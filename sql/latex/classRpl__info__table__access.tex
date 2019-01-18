@@ -1,0 +1,247 @@
+\hypertarget{classRpl__info__table__access}{}\section{Rpl\+\_\+info\+\_\+table\+\_\+access Class Reference}
+\label{classRpl__info__table__access}\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+Inheritance diagram for Rpl\+\_\+info\+\_\+table\+\_\+access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRpl__info__table__access}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRpl__info__table__access_a6d1ae1c8dce3fd9e3f8906acef95e9e3}{before\+\_\+open}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classRpl__info__table__access_a794ff171859b531d48de28866f928953}{close\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, Open\+\_\+tables\+\_\+backup $\ast$backup, bool error)
+\item 
+enum enum\+\_\+return\+\_\+id \mbox{\hyperlink{classRpl__info__table__access_a5e29192cc9274209edbf201622fdf161}{find\+\_\+info}} (\mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}} $\ast$field\+\_\+values, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+enum enum\+\_\+return\+\_\+id \mbox{\hyperlink{classRpl__info__table__access_ac36dfa252b97f8afcc2822739ac1996a}{scan\+\_\+info}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint instance)
+\item 
+bool \mbox{\hyperlink{classRpl__info__table__access_a642d37a8573636286459b57561e58382}{count\+\_\+info}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint $\ast$counter)
+\item 
+bool \mbox{\hyperlink{classRpl__info__table__access_a37e78e5841dad69026ce825f9d4bcb3a}{load\+\_\+info\+\_\+values}} (uint max\+\_\+num\+\_\+field, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$fields, \mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}} $\ast$field\+\_\+values)
+\item 
+bool \mbox{\hyperlink{classRpl__info__table__access_a7e9e44fcec5cbd4eb2acc5d5ae829cee}{store\+\_\+info\+\_\+values}} (uint max\+\_\+num\+\_\+field, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$fields, \mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}} $\ast$field\+\_\+values)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classRpl__info__table__access_a0ad9070e4ec45e56b0ab4750d1239d32}{create\+\_\+thd}} ()
+\item 
+void \mbox{\hyperlink{classRpl__info__table__access_a64ca1d0f697dc903e54a15247af9a0b4}{drop\+\_\+thd}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRpl__info__table__access_a6d1ae1c8dce3fd9e3f8906acef95e9e3}\label{classRpl__info__table__access_a6d1ae1c8dce3fd9e3f8906acef95e9e3}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!before\+\_\+open@{before\+\_\+open}}
+\index{before\+\_\+open@{before\+\_\+open}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{before\+\_\+open()}{before\_open()}}
+{\footnotesize\ttfamily void Rpl\+\_\+info\+\_\+table\+\_\+access\+::before\+\_\+open (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepares before opening table.
+\begin{DoxyItemize}
+\item set flags
+\item start lex and reset the part of T\+HD responsible for the state of command processing if needed.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to open the table \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSystem__table__access_a7357c29323649f270cf35b08cd8fe826}{System\+\_\+table\+\_\+access}}.
+
+\mbox{\Hypertarget{classRpl__info__table__access_a794ff171859b531d48de28866f928953}\label{classRpl__info__table__access_a794ff171859b531d48de28866f928953}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!close\+\_\+table@{close\+\_\+table}}
+\index{close\+\_\+table@{close\+\_\+table}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{close\+\_\+table()}{close\_table()}}
+{\footnotesize\ttfamily void Rpl\+\_\+info\+\_\+table\+\_\+access\+::close\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup,  }\item[{bool}]{error }\end{DoxyParamCaption})}
+
+Commits the changes, unlocks the table and closes it. This method needs to be called even if the open\+\_\+table fails, in order to ensure the lock info is properly restored.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to close the table \\
+\hline
+\mbox{\texttt{ in}}  & {\em table} & Table to be closed \\
+\hline
+\mbox{\texttt{ in}}  & {\em backup} & Restore the lock info from here \\
+\hline
+\mbox{\texttt{ in}}  & {\em error} & If there was an error while updating the table\\
+\hline
+\end{DoxyParams}
+If there is an error, rolls back the current statement. Otherwise, commits it. However, if a new thread was created and there is an error, the transaction must be rolled back. Otherwise, it must be committed. In this case, the changes were not done on behalf of any user transaction and if not finished, there would be pending changes. \mbox{\Hypertarget{classRpl__info__table__access_a642d37a8573636286459b57561e58382}\label{classRpl__info__table__access_a642d37a8573636286459b57561e58382}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!count\+\_\+info@{count\+\_\+info}}
+\index{count\+\_\+info@{count\+\_\+info}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{count\+\_\+info()}{count\_info()}}
+{\footnotesize\ttfamily bool Rpl\+\_\+info\+\_\+table\+\_\+access\+::count\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint $\ast$}]{counter }\end{DoxyParamCaption})}
+
+Returns the number of entries in table.
+
+The code built on top of this function needs to ensure there is no concurrent threads trying to update the table. So if an error different from H\+A\+\_\+\+E\+R\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE is returned, we abort with an error because this implies that someone has manualy and concurrently changed something.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table} & Table \\
+\hline
+\mbox{\texttt{ out}}  & {\em counter} & Registers the number of entries.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & No error \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRpl__info__table__access_a0ad9070e4ec45e56b0ab4750d1239d32}\label{classRpl__info__table__access_a0ad9070e4ec45e56b0ab4750d1239d32}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!create\+\_\+thd@{create\+\_\+thd}}
+\index{create\+\_\+thd@{create\+\_\+thd}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{create\+\_\+thd()}{create\_thd()}}
+{\footnotesize\ttfamily T\+HD $\ast$ Rpl\+\_\+info\+\_\+table\+\_\+access\+::create\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a new thread if necessary. In the bootstrap process or in the mysqld startup, a thread is created in order to be able to access a table. Otherwise, the current thread is used.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+H\+D$\ast$} & Pointer to thread structure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRpl__info__table__access_a64ca1d0f697dc903e54a15247af9a0b4}\label{classRpl__info__table__access_a64ca1d0f697dc903e54a15247af9a0b4}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!drop\+\_\+thd@{drop\+\_\+thd}}
+\index{drop\+\_\+thd@{drop\+\_\+thd}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{drop\+\_\+thd()}{drop\_thd()}}
+{\footnotesize\ttfamily void Rpl\+\_\+info\+\_\+table\+\_\+access\+::drop\+\_\+thd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Destroys the created thread if necessary and restores the system\+\_\+thread information.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRpl__info__table__access_a5e29192cc9274209edbf201622fdf161}\label{classRpl__info__table__access_a5e29192cc9274209edbf201622fdf161}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!find\+\_\+info@{find\+\_\+info}}
+\index{find\+\_\+info@{find\+\_\+info}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{find\+\_\+info()}{find\_info()}}
+{\footnotesize\ttfamily enum enum\+\_\+return\+\_\+id Rpl\+\_\+info\+\_\+table\+\_\+access\+::find\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}} $\ast$}]{field\+\_\+values,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Positions the internal pointer of {\ttfamily table} according to the primary key.
+
+If the search succeeds, the table cursor points to the found row.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field\+\_\+values} & The sequence of values \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em table} & Table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+O\+U\+ND} & The row was found. \\
+\hline
+{\em N\+O\+T\+\_\+\+F\+O\+U\+ND} & The row was not found. \\
+\hline
+{\em E\+R\+R\+OR} & There was a failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRpl__info__table__access_a37e78e5841dad69026ce825f9d4bcb3a}\label{classRpl__info__table__access_a37e78e5841dad69026ce825f9d4bcb3a}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!load\+\_\+info\+\_\+values@{load\+\_\+info\+\_\+values}}
+\index{load\+\_\+info\+\_\+values@{load\+\_\+info\+\_\+values}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{load\+\_\+info\+\_\+values()}{load\_info\_values()}}
+{\footnotesize\ttfamily bool Rpl\+\_\+info\+\_\+table\+\_\+access\+::load\+\_\+info\+\_\+values (\begin{DoxyParamCaption}\item[{uint}]{max\+\_\+num\+\_\+field,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{fields,  }\item[{\mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}} $\ast$}]{field\+\_\+values }\end{DoxyParamCaption})}
+
+Reads information from a sequence of fields into a set of L\+E\+X\+\_\+\+S\+T\+R\+I\+NG structures, where the sequence of values is specified through the object \mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em max\+\_\+num\+\_\+field} & Maximum number of fields \\
+\hline
+\mbox{\texttt{ in}}  & {\em fields} & The sequence of fields \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+values} & The sequence of values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & No error \\
+\hline
+{\em T\+R\+UE} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRpl__info__table__access_ac36dfa252b97f8afcc2822739ac1996a}\label{classRpl__info__table__access_ac36dfa252b97f8afcc2822739ac1996a}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!scan\+\_\+info@{scan\+\_\+info}}
+\index{scan\+\_\+info@{scan\+\_\+info}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{scan\+\_\+info()}{scan\_info()}}
+{\footnotesize\ttfamily enum enum\+\_\+return\+\_\+id Rpl\+\_\+info\+\_\+table\+\_\+access\+::scan\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint}]{instance }\end{DoxyParamCaption})}
+
+Positions the internal pointer of {\ttfamily table} to the n-\/instance row.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table} & Reference to a table object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em instance} & n-\/instance row.\\
+\hline
+\end{DoxyParams}
+The code built on top of this function needs to ensure there is no concurrent threads trying to update the table. So if an error different from H\+A\+\_\+\+E\+R\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE is returned, we abort with an error because this implies that someone has manualy and concurrently changed something.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+O\+U\+ND} & The row was found. \\
+\hline
+{\em N\+O\+T\+\_\+\+F\+O\+U\+ND} & The row was not found. \\
+\hline
+{\em E\+R\+R\+OR} & There was a failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRpl__info__table__access_a7e9e44fcec5cbd4eb2acc5d5ae829cee}\label{classRpl__info__table__access_a7e9e44fcec5cbd4eb2acc5d5ae829cee}} 
+\index{Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}!store\+\_\+info\+\_\+values@{store\+\_\+info\+\_\+values}}
+\index{store\+\_\+info\+\_\+values@{store\+\_\+info\+\_\+values}!Rpl\+\_\+info\+\_\+table\+\_\+access@{Rpl\+\_\+info\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{store\+\_\+info\+\_\+values()}{store\_info\_values()}}
+{\footnotesize\ttfamily bool Rpl\+\_\+info\+\_\+table\+\_\+access\+::store\+\_\+info\+\_\+values (\begin{DoxyParamCaption}\item[{uint}]{max\+\_\+num\+\_\+field,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{fields,  }\item[{\mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}} $\ast$}]{field\+\_\+values }\end{DoxyParamCaption})}
+
+Stores information from a sequence of fields into a set of L\+E\+X\+\_\+\+S\+T\+R\+I\+NG structures, where the sequence of values is specified through the object \mbox{\hyperlink{classRpl__info__values}{Rpl\+\_\+info\+\_\+values}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em max\+\_\+num\+\_\+field} & Maximum number of fields \\
+\hline
+\mbox{\texttt{ in}}  & {\em fields} & The sequence of fields \\
+\hline
+\mbox{\texttt{ in}}  & {\em field\+\_\+values} & The sequence of values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & No error \\
+\hline
+{\em T\+R\+UE} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+info\+\_\+table\+\_\+access.\+h\item 
+rpl\+\_\+info\+\_\+table\+\_\+access.\+cc\end{DoxyCompactItemize}

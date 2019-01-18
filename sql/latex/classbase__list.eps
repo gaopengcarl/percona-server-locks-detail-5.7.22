@@ -1,0 +1,418 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: ClassName
+%%Creator: Doxygen
+%%CreationDate: Time
+%%For: 
+%Magnification: 1.00
+%%Orientation: Portrait
+%%BoundingBox: 0 0 500 1812.297735
+%%Pages: 0
+%%BeginSetup
+%%EndSetup
+%%EndComments
+
+% ----- variables -----
+
+/boxwidth 0 def
+/boxheight 40 def
+/fontheight 24 def
+/marginwidth 10 def
+/distx 20 def
+/disty 40 def
+/boundaspect 0.275893 def  % aspect ratio of the BoundingBox (width/height)
+/boundx 500 def
+/boundy boundx boundaspect div def
+/xspacing 0 def
+/yspacing 0 def
+/rows 56 def
+/cols 2 def
+/scalefactor 0 def
+/boxfont /Times-Roman findfont fontheight scalefont def
+
+% ----- procedures -----
+
+/dotted { [1 4] 0 setdash } def
+/dashed { [5] 0 setdash } def
+/solid  { [] 0 setdash } def
+
+/max % result = MAX(arg1,arg2)
+{
+  /a exch def
+  /b exch def
+  a b gt {a} {b} ifelse
+} def
+
+/xoffset % result = MAX(0,(scalefactor-(boxwidth*cols+distx*(cols-1)))/2)
+{
+  0 scalefactor boxwidth cols mul distx cols 1 sub mul add sub 2 div max
+} def
+
+/cw % boxwidth = MAX(boxwidth, stringwidth(arg1))
+{
+  /str exch def
+  /boxwidth boxwidth str stringwidth pop max def
+} def
+
+/box % draws a box with text `arg1' at grid pos (arg2,arg3)
+{ gsave
+  2 setlinewidth
+  newpath
+  exch xspacing mul xoffset add
+  exch yspacing mul
+  moveto
+  boxwidth 0 rlineto 
+  0 boxheight rlineto 
+  boxwidth neg 0 rlineto 
+  0 boxheight neg rlineto 
+  closepath
+  dup stringwidth pop neg boxwidth add 2 div
+  boxheight fontheight 2 div sub 2 div
+  rmoveto show stroke
+  grestore
+} def  
+
+/mark
+{ newpath
+  exch xspacing mul xoffset add boxwidth add
+  exch yspacing mul
+  moveto
+  0 boxheight 4 div rlineto
+  boxheight neg 4 div boxheight neg 4 div rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/arrow
+{ newpath
+  moveto
+  3 -8 rlineto
+  -6 0 rlineto
+  3 8 rlineto
+  closepath
+  eofill
+  stroke
+} def
+
+/out % draws an output connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight add
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto 
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/in % draws an input connector for the block at (arg1,arg2)
+{
+  newpath
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul disty 2 div sub
+  /y exch def
+  /x exch def
+  x y moveto
+  0 disty 2 div rlineto
+  stroke
+  1 eq { x y disty 2 div add arrow } if
+} def
+
+/hedge
+{
+  exch xspacing mul xoffset add boxwidth 2 div add
+  exch yspacing mul boxheight 2 div sub
+  /y exch def
+  /x exch def
+  newpath
+  x y moveto
+  boxwidth 2 div distx add 0 rlineto
+  stroke
+  1 eq
+  { newpath x boxwidth 2 div distx add add y moveto
+    -8 3 rlineto
+    0 -6 rlineto
+    8 3 rlineto
+    closepath
+    eofill
+    stroke
+  } if
+} def
+
+/vedge
+{
+  /ye exch def
+  /ys exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add dup
+  ys yspacing mul boxheight 2 div sub
+  moveto
+  ye yspacing mul boxheight 2 div sub
+  lineto
+  stroke
+} def
+
+/conn % connections the blocks from col `arg1' to `arg2' of row `arg3'
+{
+  /ys exch def
+  /xe exch def
+  /xs exch def
+  newpath
+  xs xspacing mul xoffset add boxwidth 2 div add
+  ys yspacing mul disty 2 div sub
+  moveto
+  xspacing xe xs sub mul 0
+  rlineto
+  stroke
+} def
+
+% ----- main ------
+
+boxfont setfont
+1 boundaspect scale
+(base_list) cw
+(Sql_alloc) cw
+(List< T >) cw
+(List< Alter_column >) cw
+(List< Alter_drop >) cw
+(List< Alter_rename_key >) cw
+(List< Backpatch_info >) cw
+(List< Cached_item >) cw
+(List< char >) cw
+(List< Condition_information_item >) cw
+(List< const char >) cw
+(List< const sp_condition_value >) cw
+(List< const Sql_condition >) cw
+(List< Const_ordered_table_node >) cw
+(List< Create_field >) cw
+(List< Derived_key >) cw
+(List< Ed_row >) cw
+(List< Index_hint >) cw
+(List< Item >) cw
+(List< Item_sum >) cw
+(List< Key >) cw
+(List< Key_part_spec >) cw
+(List< LEX >) cw
+(List< LEX_STRING >) cw
+(List< List< Item > >) cw
+(List< longlong >) cw
+(List< Natural_join_column >) cw
+(List< Ndb_fk_item >) cw
+(List< Ndb_schema_op >) cw
+(List< NDB_SHARE >) cw
+(List< NdbDictionary::ForeignKey >) cw
+(List< Node >) cw
+(List< Observer_info >) cw
+(List< opt_explain_json_namespace::context >) cw
+(List< opt_explain_json_namespace::joinable_ctx >) cw
+(List< opt_explain_json_namespace::subquery_ctx >) cw
+(List< p_elem_val >) cw
+(List< partition_element >) cw
+(List< PT_select_var >) cw
+(List< qep_row::extra >) cw
+(List< QUICK_RANGE >) cw
+(List< QUICK_RANGE_SELECT >) cw
+(List< QUICK_SELECT_I >) cw
+(List< SEL_IMERGE >) cw
+(List< SELECT_LEX_UNIT >) cw
+(List< Semijoin_mat_exec >) cw
+(List< sp_label >) cw
+(List< sp_lex_branch_instr >) cw
+(List< sp_variable >) cw
+(List< Statement_information_item >) cw
+(List< String >) cw
+(List< TABLE >) cw
+(List< TABLE_LIST >) cw
+(List< Trigger >) cw
+(List< ulonglong >) cw
+(List< XML_TAG >) cw
+/boxwidth boxwidth marginwidth 2 mul add def
+/xspacing boxwidth distx add def
+/yspacing boxheight disty add def
+/scalefactor 
+  boxwidth cols mul distx cols 1 sub mul add
+  boxheight rows mul disty rows 1 sub mul add boundaspect mul 
+  max def
+boundx scalefactor div boundy scalefactor div scale
+
+% ----- classes -----
+
+ (base_list) 0.000000 54.000000 box
+ (Sql_alloc) 0.000000 55.000000 box
+ (List< T >) 1.000000 53.000000 box
+ (List< Alter_column >) 1.000000 52.000000 box
+ (List< Alter_drop >) 1.000000 51.000000 box
+ (List< Alter_rename_key >) 1.000000 50.000000 box
+ (List< Backpatch_info >) 1.000000 49.000000 box
+ (List< Cached_item >) 1.000000 48.000000 box
+ (List< char >) 1.000000 47.000000 box
+ (List< Condition_information_item >) 1.000000 46.000000 box
+ (List< const char >) 1.000000 45.000000 box
+ (List< const sp_condition_value >) 1.000000 44.000000 box
+ (List< const Sql_condition >) 1.000000 43.000000 box
+ (List< Const_ordered_table_node >) 1.000000 42.000000 box
+ (List< Create_field >) 1.000000 41.000000 box
+ (List< Derived_key >) 1.000000 40.000000 box
+ (List< Ed_row >) 1.000000 39.000000 box
+ (List< Index_hint >) 1.000000 38.000000 box
+ (List< Item >) 1.000000 37.000000 box
+ (List< Item_sum >) 1.000000 36.000000 box
+ (List< Key >) 1.000000 35.000000 box
+ (List< Key_part_spec >) 1.000000 34.000000 box
+ (List< LEX >) 1.000000 33.000000 box
+ (List< LEX_STRING >) 1.000000 32.000000 box
+ (List< List< Item > >) 1.000000 31.000000 box
+ (List< longlong >) 1.000000 30.000000 box
+ (List< Natural_join_column >) 1.000000 29.000000 box
+ (List< Ndb_fk_item >) 1.000000 28.000000 box
+ (List< Ndb_schema_op >) 1.000000 27.000000 box
+ (List< NDB_SHARE >) 1.000000 26.000000 box
+ (List< NdbDictionary::ForeignKey >) 1.000000 25.000000 box
+1.000000 25.000000 mark
+ (List< Node >) 1.000000 24.000000 box
+ (List< Observer_info >) 1.000000 23.000000 box
+ (List< opt_explain_json_namespace::context >) 1.000000 22.000000 box
+ (List< opt_explain_json_namespace::joinable_ctx >) 1.000000 21.000000 box
+ (List< opt_explain_json_namespace::subquery_ctx >) 1.000000 20.000000 box
+ (List< p_elem_val >) 1.000000 19.000000 box
+ (List< partition_element >) 1.000000 18.000000 box
+ (List< PT_select_var >) 1.000000 17.000000 box
+ (List< qep_row::extra >) 1.000000 16.000000 box
+ (List< QUICK_RANGE >) 1.000000 15.000000 box
+ (List< QUICK_RANGE_SELECT >) 1.000000 14.000000 box
+ (List< QUICK_SELECT_I >) 1.000000 13.000000 box
+ (List< SEL_IMERGE >) 1.000000 12.000000 box
+ (List< SELECT_LEX_UNIT >) 1.000000 11.000000 box
+ (List< Semijoin_mat_exec >) 1.000000 10.000000 box
+ (List< sp_label >) 1.000000 9.000000 box
+ (List< sp_lex_branch_instr >) 1.000000 8.000000 box
+ (List< sp_variable >) 1.000000 7.000000 box
+ (List< Statement_information_item >) 1.000000 6.000000 box
+ (List< String >) 1.000000 5.000000 box
+ (List< TABLE >) 1.000000 4.000000 box
+ (List< TABLE_LIST >) 1.000000 3.000000 box
+ (List< Trigger >) 1.000000 2.000000 box
+ (List< ulonglong >) 1.000000 1.000000 box
+ (List< XML_TAG >) 1.000000 0.000000 box
+
+% ----- relations -----
+
+solid
+0 0.000000 54.000000 out
+solid
+1 0.000000 55.000000 in
+solid
+1 0.000000 53.250000 out
+solid
+0 0.000000 53.500000 hedge
+solid
+0 0.000000 52.500000 hedge
+solid
+0 0.000000 51.500000 hedge
+solid
+0 0.000000 50.500000 hedge
+solid
+0 0.000000 49.500000 hedge
+solid
+0 0.000000 48.500000 hedge
+solid
+0 0.000000 47.500000 hedge
+solid
+0 0.000000 46.500000 hedge
+solid
+0 0.000000 45.500000 hedge
+solid
+0 0.000000 44.500000 hedge
+solid
+0 0.000000 43.500000 hedge
+solid
+0 0.000000 42.500000 hedge
+solid
+0 0.000000 41.500000 hedge
+solid
+0 0.000000 40.500000 hedge
+solid
+0 0.000000 39.500000 hedge
+solid
+0 0.000000 38.500000 hedge
+solid
+0 0.000000 37.500000 hedge
+solid
+0 0.000000 36.500000 hedge
+solid
+0 0.000000 35.500000 hedge
+solid
+0 0.000000 34.500000 hedge
+solid
+0 0.000000 33.500000 hedge
+solid
+0 0.000000 32.500000 hedge
+solid
+0 0.000000 31.500000 hedge
+solid
+0 0.000000 30.500000 hedge
+solid
+0 0.000000 29.500000 hedge
+solid
+0 0.000000 28.500000 hedge
+solid
+0 0.000000 27.500000 hedge
+solid
+0 0.000000 26.500000 hedge
+solid
+0 0.000000 25.500000 hedge
+solid
+0 0.000000 24.500000 hedge
+solid
+0 0.000000 23.500000 hedge
+solid
+0 0.000000 22.500000 hedge
+solid
+0 0.000000 21.500000 hedge
+solid
+0 0.000000 20.500000 hedge
+solid
+0 0.000000 19.500000 hedge
+solid
+0 0.000000 18.500000 hedge
+solid
+0 0.000000 17.500000 hedge
+solid
+0 0.000000 16.500000 hedge
+solid
+0 0.000000 15.500000 hedge
+solid
+0 0.000000 14.500000 hedge
+solid
+0 0.000000 13.500000 hedge
+solid
+0 0.000000 12.500000 hedge
+solid
+0 0.000000 11.500000 hedge
+solid
+0 0.000000 10.500000 hedge
+solid
+0 0.000000 9.500000 hedge
+solid
+0 0.000000 8.500000 hedge
+solid
+0 0.000000 7.500000 hedge
+solid
+0 0.000000 6.500000 hedge
+solid
+0 0.000000 5.500000 hedge
+solid
+0 0.000000 4.500000 hedge
+solid
+0 0.000000 3.500000 hedge
+solid
+0 0.000000 2.500000 hedge
+solid
+0 0.000000 1.500000 hedge
+solid
+0 0.000000 0.500000 hedge
+solid
+0.000000 54.000000 0.500000 vedge

@@ -1,0 +1,25 @@
+\hypertarget{classTHD_1_1Attachable__trx__rw}{}\section{T\+HD\+:\+:Attachable\+\_\+trx\+\_\+rw Class Reference}
+\label{classTHD_1_1Attachable__trx__rw}\index{T\+H\+D\+::\+Attachable\+\_\+trx\+\_\+rw@{T\+H\+D\+::\+Attachable\+\_\+trx\+\_\+rw}}
+Inheritance diagram for T\+HD\+:\+:Attachable\+\_\+trx\+\_\+rw\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTHD_1_1Attachable__trx__rw}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTHD_1_1Attachable__trx__rw_a6a043fc03c3fc818a651775d1329d220}\label{classTHD_1_1Attachable__trx__rw_a6a043fc03c3fc818a651775d1329d220}} 
+bool {\bfseries is\+\_\+read\+\_\+only} () const
+\item 
+\mbox{\Hypertarget{classTHD_1_1Attachable__trx__rw_af20705c08a222ff743432285df375913}\label{classTHD_1_1Attachable__trx__rw_af20705c08a222ff743432285df375913}} 
+{\bfseries Attachable\+\_\+trx\+\_\+rw} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A derived from T\+H\+D\+::\+Attachable\+\_\+trx class allows updates in the attachable transaction. Callers of the class methods must make sure the attachable\+\_\+rw won\textquotesingle{}t cause deadlock with the main transaction. The destructor does not invoke ha\+\_\+commit\+\_\+\{stmt,trans\} nor ha\+\_\+rollback\+\_\+trans on purpose. Burden to terminate the read-\/write instance also lies on the caller! In order to use this interface it {\itshape M\+U\+ST} prove that no side effect to the global transaction state can be inflicted by a chosen method. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid\+\_\+persist.\+cc\end{DoxyCompactItemize}

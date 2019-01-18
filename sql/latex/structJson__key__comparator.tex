@@ -1,0 +1,53 @@
+\hypertarget{structJson__key__comparator}{}\section{Json\+\_\+key\+\_\+comparator Struct Reference}
+\label{structJson__key__comparator}\index{Json\+\_\+key\+\_\+comparator@{Json\+\_\+key\+\_\+comparator}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+key\+\_\+comparator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structJson__key__comparator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structJson__key__comparator_a7d1a1e90eca547bbaf63b20b41410648}{operator()}} (const std\+::string \&key1, const std\+::string \&key2) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A comparator that is used for ordering keys in a \mbox{\hyperlink{classJson__object}{Json\+\_\+object}}. It orders the keys on length, and lexicographically if the keys have the same length. The ordering is ascending. This ordering was chosen for speed of look-\/up. See usage in Json\+\_\+object\+\_\+map. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structJson__key__comparator_a7d1a1e90eca547bbaf63b20b41410648}\label{structJson__key__comparator_a7d1a1e90eca547bbaf63b20b41410648}} 
+\index{Json\+\_\+key\+\_\+comparator@{Json\+\_\+key\+\_\+comparator}!operator()@{operator()}}
+\index{operator()@{operator()}!Json\+\_\+key\+\_\+comparator@{Json\+\_\+key\+\_\+comparator}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily bool Json\+\_\+key\+\_\+comparator\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key1,  }\item[{const std\+::string \&}]{key2 }\end{DoxyParamCaption}) const}
+
+Compare two keys from a J\+S\+ON object and determine whether or not the first key is less than the second key. key1 is considered less than key2 if
+
+a) key1 is shorter than key2, or if
+
+b) key1 and key2 have the same length, but different contents, and the first byte that differs has a smaller value in key1 than in key2
+
+Otherwise, key1 is not less than key2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key1} & the first key to compare \\
+\hline
+{\em key2} & the second key to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if key1 is considered less than key2, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+\hypertarget{classSession__gtids__ctx__encoder}{}\section{Session\+\_\+gtids\+\_\+ctx\+\_\+encoder Class Reference}
+\label{classSession__gtids__ctx__encoder}\index{Session\+\_\+gtids\+\_\+ctx\+\_\+encoder@{Session\+\_\+gtids\+\_\+ctx\+\_\+encoder}}
+Inheritance diagram for Session\+\_\+gtids\+\_\+ctx\+\_\+encoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSession__gtids__ctx__encoder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSession__gtids__ctx__encoder_a7ca94e87acaf235565a106f04a6f7f5e}\label{classSession__gtids__ctx__encoder_a7ca94e87acaf235565a106f04a6f7f5e}} 
+virtual bool {\bfseries encode} (T\+HD $\ast$thd, String \&buf)=0
+\item 
+\mbox{\Hypertarget{classSession__gtids__ctx__encoder_a6f7f77281c6582b3448a05aaf62cda54}\label{classSession__gtids__ctx__encoder_a6f7f77281c6582b3448a05aaf62cda54}} 
+virtual ulonglong {\bfseries encoding\+\_\+specification} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an interface for encoding the gtids in the payload of the the OK packet.
+
+In the future we may have different types of payloads, thence we may have different encoders specifications/types. This implies changing either, the encoding specification code, the actual encoding procedure or both at the same time.
+
+New encoders can extend this interface/abstract class or extend other encoders in the hierarchy. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+cc\end{DoxyCompactItemize}

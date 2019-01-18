@@ -1,0 +1,108 @@
+\hypertarget{namespaceAQP}{}\section{A\+QP Namespace Reference}
+\label{namespaceAQP}\index{A\+QP@{A\+QP}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAQP_1_1Equal__set__iterator}{Equal\+\_\+set\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}}
+\item 
+class \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}{enum\+\_\+access\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5af9d158d0883d15ad1551ecefd64e0c5a}{A\+T\+\_\+\+V\+O\+ID}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5abb6491cbaa915cb0e45a3f0c5cb84c0c}{A\+T\+\_\+\+F\+I\+X\+ED}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a73c2bc147a4868f2cb7b95980e11c561}{A\+T\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a225031e143434de790e00c6d421130cf}{A\+T\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY}}, 
+\newline
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a34f5c8d4f66ba61904e1ba12a97c5896}{A\+T\+\_\+\+O\+R\+D\+E\+R\+E\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a46f728fe61227bf336b3f7b7c7ef0df0}{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a4d83346b5d11467d616f8c27c42ed9d5}{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a4a79a6497d4de1d270db71641e83f6ea}{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+M\+I\+X\+ED}}, 
+\newline
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5ab088a8376ecb7637c5001bd4987508c9}{A\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a9e9c8f946d0e4fd2ad7ab6b2006056fc}{A\+T\+\_\+\+U\+N\+D\+E\+C\+I\+D\+ED}}, 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5af072c18eedd1c96cb1f56214d2fe1492}{A\+T\+\_\+\+O\+T\+H\+ER}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceAQP_a79358adf81977651643ef6c1672e18f8}{enum\+\_\+join\+\_\+type}} \{ {\bfseries J\+T\+\_\+\+O\+U\+T\+E\+R\+\_\+\+J\+O\+IN}, 
+{\bfseries J\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+J\+O\+IN}, 
+{\bfseries J\+T\+\_\+\+S\+E\+M\+I\+\_\+\+J\+O\+IN}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract query plan (\mbox{\hyperlink{namespaceAQP}{A\+QP}}) is an interface for examining certain aspects of query plans without accessing mysqld internal classes (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}}, etc.) directly.
+
+\mbox{\hyperlink{namespaceAQP}{A\+QP}} maps join execution plans, as represented by mysqld internals, to a set of facade classes. Non-\/join operations such as sorting and aggregation is currently {\itshape not} modelled in the \mbox{\hyperlink{namespaceAQP}{A\+QP}}.
+
+The \mbox{\hyperlink{namespaceAQP}{A\+QP}} models an n-\/way join as a sequence of the n table access operations that the My\+S\+QL server would execute as part of its nested loop join execution. (Each such table access operation is a scan of a table or index, or an index lookup.) For each lookup operation, it is possible to examine the expression that represents each field in the key.
+
+A storage enging will typically use the \mbox{\hyperlink{namespaceAQP}{A\+QP}} for finding sections of a join execution plan that may be executed in the engine rather than in mysqld. By using the \mbox{\hyperlink{namespaceAQP}{A\+QP}} rather than the mysqld internals directly, the coupling between the engine and mysqld is reduced.
+
+The \mbox{\hyperlink{namespaceAQP}{A\+QP}} also provides functions which allows the storage engine to change the query execution plan for the part of the join which it will handle. Thus be aware that although the Q\+E\+P\+\_\+\+T\+A\+B$\ast$\textquotesingle{}s are const they may be modified. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}} 
+\index{A\+QP@{A\+QP}!enum\+\_\+access\+\_\+type@{enum\+\_\+access\+\_\+type}}
+\index{enum\+\_\+access\+\_\+type@{enum\+\_\+access\+\_\+type}!A\+QP@{A\+QP}}
+\subsubsection{\texorpdfstring{enum\+\_\+access\+\_\+type}{enum\_access\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}{A\+Q\+P\+::enum\+\_\+access\+\_\+type}}}
+
+The type of a table access operation. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+V\+O\+ID@{A\+T\+\_\+\+V\+O\+ID}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+V\+O\+ID@{A\+T\+\_\+\+V\+O\+ID}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5af9d158d0883d15ad1551ecefd64e0c5a}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5af9d158d0883d15ad1551ecefd64e0c5a}} 
+A\+T\+\_\+\+V\+O\+ID&For default initialization. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+F\+I\+X\+ED@{A\+T\+\_\+\+F\+I\+X\+ED}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+F\+I\+X\+ED@{A\+T\+\_\+\+F\+I\+X\+ED}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5abb6491cbaa915cb0e45a3f0c5cb84c0c}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5abb6491cbaa915cb0e45a3f0c5cb84c0c}} 
+A\+T\+\_\+\+F\+I\+X\+ED&Value has already been fetched / determined by optimizer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY@{A\+T\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY@{A\+T\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a73c2bc147a4868f2cb7b95980e11c561}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a73c2bc147a4868f2cb7b95980e11c561}} 
+A\+T\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY&Do a lookup of a single primary key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY@{A\+T\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY@{A\+T\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a225031e143434de790e00c6d421130cf}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a225031e143434de790e00c6d421130cf}} 
+A\+T\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY&Do a lookup of a single unique index key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+O\+R\+D\+E\+R\+E\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN@{A\+T\+\_\+\+O\+R\+D\+E\+R\+E\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+O\+R\+D\+E\+R\+E\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN@{A\+T\+\_\+\+O\+R\+D\+E\+R\+E\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a34f5c8d4f66ba61904e1ba12a97c5896}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a34f5c8d4f66ba61904e1ba12a97c5896}} 
+A\+T\+\_\+\+O\+R\+D\+E\+R\+E\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN&Scan an ordered index with a single upper and lower bound pair. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY@{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY@{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a46f728fe61227bf336b3f7b7c7ef0df0}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a46f728fe61227bf336b3f7b7c7ef0df0}} 
+A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+K\+EY&Do a multi range read for a set of primary keys. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY@{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY@{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a4d83346b5d11467d616f8c27c42ed9d5}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a4d83346b5d11467d616f8c27c42ed9d5}} 
+A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+K\+EY&Do a multi range read for a set of unique index keys. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+M\+I\+X\+ED@{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+M\+I\+X\+ED}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+M\+I\+X\+ED@{A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+M\+I\+X\+ED}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a4a79a6497d4de1d270db71641e83f6ea}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a4a79a6497d4de1d270db71641e83f6ea}} 
+A\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+M\+I\+X\+ED&Do a multi range read for a mix of ranges (for which there is an ordered index), and either primary keys or unique index keys. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN@{A\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN@{A\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5ab088a8376ecb7637c5001bd4987508c9}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5ab088a8376ecb7637c5001bd4987508c9}} 
+A\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN&Scan a table. (No index is assumed to be used.) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+U\+N\+D\+E\+C\+I\+D\+ED@{A\+T\+\_\+\+U\+N\+D\+E\+C\+I\+D\+ED}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+U\+N\+D\+E\+C\+I\+D\+ED@{A\+T\+\_\+\+U\+N\+D\+E\+C\+I\+D\+ED}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a9e9c8f946d0e4fd2ad7ab6b2006056fc}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5a9e9c8f946d0e4fd2ad7ab6b2006056fc}} 
+A\+T\+\_\+\+U\+N\+D\+E\+C\+I\+D\+ED&Access method will not be chosen before the execution phase. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+T\+\_\+\+O\+T\+H\+ER@{A\+T\+\_\+\+O\+T\+H\+ER}!A\+QP@{A\+QP}}\index{A\+QP@{A\+QP}!A\+T\+\_\+\+O\+T\+H\+ER@{A\+T\+\_\+\+O\+T\+H\+ER}}}\mbox{\Hypertarget{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5af072c18eedd1c96cb1f56214d2fe1492}\label{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5af072c18eedd1c96cb1f56214d2fe1492}} 
+A\+T\+\_\+\+O\+T\+H\+ER&The access method has properties that prevents it from being pushed to a storage engine. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceAQP_a79358adf81977651643ef6c1672e18f8}\label{namespaceAQP_a79358adf81977651643ef6c1672e18f8}} 
+\index{A\+QP@{A\+QP}!enum\+\_\+join\+\_\+type@{enum\+\_\+join\+\_\+type}}
+\index{enum\+\_\+join\+\_\+type@{enum\+\_\+join\+\_\+type}!A\+QP@{A\+QP}}
+\subsubsection{\texorpdfstring{enum\+\_\+join\+\_\+type}{enum\_join\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceAQP_a79358adf81977651643ef6c1672e18f8}{A\+Q\+P\+::enum\+\_\+join\+\_\+type}}}
+
+The type of join operation require 

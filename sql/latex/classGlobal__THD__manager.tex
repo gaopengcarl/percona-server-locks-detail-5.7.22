@@ -1,0 +1,285 @@
+\hypertarget{classGlobal__THD__manager}{}\section{Global\+\_\+\+T\+H\+D\+\_\+manager Class Reference}
+\label{classGlobal__THD__manager}\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+
+
+{\ttfamily \#include $<$mysqld\+\_\+thd\+\_\+manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a52d3e196c17357f3d5acea3c8aca6f02}{set\+\_\+unit\+\_\+test}} ()
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a0b2f6b235db53984b7c1ec63ee4a0dd9}{add\+\_\+thd}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_acb2067c4549d412ac402e6941930f793}{remove\+\_\+thd}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classGlobal__THD__manager_a751a7e09cf025b578e425723a3fbe22e}{get\+\_\+num\+\_\+thread\+\_\+running}} () const
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a2c6d45fb36a523945c5c203341fbaaa0}{inc\+\_\+thread\+\_\+running}} ()
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a842edf9553aaf1a228b996299252273a}{dec\+\_\+thread\+\_\+running}} ()
+\item 
+ulonglong \mbox{\hyperlink{classGlobal__THD__manager_ac0634df07f20a646484ce05a484b6676}{get\+\_\+num\+\_\+thread\+\_\+created}} () const
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_ad3b390bc64900597e7f71800b7b72a45}{inc\+\_\+thread\+\_\+created}} ()
+\item 
+my\+\_\+thread\+\_\+id \mbox{\hyperlink{classGlobal__THD__manager_a854e178c07d57bb7aa218f2cbca70808}{get\+\_\+new\+\_\+thread\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a6486ba43b6018d27f72cbb0294d2c437}{release\+\_\+thread\+\_\+id}} (my\+\_\+thread\+\_\+id thread\+\_\+id)
+\item 
+my\+\_\+thread\+\_\+id \mbox{\hyperlink{classGlobal__THD__manager_a408b397cddb0f8b17108bd48e7b15464}{get\+\_\+thread\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_ab82aa13615fd9bf44dea89589773c61e}{set\+\_\+thread\+\_\+id\+\_\+counter}} (my\+\_\+thread\+\_\+id new\+\_\+id)
+\item 
+uint \mbox{\hyperlink{classGlobal__THD__manager_a1da81e89755632c72454b9570a544ad3}{get\+\_\+thd\+\_\+count}} () const
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_ac52a7fd63b6042da22b9f0126e1a51eb}{wait\+\_\+till\+\_\+no\+\_\+thd}} ()
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a2d0baa41cc903006ffa2d06b1f6e56d9}{do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy}} (\mbox{\hyperlink{classDo__THD__Impl}{Do\+\_\+\+T\+H\+D\+\_\+\+Impl}} $\ast$func)
+\item 
+void \mbox{\hyperlink{classGlobal__THD__manager_a493a2379502fbb615bd24629f2cf85d0}{do\+\_\+for\+\_\+all\+\_\+thd}} (\mbox{\hyperlink{classDo__THD__Impl}{Do\+\_\+\+T\+H\+D\+\_\+\+Impl}} $\ast$func)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classGlobal__THD__manager_ae533bd3cb655dbbdb30bfd1703110dba}{find\+\_\+thd}} (\mbox{\hyperlink{classFind__THD__Impl}{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}} $\ast$func)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classGlobal__THD__manager}{Global\+\_\+\+T\+H\+D\+\_\+manager}} $\ast$ \mbox{\hyperlink{classGlobal__THD__manager_a5e4a050bfded837c0faf11f11f83557e}{get\+\_\+instance}} ()
+\item 
+static bool \mbox{\hyperlink{classGlobal__THD__manager_adde98689c7a71d9adf1284d89cab8776}{create\+\_\+instance}} ()
+\item 
+static void \mbox{\hyperlink{classGlobal__THD__manager_aa672fe32e86b6e351276407d90957639}{destroy\+\_\+instance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const my\+\_\+thread\+\_\+id \mbox{\hyperlink{classGlobal__THD__manager_a7306fb4d252fca9c53df1b427ba3096b}{reserved\+\_\+thread\+\_\+id}} = 0
+\item 
+\mbox{\Hypertarget{classGlobal__THD__manager_aef84bbb0aa2b15cdadbc75589074f693}\label{classGlobal__THD__manager_aef84bbb0aa2b15cdadbc75589074f693}} 
+static int {\bfseries global\+\_\+thd\+\_\+count} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGlobal__THD__manager_ad065a546682f049bc77783f533d4699c}\label{classGlobal__THD__manager_ad065a546682f049bc77783f533d4699c}} 
+void {\bfseries thd\+\_\+lock\+\_\+thread\+\_\+count} (T\+HD $\ast$)
+\item 
+\mbox{\Hypertarget{classGlobal__THD__manager_add05e7a76f816b9843e8ecda6726f9d5}\label{classGlobal__THD__manager_add05e7a76f816b9843e8ecda6726f9d5}} 
+void {\bfseries thd\+\_\+unlock\+\_\+thread\+\_\+count} (T\+HD $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class maintains T\+HD object of all registered threads. It provides interface to perform functions such as find, count, perform some action for each T\+HD object in the list.
+
+It also provide mutators for inserting, and removing an element\+: \mbox{\hyperlink{classGlobal__THD__manager_a0b2f6b235db53984b7c1ec63ee4a0dd9}{add\+\_\+thd()}} inserts a T\+HD into the set, and increments the counter. \mbox{\hyperlink{classGlobal__THD__manager_acb2067c4549d412ac402e6941930f793}{remove\+\_\+thd()}} removes a T\+HD from the set, and decrements the counter. Method \mbox{\hyperlink{classGlobal__THD__manager_acb2067c4549d412ac402e6941930f793}{remove\+\_\+thd()}} also broadcasts C\+O\+N\+D\+\_\+thd\+\_\+list. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGlobal__THD__manager_a0b2f6b235db53984b7c1ec63ee4a0dd9}\label{classGlobal__THD__manager_a0b2f6b235db53984b7c1ec63ee4a0dd9}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!add\+\_\+thd@{add\+\_\+thd}}
+\index{add\+\_\+thd@{add\+\_\+thd}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{add\+\_\+thd()}{add\_thd()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::add\+\_\+thd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Adds T\+HD to global T\+HD list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGlobal__THD__manager_adde98689c7a71d9adf1284d89cab8776}\label{classGlobal__THD__manager_adde98689c7a71d9adf1284d89cab8776}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!create\+\_\+instance@{create\+\_\+instance}}
+\index{create\+\_\+instance@{create\+\_\+instance}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{create\+\_\+instance()}{create\_instance()}}
+{\footnotesize\ttfamily bool Global\+\_\+\+T\+H\+D\+\_\+manager\+::create\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes the thd manager. Must be called before \mbox{\hyperlink{classGlobal__THD__manager_a5e4a050bfded837c0faf11f11f83557e}{get\+\_\+instance()}} can be used.
+
+\begin{DoxyReturn}{Returns}
+true if initialization failed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGlobal__THD__manager_a842edf9553aaf1a228b996299252273a}\label{classGlobal__THD__manager_a842edf9553aaf1a228b996299252273a}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!dec\+\_\+thread\+\_\+running@{dec\+\_\+thread\+\_\+running}}
+\index{dec\+\_\+thread\+\_\+running@{dec\+\_\+thread\+\_\+running}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{dec\+\_\+thread\+\_\+running()}{dec\_thread\_running()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::dec\+\_\+thread\+\_\+running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Decrements thread running statistic variable. \mbox{\Hypertarget{classGlobal__THD__manager_aa672fe32e86b6e351276407d90957639}\label{classGlobal__THD__manager_aa672fe32e86b6e351276407d90957639}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!destroy\+\_\+instance@{destroy\+\_\+instance}}
+\index{destroy\+\_\+instance@{destroy\+\_\+instance}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{destroy\+\_\+instance()}{destroy\_instance()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::destroy\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Destroys the singleton instance. \mbox{\Hypertarget{classGlobal__THD__manager_a493a2379502fbb615bd24629f2cf85d0}\label{classGlobal__THD__manager_a493a2379502fbb615bd24629f2cf85d0}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!do\+\_\+for\+\_\+all\+\_\+thd@{do\+\_\+for\+\_\+all\+\_\+thd}}
+\index{do\+\_\+for\+\_\+all\+\_\+thd@{do\+\_\+for\+\_\+all\+\_\+thd}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{do\+\_\+for\+\_\+all\+\_\+thd()}{do\_for\_all\_thd()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::do\+\_\+for\+\_\+all\+\_\+thd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDo__THD__Impl}{Do\+\_\+\+T\+H\+D\+\_\+\+Impl}} $\ast$}]{func }\end{DoxyParamCaption})}
+
+This function calls func() for all thds in thd list. 
+\begin{DoxyParams}{Parameters}
+{\em func} & Object of class which overrides operator() \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGlobal__THD__manager_a2d0baa41cc903006ffa2d06b1f6e56d9}\label{classGlobal__THD__manager_a2d0baa41cc903006ffa2d06b1f6e56d9}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy@{do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy}}
+\index{do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy@{do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy()}{do\_for\_all\_thd\_copy()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::do\+\_\+for\+\_\+all\+\_\+thd\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDo__THD__Impl}{Do\+\_\+\+T\+H\+D\+\_\+\+Impl}} $\ast$}]{func }\end{DoxyParamCaption})}
+
+This function calls func() for all thds in thd list after taking local copy of thd list. It acquires L\+O\+C\+K\+\_\+thd\+\_\+remove to prevent removal from thd list. 
+\begin{DoxyParams}{Parameters}
+{\em func} & Object of class which overrides operator() \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGlobal__THD__manager_ae533bd3cb655dbbdb30bfd1703110dba}\label{classGlobal__THD__manager_ae533bd3cb655dbbdb30bfd1703110dba}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!find\+\_\+thd@{find\+\_\+thd}}
+\index{find\+\_\+thd@{find\+\_\+thd}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{find\+\_\+thd()}{find\_thd()}}
+{\footnotesize\ttfamily T\+HD $\ast$ Global\+\_\+\+T\+H\+D\+\_\+manager\+::find\+\_\+thd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFind__THD__Impl}{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}} $\ast$}]{func }\end{DoxyParamCaption})}
+
+Returns a pointer to the first T\+HD for which operator() returns true. 
+\begin{DoxyParams}{Parameters}
+{\em func} & Object of class which overrides operator() \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+HD 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+H\+D$\ast$} & Matching T\+HD \\
+\hline
+{\em N\+U\+LL} & When T\+HD is not found in the list \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGlobal__THD__manager_a5e4a050bfded837c0faf11f11f83557e}\label{classGlobal__THD__manager_a5e4a050bfded837c0faf11f11f83557e}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!get\+\_\+instance@{get\+\_\+instance}}
+\index{get\+\_\+instance@{get\+\_\+instance}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classGlobal__THD__manager}{Global\+\_\+\+T\+H\+D\+\_\+manager}}$\ast$ Global\+\_\+\+T\+H\+D\+\_\+manager\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Retrieves singleton instance \mbox{\Hypertarget{classGlobal__THD__manager_a854e178c07d57bb7aa218f2cbca70808}\label{classGlobal__THD__manager_a854e178c07d57bb7aa218f2cbca70808}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!get\+\_\+new\+\_\+thread\+\_\+id@{get\+\_\+new\+\_\+thread\+\_\+id}}
+\index{get\+\_\+new\+\_\+thread\+\_\+id@{get\+\_\+new\+\_\+thread\+\_\+id}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+new\+\_\+thread\+\_\+id()}{get\_new\_thread\_id()}}
+{\footnotesize\ttfamily my\+\_\+thread\+\_\+id Global\+\_\+\+T\+H\+D\+\_\+manager\+::get\+\_\+new\+\_\+thread\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an unused thread id. \mbox{\Hypertarget{classGlobal__THD__manager_ac0634df07f20a646484ce05a484b6676}\label{classGlobal__THD__manager_ac0634df07f20a646484ce05a484b6676}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!get\+\_\+num\+\_\+thread\+\_\+created@{get\+\_\+num\+\_\+thread\+\_\+created}}
+\index{get\+\_\+num\+\_\+thread\+\_\+created@{get\+\_\+num\+\_\+thread\+\_\+created}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+num\+\_\+thread\+\_\+created()}{get\_num\_thread\_created()}}
+{\footnotesize\ttfamily ulonglong Global\+\_\+\+T\+H\+D\+\_\+manager\+::get\+\_\+num\+\_\+thread\+\_\+created (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves thread created statistic variable. \begin{DoxyReturn}{Returns}
+ulonglong Returns the total number of threads created after server start 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a dirty read. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classGlobal__THD__manager_a751a7e09cf025b578e425723a3fbe22e}\label{classGlobal__THD__manager_a751a7e09cf025b578e425723a3fbe22e}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!get\+\_\+num\+\_\+thread\+\_\+running@{get\+\_\+num\+\_\+thread\+\_\+running}}
+\index{get\+\_\+num\+\_\+thread\+\_\+running@{get\+\_\+num\+\_\+thread\+\_\+running}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+num\+\_\+thread\+\_\+running()}{get\_num\_thread\_running()}}
+{\footnotesize\ttfamily int Global\+\_\+\+T\+H\+D\+\_\+manager\+::get\+\_\+num\+\_\+thread\+\_\+running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves thread running statistic variable. \begin{DoxyReturn}{Returns}
+int Returns the total number of threads currently running 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a dirty read. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classGlobal__THD__manager_a1da81e89755632c72454b9570a544ad3}\label{classGlobal__THD__manager_a1da81e89755632c72454b9570a544ad3}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!get\+\_\+thd\+\_\+count@{get\+\_\+thd\+\_\+count}}
+\index{get\+\_\+thd\+\_\+count@{get\+\_\+thd\+\_\+count}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+thd\+\_\+count()}{get\_thd\_count()}}
+{\footnotesize\ttfamily uint Global\+\_\+\+T\+H\+D\+\_\+manager\+::get\+\_\+thd\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves total number of items in global T\+HD list. \begin{DoxyReturn}{Returns}
+uint Returns the count of items in global T\+HD list 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a dirty read. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classGlobal__THD__manager_a408b397cddb0f8b17108bd48e7b15464}\label{classGlobal__THD__manager_a408b397cddb0f8b17108bd48e7b15464}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!get\+\_\+thread\+\_\+id@{get\+\_\+thread\+\_\+id}}
+\index{get\+\_\+thread\+\_\+id@{get\+\_\+thread\+\_\+id}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+thread\+\_\+id()}{get\_thread\_id()}}
+{\footnotesize\ttfamily my\+\_\+thread\+\_\+id Global\+\_\+\+T\+H\+D\+\_\+manager\+::get\+\_\+thread\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves thread id counter value. \begin{DoxyReturn}{Returns}
+my\+\_\+thread\+\_\+id Returns the thread id counter value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a dirty read. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classGlobal__THD__manager_ad3b390bc64900597e7f71800b7b72a45}\label{classGlobal__THD__manager_ad3b390bc64900597e7f71800b7b72a45}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!inc\+\_\+thread\+\_\+created@{inc\+\_\+thread\+\_\+created}}
+\index{inc\+\_\+thread\+\_\+created@{inc\+\_\+thread\+\_\+created}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{inc\+\_\+thread\+\_\+created()}{inc\_thread\_created()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::inc\+\_\+thread\+\_\+created (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increments thread created statistic variable. \mbox{\Hypertarget{classGlobal__THD__manager_a2c6d45fb36a523945c5c203341fbaaa0}\label{classGlobal__THD__manager_a2c6d45fb36a523945c5c203341fbaaa0}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!inc\+\_\+thread\+\_\+running@{inc\+\_\+thread\+\_\+running}}
+\index{inc\+\_\+thread\+\_\+running@{inc\+\_\+thread\+\_\+running}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{inc\+\_\+thread\+\_\+running()}{inc\_thread\_running()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::inc\+\_\+thread\+\_\+running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increments thread running statistic variable. \mbox{\Hypertarget{classGlobal__THD__manager_a6486ba43b6018d27f72cbb0294d2c437}\label{classGlobal__THD__manager_a6486ba43b6018d27f72cbb0294d2c437}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!release\+\_\+thread\+\_\+id@{release\+\_\+thread\+\_\+id}}
+\index{release\+\_\+thread\+\_\+id@{release\+\_\+thread\+\_\+id}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{release\+\_\+thread\+\_\+id()}{release\_thread\_id()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::release\+\_\+thread\+\_\+id (\begin{DoxyParamCaption}\item[{my\+\_\+thread\+\_\+id}]{thread\+\_\+id }\end{DoxyParamCaption})}
+
+Releases a thread id so that it can be reused. Note that this is done automatically by \mbox{\hyperlink{classGlobal__THD__manager_acb2067c4549d412ac402e6941930f793}{remove\+\_\+thd()}}. \mbox{\Hypertarget{classGlobal__THD__manager_acb2067c4549d412ac402e6941930f793}\label{classGlobal__THD__manager_acb2067c4549d412ac402e6941930f793}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!remove\+\_\+thd@{remove\+\_\+thd}}
+\index{remove\+\_\+thd@{remove\+\_\+thd}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{remove\+\_\+thd()}{remove\_thd()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::remove\+\_\+thd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Removes T\+HD from global T\+HD list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGlobal__THD__manager_ab82aa13615fd9bf44dea89589773c61e}\label{classGlobal__THD__manager_ab82aa13615fd9bf44dea89589773c61e}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!set\+\_\+thread\+\_\+id\+\_\+counter@{set\+\_\+thread\+\_\+id\+\_\+counter}}
+\index{set\+\_\+thread\+\_\+id\+\_\+counter@{set\+\_\+thread\+\_\+id\+\_\+counter}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{set\+\_\+thread\+\_\+id\+\_\+counter()}{set\_thread\_id\_counter()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::set\+\_\+thread\+\_\+id\+\_\+counter (\begin{DoxyParamCaption}\item[{my\+\_\+thread\+\_\+id}]{new\+\_\+id }\end{DoxyParamCaption})}
+
+Sets thread id counter value. Only used in testing for now. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+id} & The next ID to hand out (if it\textquotesingle{}s unused). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGlobal__THD__manager_a52d3e196c17357f3d5acea3c8aca6f02}\label{classGlobal__THD__manager_a52d3e196c17357f3d5acea3c8aca6f02}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!set\+\_\+unit\+\_\+test@{set\+\_\+unit\+\_\+test}}
+\index{set\+\_\+unit\+\_\+test@{set\+\_\+unit\+\_\+test}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{set\+\_\+unit\+\_\+test()}{set\_unit\_test()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::set\+\_\+unit\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Internally used to bypass code. It enables unit test scripts to create dummy T\+HD object for testing. \mbox{\Hypertarget{classGlobal__THD__manager_ac52a7fd63b6042da22b9f0126e1a51eb}\label{classGlobal__THD__manager_ac52a7fd63b6042da22b9f0126e1a51eb}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!wait\+\_\+till\+\_\+no\+\_\+thd@{wait\+\_\+till\+\_\+no\+\_\+thd}}
+\index{wait\+\_\+till\+\_\+no\+\_\+thd@{wait\+\_\+till\+\_\+no\+\_\+thd}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{wait\+\_\+till\+\_\+no\+\_\+thd()}{wait\_till\_no\_thd()}}
+{\footnotesize\ttfamily void Global\+\_\+\+T\+H\+D\+\_\+manager\+::wait\+\_\+till\+\_\+no\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Waits until all thd are removed from global T\+HD list. In other words, get\+\_\+thd\+\_\+count to become zero. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classGlobal__THD__manager_a7306fb4d252fca9c53df1b427ba3096b}\label{classGlobal__THD__manager_a7306fb4d252fca9c53df1b427ba3096b}} 
+\index{Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}!reserved\+\_\+thread\+\_\+id@{reserved\+\_\+thread\+\_\+id}}
+\index{reserved\+\_\+thread\+\_\+id@{reserved\+\_\+thread\+\_\+id}!Global\+\_\+\+T\+H\+D\+\_\+manager@{Global\+\_\+\+T\+H\+D\+\_\+manager}}
+\subsubsection{\texorpdfstring{reserved\+\_\+thread\+\_\+id}{reserved\_thread\_id}}
+{\footnotesize\ttfamily const my\+\_\+thread\+\_\+id Global\+\_\+\+T\+H\+D\+\_\+manager\+::reserved\+\_\+thread\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+Value for thread\+\_\+id reserved for T\+H\+Ds which does not have an assigned value yet. \mbox{\hyperlink{classGlobal__THD__manager_a854e178c07d57bb7aa218f2cbca70808}{get\+\_\+new\+\_\+thread\+\_\+id()}} will never return this value. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mysqld\+\_\+thd\+\_\+manager.\+h\item 
+mysqld\+\_\+thd\+\_\+manager.\+cc\end{DoxyCompactItemize}

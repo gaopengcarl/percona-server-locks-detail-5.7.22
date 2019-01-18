@@ -1,0 +1,50 @@
+\hypertarget{classUpdate__rows__log__event__old}{}\section{Update\+\_\+rows\+\_\+log\+\_\+event\+\_\+old Class Reference}
+\label{classUpdate__rows__log__event__old}\index{Update\+\_\+rows\+\_\+log\+\_\+event\+\_\+old@{Update\+\_\+rows\+\_\+log\+\_\+event\+\_\+old}}
+
+
+{\ttfamily \#include $<$log\+\_\+event\+\_\+old.\+h$>$}
+
+Inheritance diagram for Update\+\_\+rows\+\_\+log\+\_\+event\+\_\+old\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classUpdate__rows__log__event__old}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUpdate__rows__log__event__old_a344cabef63f08898428c9886d44f41f7}\label{classUpdate__rows__log__event__old_a344cabef63f08898428c9886d44f41f7}} 
+enum \{ {\bfseries T\+Y\+P\+E\+\_\+\+C\+O\+DE} = binary\+\_\+log\+:\+:P\+R\+E\+\_\+\+G\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUpdate__rows__log__event__old_ab7933adf390ecb61174b6e1d00b6f61b}\label{classUpdate__rows__log__event__old_ab7933adf390ecb61174b6e1d00b6f61b}} 
+{\bfseries Update\+\_\+rows\+\_\+log\+\_\+event\+\_\+old} (T\+HD $\ast$, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$, ulong table\+\_\+id, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, bool is\+\_\+transactional)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUpdate__rows__log__event__old_a17f299a24a5e220399553f5be3c51ace}\label{classUpdate__rows__log__event__old_a17f299a24a5e220399553f5be3c51ace}} 
+static bool {\bfseries binlog\+\_\+row\+\_\+logging\+\_\+function} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool is\+\_\+transactional, const uchar $\ast$before\+\_\+record, const uchar $\ast$after\+\_\+record)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUpdate__rows__log__event__old_af7826130b64b4c3f25ef484f051f3b97}\label{classUpdate__rows__log__event__old_af7826130b64b4c3f25ef484f051f3b97}} 
+uchar $\ast$ {\bfseries m\+\_\+after\+\_\+image}
+\item 
+\mbox{\Hypertarget{classUpdate__rows__log__event__old_a798fc0f9a9f8765af7f9be938260cead}\label{classUpdate__rows__log__event__old_a798fc0f9a9f8765af7f9be938260cead}} 
+uchar $\ast$ {\bfseries m\+\_\+memory}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Old class for binlog events that modify existing rows to a table (event type code P\+R\+E\+\_\+\+G\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT). Such events are never produced by this version of the server, but they may be read from a relay log created by an old server. New servers create events of class \mbox{\hyperlink{classUpdate__rows__log__event}{Update\+\_\+rows\+\_\+log\+\_\+event}} (event type code U\+P\+D\+A\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT) instead. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event__old_8h}{log\+\_\+event\+\_\+old.\+h}}\item 
+log\+\_\+event\+\_\+old.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\hypertarget{classinplace__alter__handler__ctx}{}\section{inplace\+\_\+alter\+\_\+handler\+\_\+ctx Class Reference}
+\label{classinplace__alter__handler__ctx}\index{inplace\+\_\+alter\+\_\+handler\+\_\+ctx@{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$handler.\+h$>$}
+
+Inheritance diagram for inplace\+\_\+alter\+\_\+handler\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classinplace__alter__handler__ctx}
+\end{center}
+\end{figure}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+In-\/place alter handler context.
+
+This is a superclass intended to be subclassed by individual handlers in order to store handler unique context between in-\/place alter A\+PI calls.
+
+The handler is responsible for creating the object. This can be done as early as during check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter().
+
+The S\+QL layer is responsible for destroying the object. The class extends \mbox{\hyperlink{classSql__alloc}{Sql\+\_\+alloc}} so the memory will be mem root allocated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+handler.\+h\end{DoxyCompactItemize}

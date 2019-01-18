@@ -1,0 +1,703 @@
+\hypertarget{group__Query__Executor}{}\section{Query Executor}
+\label{group__Query__Executor}\index{Query Executor@{Query Executor}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga1cc817dd0c7e9e7ba403b55f4b20a3fb}\label{group__Query__Executor_ga1cc817dd0c7e9e7ba403b55f4b20a3fb}} 
+bool {\bfseries prepare\+\_\+sum\+\_\+aggregators} (\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$func\+\_\+ptr, bool need\+\_\+distinct)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga1b1125b75ed00a408f039bb83de7c480}{setup\+\_\+sum\+\_\+funcs}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$func\+\_\+ptr)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga7f64c00677c38e6f233e43f47a52aef7}{copy\+\_\+funcs}} (\mbox{\hyperlink{classMem__root__array}{Func\+\_\+ptr\+\_\+array}} $\ast$func\+\_\+ptr, const T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__Query__Executor_ga2b6b23af4fddf731279c6dfdbd084659}{setup\+\_\+tmptable\+\_\+write\+\_\+func}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\begin{DoxyCompactList}\small\item\em Setup write\+\_\+func of \mbox{\hyperlink{classQEP__tmp__table}{Q\+E\+P\+\_\+tmp\+\_\+table}} object. \end{DoxyCompactList}\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{group__Query__Executor_gacddd73f0964f6141ef2666b7ac8a3997}{sub\+\_\+select\+\_\+op}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\begin{DoxyCompactList}\small\item\em Accumulate full or partial join result in operation and send operation\textquotesingle{}s result further. \end{DoxyCompactList}\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{group__Query__Executor_ga09a751162b6ad6ce37cc4db2c77cc158}{sub\+\_\+select}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$const qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga4c3b77b483fa5b7bcefe0f38587480c8}{do\+\_\+sj\+\_\+dups\+\_\+weedout}} (T\+HD $\ast$thd, \mbox{\hyperlink{classSJ__TMP__TABLE}{S\+J\+\_\+\+T\+M\+P\+\_\+\+T\+A\+B\+LE}} $\ast$sjtbl)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga4fb800e0e68d03a1b49a9cf66fda4006}{report\+\_\+handler\+\_\+error}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, int error)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga6634e09c549559c5547496bf849a6c0d}\label{group__Query__Executor_ga6634e09c549559c5547496bf849a6c0d}} 
+int {\bfseries safe\+\_\+index\+\_\+read} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga39c30d89f411ee0d12ecd4824f9aae1a}{join\+\_\+read\+\_\+const\+\_\+table}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab, \mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}} $\ast$pos)
+\item 
+void \mbox{\hyperlink{group__Query__Executor_ga2e0154a16c989becf374e885b851aaab}{join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga9cf45a16cbecb892a847bb2ac6e92a56}{join\+\_\+read\+\_\+last\+\_\+key}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga4478c7766644e31523194a220460a9f2}\label{group__Query__Executor_ga4478c7766644e31523194a220460a9f2}} 
+int {\bfseries join\+\_\+read\+\_\+prev\+\_\+same} (\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$info)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga0d5bd1e4067c849c724d3d711584fb58}\label{group__Query__Executor_ga0d5bd1e4067c849c724d3d711584fb58}} 
+int {\bfseries join\+\_\+init\+\_\+quick\+\_\+read\+\_\+record} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga790d98d6f46425c61c7265b7cdf16778}\label{group__Query__Executor_ga790d98d6f46425c61c7265b7cdf16778}} 
+int {\bfseries read\+\_\+first\+\_\+record\+\_\+seq} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_gad4a1cc488b1586d28aa8cfd90bb875df}{join\+\_\+init\+\_\+read\+\_\+record}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\begin{DoxyCompactList}\small\item\em Prepare table for reading rows and read first record. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__Query__Executor_gaacfded5a6c9ce5c5bb279b9c993b0abc}\label{group__Query__Executor_gaacfded5a6c9ce5c5bb279b9c993b0abc}} 
+int {\bfseries join\+\_\+materialize\+\_\+derived} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga65ca6da89564963ba3ecf8928c6fbe39}\label{group__Query__Executor_ga65ca6da89564963ba3ecf8928c6fbe39}} 
+int {\bfseries join\+\_\+materialize\+\_\+semijoin} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_gab44c4ace769049e98d1b391d2918ecb9}\label{group__Query__Executor_gab44c4ace769049e98d1b391d2918ecb9}} 
+int {\bfseries join\+\_\+read\+\_\+first} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_gabd0f901c4d15cfc0dc61c7c3dc12cee5}\label{group__Query__Executor_gabd0f901c4d15cfc0dc61c7c3dc12cee5}} 
+int {\bfseries join\+\_\+read\+\_\+last} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_gaf3f237e84d9f550f9b30b62e9cc34a69}\label{group__Query__Executor_gaf3f237e84d9f550f9b30b62e9cc34a69}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries end\+\_\+send\+\_\+group} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gaa74e832cc92e35fa5e94c664b367dcad}{group\+\_\+rec\+\_\+cmp}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group, uchar $\ast$rec0, uchar $\ast$rec1)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gabf5c3ba6e3e4cec96f452e9d2ca5bf9a}{table\+\_\+rec\+\_\+cmp}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+ulonglong \mbox{\hyperlink{group__Query__Executor_ga161ae3fce537993456b85fe09b4c3d89}{unique\+\_\+hash}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, ulonglong $\ast$hash\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga0d5b7476da75f3e6068a960995ac3313}\label{group__Query__Executor_ga0d5b7476da75f3e6068a960995ac3313}} 
+ulonglong {\bfseries unique\+\_\+hash\+\_\+group} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga93219e97760f167554f60d019f3cb11f}\label{group__Query__Executor_ga93219e97760f167554f60d019f3cb11f}} 
+ulonglong {\bfseries unique\+\_\+hash\+\_\+fields} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga90a4e0bf6e706b42c25d6649e105bd87}{check\+\_\+unique\+\_\+constraint}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga0ba03c58c23ec2df563b37709e40ece2}\label{group__Query__Executor_ga0ba03c58c23ec2df563b37709e40ece2}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries end\+\_\+write\+\_\+group} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$const qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga8ce1ad15977cc2105276ffca627a3824}\label{group__Query__Executor_ga8ce1ad15977cc2105276ffca627a3824}} 
+bool {\bfseries cp\+\_\+buffer\+\_\+from\+\_\+ref} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{structst__table__ref}{T\+A\+B\+L\+E\+\_\+\+R\+EF}} $\ast$ref)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gaa0bd2dbcf106da50227e2eb4932b588d}{make\+\_\+group\+\_\+fields}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$main\+\_\+join, \mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$curr\+\_\+join)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga108fbed43151ab58878335fbb84503c1}{alloc\+\_\+group\+\_\+fields}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_ga1389fe70c557f844809a7bd780fc545a}\label{group__Query__Executor_ga1389fe70c557f844809a7bd780fc545a}} 
+int {\bfseries test\+\_\+if\+\_\+item\+\_\+cache\+\_\+changed} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCached__item}{Cached\+\_\+item}} $>$ \&list)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gaea6e7f59b9cca648046cf55fe5a95732}{setup\+\_\+copy\+\_\+fields}} (T\+HD $\ast$thd, Temp\+\_\+table\+\_\+param $\ast$param, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga6ae2b33e35bb51f5250fac64ee0d231b}{copy\+\_\+fields}} (Temp\+\_\+table\+\_\+param $\ast$param, const T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga1e985adce1ee0b0c97f2351330ba0b45}{change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gae27d7837289ad61f55a8649b343d2ffe}{change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields)
+\item 
+void \mbox{\hyperlink{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}{J\+O\+I\+N\+::exec}} ()
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga148b2123bee3ebd0718d334e9f109db8}{J\+O\+I\+N\+::rollup\+\_\+send\+\_\+data}} (uint idx)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga15c9baf548fef3d59f993a3c13575593}{J\+O\+I\+N\+::rollup\+\_\+write\+\_\+data}} (uint idx, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+Next\+\_\+select\+\_\+func \mbox{\hyperlink{group__Query__Executor_ga8a8f8266528e6e4f33f31333f5f3cd8a}{J\+O\+I\+N\+::get\+\_\+end\+\_\+select\+\_\+func}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga0f7e9ff5a681a6bcc59e6e1f9af62b76}{Q\+E\+P\+\_\+\+T\+A\+B\+::prepare\+\_\+scan}} ()
+\begin{DoxyCompactList}\small\item\em Prepare table to be scanned. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga685838679adf501ece418d4bd969f2ea}{Q\+E\+P\+\_\+\+T\+A\+B\+::use\+\_\+order}} () const
+\begin{DoxyCompactList}\small\item\em Use ordering provided by chosen index? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__Query__Executor_ga9ead874e1e879b621085292a1c98fbbc}\label{group__Query__Executor_ga9ead874e1e879b621085292a1c98fbbc}} 
+bool {\bfseries Q\+E\+P\+\_\+\+T\+A\+B\+::sort\+\_\+table} ()
+\item 
+void \mbox{\hyperlink{group__Query__Executor_gaf6ecbbe7a1950c60e06170bce55ff70e}{Q\+E\+P\+\_\+\+T\+A\+B\+::pick\+\_\+table\+\_\+access\+\_\+method}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$join\+\_\+tab)
+\item 
+void \mbox{\hyperlink{group__Query__Executor_gae69d0ee5d7d438abeff1d7d4c99abd8f}{Q\+E\+P\+\_\+\+T\+A\+B\+::set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method}} (void)
+\item 
+\mbox{\Hypertarget{group__Query__Executor_gabd9c43f5c99dab9d64e8a5723806e47b}\label{group__Query__Executor_gabd9c43f5c99dab9d64e8a5723806e47b}} 
+bool {\bfseries Q\+E\+P\+\_\+\+T\+A\+B\+::remove\+\_\+duplicates} ()
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{group__Query__Executor_ga1cbaa4a44140f41c161eaab87c25f473}{Q\+E\+P\+\_\+tmp\+\_\+table\+::end\+\_\+send}} ()
+\begin{DoxyCompactList}\small\item\em Finish rnd/index scan after accumulating records, switch ref\+\_\+array, and send accumulated records further. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__Query__Executor_ga191937944ea06a62814887a9c104a7d7}\label{group__Query__Executor_ga191937944ea06a62814887a9c104a7d7}} 
+bool {\bfseries Q\+E\+P\+\_\+\+T\+A\+B\+::pfs\+\_\+batch\+\_\+update} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Query__Executor_ga108fbed43151ab58878335fbb84503c1}\label{group__Query__Executor_ga108fbed43151ab58878335fbb84503c1}} 
+\index{Query Executor@{Query Executor}!alloc\+\_\+group\+\_\+fields@{alloc\+\_\+group\+\_\+fields}}
+\index{alloc\+\_\+group\+\_\+fields@{alloc\+\_\+group\+\_\+fields}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{alloc\+\_\+group\+\_\+fields()}{alloc\_group\_fields()}}
+{\footnotesize\ttfamily bool alloc\+\_\+group\+\_\+fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{group }\end{DoxyParamCaption})}
+
+Get a list of buffers for saveing last group.
+
+Groups are saved in reverse order for easyer check loop. \mbox{\Hypertarget{group__Query__Executor_gae27d7837289ad61f55a8649b343d2ffe}\label{group__Query__Executor_gae27d7837289ad61f55a8649b343d2ffe}} 
+\index{Query Executor@{Query Executor}!change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields@{change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields}}
+\index{change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields@{change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields()}{change\_refs\_to\_tmp\_fields()}}
+{\footnotesize\ttfamily bool change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{ref\+\_\+pointer\+\_\+array,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{res\+\_\+selected\+\_\+fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{res\+\_\+all\+\_\+fields,  }\item[{uint}]{elements,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{all\+\_\+fields }\end{DoxyParamCaption})}
+
+Change all sum\+\_\+func refs to fields to point at fields in tmp table. Change all funcs to be fields in tmp table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer \\
+\hline
+{\em ref\+\_\+pointer\+\_\+array} & array of pointers to top elements of filed list \\
+\hline
+{\em res\+\_\+selected\+\_\+fields} & new list of items of select item list \\
+\hline
+{\em res\+\_\+all\+\_\+fields} & new list of all items \\
+\hline
+{\em elements} & number of elements in select item list \\
+\hline
+{\em all\+\_\+fields} & all fields list\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga1e985adce1ee0b0c97f2351330ba0b45}\label{group__Query__Executor_ga1e985adce1ee0b0c97f2351330ba0b45}} 
+\index{Query Executor@{Query Executor}!change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields@{change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields}}
+\index{change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields@{change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields()}{change\_to\_use\_tmp\_fields()}}
+{\footnotesize\ttfamily bool change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{ref\+\_\+pointer\+\_\+array,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{res\+\_\+selected\+\_\+fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{res\+\_\+all\+\_\+fields,  }\item[{uint}]{elements,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{all\+\_\+fields }\end{DoxyParamCaption})}
+
+Change all funcs and sum\+\_\+funcs to fields in tmp table, and create new list of all items.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer \\
+\hline
+{\em ref\+\_\+pointer\+\_\+array} & array of pointers to top elements of filed list \\
+\hline
+{\em res\+\_\+selected\+\_\+fields} & new list of items of select item list \\
+\hline
+{\em res\+\_\+all\+\_\+fields} & new list of all items \\
+\hline
+{\em elements} & number of elements in select item list \\
+\hline
+{\em all\+\_\+fields} & all fields list\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em !=0} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga90a4e0bf6e706b42c25d6649e105bd87}\label{group__Query__Executor_ga90a4e0bf6e706b42c25d6649e105bd87}} 
+\index{Query Executor@{Query Executor}!check\+\_\+unique\+\_\+constraint@{check\+\_\+unique\+\_\+constraint}}
+\index{check\+\_\+unique\+\_\+constraint@{check\+\_\+unique\+\_\+constraint}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{check\+\_\+unique\+\_\+constraint()}{check\_unique\_constraint()}}
+{\footnotesize\ttfamily bool check\+\_\+unique\+\_\+constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Check unique\+\_\+constraint.
+
+Calculates record\textquotesingle{}s hash and checks whether the record given in table-\/$>$record\mbox{[}0\mbox{]} is already present in the tmp table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} of tmp table to check\\
+\hline
+\end{DoxyParams}
+This function assumes record\mbox{[}0\mbox{]} is already filled by the caller. Depending on presence of table-\/$>$group, it\textquotesingle{}s or full list of table\textquotesingle{}s fields are used to calculate hash.
+
+\begin{DoxyReturn}{Returns}
+false same record was found true record wasn\textquotesingle{}t found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_ga6ae2b33e35bb51f5250fac64ee0d231b}\label{group__Query__Executor_ga6ae2b33e35bb51f5250fac64ee0d231b}} 
+\index{Query Executor@{Query Executor}!copy\+\_\+fields@{copy\+\_\+fields}}
+\index{copy\+\_\+fields@{copy\+\_\+fields}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{copy\+\_\+fields()}{copy\_fields()}}
+{\footnotesize\ttfamily bool copy\+\_\+fields (\begin{DoxyParamCaption}\item[{Temp\+\_\+table\+\_\+param $\ast$}]{param,  }\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Make a copy of all simple S\+E\+L\+E\+CT\textquotesingle{}ed items.
+
+This is done at the start of a new group so that we can retrieve these later when the group changes. \begin{DoxyReturn}{Returns}
+false if OK, true on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_ga7f64c00677c38e6f233e43f47a52aef7}\label{group__Query__Executor_ga7f64c00677c38e6f233e43f47a52aef7}} 
+\index{Query Executor@{Query Executor}!copy\+\_\+funcs@{copy\+\_\+funcs}}
+\index{copy\+\_\+funcs@{copy\+\_\+funcs}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{copy\+\_\+funcs()}{copy\_funcs()}}
+{\footnotesize\ttfamily bool copy\+\_\+funcs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMem__root__array}{Func\+\_\+ptr\+\_\+array}} $\ast$}]{func\+\_\+ptr,  }\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Copy result of functions to record in tmp\+\_\+table.
+
+Uses the thread pointer to check for errors in some of the val\+\_\+xxx() methods called by the save\+\_\+in\+\_\+result\+\_\+field() function. T\+O\+DO\+: make the Item\+::val\+\_\+xxx() return error code
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\+\_\+ptr} & array of the function Items to copy to the tmp table \\
+\hline
+{\em thd} & pointer to the current thread for error checking \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & if OK \\
+\hline
+{\em T\+R\+UE} & on error ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga4c3b77b483fa5b7bcefe0f38587480c8}\label{group__Query__Executor_ga4c3b77b483fa5b7bcefe0f38587480c8}} 
+\index{Query Executor@{Query Executor}!do\+\_\+sj\+\_\+dups\+\_\+weedout@{do\+\_\+sj\+\_\+dups\+\_\+weedout}}
+\index{do\+\_\+sj\+\_\+dups\+\_\+weedout@{do\+\_\+sj\+\_\+dups\+\_\+weedout}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{do\+\_\+sj\+\_\+dups\+\_\+weedout()}{do\_sj\_dups\_weedout()}}
+{\footnotesize\ttfamily int do\+\_\+sj\+\_\+dups\+\_\+weedout (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classSJ__TMP__TABLE}{S\+J\+\_\+\+T\+M\+P\+\_\+\+T\+A\+B\+LE}} $\ast$}]{sjtbl }\end{DoxyParamCaption})}
+
+Semi\+Join\+Duplicate\+Elimination\+: Weed out duplicate row combinations
+
+S\+Y\+N\+P\+O\+S\+IS \mbox{\hyperlink{group__Query__Executor_ga4c3b77b483fa5b7bcefe0f38587480c8}{do\+\_\+sj\+\_\+dups\+\_\+weedout()}} thd Thread handle sjtbl Duplicate weedout table
+
+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON Try storing current record combination of outer tables (i.\+e. their rowids) in the temporary table. This records the fact that we\textquotesingle{}ve seen this record combination and also tells us if we\textquotesingle{}ve seen it before.
+
+R\+E\+T\+U\+RN -\/1 Error 1 The row combination is a duplicate (discard it) 0 The row combination is not a duplicate (continue) \mbox{\Hypertarget{group__Query__Executor_ga1cbaa4a44140f41c161eaab87c25f473}\label{group__Query__Executor_ga1cbaa4a44140f41c161eaab87c25f473}} 
+\index{Query Executor@{Query Executor}!end\+\_\+send@{end\+\_\+send}}
+\index{end\+\_\+send@{end\+\_\+send}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{end\+\_\+send()}{end\_send()}}
+{\footnotesize\ttfamily enum\+\_\+nested\+\_\+loop\+\_\+state Q\+E\+P\+\_\+tmp\+\_\+table\+::end\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finish rnd/index scan after accumulating records, switch ref\+\_\+array, and send accumulated records further. 
+
+\begin{DoxyReturn}{Returns}
+return one of enum\+\_\+nested\+\_\+loop\+\_\+state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classQEP__operation_a4faf706cddaf3ae613fe92434776df5e}{Q\+E\+P\+\_\+operation}}.
+
+\mbox{\Hypertarget{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}\label{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}} 
+\index{Query Executor@{Query Executor}!exec@{exec}}
+\index{exec@{exec}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Execute select, executor entry point.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000080}{Todo}}]When can we have here thd-\/$>$net.\+report\+\_\+error not zero?\end{DoxyRefDesc}
+
+
+\begin{DoxyNote}{Note}
+that E\+X\+P\+L\+A\+IN may come here (single-\/row derived table, uncorrelated scalar subquery in W\+H\+E\+RE clause...). 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Executor_ga8a8f8266528e6e4f33f31333f5f3cd8a}\label{group__Query__Executor_ga8a8f8266528e6e4f33f31333f5f3cd8a}} 
+\index{Query Executor@{Query Executor}!get\+\_\+end\+\_\+select\+\_\+func@{get\+\_\+end\+\_\+select\+\_\+func}}
+\index{get\+\_\+end\+\_\+select\+\_\+func@{get\+\_\+end\+\_\+select\+\_\+func}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{get\+\_\+end\+\_\+select\+\_\+func()}{get\_end\_select\_func()}}
+{\footnotesize\ttfamily Next\+\_\+select\+\_\+func J\+O\+I\+N\+::get\+\_\+end\+\_\+select\+\_\+func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rows produced by a join sweep may end up in a temporary table or be sent to a client. Setup the function of the nested loop join algorithm which handles final fully constructed and matched records.
+
+\begin{DoxyReturn}{Returns}
+end\+\_\+select function to use. This function can\textquotesingle{}t fail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_gaa74e832cc92e35fa5e94c664b367dcad}\label{group__Query__Executor_gaa74e832cc92e35fa5e94c664b367dcad}} 
+\index{Query Executor@{Query Executor}!group\+\_\+rec\+\_\+cmp@{group\+\_\+rec\+\_\+cmp}}
+\index{group\+\_\+rec\+\_\+cmp@{group\+\_\+rec\+\_\+cmp}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{group\+\_\+rec\+\_\+cmp()}{group\_rec\_cmp()}}
+{\footnotesize\ttfamily bool group\+\_\+rec\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{group,  }\item[{uchar $\ast$}]{rec0,  }\item[{uchar $\ast$}]{rec1 }\end{DoxyParamCaption})}
+
+Compare G\+R\+O\+UP BY in from tmp table\textquotesingle{}s record\mbox{[}0\mbox{]} and record\mbox{[}1\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+true records are different false records are the same 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_gad4a1cc488b1586d28aa8cfd90bb875df}\label{group__Query__Executor_gad4a1cc488b1586d28aa8cfd90bb875df}} 
+\index{Query Executor@{Query Executor}!join\+\_\+init\+\_\+read\+\_\+record@{join\+\_\+init\+\_\+read\+\_\+record}}
+\index{join\+\_\+init\+\_\+read\+\_\+record@{join\+\_\+init\+\_\+read\+\_\+record}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{join\+\_\+init\+\_\+read\+\_\+record()}{join\_init\_read\_record()}}
+{\footnotesize\ttfamily int join\+\_\+init\+\_\+read\+\_\+record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab }\end{DoxyParamCaption})}
+
+
+
+Prepare table for reading rows and read first record. 
+
+Prior to reading the table following tasks are done, (in the order of execution)\+: .) derived tables are materialized .) duplicates removed (tmp tables only) .) table is sorted with filesort (both non-\/tmp and tmp tables) After this have been done this function resets quick select, if it\textquotesingle{}s present, sets up table reading functions, and reads first record.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Ok \\
+\hline
+{\em -\/1} & End of records \\
+\hline
+{\em 1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga39c30d89f411ee0d12ecd4824f9aae1a}\label{group__Query__Executor_ga39c30d89f411ee0d12ecd4824f9aae1a}} 
+\index{Query Executor@{Query Executor}!join\+\_\+read\+\_\+const\+\_\+table@{join\+\_\+read\+\_\+const\+\_\+table}}
+\index{join\+\_\+read\+\_\+const\+\_\+table@{join\+\_\+read\+\_\+const\+\_\+table}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{join\+\_\+read\+\_\+const\+\_\+table()}{join\_read\_const\_table()}}
+{\footnotesize\ttfamily int join\+\_\+read\+\_\+const\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{tab,  }\item[{\mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}} $\ast$}]{pos }\end{DoxyParamCaption})}
+
+Reads content of constant table 
+\begin{DoxyParams}{Parameters}
+{\em tab} & table \\
+\hline
+{\em pos} & position of table in query plan \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok, one row was found or one N\+U\+LL-\/complemented row was created \\
+\hline
+{\em -\/1} & ok, no row was found and no N\+U\+LL-\/complemented row was created \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga2e0154a16c989becf374e885b851aaab}\label{group__Query__Executor_ga2e0154a16c989becf374e885b851aaab}} 
+\index{Query Executor@{Query Executor}!join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row@{join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row}}
+\index{join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row@{join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row()}{join\_read\_key\_unlock\_row()}}
+{\footnotesize\ttfamily void join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab }\end{DoxyParamCaption})}
+
+Since join\+\_\+read\+\_\+key may buffer a record, do not unlock it if it was not used in this invocation of join\+\_\+read\+\_\+key(). Only count locks, thus remembering if the record was left unused, and unlock already when pruning the current value of T\+A\+B\+L\+E\+\_\+\+R\+EF buffer. \begin{DoxySeeAlso}{See also}
+join\+\_\+read\+\_\+key() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Query__Executor_ga9cf45a16cbecb892a847bb2ac6e92a56}\label{group__Query__Executor_ga9cf45a16cbecb892a847bb2ac6e92a56}} 
+\index{Query Executor@{Query Executor}!join\+\_\+read\+\_\+last\+\_\+key@{join\+\_\+read\+\_\+last\+\_\+key}}
+\index{join\+\_\+read\+\_\+last\+\_\+key@{join\+\_\+read\+\_\+last\+\_\+key}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{join\+\_\+read\+\_\+last\+\_\+key()}{join\_read\_last\_key()}}
+{\footnotesize\ttfamily int join\+\_\+read\+\_\+last\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab }\end{DoxyParamCaption})}
+
+This function is used when optimizing away O\+R\+D\+ER BY in S\+E\+L\+E\+CT $\ast$ F\+R\+OM t1 W\+H\+E\+RE a=1 O\+R\+D\+ER BY a D\+E\+SC,b D\+E\+SC. \mbox{\Hypertarget{group__Query__Executor_gaa0bd2dbcf106da50227e2eb4932b588d}\label{group__Query__Executor_gaa0bd2dbcf106da50227e2eb4932b588d}} 
+\index{Query Executor@{Query Executor}!make\+\_\+group\+\_\+fields@{make\+\_\+group\+\_\+fields}}
+\index{make\+\_\+group\+\_\+fields@{make\+\_\+group\+\_\+fields}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{make\+\_\+group\+\_\+fields()}{make\_group\_fields()}}
+{\footnotesize\ttfamily bool make\+\_\+group\+\_\+fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{main\+\_\+join,  }\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{curr\+\_\+join }\end{DoxyParamCaption})}
+
+allocate group fields or take prepared (cached).
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+\_\+join} & join of current select \\
+\hline
+{\em curr\+\_\+join} & current join (join of current select or temporary copy of it)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & failed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_gaf6ecbbe7a1950c60e06170bce55ff70e}\label{group__Query__Executor_gaf6ecbbe7a1950c60e06170bce55ff70e}} 
+\index{Query Executor@{Query Executor}!pick\+\_\+table\+\_\+access\+\_\+method@{pick\+\_\+table\+\_\+access\+\_\+method}}
+\index{pick\+\_\+table\+\_\+access\+\_\+method@{pick\+\_\+table\+\_\+access\+\_\+method}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{pick\+\_\+table\+\_\+access\+\_\+method()}{pick\_table\_access\_method()}}
+{\footnotesize\ttfamily void Q\+E\+P\+\_\+\+T\+A\+B\+::pick\+\_\+table\+\_\+access\+\_\+method (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{join\+\_\+tab }\end{DoxyParamCaption})}
+
+Pick the appropriate access method functions
+
+Sets the functions for the selected table access method
+
+
+\begin{DoxyParams}{Parameters}
+{\em join\+\_\+tab} & \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} for this \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000081}{Todo}}]join\+\_\+init\+\_\+read\+\_\+record/join\+\_\+read\+\_\+(last$\vert$first) set tab-\/$>$read\+\_\+record.\+read\+\_\+record internally. Do the same in other first record reading functions. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Query__Executor_ga0f7e9ff5a681a6bcc59e6e1f9af62b76}\label{group__Query__Executor_ga0f7e9ff5a681a6bcc59e6e1f9af62b76}} 
+\index{Query Executor@{Query Executor}!prepare\+\_\+scan@{prepare\+\_\+scan}}
+\index{prepare\+\_\+scan@{prepare\+\_\+scan}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{prepare\+\_\+scan()}{prepare\_scan()}}
+{\footnotesize\ttfamily bool Q\+E\+P\+\_\+\+T\+A\+B\+::prepare\+\_\+scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prepare table to be scanned. 
+
+This function is the place to do any work on the table that needs to be done before table can be scanned. Currently it only materialized derived tables and semi-\/joined subqueries and binds buffer for current rowid.
+
+\begin{DoxyReturn}{Returns}
+false -\/ Ok, true -\/ error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_ga4fb800e0e68d03a1b49a9cf66fda4006}\label{group__Query__Executor_ga4fb800e0e68d03a1b49a9cf66fda4006}} 
+\index{Query Executor@{Query Executor}!report\+\_\+handler\+\_\+error@{report\+\_\+handler\+\_\+error}}
+\index{report\+\_\+handler\+\_\+error@{report\+\_\+handler\+\_\+error}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{report\+\_\+handler\+\_\+error()}{report\_handler\_error()}}
+{\footnotesize\ttfamily int report\+\_\+handler\+\_\+error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{int}]{error }\end{DoxyParamCaption})}
+
+Help function when we get some an error from the table handler. \mbox{\Hypertarget{group__Query__Executor_ga148b2123bee3ebd0718d334e9f109db8}\label{group__Query__Executor_ga148b2123bee3ebd0718d334e9f109db8}} 
+\index{Query Executor@{Query Executor}!rollup\+\_\+send\+\_\+data@{rollup\+\_\+send\+\_\+data}}
+\index{rollup\+\_\+send\+\_\+data@{rollup\+\_\+send\+\_\+data}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{rollup\+\_\+send\+\_\+data()}{rollup\_send\_data()}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+::rollup\+\_\+send\+\_\+data (\begin{DoxyParamCaption}\item[{uint}]{idx }\end{DoxyParamCaption})}
+
+Send all rollup levels higher than the current one to the client.
+
+{\bfseries S\+A\+M\+P\+LE} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT a, b, c SUM(b) FROM t1 GROUP BY a,b WITH \mbox{\hyperlink{structst__rollup}{ROLLUP}}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Level we are on\+:
+\begin{DoxyItemize}
+\item 0 = Total sum level
+\item 1 = First group changed (a)
+\item 2 = Second group changed (a,b)
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & If send\+\_\+data\+\_\+failed() \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga15c9baf548fef3d59f993a3c13575593}\label{group__Query__Executor_ga15c9baf548fef3d59f993a3c13575593}} 
+\index{Query Executor@{Query Executor}!rollup\+\_\+write\+\_\+data@{rollup\+\_\+write\+\_\+data}}
+\index{rollup\+\_\+write\+\_\+data@{rollup\+\_\+write\+\_\+data}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{rollup\+\_\+write\+\_\+data()}{rollup\_write\_data()}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+::rollup\+\_\+write\+\_\+data (\begin{DoxyParamCaption}\item[{uint}]{idx,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table\+\_\+arg }\end{DoxyParamCaption})}
+
+Write all rollup levels higher than the current one to a temp table.
+
+{\bfseries S\+A\+M\+P\+LE} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT a, b, SUM(c) FROM t1 GROUP BY a,b WITH \mbox{\hyperlink{structst__rollup}{ROLLUP}}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Level we are on\+:
+\begin{DoxyItemize}
+\item 0 = Total sum level
+\item 1 = First group changed (a)
+\item 2 = Second group changed (a,b) 
+\end{DoxyItemize}\\
+\hline
+{\em table} & reference to temp table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & if write\+\_\+data\+\_\+failed() \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_gae69d0ee5d7d438abeff1d7d4c99abd8f}\label{group__Query__Executor_gae69d0ee5d7d438abeff1d7d4c99abd8f}} 
+\index{Query Executor@{Query Executor}!set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method@{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method}}
+\index{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method@{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method()}{set\_pushed\_table\_access\_method()}}
+{\footnotesize\ttfamily void Q\+E\+P\+\_\+\+T\+A\+B\+::set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Install the appropriate \textquotesingle{}linked\textquotesingle{} access method functions if this part of the join have been converted to pushed join. Setup modified access function for children of pushed joins.
+
+Is child of a pushed join operation\+: Replace access functions with its linked counterpart. ... Which is effectively a N\+O\+OP as the row is already fetched together with the root of the linked operation.\mbox{\Hypertarget{group__Query__Executor_gaea6e7f59b9cca648046cf55fe5a95732}\label{group__Query__Executor_gaea6e7f59b9cca648046cf55fe5a95732}} 
+\index{Query Executor@{Query Executor}!setup\+\_\+copy\+\_\+fields@{setup\+\_\+copy\+\_\+fields}}
+\index{setup\+\_\+copy\+\_\+fields@{setup\+\_\+copy\+\_\+fields}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{setup\+\_\+copy\+\_\+fields()}{setup\_copy\_fields()}}
+{\footnotesize\ttfamily bool setup\+\_\+copy\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Temp\+\_\+table\+\_\+param $\ast$}]{param,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{ref\+\_\+pointer\+\_\+array,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{res\+\_\+selected\+\_\+fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{res\+\_\+all\+\_\+fields,  }\item[{uint}]{elements,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{all\+\_\+fields }\end{DoxyParamCaption})}
+
+Setup copy\+\_\+fields to save fields at start of new group.
+
+Setup copy\+\_\+fields to save fields at start of new group
+
+Only F\+I\+E\+L\+D\+\_\+\+I\+T\+EM\+:s and F\+U\+N\+C\+\_\+\+I\+T\+EM\+:s needs to be saved between groups. Change old item\+\_\+field to use a new field with points at saved fieldvalue This function is only called before use of send\+\_\+result\+\_\+set\+\_\+metadata.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer \\
+\hline
+{\em param} & temporary table parameters \\
+\hline
+{\em ref\+\_\+pointer\+\_\+array} & array of pointers to top elements of filed list \\
+\hline
+{\em res\+\_\+selected\+\_\+fields} & new list of items of select item list \\
+\hline
+{\em res\+\_\+all\+\_\+fields} & new list of all items \\
+\hline
+{\em elements} & number of elements in select item list \\
+\hline
+{\em all\+\_\+fields} & all fields list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000082}{Todo}}]In most cases this result will be sent to the user. This should be changed to use copy\+\_\+int or copy\+\_\+real depending on how the value is to be used\+: In some cases this may be an argument in a group function, like\+: IF(I\+S\+N\+U\+L\+L(col),0,C\+O\+U\+N\+T($\ast$))\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em !=0} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga1b1125b75ed00a408f039bb83de7c480}\label{group__Query__Executor_ga1b1125b75ed00a408f039bb83de7c480}} 
+\index{Query Executor@{Query Executor}!setup\+\_\+sum\+\_\+funcs@{setup\+\_\+sum\+\_\+funcs}}
+\index{setup\+\_\+sum\+\_\+funcs@{setup\+\_\+sum\+\_\+funcs}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{setup\+\_\+sum\+\_\+funcs()}{setup\_sum\_funcs()}}
+{\footnotesize\ttfamily bool setup\+\_\+sum\+\_\+funcs (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$}]{func\+\_\+ptr }\end{DoxyParamCaption})}
+
+Call \+::setup for all sum functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em func\+\_\+ptr} & sum function list\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & ok \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Executor_ga2b6b23af4fddf731279c6dfdbd084659}\label{group__Query__Executor_ga2b6b23af4fddf731279c6dfdbd084659}} 
+\index{Query Executor@{Query Executor}!setup\+\_\+tmptable\+\_\+write\+\_\+func@{setup\+\_\+tmptable\+\_\+write\+\_\+func}}
+\index{setup\+\_\+tmptable\+\_\+write\+\_\+func@{setup\+\_\+tmptable\+\_\+write\+\_\+func}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{setup\+\_\+tmptable\+\_\+write\+\_\+func()}{setup\_tmptable\_write\_func()}}
+{\footnotesize\ttfamily void setup\+\_\+tmptable\+\_\+write\+\_\+func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab }\end{DoxyParamCaption})}
+
+
+
+Setup write\+\_\+func of \mbox{\hyperlink{classQEP__tmp__table}{Q\+E\+P\+\_\+tmp\+\_\+table}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em join\+\_\+tab} & \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} of a tmp table\\
+\hline
+\end{DoxyParams}
+Function sets up write\+\_\+func according to how \mbox{\hyperlink{classQEP__tmp__table}{Q\+E\+P\+\_\+tmp\+\_\+table}} object that is attached to the given join\+\_\+tab will be used in the query. \mbox{\Hypertarget{group__Query__Executor_ga09a751162b6ad6ce37cc4db2c77cc158}\label{group__Query__Executor_ga09a751162b6ad6ce37cc4db2c77cc158}} 
+\index{Query Executor@{Query Executor}!sub\+\_\+select@{sub\+\_\+select}}
+\index{sub\+\_\+select@{sub\+\_\+select}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{sub\+\_\+select()}{sub\_select()}}
+{\footnotesize\ttfamily enum\+\_\+nested\+\_\+loop\+\_\+state sub\+\_\+select (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$const}]{qep\+\_\+tab,  }\item[{bool}]{end\+\_\+of\+\_\+records }\end{DoxyParamCaption})}
+
+Retrieve records ends with a given beginning from the result of a join.
+
+S\+Y\+N\+P\+O\+S\+IS \mbox{\hyperlink{group__Query__Executor_ga09a751162b6ad6ce37cc4db2c77cc158}{sub\+\_\+select()}} join pointer to the structure providing all context info for the query join\+\_\+tab the first next table of the execution plan to be retrieved end\+\_\+records true when we need to perform final steps of retrival ~\newline
+ D\+E\+S\+C\+R\+I\+P\+T\+I\+ON For a given partial join record consisting of records from the tables preceding the table join\+\_\+tab in the execution plan, the function retrieves all matching full records from the result set and send them to the result set stream.
+
+\begin{DoxyNote}{Note}
+The function effectively implements the final (n-\/k) nested loops of nested loops join algorithm, where k is the ordinal number of the join\+\_\+tab table and n is the total number of tables in the join query. It performs nested loops joins with all conjunctive predicates from the where condition pushed as low to the tables as possible. E.\+g. for the query 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM t1,t2,t3}
+\DoxyCodeLine{WHERE t1.a=t2.a AND t2.b=t3.b AND t1.a BETWEEN 5 AND 9}
+\end{DoxyCode}
+ the predicate (t1.\+a B\+E\+T\+W\+E\+EN 5 A\+ND 9) will be pushed to table t1, given the selected plan prescribes to nest retrievals of the joined tables in the following order\+: t1,t2,t3. A pushed down predicate are attached to the table which it pushed to, at the field join\+\_\+tab-\/$>$cond. When executing a nested loop of level k the function runs through the rows of \textquotesingle{}join\+\_\+tab\textquotesingle{} and for each row checks the pushed condition attached to the table. If it is false the function moves to the next row of the table. If the condition is true the function recursively executes (n-\/k-\/1) remaining embedded nested loops. The situation becomes more complicated if outer joins are involved in the execution plan. In this case the pushed down predicates can be checked only at certain conditions. Suppose for the query 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM t1 LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t2,t3) ON t3.a=t1.a}
+\DoxyCodeLine{WHERE t1>2 AND (t2.b>5 OR t2.b IS NULL)}
+\end{DoxyCode}
+ the optimizer has chosen a plan with the table order t1,t2,t3. The predicate P1=t1$>$2 will be pushed down to the table t1, while the predicate P2=(t2.\+b$>$5 OR t2.\+b IS N\+U\+LL) will be attached to the table t2. But the second predicate can not be unconditionally tested right after a row from t2 has been read. This can be done only after the first row with t3.\+a=t1.\+a has been encountered. Thus, the second predicate P2 is supplied with a guarded value that are stored in the field \textquotesingle{}found\textquotesingle{} of the first inner table for the outer join (table t2). When the first row with t3.\+a=t1.\+a for the current row of table t1 appears, the value becomes true. For now on the predicate is evaluated immediately after the row of table t2 has been read. When the first row with t3.\+a=t1.\+a has been encountered all conditions attached to the inner tables t2,t3 must be evaluated. Only when all of them are true the row is sent to the output stream. If not, the function returns to the lowest nest level that has a false attached condition. The predicates from on expressions are also pushed down. If in the the above example the on expression were (t3.\+a=t1.\+a A\+ND t2.\+a=t1.\+a), then t1.\+a=t2.\+a would be pushed down to table t2, and without any guard. If after the run through all rows of table t2, the first inner table for the outer join operation, it turns out that no matches are found for the current row of t1, then current row from table t1 is complemented by nulls for t2 and t3. Then the pushed down predicates are checked for the composed row almost in the same way as it had been done for the first row with a match. The only difference is the predicates from on expressions are not checked.
+\end{DoxyNote}
+\begin{DoxyParagraph}{}
+{\bfseries I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function forms output rows for a current partial join of k tables tables recursively. For each partial join record ending with a certain row from join\+\_\+tab it calls sub\+\_\+select that builds all possible matching tails from the result set. To be able check predicates conditionally items of the class \mbox{\hyperlink{classItem__func__trig__cond}{Item\+\_\+func\+\_\+trig\+\_\+cond}} are employed. An object of this class is constructed from an item of class C\+O\+ND and a pointer to a guarding boolean variable. When the value of the guard variable is true the value of the object is the same as the value of the predicate, otherwise it\textquotesingle{}s just returns true. To carry out a return to a nested loop level of join table t the pointer to t is remembered in the field \textquotesingle{}return\+\_\+tab\textquotesingle{} of the join structure. Consider the following query\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM t1,}
+\DoxyCodeLine{              LEFT \mbox{\hyperlink{classJOIN}{JOIN}}}
+\DoxyCodeLine{              (t2, t3 LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t4,t5) ON t5.a=t3.a)}
+\DoxyCodeLine{              ON t4.a=t2.a}
+\DoxyCodeLine{   WHERE (t2.b=5 OR t2.b IS NULL) AND (t4.b=2 OR t4.b IS NULL)}
+\end{DoxyCode}
+ Suppose the chosen execution plan dictates the order t1,t2,t3,t4,t5 and suppose for a given joined rows from tables t1,t2,t3 there are no rows in the result set yet. When first row from t5 that satisfies the on condition t5.\+a=t3.\+a is found, the pushed down predicate t4.\+b=2 OR t4.\+b IS N\+U\+LL becomes \textquotesingle{}activated\textquotesingle{}, as well the predicate t4.\+a=t2.\+a. But the predicate (t2.\+b=5 OR t2.\+b IS N\+U\+LL) can not be checked until t4.\+a=t2.\+a becomes true. In order not to re-\/evaluate the predicates that were already evaluated as attached pushed down predicates, a pointer to the the first most inner unmatched table is maintained in join\+\_\+tab-\/$>$first\+\_\+unmatched. Thus, when the first row from t5 with t5.\+a=t3.\+a is found this pointer for t5 is changed from t4 to t2. ~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+{\bfseries S\+T\+R\+U\+C\+T\+U\+RE} {\bfseries N\+O\+T\+ES} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+join\+\_\+tab-\/$>$first\+\_\+unmatched points always backwards to the first inner table of the embedding nested join, if any.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{Parameters}
+{\em join} & pointer to the structure providing all context info for the query \\
+\hline
+{\em join\+\_\+tab} & the first next table of the execution plan to be retrieved \\
+\hline
+{\em end\+\_\+records} & true when we need to perform final steps of retrival ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return one of enum\+\_\+nested\+\_\+loop\+\_\+state, except N\+E\+S\+T\+E\+D\+\_\+\+L\+O\+O\+P\+\_\+\+N\+O\+\_\+\+M\+O\+R\+E\+\_\+\+R\+O\+WS. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_gacddd73f0964f6141ef2666b7ac8a3997}\label{group__Query__Executor_gacddd73f0964f6141ef2666b7ac8a3997}} 
+\index{Query Executor@{Query Executor}!sub\+\_\+select\+\_\+op@{sub\+\_\+select\+\_\+op}}
+\index{sub\+\_\+select\+\_\+op@{sub\+\_\+select\+\_\+op}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{sub\+\_\+select\+\_\+op()}{sub\_select\_op()}}
+{\footnotesize\ttfamily enum\+\_\+nested\+\_\+loop\+\_\+state sub\+\_\+select\+\_\+op (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{qep\+\_\+tab,  }\item[{bool}]{end\+\_\+of\+\_\+records }\end{DoxyParamCaption})}
+
+
+
+Accumulate full or partial join result in operation and send operation\textquotesingle{}s result further. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & pointer to the structure providing all context info for the query \\
+\hline
+{\em join\+\_\+tab} & the \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} object to which the operation is attached \\
+\hline
+{\em end\+\_\+records} & T\+R\+UE $<$=$>$ all records were accumulated, send them further\\
+\hline
+\end{DoxyParams}
+This function accumulates records, one by one, in Q\+EP operation\textquotesingle{}s buffer by calling op-\/$>$put\+\_\+record(). When there is no more records to save, in this case the end\+\_\+of\+\_\+records argument == true, function tells Q\+EP operation to send records further by calling op-\/$>$send\+\_\+records(). When all records are sent this function passes \textquotesingle{}end\+\_\+of\+\_\+records\textquotesingle{} signal further by calling \mbox{\hyperlink{group__Query__Executor_ga09a751162b6ad6ce37cc4db2c77cc158}{sub\+\_\+select()}} with end\+\_\+of\+\_\+records argument set to true. After that op-\/$>$end\+\_\+send() is called to tell Q\+EP operation that it could end internal buffer scan.
+
+\begin{DoxyNote}{Note}
+This function is not expected to be called when dynamic range scan is used to scan join\+\_\+tab because join cache is disabled for such scan and range scans aren\textquotesingle{}t used for tmp tables. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+setup\+\_\+join\+\_\+buffering For caches the function implements the algorithmic schema for both Blocked Nested Loop Join and Batched \mbox{\hyperlink{classKey}{Key}} Access Join. The difference can be seen only at the level of of the implementation of the put\+\_\+record and send\+\_\+records virtual methods for the cache object associated with the join\+\_\+tab.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+return one of enum\+\_\+nested\+\_\+loop\+\_\+state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_gabf5c3ba6e3e4cec96f452e9d2ca5bf9a}\label{group__Query__Executor_gabf5c3ba6e3e4cec96f452e9d2ca5bf9a}} 
+\index{Query Executor@{Query Executor}!table\+\_\+rec\+\_\+cmp@{table\+\_\+rec\+\_\+cmp}}
+\index{table\+\_\+rec\+\_\+cmp@{table\+\_\+rec\+\_\+cmp}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{table\+\_\+rec\+\_\+cmp()}{table\_rec\_cmp()}}
+{\footnotesize\ttfamily bool table\+\_\+rec\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Compare G\+R\+O\+UP BY in from tmp table\textquotesingle{}s record\mbox{[}0\mbox{]} and record\mbox{[}1\mbox{]}
+
+\begin{DoxyReturn}{Returns}
+true records are different false records are the same 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_ga161ae3fce537993456b85fe09b4c3d89}\label{group__Query__Executor_ga161ae3fce537993456b85fe09b4c3d89}} 
+\index{Query Executor@{Query Executor}!unique\+\_\+hash@{unique\+\_\+hash}}
+\index{unique\+\_\+hash@{unique\+\_\+hash}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{unique\+\_\+hash()}{unique\_hash()}}
+{\footnotesize\ttfamily ulonglong unique\+\_\+hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{ulonglong $\ast$}]{hash\+\_\+val }\end{DoxyParamCaption})}
+
+Generate hash for a field
+
+\begin{DoxyReturn}{Returns}
+generated hash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Executor_ga685838679adf501ece418d4bd969f2ea}\label{group__Query__Executor_ga685838679adf501ece418d4bd969f2ea}} 
+\index{Query Executor@{Query Executor}!use\+\_\+order@{use\+\_\+order}}
+\index{use\+\_\+order@{use\+\_\+order}!Query Executor@{Query Executor}}
+\subsubsection{\texorpdfstring{use\+\_\+order()}{use\_order()}}
+{\footnotesize\ttfamily bool Q\+E\+P\+\_\+\+T\+A\+B\+::use\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Use ordering provided by chosen index? 
+
+Check if access to this \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} has to retrieve rows in sorted order as defined by the ordered index used to access this table. 

@@ -1,0 +1,189 @@
+\hypertarget{item__geofunc__internal_8h}{}\section{item\+\_\+geofunc\+\_\+internal.\+h File Reference}
+\label{item__geofunc__internal_8h}\index{item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}}
+
+
+This file defines common build blocks of G\+IS functions.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$m\+\_\+ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+geofunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gis\+\_\+bg\+\_\+traits.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/geometry/geometry.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/geometry/index/rtree.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range.\+hpp$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBG__models}{B\+G\+\_\+models$<$ Coordinate\+System\+Type $>$}}
+\item 
+class \mbox{\hyperlink{classBG__models_3_01boost_1_1geometry_1_1cs_1_1spherical__equatorial_3_01boost_1_1geometry_1_1degree_01_4_01_4}{B\+G\+\_\+models$<$ boost\+::geometry\+::cs\+::spherical\+\_\+equatorial$<$ boost\+::geometry\+::degree $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{structbgpt__lt}{bgpt\+\_\+lt}}
+\item 
+struct \mbox{\hyperlink{structbgpt__eq}{bgpt\+\_\+eq}}
+\item 
+class \mbox{\hyperlink{classVar__resetter}{Var\+\_\+resetter$<$ Valtype $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a17f2e729a629eee9f5b7371c357f5e25}\label{item__geofunc__internal_8h_a17f2e729a629eee9f5b7371c357f5e25}} 
+\#define {\bfseries T\+Y\+P\+E\+N\+A\+ME}~typename
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_ac39890f9a328a7325394be95e0b28b8f}\label{item__geofunc__internal_8h_ac39890f9a328a7325394be95e0b28b8f}} 
+\#define {\bfseries G\+I\+S\+\_\+\+Z\+E\+RO}~0.\+00000000001
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_ad6db0975b100d9bb7f267ee5e2eaf6af}\label{item__geofunc__internal_8h_ad6db0975b100d9bb7f267ee5e2eaf6af}} 
+typedef bgm\+::point$<$ double, 2, bgcs\+::cartesian $>$ {\bfseries B\+G\+\_\+point}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a557148f2289f1921556f04935b0f016b}\label{item__geofunc__internal_8h_a557148f2289f1921556f04935b0f016b}} 
+typedef bgm\+::box$<$ B\+G\+\_\+point $>$ {\bfseries B\+G\+\_\+box}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a5ecbaf550c479730c27207562263c12c}\label{item__geofunc__internal_8h_a5ecbaf550c479730c27207562263c12c}} 
+typedef std\+::pair$<$ B\+G\+\_\+box, size\+\_\+t $>$ {\bfseries B\+G\+\_\+rtree\+\_\+entry}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a700d4d561179a70f14ed244b7221a6e4}\label{item__geofunc__internal_8h_a700d4d561179a70f14ed244b7221a6e4}} 
+typedef std\+::vector$<$ B\+G\+\_\+rtree\+\_\+entry $>$ {\bfseries B\+G\+\_\+rtree\+\_\+entries}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a22897bce5a1ac298396f3377c4adac7b}\label{item__geofunc__internal_8h_a22897bce5a1ac298396f3377c4adac7b}} 
+typedef bgi\+::rtree$<$ B\+G\+\_\+rtree\+\_\+entry, bgi\+::quadratic$<$ 64 $>$ $>$ {\bfseries Rtree\+\_\+index}
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a3319b90f39ff1b940b59ea0136526185}\label{item__geofunc__internal_8h_a3319b90f39ff1b940b59ea0136526185}} 
+typedef std\+::vector$<$ B\+G\+\_\+rtree\+\_\+entry $>$ {\bfseries Rtree\+\_\+result}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{item__geofunc__internal_8h_a351ac61f5e86431fd379a7c77d64e432}{simplify\+\_\+multi\+\_\+geometry}} (String $\ast$str, String $\ast$result\+\_\+buffer)
+\item 
+void \mbox{\hyperlink{item__geofunc__internal_8h_a7dc12de3e4aa20476cbc32c6657e612f}{handle\+\_\+gis\+\_\+exception}} (const char $\ast$funcname)
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_ac3fb5b25696e677fd2a88cd4e8493a03}\label{item__geofunc__internal_8h_ac3fb5b25696e677fd2a88cd4e8493a03}} 
+void {\bfseries make\+\_\+bg\+\_\+box} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g, B\+G\+\_\+box $\ast$box)
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a6a1ada470ea7b74961a4d3789cc363e7}\label{item__geofunc__internal_8h_a6a1ada470ea7b74961a4d3789cc363e7}} 
+bool {\bfseries is\+\_\+box\+\_\+valid} (const B\+G\+\_\+box \&box)
+\item 
+void \mbox{\hyperlink{item__geofunc__internal_8h_a626ed85fbd5ee4745466d6aea9b305b4}{make\+\_\+rtree}} (const B\+G\+\_\+geometry\+\_\+collection\+::\+Geometry\+\_\+list \&gl, Rtree\+\_\+index $\ast$rtree)
+\item 
+{\footnotesize template$<$typename Multi\+Geometry $>$ }\\void \mbox{\hyperlink{item__geofunc__internal_8h_a22b406836ec09c006fae342ae8124573}{make\+\_\+rtree\+\_\+bggeom}} (const Multi\+Geometry \&mg, Rtree\+\_\+index $\ast$rtree)
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_ae05b1df1d1fc6d7df347dc31eaa41b0b}\label{item__geofunc__internal_8h_ae05b1df1d1fc6d7df347dc31eaa41b0b}} 
+\mbox{\hyperlink{classGis__geometry__collection}{Gis\+\_\+geometry\+\_\+collection}} $\ast$ {\bfseries empty\+\_\+collection} (String $\ast$str, uint32 srid)
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_ab873126ee7b8724aebdc8cff787e935f}\label{item__geofunc__internal_8h_ab873126ee7b8724aebdc8cff787e935f}} 
+bool {\bfseries is\+\_\+empty\+\_\+geocollection} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g)
+\item 
+\mbox{\Hypertarget{item__geofunc__internal_8h_a52607f6dd2c95740647fba47865785f5}\label{item__geofunc__internal_8h_a52607f6dd2c95740647fba47865785f5}} 
+bool {\bfseries is\+\_\+empty\+\_\+geocollection} (const String \&wkbres)
+\item 
+{\footnotesize template$<$typename B\+G\+\_\+geotype $>$ }\\bool \mbox{\hyperlink{item__geofunc__internal_8h_a289d8f82176492568f43f198ef4caeb4}{post\+\_\+fix\+\_\+result}} (\mbox{\hyperlink{classBG__result__buf__mgr}{B\+G\+\_\+result\+\_\+buf\+\_\+mgr}} $\ast$resbuf\+\_\+mgr, B\+G\+\_\+geotype \&geout, String $\ast$res)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines common build blocks of G\+IS functions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__geofunc__internal_8h_a7dc12de3e4aa20476cbc32c6657e612f}\label{item__geofunc__internal_8h_a7dc12de3e4aa20476cbc32c6657e612f}} 
+\index{item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}!handle\+\_\+gis\+\_\+exception@{handle\+\_\+gis\+\_\+exception}}
+\index{handle\+\_\+gis\+\_\+exception@{handle\+\_\+gis\+\_\+exception}!item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{handle\+\_\+gis\+\_\+exception()}{handle\_gis\_exception()}}
+{\footnotesize\ttfamily void handle\+\_\+gis\+\_\+exception (\begin{DoxyParamCaption}\item[{const char $\ast$}]{funcname }\end{DoxyParamCaption})}
+
+Handle a G\+IS exception of any type.
+
+This function constitutes the exception handling barrier between Boost.\+Geometry and My\+S\+QL code. It handles all exceptions thrown in G\+IS code and raises the corresponding error in My\+S\+QL.
+
+Pattern for use in other functions\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  something\_that\_throws();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{catch} (...)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{item__geofunc__internal_8h_a7dc12de3e4aa20476cbc32c6657e612f}{handle\_gis\_exception}}(\textcolor{stringliteral}{"st\_foo"});}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Other exception handling code put into the catch block, before or after the call to \mbox{\hyperlink{item__geofunc__internal_8h_a7dc12de3e4aa20476cbc32c6657e612f}{handle\+\_\+gis\+\_\+exception()}}, must not throw exceptions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em funcname} & Function name for use in error message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item__geofunc__internal_8h_a626ed85fbd5ee4745466d6aea9b305b4}\label{item__geofunc__internal_8h_a626ed85fbd5ee4745466d6aea9b305b4}} 
+\index{item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}!make\+\_\+rtree@{make\+\_\+rtree}}
+\index{make\+\_\+rtree@{make\+\_\+rtree}!item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{make\+\_\+rtree()}{make\_rtree()}}
+{\footnotesize\ttfamily void make\+\_\+rtree (\begin{DoxyParamCaption}\item[{const B\+G\+\_\+geometry\+\_\+collection\+::\+Geometry\+\_\+list \&}]{gl,  }\item[{Rtree\+\_\+index $\ast$}]{rtree }\end{DoxyParamCaption})}
+
+Build an rtree set using a geometry collection. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em gl} & geometry object pointers container. \\
+\hline
+\mbox{\texttt{ out}}  & {\em rtree} & entries which can be used to build an rtree. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item__geofunc__internal_8h_a22b406836ec09c006fae342ae8124573}\label{item__geofunc__internal_8h_a22b406836ec09c006fae342ae8124573}} 
+\index{item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}!make\+\_\+rtree\+\_\+bggeom@{make\+\_\+rtree\+\_\+bggeom}}
+\index{make\+\_\+rtree\+\_\+bggeom@{make\+\_\+rtree\+\_\+bggeom}!item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{make\+\_\+rtree\+\_\+bggeom()}{make\_rtree\_bggeom()}}
+{\footnotesize\ttfamily template$<$typename Multi\+Geometry $>$ \\
+void make\+\_\+rtree\+\_\+bggeom (\begin{DoxyParamCaption}\item[{const Multi\+Geometry \&}]{mg,  }\item[{Rtree\+\_\+index $\ast$}]{rtree }\end{DoxyParamCaption})}
+
+Build an rtree set using array of Boost.\+Geometry objects, which are components of a multi geometry. 
+\begin{DoxyParams}{Parameters}
+{\em mg} & the multi geometry. \\
+\hline
+{\em rtree} & the rtree to build. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item__geofunc__internal_8h_a289d8f82176492568f43f198ef4caeb4}\label{item__geofunc__internal_8h_a289d8f82176492568f43f198ef4caeb4}} 
+\index{item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}!post\+\_\+fix\+\_\+result@{post\+\_\+fix\+\_\+result}}
+\index{post\+\_\+fix\+\_\+result@{post\+\_\+fix\+\_\+result}!item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{post\+\_\+fix\+\_\+result()}{post\_fix\_result()}}
+{\footnotesize\ttfamily template$<$typename B\+G\+\_\+geotype $>$ \\
+bool post\+\_\+fix\+\_\+result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBG__result__buf__mgr}{B\+G\+\_\+result\+\_\+buf\+\_\+mgr}} $\ast$}]{resbuf\+\_\+mgr,  }\item[{B\+G\+\_\+geotype \&}]{geout,  }\item[{String $\ast$}]{res }\end{DoxyParamCaption})}
+
+For every \mbox{\hyperlink{classGeometry}{Geometry}} object write-\/accessed by a boost geometry function, i.\+e. those passed as out parameter into set operation functions, call this function before using the result object\textquotesingle{}s data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em resbuf\+\_\+mgr} & tracks the result buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an error occurred or if the geometry is an empty collection; false if no error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc__internal_8h_a351ac61f5e86431fd379a7c77d64e432}\label{item__geofunc__internal_8h_a351ac61f5e86431fd379a7c77d64e432}} 
+\index{item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}!simplify\+\_\+multi\+\_\+geometry@{simplify\+\_\+multi\+\_\+geometry}}
+\index{simplify\+\_\+multi\+\_\+geometry@{simplify\+\_\+multi\+\_\+geometry}!item\+\_\+geofunc\+\_\+internal.\+h@{item\+\_\+geofunc\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{simplify\+\_\+multi\+\_\+geometry()}{simplify\_multi\_geometry()}}
+{\footnotesize\ttfamily bool simplify\+\_\+multi\+\_\+geometry (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{String $\ast$}]{result\+\_\+buffer }\end{DoxyParamCaption})}
+
+Simplify multi-\/geometry data. If str contains a multi-\/geometry or geometry collection with one component, the component is made as content of str. If str contains a nested geometry collection, the effective concrete geometry object is returned. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em str} & A string buffer containing a G\+E\+O\+M\+E\+T\+RY byte string. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result\+\_\+buffer} & if not N\+U\+LL and if a simplification is to be done, we will copy the G\+E\+O\+M\+E\+T\+RY byte string from str into result\+\_\+buffer and simplify the one stored in result\+\_\+buffer, and the one in str is intact. If there is any data in result\+\_\+buffer before calling this function, it is overwritten; If no simplification done, the result\+\_\+buffer is intact if it is provided. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the geometry is simplified or not. 
+\end{DoxyReturn}

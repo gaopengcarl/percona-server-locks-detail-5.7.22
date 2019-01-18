@@ -1,0 +1,125 @@
+\hypertarget{classMutex__cond__array}{}\section{Mutex\+\_\+cond\+\_\+array Class Reference}
+\label{classMutex__cond__array}\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMutex__cond__array_a7daf69af88f2693e9d8ba87a5fa59c2b}{Mutex\+\_\+cond\+\_\+array}} (\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$global\+\_\+lock)
+\item 
+\mbox{\Hypertarget{classMutex__cond__array_a9dd09088240c27e11c270c43ff6c212b}\label{classMutex__cond__array_a9dd09088240c27e11c270c43ff6c212b}} 
+\mbox{\hyperlink{classMutex__cond__array_a9dd09088240c27e11c270c43ff6c212b}{$\sim$\+Mutex\+\_\+cond\+\_\+array}} ()
+\begin{DoxyCompactList}\small\item\em Destroy this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMutex__cond__array_acefa8a4be4f750ef387b6cdcae78f1da}\label{classMutex__cond__array_acefa8a4be4f750ef387b6cdcae78f1da}} 
+void \mbox{\hyperlink{classMutex__cond__array_acefa8a4be4f750ef387b6cdcae78f1da}{lock}} (int n) const
+\begin{DoxyCompactList}\small\item\em Lock the n\textquotesingle{}th mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMutex__cond__array_ab2d612110e1544c730ab0e9986f75762}\label{classMutex__cond__array_ab2d612110e1544c730ab0e9986f75762}} 
+void \mbox{\hyperlink{classMutex__cond__array_ab2d612110e1544c730ab0e9986f75762}{unlock}} (int n) const
+\begin{DoxyCompactList}\small\item\em Unlock the n\textquotesingle{}th mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMutex__cond__array_a814e7f07b28928ffe98a471581625775}\label{classMutex__cond__array_a814e7f07b28928ffe98a471581625775}} 
+void \mbox{\hyperlink{classMutex__cond__array_a814e7f07b28928ffe98a471581625775}{broadcast}} (int n) const
+\begin{DoxyCompactList}\small\item\em Broadcast the n\textquotesingle{}th condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMutex__cond__array_aae15c5c36f1d88f44f8ec8672a827d22}{assert\+\_\+owner}} (int n) const
+\item 
+void \mbox{\hyperlink{classMutex__cond__array_a944367c6618c3f1c766511fdfc10eff8}{assert\+\_\+not\+\_\+owner}} (int n) const
+\item 
+bool \mbox{\hyperlink{classMutex__cond__array_a3d35f8265bc0ba163ca0c6bb36ba96d9}{wait}} (const T\+HD $\ast$thd, int sidno, struct timespec $\ast$abstime) const
+\item 
+\mbox{\Hypertarget{classMutex__cond__array_a21299141e0c3205b4ab6545621f9526e}\label{classMutex__cond__array_a21299141e0c3205b4ab6545621f9526e}} 
+void \mbox{\hyperlink{classMutex__cond__array_a21299141e0c3205b4ab6545621f9526e}{enter\+\_\+cond}} (T\+HD $\ast$thd, int n, P\+S\+I\+\_\+stage\+\_\+info $\ast$stage, P\+S\+I\+\_\+stage\+\_\+info $\ast$old\+\_\+stage) const
+\begin{DoxyCompactList}\small\item\em Execute T\+H\+D\+::enter\+\_\+cond for the n\textquotesingle{}th condition variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMutex__cond__array_a06799cb9027245967b4e372390a43514}\label{classMutex__cond__array_a06799cb9027245967b4e372390a43514}} 
+int \mbox{\hyperlink{classMutex__cond__array_a06799cb9027245967b4e372390a43514}{get\+\_\+max\+\_\+index}} () const
+\begin{DoxyCompactList}\small\item\em Return the greatest addressable index in this \mbox{\hyperlink{classMutex__cond__array}{Mutex\+\_\+cond\+\_\+array}}. \end{DoxyCompactList}\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classMutex__cond__array_a36690cb3001e20bc5900abce919ea4e1}{ensure\+\_\+index}} (int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a growable array where each element contains a mutex and a condition variable.
+
+Each element can be locked, unlocked, broadcast, or waited for, and it is possible to call \char`\"{}\+T\+H\+D\+::enter\+\_\+cond\char`\"{} for the condition. The allowed indexes range from 0, inclusive, to \mbox{\hyperlink{classMutex__cond__array_a06799cb9027245967b4e372390a43514}{get\+\_\+max\+\_\+index()}}, inclusive. Initially there are zero elements (and \mbox{\hyperlink{classMutex__cond__array_a06799cb9027245967b4e372390a43514}{get\+\_\+max\+\_\+index()}} returns -\/1); more elements can be allocated by calling \mbox{\hyperlink{classMutex__cond__array_a36690cb3001e20bc5900abce919ea4e1}{ensure\+\_\+index()}}.
+
+This data structure has a read-\/write lock that protects the number of elements. The lock is provided by the invoker of the constructor and it is generally the caller\textquotesingle{}s responsibility to acquire the read lock. Access methods assert that the caller already holds the read (or write) lock. If a method of this class grows the number of elements, then the method temporarily upgrades this lock to a write lock and then degrades it to a read lock again; there will be a short period when the lock is not held at all. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMutex__cond__array_a7daf69af88f2693e9d8ba87a5fa59c2b}\label{classMutex__cond__array_a7daf69af88f2693e9d8ba87a5fa59c2b}} 
+\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}!Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}!Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+\subsubsection{\texorpdfstring{Mutex\+\_\+cond\+\_\+array()}{Mutex\_cond\_array()}}
+{\footnotesize\ttfamily Mutex\+\_\+cond\+\_\+array\+::\+Mutex\+\_\+cond\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$}]{global\+\_\+lock }\end{DoxyParamCaption})}
+
+Create a new \mbox{\hyperlink{classMutex__cond__array}{Mutex\+\_\+cond\+\_\+array}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em global\+\_\+lock} & Read-\/write lock that protects updates to the number of elements. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMutex__cond__array_a944367c6618c3f1c766511fdfc10eff8}\label{classMutex__cond__array_a944367c6618c3f1c766511fdfc10eff8}} 
+\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}!assert\+\_\+not\+\_\+owner@{assert\+\_\+not\+\_\+owner}}
+\index{assert\+\_\+not\+\_\+owner@{assert\+\_\+not\+\_\+owner}!Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+\subsubsection{\texorpdfstring{assert\+\_\+not\+\_\+owner()}{assert\_not\_owner()}}
+{\footnotesize\ttfamily void Mutex\+\_\+cond\+\_\+array\+::assert\+\_\+not\+\_\+owner (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assert that this thread does not own the n\textquotesingle{}th mutex. This is a no-\/op if D\+B\+U\+G\+\_\+\+O\+FF is on. \mbox{\Hypertarget{classMutex__cond__array_aae15c5c36f1d88f44f8ec8672a827d22}\label{classMutex__cond__array_aae15c5c36f1d88f44f8ec8672a827d22}} 
+\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}!assert\+\_\+owner@{assert\+\_\+owner}}
+\index{assert\+\_\+owner@{assert\+\_\+owner}!Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+\subsubsection{\texorpdfstring{assert\+\_\+owner()}{assert\_owner()}}
+{\footnotesize\ttfamily void Mutex\+\_\+cond\+\_\+array\+::assert\+\_\+owner (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assert that this thread owns the n\textquotesingle{}th mutex. This is a no-\/op if D\+B\+U\+G\+\_\+\+O\+FF is on. \mbox{\Hypertarget{classMutex__cond__array_a36690cb3001e20bc5900abce919ea4e1}\label{classMutex__cond__array_a36690cb3001e20bc5900abce919ea4e1}} 
+\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}!ensure\+\_\+index@{ensure\+\_\+index}}
+\index{ensure\+\_\+index@{ensure\+\_\+index}!Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+\subsubsection{\texorpdfstring{ensure\+\_\+index()}{ensure\_index()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Mutex\+\_\+cond\+\_\+array\+::ensure\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+Grows the array so that the given index fits.
+
+If the array is grown, the global\+\_\+lock is temporarily upgraded to a write lock and then degraded again; there will be a short period when the lock is not held at all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutex__cond__array_a3d35f8265bc0ba163ca0c6bb36ba96d9}\label{classMutex__cond__array_a3d35f8265bc0ba163ca0c6bb36ba96d9}} 
+\index{Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}!wait@{wait}}
+\index{wait@{wait}!Mutex\+\_\+cond\+\_\+array@{Mutex\+\_\+cond\+\_\+array}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily bool Mutex\+\_\+cond\+\_\+array\+::wait (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd,  }\item[{int}]{sidno,  }\item[{struct timespec $\ast$}]{abstime }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Wait for signal on the n\textquotesingle{}th condition variable.
+
+The caller must hold the read lock or write lock on sid\+\_\+lock, as well as the nth mutex lock, before invoking this function. The sid\+\_\+lock will be released, whereas the mutex will be released during the wait and (atomically) re-\/acquired when the wait ends or the timeout is reached.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & T\+HD object for the calling thread. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Condition variable to wait for. \\
+\hline
+\mbox{\texttt{ in}}  & {\em abstime} & The absolute point in time when the wait times out and stops, or N\+U\+LL to wait indefinitely.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure\+: either timeout or thread was killed. If thread was killed, the error has been generated. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\item 
+rpl\+\_\+gtid\+\_\+mutex\+\_\+cond\+\_\+array.\+cc\end{DoxyCompactItemize}

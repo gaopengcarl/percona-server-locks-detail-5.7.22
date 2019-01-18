@@ -1,0 +1,88 @@
+\hypertarget{classFilesort}{}\section{Filesort Class Reference}
+\label{classFilesort}\index{Filesort@{Filesort}}
+
+
+{\ttfamily \#include $<$filesort.\+h$>$}
+
+Inheritance diagram for Filesort\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFilesort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFilesort_a7af75a334a989b13a37e76d5fa4987e2}\label{classFilesort_a7af75a334a989b13a37e76d5fa4987e2}} 
+{\bfseries Filesort} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab\+\_\+arg, \mbox{\hyperlink{structst__order}{st\+\_\+order}} $\ast$order\+\_\+arg, ha\+\_\+rows limit\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classFilesort_aca379f5e809620ea4517169c3cee18b5}\label{classFilesort_aca379f5e809620ea4517169c3cee18b5}} 
+uint {\bfseries make\+\_\+sortorder} ()
+\item 
+\mbox{\hyperlink{classAddon__fields}{Addon\+\_\+fields}} $\ast$ \mbox{\hyperlink{classFilesort_a7b6a9829d340386a342405bcbd1f1fa1}{get\+\_\+addon\+\_\+fields}} (ulong max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ptabfield, uint \mbox{\hyperlink{filesort_8cc_af2b02d8e944d1fc9ccaf16547453c156}{sortlength}}, uint $\ast$plength, uint $\ast$ppackable\+\_\+length)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFilesort_a00dd6a20503a0eab39f2c9eb8bf421ea}\label{classFilesort_a00dd6a20503a0eab39f2c9eb8bf421ea}} 
+\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$const \mbox{\hyperlink{classFilesort_a00dd6a20503a0eab39f2c9eb8bf421ea}{tab}}
+\begin{DoxyCompactList}\small\item\em The Q\+EP entry for the table to be sorted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort_ac811beea21279e6cccf453241fe51e51}\label{classFilesort_ac811beea21279e6cccf453241fe51e51}} 
+\mbox{\hyperlink{structst__order}{st\+\_\+order}} $\ast$ \mbox{\hyperlink{classFilesort_ac811beea21279e6cccf453241fe51e51}{order}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classList}{List}} of expressions to order the table by. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort_a6150bb39d6fe146d40d27101771618cb}\label{classFilesort_a6150bb39d6fe146d40d27101771618cb}} 
+ha\+\_\+rows \mbox{\hyperlink{classFilesort_a6150bb39d6fe146d40d27101771618cb}{limit}}
+\begin{DoxyCompactList}\small\item\em Maximum number of rows to return. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort_a1dbd5af6a2fd7666dd5df3c9760bd152}\label{classFilesort_a1dbd5af6a2fd7666dd5df3c9760bd152}} 
+\mbox{\hyperlink{structst__sort__field}{st\+\_\+sort\+\_\+field}} $\ast$ \mbox{\hyperlink{classFilesort_a1dbd5af6a2fd7666dd5df3c9760bd152}{sortorder}}
+\begin{DoxyCompactList}\small\item\em O\+R\+D\+ER BY list with some precalculated info for filesort. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort_a4a5d09c1f56508024a7182dd84fd258d}\label{classFilesort_a4a5d09c1f56508024a7182dd84fd258d}} 
+bool \mbox{\hyperlink{classFilesort_a4a5d09c1f56508024a7182dd84fd258d}{using\+\_\+pq}}
+\begin{DoxyCompactList}\small\item\em true means we are using Priority Queue for order by with limit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort_ac6d719110824dc3ed83e734cca57b988}\label{classFilesort_ac6d719110824dc3ed83e734cca57b988}} 
+\mbox{\hyperlink{classAddon__fields}{Addon\+\_\+fields}} $\ast$ \mbox{\hyperlink{classFilesort_ac6d719110824dc3ed83e734cca57b988}{addon\+\_\+fields}}
+\begin{DoxyCompactList}\small\item\em Addon fields descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Sorting related info. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilesort_a7b6a9829d340386a342405bcbd1f1fa1}\label{classFilesort_a7b6a9829d340386a342405bcbd1f1fa1}} 
+\index{Filesort@{Filesort}!get\+\_\+addon\+\_\+fields@{get\+\_\+addon\+\_\+fields}}
+\index{get\+\_\+addon\+\_\+fields@{get\+\_\+addon\+\_\+fields}!Filesort@{Filesort}}
+\subsubsection{\texorpdfstring{get\+\_\+addon\+\_\+fields()}{get\_addon\_fields()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAddon__fields}{Addon\+\_\+fields}} $\ast$ Filesort\+::get\+\_\+addon\+\_\+fields (\begin{DoxyParamCaption}\item[{ulong}]{max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{ptabfield,  }\item[{uint}]{sortlength,  }\item[{uint $\ast$}]{plength,  }\item[{uint $\ast$}]{ppackable\+\_\+length }\end{DoxyParamCaption})}
+
+Get descriptors of fields appended to sorted fields and calculate their total length.
+
+The function first finds out what fields are used in the result set. Then it calculates the length of the buffer to store the values of these fields together with the value of sort values. If the calculated length is not greater than max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data the function allocates memory for an array of descriptors containing layouts for the values of the non-\/sorted fields in the buffer and fills them.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data} & Value of session variable. \\
+\hline
+ & {\em ptabfield} & Array of references to the table fields \\
+\hline
+ & {\em sortlength} & Total length of sorted fields \\
+\hline
+\mbox{\texttt{ out}}  & {\em plength} & Total length of appended fields \\
+\hline
+\mbox{\texttt{ out}}  & {\em ppackable\+\_\+length} & Total length of appended fields having a packable type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The null bits for the appended values are supposed to be put together and stored into the buffer just ahead of the value of the first field.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Pointer to the layout descriptors for the appended fields, if any 
+
+N\+U\+LL if we do not store field values with sort data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+filesort.\+h\item 
+\mbox{\hyperlink{filesort_8cc}{filesort.\+cc}}\end{DoxyCompactItemize}

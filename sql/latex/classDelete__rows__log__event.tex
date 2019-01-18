@@ -1,0 +1,45 @@
+\hypertarget{classDelete__rows__log__event}{}\section{Delete\+\_\+rows\+\_\+log\+\_\+event Class Reference}
+\label{classDelete__rows__log__event}\index{Delete\+\_\+rows\+\_\+log\+\_\+event@{Delete\+\_\+rows\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Delete\+\_\+rows\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDelete__rows__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event_a9b760629eb9a3c7f5326278f7b76fc6f}\label{classDelete__rows__log__event_a9b760629eb9a3c7f5326278f7b76fc6f}} 
+enum \{ {\bfseries T\+Y\+P\+E\+\_\+\+C\+O\+DE} = binary\+\_\+log\+:\+:D\+E\+L\+E\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event_acf537554b1dbc23ede8dfef382bf026e}\label{classDelete__rows__log__event_acf537554b1dbc23ede8dfef382bf026e}} 
+virtual Log\+\_\+event\+\_\+type {\bfseries get\+\_\+general\+\_\+type\+\_\+code} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Log row deletions. The event contain several delete rows for a table. Note that each event contains only rows for one table.
+
+R\+E\+S\+P\+O\+N\+S\+I\+B\+I\+L\+I\+T\+I\+ES
+
+
+\begin{DoxyItemize}
+\item Act as a container for rows that has been deleted on the master and should be deleted on the slave.
+\end{DoxyItemize}
+
+C\+O\+L\+L\+A\+B\+O\+R\+A\+T\+I\+ON
+
+Row\+\_\+writer Create the event and add rows to the event. Row\+\_\+reader Extract the rows from the event. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\end{DoxyCompactItemize}

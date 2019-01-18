@@ -1,0 +1,280 @@
+\hypertarget{sql__select_8h}{}\section{sql\+\_\+select.\+h File Reference}
+\label{sql__select_8h}\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+
+
+classes to use when handling where clause  
+
+
+{\ttfamily \#include \char`\"{}procedure.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$myisam.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}records.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+range.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}filesort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mem\+\_\+root\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+executor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+explain\+\_\+format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+opt\+\_\+exec\+\_\+shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+cmpfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKey__use}{Key\+\_\+use}}
+\item 
+struct \mbox{\hyperlink{structst__position}{st\+\_\+position}}
+\item 
+class \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}
+\item 
+class \mbox{\hyperlink{classJoin__tab__compare__default}{Join\+\_\+tab\+\_\+compare\+\_\+default}}
+\item 
+class \mbox{\hyperlink{classJoin__tab__compare__straight}{Join\+\_\+tab\+\_\+compare\+\_\+straight}}
+\item 
+class \mbox{\hyperlink{classJoin__tab__compare__embedded__first}{Join\+\_\+tab\+\_\+compare\+\_\+embedded\+\_\+first}}
+\item 
+struct \mbox{\hyperlink{structst__select__check}{st\+\_\+select\+\_\+check}}
+\item 
+class \mbox{\hyperlink{classstore__key}{store\+\_\+key}}
+\item 
+class \mbox{\hyperlink{classstore__key__field}{store\+\_\+key\+\_\+field}}
+\item 
+class \mbox{\hyperlink{classstore__key__item}{store\+\_\+key\+\_\+item}}
+\item 
+class \mbox{\hyperlink{classstore__key__hash__item}{store\+\_\+key\+\_\+hash\+\_\+item}}
+\item 
+class \mbox{\hyperlink{classstore__key__const__item}{store\+\_\+key\+\_\+const\+\_\+item}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sql__select_8h_a6eed6d35f6f9b49a23f817619e94210e}{L\+O\+W\+E\+R\+\_\+\+B\+I\+TS}}(type,  A)~((type) (((type) 1 $<$$<$ (A)) -\/1))
+\item 
+\mbox{\Hypertarget{sql__select_8h_a58297bde0da4187801e718c29d5d6b5e}\label{sql__select_8h_a58297bde0da4187801e718c29d5d6b5e}} 
+\#define {\bfseries K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+E\+X\+I\+S\+TS}~1
+\item 
+\mbox{\Hypertarget{sql__select_8h_a0658a5d9673135da1c2f6463f0537405}\label{sql__select_8h_a0658a5d9673135da1c2f6463f0537405}} 
+\#define {\bfseries K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+R\+E\+F\+\_\+\+O\+R\+\_\+\+N\+U\+LL}~2
+\item 
+\mbox{\Hypertarget{sql__select_8h_ada178c5478bd466bb5b6733415cfad95}\label{sql__select_8h_ada178c5478bd466bb5b6733415cfad95}} 
+\#define {\bfseries F\+T\+\_\+\+K\+E\+Y\+P\+A\+RT}~(M\+A\+X\+\_\+\+R\+E\+F\+\_\+\+P\+A\+R\+TS+10)
+\item 
+\mbox{\Hypertarget{sql__select_8h_a61f281a938eb6d3776159ad988056a6d}\label{sql__select_8h_a61f281a938eb6d3776159ad988056a6d}} 
+\#define {\bfseries S\+J\+\_\+\+O\+P\+T\+\_\+\+N\+O\+NE}~0
+\item 
+\mbox{\Hypertarget{sql__select_8h_a5f4d6d11825a9c0dbb60fe55e798134d}\label{sql__select_8h_a5f4d6d11825a9c0dbb60fe55e798134d}} 
+\#define {\bfseries S\+J\+\_\+\+O\+P\+T\+\_\+\+D\+U\+P\+S\+\_\+\+W\+E\+E\+D\+O\+UT}~1
+\item 
+\mbox{\Hypertarget{sql__select_8h_a0db2cd72c9266a9aa274f3f835539937}\label{sql__select_8h_a0db2cd72c9266a9aa274f3f835539937}} 
+\#define {\bfseries S\+J\+\_\+\+O\+P\+T\+\_\+\+L\+O\+O\+S\+E\+\_\+\+S\+C\+AN}~2
+\item 
+\mbox{\Hypertarget{sql__select_8h_a669055f82cf82347a6b9e34ef9848ea5}\label{sql__select_8h_a669055f82cf82347a6b9e34ef9848ea5}} 
+\#define {\bfseries S\+J\+\_\+\+O\+P\+T\+\_\+\+F\+I\+R\+S\+T\+\_\+\+M\+A\+T\+CH}~3
+\item 
+\mbox{\Hypertarget{sql__select_8h_a5fa392781eb55913546b9f34092104ff}\label{sql__select_8h_a5fa392781eb55913546b9f34092104ff}} 
+\#define {\bfseries S\+J\+\_\+\+O\+P\+T\+\_\+\+M\+A\+T\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+L\+O\+O\+K\+UP}~4
+\item 
+\mbox{\Hypertarget{sql__select_8h_a2175df19d893d0eaf73ba706fa66eedf}\label{sql__select_8h_a2175df19d893d0eaf73ba706fa66eedf}} 
+\#define {\bfseries S\+J\+\_\+\+O\+P\+T\+\_\+\+M\+A\+T\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+S\+C\+AN}~5
+\item 
+\#define \mbox{\hyperlink{sql__select_8h_aea11eafc0c380c02d00fd3c409fb8648}{A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER}}(join)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sql__select_8h_ada72e783b0933fbd20147d3a3da11f8b}\label{sql__select_8h_ada72e783b0933fbd20147d3a3da11f8b}} 
+typedef \mbox{\hyperlink{classMem__root__array}{Mem\+\_\+root\+\_\+array}}$<$ \mbox{\hyperlink{classKey__use}{Key\+\_\+use}}, true $>$ {\bfseries Key\+\_\+use\+\_\+array}
+\item 
+typedef \mbox{\hyperlink{structst__position}{st\+\_\+position}} \mbox{\hyperlink{sql__select_8h_ab1fbaec9ec8a5fc726403f87fb7e64e5}{P\+O\+S\+I\+T\+I\+ON}}
+\item 
+\mbox{\Hypertarget{sql__select_8h_a30ea6565ae4710b0d25c94d711cef111}\label{sql__select_8h_a30ea6565ae4710b0d25c94d711cef111}} 
+typedef \mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$ \mbox{\hyperlink{classItem__null__result}{Item\+\_\+null\+\_\+result}} $\ast$ $>$ {\bfseries Item\+\_\+null\+\_\+array}
+\item 
+\mbox{\Hypertarget{sql__select_8h_a2563454aca187984426ada8a1127a9b3}\label{sql__select_8h_a2563454aca187984426ada8a1127a9b3}} 
+typedef struct \mbox{\hyperlink{structst__select__check}{st\+\_\+select\+\_\+check}} {\bfseries S\+E\+L\+E\+C\+T\+\_\+\+C\+H\+E\+CK}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sql__select_8h_a931d06905210c0f917b25d180eeb643f}{quick\+\_\+type}} \{ {\bfseries Q\+S\+\_\+\+N\+O\+NE}, 
+{\bfseries Q\+S\+\_\+\+R\+A\+N\+GE}, 
+{\bfseries Q\+S\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+R\+A\+N\+GE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+join\+\_\+type \mbox{\hyperlink{group__Query__Optimizer_gaaf336d1a31135fd93a5564c5e090b50a}{calc\+\_\+join\+\_\+type}} (int \mbox{\hyperlink{sql__select_8h_a931d06905210c0f917b25d180eeb643f}{quick\+\_\+type}})
+\item 
+\mbox{\Hypertarget{sql__select_8h_a1d630ea1feaa2b26fe8427e0743a6a8c}\label{sql__select_8h_a1d630ea1feaa2b26fe8427e0743a6a8c}} 
+bool {\bfseries sj\+\_\+is\+\_\+materialize\+\_\+strategy} (uint strategy)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga37c57743c17000bba9bbbbd87b01d32f}{count\+\_\+field\+\_\+types}} (S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex, Temp\+\_\+table\+\_\+param $\ast$param, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, bool reset\+\_\+with\+\_\+sum\+\_\+func, bool save\+\_\+sum\+\_\+fields)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gafd0c3fdb07be77d705feaf3f8f51164f}{find\+\_\+shortest\+\_\+key}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} $\ast$usable\+\_\+keys)
+\item 
+bool \mbox{\hyperlink{sql__select_8h_acae7cc2d8de0971fd45df71329943de4}{simple\+\_\+pred}} (\mbox{\hyperlink{classItem__func}{Item\+\_\+func}} $\ast$func\+\_\+item, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, bool $\ast$inv\+\_\+order)
+\item 
+int \mbox{\hyperlink{sql__select_8h_a89d353b7a877388083c43aed53124034}{opt\+\_\+sum\+\_\+query}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields, \mbox{\hyperlink{classItem}{Item}} $\ast$conds)
+\item 
+\mbox{\Hypertarget{sql__select_8h_ad3daf6512fb3c01ad9832e09857ba423}\label{sql__select_8h_ad3daf6512fb3c01ad9832e09857ba423}} 
+int {\bfseries refpos\+\_\+order\+\_\+cmp} (const void $\ast$arg, const void $\ast$a, const void $\ast$b)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaf1351457ee30a4e67786117e50413541}{error\+\_\+if\+\_\+full\+\_\+join}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gae77d58d476f44178e469e2cbe16e9e01}{handle\+\_\+query}} (T\+HD $\ast$thd, L\+EX $\ast$lex, Query\+\_\+result $\ast$result, ulonglong added\+\_\+options, ulonglong removed\+\_\+options)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga59080a3acd829efcf18fc56d51df215c}{free\+\_\+underlaid\+\_\+joins}} (T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga4be82b593cb5e0548b3b3aa4b28bc3bf}{calc\+\_\+used\+\_\+field\+\_\+length}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool keep\+\_\+current\+\_\+rowid, uint $\ast$p\+\_\+used\+\_\+fields, uint $\ast$p\+\_\+used\+\_\+fieldlength, uint $\ast$p\+\_\+used\+\_\+blobs, bool $\ast$p\+\_\+used\+\_\+null\+\_\+fields, bool $\ast$p\+\_\+used\+\_\+uneven\+\_\+bit\+\_\+fields)
+\item 
+\mbox{\Hypertarget{sql__select_8h_a18fa5f621738a8ab8f8ed1fa6408f2a8}\label{sql__select_8h_a18fa5f621738a8ab8f8ed1fa6408f2a8}} 
+bool {\bfseries optimizer\+\_\+flag} (T\+HD $\ast$thd, uint flag)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga92d8a0c25d038fddac9b92696f6845e3}{get\+\_\+index\+\_\+for\+\_\+order}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab, ha\+\_\+rows limit, bool $\ast$need\+\_\+sort, bool $\ast$reverse)
+\item 
+\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_gadbc980a72c17c8442fab87af085697d4}{simple\+\_\+remove\+\_\+const}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{classItem}{Item}} $\ast$where)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga8478e8df214dcc332c84d24ebe3f0785}{const\+\_\+expression\+\_\+in\+\_\+where}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{classItem}{Item}} $\ast$comp\+\_\+item, \mbox{\hyperlink{classField}{Field}} $\ast$comp\+\_\+field=N\+U\+LL, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$const\+\_\+item=N\+U\+LL)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga4d5a2e1822e2131fcfbe6501a8a97525}{test\+\_\+if\+\_\+subpart}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$a, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$b)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaa978828bfe7be091fb76e1c5da80d644}{calc\+\_\+group\+\_\+buffer}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga27b74179b9a9207753aa3f93a9df4225}{make\+\_\+join\+\_\+readinfo}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, uint no\+\_\+jbuf\+\_\+after)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga3b518fb7975676afc7395b412e803368}{create\+\_\+ref\+\_\+for\+\_\+key}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$j, \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$org\+\_\+keyuse, table\+\_\+map used\+\_\+tables)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga410e1c85b186cd5520a7d21930ead6e5}{types\+\_\+allow\+\_\+materialization}} (\mbox{\hyperlink{classItem}{Item}} $\ast$outer, \mbox{\hyperlink{classItem}{Item}} $\ast$inner)
+\begin{DoxyCompactList}\small\item\em Check if two items are compatible wrt. materialization. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gad3c0a5624f789fb0bf0c5fc5ec057de9}{and\+\_\+conditions}} (\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$e1, \mbox{\hyperlink{classItem}{Item}} $\ast$e2)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga6609ac0420a8a415d5a57cc6659f460d}{actual\+\_\+key\+\_\+parts}} (const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga174d79a5aef2a8abd1caec143b42837e}{actual\+\_\+key\+\_\+flags}} (\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga96dc524565684a4e258c98f5b7fd1541}{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint idx, uint $\ast$used\+\_\+key\+\_\+parts=N\+U\+LL)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga3eec84bb823e8a5ea10710e1e4f066d1}{test\+\_\+if\+\_\+cheaper\+\_\+ordering}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} usable\+\_\+keys, int key, ha\+\_\+rows select\+\_\+limit, int $\ast$new\+\_\+key, int $\ast$new\+\_\+key\+\_\+direction, ha\+\_\+rows $\ast$new\+\_\+select\+\_\+limit, uint $\ast$new\+\_\+used\+\_\+key\+\_\+parts=N\+U\+LL, uint $\ast$saved\+\_\+best\+\_\+key\+\_\+parts=N\+U\+LL)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga5f8a3668a5d5771061e14f5d87c30794}{calc\+\_\+length\+\_\+and\+\_\+keyparts}} (\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$keyuse, \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab, const uint key, table\+\_\+map used\+\_\+tables, \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$$\ast$chosen\+\_\+keyuses, uint $\ast$length\+\_\+out, uint $\ast$keyparts\+\_\+out, table\+\_\+map $\ast$dep\+\_\+map, bool $\ast$maybe\+\_\+null)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+classes to use when handling where clause 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sql__select_8h_aea11eafc0c380c02d00fd3c409fb8648}\label{sql__select_8h_aea11eafc0c380c02d00fd3c409fb8648}} 
+\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}!A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER@{A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER@{A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER}!sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+\subsubsection{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER}{ASSERT\_BEST\_REF\_IN\_JOIN\_ORDER}}
+{\footnotesize\ttfamily \#define A\+S\+S\+E\+R\+T\+\_\+\+B\+E\+S\+T\+\_\+\+R\+E\+F\+\_\+\+I\+N\+\_\+\+J\+O\+I\+N\+\_\+\+O\+R\+D\+ER(\begin{DoxyParamCaption}\item[{}]{join }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ DBUG\_ASSERT(join->tables == 0 ||                         \(\backslash\)}
+\DoxyCodeLine{                   (join->best\_ref \&\& !join->join\_tab)); \} \textcolor{keywordflow}{while}(0)}
+\end{DoxyCode}
+Use this in a function which depends on best\+\_\+ref listing tables in the final join order. If \textquotesingle{}tables==0\textquotesingle{}, one is not expected to consult best\+\_\+ref cells, and best\+\_\+ref may not even have been allocated. \mbox{\Hypertarget{sql__select_8h_a6eed6d35f6f9b49a23f817619e94210e}\label{sql__select_8h_a6eed6d35f6f9b49a23f817619e94210e}} 
+\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}!L\+O\+W\+E\+R\+\_\+\+B\+I\+TS@{L\+O\+W\+E\+R\+\_\+\+B\+I\+TS}}
+\index{L\+O\+W\+E\+R\+\_\+\+B\+I\+TS@{L\+O\+W\+E\+R\+\_\+\+B\+I\+TS}!sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+W\+E\+R\+\_\+\+B\+I\+TS}{LOWER\_BITS}}
+{\footnotesize\ttfamily \#define L\+O\+W\+E\+R\+\_\+\+B\+I\+TS(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{A }\end{DoxyParamCaption})~((type) (((type) 1 $<$$<$ (A)) -\/1))}
+
+Returns a constant of type \textquotesingle{}type\textquotesingle{} with the \textquotesingle{}A\textquotesingle{} lowest-\/weight bits set. Example\+: \mbox{\hyperlink{sql__select_8h_a6eed6d35f6f9b49a23f817619e94210e}{L\+O\+W\+E\+R\+\_\+\+B\+I\+T\+S(uint, 3)}} == 7. Requirement\+: A $<$ sizeof(type) $\ast$ 8. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sql__select_8h_ab1fbaec9ec8a5fc726403f87fb7e64e5}\label{sql__select_8h_ab1fbaec9ec8a5fc726403f87fb7e64e5}} 
+\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}!P\+O\+S\+I\+T\+I\+ON@{P\+O\+S\+I\+T\+I\+ON}}
+\index{P\+O\+S\+I\+T\+I\+ON@{P\+O\+S\+I\+T\+I\+ON}!sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+ON}{POSITION}}
+{\footnotesize\ttfamily typedef  \mbox{\hyperlink{structst__position}{st\+\_\+position}}  \mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}}}
+
+A position of table within a join order. This structure is primarily used as a part of join-\/$>$positions and join-\/$>$best\+\_\+positions arrays.
+
+One P\+O\+S\+I\+T\+I\+ON element contains information about\+:
+\begin{DoxyItemize}
+\item Which table is accessed
+\item Which access method was chosen = Its cost and \#of output records
+\item Semi-\/join strategy choice. Note that there are two different representation formats\+:
+\begin{DoxyEnumerate}
+\item The one used during join optimization
+\item The one used at plan refinement/code generation stage. We call fix\+\_\+semijoin\+\_\+strategies\+\_\+for\+\_\+picked\+\_\+join\+\_\+order() to switch between \#1 and \#2. See that function\textquotesingle{}s comment for more details.
+\end{DoxyEnumerate}
+\item Semi-\/join optimization state. When we\textquotesingle{}re running join optimization, we main a state for every semi-\/join strategy which are various variables that tell us if/at which point we could consider applying the strategy. ~\newline
+ The variables are really a function of join prefix but they are too expensive to re-\/caclulate for every join prefix we consider, so we maintain current state in join-\/$>$positions\mbox{[}\#tables\+\_\+in\+\_\+prefix\mbox{]}. See advance\+\_\+sj\+\_\+state() for details.
+\end{DoxyItemize}
+
+This class has to stay a P\+OD, because it is memcpy\textquotesingle{}d in many places. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sql__select_8h_a931d06905210c0f917b25d180eeb643f}\label{sql__select_8h_a931d06905210c0f917b25d180eeb643f}} 
+\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}!quick\+\_\+type@{quick\+\_\+type}}
+\index{quick\+\_\+type@{quick\+\_\+type}!sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+\subsubsection{\texorpdfstring{quick\+\_\+type}{quick\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sql__select_8h_a931d06905210c0f917b25d180eeb643f}{quick\+\_\+type}}}
+
+Bits describing quick select type 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__select_8h_a89d353b7a877388083c43aed53124034}\label{sql__select_8h_a89d353b7a877388083c43aed53124034}} 
+\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}!opt\+\_\+sum\+\_\+query@{opt\+\_\+sum\+\_\+query}}
+\index{opt\+\_\+sum\+\_\+query@{opt\+\_\+sum\+\_\+query}!sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+\subsubsection{\texorpdfstring{opt\+\_\+sum\+\_\+query()}{opt\_sum\_query()}}
+{\footnotesize\ttfamily int opt\+\_\+sum\+\_\+query (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{all\+\_\+fields,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{conds }\end{DoxyParamCaption})}
+
+Substitutes constants for some C\+O\+U\+N\+T(), M\+I\+N() and M\+A\+X() functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em tables} & list of leaves of join table tree \\
+\hline
+{\em all\+\_\+fields} & All fields to be returned \\
+\hline
+{\em conds} & W\+H\+E\+RE clause\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is only called for queries with aggregate functions and no G\+R\+O\+UP BY part. This means that the result set shall contain a single row only
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & no errors \\
+\hline
+{\em 1} & if all items were resolved \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+\+K\+E\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND} & on impossible conditions \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+...} & if a deadlock or a lock wait timeout happens, for example \\
+\hline
+{\em E\+R\+\_\+...} & e.\+g. E\+R\+\_\+\+S\+U\+B\+Q\+U\+E\+R\+Y\+\_\+\+N\+O\+\_\+1\+\_\+\+R\+OW \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__select_8h_acae7cc2d8de0971fd45df71329943de4}\label{sql__select_8h_acae7cc2d8de0971fd45df71329943de4}} 
+\index{sql\+\_\+select.\+h@{sql\+\_\+select.\+h}!simple\+\_\+pred@{simple\+\_\+pred}}
+\index{simple\+\_\+pred@{simple\+\_\+pred}!sql\+\_\+select.\+h@{sql\+\_\+select.\+h}}
+\subsubsection{\texorpdfstring{simple\+\_\+pred()}{simple\_pred()}}
+{\footnotesize\ttfamily bool simple\+\_\+pred (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__func}{Item\+\_\+func}} $\ast$}]{func\+\_\+item,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{bool $\ast$}]{inv\+\_\+order }\end{DoxyParamCaption})}
+
+Test if the predicate compares a field with constants.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em func\+\_\+item} & Predicate item \\
+\hline
+\mbox{\texttt{ out}}  & {\em args} & Here we store the field followed by constants \\
+\hline
+\mbox{\texttt{ out}}  & {\em inv\+\_\+order} & Is set to 1 if the predicate is of the form \textquotesingle{}const op field\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & func\+\_\+item is a simple predicate\+: a field is compared with constants \\
+\hline
+{\em 1} & Otherwise \\
+\hline
+\end{DoxyRetVals}

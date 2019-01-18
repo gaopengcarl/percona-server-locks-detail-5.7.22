@@ -1,0 +1,79 @@
+\hypertarget{classEvents}{}\section{Events Class Reference}
+\label{classEvents}\index{Events@{Events}}
+
+
+A facade to the functionality of the Event Scheduler.  
+
+
+
+
+{\ttfamily \#include $<$events.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEvents_aaa3c23838f7bd6c60010b8ebbd5f8383}\label{classEvents_aaa3c23838f7bd6c60010b8ebbd5f8383}} 
+enum {\bfseries enum\+\_\+opt\+\_\+event\+\_\+scheduler} \{ {\bfseries E\+V\+E\+N\+T\+S\+\_\+\+O\+FF}, 
+{\bfseries E\+V\+E\+N\+T\+S\+\_\+\+ON}, 
+{\bfseries E\+V\+E\+N\+T\+S\+\_\+\+D\+I\+S\+A\+B\+L\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga97efaefcec61d1bb9b7e0c518c1319ce}{check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error}} ()
+\item 
+static bool {\bfseries start} (int $\ast$err\+\_\+no)
+\item 
+static bool {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{classEvents_ac2209b7df7a277a434d842b8c98aa231}\label{classEvents_ac2209b7df7a277a434d842b8c98aa231}} 
+static \mbox{\hyperlink{classEvent__db__repository}{Event\+\_\+db\+\_\+repository}} $\ast$ {\bfseries get\+\_\+db\+\_\+repository} ()
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_gaa1df78d5847482dc1712c780dfd44b9a}{init}} (my\+\_\+bool opt\+\_\+noacl)
+\item 
+static void {\bfseries deinit} ()
+\item 
+static void \mbox{\hyperlink{group__Event__Scheduler_gaa26988f7ec7f5d0053af28a5d8586236}{init\+\_\+mutexes}} ()
+\item 
+\mbox{\Hypertarget{classEvents_a412174206397aaaf1601bbe6ed248ba5}\label{classEvents_a412174206397aaaf1601bbe6ed248ba5}} 
+static void {\bfseries destroy\+\_\+mutexes} ()
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga8fbb9616149b046c5cc59eb889d6f809}{create\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$parse\+\_\+data, bool if\+\_\+exists)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga7577ede664831ea99e27f45a0d91d946}{update\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$parse\+\_\+data, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+name)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}{drop\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, bool if\+\_\+exists)
+\item 
+static void \mbox{\hyperlink{group__Event__Scheduler_ga3a0f2bbcd465f2afe81b3f88fb2bf62e}{drop\+\_\+schema\+\_\+events}} (T\+HD $\ast$thd, const char $\ast$db)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga99ad9b87a2e1ce1b69c8f9c31e4ee5d1}{show\+\_\+create\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+static int \mbox{\hyperlink{group__Event__Scheduler_gafb6d2b26338cb92f01504ba32e0ecdf7}{reconstruct\+\_\+interval\+\_\+expression}} (String $\ast$buf, interval\+\_\+type interval, longlong expression)
+\item 
+static int \mbox{\hyperlink{group__Event__Scheduler_gae80cc405efbd8816c70a163818854645}{fill\+\_\+schema\+\_\+events}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classItem}{Item}} $\ast$)
+\item 
+static void {\bfseries dump\+\_\+internal\+\_\+status} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static ulong {\bfseries opt\+\_\+event\+\_\+scheduler} = Events\+::\+E\+V\+E\+N\+T\+S\+\_\+\+O\+FF
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A facade to the functionality of the Event Scheduler. 
+
+Every public operation against the scheduler has to be executed via the interface provided by a static method of this class. No instance of this class is ever created and it has no non-\/static data members.
+
+The life cycle of the \mbox{\hyperlink{classEvents}{Events}} module is the following\+:
+
+At server start up\+: \mbox{\hyperlink{group__Event__Scheduler_gaa26988f7ec7f5d0053af28a5d8586236}{init\+\_\+mutexes()}} -\/$>$ \mbox{\hyperlink{group__Event__Scheduler_gaa1df78d5847482dc1712c780dfd44b9a}{init()}} When the server is running\+: \mbox{\hyperlink{group__Event__Scheduler_ga8fbb9616149b046c5cc59eb889d6f809}{create\+\_\+event()}}, \mbox{\hyperlink{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}{drop\+\_\+event()}}, start\+\_\+or\+\_\+stop\+\_\+event\+\_\+scheduler(), etc At shutdown\+: deinit(), destroy\+\_\+mutexes().
+
+The peculiar initialization and shutdown cycle is an adaptation to the outside server startup/shutdown framework and mimics the rest of My\+S\+QL subsystems (A\+CL, time zone tables, etc). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{events_8h}{events.\+h}}\item 
+events.\+cc\end{DoxyCompactItemize}

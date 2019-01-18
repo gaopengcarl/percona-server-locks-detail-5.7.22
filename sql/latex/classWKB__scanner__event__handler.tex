@@ -1,0 +1,64 @@
+\hypertarget{classWKB__scanner__event__handler}{}\section{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler Class Reference}
+\label{classWKB__scanner__event__handler}\index{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler@{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}
+Inheritance diagram for W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classWKB__scanner__event__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}{on\+\_\+wkb\+\_\+start}} (Geometry\+::wkb\+Byte\+Order bo, Geometry\+::wkb\+Type geotype, const void $\ast$wkb, uint32 len, bool has\+\_\+hdr)=0
+\item 
+virtual void \mbox{\hyperlink{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}{on\+\_\+wkb\+\_\+end}} (const void $\ast$wkb)=0
+\item 
+\mbox{\Hypertarget{classWKB__scanner__event__handler_a9f19aa962a7233580e0b7c3c3e3c7110}\label{classWKB__scanner__event__handler_a9f19aa962a7233580e0b7c3c3e3c7110}} 
+virtual bool {\bfseries continue\+\_\+scan} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}\label{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}} 
+\index{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler@{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}!on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}}
+\index{on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}!W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler@{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+end()}{on\_wkb\_end()}}
+{\footnotesize\ttfamily virtual void W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler\+::on\+\_\+wkb\+\_\+end (\begin{DoxyParamCaption}\item[{const void $\ast$}]{wkb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Notified when scanner sees the end of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em wkb} & the position of the first byte after the W\+KB byte string which the scanner just scanned. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classPoint__coordinate__checker_a860f54df705a7452ee4f1c5ca825f0e6}{Point\+\_\+coordinate\+\_\+checker}}, \mbox{\hyperlink{classGeomcoll__validity__checker_ab01b921860de69974b27ba422c55ae82}{Geomcoll\+\_\+validity\+\_\+checker}}, \mbox{\hyperlink{classSingleton__extractor_af504a10c6a45262fb75907677fce3b56}{Singleton\+\_\+extractor}}, \mbox{\hyperlink{classGeometry__grouper_a6e42cf59211e8d812ac6613e578cc8cf}{Geometry\+\_\+grouper$<$ Base\+\_\+type $>$}}, \mbox{\hyperlink{classPoint__accumulator_a83a4d28319329e91016d71dec5c7bed3}{Point\+\_\+accumulator}}, \mbox{\hyperlink{classGeomColl__component__counter_a691ceeffb53553f90d6cd088085b5bcc}{Geom\+Coll\+\_\+component\+\_\+counter}}, \mbox{\hyperlink{classGeometry__well__formed__checker_a448bf937ff032ce46a3b2e69a4d0907e}{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}, and \mbox{\hyperlink{classIs__empty__geometry_a9c4aa9285a264596e57a8c3018f6500a}{Is\+\_\+empty\+\_\+geometry}}.
+
+\mbox{\Hypertarget{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}\label{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}} 
+\index{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler@{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}!on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}}
+\index{on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}!W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler@{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+start()}{on\_wkb\_start()}}
+{\footnotesize\ttfamily virtual void W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler\+::on\+\_\+wkb\+\_\+start (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{Geometry\+::wkb\+Type}]{geotype,  }\item[{const void $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{bool}]{has\+\_\+hdr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Notified when scanner sees the start of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em bo} & byte order of the W\+KB. \\
+\hline
+{\em geotype} & geometry type of the W\+KB; \\
+\hline
+{\em wkb} & W\+KB byte string, the first byte after the W\+KB header if any. \\
+\hline
+{\em len} & NO. of bytes of the W\+KB byte string starting from wkb. There can be many geometries in the \mbox{[}wkb, wkb+len) buffer. \\
+\hline
+{\em has\+\_\+hdr} & whether there is a W\+KB header right before \textquotesingle{}wkb\textquotesingle{} in the byte string. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classPoint__coordinate__checker_a69fe70028bc0356ba1e10d47a7a76e8e}{Point\+\_\+coordinate\+\_\+checker}}, \mbox{\hyperlink{classGeomcoll__validity__checker_adac22fc99851bc6ef079b7d1ff045abb}{Geomcoll\+\_\+validity\+\_\+checker}}, \mbox{\hyperlink{classSingleton__extractor_a9a071750643d115773d3375e98a9c8c2}{Singleton\+\_\+extractor}}, \mbox{\hyperlink{classGeometry__grouper_afc15aa192aef3e8819482a0718a34327}{Geometry\+\_\+grouper$<$ Base\+\_\+type $>$}}, \mbox{\hyperlink{classPoint__accumulator_a2ea2b707dbcca3fc3b891340567c7793}{Point\+\_\+accumulator}}, \mbox{\hyperlink{classGeomColl__component__counter_a6d1753bceb416c8ce84b0b761cc1a623}{Geom\+Coll\+\_\+component\+\_\+counter}}, \mbox{\hyperlink{classIs__empty__geometry_a30bc84d35b5a414d1366b57a6ba02f2e}{Is\+\_\+empty\+\_\+geometry}}, and \mbox{\hyperlink{classGeometry__well__formed__checker_a6ae74af00fe1297813f3c35ba58ff372}{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\end{DoxyCompactItemize}

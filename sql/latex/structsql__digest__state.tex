@@ -1,0 +1,43 @@
+\hypertarget{structsql__digest__state}{}\section{sql\+\_\+digest\+\_\+state Struct Reference}
+\label{structsql__digest__state}\index{sql\+\_\+digest\+\_\+state@{sql\+\_\+digest\+\_\+state}}
+
+
+{\ttfamily \#include $<$sql\+\_\+digest\+\_\+stream.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsql__digest__state_a862f291fee25477262c277602242be91}\label{structsql__digest__state_a862f291fee25477262c277602242be91}} 
+void {\bfseries reset} (unsigned char $\ast$token\+\_\+array, uint length)
+\item 
+\mbox{\Hypertarget{structsql__digest__state_a14b732c508a3eee659ba69943b42b09a}\label{structsql__digest__state_a14b732c508a3eee659ba69943b42b09a}} 
+bool {\bfseries is\+\_\+empty} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsql__digest__state_ae16b2c8bbc75b4de6a3a98bf5ec9a6d6}{m\+\_\+last\+\_\+id\+\_\+index}}
+\item 
+\mbox{\Hypertarget{structsql__digest__state_a258b682ae8da0ac28bd00c66e770bd3f}\label{structsql__digest__state_a258b682ae8da0ac28bd00c66e770bd3f}} 
+\mbox{\hyperlink{structsql__digest__storage}{sql\+\_\+digest\+\_\+storage}} {\bfseries m\+\_\+digest\+\_\+storage}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+State data storage for {\ttfamily digest\+\_\+start}, {\ttfamily digest\+\_\+add\+\_\+token}. This structure extends the {\ttfamily \mbox{\hyperlink{structsql__digest__storage}{sql\+\_\+digest\+\_\+storage}}} structure with temporary state used only during parsing. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structsql__digest__state_ae16b2c8bbc75b4de6a3a98bf5ec9a6d6}\label{structsql__digest__state_ae16b2c8bbc75b4de6a3a98bf5ec9a6d6}} 
+\index{sql\+\_\+digest\+\_\+state@{sql\+\_\+digest\+\_\+state}!m\+\_\+last\+\_\+id\+\_\+index@{m\+\_\+last\+\_\+id\+\_\+index}}
+\index{m\+\_\+last\+\_\+id\+\_\+index@{m\+\_\+last\+\_\+id\+\_\+index}!sql\+\_\+digest\+\_\+state@{sql\+\_\+digest\+\_\+state}}
+\subsubsection{\texorpdfstring{m\+\_\+last\+\_\+id\+\_\+index}{m\_last\_id\_index}}
+{\footnotesize\ttfamily int sql\+\_\+digest\+\_\+state\+::m\+\_\+last\+\_\+id\+\_\+index}
+
+Index, in the digest token array, of the last identifier seen. Reduce rules used in the digest computation can not apply to tokens seen before an identifier. \begin{DoxySeeAlso}{See also}
+digest\+\_\+add\+\_\+token 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+digest\+\_\+stream.\+h\end{DoxyCompactItemize}

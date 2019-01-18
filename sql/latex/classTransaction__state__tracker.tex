@@ -1,0 +1,274 @@
+\hypertarget{classTransaction__state__tracker}{}\section{Transaction\+\_\+state\+\_\+tracker Class Reference}
+\label{classTransaction__state__tracker}\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+Inheritance diagram for Transaction\+\_\+state\+\_\+tracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTransaction__state__tracker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTransaction__state__tracker_a121b121c5020591ab173dd5735e0c261}{Transaction\+\_\+state\+\_\+tracker}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for transaction state tracker. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTransaction__state__tracker_a1027295403af650734a45d8281cc5d1c}{enable}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classTransaction__state__tracker_ab1c253155bc5bbab9edf22dc64fffa20}{check}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+bool \mbox{\hyperlink{classTransaction__state__tracker_a96e814f8253741480125787405add62a}{update}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Enable/disable the tracker based on @session\+\_\+track\+\_\+transaction\+\_\+info\textquotesingle{}s value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTransaction__state__tracker_a7f7843e53238fdc98ee31ac07b2376e2}{store}} (T\+HD $\ast$thd, String \&buf)
+\begin{DoxyCompactList}\small\item\em Store the transaction state (and, optionally, characteristics) as length-\/encoded string in the specified buffer. Once the data is stored, we reset the flags related to state-\/change (see reset()). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_a5afd4fcf4c13dcaf68811246a153d72f}{mark\+\_\+as\+\_\+changed}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$tracked\+\_\+item\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Mark the tracker as changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_a89dd20a6792185119d322594f8c5a420}{set\+\_\+read\+\_\+flags}} (T\+HD $\ast$thd, enum enum\+\_\+tx\+\_\+read\+\_\+flags flags)
+\begin{DoxyCompactList}\small\item\em Set read flags (read only/read write) pertaining to the next transaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_aaa609102617808d57f15dbe92a278019}{set\+\_\+isol\+\_\+level}} (T\+HD $\ast$thd, enum enum\+\_\+tx\+\_\+isol\+\_\+level level)
+\begin{DoxyCompactList}\small\item\em Set isolation level pertaining to the next transaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_aa8a01939d3da4f3e87e5b833f79b635f}{clear\+\_\+trx\+\_\+state}} (T\+HD $\ast$thd, uint clear)
+\begin{DoxyCompactList}\small\item\em Clear flags pertaining to the current statement or transaction. May be called repeatedly within the same execution cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_a40392c989a5a9f32826f07bcb14c11b2}{add\+\_\+trx\+\_\+state}} (T\+HD $\ast$thd, uint add)
+\begin{DoxyCompactList}\small\item\em Add flags pertaining to the current statement or transaction. May be called repeatedly within the same execution cycle, e.\+g. to add access info for more tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_ae374c15ed3eccd93e4d59501e70b4f9f}{add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Add \char`\"{}unsafe statement\char`\"{} flag if applicable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransaction__state__tracker_a6c702422b28c51ab3747a4f7fb45fd96}{end\+\_\+trx}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Register the end of an (implicit or explicit) transaction. \end{DoxyCompactList}\item 
+enum\+\_\+tx\+\_\+state \mbox{\hyperlink{classTransaction__state__tracker_a919e7753e41fce01958c48146ff6eacb}{calc\+\_\+trx\+\_\+state}} (T\+HD $\ast$thd, thr\+\_\+lock\+\_\+type l, bool has\+\_\+trx)
+\begin{DoxyCompactList}\small\item\em Helper function\+: turn table info into table access flag. Accepts table lock type and engine type flag (transactional/ non-\/transactional), and returns the corresponding access flag out of T\+X\+\_\+\+R\+E\+A\+D\+\_\+\+T\+RX, T\+X\+\_\+\+R\+E\+A\+D\+\_\+\+U\+N\+S\+A\+FE, T\+X\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+RX, T\+X\+\_\+\+W\+R\+I\+T\+E\+\_\+\+U\+N\+S\+A\+FE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransaction__state__tracker_a121b121c5020591ab173dd5735e0c261}\label{classTransaction__state__tracker_a121b121c5020591ab173dd5735e0c261}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{Transaction\+\_\+state\+\_\+tracker()}{Transaction\_state\_tracker()}}
+{\footnotesize\ttfamily Transaction\+\_\+state\+\_\+tracker\+::\+Transaction\+\_\+state\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for transaction state tracker. 
+
+Constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransaction__state__tracker_a40392c989a5a9f32826f07bcb14c11b2}\label{classTransaction__state__tracker_a40392c989a5a9f32826f07bcb14c11b2}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!add\+\_\+trx\+\_\+state@{add\+\_\+trx\+\_\+state}}
+\index{add\+\_\+trx\+\_\+state@{add\+\_\+trx\+\_\+state}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{add\+\_\+trx\+\_\+state()}{add\_trx\_state()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::add\+\_\+trx\+\_\+state (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{add }\end{DoxyParamCaption})}
+
+
+
+Add flags pertaining to the current statement or transaction. May be called repeatedly within the same execution cycle, e.\+g. to add access info for more tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} The flags to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__state__tracker_ae374c15ed3eccd93e4d59501e70b4f9f}\label{classTransaction__state__tracker_ae374c15ed3eccd93e4d59501e70b4f9f}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd@{add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd}}
+\index{add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd@{add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd()}{add\_trx\_state\_from\_thd()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::add\+\_\+trx\+\_\+state\+\_\+from\+\_\+thd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Add \char`\"{}unsafe statement\char`\"{} flag if applicable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} The flags to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__state__tracker_a919e7753e41fce01958c48146ff6eacb}\label{classTransaction__state__tracker_a919e7753e41fce01958c48146ff6eacb}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!calc\+\_\+trx\+\_\+state@{calc\+\_\+trx\+\_\+state}}
+\index{calc\+\_\+trx\+\_\+state@{calc\+\_\+trx\+\_\+state}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{calc\+\_\+trx\+\_\+state()}{calc\_trx\_state()}}
+{\footnotesize\ttfamily enum\+\_\+tx\+\_\+state Transaction\+\_\+state\+\_\+tracker\+::calc\+\_\+trx\+\_\+state (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{thr\+\_\+lock\+\_\+type}]{l,  }\item[{bool}]{has\+\_\+trx }\end{DoxyParamCaption})}
+
+
+
+Helper function\+: turn table info into table access flag. Accepts table lock type and engine type flag (transactional/ non-\/transactional), and returns the corresponding access flag out of T\+X\+\_\+\+R\+E\+A\+D\+\_\+\+T\+RX, T\+X\+\_\+\+R\+E\+A\+D\+\_\+\+U\+N\+S\+A\+FE, T\+X\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+RX, T\+X\+\_\+\+W\+R\+I\+T\+E\+\_\+\+U\+N\+S\+A\+FE. 
+
+Helper function\+: turn table info into table access flag
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} The table\textquotesingle{}s access/lock type \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} Whether the table\textquotesingle{}s engine is transactional\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The table access flag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction__state__tracker_ab1c253155bc5bbab9edf22dc64fffa20}\label{classTransaction__state__tracker_ab1c253155bc5bbab9edf22dc64fffa20}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!check@{check}}
+\index{check@{check}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+state\+\_\+tracker\+::check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+To be invoked when the tracker\textquotesingle{}s system variable is checked (O\+N\+\_\+\+C\+H\+E\+CK). 
+
+Implements \mbox{\hyperlink{classState__tracker_a50923266a6300e657b70dc4f0125782c}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classTransaction__state__tracker_aa8a01939d3da4f3e87e5b833f79b635f}\label{classTransaction__state__tracker_aa8a01939d3da4f3e87e5b833f79b635f}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!clear\+\_\+trx\+\_\+state@{clear\+\_\+trx\+\_\+state}}
+\index{clear\+\_\+trx\+\_\+state@{clear\+\_\+trx\+\_\+state}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{clear\+\_\+trx\+\_\+state()}{clear\_trx\_state()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::clear\+\_\+trx\+\_\+state (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{clear }\end{DoxyParamCaption})}
+
+
+
+Clear flags pertaining to the current statement or transaction. May be called repeatedly within the same execution cycle. 
+
+Change transaction state
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} The flags to clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__state__tracker_a1027295403af650734a45d8281cc5d1c}\label{classTransaction__state__tracker_a1027295403af650734a45d8281cc5d1c}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!enable@{enable}}
+\index{enable@{enable}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+state\+\_\+tracker\+::enable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called in the constructor of T\+HD 
+
+Implements \mbox{\hyperlink{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classTransaction__state__tracker_a6c702422b28c51ab3747a4f7fb45fd96}\label{classTransaction__state__tracker_a6c702422b28c51ab3747a4f7fb45fd96}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!end\+\_\+trx@{end\+\_\+trx}}
+\index{end\+\_\+trx@{end\+\_\+trx}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{end\+\_\+trx()}{end\_trx()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::end\+\_\+trx (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Register the end of an (implicit or explicit) transaction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__state__tracker_a5afd4fcf4c13dcaf68811246a153d72f}\label{classTransaction__state__tracker_a5afd4fcf4c13dcaf68811246a153d72f}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}}
+\index{mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{mark\+\_\+as\+\_\+changed()}{mark\_as\_changed()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::mark\+\_\+as\+\_\+changed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{tracked\+\_\+item\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Mark the tracker as changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{[}IN\mbox{]} Always null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classTransaction__state__tracker_aaa609102617808d57f15dbe92a278019}\label{classTransaction__state__tracker_aaa609102617808d57f15dbe92a278019}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!set\+\_\+isol\+\_\+level@{set\+\_\+isol\+\_\+level}}
+\index{set\+\_\+isol\+\_\+level@{set\+\_\+isol\+\_\+level}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{set\+\_\+isol\+\_\+level()}{set\_isol\_level()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::set\+\_\+isol\+\_\+level (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum enum\+\_\+tx\+\_\+isol\+\_\+level}]{level }\end{DoxyParamCaption})}
+
+
+
+Set isolation level pertaining to the next transaction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} The isolation level to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__state__tracker_a89dd20a6792185119d322594f8c5a420}\label{classTransaction__state__tracker_a89dd20a6792185119d322594f8c5a420}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!set\+\_\+read\+\_\+flags@{set\+\_\+read\+\_\+flags}}
+\index{set\+\_\+read\+\_\+flags@{set\+\_\+read\+\_\+flags}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{set\+\_\+read\+\_\+flags()}{set\_read\_flags()}}
+{\footnotesize\ttfamily void Transaction\+\_\+state\+\_\+tracker\+::set\+\_\+read\+\_\+flags (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum enum\+\_\+tx\+\_\+read\+\_\+flags}]{flags }\end{DoxyParamCaption})}
+
+
+
+Set read flags (read only/read write) pertaining to the next transaction. 
+
+Change transaction characteristics
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+{\em set} & \mbox{[}IN\mbox{]} The flags to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__state__tracker_a7f7843e53238fdc98ee31ac07b2376e2}\label{classTransaction__state__tracker_a7f7843e53238fdc98ee31ac07b2376e2}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!store@{store}}
+\index{store@{store}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+state\+\_\+tracker\+::store (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String \&}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Store the transaction state (and, optionally, characteristics) as length-\/encoded string in the specified buffer. Once the data is stored, we reset the flags related to state-\/change (see reset()). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.  buf \mbox{[}I\+N\+O\+UT\mbox{]} Buffer to store the information to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false Success true Error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classTransaction__state__tracker_a96e814f8253741480125787405add62a}\label{classTransaction__state__tracker_a96e814f8253741480125787405add62a}} 
+\index{Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}!update@{update}}
+\index{update@{update}!Transaction\+\_\+state\+\_\+tracker@{Transaction\+\_\+state\+\_\+tracker}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+state\+\_\+tracker\+::update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable/disable the tracker based on @session\+\_\+track\+\_\+transaction\+\_\+info\textquotesingle{}s value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if updating the tracking level failed, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}{State\+\_\+tracker}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+h\item 
+session\+\_\+tracker.\+cc\end{DoxyCompactItemize}

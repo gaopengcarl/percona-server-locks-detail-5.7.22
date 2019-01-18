@@ -1,0 +1,108 @@
+\hypertarget{classQuery__result__union__direct}{}\section{Query\+\_\+result\+\_\+union\+\_\+direct Class Reference}
+\label{classQuery__result__union__direct}\index{Query\+\_\+result\+\_\+union\+\_\+direct@{Query\+\_\+result\+\_\+union\+\_\+direct}}
+Inheritance diagram for Query\+\_\+result\+\_\+union\+\_\+direct\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQuery__result__union__direct}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a2aefc9859a1d06b50ab622476d5906d8}\label{classQuery__result__union__direct_a2aefc9859a1d06b50ab622476d5906d8}} 
+{\bfseries Query\+\_\+result\+\_\+union\+\_\+direct} (Query\+\_\+result $\ast$result, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$last\+\_\+select\+\_\+lex)
+\item 
+bool \mbox{\hyperlink{classQuery__result__union__direct_a22f70374a68909fb2a45d207639ca70a}{change\+\_\+query\+\_\+result}} (Query\+\_\+result $\ast$new\+\_\+result)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a3e5704d273740f0fa46be6db6ebf8125}\label{classQuery__result__union__direct_a3e5704d273740f0fa46be6db6ebf8125}} 
+uint {\bfseries field\+\_\+count} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields) const
+\item 
+bool \mbox{\hyperlink{classQuery__result__union__direct_af8c3f38e8a9597784871d3d9a6d5839a}{postponed\+\_\+prepare}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&types)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_afd2a4d6955a6f05aea0996ee3f7b6c20}\label{classQuery__result__union__direct_afd2a4d6955a6f05aea0996ee3f7b6c20}} 
+bool {\bfseries send\+\_\+result\+\_\+set\+\_\+metadata} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&list, uint flags)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a45ce2e83db9279abdea4d169912a769f}\label{classQuery__result__union__direct_a45ce2e83db9279abdea4d169912a769f}} 
+bool {\bfseries send\+\_\+data} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&items)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_ab7feb1e533b778e2f924b02f786b0071}\label{classQuery__result__union__direct_ab7feb1e533b778e2f924b02f786b0071}} 
+bool {\bfseries initialize\+\_\+tables} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a79aba5f6553e9ed0a14d2ed0850101cd}\label{classQuery__result__union__direct_a79aba5f6553e9ed0a14d2ed0850101cd}} 
+void {\bfseries send\+\_\+error} (uint errcode, const char $\ast$err)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a45948265d1b0a5ec4cfec22982db9530}\label{classQuery__result__union__direct_a45948265d1b0a5ec4cfec22982db9530}} 
+bool {\bfseries send\+\_\+eof} ()
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a0b43db0333bd9c587f2c8a86e9a99a6d}\label{classQuery__result__union__direct_a0b43db0333bd9c587f2c8a86e9a99a6d}} 
+bool {\bfseries flush} ()
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_ab86ff521a323ad6ea6c48ea437cb552e}\label{classQuery__result__union__direct_ab86ff521a323ad6ea6c48ea437cb552e}} 
+bool {\bfseries check\+\_\+simple\+\_\+select} () const
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a6e3a6836979162a70ed9803debf1217f}\label{classQuery__result__union__direct_a6e3a6836979162a70ed9803debf1217f}} 
+void {\bfseries abort\+\_\+result\+\_\+set} ()
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a2b65d6c617f13469063698a4a8b9b1f0}\label{classQuery__result__union__direct_a2b65d6c617f13469063698a4a8b9b1f0}} 
+void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a7dd197576188857d8998d346d00271fd}\label{classQuery__result__union__direct_a7dd197576188857d8998d346d00271fd}} 
+void {\bfseries set\+\_\+thd} (T\+HD $\ast$thd\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classQuery__result__union__direct_a1ca8dc47daf96ec47cd3c1fbe7884b93}\label{classQuery__result__union__direct_a1ca8dc47daf96ec47cd3c1fbe7884b93}} 
+void {\bfseries begin\+\_\+dataset} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+U\+N\+I\+ON result that is passed directly to the receiving Query\+\_\+result without filling a temporary table.
+
+Function calls are forwarded to the wrapped Query\+\_\+result, but some functions are expected to be called only once for each query, so they are only executed for the first query block in the union (except for send\+\_\+eof(), which is executed only for the last query block).
+
+This Query\+\_\+result is used when a U\+N\+I\+ON is not D\+I\+S\+T\+I\+N\+CT and doesn\textquotesingle{}t have a global O\+R\+D\+ER BY clause. \begin{DoxySeeAlso}{See also}
+st\+\_\+select\+\_\+lex\+\_\+unit\+::prepare(). 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuery__result__union__direct_a22f70374a68909fb2a45d207639ca70a}\label{classQuery__result__union__direct_a22f70374a68909fb2a45d207639ca70a}} 
+\index{Query\+\_\+result\+\_\+union\+\_\+direct@{Query\+\_\+result\+\_\+union\+\_\+direct}!change\+\_\+query\+\_\+result@{change\+\_\+query\+\_\+result}}
+\index{change\+\_\+query\+\_\+result@{change\+\_\+query\+\_\+result}!Query\+\_\+result\+\_\+union\+\_\+direct@{Query\+\_\+result\+\_\+union\+\_\+direct}}
+\subsubsection{\texorpdfstring{change\+\_\+query\+\_\+result()}{change\_query\_result()}}
+{\footnotesize\ttfamily bool Query\+\_\+result\+\_\+union\+\_\+direct\+::change\+\_\+query\+\_\+result (\begin{DoxyParamCaption}\item[{Query\+\_\+result $\ast$}]{new\+\_\+result }\end{DoxyParamCaption})}
+
+Replace the current query result with new\+\_\+result and prepare it. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+result} & New query result\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__result__union__direct_af8c3f38e8a9597784871d3d9a6d5839a}\label{classQuery__result__union__direct_af8c3f38e8a9597784871d3d9a6d5839a}} 
+\index{Query\+\_\+result\+\_\+union\+\_\+direct@{Query\+\_\+result\+\_\+union\+\_\+direct}!postponed\+\_\+prepare@{postponed\+\_\+prepare}}
+\index{postponed\+\_\+prepare@{postponed\+\_\+prepare}!Query\+\_\+result\+\_\+union\+\_\+direct@{Query\+\_\+result\+\_\+union\+\_\+direct}}
+\subsubsection{\texorpdfstring{postponed\+\_\+prepare()}{postponed\_prepare()}}
+{\footnotesize\ttfamily bool Query\+\_\+result\+\_\+union\+\_\+direct\+::postponed\+\_\+prepare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Do prepare() and prepare2() if they have been postponed until column type information is computed (used by \mbox{\hyperlink{classQuery__result__union__direct}{Query\+\_\+result\+\_\+union\+\_\+direct}}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & Column types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classQuery__result__union_ad110a83be28d4f91cfd4c7c534defcc9}{Query\+\_\+result\+\_\+union}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+union.\+cc\end{DoxyCompactItemize}

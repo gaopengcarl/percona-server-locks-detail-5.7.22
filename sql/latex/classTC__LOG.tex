@@ -1,0 +1,222 @@
+\hypertarget{classTC__LOG}{}\section{T\+C\+\_\+\+L\+OG Class Reference}
+\label{classTC__LOG}\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+
+
+{\ttfamily \#include $<$tc\+\_\+log.\+h$>$}
+
+Inheritance diagram for T\+C\+\_\+\+L\+OG\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTC__LOG}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTC__LOG_ae6d54c7c6922b5ce426744f35602e9af}\label{classTC__LOG_ae6d54c7c6922b5ce426744f35602e9af}} 
+enum {\bfseries enum\+\_\+result} \{ {\bfseries R\+E\+S\+U\+L\+T\+\_\+\+S\+U\+C\+C\+E\+SS}, 
+{\bfseries R\+E\+S\+U\+L\+T\+\_\+\+A\+B\+O\+R\+T\+ED}, 
+{\bfseries R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+C\+O\+N\+S\+I\+S\+T\+E\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTC__LOG_a57d3ed9dfb015fb2427a25eecaf78687}{using\+\_\+heuristic\+\_\+recover}} ()
+\item 
+virtual int \mbox{\hyperlink{classTC__LOG_a34eb4c35fe8d29b0febbd700a61b282d}{open}} (const char $\ast$opt\+\_\+name)=0
+\item 
+virtual void \mbox{\hyperlink{classTC__LOG_a645b5d1b49c4c4396d327eef07e2dd53}{close}} ()=0
+\item 
+virtual enum\+\_\+result \mbox{\hyperlink{classTC__LOG_a3f9ef43db745a798f8b361eb0b93ff22}{commit}} (T\+HD $\ast$thd, bool all)=0
+\item 
+virtual int \mbox{\hyperlink{classTC__LOG_abf637f1bbf02c6f8e4f69aa2f5e2d362}{rollback}} (T\+HD $\ast$thd, bool all)=0
+\item 
+virtual int \mbox{\hyperlink{classTC__LOG_ab968f1e200f370127c3dcd0302d00968}{prepare}} (T\+HD $\ast$thd, bool all)=0
+\item 
+virtual void \mbox{\hyperlink{classTC__LOG_aac75dc061e9aae27449e675b23c27ae3}{xlock}} (void)=0
+\item 
+virtual void \mbox{\hyperlink{classTC__LOG_a60ee380273adc9e23c56ff114cd2636a}{xunlock}} (void)=0
+\item 
+virtual void \mbox{\hyperlink{classTC__LOG_a5b73af1ad12c691b3417c565f7e58a1c}{slock}} (void)=0
+\item 
+virtual void \mbox{\hyperlink{classTC__LOG_ab383cdb4b722c9b11d284ac8b970b087}{sunlock}} (void)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Transaction Coordinator Log.
+
+A base abstract class for three different implementations of the transaction coordinator.
+
+The server uses the transaction coordinator to order transactions correctly and there are three different implementations\+: one using an in-\/memory structure, one dummy that does not do anything, and one using the binary log for transaction coordination. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTC__LOG_a645b5d1b49c4c4396d327eef07e2dd53}\label{classTC__LOG_a645b5d1b49c4c4396d327eef07e2dd53}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!close@{close}}
+\index{close@{close}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void T\+C\+\_\+\+L\+O\+G\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Close the transaction coordinator log and free any resources. Called during server shutdown. 
+
+Implemented in \mbox{\hyperlink{group__Binary__Log_ga22e829bf97dfac49c3b05a2cbdbaf7cb}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_aefc50f2b1eeb68743a1ab72219f85db4}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_adb7792f21f5a090a7d71a646d2ebf82f}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_a3f9ef43db745a798f8b361eb0b93ff22}\label{classTC__LOG_a3f9ef43db745a798f8b361eb0b93ff22}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!commit@{commit}}
+\index{commit@{commit}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily virtual enum\+\_\+result T\+C\+\_\+\+L\+O\+G\+::commit (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Log a commit record of the transaction to the transaction coordinator log.
+
+When the function returns, the transaction commit is properly logged to the transaction coordinator log and can be committed in the storage engines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to log transaction for. \\
+\hline
+{\em all} & {\ttfamily True} if this is a \char`\"{}real\char`\"{} commit, {\ttfamily false} if it is a \char`\"{}statement\char`\"{} commit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code on failure, zero on success. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{group__Binary__Log_ga94fdcfcfb5d2c85ca2a114ad2115b20e}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_ac8696930a9546b39057462eca51b3648}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_acb87643d4017b6946c1f1814f8a4ca36}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_a34eb4c35fe8d29b0febbd700a61b282d}\label{classTC__LOG_a34eb4c35fe8d29b0febbd700a61b282d}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!open@{open}}
+\index{open@{open}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual int T\+C\+\_\+\+L\+O\+G\+::open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{opt\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initialize and open the coordinator log. Do recovery if necessary. Called during server startup.
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+name} & Name of logfile.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & sucess \\
+\hline
+{\em 1} & failed \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classTC__LOG__MMAP_a2a7bf09548c80ed522a20ad9b9cff295}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_ac5c9f424a1544aafc9fe08e894bbce81}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_ab968f1e200f370127c3dcd0302d00968}\label{classTC__LOG_ab968f1e200f370127c3dcd0302d00968}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!prepare@{prepare}}
+\index{prepare@{prepare}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily virtual int T\+C\+\_\+\+L\+O\+G\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Log a prepare record of the transaction to the storage engines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to log transaction record for.\\
+\hline
+{\em all} & {\ttfamily true} if an explicit commit or an implicit commit for a statement, {\ttfamily false} if an internal commit of the statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code on failure, zero on success. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{group__Binary__Log_ga4789039161947fff76fa8250b120b7e3}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_a334d9853acc2f7b12ae2a3014806f6c4}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_a911680c1d0a8f4e5a028e2f1920ee2a2}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_abf637f1bbf02c6f8e4f69aa2f5e2d362}\label{classTC__LOG_abf637f1bbf02c6f8e4f69aa2f5e2d362}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!rollback@{rollback}}
+\index{rollback@{rollback}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily virtual int T\+C\+\_\+\+L\+O\+G\+::rollback (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Log a rollback record of the transaction to the transaction coordinator log.
+
+When the function returns, the transaction have been aborted in the transaction coordinator log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to log transaction record for.\\
+\hline
+{\em all} & {\ttfamily true} if an explicit commit or an implicit commit for a statement, {\ttfamily false} if an internal commit of the statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code on failure, zero on success. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{group__Binary__Log_ga9590d29210bd03fce1b8f9effc7c2d2a}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_a5a050951b50e08417abbec375ab30614}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_af37509e3086560c3d057a0c43b67a238}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_a5b73af1ad12c691b3417c565f7e58a1c}\label{classTC__LOG_a5b73af1ad12c691b3417c565f7e58a1c}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!slock@{slock}}
+\index{slock@{slock}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{slock()}{slock()}}
+{\footnotesize\ttfamily virtual void T\+C\+\_\+\+L\+O\+G\+::slock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Acquire a shared lock to block commits. This is used when calling \mbox{\hyperlink{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}{ha\+\_\+commit\+\_\+low()}} to block commits if there\textquotesingle{}s an exclusive lock acquired by S\+T\+A\+RT T\+R\+A\+N\+S\+A\+C\+T\+I\+ON W\+I\+TH C\+O\+N\+S\+I\+S\+T\+E\+NT S\+N\+A\+P\+S\+H\+OT. 
+
+Implemented in \mbox{\hyperlink{classMYSQL__BIN__LOG_a189bd79b457e303f7c6ef936e3c932cf}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_a8c90387699139f5e9d244e60c5a126a1}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_a144eb01c40fb75ae3a1c04609dc89ea3}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_ab383cdb4b722c9b11d284ac8b970b087}\label{classTC__LOG_ab383cdb4b722c9b11d284ac8b970b087}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!sunlock@{sunlock}}
+\index{sunlock@{sunlock}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{sunlock()}{sunlock()}}
+{\footnotesize\ttfamily virtual void T\+C\+\_\+\+L\+O\+G\+::sunlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Release lock acquired with \mbox{\hyperlink{classTC__LOG_a5b73af1ad12c691b3417c565f7e58a1c}{slock()}}. 
+
+Implemented in \mbox{\hyperlink{classMYSQL__BIN__LOG_a594f819067f89619e7329f67043c1323}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_a8f2d68fb0873cc813dcfc65d4d922261}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_a5ab2da6fa3688756cf9694d25db67c6c}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_a57d3ed9dfb015fb2427a25eecaf78687}\label{classTC__LOG_a57d3ed9dfb015fb2427a25eecaf78687}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!using\+\_\+heuristic\+\_\+recover@{using\+\_\+heuristic\+\_\+recover}}
+\index{using\+\_\+heuristic\+\_\+recover@{using\+\_\+heuristic\+\_\+recover}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{using\+\_\+heuristic\+\_\+recover()}{using\_heuristic\_recover()}}
+{\footnotesize\ttfamily bool T\+C\+\_\+\+L\+O\+G\+::using\+\_\+heuristic\+\_\+recover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Perform heuristic recovery, if --tc-\/heuristic-\/recover was used.
+
+\begin{DoxyNote}{Note}
+no matter whether heuristic recovery was successful or not mysqld must exit. So, return value is the same in both cases.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & no heuristic recovery was requested \\
+\hline
+{\em true} & heuristic recovery was performed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTC__LOG_aac75dc061e9aae27449e675b23c27ae3}\label{classTC__LOG_aac75dc061e9aae27449e675b23c27ae3}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!xlock@{xlock}}
+\index{xlock@{xlock}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{xlock()}{xlock()}}
+{\footnotesize\ttfamily virtual void T\+C\+\_\+\+L\+O\+G\+::xlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Acquire an exclusive lock to block binary log updates and commits. This is used by S\+T\+A\+RT T\+R\+A\+N\+S\+A\+C\+T\+I\+ON W\+I\+TH C\+O\+N\+S\+I\+S\+T\+E\+NT S\+N\+A\+P\+S\+H\+OT to create an atomic snapshot. 
+
+Implemented in \mbox{\hyperlink{group__Binary__Log_ga5ebea3ac42b19b6e1c86ca33c3cb28e7}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_ab6e8fad0d9b8167b22d22f4372739202}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_a48cd538ebda31693671772018d2563b9}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+\mbox{\Hypertarget{classTC__LOG_a60ee380273adc9e23c56ff114cd2636a}\label{classTC__LOG_a60ee380273adc9e23c56ff114cd2636a}} 
+\index{T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}!xunlock@{xunlock}}
+\index{xunlock@{xunlock}!T\+C\+\_\+\+L\+OG@{T\+C\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{xunlock()}{xunlock()}}
+{\footnotesize\ttfamily virtual void T\+C\+\_\+\+L\+O\+G\+::xunlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Release lock acquired with \mbox{\hyperlink{classTC__LOG_aac75dc061e9aae27449e675b23c27ae3}{xlock()}}. 
+
+Implemented in \mbox{\hyperlink{group__Binary__Log_gaee260f3856d7b1e557b91b7ecdc0b01c}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}, \mbox{\hyperlink{classTC__LOG__MMAP_a728d9b1b03c73850ba116b93677a42a8}{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}, and \mbox{\hyperlink{classTC__LOG__DUMMY_a0ac9df53eb4f1ec401e0bdf9d9c95f62}{T\+C\+\_\+\+L\+O\+G\+\_\+\+D\+U\+M\+MY}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tc\+\_\+log.\+h\item 
+tc\+\_\+log.\+cc\end{DoxyCompactItemize}

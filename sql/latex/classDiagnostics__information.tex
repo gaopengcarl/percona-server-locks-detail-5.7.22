@@ -1,0 +1,140 @@
+\hypertarget{classDiagnostics__information}{}\section{Diagnostics\+\_\+information Class Reference}
+\label{classDiagnostics__information}\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+
+
+{\ttfamily \#include $<$sql\+\_\+get\+\_\+diagnostics.\+h$>$}
+
+Inheritance diagram for Diagnostics\+\_\+information\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDiagnostics__information}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}{Which\+\_\+area}} \{ \mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624a748fd638d5316894a8ee58beaa23008a}{C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+R\+EA}}, 
+\mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624a0227135d55506f0db7064e4c0e962120}{S\+T\+A\+C\+K\+E\+D\+\_\+\+A\+R\+EA}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDiagnostics__information_a6028d068edb45a088afe02639c4cbab7}{set\+\_\+which\+\_\+da}} (\mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}{Which\+\_\+area}} area)
+\item 
+\mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}{Which\+\_\+area}} \mbox{\hyperlink{classDiagnostics__information_aa6e10915b239cfb7372890568168abb9}{get\+\_\+which\+\_\+da}} (void) const
+\item 
+virtual bool \mbox{\hyperlink{classDiagnostics__information_a5181f11d3ef8554e1989a882bc2504dc}{aggregate}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$da)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classDiagnostics__information_a36e371a6a611551e83ce8e331c8c1541}{$\sim$\+Diagnostics\+\_\+information}} ()
+\item 
+{\footnotesize template$<$typename Diag\+\_\+item , typename Context $>$ }\\bool \mbox{\hyperlink{classDiagnostics__information_a76edbb6f3462e7e236d71496c8b09094}{evaluate}} (T\+HD $\ast$thd, Diag\+\_\+item $\ast$diag\+\_\+item, Context ctx)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents the diagnostics information to be obtained.
+
+Diagnostic information is made available through statement information and condition information items. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}\label{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}} 
+\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!Which\+\_\+area@{Which\+\_\+area}}
+\index{Which\+\_\+area@{Which\+\_\+area}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+\subsubsection{\texorpdfstring{Which\+\_\+area}{Which\_area}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}{Diagnostics\+\_\+information\+::\+Which\+\_\+area}}}
+
+Which Diagnostics Area to access. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+R\+EA@{C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+R\+EA}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+R\+EA@{C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+R\+EA}}}\mbox{\Hypertarget{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624a748fd638d5316894a8ee58beaa23008a}\label{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624a748fd638d5316894a8ee58beaa23008a}} 
+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+R\+EA&Access the first Diagnostics Area. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+C\+K\+E\+D\+\_\+\+A\+R\+EA@{S\+T\+A\+C\+K\+E\+D\+\_\+\+A\+R\+EA}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!S\+T\+A\+C\+K\+E\+D\+\_\+\+A\+R\+EA@{S\+T\+A\+C\+K\+E\+D\+\_\+\+A\+R\+EA}}}\mbox{\Hypertarget{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624a0227135d55506f0db7064e4c0e962120}\label{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624a0227135d55506f0db7064e4c0e962120}} 
+S\+T\+A\+C\+K\+E\+D\+\_\+\+A\+R\+EA&Access the second Diagnostics Area. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDiagnostics__information_a36e371a6a611551e83ce8e331c8c1541}\label{classDiagnostics__information_a36e371a6a611551e83ce8e331c8c1541}} 
+\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!````~Diagnostics\+\_\+information@{$\sim$\+Diagnostics\+\_\+information}}
+\index{````~Diagnostics\+\_\+information@{$\sim$\+Diagnostics\+\_\+information}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+\subsubsection{\texorpdfstring{$\sim$\+Diagnostics\+\_\+information()}{~Diagnostics\_information()}}
+{\footnotesize\ttfamily virtual Diagnostics\+\_\+information\+::$\sim$\+Diagnostics\+\_\+information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classDiagnostics__information}{Diagnostics\+\_\+information}} objects are allocated in thd-\/$>$mem\+\_\+root. Do not rely on the destructor for any cleanup. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiagnostics__information_a5181f11d3ef8554e1989a882bc2504dc}\label{classDiagnostics__information_a5181f11d3ef8554e1989a882bc2504dc}} 
+\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+\subsubsection{\texorpdfstring{aggregate()}{aggregate()}}
+{\footnotesize\ttfamily virtual bool Diagnostics\+\_\+information\+::aggregate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{da }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Aggregate diagnostics information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em da} & The Diagnostics Area.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classCondition__information_acb021776f86470bf0ca0da8a3f60c44a}{Condition\+\_\+information}}, and \mbox{\hyperlink{classStatement__information_ab059a9e174ffce90b78d541ec4f93455}{Statement\+\_\+information}}.
+
+\mbox{\Hypertarget{classDiagnostics__information_a76edbb6f3462e7e236d71496c8b09094}\label{classDiagnostics__information_a76edbb6f3462e7e236d71496c8b09094}} 
+\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily template$<$typename Diag\+\_\+item , typename Context $>$ \\
+bool Diagnostics\+\_\+information\+::evaluate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Diag\+\_\+item $\ast$}]{diag\+\_\+item,  }\item[{Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Evaluate a diagnostics information item in a specific context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em diag\+\_\+item} & The diagnostics information item. \\
+\hline
+{\em ctx} & The context to evaluate the item.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classDiagnostics__information_aa6e10915b239cfb7372890568168abb9}\label{classDiagnostics__information_aa6e10915b239cfb7372890568168abb9}} 
+\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!get\+\_\+which\+\_\+da@{get\+\_\+which\+\_\+da}}
+\index{get\+\_\+which\+\_\+da@{get\+\_\+which\+\_\+da}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+\subsubsection{\texorpdfstring{get\+\_\+which\+\_\+da()}{get\_which\_da()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}{Which\+\_\+area}} Diagnostics\+\_\+information\+::get\+\_\+which\+\_\+da (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get which Diagnostics Area to access. \mbox{\Hypertarget{classDiagnostics__information_a6028d068edb45a088afe02639c4cbab7}\label{classDiagnostics__information_a6028d068edb45a088afe02639c4cbab7}} 
+\index{Diagnostics\+\_\+information@{Diagnostics\+\_\+information}!set\+\_\+which\+\_\+da@{set\+\_\+which\+\_\+da}}
+\index{set\+\_\+which\+\_\+da@{set\+\_\+which\+\_\+da}!Diagnostics\+\_\+information@{Diagnostics\+\_\+information}}
+\subsubsection{\texorpdfstring{set\+\_\+which\+\_\+da()}{set\_which\_da()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+information\+::set\+\_\+which\+\_\+da (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiagnostics__information_a87e497725c87366dd3af8cafe74fc624}{Which\+\_\+area}}}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set which Diagnostics Area to access. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+get\+\_\+diagnostics.\+h\end{DoxyCompactItemize}

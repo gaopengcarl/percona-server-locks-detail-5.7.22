@@ -1,0 +1,241 @@
+\hypertarget{structst__position}{}\section{st\+\_\+position Struct Reference}
+\label{structst__position}\index{st\+\_\+position@{st\+\_\+position}}
+
+
+{\ttfamily \#include $<$sql\+\_\+select.\+h$>$}
+
+Inheritance diagram for st\+\_\+position\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structst__position}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structst__position_a2ebb88c3230d471f89bda02de12f62e6}{no\+\_\+semijoin}} ()
+\item 
+void \mbox{\hyperlink{structst__position_aa317ac2b3fa373e6c8f9a1a02c2e2754}{set\+\_\+prefix\+\_\+cost}} (double cost, double rowcount)
+\item 
+void \mbox{\hyperlink{structst__position_a3077a39535d27d819e8e027e22905840}{set\+\_\+prefix\+\_\+join\+\_\+cost}} (uint idx, const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$cm)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structst__position_aa38b3dcf630fb252f9eae43cb1d8a847}{rows\+\_\+fetched}}
+\item 
+double \mbox{\hyperlink{structst__position_a455bdd05662b3e0e7670501bf0788cdd}{read\+\_\+cost}}
+\item 
+float \mbox{\hyperlink{structst__position_af2d5d5e5b65710d3a1a1ae38b14f44de}{filter\+\_\+effect}}
+\item 
+double \mbox{\hyperlink{structst__position_aa29ae7911f9cc07153c57c5bc9ff9617}{prefix\+\_\+rowcount}}
+\item 
+\mbox{\Hypertarget{structst__position_af0c9d2de2a7041516158ed42a97ce35b}\label{structst__position_af0c9d2de2a7041516158ed42a97ce35b}} 
+double {\bfseries prefix\+\_\+cost}
+\item 
+\mbox{\Hypertarget{structst__position_a47b8a06d0137c8109d4798f9f4ecdc78}\label{structst__position_a47b8a06d0137c8109d4798f9f4ecdc78}} 
+\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$ {\bfseries table}
+\item 
+\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$ \mbox{\hyperlink{structst__position_a5d8ce81ce1aaae66efabc4bef2f53f4e}{key}}
+\item 
+table\+\_\+map \mbox{\hyperlink{structst__position_a0adedeafc969f1754149c722665d64c0}{ref\+\_\+depend\+\_\+map}}
+\item 
+\mbox{\Hypertarget{structst__position_a6f00683cab5fe2cfd4aaa45a2a5a7710}\label{structst__position_a6f00683cab5fe2cfd4aaa45a2a5a7710}} 
+bool {\bfseries use\+\_\+join\+\_\+buffer}
+\item 
+uint \mbox{\hyperlink{structst__position_ab27ba77e3972eeb713a371d38657ce1f}{sj\+\_\+strategy}}
+\item 
+uint \mbox{\hyperlink{structst__position_afa9fd7ef4d5fb77a167a68bd46f7b159}{n\+\_\+sj\+\_\+tables}}
+\item 
+table\+\_\+map \mbox{\hyperlink{structst__position_a1dd4650de7dfd57c330261f9a0b583fe}{dups\+\_\+producing\+\_\+tables}}
+\item 
+\mbox{\Hypertarget{structst__position_ad75bf24712a71313fdf9e130b8bce644}\label{structst__position_ad75bf24712a71313fdf9e130b8bce644}} 
+uint {\bfseries first\+\_\+loosescan\+\_\+table}
+\item 
+\mbox{\Hypertarget{structst__position_a8cd3ebf9fc563bfac1983f97a97bc81f}\label{structst__position_a8cd3ebf9fc563bfac1983f97a97bc81f}} 
+table\+\_\+map {\bfseries loosescan\+\_\+need\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structst__position_a0f7959094b0551189f17496b4318dfad}\label{structst__position_a0f7959094b0551189f17496b4318dfad}} 
+uint {\bfseries loosescan\+\_\+key}
+\item 
+\mbox{\Hypertarget{structst__position_ac53c4c03bf2a7962e65bcfd0c1d549db}\label{structst__position_ac53c4c03bf2a7962e65bcfd0c1d549db}} 
+uint {\bfseries loosescan\+\_\+parts}
+\item 
+\mbox{\Hypertarget{structst__position_aa2143e25acde96767b338afe1b71f665}\label{structst__position_aa2143e25acde96767b338afe1b71f665}} 
+uint {\bfseries first\+\_\+firstmatch\+\_\+table}
+\item 
+\mbox{\Hypertarget{structst__position_a2250a6e56fb9822a536464bca7120009}\label{structst__position_a2250a6e56fb9822a536464bca7120009}} 
+table\+\_\+map {\bfseries first\+\_\+firstmatch\+\_\+rtbl}
+\item 
+\mbox{\Hypertarget{structst__position_aa2e6ad52f286351f2d69b0d1fbe617a9}\label{structst__position_aa2e6ad52f286351f2d69b0d1fbe617a9}} 
+table\+\_\+map {\bfseries firstmatch\+\_\+need\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structst__position_a6b28c9f1b98b4338553fcb9fa9edffd3}\label{structst__position_a6b28c9f1b98b4338553fcb9fa9edffd3}} 
+uint {\bfseries first\+\_\+dupsweedout\+\_\+table}
+\item 
+\mbox{\Hypertarget{structst__position_a8a23435c5b2e6092c2a76d9b1f663746}\label{structst__position_a8a23435c5b2e6092c2a76d9b1f663746}} 
+table\+\_\+map {\bfseries dupsweedout\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structst__position_a49de59eed736027891007e7ff05dea00}\label{structst__position_a49de59eed736027891007e7ff05dea00}} 
+uint {\bfseries sjm\+\_\+scan\+\_\+last\+\_\+inner}
+\item 
+\mbox{\Hypertarget{structst__position_a10ccfdf00818485fa9230b73c827a6d6}\label{structst__position_a10ccfdf00818485fa9230b73c827a6d6}} 
+table\+\_\+map {\bfseries sjm\+\_\+scan\+\_\+need\+\_\+tables}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A position of table within a join order. This structure is primarily used as a part of join-\/$>$positions and join-\/$>$best\+\_\+positions arrays.
+
+One P\+O\+S\+I\+T\+I\+ON element contains information about\+:
+\begin{DoxyItemize}
+\item Which table is accessed
+\item Which access method was chosen = Its cost and \#of output records
+\item Semi-\/join strategy choice. Note that there are two different representation formats\+:
+\begin{DoxyEnumerate}
+\item The one used during join optimization
+\item The one used at plan refinement/code generation stage. We call fix\+\_\+semijoin\+\_\+strategies\+\_\+for\+\_\+picked\+\_\+join\+\_\+order() to switch between \#1 and \#2. See that function\textquotesingle{}s comment for more details.
+\end{DoxyEnumerate}
+\item Semi-\/join optimization state. When we\textquotesingle{}re running join optimization, we main a state for every semi-\/join strategy which are various variables that tell us if/at which point we could consider applying the strategy. ~\newline
+ The variables are really a function of join prefix but they are too expensive to re-\/caclulate for every join prefix we consider, so we maintain current state in join-\/$>$positions\mbox{[}\#tables\+\_\+in\+\_\+prefix\mbox{]}. See advance\+\_\+sj\+\_\+state() for details.
+\end{DoxyItemize}
+
+This class has to stay a P\+OD, because it is memcpy\textquotesingle{}d in many places. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structst__position_a2ebb88c3230d471f89bda02de12f62e6}\label{structst__position_a2ebb88c3230d471f89bda02de12f62e6}} 
+\index{st\+\_\+position@{st\+\_\+position}!no\+\_\+semijoin@{no\+\_\+semijoin}}
+\index{no\+\_\+semijoin@{no\+\_\+semijoin}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{no\+\_\+semijoin()}{no\_semijoin()}}
+{\footnotesize\ttfamily void st\+\_\+position\+::no\+\_\+semijoin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Even if the query has no semijoin, two sj-\/related members are read and must thus have been set, by this function. \mbox{\Hypertarget{structst__position_aa317ac2b3fa373e6c8f9a1a02c2e2754}\label{structst__position_aa317ac2b3fa373e6c8f9a1a02c2e2754}} 
+\index{st\+\_\+position@{st\+\_\+position}!set\+\_\+prefix\+\_\+cost@{set\+\_\+prefix\+\_\+cost}}
+\index{set\+\_\+prefix\+\_\+cost@{set\+\_\+prefix\+\_\+cost}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{set\+\_\+prefix\+\_\+cost()}{set\_prefix\_cost()}}
+{\footnotesize\ttfamily void st\+\_\+position\+::set\+\_\+prefix\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{cost,  }\item[{double}]{rowcount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set complete estimated cost and produced rowcount for the prefix of tables up to and including this table, in the join plan.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cost} & Estimated cost \\
+\hline
+{\em rowcount} & Estimated row count \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structst__position_a3077a39535d27d819e8e027e22905840}\label{structst__position_a3077a39535d27d819e8e027e22905840}} 
+\index{st\+\_\+position@{st\+\_\+position}!set\+\_\+prefix\+\_\+join\+\_\+cost@{set\+\_\+prefix\+\_\+join\+\_\+cost}}
+\index{set\+\_\+prefix\+\_\+join\+\_\+cost@{set\+\_\+prefix\+\_\+join\+\_\+cost}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{set\+\_\+prefix\+\_\+join\+\_\+cost()}{set\_prefix\_join\_cost()}}
+{\footnotesize\ttfamily void st\+\_\+position\+::set\+\_\+prefix\+\_\+join\+\_\+cost (\begin{DoxyParamCaption}\item[{uint}]{idx,  }\item[{const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$}]{cm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set complete estimated cost and produced rowcount for the prefix of tables up to and including this table, calculated from the cost of the previous stage, the fanout of the current stage and the cost to process a row at the current stage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index of position object within array, if zero there is no \char`\"{}previous\char`\"{} stage that can be added. \\
+\hline
+{\em cm} & Cost model that provides the actual calculation \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__position_a1dd4650de7dfd57c330261f9a0b583fe}\label{structst__position_a1dd4650de7dfd57c330261f9a0b583fe}} 
+\index{st\+\_\+position@{st\+\_\+position}!dups\+\_\+producing\+\_\+tables@{dups\+\_\+producing\+\_\+tables}}
+\index{dups\+\_\+producing\+\_\+tables@{dups\+\_\+producing\+\_\+tables}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{dups\+\_\+producing\+\_\+tables}{dups\_producing\_tables}}
+{\footnotesize\ttfamily table\+\_\+map st\+\_\+position\+::dups\+\_\+producing\+\_\+tables}
+
+\mbox{\hyperlink{classBitmap}{Bitmap}} of semi-\/join inner tables that are in the join prefix and for which there\textquotesingle{}s no provision yet for how to eliminate semi-\/join duplicates which they produce. \mbox{\Hypertarget{structst__position_af2d5d5e5b65710d3a1a1ae38b14f44de}\label{structst__position_af2d5d5e5b65710d3a1a1ae38b14f44de}} 
+\index{st\+\_\+position@{st\+\_\+position}!filter\+\_\+effect@{filter\+\_\+effect}}
+\index{filter\+\_\+effect@{filter\+\_\+effect}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{filter\+\_\+effect}{filter\_effect}}
+{\footnotesize\ttfamily float st\+\_\+position\+::filter\+\_\+effect}
+
+The fraction of the \textquotesingle{}rows\+\_\+fetched\textquotesingle{} rows that will pass the table conditions that were N\+OT used by the access method. If, e.\+g.,
+
+\char`\"{}\+S\+E\+L\+E\+C\+T ... W\+H\+E\+R\+E t1.\+colx = 4 and t1.\+coly $>$ 5\char`\"{}
+
+is resolved by ref access on t1.\+colx, filter\+\_\+effect will be the fraction of rows that will pass the \char`\"{}t1.\+coly $>$ 5\char`\"{} predicate. The valid range is 0..1, where 0.\+0 means that no rows will pass the table conditions and 1.\+0 means that all rows will pass.
+
+It is used to calculate how many row combinations will be joined with the next table, \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structst__position_aa29ae7911f9cc07153c57c5bc9ff9617}{prefix\+\_\+rowcount}} below.
+\end{DoxySeeAlso}
+that with condition filtering enabled, it is possible to get a fanout = rows\+\_\+fetched $\ast$ filter\+\_\+effect that is less than 1.\+0. Consider, e.\+g., a join between t1 and t2\+:
+
+\char`\"{}\+S\+E\+L\+E\+C\+T ... W\+H\+E\+R\+E t1.\+col1=t2.\+colx and t2.\+coly O\+P $<$something$>$\char`\"{}
+
+where t1 is a prefix table and the optimizer currently calculates the cost of adding t2 to the join. Assume that the chosen access method on t2 is a \textquotesingle{}ref\textquotesingle{} access on \textquotesingle{}colx\textquotesingle{} that is estimated to produce 2 rows per row from t1 (i.\+e., rows\+\_\+fetched = 2). It will in this case be perfectly fine to calculate a filtering effect $<$0.\+5 (resulting in \char`\"{}rows\+\_\+fetched $\ast$ filter\+\_\+effect $<$ 1.\+0\char`\"{}) from the predicate \char`\"{}t2.\+coly O\+P $<$something$>$\char`\"{}. If so, the number of row combinations from (t1,t2) is lower than the prefix\+\_\+rowcount of t1.
+
+The above is just an example of how the fanout of a table can become less than one. It can happen for any access method. \mbox{\Hypertarget{structst__position_a5d8ce81ce1aaae66efabc4bef2f53f4e}\label{structst__position_a5d8ce81ce1aaae66efabc4bef2f53f4e}} 
+\index{st\+\_\+position@{st\+\_\+position}!key@{key}}
+\index{key@{key}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey__use}{Key\+\_\+use}}$\ast$ st\+\_\+position\+::key}
+
+N\+U\+LL -\/ \textquotesingle{}index\textquotesingle{} or \textquotesingle{}range\textquotesingle{} or \textquotesingle{}index\+\_\+merge\textquotesingle{} or \textquotesingle{}A\+LL\textquotesingle{} access is used. Other -\/ \mbox{[}eq\+\_\+\mbox{]}ref\mbox{[}\+\_\+or\+\_\+null\mbox{]} access is used. Pointer to \{t.\+keypart1 = expr\} \mbox{\Hypertarget{structst__position_afa9fd7ef4d5fb77a167a68bd46f7b159}\label{structst__position_afa9fd7ef4d5fb77a167a68bd46f7b159}} 
+\index{st\+\_\+position@{st\+\_\+position}!n\+\_\+sj\+\_\+tables@{n\+\_\+sj\+\_\+tables}}
+\index{n\+\_\+sj\+\_\+tables@{n\+\_\+sj\+\_\+tables}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{n\+\_\+sj\+\_\+tables}{n\_sj\_tables}}
+{\footnotesize\ttfamily uint st\+\_\+position\+::n\+\_\+sj\+\_\+tables}
+
+Valid only after fix\+\_\+semijoin\+\_\+strategies\+\_\+for\+\_\+picked\+\_\+join\+\_\+order() call\+: if sj\+\_\+strategy!=S\+J\+\_\+\+O\+P\+T\+\_\+\+N\+O\+NE, this is the number of subsequent tables that are covered by the specified semi-\/join strategy \mbox{\Hypertarget{structst__position_aa29ae7911f9cc07153c57c5bc9ff9617}\label{structst__position_aa29ae7911f9cc07153c57c5bc9ff9617}} 
+\index{st\+\_\+position@{st\+\_\+position}!prefix\+\_\+rowcount@{prefix\+\_\+rowcount}}
+\index{prefix\+\_\+rowcount@{prefix\+\_\+rowcount}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{prefix\+\_\+rowcount}{prefix\_rowcount}}
+{\footnotesize\ttfamily double st\+\_\+position\+::prefix\+\_\+rowcount}
+
+prefix\+\_\+rowcount and prefix\+\_\+cost form a stack of partial join order costs and output sizes
+
+prefix\+\_\+rowcount\+: The number of row combinations that will be joined to the next table in the join sequence.
+
+For a joined table it is calculated as prefix\+\_\+rowcount = last\+\_\+table.\+prefix\+\_\+rowcount $\ast$ rows\+\_\+fetched $\ast$ filter\+\_\+effect
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structst__position_af2d5d5e5b65710d3a1a1ae38b14f44de}{filter\+\_\+effect}}
+\end{DoxySeeAlso}
+For a semijoined table it may be less than this formula due to duplicate elimination. \mbox{\Hypertarget{structst__position_a455bdd05662b3e0e7670501bf0788cdd}\label{structst__position_a455bdd05662b3e0e7670501bf0788cdd}} 
+\index{st\+\_\+position@{st\+\_\+position}!read\+\_\+cost@{read\+\_\+cost}}
+\index{read\+\_\+cost@{read\+\_\+cost}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{read\+\_\+cost}{read\_cost}}
+{\footnotesize\ttfamily double st\+\_\+position\+::read\+\_\+cost}
+
+Cost of accessing the table in course of the entire complete join execution, i.\+e. cost of one access method use (e.\+g. \textquotesingle{}range\textquotesingle{} or \textquotesingle{}ref\textquotesingle{} scan ) multiplied by estimated number of rows from tables earlier in the join sequence.
+
+read\+\_\+cost does N\+OT include cost of processing rows within the executor (row\+\_\+evaluate\+\_\+cost). \mbox{\Hypertarget{structst__position_a0adedeafc969f1754149c722665d64c0}\label{structst__position_a0adedeafc969f1754149c722665d64c0}} 
+\index{st\+\_\+position@{st\+\_\+position}!ref\+\_\+depend\+\_\+map@{ref\+\_\+depend\+\_\+map}}
+\index{ref\+\_\+depend\+\_\+map@{ref\+\_\+depend\+\_\+map}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{ref\+\_\+depend\+\_\+map}{ref\_depend\_map}}
+{\footnotesize\ttfamily table\+\_\+map st\+\_\+position\+::ref\+\_\+depend\+\_\+map}
+
+If ref-\/based access is used\+: bitmap of tables this table depends on \mbox{\Hypertarget{structst__position_aa38b3dcf630fb252f9eae43cb1d8a847}\label{structst__position_aa38b3dcf630fb252f9eae43cb1d8a847}} 
+\index{st\+\_\+position@{st\+\_\+position}!rows\+\_\+fetched@{rows\+\_\+fetched}}
+\index{rows\+\_\+fetched@{rows\+\_\+fetched}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{rows\+\_\+fetched}{rows\_fetched}}
+{\footnotesize\ttfamily double st\+\_\+position\+::rows\+\_\+fetched}
+
+The number of rows that will be fetched by the chosen access method per each row combination of previous tables. That is\+:
+
+rows\+\_\+fetched = selectivity(access\+\_\+condition) $\ast$ cardinality(table)
+
+where \textquotesingle{}access\+\_\+condition\textquotesingle{} is whatever condition was chosen for index access, depending on the access method (\textquotesingle{}ref\textquotesingle{}, \textquotesingle{}range\textquotesingle{}, etc.)
+
+that for index/table scans, rows\+\_\+fetched may be less than the number of rows in the table because the cost of evaluating constant conditions is included in the scan cost, and the number of rows produced by these scans is the estimated number of rows that pass the constant conditions. \begin{DoxySeeAlso}{See also}
+Optimize\+\_\+table\+\_\+order\+::calculate\+\_\+scan\+\_\+cost() . But this is only during planning; \mbox{\hyperlink{group__Query__Optimizer_ga27b74179b9a9207753aa3f93a9df4225}{make\+\_\+join\+\_\+readinfo()}} simplifies it for E\+X\+P\+L\+A\+IN. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structst__position_ab27ba77e3972eeb713a371d38657ce1f}\label{structst__position_ab27ba77e3972eeb713a371d38657ce1f}} 
+\index{st\+\_\+position@{st\+\_\+position}!sj\+\_\+strategy@{sj\+\_\+strategy}}
+\index{sj\+\_\+strategy@{sj\+\_\+strategy}!st\+\_\+position@{st\+\_\+position}}
+\subsubsection{\texorpdfstring{sj\+\_\+strategy}{sj\_strategy}}
+{\footnotesize\ttfamily uint st\+\_\+position\+::sj\+\_\+strategy}
+
+Current optimization state\+: Semi-\/join strategy to be used for this and preceding join tables.
+
+Join optimizer sets this for the {\itshape last} join\+\_\+tab in the duplicate-\/generating range. That is, in order to interpret this field, one needs to traverse join-\/$>$\mbox{[}best\+\_\+\mbox{]}positions array from right to left. When you see a join table with sj\+\_\+strategy!= S\+J\+\_\+\+O\+P\+T\+\_\+\+N\+O\+NE, some other field (depending on the strategy) tells how many preceding positions this applies to. The values of covered\+\_\+preceding\+\_\+positions-\/$>$sj\+\_\+strategy must be ignored. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__select_8h}{sql\+\_\+select.\+h}}\end{DoxyCompactItemize}

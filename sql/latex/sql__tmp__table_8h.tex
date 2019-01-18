@@ -1,0 +1,250 @@
+\hypertarget{sql__tmp__table_8h}{}\section{sql\+\_\+tmp\+\_\+table.\+h File Reference}
+\label{sql__tmp__table_8h}\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+
+
+Temporary table handling functions.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMem__root__array}{Mem\+\_\+root\+\_\+array$<$ Element\+\_\+type, has\+\_\+trivial\+\_\+destructor $>$}}
+\item 
+class \mbox{\hyperlink{classList}{List$<$ T $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_a44db04362e9ad7e3ec9b5902b13348fa}\label{sql__tmp__table_8h_a44db04362e9ad7e3ec9b5902b13348fa}} 
+typedef struct st\+\_\+columndef {\bfseries M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF}
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_af476bf8bb716c73285954bbe6454b86a}\label{sql__tmp__table_8h_af476bf8bb716c73285954bbe6454b86a}} 
+typedef struct \mbox{\hyperlink{structst__key}{st\+\_\+key}} {\bfseries K\+EY}
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_a382bc7c9c36db79f121d41b7f816d40e}\label{sql__tmp__table_8h_a382bc7c9c36db79f121d41b7f816d40e}} 
+typedef struct \mbox{\hyperlink{structst__order}{st\+\_\+order}} {\bfseries O\+R\+D\+ER}
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_abdd2288775feb1eca47e21cf66b3717c}\label{sql__tmp__table_8h_abdd2288775feb1eca47e21cf66b3717c}} 
+typedef \mbox{\hyperlink{classMem__root__array}{Mem\+\_\+root\+\_\+array}}$<$ \mbox{\hyperlink{classItem}{Item}} $\ast$, true $>$ {\bfseries Func\+\_\+ptr\+\_\+array}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_ae8bc0019eedd28e723495cf722bcdb8b}\label{sql__tmp__table_8h_ae8bc0019eedd28e723495cf722bcdb8b}} 
+enum {\bfseries enum\+\_\+internal\+\_\+tmp\+\_\+disk\+\_\+storage\+\_\+engine} \{ {\bfseries T\+M\+P\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+Y\+I\+S\+AM}, 
+{\bfseries T\+M\+P\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+N\+N\+O\+DB}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{sql__tmp__table_8h_adfb8ccc236ce303095c9c108c4fbf37e}{create\+\_\+tmp\+\_\+table}} (T\+HD $\ast$thd, Temp\+\_\+table\+\_\+param $\ast$param, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group, bool distinct, bool save\+\_\+sum\+\_\+fields, ulonglong select\+\_\+options, ha\+\_\+rows rows\+\_\+limit, const char $\ast$table\+\_\+alias)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{sql__tmp__table_8h_ab96b92fdb5742c887723b0a5cd9bb5ed}{create\+\_\+virtual\+\_\+tmp\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ \&field\+\_\+list)
+\item 
+bool \mbox{\hyperlink{sql__tmp__table_8h_acd7b9fb8583e2ee5080c10b7c12828f0}{create\+\_\+ondisk\+\_\+from\+\_\+heap}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$start\+\_\+recinfo, M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$$\ast$recinfo, int error, bool ignore\+\_\+last\+\_\+dup, bool $\ast$is\+\_\+duplicate)
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_a91b1e0dacb732b7a68c3e0400b98b574}\label{sql__tmp__table_8h_a91b1e0dacb732b7a68c3e0400b98b574}} 
+void {\bfseries free\+\_\+tmp\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$entry)
+\item 
+\mbox{\Hypertarget{sql__tmp__table_8h_a05f9e476ed3103722f6797275569bcef}\label{sql__tmp__table_8h_a05f9e476ed3103722f6797275569bcef}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries create\+\_\+duplicate\+\_\+weedout\+\_\+tmp\+\_\+table} (T\+HD $\ast$thd, uint uniq\+\_\+tuple\+\_\+length\+\_\+arg, \mbox{\hyperlink{classSJ__TMP__TABLE}{S\+J\+\_\+\+T\+M\+P\+\_\+\+T\+A\+B\+LE}} $\ast$sjtbl)
+\item 
+bool \mbox{\hyperlink{sql__tmp__table_8h_aa9fe1c1797077c4e247f7a3d7131bbe2}{instantiate\+\_\+tmp\+\_\+table}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$keyinfo, M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$start\+\_\+recinfo, M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$$\ast$recinfo, ulonglong options, my\+\_\+bool big\+\_\+tables, \mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$trace)
+\begin{DoxyCompactList}\small\item\em Instantiates temporary table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{sql__tmp__table_8h_ae0ce71a30b8c34f5da3109d64f9c2abe}{create\+\_\+tmp\+\_\+field}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classItem}{Item}} $\ast$item, Item\+::\+Type type, \mbox{\hyperlink{classMem__root__array}{Func\+\_\+ptr\+\_\+array}} $\ast$copy\+\_\+func, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$from\+\_\+field, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$default\+\_\+field, bool group, bool modify\+\_\+item, bool table\+\_\+cant\+\_\+handle\+\_\+bit\+\_\+fields, bool make\+\_\+copy\+\_\+field)
+\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{sql__tmp__table_8h_ac27931d629bb2af3886439f98986a6ae}{create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field}} (T\+HD $\ast$thd, \mbox{\hyperlink{classField}{Field}} $\ast$org\+\_\+field, const char $\ast$name, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$item)
+\item 
+void \mbox{\hyperlink{sql__tmp__table_8h_ad518b6a0a5b0a77d3961e81aa3686094}{get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length}} (uint $\ast$max\+\_\+key\+\_\+length, uint $\ast$max\+\_\+key\+\_\+part\+\_\+length)
+\item 
+void \mbox{\hyperlink{sql__tmp__table_8h_ad6b030319fe92a064c1c0a930289225b}{init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Temporary table handling functions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__tmp__table_8h_acd7b9fb8583e2ee5080c10b7c12828f0}\label{sql__tmp__table_8h_acd7b9fb8583e2ee5080c10b7c12828f0}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!create\+\_\+ondisk\+\_\+from\+\_\+heap@{create\+\_\+ondisk\+\_\+from\+\_\+heap}}
+\index{create\+\_\+ondisk\+\_\+from\+\_\+heap@{create\+\_\+ondisk\+\_\+from\+\_\+heap}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{create\+\_\+ondisk\+\_\+from\+\_\+heap()}{create\_ondisk\_from\_heap()}}
+{\footnotesize\ttfamily bool create\+\_\+ondisk\+\_\+from\+\_\+heap (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$}]{start\+\_\+recinfo,  }\item[{M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$$\ast$}]{recinfo,  }\item[{int}]{error,  }\item[{bool}]{ignore\+\_\+last\+\_\+dup,  }\item[{bool $\ast$}]{is\+\_\+duplicate }\end{DoxyParamCaption})}
+
+If a M\+E\+M\+O\+RY table gets full, create a disk-\/based table and copy all rows to this.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD reference \\
+\hline
+{\em table} & Table reference \\
+\hline
+{\em start\+\_\+recinfo} & Engine\textquotesingle{}s column descriptions \\
+\hline
+{\em recinfo\mbox{[}in,out\mbox{]}} & End of engine\textquotesingle{}s column descriptions \\
+\hline
+{\em error} & Reason why inserting into M\+E\+M\+O\+RY table failed. \\
+\hline
+{\em ignore\+\_\+last\+\_\+dup} & If true, ignore duplicate key error for last inserted key (see detailed description below). \\
+\hline
+{\em is\+\_\+duplicate\mbox{[}out\mbox{]}} & if non-\/N\+U\+LL and ignore\+\_\+last\+\_\+dup is T\+R\+UE, return T\+R\+UE if last key was a duplicate, and F\+A\+L\+SE otherwise.\\
+\hline
+\end{DoxyParams}
+Function can be called with any error code, but only H\+A\+\_\+\+E\+R\+R\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+F\+I\+L\+E\+\_\+\+F\+U\+LL will be handled, all other errors cause a fatal error to be thrown. The function creates a disk-\/based temporary table, copies all records from the M\+E\+M\+O\+RY table into this new table, deletes the old table and switches to use the new table within the table handle. The function uses table-\/$>$record\mbox{[}1\mbox{]} as a temporary buffer while copying.
+
+The function assumes that table-\/$>$record\mbox{[}0\mbox{]} contains the row that caused the error when inserting into the M\+E\+M\+O\+RY table (the \char`\"{}last row\char`\"{}). After all existing rows have been copied to the new table, the last row is attempted to be inserted as well. If ignore\+\_\+last\+\_\+dup is true, this row can be a duplicate of an existing row without throwing an error. If is\+\_\+duplicate is non-\/N\+U\+LL, an indication of whether the last row was a duplicate is returned.
+
+\begin{DoxyNote}{Note}
+that any index/scan access initialized on the M\+E\+M\+O\+RY table is not replicated to the on-\/disk table -\/ it\textquotesingle{}s the caller\textquotesingle{}s responsibility. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sql__tmp__table_8h_ae0ce71a30b8c34f5da3109d64f9c2abe}\label{sql__tmp__table_8h_ae0ce71a30b8c34f5da3109d64f9c2abe}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!create\+\_\+tmp\+\_\+field@{create\+\_\+tmp\+\_\+field}}
+\index{create\+\_\+tmp\+\_\+field@{create\+\_\+tmp\+\_\+field}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{create\+\_\+tmp\+\_\+field()}{create\_tmp\_field()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}}$\ast$ create\+\_\+tmp\+\_\+field (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{Item\+::\+Type}]{type,  }\item[{\mbox{\hyperlink{classMem__root__array}{Func\+\_\+ptr\+\_\+array}} $\ast$}]{copy\+\_\+func,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{from\+\_\+field,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{default\+\_\+field,  }\item[{bool}]{group,  }\item[{bool}]{modify\+\_\+item,  }\item[{bool}]{table\+\_\+cant\+\_\+handle\+\_\+bit\+\_\+fields,  }\item[{bool}]{make\+\_\+copy\+\_\+field }\end{DoxyParamCaption})}
+
+Create field for temporary table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em table} & Temporary table \\
+\hline
+{\em item} & \mbox{\hyperlink{classItem}{Item}} to create a field for \\
+\hline
+{\em type} & Type of item (normally item-\/$>$type) \\
+\hline
+{\em copy\+\_\+func} & If set and item is a function, store copy of item in this array \\
+\hline
+{\em from\+\_\+field} & if field will be created using other field as example, pointer example field will be written here \\
+\hline
+{\em default\+\_\+field} & If field has a default value field, store it here \\
+\hline
+{\em group} & 1 if we are going to do a relative group by on result \\
+\hline
+{\em modify\+\_\+item} & 1 if item-\/$>$result\+\_\+field should point to new item. This is relevent for how fill\+\_\+record() is going to work\+: If modify\+\_\+item is 1 then fill\+\_\+record() will update the record in the original table. If modify\+\_\+item is 0 then fill\+\_\+record() will update the temporary table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & On error.\\
+\hline
+{\em new\+\_\+created} & field \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__tmp__table_8h_ac27931d629bb2af3886439f98986a6ae}\label{sql__tmp__table_8h_ac27931d629bb2af3886439f98986a6ae}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field@{create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field}}
+\index{create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field@{create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field()}{create\_tmp\_field\_from\_field()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}}$\ast$ create\+\_\+tmp\+\_\+field\+\_\+from\+\_\+field (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{org\+\_\+field,  }\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Create field for temporary table from given field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em org\+\_\+field} & field from which new field will be created \\
+\hline
+{\em name} & New field name \\
+\hline
+{\em table} & Temporary table \\
+\hline
+{\em item} & !=N\+U\+LL if item-\/$>$result\+\_\+field should point to new field. This is relevant for how fill\+\_\+record() is going to work\+: If item != N\+U\+LL then fill\+\_\+record() will update the record in the original table. If item == N\+U\+LL then fill\+\_\+record() will update the temporary table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & on error \\
+\hline
+{\em new\+\_\+created} & field \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__tmp__table_8h_adfb8ccc236ce303095c9c108c4fbf37e}\label{sql__tmp__table_8h_adfb8ccc236ce303095c9c108c4fbf37e}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!create\+\_\+tmp\+\_\+table@{create\+\_\+tmp\+\_\+table}}
+\index{create\+\_\+tmp\+\_\+table@{create\+\_\+tmp\+\_\+table}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{create\+\_\+tmp\+\_\+table()}{create\_tmp\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ create\+\_\+tmp\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Temp\+\_\+table\+\_\+param $\ast$}]{param,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{group,  }\item[{bool}]{distinct,  }\item[{bool}]{save\+\_\+sum\+\_\+fields,  }\item[{ulonglong}]{select\+\_\+options,  }\item[{ha\+\_\+rows}]{rows\+\_\+limit,  }\item[{const char $\ast$}]{table\+\_\+alias }\end{DoxyParamCaption})}
+
+When true, enforces unique constraint (by adding a hidden hash\+\_\+field and creating a key over this field) when\+: (1) unique key is too long or (2) number of key parts in distinct key is too big.\mbox{\Hypertarget{sql__tmp__table_8h_ab96b92fdb5742c887723b0a5cd9bb5ed}\label{sql__tmp__table_8h_ab96b92fdb5742c887723b0a5cd9bb5ed}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!create\+\_\+virtual\+\_\+tmp\+\_\+table@{create\+\_\+virtual\+\_\+tmp\+\_\+table}}
+\index{create\+\_\+virtual\+\_\+tmp\+\_\+table@{create\+\_\+virtual\+\_\+tmp\+\_\+table}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{create\+\_\+virtual\+\_\+tmp\+\_\+table()}{create\_virtual\_tmp\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ create\+\_\+virtual\+\_\+tmp\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ \&}]{field\+\_\+list }\end{DoxyParamCaption})}
+
+General routine to change field-\/$>$ptr of a N\+U\+LL-\/terminated array of \mbox{\hyperlink{classField}{Field}} objects. Useful when needed to call val\+\_\+int, val\+\_\+str or similar and the field data is not in table-\/$>$record\mbox{[}0\mbox{]} but in some other structure. set\+\_\+key\+\_\+field\+\_\+ptr changes all fields of an index using a key\+\_\+info object. All methods presume that there is at least one field to change.
+
+Create a reduced \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object with properly set up \mbox{\hyperlink{classField}{Field}} list from a list of field definitions.
+
+The created table doesn\textquotesingle{}t have a table handler associated with it, has no keys, no group/distinct, no copy\+\_\+funcs array. The sole purpose of this \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object is to use the power of \mbox{\hyperlink{classField}{Field}} class to read/write data to/from table-\/$>$record\mbox{[}0\mbox{]}. Then one can store the record in any container (RB tree, hash, etc). The table is created in T\+HD mem\+\_\+root, so are the table\textquotesingle{}s fields. Consequently, if you don\textquotesingle{}t B\+L\+OB fields, you don\textquotesingle{}t need to free it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & connection handle \\
+\hline
+{\em field\+\_\+list} & list of column definitions\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if out of memory, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object in case of success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sql__tmp__table_8h_ad518b6a0a5b0a77d3961e81aa3686094}\label{sql__tmp__table_8h_ad518b6a0a5b0a77d3961e81aa3686094}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length@{get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length}}
+\index{get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length@{get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length()}{get\_max\_key\_and\_part\_length()}}
+{\footnotesize\ttfamily void get\+\_\+max\+\_\+key\+\_\+and\+\_\+part\+\_\+length (\begin{DoxyParamCaption}\item[{uint $\ast$}]{max\+\_\+key\+\_\+length,  }\item[{uint $\ast$}]{max\+\_\+key\+\_\+part\+\_\+length }\end{DoxyParamCaption})}
+
+Get the minimum of max\+\_\+key\+\_\+length and max\+\_\+key\+\_\+part\+\_\+length between H\+E\+AP engine and internal\+\_\+tmp\+\_\+disk\+\_\+storage\+\_\+engine.
+
+Get the minimum of max\+\_\+key\+\_\+length and max\+\_\+key\+\_\+part\+\_\+length. The minimum is between H\+E\+AP engine and internal\+\_\+tmp\+\_\+disk\+\_\+storage\+\_\+engine.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em max\+\_\+key\+\_\+length} & Minimum of max\+\_\+key\+\_\+length \\
+\hline
+\mbox{\texttt{ out}}  & {\em max\+\_\+key\+\_\+part\+\_\+length} & Minimum of max\+\_\+key\+\_\+part\+\_\+length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sql__tmp__table_8h_ad6b030319fe92a064c1c0a930289225b}\label{sql__tmp__table_8h_ad6b030319fe92a064c1c0a930289225b}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties@{init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties}}
+\index{init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties@{init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties()}{init\_cache\_tmp\_engine\_properties()}}
+{\footnotesize\ttfamily void init\+\_\+cache\+\_\+tmp\+\_\+engine\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initilize the storage engine properties for the alternative temporary table storage engines. \mbox{\Hypertarget{sql__tmp__table_8h_aa9fe1c1797077c4e247f7a3d7131bbe2}\label{sql__tmp__table_8h_aa9fe1c1797077c4e247f7a3d7131bbe2}} 
+\index{sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}!instantiate\+\_\+tmp\+\_\+table@{instantiate\+\_\+tmp\+\_\+table}}
+\index{instantiate\+\_\+tmp\+\_\+table@{instantiate\+\_\+tmp\+\_\+table}!sql\+\_\+tmp\+\_\+table.\+h@{sql\+\_\+tmp\+\_\+table.\+h}}
+\subsubsection{\texorpdfstring{instantiate\+\_\+tmp\+\_\+table()}{instantiate\_tmp\_table()}}
+{\footnotesize\ttfamily bool instantiate\+\_\+tmp\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{keyinfo,  }\item[{M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$}]{start\+\_\+recinfo,  }\item[{M\+I\+\_\+\+C\+O\+L\+U\+M\+N\+D\+EF $\ast$$\ast$}]{recinfo,  }\item[{ulonglong}]{options,  }\item[{my\+\_\+bool}]{big\+\_\+tables,  }\item[{\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$}]{trace }\end{DoxyParamCaption})}
+
+
+
+Instantiates temporary table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Table object that describes the table to be instantiated \\
+\hline
+{\em keyinfo} & Description of the index (there is always one index) \\
+\hline
+{\em start\+\_\+recinfo} & Column descriptions \\
+\hline
+{\em recinfo} & I\+N\+O\+UT End of column descriptions \\
+\hline
+{\em options} & Option bits \\
+\hline
+{\em trace} & Optimizer trace to write info to\\
+\hline
+\end{DoxyParams}
+Creates tmp table and opens it.
+
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE -\/ OK T\+R\+UE -\/ Error 
+\end{DoxyReturn}

@@ -1,0 +1,58 @@
+\hypertarget{classSql__cmd__xa__rollback}{}\section{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback Class Reference}
+\label{classSql__cmd__xa__rollback}\index{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback@{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback}}
+
+
+{\ttfamily \#include $<$xa.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+xa\+\_\+rollback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__xa__rollback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__rollback_a08425a05b0b34668b2998dac044bdbcf}\label{classSql__cmd__xa__rollback_a08425a05b0b34668b2998dac044bdbcf}} 
+{\bfseries Sql\+\_\+cmd\+\_\+xa\+\_\+rollback} (\mbox{\hyperlink{structxid__t}{xid\+\_\+t}} $\ast$xid\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__rollback_ad7dbd456e047d222a95f11392900cf3e}\label{classSql__cmd__xa__rollback_ad7dbd456e047d222a95f11392900cf3e}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__xa__rollback_ad7dbd456e047d222a95f11392900cf3e}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__xa__rollback_ab6ad1f2611953c4c083908827b1e7997}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents S\+QL statement which rollbacks and terminates an XA transaction with the given xid value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__xa__rollback_ab6ad1f2611953c4c083908827b1e7997}\label{classSql__cmd__xa__rollback_ab6ad1f2611953c4c083908827b1e7997}} 
+\index{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback@{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+xa\+\_\+rollback@{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+xa\+\_\+rollback\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+xa.\+h\item 
+xa.\+cc\end{DoxyCompactItemize}

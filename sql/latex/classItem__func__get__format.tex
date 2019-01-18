@@ -1,0 +1,63 @@
+\hypertarget{classItem__func__get__format}{}\section{Item\+\_\+func\+\_\+get\+\_\+format Class Reference}
+\label{classItem__func__get__format}\index{Item\+\_\+func\+\_\+get\+\_\+format@{Item\+\_\+func\+\_\+get\+\_\+format}}
+Inheritance diagram for Item\+\_\+func\+\_\+get\+\_\+format\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__get__format}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__get__format_a8f13c08ede9834656e566db474ac04d0}\label{classItem__func__get__format_a8f13c08ede9834656e566db474ac04d0}} 
+{\bfseries Item\+\_\+func\+\_\+get\+\_\+format} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, timestamp\+\_\+type type\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__func__get__format_acaa501cd4b8e2762d713ca8d1d675992}\label{classItem__func__get__format_acaa501cd4b8e2762d713ca8d1d675992}} 
+String $\ast$ {\bfseries val\+\_\+str\+\_\+ascii} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem__func__get__format_a1771a5bed3c08d9384772ebcf5211fc5}\label{classItem__func__get__format_a1771a5bed3c08d9384772ebcf5211fc5}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__func__get__format_a8ea71517d3f2ef09fd00ecec7339a618}\label{classItem__func__get__format_a8ea71517d3f2ef09fd00ecec7339a618}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+virtual void \mbox{\hyperlink{classItem__func__get__format_a9de8cf490a3cdfbef5f1c7e42e0d20f2}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__get__format_afb6d2b0621cfd8ff46a34faa55d63a44}\label{classItem__func__get__format_afb6d2b0621cfd8ff46a34faa55d63a44}} 
+const timestamp\+\_\+type {\bfseries type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__get__format_a9de8cf490a3cdfbef5f1c7e42e0d20f2}\label{classItem__func__get__format_a9de8cf490a3cdfbef5f1c7e42e0d20f2}} 
+\index{Item\+\_\+func\+\_\+get\+\_\+format@{Item\+\_\+func\+\_\+get\+\_\+format}!print@{print}}
+\index{print@{print}!Item\+\_\+func\+\_\+get\+\_\+format@{Item\+\_\+func\+\_\+get\+\_\+format}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+func\+\_\+get\+\_\+format\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

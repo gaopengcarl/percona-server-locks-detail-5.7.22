@@ -1,0 +1,97 @@
+\hypertarget{classsp__condition__value}{}\section{sp\+\_\+condition\+\_\+value Class Reference}
+\label{classsp__condition__value}\index{sp\+\_\+condition\+\_\+value@{sp\+\_\+condition\+\_\+value}}
+
+
+{\ttfamily \#include $<$sp\+\_\+pcontext.\+h$>$}
+
+Inheritance diagram for sp\+\_\+condition\+\_\+value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__condition__value}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__condition__value_ae0cd1ab46cf8fccade87303418b0f01d}\label{classsp__condition__value_ae0cd1ab46cf8fccade87303418b0f01d}} 
+enum {\bfseries enum\+\_\+type} \{ \newline
+{\bfseries E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}, 
+{\bfseries S\+Q\+L\+S\+T\+A\+TE}, 
+{\bfseries W\+A\+R\+N\+I\+NG}, 
+{\bfseries N\+O\+T\+\_\+\+F\+O\+U\+ND}, 
+\newline
+{\bfseries E\+X\+C\+E\+P\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__condition__value_abc56e64cef6ea99b183dfd4c2e70ea1e}\label{classsp__condition__value_abc56e64cef6ea99b183dfd4c2e70ea1e}} 
+{\bfseries sp\+\_\+condition\+\_\+value} (uint \+\_\+mysqlerr)
+\item 
+\mbox{\Hypertarget{classsp__condition__value_a589fd7dadc992eecf945257abaaa7689}\label{classsp__condition__value_a589fd7dadc992eecf945257abaaa7689}} 
+{\bfseries sp\+\_\+condition\+\_\+value} (const char $\ast$\+\_\+sql\+\_\+state)
+\item 
+\mbox{\Hypertarget{classsp__condition__value_a889140add54b9b98e8588a95df0a22af}\label{classsp__condition__value_a889140add54b9b98e8588a95df0a22af}} 
+{\bfseries sp\+\_\+condition\+\_\+value} (enum\+\_\+type \+\_\+type)
+\item 
+void \mbox{\hyperlink{classsp__condition__value_aa6400b2ead821963ed73462ecd2f4f75}{print}} (String $\ast$str) const
+\item 
+bool \mbox{\hyperlink{classsp__condition__value_a35b9fba60f8d0d13142ebfc19968ea2d}{equals}} (const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$cv) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__condition__value_aba7838d59b7277fc23e19d091cf3ff1f}\label{classsp__condition__value_aba7838d59b7277fc23e19d091cf3ff1f}} 
+enum\+\_\+type \mbox{\hyperlink{classsp__condition__value_aba7838d59b7277fc23e19d091cf3ff1f}{type}}
+\begin{DoxyCompactList}\small\item\em Type of the condition value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__condition__value_a5aad50e31732a61178804ac84ef40449}\label{classsp__condition__value_a5aad50e31732a61178804ac84ef40449}} 
+char \mbox{\hyperlink{classsp__condition__value_a5aad50e31732a61178804ac84ef40449}{sql\+\_\+state}} \mbox{[}S\+Q\+L\+S\+T\+A\+T\+E\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em S\+Q\+L\+S\+T\+A\+TE of the condition value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__condition__value_a8bd587adf0922caf55d1a5ee74e570cd}\label{classsp__condition__value_a8bd587adf0922caf55d1a5ee74e570cd}} 
+uint \mbox{\hyperlink{classsp__condition__value_a8bd587adf0922caf55d1a5ee74e570cd}{mysqlerr}}
+\begin{DoxyCompactList}\small\item\em My\+S\+QL error code of the condition value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents condition-\/value term in D\+E\+C\+L\+A\+RE C\+O\+N\+D\+I\+T\+I\+ON or D\+E\+C\+L\+A\+RE H\+A\+N\+D\+L\+ER statements. \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} has little to do with S\+QL-\/conditions.
+
+In some sense, this class is a union -- a set of filled attributes depends on the \mbox{\hyperlink{classsp__condition__value_aba7838d59b7277fc23e19d091cf3ff1f}{sp\+\_\+condition\+\_\+value\+::type}} value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__condition__value_a35b9fba60f8d0d13142ebfc19968ea2d}\label{classsp__condition__value_a35b9fba60f8d0d13142ebfc19968ea2d}} 
+\index{sp\+\_\+condition\+\_\+value@{sp\+\_\+condition\+\_\+value}!equals@{equals}}
+\index{equals@{equals}!sp\+\_\+condition\+\_\+value@{sp\+\_\+condition\+\_\+value}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool sp\+\_\+condition\+\_\+value\+::equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$}]{cv }\end{DoxyParamCaption}) const}
+
+Check if two instances of \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} are equal or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cv} & another instance of \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the instances are equal, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__condition__value_aa6400b2ead821963ed73462ecd2f4f75}\label{classsp__condition__value_aa6400b2ead821963ed73462ecd2f4f75}} 
+\index{sp\+\_\+condition\+\_\+value@{sp\+\_\+condition\+\_\+value}!print@{print}}
+\index{print@{print}!sp\+\_\+condition\+\_\+value@{sp\+\_\+condition\+\_\+value}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void sp\+\_\+condition\+\_\+value\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str }\end{DoxyParamCaption}) const}
+
+Print a condition\+\_\+value in human-\/readable form.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The variable to print to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+pcontext.\+h\item 
+sp\+\_\+pcontext.\+cc\end{DoxyCompactItemize}

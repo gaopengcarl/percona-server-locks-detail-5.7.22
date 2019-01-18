@@ -1,0 +1,187 @@
+\hypertarget{classThd__ndb}{}\section{Thd\+\_\+ndb Class Reference}
+\label{classThd__ndb}\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classThd__ndb_acf1ce4607b6f9d69f93a3fab75da4313}\label{classThd__ndb_acf1ce4607b6f9d69f93a3fab75da4313}} 
+void {\bfseries init\+\_\+open\+\_\+tables} ()
+\item 
+\mbox{\Hypertarget{classThd__ndb_a24aa990c3fa2ebda50e36ca3c064fc4c}\label{classThd__ndb_a24aa990c3fa2ebda50e36ca3c064fc4c}} 
+void {\bfseries transaction\+\_\+checks} (void)
+\item 
+\mbox{\Hypertarget{classThd__ndb_acf69f05f416606868d5d0caaed0eedc7}\label{classThd__ndb_acf69f05f416606868d5d0caaed0eedc7}} 
+bool {\bfseries add\+\_\+row\+\_\+check\+\_\+if\+\_\+batch\+\_\+full} (uint size)
+\item 
+\mbox{\Hypertarget{classThd__ndb_a2a41a722c813200585411fed3cabca6c}\label{classThd__ndb_a2a41a722c813200585411fed3cabca6c}} 
+bool {\bfseries has\+\_\+required\+\_\+global\+\_\+schema\+\_\+lock} (const char $\ast$func)
+\item 
+\mbox{\Hypertarget{classThd__ndb_aac277ef455a816d1ca655d72bfe59dec}\label{classThd__ndb_aac277ef455a816d1ca655d72bfe59dec}} 
+bool {\bfseries valid\+\_\+ndb} (void) const
+\item 
+\mbox{\Hypertarget{classThd__ndb_a9f22050ac3e16cfd7a95a2475538b3c7}\label{classThd__ndb_a9f22050ac3e16cfd7a95a2475538b3c7}} 
+bool {\bfseries recycle\+\_\+ndb} (void)
+\item 
+\mbox{\Hypertarget{classThd__ndb_a45adada9cd0110047c31d1a91b1f8561}\label{classThd__ndb_a45adada9cd0110047c31d1a91b1f8561}} 
+bool {\bfseries is\+\_\+slave\+\_\+thread} (void) const
+\item 
+\mbox{\Hypertarget{classThd__ndb_a5dcd877fa9b14a52194cedc2de0cbe94}\label{classThd__ndb_a5dcd877fa9b14a52194cedc2de0cbe94}} 
+void {\bfseries set\+\_\+skip\+\_\+binlog\+\_\+setup\+\_\+in\+\_\+find\+\_\+files} (bool value)
+\item 
+\mbox{\Hypertarget{classThd__ndb_ab0582a5d0c0f315eeab6d4834aa1e92b}\label{classThd__ndb_ab0582a5d0c0f315eeab6d4834aa1e92b}} 
+bool {\bfseries skip\+\_\+binlog\+\_\+setup\+\_\+in\+\_\+find\+\_\+files} (void) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classThd__ndb_ac888469c76ec9304f573ab1ac4513da8}\label{classThd__ndb_ac888469c76ec9304f573ab1ac4513da8}} 
+static \mbox{\hyperlink{classThd__ndb}{Thd\+\_\+ndb}} $\ast$ {\bfseries seize} (T\+HD $\ast$)
+\item 
+\mbox{\Hypertarget{classThd__ndb_a58406d99c96c75cd7b971607b65a0401}\label{classThd__ndb_a58406d99c96c75cd7b971607b65a0401}} 
+static void {\bfseries release} (\mbox{\hyperlink{classThd__ndb}{Thd\+\_\+ndb}} $\ast$thd\+\_\+ndb)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a0879ca563607f1dcb342cdfc87497e20}\label{classThd__ndb_a0879ca563607f1dcb342cdfc87497e20}} 
+class Ndb\+\_\+cluster\+\_\+connection $\ast$ {\bfseries connection}
+\item 
+\mbox{\Hypertarget{classThd__ndb_aceb59fa3005477dfaea2a802d9264ec9}\label{classThd__ndb_aceb59fa3005477dfaea2a802d9264ec9}} 
+class Ndb $\ast$ {\bfseries ndb}
+\item 
+\mbox{\Hypertarget{classThd__ndb_ac18d66f13b8b2b37ab7c0bfd0fc094bd}\label{classThd__ndb_ac18d66f13b8b2b37ab7c0bfd0fc094bd}} 
+class \mbox{\hyperlink{classha__ndbcluster}{ha\+\_\+ndbcluster}} $\ast$ {\bfseries m\+\_\+handler}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a999f57334b5c07130f3d615198935c2a}\label{classThd__ndb_a999f57334b5c07130f3d615198935c2a}} 
+ulong {\bfseries count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a19d5f668671024169ab032511bc26a75}\label{classThd__ndb_a19d5f668671024169ab032511bc26a75}} 
+uint {\bfseries lock\+\_\+count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_ad2e38418f64bf1cdff8940bf553d631c}\label{classThd__ndb_ad2e38418f64bf1cdff8940bf553d631c}} 
+uint {\bfseries start\+\_\+stmt\+\_\+count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a2cca1ab8ffc90705e36f83016262ae82}\label{classThd__ndb_a2cca1ab8ffc90705e36f83016262ae82}} 
+uint {\bfseries save\+\_\+point\+\_\+count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a6cdfa1ad7132902105909cb9f75b7eed}\label{classThd__ndb_a6cdfa1ad7132902105909cb9f75b7eed}} 
+class Ndb\+Transaction $\ast$ {\bfseries trans}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a02c73b243bf4fa3865aa40570b5bd74e}\label{classThd__ndb_a02c73b243bf4fa3865aa40570b5bd74e}} 
+bool {\bfseries m\+\_\+error}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a9701d4d83575b3c43ce8160fc2b47fba}\label{classThd__ndb_a9701d4d83575b3c43ce8160fc2b47fba}} 
+bool {\bfseries m\+\_\+slow\+\_\+path}
+\item 
+\mbox{\Hypertarget{classThd__ndb_ab64e272166964781bd2090c46867973d}\label{classThd__ndb_ab64e272166964781bd2090c46867973d}} 
+bool {\bfseries m\+\_\+force\+\_\+send}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a39323722f2164f59f75cddfbd8701e72}\label{classThd__ndb_a39323722f2164f59f75cddfbd8701e72}} 
+uint32 {\bfseries options}
+\item 
+\mbox{\Hypertarget{classThd__ndb_af3a976c255a7c95f876a5be071d0757a}\label{classThd__ndb_af3a976c255a7c95f876a5be071d0757a}} 
+uint32 {\bfseries trans\+\_\+options}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a26ba14a441b21b867c501035490aad6c}\label{classThd__ndb_a26ba14a441b21b867c501035490aad6c}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $>$ {\bfseries changed\+\_\+tables}
+\item 
+\mbox{\Hypertarget{classThd__ndb_afb055b4c711eb9395edadf736fe69f7d}\label{classThd__ndb_afb055b4c711eb9395edadf736fe69f7d}} 
+H\+A\+SH {\bfseries open\+\_\+tables}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a8598f26fde6fcca8895dd091fa4578ef}\label{classThd__ndb_a8598f26fde6fcca8895dd091fa4578ef}} 
+M\+E\+M\+\_\+\+R\+O\+OT {\bfseries m\+\_\+batch\+\_\+mem\+\_\+root}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a4b65b91606931393cbb29d93bfcbc726}\label{classThd__ndb_a4b65b91606931393cbb29d93bfcbc726}} 
+uint {\bfseries m\+\_\+unsent\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a1f7bab1cb4768a0d78e72c67c02da283}\label{classThd__ndb_a1f7bab1cb4768a0d78e72c67c02da283}} 
+uint {\bfseries m\+\_\+batch\+\_\+size}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a411d895fcd769924086073b19b54aca6}\label{classThd__ndb_a411d895fcd769924086073b19b54aca6}} 
+uint {\bfseries m\+\_\+execute\+\_\+count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_af85dbb6989f35d0ac5c0d14c8392c76a}\label{classThd__ndb_af85dbb6989f35d0ac5c0d14c8392c76a}} 
+uint {\bfseries m\+\_\+scan\+\_\+count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a37ebd3fc9c955ab5a139f6a33a3c4e08}\label{classThd__ndb_a37ebd3fc9c955ab5a139f6a33a3c4e08}} 
+uint {\bfseries m\+\_\+pruned\+\_\+scan\+\_\+count}
+\item 
+uint \mbox{\hyperlink{classThd__ndb_ae80017f1707f6464befa42e3e36e5986}{m\+\_\+sorted\+\_\+scan\+\_\+count}}
+\item 
+uint \mbox{\hyperlink{classThd__ndb_a99bf12f11431f7c8131a4a652d14078e}{m\+\_\+pushed\+\_\+queries\+\_\+defined}}
+\item 
+uint \mbox{\hyperlink{classThd__ndb_a49c10f50086db9e89496a7340601d31e}{m\+\_\+pushed\+\_\+queries\+\_\+dropped}}
+\item 
+uint \mbox{\hyperlink{classThd__ndb_aa19ebeb5058afcbe72e14c0766b654cf}{m\+\_\+pushed\+\_\+queries\+\_\+executed}}
+\item 
+uint \mbox{\hyperlink{classThd__ndb_adaab6156dc12f5f9c08cf5930b9e61fb}{m\+\_\+pushed\+\_\+reads}}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a073a766e2fc5421c021f1d90bd4095fb}\label{classThd__ndb_a073a766e2fc5421c021f1d90bd4095fb}} 
+uint {\bfseries m\+\_\+transaction\+\_\+no\+\_\+hint\+\_\+count} \mbox{[}M\+A\+X\+\_\+\+N\+D\+B\+\_\+\+N\+O\+D\+ES\mbox{]}
+\item 
+\mbox{\Hypertarget{classThd__ndb_ac4e8deb67cd5d3ce3059466b1e8c8aea}\label{classThd__ndb_ac4e8deb67cd5d3ce3059466b1e8c8aea}} 
+uint {\bfseries m\+\_\+transaction\+\_\+hint\+\_\+count} \mbox{[}M\+A\+X\+\_\+\+N\+D\+B\+\_\+\+N\+O\+D\+ES\mbox{]}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a022ddcc7a083139f3a84c39f799ca654}\label{classThd__ndb_a022ddcc7a083139f3a84c39f799ca654}} 
+Ndb\+Transaction $\ast$ {\bfseries global\+\_\+schema\+\_\+lock\+\_\+trans}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a8e80d45ad363ab830e1105147f06ab6b}\label{classThd__ndb_a8e80d45ad363ab830e1105147f06ab6b}} 
+uint {\bfseries global\+\_\+schema\+\_\+lock\+\_\+count}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a0b178f605b2df1f616072875ac9ef9cb}\label{classThd__ndb_a0b178f605b2df1f616072875ac9ef9cb}} 
+uint {\bfseries global\+\_\+schema\+\_\+lock\+\_\+error}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a480e508c05b9be71cb0fabe1d5a92cf1}\label{classThd__ndb_a480e508c05b9be71cb0fabe1d5a92cf1}} 
+uint {\bfseries schema\+\_\+locks\+\_\+count}
+\item 
+Uint64 \mbox{\hyperlink{classThd__ndb_a117dad8fabd4e0cefa8738537c6ca831}{m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session}}
+\item 
+\mbox{\Hypertarget{classThd__ndb_a65909edfaa04fe5a70a1e848fcb029ae}\label{classThd__ndb_a65909edfaa04fe5a70a1e848fcb029ae}} 
+unsigned {\bfseries m\+\_\+connect\+\_\+count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classThd__ndb_a117dad8fabd4e0cefa8738537c6ca831}\label{classThd__ndb_a117dad8fabd4e0cefa8738537c6ca831}} 
+\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}!m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session@{m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session}}
+\index{m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session@{m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session}!Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsubsection{\texorpdfstring{m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session}{m\_last\_commit\_epoch\_session}}
+{\footnotesize\ttfamily Uint64 Thd\+\_\+ndb\+::m\+\_\+last\+\_\+commit\+\_\+epoch\+\_\+session}
+
+Epoch of last committed transaction in this session, 0 if none so far \mbox{\Hypertarget{classThd__ndb_a99bf12f11431f7c8131a4a652d14078e}\label{classThd__ndb_a99bf12f11431f7c8131a4a652d14078e}} 
+\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}!m\+\_\+pushed\+\_\+queries\+\_\+defined@{m\+\_\+pushed\+\_\+queries\+\_\+defined}}
+\index{m\+\_\+pushed\+\_\+queries\+\_\+defined@{m\+\_\+pushed\+\_\+queries\+\_\+defined}!Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsubsection{\texorpdfstring{m\+\_\+pushed\+\_\+queries\+\_\+defined}{m\_pushed\_queries\_defined}}
+{\footnotesize\ttfamily uint Thd\+\_\+ndb\+::m\+\_\+pushed\+\_\+queries\+\_\+defined}
+
+This is the number of Ndb\+Query\+Def objects that the handler has created. \mbox{\Hypertarget{classThd__ndb_a49c10f50086db9e89496a7340601d31e}\label{classThd__ndb_a49c10f50086db9e89496a7340601d31e}} 
+\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}!m\+\_\+pushed\+\_\+queries\+\_\+dropped@{m\+\_\+pushed\+\_\+queries\+\_\+dropped}}
+\index{m\+\_\+pushed\+\_\+queries\+\_\+dropped@{m\+\_\+pushed\+\_\+queries\+\_\+dropped}!Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsubsection{\texorpdfstring{m\+\_\+pushed\+\_\+queries\+\_\+dropped}{m\_pushed\_queries\_dropped}}
+{\footnotesize\ttfamily uint Thd\+\_\+ndb\+::m\+\_\+pushed\+\_\+queries\+\_\+dropped}
+
+This is the number of cases where the handler decided not to use an Ndb\+Query object that it previously created for executing a particular instance of a query fragment. This may happen if for examle the optimizer decides to use another type of access operation than originally assumed. \mbox{\Hypertarget{classThd__ndb_aa19ebeb5058afcbe72e14c0766b654cf}\label{classThd__ndb_aa19ebeb5058afcbe72e14c0766b654cf}} 
+\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}!m\+\_\+pushed\+\_\+queries\+\_\+executed@{m\+\_\+pushed\+\_\+queries\+\_\+executed}}
+\index{m\+\_\+pushed\+\_\+queries\+\_\+executed@{m\+\_\+pushed\+\_\+queries\+\_\+executed}!Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsubsection{\texorpdfstring{m\+\_\+pushed\+\_\+queries\+\_\+executed}{m\_pushed\_queries\_executed}}
+{\footnotesize\ttfamily uint Thd\+\_\+ndb\+::m\+\_\+pushed\+\_\+queries\+\_\+executed}
+
+This is the number of times that the handler instantiated an Ndb\+Query object from a Ndb\+Query\+Def object and used the former for executing an instance of a query fragment. \mbox{\Hypertarget{classThd__ndb_adaab6156dc12f5f9c08cf5930b9e61fb}\label{classThd__ndb_adaab6156dc12f5f9c08cf5930b9e61fb}} 
+\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}!m\+\_\+pushed\+\_\+reads@{m\+\_\+pushed\+\_\+reads}}
+\index{m\+\_\+pushed\+\_\+reads@{m\+\_\+pushed\+\_\+reads}!Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsubsection{\texorpdfstring{m\+\_\+pushed\+\_\+reads}{m\_pushed\_reads}}
+{\footnotesize\ttfamily uint Thd\+\_\+ndb\+::m\+\_\+pushed\+\_\+reads}
+
+This is the number of lookup operations (via unique index or primary key) that were eliminated by pushing linked operations (Ndb\+Query) to the data nodes. \mbox{\Hypertarget{classThd__ndb_ae80017f1707f6464befa42e3e36e5986}\label{classThd__ndb_ae80017f1707f6464befa42e3e36e5986}} 
+\index{Thd\+\_\+ndb@{Thd\+\_\+ndb}!m\+\_\+sorted\+\_\+scan\+\_\+count@{m\+\_\+sorted\+\_\+scan\+\_\+count}}
+\index{m\+\_\+sorted\+\_\+scan\+\_\+count@{m\+\_\+sorted\+\_\+scan\+\_\+count}!Thd\+\_\+ndb@{Thd\+\_\+ndb}}
+\subsubsection{\texorpdfstring{m\+\_\+sorted\+\_\+scan\+\_\+count}{m\_sorted\_scan\_count}}
+{\footnotesize\ttfamily uint Thd\+\_\+ndb\+::m\+\_\+sorted\+\_\+scan\+\_\+count}
+
+This is the number of sorted scans (via ordered indexes). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ndb\+\_\+thd\+\_\+ndb.\+h\item 
+\mbox{\hyperlink{ha__ndbcluster_8cc}{ha\+\_\+ndbcluster.\+cc}}\item 
+ndb\+\_\+global\+\_\+schema\+\_\+lock.\+cc\item 
+ndb\+\_\+thd\+\_\+ndb.\+cc\end{DoxyCompactItemize}

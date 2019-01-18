@@ -1,0 +1,25 @@
+\hypertarget{classRange__optimizer__error__handler}{}\section{Range\+\_\+optimizer\+\_\+error\+\_\+handler Class Reference}
+\label{classRange__optimizer__error__handler}\index{Range\+\_\+optimizer\+\_\+error\+\_\+handler@{Range\+\_\+optimizer\+\_\+error\+\_\+handler}}
+Inheritance diagram for Range\+\_\+optimizer\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRange__optimizer__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRange__optimizer__error__handler_a801cc47d4eb14e281b4e5a36e35aff86}\label{classRange__optimizer__error__handler_a801cc47d4eb14e281b4e5a36e35aff86}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\item 
+\mbox{\Hypertarget{classRange__optimizer__error__handler_ab8fbb40227e09973430bc7e23f16075c}\label{classRange__optimizer__error__handler_ab8fbb40227e09973430bc7e23f16075c}} 
+bool {\bfseries has\+\_\+errors} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Error handling class for range optimizer. We handle only out of memory error here. This is to give a hint to the user to raise range\+\_\+optimizer\+\_\+max\+\_\+mem\+\_\+size if required. Warning for the memory error is pushed only once. The consequent errors will be ignored. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+range.\+cc\end{DoxyCompactItemize}

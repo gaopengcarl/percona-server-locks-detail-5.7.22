@@ -1,0 +1,46 @@
+\hypertarget{classStrict__error__handler}{}\section{Strict\+\_\+error\+\_\+handler Class Reference}
+\label{classStrict__error__handler}\index{Strict\+\_\+error\+\_\+handler@{Strict\+\_\+error\+\_\+handler}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+Inheritance diagram for Strict\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStrict__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStrict__error__handler_a752bafb7dd33f940f38fa0a0e1fe1f18}\label{classStrict__error__handler_a752bafb7dd33f940f38fa0a0e1fe1f18}} 
+enum {\bfseries enum\+\_\+set\+\_\+select\+\_\+behavior} \{ {\bfseries D\+I\+S\+A\+B\+L\+E\+\_\+\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+S\+T\+R\+I\+C\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER}, 
+{\bfseries E\+N\+A\+B\+L\+E\+\_\+\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+S\+T\+R\+I\+C\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStrict__error__handler_a6fb90a05f5c35c710919c2568ba242e2}\label{classStrict__error__handler_a6fb90a05f5c35c710919c2568ba242e2}} 
+{\bfseries Strict\+\_\+error\+\_\+handler} (enum\+\_\+set\+\_\+select\+\_\+behavior param)
+\item 
+virtual bool \mbox{\hyperlink{classStrict__error__handler_a81995f26b8587f9eb6b721e8e382aaeb}{handle\+\_\+condition}} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This internal handler implements upgrade from S\+L\+\_\+\+W\+A\+R\+N\+I\+NG to S\+L\+\_\+\+E\+R\+R\+OR for the error codes affected by S\+T\+R\+I\+CT mode. Currently S\+T\+R\+I\+CT mode does not affect S\+E\+L\+E\+CT statements. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStrict__error__handler_a81995f26b8587f9eb6b721e8e382aaeb}\label{classStrict__error__handler_a81995f26b8587f9eb6b721e8e382aaeb}} 
+\index{Strict\+\_\+error\+\_\+handler@{Strict\+\_\+error\+\_\+handler}!handle\+\_\+condition@{handle\+\_\+condition}}
+\index{handle\+\_\+condition@{handle\+\_\+condition}!Strict\+\_\+error\+\_\+handler@{Strict\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{handle\+\_\+condition()}{handle\_condition()}}
+{\footnotesize\ttfamily bool Strict\+\_\+error\+\_\+handler\+::handle\+\_\+condition (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{sqlstate,  }\item[{\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$}]{level,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Implementation of S\+T\+R\+I\+CT mode. Upgrades a set of given conditions from warning to error. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\item 
+sql\+\_\+base.\+cc\end{DoxyCompactItemize}

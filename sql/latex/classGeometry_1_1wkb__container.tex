@@ -1,0 +1,82 @@
+\hypertarget{classGeometry_1_1wkb__container}{}\section{Geometry\+:\+:wkb\+\_\+container Class Reference}
+\label{classGeometry_1_1wkb__container}\index{Geometry\+::wkb\+\_\+container@{Geometry\+::wkb\+\_\+container}}
+
+
+{\ttfamily \#include $<$spatial.\+h$>$}
+
+Inheritance diagram for Geometry\+:\+:wkb\+\_\+container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeometry_1_1wkb__container}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a70578b34b394b41a8bd8ebe802729a26}\label{classGeometry_1_1wkb__container_a70578b34b394b41a8bd8ebe802729a26}} 
+{\bfseries wkb\+\_\+container} (const char $\ast$data, const char $\ast$data\+\_\+end)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a7c0a755441113338aab97737ce77da48}\label{classGeometry_1_1wkb__container_a7c0a755441113338aab97737ce77da48}} 
+void {\bfseries set} (const char $\ast$data, const char $\ast$data\+\_\+end)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a83c40a274805f32bc54fafa276843c1b}\label{classGeometry_1_1wkb__container_a83c40a274805f32bc54fafa276843c1b}} 
+const char $\ast$ {\bfseries data} () const
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_adc1887c73ce75eba44eddc92b6b2b7bb}\label{classGeometry_1_1wkb__container_adc1887c73ce75eba44eddc92b6b2b7bb}} 
+const char $\ast$ {\bfseries data\+\_\+end} () const
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a37a20d0ff30547670be205c19257a5ab}\label{classGeometry_1_1wkb__container_a37a20d0ff30547670be205c19257a5ab}} 
+uint32 {\bfseries length} () const
+\item 
+bool \mbox{\hyperlink{classGeometry_1_1wkb__container_a77f40e16781fab23d33966364f3836a2}{no\+\_\+data}} (size\+\_\+t data\+\_\+amount) const
+\item 
+bool \mbox{\hyperlink{classGeometry_1_1wkb__container_adc7224d1d02516ae57eb5fee366e6a5f}{not\+\_\+enough\+\_\+points}} (uint32 expected\+\_\+points, uint32 extra\+\_\+point\+\_\+space=0) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a958ff0be5f773b8282396f84d5d996a2}\label{classGeometry_1_1wkb__container_a958ff0be5f773b8282396f84d5d996a2}} 
+const char $\ast$ {\bfseries m\+\_\+data}
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a150128a99c8a981d9468e9dfe1608293}\label{classGeometry_1_1wkb__container_a150128a99c8a981d9468e9dfe1608293}} 
+const char $\ast$ {\bfseries m\+\_\+data\+\_\+end}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Constant storage for W\+KB. Encapsulation and the available methods make it impossible to update the members of \mbox{\hyperlink{classGeometry_1_1wkb__container}{wkb\+\_\+container}} once it is initialized. The only allowed modification method is set(), which fully replaces the previous buffer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_a77f40e16781fab23d33966364f3836a2}\label{classGeometry_1_1wkb__container_a77f40e16781fab23d33966364f3836a2}} 
+\index{Geometry\+::wkb\+\_\+container@{Geometry\+::wkb\+\_\+container}!no\+\_\+data@{no\+\_\+data}}
+\index{no\+\_\+data@{no\+\_\+data}!Geometry\+::wkb\+\_\+container@{Geometry\+::wkb\+\_\+container}}
+\subsubsection{\texorpdfstring{no\+\_\+data()}{no\_data()}}
+{\footnotesize\ttfamily bool Geometry\+::wkb\+\_\+container\+::no\+\_\+data (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{data\+\_\+amount }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if there\textquotesingle{}s enough data remaining as requested.
+
+\begin{DoxyItemize}
+\item data\+\_\+amount data requested\end{DoxyItemize}
+\begin{DoxyReturn}{Returns}
+true if not enough data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_1_1wkb__container_adc7224d1d02516ae57eb5fee366e6a5f}\label{classGeometry_1_1wkb__container_adc7224d1d02516ae57eb5fee366e6a5f}} 
+\index{Geometry\+::wkb\+\_\+container@{Geometry\+::wkb\+\_\+container}!not\+\_\+enough\+\_\+points@{not\+\_\+enough\+\_\+points}}
+\index{not\+\_\+enough\+\_\+points@{not\+\_\+enough\+\_\+points}!Geometry\+::wkb\+\_\+container@{Geometry\+::wkb\+\_\+container}}
+\subsubsection{\texorpdfstring{not\+\_\+enough\+\_\+points()}{not\_enough\_points()}}
+{\footnotesize\ttfamily bool Geometry\+::wkb\+\_\+container\+::not\+\_\+enough\+\_\+points (\begin{DoxyParamCaption}\item[{uint32}]{expected\+\_\+points,  }\item[{uint32}]{extra\+\_\+point\+\_\+space = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if there\textquotesingle{}re enough points remaining as requested.
+
+Need to perform the calculation in logical units, since multiplication can overflow the size data type.
+
+\begin{DoxyItemize}
+\item expected\+\_\+points number of points expected \item extra\+\_\+point\+\_\+space extra space for each point element in the array\end{DoxyItemize}
+\begin{DoxyReturn}{Returns}
+true if there are not enough points 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\end{DoxyCompactItemize}

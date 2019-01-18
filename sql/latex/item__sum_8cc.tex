@@ -1,0 +1,72 @@
+\hypertarget{item__sum_8cc}{}\section{item\+\_\+sum.\+cc File Reference}
+\label{item__sum_8cc}\index{item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}}
+
+
+Sum functions (C\+O\+U\+NT, M\+IN...)  
+
+
+{\ttfamily \#include \char`\"{}item\+\_\+json\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json\+\_\+dom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+exception\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+tmp\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+resolver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uniques.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+nodes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}aggregate\+\_\+check.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{item__sum_8cc_a472c419ab553899eb8a8f2645f4c55be}{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct}} (const void $\ast$arg, const void $\ast$key1, const void $\ast$key2)
+\item 
+int \mbox{\hyperlink{item__sum_8cc_a53a52a3ef588f2b7cfd0a612b6d374da}{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order}} (const void $\ast$arg, const void $\ast$key1, const void $\ast$key2)
+\item 
+int \mbox{\hyperlink{item__sum_8cc_a3fff8ed469149feebd57688fa152c429}{dump\+\_\+leaf\+\_\+key}} (void $\ast$key\+\_\+arg, element\+\_\+count count M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)), void $\ast$item\+\_\+arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sum functions (C\+O\+U\+NT, M\+IN...) 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__sum_8cc_a3fff8ed469149feebd57688fa152c429}\label{item__sum_8cc_a3fff8ed469149feebd57688fa152c429}} 
+\index{item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}!dump\+\_\+leaf\+\_\+key@{dump\+\_\+leaf\+\_\+key}}
+\index{dump\+\_\+leaf\+\_\+key@{dump\+\_\+leaf\+\_\+key}!item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}}
+\subsubsection{\texorpdfstring{dump\+\_\+leaf\+\_\+key()}{dump\_leaf\_key()}}
+{\footnotesize\ttfamily int dump\+\_\+leaf\+\_\+key (\begin{DoxyParamCaption}\item[{void $\ast$}]{key\+\_\+arg,  }\item[{element\+\_\+count count }]{M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE(unused),  }\item[{void $\ast$}]{item\+\_\+arg }\end{DoxyParamCaption})}
+
+Append data from current leaf to item-\/$>$result. To avoid duplicated warnings in Item\+\_\+func\+\_\+group\+\_\+concat\+::val\+\_\+str()\mbox{\Hypertarget{item__sum_8cc_a472c419ab553899eb8a8f2645f4c55be}\label{item__sum_8cc_a472c419ab553899eb8a8f2645f4c55be}} 
+\index{item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}!group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct@{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct}}
+\index{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct@{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct}!item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}}
+\subsubsection{\texorpdfstring{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct()}{group\_concat\_key\_cmp\_with\_distinct()}}
+{\footnotesize\ttfamily int group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+distinct (\begin{DoxyParamCaption}\item[{const void $\ast$}]{arg,  }\item[{const void $\ast$}]{key1,  }\item[{const void $\ast$}]{key2 }\end{DoxyParamCaption})}
+
+Compares the values for fields in expr list of G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+AT. \begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+~\newline
+ G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+AT(\mbox{[}D\+I\+S\+T\+I\+N\+CT\mbox{]} expr \mbox{[},expr ...\mbox{]} \mbox{[}O\+R\+D\+ER BY \{unsigned\+\_\+integer $\vert$ col\+\_\+name $\vert$ expr\} \mbox{[}A\+SC $\vert$ D\+E\+SC\mbox{]} \mbox{[},col\+\_\+name ...\mbox{]}\mbox{]} \mbox{[}S\+E\+P\+A\+R\+A\+T\+OR str\+\_\+val\mbox{]})
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & \+: key1 $<$ key2 \\
+\hline
+{\em 0} & \+: key1 = key2 \\
+\hline
+{\em 1} & \+: key1 $>$ key2 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{item__sum_8cc_a53a52a3ef588f2b7cfd0a612b6d374da}\label{item__sum_8cc_a53a52a3ef588f2b7cfd0a612b6d374da}} 
+\index{item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}!group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order@{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order}}
+\index{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order@{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order}!item\+\_\+sum.\+cc@{item\+\_\+sum.\+cc}}
+\subsubsection{\texorpdfstring{group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order()}{group\_concat\_key\_cmp\_with\_order()}}
+{\footnotesize\ttfamily int group\+\_\+concat\+\_\+key\+\_\+cmp\+\_\+with\+\_\+order (\begin{DoxyParamCaption}\item[{const void $\ast$}]{arg,  }\item[{const void $\ast$}]{key1,  }\item[{const void $\ast$}]{key2 }\end{DoxyParamCaption})}
+
+function of sort for syntax\+: G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+A\+T(expr,... O\+R\+D\+E\+R B\+Y col,... ) 

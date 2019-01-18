@@ -1,0 +1,93 @@
+\hypertarget{classSql__cmd__change__repl__filter}{}\section{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter Class Reference}
+\label{classSql__cmd__change__repl__filter}\index{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+filter.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__change__repl__filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSql__cmd__change__repl__filter_a73611ab571310908fc2af65d573f55a0}{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}} ()
+\item 
+\mbox{\Hypertarget{classSql__cmd__change__repl__filter_a31e9001f1040b16104601ba7baacdb5c}\label{classSql__cmd__change__repl__filter_a31e9001f1040b16104601ba7baacdb5c}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__change__repl__filter_a31e9001f1040b16104601ba7baacdb5c}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSql__cmd__change__repl__filter_ad07a5ae16f5018f6235ea978e523a6df}{execute}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classSql__cmd__change__repl__filter_a35ec8f44b50b6c3489f209ffee94b091}\label{classSql__cmd__change__repl__filter_a35ec8f44b50b6c3489f209ffee94b091}} 
+void {\bfseries set\+\_\+filter\+\_\+value} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$item\+\_\+list, options\+\_\+mysqld filter\+\_\+type)
+\item 
+bool \mbox{\hyperlink{classSql__cmd__change__repl__filter_a978000a3c38f87c64f62c736d8f36012}{change\+\_\+rpl\+\_\+filter}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSql__cmd__change__repl__filter}{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}} represents the command C\+H\+A\+N\+GE R\+E\+P\+L\+I\+C\+A\+T\+I\+ON F\+I\+L\+T\+ER. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSql__cmd__change__repl__filter_a73611ab571310908fc2af65d573f55a0}\label{classSql__cmd__change__repl__filter_a73611ab571310908fc2af65d573f55a0}} 
+\index{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}!Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}}
+\index{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}!Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}}
+\subsubsection{\texorpdfstring{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter()}{Sql\_cmd\_change\_repl\_filter()}}
+{\footnotesize\ttfamily Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter\+::\+Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__change__repl__filter_a978000a3c38f87c64f62c736d8f36012}\label{classSql__cmd__change__repl__filter_a978000a3c38f87c64f62c736d8f36012}} 
+\index{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}!change\+\_\+rpl\+\_\+filter@{change\+\_\+rpl\+\_\+filter}}
+\index{change\+\_\+rpl\+\_\+filter@{change\+\_\+rpl\+\_\+filter}!Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}}
+\subsubsection{\texorpdfstring{change\+\_\+rpl\+\_\+filter()}{change\_rpl\_filter()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter\+::change\+\_\+rpl\+\_\+filter (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Execute a C\+H\+A\+N\+GE R\+E\+P\+L\+I\+C\+A\+T\+I\+ON F\+I\+L\+T\+ER statement to set filter rules.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & A pointer to the thread handler object.\\
+\hline
+{\em mi} & Pointer to Master\+\_\+info object belonging to the slave\textquotesingle{}s IO thread.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classSql__cmd__change__repl__filter_ad07a5ae16f5018f6235ea978e523a6df}\label{classSql__cmd__change__repl__filter_ad07a5ae16f5018f6235ea978e523a6df}} 
+\index{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter@{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+filter.\+h\item 
+rpl\+\_\+filter.\+cc\end{DoxyCompactItemize}

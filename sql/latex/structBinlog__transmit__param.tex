@@ -1,0 +1,54 @@
+\hypertarget{structBinlog__transmit__param}{}\section{Binlog\+\_\+transmit\+\_\+param Struct Reference}
+\label{structBinlog__transmit__param}\index{Binlog\+\_\+transmit\+\_\+param@{Binlog\+\_\+transmit\+\_\+param}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__param_a572904c508be567689b529520c549109}\label{structBinlog__transmit__param_a572904c508be567689b529520c549109}} 
+void {\bfseries set\+\_\+observe\+\_\+flag} ()
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__param_a78b85994540bbb892743a5b9bb56eef0}\label{structBinlog__transmit__param_a78b85994540bbb892743a5b9bb56eef0}} 
+void {\bfseries set\+\_\+dont\+\_\+observe\+\_\+flag} ()
+\item 
+bool \mbox{\hyperlink{structBinlog__transmit__param_a2de96979dea739113c6d0df8ff53d336}{should\+\_\+observe}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__param_aa4f19c982335666a8e8065a507babcfe}\label{structBinlog__transmit__param_aa4f19c982335666a8e8065a507babcfe}} 
+uint32 {\bfseries server\+\_\+id}
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__param_ae9b6a5843969db1fb0cdde1eb50fc70a}\label{structBinlog__transmit__param_ae9b6a5843969db1fb0cdde1eb50fc70a}} 
+uint32 {\bfseries flags}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__param_a6f0a92ca69a1ad4628c56cd3e5520250}\label{structBinlog__transmit__param_a6f0a92ca69a1ad4628c56cd3e5520250}} 
+static const uint32 {\bfseries F\+\_\+\+O\+B\+S\+E\+R\+VE} = 1
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__param_a0edbd1952453a9dce3853ea0c6b13b6c}\label{structBinlog__transmit__param_a0edbd1952453a9dce3853ea0c6b13b6c}} 
+static const uint32 {\bfseries F\+\_\+\+D\+O\+N\+T\+\_\+\+O\+B\+S\+E\+R\+VE} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Replication binlog transmitter (binlog dump) observer parameter. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structBinlog__transmit__param_a2de96979dea739113c6d0df8ff53d336}\label{structBinlog__transmit__param_a2de96979dea739113c6d0df8ff53d336}} 
+\index{Binlog\+\_\+transmit\+\_\+param@{Binlog\+\_\+transmit\+\_\+param}!should\+\_\+observe@{should\+\_\+observe}}
+\index{should\+\_\+observe@{should\+\_\+observe}!Binlog\+\_\+transmit\+\_\+param@{Binlog\+\_\+transmit\+\_\+param}}
+\subsubsection{\texorpdfstring{should\+\_\+observe()}{should\_observe()}}
+{\footnotesize\ttfamily bool Binlog\+\_\+transmit\+\_\+param\+::should\+\_\+observe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If F\+\_\+\+O\+B\+S\+E\+R\+VE is set by any plugin, then it should observe binlog transmission, even F\+\_\+\+D\+O\+N\+T\+\_\+\+O\+B\+S\+E\+R\+VE is set by some plugins.
+
+If both F\+\_\+\+O\+B\+S\+E\+R\+VE and F\+\_\+\+D\+O\+N\+T\+\_\+\+O\+B\+S\+E\+R\+VE are not set, then it is an old plugin. In this case, it should always observe binlog transmission. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{classStored__program__creation__ctx}{}\section{Stored\+\_\+program\+\_\+creation\+\_\+ctx Class Reference}
+\label{classStored__program__creation__ctx}\index{Stored\+\_\+program\+\_\+creation\+\_\+ctx@{Stored\+\_\+program\+\_\+creation\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$sp\+\_\+head.\+h$>$}
+
+Inheritance diagram for Stored\+\_\+program\+\_\+creation\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.992870cm]{classStored__program__creation__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStored__program__creation__ctx_a389842c6c04e28135e3de01be496e422}\label{classStored__program__creation__ctx_a389842c6c04e28135e3de01be496e422}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries get\+\_\+db\+\_\+cl} ()
+\item 
+\mbox{\Hypertarget{classStored__program__creation__ctx_a9602b9a2d803e632314e6dfadaa7a068}\label{classStored__program__creation__ctx_a9602b9a2d803e632314e6dfadaa7a068}} 
+virtual \mbox{\hyperlink{classStored__program__creation__ctx}{Stored\+\_\+program\+\_\+creation\+\_\+ctx}} $\ast$ {\bfseries clone} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStored__program__creation__ctx_a5b1a705926479add4cc96ebd65b11097}\label{classStored__program__creation__ctx_a5b1a705926479add4cc96ebd65b11097}} 
+{\bfseries Stored\+\_\+program\+\_\+creation\+\_\+ctx} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classStored__program__creation__ctx_a9220eb6ac520345fe3ae37637227cdf8}\label{classStored__program__creation__ctx_a9220eb6ac520345fe3ae37637227cdf8}} 
+{\bfseries Stored\+\_\+program\+\_\+creation\+\_\+ctx} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$client\+\_\+cs, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$connection\+\_\+cl, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$db\+\_\+cl)
+\item 
+\mbox{\Hypertarget{classStored__program__creation__ctx_ab906e4775398f87bd810d1362f02b7d7}\label{classStored__program__creation__ctx_ab906e4775398f87bd810d1362f02b7d7}} 
+virtual void {\bfseries change\+\_\+env} (T\+HD $\ast$thd) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ \mbox{\hyperlink{classStored__program__creation__ctx_a07b5a0d5b8456fe0ced215a66cc8ba0c}{m\+\_\+db\+\_\+cl}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classStored__program__creation__ctx}{Stored\+\_\+program\+\_\+creation\+\_\+ctx}} -- base class for creation context of stored programs (stored routines, triggers, events). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classStored__program__creation__ctx_a07b5a0d5b8456fe0ced215a66cc8ba0c}\label{classStored__program__creation__ctx_a07b5a0d5b8456fe0ced215a66cc8ba0c}} 
+\index{Stored\+\_\+program\+\_\+creation\+\_\+ctx@{Stored\+\_\+program\+\_\+creation\+\_\+ctx}!m\+\_\+db\+\_\+cl@{m\+\_\+db\+\_\+cl}}
+\index{m\+\_\+db\+\_\+cl@{m\+\_\+db\+\_\+cl}!Stored\+\_\+program\+\_\+creation\+\_\+ctx@{Stored\+\_\+program\+\_\+creation\+\_\+ctx}}
+\subsubsection{\texorpdfstring{m\+\_\+db\+\_\+cl}{m\_db\_cl}}
+{\footnotesize\ttfamily const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO$\ast$ Stored\+\_\+program\+\_\+creation\+\_\+ctx\+::m\+\_\+db\+\_\+cl\hspace{0.3cm}{\ttfamily [protected]}}
+
+db\+\_\+cl stores the value of the database collation. Both character set and collation attributes are used.
+
+Database collation is included into the context because it defines the default collation for stored-\/program variables. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+head.\+h\end{DoxyCompactItemize}

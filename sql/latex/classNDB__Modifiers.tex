@@ -1,0 +1,43 @@
+\hypertarget{classNDB__Modifiers}{}\section{N\+D\+B\+\_\+\+Modifiers Class Reference}
+\label{classNDB__Modifiers}\index{N\+D\+B\+\_\+\+Modifiers@{N\+D\+B\+\_\+\+Modifiers}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNDB__Modifiers_a352016470e97192dbc1825d41890d4f3}\label{classNDB__Modifiers_a352016470e97192dbc1825d41890d4f3}} 
+{\bfseries N\+D\+B\+\_\+\+Modifiers} (const \mbox{\hyperlink{structNDB__Modifier}{N\+D\+B\+\_\+\+Modifier}} modifiers\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{classNDB__Modifiers_a02f4af022d96e7bf5e25d79467bba423}{parse}} (T\+HD $\ast$thd, const char $\ast$prefix, const char $\ast$str, size\+\_\+t strlen)
+\item 
+const \mbox{\hyperlink{structNDB__Modifier}{N\+D\+B\+\_\+\+Modifier}} $\ast$ \mbox{\hyperlink{classNDB__Modifiers_aa1774857d383249eec23b50cc035a968}{get}} (const char $\ast$name) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classNDB__Modifiers}{N\+D\+B\+\_\+\+Modifiers}}
+
+This class implements a simple parser for getting modifiers out of a string (e.\+g a comment field) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNDB__Modifiers_aa1774857d383249eec23b50cc035a968}\label{classNDB__Modifiers_aa1774857d383249eec23b50cc035a968}} 
+\index{N\+D\+B\+\_\+\+Modifiers@{N\+D\+B\+\_\+\+Modifiers}!get@{get}}
+\index{get@{get}!N\+D\+B\+\_\+\+Modifiers@{N\+D\+B\+\_\+\+Modifiers}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structNDB__Modifier}{N\+D\+B\+\_\+\+Modifier}} $\ast$ N\+D\+B\+\_\+\+Modifiers\+::get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption}) const}
+
+Get modifier...returns N\+U\+LL if unknown \mbox{\Hypertarget{classNDB__Modifiers_a02f4af022d96e7bf5e25d79467bba423}\label{classNDB__Modifiers_a02f4af022d96e7bf5e25d79467bba423}} 
+\index{N\+D\+B\+\_\+\+Modifiers@{N\+D\+B\+\_\+\+Modifiers}!parse@{parse}}
+\index{parse@{parse}!N\+D\+B\+\_\+\+Modifiers@{N\+D\+B\+\_\+\+Modifiers}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily int N\+D\+B\+\_\+\+Modifiers\+::parse (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{prefix,  }\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{strlen }\end{DoxyParamCaption})}
+
+parse string-\/with length (not necessarily N\+U\+LL terminated) Check if \+\_\+source is N\+U\+LL-\/terminated
+
+Make N\+U\+LL terminated string so that str\+X\+XX-\/functions are safe
+
+Found modifier...
+
+We continue parsing even if modifier had error
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ha__ndbcluster_8cc}{ha\+\_\+ndbcluster.\+cc}}\end{DoxyCompactItemize}

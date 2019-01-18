@@ -1,0 +1,62 @@
+\hypertarget{item__timefunc_8cc}{}\section{item\+\_\+timefunc.\+cc File Reference}
+\label{item__timefunc_8cc}\index{item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}}
+
+
+This file defines all time functions.  
+
+
+{\ttfamily \#include \char`\"{}item\+\_\+timefunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tztime.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{item__timefunc_8cc_af328dec60bc3d25dc876aebba1829770}{M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER}}~3652424L
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{item__timefunc_8cc_a8bc4d6f6904af12f4827fdb5fd0b27f6}{make\+\_\+date\+\_\+time}} (\mbox{\hyperlink{structDate__time__format}{Date\+\_\+time\+\_\+format}} $\ast$format, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$l\+\_\+time, timestamp\+\_\+type type, String $\ast$str)
+\item 
+\mbox{\Hypertarget{item__timefunc_8cc_ad9c84b42bb3fce985db88695bb60494b}\label{item__timefunc_8cc_ad9c84b42bb3fce985db88695bb60494b}} 
+uint {\bfseries week\+\_\+mode} (uint mode)
+\item 
+bool \mbox{\hyperlink{item__timefunc_8cc_af3ccde6d4d690b4fe5c04ec45385da3d}{get\+\_\+interval\+\_\+value}} (\mbox{\hyperlink{classItem}{Item}} $\ast$args, interval\+\_\+type int\+\_\+type, String $\ast$str\+\_\+value, \mbox{\hyperlink{structInterval}{Interval}} $\ast$interval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines all time functions. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000041}{Todo}}]Move month and days to language files \end{DoxyRefDesc}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{item__timefunc_8cc_af328dec60bc3d25dc876aebba1829770}\label{item__timefunc_8cc_af328dec60bc3d25dc876aebba1829770}} 
+\index{item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}!M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER@{M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER}}
+\index{M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER@{M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER}!item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER}{MAX\_DAY\_NUMBER}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+D\+A\+Y\+\_\+\+N\+U\+M\+B\+ER~3652424L}
+
+Day number for Dec 31st, 9999. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__timefunc_8cc_af3ccde6d4d690b4fe5c04ec45385da3d}\label{item__timefunc_8cc_af3ccde6d4d690b4fe5c04ec45385da3d}} 
+\index{item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}!get\+\_\+interval\+\_\+value@{get\+\_\+interval\+\_\+value}}
+\index{get\+\_\+interval\+\_\+value@{get\+\_\+interval\+\_\+value}!item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+interval\+\_\+value()}{get\_interval\_value()}}
+{\footnotesize\ttfamily bool get\+\_\+interval\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{args,  }\item[{interval\+\_\+type}]{int\+\_\+type,  }\item[{String $\ast$}]{str\+\_\+value,  }\item[{\mbox{\hyperlink{structInterval}{Interval}} $\ast$}]{interval }\end{DoxyParamCaption})}
+
+Convert a string to a interval value.
+
+To make code easy, allow interval objects without separators. \mbox{\Hypertarget{item__timefunc_8cc_a8bc4d6f6904af12f4827fdb5fd0b27f6}\label{item__timefunc_8cc_a8bc4d6f6904af12f4827fdb5fd0b27f6}} 
+\index{item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}!make\+\_\+date\+\_\+time@{make\+\_\+date\+\_\+time}}
+\index{make\+\_\+date\+\_\+time@{make\+\_\+date\+\_\+time}!item\+\_\+timefunc.\+cc@{item\+\_\+timefunc.\+cc}}
+\subsubsection{\texorpdfstring{make\+\_\+date\+\_\+time()}{make\_date\_time()}}
+{\footnotesize\ttfamily bool make\+\_\+date\+\_\+time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDate__time__format}{Date\+\_\+time\+\_\+format}} $\ast$}]{format,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{l\+\_\+time,  }\item[{timestamp\+\_\+type}]{type,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption})}
+
+Create a formated date/time value in a string. 

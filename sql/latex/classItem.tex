@@ -1,0 +1,2061 @@
+\hypertarget{classItem}{}\section{Item Class Reference}
+\label{classItem}\index{Item@{Item}}
+Inheritance diagram for Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classItem}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem_a6b718f9918eb7a5b2d4572cc1a231005}\label{classItem_a6b718f9918eb7a5b2d4572cc1a231005}} 
+enum {\bfseries Type} \{ \newline
+{\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+T\+EM} = 0, 
+{\bfseries F\+I\+E\+L\+D\+\_\+\+I\+T\+EM}, 
+{\bfseries F\+U\+N\+C\+\_\+\+I\+T\+EM}, 
+{\bfseries S\+U\+M\+\_\+\+F\+U\+N\+C\+\_\+\+I\+T\+EM}, 
+\newline
+{\bfseries S\+T\+R\+I\+N\+G\+\_\+\+I\+T\+EM}, 
+{\bfseries I\+N\+T\+\_\+\+I\+T\+EM}, 
+{\bfseries R\+E\+A\+L\+\_\+\+I\+T\+EM}, 
+{\bfseries N\+U\+L\+L\+\_\+\+I\+T\+EM}, 
+\newline
+{\bfseries V\+A\+R\+B\+I\+N\+\_\+\+I\+T\+EM}, 
+{\bfseries C\+O\+P\+Y\+\_\+\+S\+T\+R\+\_\+\+I\+T\+EM}, 
+{\bfseries F\+I\+E\+L\+D\+\_\+\+A\+V\+G\+\_\+\+I\+T\+EM}, 
+{\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+T\+EM}, 
+\newline
+{\bfseries P\+R\+O\+C\+\_\+\+I\+T\+EM}, 
+{\bfseries C\+O\+N\+D\+\_\+\+I\+T\+EM}, 
+{\bfseries R\+E\+F\+\_\+\+I\+T\+EM}, 
+{\bfseries F\+I\+E\+L\+D\+\_\+\+S\+T\+D\+\_\+\+I\+T\+EM}, 
+\newline
+{\bfseries F\+I\+E\+L\+D\+\_\+\+V\+A\+R\+I\+A\+N\+C\+E\+\_\+\+I\+T\+EM}, 
+{\bfseries I\+N\+S\+E\+R\+T\+\_\+\+V\+A\+L\+U\+E\+\_\+\+I\+T\+EM}, 
+{\bfseries S\+U\+B\+S\+E\+L\+E\+C\+T\+\_\+\+I\+T\+EM}, 
+{\bfseries R\+O\+W\+\_\+\+I\+T\+EM}, 
+\newline
+{\bfseries C\+A\+C\+H\+E\+\_\+\+I\+T\+EM}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+H\+O\+L\+D\+ER}, 
+{\bfseries P\+A\+R\+A\+M\+\_\+\+I\+T\+EM}, 
+{\bfseries T\+R\+I\+G\+G\+E\+R\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+T\+EM}, 
+\newline
+{\bfseries D\+E\+C\+I\+M\+A\+L\+\_\+\+I\+T\+EM}, 
+{\bfseries X\+P\+A\+T\+H\+\_\+\+N\+O\+D\+E\+S\+ET}, 
+{\bfseries X\+P\+A\+T\+H\+\_\+\+N\+O\+D\+E\+S\+E\+T\+\_\+\+C\+MP}, 
+{\bfseries V\+I\+E\+W\+\_\+\+F\+I\+X\+E\+R\+\_\+\+I\+T\+EM}
+ \}
+\item 
+\mbox{\Hypertarget{classItem_ab74b339b7c522a3a7aa2b8e4e8123a1b}\label{classItem_ab74b339b7c522a3a7aa2b8e4e8123a1b}} 
+enum {\bfseries cond\+\_\+result} \{ {\bfseries C\+O\+N\+D\+\_\+\+U\+N\+D\+EF}, 
+{\bfseries C\+O\+N\+D\+\_\+\+OK}, 
+{\bfseries C\+O\+N\+D\+\_\+\+T\+R\+UE}, 
+{\bfseries C\+O\+N\+D\+\_\+\+F\+A\+L\+SE}
+ \}
+\item 
+\mbox{\Hypertarget{classItem_ab90611975a34654134d0b82e75dc12f1}\label{classItem_ab90611975a34654134d0b82e75dc12f1}} 
+enum {\bfseries traverse\+\_\+order} \{ {\bfseries P\+O\+S\+T\+F\+IX}, 
+{\bfseries P\+R\+E\+F\+IX}
+ \}
+\item 
+enum \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}} \{ \newline
+{\bfseries W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX} = 0x01, 
+{\bfseries W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX} = 0x02, 
+{\bfseries W\+A\+L\+K\+\_\+\+S\+U\+B\+Q\+U\+E\+RY} = 0x04, 
+{\bfseries W\+A\+L\+K\+\_\+\+S\+U\+B\+Q\+U\+E\+R\+Y\+\_\+\+P\+R\+E\+F\+IX} = 0x05, 
+\newline
+{\bfseries W\+A\+L\+K\+\_\+\+S\+U\+B\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+S\+T\+F\+IX} = 0x06
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a9382072b90618574708c944b4f797eb3}{Item}} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&)
+\item 
+\mbox{\hyperlink{classItem_ada77f843f657d3acbecf5f9fad69b440}{Item}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{itemize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\item 
+void \mbox{\hyperlink{classItem_aed7a36014781d07bf5470d1f8652c8f2}{rename}} (char $\ast$new\+\_\+name)
+\item 
+\mbox{\Hypertarget{classItem_a215d34e08b073eb9e4c02e960c59b7b0}\label{classItem_a215d34e08b073eb9e4c02e960c59b7b0}} 
+void {\bfseries init\+\_\+make\+\_\+field} (\mbox{\hyperlink{classSend__field}{Send\+\_\+field}} $\ast$tmp\+\_\+field, enum enum\+\_\+field\+\_\+types type)
+\item 
+\mbox{\Hypertarget{classItem_a8b47634a02e8a5dbd71902df10a0b1ac}\label{classItem_a8b47634a02e8a5dbd71902df10a0b1ac}} 
+virtual void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classItem_ab2f65c8bd44c7ff59c27bc962d80c1b5}\label{classItem_ab2f65c8bd44c7ff59c27bc962d80c1b5}} 
+virtual void {\bfseries make\+\_\+field} (\mbox{\hyperlink{classSend__field}{Send\+\_\+field}} $\ast$field)
+\item 
+virtual \mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{classItem_a4380479e68d46a2d719e4a0f5c2ee25e}{make\+\_\+string\+\_\+field}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classItem_a618641ca5e51b50d18d7c78dfbc31529}\label{classItem_a618641ca5e51b50d18d7c78dfbc31529}} 
+virtual bool {\bfseries fix\+\_\+fields} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+virtual void \mbox{\hyperlink{classItem_a6e3c38497d210357a4f80a755fb7b61e}{fix\+\_\+after\+\_\+pullout}} (st\+\_\+select\+\_\+lex $\ast$parent\+\_\+select, st\+\_\+select\+\_\+lex $\ast$removed\+\_\+select)
+\item 
+\mbox{\Hypertarget{classItem_af4f4f80d9a7b094b515e10a5cac365e4}\label{classItem_af4f4f80d9a7b094b515e10a5cac365e4}} 
+void {\bfseries quick\+\_\+fix\+\_\+field} ()
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem_a965258368f10f5b882a532602d328baa}{save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\item 
+\mbox{\Hypertarget{classItem_afbcbd13d1dd060239d6ca2031e587c07}\label{classItem_afbcbd13d1dd060239d6ca2031e587c07}} 
+virtual void {\bfseries save\+\_\+org\+\_\+in\+\_\+field} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+\mbox{\Hypertarget{classItem_a64760ce4d915d0a0804dc479fee18fa6}\label{classItem_a64760ce4d915d0a0804dc479fee18fa6}} 
+virtual type\+\_\+conversion\+\_\+status {\bfseries save\+\_\+safe\+\_\+in\+\_\+field} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a7d1b934e9612e1c78bd369b31e3d9cb1}{send}} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$protocol, String $\ast$str)
+\item 
+bool \mbox{\hyperlink{classItem_ab0f6b295c74578740e30998424daa717}{evaluate}} (T\+HD $\ast$thd, String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classItem_af0957bbdb9a256de0cd29f1adcae28be}{eq}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$, bool binary\+\_\+cmp) const
+\item 
+\mbox{\Hypertarget{classItem_a651fe4ca331108ae6cf364691815303a}\label{classItem_a651fe4ca331108ae6cf364691815303a}} 
+virtual Item\+\_\+result {\bfseries result\+\_\+type} () const
+\item 
+virtual enum Item\+\_\+result \mbox{\hyperlink{classItem_a0cd3592a280aa2306ea9abfeae3f632b}{numeric\+\_\+context\+\_\+result\+\_\+type}} () const
+\item 
+enum Item\+\_\+result \mbox{\hyperlink{classItem_af87ae536f54acffbc047f65e7c14d0b4}{temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type}} () const
+\item 
+\mbox{\Hypertarget{classItem_af5a0eb3b223b0a39e9c6f4216343ac95}\label{classItem_af5a0eb3b223b0a39e9c6f4216343ac95}} 
+virtual Item\+\_\+result {\bfseries cast\+\_\+to\+\_\+int\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classItem_ad32a8145ed931606f51ee55493077585}\label{classItem_ad32a8145ed931606f51ee55493077585}} 
+virtual enum\+\_\+field\+\_\+types {\bfseries string\+\_\+field\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classItem_a3f6be9b1d4e2a0b7190e0b9a90c0c6a9}\label{classItem_a3f6be9b1d4e2a0b7190e0b9a90c0c6a9}} 
+virtual enum\+\_\+field\+\_\+types {\bfseries field\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classItem_aee8b1ec6739e79398968253a17a300eb}\label{classItem_aee8b1ec6739e79398968253a17a300eb}} 
+virtual enum Type {\bfseries type} () const =0
+\item 
+\mbox{\Hypertarget{classItem_ae4fd66e4b8748adf4953b9f92ee5c92d}\label{classItem_ae4fd66e4b8748adf4953b9f92ee5c92d}} 
+virtual enum\+\_\+monotonicity\+\_\+info {\bfseries get\+\_\+monotonicity\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classItem_aee6ad13fd4a6cbecf438e0550021590f}\label{classItem_aee6ad13fd4a6cbecf438e0550021590f}} 
+virtual longlong {\bfseries val\+\_\+int\+\_\+endpoint} (bool left\+\_\+endp, bool $\ast$incl\+\_\+endp)
+\item 
+\mbox{\Hypertarget{classItem_a00ccd18c535f46512dd52c016e767f71}\label{classItem_a00ccd18c535f46512dd52c016e767f71}} 
+virtual double {\bfseries val\+\_\+real} ()=0
+\item 
+\mbox{\Hypertarget{classItem_a582158d8691b5f0f799ccaa4d3d69045}\label{classItem_a582158d8691b5f0f799ccaa4d3d69045}} 
+virtual longlong {\bfseries val\+\_\+int} ()=0
+\item 
+virtual longlong \mbox{\hyperlink{classItem_a9174217a46706eb2db74689b5365c4a5}{val\+\_\+date\+\_\+temporal}} ()
+\item 
+virtual longlong \mbox{\hyperlink{classItem_a69ef60a3917a1bb4832498a695754c58}{val\+\_\+time\+\_\+temporal}} ()
+\item 
+longlong \mbox{\hyperlink{classItem_a00ab36bcf5ebe7138e869d1ceecee573}{val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type}} ()
+\item 
+longlong \mbox{\hyperlink{classItem_a934c293f50afd4e39891b26beef3e3c4}{val\+\_\+temporal\+\_\+with\+\_\+round}} (enum\+\_\+field\+\_\+types type, uint8 dec)
+\item 
+\mbox{\Hypertarget{classItem_a0a955fa3645b23c8074701e33eabe06e}\label{classItem_a0a955fa3645b23c8074701e33eabe06e}} 
+ulonglong {\bfseries val\+\_\+uint} ()
+\item 
+\mbox{\Hypertarget{classItem_a775078e0c5eeb20a3707dfbe50861600}\label{classItem_a775078e0c5eeb20a3707dfbe50861600}} 
+virtual String $\ast$ {\bfseries val\+\_\+str} (String $\ast$str)=0
+\item 
+\mbox{\Hypertarget{classItem_a5fb88a1036fe3516824d804b50fa0e97}\label{classItem_a5fb88a1036fe3516824d804b50fa0e97}} 
+virtual String $\ast$ {\bfseries val\+\_\+str\+\_\+ascii} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_a04197b89bab3afceac11df1efda905f4}\label{classItem_a04197b89bab3afceac11df1efda905f4}} 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+buffer)=0
+\item 
+virtual bool \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{val\+\_\+bool}} ()
+\item 
+\mbox{\Hypertarget{classItem_ac6658015996a5823f604fe73883d1591}\label{classItem_ac6658015996a5823f604fe73883d1591}} 
+virtual String $\ast$ {\bfseries val\+\_\+nodeset} (String $\ast$)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$result)
+\item 
+virtual float \mbox{\hyperlink{classItem_a83f65da25aae04ad1aecebc1d43832c0}{get\+\_\+filtering\+\_\+effect}} (table\+\_\+map filter\+\_\+for\+\_\+table, table\+\_\+map read\+\_\+tables, const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$fields\+\_\+to\+\_\+ignore, double rows\+\_\+in\+\_\+table)
+\item 
+bool \mbox{\hyperlink{classItem_a3514d1992e60ef2d018eba61fc5ff269}{error\+\_\+json}} ()
+\item 
+\mbox{\Hypertarget{classItem_ab81930a870271d35533fa56b4a7a3854}\label{classItem_ab81930a870271d35533fa56b4a7a3854}} 
+type\+\_\+conversion\+\_\+status {\bfseries save\+\_\+time\+\_\+in\+\_\+field} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+\mbox{\Hypertarget{classItem_af6b431deeb4f7ea39b81006078142581}\label{classItem_af6b431deeb4f7ea39b81006078142581}} 
+type\+\_\+conversion\+\_\+status {\bfseries save\+\_\+date\+\_\+in\+\_\+field} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+\mbox{\Hypertarget{classItem_a8a2c68a13c05db268c4fe3a1db5563a0}\label{classItem_a8a2c68a13c05db268c4fe3a1db5563a0}} 
+type\+\_\+conversion\+\_\+status {\bfseries save\+\_\+str\+\_\+value\+\_\+in\+\_\+field} (\mbox{\hyperlink{classField}{Field}} $\ast$field, String $\ast$result)
+\item 
+\mbox{\Hypertarget{classItem_ac7627e7f4c470436c64ea1c1ae6af469}\label{classItem_ac7627e7f4c470436c64ea1c1ae6af469}} 
+virtual \mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries get\+\_\+tmp\+\_\+table\+\_\+field} ()
+\item 
+\mbox{\Hypertarget{classItem_a9c963062ee91b6735d2fc219143f1c82}\label{classItem_a9c963062ee91b6735d2fc219143f1c82}} 
+virtual \mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries tmp\+\_\+table\+\_\+field} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$t\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_ae2d9dc78264657693b2ec5e310906f78}\label{classItem_ae2d9dc78264657693b2ec5e310906f78}} 
+virtual const char $\ast$ {\bfseries full\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem_a42554d7016ea643d6534e332caafe23f}\label{classItem_a42554d7016ea643d6534e332caafe23f}} 
+virtual double {\bfseries val\+\_\+result} ()
+\item 
+\mbox{\Hypertarget{classItem_a19d0d5eb817c874eb30cdbab8e767a0b}\label{classItem_a19d0d5eb817c874eb30cdbab8e767a0b}} 
+virtual longlong {\bfseries val\+\_\+int\+\_\+result} ()
+\item 
+virtual longlong \mbox{\hyperlink{classItem_a9d011d3f1d2498f46bbdc4c06d47d5f0}{val\+\_\+time\+\_\+temporal\+\_\+result}} ()
+\item 
+virtual longlong \mbox{\hyperlink{classItem_aa66204e63dc471de5be79e2da81ac7aa}{val\+\_\+date\+\_\+temporal\+\_\+result}} ()
+\item 
+\mbox{\Hypertarget{classItem_ac633994ecb3be1fd5306aafd9634355f}\label{classItem_ac633994ecb3be1fd5306aafd9634355f}} 
+virtual String $\ast$ {\bfseries str\+\_\+result} (String $\ast$tmp)
+\item 
+\mbox{\Hypertarget{classItem_a9d5860d6cb7b7fa372bb6d76435157b4}\label{classItem_a9d5860d6cb7b7fa372bb6d76435157b4}} 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal\+\_\+result} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$val)
+\item 
+\mbox{\Hypertarget{classItem_a8e6ee12189f1395c2c0de63a34fe0534}\label{classItem_a8e6ee12189f1395c2c0de63a34fe0534}} 
+virtual bool {\bfseries val\+\_\+bool\+\_\+result} ()
+\item 
+\mbox{\Hypertarget{classItem_af2227d52b2b68138990eb31171dbff10}\label{classItem_af2227d52b2b68138990eb31171dbff10}} 
+virtual bool {\bfseries is\+\_\+null\+\_\+result} ()
+\item 
+\mbox{\Hypertarget{classItem_a2e6f1d83258831b14cbbb9212dbd378f}\label{classItem_a2e6f1d83258831b14cbbb9212dbd378f}} 
+virtual table\+\_\+map {\bfseries used\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classItem_a91e91383b3287dc58a27a3bf73e13e29}\label{classItem_a91e91383b3287dc58a27a3bf73e13e29}} 
+virtual table\+\_\+map {\bfseries not\+\_\+null\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classItem_ada4688a1a037bd0c37752a763efe350f}\label{classItem_ada4688a1a037bd0c37752a763efe350f}} 
+virtual bool {\bfseries basic\+\_\+const\+\_\+item} () const
+\item 
+\mbox{\Hypertarget{classItem_ad441e5a0412f3a464ccf0a75cd6ffd5c}\label{classItem_ad441e5a0412f3a464ccf0a75cd6ffd5c}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries clone\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem_aacb1156cd4d3dedc374e7464f07fef73}\label{classItem_aacb1156cd4d3dedc374e7464f07fef73}} 
+virtual cond\+\_\+result {\bfseries eq\+\_\+cmp\+\_\+result} () const
+\item 
+\mbox{\Hypertarget{classItem_a54a5915f10d0649231b9b7bfff87f29d}\label{classItem_a54a5915f10d0649231b9b7bfff87f29d}} 
+uint {\bfseries float\+\_\+length} (uint decimals\+\_\+par) const
+\item 
+\mbox{\Hypertarget{classItem_a48997bf065bfa474b8d791f066bceae7}\label{classItem_a48997bf065bfa474b8d791f066bceae7}} 
+virtual uint {\bfseries decimal\+\_\+precision} () const
+\item 
+\mbox{\Hypertarget{classItem_afd1b61959674e2a9c0082ccafba902fc}\label{classItem_afd1b61959674e2a9c0082ccafba902fc}} 
+int {\bfseries decimal\+\_\+int\+\_\+part} () const
+\item 
+virtual uint \mbox{\hyperlink{classItem_a7b3cc55ea7e3a429a6e8f0fbbba6e4ff}{time\+\_\+precision}} ()
+\item 
+virtual uint \mbox{\hyperlink{classItem_a7d01a73ce07ab1b1503c2de56668fdc1}{datetime\+\_\+precision}} ()
+\item 
+\mbox{\Hypertarget{classItem_a9f45ab36bf6773a609c6c55e01386516}\label{classItem_a9f45ab36bf6773a609c6c55e01386516}} 
+virtual bool {\bfseries const\+\_\+item} () const
+\item 
+\mbox{\Hypertarget{classItem_aa62cc2ad3e635a450afe4c3dc718973a}\label{classItem_aa62cc2ad3e635a450afe4c3dc718973a}} 
+virtual bool {\bfseries const\+\_\+during\+\_\+execution} () const
+\item 
+virtual void \mbox{\hyperlink{classItem_aa7ba4bde739d83adec8edf3bf1596d94}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem_a96e64d774c810242c2a521ef12ec5e87}\label{classItem_a96e64d774c810242c2a521ef12ec5e87}} 
+void {\bfseries print\+\_\+item\+\_\+w\+\_\+name} (String $\ast$, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+void \mbox{\hyperlink{classItem_a57c4fb57ce8c51fcd6b33675930e90ca}{print\+\_\+for\+\_\+order}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type, bool used\+\_\+alias)
+\item 
+\mbox{\Hypertarget{classItem_aadd2c248fbd750a1f52ba6ad2c7012b0}\label{classItem_aadd2c248fbd750a1f52ba6ad2c7012b0}} 
+virtual void {\bfseries update\+\_\+used\+\_\+tables} ()
+\item 
+\mbox{\Hypertarget{classItem_ac1beb306adcaeb186cf8e53fcd966388}\label{classItem_ac1beb306adcaeb186cf8e53fcd966388}} 
+virtual void {\bfseries split\+\_\+sum\+\_\+func} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields)
+\item 
+void \mbox{\hyperlink{classItem_a17732157754b75692c499089e9c7945c}{split\+\_\+sum\+\_\+func2}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref, bool skip\+\_\+registered)
+\item 
+\mbox{\Hypertarget{classItem_aa3b1a49c95451ca4f42e3708625ce997}\label{classItem_aa3b1a49c95451ca4f42e3708625ce997}} 
+virtual bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)=0
+\item 
+\mbox{\Hypertarget{classItem_a27ee6319d3922b06f0bc86da72ed1354}\label{classItem_a27ee6319d3922b06f0bc86da72ed1354}} 
+virtual bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)=0
+\item 
+virtual bool \mbox{\hyperlink{classItem_aa04fbf99d5b417b78536362654daff73}{get\+\_\+timeval}} (struct timeval $\ast$tm, int $\ast$warnings)
+\item 
+\mbox{\Hypertarget{classItem_a10381afc72e70da129cf71aa66938b0c}\label{classItem_a10381afc72e70da129cf71aa66938b0c}} 
+virtual bool {\bfseries get\+\_\+date\+\_\+result} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem_aa568127216da8ae09be7923d68938dc0}\label{classItem_aa568127216da8ae09be7923d68938dc0}} 
+virtual bool {\bfseries is\+\_\+null} ()
+\item 
+\mbox{\Hypertarget{classItem_a4820783a9797ede17808b882419eefdd}\label{classItem_a4820783a9797ede17808b882419eefdd}} 
+virtual void {\bfseries update\+\_\+null\+\_\+value} ()
+\item 
+\mbox{\Hypertarget{classItem_a6db63857f8b63b425a8d9cc983152269}\label{classItem_a6db63857f8b63b425a8d9cc983152269}} 
+virtual void {\bfseries top\+\_\+level\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem_a1d592b36da1442da5afd411c85302e26}\label{classItem_a1d592b36da1442da5afd411c85302e26}} 
+virtual void {\bfseries set\+\_\+result\+\_\+field} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+\mbox{\Hypertarget{classItem_aa618197b5331a961e8da7a8771e74e35}\label{classItem_aa618197b5331a961e8da7a8771e74e35}} 
+virtual bool {\bfseries is\+\_\+result\+\_\+field} ()
+\item 
+\mbox{\Hypertarget{classItem_aec3fad2b9d9b17d303ac5d99178c2ce2}\label{classItem_aec3fad2b9d9b17d303ac5d99178c2ce2}} 
+virtual bool {\bfseries is\+\_\+bool\+\_\+func} ()
+\item 
+\mbox{\Hypertarget{classItem_aa2d0634746b59c292191a08238960829}\label{classItem_aa2d0634746b59c292191a08238960829}} 
+virtual void {\bfseries save\+\_\+in\+\_\+result\+\_\+field} (bool no\+\_\+conversions)
+\item 
+\mbox{\Hypertarget{classItem_aca598fe28c880a0eba2b1e6bc090d380}\label{classItem_aca598fe28c880a0eba2b1e6bc090d380}} 
+virtual void {\bfseries no\+\_\+rows\+\_\+in\+\_\+result} ()
+\item 
+\mbox{\Hypertarget{classItem_aa81c49d5e646bfd0f04446e408c5ac81}\label{classItem_aa81c49d5e646bfd0f04446e408c5ac81}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries copy\+\_\+or\+\_\+same} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classItem_ac205b72828d6a1bef2f5dffbf2e16897}\label{classItem_ac205b72828d6a1bef2f5dffbf2e16897}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries copy\+\_\+andor\+\_\+structure} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classItem_a041e069111d8796348f5e8cdecd9ae2d}\label{classItem_a041e069111d8796348f5e8cdecd9ae2d}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries real\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem_a688bf6606f185f904b90b7b154d88ce1}\label{classItem_a688bf6606f185f904b90b7b154d88ce1}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries substitutional\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem_a5cf6ab8e5909e441a29c632e3655aba2}\label{classItem_a5cf6ab8e5909e441a29c632e3655aba2}} 
+virtual void {\bfseries set\+\_\+runtime\+\_\+created} ()
+\item 
+\mbox{\Hypertarget{classItem_aefc0e534764c4d918b8717d31ae29f68}\label{classItem_aefc0e534764c4d918b8717d31ae29f68}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries get\+\_\+tmp\+\_\+table\+\_\+item} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classItem_a14ea0f0d3674d824f7983b2b5c0085ce}\label{classItem_a14ea0f0d3674d824f7983b2b5c0085ce}} 
+virtual const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries compare\+\_\+collation} ()
+\item 
+\mbox{\Hypertarget{classItem_a05853fafc73beea49e5a2fd14169f20a}\label{classItem_a05853fafc73beea49e5a2fd14169f20a}} 
+virtual const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries charset\+\_\+for\+\_\+protocol} (void) const
+\item 
+virtual bool \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{walk}} (Item\+\_\+processor processor, \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}} walk, uchar $\ast$arg)
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem_ae4459c9d19c2c656c63da3bbd32760e5}{transform}} (Item\+\_\+transformer transformer, uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_ab1fb8d26cc665ed6fa08dcda80f095fb}\label{classItem_ab1fb8d26cc665ed6fa08dcda80f095fb}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries compile} (Item\+\_\+analyzer analyzer, uchar $\ast$$\ast$arg\+\_\+p, Item\+\_\+transformer transformer, uchar $\ast$arg\+\_\+t)
+\item 
+\mbox{\Hypertarget{classItem_af4320dc482f800512f15106c65f9ed60}\label{classItem_af4320dc482f800512f15106c65f9ed60}} 
+virtual void {\bfseries traverse\+\_\+cond} (Cond\+\_\+traverser traverser, void $\ast$arg, traverse\+\_\+order order)
+\item 
+\mbox{\Hypertarget{classItem_aee732afe0afb9e9c8d9e7860d4d2f903}\label{classItem_aee732afe0afb9e9c8d9e7860d4d2f903}} 
+virtual bool {\bfseries intro\+\_\+version} (uchar $\ast$int\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_a0b35141015705c9a4ea253f5393d5af1}\label{classItem_a0b35141015705c9a4ea253f5393d5af1}} 
+virtual bool {\bfseries remove\+\_\+fixed} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a92291b9ff9c01c3e6ab721a209c536c2}{cleanup\+\_\+processor}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_aa242cb5b9e525a72e6f11a80106c25a5}\label{classItem_aa242cb5b9e525a72e6f11a80106c25a5}} 
+virtual bool {\bfseries collect\+\_\+item\+\_\+field\+\_\+processor} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_ad26ce6d5e983b547db3e32efa17a36df}{add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a72b136d5e806ef427a0e83b256853aa4}\label{classItem_a72b136d5e806ef427a0e83b256853aa4}} 
+virtual bool \mbox{\hyperlink{classItem_a72b136d5e806ef427a0e83b256853aa4}{visitor\+\_\+processor}} (uchar $\ast$arg)
+\begin{DoxyCompactList}\small\item\em A processor to handle the select lex visitor framework. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classItem_a1ddf19c11395fc67c33b8bb38ce67fc7}{add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor}} (uchar $\ast$unused)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a46a9fb3471a7a0b846ce9487dce470b2}{remove\+\_\+column\+\_\+from\+\_\+bitmap}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_aad5c7f57a8a156642d46dc2dd2dfb9ed}\label{classItem_aad5c7f57a8a156642d46dc2dd2dfb9ed}} 
+virtual bool {\bfseries find\+\_\+item\+\_\+in\+\_\+field\+\_\+list\+\_\+processor} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a37dc7522ee8c8e3de2f471badc50d593}\label{classItem_a37dc7522ee8c8e3de2f471badc50d593}} 
+virtual bool {\bfseries change\+\_\+context\+\_\+processor} (uchar $\ast$context)
+\item 
+\mbox{\Hypertarget{classItem_a48cc1f8cecfdca42564c220b046d65d1}\label{classItem_a48cc1f8cecfdca42564c220b046d65d1}} 
+virtual bool {\bfseries reset\+\_\+query\+\_\+id\+\_\+processor} (uchar $\ast$query\+\_\+id\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_ac8f6b287984e09b06d16f6c1b75eed0e}\label{classItem_ac8f6b287984e09b06d16f6c1b75eed0e}} 
+virtual bool {\bfseries find\+\_\+item\+\_\+processor} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_ada2ce79ccf5ef1273b9e1654448944c1}{mark\+\_\+field\+\_\+in\+\_\+map}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_af55c5ec69663eb6a1b98f071232a7aa2}{used\+\_\+tables\+\_\+for\+\_\+level}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a7ef2237e207688ebc212d481730f2167}\label{classItem_a7ef2237e207688ebc212d481730f2167}} 
+virtual bool {\bfseries check\+\_\+column\+\_\+privileges} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a99333408f695737ac6b86e9734d5f47c}\label{classItem_a99333408f695737ac6b86e9734d5f47c}} 
+virtual bool {\bfseries inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a649bf72a4ae639e262d147cf5beaa30a}{clean\+\_\+up\+\_\+after\+\_\+removal}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_ac2caaead7a0c527f9e3968532a00f4ef}{propagate\+\_\+derived\+\_\+used}} (uchar $\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem_ae91bed467907fd1e3720f7caaaba120f}{propagate\+\_\+set\+\_\+derived\+\_\+used}} (uchar $\ast$)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a7291ce9a64c0201c71463033b4346df4}{aggregate\+\_\+check\+\_\+distinct}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_ab828d3602e63ad15f5cfd8ff54339189}{aggregate\+\_\+check\+\_\+group}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a6f6cf3b5317dce7e27b04c4eaaa37f89}{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a24e82d279a8907ad502faebb3abe1ab1}{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_aeb09f698fb93aedea872783b5bebe5c0}\label{classItem_aeb09f698fb93aedea872783b5bebe5c0}} 
+virtual \mbox{\hyperlink{classBool3}{Bool3}} {\bfseries local\+\_\+column} (const st\+\_\+select\+\_\+lex $\ast$sl) const
+\item 
+virtual bool \mbox{\hyperlink{classItem_a1957a7092839e6913cc8c6ed901c7bea}{cache\+\_\+const\+\_\+expr\+\_\+analyzer}} (uchar $\ast$$\ast$arg)
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem_a4ce0aa0716b2a6b5b29c6c455d0d76db}{cache\+\_\+const\+\_\+expr\+\_\+transformer}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a7d19cd31c89cf5e660667dc27873a265}{item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer}} (uchar $\ast$$\ast$arg)
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem_ae697702435e782119336e6fc3fb6d204}{item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_ac517ef495505fcb649b5ee337db2421f}\label{classItem_ac517ef495505fcb649b5ee337db2421f}} 
+virtual bool {\bfseries equality\+\_\+substitution\+\_\+analyzer} (uchar $\ast$$\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_afa6e1c3ddf41cad0f77a3d1cc010fe88}\label{classItem_afa6e1c3ddf41cad0f77a3d1cc010fe88}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries equality\+\_\+substitution\+\_\+transformer} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a05a7f6ddd521a7215e90e42542fd8ba4}\label{classItem_a05a7f6ddd521a7215e90e42542fd8ba4}} 
+virtual bool {\bfseries check\+\_\+partition\+\_\+func\+\_\+processor} (uchar $\ast$bool\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_a0ae01cdd5731103daecd4b04dbd36840}\label{classItem_a0ae01cdd5731103daecd4b04dbd36840}} 
+virtual bool {\bfseries subst\+\_\+argument\+\_\+checker} (uchar $\ast$$\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_aa758aa1db3baf38843990bb8428cbcae}\label{classItem_aa758aa1db3baf38843990bb8428cbcae}} 
+virtual bool {\bfseries explain\+\_\+subquery\+\_\+checker} (uchar $\ast$$\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a682f321153ac1050b7b245b5012a494f}\label{classItem_a682f321153ac1050b7b245b5012a494f}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries explain\+\_\+subquery\+\_\+propagator} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a31332cb08fd6b858c2d9e70f8141e304}\label{classItem_a31332cb08fd6b858c2d9e70f8141e304}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries equal\+\_\+fields\+\_\+propagator} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_a2f00273ec814da9025506ecd42835895}\label{classItem_a2f00273ec814da9025506ecd42835895}} 
+virtual bool {\bfseries set\+\_\+no\+\_\+const\+\_\+sub} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_ae5468801b588d9d421ffc6137f3ffdff}\label{classItem_ae5468801b588d9d421ffc6137f3ffdff}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries replace\+\_\+equal\+\_\+field} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem_afc1816a70173c2246722e1a559e30145}\label{classItem_afc1816a70173c2246722e1a559e30145}} 
+virtual bool {\bfseries check\+\_\+valid\+\_\+arguments\+\_\+processor} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a8aefc8bd78c2530c57e0fda53063c99d}{find\+\_\+function\+\_\+processor}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_af75e3659f732265cbe72824803f208f2}{check\+\_\+gcol\+\_\+func\+\_\+processor}} (uchar $\ast$int\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a16558f8205877603fbc942dcd880c673}{check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem_a870059b0d80311b71b473af58329edd7}{update\+\_\+indexed\+\_\+column\+\_\+map}} (uchar $\ast$int\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em update\+\_\+indexed\+\_\+column\+\_\+map Update columns map for index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classItem_a8fa4db0b4deb196d03c051bab4f81a1b}\label{classItem_a8fa4db0b4deb196d03c051bab4f81a1b}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries this\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem_a42b6e0ea953427bf5c089591ac0523f0}\label{classItem_a42b6e0ea953427bf5c089591ac0523f0}} 
+virtual const \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries this\+\_\+item} () const
+\item 
+\mbox{\Hypertarget{classItem_af919f9173d340dd57076f9b83851db52}\label{classItem_af919f9173d340dd57076f9b83851db52}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries this\+\_\+item\+\_\+addr} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$addr\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_a1ed7d583dad25a221f34d8485f08dca7}\label{classItem_a1ed7d583dad25a221f34d8485f08dca7}} 
+virtual uint {\bfseries cols} ()
+\item 
+\mbox{\Hypertarget{classItem_a1570463b723057f2666f10b6b4f99b58}\label{classItem_a1570463b723057f2666f10b6b4f99b58}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries element\+\_\+index} (uint i)
+\item 
+\mbox{\Hypertarget{classItem_a9fbbda45036aee26c41dd5db086a5955}\label{classItem_a9fbbda45036aee26c41dd5db086a5955}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries addr} (uint i)
+\item 
+\mbox{\Hypertarget{classItem_a6e550cba41ec0c91236cce96418963b3}\label{classItem_a6e550cba41ec0c91236cce96418963b3}} 
+virtual bool {\bfseries check\+\_\+cols} (uint c)
+\item 
+\mbox{\Hypertarget{classItem_a9e4591aa939209bed0f40fb9e5d943d6}\label{classItem_a9e4591aa939209bed0f40fb9e5d943d6}} 
+virtual bool {\bfseries null\+\_\+inside} ()
+\item 
+\mbox{\Hypertarget{classItem_af2f37808fee412f38b1be05aae55c0f1}\label{classItem_af2f37808fee412f38b1be05aae55c0f1}} 
+virtual void {\bfseries bring\+\_\+value} ()
+\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{classItem_a54c52eb8a27c390d227b0aa547829e1b}{tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool fixed\+\_\+length)
+\item 
+\mbox{\Hypertarget{classItem_aa5cbb858ff1c8841fe5cf94b6d03b291}\label{classItem_aa5cbb858ff1c8841fe5cf94b6d03b291}} 
+virtual \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$ {\bfseries field\+\_\+for\+\_\+view\+\_\+update} ()
+\item 
+\mbox{\Hypertarget{classItem_a2d03476210699508adc7e17488a48329}\label{classItem_a2d03476210699508adc7e17488a48329}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries neg\+\_\+transformer} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classItem_a4a7ea3c62f78b4658a77c8ea2163a5f7}\label{classItem_a4a7ea3c62f78b4658a77c8ea2163a5f7}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries update\+\_\+value\+\_\+transformer} (uchar $\ast$select\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_a866bd9027531943ca1df3692d679cc4d}\label{classItem_a866bd9027531943ca1df3692d679cc4d}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries safe\+\_\+charset\+\_\+converter} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$tocs)
+\item 
+\mbox{\Hypertarget{classItem_a7b5bec40da4e7c2dcab6eada1d46e14a}\label{classItem_a7b5bec40da4e7c2dcab6eada1d46e14a}} 
+void {\bfseries delete\+\_\+self} ()
+\item 
+\mbox{\Hypertarget{classItem_a429edb0cfbcbabd48c3ebf5c3263ed5b}\label{classItem_a429edb0cfbcbabd48c3ebf5c3263ed5b}} 
+virtual bool {\bfseries is\+\_\+splocal} ()
+\item 
+\mbox{\Hypertarget{classItem_af245a2d1390c3be6618e0cebb29800b6}\label{classItem_af245a2d1390c3be6618e0cebb29800b6}} 
+virtual \mbox{\hyperlink{classSettable__routine__parameter}{Settable\+\_\+routine\+\_\+parameter}} $\ast$ {\bfseries get\+\_\+settable\+\_\+routine\+\_\+parameter} ()
+\item 
+\mbox{\Hypertarget{classItem_a2dd09c302badf065170b8f59c17c31a7}\label{classItem_a2dd09c302badf065170b8f59c17c31a7}} 
+bool {\bfseries is\+\_\+temporal\+\_\+with\+\_\+date} () const
+\item 
+\mbox{\Hypertarget{classItem_ac10df722459acd4f79e38971c4451031}\label{classItem_ac10df722459acd4f79e38971c4451031}} 
+bool {\bfseries is\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time} () const
+\item 
+\mbox{\Hypertarget{classItem_a71b2994aee88caa4a3f3db352eca8aa7}\label{classItem_a71b2994aee88caa4a3f3db352eca8aa7}} 
+bool {\bfseries is\+\_\+temporal\+\_\+with\+\_\+time} () const
+\item 
+\mbox{\Hypertarget{classItem_abf0efe057406dd569b981447829ca6c0}\label{classItem_abf0efe057406dd569b981447829ca6c0}} 
+bool {\bfseries is\+\_\+temporal} () const
+\item 
+bool \mbox{\hyperlink{classItem_a7e19bfc78f1c2b4e50a82e4876e0eea8}{has\+\_\+compatible\+\_\+context}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item) const
+\item 
+\mbox{\Hypertarget{classItem_a05a2888f996d4c74ee972642d7c7864c}\label{classItem_a05a2888f996d4c74ee972642d7c7864c}} 
+virtual Field\+::geometry\+\_\+type {\bfseries get\+\_\+geometry\+\_\+type} () const
+\item 
+String $\ast$ \mbox{\hyperlink{classItem_ad28a9d3b48dd6e838b709d03b85f7eb1}{check\+\_\+well\+\_\+formed\+\_\+result}} (String $\ast$str, bool send\+\_\+error, bool truncate)
+\item 
+\mbox{\Hypertarget{classItem_aaacc0c72728bb72256599c792407f700}\label{classItem_aaacc0c72728bb72256599c792407f700}} 
+bool {\bfseries eq\+\_\+by\+\_\+collation} (\mbox{\hyperlink{classItem}{Item}} $\ast$item, bool binary\+\_\+cmp, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\Hypertarget{classItem_a655332b412ecd77436ba935ad8c681ed}\label{classItem_a655332b412ecd77436ba935ad8c681ed}} 
+virtual bool {\bfseries is\+\_\+expensive} ()
+\item 
+virtual bool \mbox{\hyperlink{classItem_a714b4a2e3278f84b2ddb9e65c7fddaff}{can\+\_\+be\+\_\+evaluated\+\_\+now}} () const
+\item 
+\mbox{\Hypertarget{classItem_a043b505a2cb034a2228f13c4366f05e7}\label{classItem_a043b505a2cb034a2228f13c4366f05e7}} 
+uint32 {\bfseries max\+\_\+char\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classItem_ae48d802adeb480452f0869228c63e3e1}\label{classItem_ae48d802adeb480452f0869228c63e3e1}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+charset} (uint32 max\+\_\+char\+\_\+length\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\Hypertarget{classItem_a246c6f63e5c643a661cb2525706c32c4}\label{classItem_a246c6f63e5c643a661cb2525706c32c4}} 
+void {\bfseries fix\+\_\+char\+\_\+length} (uint32 max\+\_\+char\+\_\+length\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_ab958dd079148cdbfc968462f230301b4}\label{classItem_ab958dd079148cdbfc968462f230301b4}} 
+void {\bfseries fix\+\_\+char\+\_\+length\+\_\+ulonglong} (ulonglong max\+\_\+char\+\_\+length\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_a6d1ddaecb6a736f552f58ac4ed867816}\label{classItem_a6d1ddaecb6a736f552f58ac4ed867816}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+charset\+\_\+datetime} (uint32 max\+\_\+char\+\_\+length\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_a61f1e399fcbcdf4c95b4caadd6a063a5}\label{classItem_a61f1e399fcbcdf4c95b4caadd6a063a5}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec\+\_\+and\+\_\+charset\+\_\+datetime} (uint32 max\+\_\+char\+\_\+length\+\_\+arg, uint8 dec\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem_ab55e3e3fe72135bfcddc6d86b6b6f316}\label{classItem_ab55e3e3fe72135bfcddc6d86b6b6f316}} 
+virtual bool {\bfseries is\+\_\+outer\+\_\+field} () const
+\item 
+bool \mbox{\hyperlink{classItem_aa4a4bee673e7e8dedc1c4f7c283188ea}{is\+\_\+blob\+\_\+field}} () const
+\item 
+virtual bool \mbox{\hyperlink{classItem_a555481d359fe1f802b42497d4c39444f}{has\+\_\+subquery}} () const
+\item 
+\mbox{\Hypertarget{classItem_a04ff5e7a8974366d27c1b11a3244518d}\label{classItem_a04ff5e7a8974366d27c1b11a3244518d}} 
+virtual bool {\bfseries has\+\_\+stored\+\_\+program} () const
+\item 
+\mbox{\Hypertarget{classItem_a339485db1a34ae56e5c9039d955aba3a}\label{classItem_a339485db1a34ae56e5c9039d955aba3a}} 
+virtual bool \mbox{\hyperlink{classItem_a339485db1a34ae56e5c9039d955aba3a}{created\+\_\+by\+\_\+in2exists}} () const
+\begin{DoxyCompactList}\small\item\em Whether this \mbox{\hyperlink{classItem}{Item}} was created by the IN-\/$>$E\+X\+I\+S\+TS subquery transformation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classItem_adab31a539e63073e8b5e44121fec6129}\label{classItem_adab31a539e63073e8b5e44121fec6129}} 
+bool {\bfseries is\+\_\+derived\+\_\+used} () const
+\item 
+\mbox{\Hypertarget{classItem_a25f71a381276e045473f21b8f628e366}\label{classItem_a25f71a381276e045473f21b8f628e366}} 
+void {\bfseries mark\+\_\+subqueries\+\_\+optimized\+\_\+away} ()
+\item 
+virtual bool \mbox{\hyperlink{classItem_aea5d6f41e9cd5d17d8e6e8d44bee9c3e}{gc\+\_\+subst\+\_\+analyzer}} (uchar $\ast$$\ast$arg)
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem_a09908dd05d73b9ca1eda2ed8b00d87f4}{gc\+\_\+subst\+\_\+transformer}} (uchar $\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem_a6412d8808519ea336ea6d85ea5efc720}{can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc}} () const
+\item 
+virtual bool \mbox{\hyperlink{classItem_a8deff5e761c2a4fc89e60df1389da969}{repoint\+\_\+const\+\_\+outer\+\_\+ref}} (uchar $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem_aee11dfd52d4450357bfba809e1cb8f39}\label{classItem_aee11dfd52d4450357bfba809e1cb8f39}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t size)  throw ()
+\item 
+\mbox{\Hypertarget{classItem_a77473a8e4e8b1ebb64b67b5bed10b348}\label{classItem_a77473a8e4e8b1ebb64b67b5bed10b348}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t size, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)  throw ()
+\item 
+\mbox{\Hypertarget{classItem_a3f97522131ddb578fe2f42695d7a5eb1}\label{classItem_a3f97522131ddb578fe2f42695d7a5eb1}} 
+static void {\bfseries operator delete} (void $\ast$ptr, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classItem_a2b0da98bc2d073daca299da270cd364c}\label{classItem_a2b0da98bc2d073daca299da270cd364c}} 
+static void {\bfseries operator delete} (void $\ast$ptr, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+\mbox{\Hypertarget{classItem_a1f84346cd539f1d821032f82889c4e0a}\label{classItem_a1f84346cd539f1d821032f82889c4e0a}} 
+static const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries default\+\_\+charset} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem_a0f4da124355876c1c871c190a62d76a6}\label{classItem_a0f4da124355876c1c871c190a62d76a6}} 
+uint {\bfseries rsize}
+\item 
+\mbox{\Hypertarget{classItem_a0624277d59e4437075c246386c43d192}\label{classItem_a0624277d59e4437075c246386c43d192}} 
+String {\bfseries str\+\_\+value}
+\item 
+\mbox{\Hypertarget{classItem_a5d6671d423ea099d218147d62475dc42}\label{classItem_a5d6671d423ea099d218147d62475dc42}} 
+\mbox{\hyperlink{classItem__name__string}{Item\+\_\+name\+\_\+string}} {\bfseries item\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem_aaa596db59f6b0b1f78a3a86abcc44c67}\label{classItem_aaa596db59f6b0b1f78a3a86abcc44c67}} 
+\mbox{\hyperlink{classItem__name__string}{Item\+\_\+name\+\_\+string}} {\bfseries orig\+\_\+name}
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem_af41ed24b86b2126cf7eacc591a863f47}{next}}
+\item 
+\mbox{\Hypertarget{classItem_ae7f55853c995853bfe9c1dc39e4aff62}\label{classItem_ae7f55853c995853bfe9c1dc39e4aff62}} 
+uint32 {\bfseries max\+\_\+length}
+\item 
+int \mbox{\hyperlink{classItem_afebd72a3075897b31b17ead8dd1d10eb}{marker}}
+\item 
+\mbox{\Hypertarget{classItem_ac2171994f02baa59dfb36c176cbe6724}\label{classItem_ac2171994f02baa59dfb36c176cbe6724}} 
+uint8 {\bfseries decimals}
+\item 
+my\+\_\+bool \mbox{\hyperlink{classItem_a4c62081a1b4986d26cf265143f403e4b}{maybe\+\_\+null}}
+\item 
+\mbox{\Hypertarget{classItem_a429f008ae0acdcdccac02674722503b5}\label{classItem_a429f008ae0acdcdccac02674722503b5}} 
+my\+\_\+bool {\bfseries null\+\_\+value}
+\item 
+\mbox{\Hypertarget{classItem_a4f54eded4efc2774f573b3de72a1f97c}\label{classItem_a4f54eded4efc2774f573b3de72a1f97c}} 
+my\+\_\+bool {\bfseries unsigned\+\_\+flag}
+\item 
+\mbox{\Hypertarget{classItem_a29f202de9231b26722d2d300c3042872}\label{classItem_a29f202de9231b26722d2d300c3042872}} 
+my\+\_\+bool {\bfseries with\+\_\+sum\+\_\+func}
+\item 
+\mbox{\Hypertarget{classItem_a55fa0bb60e4a106296ccb99ef27899fa}\label{classItem_a55fa0bb60e4a106296ccb99ef27899fa}} 
+my\+\_\+bool {\bfseries fixed}
+\item 
+\mbox{\Hypertarget{classItem_a094c4557e5151fc64066cc1912373be4}\label{classItem_a094c4557e5151fc64066cc1912373be4}} 
+\mbox{\hyperlink{classDTCollation}{D\+T\+Collation}} {\bfseries collation}
+\item 
+\mbox{\Hypertarget{classItem_a498a4f5726c9b9226f250d3696f3e004}\label{classItem_a498a4f5726c9b9226f250d3696f3e004}} 
+Item\+\_\+result {\bfseries cmp\+\_\+context}
+\item 
+\mbox{\Hypertarget{classItem_aa7e3c68fd039a7afcdf3ee94d3891f59}\label{classItem_aa7e3c68fd039a7afcdf3ee94d3891f59}} 
+bool {\bfseries runtime\+\_\+item}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String $\ast$ \mbox{\hyperlink{classItem_ad087824772daf5ea1dad82d52b16255c}{make\+\_\+empty\+\_\+result}} ()
+\item 
+bool \mbox{\hyperlink{classItem_a0630371e331f83a8d258952a52cc5c72}{skip\+\_\+itemize}} (\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\item 
+virtual type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem_a463ded5f3c21ed2508dd8fddc6024722}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\item 
+\mbox{\Hypertarget{classItem_af93c6ce0f62695eddc62271ec58195f1}\label{classItem_af93c6ce0f62695eddc62271ec58195f1}} 
+String $\ast$ {\bfseries val\+\_\+string\+\_\+from\+\_\+real} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_a10e54916ef80f2f042ae696542b766b7}\label{classItem_a10e54916ef80f2f042ae696542b766b7}} 
+String $\ast$ {\bfseries val\+\_\+string\+\_\+from\+\_\+int} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_afe90083f549a48da15a8edfaa28d7463}\label{classItem_afe90083f549a48da15a8edfaa28d7463}} 
+String $\ast$ {\bfseries val\+\_\+string\+\_\+from\+\_\+decimal} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_a22d6e279a15f5ef46d5f6f63dcfaa8ec}\label{classItem_a22d6e279a15f5ef46d5f6f63dcfaa8ec}} 
+String $\ast$ {\bfseries val\+\_\+string\+\_\+from\+\_\+date} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_a2f550d4d08d6686db96833b172250f43}\label{classItem_a2f550d4d08d6686db96833b172250f43}} 
+String $\ast$ {\bfseries val\+\_\+string\+\_\+from\+\_\+datetime} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_ae1f8005f8ea489e0225a880070465885}\label{classItem_ae1f8005f8ea489e0225a880070465885}} 
+String $\ast$ {\bfseries val\+\_\+string\+\_\+from\+\_\+time} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem_a97b88aaeff9a1abd26a648bd84b7a8ca}\label{classItem_a97b88aaeff9a1abd26a648bd84b7a8ca}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal\+\_\+from\+\_\+real} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+value)
+\item 
+\mbox{\Hypertarget{classItem_a473147f97c8dab9a973dd808e5d58454}\label{classItem_a473147f97c8dab9a973dd808e5d58454}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal\+\_\+from\+\_\+int} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+value)
+\item 
+\mbox{\Hypertarget{classItem_a18605f84ce61955a00d471f4496dc30d}\label{classItem_a18605f84ce61955a00d471f4496dc30d}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal\+\_\+from\+\_\+string} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+value)
+\item 
+\mbox{\Hypertarget{classItem_a92cd514da1668778390e8e356b039117}\label{classItem_a92cd514da1668778390e8e356b039117}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal\+\_\+from\+\_\+date} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+value)
+\item 
+\mbox{\Hypertarget{classItem_af585089607bc3bde7264b1b41785f832}\label{classItem_af585089607bc3bde7264b1b41785f832}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal\+\_\+from\+\_\+time} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+value)
+\item 
+\mbox{\Hypertarget{classItem_a101e0585bdb851e6460986a445f03c83}\label{classItem_a101e0585bdb851e6460986a445f03c83}} 
+longlong {\bfseries val\+\_\+int\+\_\+from\+\_\+decimal} ()
+\item 
+\mbox{\Hypertarget{classItem_a3fc58357f36e11d18e68d59cfd6f6c0e}\label{classItem_a3fc58357f36e11d18e68d59cfd6f6c0e}} 
+longlong {\bfseries val\+\_\+int\+\_\+from\+\_\+date} ()
+\item 
+\mbox{\Hypertarget{classItem_a67a1fb29d2e834d5f70efd8acf83f1cc}\label{classItem_a67a1fb29d2e834d5f70efd8acf83f1cc}} 
+longlong {\bfseries val\+\_\+int\+\_\+from\+\_\+time} ()
+\item 
+\mbox{\Hypertarget{classItem_a1653c9e60f10bf5ca7fe3cb1044fbaba}\label{classItem_a1653c9e60f10bf5ca7fe3cb1044fbaba}} 
+longlong {\bfseries val\+\_\+int\+\_\+from\+\_\+datetime} ()
+\item 
+\mbox{\Hypertarget{classItem_a26938e4be70ad1e5a4040734eeb2fc43}\label{classItem_a26938e4be70ad1e5a4040734eeb2fc43}} 
+double {\bfseries val\+\_\+real\+\_\+from\+\_\+decimal} ()
+\item 
+bool \mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{error\+\_\+bool}} ()
+\item 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classItem_a78123cd543a38626c2bff77164653ccf}{error\+\_\+decimal}} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+buffer)
+\item 
+int \mbox{\hyperlink{classItem_a115c9bc7c78e1ec851df24e1c934e44f}{error\+\_\+int}} ()
+\item 
+double \mbox{\hyperlink{classItem_a1d0cb18fac534ad707a5d2842832d6d0}{error\+\_\+real}} ()
+\item 
+String $\ast$ \mbox{\hyperlink{classItem_ac16fa7082ec39db85fceb3a37459fd7d}{error\+\_\+str}} ()
+\item 
+bool \mbox{\hyperlink{classItem_ab1a8a02f43971655c32eb669de6ccedc}{get\+\_\+date\+\_\+from\+\_\+string}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t flags)
+\item 
+bool \mbox{\hyperlink{classItem_ae98d037636216e49bc5668606e2734ee}{get\+\_\+date\+\_\+from\+\_\+real}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t flags)
+\item 
+bool \mbox{\hyperlink{classItem_a394b578242abd51ee9ca269cd21e4147}{get\+\_\+date\+\_\+from\+\_\+decimal}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t flags)
+\item 
+bool \mbox{\hyperlink{classItem_ada63b68c953a82ca7f2f7cdc851ae755}{get\+\_\+date\+\_\+from\+\_\+int}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t flags)
+\item 
+bool \mbox{\hyperlink{classItem_a3a3f871daa34d4863f4e4968499cc211}{get\+\_\+date\+\_\+from\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_a8afea7f26f856cb2f7f0019134ab6cba}{get\+\_\+date\+\_\+from\+\_\+numeric}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+bool \mbox{\hyperlink{classItem_ac58bafe79e54dca5453a67b95e975a5e}{get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+bool \mbox{\hyperlink{classItem_a1f6773c162fa458b6ef2087b427244b7}{get\+\_\+time\+\_\+from\+\_\+string}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_a309d78890d1ca16e7555d3030614a9fa}{get\+\_\+time\+\_\+from\+\_\+real}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_a099dd8c794d94ac482747e34e4f7a6b3}{get\+\_\+time\+\_\+from\+\_\+decimal}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_afc9b0e1c1a122f5394f6ab80135cfd24}{get\+\_\+time\+\_\+from\+\_\+int}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_a55b105713447a5934c07cfff39001898}{get\+\_\+time\+\_\+from\+\_\+date}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_a3b6eb99fbb257de09b1fcddb73bc3142}{get\+\_\+time\+\_\+from\+\_\+datetime}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_aba77318c46ff171c2a388ec16625afc2}{get\+\_\+time\+\_\+from\+\_\+numeric}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+bool \mbox{\hyperlink{classItem_a7af21871229b24c64767bb189a8fa42f}{get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem_a792f694e9e029f38b7f1bbc021c32cf1}\label{classItem_a792f694e9e029f38b7f1bbc021c32cf1}} 
+static void {\bfseries check\+\_\+deprecated\+\_\+bin\+\_\+op} (const \mbox{\hyperlink{classItem}{Item}} $\ast$a, const \mbox{\hyperlink{classItem}{Item}} $\ast$b)
+\item 
+static bool \mbox{\hyperlink{classItem_adc95ed16596a556875d6272aeacbc2c0}{mark\+\_\+field\+\_\+in\+\_\+map}} (\mbox{\hyperlink{classMark__field}{Mark\+\_\+field}} $\ast$mark\+\_\+field, \mbox{\hyperlink{classField}{Field}} $\ast$field)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem_a467290aefc522465e8891bf227bb3f2d}\label{classItem_a467290aefc522465e8891bf227bb3f2d}} 
+my\+\_\+bool {\bfseries with\+\_\+subselect}
+\item 
+\mbox{\Hypertarget{classItem_a7303d8a3a16f02dad23f73b3e819e572}\label{classItem_a7303d8a3a16f02dad23f73b3e819e572}} 
+my\+\_\+bool {\bfseries with\+\_\+stored\+\_\+program}
+\item 
+bool \mbox{\hyperlink{classItem_a57b1fecae2dda2c06aca6754460b5894}{tables\+\_\+locked\+\_\+cache}}
+\item 
+\mbox{\Hypertarget{classItem_a7031b9098256a6719fc3a98ad7d9f3cb}\label{classItem_a7031b9098256a6719fc3a98ad7d9f3cb}} 
+const bool {\bfseries is\+\_\+parser\+\_\+item}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classItem_a4e68f315ba2a26543339e9f0efed3695}\label{classItem_a4e68f315ba2a26543339e9f0efed3695}} 
+\index{Item@{Item}!enum\+\_\+walk@{enum\+\_\+walk}}
+\index{enum\+\_\+walk@{enum\+\_\+walk}!Item@{Item}}
+\subsubsection{\texorpdfstring{enum\+\_\+walk}{enum\_walk}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{Item\+::enum\+\_\+walk}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000030}{Todo}}]
+\begin{DoxyEnumerate}
+\item Move this away from the \mbox{\hyperlink{classItem}{Item}} class. It is a property of the visitor in what direction the traversal is done, not of the visitee.
+\end{DoxyEnumerate}\end{DoxyRefDesc}
+
+
+
+\begin{DoxyEnumerate}
+\item Make this two booleans instead. There are two orthogonal flags here. 
+\end{DoxyEnumerate}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classItem_a9382072b90618574708c944b4f797eb3}\label{classItem_a9382072b90618574708c944b4f797eb3}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Parse-\/time context-\/independent constructor.
+
+This constructor and caller constructors of child classes must not access/change thd-\/$>$lex (including thd-\/$>$lex-\/$>$current\+\_\+select(), thd-\/$>$m\+\_\+parser\+\_\+state etc structures).
+
+If we need to finalize the construction of the object, then we move all context-\/sensitive code to the \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{itemize()}} virtual function.
+
+The P\+OS parameter marks this constructor and other context-\/independent constructors of child classes for easy recognition/separation from other (context-\/dependent) constructors. \mbox{\Hypertarget{classItem_ada77f843f657d3acbecf5f9fad69b440}\label{classItem_ada77f843f657d3acbecf5f9fad69b440}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Constructor used by \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__ref}{Item\+\_\+ref}} \& aggregate (sum) functions.
+
+Used for duplicating lists in processing queries with temporary tables. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem_a1ddf19c11395fc67c33b8bb38ce67fc7}\label{classItem_a1ddf19c11395fc67c33b8bb38ce67fc7}} 
+\index{Item@{Item}!add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor@{add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor}}
+\index{add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor@{add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor}!Item@{Item}}
+\subsubsection{\texorpdfstring{add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor()}{add\_field\_to\_cond\_set\_processor()}}
+{\footnotesize\ttfamily virtual bool Item\+::add\+\_\+field\+\_\+to\+\_\+cond\+\_\+set\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{unused }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk}} function. Set bit in table-\/$>$cond\+\_\+set for all fields of all tables that are referred to by the \mbox{\hyperlink{classItem}{Item}}. 
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a9296d0ae378518ab8aed6c1e9c7a3bf9}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_ad26ce6d5e983b547db3e32efa17a36df}\label{classItem_ad26ce6d5e983b547db3e32efa17a36df}} 
+\index{Item@{Item}!add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor@{add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor}}
+\index{add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor@{add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor}!Item@{Item}}
+\subsubsection{\texorpdfstring{add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor()}{add\_field\_to\_set\_processor()}}
+{\footnotesize\ttfamily virtual bool Item\+::add\+\_\+field\+\_\+to\+\_\+set\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk}} function. Set bit in table-\/$>$tmp\+\_\+set for all fields in table \textquotesingle{}arg\textquotesingle{} that are referred to by the \mbox{\hyperlink{classItem}{Item}}. 
+
+Reimplemented in \mbox{\hyperlink{classItem__field_accdc70183bdbc1279be2ef8d3f0ab042}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_a7291ce9a64c0201c71463033b4346df4}\label{classItem_a7291ce9a64c0201c71463033b4346df4}} 
+\index{Item@{Item}!aggregate\+\_\+check\+\_\+distinct@{aggregate\+\_\+check\+\_\+distinct}}
+\index{aggregate\+\_\+check\+\_\+distinct@{aggregate\+\_\+check\+\_\+distinct}!Item@{Item}}
+\subsubsection{\texorpdfstring{aggregate\+\_\+check\+\_\+distinct()}{aggregate\_check\_distinct()}}
+{\footnotesize\ttfamily virtual bool Item\+::aggregate\+\_\+check\+\_\+distinct (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__AGGREGATE__CHECKS_ga83e75b415b78e10ade375ad320ea446c}{Distinct\+\_\+check\+::check\+\_\+query()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__ident_a00ab5f763e017d4892db3d07fc8b13f3}{Item\+\_\+ident}}, and \mbox{\hyperlink{classItem__sum_a469f9e37bdb5f0c186b4fc2190f01fdb}{Item\+\_\+sum}}.
+
+\mbox{\Hypertarget{classItem_ab828d3602e63ad15f5cfd8ff54339189}\label{classItem_ab828d3602e63ad15f5cfd8ff54339189}} 
+\index{Item@{Item}!aggregate\+\_\+check\+\_\+group@{aggregate\+\_\+check\+\_\+group}}
+\index{aggregate\+\_\+check\+\_\+group@{aggregate\+\_\+check\+\_\+group}!Item@{Item}}
+\subsubsection{\texorpdfstring{aggregate\+\_\+check\+\_\+group()}{aggregate\_check\_group()}}
+{\footnotesize\ttfamily virtual bool Item\+::aggregate\+\_\+check\+\_\+group (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__AGGREGATE__CHECKS_ga85f98a122e6f9accf528534acb5db686}{Group\+\_\+check\+::check\+\_\+query()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__ident_ae79407fb0ebd076c5a45f16f36512724}{Item\+\_\+ident}}, and \mbox{\hyperlink{classItem__sum_acc4dbcc4a2da3750ff11bf372fd973f5}{Item\+\_\+sum}}.
+
+\mbox{\Hypertarget{classItem_a1957a7092839e6913cc8c6ed901c7bea}\label{classItem_a1957a7092839e6913cc8c6ed901c7bea}} 
+\index{Item@{Item}!cache\+\_\+const\+\_\+expr\+\_\+analyzer@{cache\+\_\+const\+\_\+expr\+\_\+analyzer}}
+\index{cache\+\_\+const\+\_\+expr\+\_\+analyzer@{cache\+\_\+const\+\_\+expr\+\_\+analyzer}!Item@{Item}}
+\subsubsection{\texorpdfstring{cache\+\_\+const\+\_\+expr\+\_\+analyzer()}{cache\_const\_expr\_analyzer()}}
+{\footnotesize\ttfamily bool Item\+::cache\+\_\+const\+\_\+expr\+\_\+analyzer (\begin{DoxyParamCaption}\item[{uchar $\ast$$\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if an item is a constant one and can be cached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \mbox{[}out\mbox{]} != N\+U\+LL $<$=$>$ Cache this item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE Go deeper in item tree. 
+
+F\+A\+L\+SE Don\textquotesingle{}t go deeper in item tree. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__name__const_aa6f5f451a1c2fc81670502605ae1cffc}{Item\+\_\+name\+\_\+const}}.
+
+\mbox{\Hypertarget{classItem_a4ce0aa0716b2a6b5b29c6c455d0d76db}\label{classItem_a4ce0aa0716b2a6b5b29c6c455d0d76db}} 
+\index{Item@{Item}!cache\+\_\+const\+\_\+expr\+\_\+transformer@{cache\+\_\+const\+\_\+expr\+\_\+transformer}}
+\index{cache\+\_\+const\+\_\+expr\+\_\+transformer@{cache\+\_\+const\+\_\+expr\+\_\+transformer}!Item@{Item}}
+\subsubsection{\texorpdfstring{cache\+\_\+const\+\_\+expr\+\_\+transformer()}{cache\_const\_expr\_transformer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+::cache\+\_\+const\+\_\+expr\+\_\+transformer (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Cache item if needed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & != N\+U\+LL $<$=$>$ Cache this item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cache if cache needed. 
+
+this otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a714b4a2e3278f84b2ddb9e65c7fddaff}\label{classItem_a714b4a2e3278f84b2ddb9e65c7fddaff}} 
+\index{Item@{Item}!can\+\_\+be\+\_\+evaluated\+\_\+now@{can\+\_\+be\+\_\+evaluated\+\_\+now}}
+\index{can\+\_\+be\+\_\+evaluated\+\_\+now@{can\+\_\+be\+\_\+evaluated\+\_\+now}!Item@{Item}}
+\subsubsection{\texorpdfstring{can\+\_\+be\+\_\+evaluated\+\_\+now()}{can\_be\_evaluated\_now()}}
+{\footnotesize\ttfamily bool Item\+::can\+\_\+be\+\_\+evaluated\+\_\+now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if it is OK to evaluate the item now.
+
+\begin{DoxyReturn}{Returns}
+true if the item can be evaluated in the current statement state. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & The item can be evaluated now. \\
+\hline
+{\em false} & The item can not be evaluated now, (i.\+e. depend on non locked table).\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Help function to avoid optimize or exec call during prepare phase. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classItem_a6412d8808519ea336ea6d85ea5efc720}\label{classItem_a6412d8808519ea336ea6d85ea5efc720}} 
+\index{Item@{Item}!can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc@{can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc}}
+\index{can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc@{can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc}!Item@{Item}}
+\subsubsection{\texorpdfstring{can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc()}{can\_be\_substituted\_for\_gc()}}
+{\footnotesize\ttfamily bool Item\+::can\+\_\+be\+\_\+substituted\+\_\+for\+\_\+gc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if this item is of a type that is eligible for GC substitution. All items that belong to subclasses of \mbox{\hyperlink{classItem__func}{Item\+\_\+func}} are eligible for substitution. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classItem_a16558f8205877603fbc942dcd880c673}\label{classItem_a16558f8205877603fbc942dcd880c673}} 
+\index{Item@{Item}!check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor@{check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor}}
+\index{check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor@{check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor}!Item@{Item}}
+\subsubsection{\texorpdfstring{check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor()}{check\_gcol\_depend\_default\_processor()}}
+{\footnotesize\ttfamily virtual bool Item\+::check\+\_\+gcol\+\_\+depend\+\_\+default\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if a generated expression depends on D\+E\+F\+A\+U\+LT function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & ignored\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the function is not D\+E\+F\+A\+U\+L\+T(), otherwise true. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__default__value_a309bddf86a7472371f02ab9ed80e6b27}{Item\+\_\+default\+\_\+value}}.
+
+\mbox{\Hypertarget{classItem_af75e3659f732265cbe72824803f208f2}\label{classItem_af75e3659f732265cbe72824803f208f2}} 
+\index{Item@{Item}!check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}}
+\index{check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}!Item@{Item}}
+\subsubsection{\texorpdfstring{check\+\_\+gcol\+\_\+func\+\_\+processor()}{check\_gcol\_func\_processor()}}
+{\footnotesize\ttfamily virtual bool Item\+::check\+\_\+gcol\+\_\+func\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{int\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if an expression/function is allowed for a virtual column
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em int\+\_\+arg} & An array of two integers. Used only for \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}. The first cell passes the field\textquotesingle{}s number in the table. The second cell is an out parameter containing the error code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if function is not accepted 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__cache_ae62bc37e1839d9749fdd70c485506c5f}{Item\+\_\+cache}}, \mbox{\hyperlink{classItem__insert__value_a6c64934ac5862b0e211f15e347a0a940}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__result__field_a12324702e7f419b47de45e3505730441}{Item\+\_\+result\+\_\+field}}, \mbox{\hyperlink{classItem__static__string__func_affbcad090aae0059272342f77d51ae90}{Item\+\_\+static\+\_\+string\+\_\+func}}, \mbox{\hyperlink{classItem__int_ae1ea6b10f3987835fc6d7ec45bb11f94}{Item\+\_\+int}}, \mbox{\hyperlink{classItem__null__result_a2e623724f3729cea2a1b54c3d5f7dbd4}{Item\+\_\+null\+\_\+result}}, \mbox{\hyperlink{classItem__field_a9a5288fcbc34ac4bda07a8e11c86269c}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__basic__constant_a6240f3253090d2fc91f87a7a1cb773a7}{Item\+\_\+basic\+\_\+constant}}, \mbox{\hyperlink{classItem__func__uuid_a2ffae007bf0712dd82926ee1a994dc70}{Item\+\_\+func\+\_\+uuid}}, \mbox{\hyperlink{classItem__func__now_a724c78088a5de2c85cab8d92f0f8a519}{Item\+\_\+func\+\_\+now}}, \mbox{\hyperlink{classItem__func__curdate_abdf88efdcbd4bf821e4577dcd7765bb9}{Item\+\_\+func\+\_\+curdate}}, \mbox{\hyperlink{classItem__func__curtime_af861f93c4face56168852e5cdb465e43}{Item\+\_\+func\+\_\+curtime}}, \mbox{\hyperlink{classItem__load__file_a1be538400bc26d5fd2f1ee075bb11be5}{Item\+\_\+load\+\_\+file}}, \mbox{\hyperlink{classItem__func__sysconst_afef78b3a992b62b9c1155e0074e8ab72}{Item\+\_\+func\+\_\+sysconst}}, \mbox{\hyperlink{classItem__func__encrypt_a8b948c531a8265980a7be6913f3fe36c}{Item\+\_\+func\+\_\+encrypt}}, \mbox{\hyperlink{classItem__func__unix__timestamp_a326e598d47a54d35b5853e2b121894c2}{Item\+\_\+func\+\_\+unix\+\_\+timestamp}}, \mbox{\hyperlink{classItem__row_abaff5b82ee17b24e4a5d24a3c71b29b4}{Item\+\_\+row}}, \mbox{\hyperlink{classItem__func__xml__update_aef4d74587e25de0b32a863ecc3b27214}{Item\+\_\+func\+\_\+xml\+\_\+update}}, and \mbox{\hyperlink{classItem__xml__str__func_aad586261f128e8819704b29bdf0c0470}{Item\+\_\+xml\+\_\+str\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_ad28a9d3b48dd6e838b709d03b85f7eb1}\label{classItem_ad28a9d3b48dd6e838b709d03b85f7eb1}} 
+\index{Item@{Item}!check\+\_\+well\+\_\+formed\+\_\+result@{check\+\_\+well\+\_\+formed\+\_\+result}}
+\index{check\+\_\+well\+\_\+formed\+\_\+result@{check\+\_\+well\+\_\+formed\+\_\+result}!Item@{Item}}
+\subsubsection{\texorpdfstring{check\+\_\+well\+\_\+formed\+\_\+result()}{check\_well\_formed\_result()}}
+{\footnotesize\ttfamily String $\ast$ Item\+::check\+\_\+well\+\_\+formed\+\_\+result (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{bool}]{send\+\_\+error,  }\item[{bool}]{truncate }\end{DoxyParamCaption})}
+
+Verifies that the input string is well-\/formed according to its character set. 
+\begin{DoxyParams}{Parameters}
+{\em send\+\_\+error} & If true, call my\+\_\+error if string is not well-\/formed. \\
+\hline
+{\em truncate} & If true, set to null/truncate if not well-\/formed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If well-\/formed\+: input string. If not well-\/formed\+: if truncate is true and strict mode\+: N\+U\+LL pointer and we set this \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s value to N\+U\+LL. if truncate is true and not strict mode\+: input string truncated up to last good character. if truncate is false\+: input string is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a649bf72a4ae639e262d147cf5beaa30a}\label{classItem_a649bf72a4ae639e262d147cf5beaa30a}} 
+\index{Item@{Item}!clean\+\_\+up\+\_\+after\+\_\+removal@{clean\+\_\+up\+\_\+after\+\_\+removal}}
+\index{clean\+\_\+up\+\_\+after\+\_\+removal@{clean\+\_\+up\+\_\+after\+\_\+removal}!Item@{Item}}
+\subsubsection{\texorpdfstring{clean\+\_\+up\+\_\+after\+\_\+removal()}{clean\_up\_after\_removal()}}
+{\footnotesize\ttfamily virtual bool Item\+::clean\+\_\+up\+\_\+after\+\_\+removal (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Clean up after removing the item from the item tree.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the st\+\_\+select\+\_\+lex from which the walk started, i.\+e., the st\+\_\+select\+\_\+lex that contained the clause that was removed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__sum_a838d698110f5c45d6ad3ba1c6e5b2a95}{Item\+\_\+sum}}, and \mbox{\hyperlink{classItem__subselect_a0944e9b89787f5adac23639eb0792d86}{Item\+\_\+subselect}}.
+
+\mbox{\Hypertarget{classItem_a92291b9ff9c01c3e6ab721a209c536c2}\label{classItem_a92291b9ff9c01c3e6ab721a209c536c2}} 
+\index{Item@{Item}!cleanup\+\_\+processor@{cleanup\+\_\+processor}}
+\index{cleanup\+\_\+processor@{cleanup\+\_\+processor}!Item@{Item}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+processor()}{cleanup\_processor()}}
+{\footnotesize\ttfamily bool Item\+::cleanup\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+cleanup() item if it is \textquotesingle{}fixed\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & a dummy parameter, is not used here \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classItem_a7d01a73ce07ab1b1503c2de56668fdc1}\label{classItem_a7d01a73ce07ab1b1503c2de56668fdc1}} 
+\index{Item@{Item}!datetime\+\_\+precision@{datetime\+\_\+precision}}
+\index{datetime\+\_\+precision@{datetime\+\_\+precision}!Item@{Item}}
+\subsubsection{\texorpdfstring{datetime\+\_\+precision()}{datetime\_precision()}}
+{\footnotesize\ttfamily uint Item\+::datetime\+\_\+precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+D\+A\+T\+E\+T\+I\+ME precision of the item\+: 0..6 
+
+Reimplemented in \mbox{\hyperlink{classItem__temporal__func_ad8de60fc778a47b3e3c14df2ef3d8f38}{Item\+\_\+temporal\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_af0957bbdb9a256de0cd29f1adcae28be}\label{classItem_af0957bbdb9a256de0cd29f1adcae28be}} 
+\index{Item@{Item}!eq@{eq}}
+\index{eq@{eq}!Item@{Item}}
+\subsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily bool Item\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{bool}]{binary\+\_\+cmp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function is called when\+:
+\begin{DoxyItemize}
+\item Comparing items in the W\+H\+E\+RE clause (when doing where optimization)
+\item When trying to find an O\+R\+D\+ER B\+Y/\+G\+R\+O\+UP BY item in the S\+E\+L\+E\+CT part
+\item When matching fields in multiple equality objects (Item\+\_\+equal) 
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{classItem__cache_a77bf4f66aca1a46aeca8ba732eed78ce}{Item\+\_\+cache}}, \mbox{\hyperlink{classItem__trigger__field_a8ad192808fbb5d42dbc49a0809355478}{Item\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classItem__insert__value_aa8be1a5d87cbe34ca0fc197a80522738}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_a2be2ba1ab394829380e6f0525f9f5d07}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__direct__view__ref_ae9d8bc691bf2687ea154e83f8943bdf7}{Item\+\_\+direct\+\_\+view\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_aeeefca8b7da367005015a5f978e9753b}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__hex__string_abbed37919e6473f66b9814d612ece365}{Item\+\_\+hex\+\_\+string}}, \mbox{\hyperlink{classItem__string_abe8d23ca4b542969781ed21793fe96e5}{Item\+\_\+string}}, \mbox{\hyperlink{classItem__float_a448efe19e2daa5e89d66b92b82ddbfba}{Item\+\_\+float}}, \mbox{\hyperlink{classItem__decimal_a4aa9e47eb7b28550f00439b40a5fdf83}{Item\+\_\+decimal}}, \mbox{\hyperlink{classItem__int_a75d827818558edd68522d1823a1fc803}{Item\+\_\+int}}, \mbox{\hyperlink{classItem__param_ab816b03dcf1fc98c4f7990d7b22b1b16}{Item\+\_\+param}}, \mbox{\hyperlink{classItem__null_acf71d2194641e39c7aa1d9863ddd4fd7}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a009fb19dc742f706ec5c8bad9a6a0c2d}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__cond_aa73fc3b0f22689cebea9205dbf275421}{Item\+\_\+cond}}, \mbox{\hyperlink{classItem__extract_ad12d12826c6f4231a4dde0150732c5aa}{Item\+\_\+extract}}, \mbox{\hyperlink{classItem__date__add__interval_a1f23c39581583b37f1694f987655b772}{Item\+\_\+date\+\_\+add\+\_\+interval}}, \mbox{\hyperlink{classItem__func__date__format_a28846e4dfbb3bb5ea2eeddc387929abe}{Item\+\_\+func\+\_\+date\+\_\+format}}, \mbox{\hyperlink{classItem__func__weight__string_a8a87a95257f1dc03839970a753c0fa9a}{Item\+\_\+func\+\_\+weight\+\_\+string}}, \mbox{\hyperlink{classItem__func__set__collation_acaa06875a0860b9553adb983201e067f}{Item\+\_\+func\+\_\+set\+\_\+collation}}, \mbox{\hyperlink{classItem__datetime__literal_a30ee1698b8a594542f2017e3ee6ac8ad}{Item\+\_\+datetime\+\_\+literal}}, \mbox{\hyperlink{classItem__time__literal_affc6ba040990919f39ee32d01bbf35c3}{Item\+\_\+time\+\_\+literal}}, \mbox{\hyperlink{classItem__char__typecast_a8ed432731786b97255a7a47901c79768}{Item\+\_\+char\+\_\+typecast}}, \mbox{\hyperlink{classItem__date__literal_a34fad994fb206e5c7bacf2f7b8455dd7}{Item\+\_\+date\+\_\+literal}}, \mbox{\hyperlink{classItem__func__opt__neg_a7a637b1a83c5f2737350e3630318fa76}{Item\+\_\+func\+\_\+opt\+\_\+neg}}, \mbox{\hyperlink{classItem__sum_aeab749252b834e0be4f00aac8ca523f5}{Item\+\_\+sum}}, and \mbox{\hyperlink{classItem__func_a3de3f23377e6f0006dfccd375086365f}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_a45c8c303465b71321c15ae43583de83f}\label{classItem_a45c8c303465b71321c15ae43583de83f}} 
+\index{Item@{Item}!error\+\_\+bool@{error\+\_\+bool}}
+\index{error\+\_\+bool@{error\+\_\+bool}!Item@{Item}}
+\subsubsection{\texorpdfstring{error\+\_\+bool()}{error\_bool()}}
+{\footnotesize\ttfamily bool Item\+::error\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Get the value to return from \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{val\+\_\+bool()}} in case of errors.
+
+This function is called from \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{val\+\_\+bool()}} when an error has occured and we need to return something to abort evaluation of the item. The expected pattern in \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{val\+\_\+bool()}} is
+
+if ($<$error condition$>$=\char`\"{}\char`\"{}$>$) \{ my\+\_\+error(...) return \mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{error\+\_\+bool()}}; \}
+
+\begin{DoxyReturn}{Returns}
+The value \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{val\+\_\+bool()}} should return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a78123cd543a38626c2bff77164653ccf}\label{classItem_a78123cd543a38626c2bff77164653ccf}} 
+\index{Item@{Item}!error\+\_\+decimal@{error\+\_\+decimal}}
+\index{error\+\_\+decimal@{error\+\_\+decimal}!Item@{Item}}
+\subsubsection{\texorpdfstring{error\+\_\+decimal()}{error\_decimal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}}$\ast$ Item\+::error\+\_\+decimal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{decimal\+\_\+buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Get the value to return from val\+\_\+decimal() in case of errors.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{Item\+::error\+\_\+bool}}
+\end{DoxySeeAlso}
+The expected pattern is to use the buffer given as parameter to val\+\_\+decimal\+:
+
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$\+Item\+\_\+foo\+::val\+\_\+decimal(my\+\_\+decimal $\ast$decimal\+\_\+buffer) \{ ... if ($<$error condition$>$=\char`\"{}\char`\"{}$>$) \{ my\+\_\+error(...) return error\+\_\+decimal(decimal\+\_\+buffer); \} ... \}
+
+
+\begin{DoxyParams}{Parameters}
+{\em decimal\+\_\+buffer} & Buffer used for returning value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value val\+\_\+decimal() should return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a115c9bc7c78e1ec851df24e1c934e44f}\label{classItem_a115c9bc7c78e1ec851df24e1c934e44f}} 
+\index{Item@{Item}!error\+\_\+int@{error\+\_\+int}}
+\index{error\+\_\+int@{error\+\_\+int}!Item@{Item}}
+\subsubsection{\texorpdfstring{error\+\_\+int()}{error\_int()}}
+{\footnotesize\ttfamily int Item\+::error\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Get the value to return from val\+\_\+int() in case of errors.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{Item\+::error\+\_\+bool}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The value val\+\_\+int() should return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a3514d1992e60ef2d018eba61fc5ff269}\label{classItem_a3514d1992e60ef2d018eba61fc5ff269}} 
+\index{Item@{Item}!error\+\_\+json@{error\+\_\+json}}
+\index{error\+\_\+json@{error\+\_\+json}!Item@{Item}}
+\subsubsection{\texorpdfstring{error\+\_\+json()}{error\_json()}}
+{\footnotesize\ttfamily bool Item\+::error\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the value to return from \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{val\+\_\+json()}} in case of errors.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{Item\+::error\+\_\+bool}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The value \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{val\+\_\+json()}} should return, which is true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a1d0cb18fac534ad707a5d2842832d6d0}\label{classItem_a1d0cb18fac534ad707a5d2842832d6d0}} 
+\index{Item@{Item}!error\+\_\+real@{error\+\_\+real}}
+\index{error\+\_\+real@{error\+\_\+real}!Item@{Item}}
+\subsubsection{\texorpdfstring{error\+\_\+real()}{error\_real()}}
+{\footnotesize\ttfamily double Item\+::error\+\_\+real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Get the value to return from val\+\_\+real() in case of errors.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{Item\+::error\+\_\+bool}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The value val\+\_\+real() should return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_ac16fa7082ec39db85fceb3a37459fd7d}\label{classItem_ac16fa7082ec39db85fceb3a37459fd7d}} 
+\index{Item@{Item}!error\+\_\+str@{error\+\_\+str}}
+\index{error\+\_\+str@{error\+\_\+str}!Item@{Item}}
+\subsubsection{\texorpdfstring{error\+\_\+str()}{error\_str()}}
+{\footnotesize\ttfamily String$\ast$ Item\+::error\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Get the value to return from val\+\_\+str() in case of errors.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem_a45c8c303465b71321c15ae43583de83f}{Item\+::error\+\_\+bool}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The value val\+\_\+str() should return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_ab0f6b295c74578740e30998424daa717}\label{classItem_ab0f6b295c74578740e30998424daa717}} 
+\index{Item@{Item}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Item@{Item}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily bool Item\+::evaluate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Evaluate item, possibly using the supplied buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+{\em buffer} & Buffer, in case item needs a large one\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a8aefc8bd78c2530c57e0fda53063c99d}\label{classItem_a8aefc8bd78c2530c57e0fda53063c99d}} 
+\index{Item@{Item}!find\+\_\+function\+\_\+processor@{find\+\_\+function\+\_\+processor}}
+\index{find\+\_\+function\+\_\+processor@{find\+\_\+function\+\_\+processor}!Item@{Item}}
+\subsubsection{\texorpdfstring{find\+\_\+function\+\_\+processor()}{find\_function\_processor()}}
+{\footnotesize\ttfamily virtual bool Item\+::find\+\_\+function\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Find a function of a given type
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & the function type to search (enum Item\+\_\+func\+::\+Functype) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & the function type we\textquotesingle{}re searching for is found \\
+\hline
+{\em F\+A\+L\+SE} & the function type wasn\textquotesingle{}t found\\
+\hline
+\end{DoxyRetVals}
+This function can be used (together with \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk()}}) to find functions in an item tree fragment. 
+
+Reimplemented in \mbox{\hyperlink{classItem__func_a0aeb033ca165677743782518419b71ac}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_a6e3c38497d210357a4f80a755fb7b61e}\label{classItem_a6e3c38497d210357a4f80a755fb7b61e}} 
+\index{Item@{Item}!fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}}
+\index{fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}!Item@{Item}}
+\subsubsection{\texorpdfstring{fix\+\_\+after\+\_\+pullout()}{fix\_after\_pullout()}}
+{\footnotesize\ttfamily virtual void Item\+::fix\+\_\+after\+\_\+pullout (\begin{DoxyParamCaption}\item[{st\+\_\+select\+\_\+lex $\ast$}]{parent\+\_\+select,  }\item[{st\+\_\+select\+\_\+lex $\ast$}]{removed\+\_\+select }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Fix after tables have been moved from one select\+\_\+lex level to the parent level, e.\+g by semijoin conversion. Basically re-\/calculate all attributes dependent on the tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+\_\+select} & select\+\_\+lex that tables are moved to. \\
+\hline
+{\em removed\+\_\+select} & select\+\_\+lex that tables are moved away from, child of parent\+\_\+select. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__cache_a2d1447a09b8702eb448c8176043fe748}{Item\+\_\+cache}}, \mbox{\hyperlink{classItem__outer__ref_a30ff5c4083f8d4d7c6ab5c7b2b4fac0c}{Item\+\_\+outer\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_a54fdde8c2418171d5f529e24d733f357}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__ident_aef2c77c01832da121180c1a74d3873b5}{Item\+\_\+ident}}, \mbox{\hyperlink{classItem__cond_a8bef49149dce6339066280ef3a43f666}{Item\+\_\+cond}}, \mbox{\hyperlink{classItem__func__between_ade856fd17d40b1e39a2cdde5591423f3}{Item\+\_\+func\+\_\+between}}, \mbox{\hyperlink{classItem__in__subselect_aa6c971974969097521a5a736ea6eed02}{Item\+\_\+in\+\_\+subselect}}, \mbox{\hyperlink{classItem__in__optimizer_aeac1cb56fd617d7cebee1d792b02ba1a}{Item\+\_\+in\+\_\+optimizer}}, \mbox{\hyperlink{classItem__func_ab2b8cc7a3bf580679718da7e99e3e8d9}{Item\+\_\+func}}, \mbox{\hyperlink{classItem__subselect_a8636b93f943b8a52f75222eb4e49c4cf}{Item\+\_\+subselect}}, and \mbox{\hyperlink{classItem__row_a2da513a82afd5830483e351dbc9c2dad}{Item\+\_\+row}}.
+
+\mbox{\Hypertarget{classItem_aea5d6f41e9cd5d17d8e6e8d44bee9c3e}\label{classItem_aea5d6f41e9cd5d17d8e6e8d44bee9c3e}} 
+\index{Item@{Item}!gc\+\_\+subst\+\_\+analyzer@{gc\+\_\+subst\+\_\+analyzer}}
+\index{gc\+\_\+subst\+\_\+analyzer@{gc\+\_\+subst\+\_\+analyzer}!Item@{Item}}
+\subsubsection{\texorpdfstring{gc\+\_\+subst\+\_\+analyzer()}{gc\_subst\_analyzer()}}
+{\footnotesize\ttfamily virtual bool Item\+::gc\+\_\+subst\+\_\+analyzer (\begin{DoxyParamCaption}\item[{uchar $\ast$$\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Analyzer function for GC substitution. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__func__between_a3f2bb762cdae1a93c78425d5752b274f}{Item\+\_\+func\+\_\+between}}, \mbox{\hyperlink{classItem__func__lt_aa224df880d91b7ece8f36854f3d2db5d}{Item\+\_\+func\+\_\+lt}}, \mbox{\hyperlink{classItem__func__le_a1ee55d9e7ec7f51098181a95c377104e}{Item\+\_\+func\+\_\+le}}, \mbox{\hyperlink{classItem__func__gt_a1b58f75ad3398ed88cf619f1d54109a8}{Item\+\_\+func\+\_\+gt}}, \mbox{\hyperlink{classItem__func__ge_af4066c4cdee18479038378285cdb48cb}{Item\+\_\+func\+\_\+ge}}, and \mbox{\hyperlink{classItem__func__eq_a085a3e6f03cf5e3915949e4f6bc9f53c}{Item\+\_\+func\+\_\+eq}}.
+
+\mbox{\Hypertarget{classItem_a09908dd05d73b9ca1eda2ed8b00d87f4}\label{classItem_a09908dd05d73b9ca1eda2ed8b00d87f4}} 
+\index{Item@{Item}!gc\+\_\+subst\+\_\+transformer@{gc\+\_\+subst\+\_\+transformer}}
+\index{gc\+\_\+subst\+\_\+transformer@{gc\+\_\+subst\+\_\+transformer}!Item@{Item}}
+\subsubsection{\texorpdfstring{gc\+\_\+subst\+\_\+transformer()}{gc\_subst\_transformer()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classItem}{Item}}$\ast$ Item\+::gc\+\_\+subst\+\_\+transformer (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Transformer function for GC substitution. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__func_acac46454222156dbb8336cc709c6cf41}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_a394b578242abd51ee9ca269cd21e4147}\label{classItem_a394b578242abd51ee9ca269cd21e4147}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+decimal@{get\+\_\+date\+\_\+from\+\_\+decimal}}
+\index{get\+\_\+date\+\_\+from\+\_\+decimal@{get\+\_\+date\+\_\+from\+\_\+decimal}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+decimal()}{get\_date\_from\_decimal()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+decimal (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+decimal() to date in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_ada63b68c953a82ca7f2f7cdc851ae755}\label{classItem_ada63b68c953a82ca7f2f7cdc851ae755}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+int@{get\+\_\+date\+\_\+from\+\_\+int}}
+\index{get\+\_\+date\+\_\+from\+\_\+int@{get\+\_\+date\+\_\+from\+\_\+int}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+int()}{get\_date\_from\_int()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+int (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+int() to date in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_ac58bafe79e54dca5453a67b95e975a5e}\label{classItem_ac58bafe79e54dca5453a67b95e975a5e}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal@{get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal}}
+\index{get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal@{get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal()}{get\_date\_from\_non\_temporal()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+non\+\_\+temporal (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{fuzzydate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a non-\/temporal type to date
+
+Get the value of the function as a M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME structure. As a extra convenience the time structure is reset on error! \mbox{\Hypertarget{classItem_a8afea7f26f856cb2f7f0019134ab6cba}\label{classItem_a8afea7f26f856cb2f7f0019134ab6cba}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+numeric@{get\+\_\+date\+\_\+from\+\_\+numeric}}
+\index{get\+\_\+date\+\_\+from\+\_\+numeric@{get\+\_\+date\+\_\+from\+\_\+numeric}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+numeric()}{get\_date\_from\_numeric()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+numeric (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{fuzzydate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a numeric type to date \mbox{\Hypertarget{classItem_ae98d037636216e49bc5668606e2734ee}\label{classItem_ae98d037636216e49bc5668606e2734ee}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+real@{get\+\_\+date\+\_\+from\+\_\+real}}
+\index{get\+\_\+date\+\_\+from\+\_\+real@{get\+\_\+date\+\_\+from\+\_\+real}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+real()}{get\_date\_from\_real()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+real (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+real() to date in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_ab1a8a02f43971655c32eb669de6ccedc}\label{classItem_ab1a8a02f43971655c32eb669de6ccedc}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+string@{get\+\_\+date\+\_\+from\+\_\+string}}
+\index{get\+\_\+date\+\_\+from\+\_\+string@{get\+\_\+date\+\_\+from\+\_\+string}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+string()}{get\_date\_from\_string()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+str() to date in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_a3a3f871daa34d4863f4e4968499cc211}\label{classItem_a3a3f871daa34d4863f4e4968499cc211}} 
+\index{Item@{Item}!get\+\_\+date\+\_\+from\+\_\+time@{get\+\_\+date\+\_\+from\+\_\+time}}
+\index{get\+\_\+date\+\_\+from\+\_\+time@{get\+\_\+date\+\_\+from\+\_\+time}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+from\+\_\+time()}{get\_date\_from\_time()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+date\+\_\+from\+\_\+time (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert get\+\_\+time() from time to date in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_a83f65da25aae04ad1aecebc1d43832c0}\label{classItem_a83f65da25aae04ad1aecebc1d43832c0}} 
+\index{Item@{Item}!get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}}
+\index{get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+filtering\+\_\+effect()}{get\_filtering\_effect()}}
+{\footnotesize\ttfamily virtual float Item\+::get\+\_\+filtering\+\_\+effect (\begin{DoxyParamCaption}\item[{table\+\_\+map}]{filter\+\_\+for\+\_\+table,  }\item[{table\+\_\+map}]{read\+\_\+tables,  }\item[{const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{fields\+\_\+to\+\_\+ignore,  }\item[{double}]{rows\+\_\+in\+\_\+table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Calculate the filter contribution that is relevant for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} for this item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+\_\+for\+\_\+table} & The table we are calculating filter effect for \\
+\hline
+{\em read\+\_\+tables} & Tables earlier in the join sequence. Predicates for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that rely on values from these tables can be part of the filter effect. \\
+\hline
+{\em fields\+\_\+to\+\_\+ignore} & Fields in \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that should not be part of the filter calculation. The filtering effect of these fields is already part of the calculation somehow (e.\+g. because there is a predicate \char`\"{}col = $<$const$>$\char`\"{}, and the optimizer has decided to do ref access on \textquotesingle{}col\textquotesingle{}). \\
+\hline
+{\em rows\+\_\+in\+\_\+table} & The number of rows in table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the filtering effect (between 0 and 1) this \mbox{\hyperlink{classItem}{Item}} contributes with. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__field_ac11040b668deb3ccc1cd16b19bd38d03}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__func__between_a84b7522d374dbbd2246a28b43d9224e8}{Item\+\_\+func\+\_\+between}}, \mbox{\hyperlink{classItem__func__ne_a0f99e61ddf29602bc36b419068b44d11}{Item\+\_\+func\+\_\+ne}}, \mbox{\hyperlink{classItem__func__lt_a433d163fb3b3c78d1af1695f558da117}{Item\+\_\+func\+\_\+lt}}, \mbox{\hyperlink{classItem__func__le_a87166f592eb61ea3127bb9f00bca10d7}{Item\+\_\+func\+\_\+le}}, \mbox{\hyperlink{classItem__func__gt_a01c0dea29d81f8f99c9a856381c20351}{Item\+\_\+func\+\_\+gt}}, \mbox{\hyperlink{classItem__func__ge_a3614027bdff5ae7d70e2e0178c881e05}{Item\+\_\+func\+\_\+ge}}, \mbox{\hyperlink{classItem__func__equal_ac9f18925664d02a73530813c3c2f2710}{Item\+\_\+func\+\_\+equal}}, \mbox{\hyperlink{classItem__func__eq_a2fcef97ba353457bb567011be900a680}{Item\+\_\+func\+\_\+eq}}, \mbox{\hyperlink{classItem__func__not_a529dc3563de07479fbc0d9935bfda1ea}{Item\+\_\+func\+\_\+not}}, and \mbox{\hyperlink{classItem__func__xor_abd4e66123ec93ceb67d18b756c1c2720}{Item\+\_\+func\+\_\+xor}}.
+
+\mbox{\Hypertarget{classItem_a55b105713447a5934c07cfff39001898}\label{classItem_a55b105713447a5934c07cfff39001898}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+date@{get\+\_\+time\+\_\+from\+\_\+date}}
+\index{get\+\_\+time\+\_\+from\+\_\+date@{get\+\_\+time\+\_\+from\+\_\+date}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+date()}{get\_time\_from\_date()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+date (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert date to time \mbox{\Hypertarget{classItem_a3b6eb99fbb257de09b1fcddb73bc3142}\label{classItem_a3b6eb99fbb257de09b1fcddb73bc3142}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+datetime@{get\+\_\+time\+\_\+from\+\_\+datetime}}
+\index{get\+\_\+time\+\_\+from\+\_\+datetime@{get\+\_\+time\+\_\+from\+\_\+datetime}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+datetime()}{get\_time\_from\_datetime()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+datetime (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert datetime to time \mbox{\Hypertarget{classItem_a099dd8c794d94ac482747e34e4f7a6b3}\label{classItem_a099dd8c794d94ac482747e34e4f7a6b3}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+decimal@{get\+\_\+time\+\_\+from\+\_\+decimal}}
+\index{get\+\_\+time\+\_\+from\+\_\+decimal@{get\+\_\+time\+\_\+from\+\_\+decimal}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+decimal()}{get\_time\_from\_decimal()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+decimal (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+decimal() to time in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_afc9b0e1c1a122f5394f6ab80135cfd24}\label{classItem_afc9b0e1c1a122f5394f6ab80135cfd24}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+int@{get\+\_\+time\+\_\+from\+\_\+int}}
+\index{get\+\_\+time\+\_\+from\+\_\+int@{get\+\_\+time\+\_\+from\+\_\+int}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+int()}{get\_time\_from\_int()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+int (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+int() to time in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_a7af21871229b24c64767bb189a8fa42f}\label{classItem_a7af21871229b24c64767bb189a8fa42f}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal@{get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal}}
+\index{get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal@{get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal()}{get\_time\_from\_non\_temporal()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+non\+\_\+temporal (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a non-\/temporal type to time
+
+Get time value from int, real, decimal or string.
+
+As a extra convenience the time structure is reset on error! \mbox{\Hypertarget{classItem_aba77318c46ff171c2a388ec16625afc2}\label{classItem_aba77318c46ff171c2a388ec16625afc2}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+numeric@{get\+\_\+time\+\_\+from\+\_\+numeric}}
+\index{get\+\_\+time\+\_\+from\+\_\+numeric@{get\+\_\+time\+\_\+from\+\_\+numeric}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+numeric()}{get\_time\_from\_numeric()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+numeric (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert a numeric type to time \mbox{\Hypertarget{classItem_a309d78890d1ca16e7555d3030614a9fa}\label{classItem_a309d78890d1ca16e7555d3030614a9fa}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+real@{get\+\_\+time\+\_\+from\+\_\+real}}
+\index{get\+\_\+time\+\_\+from\+\_\+real@{get\+\_\+time\+\_\+from\+\_\+real}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+real()}{get\_time\_from\_real()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+real (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+real() to time in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_a1f6773c162fa458b6ef2087b427244b7}\label{classItem_a1f6773c162fa458b6ef2087b427244b7}} 
+\index{Item@{Item}!get\+\_\+time\+\_\+from\+\_\+string@{get\+\_\+time\+\_\+from\+\_\+string}}
+\index{get\+\_\+time\+\_\+from\+\_\+string@{get\+\_\+time\+\_\+from\+\_\+string}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+time\+\_\+from\+\_\+string()}{get\_time\_from\_string()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+time\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert val\+\_\+str() to time in M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \mbox{\Hypertarget{classItem_aa04fbf99d5b417b78536362654daff73}\label{classItem_aa04fbf99d5b417b78536362654daff73}} 
+\index{Item@{Item}!get\+\_\+timeval@{get\+\_\+timeval}}
+\index{get\+\_\+timeval@{get\+\_\+timeval}!Item@{Item}}
+\subsubsection{\texorpdfstring{get\+\_\+timeval()}{get\_timeval()}}
+{\footnotesize\ttfamily bool Item\+::get\+\_\+timeval (\begin{DoxyParamCaption}\item[{struct timeval $\ast$}]{tm,  }\item[{int $\ast$}]{warnings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get timestamp in \char`\"{}struct timeval\char`\"{} format. 
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on error\\
+\hline
+\end{DoxyRetVals}
+If argument is N\+U\+LL, sets null\+\_\+value. Otherwise\+: if invalid D\+A\+T\+E\+T\+I\+ME value, or a valid D\+A\+T\+E\+T\+I\+ME value but which is out of the supported Unix timestamp range, sets \textquotesingle{}tm\textquotesingle{} to 0. 
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a1b77cc2e083b73e7f7640a0633be6312}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_a7e19bfc78f1c2b4e50a82e4876e0eea8}\label{classItem_a7e19bfc78f1c2b4e50a82e4876e0eea8}} 
+\index{Item@{Item}!has\+\_\+compatible\+\_\+context@{has\+\_\+compatible\+\_\+context}}
+\index{has\+\_\+compatible\+\_\+context@{has\+\_\+compatible\+\_\+context}!Item@{Item}}
+\subsubsection{\texorpdfstring{has\+\_\+compatible\+\_\+context()}{has\_compatible\_context()}}
+{\footnotesize\ttfamily bool Item\+::has\+\_\+compatible\+\_\+context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check whether this and the given item has compatible comparison context. Used by the equality propagation. See \mbox{\hyperlink{classItem__field_af886c8bd34afb6700eabba7cb508866a}{Item\+\_\+field\+::equal\+\_\+fields\+\_\+propagator}}.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the context is the same or if fields could be compared as D\+A\+T\+E\+T\+I\+ME values by the \mbox{\hyperlink{classArg__comparator}{Arg\+\_\+comparator}}. F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a555481d359fe1f802b42497d4c39444f}\label{classItem_a555481d359fe1f802b42497d4c39444f}} 
+\index{Item@{Item}!has\+\_\+subquery@{has\+\_\+subquery}}
+\index{has\+\_\+subquery@{has\+\_\+subquery}!Item@{Item}}
+\subsubsection{\texorpdfstring{has\+\_\+subquery()}{has\_subquery()}}
+{\footnotesize\ttfamily virtual bool Item\+::has\+\_\+subquery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Checks if this item or any of its decendents contains a subquery. 
+
+Reimplemented in \mbox{\hyperlink{classItem__ref_a3d3e749004c6da772dab1aec83066aa0}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem_aa4a4bee673e7e8dedc1c4f7c283188ea}\label{classItem_aa4a4bee673e7e8dedc1c4f7c283188ea}} 
+\index{Item@{Item}!is\+\_\+blob\+\_\+field@{is\+\_\+blob\+\_\+field}}
+\index{is\+\_\+blob\+\_\+field@{is\+\_\+blob\+\_\+field}!Item@{Item}}
+\subsubsection{\texorpdfstring{is\+\_\+blob\+\_\+field()}{is\_blob\_field()}}
+{\footnotesize\ttfamily bool Item\+::is\+\_\+blob\+\_\+field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if an item either is a blob field, or will be represented as a B\+L\+OB field if a field is created based on this item.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & If a field based on this item will be a B\+L\+OB field, \\
+\hline
+{\em F\+A\+L\+SE} & Otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classItem_a24e82d279a8907ad502faebb3abe1ab1}\label{classItem_a24e82d279a8907ad502faebb3abe1ab1}} 
+\index{Item@{Item}!is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}}
+\index{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}!Item@{Item}}
+\subsubsection{\texorpdfstring{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd()}{is\_column\_not\_in\_fd()}}
+{\footnotesize\ttfamily virtual bool Item\+::is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+Group\+\_\+check\+::is\+\_\+in\+\_\+fd\+\_\+of\+\_\+underlying() 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__ident_ab09d952b5bb33d175d548662fcdc89ef}{Item\+\_\+ident}}.
+
+\mbox{\Hypertarget{classItem_a6f6cf3b5317dce7e27b04c4eaaa37f89}\label{classItem_a6f6cf3b5317dce7e27b04c4eaaa37f89}} 
+\index{Item@{Item}!is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}}
+\index{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}!Item@{Item}}
+\subsubsection{\texorpdfstring{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd()}{is\_strong\_side\_column\_not\_in\_fd()}}
+{\footnotesize\ttfamily virtual bool Item\+::is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+Group\+\_\+check\+::analyze\+\_\+conjunct() 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__ident_a3270cc5d558904bbad4c9df6d1c28c70}{Item\+\_\+ident}}.
+
+\mbox{\Hypertarget{classItem_a7d19cd31c89cf5e660667dc27873a265}\label{classItem_a7d19cd31c89cf5e660667dc27873a265}} 
+\index{Item@{Item}!item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer@{item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer}}
+\index{item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer@{item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer}!Item@{Item}}
+\subsubsection{\texorpdfstring{item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer()}{item\_field\_by\_name\_analyzer()}}
+{\footnotesize\ttfamily virtual bool Item\+::item\+\_\+field\+\_\+by\+\_\+name\+\_\+analyzer (\begin{DoxyParamCaption}\item[{uchar $\ast$$\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Analyzer for finding \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} by name
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \mbox{\hyperlink{classField}{Field}} name to search for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE Go deeper in item tree. (Found \mbox{\hyperlink{classItem}{Item}} or not an \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}) 
+
+F\+A\+L\+SE Don\textquotesingle{}t go deeper in item tree. (\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} with other name) 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__field_aee675801bd0ba08e66d0210a597390de}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_ae697702435e782119336e6fc3fb6d204}\label{classItem_ae697702435e782119336e6fc3fb6d204}} 
+\index{Item@{Item}!item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer@{item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer}}
+\index{item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer@{item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer}!Item@{Item}}
+\subsubsection{\texorpdfstring{item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer()}{item\_field\_by\_name\_transformer()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classItem}{Item}}$\ast$ Item\+::item\+\_\+field\+\_\+by\+\_\+name\+\_\+transformer (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Simple transformer that returns the argument if this is an \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}. The new item will inherit it\textquotesingle{}s name to maintain aliases.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \mbox{\hyperlink{classItem}{Item}} to replace \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+argument if this is an \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} 
+
+this otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a6f22b76914e17709e6f3d8e894d8807d}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_a0757839d09aa77bfd92bfe071f257ae9}\label{classItem_a0757839d09aa77bfd92bfe071f257ae9}} 
+\index{Item@{Item}!itemize@{itemize}}
+\index{itemize@{itemize}!Item@{Item}}
+\subsubsection{\texorpdfstring{itemize()}{itemize()}}
+{\footnotesize\ttfamily bool Item\+::itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The same as contextualize()/contextualize\+\_\+() but with additional parameter
+
+This function finalize the construction of \mbox{\hyperlink{classItem}{Item}} objects (see the \mbox{\hyperlink{classItem}{Item(\+P\+O\+S)}} constructor)\+: we can access/change parser contexts from the \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{itemize()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em pc} & current parse context \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{} or to a newly allocated replacement object to use in the \mbox{\hyperlink{classItem}{Item}} tree instead\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__insert__value_a113d00e28d63795bfd89d65dad61e769}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_afb6673a2601e5f5b3f1a80243ce73c67}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__param_a60919152e0bdfb240b4a2d875178a303}{Item\+\_\+param}}, \mbox{\hyperlink{classItem__null_a7784bff3d6b49a263711152e2e446076}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a6220537b7094a20e4dfb15e229e1a33c}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__ident_a05720124bb45a772f712d514650e745e}{Item\+\_\+ident}}, \mbox{\hyperlink{classItem__name__const_ae8394eda20cb84282f9f6ea43fb6eacd}{Item\+\_\+name\+\_\+const}}, \mbox{\hyperlink{classItem__cond_a188060057f9f212bd0946f952b276555}{Item\+\_\+cond}}, \mbox{\hyperlink{classItem__func__group__concat_a8f71da39da2da3663cab3357ff4f8e9d}{Item\+\_\+func\+\_\+group\+\_\+concat}}, \mbox{\hyperlink{classItem__func__uuid_a004c316cb6e1c0620b1b13d49f5571f7}{Item\+\_\+func\+\_\+uuid}}, \mbox{\hyperlink{classItem__func__now__utc_ac48fbe69e363d5a82f3debc0c90eb8c6}{Item\+\_\+func\+\_\+now\+\_\+utc}}, \mbox{\hyperlink{classItem__func__weight__string_ad8dca90ccc2473a483b575462bb6fbb5}{Item\+\_\+func\+\_\+weight\+\_\+string}}, \mbox{\hyperlink{classItem__func__set__collation_afba6fcb692db9783367474887f17f801}{Item\+\_\+func\+\_\+set\+\_\+collation}}, \mbox{\hyperlink{classItem__func__curdate_a9c3b90cb34f741de0795ca7908377ce0}{Item\+\_\+func\+\_\+curdate}}, \mbox{\hyperlink{classItem__func__curtime_a2051bac2667b0b2a7de42607accca31f}{Item\+\_\+func\+\_\+curtime}}, \mbox{\hyperlink{classItem__load__file_a3181c3542fe37a8a9b9842beeb384943}{Item\+\_\+load\+\_\+file}}, \mbox{\hyperlink{classPTI__context_a8b09b3195bb1ec82c471a686d0f17bbb}{P\+T\+I\+\_\+context$<$ Context $>$}}, \mbox{\hyperlink{classPTI__limit__option__param__marker_a814f82a8dc01094d2483959cd511c87d}{P\+T\+I\+\_\+limit\+\_\+option\+\_\+param\+\_\+marker}}, \mbox{\hyperlink{classPTI__limit__option__ident_aed5d55bb68f0a47c7c841fe480ac3cf0}{P\+T\+I\+\_\+limit\+\_\+option\+\_\+ident}}, \mbox{\hyperlink{classPTI__expr__with__alias_ac48c4703a1ae10a3176505e9b44603c5}{P\+T\+I\+\_\+expr\+\_\+with\+\_\+alias}}, \mbox{\hyperlink{classPTI__handle__sql2003__note184__exception_afd59962bc1e58ba8f5bd626f222c6021}{P\+T\+I\+\_\+handle\+\_\+sql2003\+\_\+note184\+\_\+exception}}, \mbox{\hyperlink{classPTI__odbc__date_a5fb3529a482508f3ef863b49cc31d689}{P\+T\+I\+\_\+odbc\+\_\+date}}, \mbox{\hyperlink{classPTI__exists__subselect_a5b09ebe0df087993855c962e583559bb}{P\+T\+I\+\_\+exists\+\_\+subselect}}, \mbox{\hyperlink{classPTI__singlerow__subselect_ab79156f13d68d44871ecd79811060fea}{P\+T\+I\+\_\+singlerow\+\_\+subselect}}, \mbox{\hyperlink{classPTI__in__sum__expr_a4377e91b7dc6fe0027947f3995beba8b}{P\+T\+I\+\_\+in\+\_\+sum\+\_\+expr}}, \mbox{\hyperlink{classItem__func__make__set_a5b2e80cd013122c3a7bed4582b75456f}{Item\+\_\+func\+\_\+make\+\_\+set}}, \mbox{\hyperlink{classPTI__count__sym_a2e3569aae8364fa95ead6581bd712a87}{P\+T\+I\+\_\+count\+\_\+sym}}, \mbox{\hyperlink{classPTI__variable__aux__3d_a0a705f4286ede797ca2760987f572a84}{P\+T\+I\+\_\+variable\+\_\+aux\+\_\+3d}}, \mbox{\hyperlink{classItem__func__current__user_a01674014623f5a365c7c42ff2db6fd80}{Item\+\_\+func\+\_\+current\+\_\+user}}, \mbox{\hyperlink{classPTI__literal__underscore__charset__bin__num_a83c8ef224919d7929abe09b73e054476}{P\+T\+I\+\_\+literal\+\_\+underscore\+\_\+charset\+\_\+bin\+\_\+num}}, \mbox{\hyperlink{classItem__func__user_a3e90c1dfcb5fc3007e8f77e9c3398f93}{Item\+\_\+func\+\_\+user}}, \mbox{\hyperlink{classPTI__literal__underscore__charset__hex__num_a3117c9901a41eed32849849d8009384b}{P\+T\+I\+\_\+literal\+\_\+underscore\+\_\+charset\+\_\+hex\+\_\+num}}, \mbox{\hyperlink{classItem__func__database_a7faef292296f73f2a62f71faeb4a7d5c}{Item\+\_\+func\+\_\+database}}, \mbox{\hyperlink{classPTI__temporal__literal_a6fd5bf8c4635fe88d86317c1e14b0d90}{P\+T\+I\+\_\+temporal\+\_\+literal}}, \mbox{\hyperlink{classPTI__text__literal__concat_abd01acba243b32d4fee0cf5b5c8cb5ea}{P\+T\+I\+\_\+text\+\_\+literal\+\_\+concat}}, \mbox{\hyperlink{classItem__func__encrypt_acea55a9904c3859cf69425dddf16a121}{Item\+\_\+func\+\_\+encrypt}}, \mbox{\hyperlink{classPTI__text__literal__underscore__charset_a57202ec54acdca0b35c862a0a79d5a64}{P\+T\+I\+\_\+text\+\_\+literal\+\_\+underscore\+\_\+charset}}, \mbox{\hyperlink{classPTI__text__literal__nchar__string_ae4eda174610721d6a2a61e55d8e6ffec}{P\+T\+I\+\_\+text\+\_\+literal\+\_\+nchar\+\_\+string}}, \mbox{\hyperlink{classItem__in__subselect_a68b1a8d10b94a1e2ff4afddc6eff2d58}{Item\+\_\+in\+\_\+subselect}}, \mbox{\hyperlink{classItem__func__unix__timestamp_a6fd7748e77da5e602a452ad49dfe4bbc}{Item\+\_\+func\+\_\+unix\+\_\+timestamp}}, \mbox{\hyperlink{classPTI__text__literal__text__string_ac08dec875b8f03e717ca51e4e0c14682}{P\+T\+I\+\_\+text\+\_\+literal\+\_\+text\+\_\+string}}, \mbox{\hyperlink{classPTI__password_a3970b1d42198fa667f54cebdd024eac9}{P\+T\+I\+\_\+password}}, \mbox{\hyperlink{classItem__sum_ab44941149d918895e5f58ae94d3cd909}{Item\+\_\+sum}}, \mbox{\hyperlink{classPTI__function__call__generic__2d_a8389488372c0fcd602892f942a9b73ed}{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d}}, \mbox{\hyperlink{classPTI__function__call__generic__ident__sys_a7fc59d17019e0b99f768ebbf10edf067}{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+ident\+\_\+sys}}, \mbox{\hyperlink{classItem__func__week_ae0faa47bfc4b7e52ce370ba9f0a49db4}{Item\+\_\+func\+\_\+week}}, \mbox{\hyperlink{classPTI__udf__expr_abccd7283f1cf0fb7bbe2d4c04d1f1934}{P\+T\+I\+\_\+udf\+\_\+expr}}, \mbox{\hyperlink{classPTI__function__call__nonkeyword__sysdate_a472d886c3a71afb25b2ff7b482871ee7}{P\+T\+I\+\_\+function\+\_\+call\+\_\+nonkeyword\+\_\+sysdate}}, \mbox{\hyperlink{classItem__func__geometry__from__wkb_a5bbf72a1bfa89ffeb1b6b50691a661b4}{Item\+\_\+func\+\_\+geometry\+\_\+from\+\_\+wkb}}, \mbox{\hyperlink{classPTI__function__call__nonkeyword__now_ac39ec6c94214b8cc9aa5ccbdb8a58e04}{P\+T\+I\+\_\+function\+\_\+call\+\_\+nonkeyword\+\_\+now}}, \mbox{\hyperlink{classItem__func__geometry__from__text_a728cf06ce841c738abdd5887b4ecb643}{Item\+\_\+func\+\_\+geometry\+\_\+from\+\_\+text}}, \mbox{\hyperlink{classItem__func__random__bytes_a77c8913964a4f190b23343325d813d28}{Item\+\_\+func\+\_\+random\+\_\+bytes}}, \mbox{\hyperlink{classItem__func__aes__decrypt_aba543513adc92c354596ad9d3b81ba9c}{Item\+\_\+func\+\_\+aes\+\_\+decrypt}}, \mbox{\hyperlink{classItem__func_a6413cdbe7b14be77cc47462c9fc87ddb}{Item\+\_\+func}}, \mbox{\hyperlink{classPTI__simple__ident__nospvar__ident_ae6b43df14f3a747e60825b879e3b923c}{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+nospvar\+\_\+ident}}, \mbox{\hyperlink{classItem__func__aes__encrypt_a3dea8d64bcdabb7dabe2f2e76959408c}{Item\+\_\+func\+\_\+aes\+\_\+encrypt}}, \mbox{\hyperlink{classPTI__simple__ident__q__2d_a1cd2321d602048802e283a067c2bb986}{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+2d}}, \mbox{\hyperlink{classPTI__simple__ident__q__3d_ad94d0e373c6cb86832c3206b706eaf0b}{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d}}, \mbox{\hyperlink{classPTI__simple__ident__ident_ae9ddbaf6e11a794be2f831c7b8321e86}{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+ident}}, \mbox{\hyperlink{classPTI__comp__op__all_a790ee351d642e9f8e7329b598b69eba0}{P\+T\+I\+\_\+comp\+\_\+op\+\_\+all}}, \mbox{\hyperlink{classPTI__comp__op_a934bb7f11536d59eea997d9ac5e276aa}{P\+T\+I\+\_\+comp\+\_\+op}}, \mbox{\hyperlink{classItem__row_af0e050bb8e5b8942ac7d27da01ab897b}{Item\+\_\+row}}, \mbox{\hyperlink{classPTI__negate__expression_acfb830168ceffe8ca4563665a1016297}{P\+T\+I\+\_\+negate\+\_\+expression}}, \mbox{\hyperlink{classPTI__table__wild_a4f54c9332727d8f233f86fe0cdf6bf60}{P\+T\+I\+\_\+table\+\_\+wild}}, and \mbox{\hyperlink{classItem__func__rotate__system__key_a9fb9f671f7e7e6cc30d52cf84be06237}{Item\+\_\+func\+\_\+rotate\+\_\+system\+\_\+key}}.
+
+\mbox{\Hypertarget{classItem_ad087824772daf5ea1dad82d52b16255c}\label{classItem_ad087824772daf5ea1dad82d52b16255c}} 
+\index{Item@{Item}!make\+\_\+empty\+\_\+result@{make\+\_\+empty\+\_\+result}}
+\index{make\+\_\+empty\+\_\+result@{make\+\_\+empty\+\_\+result}!Item@{Item}}
+\subsubsection{\texorpdfstring{make\+\_\+empty\+\_\+result()}{make\_empty\_result()}}
+{\footnotesize\ttfamily String$\ast$ Item\+::make\+\_\+empty\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Sets the result value of the function an empty string, using the current character set. No memory is allocated. 
+\begin{DoxyRetVals}{Return values}
+{\em A} & pointer to the str\+\_\+value member. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classItem_a4380479e68d46a2d719e4a0f5c2ee25e}\label{classItem_a4380479e68d46a2d719e4a0f5c2ee25e}} 
+\index{Item@{Item}!make\+\_\+string\+\_\+field@{make\+\_\+string\+\_\+field}}
+\index{make\+\_\+string\+\_\+field@{make\+\_\+string\+\_\+field}!Item@{Item}}
+\subsubsection{\texorpdfstring{make\+\_\+string\+\_\+field()}{make\_string\_field()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}} $\ast$ Item\+::make\+\_\+string\+\_\+field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a field to hold a string value from an item.
+
+If max\+\_\+length $>$ C\+O\+N\+V\+E\+R\+T\+\_\+\+I\+F\+\_\+\+B\+I\+G\+G\+E\+R\+\_\+\+T\+O\+\_\+\+B\+L\+OB create a blob ~\newline
+If max\+\_\+length $>$ 0 create a varchar ~\newline
+If max\+\_\+length == 0 create a C\+H\+A\+R(0) (or V\+A\+R\+C\+H\+A\+R(0) if we are grouping)
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Table for which the field is created \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__func__group__concat_ae472eb4f6eb3190f8baa326054acf9f8}{Item\+\_\+func\+\_\+group\+\_\+concat}}.
+
+\mbox{\Hypertarget{classItem_ada2ce79ccf5ef1273b9e1654448944c1}\label{classItem_ada2ce79ccf5ef1273b9e1654448944c1}} 
+\index{Item@{Item}!mark\+\_\+field\+\_\+in\+\_\+map@{mark\+\_\+field\+\_\+in\+\_\+map}}
+\index{mark\+\_\+field\+\_\+in\+\_\+map@{mark\+\_\+field\+\_\+in\+\_\+map}!Item@{Item}}
+\subsubsection{\texorpdfstring{mark\+\_\+field\+\_\+in\+\_\+map()}{mark\_field\_in\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Item\+::mark\+\_\+field\+\_\+in\+\_\+map (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Mark underlying field in read or write map of a table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \mbox{\hyperlink{classMark__field}{Mark\+\_\+field}} object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__direct__view__ref_a82d411e16d677c1a1eead5c386f6bdd0}{Item\+\_\+direct\+\_\+view\+\_\+ref}}, \mbox{\hyperlink{classItem__field_a45e7c96e69477dfa28d0004321285cb8}{Item\+\_\+field}}, and \mbox{\hyperlink{classItem__sum__num__field_a2c9ebf8dd31a83c22860bcb2c68c8c60}{Item\+\_\+sum\+\_\+num\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_adc95ed16596a556875d6272aeacbc2c0}\label{classItem_adc95ed16596a556875d6272aeacbc2c0}} 
+\index{Item@{Item}!mark\+\_\+field\+\_\+in\+\_\+map@{mark\+\_\+field\+\_\+in\+\_\+map}}
+\index{mark\+\_\+field\+\_\+in\+\_\+map@{mark\+\_\+field\+\_\+in\+\_\+map}!Item@{Item}}
+\subsubsection{\texorpdfstring{mark\+\_\+field\+\_\+in\+\_\+map()}{mark\_field\_in\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Item\+::mark\+\_\+field\+\_\+in\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMark__field}{Mark\+\_\+field}} $\ast$}]{mark\+\_\+field,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+Helper function for \mbox{\hyperlink{classItem_ada2ce79ccf5ef1273b9e1654448944c1}{mark\+\_\+field\+\_\+in\+\_\+map(uchar $\ast$arg)}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mark\+\_\+field} & \mbox{\hyperlink{classMark__field}{Mark\+\_\+field}} object \\
+\hline
+{\em field} & \mbox{\hyperlink{classField}{Field}} to be marked for read/write \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classItem_a0cd3592a280aa2306ea9abfeae3f632b}\label{classItem_a0cd3592a280aa2306ea9abfeae3f632b}} 
+\index{Item@{Item}!numeric\+\_\+context\+\_\+result\+\_\+type@{numeric\+\_\+context\+\_\+result\+\_\+type}}
+\index{numeric\+\_\+context\+\_\+result\+\_\+type@{numeric\+\_\+context\+\_\+result\+\_\+type}!Item@{Item}}
+\subsubsection{\texorpdfstring{numeric\+\_\+context\+\_\+result\+\_\+type()}{numeric\_context\_result\_type()}}
+{\footnotesize\ttfamily virtual enum Item\+\_\+result Item\+::numeric\+\_\+context\+\_\+result\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Result type when an item appear in a numeric context. See \mbox{\hyperlink{classField_a834475c74f6d0812dc4aa1abfc483a7f}{Field\+::numeric\+\_\+context\+\_\+result\+\_\+type()}} for more comments. 
+
+Reimplemented in \mbox{\hyperlink{classItem__hex__string_af866816dabea5ef3d8316a2055ebab84}{Item\+\_\+hex\+\_\+string}}, and \mbox{\hyperlink{classItem__field_aa456671bbffd7f807a25b1a76bd3ea54}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_aa7ba4bde739d83adec8edf3bf1596d94}\label{classItem_aa7ba4bde739d83adec8edf3bf1596d94}} 
+\index{Item@{Item}!print@{print}}
+\index{print@{print}!Item@{Item}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Item\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__cache_aecabd691684004d947417423448a4ff3}{Item\+\_\+cache}}, \mbox{\hyperlink{classItem__trigger__field_a68115abf242013d5b319a0c3c58c5384}{Item\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classItem__insert__value_abbba2f565d5a63803b693a03f7184d14}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_adc863c4577d7c10a0cbf1c006c8087a6}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__temporal__with__ref_ab32f4567ebd0183a399f1a0b8c66e2e8}{Item\+\_\+temporal\+\_\+with\+\_\+ref}}, \mbox{\hyperlink{classItem__ref__null__helper_a89293e68530fb3b07572c5005c3220c8}{Item\+\_\+ref\+\_\+null\+\_\+helper}}, \mbox{\hyperlink{classItem__ref_a90c0289e8983ca73c75eaa92bc762cf6}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__hex__string_acb5db1d4b87cf94b16c0878d2a24616a}{Item\+\_\+hex\+\_\+string}}, \mbox{\hyperlink{classItem__static__string__func_a592a40880113216f223f6c484622ac0d}{Item\+\_\+static\+\_\+string\+\_\+func}}, \mbox{\hyperlink{classItem__string_a4d6fccdca40394df6239ca7dfbb9bb09}{Item\+\_\+string}}, \mbox{\hyperlink{classItem__static__float__func_a01626caaf912493b016fc9b0d8eb7349}{Item\+\_\+static\+\_\+float\+\_\+func}}, \mbox{\hyperlink{classItem__float_a968cc4aafdeab156d234f92e5bcc2f9d}{Item\+\_\+float}}, \mbox{\hyperlink{classItem__decimal_aa6e14a49a63e7eab8ee478bf4372926d}{Item\+\_\+decimal}}, \mbox{\hyperlink{classItem__uint_a24c54d4822268228386af4160895372c}{Item\+\_\+uint}}, \mbox{\hyperlink{classItem__int_a7c2f1ba97b34b9b3379d49e85d81bdc0}{Item\+\_\+int}}, \mbox{\hyperlink{classItem__param_a924859217c703dcca71af233e6d3548a}{Item\+\_\+param}}, \mbox{\hyperlink{classItem__null_ae5cfe3c72d47cce17b5b1d9fb96801a2}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a40b28e2bc9886f81e8ad19c64efb1408}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__ident_abbedbcfff5de0cc721c9be3657fcb3ad}{Item\+\_\+ident}}, \mbox{\hyperlink{classItem__name__const_ade0f7d82ec667f6bda7d59aef50bf17d}{Item\+\_\+name\+\_\+const}}, \mbox{\hyperlink{classItem__case__expr_aaa00c7acd64b436ca4218d15ba8aa34e}{Item\+\_\+case\+\_\+expr}}, \mbox{\hyperlink{classItem__splocal_a29ba8bcb74a30bdaf98fe72fdc28b543}{Item\+\_\+splocal}}, \mbox{\hyperlink{classItem__aggregate__ref_ae6a411b0088c79b64443138fcc3625ba}{Item\+\_\+aggregate\+\_\+ref}}, \mbox{\hyperlink{classItem__cond_ac31bdc524e6febf5e6b1ac0874064400}{Item\+\_\+cond}}, \mbox{\hyperlink{classItem__func__get__format_a9de8cf490a3cdfbef5f1c7e42e0d20f2}{Item\+\_\+func\+\_\+get\+\_\+format}}, \mbox{\hyperlink{classItem__func__timestamp__diff_ad6f3cff0c7490aaabba3e11f18de66ec}{Item\+\_\+func\+\_\+timestamp\+\_\+diff}}, \mbox{\hyperlink{classItem__func__group__concat_aec51f14b9c22c61d5ac4e58add30365b}{Item\+\_\+func\+\_\+group\+\_\+concat}}, \mbox{\hyperlink{classItem__func__add__time_a29dd981b554a30df77ea0c3a24fd308c}{Item\+\_\+func\+\_\+add\+\_\+time}}, \mbox{\hyperlink{classItem__datetime__typecast_a0b5814efb8176acce656e2f7d4ad9185}{Item\+\_\+datetime\+\_\+typecast}}, \mbox{\hyperlink{classItem__time__typecast_aee10e9840d9d9bce9887ac3d49f8729c}{Item\+\_\+time\+\_\+typecast}}, \mbox{\hyperlink{classItem__date__typecast_a57c9ad045bd8ff8cebe022dd4868f47c}{Item\+\_\+date\+\_\+typecast}}, \mbox{\hyperlink{classItem__extract_a5a2c762763085131a38bd15816bd361b}{Item\+\_\+extract}}, \mbox{\hyperlink{classItem__date__add__interval_aef41086a34899cc2cfa46ab05a46dc7a}{Item\+\_\+date\+\_\+add\+\_\+interval}}, \mbox{\hyperlink{classItem__func__weight__string_a57eca2ad6eba0b12baba9fc800b77013}{Item\+\_\+func\+\_\+weight\+\_\+string}}, \mbox{\hyperlink{classItem__func__set__collation_a9d8a3b08d2d4c55fc9ab038bef3ce1b5}{Item\+\_\+func\+\_\+set\+\_\+collation}}, \mbox{\hyperlink{classItem__func__conv__charset_ac8281c66d90d6a9b818dde781f63d28f}{Item\+\_\+func\+\_\+conv\+\_\+charset}}, \mbox{\hyperlink{classItem__datetime__literal_a96ac54156ec3267f4913e3fbed7837a1}{Item\+\_\+datetime\+\_\+literal}}, \mbox{\hyperlink{classItem__func__binary_a844fa037571955cec5ce1a8d64eb33c1}{Item\+\_\+func\+\_\+binary}}, \mbox{\hyperlink{classItem__char__typecast_adf128fa02d763bb58d3501358a1d1e1a}{Item\+\_\+char\+\_\+typecast}}, \mbox{\hyperlink{classItem__time__literal_a4e8dca3ff39e2a0ecd40373f083f9b14}{Item\+\_\+time\+\_\+literal}}, \mbox{\hyperlink{classItem__date__literal_af4a9546a669fb4f62178869b7e79f553}{Item\+\_\+date\+\_\+literal}}, \mbox{\hyperlink{classItem__func__strcmp_a524a65bbd7fcff131c5ba9547cfe79e4}{Item\+\_\+func\+\_\+strcmp}}, \mbox{\hyperlink{classItem__func__between_ad23dd8c7e58553158f25fe513e5964fd}{Item\+\_\+func\+\_\+between}}, \mbox{\hyperlink{classItem__func__format_aaf19ba682a8f2acb947222addb55b0d2}{Item\+\_\+func\+\_\+format}}, \mbox{\hyperlink{classItem__func__spatial__operation_ac7bb51665071406b92daf9728254fdfe}{Item\+\_\+func\+\_\+spatial\+\_\+operation}}, \mbox{\hyperlink{classItem__func__make__set_a906cb74c980690ae9a7c767d111da188}{Item\+\_\+func\+\_\+make\+\_\+set}}, \mbox{\hyperlink{classItem__func__spatial__rel_aa0e96f4e0cebc9ea671b253d885f4ab9}{Item\+\_\+func\+\_\+spatial\+\_\+rel}}, \mbox{\hyperlink{classItem__func__spatial__mbr__rel_a0f37964f2e40c8cf415dd81f03795c35}{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel}}, \mbox{\hyperlink{classItem__func__not__all_add67ca3249a9c4b6b68e6a6d0fcdd411}{Item\+\_\+func\+\_\+not\+\_\+all}}, \mbox{\hyperlink{classItem__func__trig__cond_afa6900d80f97abb71f1e710c02d83d8a}{Item\+\_\+func\+\_\+trig\+\_\+cond}}, \mbox{\hyperlink{classItem__allany__subselect_ade4b2eaa6af0cde005b082598d2e31b0}{Item\+\_\+allany\+\_\+subselect}}, \mbox{\hyperlink{classItem__temporal__func_a2d5c593d44864f0d0744dd6c6a00f6ac}{Item\+\_\+temporal\+\_\+func}}, \mbox{\hyperlink{classItem__func__not_a2d11d511c9b23933c2615f703b6e38fa}{Item\+\_\+func\+\_\+not}}, \mbox{\hyperlink{classItem__in__subselect_a8c80eb807d1c1219807fd45db61fad8f}{Item\+\_\+in\+\_\+subselect}}, \mbox{\hyperlink{classItem__sum_a0c176fad01253e4a168d0956eb1f6fc5}{Item\+\_\+sum}}, \mbox{\hyperlink{classItem__bool__func2_a12469a240720c26bef325a4ee5b02f50}{Item\+\_\+bool\+\_\+func2}}, \mbox{\hyperlink{classItem__func__trim_a1a6186bb6a876ebfa09ee9c600c0bdfd}{Item\+\_\+func\+\_\+trim}}, \mbox{\hyperlink{classItem__json__typecast_a94def4699135226915f3350f5cb6dde7}{Item\+\_\+json\+\_\+typecast}}, \mbox{\hyperlink{classItem__exists__subselect_a795c650acea24859e6ff1d6f82d5a2ec}{Item\+\_\+exists\+\_\+subselect}}, \mbox{\hyperlink{classItem__maxmin__subselect_ad03a1c165ac9ec019b5c7e80f108cddd}{Item\+\_\+maxmin\+\_\+subselect}}, \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}, \mbox{\hyperlink{classItem__func__truth_aa17f138c8366c33e377d3e64384415c1}{Item\+\_\+func\+\_\+truth}}, \mbox{\hyperlink{classItem__subselect_a61f70e7dc36e3aad77919971995cccb9}{Item\+\_\+subselect}}, and \mbox{\hyperlink{classItem__row_a9392533818e1f941a356ba46ba5c001c}{Item\+\_\+row}}.
+
+\mbox{\Hypertarget{classItem_a57c4fb57ce8c51fcd6b33675930e90ca}\label{classItem_a57c4fb57ce8c51fcd6b33675930e90ca}} 
+\index{Item@{Item}!print\+\_\+for\+\_\+order@{print\+\_\+for\+\_\+order}}
+\index{print\+\_\+for\+\_\+order@{print\+\_\+for\+\_\+order}!Item@{Item}}
+\subsubsection{\texorpdfstring{print\+\_\+for\+\_\+order()}{print\_for\_order()}}
+{\footnotesize\ttfamily void Item\+::print\+\_\+for\+\_\+order (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type,  }\item[{bool}]{used\+\_\+alias }\end{DoxyParamCaption})}
+
+Prints the item when it\textquotesingle{}s part of O\+R\+D\+ER BY and G\+R\+O\+UP BY. 
+\begin{DoxyParams}{Parameters}
+{\em str} & String to print to \\
+\hline
+{\em query\+\_\+type} & How to format the item \\
+\hline
+{\em used\+\_\+alias} & Whether item was referenced with alias.\\
+\hline
+\end{DoxyParams}
+\char`\"{}\+S\+E\+L\+E\+C\+T (subq) G\+R\+O\+U\+P B\+Y (same\+\_\+subq)\char`\"{} confuses O\+N\+L\+Y\+\_\+\+F\+U\+L\+L\+\_\+\+G\+R\+O\+U\+P\+\_\+\+BY (it does not see that both subqueries are the same, raises an error). To avoid hitting this problem, if the original query was\+: \char`\"{}\+S\+E\+L\+E\+C\+T expression A\+S x G\+R\+O\+U\+P B\+Y x\char`\"{}, we print \char`\"{}\+G\+R\+O\+U\+P B\+Y x\char`\"{}, not \char`\"{}\+G\+R\+O\+U\+P B\+Y expression\char`\"{}. Same for O\+R\+D\+ER BY. This has practical importance for views created as \char`\"{}\+C\+R\+E\+A\+T\+E V\+I\+E\+W v S\+E\+L\+E\+C\+T (subq) A\+S x G\+R\+O\+U\+P B\+Y x\char`\"{} (print\+\_\+order() is used to write the view\textquotesingle{}s definition in the frm file). We make one exception\+: if the view is merge-\/able, its O\+R\+D\+ER clause will be merged into the parent query\textquotesingle{}s. If an identifier in the merged O\+R\+D\+ER clause is allowed to be either an alias or an expression of the view\textquotesingle{}s underlying tables, resolution is difficult\+: it may be to be found in the underlying tables of the view, or in the S\+E\+L\+E\+CT list of the view; unlike other O\+R\+D\+ER elements directly originating from the parent query. To avoid this problem, if the view is merge-\/able, we print the expression. This does not cause problems with only\+\_\+full\+\_\+group\+\_\+by, because a merge-\/able view never has G\+R\+O\+UP BY. \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classItem_ac2caaead7a0c527f9e3968532a00f4ef}\label{classItem_ac2caaead7a0c527f9e3968532a00f4ef}} 
+\index{Item@{Item}!propagate\+\_\+derived\+\_\+used@{propagate\+\_\+derived\+\_\+used}}
+\index{propagate\+\_\+derived\+\_\+used@{propagate\+\_\+derived\+\_\+used}!Item@{Item}}
+\subsubsection{\texorpdfstring{propagate\+\_\+derived\+\_\+used()}{propagate\_derived\_used()}}
+{\footnotesize\ttfamily virtual bool Item\+::propagate\+\_\+derived\+\_\+used (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Propagate components that use referenced columns from derived tables. Some columns from derived tables may be determined to be unused, but may actually reference other columns that are used. This function will return true for such columns when called with \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk()}}, which then means that this column can also be marked as used. \begin{DoxySeeAlso}{See also}
+also S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::delete\+\_\+unused\+\_\+merged\+\_\+columns(). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classItem_ae91bed467907fd1e3720f7caaaba120f}\label{classItem_ae91bed467907fd1e3720f7caaaba120f}} 
+\index{Item@{Item}!propagate\+\_\+set\+\_\+derived\+\_\+used@{propagate\+\_\+set\+\_\+derived\+\_\+used}}
+\index{propagate\+\_\+set\+\_\+derived\+\_\+used@{propagate\+\_\+set\+\_\+derived\+\_\+used}!Item@{Item}}
+\subsubsection{\texorpdfstring{propagate\+\_\+set\+\_\+derived\+\_\+used()}{propagate\_set\_derived\_used()}}
+{\footnotesize\ttfamily bool Item\+::propagate\+\_\+set\+\_\+derived\+\_\+used (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Called by \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk()}} to set all the referenced items\textquotesingle{} derived\+\_\+used flag. \mbox{\Hypertarget{classItem_a46a9fb3471a7a0b846ce9487dce470b2}\label{classItem_a46a9fb3471a7a0b846ce9487dce470b2}} 
+\index{Item@{Item}!remove\+\_\+column\+\_\+from\+\_\+bitmap@{remove\+\_\+column\+\_\+from\+\_\+bitmap}}
+\index{remove\+\_\+column\+\_\+from\+\_\+bitmap@{remove\+\_\+column\+\_\+from\+\_\+bitmap}!Item@{Item}}
+\subsubsection{\texorpdfstring{remove\+\_\+column\+\_\+from\+\_\+bitmap()}{remove\_column\_from\_bitmap()}}
+{\footnotesize\ttfamily virtual bool Item\+::remove\+\_\+column\+\_\+from\+\_\+bitmap (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Visitor interface for removing all column expressions (\mbox{\hyperlink{classItem__field}{Item\+\_\+field}}) in this expression tree from a bitmap.  \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{walk()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & A M\+Y\+\_\+\+B\+I\+T\+M\+A\+P$\ast$ cast to unsigned char$\ast$, where the bits represent Field\+::field\+\_\+index values. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a4df6afee14222812ccadfe9b1e32d9ee}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_aed7a36014781d07bf5470d1f8652c8f2}\label{classItem_aed7a36014781d07bf5470d1f8652c8f2}} 
+\index{Item@{Item}!rename@{rename}}
+\index{rename@{rename}!Item@{Item}}
+\subsubsection{\texorpdfstring{rename()}{rename()}}
+{\footnotesize\ttfamily void Item\+::rename (\begin{DoxyParamCaption}\item[{char $\ast$}]{new\+\_\+name }\end{DoxyParamCaption})}
+
+rename item (used for views, cleanup() return original name).
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & new name of item; \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classItem_a8deff5e761c2a4fc89e60df1389da969}\label{classItem_a8deff5e761c2a4fc89e60df1389da969}} 
+\index{Item@{Item}!repoint\+\_\+const\+\_\+outer\+\_\+ref@{repoint\+\_\+const\+\_\+outer\+\_\+ref}}
+\index{repoint\+\_\+const\+\_\+outer\+\_\+ref@{repoint\+\_\+const\+\_\+outer\+\_\+ref}!Item@{Item}}
+\subsubsection{\texorpdfstring{repoint\+\_\+const\+\_\+outer\+\_\+ref()}{repoint\_const\_outer\_ref()}}
+{\footnotesize\ttfamily virtual bool Item\+::repoint\+\_\+const\+\_\+outer\+\_\+ref (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This function applies only to \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} objects referred to by an \mbox{\hyperlink{classItem__ref}{Item\+\_\+ref}} object that has been marked as a const\+\_\+item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Keep track of whether an \mbox{\hyperlink{classItem__ref}{Item\+\_\+ref}} refers to an \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__ref_a98be0fd1ea742321acff64b78c175468}{Item\+\_\+ref}}, and \mbox{\hyperlink{classItem__field_ac5eaad612e0fbd977769930c7c0829ae}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_acf4c1888a07e9e0dd5787283c6569545}\label{classItem_acf4c1888a07e9e0dd5787283c6569545}} 
+\index{Item@{Item}!save\+\_\+in\+\_\+field@{save\+\_\+in\+\_\+field}}
+\index{save\+\_\+in\+\_\+field@{save\+\_\+in\+\_\+field}!Item@{Item}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field()}{save\_in\_field()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+::save\+\_\+in\+\_\+field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})}
+
+Save a temporal value in packed longlong format into a \mbox{\hyperlink{classField}{Field}}. Used in optimizer.
+
+Subclasses that need to specialize this function, should override \mbox{\hyperlink{classItem_a463ded5f3c21ed2508dd8fddc6024722}{save\+\_\+in\+\_\+field\+\_\+inner()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field} & the field to save the item into \\
+\hline
+ & {\em no\+\_\+conversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any errors or warnings \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were errors or warnings when saving the item \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classItem_a463ded5f3c21ed2508dd8fddc6024722}\label{classItem_a463ded5f3c21ed2508dd8fddc6024722}} 
+\index{Item@{Item}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item@{Item}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Helper function which does all of the work for \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field(\+Field$\ast$, bool)}}, except some error checking common to all subclasses, which is performed by \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}} itself.
+
+Subclasses that need to specialize the behaviour of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}, should override this function instead of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field} & the field to save the item into \\
+\hline
+ & {\em no\+\_\+conversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any errors or warnings \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were errors or warnings when saving the item \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__cache__str_ac6c7bc5886dd787254f9621e46cc2c17}{Item\+\_\+cache\+\_\+str}}, \mbox{\hyperlink{classItem__insert__value_a66064a4540fb76d611f806c195c40886}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_addb79dad1639e8088ae278397d637fee}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__copy__decimal_a8e57c99667202306a06a0c46d8f4597a}{Item\+\_\+copy\+\_\+decimal}}, \mbox{\hyperlink{classItem__copy__float_a02adac943fb28891430337f1b64a7595}{Item\+\_\+copy\+\_\+float}}, \mbox{\hyperlink{classItem__copy__int_add731c9db4197e971b70f6f4b1b988cc}{Item\+\_\+copy\+\_\+int}}, \mbox{\hyperlink{classItem__copy__json_a30b375a69d8ab08efa641fc376490804}{Item\+\_\+copy\+\_\+json}}, \mbox{\hyperlink{classItem__copy__string_ab2594565cca52438e556cbce30e199e6}{Item\+\_\+copy\+\_\+string}}, \mbox{\hyperlink{classItem__copy_af4b55bf8c530188fa2110728a512811b}{Item\+\_\+copy}}, \mbox{\hyperlink{classItem__int__with__ref_a3b0eb8a477df3718cd623935eaaa73de}{Item\+\_\+int\+\_\+with\+\_\+ref}}, \mbox{\hyperlink{classItem__direct__view__ref_ac1cdb42acbcec19d8d004f86f96d8db8}{Item\+\_\+direct\+\_\+view\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_a08a7488069b002097708079cd73e84fb}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__hex__string_adb8f37241f406ed3c4aef366d462c219}{Item\+\_\+hex\+\_\+string}}, \mbox{\hyperlink{classItem__string_aafcfb45c5e610f75790ea91fded1dcc7}{Item\+\_\+string}}, \mbox{\hyperlink{classItem__float_a8114dff591bc7627fb9280e164443783}{Item\+\_\+float}}, \mbox{\hyperlink{classItem__decimal_acad1cbacc238128c33dcb3a5928dad75}{Item\+\_\+decimal}}, \mbox{\hyperlink{classItem__uint_a91382bc23286fc3fcd9fdab10dce8567}{Item\+\_\+uint}}, \mbox{\hyperlink{classItem__temporal_a12c4888e99d5a236550023180ec4f400}{Item\+\_\+temporal}}, \mbox{\hyperlink{classItem__int_a61fc7a6461f8d3f027fc91b5aeca8d1b}{Item\+\_\+int}}, \mbox{\hyperlink{classItem__param_a06432323e21e8640436094b45a7c8cb1}{Item\+\_\+param}}, \mbox{\hyperlink{classItem__null_af63975b9d3bea7f7a09bcaf0dc5da860}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a6a89af67b3665a4d25c24300fa8e298e}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__name__const_a5008a91f531840dd4b0595a0e3923263}{Item\+\_\+name\+\_\+const}}, \mbox{\hyperlink{classItem__sp__variable_acb11aaf1fbb77e35dae0f8e977ae3294}{Item\+\_\+sp\+\_\+variable}}, \mbox{\hyperlink{classItem__func__now_a8d1ad8eb628505c304c5e871c1c23dcc}{Item\+\_\+func\+\_\+now}}, \mbox{\hyperlink{classItem__time__func_aa97edadb152e620b50128499fc883a22}{Item\+\_\+time\+\_\+func}}, \mbox{\hyperlink{classItem__datetime__func_a81b32a747901bce656f4a1616650621d}{Item\+\_\+datetime\+\_\+func}}, \mbox{\hyperlink{classItem__func__user_af2a9b48879d2aa85545dfd4074510531}{Item\+\_\+func\+\_\+user}}, \mbox{\hyperlink{classItem__date__func_a4fe0277927df0b5012658ebc76717f17}{Item\+\_\+date\+\_\+func}}, \mbox{\hyperlink{classItem__temporal__hybrid__func_a3f3134574bdb6dd08a1cdd7078806368}{Item\+\_\+temporal\+\_\+hybrid\+\_\+func}}, and \mbox{\hyperlink{classItem__json__func_ac8bf3b1104bbbe70d1ec9f4f2bc13fb4}{Item\+\_\+json\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_a965258368f10f5b882a532602d328baa}\label{classItem_a965258368f10f5b882a532602d328baa}} 
+\index{Item@{Item}!save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings@{save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings}}
+\index{save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings@{save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings}!Item@{Item}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings()}{save\_in\_field\_no\_warnings()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+::save\+\_\+in\+\_\+field\+\_\+no\+\_\+warnings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})}
+
+Save the item into a field but do not emit any warnings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & field to save the item into \\
+\hline
+{\em no\+\_\+coversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any issues \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were issues saving the item \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classItem_a7d1b934e9612e1c78bd369b31e3d9cb1}\label{classItem_a7d1b934e9612e1c78bd369b31e3d9cb1}} 
+\index{Item@{Item}!send@{send}}
+\index{send@{send}!Item@{Item}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Item\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$}]{protocol,  }\item[{String $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is only called from items that is not of type item\+\_\+field. 
+
+Reimplemented in \mbox{\hyperlink{classItem__direct__view__ref_a29104c4d5e1f37059a1b0e357bb0cfc9}{Item\+\_\+direct\+\_\+view\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_a8a0631a3f2c781f2215d220df1e80869}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__null_abda34e2df5b301b98193bf38b0766f15}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_aecd4c06e61ad49121f428f7156cd0dfb}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__name__const_a11b5077653b428797e7f9ca7e5237eec}{Item\+\_\+name\+\_\+const}}, and \mbox{\hyperlink{classItem__sp__variable_a0995ce9203747eca85eff9aca948e131}{Item\+\_\+sp\+\_\+variable}}.
+
+\mbox{\Hypertarget{classItem_a0630371e331f83a8d258952a52cc5c72}\label{classItem_a0630371e331f83a8d258952a52cc5c72}} 
+\index{Item@{Item}!skip\+\_\+itemize@{skip\+\_\+itemize}}
+\index{skip\+\_\+itemize@{skip\+\_\+itemize}!Item@{Item}}
+\subsubsection{\texorpdfstring{skip\+\_\+itemize()}{skip\_itemize()}}
+{\footnotesize\ttfamily bool Item\+::skip\+\_\+itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Helper function to skip \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{itemize()}} for grammar-\/allocated items
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & can skip \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{itemize()}} \\
+\hline
+{\em false} & can\textquotesingle{}t skip\+: the item is allocated directly by the parser \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classItem_a17732157754b75692c499089e9c7945c}\label{classItem_a17732157754b75692c499089e9c7945c}} 
+\index{Item@{Item}!split\+\_\+sum\+\_\+func2@{split\+\_\+sum\+\_\+func2}}
+\index{split\+\_\+sum\+\_\+func2@{split\+\_\+sum\+\_\+func2}!Item@{Item}}
+\subsubsection{\texorpdfstring{split\+\_\+sum\+\_\+func2()}{split\_sum\_func2()}}
+{\footnotesize\ttfamily void Item\+::split\+\_\+sum\+\_\+func2 (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{ref\+\_\+pointer\+\_\+array,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{ref,  }\item[{bool}]{skip\+\_\+registered }\end{DoxyParamCaption})}
+
+Move S\+UM items out from item tree and replace with reference.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em ref\+\_\+pointer\+\_\+array} & Pointer to array of reference fields \\
+\hline
+{\em fields} & All fields in select \\
+\hline
+{\em ref} & Pointer to item \\
+\hline
+{\em skip\+\_\+registered} & $<$=$>$ function be must skipped for registered S\+UM items\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This is from \mbox{\hyperlink{classItem_a17732157754b75692c499089e9c7945c}{split\+\_\+sum\+\_\+func2()}} for items that should be split
+\end{DoxyNote}
+All found S\+UM items are added F\+I\+R\+ST in the fields list and we replace the item with a reference.
+
+thd-\/$>$fatal\+\_\+error() may be called if we are out of memory \mbox{\Hypertarget{classItem_af87ae536f54acffbc047f65e7c14d0b4}\label{classItem_af87ae536f54acffbc047f65e7c14d0b4}} 
+\index{Item@{Item}!temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type@{temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type}}
+\index{temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type@{temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type}!Item@{Item}}
+\subsubsection{\texorpdfstring{temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type()}{temporal\_with\_date\_as\_number\_result\_type()}}
+{\footnotesize\ttfamily enum Item\+\_\+result Item\+::temporal\+\_\+with\+\_\+date\+\_\+as\+\_\+number\+\_\+result\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Similar to result\+\_\+type() but makes D\+A\+TE, D\+A\+T\+E\+T\+I\+ME, T\+I\+M\+E\+S\+T\+A\+MP pretend to be numbers rather than strings. \mbox{\Hypertarget{classItem_a7b3cc55ea7e3a429a6e8f0fbbba6e4ff}\label{classItem_a7b3cc55ea7e3a429a6e8f0fbbba6e4ff}} 
+\index{Item@{Item}!time\+\_\+precision@{time\+\_\+precision}}
+\index{time\+\_\+precision@{time\+\_\+precision}!Item@{Item}}
+\subsubsection{\texorpdfstring{time\+\_\+precision()}{time\_precision()}}
+{\footnotesize\ttfamily uint Item\+::time\+\_\+precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+T\+I\+ME precision of the item\+: 0..6 
+
+Reimplemented in \mbox{\hyperlink{classItem__temporal__func_a78c81ac3504e8cc63f3743bee366f3f2}{Item\+\_\+temporal\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_a54c52eb8a27c390d227b0aa547829e1b}\label{classItem_a54c52eb8a27c390d227b0aa547829e1b}} 
+\index{Item@{Item}!tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type@{tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type}}
+\index{tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type@{tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type}!Item@{Item}}
+\subsubsection{\texorpdfstring{tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type()}{tmp\_table\_field\_from\_field\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}} $\ast$ Item\+::tmp\+\_\+table\+\_\+field\+\_\+from\+\_\+field\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{bool}]{fixed\+\_\+length }\end{DoxyParamCaption})}
+
+Create a field based on field\+\_\+type of argument.
+
+For now, this is only used to create a field for I\+F\+N\+U\+L\+L(x,something) and time functions
+
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & error \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classItem_ae4459c9d19c2c656c63da3bbd32760e5}\label{classItem_ae4459c9d19c2c656c63da3bbd32760e5}} 
+\index{Item@{Item}!transform@{transform}}
+\index{transform@{transform}!Item@{Item}}
+\subsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+::transform (\begin{DoxyParamCaption}\item[{Item\+\_\+transformer}]{transformer,  }\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Traverse item tree possibly transforming it (replacing items).
+
+This function is designed to ease transformation of \mbox{\hyperlink{classItem}{Item}} trees. Re-\/execution note\+: every such transformation is registered for rollback by T\+H\+D\+::change\+\_\+item\+\_\+tree() and is rolled back at the end of execution by T\+H\+D\+::rollback\+\_\+item\+\_\+tree\+\_\+changes().
+
+Therefore\+:
+\begin{DoxyItemize}
+\item this function can not be used at prepared statement prepare (in particular, in fix\+\_\+fields!), as only permanent transformation of \mbox{\hyperlink{classItem}{Item}} trees are allowed at prepare.
+\item the transformer function shall allocate new Items in execution memory root (thd-\/$>$mem\+\_\+root) and not anywhere else\+: allocated items will be gone in the end of execution.
+\end{DoxyItemize}
+
+If you don\textquotesingle{}t need to transform an item tree, but only traverse it, please use \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk()}} instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transformer} & functor that performs transformation of a subtree \\
+\hline
+{\em arg} & opaque argument passed to the functor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns pointer to the new subtree root. T\+H\+D\+::change\+\_\+item\+\_\+tree() should be called for it if transformation took place, i.\+e. if a pointer to newly allocated item is returned. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__default__value_af8efb13ec5ade9320533c1e508d995ee}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__ref_a7918159b3087d8f56a9188e6469f1fd3}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__cond_a43e1bfb20c36bd6daa98d1243ef807fa}{Item\+\_\+cond}}, \mbox{\hyperlink{classItem__func__make__set_a7f76c6a1bd0ad1f4ecfc30eaa0165d21}{Item\+\_\+func\+\_\+make\+\_\+set}}, \mbox{\hyperlink{classItem__func_a808d0fe427eec3c050ee5214594b8908}{Item\+\_\+func}}, \mbox{\hyperlink{classItem__in__optimizer_abf3e3561b7ff2f5e6d58a343cc93fcc5}{Item\+\_\+in\+\_\+optimizer}}, and \mbox{\hyperlink{classItem__row_a708898ec64fe61e228a0f345d1657afb}{Item\+\_\+row}}.
+
+\mbox{\Hypertarget{classItem_a870059b0d80311b71b473af58329edd7}\label{classItem_a870059b0d80311b71b473af58329edd7}} 
+\index{Item@{Item}!update\+\_\+indexed\+\_\+column\+\_\+map@{update\+\_\+indexed\+\_\+column\+\_\+map}}
+\index{update\+\_\+indexed\+\_\+column\+\_\+map@{update\+\_\+indexed\+\_\+column\+\_\+map}!Item@{Item}}
+\subsubsection{\texorpdfstring{update\+\_\+indexed\+\_\+column\+\_\+map()}{update\_indexed\_column\_map()}}
+{\footnotesize\ttfamily virtual bool Item\+::update\+\_\+indexed\+\_\+column\+\_\+map (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{int\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+update\+\_\+indexed\+\_\+column\+\_\+map Update columns map for index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int\+\_\+arg} & It\textquotesingle{}s useless \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false successfully update 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_af55c5ec69663eb6a1b98f071232a7aa2}\label{classItem_af55c5ec69663eb6a1b98f071232a7aa2}} 
+\index{Item@{Item}!used\+\_\+tables\+\_\+for\+\_\+level@{used\+\_\+tables\+\_\+for\+\_\+level}}
+\index{used\+\_\+tables\+\_\+for\+\_\+level@{used\+\_\+tables\+\_\+for\+\_\+level}!Item@{Item}}
+\subsubsection{\texorpdfstring{used\+\_\+tables\+\_\+for\+\_\+level()}{used\_tables\_for\_level()}}
+{\footnotesize\ttfamily virtual bool Item\+::used\+\_\+tables\+\_\+for\+\_\+level (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return used table information for the specified query block (level). For a field that is resolved from this query block, return the table number. For a field that is resolved from a query block outer to the specified one, return O\+U\+T\+E\+R\+\_\+\+R\+E\+F\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+IT
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em arg} & pointer to an instance of class \mbox{\hyperlink{classUsed__tables}{Used\+\_\+tables}}, which is constructed with the query block as argument. The used tables information is accumulated in the field used\+\_\+tables in this class.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is used to update used tables information after merging a query block (a subquery) with its parent. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a29900919e790061d19f828b4baf5fc25}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_a875594d2b9d99ccff3863bfd435828f0}\label{classItem_a875594d2b9d99ccff3863bfd435828f0}} 
+\index{Item@{Item}!val\+\_\+bool@{val\+\_\+bool}}
+\index{val\+\_\+bool@{val\+\_\+bool}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+bool()}{val\_bool()}}
+{\footnotesize\ttfamily bool Item\+::val\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]Make this functions class dependent \end{DoxyRefDesc}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__ref__null__helper_ae2f622d4bb13a40800c5293c07f56334}{Item\+\_\+ref\+\_\+null\+\_\+helper}}, \mbox{\hyperlink{classItem__direct__view__ref_addadee858f933ad08e2bb3bb533067f3}{Item\+\_\+direct\+\_\+view\+\_\+ref}}, \mbox{\hyperlink{classItem__direct__ref_ae552bb7da0a5629c75850d6d0e07d344}{Item\+\_\+direct\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_af6730f5fe99b99c653a6fa1a66e8cf89}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__in__subselect_a137eef270a78238c1bafde29071cbbcb}{Item\+\_\+in\+\_\+subselect}}, \mbox{\hyperlink{classItem__exists__subselect_a2ca1dbb0f70d442c43e5360933a5a44d}{Item\+\_\+exists\+\_\+subselect}}, \mbox{\hyperlink{classItem__singlerow__subselect_a9e8de5972977f88a0354b36a05862a68}{Item\+\_\+singlerow\+\_\+subselect}}, and \mbox{\hyperlink{classItem__func__truth_a1c0f8cdf192cec99a3e0b5eafa1845bf}{Item\+\_\+func\+\_\+truth}}.
+
+\mbox{\Hypertarget{classItem_a9174217a46706eb2db74689b5365c4a5}\label{classItem_a9174217a46706eb2db74689b5365c4a5}} 
+\index{Item@{Item}!val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}}
+\index{val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+date\+\_\+temporal()}{val\_date\_temporal()}}
+{\footnotesize\ttfamily longlong Item\+::val\+\_\+date\+\_\+temporal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return date value of item in packed longlong format. 
+
+Reimplemented in \mbox{\hyperlink{classItem__cache__datetime_ab2431102a1d70199b6d9438c12ac3b24}{Item\+\_\+cache\+\_\+datetime}}, \mbox{\hyperlink{classItem__cache__int_afea06afa547e7884db25240f67cfff0d}{Item\+\_\+cache\+\_\+int}}, \mbox{\hyperlink{classItem__time__with__ref_a1137ceb3bed39b0ff416f5534bd5b18d}{Item\+\_\+time\+\_\+with\+\_\+ref}}, \mbox{\hyperlink{classItem__datetime__with__ref_acc643536450eae3ce88e244d70b8e3e5}{Item\+\_\+datetime\+\_\+with\+\_\+ref}}, \mbox{\hyperlink{classItem__ref__null__helper_ae8e303c9b0015a81a80607ff31cdf57e}{Item\+\_\+ref\+\_\+null\+\_\+helper}}, \mbox{\hyperlink{classItem__direct__ref_a10fdb82072009fd9bc88657cbc49f282}{Item\+\_\+direct\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_a749f7427b60d23f3f50a6651dcc3abf6}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__temporal_a3af452477612ee734dbee3b4b206b14f}{Item\+\_\+temporal}}, \mbox{\hyperlink{classItem__null_a99590d9cddd9f8fbc0a6bfbc848325e9}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a29fb94776a9681e8d166112f4ab2fb97}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__func__now_a0abcdd4d578abeacaa50a754563cbd9f}{Item\+\_\+func\+\_\+now}}, \mbox{\hyperlink{classItem__sum__hybrid_a33ba0c96d045283cd6ddcf3fcf4ec992}{Item\+\_\+sum\+\_\+hybrid}}, \mbox{\hyperlink{classItem__func__curdate_aa8961163e017b6d68c26df334cd9c0b6}{Item\+\_\+func\+\_\+curdate}}, \mbox{\hyperlink{classItem__datetime__literal_af205497e535eba297fbdd01b60bb93d9}{Item\+\_\+datetime\+\_\+literal}}, \mbox{\hyperlink{classItem__date__literal_a03ebcf3ba975b9b8605edad6e902b2db}{Item\+\_\+date\+\_\+literal}}, \mbox{\hyperlink{classItem__datetime__func_a10b03b1938f6aa1c40e1191fe304f943}{Item\+\_\+datetime\+\_\+func}}, and \mbox{\hyperlink{classItem__date__func_a34f95de47fe9ff5bfe16fb641ec22a42}{Item\+\_\+date\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_aa66204e63dc471de5be79e2da81ac7aa}\label{classItem_aa66204e63dc471de5be79e2da81ac7aa}} 
+\index{Item@{Item}!val\+\_\+date\+\_\+temporal\+\_\+result@{val\+\_\+date\+\_\+temporal\+\_\+result}}
+\index{val\+\_\+date\+\_\+temporal\+\_\+result@{val\+\_\+date\+\_\+temporal\+\_\+result}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+date\+\_\+temporal\+\_\+result()}{val\_date\_temporal\_result()}}
+{\footnotesize\ttfamily virtual longlong Item\+::val\+\_\+date\+\_\+temporal\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get date value in packed longlong format. N\+U\+LL is converted to 0. 
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a181f56468a06623d0c7399868b8fda47}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_a57e763fcde2d0a819d21e31c59611290}\label{classItem_a57e763fcde2d0a819d21e31c59611290}} 
+\index{Item@{Item}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily virtual bool Item\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get a J\+S\+ON value from an \mbox{\hyperlink{classItem}{Item}}.
+
+All subclasses that can return a J\+S\+ON value, should override this function. The function in the base class is not expected to be called. If it is called, it most likely means that some subclass is missing an override of \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{val\+\_\+json()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em result} & The resulting \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__json_a002a9253bafc524798d5bc2e5ee1a3d9}{Item\+\_\+json}}, \mbox{\hyperlink{classItem__cache__json_a6ca554ad2b7f1652594382f98698f4ba}{Item\+\_\+cache\+\_\+json}}, \mbox{\hyperlink{classItem__copy__json_aead579100651419c06fe93f2e53bb396}{Item\+\_\+copy\+\_\+json}}, \mbox{\hyperlink{classItem__copy_ab74e3b8e79f623d7caabec195ab69a11}{Item\+\_\+copy}}, \mbox{\hyperlink{classItem__direct__view__ref_a4b28cab9b54ffdfe277bd2c26cb50709}{Item\+\_\+direct\+\_\+view\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_ab7fe1fd26301ae6f9692105dc06403f1}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__null_a251248ba4bdd1ac6628c60db7c3aaa01}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a9ec27408794eda03a2f7a979dfa5cf57}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__splocal_a4417b9609600a6583814a12ef594a3b5}{Item\+\_\+splocal}}, \mbox{\hyperlink{classItem__sum__hybrid_a465c42375cab52fc5feabd0268d2bced}{Item\+\_\+sum\+\_\+hybrid}}, \mbox{\hyperlink{classItem__sum__json_af07ece41d4b8cbf1cb45a485c718880e}{Item\+\_\+sum\+\_\+json}}, \mbox{\hyperlink{classItem__func__json__merge__patch_a6f64e1bc4bc2fc67ecf0d00a96b74a2c}{Item\+\_\+func\+\_\+json\+\_\+merge\+\_\+patch}}, \mbox{\hyperlink{classItem__func__json__merge__preserve_a50d0baf1a3e3ad6644db48253bb8990a}{Item\+\_\+func\+\_\+json\+\_\+merge\+\_\+preserve}}, \mbox{\hyperlink{classItem__func__json__remove_a54cf17d640b8f52c375b5456341049af}{Item\+\_\+func\+\_\+json\+\_\+remove}}, \mbox{\hyperlink{classItem__func__json__search_a69fc8b718e013ca52e964ebafd54de60}{Item\+\_\+func\+\_\+json\+\_\+search}}, \mbox{\hyperlink{classItem__func__json__row__object_ac325e6707cbb0d96b06b8695ca05f228}{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object}}, \mbox{\hyperlink{classItem__func__json__array_ae1b5ecc4639fd3d83db1afc5bed37e95}{Item\+\_\+func\+\_\+json\+\_\+array}}, \mbox{\hyperlink{classItem__func__json__set__replace_a01112442d94a21e1495f34f418fbf9e0}{Item\+\_\+func\+\_\+json\+\_\+set\+\_\+replace}}, \mbox{\hyperlink{classItem__func__json__array__insert_a967c286607ca60e2e3b7e2771eab26d0}{Item\+\_\+func\+\_\+json\+\_\+array\+\_\+insert}}, \mbox{\hyperlink{classItem__func__json__insert_a45b5b362fcea87f93083500e8c805609}{Item\+\_\+func\+\_\+json\+\_\+insert}}, \mbox{\hyperlink{classItem__func__json__array__append_ae3826106cb02273f4e06a924b0dcb09c}{Item\+\_\+func\+\_\+json\+\_\+array\+\_\+append}}, \mbox{\hyperlink{classItem__func__json__extract_ab775e6ae9faf1c5df20596fea217f383}{Item\+\_\+func\+\_\+json\+\_\+extract}}, \mbox{\hyperlink{classItem__func__json__keys_aef4e835bbd9ef49b650477f220373ee4}{Item\+\_\+func\+\_\+json\+\_\+keys}}, \mbox{\hyperlink{classItem__func__as__geojson_a5d5fa5457258b65c6123d14145c45bdd}{Item\+\_\+func\+\_\+as\+\_\+geojson}}, \mbox{\hyperlink{classItem__json__typecast_a09e8b9b3ec04c6e654bbb540f47d7b91}{Item\+\_\+json\+\_\+typecast}}, and \mbox{\hyperlink{classItem__singlerow__subselect_a0f7547c32eca8cc13e5670aca3fd5e86}{Item\+\_\+singlerow\+\_\+subselect}}.
+
+\mbox{\Hypertarget{classItem_a00ab36bcf5ebe7138e869d1ceecee573}\label{classItem_a00ab36bcf5ebe7138e869d1ceecee573}} 
+\index{Item@{Item}!val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type@{val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type}}
+\index{val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type@{val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type()}{val\_temporal\_by\_field\_type()}}
+{\footnotesize\ttfamily longlong Item\+::val\+\_\+temporal\+\_\+by\+\_\+field\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return date or time value of item in packed longlong format, depending on item field type. \mbox{\Hypertarget{classItem_a934c293f50afd4e39891b26beef3e3c4}\label{classItem_a934c293f50afd4e39891b26beef3e3c4}} 
+\index{Item@{Item}!val\+\_\+temporal\+\_\+with\+\_\+round@{val\+\_\+temporal\+\_\+with\+\_\+round}}
+\index{val\+\_\+temporal\+\_\+with\+\_\+round@{val\+\_\+temporal\+\_\+with\+\_\+round}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+temporal\+\_\+with\+\_\+round()}{val\_temporal\_with\_round()}}
+{\footnotesize\ttfamily longlong Item\+::val\+\_\+temporal\+\_\+with\+\_\+round (\begin{DoxyParamCaption}\item[{enum\+\_\+field\+\_\+types}]{type,  }\item[{uint8}]{dec }\end{DoxyParamCaption})}
+
+Get date or time value in packed longlong format. Before conversion from M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME to packed format, the M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value is rounded to \char`\"{}dec\char`\"{} fractional digits. \mbox{\Hypertarget{classItem_a69ef60a3917a1bb4832498a695754c58}\label{classItem_a69ef60a3917a1bb4832498a695754c58}} 
+\index{Item@{Item}!val\+\_\+time\+\_\+temporal@{val\+\_\+time\+\_\+temporal}}
+\index{val\+\_\+time\+\_\+temporal@{val\+\_\+time\+\_\+temporal}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+time\+\_\+temporal()}{val\_time\_temporal()}}
+{\footnotesize\ttfamily longlong Item\+::val\+\_\+time\+\_\+temporal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return time value of item in packed longlong format. 
+
+Reimplemented in \mbox{\hyperlink{classItem__cache__datetime_a3a3dc978f89d305b26a866eebf2705a6}{Item\+\_\+cache\+\_\+datetime}}, \mbox{\hyperlink{classItem__cache__int_af7bbf9ca88eac67901bc1e7c5768392a}{Item\+\_\+cache\+\_\+int}}, \mbox{\hyperlink{classItem__time__with__ref_a9e41e41a7136e706ac9182203ea3063f}{Item\+\_\+time\+\_\+with\+\_\+ref}}, \mbox{\hyperlink{classItem__datetime__with__ref_ad4f0af48197792dcbd0ce0bbac488cbd}{Item\+\_\+datetime\+\_\+with\+\_\+ref}}, \mbox{\hyperlink{classItem__ref__null__helper_a310f77154e5867053304bd27d75cbb53}{Item\+\_\+ref\+\_\+null\+\_\+helper}}, \mbox{\hyperlink{classItem__direct__ref_af46d56da55778711183208f74fc592e9}{Item\+\_\+direct\+\_\+ref}}, \mbox{\hyperlink{classItem__ref_a962c929d6871099e06c7aa2868f09779}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__temporal_ac5adb00cf4d1f565f7b858bef7c0a968}{Item\+\_\+temporal}}, \mbox{\hyperlink{classItem__null_a9e65f0e26156a43bcb6c4d915389662d}{Item\+\_\+null}}, \mbox{\hyperlink{classItem__field_a9d9f8e906fb2f056b1bb4e907d8c783b}{Item\+\_\+field}}, \mbox{\hyperlink{classItem__sum__hybrid_a8de5e52f6be6c1d1e58a6f86b24c073f}{Item\+\_\+sum\+\_\+hybrid}}, \mbox{\hyperlink{classItem__func__curtime_a58e6e51156871d1b5e844993c88cf053}{Item\+\_\+func\+\_\+curtime}}, \mbox{\hyperlink{classItem__time__literal_a38682be97c3300d176410c59ca436c1b}{Item\+\_\+time\+\_\+literal}}, and \mbox{\hyperlink{classItem__time__func_ac6f281d250770126e010750dff54ef36}{Item\+\_\+time\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem_a9d011d3f1d2498f46bbdc4c06d47d5f0}\label{classItem_a9d011d3f1d2498f46bbdc4c06d47d5f0}} 
+\index{Item@{Item}!val\+\_\+time\+\_\+temporal\+\_\+result@{val\+\_\+time\+\_\+temporal\+\_\+result}}
+\index{val\+\_\+time\+\_\+temporal\+\_\+result@{val\+\_\+time\+\_\+temporal\+\_\+result}!Item@{Item}}
+\subsubsection{\texorpdfstring{val\+\_\+time\+\_\+temporal\+\_\+result()}{val\_time\_temporal\_result()}}
+{\footnotesize\ttfamily virtual longlong Item\+::val\+\_\+time\+\_\+temporal\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get time value in packed longlong format. N\+U\+LL is converted to 0. 
+
+Reimplemented in \mbox{\hyperlink{classItem__field_a2f56e7eb6956ae5a02df47769a038c6a}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}\label{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}} 
+\index{Item@{Item}!walk@{walk}}
+\index{walk@{walk}!Item@{Item}}
+\subsubsection{\texorpdfstring{walk()}{walk()}}
+{\footnotesize\ttfamily virtual bool Item\+::walk (\begin{DoxyParamCaption}\item[{Item\+\_\+processor}]{processor,  }\item[{\mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}}}]{walk,  }\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Traverses a tree of Items in prefix and/or postfix order. Optionally walks into subqueries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & processor function to be invoked per item returns true to abort traversal, false to continue \\
+\hline
+{\em walk} & controls how to traverse the item tree W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX\+: call processor before invoking children W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX\+: call processor after invoking children W\+A\+L\+K\+\_\+\+S\+U\+B\+Q\+U\+E\+RY go down into subqueries walk values are bit-\/coded and may be combined. Omitting both W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX and W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX is undefined behaviour. \\
+\hline
+{\em arg} & Optional pointer to a walk-\/specific object\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & walk succeeded \\
+\hline
+{\em true} & walk aborted by agreement, an error may have been reported \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__cache_a38750db48a153247ba0b65b6674f11b4}{Item\+\_\+cache}}, \mbox{\hyperlink{classItem__insert__value_a7023df48fccb11a014d348cbde3b35c6}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_aa26d7118262053541ab095b9f9c7d53f}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__ref_a19c98abd79dbdb19a4af10a7c41f1449}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__ident_ab74fffc591821c7bc35929085ad82cf9}{Item\+\_\+ident}}, \mbox{\hyperlink{classItem__cond_a6e601f5a22e1625a703c0183a67eca2a}{Item\+\_\+cond}}, \mbox{\hyperlink{classItem__func__make__set_a75791f36ac076834fdd42c7081d8d763}{Item\+\_\+func\+\_\+make\+\_\+set}}, \mbox{\hyperlink{classItem__in__subselect_ae2d9db307c8214b314f387b8f0fca6ae}{Item\+\_\+in\+\_\+subselect}}, \mbox{\hyperlink{classItem__sum_ae323b192d183b3f85bbee92c43685310}{Item\+\_\+sum}}, \mbox{\hyperlink{classItem__func_af98acc318ebbc106d047a1589884f0ff}{Item\+\_\+func}}, \mbox{\hyperlink{classItem__subselect_a163a5d1a04b9bf04d352aca85c084adf}{Item\+\_\+subselect}}, and \mbox{\hyperlink{classItem__row_a7866a24ed779c242c6841735e7de6c04}{Item\+\_\+row}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classItem_afebd72a3075897b31b17ead8dd1d10eb}\label{classItem_afebd72a3075897b31b17ead8dd1d10eb}} 
+\index{Item@{Item}!marker@{marker}}
+\index{marker@{marker}!Item@{Item}}
+\subsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily int Item\+::marker}
+
+This member has several successive meanings, depending on the phase we\textquotesingle{}re in\+:
+\begin{DoxyItemize}
+\item during field resolution\+: it contains the index, in the \char`\"{}all\+\_\+fields\char`\"{} list, of the expression to which this field belongs; or a special constant U\+N\+D\+E\+F\+\_\+\+P\+OS; see st\+\_\+select\+\_\+lex\+::cur\+\_\+pos\+\_\+in\+\_\+all\+\_\+fields and match\+\_\+exprs\+\_\+for\+\_\+only\+\_\+full\+\_\+group\+\_\+by().
+\item when attaching conditions to tables\+: it says whether some condition needs to be attached or can be omitted (for example because it is already implemented by \textquotesingle{}ref\textquotesingle{} access)
+\item when pushing index conditions\+: it says whether a condition uses only indexed columns
+\item when creating an internal temporary table\+: it says how to store B\+IT fields
+\item when we change D\+I\+S\+T\+I\+N\+CT to G\+R\+O\+UP BY\+: it is used for book-\/keeping of fields. 
+\end{DoxyItemize}\mbox{\Hypertarget{classItem_a4c62081a1b4986d26cf265143f403e4b}\label{classItem_a4c62081a1b4986d26cf265143f403e4b}} 
+\index{Item@{Item}!maybe\+\_\+null@{maybe\+\_\+null}}
+\index{maybe\+\_\+null@{maybe\+\_\+null}!Item@{Item}}
+\subsubsection{\texorpdfstring{maybe\+\_\+null}{maybe\_null}}
+{\footnotesize\ttfamily my\+\_\+bool Item\+::maybe\+\_\+null}
+
+True if this item may be null.
+
+For items that represent rows, it is true if one of the columns may be null.
+
+For items that represent scalar or row subqueries, it is true if one of the returned columns could be null, or if the subquery could return zero rows. \mbox{\Hypertarget{classItem_af41ed24b86b2126cf7eacc591a863f47}\label{classItem_af41ed24b86b2126cf7eacc591a863f47}} 
+\index{Item@{Item}!next@{next}}
+\index{next@{next}!Item@{Item}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ Item\+::next}
+
+Intrusive list pointer for free list. If not null, points to the next \mbox{\hyperlink{classItem}{Item}} on some Query\+\_\+arena\textquotesingle{}s free list. For instance, stored procedures have their own Query\+\_\+arena\textquotesingle{}s.
+
+\begin{DoxySeeAlso}{See also}
+Query\+\_\+arena\+::free\+\_\+list 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classItem_a57b1fecae2dda2c06aca6754460b5894}\label{classItem_a57b1fecae2dda2c06aca6754460b5894}} 
+\index{Item@{Item}!tables\+\_\+locked\+\_\+cache@{tables\+\_\+locked\+\_\+cache}}
+\index{tables\+\_\+locked\+\_\+cache@{tables\+\_\+locked\+\_\+cache}!Item@{Item}}
+\subsubsection{\texorpdfstring{tables\+\_\+locked\+\_\+cache}{tables\_locked\_cache}}
+{\footnotesize\ttfamily bool Item\+::tables\+\_\+locked\+\_\+cache\hspace{0.3cm}{\ttfamily [protected]}}
+
+This variable is a cache of \textquotesingle{}Needed tables are locked\textquotesingle{}. True if either \textquotesingle{}No tables locks is needed\textquotesingle{} or \textquotesingle{}Needed tables are locked\textquotesingle{}. If tables are used, then it will be set to current\+\_\+thd-\/$>$lex-\/$>$is\+\_\+query\+\_\+tables\+\_\+locked().
+
+It is used when checking const\+\_\+item()/can\+\_\+be\+\_\+evaluated\+\_\+now(). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

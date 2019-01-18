@@ -1,0 +1,62 @@
+\hypertarget{classFile__parser__dummy__hook}{}\section{File\+\_\+parser\+\_\+dummy\+\_\+hook Class Reference}
+\label{classFile__parser__dummy__hook}\index{File\+\_\+parser\+\_\+dummy\+\_\+hook@{File\+\_\+parser\+\_\+dummy\+\_\+hook}}
+
+
+{\ttfamily \#include $<$parse\+\_\+file.\+h$>$}
+
+Inheritance diagram for File\+\_\+parser\+\_\+dummy\+\_\+hook\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFile__parser__dummy__hook}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classFile__parser__dummy__hook_a5e8f146f4eb4663ee7b94de4e12e64d4}{process\+\_\+unknown\+\_\+string}} (const char $\ast$\&unknown\+\_\+key, uchar $\ast$base, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, const char $\ast$end)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dummy hook for parsers which do not need hook for unknown keys. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFile__parser__dummy__hook_a5e8f146f4eb4663ee7b94de4e12e64d4}\label{classFile__parser__dummy__hook_a5e8f146f4eb4663ee7b94de4e12e64d4}} 
+\index{File\+\_\+parser\+\_\+dummy\+\_\+hook@{File\+\_\+parser\+\_\+dummy\+\_\+hook}!process\+\_\+unknown\+\_\+string@{process\+\_\+unknown\+\_\+string}}
+\index{process\+\_\+unknown\+\_\+string@{process\+\_\+unknown\+\_\+string}!File\+\_\+parser\+\_\+dummy\+\_\+hook@{File\+\_\+parser\+\_\+dummy\+\_\+hook}}
+\subsubsection{\texorpdfstring{process\+\_\+unknown\+\_\+string()}{process\_unknown\_string()}}
+{\footnotesize\ttfamily bool File\+\_\+parser\+\_\+dummy\+\_\+hook\+::process\+\_\+unknown\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$\&}]{unknown\+\_\+key,  }\item[{uchar $\ast$}]{base,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{const char $\ast$}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Dummy unknown key hook.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em unknown\+\_\+key} & reference on the line with unknown parameter and the parsing point \\
+\hline
+\mbox{\texttt{ in}}  & {\em base} & base address for parameter writing (structure like \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}) \\
+\hline
+\mbox{\texttt{ in}}  & {\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT for parameters allocation \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & the end of the configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This hook used to catch no longer supported keys and process them for backward compatibility, but it will not slow down processing of modern format files. This hook does nothing except debug output.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classUnknown__key__hook}{Unknown\+\_\+key\+\_\+hook}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+file.\+h\item 
+\mbox{\hyperlink{parse__file_8cc}{parse\+\_\+file.\+cc}}\end{DoxyCompactItemize}

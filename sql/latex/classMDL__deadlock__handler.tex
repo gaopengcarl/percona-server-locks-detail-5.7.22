@@ -1,0 +1,25 @@
+\hypertarget{classMDL__deadlock__handler}{}\section{M\+D\+L\+\_\+deadlock\+\_\+handler Class Reference}
+\label{classMDL__deadlock__handler}\index{M\+D\+L\+\_\+deadlock\+\_\+handler@{M\+D\+L\+\_\+deadlock\+\_\+handler}}
+Inheritance diagram for M\+D\+L\+\_\+deadlock\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMDL__deadlock__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__deadlock__handler_a0d92a58dd6d26ebccc12eb1cb9f9d06e}\label{classMDL__deadlock__handler_a0d92a58dd6d26ebccc12eb1cb9f9d06e}} 
+{\bfseries M\+D\+L\+\_\+deadlock\+\_\+handler} (\mbox{\hyperlink{classOpen__table__context}{Open\+\_\+table\+\_\+context}} $\ast$ot\+\_\+ctx\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classMDL__deadlock__handler_ac44691cb71986087203f7a97c5e4f0e8}\label{classMDL__deadlock__handler_ac44691cb71986087203f7a97c5e4f0e8}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An error handler which converts, if possible, E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+A\+D\+L\+O\+CK error that can occur when we are trying to acquire a metadata lock to a request for back-\/off and re-\/start of \mbox{\hyperlink{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}{open\+\_\+tables()}} process. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+cc\end{DoxyCompactItemize}

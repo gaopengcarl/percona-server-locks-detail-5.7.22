@@ -1,0 +1,165 @@
+\hypertarget{classPrepared__statement}{}\section{Prepared\+\_\+statement Class Reference}
+\label{classPrepared__statement}\index{Prepared\+\_\+statement@{Prepared\+\_\+statement}}
+
+
+{\ttfamily \#include $<$sql\+\_\+prepare.\+h$>$}
+
+Inheritance diagram for Prepared\+\_\+statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPrepared__statement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a0495f17b9ef472b7cc36688ab821a56b}\label{classPrepared__statement_a0495f17b9ef472b7cc36688ab821a56b}} 
+{\bfseries Prepared\+\_\+statement} (T\+HD $\ast$thd\+\_\+arg)
+\item 
+virtual \mbox{\hyperlink{classPrepared__statement_a3fd21faacd303bbc3c64a81d08755ab5}{$\sim$\+Prepared\+\_\+statement}} ()
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a4e56ad949bfe4417431c49b1876adce2}\label{classPrepared__statement_a4e56ad949bfe4417431c49b1876adce2}} 
+virtual void {\bfseries cleanup\+\_\+stmt} ()
+\item 
+\mbox{\Hypertarget{classPrepared__statement_ad8c415a7134b32988b7c7ebd2bbf2c03}\label{classPrepared__statement_ad8c415a7134b32988b7c7ebd2bbf2c03}} 
+bool {\bfseries set\+\_\+name} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name)
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a86d5de565ece19b2a507c0a16e0f28a8}\label{classPrepared__statement_a86d5de565ece19b2a507c0a16e0f28a8}} 
+const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \& {\bfseries name} () const
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a9faaf44f12ac63713c64a88bbe789caa}\label{classPrepared__statement_a9faaf44f12ac63713c64a88bbe789caa}} 
+void {\bfseries close\+\_\+cursor} ()
+\item 
+\mbox{\Hypertarget{classPrepared__statement_af910b63ece98dcfe8c6ac6be563f335e}\label{classPrepared__statement_af910b63ece98dcfe8c6ac6be563f335e}} 
+bool {\bfseries is\+\_\+in\+\_\+use} () const
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a673ddcabc58287c78b9481f65268eee7}\label{classPrepared__statement_a673ddcabc58287c78b9481f65268eee7}} 
+bool {\bfseries is\+\_\+sql\+\_\+prepare} () const
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a1d1fdab484ea863264c0c68433991ddb}\label{classPrepared__statement_a1d1fdab484ea863264c0c68433991ddb}} 
+void {\bfseries set\+\_\+sql\+\_\+prepare} ()
+\item 
+bool \mbox{\hyperlink{classPrepared__statement_a7f79adbd42eb5d502f5d248d17de5b3c}{prepare}} (const char $\ast$packet, size\+\_\+t packet\+\_\+length)
+\item 
+bool \mbox{\hyperlink{classPrepared__statement_a242307a08c73c7f6ea9778d8f9af719b}{execute\+\_\+loop}} (String $\ast$expanded\+\_\+query, bool open\+\_\+cursor, uchar $\ast$packet\+\_\+arg, uchar $\ast$packet\+\_\+end\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a1e7f864303a5ca289493105d2fd866ec}\label{classPrepared__statement_a1e7f864303a5ca289493105d2fd866ec}} 
+bool {\bfseries execute\+\_\+server\+\_\+runnable} (\mbox{\hyperlink{classServer__runnable}{Server\+\_\+runnable}} $\ast$server\+\_\+runnable)
+\item 
+void \mbox{\hyperlink{classPrepared__statement_a3f94255f9c510ed6339d5ca8609f9003}{deallocate}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_aae476bbde53477868c74819970654cf9}\label{classPrepared__statement_aae476bbde53477868c74819970654cf9}} 
+T\+HD $\ast$ {\bfseries thd}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a43cc99910f947a1edb2041b6ba7978c2}\label{classPrepared__statement_a43cc99910f947a1edb2041b6ba7978c2}} 
+\mbox{\hyperlink{classItem__param}{Item\+\_\+param}} $\ast$$\ast$ {\bfseries param\+\_\+array}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a6e1d8b78bc4e4c90342dc0601351f347}\label{classPrepared__statement_a6e1d8b78bc4e4c90342dc0601351f347}} 
+\mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}} $\ast$ {\bfseries cursor}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_ac6db9999376b18bd54a1f3fc4d45de52}\label{classPrepared__statement_ac6db9999376b18bd54a1f3fc4d45de52}} 
+uint {\bfseries param\+\_\+count}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a540582dd0ac036af68fdffa6864588fa}\label{classPrepared__statement_a540582dd0ac036af68fdffa6864588fa}} 
+uint {\bfseries last\+\_\+errno}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_ab9f86940e85aa16a85160804e028caf0}\label{classPrepared__statement_ab9f86940e85aa16a85160804e028caf0}} 
+char {\bfseries last\+\_\+error} \mbox{[}M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+M\+S\+G\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_a85a2579e7ff4d9d0cbbdd2990ee72149}\label{classPrepared__statement_a85a2579e7ff4d9d0cbbdd2990ee72149}} 
+const ulong {\bfseries id}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_abc0f85d1830c97dbfb54370827427f23}\label{classPrepared__statement_abc0f85d1830c97dbfb54370827427f23}} 
+L\+EX $\ast$ {\bfseries lex}
+\item 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \mbox{\hyperlink{classPrepared__statement_a1dd19fad322528df92ab374a076e3bf8}{m\+\_\+query\+\_\+string}}
+\item 
+\mbox{\Hypertarget{classPrepared__statement_afa80e420bb61337206170eb4571f015f}\label{classPrepared__statement_afa80e420bb61337206170eb4571f015f}} 
+P\+S\+I\+\_\+prepared\+\_\+stmt $\ast$ {\bfseries m\+\_\+prepared\+\_\+stmt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classPrepared__statement}{Prepared\+\_\+statement}}\+: a statement that can contain placeholders. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPrepared__statement_a3fd21faacd303bbc3c64a81d08755ab5}\label{classPrepared__statement_a3fd21faacd303bbc3c64a81d08755ab5}} 
+\index{Prepared\+\_\+statement@{Prepared\+\_\+statement}!````~Prepared\+\_\+statement@{$\sim$\+Prepared\+\_\+statement}}
+\index{````~Prepared\+\_\+statement@{$\sim$\+Prepared\+\_\+statement}!Prepared\+\_\+statement@{Prepared\+\_\+statement}}
+\subsubsection{\texorpdfstring{$\sim$\+Prepared\+\_\+statement()}{~Prepared\_statement()}}
+{\footnotesize\ttfamily Prepared\+\_\+statement\+::$\sim$\+Prepared\+\_\+statement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destroy this prepared statement, cleaning up all used memory and resources.
+
+This is called from \+::deallocate() to handle C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+C\+L\+O\+SE and D\+E\+A\+L\+L\+O\+C\+A\+TE P\+R\+E\+P\+A\+RE or when T\+HD ends and all prepared statements are freed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPrepared__statement_a3f94255f9c510ed6339d5ca8609f9003}\label{classPrepared__statement_a3f94255f9c510ed6339d5ca8609f9003}} 
+\index{Prepared\+\_\+statement@{Prepared\+\_\+statement}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!Prepared\+\_\+statement@{Prepared\+\_\+statement}}
+\subsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily void Prepared\+\_\+statement\+::deallocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Common part of D\+E\+A\+L\+L\+O\+C\+A\+TE P\+R\+E\+P\+A\+RE and mysqld\+\_\+stmt\+\_\+close. \mbox{\Hypertarget{classPrepared__statement_a242307a08c73c7f6ea9778d8f9af719b}\label{classPrepared__statement_a242307a08c73c7f6ea9778d8f9af719b}} 
+\index{Prepared\+\_\+statement@{Prepared\+\_\+statement}!execute\+\_\+loop@{execute\+\_\+loop}}
+\index{execute\+\_\+loop@{execute\+\_\+loop}!Prepared\+\_\+statement@{Prepared\+\_\+statement}}
+\subsubsection{\texorpdfstring{execute\+\_\+loop()}{execute\_loop()}}
+{\footnotesize\ttfamily bool Prepared\+\_\+statement\+::execute\+\_\+loop (\begin{DoxyParamCaption}\item[{String $\ast$}]{expanded\+\_\+query,  }\item[{bool}]{open\+\_\+cursor,  }\item[{uchar $\ast$}]{packet,  }\item[{uchar $\ast$}]{packet\+\_\+end }\end{DoxyParamCaption})}
+
+Execute a prepared statement. Re-\/prepare it a limited number of times if necessary.
+
+Try to execute a prepared statement. If there is a metadata validation error, prepare a new copy of the prepared statement, swap the old and the new statements, and try again. If there is a validation error again, repeat the above, but perform no more than M\+A\+X\+\_\+\+R\+E\+P\+R\+E\+P\+A\+R\+E\+\_\+\+A\+T\+T\+E\+M\+P\+TS.
+
+\begin{DoxyNote}{Note}
+We have to try several times in a loop since we release metadata locks on tables after prepared statement prepare. Therefore, a D\+DL statement may sneak in between prepare and execute of a new statement. If this happens repeatedly more than M\+A\+X\+\_\+\+R\+E\+P\+R\+E\+P\+A\+R\+E\+\_\+\+A\+T\+T\+E\+M\+P\+TS times, we give up.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if an error, F\+A\+L\+SE if success 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & either M\+A\+X\+\_\+\+R\+E\+P\+R\+E\+P\+A\+R\+E\+\_\+\+A\+T\+T\+E\+M\+P\+TS has been reached, or some general error \\
+\hline
+{\em F\+A\+L\+SE} & successfully executed the statement, perhaps after having reprepared it a few times. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classPrepared__statement_a7f79adbd42eb5d502f5d248d17de5b3c}\label{classPrepared__statement_a7f79adbd42eb5d502f5d248d17de5b3c}} 
+\index{Prepared\+\_\+statement@{Prepared\+\_\+statement}!prepare@{prepare}}
+\index{prepare@{prepare}!Prepared\+\_\+statement@{Prepared\+\_\+statement}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily bool Prepared\+\_\+statement\+::prepare (\begin{DoxyParamCaption}\item[{const char $\ast$}]{query\+\_\+str,  }\item[{size\+\_\+t}]{query\+\_\+length }\end{DoxyParamCaption})}
+
+Parse statement text, validate the statement, and prepare it for execution.
+
+You should not change global T\+HD state in this function, if at all possible\+: it may be called from any context, e.\+g. when executing a C\+O\+M\+\_\+$\ast$ command, and S\+Q\+L\+C\+O\+M\+\_\+$\ast$ command, or a stored procedure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+\_\+str} & statement text \\
+\hline
+{\em query\+\_\+length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Precondition\+: The caller must ensure that thd-\/$>$change\+\_\+list and thd-\/$>$free\+\_\+list is empty\+: this function will not back them up but will free in the end of its execution.
+
+Postcondition\+: thd-\/$>$mem\+\_\+root contains unused memory allocated during validation. 
+\end{DoxyNote}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPrepared__statement_a1dd19fad322528df92ab374a076e3bf8}\label{classPrepared__statement_a1dd19fad322528df92ab374a076e3bf8}} 
+\index{Prepared\+\_\+statement@{Prepared\+\_\+statement}!m\+\_\+query\+\_\+string@{m\+\_\+query\+\_\+string}}
+\index{m\+\_\+query\+\_\+string@{m\+\_\+query\+\_\+string}!Prepared\+\_\+statement@{Prepared\+\_\+statement}}
+\subsubsection{\texorpdfstring{m\+\_\+query\+\_\+string}{m\_query\_string}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG Prepared\+\_\+statement\+::m\+\_\+query\+\_\+string}
+
+The query associated with this statement. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+prepare.\+h\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,862 @@
+\hypertarget{group__Runtime__Environment}{}\section{Runtime Environment}
+\label{group__Runtime__Environment}\index{Runtime Environment@{Runtime Environment}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__Event__Scheduler}{Event Scheduler}}
+\item 
+\mbox{\hyperlink{group__Stored__Routines}{Stored Routines}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKill__non__super__conn}{Kill\+\_\+non\+\_\+super\+\_\+conn}}
+\item 
+class \mbox{\hyperlink{classParser__oom__handler}{Parser\+\_\+oom\+\_\+handler}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG}(LP)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gab5a8b65ae940ccbcd0665dae441270e7}\label{group__Runtime__Environment_gab5a8b65ae940ccbcd0665dae441270e7}} 
+\#define {\bfseries used\+\_\+stack}(A,  B)~(long) (B -\/ A)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga08d1ba6753fe093a35ab0c87ab118b8a}\label{group__Runtime__Environment_ga08d1ba6753fe093a35ab0c87ab118b8a}} 
+\#define {\bfseries M\+Y\+\_\+\+Y\+A\+C\+C\+\_\+\+I\+N\+IT}~1000
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga42ed848262f0f56a57d1e07c0d4878c3}\label{group__Runtime__Environment_ga42ed848262f0f56a57d1e07c0d4878c3}} 
+\#define {\bfseries M\+Y\+\_\+\+Y\+A\+C\+C\+\_\+\+M\+AX}~32000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga28dd9a1a616e1e1855b482ab1346f18e}\label{group__Runtime__Environment_ga28dd9a1a616e1e1855b482ab1346f18e}} 
+bool {\bfseries some\+\_\+non\+\_\+temp\+\_\+table\+\_\+to\+\_\+be\+\_\+updated} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga4c2f693556d7e6b0d1cf38ad801ae51c}\label{group__Runtime__Environment_ga4c2f693556d7e6b0d1cf38ad801ae51c}} 
+bool {\bfseries stmt\+\_\+causes\+\_\+implicit\+\_\+commit} (const T\+HD $\ast$thd, uint mask)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga50e3f222a46f347db65d19bd17941286}\label{group__Runtime__Environment_ga50e3f222a46f347db65d19bd17941286}} 
+void {\bfseries init\+\_\+update\+\_\+queries} (void)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga5544094e643119252380d39ac8cd2efa}\label{group__Runtime__Environment_ga5544094e643119252380d39ac8cd2efa}} 
+bool {\bfseries sqlcom\+\_\+can\+\_\+generate\+\_\+row\+\_\+events} (enum enum\+\_\+sql\+\_\+command command)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gacd6cd553a8c7199f9ab84c0f72871177}\label{group__Runtime__Environment_gacd6cd553a8c7199f9ab84c0f72871177}} 
+bool {\bfseries is\+\_\+update\+\_\+query} (enum enum\+\_\+sql\+\_\+command command)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga4b1b314a012674325f76ce371614df4d}\label{group__Runtime__Environment_ga4b1b314a012674325f76ce371614df4d}} 
+bool {\bfseries is\+\_\+explainable\+\_\+query} (enum enum\+\_\+sql\+\_\+command command)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga1eaa146f67e2bd9604ec2ec0645ba81c}{is\+\_\+log\+\_\+table\+\_\+write\+\_\+query}} (enum enum\+\_\+sql\+\_\+command command)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga10e39fc20b643c491433d588e0cc1c0e}\label{group__Runtime__Environment_ga10e39fc20b643c491433d588e0cc1c0e}} 
+void {\bfseries execute\+\_\+init\+\_\+command} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$init\+\_\+command, mysql\+\_\+rwlock\+\_\+t $\ast$var\+\_\+lock)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gaf3ca455b4e3e525a662ef572d60f9290}\label{group__Runtime__Environment_gaf3ca455b4e3e525a662ef572d60f9290}} 
+void {\bfseries free\+\_\+items} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_gaf7bccb54271a0546d92f2bc732abf3d1}{cleanup\+\_\+items}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga331df424a7892fbbad536f0f3a7b18f6}{do\+\_\+command}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_ga3632047b55b1b225c609f0f9ff46250a}{reset\+\_\+statement\+\_\+timer}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}{dispatch\+\_\+command}} (T\+HD $\ast$thd, const C\+O\+M\+\_\+\+D\+A\+TA $\ast$com\+\_\+data, enum enum\+\_\+server\+\_\+command command)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga12e1f9234a9969980b924de2e3fe487d}{shutdown}} (T\+HD $\ast$thd, enum mysql\+\_\+enum\+\_\+shutdown\+\_\+level level, enum enum\+\_\+server\+\_\+command command)
+\item 
+int \mbox{\hyperlink{group__Runtime__Environment_gaa5de0e97014b9b2e757a145f30eb7efb}{prepare\+\_\+schema\+\_\+table}} (T\+HD $\ast$thd, L\+EX $\ast$lex, Table\+\_\+ident $\ast$table\+\_\+ident, enum enum\+\_\+schema\+\_\+tables schema\+\_\+table\+\_\+idx)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga8b3573b4adc788a4eeddbf6d1cb12582}{alloc\+\_\+query}} (T\+HD $\ast$thd, const char $\ast$packet, size\+\_\+t packet\+\_\+length)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_gabbd6de1ff28f3b8c16300a74d412b3b3}{lock\+\_\+binlog\+\_\+for\+\_\+backup}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{group__Runtime__Environment_gac7751d9816645a7a68e879596ee7e558}{mysql\+\_\+execute\+\_\+command}} (T\+HD $\ast$thd, bool first\+\_\+level)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga9a660aa2196395412bc0c5c8e7baa33a}{check\+\_\+stack\+\_\+overrun}} (T\+HD $\ast$thd, long margin, uchar $\ast$buf M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga575f30fef70f57d45123b418f7a14efa}\label{group__Runtime__Environment_ga575f30fef70f57d45123b418f7a14efa}} 
+bool {\bfseries my\+\_\+yyoverflow} (short $\ast$$\ast$yyss, Y\+Y\+S\+T\+Y\+PE $\ast$$\ast$yyvs, \mbox{\hyperlink{structYYLTYPE}{Y\+Y\+L\+T\+Y\+PE}} $\ast$$\ast$yyls, ulong $\ast$yystacksize)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_gab37db6950d3b6bc16bbbb2ae0484ae55}{mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_gae69775e9e669f55cbedb293c4498717b}{create\+\_\+select\+\_\+for\+\_\+variable}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, const char $\ast$var\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga891266e258a6034e8f09a410bb4abe62}\label{group__Runtime__Environment_ga891266e258a6034e8f09a410bb4abe62}} 
+void {\bfseries mysql\+\_\+init\+\_\+multi\+\_\+delete} (L\+EX $\ast$lex)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_ga81611063376e9fd7612c3ca78d16f70d}{mysql\+\_\+parse}} (T\+HD $\ast$thd, Parser\+\_\+state $\ast$parser\+\_\+state)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga20dc4d55537ca52787813134e3639148}{add\+\_\+field\+\_\+to\+\_\+list}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$field\+\_\+name, enum\+\_\+field\+\_\+types type, char $\ast$length, char $\ast$decimals, uint type\+\_\+modifier, \mbox{\hyperlink{classItem}{Item}} $\ast$default\+\_\+value, \mbox{\hyperlink{classItem}{Item}} $\ast$on\+\_\+update\+\_\+value, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$comment, char $\ast$change, \mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$interval\+\_\+list, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, uint uint\+\_\+geom\+\_\+type, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$zip\+\_\+dict, \mbox{\hyperlink{classGenerated__column}{Generated\+\_\+column}} $\ast$gcol\+\_\+info)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_ga22aec956c23a6f1e16aef7d9db67bc79}{store\+\_\+position\+\_\+for\+\_\+column}} (const char $\ast$name)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_ga1d8a136c5775459ea3a35a0c27fc6c06}{add\+\_\+to\+\_\+list}} (\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $>$ \&list, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_gaa70b34c69515f56b1d43caa55824d5d5}{add\+\_\+join\+\_\+natural}} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$a, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$b, \mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$using\+\_\+fields, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$lex)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gaba2822d159fb63e7b05d3e58a5cf7ad7}\label{group__Runtime__Environment_gaba2822d159fb63e7b05d3e58a5cf7ad7}} 
+void {\bfseries killall\+\_\+non\+\_\+super\+\_\+threads} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_ga09d8997f1551aefa58a28606ff68c6f5}{append\+\_\+file\+\_\+to\+\_\+dir}} (T\+HD $\ast$thd, const char $\ast$$\ast$filename\+\_\+ptr, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gaf4fc9496f4801d17398eed353847b8b9}\label{group__Runtime__Environment_gaf4fc9496f4801d17398eed353847b8b9}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+eq\+\_\+creator} (bool invert)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga97a387bf8e37aebe6cf8b7efb31b0db8}\label{group__Runtime__Environment_ga97a387bf8e37aebe6cf8b7efb31b0db8}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+equal\+\_\+creator} (bool invert)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga20931601222cda32e69fd3945f6626cc}\label{group__Runtime__Environment_ga20931601222cda32e69fd3945f6626cc}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+ge\+\_\+creator} (bool invert)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga39f9fb67350b86979e8075ebf10ec3b2}\label{group__Runtime__Environment_ga39f9fb67350b86979e8075ebf10ec3b2}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+gt\+\_\+creator} (bool invert)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gad219be929fb149f9ffa69224e8214834}\label{group__Runtime__Environment_gad219be929fb149f9ffa69224e8214834}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+le\+\_\+creator} (bool invert)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga5581721018ae2b9b655cefa8bacfb255}\label{group__Runtime__Environment_ga5581721018ae2b9b655cefa8bacfb255}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+lt\+\_\+creator} (bool invert)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga83bec074d98c59c94c8b0f8631df6e5b}\label{group__Runtime__Environment_ga83bec074d98c59c94c8b0f8631df6e5b}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries comp\+\_\+ne\+\_\+creator} (bool invert)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{group__Runtime__Environment_gac994ea735fa021334a4e3c9370af1bd3}{all\+\_\+any\+\_\+subquery\+\_\+creator}} (\mbox{\hyperlink{classItem}{Item}} $\ast$left\+\_\+expr, chooser\+\_\+compare\+\_\+func\+\_\+creator cmp, bool all, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_ga95cca4e86f6c748bc34a5879ae0d36f4}{create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables}} (L\+EX $\ast$lex)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{group__Runtime__Environment_ga370cd1baacb8f9761d1f6caba0f01954}{negate\+\_\+expression}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$expr)
+\item 
+void \mbox{\hyperlink{group__Runtime__Environment_gae6109e9d93731678e792405018a30a24}{get\+\_\+default\+\_\+definer}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}} $\ast$definer)
+\item 
+\mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}} $\ast$ \mbox{\hyperlink{group__Runtime__Environment_ga8ba3e531f8d364506ca098138bd4b459}{create\+\_\+default\+\_\+definer}} (T\+HD $\ast$thd)
+\item 
+\mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}} $\ast$ \mbox{\hyperlink{group__Runtime__Environment_ga3317cfcf3ee5abca5accb1e77461ca56}{get\+\_\+current\+\_\+user}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}} $\ast$user)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gaffd668a5d759810bb2234bdab39aa840}\label{group__Runtime__Environment_gaffd668a5d759810bb2234bdab39aa840}} 
+bool {\bfseries check\+\_\+string\+\_\+char\+\_\+length} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&str, const char $\ast$err\+\_\+msg, size\+\_\+t max\+\_\+char\+\_\+length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, bool no\+\_\+error)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga35590aeb74bdebbccac86b889a2cb7d1}\label{group__Runtime__Environment_ga35590aeb74bdebbccac86b889a2cb7d1}} 
+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+RT int {\bfseries test\+\_\+if\+\_\+data\+\_\+home\+\_\+dir} (const char $\ast$dir)
+\item 
+C\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND bool \mbox{\hyperlink{group__Runtime__Environment_ga83c28ce3e415fe976a0d40cc4b4eef81}{check\+\_\+host\+\_\+name}} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&str)
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga064577e9942acfdd4ec6383b30792475}\label{group__Runtime__Environment_ga064577e9942acfdd4ec6383b30792475}} 
+int {\bfseries M\+Y\+S\+Q\+Lparse} (class T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Runtime__Environment_gabb1400ab6d81b2c3eb496d66df4d7674}{parse\+\_\+sql}} (T\+HD $\ast$thd, Parser\+\_\+state $\ast$parser\+\_\+state, \mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} $\ast$creation\+\_\+ctx)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga0fff36dbb3be1083486e5226dbe8267e}\label{group__Runtime__Environment_ga0fff36dbb3be1083486e5226dbe8267e}} 
+const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries command\+\_\+name} \mbox{[}$\,$\mbox{]}
+\item 
+uint \mbox{\hyperlink{group__Runtime__Environment_ga2b520658dfe2259770e9037c640d5399}{sql\+\_\+command\+\_\+flags}} \mbox{[}S\+Q\+L\+C\+O\+M\+\_\+\+E\+ND+1\mbox{]}
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_gabb2a8fda5bafb784dd61891fb58c9274}\label{group__Runtime__Environment_gabb2a8fda5bafb784dd61891fb58c9274}} 
+uint {\bfseries server\+\_\+command\+\_\+flags} \mbox{[}C\+O\+M\+\_\+\+E\+ND+1\mbox{]}
+\item 
+\mbox{\Hypertarget{group__Runtime__Environment_ga909f1c5c4bc6d72a01f18503b25d2e07}\label{group__Runtime__Environment_ga909f1c5c4bc6d72a01f18503b25d2e07}} 
+long {\bfseries max\+\_\+stack\+\_\+used}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__Runtime__Environment_gaad46f86d310fd4da9b8b2fa93068c4a0}\label{group__Runtime__Environment_gaad46f86d310fd4da9b8b2fa93068c4a0}} 
+\index{Runtime Environment@{Runtime Environment}!S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG@{S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG}}
+\index{S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG@{S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG}{SP\_COM\_STRING}}
+{\footnotesize\ttfamily \#define S\+P\+\_\+\+C\+O\+M\+\_\+\+S\+T\+R\+I\+NG(\begin{DoxyParamCaption}\item[{}]{LP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((LP)->sql\_command == SQLCOM\_CREATE\_SPFUNCTION || \(\backslash\)}
+\DoxyCodeLine{   (LP)->sql\_command == SQLCOM\_ALTER\_FUNCTION || \(\backslash\)}
+\DoxyCodeLine{   (LP)->sql\_command == SQLCOM\_SHOW\_CREATE\_FUNC || \(\backslash\)}
+\DoxyCodeLine{   (LP)->sql\_command == SQLCOM\_DROP\_FUNCTION ? \(\backslash\)}
+\DoxyCodeLine{   \textcolor{stringliteral}{"FUNCTION"} : \textcolor{stringliteral}{"PROCEDURE"})}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Runtime__Environment_ga20dc4d55537ca52787813134e3639148}\label{group__Runtime__Environment_ga20dc4d55537ca52787813134e3639148}} 
+\index{Runtime Environment@{Runtime Environment}!add\+\_\+field\+\_\+to\+\_\+list@{add\+\_\+field\+\_\+to\+\_\+list}}
+\index{add\+\_\+field\+\_\+to\+\_\+list@{add\+\_\+field\+\_\+to\+\_\+list}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{add\+\_\+field\+\_\+to\+\_\+list()}{add\_field\_to\_list()}}
+{\footnotesize\ttfamily bool add\+\_\+field\+\_\+to\+\_\+list (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{field\+\_\+name,  }\item[{enum\+\_\+field\+\_\+types}]{type,  }\item[{char $\ast$}]{length,  }\item[{char $\ast$}]{decimals,  }\item[{uint}]{type\+\_\+modifier,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{default\+\_\+value,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{on\+\_\+update\+\_\+value,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{comment,  }\item[{char $\ast$}]{change,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$}]{interval\+\_\+list,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs,  }\item[{uint}]{uint\+\_\+geom\+\_\+type,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{zip\+\_\+dict,  }\item[{\mbox{\hyperlink{classGenerated__column}{Generated\+\_\+column}} $\ast$}]{gcol\+\_\+info }\end{DoxyParamCaption})}
+
+Store field definition for create.
+
+\begin{DoxyReturn}{Returns}
+Return 0 if ok 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_gaa70b34c69515f56b1d43caa55824d5d5}\label{group__Runtime__Environment_gaa70b34c69515f56b1d43caa55824d5d5}} 
+\index{Runtime Environment@{Runtime Environment}!add\+\_\+join\+\_\+natural@{add\+\_\+join\+\_\+natural}}
+\index{add\+\_\+join\+\_\+natural@{add\+\_\+join\+\_\+natural}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{add\+\_\+join\+\_\+natural()}{add\_join\_natural()}}
+{\footnotesize\ttfamily void add\+\_\+join\+\_\+natural (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$}]{using\+\_\+fields,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{lex }\end{DoxyParamCaption})}
+
+Create a fake S\+E\+L\+E\+C\+T\+\_\+\+L\+EX for a unit.
+
+The method create a fake S\+E\+L\+E\+C\+T\+\_\+\+L\+EX object for a unit. This object is created for any union construct containing a union operation and also for any single select union construct of the form \begin{DoxyVerb}    (SELECT ... ORDER BY order_list [LIMIT n]) ORDER BY ... 
+    @endvarbatim
+    or of the form
+    @varbatim
+    (SELECT ... ORDER BY LIMIT n) ORDER BY ...
+    @endvarbatim
+  
+  @param thd_arg       thread handle
+
+  @note
+    The object is used to retrieve rows from the temporary table
+    where the result on the union is obtained.
+
+  @retval
+    1     on failure to create the object
+  @retval
+    0     on success
+*/
+
+bool st_select_lex_unit::add_fake_select_lex(THD *thd_arg)
+{
+  SELECT_LEX *first_sl= first_select();
+  DBUG_ENTER("add_fake_select_lex");
+  DBUG_ASSERT(!fake_select_lex);
+  DBUG_ASSERT(thd_arg == thd);
+
+  if (!(fake_select_lex= thd_arg->lex->new_empty_query_block()))
+    DBUG_RETURN(true);       /* purecov: inspected */
+  fake_select_lex->include_standalone(this, &fake_select_lex);
+  fake_select_lex->select_number= INT_MAX;
+  fake_select_lex->linkage= GLOBAL_OPTIONS_TYPE;
+  fake_select_lex->select_limit= 0;
+
+  fake_select_lex->set_context(first_sl->context.outer_context);
+
+  /* allow item list resolving in fake select for ORDER BY */
+  fake_select_lex->context.resolve_in_select_list= TRUE;
+
+  if (!is_union())
+  {
+    /* 
+      This works only for 
+      (SELECT ... ORDER BY list [LIMIT n]) ORDER BY order_list [LIMIT m],
+      (SELECT ... LIMIT n) ORDER BY order_list [LIMIT m]
+      just before the parser starts processing order_list
+    */ 
+    fake_select_lex->no_table_names_allowed= 1;
+  }
+  thd->lex->pop_context();
+  DBUG_RETURN(false);
+}
+
+
+/**
+  Push a new name resolution context for a JOIN ... ON clause to the
+  context stack of a query block.
+
+    Create a new name resolution context for a JOIN ... ON clause,
+    set the first and last leaves of the list of table references
+    to be used for name resolution, and push the newly created
+    context to the stack of contexts of the query.
+
+  @param pc        current parse context
+  @param left_op   left  operand of the JOIN
+  @param right_op  rigth operand of the JOIN
+
+  @todo Research if we should set the "outer_context" member of the new ON
+  context.
+
+  @retval
+    FALSE  if all is OK
+  @retval
+    TRUE   if a memory allocation error occured
+*/
+
+bool
+push_new_name_resolution_context(Parse_context *pc,
+                                 TABLE_LIST *left_op, TABLE_LIST *right_op)
+{
+  THD *thd= pc->thd;
+  Name_resolution_context *on_context;
+  if (!(on_context= new (thd->mem_root) Name_resolution_context))
+    return TRUE;
+  on_context->init();
+  on_context->first_name_resolution_table=
+    left_op->first_leaf_for_name_resolution();
+  on_context->last_name_resolution_table=
+    right_op->last_leaf_for_name_resolution();
+  on_context->select_lex= pc->select;
+  on_context->next_context= pc->select->first_context;
+  pc->select->first_context= on_context;
+
+  return thd->lex->push_context(on_context);
+}
+
+
+/**
+  Add an ON condition to the second operand of a JOIN ... ON.
+
+    Add an ON condition to the right operand of a JOIN ... ON clause.
+
+  @param b     the second operand of a JOIN ... ON
+  @param expr  the condition to be added to the ON clause
+*/
+
+void add_join_on(TABLE_LIST *b, Item *expr)
+{
+  if (expr)
+  {
+    b->set_join_cond_optim((Item*)1); // m_join_cond_optim is not ready
+    if (!b->join_cond())
+      b->set_join_cond(expr);
+    else
+    {
+      /*
+        If called from the parser, this happens if you have both a
+        right and left join. If called later, it happens if we add more
+        than one condition to the ON clause.
+      */
+      b->set_join_cond(new Item_cond_and(b->join_cond(), expr));
+    }
+    b->join_cond()->top_level_item();
+  }
+}
+
+
+/**
+  Mark that there is a NATURAL JOIN or JOIN ... USING between two
+  tables.
+
+    This function marks that table b should be joined with a either via
+    a NATURAL JOIN or via JOIN ... USING. Both join types are special
+    cases of each other, so we treat them together. The function
+    setup_conds() creates a list of equal condition between all fields
+    of the same name for NATURAL JOIN or the fields in 'using_fields'
+    for JOIN ... USING. The list of equality conditions is stored
+    either in b->join_cond(), or in JOIN::conds, depending on whether there
+    was an outer join.
+
+  EXAMPLE
+  @verbatim
+    SELECT * FROM t1 NATURAL LEFT JOIN t2
+     <=>
+    SELECT * FROM t1 LEFT JOIN t2 ON (t1.i=t2.i and t1.j=t2.j ... )
+
+    SELECT * FROM t1 NATURAL JOIN t2 WHERE <some_cond>
+     <=>
+    SELECT * FROM t1, t2 WHERE (t1.i=t2.i and t1.j=t2.j and <some_cond>)
+
+    SELECT * FROM t1 JOIN t2 USING(j) WHERE <some_cond>
+     <=>
+    SELECT * FROM t1, t2 WHERE (t1.j=t2.j and <some_cond>)\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Left join argument \\
+\hline
+{\em b} & Right join argument \\
+\hline
+{\em using\+\_\+fields} & \mbox{\hyperlink{classField}{Field}} names from U\+S\+I\+NG clause \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Runtime__Environment_ga1d8a136c5775459ea3a35a0c27fc6c06}\label{group__Runtime__Environment_ga1d8a136c5775459ea3a35a0c27fc6c06}} 
+\index{Runtime Environment@{Runtime Environment}!add\+\_\+to\+\_\+list@{add\+\_\+to\+\_\+list}}
+\index{add\+\_\+to\+\_\+list@{add\+\_\+to\+\_\+list}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{add\+\_\+to\+\_\+list()}{add\_to\_list()}}
+{\footnotesize\ttfamily void add\+\_\+to\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $>$ \&}]{list,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order }\end{DoxyParamCaption})}
+
+save order by and tables in own lists. \mbox{\Hypertarget{group__Runtime__Environment_gac994ea735fa021334a4e3c9370af1bd3}\label{group__Runtime__Environment_gac994ea735fa021334a4e3c9370af1bd3}} 
+\index{Runtime Environment@{Runtime Environment}!all\+\_\+any\+\_\+subquery\+\_\+creator@{all\+\_\+any\+\_\+subquery\+\_\+creator}}
+\index{all\+\_\+any\+\_\+subquery\+\_\+creator@{all\+\_\+any\+\_\+subquery\+\_\+creator}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{all\+\_\+any\+\_\+subquery\+\_\+creator()}{all\_any\_subquery\_creator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ all\+\_\+any\+\_\+subquery\+\_\+creator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{left\+\_\+expr,  }\item[{chooser\+\_\+compare\+\_\+func\+\_\+creator}]{cmp,  }\item[{bool}]{all,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{select\+\_\+lex }\end{DoxyParamCaption})}
+
+Construct A\+L\+L/\+A\+N\+Y/\+S\+O\+ME subquery \mbox{\hyperlink{classItem}{Item}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+expr} & pointer to left expression \\
+\hline
+{\em cmp} & compare function creator \\
+\hline
+{\em all} & true if we create A\+LL subquery \\
+\hline
+{\em select\+\_\+lex} & pointer on parsed subquery structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+constructed \mbox{\hyperlink{classItem}{Item}} (or 0 if out of memory) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_ga8b3573b4adc788a4eeddbf6d1cb12582}\label{group__Runtime__Environment_ga8b3573b4adc788a4eeddbf6d1cb12582}} 
+\index{Runtime Environment@{Runtime Environment}!alloc\+\_\+query@{alloc\+\_\+query}}
+\index{alloc\+\_\+query@{alloc\+\_\+query}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{alloc\+\_\+query()}{alloc\_query()}}
+{\footnotesize\ttfamily bool alloc\+\_\+query (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{packet,  }\item[{size\+\_\+t}]{packet\+\_\+length }\end{DoxyParamCaption})}
+
+Read query from packet and store in thd-\/$>$query. Used in C\+O\+M\+\_\+\+Q\+U\+E\+RY and C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE.
+
+Sets the following T\+HD variables\+:
+\begin{DoxyItemize}
+\item query
+\item query\+\_\+length
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & ok \\
+\hline
+{\em T\+R\+UE} & error; In this case thd-\/$>$fatal\+\_\+error is set \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Runtime__Environment_ga09d8997f1551aefa58a28606ff68c6f5}\label{group__Runtime__Environment_ga09d8997f1551aefa58a28606ff68c6f5}} 
+\index{Runtime Environment@{Runtime Environment}!append\+\_\+file\+\_\+to\+\_\+dir@{append\+\_\+file\+\_\+to\+\_\+dir}}
+\index{append\+\_\+file\+\_\+to\+\_\+dir@{append\+\_\+file\+\_\+to\+\_\+dir}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{append\+\_\+file\+\_\+to\+\_\+dir()}{append\_file\_to\_dir()}}
+{\footnotesize\ttfamily bool append\+\_\+file\+\_\+to\+\_\+dir (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$$\ast$}]{filename\+\_\+ptr,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+If pointer is not a null pointer, append filename to it. \mbox{\Hypertarget{group__Runtime__Environment_ga83c28ce3e415fe976a0d40cc4b4eef81}\label{group__Runtime__Environment_ga83c28ce3e415fe976a0d40cc4b4eef81}} 
+\index{Runtime Environment@{Runtime Environment}!check\+\_\+host\+\_\+name@{check\+\_\+host\+\_\+name}}
+\index{check\+\_\+host\+\_\+name@{check\+\_\+host\+\_\+name}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{check\+\_\+host\+\_\+name()}{check\_host\_name()}}
+{\footnotesize\ttfamily C\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND bool check\+\_\+host\+\_\+name (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{str }\end{DoxyParamCaption})}
+
+Check that host name string is valid.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & string to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & host name is ok \\
+\hline
+{\em T\+R\+UE} & host name string is longer than max\+\_\+length or has invalid symbols \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Runtime__Environment_ga9a660aa2196395412bc0c5c8e7baa33a}\label{group__Runtime__Environment_ga9a660aa2196395412bc0c5c8e7baa33a}} 
+\index{Runtime Environment@{Runtime Environment}!check\+\_\+stack\+\_\+overrun@{check\+\_\+stack\+\_\+overrun}}
+\index{check\+\_\+stack\+\_\+overrun@{check\+\_\+stack\+\_\+overrun}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{check\+\_\+stack\+\_\+overrun()}{check\_stack\_overrun()}}
+{\footnotesize\ttfamily bool check\+\_\+stack\+\_\+overrun (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{long}]{margin,  }\item[{uchar $\ast$buf }]{M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE(unused) }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Note\+: The \textquotesingle{}buf\textquotesingle{} parameter is necessary, even if it is unused here.
+\begin{DoxyItemize}
+\item fix\+\_\+fields functions has a \char`\"{}dummy\char`\"{} buffer large enough for the corresponding exec. (Thus we only have to check in fix\+\_\+fields.)
+\item Passing to \mbox{\hyperlink{group__Runtime__Environment_ga9a660aa2196395412bc0c5c8e7baa33a}{check\+\_\+stack\+\_\+overrun()}} prevents the compiler from removing it. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Runtime__Environment_gaf7bccb54271a0546d92f2bc732abf3d1}\label{group__Runtime__Environment_gaf7bccb54271a0546d92f2bc732abf3d1}} 
+\index{Runtime Environment@{Runtime Environment}!cleanup\+\_\+items@{cleanup\+\_\+items}}
+\index{cleanup\+\_\+items@{cleanup\+\_\+items}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+items()}{cleanup\_items()}}
+{\footnotesize\ttfamily void cleanup\+\_\+items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+This works because items are allocated with sql\+\_\+alloc(). \begin{DoxyNote}{Note}
+The function also handles null pointers (empty list). 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Runtime__Environment_ga8ba3e531f8d364506ca098138bd4b459}\label{group__Runtime__Environment_ga8ba3e531f8d364506ca098138bd4b459}} 
+\index{Runtime Environment@{Runtime Environment}!create\+\_\+default\+\_\+definer@{create\+\_\+default\+\_\+definer}}
+\index{create\+\_\+default\+\_\+definer@{create\+\_\+default\+\_\+definer}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{create\+\_\+default\+\_\+definer()}{create\_default\_definer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}}$\ast$ create\+\_\+default\+\_\+definer (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Create default definer for the specified T\+HD.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handler\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item On success, return a valid pointer to the created and initialized L\+E\+X\+\_\+\+U\+S\+ER, which contains definer information.
+\item On error, return 0. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_gae69775e9e669f55cbedb293c4498717b}\label{group__Runtime__Environment_gae69775e9e669f55cbedb293c4498717b}} 
+\index{Runtime Environment@{Runtime Environment}!create\+\_\+select\+\_\+for\+\_\+variable@{create\+\_\+select\+\_\+for\+\_\+variable}}
+\index{create\+\_\+select\+\_\+for\+\_\+variable@{create\+\_\+select\+\_\+for\+\_\+variable}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{create\+\_\+select\+\_\+for\+\_\+variable()}{create\_select\_for\_variable()}}
+{\footnotesize\ttfamily void create\+\_\+select\+\_\+for\+\_\+variable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{const char $\ast$}]{var\+\_\+name }\end{DoxyParamCaption})}
+
+Create a select to return the same output as \textquotesingle{}S\+E\+L\+E\+CT @var\+\_\+name\textquotesingle{}.
+
+Used for S\+H\+OW C\+O\+U\+N\+T($\ast$) \mbox{[} W\+A\+R\+N\+I\+N\+GS $\vert$ E\+R\+R\+OR\mbox{]}.
+
+This will crash with a core dump if the variable doesn\textquotesingle{}t exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Current parse context \\
+\hline
+{\em var\+\_\+name} & Variable name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Runtime__Environment_ga95cca4e86f6c748bc34a5879ae0d36f4}\label{group__Runtime__Environment_ga95cca4e86f6c748bc34a5879ae0d36f4}} 
+\index{Runtime Environment@{Runtime Environment}!create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables@{create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables}}
+\index{create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables@{create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables()}{create\_table\_set\_open\_action\_and\_adjust\_tables()}}
+{\footnotesize\ttfamily void create\+\_\+table\+\_\+set\+\_\+open\+\_\+action\+\_\+and\+\_\+adjust\+\_\+tables (\begin{DoxyParamCaption}\item[{L\+EX $\ast$}]{lex }\end{DoxyParamCaption})}
+
+Set proper open mode and table type for element representing target table of C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement, also adjust statement table list if necessary. \mbox{\Hypertarget{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}\label{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}} 
+\index{Runtime Environment@{Runtime Environment}!dispatch\+\_\+command@{dispatch\+\_\+command}}
+\index{dispatch\+\_\+command@{dispatch\+\_\+command}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{dispatch\+\_\+command()}{dispatch\_command()}}
+{\footnotesize\ttfamily bool dispatch\+\_\+command (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const C\+O\+M\+\_\+\+D\+A\+TA $\ast$}]{com\+\_\+data,  }\item[{enum enum\+\_\+server\+\_\+command}]{command }\end{DoxyParamCaption})}
+
+Perform one connection-\/level (C\+O\+M\+\_\+\+X\+X\+XX) command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & connection handle \\
+\hline
+{\em command} & type of command to perform  com\+\_\+data union to store the generated command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000100}{Todo}}]set thd-\/$>$lex-\/$>$sql\+\_\+command to S\+Q\+L\+C\+O\+M\+\_\+\+E\+ND here. 
+
+The following has to be changed to an 8 byte integer\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & request of thread shutdown, i. e. if command is C\+O\+M\+\_\+\+Q\+U\+I\+T/\+C\+O\+M\+\_\+\+S\+H\+U\+T\+D\+O\+WN \\
+\hline
+\end{DoxyRetVals}
+Clear the set of flags that are expected to be cleared at the beginning of each command.
+
+Enforce password expiration for all R\+PC commands, except the following\+:
+
+C\+O\+M\+\_\+\+Q\+U\+E\+RY does a more fine-\/grained check later. C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+C\+L\+O\+SE and C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+S\+E\+N\+D\+\_\+\+L\+O\+N\+G\+\_\+\+D\+A\+TA don\textquotesingle{}t return anything. C\+O\+M\+\_\+\+P\+I\+NG only discloses information that the server is running, and that\textquotesingle{}s available through other means. C\+O\+M\+\_\+\+Q\+U\+IT should work even for expired statements.\mbox{\Hypertarget{group__Runtime__Environment_ga331df424a7892fbbad536f0f3a7b18f6}\label{group__Runtime__Environment_ga331df424a7892fbbad536f0f3a7b18f6}} 
+\index{Runtime Environment@{Runtime Environment}!do\+\_\+command@{do\+\_\+command}}
+\index{do\+\_\+command@{do\+\_\+command}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{do\+\_\+command()}{do\_command()}}
+{\footnotesize\ttfamily bool do\+\_\+command (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Read one command from connection and execute it (query or simple command). This function is called in loop from thread function.
+
+For profiling to work, it must never be called recursively.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em 1} & request of thread shutdown (see \mbox{\hyperlink{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}{dispatch\+\_\+command()}} description) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Runtime__Environment_ga3317cfcf3ee5abca5accb1e77461ca56}\label{group__Runtime__Environment_ga3317cfcf3ee5abca5accb1e77461ca56}} 
+\index{Runtime Environment@{Runtime Environment}!get\+\_\+current\+\_\+user@{get\+\_\+current\+\_\+user}}
+\index{get\+\_\+current\+\_\+user@{get\+\_\+current\+\_\+user}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+user()}{get\_current\_user()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}}$\ast$ get\+\_\+current\+\_\+user (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}} $\ast$}]{user }\end{DoxyParamCaption})}
+
+Retuns information about user or current user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handler \\
+\hline
+\mbox{\texttt{ in}}  & {\em user} & user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item On success, return a valid pointer to initialized L\+E\+X\+\_\+\+U\+S\+ER, which contains user information.
+\item On error, return 0. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_gae6109e9d93731678e792405018a30a24}\label{group__Runtime__Environment_gae6109e9d93731678e792405018a30a24}} 
+\index{Runtime Environment@{Runtime Environment}!get\+\_\+default\+\_\+definer@{get\+\_\+default\+\_\+definer}}
+\index{get\+\_\+default\+\_\+definer@{get\+\_\+default\+\_\+definer}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{get\+\_\+default\+\_\+definer()}{get\_default\_definer()}}
+{\footnotesize\ttfamily void get\+\_\+default\+\_\+definer (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structst__lex__user}{L\+E\+X\+\_\+\+U\+S\+ER}} $\ast$}]{definer }\end{DoxyParamCaption})}
+
+Set the specified definer to the default value, which is the current user in the thread.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handler \\
+\hline
+\mbox{\texttt{ out}}  & {\em definer} & definer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Runtime__Environment_ga1eaa146f67e2bd9604ec2ec0645ba81c}\label{group__Runtime__Environment_ga1eaa146f67e2bd9604ec2ec0645ba81c}} 
+\index{Runtime Environment@{Runtime Environment}!is\+\_\+log\+\_\+table\+\_\+write\+\_\+query@{is\+\_\+log\+\_\+table\+\_\+write\+\_\+query}}
+\index{is\+\_\+log\+\_\+table\+\_\+write\+\_\+query@{is\+\_\+log\+\_\+table\+\_\+write\+\_\+query}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{is\+\_\+log\+\_\+table\+\_\+write\+\_\+query()}{is\_log\_table\_write\_query()}}
+{\footnotesize\ttfamily bool is\+\_\+log\+\_\+table\+\_\+write\+\_\+query (\begin{DoxyParamCaption}\item[{enum enum\+\_\+sql\+\_\+command}]{command }\end{DoxyParamCaption})}
+
+Check if a sql command is allowed to write to log tables. 
+\begin{DoxyParams}{Parameters}
+{\em command} & The S\+QL command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if writing is allowed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_gabbd6de1ff28f3b8c16300a74d412b3b3}\label{group__Runtime__Environment_gabbd6de1ff28f3b8c16300a74d412b3b3}} 
+\index{Runtime Environment@{Runtime Environment}!lock\+\_\+binlog\+\_\+for\+\_\+backup@{lock\+\_\+binlog\+\_\+for\+\_\+backup}}
+\index{lock\+\_\+binlog\+\_\+for\+\_\+backup@{lock\+\_\+binlog\+\_\+for\+\_\+backup}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{lock\+\_\+binlog\+\_\+for\+\_\+backup()}{lock\_binlog\_for\_backup()}}
+{\footnotesize\ttfamily bool lock\+\_\+binlog\+\_\+for\+\_\+backup (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Acquire a global binlog lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE in case of success, T\+R\+UE in case of error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_gac7751d9816645a7a68e879596ee7e558}\label{group__Runtime__Environment_gac7751d9816645a7a68e879596ee7e558}} 
+\index{Runtime Environment@{Runtime Environment}!mysql\+\_\+execute\+\_\+command@{mysql\+\_\+execute\+\_\+command}}
+\index{mysql\+\_\+execute\+\_\+command@{mysql\+\_\+execute\+\_\+command}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{mysql\+\_\+execute\+\_\+command()}{mysql\_execute\_command()}}
+{\footnotesize\ttfamily int mysql\+\_\+execute\+\_\+command (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{first\+\_\+level }\end{DoxyParamCaption})}
+
+Execute command saved in thd and lex-\/$>$sql\+\_\+command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000101}{Todo}}]
+\begin{DoxyItemize}
+\item Invalidate the table in the query cache if something changed after unlocking when changes become visible. 
+\end{DoxyItemize}
+
+\+: this is workaround. right way will be move invalidating in the unlock procedure.
+\begin{DoxyItemize}
+\item T\+O\+DO\+: use check\+\_\+change\+\_\+password()
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+N\+O\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+C\+H\+E\+C\+KS \mbox{\Hypertarget{group__Runtime__Environment_ga81611063376e9fd7612c3ca78d16f70d}\label{group__Runtime__Environment_ga81611063376e9fd7612c3ca78d16f70d}} 
+\index{Runtime Environment@{Runtime Environment}!mysql\+\_\+parse@{mysql\+\_\+parse}}
+\index{mysql\+\_\+parse@{mysql\+\_\+parse}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{mysql\+\_\+parse()}{mysql\_parse()}}
+{\footnotesize\ttfamily void mysql\+\_\+parse (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Parser\+\_\+state $\ast$}]{parser\+\_\+state }\end{DoxyParamCaption})}
+
+Parse a query.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Current thread \\
+\hline
+ & {\em rawbuf} & Begining of the query text \\
+\hline
+ & {\em length} & Length of the query text \\
+\hline
+\mbox{\texttt{ out}}  & {\em found\+\_\+semicolon} & For multi queries, position of the character of the next query in the query text. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Runtime__Environment_gab37db6950d3b6bc16bbbb2ae0484ae55}\label{group__Runtime__Environment_gab37db6950d3b6bc16bbbb2ae0484ae55}} 
+\index{Runtime Environment@{Runtime Environment}!mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command@{mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command}}
+\index{mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command@{mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command()}{mysql\_reset\_thd\_for\_next\_command()}}
+{\footnotesize\ttfamily void mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Reset the part of T\+HD responsible for the state of command processing.
+
+This needs to be called before execution of every statement (prepared or conventional). It is not called by substatements of routines.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000102}{Todo}}]Remove mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command and only use the member function.\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000103}{Todo}}]Call it after we use T\+HD for queries, not before. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Runtime__Environment_ga370cd1baacb8f9761d1f6caba0f01954}\label{group__Runtime__Environment_ga370cd1baacb8f9761d1f6caba0f01954}} 
+\index{Runtime Environment@{Runtime Environment}!negate\+\_\+expression@{negate\+\_\+expression}}
+\index{negate\+\_\+expression@{negate\+\_\+expression}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{negate\+\_\+expression()}{negate\_expression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ negate\+\_\+expression (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{expr }\end{DoxyParamCaption})}
+
+negate given expression.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context \\
+\hline
+{\em expr} & expression for negation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+negated expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Runtime__Environment_gabb1400ab6d81b2c3eb496d66df4d7674}\label{group__Runtime__Environment_gabb1400ab6d81b2c3eb496d66df4d7674}} 
+\index{Runtime Environment@{Runtime Environment}!parse\+\_\+sql@{parse\+\_\+sql}}
+\index{parse\+\_\+sql@{parse\+\_\+sql}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{parse\+\_\+sql()}{parse\_sql()}}
+{\footnotesize\ttfamily bool parse\+\_\+sql (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Parser\+\_\+state $\ast$}]{parser\+\_\+state,  }\item[{\mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} $\ast$}]{creation\+\_\+ctx }\end{DoxyParamCaption})}
+
+This is a wrapper of M\+Y\+S\+Q\+Lparse(). All the code should call \mbox{\hyperlink{group__Runtime__Environment_gabb1400ab6d81b2c3eb496d66df4d7674}{parse\+\_\+sql()}} instead of M\+Y\+S\+Q\+Lparse().
+
+As a by product of parsing, the parser can also generate a query digest. To compute a digest, invoke this function as follows.
+
+\begin{DoxyVerb}  THD *thd = ...;
+  const char *query_text = ...;
+  uint query_length = ...;
+  Object_creation_ctx *ctx = ...;
+  bool rc;
+
+  Parser_state parser_state;
+  if (parser_state.init(thd, query_text, query_length)
+  {
+    ... handle error
+  }
+
+  parser_state.m_input.m_compute_digest= true;
+  
+  rc= parse_sql(the, &parser_state, ctx);
+  if (! rc)
+  {
+    unsigned char md5[MD5_HASH_SIZE];
+    char digest_text[1024];
+    bool truncated;
+    const sql_digest_storage *digest= & thd->m_digest->m_digest_storage;
+
+    compute_digest_md5(digest, & md5[0]);
+    compute_digest_text(digest, & digest_text[0], sizeof(digest_text), & truncated);
+  }
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em parser\+\_\+state} & Parser state. \\
+\hline
+{\em creation\+\_\+ctx} & Object creation context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & on success. \\
+\hline
+{\em T\+R\+UE} & on parsing error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Runtime__Environment_gaa5de0e97014b9b2e757a145f30eb7efb}\label{group__Runtime__Environment_gaa5de0e97014b9b2e757a145f30eb7efb}} 
+\index{Runtime Environment@{Runtime Environment}!prepare\+\_\+schema\+\_\+table@{prepare\+\_\+schema\+\_\+table}}
+\index{prepare\+\_\+schema\+\_\+table@{prepare\+\_\+schema\+\_\+table}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{prepare\+\_\+schema\+\_\+table()}{prepare\_schema\_table()}}
+{\footnotesize\ttfamily int prepare\+\_\+schema\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+EX $\ast$}]{lex,  }\item[{Table\+\_\+ident $\ast$}]{table\+\_\+ident,  }\item[{enum enum\+\_\+schema\+\_\+tables}]{schema\+\_\+table\+\_\+idx }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object for an I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA table.
+
+This function is used in the parser to convert a S\+H\+OW or D\+E\+S\+C\+R\+I\+BE table\+\_\+name command to a S\+E\+L\+E\+CT from I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA. It prepares a S\+E\+L\+E\+C\+T\+\_\+\+L\+EX and a \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object to represent the given command as a S\+E\+L\+E\+CT parse tree.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em lex} & current lex \\
+\hline
+{\em table\+\_\+ident} & table alias if it\textquotesingle{}s used \\
+\hline
+{\em schema\+\_\+table\+\_\+idx} & the type of the I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA table to be created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Due to the way this function works with memory and L\+EX it cannot be used outside the parser (parse tree transformations outside the parser break PS and SP).
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em 1} & out of memory or S\+H\+OW commands are not allowed in this version of the server. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Runtime__Environment_ga3632047b55b1b225c609f0f9ff46250a}\label{group__Runtime__Environment_ga3632047b55b1b225c609f0f9ff46250a}} 
+\index{Runtime Environment@{Runtime Environment}!reset\+\_\+statement\+\_\+timer@{reset\+\_\+statement\+\_\+timer}}
+\index{reset\+\_\+statement\+\_\+timer@{reset\+\_\+statement\+\_\+timer}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{reset\+\_\+statement\+\_\+timer()}{reset\_statement\_timer()}}
+{\footnotesize\ttfamily void reset\+\_\+statement\+\_\+timer (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Deactivate the timer associated with the statement that was executed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread (session) context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Runtime__Environment_ga12e1f9234a9969980b924de2e3fe487d}\label{group__Runtime__Environment_ga12e1f9234a9969980b924de2e3fe487d}} 
+\index{Runtime Environment@{Runtime Environment}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily bool shutdown (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum mysql\+\_\+enum\+\_\+shutdown\+\_\+level}]{level,  }\item[{enum enum\+\_\+server\+\_\+command}]{command }\end{DoxyParamCaption})}
+
+Shutdown the mysqld server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread (session) context. \\
+\hline
+{\em level} & Shutdown level. \\
+\hline
+{\em command} & type of command to perform\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success \\
+\hline
+{\em false} & When user has insufficient privilege or unsupported shutdown level \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Runtime__Environment_ga22aec956c23a6f1e16aef7d9db67bc79}\label{group__Runtime__Environment_ga22aec956c23a6f1e16aef7d9db67bc79}} 
+\index{Runtime Environment@{Runtime Environment}!store\+\_\+position\+\_\+for\+\_\+column@{store\+\_\+position\+\_\+for\+\_\+column}}
+\index{store\+\_\+position\+\_\+for\+\_\+column@{store\+\_\+position\+\_\+for\+\_\+column}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{store\+\_\+position\+\_\+for\+\_\+column()}{store\_position\_for\_column()}}
+{\footnotesize\ttfamily void store\+\_\+position\+\_\+for\+\_\+column (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Store position for column in A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} .. A\+DD column. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__Runtime__Environment_ga2b520658dfe2259770e9037c640d5399}\label{group__Runtime__Environment_ga2b520658dfe2259770e9037c640d5399}} 
+\index{Runtime Environment@{Runtime Environment}!sql\+\_\+command\+\_\+flags@{sql\+\_\+command\+\_\+flags}}
+\index{sql\+\_\+command\+\_\+flags@{sql\+\_\+command\+\_\+flags}!Runtime Environment@{Runtime Environment}}
+\subsubsection{\texorpdfstring{sql\+\_\+command\+\_\+flags}{sql\_command\_flags}}
+{\footnotesize\ttfamily uint sql\+\_\+command\+\_\+flags\mbox{[}S\+Q\+L\+C\+O\+M\+\_\+\+E\+ND+1\mbox{]}}
+
+Mark all commands that somehow changes a table.
+
+This is used to check number of updates / hour.
+
+sql\+\_\+command is actually set to S\+Q\+L\+C\+O\+M\+\_\+\+E\+ND sometimes so we need the +1 to include it in the array.
+
+See C\+O\+M\+M\+A\+N\+D\+\_\+\+F\+L\+A\+G\+\_\+xxx for different type of commands 2 -\/ query that returns meaningful R\+O\+W\+\_\+\+C\+O\+U\+N\+T() -\/ a number of modified rows 

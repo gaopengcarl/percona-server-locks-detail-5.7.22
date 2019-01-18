@@ -1,0 +1,169 @@
+\hypertarget{classsp__instr__jump}{}\section{sp\+\_\+instr\+\_\+jump Class Reference}
+\label{classsp__instr__jump}\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+jump\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsp__instr__jump}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__jump_a3c1f0bf4af9a476c52e662cbcb854427}\label{classsp__instr__jump_a3c1f0bf4af9a476c52e662cbcb854427}} 
+{\bfseries sp\+\_\+instr\+\_\+jump} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx)
+\item 
+\mbox{\Hypertarget{classsp__instr__jump_a5cdf5b452566a03d3229acca3c3d1b21}\label{classsp__instr__jump_a5cdf5b452566a03d3229acca3c3d1b21}} 
+{\bfseries sp\+\_\+instr\+\_\+jump} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, uint dest)
+\item 
+\mbox{\Hypertarget{classsp__instr__jump_a08f56fe5d0500607bb76d056a1d2abf7}\label{classsp__instr__jump_a08f56fe5d0500607bb76d056a1d2abf7}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__jump_a2b76438345358e22b6029129828d66d5}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual uint \mbox{\hyperlink{classsp__instr__jump_a4daedb439c97a78adf9957fc35121dbe}{opt\+\_\+mark}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$leads)
+\item 
+virtual uint \mbox{\hyperlink{classsp__instr__jump_a7c0f595bd9f39e9b38cc1e06333c3db0}{opt\+\_\+shortcut\+\_\+jump}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$start)
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__jump_a84478dd9ceeedc8693c60d77d24816f7}{opt\+\_\+move}} (uint dst, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__branch__instr}{sp\+\_\+branch\+\_\+instr}} $>$ $\ast$ibp)
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__jump_aee2d8071b4f12109135a0e22a9ba3c71}{set\+\_\+destination}} (uint old\+\_\+dest, uint new\+\_\+dest)
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__jump_ad4ac1776111c39aa6d2af89b0ffe0af6}{backpatch}} (uint dest)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__jump_a6d6eb2bcf4fddac8436bbb02c2f60e3a}\label{classsp__instr__jump_a6d6eb2bcf4fddac8436bbb02c2f60e3a}} 
+uint \mbox{\hyperlink{classsp__instr__jump_a6d6eb2bcf4fddac8436bbb02c2f60e3a}{m\+\_\+dest}}
+\begin{DoxyCompactList}\small\item\em Where we will go. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__instr__jump_a5cab6f8e6b3783018314d2a2f725cfd8}\label{classsp__instr__jump_a5cab6f8e6b3783018314d2a2f725cfd8}} 
+\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$ {\bfseries m\+\_\+optdest}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is base class for all kinds of jump instructions.
+
+\begin{DoxyNote}{Note}
+this is the only class, we directly construct instances of, that has subclasses. We also redefine \mbox{\hyperlink{classsp__instr__jump}{sp\+\_\+instr\+\_\+jump}} behavior in those subclasses.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000073}{Todo}}]later we will consider introducing a new class, which will be the base for \mbox{\hyperlink{classsp__instr__jump}{sp\+\_\+instr\+\_\+jump}}, \mbox{\hyperlink{classsp__instr__set__case__expr}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}} and \mbox{\hyperlink{classsp__instr__jump__case__when}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}. Something like sp\+\_\+regular\+\_\+branch\+\_\+instr (similar to \mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}). \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__jump_ad4ac1776111c39aa6d2af89b0ffe0af6}\label{classsp__instr__jump_ad4ac1776111c39aa6d2af89b0ffe0af6}} 
+\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}!backpatch@{backpatch}}
+\index{backpatch@{backpatch}!sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+\subsubsection{\texorpdfstring{backpatch()}{backpatch()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+jump\+::backpatch (\begin{DoxyParamCaption}\item[{uint}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Update all instruction with the given label in the backpatch list to the specified instruction pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & destination instruction pointer. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsp__branch__instr_a10bd06254e30634e367405f0fba5ab0d}{sp\+\_\+branch\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__hpush__jump_addad7cbed316eb02d7238e07e092c558}{sp\+\_\+instr\+\_\+hpush\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__instr__jump_a2b76438345358e22b6029129828d66d5}\label{classsp__instr__jump_a2b76438345358e22b6029129828d66d5}} 
+\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+jump\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__instr_a78add2ec1a98f8ba58d75c8eb40ed8cb}{sp\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__hreturn_a8491a8712319d0ba1b698c18ae4d8b48}{sp\+\_\+instr\+\_\+hreturn}}, and \mbox{\hyperlink{classsp__instr__hpush__jump_a5ecf945e7fa0e56f22447a64a6fa545e}{sp\+\_\+instr\+\_\+hpush\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__instr__jump_a4daedb439c97a78adf9957fc35121dbe}\label{classsp__instr__jump_a4daedb439c97a78adf9957fc35121dbe}} 
+\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}!opt\+\_\+mark@{opt\+\_\+mark}}
+\index{opt\+\_\+mark@{opt\+\_\+mark}!sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+\subsubsection{\texorpdfstring{opt\+\_\+mark()}{opt\_mark()}}
+{\footnotesize\ttfamily uint sp\+\_\+instr\+\_\+jump\+::opt\+\_\+mark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$}]{leads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Mark this instruction as reachable during optimization and return the index to the next instruction. Jump instruction will add their destination to the leads list. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a10b7b33a30316fca4cff5adfe98e282c}{sp\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__hreturn_a2154f9d995bbd7aa47b0fe714ef3c33f}{sp\+\_\+instr\+\_\+hreturn}}, and \mbox{\hyperlink{classsp__instr__hpush__jump_affb8b5892ac7dd82bcbb99183f6bc6e3}{sp\+\_\+instr\+\_\+hpush\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__instr__jump_a84478dd9ceeedc8693c60d77d24816f7}\label{classsp__instr__jump_a84478dd9ceeedc8693c60d77d24816f7}} 
+\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}!opt\+\_\+move@{opt\+\_\+move}}
+\index{opt\+\_\+move@{opt\+\_\+move}!sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+\subsubsection{\texorpdfstring{opt\+\_\+move()}{opt\_move()}}
+{\footnotesize\ttfamily void sp\+\_\+instr\+\_\+jump\+::opt\+\_\+move (\begin{DoxyParamCaption}\item[{uint}]{dst,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__branch__instr}{sp\+\_\+branch\+\_\+instr}} $>$ $\ast$}]{ibp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Inform the instruction that it has been moved during optimization. Most instructions will simply update its index, but jump instructions must also take care of their destination pointers. Forward jumps get pushed to the backpatch list \textquotesingle{}ibp\textquotesingle{}. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a7b73990576fc8cd3f4a8bd16003ab44b}{sp\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__jump_a7c0f595bd9f39e9b38cc1e06333c3db0}\label{classsp__instr__jump_a7c0f595bd9f39e9b38cc1e06333c3db0}} 
+\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}!opt\+\_\+shortcut\+\_\+jump@{opt\+\_\+shortcut\+\_\+jump}}
+\index{opt\+\_\+shortcut\+\_\+jump@{opt\+\_\+shortcut\+\_\+jump}!sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+\subsubsection{\texorpdfstring{opt\+\_\+shortcut\+\_\+jump()}{opt\_shortcut\_jump()}}
+{\footnotesize\ttfamily uint sp\+\_\+instr\+\_\+jump\+::opt\+\_\+shortcut\+\_\+jump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$}]{start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Short-\/cut jumps to jumps during optimization. This is used by the jump instructions\textquotesingle{} \mbox{\hyperlink{classsp__instr__jump_a4daedb439c97a78adf9957fc35121dbe}{opt\+\_\+mark()}} methods. \textquotesingle{}start\textquotesingle{} is the starting point, used to prevent the mark sweep from looping for ever. Return the end destination. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_aa06a5e2fcf128a0ed13e802b11efaba0}{sp\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__hreturn_aad1c6b1378f1f2f26fb3be33622f0ce2}{sp\+\_\+instr\+\_\+hreturn}}, and \mbox{\hyperlink{classsp__instr__hpush__jump_a7b00002d8497221812af5f222a2a1732}{sp\+\_\+instr\+\_\+hpush\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__instr__jump_aee2d8071b4f12109135a0e22a9ba3c71}\label{classsp__instr__jump_aee2d8071b4f12109135a0e22a9ba3c71}} 
+\index{sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}!set\+\_\+destination@{set\+\_\+destination}}
+\index{set\+\_\+destination@{set\+\_\+destination}!sp\+\_\+instr\+\_\+jump@{sp\+\_\+instr\+\_\+jump}}
+\subsubsection{\texorpdfstring{set\+\_\+destination()}{set\_destination()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+jump\+::set\+\_\+destination (\begin{DoxyParamCaption}\item[{uint}]{old\+\_\+dest,  }\item[{uint}]{new\+\_\+dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Update the destination; used by the SP-\/instruction-\/optimizer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+\_\+dest} & current (old) destination (instruction pointer). \\
+\hline
+{\em new\+\_\+dest} & new destination (instruction pointer). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsp__branch__instr_ad5bc8e2fede785323c1749b6269869c3}{sp\+\_\+branch\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

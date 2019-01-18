@@ -1,0 +1,77 @@
+\hypertarget{classKey}{}\section{Key Class Reference}
+\label{classKey}\index{Key@{Key}}
+Inheritance diagram for Key\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey_a34a24fe38c188feea23f69a78808ca02}\label{classKey_a34a24fe38c188feea23f69a78808ca02}} 
+{\bfseries Key} (keytype type\+\_\+par, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&name\+\_\+arg, \mbox{\hyperlink{structst__key__create__information}{K\+E\+Y\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$key\+\_\+info\+\_\+arg, bool generated\+\_\+arg, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ \&cols)
+\item 
+\mbox{\Hypertarget{classKey_a934009c4efa8ef6d2345d9410d24a103}\label{classKey_a934009c4efa8ef6d2345d9410d24a103}} 
+{\bfseries Key} (keytype type\+\_\+par, const char $\ast$name\+\_\+arg, size\+\_\+t name\+\_\+len\+\_\+arg, \mbox{\hyperlink{structst__key__create__information}{K\+E\+Y\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$key\+\_\+info\+\_\+arg, bool generated\+\_\+arg, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ \&cols)
+\item 
+\mbox{\hyperlink{classKey_a10737e8c6b396fdd5b8adce7f7a00eec}{Key}} (const \mbox{\hyperlink{classKey}{Key}} \&rhs, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+virtual \mbox{\hyperlink{classKey}{Key}} $\ast$ \mbox{\hyperlink{classKey_ac6f8cb767fc9dcee06fd80ca2350f43f}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey_a658683e853c0171f2ca6adc1de09a0c0}\label{classKey_a658683e853c0171f2ca6adc1de09a0c0}} 
+keytype {\bfseries type}
+\item 
+\mbox{\Hypertarget{classKey_afd9a7bed424f56ce9e30695feed941cd}\label{classKey_afd9a7bed424f56ce9e30695feed941cd}} 
+\mbox{\hyperlink{structst__key__create__information}{K\+E\+Y\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} {\bfseries key\+\_\+create\+\_\+info}
+\item 
+\mbox{\Hypertarget{classKey_a190dfa8a7771023036b5c5c709b4e088}\label{classKey_a190dfa8a7771023036b5c5c709b4e088}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ {\bfseries columns}
+\item 
+\mbox{\Hypertarget{classKey_ab7efda3d95765d306875fb65905dd5d6}\label{classKey_ab7efda3d95765d306875fb65905dd5d6}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries name}
+\item 
+\mbox{\Hypertarget{classKey_a8ae0de23410896abb4c8afc9261ea29d}\label{classKey_a8ae0de23410896abb4c8afc9261ea29d}} 
+bool {\bfseries generated}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey_a8cdba4b934f5905f71342ab3047e6a32}\label{classKey_a8cdba4b934f5905f71342ab3047e6a32}} 
+bool {\bfseries foreign\+\_\+key\+\_\+prefix} (\mbox{\hyperlink{classKey}{Key}} $\ast$a, \mbox{\hyperlink{classKey}{Key}} $\ast$b)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKey_a10737e8c6b396fdd5b8adce7f7a00eec}\label{classKey_a10737e8c6b396fdd5b8adce7f7a00eec}} 
+\index{Key@{Key}!Key@{Key}}
+\index{Key@{Key}!Key@{Key}}
+\subsubsection{\texorpdfstring{Key()}{Key()}}
+{\footnotesize\ttfamily Key\+::\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKey}{Key}} \&}]{rhs,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption})}
+
+Construct an (almost) deep copy of this key. Only those elements that are known to never change are not copied. If out of memory, a partial copy is returned and an error is set in T\+HD. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classKey_ac6f8cb767fc9dcee06fd80ca2350f43f}\label{classKey_ac6f8cb767fc9dcee06fd80ca2350f43f}} 
+\index{Key@{Key}!clone@{clone}}
+\index{clone@{clone}!Key@{Key}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classKey}{Key}}$\ast$ Key\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Used to make a clone of this object for A\+L\+T\+E\+R/\+C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} \begin{DoxySeeAlso}{See also}
+comment for \mbox{\hyperlink{classKey__part__spec_adf40542629144b3dc70f9ae4b4b27c78}{Key\+\_\+part\+\_\+spec\+::clone}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classForeign__key_a6b95a958ac60355c961a0a173a439678}{Foreign\+\_\+key}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+class.\+h\item 
+sql\+\_\+class.\+cc\end{DoxyCompactItemize}

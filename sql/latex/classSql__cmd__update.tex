@@ -1,0 +1,118 @@
+\hypertarget{classSql__cmd__update}{}\section{Sql\+\_\+cmd\+\_\+update Class Reference}
+\label{classSql__cmd__update}\index{Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}}
+Inheritance diagram for Sql\+\_\+cmd\+\_\+update\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__update}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__update_a11ca65a1dc0b16ae2ad22dd419bdaa55}\label{classSql__cmd__update_a11ca65a1dc0b16ae2ad22dd419bdaa55}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__update_a11ca65a1dc0b16ae2ad22dd419bdaa55}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__update_a948016f5dbbc804c7fcd5e0cf75364bc}{execute}} (T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__update_af3b765bea10980878c0d4c0e677ce88f}{prepare}} (T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__update_ae0fcfae54301cb796e4bc9adfc2c8ec5}{prepared\+\_\+statement\+\_\+test}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__update_a3e5531d562c0a87cd1599e75df1db647}\label{classSql__cmd__update_a3e5531d562c0a87cd1599e75df1db647}} 
+enum\+\_\+sql\+\_\+command {\bfseries sql\+\_\+command}
+\item 
+\mbox{\Hypertarget{classSql__cmd__update_ae0dcf6b7d9c00024ee242ecdff1b3dad}\label{classSql__cmd__update_ae0dcf6b7d9c00024ee242ecdff1b3dad}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries update\+\_\+value\+\_\+list}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__update_a948016f5dbbc804c7fcd5e0cf75364bc}\label{classSql__cmd__update_a948016f5dbbc804c7fcd5e0cf75364bc}} 
+\index{Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+update\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+\mbox{\Hypertarget{classSql__cmd__update_af3b765bea10980878c0d4c0e677ce88f}\label{classSql__cmd__update_af3b765bea10980878c0d4c0e677ce88f}} 
+\index{Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}!prepare@{prepare}}
+\index{prepare@{prepare}!Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily virtual bool Sql\+\_\+cmd\+\_\+update\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Command-\/specific resolving (doesn\textquotesingle{}t include L\+E\+X\+::prepare())
+
+\begin{DoxySeeAlso}{See also}
+select\+\_\+like\+\_\+stmt\+\_\+test()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current T\+HD.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd__dml_ad395374af7ac799573ca41d87b60b977}{Sql\+\_\+cmd\+\_\+dml}}.
+
+\mbox{\Hypertarget{classSql__cmd__update_ae0fcfae54301cb796e4bc9adfc2c8ec5}\label{classSql__cmd__update_ae0fcfae54301cb796e4bc9adfc2c8ec5}} 
+\index{Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}!prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}}
+\index{prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}!Sql\+\_\+cmd\+\_\+update@{Sql\+\_\+cmd\+\_\+update}}
+\subsubsection{\texorpdfstring{prepared\+\_\+statement\+\_\+test()}{prepared\_statement\_test()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+update\+::prepared\+\_\+statement\+\_\+test (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Validate PS and do name resolution\+:
+
+Check A\+C\+Ls Open tables Prepare the query when needed (resolve names etc)
+
+\begin{DoxySeeAlso}{See also}
+check\+\_\+prepared\+\_\+statement()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd__dml_af36dc69e855d0e48d0e79002576907a4}{Sql\+\_\+cmd\+\_\+dml}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+update.\+h\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\item 
+sql\+\_\+update.\+cc\end{DoxyCompactItemize}

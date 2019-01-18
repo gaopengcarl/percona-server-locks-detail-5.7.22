@@ -1,0 +1,30 @@
+\hypertarget{sql__planner_8cc}{}\section{sql\+\_\+planner.\+cc File Reference}
+\label{sql__planner_8cc}\index{sql\+\_\+planner.\+cc@{sql\+\_\+planner.\+cc}}
+
+
+Create plan for a single select.  
+
+
+{\ttfamily \#include \char`\"{}sql\+\_\+planner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+costmodel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+range.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+executor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}merge\+\_\+sort.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$my\+\_\+bit.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+hints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+hints.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{group__Query__Planner_gab40ad85a04512dd2ac293b723d96fb54}{calculate\+\_\+condition\+\_\+filter}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$const tab, const \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$const keyuse, table\+\_\+map used\+\_\+tables, double fanout, bool is\+\_\+join\+\_\+buffering)
+\item 
+void \mbox{\hyperlink{group__Query__Planner_ga945145266f4a865c166692aea42818ed}{get\+\_\+partial\+\_\+join\+\_\+cost}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, uint n\+\_\+tables, double $\ast$cost\+\_\+arg, double $\ast$rowcount\+\_\+arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create plan for a single select. 
+

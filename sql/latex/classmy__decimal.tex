@@ -1,0 +1,78 @@
+\hypertarget{classmy__decimal}{}\section{my\+\_\+decimal Class Reference}
+\label{classmy__decimal}\index{my\+\_\+decimal@{my\+\_\+decimal}}
+
+
+{\ttfamily \#include $<$my\+\_\+decimal.\+h$>$}
+
+Inheritance diagram for my\+\_\+decimal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy__decimal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmy__decimal_a97984df13f29c1a3cd973c2c0cfcf085}\label{classmy__decimal_a97984df13f29c1a3cd973c2c0cfcf085}} 
+{\bfseries my\+\_\+decimal} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} \&rhs)
+\item 
+\mbox{\Hypertarget{classmy__decimal_abd730fefce3bbca2ca09147a23cdf513}\label{classmy__decimal_abd730fefce3bbca2ca09147a23cdf513}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} \& {\bfseries operator=} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} \&rhs)
+\item 
+\mbox{\Hypertarget{classmy__decimal_a4856fa82097895baf8fc129ce11d6af0}\label{classmy__decimal_a4856fa82097895baf8fc129ce11d6af0}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classmy__decimal_a645025e85b426937df704b7a0e11b13a}\label{classmy__decimal_a645025e85b426937df704b7a0e11b13a}} 
+void {\bfseries sanity\+\_\+check} () const
+\item 
+\mbox{\Hypertarget{classmy__decimal_ad4f214f01673e331e6cbaed08f02fe77}\label{classmy__decimal_ad4f214f01673e331e6cbaed08f02fe77}} 
+bool {\bfseries sign} () const
+\item 
+\mbox{\Hypertarget{classmy__decimal_a10cce4b3e0fbe456975103ea04dacd41}\label{classmy__decimal_a10cce4b3e0fbe456975103ea04dacd41}} 
+void {\bfseries sign} (bool s)
+\item 
+\mbox{\Hypertarget{classmy__decimal_a9c312c8e168b021c80c85a0b3b9f69ae}\label{classmy__decimal_a9c312c8e168b021c80c85a0b3b9f69ae}} 
+uint {\bfseries precision} () const
+\item 
+void \mbox{\hyperlink{classmy__decimal_af4c268a43bd0a237c9f147950af907fb}{swap}} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} \&rhs)
+\item 
+int \mbox{\hyperlink{classmy__decimal_a9fc01f08993732970194ffb50c041028}{check\+\_\+result}} (uint mask, int result) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} class limits \textquotesingle{}decimal\+\_\+t\textquotesingle{} type to what we need in My\+S\+QL.
+
+It contains internally all necessary space needed by the instance so no extra memory is needed. Objects should be moved using copy C\+T\+OR or assignment operator, rather than memcpy/memmove. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy__decimal_a9fc01f08993732970194ffb50c041028}\label{classmy__decimal_a9fc01f08993732970194ffb50c041028}} 
+\index{my\+\_\+decimal@{my\+\_\+decimal}!check\+\_\+result@{check\+\_\+result}}
+\index{check\+\_\+result@{check\+\_\+result}!my\+\_\+decimal@{my\+\_\+decimal}}
+\subsubsection{\texorpdfstring{check\+\_\+result()}{check\_result()}}
+{\footnotesize\ttfamily int my\+\_\+decimal\+::check\+\_\+result (\begin{DoxyParamCaption}\item[{uint}]{mask,  }\item[{int}]{result }\end{DoxyParamCaption}) const}
+
+report result of decimal operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & bitmask filtering result, most likely E\+\_\+\+D\+E\+C\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR \\
+\hline
+{\em result} & decimal library return code (E\+\_\+\+D\+E\+C\+\_\+$\ast$ see include/decimal.\+h)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy__decimal_af4c268a43bd0a237c9f147950af907fb}\label{classmy__decimal_af4c268a43bd0a237c9f147950af907fb}} 
+\index{my\+\_\+decimal@{my\+\_\+decimal}!swap@{swap}}
+\index{swap@{swap}!my\+\_\+decimal@{my\+\_\+decimal}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void my\+\_\+decimal\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Swap two \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} values 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{my__decimal_8h}{my\+\_\+decimal.\+h}}\item 
+my\+\_\+decimal.\+cc\end{DoxyCompactItemize}

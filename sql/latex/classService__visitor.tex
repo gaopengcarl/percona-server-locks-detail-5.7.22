@@ -1,0 +1,46 @@
+\hypertarget{classService__visitor}{}\section{Service\+\_\+visitor Class Reference}
+\label{classService__visitor}\index{Service\+\_\+visitor@{Service\+\_\+visitor}}
+Inheritance diagram for Service\+\_\+visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classService__visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classService__visitor_a6da35731c78ae07c258f483952ba766a}{Service\+\_\+visitor}} (parse\+\_\+node\+\_\+visit\+\_\+function processor, uchar $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classService__visitor_ad211cb379177c9fa735eb63d72aa2c82}\label{classService__visitor_ad211cb379177c9fa735eb63d72aa2c82}} 
+bool {\bfseries visit\+\_\+item} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements the parse tree visiting service. \begin{DoxySeeAlso}{See also}
+mysql\+\_\+parser\+\_\+visit\+\_\+tree 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classService__visitor_a6da35731c78ae07c258f483952ba766a}\label{classService__visitor_a6da35731c78ae07c258f483952ba766a}} 
+\index{Service\+\_\+visitor@{Service\+\_\+visitor}!Service\+\_\+visitor@{Service\+\_\+visitor}}
+\index{Service\+\_\+visitor@{Service\+\_\+visitor}!Service\+\_\+visitor@{Service\+\_\+visitor}}
+\subsubsection{\texorpdfstring{Service\+\_\+visitor()}{Service\_visitor()}}
+{\footnotesize\ttfamily Service\+\_\+visitor\+::\+Service\+\_\+visitor (\begin{DoxyParamCaption}\item[{parse\+\_\+node\+\_\+visit\+\_\+function}]{processor,  }\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & This function will be called for each literal (\mbox{\hyperlink{classItem}{Item}}) in the parse tree, along with the \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s type and arg. If the function returns non-\/zero, parse tree traversal will terminate.\\
+\hline
+{\em arg} & Will be passed to processor on every call. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parser\+\_\+service.\+cc\end{DoxyCompactItemize}

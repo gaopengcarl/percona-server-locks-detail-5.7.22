@@ -1,0 +1,304 @@
+\hypertarget{classJson__array}{}\section{Json\+\_\+array Class Reference}
+\label{classJson__array}\index{Json\+\_\+array@{Json\+\_\+array}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson__array}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__array_adbf357741dff1a92b01bfd31f97c1424}{json\+\_\+type}} () const
+\item 
+bool \mbox{\hyperlink{classJson__array_ae1240558ff2fa4cb2bae81d8dd332725}{append\+\_\+clone}} (const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$value)
+\item 
+bool \mbox{\hyperlink{classJson__array_abd10bd299c6268b5195e79ed5536be1f}{append\+\_\+alias}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$value)
+\item 
+bool \mbox{\hyperlink{classJson__array_a49c8a014041739ebb69367a5710ff802}{consume}} (\mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$other)
+\item 
+bool \mbox{\hyperlink{classJson__array_acb33be78e43dd7b8c608dcbcb3a50e0e}{insert\+\_\+clone}} (size\+\_\+t index, const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$value)
+\item 
+bool \mbox{\hyperlink{classJson__array_a9638175903fd33aa8bde389d028a7eb7}{insert\+\_\+alias}} (size\+\_\+t index, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$value)
+\item 
+bool \mbox{\hyperlink{classJson__array_a377430a4a9ef9f7c22340d80b3bc74f7}{remove}} (size\+\_\+t index)
+\item 
+bool \mbox{\hyperlink{classJson__array_a0912b69f4733852316976f2dba87ad9a}{remove}} (const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$child)
+\item 
+size\+\_\+t \mbox{\hyperlink{classJson__array_aa6ddabea5c2cd9e38920f32abf2e6e26}{size}} () const
+\item 
+uint32 \mbox{\hyperlink{classJson__array_a2ab9cb0a7b55a817c9babb6a74b3922e}{depth}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__array_a936f17ef11712af8bfd2d6d1aa5c9ba1}{clone}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__array_ad8a78c1f2194b6b57c3bc8e529838aea}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+\item 
+void \mbox{\hyperlink{classJson__array_a870a69226047a6d65e114b3d32efc454}{clear}} ()
+\item 
+\mbox{\hyperlink{classJson__array_ac99abb112ea6f5b01b841c47b42908a3}{Json\+\_\+array}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$innards)
+\item 
+void \mbox{\hyperlink{classJson__array_af6caa961d3774eebfaaef82daeab63c9}{replace\+\_\+dom\+\_\+in\+\_\+container}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$oldv, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$newv)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a J\+S\+ON array container, i.\+e. type J\+\_\+\+A\+R\+R\+AY here. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJson__array_ac99abb112ea6f5b01b841c47b42908a3}\label{classJson__array_ac99abb112ea6f5b01b841c47b42908a3}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!Json\+\_\+array@{Json\+\_\+array}}
+\index{Json\+\_\+array@{Json\+\_\+array}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{Json\+\_\+array()}{Json\_array()}}
+{\footnotesize\ttfamily Json\+\_\+array\+::\+Json\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{innards }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Auto-\/wrapping constructor. Wraps an array around a dom. Ownership of the dom belongs to this array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dom} & \mbox{[}in\mbox{]} The dom to autowrap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the auto-\/wrapped dom. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__array_abd10bd299c6268b5195e79ed5536be1f}\label{classJson__array_abd10bd299c6268b5195e79ed5536be1f}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!append\+\_\+alias@{append\+\_\+alias}}
+\index{append\+\_\+alias@{append\+\_\+alias}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{append\+\_\+alias()}{append\_alias()}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::append\+\_\+alias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+Append the value to the end of the array.
+
+Ownership of the value is effectively transferred to the array and the value will be deallocated by the array so only append values that can be deallocated safely (no stack variables please!)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & pointer a J\+S\+ON value to be appended \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__array_ae1240558ff2fa4cb2bae81d8dd332725}\label{classJson__array_ae1240558ff2fa4cb2bae81d8dd332725}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!append\+\_\+clone@{append\+\_\+clone}}
+\index{append\+\_\+clone@{append\+\_\+clone}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{append\+\_\+clone()}{append\_clone()}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::append\+\_\+clone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+Append a clone of the value to the end of the array. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & a J\+S\+ON value to be appended \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__array_a870a69226047a6d65e114b3d32efc454}\label{classJson__array_a870a69226047a6d65e114b3d32efc454}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!clear@{clear}}
+\index{clear@{clear}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Json\+\_\+array\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove the values in the array. \mbox{\Hypertarget{classJson__array_a936f17ef11712af8bfd2d6d1aa5c9ba1}\label{classJson__array_a936f17ef11712af8bfd2d6d1aa5c9ba1}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+array\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__array_a49c8a014041739ebb69367a5710ff802}\label{classJson__array_a49c8a014041739ebb69367a5710ff802}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!consume@{consume}}
+\index{consume@{consume}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{consume()}{consume()}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::consume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Moves all of the elements in the other array to the end of this array. The other array is deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{[}in\mbox{]} a pointer to the array which will be consumed \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__array_a2ab9cb0a7b55a817c9babb6a74b3922e}\label{classJson__array_a2ab9cb0a7b55a817c9babb6a74b3922e}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!depth@{depth}}
+\index{depth@{depth}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily uint32 Json\+\_\+array\+::depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+depth of the D\+OM. \char`\"{}abc\char`\"{}, \mbox{[}\mbox{]} and \{\} have depth 1. \mbox{[}\char`\"{}abc\char`\"{}\mbox{]} and \{\char`\"{}a\char`\"{}\+: \char`\"{}abc\char`\"{}\} have depth 2. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a779b8c6ac78329409f8be12e6d082782}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__array_a9638175903fd33aa8bde389d028a7eb7}\label{classJson__array_a9638175903fd33aa8bde389d028a7eb7}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!insert\+\_\+alias@{insert\+\_\+alias}}
+\index{insert\+\_\+alias@{insert\+\_\+alias}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{insert\+\_\+alias()}{insert\_alias()}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::insert\+\_\+alias (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+Insert the value at position index of the array. If beyond the end, insert at the end.
+
+Ownership of the value is effectively transferred to the array and the value will be deallocated by the array so only append values that can be deallocated safely (no stack variables please!)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & the position at which to insert \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & a J\+S\+ON value to be inserted \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__array_acb33be78e43dd7b8c608dcbcb3a50e0e}\label{classJson__array_acb33be78e43dd7b8c608dcbcb3a50e0e}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!insert\+\_\+clone@{insert\+\_\+clone}}
+\index{insert\+\_\+clone@{insert\+\_\+clone}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{insert\+\_\+clone()}{insert\_clone()}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::insert\+\_\+clone (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+Insert a clone of the value at position index of the array. If beyond the end, insert at the end.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & the position at which to insert \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & a J\+S\+ON value to be inserted \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__array_adbf357741dff1a92b01bfd31f97c1424}\label{classJson__array_adbf357741dff1a92b01bfd31f97c1424}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} Json\+\_\+array\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__array_ad8a78c1f2194b6b57c3bc8e529838aea}\label{classJson__array_ad8a78c1f2194b6b57c3bc8e529838aea}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ Json\+\_\+array\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the value at position index. The value has not been cloned so it is the responsibility of the user to make a copy if needed. Do not try to deallocate the returned value -\/ it is owned by the array and will be deallocated by it in time. It is admissible to modify its contents (in place; without a clone being taken) if it is a compound.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & the array index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value at index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__array_a377430a4a9ef9f7c22340d80b3bc74f7}\label{classJson__array_a377430a4a9ef9f7c22340d80b3bc74f7}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!remove@{remove}}
+\index{remove@{remove}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::remove (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+Remove the value at this index. A no-\/op if index is larger than size. Deletes the value. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true of a value was removed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__array_a0912b69f4733852316976f2dba87ad9a}\label{classJson__array_a0912b69f4733852316976f2dba87ad9a}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!remove@{remove}}
+\index{remove@{remove}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Json\+\_\+array\+::remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{child }\end{DoxyParamCaption})}
+
+Remove the child element addressed by key. Deletes the child.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em child} & the child to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If that really was a child of this object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__array_af6caa961d3774eebfaaef82daeab63c9}\label{classJson__array_af6caa961d3774eebfaaef82daeab63c9}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!replace\+\_\+dom\+\_\+in\+\_\+container@{replace\+\_\+dom\+\_\+in\+\_\+container}}
+\index{replace\+\_\+dom\+\_\+in\+\_\+container@{replace\+\_\+dom\+\_\+in\+\_\+container}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{replace\+\_\+dom\+\_\+in\+\_\+container()}{replace\_dom\_in\_container()}}
+{\footnotesize\ttfamily void Json\+\_\+array\+::replace\+\_\+dom\+\_\+in\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{oldv,  }\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{newv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Replace oldv contained inside this container array or object) with newv. If this container does not contain oldv, calling the method is a no-\/op. Do not call this method on a D\+OM object which is not a container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em oldv} & the value to be replace \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em newv} & the new value to put in the container \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson__dom_a310ec5cb1b04e112335a0bcfe510eac5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__array_aa6ddabea5c2cd9e38920f32abf2e6e26}\label{classJson__array_aa6ddabea5c2cd9e38920f32abf2e6e26}} 
+\index{Json\+\_\+array@{Json\+\_\+array}!size@{size}}
+\index{size@{size}!Json\+\_\+array@{Json\+\_\+array}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Json\+\_\+array\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The cardinality of the array (number of values). \begin{DoxyReturn}{Returns}
+the size 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

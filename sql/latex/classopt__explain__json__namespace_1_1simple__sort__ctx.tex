@@ -1,0 +1,169 @@
+\hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx}{}\section{opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:simple\+\_\+sort\+\_\+ctx Class Reference}
+\label{classopt__explain__json__namespace_1_1simple__sort__ctx}\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}}
+Inheritance diagram for opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:simple\+\_\+sort\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classopt__explain__json__namespace_1_1simple__sort__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_a4a94663185b480ec3fab687086d886e7}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_a4a94663185b480ec3fab687086d886e7}} 
+{\bfseries simple\+\_\+sort\+\_\+ctx} (enum\+\_\+parsing\+\_\+context type\+\_\+arg, const char $\ast$name\+\_\+arg, \mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$parent\+\_\+arg, const \mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} $\ast$flags, Explain\+\_\+sort\+\_\+clause clause)
+\item 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1simple__sort__ctx_abfe9f7f76b32e211f5c70f3023aaba63}{add\+\_\+join\+\_\+tab}} (\mbox{\hyperlink{classopt__explain__json__namespace_1_1joinable__ctx}{joinable\+\_\+ctx}} $\ast$ctx)
+\item 
+virtual int \mbox{\hyperlink{classopt__explain__json__namespace_1_1simple__sort__ctx_a334cf6e47221f587df9e1012819cf19d}{add\+\_\+where\+\_\+subquery}} (\mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx}{subquery\+\_\+ctx}} $\ast$ctx, S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$subquery)
+\item 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1simple__sort__ctx_ae6d87919605c73b23b177c042b0935be}{find\+\_\+and\+\_\+set\+\_\+derived}} (\mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$subquery)
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classopt__explain__json__namespace_1_1simple__sort__ctx_aa375936b99b0a0bfa29fdd30f1eb860c}{id}} (bool hide)
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_a51df4f2b1315f332fcf1b231aebb4ca5}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_a51df4f2b1315f332fcf1b231aebb4ca5}} 
+virtual bool {\bfseries cacheable} ()
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_a559dee8015cada8d503745ce9b5c4d72}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_a559dee8015cada8d503745ce9b5c4d72}} 
+virtual bool {\bfseries dependent} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1simple__sort__ctx_a19eba23460857f0871e189c5b3934a46}{format\+\_\+body}} (\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$json, \mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} $\ast$obj)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_a8424c3cb153183453a652dc35da73942}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_a8424c3cb153183453a652dc35da73942}} 
+\mbox{\hyperlink{classopt__explain__json__namespace_1_1joinable__ctx}{joinable\+\_\+ctx}} $\ast$ {\bfseries join\+\_\+tab}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for C\+T\+X\+\_\+\+O\+R\+D\+E\+R\+\_\+\+BY, C\+T\+X\+\_\+\+G\+R\+O\+U\+P\+\_\+\+BY and node class for C\+T\+X\+\_\+\+D\+I\+S\+T\+I\+N\+CT
+
+This class represents context for simple O\+R\+D\+ER B\+Y/\+G\+R\+O\+UP B\+Y/\+D\+I\+S\+T\+I\+N\+CT clauses (the clause is effective for the single \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_abfe9f7f76b32e211f5c70f3023aaba63}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_abfe9f7f76b32e211f5c70f3023aaba63}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}!add\+\_\+join\+\_\+tab@{add\+\_\+join\+\_\+tab}}
+\index{add\+\_\+join\+\_\+tab@{add\+\_\+join\+\_\+tab}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}}
+\subsubsection{\texorpdfstring{add\+\_\+join\+\_\+tab()}{add\_join\_tab()}}
+{\footnotesize\ttfamily virtual bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx\+::add\+\_\+join\+\_\+tab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopt__explain__json__namespace_1_1joinable__ctx}{joinable\+\_\+ctx}} $\ast$}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Add a C\+T\+X\+\_\+\+Q\+E\+P\+\_\+\+T\+AB node to a C\+T\+X\+\_\+\+J\+O\+IN node
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+X\+\_\+\+Q\+E\+P\+\_\+\+T\+AB node\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_a3f7a03f0bf2a519a19b84cb5a99ee304}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_a334cf6e47221f587df9e1012819cf19d}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_a334cf6e47221f587df9e1012819cf19d}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}!add\+\_\+where\+\_\+subquery@{add\+\_\+where\+\_\+subquery}}
+\index{add\+\_\+where\+\_\+subquery@{add\+\_\+where\+\_\+subquery}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}}
+\subsubsection{\texorpdfstring{add\+\_\+where\+\_\+subquery()}{add\_where\_subquery()}}
+{\footnotesize\ttfamily virtual int opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx\+::add\+\_\+where\+\_\+subquery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx}{subquery\+\_\+ctx}} $\ast$}]{ctx,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$}]{subquery }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Associate W\+H\+E\+RE subqueries of given context and unit with this object
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Context of W\+H\+E\+RE subquery \\
+\hline
+{\em subquery} & For C\+T\+X\+\_\+\+Q\+E\+P\+\_\+\+T\+AB\+: match given unit with a previously collected by the register\+\_\+where\+\_\+subquery function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 subquery wasn\textquotesingle{}t found 0 subqusery were added 1 error occured 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_ae6606674e90fec03200823c35994873c}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_ae6d87919605c73b23b177c042b0935be}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_ae6d87919605c73b23b177c042b0935be}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}!find\+\_\+and\+\_\+set\+\_\+derived@{find\+\_\+and\+\_\+set\+\_\+derived}}
+\index{find\+\_\+and\+\_\+set\+\_\+derived@{find\+\_\+and\+\_\+set\+\_\+derived}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}}
+\subsubsection{\texorpdfstring{find\+\_\+and\+\_\+set\+\_\+derived()}{find\_and\_set\_derived()}}
+{\footnotesize\ttfamily virtual bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx\+::find\+\_\+and\+\_\+set\+\_\+derived (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$}]{subquery }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Try to associate a derived subquery node with this or underlying node
+
+
+\begin{DoxyParams}{Parameters}
+{\em subquery} & Derived subquery node\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Success \\
+\hline
+{\em false} & Can\textquotesingle{}t associate\+: this node or its child nodes are not derived from the subquery \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_afe66d6ec1a0f56114bc2b493b084c1a0}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_a19eba23460857f0871e189c5b3934a46}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_a19eba23460857f0871e189c5b3934a46}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}!format\+\_\+body@{format\+\_\+body}}
+\index{format\+\_\+body@{format\+\_\+body}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}}
+\subsubsection{\texorpdfstring{format\+\_\+body()}{format\_body()}}
+{\footnotesize\ttfamily virtual bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx\+::format\+\_\+body (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$}]{json,  }\item[{\mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Format J\+S\+ON object body
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Formatter \\
+\hline
+{\em obj} & Object of this body\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1simple__sort__ctx_aa375936b99b0a0bfa29fdd30f1eb860c}\label{classopt__explain__json__namespace_1_1simple__sort__ctx_aa375936b99b0a0bfa29fdd30f1eb860c}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}!id@{id}}
+\index{id@{id}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual size\+\_\+t opt\+\_\+explain\+\_\+json\+\_\+namespace\+::simple\+\_\+sort\+\_\+ctx\+::id (\begin{DoxyParamCaption}\item[{bool}]{hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Analogue of the \char`\"{}id\char`\"{} column in the traditional E\+X\+P\+L\+A\+IN output
+
+
+\begin{DoxyParams}{Parameters}
+{\em hide} & if true, ban the output of K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+ID J\+S\+ON property in the underlying table\+\_\+with\+\_\+where\+\_\+and\+\_\+derived\+\_\+ctx objects\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Select number\char`\"{} that is associated with this node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_a07c46bab31a35d88c13ccdca82755aaa}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+json.\+cc\end{DoxyCompactItemize}

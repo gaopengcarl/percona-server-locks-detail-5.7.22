@@ -1,0 +1,122 @@
+\hypertarget{classGeometry__well__formed__checker}{}\section{Geometry\+\_\+well\+\_\+formed\+\_\+checker Class Reference}
+\label{classGeometry__well__formed__checker}\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+Inheritance diagram for Geometry\+\_\+well\+\_\+formed\+\_\+checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeometry__well__formed__checker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeometry__well__formed__checker_a86ee1f6dba50f392ae11b34e6e37f6fe}{Geometry\+\_\+well\+\_\+formed\+\_\+checker}} (Geometry\+::wkb\+Type type, Geometry\+::wkb\+Byte\+Order required\+\_\+byte\+\_\+order)
+\item 
+virtual void \mbox{\hyperlink{classGeometry__well__formed__checker_a6ae74af00fe1297813f3c35ba58ff372}{on\+\_\+wkb\+\_\+start}} (Geometry\+::wkb\+Byte\+Order bo, Geometry\+::wkb\+Type geotype, const void $\ast$wkb, uint32 len, bool has\+\_\+hdr)
+\item 
+virtual void \mbox{\hyperlink{classGeometry__well__formed__checker_a448bf937ff032ce46a3b2e69a4d0907e}{on\+\_\+wkb\+\_\+end}} (const void $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGeometry__well__formed__checker_a81864298854127b8fdd7b8bafda48703}\label{classGeometry__well__formed__checker_a81864298854127b8fdd7b8bafda48703}} 
+virtual bool {\bfseries continue\+\_\+scan} () const
+\item 
+bool \mbox{\hyperlink{classGeometry__well__formed__checker_aba31509fe61d86bb0caa954fdacad0e6}{is\+\_\+well\+\_\+formed}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classGeometry__well__formed__checker_a16c82c0056e2db30c8305fe3d433d48f}{get\+\_\+last\+\_\+position}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+W\+KB scanner event handler that checks if the W\+KB string is well formed.
+
+This doesn\textquotesingle{}t check if the geometry is valid (e.\+g., it\textquotesingle{}s not checking if a polygon is self-\/intersecting), it only checks some simple rules for W\+KB well-\/formedness\+:
+
+R1. The byte order is as specified (constructor parameter) R2. The wkb\+Type is within the supported range R3. The geometry is of the specified type (constructor parameter), or a subtype R4. Nested geometries contain only geometries that can be contained by that type R5. Linestrings have at least two points R6. Polygon rings have at least four points R7. Polygons have at least one ring R8. Collections, except geometrycollection, contain at least one element.
+
+An additional requirement, that the W\+KB ends exactly at the end of the string, is checked by \mbox{\hyperlink{classGeometry_ae034f775d692619cc4bc8842d34a4cd8}{Geometry\+::is\+\_\+well\+\_\+formed()}}. The last parse position is maintained as last\+\_\+position here to make that test possible. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGeometry__well__formed__checker_a86ee1f6dba50f392ae11b34e6e37f6fe}\label{classGeometry__well__formed__checker_a86ee1f6dba50f392ae11b34e6e37f6fe}} 
+\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}!Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}!Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\subsubsection{\texorpdfstring{Geometry\+\_\+well\+\_\+formed\+\_\+checker()}{Geometry\_well\_formed\_checker()}}
+{\footnotesize\ttfamily Geometry\+\_\+well\+\_\+formed\+\_\+checker\+::\+Geometry\+\_\+well\+\_\+formed\+\_\+checker (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Type}]{type,  }\item[{Geometry\+::wkb\+Byte\+Order}]{required\+\_\+byte\+\_\+order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new even handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Expected geometry type. If set to Geometry\+::wkb\+\_\+invalid\+\_\+type, any geometry is allowed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeometry__well__formed__checker_a16c82c0056e2db30c8305fe3d433d48f}\label{classGeometry__well__formed__checker_a16c82c0056e2db30c8305fe3d433d48f}} 
+\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}!get\+\_\+last\+\_\+position@{get\+\_\+last\+\_\+position}}
+\index{get\+\_\+last\+\_\+position@{get\+\_\+last\+\_\+position}!Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+position()}{get\_last\_position()}}
+{\footnotesize\ttfamily const char$\ast$ Geometry\+\_\+well\+\_\+formed\+\_\+checker\+::get\+\_\+last\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the position after the last parsed byte.
+
+\begin{DoxyReturn}{Returns}
+Pointer pointing to after the last parsed byte. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry__well__formed__checker_aba31509fe61d86bb0caa954fdacad0e6}\label{classGeometry__well__formed__checker_aba31509fe61d86bb0caa954fdacad0e6}} 
+\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}!is\+\_\+well\+\_\+formed@{is\+\_\+well\+\_\+formed}}
+\index{is\+\_\+well\+\_\+formed@{is\+\_\+well\+\_\+formed}!Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\subsubsection{\texorpdfstring{is\+\_\+well\+\_\+formed()}{is\_well\_formed()}}
+{\footnotesize\ttfamily bool Geometry\+\_\+well\+\_\+formed\+\_\+checker\+::is\+\_\+well\+\_\+formed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if the parsed W\+KB was well-\/formed, as far as this handler knows.
+
+There may be other conditions that cause the object to not be well-\/formed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGeometry_ae034f775d692619cc4bc8842d34a4cd8}{Geometry\+::is\+\_\+well\+\_\+formed}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+True if the W\+KB was well-\/formed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry__well__formed__checker_a448bf937ff032ce46a3b2e69a4d0907e}\label{classGeometry__well__formed__checker_a448bf937ff032ce46a3b2e69a4d0907e}} 
+\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}!on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}}
+\index{on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}!Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+end()}{on\_wkb\_end()}}
+{\footnotesize\ttfamily virtual void Geometry\+\_\+well\+\_\+formed\+\_\+checker\+::on\+\_\+wkb\+\_\+end (\begin{DoxyParamCaption}\item[{const void $\ast$}]{wkb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the end of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em wkb} & the position of the first byte after the W\+KB byte string which the scanner just scanned. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+\mbox{\Hypertarget{classGeometry__well__formed__checker_a6ae74af00fe1297813f3c35ba58ff372}\label{classGeometry__well__formed__checker_a6ae74af00fe1297813f3c35ba58ff372}} 
+\index{Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}!on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}}
+\index{on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}!Geometry\+\_\+well\+\_\+formed\+\_\+checker@{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+start()}{on\_wkb\_start()}}
+{\footnotesize\ttfamily virtual void Geometry\+\_\+well\+\_\+formed\+\_\+checker\+::on\+\_\+wkb\+\_\+start (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{Geometry\+::wkb\+Type}]{geotype,  }\item[{const void $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{bool}]{has\+\_\+hdr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the start of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em bo} & byte order of the W\+KB. \\
+\hline
+{\em geotype} & geometry type of the W\+KB; \\
+\hline
+{\em wkb} & W\+KB byte string, the first byte after the W\+KB header if any. \\
+\hline
+{\em len} & NO. of bytes of the W\+KB byte string starting from wkb. There can be many geometries in the \mbox{[}wkb, wkb+len) buffer. \\
+\hline
+{\em has\+\_\+hdr} & whether there is a W\+KB header right before \textquotesingle{}wkb\textquotesingle{} in the byte string. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+cc\end{DoxyCompactItemize}

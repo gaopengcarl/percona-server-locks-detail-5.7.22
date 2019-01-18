@@ -1,0 +1,42 @@
+\hypertarget{structst__range__seq__entry}{}\section{st\+\_\+range\+\_\+seq\+\_\+entry Struct Reference}
+\label{structst__range__seq__entry}\index{st\+\_\+range\+\_\+seq\+\_\+entry@{st\+\_\+range\+\_\+seq\+\_\+entry}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_ae3c529da0302103f007756b9c5de654e}\label{structst__range__seq__entry_ae3c529da0302103f007756b9c5de654e}} 
+uchar $\ast$ {\bfseries min\+\_\+key}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_a1082beb11ea6aceff7f16b3d2e0ac553}\label{structst__range__seq__entry_a1082beb11ea6aceff7f16b3d2e0ac553}} 
+uchar $\ast$ {\bfseries max\+\_\+key}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_a172ce318f97dd2e7822b95010a284f6b}\label{structst__range__seq__entry_a172ce318f97dd2e7822b95010a284f6b}} 
+uint {\bfseries min\+\_\+key\+\_\+flag}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_afe005c8f767e790a75fecea22a6bbdf5}\label{structst__range__seq__entry_afe005c8f767e790a75fecea22a6bbdf5}} 
+uint {\bfseries max\+\_\+key\+\_\+flag}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_a3f3164201ab5a404de7e490b3f0aa352}\label{structst__range__seq__entry_a3f3164201ab5a404de7e490b3f0aa352}} 
+enum ha\+\_\+rkey\+\_\+function {\bfseries rkey\+\_\+func\+\_\+flag}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_a33cf5816c723b4c7836e0f1cde016731}\label{structst__range__seq__entry_a33cf5816c723b4c7836e0f1cde016731}} 
+uint {\bfseries min\+\_\+key\+\_\+parts}
+\item 
+\mbox{\Hypertarget{structst__range__seq__entry_ac4c8f92cd31777e1dc29747d973adff2}\label{structst__range__seq__entry_ac4c8f92cd31777e1dc29747d973adff2}} 
+uint {\bfseries max\+\_\+key\+\_\+parts}
+\item 
+\mbox{\hyperlink{classSEL__ARG}{S\+E\+L\+\_\+\+A\+RG}} $\ast$ \mbox{\hyperlink{structst__range__seq__entry_a2eb5297b7ad3342bd4bb40d95fa7d839}{key\+\_\+tree}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__range__seq__entry_a2eb5297b7ad3342bd4bb40d95fa7d839}\label{structst__range__seq__entry_a2eb5297b7ad3342bd4bb40d95fa7d839}} 
+\index{st\+\_\+range\+\_\+seq\+\_\+entry@{st\+\_\+range\+\_\+seq\+\_\+entry}!key\+\_\+tree@{key\+\_\+tree}}
+\index{key\+\_\+tree@{key\+\_\+tree}!st\+\_\+range\+\_\+seq\+\_\+entry@{st\+\_\+range\+\_\+seq\+\_\+entry}}
+\subsubsection{\texorpdfstring{key\+\_\+tree}{key\_tree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSEL__ARG}{S\+E\+L\+\_\+\+A\+RG}}$\ast$ st\+\_\+range\+\_\+seq\+\_\+entry\+::key\+\_\+tree}
+
+Pointer into the R-\/B tree for this keypart. It points to the currently active range for the keypart, so calling next on it will get to the next range. sel\+\_\+arg\+\_\+range\+\_\+seq\+\_\+next() uses this to avoid reparsing the R-\/B range trees each time a new range is fetched. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+range.\+cc\end{DoxyCompactItemize}

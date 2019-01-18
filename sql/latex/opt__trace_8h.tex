@@ -1,0 +1,70 @@
+\hypertarget{opt__trace_8h}{}\section{opt\+\_\+trace.\+h File Reference}
+\label{opt__trace_8h}\index{opt\+\_\+trace.\+h@{opt\+\_\+trace.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+cmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace\+\_\+context.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}}
+\item 
+class \mbox{\hyperlink{classOpt__trace__array}{Opt\+\_\+trace\+\_\+array}}
+\item 
+class \mbox{\hyperlink{classOpt__trace__disable__I__S}{Opt\+\_\+trace\+\_\+disable\+\_\+\+I\+\_\+S}}
+\item 
+class \mbox{\hyperlink{classOpt__trace__start}{Opt\+\_\+trace\+\_\+start}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{opt__trace_8h_a55890b73a7051c911e333ba7ac472866}\label{opt__trace_8h_a55890b73a7051c911e333ba7ac472866}} 
+\#define {\bfseries opt\+\_\+trace\+\_\+print\+\_\+expanded\+\_\+query}(thd,  select\+\_\+lex,  trace\+\_\+object)~do \{\} while (0)
+\item 
+\mbox{\Hypertarget{opt__trace_8h_a802367b24237bac5775ff9e743aa8d16}\label{opt__trace_8h_a802367b24237bac5775ff9e743aa8d16}} 
+\#define {\bfseries opt\+\_\+trace\+\_\+disable\+\_\+if\+\_\+no\+\_\+view\+\_\+access}(thd,  view,  underlying\+\_\+tables)~do \{\} while (0)
+\item 
+\mbox{\Hypertarget{opt__trace_8h_abe22b1d5469d323ecf945dfb4fcc0ad7}\label{opt__trace_8h_abe22b1d5469d323ecf945dfb4fcc0ad7}} 
+\#define {\bfseries opt\+\_\+trace\+\_\+disable\+\_\+if\+\_\+no\+\_\+stored\+\_\+proc\+\_\+func\+\_\+access}(thd,  sp)~do\{\} while(0)
+\item 
+\mbox{\Hypertarget{opt__trace_8h_adc83d3fb26923e8eb79fc55e688f247f}\label{opt__trace_8h_adc83d3fb26923e8eb79fc55e688f247f}} 
+\#define {\bfseries opt\+\_\+trace\+\_\+disable\+\_\+if\+\_\+no\+\_\+security\+\_\+context\+\_\+access}(thd)~do \{\} while (0)
+\item 
+\#define \mbox{\hyperlink{opt__trace_8h_a59d70b2ae6079bf75c52dafefd5f915a}{O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}}(trace,  object\+\_\+level0,  object\+\_\+level1,  select\+\_\+number,  from,  to)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for the Optimizer trace (WL\#5257)
+
+Doxygen parses include files in order to find defined symbols, which in turn influence what code is scanned. O\+P\+T\+I\+M\+I\+Z\+E\+R\+\_\+\+T\+R\+A\+CE must be defined for the optimizer trace code to be documented. Doxygen searches for include files in \char`\"{}\+I\+N\+C\+L\+U\+D\+E\+\_\+\+P\+A\+T\+H\char`\"{}. But in out-\/of-\/source builds, this path varies accross builds. An alternative is to use P\+R\+E\+D\+E\+F\+I\+N\+ED = O\+P\+T\+I\+M\+I\+Z\+E\+R\+\_\+\+T\+R\+A\+CE 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{opt__trace_8h_a59d70b2ae6079bf75c52dafefd5f915a}\label{opt__trace_8h_a59d70b2ae6079bf75c52dafefd5f915a}} 
+\index{opt\+\_\+trace.\+h@{opt\+\_\+trace.\+h}!O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM@{O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}}
+\index{O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM@{O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}!opt\+\_\+trace.\+h@{opt\+\_\+trace.\+h}}
+\subsubsection{\texorpdfstring{O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}{OPT\_TRACE\_TRANSFORM}}
+{\footnotesize\ttfamily \#define O\+P\+T\+\_\+\+T\+R\+A\+C\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM(\begin{DoxyParamCaption}\item[{}]{trace,  }\item[{}]{object\+\_\+level0,  }\item[{}]{object\+\_\+level1,  }\item[{}]{select\+\_\+number,  }\item[{}]{from,  }\item[{}]{to }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classOpt__trace__object}{Opt\_trace\_object}} object\_level0(trace);                                \(\backslash\)}
+\DoxyCodeLine{  Opt\_trace\_object object\_level1(trace, \textcolor{stringliteral}{"transformation"});              \(\backslash\)}
+\DoxyCodeLine{  object\_level1.add\_select\_number(select\_number);                       \(\backslash\)}
+\DoxyCodeLine{  object\_level1.add\_alnum(\textcolor{stringliteral}{"from"}, from).add\_alnum(\textcolor{stringliteral}{"to"}, to);}
+\end{DoxyCode}
+Helper for defining query-\/transformation-\/related trace objects in one code line. This produces \{ \char`\"{}transformation\char`\"{}\+: \{ \char`\"{}select\#\char`\"{}\+: $<$select\+\_\+number$>$, \char`\"{}from\char`\"{}\+: $<$from$>$, \char`\"{}to\char`\"{}\+: $<$to$>$ The objects are left open, so that one can add more to them (often a \char`\"{}chosen\char`\"{} property after making some computation). Objects get closed when going out of scope as usual. 
+\begin{DoxyParams}{Parameters}
+{\em trace} & optimizer trace \\
+\hline
+{\em object\+\_\+level0} & name of the outer \mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} C++ object \\
+\hline
+{\em object\+\_\+level1} & name of the inner \mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} C++ object \\
+\hline
+{\em select\+\_\+number} & number of the being-\/transformed S\+E\+L\+E\+C\+T\+\_\+\+L\+EX \\
+\hline
+{\em from} & description of the before-\/transformation state \\
+\hline
+{\em to} & description of the after-\/transformation state \\
+\hline
+\end{DoxyParams}

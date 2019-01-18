@@ -1,0 +1,56 @@
+\hypertarget{classSql__cmd__uninstall__plugin}{}\section{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin Class Reference}
+\label{classSql__cmd__uninstall__plugin}\index{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin@{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin}}
+
+
+{\ttfamily \#include $<$sql\+\_\+plugin.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__uninstall__plugin}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__uninstall__plugin_a44ead378e34879dc5779042750e83060}\label{classSql__cmd__uninstall__plugin_a44ead378e34879dc5779042750e83060}} 
+{\bfseries Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&comment)
+\item 
+\mbox{\Hypertarget{classSql__cmd__uninstall__plugin_a9a40b733787d700aa30fadfdb7d07cbc}\label{classSql__cmd__uninstall__plugin_a9a40b733787d700aa30fadfdb7d07cbc}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__uninstall__plugin_a9a40b733787d700aa30fadfdb7d07cbc}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__uninstall__plugin_ad5aad6804dee065f60f1a57d01ced199}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the U\+N\+I\+N\+S\+T\+A\+LL P\+L\+U\+G\+IN statement. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__uninstall__plugin_ad5aad6804dee065f60f1a57d01ced199}\label{classSql__cmd__uninstall__plugin_ad5aad6804dee065f60f1a57d01ced199}} 
+\index{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin@{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin@{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Uninstall a plugin by removing a row from the mysql.\+plugin table, deleting a cache entry and deinitializing plugin\textquotesingle{}s internal data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+plugin.\+h\item 
+sql\+\_\+plugin.\+cc\end{DoxyCompactItemize}

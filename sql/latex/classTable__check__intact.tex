@@ -1,0 +1,58 @@
+\hypertarget{classTable__check__intact}{}\section{Table\+\_\+check\+\_\+intact Class Reference}
+\label{classTable__check__intact}\index{Table\+\_\+check\+\_\+intact@{Table\+\_\+check\+\_\+intact}}
+Inheritance diagram for Table\+\_\+check\+\_\+intact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTable__check__intact}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTable__check__intact_a6ddfab1ea1b4e7bdfcefe9525d1c4b4c}{check}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const \mbox{\hyperlink{structst__table__field__def}{T\+A\+B\+L\+E\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+EF}} $\ast$\mbox{\hyperlink{classtable__def}{table\+\_\+def}})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTable__check__intact_a80ebe8ce5e22b0eaf9f1e4209aba0dd2}\label{classTable__check__intact_a80ebe8ce5e22b0eaf9f1e4209aba0dd2}} 
+virtual void {\bfseries report\+\_\+error} (uint code, const char $\ast$fmt,...)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTable__check__intact_a7054fb413f844b41355411d853077bf8}\label{classTable__check__intact_a7054fb413f844b41355411d853077bf8}} 
+bool {\bfseries has\+\_\+keys}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable__check__intact_a6ddfab1ea1b4e7bdfcefe9525d1c4b4c}\label{classTable__check__intact_a6ddfab1ea1b4e7bdfcefe9525d1c4b4c}} 
+\index{Table\+\_\+check\+\_\+intact@{Table\+\_\+check\+\_\+intact}!check@{check}}
+\index{check@{check}!Table\+\_\+check\+\_\+intact@{Table\+\_\+check\+\_\+intact}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Table\+\_\+check\+\_\+intact\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{const \mbox{\hyperlink{structst__table__field__def}{T\+A\+B\+L\+E\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+EF}} $\ast$}]{table\+\_\+def }\end{DoxyParamCaption})}
+
+Checks whether a table is intact.
+
+Checks whether a table is intact. Should be done {\itshape just} after the table has been opened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table} & The table to check \\
+\hline
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{classtable__def}{table\+\_\+def}}} & Expected structure of the table (column name and type)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & There was an error. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

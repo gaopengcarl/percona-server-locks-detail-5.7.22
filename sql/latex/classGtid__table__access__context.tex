@@ -1,0 +1,140 @@
+\hypertarget{classGtid__table__access__context}{}\section{Gtid\+\_\+table\+\_\+access\+\_\+context Class Reference}
+\label{classGtid__table__access__context}\index{Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}}
+Inheritance diagram for Gtid\+\_\+table\+\_\+access\+\_\+context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGtid__table__access__context}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classGtid__table__access__context_a9786483f2f9e63d06307c9261db6aa91}{init}} (T\+HD $\ast$$\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$table, bool is\+\_\+write)
+\item 
+bool \mbox{\hyperlink{classGtid__table__access__context_a07f00187a61eaad20592022fb51bac02}{deinit}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool error, bool need\+\_\+commit)
+\item 
+void \mbox{\hyperlink{classGtid__table__access__context_a2073456f19b6b9aa81cb7d874c4f2358}{before\+\_\+open}} (T\+HD $\ast$thd)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classGtid__table__access__context_ad61c84d1acef30f8de7620b7f60dfcfd}{create\+\_\+thd}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGtid__table__access__context_ac4b84dbee7ce73d070bcb2f288515cff}\label{classGtid__table__access__context_ac4b84dbee7ce73d070bcb2f288515cff}} 
+static const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries D\+B\+\_\+\+N\+A\+ME} = \{C\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+W\+I\+T\+H\+\_\+\+L\+EN(\char`\"{}mysql\char`\"{})\}
+\item 
+\mbox{\Hypertarget{classGtid__table__access__context_ac5b8f18525fc6d848c32f58bce567fe5}\label{classGtid__table__access__context_ac5b8f18525fc6d848c32f58bce567fe5}} 
+static const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries T\+A\+B\+L\+E\+\_\+\+N\+A\+ME} = \{C\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+W\+I\+T\+H\+\_\+\+L\+EN(\char`\"{}gtid\+\_\+executed\char`\"{})\}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGtid__table__access__context_a2073456f19b6b9aa81cb7d874c4f2358}\label{classGtid__table__access__context_a2073456f19b6b9aa81cb7d874c4f2358}} 
+\index{Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}!before\+\_\+open@{before\+\_\+open}}
+\index{before\+\_\+open@{before\+\_\+open}!Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}}
+\subsubsection{\texorpdfstring{before\+\_\+open()}{before\_open()}}
+{\footnotesize\ttfamily void Gtid\+\_\+table\+\_\+access\+\_\+context\+::before\+\_\+open (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepares before opening table.
+\begin{DoxyItemize}
+\item set flags
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to open the table \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSystem__table__access_a7357c29323649f270cf35b08cd8fe826}{System\+\_\+table\+\_\+access}}.
+
+\mbox{\Hypertarget{classGtid__table__access__context_ad61c84d1acef30f8de7620b7f60dfcfd}\label{classGtid__table__access__context_ad61c84d1acef30f8de7620b7f60dfcfd}} 
+\index{Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}!create\+\_\+thd@{create\+\_\+thd}}
+\index{create\+\_\+thd@{create\+\_\+thd}!Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}}
+\subsubsection{\texorpdfstring{create\+\_\+thd()}{create\_thd()}}
+{\footnotesize\ttfamily T\+HD $\ast$ Gtid\+\_\+table\+\_\+access\+\_\+context\+::create\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a new thread in the bootstrap process or in the mysqld startup, a thread is created in order to be able to access a table. And reset a new \char`\"{}statement\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+H\+D$\ast$} & Pointer to thread structure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__table__access__context_a07f00187a61eaad20592022fb51bac02}\label{classGtid__table__access__context_a07f00187a61eaad20592022fb51bac02}} 
+\index{Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}!deinit@{deinit}}
+\index{deinit@{deinit}!Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}}
+\subsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+table\+\_\+access\+\_\+context\+::deinit (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{bool}]{error,  }\item[{bool}]{need\+\_\+commit }\end{DoxyParamCaption})}
+
+De-\/initialize the gtid\+\_\+executed table access context as following\+:
+\begin{DoxyItemize}
+\item Close the table
+\item Reenable binlog if needed
+\item Destroy the created T\+HD if needed.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to close the table \\
+\hline
+{\em table} & Table to be closed \\
+\hline
+{\em error} & If there was an error while updating the table \\
+\hline
+{\em need\+\_\+commit} & Need to commit current transaction if it is true\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & failed \\
+\hline
+{\em false} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__table__access__context_a9786483f2f9e63d06307c9261db6aa91}\label{classGtid__table__access__context_a9786483f2f9e63d06307c9261db6aa91}} 
+\index{Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}!init@{init}}
+\index{init@{init}!Gtid\+\_\+table\+\_\+access\+\_\+context@{Gtid\+\_\+table\+\_\+access\+\_\+context}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+table\+\_\+access\+\_\+context\+::init (\begin{DoxyParamCaption}\item[{T\+HD $\ast$$\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$}]{table,  }\item[{bool}]{is\+\_\+write }\end{DoxyParamCaption})}
+
+Initialize the gtid\+\_\+executed table access context as following\+:
+\begin{DoxyItemize}
+\item Create a new T\+HD if current\+\_\+thd is N\+U\+LL
+\item Disable binlog temporarily if we are going to modify the table
+\item Open and lock a table.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \mbox{[}in/out\mbox{]}} & thd Thread requesting to open the table \\
+\hline
+ & {\em lock\+\_\+type} & How to lock the table \\
+\hline
+\mbox{\texttt{ out}}  & {\em table} & We will store the open table here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & failed \\
+\hline
+{\em F\+A\+L\+SE} & success \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid\+\_\+persist.\+h\item 
+rpl\+\_\+gtid\+\_\+persist.\+cc\end{DoxyCompactItemize}

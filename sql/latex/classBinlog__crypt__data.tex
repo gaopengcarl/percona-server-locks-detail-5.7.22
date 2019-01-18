@@ -1,0 +1,60 @@
+\hypertarget{classBinlog__crypt__data}{}\section{Binlog\+\_\+crypt\+\_\+data Class Reference}
+\label{classBinlog__crypt__data}\index{Binlog\+\_\+crypt\+\_\+data@{Binlog\+\_\+crypt\+\_\+data}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a6e6bc7dec66e1348ae66cd100c32e43c}\label{classBinlog__crypt__data_a6e6bc7dec66e1348ae66cd100c32e43c}} 
+enum {\bfseries Binlog\+\_\+crypt\+\_\+consts} \{ \newline
+{\bfseries B\+I\+N\+L\+O\+G\+\_\+\+C\+R\+Y\+P\+T\+O\+\_\+\+S\+C\+H\+E\+M\+E\+\_\+\+L\+E\+N\+G\+TH} = 1, 
+{\bfseries B\+I\+N\+L\+O\+G\+\_\+\+K\+E\+Y\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH} = 4, 
+{\bfseries B\+I\+N\+L\+O\+G\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH} = M\+Y\+\_\+\+A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE, 
+{\bfseries B\+I\+N\+L\+O\+G\+\_\+\+I\+V\+\_\+\+O\+F\+F\+S\+\_\+\+L\+E\+N\+G\+TH} = 4, 
+\newline
+{\bfseries B\+I\+N\+L\+O\+G\+\_\+\+N\+O\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH} = B\+I\+N\+L\+O\+G\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH -\/ B\+I\+N\+L\+O\+G\+\_\+\+I\+V\+\_\+\+O\+F\+F\+S\+\_\+\+L\+E\+N\+G\+TH
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_aecd06dd7c04312c5ed05661ab430012b}\label{classBinlog__crypt__data_aecd06dd7c04312c5ed05661ab430012b}} 
+{\bfseries Binlog\+\_\+crypt\+\_\+data} (const \mbox{\hyperlink{classBinlog__crypt__data}{Binlog\+\_\+crypt\+\_\+data}} \&b)
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_aded0388ef00e5543eb6a2c4e72515e0c}\label{classBinlog__crypt__data_aded0388ef00e5543eb6a2c4e72515e0c}} 
+\mbox{\hyperlink{classBinlog__crypt__data}{Binlog\+\_\+crypt\+\_\+data}} \& {\bfseries operator=} (\mbox{\hyperlink{classBinlog__crypt__data}{Binlog\+\_\+crypt\+\_\+data}} b)
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a652365bf916a6f8e629404a9c07797c3}\label{classBinlog__crypt__data_a652365bf916a6f8e629404a9c07797c3}} 
+bool {\bfseries is\+\_\+enabled} () const
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_aa13a952b460dc211b5781d44d1044f36}\label{classBinlog__crypt__data_aa13a952b460dc211b5781d44d1044f36}} 
+void {\bfseries disable} ()
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_adeff9b4aeb41a3e269ed85aaca37b634}\label{classBinlog__crypt__data_adeff9b4aeb41a3e269ed85aaca37b634}} 
+uchar $\ast$ {\bfseries get\+\_\+key} () const
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a340dc43e58d478574b6378525d581a0b}\label{classBinlog__crypt__data_a340dc43e58d478574b6378525d581a0b}} 
+size\+\_\+t {\bfseries get\+\_\+keys\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a5baa8604c61517f9eaf806a9a365f1b2}\label{classBinlog__crypt__data_a5baa8604c61517f9eaf806a9a365f1b2}} 
+uint {\bfseries get\+\_\+key\+\_\+version} () const
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a7a8be2c46daabfadd72cb16c2dce4cfd}\label{classBinlog__crypt__data_a7a8be2c46daabfadd72cb16c2dce4cfd}} 
+void {\bfseries free\+\_\+key} (uchar $\ast$\&key, size\+\_\+t \&key\+\_\+length)
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a34cb21a796d1fd12b70645fb0de70d2b}\label{classBinlog__crypt__data_a34cb21a796d1fd12b70645fb0de70d2b}} 
+bool {\bfseries init} (uint sch, uint kv, const uchar $\ast$nonce)
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a65115a1311fcb7a53c2de5a26b30a7b8}\label{classBinlog__crypt__data_a65115a1311fcb7a53c2de5a26b30a7b8}} 
+bool {\bfseries init\+\_\+with\+\_\+loaded\+\_\+key} (uint sch, const uchar $\ast$nonce)
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a9b981a2b129ab316a267a81b27cfffd0}\label{classBinlog__crypt__data_a9b981a2b129ab316a267a81b27cfffd0}} 
+bool {\bfseries load\+\_\+latest\+\_\+binlog\+\_\+key} ()
+\item 
+\mbox{\Hypertarget{classBinlog__crypt__data_a32325b67626e6bf724b3d28a29cd7732}\label{classBinlog__crypt__data_a32325b67626e6bf724b3d28a29cd7732}} 
+void {\bfseries set\+\_\+iv} (uchar $\ast$iv, uint32 offs) const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+binlog\+\_\+crypt\+\_\+data.\+h\item 
+binlog\+\_\+crypt\+\_\+data.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{srv__session_8cc}{}\section{srv\+\_\+session.\+cc File Reference}
+\label{srv__session_8cc}\index{srv\+\_\+session.\+cc@{srv\+\_\+session.\+cc}}
+{\ttfamily \#include \char`\"{}srv\+\_\+session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+dbug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+connect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysqld\+\_\+thd\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+audit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+thread\+\_\+local.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysqld.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+thd\+\_\+internal\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mutex\+\_\+lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/psi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conn\+\_\+handler/connection\+\_\+handler\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+plugin.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAuto__rw__lock__read}{Auto\+\_\+rw\+\_\+lock\+\_\+read}}
+\item 
+class \mbox{\hyperlink{classAuto__rw__lock__write}{Auto\+\_\+rw\+\_\+lock\+\_\+write}}
+\item 
+class \mbox{\hyperlink{classThread__to__plugin__map}{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\item 
+class \mbox{\hyperlink{classMutexed__map__thd__srv__session}{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\item 
+class \mbox{\hyperlink{classMutexed__map__thd__srv__session_1_1Do__Impl}{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::\+Do\+\_\+\+Impl}}
+\item 
+class \mbox{\hyperlink{classFind__thd__by__id__with__callback__set}{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{srv__session_8cc_ae892bbbd1490b998b0fa8d430f5552aa}{thd\+\_\+clear\+\_\+errors}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct st\+\_\+command\+\_\+service\+\_\+cbs {\bfseries error\+\_\+protocol\+\_\+callbacks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} implementation. See the method comments for more. Please, check also \mbox{\hyperlink{srv__session_8h}{srv\+\_\+session.\+h}} for more information. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{srv__session_8cc_ae892bbbd1490b998b0fa8d430f5552aa}\label{srv__session_8cc_ae892bbbd1490b998b0fa8d430f5552aa}} 
+\index{srv\+\_\+session.\+cc@{srv\+\_\+session.\+cc}!thd\+\_\+clear\+\_\+errors@{thd\+\_\+clear\+\_\+errors}}
+\index{thd\+\_\+clear\+\_\+errors@{thd\+\_\+clear\+\_\+errors}!srv\+\_\+session.\+cc@{srv\+\_\+session.\+cc}}
+\subsubsection{\texorpdfstring{thd\+\_\+clear\+\_\+errors()}{thd\_clear\_errors()}}
+{\footnotesize\ttfamily void thd\+\_\+clear\+\_\+errors (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Clear errors from the previous T\+HD
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{srv__session_8cc_aed7ec1c20dfa39341a525f6800e37f10}\label{srv__session_8cc_aed7ec1c20dfa39341a525f6800e37f10}} 
+\index{srv\+\_\+session.\+cc@{srv\+\_\+session.\+cc}!error\+\_\+protocol\+\_\+callbacks@{error\+\_\+protocol\+\_\+callbacks}}
+\index{error\+\_\+protocol\+\_\+callbacks@{error\+\_\+protocol\+\_\+callbacks}!srv\+\_\+session.\+cc@{srv\+\_\+session.\+cc}}
+\subsubsection{\texorpdfstring{error\+\_\+protocol\+\_\+callbacks}{error\_protocol\_callbacks}}
+{\footnotesize\ttfamily const struct st\+\_\+command\+\_\+service\+\_\+cbs error\+\_\+protocol\+\_\+callbacks}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  err\_start\_result\_metadata,}
+\DoxyCodeLine{  err\_field\_metadata,}
+\DoxyCodeLine{  err\_end\_result\_metadata,}
+\DoxyCodeLine{  err\_start\_row,}
+\DoxyCodeLine{  err\_end\_row,}
+\DoxyCodeLine{  err\_abort\_row,}
+\DoxyCodeLine{  err\_get\_client\_capabilities,}
+\DoxyCodeLine{  err\_get\_null,}
+\DoxyCodeLine{  err\_get\_integer,}
+\DoxyCodeLine{  err\_get\_longlong,}
+\DoxyCodeLine{  err\_get\_decimal,}
+\DoxyCodeLine{  err\_get\_double,}
+\DoxyCodeLine{  err\_get\_date,}
+\DoxyCodeLine{  err\_get\_time,}
+\DoxyCodeLine{  err\_get\_datetime,}
+\DoxyCodeLine{  err\_get\_string,}
+\DoxyCodeLine{  err\_handle\_ok,}
+\DoxyCodeLine{  err\_handle\_error,}
+\DoxyCodeLine{  err\_shutdown}
+\DoxyCodeLine{\}}
+\end{DoxyCode}

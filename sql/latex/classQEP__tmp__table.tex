@@ -1,0 +1,68 @@
+\hypertarget{classQEP__tmp__table}{}\section{Q\+E\+P\+\_\+tmp\+\_\+table Class Reference}
+\label{classQEP__tmp__table}\index{Q\+E\+P\+\_\+tmp\+\_\+table@{Q\+E\+P\+\_\+tmp\+\_\+table}}
+
+
+Class for accumulating join result in a tmp table, grouping them if necessary, and sending further.  
+
+
+
+
+{\ttfamily \#include $<$sql\+\_\+executor.\+h$>$}
+
+Inheritance diagram for Q\+E\+P\+\_\+tmp\+\_\+table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQEP__tmp__table}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQEP__tmp__table_aaef513c1b36da60071b5c9831166daf6}\label{classQEP__tmp__table_aaef513c1b36da60071b5c9831166daf6}} 
+{\bfseries Q\+E\+P\+\_\+tmp\+\_\+table} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classQEP__tmp__table_a436ee576b42863661f6ae6e286409098}\label{classQEP__tmp__table_a436ee576b42863661f6ae6e286409098}} 
+enum\+\_\+op\+\_\+type {\bfseries type} ()
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{classQEP__tmp__table_ad402039d362a460ab3b4f7035cd843ce}{put\+\_\+record}} ()
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{group__Query__Executor_ga1cbaa4a44140f41c161eaab87c25f473}{end\+\_\+send}} ()
+\begin{DoxyCompactList}\small\item\em Finish rnd/index scan after accumulating records, switch ref\+\_\+array, and send accumulated records further. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQEP__tmp__table_a4b658910c518a85ddf9c3640463dac18}{set\+\_\+write\+\_\+func}} (Next\+\_\+select\+\_\+func new\+\_\+write\+\_\+func)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for accumulating join result in a tmp table, grouping them if necessary, and sending further. 
+
+Join result records are accumulated on the \mbox{\hyperlink{classQEP__tmp__table_ad402039d362a460ab3b4f7035cd843ce}{put\+\_\+record()}} call. The accumulation process is determined by the write\+\_\+func, it could be\+: end\+\_\+write Simply store all records in tmp table. end\+\_\+write\+\_\+group Perform grouping using join-\/$>$group\+\_\+fields, records are expected to be sorted. end\+\_\+update Perform grouping using the key generated on tmp table. Input records aren\textquotesingle{}t expected to be sorted. Tmp table uses the heap engine end\+\_\+update\+\_\+unique Same as above, but the engine is myisam.
+
+\mbox{\hyperlink{classLazy}{Lazy}} table initialization is used -\/ the table will be instantiated and rnd/index scan started on the first \mbox{\hyperlink{classQEP__tmp__table_ad402039d362a460ab3b4f7035cd843ce}{put\+\_\+record()}} call. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQEP__tmp__table_ad402039d362a460ab3b4f7035cd843ce}\label{classQEP__tmp__table_ad402039d362a460ab3b4f7035cd843ce}} 
+\index{Q\+E\+P\+\_\+tmp\+\_\+table@{Q\+E\+P\+\_\+tmp\+\_\+table}!put\+\_\+record@{put\+\_\+record}}
+\index{put\+\_\+record@{put\+\_\+record}!Q\+E\+P\+\_\+tmp\+\_\+table@{Q\+E\+P\+\_\+tmp\+\_\+table}}
+\subsubsection{\texorpdfstring{put\+\_\+record()}{put\_record()}}
+{\footnotesize\ttfamily enum\+\_\+nested\+\_\+loop\+\_\+state Q\+E\+P\+\_\+tmp\+\_\+table\+::put\+\_\+record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Put a new record into the operation\textquotesingle{}s buffer \begin{DoxyReturn}{Returns}
+return one of enum\+\_\+nested\+\_\+loop\+\_\+state values. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classQEP__operation_af7cac289b2b1a38349cc27e8a4ff7597}{Q\+E\+P\+\_\+operation}}.
+
+\mbox{\Hypertarget{classQEP__tmp__table_a4b658910c518a85ddf9c3640463dac18}\label{classQEP__tmp__table_a4b658910c518a85ddf9c3640463dac18}} 
+\index{Q\+E\+P\+\_\+tmp\+\_\+table@{Q\+E\+P\+\_\+tmp\+\_\+table}!set\+\_\+write\+\_\+func@{set\+\_\+write\+\_\+func}}
+\index{set\+\_\+write\+\_\+func@{set\+\_\+write\+\_\+func}!Q\+E\+P\+\_\+tmp\+\_\+table@{Q\+E\+P\+\_\+tmp\+\_\+table}}
+\subsubsection{\texorpdfstring{set\+\_\+write\+\_\+func()}{set\_write\_func()}}
+{\footnotesize\ttfamily void Q\+E\+P\+\_\+tmp\+\_\+table\+::set\+\_\+write\+\_\+func (\begin{DoxyParamCaption}\item[{Next\+\_\+select\+\_\+func}]{new\+\_\+write\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+write\+\_\+func setter 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+executor.\+h\item 
+\mbox{\hyperlink{sql__executor_8cc}{sql\+\_\+executor.\+cc}}\end{DoxyCompactItemize}

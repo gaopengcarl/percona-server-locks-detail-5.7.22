@@ -1,0 +1,66 @@
+\hypertarget{classMY__LOCALE__ERRMSGS}{}\section{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS Class Reference}
+\label{classMY__LOCALE__ERRMSGS}\index{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMY__LOCALE__ERRMSGS_aa325530fbd654d206c7a39553eba0cf4}\label{classMY__LOCALE__ERRMSGS_aa325530fbd654d206c7a39553eba0cf4}} 
+{\bfseries M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS} (const char $\ast$lang\+\_\+par)
+\item 
+const char $\ast$ \mbox{\hyperlink{classMY__LOCALE__ERRMSGS_a5b285fee4903311c7284d5fdf0bd7cad}{lookup}} (int mysql\+\_\+errno)
+\item 
+bool \mbox{\hyperlink{classMY__LOCALE__ERRMSGS_a9ecc18e8f3a6a458f8f55ce1ba2824a4}{is\+\_\+loaded}} () const
+\item 
+void \mbox{\hyperlink{classMY__LOCALE__ERRMSGS_ab5a48f78914d6ea18049758eadc7c66c}{destroy}} ()
+\item 
+bool \mbox{\hyperlink{classMY__LOCALE__ERRMSGS_aeabbcfe72a53fc6af113879b5ed8a130}{read\+\_\+texts}} ()
+\item 
+\mbox{\Hypertarget{classMY__LOCALE__ERRMSGS_a44ebbd2249ca49f4eb26d2deb8248854}\label{classMY__LOCALE__ERRMSGS_a44ebbd2249ca49f4eb26d2deb8248854}} 
+const char $\ast$ {\bfseries get\+\_\+language} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMY__LOCALE__ERRMSGS_ab5a48f78914d6ea18049758eadc7c66c}\label{classMY__LOCALE__ERRMSGS_ab5a48f78914d6ea18049758eadc7c66c}} 
+\index{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}!destroy@{destroy}}
+\index{destroy@{destroy}!M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+G\+S\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deallocate error message strings. \mbox{\Hypertarget{classMY__LOCALE__ERRMSGS_a9ecc18e8f3a6a458f8f55ce1ba2824a4}\label{classMY__LOCALE__ERRMSGS_a9ecc18e8f3a6a458f8f55ce1ba2824a4}} 
+\index{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}!is\+\_\+loaded@{is\+\_\+loaded}}
+\index{is\+\_\+loaded@{is\+\_\+loaded}!M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}}
+\subsubsection{\texorpdfstring{is\+\_\+loaded()}{is\_loaded()}}
+{\footnotesize\ttfamily bool M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+G\+S\+::is\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Has the error message file been sucessfully loaded? \mbox{\Hypertarget{classMY__LOCALE__ERRMSGS_a5b285fee4903311c7284d5fdf0bd7cad}\label{classMY__LOCALE__ERRMSGS_a5b285fee4903311c7284d5fdf0bd7cad}} 
+\index{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}!lookup@{lookup}}
+\index{lookup@{lookup}!M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}}
+\subsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily const char $\ast$ M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+G\+S\+::lookup (\begin{DoxyParamCaption}\item[{int}]{mysql\+\_\+errno }\end{DoxyParamCaption})}
+
+Return error message string for a given error number. \mbox{\Hypertarget{classMY__LOCALE__ERRMSGS_aeabbcfe72a53fc6af113879b5ed8a130}\label{classMY__LOCALE__ERRMSGS_aeabbcfe72a53fc6af113879b5ed8a130}} 
+\index{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}!read\+\_\+texts@{read\+\_\+texts}}
+\index{read\+\_\+texts@{read\+\_\+texts}!M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS@{M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+GS}}
+\subsubsection{\texorpdfstring{read\+\_\+texts()}{read\_texts()}}
+{\footnotesize\ttfamily bool M\+Y\+\_\+\+L\+O\+C\+A\+L\+E\+\_\+\+E\+R\+R\+M\+S\+G\+S\+::read\+\_\+texts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read the error message file and initialize strings.
+
+Read text from packed textfile in language-\/directory.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & On success \\
+\hline
+{\em true} & On failure\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If we can\textquotesingle{}t read messagefile then it\textquotesingle{}s panic-\/ we can\textquotesingle{}t continue. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+derror.\+h\item 
+derror.\+cc\end{DoxyCompactItemize}

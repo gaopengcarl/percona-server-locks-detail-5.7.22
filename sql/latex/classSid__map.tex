@@ -1,0 +1,172 @@
+\hypertarget{classSid__map}{}\section{Sid\+\_\+map Class Reference}
+\label{classSid__map}\index{Sid\+\_\+map@{Sid\+\_\+map}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSid__map_adcb420a3241258cc68ab42910133144d}{Sid\+\_\+map}} (\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$sid\+\_\+lock)
+\item 
+\mbox{\Hypertarget{classSid__map_a02ebe48caba52d2bccd668088c25a8e8}\label{classSid__map_a02ebe48caba52d2bccd668088c25a8e8}} 
+\mbox{\hyperlink{classSid__map_a02ebe48caba52d2bccd668088c25a8e8}{$\sim$\+Sid\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Destroy this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}}. \end{DoxyCompactList}\item 
+rpl\+\_\+sidno \mbox{\hyperlink{classSid__map_a23aa9c0f385a44772e9e5c3955cca0cf}{add\+\_\+sid}} (const rpl\+\_\+sid \&sid)
+\item 
+rpl\+\_\+sidno \mbox{\hyperlink{classSid__map_a1667fd040c720d4ab8c35871f63926f4}{sid\+\_\+to\+\_\+sidno}} (const rpl\+\_\+sid \&sid) const
+\item 
+const rpl\+\_\+sid \& \mbox{\hyperlink{classSid__map_ae9a138fb42883743ec9548a6e65a56f8}{sidno\+\_\+to\+\_\+sid}} (rpl\+\_\+sidno sidno, bool need\+\_\+lock=false) const
+\item 
+rpl\+\_\+sidno \mbox{\hyperlink{classSid__map_a136025a5e9fb2ea21eb4da9d44060fce}{get\+\_\+sorted\+\_\+sidno}} (rpl\+\_\+sidno n) const
+\item 
+rpl\+\_\+sidno \mbox{\hyperlink{classSid__map_a4e1dbe6bf6fbaf1d6c3199cd407a620c}{get\+\_\+max\+\_\+sidno}} () const
+\item 
+\mbox{\Hypertarget{classSid__map_ae8a930508aff1669dabea328064ada55}\label{classSid__map_ae8a930508aff1669dabea328064ada55}} 
+\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$ \mbox{\hyperlink{classSid__map_ae8a930508aff1669dabea328064ada55}{get\+\_\+sid\+\_\+lock}} () const
+\begin{DoxyCompactList}\small\item\em Return the sid\+\_\+lock. \end{DoxyCompactList}\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classSid__map_aa02acc6896576b6a7f54fb55c1e359cd}{copy}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$dest)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a bidirectional map between S\+ID and S\+I\+D\+NO.
+
+S\+I\+D\+N\+Os are always numbers greater or equal to 1.
+
+This data structure O\+P\+T\+I\+O\+N\+A\+L\+LY knows of a read-\/write lock that protects the number of S\+I\+D\+N\+Os. The lock is provided by the invoker of the constructor and it is generally the caller\textquotesingle{}s responsibility to acquire the read lock. If the lock is not N\+U\+LL, access methods assert that the caller already holds the read (or write) lock. If the lock is not N\+U\+LL and a method of this class grows the number of S\+I\+D\+N\+Os, then the method temporarily upgrades this lock to a write lock and then degrades it to a read lock again; there will be a short period when the lock is not held at all. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSid__map_adcb420a3241258cc68ab42910133144d}\label{classSid__map_adcb420a3241258cc68ab42910133144d}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!Sid\+\_\+map@{Sid\+\_\+map}}
+\index{Sid\+\_\+map@{Sid\+\_\+map}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{Sid\+\_\+map()}{Sid\_map()}}
+{\footnotesize\ttfamily Sid\+\_\+map\+::\+Sid\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$}]{sid\+\_\+lock }\end{DoxyParamCaption})}
+
+Create this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid\+\_\+lock} & Read-\/write lock that protects updates to the number of S\+I\+D\+N\+Os. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSid__map_a23aa9c0f385a44772e9e5c3955cca0cf}\label{classSid__map_a23aa9c0f385a44772e9e5c3955cca0cf}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!add\+\_\+sid@{add\+\_\+sid}}
+\index{add\+\_\+sid@{add\+\_\+sid}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{add\+\_\+sid()}{add\_sid()}}
+{\footnotesize\ttfamily rpl\+\_\+sidno Sid\+\_\+map\+::add\+\_\+sid (\begin{DoxyParamCaption}\item[{const rpl\+\_\+sid \&}]{sid }\end{DoxyParamCaption})}
+
+Add the given S\+ID to this map if it does not already exist.
+
+The caller must hold the read lock or write lock on sid\+\_\+lock before invoking this function. If the S\+ID does not exist in this map, it will release the read lock, take a write lock, update the map, release the write lock, and take the read lock again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid} & The S\+ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+I\+D\+NO} & The S\+I\+D\+NO for the S\+ID (a new S\+I\+D\+NO if the S\+ID did not exist, an existing if it did exist). \\
+\hline
+{\em negative} & Error. This function calls my\+\_\+error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classSid__map_aa02acc6896576b6a7f54fb55c1e359cd}\label{classSid__map_aa02acc6896576b6a7f54fb55c1e359cd}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!copy@{copy}}
+\index{copy@{copy}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Sid\+\_\+map\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{dest }\end{DoxyParamCaption})}
+
+Deep copy this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} to dest.
+
+The caller must hold\+: the read lock on this sid\+\_\+lock the write lock on the dest sid\+\_\+lock before invoking this function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em dest} & The \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} to which the sids and sidnos will be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSid__map_a4e1dbe6bf6fbaf1d6c3199cd407a620c}\label{classSid__map_a4e1dbe6bf6fbaf1d6c3199cd407a620c}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!get\+\_\+max\+\_\+sidno@{get\+\_\+max\+\_\+sidno}}
+\index{get\+\_\+max\+\_\+sidno@{get\+\_\+max\+\_\+sidno}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+sidno()}{get\_max\_sidno()}}
+{\footnotesize\ttfamily rpl\+\_\+sidno Sid\+\_\+map\+::get\+\_\+max\+\_\+sidno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the biggest sidno in this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}}.
+
+The caller must hold the read or write lock on sid\+\_\+lock before invoking this function. \mbox{\Hypertarget{classSid__map_a136025a5e9fb2ea21eb4da9d44060fce}\label{classSid__map_a136025a5e9fb2ea21eb4da9d44060fce}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!get\+\_\+sorted\+\_\+sidno@{get\+\_\+sorted\+\_\+sidno}}
+\index{get\+\_\+sorted\+\_\+sidno@{get\+\_\+sorted\+\_\+sidno}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{get\+\_\+sorted\+\_\+sidno()}{get\_sorted\_sidno()}}
+{\footnotesize\ttfamily rpl\+\_\+sidno Sid\+\_\+map\+::get\+\_\+sorted\+\_\+sidno (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the n\textquotesingle{}th smallest sidno, in the order of the S\+ID\textquotesingle{}s U\+U\+ID.
+
+The caller must hold the read or write lock on sid\+\_\+lock before invoking this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & A number in the interval \mbox{[}0, \mbox{\hyperlink{classSid__map_a4e1dbe6bf6fbaf1d6c3199cd407a620c}{get\+\_\+max\+\_\+sidno()}}-\/1\mbox{]}, inclusively. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSid__map_a1667fd040c720d4ab8c35871f63926f4}\label{classSid__map_a1667fd040c720d4ab8c35871f63926f4}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!sid\+\_\+to\+\_\+sidno@{sid\+\_\+to\+\_\+sidno}}
+\index{sid\+\_\+to\+\_\+sidno@{sid\+\_\+to\+\_\+sidno}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{sid\+\_\+to\+\_\+sidno()}{sid\_to\_sidno()}}
+{\footnotesize\ttfamily rpl\+\_\+sidno Sid\+\_\+map\+::sid\+\_\+to\+\_\+sidno (\begin{DoxyParamCaption}\item[{const rpl\+\_\+sid \&}]{sid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the S\+I\+D\+NO for a given S\+ID
+
+The caller must hold the read lock on sid\+\_\+lock before invoking this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid} & The S\+ID. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+I\+D\+NO} & if the given S\+ID exists in this map. \\
+\hline
+{\em 0} & if the given S\+ID does not exist in this map. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classSid__map_ae9a138fb42883743ec9548a6e65a56f8}\label{classSid__map_ae9a138fb42883743ec9548a6e65a56f8}} 
+\index{Sid\+\_\+map@{Sid\+\_\+map}!sidno\+\_\+to\+\_\+sid@{sidno\+\_\+to\+\_\+sid}}
+\index{sidno\+\_\+to\+\_\+sid@{sidno\+\_\+to\+\_\+sid}!Sid\+\_\+map@{Sid\+\_\+map}}
+\subsubsection{\texorpdfstring{sidno\+\_\+to\+\_\+sid()}{sidno\_to\_sid()}}
+{\footnotesize\ttfamily const rpl\+\_\+sid\& Sid\+\_\+map\+::sidno\+\_\+to\+\_\+sid (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno,  }\item[{bool}]{need\+\_\+lock = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the S\+ID for a given S\+I\+D\+NO.
+
+Raises an assertion if the S\+I\+D\+NO is not valid.
+
+If need\+\_\+lock is true, acquires sid\+\_\+lock-\/$>$rdlock; otherwise asserts that it is held already.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & The S\+I\+D\+NO. \\
+\hline
+{\em need\+\_\+lock} & If true, and sid\+\_\+lock!=N\+U\+LL, this function will acquire sid\+\_\+lock before looking up the sid, and then release it. If false, and sid\+\_\+lock!=N\+U\+LL, this function will assert the sid\+\_\+lock is already held. If sid\+\_\+lock==N\+U\+LL, nothing is done w.\+r.\+t. locking. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & The S\+I\+D\+NO does not exist in this map. \\
+\hline
+{\em pointer} & Pointer to the S\+ID. The data is shared with this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}}, so should not be modified. It is safe to read the data even after this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} is modified, but not if this \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} is destroyed. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\item 
+rpl\+\_\+gtid\+\_\+sid\+\_\+map.\+cc\end{DoxyCompactItemize}

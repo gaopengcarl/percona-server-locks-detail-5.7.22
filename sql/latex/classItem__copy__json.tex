@@ -1,0 +1,112 @@
+\hypertarget{classItem__copy__json}{}\section{Item\+\_\+copy\+\_\+json Class Reference}
+\label{classItem__copy__json}\index{Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}}
+Inheritance diagram for Item\+\_\+copy\+\_\+json\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classItem__copy__json}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__copy__json_ad6119954b9cc3b47ca7420eaa30664ad}\label{classItem__copy__json_ad6119954b9cc3b47ca7420eaa30664ad}} 
+{\bfseries Item\+\_\+copy\+\_\+json} (\mbox{\hyperlink{classItem}{Item}} $\ast$\mbox{\hyperlink{classItem__copy_a9ef1b9fd547a3b940e89e9837083c87f}{item}})
+\item 
+virtual bool \mbox{\hyperlink{classItem__copy__json_a061528b6d05583ba76ecec780d4603f7}{copy}} (const T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classItem__copy__json_aead579100651419c06fe93f2e53bb396}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__json_a4f84f1cd4290884a562ceb59adbe7eb2}\label{classItem__copy__json_a4f84f1cd4290884a562ceb59adbe7eb2}} 
+virtual String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__json_a2cb394a08f083590f164dbc57bbf3087}\label{classItem__copy__json_a2cb394a08f083590f164dbc57bbf3087}} 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__json_a4f32888285513a91fa67f5cd1f986957}\label{classItem__copy__json_a4f32888285513a91fa67f5cd1f986957}} 
+virtual double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__copy__json_a9728665aa46804f0f6c1010660e08e3c}\label{classItem__copy__json_a9728665aa46804f0f6c1010660e08e3c}} 
+virtual longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__copy__json_ab15e45d98dee553cd4f2ee8e3969e651}\label{classItem__copy__json_ab15e45d98dee553cd4f2ee8e3969e651}} 
+virtual bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem__copy__json_ab9831e4017886e4a61c7c73e0898b5bb}\label{classItem__copy__json_ab9831e4017886e4a61c7c73e0898b5bb}} 
+virtual bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem__copy__json_a30b375a69d8ab08efa641fc376490804}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__copy__json_a061528b6d05583ba76ecec780d4603f7}\label{classItem__copy__json_a061528b6d05583ba76ecec780d4603f7}} 
+\index{Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}!copy@{copy}}
+\index{copy@{copy}!Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily bool Item\+\_\+copy\+\_\+json\+::copy (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update the cache with the value of the original item
+
+This is the method that updates the cached value. It must be explicitly called by the user of this class to store the value of the orginal item in the cache. \begin{DoxyReturn}{Returns}
+false if OK, true on error. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classItem__copy_a575caec22eeb27fb76d5aa74b1a8d492}{Item\+\_\+copy}}.
+
+\mbox{\Hypertarget{classItem__copy__json_a30b375a69d8ab08efa641fc376490804}\label{classItem__copy__json_a30b375a69d8ab08efa641fc376490804}} 
+\index{Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+\_\+copy\+\_\+json\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Helper function which does all of the work for \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field(\+Field$\ast$, bool)}}, except some error checking common to all subclasses, which is performed by \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}} itself.
+
+Subclasses that need to specialize the behaviour of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}, should override this function instead of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field} & the field to save the item into \\
+\hline
+ & {\em no\+\_\+conversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any errors or warnings \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were errors or warnings when saving the item \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classItem__copy_af4b55bf8c530188fa2110728a512811b}{Item\+\_\+copy}}.
+
+\mbox{\Hypertarget{classItem__copy__json_aead579100651419c06fe93f2e53bb396}\label{classItem__copy__json_aead579100651419c06fe93f2e53bb396}} 
+\index{Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+copy\+\_\+json@{Item\+\_\+copy\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+copy\+\_\+json\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{wr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy the cached J\+S\+ON value into a wrapper. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em wr} & the wrapper that receives the J\+S\+ON value \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__copy_ab74e3b8e79f623d7caabec195ab69a11}{Item\+\_\+copy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{classGis__multi__polygon}{}\section{Gis\+\_\+multi\+\_\+polygon Class Reference}
+\label{classGis__multi__polygon}\index{Gis\+\_\+multi\+\_\+polygon@{Gis\+\_\+multi\+\_\+polygon}}
+Inheritance diagram for Gis\+\_\+multi\+\_\+polygon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGis__multi__polygon}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a0ea4e892a22be855c88a9f24a3b2684b}\label{classGis__multi__polygon_a0ea4e892a22be855c88a9f24a3b2684b}} 
+typedef \mbox{\hyperlink{classGis__multi__polygon}{Gis\+\_\+multi\+\_\+polygon}} {\bfseries self}
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a32dbe2e82bef9acb3b3c75a4a034cc31}\label{classGis__multi__polygon_a32dbe2e82bef9acb3b3c75a4a034cc31}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}$<$ \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} $>$ {\bfseries base}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a673a1ac0af60cacc1132185596c82482}\label{classGis__multi__polygon_a673a1ac0af60cacc1132185596c82482}} 
+uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a7d64f500547ddd0dfd94008acff65dfa}\label{classGis__multi__polygon_a7d64f500547ddd0dfd94008acff65dfa}} 
+bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a345b11ae03652500488874e8cdeaffe7}\label{classGis__multi__polygon_a345b11ae03652500488874e8cdeaffe7}} 
+uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a4427b52a748783db0c961dedb237820d}\label{classGis__multi__polygon_a4427b52a748783db0c961dedb237820d}} 
+bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_af1539964ca7aec8eb2414d32c8810a60}\label{classGis__multi__polygon_af1539964ca7aec8eb2414d32c8810a60}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a711d173a96f360e8c39965b4d1571e4a}\label{classGis__multi__polygon_a711d173a96f360e8c39965b4d1571e4a}} 
+int {\bfseries num\+\_\+geometries} (uint32 $\ast$num) const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a8285a25e4ce2e4f9a7e4607816a77bde}\label{classGis__multi__polygon_a8285a25e4ce2e4f9a7e4607816a77bde}} 
+int {\bfseries geometry\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a07b14b4b3ccb7a84f5cc3e409f4ebc2d}\label{classGis__multi__polygon_a07b14b4b3ccb7a84f5cc3e409f4ebc2d}} 
+uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_aa21a29375e8dadbb0612e63220359d24}\label{classGis__multi__polygon_aa21a29375e8dadbb0612e63220359d24}} 
+const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_ace45c0d4fcfb228cc4176f8b2bdfad23}\label{classGis__multi__polygon_ace45c0d4fcfb228cc4176f8b2bdfad23}} 
+{\bfseries Gis\+\_\+multi\+\_\+polygon} (bool \mbox{\hyperlink{classGeometry_ada614004627a9e7af129e51a34242af9}{is\+\_\+bg\+\_\+adapter}}=true)
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a22c9628c7dc7b58529bf4cc0005734d4}\label{classGis__multi__polygon_a22c9628c7dc7b58529bf4cc0005734d4}} 
+{\bfseries Gis\+\_\+multi\+\_\+polygon} (const void $\ast$ptr, size\+\_\+t nbytes, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGis__multi__polygon_a61309215d8d545ac447cd5e11931a87d}\label{classGis__multi__polygon_a61309215d8d545ac447cd5e11931a87d}} 
+{\bfseries Gis\+\_\+multi\+\_\+polygon} (const \mbox{\hyperlink{classGis__multi__polygon}{self}} \&mpl)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

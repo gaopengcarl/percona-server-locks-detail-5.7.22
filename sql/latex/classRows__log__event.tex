@@ -1,0 +1,208 @@
+\hypertarget{classRows__log__event}{}\section{Rows\+\_\+log\+\_\+event Class Reference}
+\label{classRows__log__event}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Rows\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classRows__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a842cc94e78b6d6bef8aa1afcca57ce34}\label{classRows__log__event_a842cc94e78b6d6bef8aa1afcca57ce34}} 
+enum {\bfseries row\+\_\+lookup\+\_\+mode} \{ \newline
+{\bfseries R\+O\+W\+\_\+\+L\+O\+O\+K\+U\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED} = 0, 
+{\bfseries R\+O\+W\+\_\+\+L\+O\+O\+K\+U\+P\+\_\+\+N\+O\+T\+\_\+\+N\+E\+E\+D\+ED} = 1, 
+{\bfseries R\+O\+W\+\_\+\+L\+O\+O\+K\+U\+P\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+C\+AN} = 2, 
+{\bfseries R\+O\+W\+\_\+\+L\+O\+O\+K\+U\+P\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+C\+AN} = 3, 
+\newline
+{\bfseries R\+O\+W\+\_\+\+L\+O\+O\+K\+U\+P\+\_\+\+H\+A\+S\+H\+\_\+\+S\+C\+AN} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35}{enum\+\_\+error}} \{ \newline
+\mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a5c3ee63b59eb0f85d9905cf16cd5fe0d}{E\+R\+R\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE}} = -\/1, 
+\mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35af994b76723251df6f2b0f76743327f8b}{E\+R\+R\+\_\+\+OK}} = 0, 
+\mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a2a1190a85f5bb2c869db9ab5b82df2d5}{E\+R\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+X\+C\+E\+E\+D\+ED}} = 1, 
+\mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35af6ebe31503925effbdecbbbae5de1e7e}{E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+EM}} = 2, 
+\newline
+\mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a3dd54ac0b82e441cb929d5fdc750777b}{E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+D\+EF}} = 3, 
+\mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a94e3965ec001edd2757d41fd002eb4e9}{E\+R\+R\+\_\+\+R\+B\+R\+\_\+\+T\+O\+\_\+\+S\+BR}} = 4
+ \}
+\item 
+\mbox{\Hypertarget{classRows__log__event_ab2ff758ce7b922afa57a9987f4c784ce}\label{classRows__log__event_ab2ff758ce7b922afa57a9987f4c784ce}} 
+enum \{ {\bfseries R\+L\+E\+\_\+\+N\+O\+\_\+\+F\+L\+A\+GS} = 0U
+ \}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a82c506b223533da9b973eb235032d022}\label{classRows__log__event_a82c506b223533da9b973eb235032d022}} 
+typedef uint16 {\bfseries flag\+\_\+set}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__log__event_af1ea4577c69993a11c0f7b0abc962d56}\label{classRows__log__event_af1ea4577c69993a11c0f7b0abc962d56}} 
+void {\bfseries set\+\_\+flags} (flag\+\_\+set flags\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classRows__log__event_ac6202f24575f0e5c613052662e6ed20d}\label{classRows__log__event_ac6202f24575f0e5c613052662e6ed20d}} 
+void {\bfseries clear\+\_\+flags} (flag\+\_\+set flags\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classRows__log__event_aef6f5fa9a4d1088af8d7fb0ad348743f}\label{classRows__log__event_aef6f5fa9a4d1088af8d7fb0ad348743f}} 
+flag\+\_\+set {\bfseries get\+\_\+flags} (flag\+\_\+set flags\+\_\+arg) const
+\item 
+\mbox{\Hypertarget{classRows__log__event_a0584a5373168c13d361b2bfeae37e8ed}\label{classRows__log__event_a0584a5373168c13d361b2bfeae37e8ed}} 
+virtual Log\+\_\+event\+\_\+type {\bfseries get\+\_\+general\+\_\+type\+\_\+code} ()=0
+\item 
+\mbox{\Hypertarget{classRows__log__event_a4a5bcde528cb0b5b82ec63432cbd7f30}\label{classRows__log__event_a4a5bcde528cb0b5b82ec63432cbd7f30}} 
+virtual size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classRows__log__event_a14993d52994c08778f892733a0b29162}\label{classRows__log__event_a14993d52994c08778f892733a0b29162}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP const  $\ast$ {\bfseries get\+\_\+cols} () const
+\item 
+\mbox{\Hypertarget{classRows__log__event_aee84e81db598dc231d077141c492a201}\label{classRows__log__event_aee84e81db598dc231d077141c492a201}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP const  $\ast$ {\bfseries get\+\_\+cols\+\_\+ai} () const
+\item 
+\mbox{\Hypertarget{classRows__log__event_a1b0f8f45d476d82ba4564bb72d65cdad}\label{classRows__log__event_a1b0f8f45d476d82ba4564bb72d65cdad}} 
+size\+\_\+t {\bfseries get\+\_\+width} () const
+\item 
+\mbox{\Hypertarget{classRows__log__event_a28510b5571022d01fa26c13e4437b41b}\label{classRows__log__event_a28510b5571022d01fa26c13e4437b41b}} 
+const Table\+\_\+id \& {\bfseries get\+\_\+table\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classRows__log__event_adf9f246360b677be3b352b5f7e52625f}\label{classRows__log__event_adf9f246360b677be3b352b5f7e52625f}} 
+const uchar $\ast$ {\bfseries get\+\_\+extra\+\_\+row\+\_\+data} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a8f48d1dce18aa49d9b71e9e1a296bbbe}\label{classRows__log__event_a8f48d1dce18aa49d9b71e9e1a296bbbe}} 
+uint {\bfseries m\+\_\+row\+\_\+count}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a6c1c863fd13866639c1a4c37fd41e6b2}\label{classRows__log__event_a6c1c863fd13866639c1a4c37fd41e6b2}} 
+{\bfseries Rows\+\_\+log\+\_\+event} (const char $\ast$row\+\_\+data, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+bool \mbox{\hyperlink{classRows__log__event_a6e9443d09dd4aad9e689f962ba29abfd}{is\+\_\+rbr\+\_\+logging\+\_\+format}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__log__event_afdc4bc6754c8faeeceb3e341c7bddc4c}\label{classRows__log__event_afdc4bc6754c8faeeceb3e341c7bddc4c}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries m\+\_\+cols}
+\item 
+\mbox{\hyperlink{classHash__slave__rows}{Hash\+\_\+slave\+\_\+rows}} \mbox{\hyperlink{classRows__log__event_a4e650c9f7bb9f4a75b63340cc2eb3a60}{m\+\_\+hash}}
+\item 
+uint \mbox{\hyperlink{classRows__log__event_a34154d5894f717b32ccff5803a14f62e}{m\+\_\+rows\+\_\+lookup\+\_\+algorithm}}
+\item 
+\mbox{\Hypertarget{classRows__log__event_ae80d0c7b763593c7d34c8e9c16734f9b}\label{classRows__log__event_ae80d0c7b763593c7d34c8e9c16734f9b}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries m\+\_\+cols\+\_\+ai}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a6efdb323188063f6de017241743aaf99}\label{classRows__log__event_a6efdb323188063f6de017241743aaf99}} 
+ulong {\bfseries m\+\_\+master\+\_\+reclength}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a031c127c384f1e531c9f6fdf90866f72}\label{classRows__log__event_a031c127c384f1e531c9f6fdf90866f72}} 
+uint32 {\bfseries m\+\_\+bitbuf} \mbox{[}128/(sizeof(uint32) $\ast$8)\mbox{]}
+\item 
+\mbox{\Hypertarget{classRows__log__event_afd30448222df2e8e2ed6a2fe2b43aa5d}\label{classRows__log__event_afd30448222df2e8e2ed6a2fe2b43aa5d}} 
+uint32 {\bfseries m\+\_\+bitbuf\+\_\+ai} \mbox{[}128/(sizeof(uint32) $\ast$8)\mbox{]}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a25866943b754ef5de12980f571342785}\label{classRows__log__event_a25866943b754ef5de12980f571342785}} 
+uchar $\ast$ {\bfseries m\+\_\+rows\+\_\+buf}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a8cd5590ec0f6df0f2b0f152a9ee909f3}\label{classRows__log__event_a8cd5590ec0f6df0f2b0f152a9ee909f3}} 
+uchar $\ast$ {\bfseries m\+\_\+rows\+\_\+cur}
+\item 
+\mbox{\Hypertarget{classRows__log__event_a0da0072463be1fd9bbe17cdbf6e6200a}\label{classRows__log__event_a0da0072463be1fd9bbe17cdbf6e6200a}} 
+uchar $\ast$ {\bfseries m\+\_\+rows\+\_\+end}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__log__event_af1f35e123eb714eb1e82361a58ecbe60}\label{classRows__log__event_af1f35e123eb714eb1e82361a58ecbe60}} 
+class {\bfseries Old\+\_\+rows\+\_\+log\+\_\+event}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Common base class for all row-\/containing log events.
+
+R\+E\+S\+P\+O\+N\+S\+I\+B\+I\+L\+I\+T\+I\+ES
+
+Encode the common parts of all events containing rows, which are\+:
+\begin{DoxyItemize}
+\item Write data header and data body to an I\+O\+\_\+\+C\+A\+C\+HE.
+\end{DoxyItemize}
+
+Virtual inheritance is required here to handle the diamond problem in the class \mbox{\hyperlink{classWrite__rows__log__event}{Write\+\_\+rows\+\_\+log\+\_\+event}}, \mbox{\hyperlink{classUpdate__rows__log__event}{Update\+\_\+rows\+\_\+log\+\_\+event}} and \mbox{\hyperlink{classDelete__rows__log__event}{Delete\+\_\+rows\+\_\+log\+\_\+event}}. The diamond structure is explained in , ,  
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35}} 
+\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!enum\+\_\+error@{enum\+\_\+error}}
+\index{enum\+\_\+error@{enum\+\_\+error}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{enum\+\_\+error}{enum\_error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35}{Rows\+\_\+log\+\_\+event\+::enum\+\_\+error}}}
+
+Enumeration of the errors that can be returned. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE@{E\+R\+R\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!E\+R\+R\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE@{E\+R\+R\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE}}}\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a5c3ee63b59eb0f85d9905cf16cd5fe0d}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a5c3ee63b59eb0f85d9905cf16cd5fe0d}} 
+E\+R\+R\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE&Failure to open table \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}}}\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35af994b76723251df6f2b0f76743327f8b}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35af994b76723251df6f2b0f76743327f8b}} 
+E\+R\+R\+\_\+\+OK&No error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+X\+C\+E\+E\+D\+ED@{E\+R\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+X\+C\+E\+E\+D\+ED}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!E\+R\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+X\+C\+E\+E\+D\+ED@{E\+R\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+X\+C\+E\+E\+D\+ED}}}\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a2a1190a85f5bb2c869db9ab5b82df2d5}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a2a1190a85f5bb2c869db9ab5b82df2d5}} 
+E\+R\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+X\+C\+E\+E\+D\+ED&No more room for tables \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+EM}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+EM}}}\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35af6ebe31503925effbdecbbbae5de1e7e}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35af6ebe31503925effbdecbbbae5de1e7e}} 
+E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+EM&Out of memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+D\+EF@{E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+D\+EF}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+D\+EF@{E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+D\+EF}}}\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a3dd54ac0b82e441cb929d5fdc750777b}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a3dd54ac0b82e441cb929d5fdc750777b}} 
+E\+R\+R\+\_\+\+B\+A\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+D\+EF&Table definition does not match \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+B\+R\+\_\+\+T\+O\+\_\+\+S\+BR@{E\+R\+R\+\_\+\+R\+B\+R\+\_\+\+T\+O\+\_\+\+S\+BR}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!E\+R\+R\+\_\+\+R\+B\+R\+\_\+\+T\+O\+\_\+\+S\+BR@{E\+R\+R\+\_\+\+R\+B\+R\+\_\+\+T\+O\+\_\+\+S\+BR}}}\mbox{\Hypertarget{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a94e3965ec001edd2757d41fd002eb4e9}\label{classRows__log__event_ad4f2f3d052f398cc4f3c32731a4f9b35a94e3965ec001edd2757d41fd002eb4e9}} 
+E\+R\+R\+\_\+\+R\+B\+R\+\_\+\+T\+O\+\_\+\+S\+BR&daisy-\/chanining R\+BR to S\+BR not allowed \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRows__log__event_a6e9443d09dd4aad9e689f962ba29abfd}\label{classRows__log__event_a6e9443d09dd4aad9e689f962ba29abfd}} 
+\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!is\+\_\+rbr\+\_\+logging\+\_\+format@{is\+\_\+rbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+rbr\+\_\+logging\+\_\+format@{is\+\_\+rbr\+\_\+logging\+\_\+format}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+rbr\+\_\+logging\+\_\+format()}{is\_rbr\_logging\_format()}}
+{\footnotesize\ttfamily bool Rows\+\_\+log\+\_\+event\+::is\+\_\+rbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Return true if the event has to be logged using R\+BR for D\+M\+Ls. 
+
+Reimplemented from \mbox{\hyperlink{classLog__event_abd996ad9f33a59c3b03737beb2c2869d}{Log\+\_\+event}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classRows__log__event_a4e650c9f7bb9f4a75b63340cc2eb3a60}\label{classRows__log__event_a4e650c9f7bb9f4a75b63340cc2eb3a60}} 
+\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!m\+\_\+hash@{m\+\_\+hash}}
+\index{m\+\_\+hash@{m\+\_\+hash}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{m\+\_\+hash}{m\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHash__slave__rows}{Hash\+\_\+slave\+\_\+rows}} Rows\+\_\+log\+\_\+event\+::m\+\_\+hash\hspace{0.3cm}{\ttfamily [protected]}}
+
+Hash table that will hold the entries for while using H\+A\+S\+H\+\_\+\+S\+C\+AN algorithm to search and update/delete rows. \mbox{\Hypertarget{classRows__log__event_a34154d5894f717b32ccff5803a14f62e}\label{classRows__log__event_a34154d5894f717b32ccff5803a14f62e}} 
+\index{Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}!m\+\_\+rows\+\_\+lookup\+\_\+algorithm@{m\+\_\+rows\+\_\+lookup\+\_\+algorithm}}
+\index{m\+\_\+rows\+\_\+lookup\+\_\+algorithm@{m\+\_\+rows\+\_\+lookup\+\_\+algorithm}!Rows\+\_\+log\+\_\+event@{Rows\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{m\+\_\+rows\+\_\+lookup\+\_\+algorithm}{m\_rows\_lookup\_algorithm}}
+{\footnotesize\ttfamily uint Rows\+\_\+log\+\_\+event\+::m\+\_\+rows\+\_\+lookup\+\_\+algorithm\hspace{0.3cm}{\ttfamily [protected]}}
+
+The algorithm to use while searching for rows using the before image. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

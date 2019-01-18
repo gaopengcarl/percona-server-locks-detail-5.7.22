@@ -1,0 +1,145 @@
+\hypertarget{classState__tracker}{}\section{State\+\_\+tracker Class Reference}
+\label{classState__tracker}\index{State\+\_\+tracker@{State\+\_\+tracker}}
+
+
+{\ttfamily \#include $<$session\+\_\+tracker.\+h$>$}
+
+Inheritance diagram for State\+\_\+tracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.160622cm]{classState__tracker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classState__tracker_a571c37e501f7cfde9b4b8302d5d91cd8}{State\+\_\+tracker}} ()
+\item 
+virtual \mbox{\hyperlink{classState__tracker_aa5166c8da02624bae36ec7871d411af9}{$\sim$\+State\+\_\+tracker}} ()
+\item 
+bool \mbox{\hyperlink{classState__tracker_a99311fbb724be3f1bcf5bb34a4f1a873}{is\+\_\+enabled}} () const
+\item 
+\mbox{\Hypertarget{classState__tracker_aa24e7f8855458f2696ea1b2334f507bb}\label{classState__tracker_aa24e7f8855458f2696ea1b2334f507bb}} 
+bool {\bfseries is\+\_\+changed} () const
+\item 
+virtual bool \mbox{\hyperlink{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}{enable}} (T\+HD $\ast$thd)=0
+\item 
+virtual bool \mbox{\hyperlink{classState__tracker_a50923266a6300e657b70dc4f0125782c}{check}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)=0
+\item 
+virtual bool \mbox{\hyperlink{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}{update}} (T\+HD $\ast$thd)=0
+\item 
+virtual bool \mbox{\hyperlink{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}{store}} (T\+HD $\ast$thd, String \&buf)=0
+\item 
+virtual void \mbox{\hyperlink{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}{mark\+\_\+as\+\_\+changed}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$name)=0
+\item 
+\mbox{\Hypertarget{classState__tracker_a2ec639ab51af306de04bf453c92460d0}\label{classState__tracker_a2ec639ab51af306de04bf453c92460d0}} 
+virtual void {\bfseries claim\+\_\+memory\+\_\+ownership} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classState__tracker_a95fd0969d9f32c8daeddfbe1848b2da3}{m\+\_\+enabled}}
+\item 
+bool \mbox{\hyperlink{classState__tracker_a398c00ac9a343c4a7b39836708054383}{m\+\_\+changed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{\mbox{\hyperlink{classState__tracker}{State\+\_\+tracker}} }
+
+An abstract class that defines the interface for any of the server\textquotesingle{}s \textquotesingle{}session state change tracker\textquotesingle{}. A tracker, however, is a sub-\/ class of this class which takes care of tracking the change in value of a part-\/ icular session state type and thus defines various methods listed in this interface. The change information is later serialized and transmitted to the client through protocol\textquotesingle{}s OK packet.
+
+Tracker system variables \+:-\/ A tracker is normally mapped to a system variable. So in order to enable, disable or modify the sub-\/entities of a tracker, the user needs to modify the respective system variable either through S\+ET command or via command line option. As required in system variable handling, this interface also includes two functions to help in the verification of the supplied value (O\+N\+\_\+\+C\+H\+E\+CK) and the updation (O\+N\+\_\+\+U\+P\+D\+A\+TE) of the tracker system variable, namely -\/ \mbox{\hyperlink{classState__tracker_a50923266a6300e657b70dc4f0125782c}{check()}} and \mbox{\hyperlink{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}{update()}}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classState__tracker_a571c37e501f7cfde9b4b8302d5d91cd8}\label{classState__tracker_a571c37e501f7cfde9b4b8302d5d91cd8}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!State\+\_\+tracker@{State\+\_\+tracker}}
+\index{State\+\_\+tracker@{State\+\_\+tracker}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{State\+\_\+tracker()}{State\_tracker()}}
+{\footnotesize\ttfamily State\+\_\+tracker\+::\+State\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classState__tracker_aa5166c8da02624bae36ec7871d411af9}\label{classState__tracker_aa5166c8da02624bae36ec7871d411af9}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!````~State\+\_\+tracker@{$\sim$\+State\+\_\+tracker}}
+\index{````~State\+\_\+tracker@{$\sim$\+State\+\_\+tracker}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{$\sim$\+State\+\_\+tracker()}{~State\_tracker()}}
+{\footnotesize\ttfamily virtual State\+\_\+tracker\+::$\sim$\+State\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classState__tracker_a50923266a6300e657b70dc4f0125782c}\label{classState__tracker_a50923266a6300e657b70dc4f0125782c}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!check@{check}}
+\index{check@{check}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily virtual bool State\+\_\+tracker\+::check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+To be invoked when the tracker\textquotesingle{}s system variable is checked (O\+N\+\_\+\+C\+H\+E\+CK). 
+
+Implemented in \mbox{\hyperlink{classSession__gtids__tracker_a92148b2f6afc9101d8a56b35525491ed}{Session\+\_\+gtids\+\_\+tracker}}, \mbox{\hyperlink{classTransaction__state__tracker_ab1c253155bc5bbab9edf22dc64fffa20}{Transaction\+\_\+state\+\_\+tracker}}, \mbox{\hyperlink{classCurrent__schema__tracker_adb85ededcff63655f491046f93a82cba}{Current\+\_\+schema\+\_\+tracker}}, \mbox{\hyperlink{classSession__state__change__tracker_ada427c6ab34f2fac5ba8eeee84ac1ec2}{Session\+\_\+state\+\_\+change\+\_\+tracker}}, and \mbox{\hyperlink{classSession__sysvars__tracker_a8e2849a2c33fbbfcd81243d8d44fea6f}{Session\+\_\+sysvars\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}\label{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!enable@{enable}}
+\index{enable@{enable}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily virtual bool State\+\_\+tracker\+::enable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called in the constructor of T\+HD 
+
+Implemented in \mbox{\hyperlink{classSession__gtids__tracker_a170e0e7c09b4a143c7f3f6e710b435ce}{Session\+\_\+gtids\+\_\+tracker}}, \mbox{\hyperlink{classTransaction__state__tracker_a1027295403af650734a45d8281cc5d1c}{Transaction\+\_\+state\+\_\+tracker}}, \mbox{\hyperlink{classCurrent__schema__tracker_a7d1b177b9d6cd378e072aea79c07252c}{Current\+\_\+schema\+\_\+tracker}}, \mbox{\hyperlink{classSession__state__change__tracker_a3ec79835d60171eb55647f978ee34220}{Session\+\_\+state\+\_\+change\+\_\+tracker}}, and \mbox{\hyperlink{classSession__sysvars__tracker_abe0b7f50ef4c4e269a077f7784d2ce28}{Session\+\_\+sysvars\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classState__tracker_a99311fbb724be3f1bcf5bb34a4f1a873}\label{classState__tracker_a99311fbb724be3f1bcf5bb34a4f1a873}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!is\+\_\+enabled@{is\+\_\+enabled}}
+\index{is\+\_\+enabled@{is\+\_\+enabled}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{is\+\_\+enabled()}{is\_enabled()}}
+{\footnotesize\ttfamily bool State\+\_\+tracker\+::is\+\_\+enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getters \mbox{\Hypertarget{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}\label{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}}
+\index{mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{mark\+\_\+as\+\_\+changed()}{mark\_as\_changed()}}
+{\footnotesize\ttfamily virtual void State\+\_\+tracker\+::mark\+\_\+as\+\_\+changed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Mark the entity as changed. 
+
+Implemented in \mbox{\hyperlink{classSession__gtids__tracker_a2c2c7bed399a66fda5748d1a6407b8f8}{Session\+\_\+gtids\+\_\+tracker}}, \mbox{\hyperlink{classTransaction__state__tracker_a5afd4fcf4c13dcaf68811246a153d72f}{Transaction\+\_\+state\+\_\+tracker}}, \mbox{\hyperlink{classCurrent__schema__tracker_a5b7b338910bed0627c6312b9de307dde}{Current\+\_\+schema\+\_\+tracker}}, \mbox{\hyperlink{classSession__state__change__tracker_a584fe743f65ba30c3edcde930eb17d16}{Session\+\_\+state\+\_\+change\+\_\+tracker}}, and \mbox{\hyperlink{classSession__sysvars__tracker_adeca89d5fa8be0279ec522c7afd8fcae}{Session\+\_\+sysvars\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}\label{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!store@{store}}
+\index{store@{store}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily virtual bool State\+\_\+tracker\+::store (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String \&}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Store changed data into the given buffer. 
+
+Implemented in \mbox{\hyperlink{classSession__gtids__tracker_a35a83c4f0631294a76d707c20d5f1e1f}{Session\+\_\+gtids\+\_\+tracker}}, \mbox{\hyperlink{classTransaction__state__tracker_a7f7843e53238fdc98ee31ac07b2376e2}{Transaction\+\_\+state\+\_\+tracker}}, \mbox{\hyperlink{classCurrent__schema__tracker_a9d33638a5c4db24bb480f9aa0e202edb}{Current\+\_\+schema\+\_\+tracker}}, \mbox{\hyperlink{classSession__state__change__tracker_abd748697d89b7c7146b64438db0b404e}{Session\+\_\+state\+\_\+change\+\_\+tracker}}, and \mbox{\hyperlink{classSession__sysvars__tracker_a518ef2f3fae3c779cf182a391683b22e}{Session\+\_\+sysvars\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}\label{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!update@{update}}
+\index{update@{update}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual bool State\+\_\+tracker\+::update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+To be invoked when the tracker\textquotesingle{}s system variable is updated (O\+N\+\_\+\+U\+P\+D\+A\+TE). 
+
+Implemented in \mbox{\hyperlink{classSession__gtids__tracker_a02f3fb9545c5dfbedb9022f55ce03e6c}{Session\+\_\+gtids\+\_\+tracker}}, \mbox{\hyperlink{classTransaction__state__tracker_a96e814f8253741480125787405add62a}{Transaction\+\_\+state\+\_\+tracker}}, \mbox{\hyperlink{classCurrent__schema__tracker_a087a504d0c2ff939acecf08c891d3725}{Current\+\_\+schema\+\_\+tracker}}, \mbox{\hyperlink{classSession__state__change__tracker_abab633a67ce00f87c65059317242eb6c}{Session\+\_\+state\+\_\+change\+\_\+tracker}}, and \mbox{\hyperlink{classSession__sysvars__tracker_a82607e850253dec7382bc49425179074}{Session\+\_\+sysvars\+\_\+tracker}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classState__tracker_a398c00ac9a343c4a7b39836708054383}\label{classState__tracker_a398c00ac9a343c4a7b39836708054383}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!m\+\_\+changed@{m\+\_\+changed}}
+\index{m\+\_\+changed@{m\+\_\+changed}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{m\+\_\+changed}{m\_changed}}
+{\footnotesize\ttfamily bool State\+\_\+tracker\+::m\+\_\+changed\hspace{0.3cm}{\ttfamily [protected]}}
+
+Has the session state type changed ? \mbox{\Hypertarget{classState__tracker_a95fd0969d9f32c8daeddfbe1848b2da3}\label{classState__tracker_a95fd0969d9f32c8daeddfbe1848b2da3}} 
+\index{State\+\_\+tracker@{State\+\_\+tracker}!m\+\_\+enabled@{m\+\_\+enabled}}
+\index{m\+\_\+enabled@{m\+\_\+enabled}!State\+\_\+tracker@{State\+\_\+tracker}}
+\subsubsection{\texorpdfstring{m\+\_\+enabled}{m\_enabled}}
+{\footnotesize\ttfamily bool State\+\_\+tracker\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
+Is tracking enabled for a particular session state type ? 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,183 @@
+\hypertarget{classKey__use}{}\section{Key\+\_\+use Class Reference}
+\label{classKey__use}\index{Key\+\_\+use@{Key\+\_\+use}}
+
+
+{\ttfamily \#include $<$sql\+\_\+select.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey__use_aa32d5d1bc045beb21ae82475e60ed399}\label{classKey__use_aa32d5d1bc045beb21ae82475e60ed399}} 
+{\bfseries Key\+\_\+use} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+ref\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$val\+\_\+arg, table\+\_\+map used\+\_\+tables\+\_\+arg, uint key\+\_\+arg, uint keypart\+\_\+arg, uint optimize\+\_\+arg, key\+\_\+part\+\_\+map keypart\+\_\+map\+\_\+arg, ha\+\_\+rows ref\+\_\+table\+\_\+rows\+\_\+arg, bool null\+\_\+rejecting\+\_\+arg, bool $\ast$cond\+\_\+guard\+\_\+arg, uint sj\+\_\+pred\+\_\+no\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey__use_acaebf1c7b3d1089a65bf1b9ee9d08e70}\label{classKey__use_acaebf1c7b3d1089a65bf1b9ee9d08e70}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{classKey__use_acaebf1c7b3d1089a65bf1b9ee9d08e70}{table\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em table owning the index \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classKey__use_a152efa6d57e497193957663000d47f59}{val}}
+\item 
+table\+\_\+map \mbox{\hyperlink{classKey__use_ae721ddf71a4c36bc05cc9110b4bb8165}{used\+\_\+tables}}
+\item 
+\mbox{\Hypertarget{classKey__use_ac1b903e9507fad9ab652e0cf937c97a5}\label{classKey__use_ac1b903e9507fad9ab652e0cf937c97a5}} 
+uint \mbox{\hyperlink{classKey__use_ac1b903e9507fad9ab652e0cf937c97a5}{key}}
+\begin{DoxyCompactList}\small\item\em number of index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKey__use_a92191e9f0c7cb3c408377e07b929b53f}\label{classKey__use_a92191e9f0c7cb3c408377e07b929b53f}} 
+uint \mbox{\hyperlink{classKey__use_a92191e9f0c7cb3c408377e07b929b53f}{keypart}}
+\begin{DoxyCompactList}\small\item\em used part of the index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKey__use_a4c236d532e162f606545342df717e7df}\label{classKey__use_a4c236d532e162f606545342df717e7df}} 
+uint \mbox{\hyperlink{classKey__use_a4c236d532e162f606545342df717e7df}{optimize}}
+\begin{DoxyCompactList}\small\item\em 0, or K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+$\ast$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKey__use_a519f9f72bfdf036c9476ed0d3f624c4a}\label{classKey__use_a519f9f72bfdf036c9476ed0d3f624c4a}} 
+key\+\_\+part\+\_\+map \mbox{\hyperlink{classKey__use_a519f9f72bfdf036c9476ed0d3f624c4a}{keypart\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em like keypart, but as a bitmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKey__use_a6aab1a96e0a25cd25ab6c482efd6de9a}\label{classKey__use_a6aab1a96e0a25cd25ab6c482efd6de9a}} 
+ha\+\_\+rows \mbox{\hyperlink{classKey__use_a6aab1a96e0a25cd25ab6c482efd6de9a}{ref\+\_\+table\+\_\+rows}}
+\begin{DoxyCompactList}\small\item\em Estimate of how many rows for a key value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKey__use_acba461fa75819da0303af030700a8d5b}{null\+\_\+rejecting}}
+\item 
+bool $\ast$ \mbox{\hyperlink{classKey__use_ae462d9f6aefe49c1907600a9921b02a6}{cond\+\_\+guard}}
+\item 
+uint \mbox{\hyperlink{classKey__use_a72971098712c22d6ab436e02a66837d4}{sj\+\_\+pred\+\_\+no}}
+\item 
+key\+\_\+part\+\_\+map \mbox{\hyperlink{classKey__use_a0559be6fdc6c44e75d911049c2d61d0d}{bound\+\_\+keyparts}}
+\item 
+double \mbox{\hyperlink{classKey__use_aff1bd83706433a6e2ea488815989a951}{fanout}}
+\item 
+double \mbox{\hyperlink{classKey__use_a48b5e41c710a57dd77c0da56d1666e8c}{read\+\_\+cost}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} represents an equality predicate of the form (table.\+column = val), where the column is indexed by {\ttfamily keypart} in {\ttfamily key} and {\ttfamily val} is either a constant, a column from other table, or an expression over column(s) from other table(s). If {\ttfamily val} is not a constant, then the \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} specifies an equi-\/join predicate, and {\ttfamily table} must be put in the join plan after all tables in {\ttfamily used\+\_\+tables}.
+
+At an abstract level a \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} instance can be viewed as a directed arc of an equi-\/join graph, where the arc originates from the table(s) containing the column(s) that produce the values used for index lookup into {\ttfamily table}, and the arc points into {\ttfamily table}.
+
+For instance, assuming there is only an index t3(c), the query
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM t1, t2, t3}
+\DoxyCodeLine{WHERE t1.a = t3.c AND}
+\DoxyCodeLine{      t2.b = t3.c;}
+\end{DoxyCode}
+
+
+would generate two arcs (instances of \mbox{\hyperlink{classKey__use}{Key\+\_\+use}})
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{t1-- a ->- c --.}
+\DoxyCodeLine{               |}
+\DoxyCodeLine{               V}
+\DoxyCodeLine{               t3}
+\DoxyCodeLine{               \string^}
+\DoxyCodeLine{               |}
+\DoxyCodeLine{t2-- b ->- c --\textcolor{stringliteral}{'}}
+\end{DoxyCode}
+
+
+If there were indexes t1(a), and t2(b), then the equi-\/join graph would have two additional arcs \char`\"{}c-\/$>$a\char`\"{} and \char`\"{}c-\/$>$b\char`\"{} recording the fact that it is possible to perform lookup in either direction.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{t1-- a ->- c --.    ,-- c -<- b --- t2}
+\DoxyCodeLine{ \string^             |    |               \string^}
+\DoxyCodeLine{ |             |    |               |}
+\DoxyCodeLine{ `-- a -<- c - v    v-- c ->- b ----\textcolor{stringliteral}{'}}
+\DoxyCodeLine{\textcolor{stringliteral}{                 t3}}
+\end{DoxyCode}
+
+
+The query
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM t1, t2, t3 WHERE t1.a + t2.b = t3.c;}
+\end{DoxyCode}
+
+
+can be viewed as a graph with one \char`\"{}multi-\/source\char`\"{} arc\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{t1-- a ---}
+\DoxyCodeLine{          |}
+\DoxyCodeLine{           >-- c --> t3}
+\DoxyCodeLine{          |}
+\DoxyCodeLine{t2-- b ---}
+\end{DoxyCode}
+
+
+The graph of all equi-\/join conditions usable for index lookup is stored as an ordered sequence of \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} elements in J\+O\+I\+N\+::keyuse\+\_\+array. See sort\+\_\+keyuse() for details on the ordering. Each J\+O\+I\+N\+\_\+\+T\+A\+B\+::keyuse points to the first array element with the same table. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classKey__use_a0559be6fdc6c44e75d911049c2d61d0d}\label{classKey__use_a0559be6fdc6c44e75d911049c2d61d0d}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!bound\+\_\+keyparts@{bound\+\_\+keyparts}}
+\index{bound\+\_\+keyparts@{bound\+\_\+keyparts}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{bound\+\_\+keyparts}{bound\_keyparts}}
+{\footnotesize\ttfamily key\+\_\+part\+\_\+map Key\+\_\+use\+::bound\+\_\+keyparts}
+
+The key columns which are equal to expressions depending only of earlier tables of the current join prefix. This information is stored only in the first \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} of the index. \mbox{\Hypertarget{classKey__use_ae462d9f6aefe49c1907600a9921b02a6}\label{classKey__use_ae462d9f6aefe49c1907600a9921b02a6}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!cond\+\_\+guard@{cond\+\_\+guard}}
+\index{cond\+\_\+guard@{cond\+\_\+guard}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{cond\+\_\+guard}{cond\_guard}}
+{\footnotesize\ttfamily bool$\ast$ Key\+\_\+use\+::cond\+\_\+guard}
+
+!\+N\+U\+LL -\/ This \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} was created from an equality that was wrapped into an \mbox{\hyperlink{classItem__func__trig__cond}{Item\+\_\+func\+\_\+trig\+\_\+cond}}. This means the equality (and validity of this \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} element) can be turned on and off. The on/off state is indicted by the pointed value\+: cond\+\_\+guard == T\+R\+UE $<$=$>$ equality condition is on cond\+\_\+guard == F\+A\+L\+SE $<$=$>$ equality condition is off
+
+N\+U\+LL -\/ Otherwise (the source equality can\textquotesingle{}t be turned off)
+
+Not used if the index is fulltext (such index cannot be used for equalities). \mbox{\Hypertarget{classKey__use_aff1bd83706433a6e2ea488815989a951}\label{classKey__use_aff1bd83706433a6e2ea488815989a951}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!fanout@{fanout}}
+\index{fanout@{fanout}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{fanout}{fanout}}
+{\footnotesize\ttfamily double Key\+\_\+use\+::fanout}
+
+Fanout of the ref access path for this index, in the current join prefix. This information is stored only in the first \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} of the index. \mbox{\Hypertarget{classKey__use_acba461fa75819da0303af030700a8d5b}\label{classKey__use_acba461fa75819da0303af030700a8d5b}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!null\+\_\+rejecting@{null\+\_\+rejecting}}
+\index{null\+\_\+rejecting@{null\+\_\+rejecting}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{null\+\_\+rejecting}{null\_rejecting}}
+{\footnotesize\ttfamily bool Key\+\_\+use\+::null\+\_\+rejecting}
+
+If true, the comparison this value was created from will not be satisfied if val has N\+U\+LL \textquotesingle{}value\textquotesingle{}. Not used if the index is fulltext (such index cannot be used for equalities). \mbox{\Hypertarget{classKey__use_a48b5e41c710a57dd77c0da56d1666e8c}\label{classKey__use_a48b5e41c710a57dd77c0da56d1666e8c}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!read\+\_\+cost@{read\+\_\+cost}}
+\index{read\+\_\+cost@{read\+\_\+cost}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{read\+\_\+cost}{read\_cost}}
+{\footnotesize\ttfamily double Key\+\_\+use\+::read\+\_\+cost}
+
+Cost of the ref access path for the current join prefix, i.\+e. the cost of using ref access once multiplied by estimated number of partial rows from tables earlier in the join sequence. read\+\_\+cost does N\+OT include cost of processing rows on the server side (row\+\_\+evaluate\+\_\+cost).
+
+Example\+: If the cost of ref access on this index is 5, and the estimated number of partial rows from earlier tables is 10, read\+\_\+cost=50.
+
+This information is stored only in the first \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} of the index. \mbox{\Hypertarget{classKey__use_a72971098712c22d6ab436e02a66837d4}\label{classKey__use_a72971098712c22d6ab436e02a66837d4}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!sj\+\_\+pred\+\_\+no@{sj\+\_\+pred\+\_\+no}}
+\index{sj\+\_\+pred\+\_\+no@{sj\+\_\+pred\+\_\+no}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{sj\+\_\+pred\+\_\+no}{sj\_pred\_no}}
+{\footnotesize\ttfamily uint Key\+\_\+use\+::sj\+\_\+pred\+\_\+no}
+
+0..63 $<$=$>$ This was created from semi-\/join IN-\/equality \# sj\+\_\+pred\+\_\+no. U\+I\+N\+T\+\_\+\+M\+AX Otherwise
+
+Not used if the index is fulltext (such index cannot be used for semijoin).
+
+\begin{DoxySeeAlso}{See also}
+get\+\_\+semi\+\_\+join\+\_\+select\+\_\+list\+\_\+index() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classKey__use_ae721ddf71a4c36bc05cc9110b4bb8165}\label{classKey__use_ae721ddf71a4c36bc05cc9110b4bb8165}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!used\+\_\+tables@{used\+\_\+tables}}
+\index{used\+\_\+tables@{used\+\_\+tables}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{used\+\_\+tables}{used\_tables}}
+{\footnotesize\ttfamily table\+\_\+map Key\+\_\+use\+::used\+\_\+tables}
+
+All tables used in {\ttfamily val}, that is all tables that provide bindings for the expression {\ttfamily val}. These tables must be in the plan before executing the equi-\/join described by a \mbox{\hyperlink{classKey__use}{Key\+\_\+use}}. \mbox{\Hypertarget{classKey__use_a152efa6d57e497193957663000d47f59}\label{classKey__use_a152efa6d57e497193957663000d47f59}} 
+\index{Key\+\_\+use@{Key\+\_\+use}!val@{val}}
+\index{val@{val}!Key\+\_\+use@{Key\+\_\+use}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ Key\+\_\+use\+::val}
+
+Value used for lookup into {\ttfamily key}. It may be an \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}, a constant or any other expression. If {\ttfamily val} contains a field from another table, then we have a join condition, and the table(s) of the field(s) in {\ttfamily val} should be before {\ttfamily table} in the join plan. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__select_8h}{sql\+\_\+select.\+h}}\end{DoxyCompactItemize}

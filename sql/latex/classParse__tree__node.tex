@@ -1,0 +1,118 @@
+\hypertarget{classParse__tree__node}{}\section{Parse\+\_\+tree\+\_\+node Class Reference}
+\label{classParse__tree__node}\index{Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+node\+\_\+base.\+h$>$}
+
+Inheritance diagram for Parse\+\_\+tree\+\_\+node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classParse__tree__node}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParse__tree__node_a528251e2f386174efd83497d06d8c963}\label{classParse__tree__node_a528251e2f386174efd83497d06d8c963}} 
+bool {\bfseries is\+\_\+contextualized} () const
+\item 
+virtual bool \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+virtual bool \mbox{\hyperlink{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}{contextualize\+\_\+}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+void \mbox{\hyperlink{classParse__tree__node_a3e43a52bddede2f3ffd34257a8863c85}{error}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&position, const char $\ast$msg=N\+U\+LL) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParse__tree__node_a50b8b39a50970157f72088b1bc77c7b5}\label{classParse__tree__node_a50b8b39a50970157f72088b1bc77c7b5}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t size, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)  throw ()
+\item 
+\mbox{\Hypertarget{classParse__tree__node_a01dfd50de12b1b82a72b7e1a54fd51de}\label{classParse__tree__node_a01dfd50de12b1b82a72b7e1a54fd51de}} 
+static void {\bfseries operator delete} (void $\ast$ptr, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classParse__tree__node_aa89e46e72ef0021d9a13a4ba6f978ad5}\label{classParse__tree__node_aa89e46e72ef0021d9a13a4ba6f978ad5}} 
+static void {\bfseries operator delete} (void $\ast$ptr, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParse__tree__node_aad85754f188b769ff61150eaf36106c4}\label{classParse__tree__node_aad85754f188b769ff61150eaf36106c4}} 
+class {\bfseries Item}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for parse tree nodes 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}\label{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}} 
+\index{Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily virtual bool Parse\+\_\+tree\+\_\+node\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Do all context-\/sensitive things and mark the node as contextualized
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classPT__alter__instance_a802bf9ac570878d8e0ea64a315cf6b95}{P\+T\+\_\+alter\+\_\+instance}}, \mbox{\hyperlink{classPT__insert_abac83e416618613080e64190c331ccc9}{P\+T\+\_\+insert}}, \mbox{\hyperlink{classPT__insert__query__expression_ab708c488b1d12ff1a12470feaf5093b8}{P\+T\+\_\+insert\+\_\+query\+\_\+expression}}, \mbox{\hyperlink{classPT__insert__values__list_ab71ca9567e43cd73f7b4cc4782607217}{P\+T\+\_\+insert\+\_\+values\+\_\+list}}, \mbox{\hyperlink{classPT__create__select_a1caf6147549443ad1d6578da94bd131f}{P\+T\+\_\+create\+\_\+select}}, \mbox{\hyperlink{classPT__update_a899ec562dc237115c862feb157f75d8e}{P\+T\+\_\+update}}, \mbox{\hyperlink{classPT__delete_af4282b73da9ec50c66c814422e7deb06}{P\+T\+\_\+delete}}, \mbox{\hyperlink{classPT__select_aefab2397c1ee19c99d8229e8e43e115d}{P\+T\+\_\+select}}, \mbox{\hyperlink{classPT__select__init2_a9ec1334ca637b72c228fc8b87d8aef3a}{P\+T\+\_\+select\+\_\+init2}}, \mbox{\hyperlink{classPT__select__init__parenthesis_a29cc782cc10cdfb31f72074c827c043e}{P\+T\+\_\+select\+\_\+init\+\_\+parenthesis}}, \mbox{\hyperlink{classPT__select__paren_a0f3014ee99f77845cf8b686bfcaadeed}{P\+T\+\_\+select\+\_\+paren}}, \mbox{\hyperlink{classPT__select__part2_aa5b6953b68fed0bc91a7d626db111f78}{P\+T\+\_\+select\+\_\+part2}}, \mbox{\hyperlink{classPT__select__options__and__item__list_a32783a2dca4321880f0470e4b3517b63}{P\+T\+\_\+select\+\_\+options\+\_\+and\+\_\+item\+\_\+list}}, \mbox{\hyperlink{classPT__select__var__list_a5b792bf23c127377a3ff4fc30c298fcd}{P\+T\+\_\+select\+\_\+var\+\_\+list}}, \mbox{\hyperlink{classPT__select__sp__var_ab4e2e87225264b63c7f099ca221a8e01}{P\+T\+\_\+select\+\_\+sp\+\_\+var}}, \mbox{\hyperlink{classPT__into__destination__dumpfile_ab3870bce818779ff992c7025bad8d13d}{P\+T\+\_\+into\+\_\+destination\+\_\+dumpfile}}, \mbox{\hyperlink{classPT__into__destination__outfile_a6cd3dd75a5259d8f8d5a838e8dac586e}{P\+T\+\_\+into\+\_\+destination\+\_\+outfile}}, \mbox{\hyperlink{classPT__into__destination_aa713703e7bae0b070f8a05bcfc0a71a3}{P\+T\+\_\+into\+\_\+destination}}, \mbox{\hyperlink{classPT__union__list_a9e569e01264b044adc28fb8ab68bed44}{P\+T\+\_\+union\+\_\+list}}, \mbox{\hyperlink{classPT__set_afe467df4c229a07e6264c3547d5b7c36}{P\+T\+\_\+set}}, \mbox{\hyperlink{classPT__start__option__value__list__type_abc8d6e7b1c8a8ccac6006ff6b6df3f49}{P\+T\+\_\+start\+\_\+option\+\_\+value\+\_\+list\+\_\+type}}, \mbox{\hyperlink{classPT__start__option__value__list__following__option__type__transaction_ac15edbbf907d20a95c589a0e1e016e2a}{P\+T\+\_\+start\+\_\+option\+\_\+value\+\_\+list\+\_\+following\+\_\+option\+\_\+type\+\_\+transaction}}, \mbox{\hyperlink{classPT__start__option__value__list__following__option__type__eq_a748b216be3de04a1f758284578b630c2}{P\+T\+\_\+start\+\_\+option\+\_\+value\+\_\+list\+\_\+following\+\_\+option\+\_\+type\+\_\+eq}}, \mbox{\hyperlink{classPT__start__option__value__list__transaction_aec9fbcabdc159f19244db60e3ca5d59e}{P\+T\+\_\+start\+\_\+option\+\_\+value\+\_\+list\+\_\+transaction}}, \mbox{\hyperlink{classPT__transaction__characteristics_a6f73b4c891ed99b6ffaccb1abb4cb2e4}{P\+T\+\_\+transaction\+\_\+characteristics}}, \mbox{\hyperlink{classPT__transaction__characteristic_afea326fbb1ad30e10a057b10f7a9ef6c}{P\+T\+\_\+transaction\+\_\+characteristic}}, \mbox{\hyperlink{classPT__start__option__value__list__no__type_ab92ce1db2e283950ed9dedc12cd89ca9}{P\+T\+\_\+start\+\_\+option\+\_\+value\+\_\+list\+\_\+no\+\_\+type}}, \mbox{\hyperlink{classPT__option__value__list_a11d23499d057d978727592d5b9d366c2}{P\+T\+\_\+option\+\_\+value\+\_\+list}}, \mbox{\hyperlink{classPT__option__value__list__head_a211f236acebccd35113f7f991dc9d2fb}{P\+T\+\_\+option\+\_\+value\+\_\+list\+\_\+head}}, \mbox{\hyperlink{classPT__option__value__type_ad23aea78845316211737dd90b3515663}{P\+T\+\_\+option\+\_\+value\+\_\+type}}, \mbox{\hyperlink{classPT__option__value__no__option__type__password__for_adcaa99ced0dfdcc5f0b706499a9c6ad1}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+password\+\_\+for}}, \mbox{\hyperlink{classPT__option__value__no__option__type__password_a3c352bcf85ffefcfa3cd524691061a9d}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+password}}, \mbox{\hyperlink{classPT__option__value__no__option__type__names__charset_aa54fc142e0ce2603ed24149c673a1ee9}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+names\+\_\+charset}}, \mbox{\hyperlink{classPT__option__value__no__option__type__names_a3d4e80876b3575185f363e96a550f250}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+names}}, \mbox{\hyperlink{classPT__option__value__no__option__type__charset_a5319e9cc9f8e9bd27b1818eec8681c20}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+charset}}, \mbox{\hyperlink{classPT__option__value__no__option__type__sys__var_abd287cc5111f786a62032da4ff2b518f}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+sys\+\_\+var}}, \mbox{\hyperlink{classPT__option__value__no__option__type__user__var_af5670585b4c428d1dc13e282ce534605}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+user\+\_\+var}}, \mbox{\hyperlink{classPT__option__value__no__option__type__internal_a150386fb905d43f09154f649b8081c67}{P\+T\+\_\+option\+\_\+value\+\_\+no\+\_\+option\+\_\+type\+\_\+internal}}, \mbox{\hyperlink{classPT__option__value__following__option__type_ac38fe2a0672f3a45cbf3276ca1854961}{P\+T\+\_\+option\+\_\+value\+\_\+following\+\_\+option\+\_\+type}}, \mbox{\hyperlink{classPT__internal__variable__name__default_a70dbec6cbccf1052e838c296cc97f24a}{P\+T\+\_\+internal\+\_\+variable\+\_\+name\+\_\+default}}, \mbox{\hyperlink{classPT__internal__variable__name__2d_a710255bf525ff2aca0c254c15a1882f6}{P\+T\+\_\+internal\+\_\+variable\+\_\+name\+\_\+2d}}, \mbox{\hyperlink{classPT__internal__variable__name__1d_a2141449ee3d2101cba5bc1732c05504a}{P\+T\+\_\+internal\+\_\+variable\+\_\+name\+\_\+1d}}, \mbox{\hyperlink{classPT__query__expression__body__union_a380bc05799b66ef388360609f8dbce40}{P\+T\+\_\+query\+\_\+expression\+\_\+body\+\_\+union}}, \mbox{\hyperlink{classPT__query__specification__parenthesis_af375d7399dd0886ee4c59bc9e929a661}{P\+T\+\_\+query\+\_\+specification\+\_\+parenthesis}}, \mbox{\hyperlink{classPT__select__paren__derived_abe1c66aeacebad14e67fd76613fff79d}{P\+T\+\_\+select\+\_\+paren\+\_\+derived}}, \mbox{\hyperlink{classPT__query__specification__select_a916a44606b98ed38e2112625a991f89b}{P\+T\+\_\+query\+\_\+specification\+\_\+select}}, \mbox{\hyperlink{classPT__table__reference__list_a55453eb9047372140e7232f4c208f6cc}{P\+T\+\_\+table\+\_\+reference\+\_\+list}}, \mbox{\hyperlink{classPT__join__table__list_aa2132ff1c28ed350c33a266626e46dc7}{P\+T\+\_\+join\+\_\+table\+\_\+list}}, \mbox{\hyperlink{classPT__select__derived_a4a9ec94a1d6d7dd833e4be87271065fb}{P\+T\+\_\+select\+\_\+derived}}, \mbox{\hyperlink{classPT__derived__table__list_a10b645eaf6a3221bdffba3aa2e62905f}{P\+T\+\_\+derived\+\_\+table\+\_\+list}}, \mbox{\hyperlink{classPT__table__factor__parenthesis_a343d7a8881b5425d2f3f38b6932b1c14}{P\+T\+\_\+table\+\_\+factor\+\_\+parenthesis}}, \mbox{\hyperlink{classPT__select__derived__union__union_a543c2b2f601f6de6e164547d6ba0c8e8}{P\+T\+\_\+select\+\_\+derived\+\_\+union\+\_\+union}}, \mbox{\hyperlink{classPT__select__derived__union__select_aae12aee546f84a98e4cd95c8e98092d7}{P\+T\+\_\+select\+\_\+derived\+\_\+union\+\_\+select}}, \mbox{\hyperlink{classPT__table__factor__select__sym_ab5e84e7a041385c3530b28b529b6b915}{P\+T\+\_\+table\+\_\+factor\+\_\+select\+\_\+sym}}, \mbox{\hyperlink{classPT__table__expression_a947974a68edf796f90266e545c080dd2}{P\+T\+\_\+table\+\_\+expression}}, \mbox{\hyperlink{classPT__union__order__or__limit_a3dea915c0edc923859fc01ad2dd16c5a}{P\+T\+\_\+union\+\_\+order\+\_\+or\+\_\+limit}}, \mbox{\hyperlink{classPT__order__or__limit__order_a88b42ed7c81ca5a9456dfdd7b50b2982}{P\+T\+\_\+order\+\_\+or\+\_\+limit\+\_\+order}}, \mbox{\hyperlink{classPT__procedure__analyse_adc0b9d5af360185f2861900cfec8aa30}{P\+T\+\_\+procedure\+\_\+analyse}}, \mbox{\hyperlink{classPT__order_a2de0120e90aacfc37332ff97fe4d9593}{P\+T\+\_\+order}}, \mbox{\hyperlink{classPT__group_a203c5e0e9ab4bb389f230e4113de7f35}{P\+T\+\_\+group}}, \mbox{\hyperlink{classPT__select__part2__derived_a4d6a04cc75f7b50db701f2169fb8c130}{P\+T\+\_\+select\+\_\+part2\+\_\+derived}}, \mbox{\hyperlink{classPT__table__ref__join__table_a07f1fb12ec92cbbe014951e4c277e792}{P\+T\+\_\+table\+\_\+ref\+\_\+join\+\_\+table}}, \mbox{\hyperlink{classPT__join__table__using_a08c0a676d559eff0da223764a8f127f2}{P\+T\+\_\+join\+\_\+table\+\_\+using$<$ Type $>$}}, \mbox{\hyperlink{classPT__join__table__on_a5d8bc49cbc77e4bd9c7ea3ae05c624dd}{P\+T\+\_\+join\+\_\+table\+\_\+on$<$ Type $>$}}, \mbox{\hyperlink{classPT__join__table_aa012b30af4f4d06a215c95d5417dba78}{P\+T\+\_\+join\+\_\+table$<$ Type $>$}}, \mbox{\hyperlink{classPT__hint__max__execution__time_a7d073143038eaf1eddc87b1c49f6c5aa}{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}}, \mbox{\hyperlink{classPT__table__factor__table__ident_af45d5e66b0d6c6250f39a82eb526fe70}{P\+T\+\_\+table\+\_\+factor\+\_\+table\+\_\+ident}}, \mbox{\hyperlink{classPT__hint__qb__name_a03c181a0936981540b7f7ce2dd973406}{P\+T\+\_\+hint\+\_\+qb\+\_\+name}}, \mbox{\hyperlink{classPT__key__level__hint_a3cd3bb9624cf499e03d6a312db574fcf}{P\+T\+\_\+key\+\_\+level\+\_\+hint}}, \mbox{\hyperlink{classPT__limit__clause_a90ceb3c85a9f3ae67c5317b30d166b13}{P\+T\+\_\+limit\+\_\+clause}}, \mbox{\hyperlink{classPT__table__level__hint_ab7601fb1f9159525f67e3dcf14c36e9a}{P\+T\+\_\+table\+\_\+level\+\_\+hint}}, \mbox{\hyperlink{classPT__select__item__list_a76b3fc28ad05e3c04a5d6223e8cbeade}{P\+T\+\_\+select\+\_\+item\+\_\+list}}, \mbox{\hyperlink{classPT__gorder__list_aee895e7250e73f670eccd71704b0c027}{P\+T\+\_\+gorder\+\_\+list}}, \mbox{\hyperlink{classPT__qb__level__hint_afb73e765fbf59fa0d2ffbe72d33975be}{P\+T\+\_\+qb\+\_\+level\+\_\+hint}}, \mbox{\hyperlink{classPT__order__list_a04039b92b0e1bd5d37f1975459e7b9b6}{P\+T\+\_\+order\+\_\+list}}, \mbox{\hyperlink{classPT__order__expr_ae99fae42c1559e81262345d5eab0e32e}{P\+T\+\_\+order\+\_\+expr}}, \mbox{\hyperlink{classPT__hint__list_a4579688fbae2297ff9760bb352f57eeb}{P\+T\+\_\+hint\+\_\+list}}, \mbox{\hyperlink{classPT__item__list_a5ddeca0fe325bc50ddcf4bd17da8efa8}{P\+T\+\_\+item\+\_\+list}}, and \mbox{\hyperlink{classPT__subselect_aa6cc38e01fa25d32812f52866724a920}{P\+T\+\_\+subselect}}.
+
+\mbox{\Hypertarget{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}\label{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}} 
+\index{Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}!contextualize\+\_\+@{contextualize\+\_\+}}
+\index{contextualize\+\_\+@{contextualize\+\_\+}!Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}}
+\subsubsection{\texorpdfstring{contextualize\+\_\+()}{contextualize\_()}}
+{\footnotesize\ttfamily virtual bool Parse\+\_\+tree\+\_\+node\+::contextualize\+\_\+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Intermediate version of the \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{contextualize()}} function
+
+This function is intended to resolve parser grammar loops.
+
+During the step-\/by-\/step refactoring of the parser grammar we wrap each context-\/sensitive semantic action with 3 calls\+:
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{classParse__tree__node}{Parse\+\_\+tree\+\_\+node()}} context-\/independent constructor call,
+\item \mbox{\hyperlink{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}{contextualize\+\_\+()}} function call to evaluate all context-\/sensitive things from the former context-\/sensitive semantic action code.
+\item Call of dummy \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{contextualize()}} function.
+\end{DoxyEnumerate}
+
+Then we lift the \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{contextualize()}} function call to outer grammar rules but save the \mbox{\hyperlink{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}{contextualize\+\_\+()}} function call untouched.
+
+When all loops in the grammar rules are resolved (i.\+e. transformed as described above) we\+: a. remove all \mbox{\hyperlink{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}{contextualize\+\_\+()}} function calls and b. rename all \mbox{\hyperlink{classParse__tree__node_ac8f1179a43a65742a342cad21a93aa0e}{contextualize\+\_\+()}} function definitions to \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{contextualize()}} function definitions.
+
+Note\+: it\textquotesingle{}s not necessary to transform the whole grammar and remove this function calls in one pass\+: it\textquotesingle{}s possible to transform the grammar statement by statement in a way described above.
+
+Note\+: remove this function together with Item\+::contextualize\+\_\+(). \mbox{\Hypertarget{classParse__tree__node_a3e43a52bddede2f3ffd34257a8863c85}\label{classParse__tree__node_a3e43a52bddede2f3ffd34257a8863c85}} 
+\index{Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}!error@{error}}
+\index{error@{error}!Parse\+\_\+tree\+\_\+node@{Parse\+\_\+tree\+\_\+node}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void Parse\+\_\+tree\+\_\+node\+::error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&}]{position,  }\item[{const char $\ast$}]{msg = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+my\+\_\+syntax\+\_\+error() function replacement for deferred reporting of syntax errors
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context \\
+\hline
+{\em pos} & location of the error in lexical scanner buffers \\
+\hline
+{\em msg} & error message\+: N\+U\+LL default means E\+R(\+E\+R\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+O\+R) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+node\+\_\+base.\+h\item 
+parse\+\_\+tree\+\_\+node\+\_\+base.\+cc\end{DoxyCompactItemize}

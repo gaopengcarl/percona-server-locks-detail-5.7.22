@@ -1,0 +1,54 @@
+\hypertarget{classSyntax__check__handler}{}\section{Syntax\+\_\+check\+\_\+handler Class Reference}
+\label{classSyntax__check__handler}\index{Syntax\+\_\+check\+\_\+handler@{Syntax\+\_\+check\+\_\+handler}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_aaeb51b7d2c6ed2f1359c465ab02c9876}\label{classSyntax__check__handler_aaeb51b7d2c6ed2f1359c465ab02c9876}} 
+bool {\bfseries Start\+Object} ()
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a46fb2183ec6305e47af5ee4cf88c7bd7}\label{classSyntax__check__handler_a46fb2183ec6305e47af5ee4cf88c7bd7}} 
+bool {\bfseries End\+Object} (Size\+Type)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a822e0a836a5ad0b09dccf8aa0cd7594a}\label{classSyntax__check__handler_a822e0a836a5ad0b09dccf8aa0cd7594a}} 
+bool {\bfseries Start\+Array} ()
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_ac1796a5980eed8df4f891b5578bf33fc}\label{classSyntax__check__handler_ac1796a5980eed8df4f891b5578bf33fc}} 
+bool {\bfseries End\+Array} (Size\+Type)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a9c842c8a9f074b2bba7ecdb4b562f9b0}\label{classSyntax__check__handler_a9c842c8a9f074b2bba7ecdb4b562f9b0}} 
+bool {\bfseries Null} ()
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a5ba7e7c2b516d43629ac4d095edf9358}\label{classSyntax__check__handler_a5ba7e7c2b516d43629ac4d095edf9358}} 
+bool {\bfseries Bool} (bool)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a7bb17fc65c1bb875957afeeefc3ca3ad}\label{classSyntax__check__handler_a7bb17fc65c1bb875957afeeefc3ca3ad}} 
+bool {\bfseries Int} (int)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a9309953fee01071edc11c7edc8b72f3c}\label{classSyntax__check__handler_a9309953fee01071edc11c7edc8b72f3c}} 
+bool {\bfseries Uint} (unsigned)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_ab2ace55424ebba89ed2ea3eea4135466}\label{classSyntax__check__handler_ab2ace55424ebba89ed2ea3eea4135466}} 
+bool {\bfseries Int64} (int64\+\_\+t)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_abbdfec1ecd6756e0b36b73acd38b856d}\label{classSyntax__check__handler_abbdfec1ecd6756e0b36b73acd38b856d}} 
+bool {\bfseries Uint64} (uint64\+\_\+t)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a17dd421e275eb4329bc74908ae3e7c1a}\label{classSyntax__check__handler_a17dd421e275eb4329bc74908ae3e7c1a}} 
+bool {\bfseries Double} (double, bool is\+\_\+int=false)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_a564b2e23da6cc2dd5a2059e9469dca84}\label{classSyntax__check__handler_a564b2e23da6cc2dd5a2059e9469dca84}} 
+bool {\bfseries String} (const char $\ast$, Size\+Type, bool)
+\item 
+\mbox{\Hypertarget{classSyntax__check__handler_acbd811d5713fcf967f9d1592df36ea1c}\label{classSyntax__check__handler_acbd811d5713fcf967f9d1592df36ea1c}} 
+bool {\bfseries Key} (const char $\ast$, Size\+Type, bool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a handler for use with rapidjson\+::\+Reader when we want to check if a string is a valid J\+S\+ON text. The handler does not build a D\+OM structure, so it is quicker than \mbox{\hyperlink{classJson__dom_a9615aa0ae1427d5f5986a2d85d506716}{Json\+\_\+dom\+::parse()}} in the cases where we don\textquotesingle{}t care about the D\+OM, such as in the J\+S\+O\+N\+\_\+\+V\+A\+L\+I\+D() function.
+
+The handler keeps track of how deeply nested the document is, and it raises an error and stops parsing when the depth exceeds J\+S\+O\+N\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+P\+TH. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

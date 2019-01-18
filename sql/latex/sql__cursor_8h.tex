@@ -1,0 +1,46 @@
+\hypertarget{sql__cursor_8h}{}\section{sql\+\_\+cursor.\+h File Reference}
+\label{sql__cursor_8h}\index{sql\+\_\+cursor.\+h@{sql\+\_\+cursor.\+h}}
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{sql__cursor_8h_a46fbb1b784c4d5a3b9d11de985e91c9b}{mysql\+\_\+open\+\_\+cursor}} (T\+HD $\ast$thd, Query\+\_\+result $\ast$result, \mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}} $\ast$$\ast$res)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declarations for implementation of server side cursors. Only read-\/only non-\/scrollable cursors are currently implemented. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__cursor_8h_a46fbb1b784c4d5a3b9d11de985e91c9b}\label{sql__cursor_8h_a46fbb1b784c4d5a3b9d11de985e91c9b}} 
+\index{sql\+\_\+cursor.\+h@{sql\+\_\+cursor.\+h}!mysql\+\_\+open\+\_\+cursor@{mysql\+\_\+open\+\_\+cursor}}
+\index{mysql\+\_\+open\+\_\+cursor@{mysql\+\_\+open\+\_\+cursor}!sql\+\_\+cursor.\+h@{sql\+\_\+cursor.\+h}}
+\subsubsection{\texorpdfstring{mysql\+\_\+open\+\_\+cursor()}{mysql\_open\_cursor()}}
+{\footnotesize\ttfamily bool mysql\+\_\+open\+\_\+cursor (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+result $\ast$}]{result,  }\item[{\mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}} $\ast$$\ast$}]{pcursor }\end{DoxyParamCaption})}
+
+Attempt to open a materialized cursor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em result} & result class of the caller used as a destination for the rows fetched from the cursor \\
+\hline
+\mbox{\texttt{ out}}  & {\em pcursor} & a pointer to store a pointer to cursor in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & -- the query has been successfully executed; in this case pcursor may or may not contain a pointer to an open cursor.\\
+\hline
+{\em true} & -- an error, \textquotesingle{}pcursor\textquotesingle{} has been left intact. \\
+\hline
+\end{DoxyRetVals}

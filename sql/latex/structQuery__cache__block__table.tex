@@ -1,0 +1,67 @@
+\hypertarget{structQuery__cache__block__table}{}\section{Query\+\_\+cache\+\_\+block\+\_\+table Struct Reference}
+\label{structQuery__cache__block__table}\index{Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}}
+
+
+{\ttfamily \#include $<$sql\+\_\+cache.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ \mbox{\hyperlink{structQuery__cache__block__table_a78a2985cc946dd25eb1cb239b7c4033e}{block}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE \mbox{\hyperlink{structQuery__cache__block__table_a49ac84a1f8f0dfbdd15ae144e21b7d4b}{n}}
+\item 
+\mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$ \mbox{\hyperlink{structQuery__cache__block__table_a98a811e0dd09e8df360c267125ef0ba3}{next}}
+\item 
+\mbox{\Hypertarget{structQuery__cache__block__table_a26303bcdfef9dd2d909d366d9ed4fb9d}\label{structQuery__cache__block__table_a26303bcdfef9dd2d909d366d9ed4fb9d}} 
+\mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$ {\bfseries prev}
+\item 
+\mbox{\hyperlink{structQuery__cache__table}{Query\+\_\+cache\+\_\+table}} $\ast$ \mbox{\hyperlink{structQuery__cache__block__table_a8691dff022dcd857e42fc7ece18c0dc9}{parent}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a node in the linked chain of queries belonging to one table.
+
+\begin{DoxyNote}{Note}
+The root of this linked list is not a query-\/type block, but the table-\/ type block which all queries has in common. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structQuery__cache__block__table_a78a2985cc946dd25eb1cb239b7c4033e}\label{structQuery__cache__block__table_a78a2985cc946dd25eb1cb239b7c4033e}} 
+\index{Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}!block@{block}}
+\index{block@{block}!Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}}
+\subsubsection{\texorpdfstring{block()}{block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ Query\+\_\+cache\+\_\+block\+\_\+table\+::block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to calculate the address of the query cache block owning this node. The purpose of this calculation is to make it easier to move the query cache block without having to modify all the pointer addresses. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structQuery__cache__block__table_a49ac84a1f8f0dfbdd15ae144e21b7d4b}\label{structQuery__cache__block__table_a49ac84a1f8f0dfbdd15ae144e21b7d4b}} 
+\index{Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}!n@{n}}
+\index{n@{n}!Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE Query\+\_\+cache\+\_\+block\+\_\+table\+::n}
+
+This node holds a position in a static table list belonging to the associated query (base 0). \mbox{\Hypertarget{structQuery__cache__block__table_a98a811e0dd09e8df360c267125ef0ba3}\label{structQuery__cache__block__table_a98a811e0dd09e8df360c267125ef0ba3}} 
+\index{Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}!next@{next}}
+\index{next@{next}!Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}}$\ast$ Query\+\_\+cache\+\_\+block\+\_\+table\+::next}
+
+Pointers to the next and previous node, linking all queries with a common table. \mbox{\Hypertarget{structQuery__cache__block__table_a8691dff022dcd857e42fc7ece18c0dc9}\label{structQuery__cache__block__table_a8691dff022dcd857e42fc7ece18c0dc9}} 
+\index{Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}!parent@{parent}}
+\index{parent@{parent}!Query\+\_\+cache\+\_\+block\+\_\+table@{Query\+\_\+cache\+\_\+block\+\_\+table}}
+\subsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structQuery__cache__table}{Query\+\_\+cache\+\_\+table}}$\ast$ Query\+\_\+cache\+\_\+block\+\_\+table\+::parent}
+
+A pointer to the table-\/type block which all linked queries has in common. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+cache.\+h\item 
+sql\+\_\+cache.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{classGenerated__column}{}\section{Generated\+\_\+column Class Reference}
+\label{classGenerated__column}\index{Generated\+\_\+column@{Generated\+\_\+column}}
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for Generated\+\_\+column\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGenerated__column}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGenerated__column_ad104960f26aedc8f5140ed8a009fabe6}\label{classGenerated__column_ad104960f26aedc8f5140ed8a009fabe6}} 
+enum\+\_\+field\+\_\+types {\bfseries get\+\_\+real\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classGenerated__column_a01bd8966605d51c678d1b3b6c170e5f8}\label{classGenerated__column_a01bd8966605d51c678d1b3b6c170e5f8}} 
+void {\bfseries set\+\_\+field\+\_\+type} (enum\+\_\+field\+\_\+types fld\+\_\+type)
+\item 
+\mbox{\Hypertarget{classGenerated__column_ab9b60355251ff6a9b67f5e6cc0f8db92}\label{classGenerated__column_ab9b60355251ff6a9b67f5e6cc0f8db92}} 
+bool {\bfseries get\+\_\+field\+\_\+stored} () const
+\item 
+\mbox{\Hypertarget{classGenerated__column_ae94913913037197ee35158a4f99b7942}\label{classGenerated__column_ae94913913037197ee35158a4f99b7942}} 
+void {\bfseries set\+\_\+field\+\_\+stored} (bool stored)
+\item 
+bool \mbox{\hyperlink{classGenerated__column_a7bedfc60a5b287c7e77c2c2940cf3326}{register\+\_\+base\+\_\+columns}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+uint \mbox{\hyperlink{classGenerated__column_a62ca3e4b8e67171cc8f15941537806bb}{non\+\_\+virtual\+\_\+base\+\_\+columns}} () const
+\item 
+void \mbox{\hyperlink{classGenerated__column_ac51182c81cc5bee54736dbb89380c9c5}{dup\+\_\+expr\+\_\+str}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$root, const char $\ast$src, size\+\_\+t len)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGenerated__column_a0e442a5a02e2f439ece72f07a038284d}\label{classGenerated__column_a0e442a5a02e2f439ece72f07a038284d}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries expr\+\_\+item}
+\item 
+\mbox{\Hypertarget{classGenerated__column_ad3ccaf3b5c23b5ca8c8ebde1dfd7c9c4}\label{classGenerated__column_ad3ccaf3b5c23b5ca8c8ebde1dfd7c9c4}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries expr\+\_\+str}
+\item 
+\mbox{\Hypertarget{classGenerated__column_a93c9281e085bd66c208d53459f2e7762}\label{classGenerated__column_a93c9281e085bd66c208d53459f2e7762}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries item\+\_\+free\+\_\+list}
+\item 
+\mbox{\Hypertarget{classGenerated__column_a1526d340dd7275effe962e3147707dcb}\label{classGenerated__column_a1526d340dd7275effe962e3147707dcb}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP \mbox{\hyperlink{classGenerated__column_a1526d340dd7275effe962e3147707dcb}{base\+\_\+columns\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classBitmap}{Bitmap}} records base columns which a generated column depends on. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGenerated__column_a6005a897023a9d9669d8a3a43534943e}{permanent\+\_\+changes\+\_\+completed}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class is used for recording the information of generated column. It will be created during define a generated column or the table is opened.
+
+If one field contains such an object, it means the field is a genereated one. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGenerated__column_ac51182c81cc5bee54736dbb89380c9c5}\label{classGenerated__column_ac51182c81cc5bee54736dbb89380c9c5}} 
+\index{Generated\+\_\+column@{Generated\+\_\+column}!dup\+\_\+expr\+\_\+str@{dup\+\_\+expr\+\_\+str}}
+\index{dup\+\_\+expr\+\_\+str@{dup\+\_\+expr\+\_\+str}!Generated\+\_\+column@{Generated\+\_\+column}}
+\subsubsection{\texorpdfstring{dup\+\_\+expr\+\_\+str()}{dup\_expr\_str()}}
+{\footnotesize\ttfamily void Generated\+\_\+column\+::dup\+\_\+expr\+\_\+str (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{root,  }\item[{const char $\ast$}]{src,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Duplicates a string into expr\+\_\+str.
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & M\+E\+M\+\_\+\+R\+O\+OT to use for allocation; if N\+U\+LL, use the remembered one; if non-\/N\+U\+LL, remember it. \\
+\hline
+{\em src} & source string \\
+\hline
+{\em len} & length of \textquotesingle{}src\textquotesingle{} in bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGenerated__column_a62ca3e4b8e67171cc8f15941537806bb}\label{classGenerated__column_a62ca3e4b8e67171cc8f15941537806bb}} 
+\index{Generated\+\_\+column@{Generated\+\_\+column}!non\+\_\+virtual\+\_\+base\+\_\+columns@{non\+\_\+virtual\+\_\+base\+\_\+columns}}
+\index{non\+\_\+virtual\+\_\+base\+\_\+columns@{non\+\_\+virtual\+\_\+base\+\_\+columns}!Generated\+\_\+column@{Generated\+\_\+column}}
+\subsubsection{\texorpdfstring{non\+\_\+virtual\+\_\+base\+\_\+columns()}{non\_virtual\_base\_columns()}}
+{\footnotesize\ttfamily uint Generated\+\_\+column\+::non\+\_\+virtual\+\_\+base\+\_\+columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of non virtual base columns that this generated column needs.
+
+\begin{DoxyReturn}{Returns}
+number of non virtual base columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGenerated__column_a7bedfc60a5b287c7e77c2c2940cf3326}\label{classGenerated__column_a7bedfc60a5b287c7e77c2c2940cf3326}} 
+\index{Generated\+\_\+column@{Generated\+\_\+column}!register\+\_\+base\+\_\+columns@{register\+\_\+base\+\_\+columns}}
+\index{register\+\_\+base\+\_\+columns@{register\+\_\+base\+\_\+columns}!Generated\+\_\+column@{Generated\+\_\+column}}
+\subsubsection{\texorpdfstring{register\+\_\+base\+\_\+columns()}{register\_base\_columns()}}
+{\footnotesize\ttfamily bool Generated\+\_\+column\+::register\+\_\+base\+\_\+columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Calculate the base\+\_\+columns\+\_\+map and num\+\_\+non\+\_\+virtual\+\_\+base\+\_\+cols members of this generated column
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Table with the checked field\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if error 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classGenerated__column_a6005a897023a9d9669d8a3a43534943e}\label{classGenerated__column_a6005a897023a9d9669d8a3a43534943e}} 
+\index{Generated\+\_\+column@{Generated\+\_\+column}!permanent\+\_\+changes\+\_\+completed@{permanent\+\_\+changes\+\_\+completed}}
+\index{permanent\+\_\+changes\+\_\+completed@{permanent\+\_\+changes\+\_\+completed}!Generated\+\_\+column@{Generated\+\_\+column}}
+\subsubsection{\texorpdfstring{permanent\+\_\+changes\+\_\+completed}{permanent\_changes\_completed}}
+{\footnotesize\ttfamily bool Generated\+\_\+column\+::permanent\+\_\+changes\+\_\+completed}
+
+Used to make sure permanent changes to the item tree of expr\+\_\+item are made only once. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

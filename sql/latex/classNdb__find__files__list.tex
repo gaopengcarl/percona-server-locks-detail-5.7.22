@@ -1,0 +1,39 @@
+\hypertarget{classNdb__find__files__list}{}\section{Ndb\+\_\+find\+\_\+files\+\_\+list Class Reference}
+\label{classNdb__find__files__list}\index{Ndb\+\_\+find\+\_\+files\+\_\+list@{Ndb\+\_\+find\+\_\+files\+\_\+list}}
+
+
+{\ttfamily \#include $<$ndb\+\_\+find\+\_\+files\+\_\+list.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNdb__find__files__list_a4f50aa562206477ba66034c2fd723317}\label{classNdb__find__files__list_a4f50aa562206477ba66034c2fd723317}} 
+{\bfseries Ndb\+\_\+find\+\_\+files\+\_\+list} (class T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classNdb__find__files__list_a3b05b9686ea15b3095b9c6d76c48720d}\label{classNdb__find__files__list_a3b05b9686ea15b3095b9c6d76c48720d}} 
+bool {\bfseries find\+\_\+databases} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{classNdb__find__files__list_aeb20e75fdf0cf7bbfbcaf04548e22a56}\label{classNdb__find__files__list_aeb20e75fdf0cf7bbfbcaf04548e22a56}} 
+bool {\bfseries find\+\_\+tables} (const char $\ast$db, const char $\ast$path)
+\item 
+\mbox{\Hypertarget{classNdb__find__files__list_a13dad88f534aa990eebcd02c950118e1}\label{classNdb__find__files__list_a13dad88f534aa990eebcd02c950118e1}} 
+M\+Y\+S\+Q\+L\+\_\+\+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$ {\bfseries next} ()
+\item 
+\mbox{\Hypertarget{classNdb__find__files__list_a931b285595866ecd7aa000f63f2d8f04}\label{classNdb__find__files__list_a931b285595866ecd7aa000f63f2d8f04}} 
+uint {\bfseries found\+\_\+files} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classNdb__find__files__list}{Ndb\+\_\+find\+\_\+files\+\_\+list}}
+
+Utility class which encapsulates the find\+\_\+files() function and its returned list of files.
+
+The find\+\_\+files() function return a list consisting of pointers to file names, the file names themself are allocated in a specified M\+E\+M\+\_\+\+R\+O\+OT. In order to avoid that the default M\+E\+M\+\_\+\+R\+O\+OT of the caller is used, this class allocates a memory root which holds the file name pointers and the file name strings until the list goes out of scope.
+
+The find\+\_\+files() function also has a special quirk in that it looks at the T\+H\+D\+::col\+\_\+access member variable to determine which files and directories the caller has permission to see. This class make sure that caller has full access to see all files by applying the proper values for T\+H\+D\+::col\+\_\+access(see inline comment below). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ndb\+\_\+find\+\_\+files\+\_\+list.\+h\item 
+ndb\+\_\+find\+\_\+files\+\_\+list.\+cc\end{DoxyCompactItemize}

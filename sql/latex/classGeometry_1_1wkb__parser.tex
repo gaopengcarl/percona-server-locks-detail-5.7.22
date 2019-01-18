@@ -1,0 +1,60 @@
+\hypertarget{classGeometry_1_1wkb__parser}{}\section{Geometry\+:\+:wkb\+\_\+parser Class Reference}
+\label{classGeometry_1_1wkb__parser}\index{Geometry\+::wkb\+\_\+parser@{Geometry\+::wkb\+\_\+parser}}
+
+
+{\ttfamily \#include $<$spatial.\+h$>$}
+
+Inheritance diagram for Geometry\+:\+:wkb\+\_\+parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeometry_1_1wkb__parser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a541bfce0aee13fd0f4a676c59dc97ff3}\label{classGeometry_1_1wkb__parser_a541bfce0aee13fd0f4a676c59dc97ff3}} 
+{\bfseries wkb\+\_\+parser} (const char $\ast$data, const char $\ast$data\+\_\+end)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a9f3471f7b383f08f9dbef58555a2c908}\label{classGeometry_1_1wkb__parser_a9f3471f7b383f08f9dbef58555a2c908}} 
+void {\bfseries skip\+\_\+unsafe} (size\+\_\+t nbytes)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a4c0dd9cc2e45b4c155d17b1b1c99b41e}\label{classGeometry_1_1wkb__parser_a4c0dd9cc2e45b4c155d17b1b1c99b41e}} 
+bool {\bfseries skip} (size\+\_\+t nbytes)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a816ff87f1ea168a46c0079b43d93c1df}\label{classGeometry_1_1wkb__parser_a816ff87f1ea168a46c0079b43d93c1df}} 
+bool {\bfseries skip\+\_\+wkb\+\_\+header} ()
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a4ffa1ceb8397f12f1721959b2d16e16b}\label{classGeometry_1_1wkb__parser_a4ffa1ceb8397f12f1721959b2d16e16b}} 
+bool {\bfseries skip\+\_\+coord} ()
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a061e5e6333596e2f27b8133222716f45}\label{classGeometry_1_1wkb__parser_a061e5e6333596e2f27b8133222716f45}} 
+bool {\bfseries scan\+\_\+wkb\+\_\+header} (\mbox{\hyperlink{structwkb__header__st}{wkb\+\_\+header}} $\ast$header)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_ac27d71027e211415843832cb700611b7}\label{classGeometry_1_1wkb__parser_ac27d71027e211415843832cb700611b7}} 
+bool {\bfseries scan\+\_\+uint4} (uint32 $\ast$number)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a489a710ce822ddd7e6c41b92029cbdca}\label{classGeometry_1_1wkb__parser_a489a710ce822ddd7e6c41b92029cbdca}} 
+bool {\bfseries scan\+\_\+non\+\_\+zero\+\_\+uint4} (uint32 $\ast$number)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a4f2a01d0aeb9fa459c46aee14012f544}\label{classGeometry_1_1wkb__parser_a4f2a01d0aeb9fa459c46aee14012f544}} 
+bool {\bfseries scan\+\_\+n\+\_\+points\+\_\+and\+\_\+check\+\_\+data} (uint32 $\ast$n\+\_\+points, uint32 extra\+\_\+point\+\_\+space=0)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a5fb9e16f80dbca352fccd01090ab9ad2}\label{classGeometry_1_1wkb__parser_a5fb9e16f80dbca352fccd01090ab9ad2}} 
+void {\bfseries scan\+\_\+xy\+\_\+unsafe} (\mbox{\hyperlink{classpoint__xy}{point\+\_\+xy}} $\ast$p)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_a8fa9c191862078cace7d0ac4bc1b2c65}\label{classGeometry_1_1wkb__parser_a8fa9c191862078cace7d0ac4bc1b2c65}} 
+bool {\bfseries scan\+\_\+xy} (\mbox{\hyperlink{classpoint__xy}{point\+\_\+xy}} $\ast$p)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1wkb__parser_aa4602ae209a369b241aa09a3c0eef690}\label{classGeometry_1_1wkb__parser_aa4602ae209a369b241aa09a3c0eef690}} 
+bool {\bfseries scan\+\_\+coord} (double $\ast$x)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+W\+KB parser, designed to traverse through W\+KB data from beginning of the buffer towards the end using a set of scan\+\_\+xxx(), get\+\_\+xxx() and skip\+\_\+xxx() routines, with safety tests to avoid going beyond the buffer end. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\end{DoxyCompactItemize}

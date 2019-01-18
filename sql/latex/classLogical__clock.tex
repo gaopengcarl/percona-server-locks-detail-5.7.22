@@ -1,0 +1,69 @@
+\hypertarget{classLogical__clock}{}\section{Logical\+\_\+clock Class Reference}
+\label{classLogical__clock}\index{Logical\+\_\+clock@{Logical\+\_\+clock}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+trx\+\_\+tracking.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int64 \mbox{\hyperlink{classLogical__clock_a1d2e019f74f509ac6244cd4a6e3f1101}{step}} ()
+\item 
+int64 \mbox{\hyperlink{classLogical__clock_a245c0427e7eda455da53e26c4b8a0bf9}{set\+\_\+if\+\_\+greater}} (int64 new\+\_\+val)
+\item 
+int64 \mbox{\hyperlink{classLogical__clock_ac686c90f57dbf876a7a87d648ef35700}{get\+\_\+timestamp}} ()
+\item 
+\mbox{\Hypertarget{classLogical__clock_afc18ca694cbab72dbe865485d5632b9c}\label{classLogical__clock_afc18ca694cbab72dbe865485d5632b9c}} 
+int64 {\bfseries get\+\_\+offset} ()
+\item 
+\mbox{\Hypertarget{classLogical__clock_a4cf04e43d7f6d5a39fb58c3610408774}\label{classLogical__clock_a4cf04e43d7f6d5a39fb58c3610408774}} 
+void {\bfseries update\+\_\+offset} (int64 new\+\_\+offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Logical timestamp generator for logical timestamping binlog transactions. A transaction is associated with two sequence numbers see {\ttfamily Transaction\+\_\+ctx\+::last\+\_\+committed} and {\ttfamily Transaction\+\_\+ctx\+::sequence\+\_\+number}. The class provides necessary interfaces including that of generating a next consecutive value for the latter. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogical__clock_ac686c90f57dbf876a7a87d648ef35700}\label{classLogical__clock_ac686c90f57dbf876a7a87d648ef35700}} 
+\index{Logical\+\_\+clock@{Logical\+\_\+clock}!get\+\_\+timestamp@{get\+\_\+timestamp}}
+\index{get\+\_\+timestamp@{get\+\_\+timestamp}!Logical\+\_\+clock@{Logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{get\+\_\+timestamp()}{get\_timestamp()}}
+{\footnotesize\ttfamily int64 Logical\+\_\+clock\+::get\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Atomically fetch the current state. \begin{DoxyReturn}{Returns}
+not subtracted \char`\"{}absolute\char`\"{} value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogical__clock_a245c0427e7eda455da53e26c4b8a0bf9}\label{classLogical__clock_a245c0427e7eda455da53e26c4b8a0bf9}} 
+\index{Logical\+\_\+clock@{Logical\+\_\+clock}!set\+\_\+if\+\_\+greater@{set\+\_\+if\+\_\+greater}}
+\index{set\+\_\+if\+\_\+greater@{set\+\_\+if\+\_\+greater}!Logical\+\_\+clock@{Logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{set\+\_\+if\+\_\+greater()}{set\_if\_greater()}}
+{\footnotesize\ttfamily int64 Logical\+\_\+clock\+::set\+\_\+if\+\_\+greater (\begin{DoxyParamCaption}\item[{int64}]{new\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+To try setting the clock {\itshape forward}. The clock does not change when the new value is in the past which is reflected by the new value and by offset. In other words the function main effects is described as state= max(state, new\+\_\+value). Offset that exceeds the new value indicates the binary log rotation to render such new value useless.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+val} & a new value (offset included) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a (new) value of state member regardless whether it\textquotesingle{}s changed or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogical__clock_a1d2e019f74f509ac6244cd4a6e3f1101}\label{classLogical__clock_a1d2e019f74f509ac6244cd4a6e3f1101}} 
+\index{Logical\+\_\+clock@{Logical\+\_\+clock}!step@{step}}
+\index{step@{step}!Logical\+\_\+clock@{Logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily int64 Logical\+\_\+clock\+::step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Steps the absolute value of the clock (state) to return an updated value. The caller must be sure to call the method in no concurrent execution context so either offset and state can\textquotesingle{}t change.
+
+\begin{DoxyReturn}{Returns}
+incremented \char`\"{}absolute\char`\"{} value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+trx\+\_\+tracking.\+h\item 
+rpl\+\_\+trx\+\_\+tracking.\+cc\end{DoxyCompactItemize}

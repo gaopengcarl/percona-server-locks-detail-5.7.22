@@ -1,0 +1,278 @@
+\hypertarget{classjson__binary_1_1Value}{}\section{json\+\_\+binary\+:\+:Value Class Reference}
+\label{classjson__binary_1_1Value}\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+
+
+{\ttfamily \#include $<$json\+\_\+binary.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classjson__binary_1_1Value_a4c69f1edaae6d8e6578e9127e1603385}\label{classjson__binary_1_1Value_a4c69f1edaae6d8e6578e9127e1603385}} 
+enum {\bfseries enum\+\_\+type} \{ \newline
+{\bfseries O\+B\+J\+E\+CT}, 
+{\bfseries A\+R\+R\+AY}, 
+{\bfseries S\+T\+R\+I\+NG}, 
+{\bfseries I\+NT}, 
+\newline
+{\bfseries U\+I\+NT}, 
+{\bfseries D\+O\+U\+B\+LE}, 
+{\bfseries L\+I\+T\+E\+R\+A\+L\+\_\+\+N\+U\+LL}, 
+{\bfseries L\+I\+T\+E\+R\+A\+L\+\_\+\+T\+R\+UE}, 
+\newline
+{\bfseries L\+I\+T\+E\+R\+A\+L\+\_\+\+F\+A\+L\+SE}, 
+{\bfseries O\+P\+A\+Q\+UE}, 
+{\bfseries E\+R\+R\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classjson__binary_1_1Value_af156297a9b0f2584f5986e899bf12c6c}{is\+\_\+valid}} () const
+\item 
+\mbox{\Hypertarget{classjson__binary_1_1Value_a8dc4e71426348bdac199b54fb6a17691}\label{classjson__binary_1_1Value_a8dc4e71426348bdac199b54fb6a17691}} 
+enum\+\_\+type {\bfseries type} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classjson__binary_1_1Value_a8691a2514d0bdd2a1f5c39c87ccab132}{get\+\_\+data}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classjson__binary_1_1Value_a89cd66f8f33d58a241999aa4446ebd72}{get\+\_\+data\+\_\+length}} () const
+\item 
+int64 \mbox{\hyperlink{classjson__binary_1_1Value_aac42ffa1dc718f9b86a173f0c9fdefa2}{get\+\_\+int64}} () const
+\item 
+uint64 \mbox{\hyperlink{classjson__binary_1_1Value_a26f39e9400007bb4df9461858a45e4ed}{get\+\_\+uint64}} () const
+\item 
+double \mbox{\hyperlink{classjson__binary_1_1Value_ac0e1aaddd94b4e96ef8e595a503dd5f2}{get\+\_\+double}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classjson__binary_1_1Value_aa45a919f10c1421d765ecfbc8491aa95}{element\+\_\+count}} () const
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \mbox{\hyperlink{classjson__binary_1_1Value_acea99f0727f240b2ec552a8fae60855d}{element}} (size\+\_\+t pos) const
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \mbox{\hyperlink{classjson__binary_1_1Value_a10443a279b53069820d5f0c426a046db}{key}} (size\+\_\+t pos) const
+\item 
+enum\+\_\+field\+\_\+types \mbox{\hyperlink{classjson__binary_1_1Value_acd6727baec7b2a35aed4ea9683d7dfe9}{field\+\_\+type}} () const
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \mbox{\hyperlink{classjson__binary_1_1Value_a5bfd3f9c95980a2565ea9bcf35392c03}{lookup}} (const char $\ast$\mbox{\hyperlink{classjson__binary_1_1Value_a10443a279b53069820d5f0c426a046db}{key}}, size\+\_\+t len) const
+\item 
+bool \mbox{\hyperlink{classjson__binary_1_1Value_a6ea6a826dbc7c0e078e73271b8afa2a1}{raw\+\_\+binary}} (String $\ast$buf) const
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_ac0bba537527afc9a09bee2afa60aa9d1}{Value}} (enum\+\_\+type t)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_ad595308589a4d88800fc515b076e2b8f}{Value}} (enum\+\_\+type t, int64 val)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_a73ddf21993bc1e863b1848b362681dad}{Value}} (double val)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_adad7db231ae7f2d1c262e1631fa0e7f2}{Value}} (const char $\ast$data, size\+\_\+t len)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_a6d8722c6f014798bbda4ff8243ee1d64}{Value}} (enum\+\_\+type t, const char $\ast$data, size\+\_\+t \mbox{\hyperlink{classjson__binary_1_1Value_aa45a919f10c1421d765ecfbc8491aa95}{element\+\_\+count}}, size\+\_\+t bytes, bool large)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_a33358973f44b358f8b169259852e6280}{Value}} (enum\+\_\+field\+\_\+types ft, const char $\ast$data, size\+\_\+t len)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_a567bea13aa2f1e23677fcc0557fec53d}{Value}} (const \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \&old)
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value_aaa07e73820e6dfe8727fa473de0dfe37}{Value}} ()
+\item 
+\mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \& \mbox{\hyperlink{classjson__binary_1_1Value_a71e1b7a00567cef587fa9ea3569eedeb}{operator=}} (const \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \&from)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classjson__binary_1_1Value_a6f6cd275f914b430bfdca0c345c09ed2}\label{classjson__binary_1_1Value_a6f6cd275f914b430bfdca0c345c09ed2}} 
+static \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} {\bfseries parse} (const char $\ast$data, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used for reading J\+S\+ON values that are stored in the binary format. Values are parsed lazily, so that only the parts of the value that are interesting to the caller, are read. Array elements can be looked up in constant time using the \mbox{\hyperlink{classjson__binary_1_1Value_acea99f0727f240b2ec552a8fae60855d}{element()}} function. Object members can be looked up in O(log n) time using the \mbox{\hyperlink{classjson__binary_1_1Value_a5bfd3f9c95980a2565ea9bcf35392c03}{lookup()}} function. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjson__binary_1_1Value_ac0bba537527afc9a09bee2afa60aa9d1}\label{classjson__binary_1_1Value_ac0bba537527afc9a09bee2afa60aa9d1}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{enum\+\_\+type}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for values that represent literals or errors. \mbox{\Hypertarget{classjson__binary_1_1Value_ad595308589a4d88800fc515b076e2b8f}\label{classjson__binary_1_1Value_ad595308589a4d88800fc515b076e2b8f}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{enum\+\_\+type}]{t,  }\item[{int64}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for values that represent ints or uints. \mbox{\Hypertarget{classjson__binary_1_1Value_a73ddf21993bc1e863b1848b362681dad}\label{classjson__binary_1_1Value_a73ddf21993bc1e863b1848b362681dad}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{double}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for values that represent doubles. \mbox{\Hypertarget{classjson__binary_1_1Value_adad7db231ae7f2d1c262e1631fa0e7f2}\label{classjson__binary_1_1Value_adad7db231ae7f2d1c262e1631fa0e7f2}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Constructor for values that represent strings. \mbox{\Hypertarget{classjson__binary_1_1Value_a6d8722c6f014798bbda4ff8243ee1d64}\label{classjson__binary_1_1Value_a6d8722c6f014798bbda4ff8243ee1d64}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{enum\+\_\+type}]{t,  }\item[{const char $\ast$}]{data,  }\item[{size\+\_\+t}]{element\+\_\+count,  }\item[{size\+\_\+t}]{bytes,  }\item[{bool}]{large }\end{DoxyParamCaption})}
+
+Constructor for values that represent arrays or objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & type \\
+\hline
+{\em data} & pointer to the start of the binary representation \\
+\hline
+{\em element\+\_\+count} & the number of elements or members in the value \\
+\hline
+{\em bytes} & the number of bytes in the binary representation of the value \\
+\hline
+{\em large} & true if the value should be stored in the large storage format with 4 byte offsets instead of 2 byte offsets \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjson__binary_1_1Value_a33358973f44b358f8b169259852e6280}\label{classjson__binary_1_1Value_a33358973f44b358f8b169259852e6280}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{enum\+\_\+field\+\_\+types}]{ft,  }\item[{const char $\ast$}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Constructor for values that represent opaque data. \mbox{\Hypertarget{classjson__binary_1_1Value_a567bea13aa2f1e23677fcc0557fec53d}\label{classjson__binary_1_1Value_a567bea13aa2f1e23677fcc0557fec53d}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy constructor. \mbox{\Hypertarget{classjson__binary_1_1Value_aaa07e73820e6dfe8727fa473de0dfe37}\label{classjson__binary_1_1Value_aaa07e73820e6dfe8727fa473de0dfe37}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!Value@{Value}}
+\index{Value@{Value}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily json\+\_\+binary\+::\+Value\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Empty constructor. Produces a value that represents an error condition. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjson__binary_1_1Value_acea99f0727f240b2ec552a8fae60855d}\label{classjson__binary_1_1Value_acea99f0727f240b2ec552a8fae60855d}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!element@{element}}
+\index{element@{element}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{element()}{element()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} json\+\_\+binary\+::\+Value\+::element (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption}) const}
+
+Get the element at the specified position of a J\+S\+ON array or a J\+S\+ON object. When called on a J\+S\+ON object, it returns the value associated with the key returned by key(pos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the index of the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a value representing the specified element, or a value where type() returns E\+R\+R\+OR if pos does not point to an element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjson__binary_1_1Value_aa45a919f10c1421d765ecfbc8491aa95}\label{classjson__binary_1_1Value_aa45a919f10c1421d765ecfbc8491aa95}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!element\+\_\+count@{element\+\_\+count}}
+\index{element\+\_\+count@{element\+\_\+count}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{element\+\_\+count()}{element\_count()}}
+{\footnotesize\ttfamily size\+\_\+t json\+\_\+binary\+::\+Value\+::element\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of elements in an array, or the number of members in an object. \mbox{\Hypertarget{classjson__binary_1_1Value_acd6727baec7b2a35aed4ea9683d7dfe9}\label{classjson__binary_1_1Value_acd6727baec7b2a35aed4ea9683d7dfe9}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!field\+\_\+type@{field\+\_\+type}}
+\index{field\+\_\+type@{field\+\_\+type}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{field\+\_\+type()}{field\_type()}}
+{\footnotesize\ttfamily enum\+\_\+field\+\_\+types json\+\_\+binary\+::\+Value\+::field\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the My\+S\+QL field type of an opaque value. Identifies the type of the value stored in the data portion of an opaque value. \mbox{\Hypertarget{classjson__binary_1_1Value_a8691a2514d0bdd2a1f5c39c87ccab132}\label{classjson__binary_1_1Value_a8691a2514d0bdd2a1f5c39c87ccab132}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!get\+\_\+data@{get\+\_\+data}}
+\index{get\+\_\+data@{get\+\_\+data}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{get\+\_\+data()}{get\_data()}}
+{\footnotesize\ttfamily const char $\ast$ json\+\_\+binary\+::\+Value\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get a pointer to the beginning of the S\+T\+R\+I\+NG or O\+P\+A\+Q\+UE data represented by this instance. \mbox{\Hypertarget{classjson__binary_1_1Value_a89cd66f8f33d58a241999aa4446ebd72}\label{classjson__binary_1_1Value_a89cd66f8f33d58a241999aa4446ebd72}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!get\+\_\+data\+\_\+length@{get\+\_\+data\+\_\+length}}
+\index{get\+\_\+data\+\_\+length@{get\+\_\+data\+\_\+length}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+length()}{get\_data\_length()}}
+{\footnotesize\ttfamily size\+\_\+t json\+\_\+binary\+::\+Value\+::get\+\_\+data\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the length in bytes of the S\+T\+R\+I\+NG or O\+P\+A\+Q\+UE value represented by this instance. \mbox{\Hypertarget{classjson__binary_1_1Value_ac0e1aaddd94b4e96ef8e595a503dd5f2}\label{classjson__binary_1_1Value_ac0e1aaddd94b4e96ef8e595a503dd5f2}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!get\+\_\+double@{get\+\_\+double}}
+\index{get\+\_\+double@{get\+\_\+double}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{get\+\_\+double()}{get\_double()}}
+{\footnotesize\ttfamily double json\+\_\+binary\+::\+Value\+::get\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the value of a D\+O\+U\+B\+LE. \mbox{\Hypertarget{classjson__binary_1_1Value_aac42ffa1dc718f9b86a173f0c9fdefa2}\label{classjson__binary_1_1Value_aac42ffa1dc718f9b86a173f0c9fdefa2}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!get\+\_\+int64@{get\+\_\+int64}}
+\index{get\+\_\+int64@{get\+\_\+int64}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{get\+\_\+int64()}{get\_int64()}}
+{\footnotesize\ttfamily int64 json\+\_\+binary\+::\+Value\+::get\+\_\+int64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the value of an I\+NT. \mbox{\Hypertarget{classjson__binary_1_1Value_a26f39e9400007bb4df9461858a45e4ed}\label{classjson__binary_1_1Value_a26f39e9400007bb4df9461858a45e4ed}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!get\+\_\+uint64@{get\+\_\+uint64}}
+\index{get\+\_\+uint64@{get\+\_\+uint64}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{get\+\_\+uint64()}{get\_uint64()}}
+{\footnotesize\ttfamily uint64 json\+\_\+binary\+::\+Value\+::get\+\_\+uint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the value of a U\+I\+NT. \mbox{\Hypertarget{classjson__binary_1_1Value_af156297a9b0f2584f5986e899bf12c6c}\label{classjson__binary_1_1Value_af156297a9b0f2584f5986e899bf12c6c}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{is\+\_\+valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool json\+\_\+binary\+::\+Value\+::is\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Does this value, and all of its members, represent a valid J\+S\+ON value? \mbox{\Hypertarget{classjson__binary_1_1Value_a10443a279b53069820d5f0c426a046db}\label{classjson__binary_1_1Value_a10443a279b53069820d5f0c426a046db}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!key@{key}}
+\index{key@{key}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} json\+\_\+binary\+::\+Value\+::key (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption}) const}
+
+Get the key of the member stored at the specified position in a J\+S\+ON object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the index of the member \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the key of the specified member, or a value where type() returns E\+R\+R\+OR if pos does not point to a member 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjson__binary_1_1Value_a5bfd3f9c95980a2565ea9bcf35392c03}\label{classjson__binary_1_1Value_a5bfd3f9c95980a2565ea9bcf35392c03}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!lookup@{lookup}}
+\index{lookup@{lookup}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} json\+\_\+binary\+::\+Value\+::lookup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption}) const}
+
+Get the value associated with the specified key in a J\+S\+ON object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & pointer to the key \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & length of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value associated with the key, if there is one. otherwise, returns E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classjson__binary_1_1Value_a71e1b7a00567cef587fa9ea3569eedeb}\label{classjson__binary_1_1Value_a71e1b7a00567cef587fa9ea3569eedeb}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!operator=@{operator=}}
+\index{operator=@{operator=}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classjson__binary_1_1Value}{Value}}\& json\+\_\+binary\+::\+Value\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classjson__binary_1_1Value}{Value}} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assignment operator. \mbox{\Hypertarget{classjson__binary_1_1Value_a6ea6a826dbc7c0e078e73271b8afa2a1}\label{classjson__binary_1_1Value_a6ea6a826dbc7c0e078e73271b8afa2a1}} 
+\index{json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}!raw\+\_\+binary@{raw\+\_\+binary}}
+\index{raw\+\_\+binary@{raw\+\_\+binary}!json\+\_\+binary\+::\+Value@{json\+\_\+binary\+::\+Value}}
+\subsubsection{\texorpdfstring{raw\+\_\+binary()}{raw\_binary()}}
+{\footnotesize\ttfamily bool json\+\_\+binary\+::\+Value\+::raw\+\_\+binary (\begin{DoxyParamCaption}\item[{String $\ast$}]{buf }\end{DoxyParamCaption}) const}
+
+Copy the binary representation of this value into a buffer, replacing the contents of the receiving buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & the receiving buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__binary_8h}{json\+\_\+binary.\+h}}\item 
+json\+\_\+binary.\+cc\end{DoxyCompactItemize}

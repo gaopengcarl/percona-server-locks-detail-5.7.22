@@ -1,0 +1,91 @@
+\hypertarget{group__Query__Planner}{}\section{Query Planner}
+\label{group__Query__Planner}\index{Query Planner@{Query Planner}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{group__Query__Planner_gab40ad85a04512dd2ac293b723d96fb54}{calculate\+\_\+condition\+\_\+filter}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$const tab, const \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$const keyuse, table\+\_\+map used\+\_\+tables, double fanout, bool is\+\_\+join\+\_\+buffering)
+\item 
+void \mbox{\hyperlink{group__Query__Planner_ga945145266f4a865c166692aea42818ed}{get\+\_\+partial\+\_\+join\+\_\+cost}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, uint n\+\_\+tables, double $\ast$cost\+\_\+arg, double $\ast$rowcount\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{group__Query__Planner_gaf585184987b0097465505d600394b8f3}{Optimize\+\_\+table\+\_\+order\+::choose\+\_\+table\+\_\+order}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Query__Planner_gab40ad85a04512dd2ac293b723d96fb54}\label{group__Query__Planner_gab40ad85a04512dd2ac293b723d96fb54}} 
+\index{Query Planner@{Query Planner}!calculate\+\_\+condition\+\_\+filter@{calculate\+\_\+condition\+\_\+filter}}
+\index{calculate\+\_\+condition\+\_\+filter@{calculate\+\_\+condition\+\_\+filter}!Query Planner@{Query Planner}}
+\subsubsection{\texorpdfstring{calculate\+\_\+condition\+\_\+filter()}{calculate\_condition\_filter()}}
+{\footnotesize\ttfamily float calculate\+\_\+condition\+\_\+filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$const}]{tab,  }\item[{const \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$const}]{keyuse,  }\item[{table\+\_\+map}]{used\+\_\+tables,  }\item[{double}]{fanout,  }\item[{bool}]{is\+\_\+join\+\_\+buffering }\end{DoxyParamCaption})}
+
+Calculate \textquotesingle{}Post read filtering\textquotesingle{} effect of J\+O\+I\+N\+::conds for table \textquotesingle{}tab\textquotesingle{}. Only conditions that are not directly involved in the chosen access method shall be included in the calculation of this \textquotesingle{}Post read filtering\textquotesingle{} effect.
+
+The function first identifies fields that are directly used by the access method. This includes columns used by range and ref access types, and predicates on the identified columns (if any) will not be taken into account when the filtering effect is calculated.
+
+The function will then calculate the filtering effect of any predicate that applies to \textquotesingle{}tab\textquotesingle{} and is not depending on the columns used by the access method. The source of information with highest accuracy is always preferred and is as follows\+: 1) Row estimates from the range optimizer 2) Row estimates from index statistics (records per key) 3) Guesstimates
+
+Thus, after identifying columns that are used by the access method, the function will look for rows estimates made by the range optimizer. If found, the estimates from the range optimizer are calculated into the filtering effect.
+
+The function then goes through J\+O\+I\+N\+::conds to get estimates from any remaining predicate that applies to \textquotesingle{}tab\textquotesingle{} and does not depend on any tables that come later in the join sequence. Predicates that depend on columns that are either used by the access method or used in the row estimate from the range optimizer will not be considered in this phase.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & The table condition filtering effect is calculated for \\
+\hline
+{\em keyuse} & Describes the \textquotesingle{}ref\textquotesingle{} access method (if any) that is chosen \\
+\hline
+{\em used\+\_\+tables} & Tables earlier in the join sequence than \textquotesingle{}tab\textquotesingle{} \\
+\hline
+{\em fanout} & The number of rows read by the chosen access method for each row combination of previous tables \\
+\hline
+{\em is\+\_\+join\+\_\+buffering} & Whether or not condition filtering is about to be calculated for an access method using join buffering. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \textquotesingle{}post read filtering\textquotesingle{} effect (between 0 and 1) of J\+O\+I\+N\+::conds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Planner_gaf585184987b0097465505d600394b8f3}\label{group__Query__Planner_gaf585184987b0097465505d600394b8f3}} 
+\index{Query Planner@{Query Planner}!choose\+\_\+table\+\_\+order@{choose\+\_\+table\+\_\+order}}
+\index{choose\+\_\+table\+\_\+order@{choose\+\_\+table\+\_\+order}!Query Planner@{Query Planner}}
+\subsubsection{\texorpdfstring{choose\+\_\+table\+\_\+order()}{choose\_table\_order()}}
+{\footnotesize\ttfamily bool Optimize\+\_\+table\+\_\+order\+::choose\+\_\+table\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Entry point to table join order optimization. For further description, see class header and private function headers.
+
+\begin{DoxyReturn}{Returns}
+false if successful, true if error
+\end{DoxyReturn}
+Selects and invokes a search strategy for an optimal query join order.
+
+The function checks user-\/configurable parameters that control the search strategy for an optimal plan, selects the search method and then invokes it. Each specific optimization procedure stores the final optimal plan in the array \textquotesingle{}join-\/$>$best\+\_\+positions\textquotesingle{}, and the cost of the plan in \textquotesingle{}join-\/$>$best\+\_\+read\textquotesingle{}. The function can be invoked to produce a plan for all tables in the query (in this case, the const tables are usually filtered out), or it can be invoked to produce a plan for a materialization of a semijoin nest. Set a non-\/N\+U\+LL emb\+\_\+sjm\+\_\+nest pointer when producing a plan for a semijoin nest to be materialized and a N\+U\+LL pointer when producing a full query plan.
+
+\begin{DoxyReturn}{Returns}
+false if successful, true if error 
+\end{DoxyReturn}
+$<$ The tables involved in order selection \mbox{\Hypertarget{group__Query__Planner_ga945145266f4a865c166692aea42818ed}\label{group__Query__Planner_ga945145266f4a865c166692aea42818ed}} 
+\index{Query Planner@{Query Planner}!get\+\_\+partial\+\_\+join\+\_\+cost@{get\+\_\+partial\+\_\+join\+\_\+cost}}
+\index{get\+\_\+partial\+\_\+join\+\_\+cost@{get\+\_\+partial\+\_\+join\+\_\+cost}!Query Planner@{Query Planner}}
+\subsubsection{\texorpdfstring{get\+\_\+partial\+\_\+join\+\_\+cost()}{get\_partial\_join\_cost()}}
+{\footnotesize\ttfamily void get\+\_\+partial\+\_\+join\+\_\+cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{uint}]{n\+\_\+tables,  }\item[{double $\ast$}]{cost\+\_\+arg,  }\item[{double $\ast$}]{rowcount\+\_\+arg }\end{DoxyParamCaption})}
+
+Calculate a cost of given partial join order
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & Join to use. \+::positions holds the partial join order \\
+\hline
+{\em n\+\_\+tables} & Number of tables in the partial join order \\
+\hline
+{\em cost\+\_\+arg\mbox{[}out\mbox{]}} & Store read time here \\
+\hline
+{\em rowcount\+\_\+arg\mbox{[}out\mbox{]}} & Store record count here\\
+\hline
+\end{DoxyParams}
+This is needed for semi-\/join materialization code. The idea is that we detect sj-\/materialization after we\textquotesingle{}ve put all sj-\/inner tables into the join prefix
+
+prefix-\/tables semi-\/join-\/inner-\/tables tN $^\wedge$--we\textquotesingle{}re here
+
+and we\textquotesingle{}ll need to get the cost of prefix-\/tables prefix again. 

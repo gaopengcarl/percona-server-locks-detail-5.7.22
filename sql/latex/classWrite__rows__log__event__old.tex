@@ -1,0 +1,41 @@
+\hypertarget{classWrite__rows__log__event__old}{}\section{Write\+\_\+rows\+\_\+log\+\_\+event\+\_\+old Class Reference}
+\label{classWrite__rows__log__event__old}\index{Write\+\_\+rows\+\_\+log\+\_\+event\+\_\+old@{Write\+\_\+rows\+\_\+log\+\_\+event\+\_\+old}}
+
+
+{\ttfamily \#include $<$log\+\_\+event\+\_\+old.\+h$>$}
+
+Inheritance diagram for Write\+\_\+rows\+\_\+log\+\_\+event\+\_\+old\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classWrite__rows__log__event__old}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWrite__rows__log__event__old_a21052139673a078edbccc6e13351cbb3}\label{classWrite__rows__log__event__old_a21052139673a078edbccc6e13351cbb3}} 
+enum \{ {\bfseries T\+Y\+P\+E\+\_\+\+C\+O\+DE} = binary\+\_\+log\+:\+:P\+R\+E\+\_\+\+G\+A\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWrite__rows__log__event__old_a3bd8af252796799fc9f97556ae9369bb}\label{classWrite__rows__log__event__old_a3bd8af252796799fc9f97556ae9369bb}} 
+{\bfseries Write\+\_\+rows\+\_\+log\+\_\+event\+\_\+old} (T\+HD $\ast$, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$, ulong table\+\_\+id, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, bool is\+\_\+transactional)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWrite__rows__log__event__old_ae476953d8a7a0dbcba71c118acbdcb13}\label{classWrite__rows__log__event__old_ae476953d8a7a0dbcba71c118acbdcb13}} 
+static bool {\bfseries binlog\+\_\+row\+\_\+logging\+\_\+function} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool is\+\_\+transactional, const uchar $\ast$before\+\_\+record M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)), const uchar $\ast$after\+\_\+record)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Old class for binlog events that write new rows to a table (event type code P\+R\+E\+\_\+\+G\+A\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT). Such events are never produced by this version of the server, but they may be read from a relay log created by an old server. New servers create events of class \mbox{\hyperlink{classWrite__rows__log__event}{Write\+\_\+rows\+\_\+log\+\_\+event}} (event type code W\+R\+I\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT) instead. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event__old_8h}{log\+\_\+event\+\_\+old.\+h}}\item 
+log\+\_\+event\+\_\+old.\+cc\end{DoxyCompactItemize}

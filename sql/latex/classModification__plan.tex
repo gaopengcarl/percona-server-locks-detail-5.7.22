@@ -1,0 +1,128 @@
+\hypertarget{classModification__plan}{}\section{Modification\+\_\+plan Class Reference}
+\label{classModification__plan}\index{Modification\+\_\+plan@{Modification\+\_\+plan}}
+
+
+{\ttfamily \#include $<$opt\+\_\+explain.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModification__plan_a0df82723d55b566d68c49b33c0bf26fe}{Modification\+\_\+plan}} (T\+HD $\ast$thd\+\_\+arg, enum\+\_\+mod\+\_\+type mt, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab, uint key\+\_\+arg, ha\+\_\+rows limit\+\_\+arg, bool need\+\_\+tmp\+\_\+table\+\_\+arg, bool need\+\_\+sort\+\_\+arg, bool used\+\_\+key\+\_\+is\+\_\+modified\+\_\+arg, ha\+\_\+rows rows)
+\item 
+\mbox{\hyperlink{classModification__plan_a53d45efe019d13f893144bd03159c1bd}{Modification\+\_\+plan}} (T\+HD $\ast$thd\+\_\+arg, enum\+\_\+mod\+\_\+type mt, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table\+\_\+arg, const char $\ast$message\+\_\+arg, bool zero\+\_\+result\+\_\+arg, ha\+\_\+rows rows)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModification__plan_a2667085b2d418c26636cb88a940172cb}\label{classModification__plan_a2667085b2d418c26636cb88a940172cb}} 
+T\+HD $\ast$const \mbox{\hyperlink{classModification__plan_a2667085b2d418c26636cb88a940172cb}{thd}}
+\begin{DoxyCompactList}\small\item\em Owning thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a2c9bbe05367c8efe91bb8a0ffa246696}\label{classModification__plan_a2c9bbe05367c8efe91bb8a0ffa246696}} 
+const enum\+\_\+mod\+\_\+type \mbox{\hyperlink{classModification__plan_a2c9bbe05367c8efe91bb8a0ffa246696}{mod\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Modification type -\/ M\+T\+\_\+\+I\+N\+S\+E\+R\+T/\+M\+T\+\_\+\+U\+P\+D\+A\+T\+E/etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a0e0e25a14f263652c032a4f51d17a9aa}\label{classModification__plan_a0e0e25a14f263652c032a4f51d17a9aa}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classModification__plan_a0e0e25a14f263652c032a4f51d17a9aa}{table}}
+\begin{DoxyCompactList}\small\item\em Table to modify. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a569172a72a91910aa46da363d9ce69bd}\label{classModification__plan_a569172a72a91910aa46da363d9ce69bd}} 
+\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$ \mbox{\hyperlink{classModification__plan_a569172a72a91910aa46da363d9ce69bd}{tab}}
+\begin{DoxyCompactList}\small\item\em Q\+U\+I\+CK access method + W\+H\+E\+RE clause. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a3a7a0ffc69f523bd67f2157f27431764}\label{classModification__plan_a3a7a0ffc69f523bd67f2157f27431764}} 
+uint \mbox{\hyperlink{classModification__plan_a3a7a0ffc69f523bd67f2157f27431764}{key}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classKey}{Key}} to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a127e9ca01c01606f4265fb7629a85121}\label{classModification__plan_a127e9ca01c01606f4265fb7629a85121}} 
+ha\+\_\+rows \mbox{\hyperlink{classModification__plan_a127e9ca01c01606f4265fb7629a85121}{limit}}
+\begin{DoxyCompactList}\small\item\em Limit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_aec1c918ee9a078a54d0bd8b70c98b7bc}\label{classModification__plan_aec1c918ee9a078a54d0bd8b70c98b7bc}} 
+bool \mbox{\hyperlink{classModification__plan_aec1c918ee9a078a54d0bd8b70c98b7bc}{need\+\_\+tmp\+\_\+table}}
+\begin{DoxyCompactList}\small\item\em Whether tmp table needs to be used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a4f42c3bca33f86a95e15852fe15fa11c}\label{classModification__plan_a4f42c3bca33f86a95e15852fe15fa11c}} 
+bool \mbox{\hyperlink{classModification__plan_a4f42c3bca33f86a95e15852fe15fa11c}{need\+\_\+sort}}
+\begin{DoxyCompactList}\small\item\em Whether to use filesort. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_ad3d9c4984dcc953b70eeb73db4fd2293}\label{classModification__plan_ad3d9c4984dcc953b70eeb73db4fd2293}} 
+bool \mbox{\hyperlink{classModification__plan_ad3d9c4984dcc953b70eeb73db4fd2293}{used\+\_\+key\+\_\+is\+\_\+modified}}
+\begin{DoxyCompactList}\small\item\em Whether the key used to scan is modified. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_af7a393bfeee3f670bfffda7b3f578122}\label{classModification__plan_af7a393bfeee3f670bfffda7b3f578122}} 
+const char $\ast$ \mbox{\hyperlink{classModification__plan_af7a393bfeee3f670bfffda7b3f578122}{message}}
+\begin{DoxyCompactList}\small\item\em Arbitrary message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModification__plan_a6615dc7a02532a68b8d816cc1ba52911}\label{classModification__plan_a6615dc7a02532a68b8d816cc1ba52911}} 
+bool \mbox{\hyperlink{classModification__plan_a6615dc7a02532a68b8d816cc1ba52911}{zero\+\_\+result}}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE $<$=$>$ plan will not be executed. \end{DoxyCompactList}\item 
+ha\+\_\+rows \mbox{\hyperlink{classModification__plan_ae7b1b1938ef76f577f52804a6a68509f}{examined\+\_\+rows}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Table modification plan for \mbox{\hyperlink{classJOIN}{J\+O\+IN}}-\/less statements (update/delete) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModification__plan_a0df82723d55b566d68c49b33c0bf26fe}\label{classModification__plan_a0df82723d55b566d68c49b33c0bf26fe}} 
+\index{Modification\+\_\+plan@{Modification\+\_\+plan}!Modification\+\_\+plan@{Modification\+\_\+plan}}
+\index{Modification\+\_\+plan@{Modification\+\_\+plan}!Modification\+\_\+plan@{Modification\+\_\+plan}}
+\subsubsection{\texorpdfstring{Modification\+\_\+plan()}{Modification\_plan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Modification\+\_\+plan\+::\+Modification\+\_\+plan (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd\+\_\+arg,  }\item[{enum\+\_\+mod\+\_\+type}]{mt,  }\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab\+\_\+arg,  }\item[{uint}]{key\+\_\+arg,  }\item[{ha\+\_\+rows}]{limit\+\_\+arg,  }\item[{bool}]{need\+\_\+tmp\+\_\+table\+\_\+arg,  }\item[{bool}]{need\+\_\+sort\+\_\+arg,  }\item[{bool}]{used\+\_\+key\+\_\+is\+\_\+modified\+\_\+arg,  }\item[{ha\+\_\+rows}]{rows }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classModification__plan}{Modification\+\_\+plan}}\textquotesingle{}s constructor, to represent that we will use an access method on the table.
+
+Create single table modification plan. The plan is registered in the given thd unless the modification is done in a sub-\/statement (function/trigger).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd\+\_\+arg} & owning thread \\
+\hline
+{\em mt} & modification type -\/ M\+T\+\_\+\+I\+N\+S\+E\+R\+T/\+M\+T\+\_\+\+U\+P\+D\+A\+T\+E/etc \\
+\hline
+{\em tab\+\_\+arg} & Table to modify \\
+\hline
+{\em key\+\_\+arg} & M\+A\+X\+\_\+\+K\+EY or and index number of the key that was chosen to access table data. \\
+\hline
+{\em limit\+\_\+arg} & H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR or L\+I\+M\+IT value. \\
+\hline
+{\em need\+\_\+tmp\+\_\+table\+\_\+arg} & true if it requires temporary table -- \char`\"{}\+Using temporary\char`\"{} string in the \char`\"{}extra\char`\"{} column. \\
+\hline
+{\em need\+\_\+sort\+\_\+arg} & true if it requires \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}} -- \char`\"{}\+Using filesort\char`\"{} string in the \char`\"{}extra\char`\"{} column. \\
+\hline
+{\em used\+\_\+key\+\_\+is\+\_\+modified} & U\+P\+D\+A\+TE updates used key column \\
+\hline
+{\em rows} & How many rows we plan to modify in the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModification__plan_a53d45efe019d13f893144bd03159c1bd}\label{classModification__plan_a53d45efe019d13f893144bd03159c1bd}} 
+\index{Modification\+\_\+plan@{Modification\+\_\+plan}!Modification\+\_\+plan@{Modification\+\_\+plan}}
+\index{Modification\+\_\+plan@{Modification\+\_\+plan}!Modification\+\_\+plan@{Modification\+\_\+plan}}
+\subsubsection{\texorpdfstring{Modification\+\_\+plan()}{Modification\_plan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Modification\+\_\+plan\+::\+Modification\+\_\+plan (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd\+\_\+arg,  }\item[{enum\+\_\+mod\+\_\+type}]{mt,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table\+\_\+arg,  }\item[{const char $\ast$}]{message\+\_\+arg,  }\item[{bool}]{zero\+\_\+result\+\_\+arg,  }\item[{ha\+\_\+rows}]{rows }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classModification__plan}{Modification\+\_\+plan}}\textquotesingle{}s constructor, to convey a message in the \char`\"{}extra\char`\"{} column of E\+X\+P\+L\+A\+IN. This is for the case where this message is the main information (there is no access path to the table).
+
+Create minimal single table modification plan. The plan is registered in the given thd unless the modification is done in a sub-\/statement (function/trigger).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd\+\_\+arg} & Owning thread \\
+\hline
+{\em mt} & Modification type -\/ M\+T\+\_\+\+I\+N\+S\+E\+R\+T/\+M\+T\+\_\+\+U\+P\+D\+A\+T\+E/etc \\
+\hline
+{\em table\+\_\+arg} & Table to modify \\
+\hline
+{\em message\+\_\+arg} & Message \\
+\hline
+{\em zero\+\_\+result\+\_\+arg} & If we shortcut execution \\
+\hline
+{\em rows} & How many rows we plan to modify in the table. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classModification__plan_ae7b1b1938ef76f577f52804a6a68509f}\label{classModification__plan_ae7b1b1938ef76f577f52804a6a68509f}} 
+\index{Modification\+\_\+plan@{Modification\+\_\+plan}!examined\+\_\+rows@{examined\+\_\+rows}}
+\index{examined\+\_\+rows@{examined\+\_\+rows}!Modification\+\_\+plan@{Modification\+\_\+plan}}
+\subsubsection{\texorpdfstring{examined\+\_\+rows}{examined\_rows}}
+{\footnotesize\ttfamily ha\+\_\+rows Modification\+\_\+plan\+::examined\+\_\+rows}
+
+\subsection*{of rows expected to be examined in the table}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+h\item 
+opt\+\_\+explain.\+cc\end{DoxyCompactItemize}

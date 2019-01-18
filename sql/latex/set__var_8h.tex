@@ -1,0 +1,294 @@
+\hypertarget{set__var_8h}{}\section{set\+\_\+var.\+h File Reference}
+\label{set__var_8h}\index{set\+\_\+var.\+h@{set\+\_\+var.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}m\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+getopt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql\+\_\+com.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}typelib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/plugin.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+alloc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+plugin\+\_\+ref.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}prealloced\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classList}{List$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structsys__var__chain}{sys\+\_\+var\+\_\+chain}}
+\item 
+class \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}
+\item 
+class \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}}
+\item 
+class \mbox{\hyperlink{classset__var}{set\+\_\+var}}
+\item 
+class \mbox{\hyperlink{classset__var__user}{set\+\_\+var\+\_\+user}}
+\item 
+class \mbox{\hyperlink{classset__var__password}{set\+\_\+var\+\_\+password}}
+\item 
+class \mbox{\hyperlink{classset__var__collation__client}{set\+\_\+var\+\_\+collation\+\_\+client}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{set__var_8h_a1a89ca4858041373138668a49bac35e4}\label{set__var_8h_a1a89ca4858041373138668a49bac35e4}} 
+\#define {\bfseries S\+H\+O\+W\+\_\+\+V\+A\+R\+\_\+\+P\+R\+E\+A\+L\+L\+OC}~200
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{set__var_8h_a1dba8b6567061f45e6b9df70480b5239}\label{set__var_8h_a1dba8b6567061f45e6b9df70480b5239}} 
+typedef ulonglong {\bfseries sql\+\_\+mode\+\_\+t}
+\item 
+\mbox{\Hypertarget{set__var_8h_a188960ac810f73a6c3cbf05625ecffe8}\label{set__var_8h_a188960ac810f73a6c3cbf05625ecffe8}} 
+typedef enum enum\+\_\+mysql\+\_\+show\+\_\+type {\bfseries S\+H\+O\+W\+\_\+\+T\+Y\+PE}
+\item 
+\mbox{\Hypertarget{set__var_8h_a38509d30f8129593f326c3b2e3e335dc}\label{set__var_8h_a38509d30f8129593f326c3b2e3e335dc}} 
+typedef enum enum\+\_\+mysql\+\_\+show\+\_\+scope {\bfseries S\+H\+O\+W\+\_\+\+S\+C\+O\+PE}
+\item 
+\mbox{\Hypertarget{set__var_8h_a7724e48884c721cc04ebae782e1e9bf0}\label{set__var_8h_a7724e48884c721cc04ebae782e1e9bf0}} 
+typedef struct st\+\_\+mysql\+\_\+show\+\_\+var {\bfseries S\+H\+O\+W\+\_\+\+V\+AR}
+\item 
+\mbox{\Hypertarget{set__var_8h_a401f63b918f8992fc277f5d9bc22a783}\label{set__var_8h_a401f63b918f8992fc277f5d9bc22a783}} 
+typedef Prealloced\+\_\+array$<$ S\+H\+O\+W\+\_\+\+V\+AR, S\+H\+O\+W\+\_\+\+V\+A\+R\+\_\+\+P\+R\+E\+A\+L\+L\+OC, false $>$ {\bfseries Show\+\_\+var\+\_\+array}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{set__var_8h_adc0f2e5d022a933c35e6ce7ab360047b}\label{set__var_8h_adc0f2e5d022a933c35e6ce7ab360047b}} 
+enum {\bfseries enum\+\_\+var\+\_\+type} \{ {\bfseries O\+P\+T\+\_\+\+D\+E\+F\+A\+U\+LT} = 0, 
+{\bfseries O\+P\+T\+\_\+\+S\+E\+S\+S\+I\+ON}, 
+{\bfseries O\+P\+T\+\_\+\+G\+L\+O\+B\+AL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{set__var_8h_a5405842b0b4de509e736cc843c2282aa}{mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain}} (\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$chain)
+\item 
+\mbox{\Hypertarget{set__var_8h_a8c33814315fc778bd54a771b17a03cdc}\label{set__var_8h_a8c33814315fc778bd54a771b17a03cdc}} 
+int {\bfseries mysql\+\_\+del\+\_\+sys\+\_\+var\+\_\+chain} (\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$chain)
+\item 
+\mbox{\Hypertarget{set__var_8h_a2f15232c8d3d729658df1063a91ebf72}\label{set__var_8h_a2f15232c8d3d729658df1063a91ebf72}} 
+ulong {\bfseries get\+\_\+system\+\_\+variable\+\_\+hash\+\_\+records} (void)
+\item 
+\mbox{\Hypertarget{set__var_8h_abb51352e2c2091adba3e06d6d562da1f}\label{set__var_8h_abb51352e2c2091adba3e06d6d562da1f}} 
+ulonglong {\bfseries get\+\_\+system\+\_\+variable\+\_\+hash\+\_\+version} (void)
+\item 
+bool \mbox{\hyperlink{set__var_8h_a07a52eb69ca90e1bd42c56891312d5b8}{enumerate\+\_\+sys\+\_\+vars}} (T\+HD $\ast$thd, Show\+\_\+var\+\_\+array $\ast$show\+\_\+var\+\_\+array, bool sort, enum enum\+\_\+var\+\_\+type type, bool strict)
+\item 
+\mbox{\Hypertarget{set__var_8h_a6b20faf588152a7e444372fc87661548}\label{set__var_8h_a6b20faf588152a7e444372fc87661548}} 
+void {\bfseries lock\+\_\+plugin\+\_\+mutex} ()
+\item 
+\mbox{\Hypertarget{set__var_8h_a461bb7fb122acc7734fd0c68c1cba8f5}\label{set__var_8h_a461bb7fb122acc7734fd0c68c1cba8f5}} 
+void {\bfseries unlock\+\_\+plugin\+\_\+mutex} ()
+\item 
+\mbox{\Hypertarget{set__var_8h_a94c35a0de59ca059d5e6b8650cd50934}\label{set__var_8h_a94c35a0de59ca059d5e6b8650cd50934}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries find\+\_\+sys\+\_\+var} (T\+HD $\ast$thd, const char $\ast$str, size\+\_\+t length=0)
+\item 
+\mbox{\Hypertarget{set__var_8h_aeb91fd69245755f429630db095923d93}\label{set__var_8h_aeb91fd69245755f429630db095923d93}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries find\+\_\+sys\+\_\+var\+\_\+ex} (T\+HD $\ast$thd, const char $\ast$str, size\+\_\+t length=0, bool throw\+\_\+error=false, bool locked=false)
+\item 
+int \mbox{\hyperlink{set__var_8h_a4adfab7302f329746af5cd18d10944fa}{sql\+\_\+set\+\_\+variables}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}} $>$ $\ast$var\+\_\+list, bool free\+\_\+joins=true)
+\item 
+bool \mbox{\hyperlink{set__var_8h_a3642459fc065c7fdb286f552eef092ef}{fix\+\_\+delay\+\_\+key\+\_\+write}} (\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$self, T\+HD $\ast$thd, enum\+\_\+var\+\_\+type type)
+\item 
+bool \mbox{\hyperlink{set__var_8h_a8d2fb316a73e87a221c5eee960ac0aa0}{keyring\+\_\+access\+\_\+test}} ()
+\item 
+\mbox{\Hypertarget{set__var_8h_ad3667214bdae8069e47047566030a7d8}\label{set__var_8h_ad3667214bdae8069e47047566030a7d8}} 
+sql\+\_\+mode\+\_\+t {\bfseries expand\+\_\+sql\+\_\+mode} (sql\+\_\+mode\+\_\+t sql\+\_\+mode, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{set__var_8h_a67465ab423c0edd9b7e36066b48ae7ef}\label{set__var_8h_a67465ab423c0edd9b7e36066b48ae7ef}} 
+bool {\bfseries sql\+\_\+mode\+\_\+string\+\_\+representation} (T\+HD $\ast$thd, sql\+\_\+mode\+\_\+t sql\+\_\+mode, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$ls)
+\item 
+\mbox{\Hypertarget{set__var_8h_a4bed3f78464994cadfe56da55449e966}\label{set__var_8h_a4bed3f78464994cadfe56da55449e966}} 
+void {\bfseries update\+\_\+parser\+\_\+max\+\_\+mem\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{set__var_8h_ab2c329c66770efaf77b529715ae7e9f3}\label{set__var_8h_ab2c329c66770efaf77b529715ae7e9f3}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries get\+\_\+old\+\_\+charset\+\_\+by\+\_\+name} (const char $\ast$old\+\_\+name)
+\item 
+\mbox{\Hypertarget{set__var_8h_a12c34cbf1e1dea58d97a9ac15dacafbd}\label{set__var_8h_a12c34cbf1e1dea58d97a9ac15dacafbd}} 
+int {\bfseries sys\+\_\+var\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{set__var_8h_ac61a6b9a4a2b42e64032feafdbcf865f}\label{set__var_8h_ac61a6b9a4a2b42e64032feafdbcf865f}} 
+int {\bfseries sys\+\_\+var\+\_\+add\+\_\+options} (std\+::vector$<$ my\+\_\+option $>$ $\ast$long\+\_\+options, int parse\+\_\+flags)
+\item 
+\mbox{\Hypertarget{set__var_8h_ab3eaf0e772692b67021aea66aa843592}\label{set__var_8h_ab3eaf0e772692b67021aea66aa843592}} 
+void {\bfseries sys\+\_\+var\+\_\+end} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{set__var_8h_ab0b638218934868e324ebf05717a9d38}\label{set__var_8h_ab0b638218934868e324ebf05717a9d38}} 
+T\+Y\+P\+E\+L\+IB {\bfseries bool\+\_\+typelib}
+\item 
+\mbox{\Hypertarget{set__var_8h_ae5e899458b5947681ca1ab441d58ed2b}\label{set__var_8h_ae5e899458b5947681ca1ab441d58ed2b}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+ndbcluster}
+\item 
+\mbox{\Hypertarget{set__var_8h_a51d8ef00b2b1442b4a1270999889497e}\label{set__var_8h_a51d8ef00b2b1442b4a1270999889497e}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+partitioning}
+\item 
+\mbox{\Hypertarget{set__var_8h_a32ce61f6568ff033d5327d0f63d311fe}\label{set__var_8h_a32ce61f6568ff033d5327d0f63d311fe}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+profiling}
+\item 
+\mbox{\Hypertarget{set__var_8h_a3cf052bffef71cc9c314bf7ab55907f8}\label{set__var_8h_a3cf052bffef71cc9c314bf7ab55907f8}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+ssl}
+\item 
+\mbox{\Hypertarget{set__var_8h_a54ba923e88375e9e5b5c4e110dc315bd}\label{set__var_8h_a54ba923e88375e9e5b5c4e110dc315bd}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+symlink}
+\item 
+\mbox{\Hypertarget{set__var_8h_aea14ab0f00e364d9b9be101b31264626}\label{set__var_8h_aea14ab0f00e364d9b9be101b31264626}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+dlopen}
+\item 
+\mbox{\Hypertarget{set__var_8h_ae35e873acd71a302d458a4bc2a874236}\label{set__var_8h_ae35e873acd71a302d458a4bc2a874236}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+query\+\_\+cache}
+\item 
+\mbox{\Hypertarget{set__var_8h_a9544cb5c735b645404c186d64869a808}\label{set__var_8h_a9544cb5c735b645404c186d64869a808}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+geometry}
+\item 
+\mbox{\Hypertarget{set__var_8h_a19defa18488a5b14013ab06224d88084}\label{set__var_8h_a19defa18488a5b14013ab06224d88084}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+rtree\+\_\+keys}
+\item 
+\mbox{\Hypertarget{set__var_8h_a2d2d18c2ced8521f39b6e304a41a95f4}\label{set__var_8h_a2d2d18c2ced8521f39b6e304a41a95f4}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+crypt}
+\item 
+\mbox{\Hypertarget{set__var_8h_a400083997e59c91a30cfc2e6ce40eea7}\label{set__var_8h_a400083997e59c91a30cfc2e6ce40eea7}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+compress}
+\item 
+\mbox{\Hypertarget{set__var_8h_a5c48ef13df66cd22c10bd3ef0de0336c}\label{set__var_8h_a5c48ef13df66cd22c10bd3ef0de0336c}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+statement\+\_\+timeout}
+\item 
+\mbox{\Hypertarget{set__var_8h_af43c09555cd6d80418d54482ce97364a}\label{set__var_8h_af43c09555cd6d80418d54482ce97364a}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+backup\+\_\+locks}
+\item 
+\mbox{\Hypertarget{set__var_8h_ad6ba82f9922b4b7be4a8954b485bca1e}\label{set__var_8h_ad6ba82f9922b4b7be4a8954b485bca1e}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+backup\+\_\+safe\+\_\+binlog\+\_\+info}
+\item 
+\mbox{\Hypertarget{set__var_8h_a75f19088e5d967511467abc67e9946c4}\label{set__var_8h_a75f19088e5d967511467abc67e9946c4}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries have\+\_\+snapshot\+\_\+cloning}
+\item 
+\mbox{\Hypertarget{set__var_8h_aa259d1a68b7ff4d852425cce07dae105}\label{set__var_8h_aa259d1a68b7ff4d852425cce07dae105}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries Sys\+\_\+autocommit\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{set__var_8h_a4834c2c90115fc8f655d5cac0d726f89}\label{set__var_8h_a4834c2c90115fc8f655d5cac0d726f89}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries Sys\+\_\+gtid\+\_\+next\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{set__var_8h_aeef0a8c93a8eb67e183ab6909c238674}\label{set__var_8h_aeef0a8c93a8eb67e183ab6909c238674}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries Sys\+\_\+gtid\+\_\+next\+\_\+list\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{set__var_8h_a136d84496de0e18ed3954a2e1f6c4d79}\label{set__var_8h_a136d84496de0e18ed3954a2e1f6c4d79}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries Sys\+\_\+gtid\+\_\+purged\+\_\+ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}public\char`\"{} interface to \mbox{\hyperlink{classsys__var}{sys\+\_\+var}} -\/ server configuration variables. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{set__var_8h_a07a52eb69ca90e1bd42c56891312d5b8}\label{set__var_8h_a07a52eb69ca90e1bd42c56891312d5b8}} 
+\index{set\+\_\+var.\+h@{set\+\_\+var.\+h}!enumerate\+\_\+sys\+\_\+vars@{enumerate\+\_\+sys\+\_\+vars}}
+\index{enumerate\+\_\+sys\+\_\+vars@{enumerate\+\_\+sys\+\_\+vars}!set\+\_\+var.\+h@{set\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{enumerate\+\_\+sys\+\_\+vars()}{enumerate\_sys\_vars()}}
+{\footnotesize\ttfamily bool enumerate\+\_\+sys\+\_\+vars (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Show\+\_\+var\+\_\+array $\ast$}]{show\+\_\+var\+\_\+array,  }\item[{bool}]{sort,  }\item[{enum enum\+\_\+var\+\_\+type}]{query\+\_\+scope,  }\item[{bool}]{strict }\end{DoxyParamCaption})}
+
+Constructs an array of system variables for display to the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current thread \\
+\hline
+{\em show\+\_\+var\+\_\+array} & Prealloced\+\_\+array of S\+H\+O\+W\+\_\+\+V\+AR elements for display \\
+\hline
+{\em sort} & If T\+R\+UE, the system variables should be sorted \\
+\hline
+{\em query\+\_\+scope} & O\+P\+T\+\_\+\+G\+L\+O\+B\+AL or O\+P\+T\+\_\+\+S\+E\+S\+S\+I\+ON for S\+H\+OW G\+L\+O\+B\+A\+L$\vert$\+S\+E\+S\+S\+I\+ON V\+A\+R\+I\+A\+B\+L\+ES \\
+\hline
+{\em strict} & Use strict scope checking \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & on error, false otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{set__var_8h_a3642459fc065c7fdb286f552eef092ef}\label{set__var_8h_a3642459fc065c7fdb286f552eef092ef}} 
+\index{set\+\_\+var.\+h@{set\+\_\+var.\+h}!fix\+\_\+delay\+\_\+key\+\_\+write@{fix\+\_\+delay\+\_\+key\+\_\+write}}
+\index{fix\+\_\+delay\+\_\+key\+\_\+write@{fix\+\_\+delay\+\_\+key\+\_\+write}!set\+\_\+var.\+h@{set\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{fix\+\_\+delay\+\_\+key\+\_\+write()}{fix\_delay\_key\_write()}}
+{\footnotesize\ttfamily bool fix\+\_\+delay\+\_\+key\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$}]{self,  }\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+var\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000122}{Todo}}]When updating myisam\+\_\+delay\+\_\+key\+\_\+write, we should do a \textquotesingle{}flush tables\textquotesingle{} of all My\+I\+S\+AM tables to ensure that they are reopen with the new attribute. \end{DoxyRefDesc}
+\mbox{\Hypertarget{set__var_8h_a8d2fb316a73e87a221c5eee960ac0aa0}\label{set__var_8h_a8d2fb316a73e87a221c5eee960ac0aa0}} 
+\index{set\+\_\+var.\+h@{set\+\_\+var.\+h}!keyring\+\_\+access\+\_\+test@{keyring\+\_\+access\+\_\+test}}
+\index{keyring\+\_\+access\+\_\+test@{keyring\+\_\+access\+\_\+test}!set\+\_\+var.\+h@{set\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{keyring\+\_\+access\+\_\+test()}{keyring\_access\_test()}}
+{\footnotesize\ttfamily bool keyring\+\_\+access\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is used to check if key management U\+D\+Fs like keying\+\_\+key\+\_\+generate/store/remove should proceed or not. If global variable @keyring\+\_\+operations is O\+FF then above said udfs will fail.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & E\+R\+R\+OR, keyring operations are not allowed\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+Sys\+\_\+keyring\+\_\+operations 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{set__var_8h_a5405842b0b4de509e736cc843c2282aa}\label{set__var_8h_a5405842b0b4de509e736cc843c2282aa}} 
+\index{set\+\_\+var.\+h@{set\+\_\+var.\+h}!mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain@{mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain}}
+\index{mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain@{mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain}!set\+\_\+var.\+h@{set\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain()}{mysql\_add\_sys\_var\_chain()}}
+{\footnotesize\ttfamily int mysql\+\_\+add\+\_\+sys\+\_\+var\+\_\+chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$}]{first }\end{DoxyParamCaption})}
+
+Add variables to the dynamic hash of system variables
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to first system variable to add\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & S\+U\+C\+C\+E\+SS \\
+\hline
+{\em otherwise} & F\+A\+I\+L\+U\+RE \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{set__var_8h_a4adfab7302f329746af5cd18d10944fa}\label{set__var_8h_a4adfab7302f329746af5cd18d10944fa}} 
+\index{set\+\_\+var.\+h@{set\+\_\+var.\+h}!sql\+\_\+set\+\_\+variables@{sql\+\_\+set\+\_\+variables}}
+\index{sql\+\_\+set\+\_\+variables@{sql\+\_\+set\+\_\+variables}!set\+\_\+var.\+h@{set\+\_\+var.\+h}}
+\subsubsection{\texorpdfstring{sql\+\_\+set\+\_\+variables()}{sql\_set\_variables()}}
+{\footnotesize\ttfamily int sql\+\_\+set\+\_\+variables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}} $>$ $\ast$}]{var\+\_\+list,  }\item[{bool}]{free\+\_\+joins }\end{DoxyParamCaption})}
+
+Execute update of all variables.
+
+First run a check of all variables that all updates will go ok. If yes, then execute all updates, returning an error if any one failed.
+
+This should ensure that in all normal cases none all or variables are updated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+HD} & Thread id \\
+\hline
+{\em var\+\_\+list} & \mbox{\hyperlink{classList}{List}} of variables to update \\
+\hline
+{\em free\+\_\+joins} & Whether to free subselect joins if any. They are freed by default, except for S\+ET S\+T\+A\+T\+E\+M\+E\+NT ... F\+OR ... processing\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & E\+R\+R\+OR, message sent (normally no variables was updated) \\
+\hline
+{\em -\/1} & E\+R\+R\+OR, message not sent \\
+\hline
+\end{DoxyRetVals}

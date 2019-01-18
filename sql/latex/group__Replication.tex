@@ -1,0 +1,355 @@
+\hypertarget{group__Replication}{}\section{Replication}
+\label{group__Replication}\index{Replication@{Replication}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}
+\begin{DoxyCompactList}\small\item\em Binary log event definitions. This includes generic code common to all types of log events, as well as specific code for each type of log event. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{rpl__slave_8cc}{rpl\+\_\+slave.\+cc}}
+\begin{DoxyCompactList}\small\item\em Code to run the io thread and the sql thread on the replication slave. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{rpl__slave_8h}{rpl\+\_\+slave.\+h}}
+\item 
+file \mbox{\hyperlink{rpl__trx__boundary__parser_8h}{rpl\+\_\+trx\+\_\+boundary\+\_\+parser.\+h}}
+\begin{DoxyCompactList}\small\item\em Transaction boundary parser definitions. This includes code for parsing a stream of events identifying the transaction boundaries (like if the event is starting a transaction, is in the middle of a transaction or if the event is ending a transaction). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsql__ex__info}{sql\+\_\+ex\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structst__mts__db__names}{st\+\_\+mts\+\_\+db\+\_\+names}}
+\item 
+class \mbox{\hyperlink{classLog__event}{Log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classLoad__log__event}{Load\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classStart__log__event__v3}{Start\+\_\+log\+\_\+event\+\_\+v3}}
+\item 
+class \mbox{\hyperlink{classStart__encryption__log__event}{Start\+\_\+encryption\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classIntvar__log__event}{Intvar\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRand__log__event}{Rand\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classXid__apply__log__event}{Xid\+\_\+apply\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classXid__log__event}{Xid\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classXA__prepare__log__event}{X\+A\+\_\+prepare\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classUser__var__log__event}{User\+\_\+var\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classStop__log__event}{Stop\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRotate__log__event}{Rotate\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classCreate__file__log__event}{Create\+\_\+file\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classAppend__block__log__event}{Append\+\_\+block\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classDelete__file__log__event}{Delete\+\_\+file\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classExecute__load__log__event}{Execute\+\_\+load\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classBegin__load__query__log__event}{Begin\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classExecute__load__query__log__event}{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classTable__map__log__event}{Table\+\_\+map\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRows__log__event}{Rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classWrite__rows__log__event}{Write\+\_\+rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classUpdate__rows__log__event}{Update\+\_\+rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classDelete__rows__log__event}{Delete\+\_\+rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classIncident__log__event}{Incident\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classIgnorable__log__event}{Ignorable\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRows__query__log__event}{Rows\+\_\+query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classGtid__log__event}{Gtid\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classTransaction__context__log__event}{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classView__change__log__event}{View\+\_\+change\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classTransaction__boundary__parser}{Transaction\+\_\+boundary\+\_\+parser}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Replication_gadacb4be8ef1d9b672757fd254e8a667c}\label{group__Replication_gadacb4be8ef1d9b672757fd254e8a667c}} 
+\#define {\bfseries P\+R\+E\+F\+I\+X\+\_\+\+S\+Q\+L\+\_\+\+L\+O\+AD}~\char`\"{}S\+Q\+L\+\_\+\+L\+O\+AD-\/\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__Replication_gaa195d0860b5c2a3a40362544ec720e70}{T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}~U\+U\+I\+D\+\_\+\+L\+E\+N\+G\+TH+38
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga4ebc2b131b4e1bdb6c0be57e4589851a}{A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR}}(C\+O\+ND,  E\+R\+R\+NO)~D\+B\+U\+G\+\_\+\+A\+S\+S\+E\+RT(C\+O\+ND)
+\item 
+\mbox{\Hypertarget{group__Replication_ga7a4145c1e8d3701b462f1ad6bc2bf0a4}\label{group__Replication_ga7a4145c1e8d3701b462f1ad6bc2bf0a4}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF}~-\/1
+\item 
+\mbox{\Hypertarget{group__Replication_ga619614abc7a78783e9e479f230fe5055}\label{group__Replication_ga619614abc7a78783e9e479f230fe5055}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+G\+US}~-\/2
+\item 
+\mbox{\Hypertarget{group__Replication_gaa6af69e984c46057aa85370a2096556a}\label{group__Replication_gaa6af69e984c46057aa85370a2096556a}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+IO}~-\/3
+\item 
+\mbox{\Hypertarget{group__Replication_gad5ae28701121bb80f1e7e2ce7eaf50b4}\label{group__Replication_gad5ae28701121bb80f1e7e2ce7eaf50b4}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+M\+EM}~-\/5
+\item 
+\mbox{\Hypertarget{group__Replication_gaa4a70704f45545d2e30e658ceb630b46}\label{group__Replication_gaa4a70704f45545d2e30e658ceb630b46}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+T\+R\+U\+NC}~-\/6
+\item 
+\mbox{\Hypertarget{group__Replication_ga2dc5b11d5d2d7f8f12a7618622ea64fb}\label{group__Replication_ga2dc5b11d5d2d7f8f12a7618622ea64fb}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+GE}~-\/7
+\item 
+\mbox{\Hypertarget{group__Replication_gad8d8366368de1ae685ac1513b50ea522}\label{group__Replication_gad8d8366368de1ae685ac1513b50ea522}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+F\+A\+I\+L\+U\+RE}~-\/8
+\item 
+\mbox{\Hypertarget{group__Replication_ga876b42b8a1947f23b0c14aa8eff76661}\label{group__Replication_ga876b42b8a1947f23b0c14aa8eff76661}} 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+C\+R\+Y\+PT}~-\/9
+\item 
+\mbox{\Hypertarget{group__Replication_gaeee697f645a1dc11c537f46d82909352}\label{group__Replication_gaeee697f645a1dc11c537f46d82909352}} 
+\#define {\bfseries L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET}~4
+\item 
+\mbox{\Hypertarget{group__Replication_gaea6118195553abe8beb8bd1dd6691d46}\label{group__Replication_gaea6118195553abe8beb8bd1dd6691d46}} 
+\#define {\bfseries N\+U\+M\+\_\+\+L\+O\+A\+D\+\_\+\+D\+E\+L\+I\+M\+\_\+\+S\+T\+RS}~5
+\item 
+\#define {\bfseries M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER}
+\item 
+\mbox{\Hypertarget{group__Replication_ga7bd10b01f4606025e5d1c596d46b303d}\label{group__Replication_ga7bd10b01f4606025e5d1c596d46b303d}} 
+\#define {\bfseries M\+A\+X\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+P\+A\+C\+K\+ET}~1024$\ast$1024$\ast$1024
+\item 
+\mbox{\Hypertarget{group__Replication_gaf491bb80b5a3a0caf79ecf3bf1af708a}\label{group__Replication_gaf491bb80b5a3a0caf79ecf3bf1af708a}} 
+\#define {\bfseries S\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+P\+O\+R\+T\+\_\+\+O\+F\+F\+S\+ET}~8
+\item 
+\mbox{\Hypertarget{group__Replication_gab645c64c9751e37e6c6ee8237dde80ad}\label{group__Replication_gab645c64c9751e37e6c6ee8237dde80ad}} 
+\#define {\bfseries S\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+O\+F\+F\+S\+ET}~0
+\item 
+\mbox{\Hypertarget{group__Replication_ga0c009f3e8b5b51b34e3a765dbc6f6072}\label{group__Replication_ga0c009f3e8b5b51b34e3a765dbc6f6072}} 
+\#define {\bfseries S\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+H\+O\+S\+T\+\_\+\+O\+F\+F\+S\+ET}~10
+\item 
+\mbox{\Hypertarget{group__Replication_gacbfec66bfb3a326b084c66f7d737f53e}\label{group__Replication_gacbfec66bfb3a326b084c66f7d737f53e}} 
+\#define {\bfseries I\+\_\+\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+ET}~0
+\item 
+\mbox{\Hypertarget{group__Replication_ga97debfb1467be5a7b75a016b4a242ebb}\label{group__Replication_ga97debfb1467be5a7b75a016b4a242ebb}} 
+\#define {\bfseries I\+\_\+\+V\+A\+L\+\_\+\+O\+F\+F\+S\+ET}~1
+\item 
+\mbox{\Hypertarget{group__Replication_ga907ff9a96e48b6d1e1678010197ea485}\label{group__Replication_ga907ff9a96e48b6d1e1678010197ea485}} 
+\#define {\bfseries B\+I\+N\+L\+O\+G\+\_\+\+M\+A\+G\+IC}~\char`\"{}\textbackslash{}xfe\textbackslash{}x62\textbackslash{}x69\textbackslash{}x6e\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga1006353b6090b4af079bd4c9d1728eab}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F}}~0x4
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga395595981d15e9493cf2d506ed814f0f}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F}}~0x8
+\item 
+\#define \mbox{\hyperlink{group__Replication_gae868eb0ba9f8e48fe19b405498d89444}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga1155b875ade0c3f1437f6cc557cbabf8}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__Replication_gaa08db1b3439cffa93029dd40e1ddb2d4}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F}}~0x80
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga952d3046c7945be04d6e8a7dfabc3f91}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F}}~0x100
+\item 
+\#define \mbox{\hyperlink{group__Replication_gaff6f295f5279245c4c78060da0d8ada5}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F}}~0x200
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga2dbea1bf90352a83855ef2a91dea9d04}{O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+\item 
+\mbox{\Hypertarget{group__Replication_ga15e7cf83c776e643fd0e374ff99a0395}\label{group__Replication_ga15e7cf83c776e643fd0e374ff99a0395}} 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+T\+I\+O\+NS}~((1\+U\+L\+L $<$$<$ 14) $\vert$ (1\+U\+L\+L $<$$<$ 26) $\vert$ (1\+U\+L\+L $<$$<$ 27) $\vert$ (1\+U\+L\+L $<$$<$ 19))
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga9576e3a9774232077c9cd79f015d9efd}{S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD}}~4294967
+\item 
+\mbox{\Hypertarget{group__Replication_ga568df1d60d9df9467e81f81bf55e627e}\label{group__Replication_ga568df1d60d9df9467e81f81bf55e627e}} 
+\#define {\bfseries S\+L\+A\+V\+E\+\_\+\+IO}~1
+\item 
+\mbox{\Hypertarget{group__Replication_ga34d7dd2529eb7a46ec7f8fe1733775e1}\label{group__Replication_ga34d7dd2529eb7a46ec7f8fe1733775e1}} 
+\#define {\bfseries S\+L\+A\+V\+E\+\_\+\+S\+QL}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Replication_ga1dba8b6567061f45e6b9df70480b5239}\label{group__Replication_ga1dba8b6567061f45e6b9df70480b5239}} 
+typedef ulonglong {\bfseries sql\+\_\+mode\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__Replication_ga76fbb8f3fab041f32919a5c9b779efee}\label{group__Replication_ga76fbb8f3fab041f32919a5c9b779efee}} 
+typedef struct st\+\_\+db\+\_\+worker\+\_\+hash\+\_\+entry {\bfseries db\+\_\+worker\+\_\+hash\+\_\+entry}
+\item 
+\mbox{\Hypertarget{group__Replication_ga984f4e44849152cfcf0f66accc964e65}\label{group__Replication_ga984f4e44849152cfcf0f66accc964e65}} 
+typedef struct \mbox{\hyperlink{structst__mts__db__names}{st\+\_\+mts\+\_\+db\+\_\+names}} {\bfseries Mts\+\_\+db\+\_\+names}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{group__Replication_gabd3a9658816041b32f7da3a121650668}{str\+\_\+to\+\_\+hex}} (char $\ast$to, const char $\ast$from, size\+\_\+t len)
+\item 
+int \mbox{\hyperlink{group__Replication_ga634d01455adb6c184a8832558d9af0c2}{append\+\_\+query\+\_\+string}} (T\+HD $\ast$thd, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$csinfo, String const $\ast$from, String $\ast$to)
+\item 
+\mbox{\Hypertarget{group__Replication_gae17acd0611b51110006f27f1d79de7ad}\label{group__Replication_gae17acd0611b51110006f27f1d79de7ad}} 
+bool {\bfseries is\+\_\+gtid\+\_\+event} (\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$evt)
+\item 
+\mbox{\Hypertarget{group__Replication_ga1331fc0a6eeea8f04b725636f893cfd5}\label{group__Replication_ga1331fc0a6eeea8f04b725636f893cfd5}} 
+size\+\_\+t {\bfseries my\+\_\+strmov\+\_\+quoted\+\_\+identifier} (char $\ast$buffer, const char $\ast$identifier)
+\item 
+\mbox{\Hypertarget{group__Replication_gaa69cb2ec819d49474f3f21a529f0f327}\label{group__Replication_gaa69cb2ec819d49474f3f21a529f0f327}} 
+size\+\_\+t {\bfseries my\+\_\+strmov\+\_\+quoted\+\_\+identifier\+\_\+helper} (int q, char $\ast$buffer, const char $\ast$identifier, size\+\_\+t length)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Replication_gaecc79518e6b11345997daed0b63d8c9c}\label{group__Replication_gaecc79518e6b11345997daed0b63d8c9c}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+\+Incident\+\_\+log\+\_\+event\+\_\+message}
+\item 
+\mbox{\Hypertarget{group__Replication_gaaa3c73a12e0ac27997f15223a9c34160}\label{group__Replication_gaaa3c73a12e0ac27997f15223a9c34160}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+\+Rows\+\_\+query\+\_\+log\+\_\+event\+\_\+rows\+\_\+query}
+\item 
+\mbox{\Hypertarget{group__Replication_ga7f7df2aabb45d64e6d9350111ca9705c}\label{group__Replication_ga7f7df2aabb45d64e6d9350111ca9705c}} 
+M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+O\+RT char {\bfseries server\+\_\+version} \mbox{[}S\+E\+R\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH\mbox{]}
+\item 
+const int64 \mbox{\hyperlink{group__Replication_gab1c0400a80a08c44cfbe884bbe3948a3}{S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}} = L\+L\+O\+N\+G\+\_\+\+M\+AX
+\item 
+\mbox{\Hypertarget{group__Replication_ga4fbe92f9521738ba8f6e4de88d19e9e8}\label{group__Replication_ga4fbe92f9521738ba8f6e4de88d19e9e8}} 
+T\+Y\+P\+E\+L\+IB {\bfseries binlog\+\_\+checksum\+\_\+typelib}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__Replication_ga4ebc2b131b4e1bdb6c0be57e4589851a}\label{group__Replication_ga4ebc2b131b4e1bdb6c0be57e4589851a}} 
+\index{Replication@{Replication}!A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR@{A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR@{A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR}{ASSERT\_OR\_RETURN\_ERROR}}
+{\footnotesize\ttfamily \#define A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{C\+O\+ND,  }\item[{}]{E\+R\+R\+NO }\end{DoxyParamCaption})~D\+B\+U\+G\+\_\+\+A\+S\+S\+E\+RT(C\+O\+ND)}
+
+Either assert or return an error.
+
+In debug build, the condition will be checked, but in non-\/debug builds, the error code given will be returned instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em C\+O\+ND} & Condition to check \\
+\hline
+{\em E\+R\+R\+NO} & Error number to return in non-\/debug builds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Replication_gae868eb0ba9f8e48fe19b405498d89444}\label{group__Replication_gae868eb0ba9f8e48fe19b405498d89444}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F}{LOG\_EVENT\_ARTIFICIAL\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F~0x20}
+
+Artificial events are created arbitarily and not written to binary log
+
+These events should not update the master log position when slave S\+QL thread executes them. \mbox{\Hypertarget{group__Replication_gaa08db1b3439cffa93029dd40e1ddb2d4}\label{group__Replication_gaa08db1b3439cffa93029dd40e1ddb2d4}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F}{LOG\_EVENT\_IGNORABLE\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F~0x80}
+
+For an event, \textquotesingle{}e\textquotesingle{}, carrying a type code, that a slave, \textquotesingle{}s\textquotesingle{}, does not recognize, \textquotesingle{}s\textquotesingle{} will check \textquotesingle{}e\textquotesingle{} for L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F, and if the flag is set, then \textquotesingle{}e\textquotesingle{} is ignored. Otherwise, \textquotesingle{}s\textquotesingle{} acknowledges that it has found an unknown event in the relay log. \mbox{\Hypertarget{group__Replication_gaff6f295f5279245c4c78060da0d8ada5}\label{group__Replication_gaff6f295f5279245c4c78060da0d8ada5}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F}{LOG\_EVENT\_MTS\_ISOLATE\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F~0x200}
+
+M\+TS\+: group of events can be marked to force its execution in isolation from any other Workers. So it\textquotesingle{}s a marker for Coordinator to memorize and perform necessary operations in order to guarantee no interference from other Workers. The flag can be set ON only for an event that terminates its group. Typically that is done for a transaction that contains a query accessing more than O\+V\+E\+R\+\_\+\+M\+A\+X\+\_\+\+D\+B\+S\+\_\+\+I\+N\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+TS databases. \mbox{\Hypertarget{group__Replication_ga952d3046c7945be04d6e8a7dfabc3f91}\label{group__Replication_ga952d3046c7945be04d6e8a7dfabc3f91}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F}{LOG\_EVENT\_NO\_FILTER\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F~0x100}
+
+\mbox{\hyperlink{classEvents}{Events}} with this flag are not filtered (e.\+g. on the current database) and are always written to the binary log regardless of filters. \mbox{\Hypertarget{group__Replication_ga1155b875ade0c3f1437f6cc557cbabf8}\label{group__Replication_ga1155b875ade0c3f1437f6cc557cbabf8}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F}{LOG\_EVENT\_RELAY\_LOG\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F~0x40}
+
+\mbox{\hyperlink{classEvents}{Events}} with this flag set are created by slave IO thread and written to relay log \mbox{\Hypertarget{group__Replication_ga395595981d15e9493cf2d506ed814f0f}\label{group__Replication_ga395595981d15e9493cf2d506ed814f0f}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F}{LOG\_EVENT\_SUPPRESS\_USE\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F~0x8}
+
+Suppress the generation of \textquotesingle{}U\+SE\textquotesingle{} statements before the actual statement. This flag should be set for any events that does not need the current database set to function correctly. Most notable cases are \textquotesingle{}C\+R\+E\+A\+TE D\+A\+T\+A\+B\+A\+SE\textquotesingle{} and \textquotesingle{}D\+R\+OP D\+A\+T\+A\+B\+A\+SE\textquotesingle{}.
+
+This flags should only be used in exceptional circumstances, since it introduce a significant change in behaviour regarding the replication logic together with the flags --binlog-\/do-\/db and --replicated-\/do-\/db. \mbox{\Hypertarget{group__Replication_ga1006353b6090b4af079bd4c9d1728eab}\label{group__Replication_ga1006353b6090b4af079bd4c9d1728eab}} 
+\index{Replication@{Replication}!L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F}}
+\index{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F@{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F}{LOG\_EVENT\_THREAD\_SPECIFIC\_F}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F~0x4}
+
+If the query depends on the thread (for example\+: T\+E\+M\+P\+O\+R\+A\+RY \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}). Currently this is used by mysqlbinlog to know it must print S\+ET @P\+S\+E\+U\+D\+O\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+ID=xx; before the query (it would not hurt to print it for every query but this would be slow). \mbox{\Hypertarget{group__Replication_gaabd2be8dba3c484de0d23c2adcb4a474}\label{group__Replication_gaabd2be8dba3c484de0d23c2adcb4a474}} 
+\index{Replication@{Replication}!M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER@{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER}}
+\index{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER@{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER}{MAX\_LOG\_EVENT\_HEADER}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{( \textcolor{comment}{/* in order of Query\_log\_event::write */} \(\backslash\)}
+\DoxyCodeLine{  (LOG\_EVENT\_HEADER\_LEN + \textcolor{comment}{/* write\_header */} \(\backslash\)}
+\DoxyCodeLine{  Binary\_log\_event::QUERY\_HEADER\_LEN     + \textcolor{comment}{/* write\_data */}   \(\backslash\)}
+\DoxyCodeLine{  Binary\_log\_event::EXECUTE\_LOAD\_QUERY\_EXTRA\_HEADER\_LEN) + \textcolor{comment}{/*write\_post\_header\_for\_derived */} \(\backslash\)}
+\DoxyCodeLine{  MAX\_SIZE\_LOG\_EVENT\_STATUS + \textcolor{comment}{/* status */} \(\backslash\)}
+\DoxyCodeLine{  NAME\_LEN + 1)}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__Replication_ga2dbea1bf90352a83855ef2a91dea9d04}\label{group__Replication_ga2dbea1bf90352a83855ef2a91dea9d04}} 
+\index{Replication@{Replication}!O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+\index{O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG}{OPTIONS\_WRITTEN\_TO\_BIN\_LOG}}
+{\footnotesize\ttfamily \#define O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(OPTION\_AUTO\_IS\_NULL | \mbox{\hyperlink{query__options_8h_a51cc78b54666c8d2334735fe2a1a00a9}{OPTION\_NO\_FOREIGN\_KEY\_CHECKS}} |  \(\backslash\)}
+\DoxyCodeLine{   OPTION\_RELAXED\_UNIQUE\_CHECKS | OPTION\_NOT\_AUTOCOMMIT)}
+\end{DoxyCode}
+O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG are the bits of thd-\/$>$options which must be written to the binlog. O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG could be written into the \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}, so that if later we don\textquotesingle{}t want to replicate a variable we did replicate, or the contrary, it\textquotesingle{}s doable. But it should not be too hard to decide once for all of what we replicate and what we don\textquotesingle{}t, among the fixed 32 bits of thd-\/$>$options.
+
+I (Guilhem) have read through every option\textquotesingle{}s usage, and it looks like O\+P\+T\+I\+O\+N\+\_\+\+A\+U\+T\+O\+\_\+\+I\+S\+\_\+\+N\+U\+LL and O\+P\+T\+I\+O\+N\+\_\+\+N\+O\+\_\+\+F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+YS are the only ones which alter how the query modifies the table. It\textquotesingle{}s good to replicate O\+P\+T\+I\+O\+N\+\_\+\+R\+E\+L\+A\+X\+E\+D\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+C\+H\+E\+C\+KS too because otherwise, the slave may insert data slower than the master, in Inno\+DB. O\+P\+T\+I\+O\+N\+\_\+\+B\+I\+G\+\_\+\+S\+E\+L\+E\+C\+TS is not needed (the slave thread runs with max\+\_\+join\+\_\+size=H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR) and O\+P\+T\+I\+O\+N\+\_\+\+B\+I\+G\+\_\+\+T\+A\+B\+L\+ES is not needed either, as the manual says (because a too big in-\/memory temp table is automatically written to disk). \mbox{\Hypertarget{group__Replication_ga9576e3a9774232077c9cd79f015d9efd}\label{group__Replication_ga9576e3a9774232077c9cd79f015d9efd}} 
+\index{Replication@{Replication}!S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD@{S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD}}
+\index{S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD@{S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD}{SLAVE\_MAX\_HEARTBEAT\_PERIOD}}
+{\footnotesize\ttfamily \#define S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD~4294967}
+
+Some of defines are need in parser even though replication is not compiled in (embedded).The maximum is defined as (U\+L\+O\+N\+G\+\_\+\+M\+A\+X/1000) with 4 bytes ulong \mbox{\Hypertarget{group__Replication_gaa195d0860b5c2a3a40362544ec720e70}\label{group__Replication_gaa195d0860b5c2a3a40362544ec720e70}} 
+\index{Replication@{Replication}!T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN@{T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}
+\index{T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN@{T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}{TEMP\_FILE\_MAX\_LEN}}
+{\footnotesize\ttfamily \#define T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN~U\+U\+I\+D\+\_\+\+L\+E\+N\+G\+TH+38}
+
+Maximum length of the name of a temporary file P\+R\+E\+F\+IX L\+E\+N\+G\+TH -\/ 9 U\+U\+ID -\/ U\+U\+I\+D\+\_\+\+L\+E\+N\+G\+TH S\+E\+P\+A\+R\+A\+T\+O\+RS -\/ 2 S\+E\+R\+V\+ER ID -\/ 10 (range of server ID 1 to (2$^\wedge$32)-\/1 = 4,294,967,295) F\+I\+LE ID -\/ 10 (uint) E\+X\+T\+E\+N\+S\+I\+ON -\/ 7 (Assuming that the extension is always less than 7 characters) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Replication_ga634d01455adb6c184a8832558d9af0c2}\label{group__Replication_ga634d01455adb6c184a8832558d9af0c2}} 
+\index{Replication@{Replication}!append\+\_\+query\+\_\+string@{append\+\_\+query\+\_\+string}}
+\index{append\+\_\+query\+\_\+string@{append\+\_\+query\+\_\+string}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{append\+\_\+query\+\_\+string()}{append\_query\_string()}}
+{\footnotesize\ttfamily int append\+\_\+query\+\_\+string (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{csinfo,  }\item[{String const $\ast$}]{from,  }\item[{String $\ast$}]{to }\end{DoxyParamCaption})}
+
+Append a version of the \textquotesingle{}from\textquotesingle{} string suitable for use in a query to the \textquotesingle{}to\textquotesingle{} string. To generate a correct escaping, the character set information in \textquotesingle{}csinfo\textquotesingle{} is used. \mbox{\Hypertarget{group__Replication_gabd3a9658816041b32f7da3a121650668}\label{group__Replication_gabd3a9658816041b32f7da3a121650668}} 
+\index{Replication@{Replication}!str\+\_\+to\+\_\+hex@{str\+\_\+to\+\_\+hex}}
+\index{str\+\_\+to\+\_\+hex@{str\+\_\+to\+\_\+hex}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{str\+\_\+to\+\_\+hex()}{str\_to\_hex()}}
+{\footnotesize\ttfamily char$\ast$ str\+\_\+to\+\_\+hex (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Transforms a string into \char`\"{}\char`\"{} or its expression in 0x... form. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__Replication_gab1c0400a80a08c44cfbe884bbe3948a3}\label{group__Replication_gab1c0400a80a08c44cfbe884bbe3948a3}} 
+\index{Replication@{Replication}!S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP@{S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}}
+\index{S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP@{S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}!Replication@{Replication}}
+\subsubsection{\texorpdfstring{S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}{SEQ\_MAX\_TIMESTAMP}}
+{\footnotesize\ttfamily const int64 S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP = L\+L\+O\+N\+G\+\_\+\+M\+AX}
+
+Maximum value of binlog logical timestamp. 

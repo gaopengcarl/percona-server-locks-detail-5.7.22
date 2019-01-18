@@ -1,0 +1,667 @@
+\hypertarget{ha__ndbcluster_8cc}{}\section{ha\+\_\+ndbcluster.\+cc File Reference}
+\label{ha__ndbcluster_8cc}\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+
+
+This file defines the N\+DB Cluster handler\+: the interface between My\+S\+QL and N\+DB Cluster.  
+
+
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+glue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ndbapi/\+Ndb\+Api.\+hpp$>$}\newline
+{\ttfamily \#include $<$ndbapi/\+Ndb\+Index\+Stat.\+hpp$>$}\newline
+{\ttfamily \#include $<$ndbapi/\+Ndb\+Interpreted\+Code.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}../storage/ndb/src/ndbapi/\+Ndb\+Query\+Builder.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../storage/ndb/src/ndbapi/\+Ndb\+Query\+Operation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+push.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+cond.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+tables.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+thd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+table\+\_\+guard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+global\+\_\+schema\+\_\+lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+global\+\_\+schema\+\_\+lock\+\_\+guard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}abstract\+\_\+query\+\_\+plan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}partition\+\_\+info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+dist\+\_\+priv\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndb\+\_\+index\+\_\+stat.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mysql/plugin.\+h$>$}\newline
+{\ttfamily \#include $<$ndb\+\_\+version.\+h$>$}\newline
+{\ttfamily \#include $<$ndb\+\_\+global.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+mi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+conflict.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+anyvalue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+event\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+schema\+\_\+dist.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+component.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+util\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+local\+\_\+connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+local\+\_\+schema.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+tdc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ndb\+\_\+name\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../storage/ndb/src/common/util/parse\+\_\+mask.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../storage/ndb/include/util/\+Sparse\+Bitmask.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}m\+\_\+ctype.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structst__thd__ndb__share}{st\+\_\+thd\+\_\+ndb\+\_\+share}}
+\item 
+class \mbox{\hyperlink{classNdb__tuple__id__range__guard}{Ndb\+\_\+tuple\+\_\+id\+\_\+range\+\_\+guard}}
+\item 
+struct \mbox{\hyperlink{structNDB__Modifier}{N\+D\+B\+\_\+\+Modifier}}
+\item 
+class \mbox{\hyperlink{classNDB__Modifiers}{N\+D\+B\+\_\+\+Modifiers}}
+\item 
+struct \mbox{\hyperlink{structndb__table__statistics__row}{ndb\+\_\+table\+\_\+statistics\+\_\+row}}
+\item 
+class \mbox{\hyperlink{classNDB__ALTER__DATA}{N\+D\+B\+\_\+\+A\+L\+T\+E\+R\+\_\+\+D\+A\+TA}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ac738326a9b62e6b31bdc5fd7cff49ab2}\label{ha__ndbcluster_8cc_ac738326a9b62e6b31bdc5fd7cff49ab2}} 
+\#define {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+D\+B\+\_\+\+I\+N\+D\+E\+X\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+LE}~T\+R\+UE
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a66a997e2c799263e4824b9f15dc50400}\label{ha__ndbcluster_8cc_a66a997e2c799263e4824b9f15dc50400}} 
+\#define {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+D\+B\+\_\+\+J\+O\+I\+N\+\_\+\+P\+U\+S\+H\+D\+O\+WN}~T\+R\+UE
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ab4142d72830d49a8ab7a6327ab27146d}\label{ha__ndbcluster_8cc_ab4142d72830d49a8ab7a6327ab27146d}} 
+\#define {\bfseries N\+D\+B\+\_\+\+A\+U\+T\+O\+\_\+\+I\+N\+C\+R\+E\+M\+E\+N\+T\+\_\+\+R\+E\+T\+R\+I\+ES}~100
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a65497c744f8688d540e9e48fd04d6cbe}\label{ha__ndbcluster_8cc_a65497c744f8688d540e9e48fd04d6cbe}} 
+\#define {\bfseries B\+A\+T\+C\+H\+\_\+\+F\+L\+U\+S\+H\+\_\+\+S\+I\+ZE}~(32768)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a20f902f445dee539c7ea0dd872f1ce2b}\label{ha__ndbcluster_8cc_a20f902f445dee539c7ea0dd872f1ce2b}} 
+\#define {\bfseries E\+R\+R\+\_\+\+P\+R\+I\+NT}(err)~D\+B\+U\+G\+\_\+\+P\+R\+I\+NT(\char`\"{}error\char`\"{}, (\char`\"{}\%d  message\+: \%s\char`\"{}, err.\+code, err.\+message))
+\item 
+\#define {\bfseries E\+R\+R\+\_\+\+R\+E\+T\+U\+RN}(err)
+\item 
+\#define {\bfseries E\+R\+R\+\_\+\+B\+R\+E\+AK}(err,  code)
+\item 
+\#define {\bfseries E\+R\+R\+\_\+\+S\+ET}(err,  code)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a8185adbfd7ea834b620c57515bca1a43}\label{ha__ndbcluster_8cc_a8185adbfd7ea834b620c57515bca1a43}} 
+\#define {\bfseries N\+D\+B\+A\+P\+I\+\_\+\+C\+O\+U\+N\+T\+E\+RS}(N\+A\+M\+E\+\_\+\+S\+U\+F\+F\+IX,  A\+R\+R\+A\+Y\+\_\+\+L\+O\+C\+A\+T\+I\+ON)
+\item 
+\#define {\bfseries dbug\+\_\+print\+\_\+open\+\_\+tables}()
+\item 
+\#define \mbox{\hyperlink{ha__ndbcluster_8cc_a4d4f61a2a6033b723dfad686609f0319}{M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES}}~128
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ade9da537d451603c1fc74c46f5e7ec38}\label{ha__ndbcluster_8cc_ade9da537d451603c1fc74c46f5e7ec38}} 
+typedef struct \mbox{\hyperlink{structst__thd__ndb__share}{st\+\_\+thd\+\_\+ndb\+\_\+share}} {\bfseries T\+H\+D\+\_\+\+N\+D\+B\+\_\+\+S\+H\+A\+RE}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5}{multi\+\_\+range\+\_\+types}} \{ {\bfseries enum\+\_\+unique\+\_\+range}, 
+\mbox{\hyperlink{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5aa164de22a705be2b330357488803299e}{enum\+\_\+empty\+\_\+unique\+\_\+range}}, 
+\mbox{\hyperlink{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5a358358d8e34edc22a091542d4bdbabb6}{enum\+\_\+ordered\+\_\+range}}, 
+\mbox{\hyperlink{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5a5d1b60128479d4a0fae9e540185e4d49}{enum\+\_\+skip\+\_\+range}}
+ \}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a1882c477e190a0c163f5e4367180779e}\label{ha__ndbcluster_8cc_a1882c477e190a0c163f5e4367180779e}} 
+enum {\bfseries ndb\+\_\+distribution\+\_\+enum} \{ {\bfseries N\+D\+B\+\_\+\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+K\+E\+Y\+H\+A\+SH} = 0, 
+{\bfseries N\+D\+B\+\_\+\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+L\+I\+N\+H\+A\+SH} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a01e8ae8886459c382d18fd0c28a2a8eb}\label{ha__ndbcluster_8cc_a01e8ae8886459c382d18fd0c28a2a8eb}} 
+void {\bfseries ndb\+\_\+init\+\_\+internal} ()
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ab92e82c6ed5d9aa5ab3fd775c035dcb4}\label{ha__ndbcluster_8cc_ab92e82c6ed5d9aa5ab3fd775c035dcb4}} 
+void {\bfseries ndb\+\_\+end\+\_\+internal} ()
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a475b85e8abfa7eb93a1557d26b6ed560}\label{ha__ndbcluster_8cc_a475b85e8abfa7eb93a1557d26b6ed560}} 
+bool {\bfseries ndb\+\_\+index\+\_\+stat\+\_\+get\+\_\+enable} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a20f870e783bc9e388fd0fa1ac3fc6d3f}\label{ha__ndbcluster_8cc_a20f870e783bc9e388fd0fa1ac3fc6d3f}} 
+bool {\bfseries ndb\+\_\+show\+\_\+foreign\+\_\+key\+\_\+mock\+\_\+tables} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a809abcde9decb66f631fa8831133cdb2}\label{ha__ndbcluster_8cc_a809abcde9decb66f631fa8831133cdb2}} 
+bool {\bfseries ndb\+\_\+log\+\_\+exclusive\+\_\+reads} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ab44e51f0ea170e89e53079a0e88c6493}\label{ha__ndbcluster_8cc_ab44e51f0ea170e89e53079a0e88c6493}} 
+void {\bfseries update\+\_\+slave\+\_\+api\+\_\+stats} (Ndb $\ast$ndb)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae001d867acd2a1f0747f788b6351fd64}\label{ha__ndbcluster_8cc_ae001d867acd2a1f0747f788b6351fd64}} 
+int {\bfseries ndb\+\_\+to\+\_\+mysql\+\_\+error} (const Ndb\+Error $\ast$ndberr)
+\item 
+int \mbox{\hyperlink{ha__ndbcluster_8cc_a84bfc6765e4d2f34f9c4bfcbd3c47f7a}{find\+Blob\+Error}} (Ndb\+Error \&error, Ndb\+Blob $\ast$p\+Blob)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ad17dc34870f88d3bd09062fce5f100e5}\label{ha__ndbcluster_8cc_ad17dc34870f88d3bd09062fce5f100e5}} 
+uint64 {\bfseries calc\+\_\+ndb\+\_\+blob\+\_\+len} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, uchar $\ast$blob\+\_\+ptr, uint64 maxlen)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_abacd62dc79483d9590e2250286e714e4}\label{ha__ndbcluster_8cc_abacd62dc79483d9590e2250286e714e4}} 
+int {\bfseries g\+\_\+get\+\_\+ndb\+\_\+blobs\+\_\+value} (Ndb\+Blob $\ast$ndb\+\_\+blob, void $\ast$arg)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a4ff8a895e66702ccbbdac99eb4ab67ca}\label{ha__ndbcluster_8cc_a4ff8a895e66702ccbbdac99eb4ab67ca}} 
+void {\bfseries compute\+\_\+index\+\_\+bounds} (Ndb\+Index\+Scan\+Operation\+::\+Index\+Bound \&bound, const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info, const key\+\_\+range $\ast$start\+\_\+key, const key\+\_\+range $\ast$end\+\_\+key, int from)
+\item 
+int \mbox{\hyperlink{ha__ndbcluster_8cc_ae2bd9470fe7beb5dc3481654718f39b7}{ndbcluster\+\_\+commit}} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a67b51c6cc48a465115cd24e6d148bf8b}\label{ha__ndbcluster_8cc_a67b51c6cc48a465115cd24e6d148bf8b}} 
+bool {\bfseries ndb\+\_\+fk\+\_\+util\+\_\+truncate\+\_\+allowed} (T\+HD $\ast$thd, Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const char $\ast$db, const Ndb\+Dictionary\+::\+Table $\ast$tab, bool \&allow)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ac15c340522fe88840ad1778c1d0f7e85}\label{ha__ndbcluster_8cc_ac15c340522fe88840ad1778c1d0f7e85}} 
+void {\bfseries ndb\+\_\+fk\+\_\+util\+\_\+resolve\+\_\+mock\+\_\+tables} (T\+HD $\ast$thd, Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const char $\ast$new\+\_\+parent\+\_\+db, const char $\ast$new\+\_\+parent\+\_\+name)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_aca7fedcab00214bc3271137bbdb39b4c}\label{ha__ndbcluster_8cc_aca7fedcab00214bc3271137bbdb39b4c}} 
+bool {\bfseries ndb\+\_\+fk\+\_\+util\+\_\+build\+\_\+list} (T\+HD $\ast$, Ndb\+Dictionary\+::\+Dictionary $\ast$, const Ndb\+Dictionary\+::\+Table $\ast$, \mbox{\hyperlink{classList}{List}}$<$ char $>$ \&)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a30ad9614b4204b9468f7743ef9637b53}\label{ha__ndbcluster_8cc_a30ad9614b4204b9468f7743ef9637b53}} 
+void {\bfseries ndb\+\_\+fk\+\_\+util\+\_\+drop\+\_\+list} (T\+HD $\ast$, Ndb $\ast$ndb, Ndb\+Dictionary\+::\+Dictionary $\ast$, \mbox{\hyperlink{classList}{List}}$<$ char $>$ \&)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a63828155f9b478a76b9c33ee5e00dae8}\label{ha__ndbcluster_8cc_a63828155f9b478a76b9c33ee5e00dae8}} 
+bool {\bfseries ndb\+\_\+fk\+\_\+util\+\_\+drop\+\_\+table} (T\+HD $\ast$, Ndb $\ast$ndb, Ndb\+Dictionary\+::\+Dictionary $\ast$, const Ndb\+Dictionary\+::\+Table $\ast$)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a7d97a0448a913f01fa1e1554882910bc}\label{ha__ndbcluster_8cc_a7d97a0448a913f01fa1e1554882910bc}} 
+bool {\bfseries ndb\+\_\+fk\+\_\+util\+\_\+is\+\_\+mock\+\_\+name} (const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a521db2e5b0e306b02e7905a1d15c8d32}\label{ha__ndbcluster_8cc_a521db2e5b0e306b02e7905a1d15c8d32}} 
+uchar $\ast$ {\bfseries tables\+\_\+get\+\_\+key} (const char $\ast$entry, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+int \mbox{\hyperlink{ha__ndbcluster_8cc_a81d2867500d8a5c574e4e22d1b407d80}{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}} (T\+HD $\ast$thd, const char $\ast$path)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a9b9e42785a3eb7e1961172a6cd68d329}\label{ha__ndbcluster_8cc_a9b9e42785a3eb7e1961172a6cd68d329}} 
+int {\bfseries ndb\+\_\+create\+\_\+table\+\_\+from\+\_\+engine} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_af57423d08c2062efd4816ffb9563c385}\label{ha__ndbcluster_8cc_af57423d08c2062efd4816ffb9563c385}} 
+T\+HD $\ast$ {\bfseries ndb\+\_\+create\+\_\+thd} (char $\ast$stackptr)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae5eb253f38e4e819896bedbd62555e67}\label{ha__ndbcluster_8cc_ae5eb253f38e4e819896bedbd62555e67}} 
+int {\bfseries ndbcluster\+\_\+binlog\+\_\+end} (T\+HD $\ast$thd)
+\item 
+uint \mbox{\hyperlink{ha__ndbcluster_8cc_ab99b54c80b09217de037d871d7a29519}{ndb\+\_\+get\+\_\+commitcount}} (T\+HD $\ast$thd, char $\ast$norm\+\_\+name, Uint64 $\ast$commit\+\_\+count)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_aa04b412385d3ad6efbd786f3b1f8ae40}\label{ha__ndbcluster_8cc_aa04b412385d3ad6efbd786f3b1f8ae40}} 
+int {\bfseries handle\+\_\+trailing\+\_\+share} (T\+HD $\ast$thd, \mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$share)
+\item 
+int \mbox{\hyperlink{ha__ndbcluster_8cc_ad88b47b70774c4725f1b76808e08752a}{ndbcluster\+\_\+rename\+\_\+share}} (T\+HD $\ast$thd, \mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$share, \mbox{\hyperlink{structNDB__SHARE__KEY}{N\+D\+B\+\_\+\+S\+H\+A\+R\+E\+\_\+\+K\+EY}} $\ast$new\+\_\+key)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a99b3bddc4b275fb118c05b8bf6e48166}\label{ha__ndbcluster_8cc_a99b3bddc4b275fb118c05b8bf6e48166}} 
+\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$ {\bfseries ndbcluster\+\_\+get\+\_\+share} (\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$share)
+\item 
+\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$ \mbox{\hyperlink{ha__ndbcluster_8cc_a162fbec3ff44c071f8b123b9dff76628}{ndbcluster\+\_\+get\+\_\+share}} (const char $\ast$key, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool create\+\_\+if\+\_\+not\+\_\+exists, bool have\+\_\+lock)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ab63690da5fd3706184c1d33e17aa154f}\label{ha__ndbcluster_8cc_ab63690da5fd3706184c1d33e17aa154f}} 
+void {\bfseries ndbcluster\+\_\+real\+\_\+free\+\_\+share} (\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$$\ast$share)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a138226fa75d71958b6c204c873a14be3}\label{ha__ndbcluster_8cc_a138226fa75d71958b6c204c873a14be3}} 
+void {\bfseries ndbcluster\+\_\+free\+\_\+share} (\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$$\ast$share, bool have\+\_\+lock)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_afd657fc5efc24c9f28934fdf2ed5fdb2}\label{ha__ndbcluster_8cc_afd657fc5efc24c9f28934fdf2ed5fdb2}} 
+void {\bfseries ndbcluster\+\_\+mark\+\_\+share\+\_\+dropped} (\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$share)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_acbe03ac4e10f7220a57b9b3d31295a3e}\label{ha__ndbcluster_8cc_acbe03ac4e10f7220a57b9b3d31295a3e}} 
+void {\bfseries ndb\+\_\+util\+\_\+thread\+\_\+stop} (void)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a1b69a8df5ef937d96ef2a9c6caeea078}\label{ha__ndbcluster_8cc_a1b69a8df5ef937d96ef2a9c6caeea078}} 
+int {\bfseries ndb\+\_\+index\+\_\+stat\+\_\+option\+\_\+check} (M\+Y\+S\+Q\+L\+\_\+\+T\+HD, struct \mbox{\hyperlink{structst__mysql__sys__var}{st\+\_\+mysql\+\_\+sys\+\_\+var}} $\ast$var, void $\ast$save, struct st\+\_\+mysql\+\_\+value $\ast$value)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ade4c77935a8e366b431138d59d928a07}\label{ha__ndbcluster_8cc_ade4c77935a8e366b431138d59d928a07}} 
+void {\bfseries ndb\+\_\+index\+\_\+stat\+\_\+option\+\_\+update} (M\+Y\+S\+Q\+L\+\_\+\+T\+HD, struct \mbox{\hyperlink{structst__mysql__sys__var}{st\+\_\+mysql\+\_\+sys\+\_\+var}} $\ast$var, void $\ast$var\+\_\+ptr, const void $\ast$save)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_aa5b6742dc1f0317f84d143d5d91a5573}\label{ha__ndbcluster_8cc_aa5b6742dc1f0317f84d143d5d91a5573}} 
+bool {\bfseries ndb\+\_\+log\+\_\+empty\+\_\+epochs} (void)
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae5f183fc873fffe2a27fc08b5e5bc2a0}\label{ha__ndbcluster_8cc_ae5f183fc873fffe2a27fc08b5e5bc2a0}} 
+{\bfseries mysql\+\_\+declare\+\_\+plugin} (ndbcluster)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a7d9e27995a72699283e32e80bdb9def9}\label{ha__ndbcluster_8cc_a7d9e27995a72699283e32e80bdb9def9}} 
+ulong {\bfseries opt\+\_\+ndb\+\_\+extra\+\_\+logging}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_adef89c7acddf1fd64e27b53c59a3b359}\label{ha__ndbcluster_8cc_adef89c7acddf1fd64e27b53c59a3b359}} 
+ulong {\bfseries opt\+\_\+ndb\+\_\+wait\+\_\+setup}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a35bc8a91bf27b66572c6a6449c2500a3}\label{ha__ndbcluster_8cc_a35bc8a91bf27b66572c6a6449c2500a3}} 
+int {\bfseries ndb\+\_\+setup\+\_\+complete} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a7e8000a08d8a8b9b0cfb62c5a5cab6cf}\label{ha__ndbcluster_8cc_a7e8000a08d8a8b9b0cfb62c5a5cab6cf}} 
+native\+\_\+cond\+\_\+t {\bfseries C\+O\+N\+D\+\_\+ndb\+\_\+setup\+\_\+complete}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a2412289fa9c192271e3f6453e91b0b24}\label{ha__ndbcluster_8cc_a2412289fa9c192271e3f6453e91b0b24}} 
+Ndb $\ast$ {\bfseries g\+\_\+ndb}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a3279516112958d742e416a5451d03733}\label{ha__ndbcluster_8cc_a3279516112958d742e416a5451d03733}} 
+native\+\_\+mutex\+\_\+t \mbox{\hyperlink{ha__ndbcluster_8cc_a3279516112958d742e416a5451d03733}{ndbcluster\+\_\+mutex}}
+\begin{DoxyCompactList}\small\item\em Handler synchronization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a587c2f0555f3b0778679e7a64a7d40b4}\label{ha__ndbcluster_8cc_a587c2f0555f3b0778679e7a64a7d40b4}} 
+H\+A\+SH \mbox{\hyperlink{ha__ndbcluster_8cc_a587c2f0555f3b0778679e7a64a7d40b4}{ndbcluster\+\_\+open\+\_\+tables}}
+\begin{DoxyCompactList}\small\item\em Table lock handling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_aa41f637583eea04514e8d9a8bd21d3d4}\label{ha__ndbcluster_8cc_aa41f637583eea04514e8d9a8bd21d3d4}} 
+H\+A\+SH {\bfseries ndbcluster\+\_\+dropped\+\_\+tables}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a796e90634c47d589c057430bf6cc101c}\label{ha__ndbcluster_8cc_a796e90634c47d589c057430bf6cc101c}} 
+T\+HD $\ast$ {\bfseries injector\+\_\+thd} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_aa8eec7a434c53624f1cbc941cb822538}\label{ha__ndbcluster_8cc_aa8eec7a434c53624f1cbc941cb822538}} 
+struct \mbox{\hyperlink{structst__ndb__status}{st\+\_\+ndb\+\_\+status}} {\bfseries g\+\_\+ndb\+\_\+status}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a92f5b92b173b3d307c18411faf8be30f}\label{ha__ndbcluster_8cc_a92f5b92b173b3d307c18411faf8be30f}} 
+const char $\ast$ {\bfseries g\+\_\+ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+status} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ade72da8e1ab709111e78dd10b483d1ff}\label{ha__ndbcluster_8cc_ade72da8e1ab709111e78dd10b483d1ff}} 
+long {\bfseries g\+\_\+ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+cache\+\_\+query} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a0f874e498060cade1e7d99b35cb98b34}\label{ha__ndbcluster_8cc_a0f874e498060cade1e7d99b35cb98b34}} 
+long {\bfseries g\+\_\+ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+cache\+\_\+clean} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a1d0c0a0824a78c92470c4a324f32e6cc}\label{ha__ndbcluster_8cc_a1d0c0a0824a78c92470c4a324f32e6cc}} 
+long long {\bfseries g\+\_\+event\+\_\+data\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a8690c5c47da951e67a1306d8f4c8f36d}\label{ha__ndbcluster_8cc_a8690c5c47da951e67a1306d8f4c8f36d}} 
+long long {\bfseries g\+\_\+event\+\_\+nondata\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a21063502674df4a9b6375435adebc6a6}\label{ha__ndbcluster_8cc_a21063502674df4a9b6375435adebc6a6}} 
+long long {\bfseries g\+\_\+event\+\_\+bytes\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a5558cbae61b696b975af31a6c2f45e31}\label{ha__ndbcluster_8cc_a5558cbae61b696b975af31a6c2f45e31}} 
+\mbox{\hyperlink{structst__ndb__slave__state}{st\+\_\+ndb\+\_\+slave\+\_\+state}} {\bfseries g\+\_\+ndb\+\_\+slave\+\_\+state}
+\item 
+S\+H\+O\+W\+\_\+\+V\+AR {\bfseries ndb\+\_\+status\+\_\+variables\+\_\+dynamic} \mbox{[}$\,$\mbox{]}
+\item 
+S\+H\+O\+W\+\_\+\+V\+AR {\bfseries ndb\+\_\+status\+\_\+injector\+\_\+variables} \mbox{[}$\,$\mbox{]}
+\item 
+S\+H\+O\+W\+\_\+\+V\+AR {\bfseries ndb\+\_\+status\+\_\+slave\+\_\+variables} \mbox{[}$\,$\mbox{]}
+\item 
+S\+H\+O\+W\+\_\+\+V\+AR {\bfseries ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables} \mbox{[}$\,$\mbox{]}
+\item 
+S\+H\+O\+W\+\_\+\+V\+AR {\bfseries ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae90e951b5b61bcaba75ce4e60528ee23}\label{ha__ndbcluster_8cc_ae90e951b5b61bcaba75ce4e60528ee23}} 
+ulong {\bfseries opt\+\_\+ndb\+\_\+slave\+\_\+conflict\+\_\+role}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a3b991ee564572b3ce2d13821661a3886}\label{ha__ndbcluster_8cc_a3b991ee564572b3ce2d13821661a3886}} 
+const Uint32 {\bfseries O\+L\+D\+\_\+\+N\+D\+B\+\_\+\+M\+A\+X\+\_\+\+T\+U\+P\+L\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+I\+N\+\_\+\+W\+O\+R\+DS} = N\+D\+B\+\_\+\+M\+A\+X\+\_\+\+T\+U\+P\+L\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+I\+N\+\_\+\+W\+O\+R\+DS
+\item 
+\mbox{\hyperlink{classNdb__util__thread}{Ndb\+\_\+util\+\_\+thread}} \mbox{\hyperlink{ha__ndbcluster_8cc_ae164fb2906052d80fd5040adbc5db4ab}{ndb\+\_\+util\+\_\+thread}}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a8a4321a887b0f8c88f2132008c6d0a77}\label{ha__ndbcluster_8cc_a8a4321a887b0f8c88f2132008c6d0a77}} 
+\mbox{\hyperlink{classNdb__index__stat__thread}{Ndb\+\_\+index\+\_\+stat\+\_\+thread}} {\bfseries ndb\+\_\+index\+\_\+stat\+\_\+thread}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_adcb6b5b8cebd2f9cdf1bb6ecfb75ec23}\label{ha__ndbcluster_8cc_adcb6b5b8cebd2f9cdf1bb6ecfb75ec23}} 
+int($\ast$ {\bfseries ndb\+\_\+wait\+\_\+setup\+\_\+func} )(ulong)=0
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_acdff90553da981876f7de41ca9856162}\label{ha__ndbcluster_8cc_acdff90553da981876f7de41ca9856162}} 
+int {\bfseries ndb\+\_\+dictionary\+\_\+is\+\_\+mysqld}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae8f11a5c4a455a6b3b7e43292e72a4dd}\label{ha__ndbcluster_8cc_ae8f11a5c4a455a6b3b7e43292e72a4dd}} 
+Uint32 {\bfseries recv\+\_\+thread\+\_\+num\+\_\+cpus}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ab34de6201323dcd926bc4cee3c6c9da7}\label{ha__ndbcluster_8cc_ab34de6201323dcd926bc4cee3c6c9da7}} 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ {\bfseries ndbcluster\+\_\+hton}
+\item 
+S\+H\+O\+W\+\_\+\+V\+AR {\bfseries ndb\+\_\+status\+\_\+variables\+\_\+export} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a1c2aa1b0a6fce8a6c73e21c5356a1754}\label{ha__ndbcluster_8cc_a1c2aa1b0a6fce8a6c73e21c5356a1754}} 
+char {\bfseries ndb\+\_\+recv\+\_\+thread\+\_\+cpu\+\_\+mask\+\_\+option\+\_\+buf} \mbox{[}ndb\+\_\+recv\+\_\+thread\+\_\+cpu\+\_\+mask\+\_\+option\+\_\+buf\+\_\+size\mbox{]}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ad09cf9f0092f21b1f5ddba9415d99c1d}\label{ha__ndbcluster_8cc_ad09cf9f0092f21b1f5ddba9415d99c1d}} 
+Uint16 {\bfseries recv\+\_\+thread\+\_\+cpuid\+\_\+array} \mbox{[}1 $\ast$M\+A\+X\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS\mbox{]}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ad767ea90bfb2c26a0dd1ac8122d14d49}\label{ha__ndbcluster_8cc_ad767ea90bfb2c26a0dd1ac8122d14d49}} 
+char {\bfseries ndb\+\_\+index\+\_\+stat\+\_\+option\+\_\+buf} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a376c7c62957cd61580229714c1ca84f5}\label{ha__ndbcluster_8cc_a376c7c62957cd61580229714c1ca84f5}} 
+ulong {\bfseries opt\+\_\+ndb\+\_\+report\+\_\+thresh\+\_\+binlog\+\_\+epoch\+\_\+slip}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a83c23c88709d6ddb72a97d0752a5a6d2}\label{ha__ndbcluster_8cc_a83c23c88709d6ddb72a97d0752a5a6d2}} 
+ulong {\bfseries opt\+\_\+ndb\+\_\+report\+\_\+thresh\+\_\+binlog\+\_\+mem\+\_\+usage}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a043c773dd29c9abef11c24a9b89b23d7}\label{ha__ndbcluster_8cc_a043c773dd29c9abef11c24a9b89b23d7}} 
+ulong {\bfseries opt\+\_\+ndb\+\_\+eventbuffer\+\_\+max\+\_\+alloc}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a25762eb71b2ee6ea54fb7f7afd9c1cb8}\label{ha__ndbcluster_8cc_a25762eb71b2ee6ea54fb7f7afd9c1cb8}} 
+uint {\bfseries opt\+\_\+ndb\+\_\+eventbuffer\+\_\+free\+\_\+percent}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a541cf4d65a49815540ab1ac843d89514}\label{ha__ndbcluster_8cc_a541cf4d65a49815540ab1ac843d89514}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+update\+\_\+as\+\_\+write}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a21dbf624f555ed15cdfa62f710a68760}\label{ha__ndbcluster_8cc_a21dbf624f555ed15cdfa62f710a68760}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+update\+\_\+minimal}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ac1b6703c1bac8973715efac640ca94b9}\label{ha__ndbcluster_8cc_ac1b6703c1bac8973715efac640ca94b9}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+updated\+\_\+only}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a683b2912f9d02b13789e786a29260840}\label{ha__ndbcluster_8cc_a683b2912f9d02b13789e786a29260840}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+empty\+\_\+update}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a58d39de50d7b096b22c4415b086b8874}\label{ha__ndbcluster_8cc_a58d39de50d7b096b22c4415b086b8874}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+orig}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_aee3f6a8c71a681dcb97dbf620ef38883}\label{ha__ndbcluster_8cc_aee3f6a8c71a681dcb97dbf620ef38883}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+bin}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a6f2f84905f8c858cc42b14df34ee93cb}\label{ha__ndbcluster_8cc_a6f2f84905f8c858cc42b14df34ee93cb}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+binlog\+\_\+index}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a5272c89dd8f747f4ef37f2b85b9d8e13}\label{ha__ndbcluster_8cc_a5272c89dd8f747f4ef37f2b85b9d8e13}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+apply\+\_\+status}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a50a83e4fb455aeb864e1fb0753129912}\label{ha__ndbcluster_8cc_a50a83e4fb455aeb864e1fb0753129912}} 
+my\+\_\+bool {\bfseries opt\+\_\+ndb\+\_\+log\+\_\+transaction\+\_\+id}
+\item 
+struct st\+\_\+mysql\+\_\+storage\+\_\+engine {\bfseries ndbcluster\+\_\+storage\+\_\+engine}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ab4d3dd49d614dcec4e5b3442d18bba28}\label{ha__ndbcluster_8cc_ab4d3dd49d614dcec4e5b3442d18bba28}} 
+struct st\+\_\+mysql\+\_\+plugin {\bfseries i\+\_\+s\+\_\+ndb\+\_\+transid\+\_\+mysql\+\_\+connection\+\_\+map\+\_\+plugin}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae55bb9685b0630ceaf6de11410ec6771}\label{ha__ndbcluster_8cc_ae55bb9685b0630ceaf6de11410ec6771}} 
+struct st\+\_\+mysql\+\_\+plugin {\bfseries ndbinfo\+\_\+plugin}
+\item 
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a09df60555f124dc7ffc794a874ae5714}\label{ha__ndbcluster_8cc_a09df60555f124dc7ffc794a874ae5714}} 
+i\+\_\+s\+\_\+ndb\+\_\+transid\+\_\+mysql\+\_\+connection\+\_\+map\+\_\+plugin {\bfseries mysql\+\_\+declare\+\_\+plugin\+\_\+end}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines the N\+DB Cluster handler\+: the interface between My\+S\+QL and N\+DB Cluster. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a58a20ed1f2e88692354a0eb38fb10832}\label{ha__ndbcluster_8cc_a58a20ed1f2e88692354a0eb38fb10832}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!dbug\+\_\+print\+\_\+open\+\_\+tables@{dbug\+\_\+print\+\_\+open\+\_\+tables}}
+\index{dbug\+\_\+print\+\_\+open\+\_\+tables@{dbug\+\_\+print\+\_\+open\+\_\+tables}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{dbug\+\_\+print\+\_\+open\+\_\+tables}{dbug\_print\_open\_tables}}
+{\footnotesize\ttfamily \#define dbug\+\_\+print\+\_\+open\+\_\+tables(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{DBUG\_EXECUTE(\textcolor{stringliteral}{"info"},                          \(\backslash\)}
+\DoxyCodeLine{               print\_ndbcluster\_open\_tables(););}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a7caaffbf523a6ea7e0d8f9ae2b54e5b1}\label{ha__ndbcluster_8cc_a7caaffbf523a6ea7e0d8f9ae2b54e5b1}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!E\+R\+R\+\_\+\+B\+R\+E\+AK@{E\+R\+R\+\_\+\+B\+R\+E\+AK}}
+\index{E\+R\+R\+\_\+\+B\+R\+E\+AK@{E\+R\+R\+\_\+\+B\+R\+E\+AK}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{E\+R\+R\+\_\+\+B\+R\+E\+AK}{ERR\_BREAK}}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+B\+R\+E\+AK(\begin{DoxyParamCaption}\item[{}]{err,  }\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                        \(\backslash\)}
+\DoxyCodeLine{  const NdbError\& tmp= err;              \(\backslash\)}
+\DoxyCodeLine{  code= ndb\_to\_mysql\_error(\&tmp);        \(\backslash\)}
+\DoxyCodeLine{  break;                                 \(\backslash\)}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a849bd4d1267621a078ee2aa9bc52e0ba}\label{ha__ndbcluster_8cc_a849bd4d1267621a078ee2aa9bc52e0ba}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!E\+R\+R\+\_\+\+R\+E\+T\+U\+RN@{E\+R\+R\+\_\+\+R\+E\+T\+U\+RN}}
+\index{E\+R\+R\+\_\+\+R\+E\+T\+U\+RN@{E\+R\+R\+\_\+\+R\+E\+T\+U\+RN}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{E\+R\+R\+\_\+\+R\+E\+T\+U\+RN}{ERR\_RETURN}}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+R\+E\+T\+U\+RN(\begin{DoxyParamCaption}\item[{}]{err }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                        \(\backslash\)}
+\DoxyCodeLine{  const NdbError\& tmp= err;              \(\backslash\)}
+\DoxyCodeLine{  DBUG\_RETURN(ndb\_to\_mysql\_error(\&tmp)); \(\backslash\)}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ac6fa74091d372b79b0354e048e291b89}\label{ha__ndbcluster_8cc_ac6fa74091d372b79b0354e048e291b89}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!E\+R\+R\+\_\+\+S\+ET@{E\+R\+R\+\_\+\+S\+ET}}
+\index{E\+R\+R\+\_\+\+S\+ET@{E\+R\+R\+\_\+\+S\+ET}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{E\+R\+R\+\_\+\+S\+ET}{ERR\_SET}}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{err,  }\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                        \(\backslash\)}
+\DoxyCodeLine{  const NdbError\& tmp= err;              \(\backslash\)}
+\DoxyCodeLine{  code= ndb\_to\_mysql\_error(\&tmp);        \(\backslash\)}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a4d4f61a2a6033b723dfad686609f0319}\label{ha__ndbcluster_8cc_a4d4f61a2a6033b723dfad686609f0319}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES@{M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES}}
+\index{M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES@{M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES}{MRR\_MAX\_RANGES}}
+{\footnotesize\ttfamily \#define M\+R\+R\+\_\+\+M\+A\+X\+\_\+\+R\+A\+N\+G\+ES~128}
+
+We will not attempt to deal with more than this many ranges in a single M\+RR execute(). 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5}\label{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!multi\+\_\+range\+\_\+types@{multi\+\_\+range\+\_\+types}}
+\index{multi\+\_\+range\+\_\+types@{multi\+\_\+range\+\_\+types}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{multi\+\_\+range\+\_\+types}{multi\_range\_types}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5}{multi\+\_\+range\+\_\+types}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{enum\+\_\+empty\+\_\+unique\+\_\+range@{enum\+\_\+empty\+\_\+unique\+\_\+range}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!enum\+\_\+empty\+\_\+unique\+\_\+range@{enum\+\_\+empty\+\_\+unique\+\_\+range}}}\mbox{\Hypertarget{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5aa164de22a705be2b330357488803299e}\label{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5aa164de22a705be2b330357488803299e}} 
+enum\+\_\+empty\+\_\+unique\+\_\+range&Range converted to key operation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{enum\+\_\+ordered\+\_\+range@{enum\+\_\+ordered\+\_\+range}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!enum\+\_\+ordered\+\_\+range@{enum\+\_\+ordered\+\_\+range}}}\mbox{\Hypertarget{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5a358358d8e34edc22a091542d4bdbabb6}\label{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5a358358d8e34edc22a091542d4bdbabb6}} 
+enum\+\_\+ordered\+\_\+range&No data found (in key operation) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{enum\+\_\+skip\+\_\+range@{enum\+\_\+skip\+\_\+range}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!enum\+\_\+skip\+\_\+range@{enum\+\_\+skip\+\_\+range}}}\mbox{\Hypertarget{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5a5d1b60128479d4a0fae9e540185e4d49}\label{ha__ndbcluster_8cc_a2ed7fb707000547a17416c57940335f5a5d1b60128479d4a0fae9e540185e4d49}} 
+enum\+\_\+skip\+\_\+range&Normal ordered index scan range. Empty range (eg. partition pruning) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a84bfc6765e4d2f34f9c4bfcbd3c47f7a}\label{ha__ndbcluster_8cc_a84bfc6765e4d2f34f9c4bfcbd3c47f7a}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!find\+Blob\+Error@{find\+Blob\+Error}}
+\index{find\+Blob\+Error@{find\+Blob\+Error}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{find\+Blob\+Error()}{findBlobError()}}
+{\footnotesize\ttfamily int find\+Blob\+Error (\begin{DoxyParamCaption}\item[{Ndb\+Error \&}]{error,  }\item[{Ndb\+Blob $\ast$}]{p\+Blob }\end{DoxyParamCaption})}
+
+find\+Blob\+Error This method attempts to find an error in the hierarchy of runtime N\+D\+B\+A\+PI objects from Blob up to transaction. It will return -\/1 if no error is found, 0 if an error is found. \mbox{\Hypertarget{ha__ndbcluster_8cc_ab99b54c80b09217de037d871d7a29519}\label{ha__ndbcluster_8cc_ab99b54c80b09217de037d871d7a29519}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+get\+\_\+commitcount@{ndb\+\_\+get\+\_\+commitcount}}
+\index{ndb\+\_\+get\+\_\+commitcount@{ndb\+\_\+get\+\_\+commitcount}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+get\+\_\+commitcount()}{ndb\_get\_commitcount()}}
+{\footnotesize\ttfamily uint ndb\+\_\+get\+\_\+commitcount (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{char $\ast$}]{norm\+\_\+name,  }\item[{Uint64 $\ast$}]{commit\+\_\+count }\end{DoxyParamCaption})}
+
+Retrieve the commit count for the table object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+ & {\em norm\+\_\+name} & Normalized path to the table. \\
+\hline
+\mbox{\texttt{ out}}  & {\em commit\+\_\+count} & Commit count for the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. 
+
+1 if an error occured. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae2bd9470fe7beb5dc3481654718f39b7}\label{ha__ndbcluster_8cc_ae2bd9470fe7beb5dc3481654718f39b7}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndbcluster\+\_\+commit@{ndbcluster\+\_\+commit}}
+\index{ndbcluster\+\_\+commit@{ndbcluster\+\_\+commit}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+commit()}{ndbcluster\_commit()}}
+{\footnotesize\ttfamily int ndbcluster\+\_\+commit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{hton,  }\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})}
+
+Commit a transaction started in N\+DB. \mbox{\Hypertarget{ha__ndbcluster_8cc_a81d2867500d8a5c574e4e22d1b407d80}\label{ha__ndbcluster_8cc_a81d2867500d8a5c574e4e22d1b407d80}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndbcluster\+\_\+drop\+\_\+database\+\_\+impl@{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}}
+\index{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl@{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl()}{ndbcluster\_drop\_database\_impl()}}
+{\footnotesize\ttfamily int ndbcluster\+\_\+drop\+\_\+database\+\_\+impl (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Drop a database in N\+DB Cluster
+
+\begin{DoxyNote}{Note}
+add a dummy void function, since stupid handlerton is returning void instead of int... 
+\end{DoxyNote}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a162fbec3ff44c071f8b123b9dff76628}\label{ha__ndbcluster_8cc_a162fbec3ff44c071f8b123b9dff76628}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndbcluster\+\_\+get\+\_\+share@{ndbcluster\+\_\+get\+\_\+share}}
+\index{ndbcluster\+\_\+get\+\_\+share@{ndbcluster\+\_\+get\+\_\+share}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+get\+\_\+share()}{ndbcluster\_get\_share()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}}$\ast$ ndbcluster\+\_\+get\+\_\+share (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{bool}]{create\+\_\+if\+\_\+not\+\_\+exists,  }\item[{bool}]{have\+\_\+lock }\end{DoxyParamCaption})}
+
+Get \mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} for key
+
+Returns share for key, and increases the refcount on the share.
+
+
+\begin{DoxyParams}{Parameters}
+{\em create\+\_\+if\+\_\+not\+\_\+exists,creates} & share if it does not already exist \\
+\hline
+{\em have\+\_\+lock,ndbcluster\+\_\+mutex} & already locked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ad88b47b70774c4725f1b76808e08752a}\label{ha__ndbcluster_8cc_ad88b47b70774c4725f1b76808e08752a}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndbcluster\+\_\+rename\+\_\+share@{ndbcluster\+\_\+rename\+\_\+share}}
+\index{ndbcluster\+\_\+rename\+\_\+share@{ndbcluster\+\_\+rename\+\_\+share}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+rename\+\_\+share()}{ndbcluster\_rename\_share()}}
+{\footnotesize\ttfamily int ndbcluster\+\_\+rename\+\_\+share (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$}]{share,  }\item[{\mbox{\hyperlink{structNDB__SHARE__KEY}{N\+D\+B\+\_\+\+S\+H\+A\+R\+E\+\_\+\+K\+EY}} $\ast$}]{new\+\_\+key }\end{DoxyParamCaption})}
+
+we don\textquotesingle{}t rename the table-\/$>$s here that is used by injector as we don\textquotesingle{}t know if all events has been processed This will be dropped anyway
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_abc625855894c8068d18494e3e26ad5dd}\label{ha__ndbcluster_8cc_abc625855894c8068d18494e3e26ad5dd}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables@{ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables}}
+\index{ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables@{ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables}{ndb\_status\_index\_stat\_variables}}
+{\footnotesize\ttfamily S\+H\+O\+W\+\_\+\+V\+AR ndb\+\_\+status\+\_\+index\+\_\+stat\+\_\+variables\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"status"},          (\textcolor{keywordtype}{char}*) \&g\_ndb\_status\_index\_stat\_status, SHOW\_CHAR\_PTR, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"cache\_query"},     (\textcolor{keywordtype}{char}*) \&g\_ndb\_status\_index\_stat\_cache\_query, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"cache\_clean"},     (\textcolor{keywordtype}{char}*) \&g\_ndb\_status\_index\_stat\_cache\_clean, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{NullS, NullS, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a0dcb0f4996a381a37e74529a16f9bd6f}\label{ha__ndbcluster_8cc_a0dcb0f4996a381a37e74529a16f9bd6f}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+status\+\_\+injector\+\_\+variables@{ndb\+\_\+status\+\_\+injector\+\_\+variables}}
+\index{ndb\+\_\+status\+\_\+injector\+\_\+variables@{ndb\+\_\+status\+\_\+injector\+\_\+variables}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+status\+\_\+injector\+\_\+variables}{ndb\_status\_injector\_variables}}
+{\footnotesize\ttfamily S\+H\+O\+W\+\_\+\+V\+AR ndb\+\_\+status\+\_\+injector\+\_\+variables\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"api\_event\_data\_count\_injector"},     (\textcolor{keywordtype}{char}*) \&g\_event\_data\_count, SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"api\_event\_nondata\_count\_injector"},  (\textcolor{keywordtype}{char}*) \&g\_event\_nondata\_count, SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"api\_event\_bytes\_count\_injector"},    (\textcolor{keywordtype}{char}*) \&g\_event\_bytes\_count, SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{NullS, NullS, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a834554dc8d12a476149f7a15d3175476}\label{ha__ndbcluster_8cc_a834554dc8d12a476149f7a15d3175476}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables@{ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables}}
+\index{ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables@{ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables}{ndb\_status\_server\_client\_stat\_variables}}
+{\footnotesize\ttfamily S\+H\+O\+W\+\_\+\+V\+AR ndb\+\_\+status\+\_\+server\+\_\+client\+\_\+stat\+\_\+variables\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  NDBAPI\_COUNTERS(\textcolor{stringliteral}{""}, \&g\_server\_api\_client\_stats),}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"api\_event\_data\_count"},     }
+\DoxyCodeLine{   (\textcolor{keywordtype}{char}*) \&g\_server\_api\_client\_stats[ Ndb::DataEventsRecvdCount ], }
+\DoxyCodeLine{   SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"api\_event\_nondata\_count"},  }
+\DoxyCodeLine{   (\textcolor{keywordtype}{char}*) \&g\_server\_api\_client\_stats[ Ndb::NonDataEventsRecvdCount ], }
+\DoxyCodeLine{   SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"api\_event\_bytes\_count"},    }
+\DoxyCodeLine{   (\textcolor{keywordtype}{char}*) \&g\_server\_api\_client\_stats[ Ndb::EventBytesRecvdCount ], }
+\DoxyCodeLine{   SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{NullS, NullS, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a49f2b93a5800ccb65bf3be53d95bad90}\label{ha__ndbcluster_8cc_a49f2b93a5800ccb65bf3be53d95bad90}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+status\+\_\+slave\+\_\+variables@{ndb\+\_\+status\+\_\+slave\+\_\+variables}}
+\index{ndb\+\_\+status\+\_\+slave\+\_\+variables@{ndb\+\_\+status\+\_\+slave\+\_\+variables}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+status\+\_\+slave\+\_\+variables}{ndb\_status\_slave\_variables}}
+{\footnotesize\ttfamily S\+H\+O\+W\+\_\+\+V\+AR ndb\+\_\+status\+\_\+slave\+\_\+variables\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  NDBAPI\_COUNTERS(\textcolor{stringliteral}{"\_slave"}, \&g\_slave\_api\_client\_stats),}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"slave\_max\_replicated\_epoch"}, (\textcolor{keywordtype}{char}*) \&g\_ndb\_slave\_state.max\_rep\_epoch, SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{NullS, NullS, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_a3670c287ecd1276843e68ef841531ecd}\label{ha__ndbcluster_8cc_a3670c287ecd1276843e68ef841531ecd}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+status\+\_\+variables\+\_\+dynamic@{ndb\+\_\+status\+\_\+variables\+\_\+dynamic}}
+\index{ndb\+\_\+status\+\_\+variables\+\_\+dynamic@{ndb\+\_\+status\+\_\+variables\+\_\+dynamic}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+status\+\_\+variables\+\_\+dynamic}{ndb\_status\_variables\_dynamic}}
+{\footnotesize\ttfamily S\+H\+O\+W\+\_\+\+V\+AR ndb\+\_\+status\+\_\+variables\+\_\+dynamic\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"cluster\_node\_id"},     (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.cluster\_node\_id,      SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"config\_from\_host"},    (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.connected\_host,       SHOW\_CHAR\_PTR, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"config\_from\_port"},    (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.connected\_port,       SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"number\_of\_data\_nodes"},(\textcolor{keywordtype}{char}*) \&g\_ndb\_status.number\_of\_data\_nodes, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"number\_of\_ready\_data\_nodes"},}
+\DoxyCodeLine{   (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.number\_of\_ready\_data\_nodes,                  SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"connect\_count"},      (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.connect\_count,         SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"execute\_count"},      (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.execute\_count,         SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"scan\_count"},         (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.scan\_count,            SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"pruned\_scan\_count"},  (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.pruned\_scan\_count,     SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"schema\_locks\_count"}, (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.schema\_locks\_count,    SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  NDBAPI\_COUNTERS(\textcolor{stringliteral}{"\_session"}, \&g\_ndb\_status.api\_client\_stats),}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"sorted\_scan\_count"},  (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.sorted\_scan\_count,     SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"pushed\_queries\_defined"}, (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.pushed\_queries\_defined, }
+\DoxyCodeLine{   SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"pushed\_queries\_dropped"}, (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.pushed\_queries\_dropped,}
+\DoxyCodeLine{   SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"pushed\_queries\_executed"}, (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.pushed\_queries\_executed,}
+\DoxyCodeLine{   SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"pushed\_reads"},       (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.pushed\_reads,          SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"last\_commit\_epoch\_server"}, }
+\DoxyCodeLine{                         (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.last\_commit\_epoch\_server,}
+\DoxyCodeLine{                                                                      SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"last\_commit\_epoch\_session"}, }
+\DoxyCodeLine{                         (\textcolor{keywordtype}{char}*) \&g\_ndb\_status.last\_commit\_epoch\_session, }
+\DoxyCodeLine{                                                                      SHOW\_LONGLONG, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{NullS, NullS, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae3fa674ab6a7e0480f04e386fb666278}\label{ha__ndbcluster_8cc_ae3fa674ab6a7e0480f04e386fb666278}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+status\+\_\+variables\+\_\+export@{ndb\+\_\+status\+\_\+variables\+\_\+export}}
+\index{ndb\+\_\+status\+\_\+variables\+\_\+export@{ndb\+\_\+status\+\_\+variables\+\_\+export}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+status\+\_\+variables\+\_\+export}{ndb\_status\_variables\_export}}
+{\footnotesize\ttfamily S\+H\+O\+W\+\_\+\+V\+AR ndb\+\_\+status\+\_\+variables\+\_\+export\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"Ndb"},          (\textcolor{keywordtype}{char}*) \&show\_ndb\_vars,                 SHOW\_FUNC,  SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"Ndb\_conflict"}, (\textcolor{keywordtype}{char}*) \&show\_ndb\_conflict\_status\_vars, SHOW\_FUNC,  SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"Ndb"},          (\textcolor{keywordtype}{char}*) \&ndb\_status\_injector\_variables, SHOW\_ARRAY, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"Ndb"},          (\textcolor{keywordtype}{char}*) \&ndb\_status\_slave\_variables,    SHOW\_ARRAY, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"Ndb"},          (\textcolor{keywordtype}{char}*) \&show\_ndb\_server\_api\_stats,     SHOW\_FUNC,  SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"Ndb\_index\_stat"}, (\textcolor{keywordtype}{char}*) \&ndb\_status\_index\_stat\_variables, SHOW\_ARRAY, SHOW\_SCOPE\_GLOBAL\},}
+\DoxyCodeLine{  \{NullS, NullS, SHOW\_LONG, SHOW\_SCOPE\_GLOBAL\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{ha__ndbcluster_8cc_ae164fb2906052d80fd5040adbc5db4ab}\label{ha__ndbcluster_8cc_ae164fb2906052d80fd5040adbc5db4ab}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndb\+\_\+util\+\_\+thread@{ndb\+\_\+util\+\_\+thread}}
+\index{ndb\+\_\+util\+\_\+thread@{ndb\+\_\+util\+\_\+thread}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndb\+\_\+util\+\_\+thread}{ndb\_util\_thread}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNdb__util__thread}{Ndb\+\_\+util\+\_\+thread}} ndb\+\_\+util\+\_\+thread}
+
+Components \mbox{\Hypertarget{ha__ndbcluster_8cc_aeefcdbb1a0feb8908133216bd9bf3f2d}\label{ha__ndbcluster_8cc_aeefcdbb1a0feb8908133216bd9bf3f2d}} 
+\index{ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}!ndbcluster\+\_\+storage\+\_\+engine@{ndbcluster\+\_\+storage\+\_\+engine}}
+\index{ndbcluster\+\_\+storage\+\_\+engine@{ndbcluster\+\_\+storage\+\_\+engine}!ha\+\_\+ndbcluster.\+cc@{ha\+\_\+ndbcluster.\+cc}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+storage\+\_\+engine}{ndbcluster\_storage\_engine}}
+{\footnotesize\ttfamily struct st\+\_\+mysql\+\_\+storage\+\_\+engine ndbcluster\+\_\+storage\+\_\+engine}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{ MYSQL\_HANDLERTON\_INTERFACE\_VERSION \}}
+\end{DoxyCode}

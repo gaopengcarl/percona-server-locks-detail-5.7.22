@@ -1,0 +1,64 @@
+\hypertarget{classItem__static__float__func}{}\section{Item\+\_\+static\+\_\+float\+\_\+func Class Reference}
+\label{classItem__static__float__func}\index{Item\+\_\+static\+\_\+float\+\_\+func@{Item\+\_\+static\+\_\+float\+\_\+func}}
+Inheritance diagram for Item\+\_\+static\+\_\+float\+\_\+func\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__static__float__func}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__static__float__func_ab444ef526d5808ce803feddbf00fd6f8}\label{classItem__static__float__func_ab444ef526d5808ce803feddbf00fd6f8}} 
+{\bfseries Item\+\_\+static\+\_\+float\+\_\+func} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, const \mbox{\hyperlink{className__string}{Name\+\_\+string}} \&name\+\_\+arg, double val\+\_\+arg, uint decimal\+\_\+par, uint length)
+\item 
+virtual void \mbox{\hyperlink{classItem__static__float__func_a01626caaf912493b016fc9b0d8eb7349}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__static__float__func_a9a61341166a21bae1b91976041ccbd52}{safe\+\_\+charset\+\_\+converter}} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$tocs)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__static__float__func_a01626caaf912493b016fc9b0d8eb7349}\label{classItem__static__float__func_a01626caaf912493b016fc9b0d8eb7349}} 
+\index{Item\+\_\+static\+\_\+float\+\_\+func@{Item\+\_\+static\+\_\+float\+\_\+func}!print@{print}}
+\index{print@{print}!Item\+\_\+static\+\_\+float\+\_\+func@{Item\+\_\+static\+\_\+float\+\_\+func}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Item\+\_\+static\+\_\+float\+\_\+func\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__float_a968cc4aafdeab156d234f92e5bcc2f9d}{Item\+\_\+float}}.
+
+\mbox{\Hypertarget{classItem__static__float__func_a9a61341166a21bae1b91976041ccbd52}\label{classItem__static__float__func_a9a61341166a21bae1b91976041ccbd52}} 
+\index{Item\+\_\+static\+\_\+float\+\_\+func@{Item\+\_\+static\+\_\+float\+\_\+func}!safe\+\_\+charset\+\_\+converter@{safe\+\_\+charset\+\_\+converter}}
+\index{safe\+\_\+charset\+\_\+converter@{safe\+\_\+charset\+\_\+converter}!Item\+\_\+static\+\_\+float\+\_\+func@{Item\+\_\+static\+\_\+float\+\_\+func}}
+\subsubsection{\texorpdfstring{safe\+\_\+charset\+\_\+converter()}{safe\_charset\_converter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+static\+\_\+float\+\_\+func\+::safe\+\_\+charset\+\_\+converter (\begin{DoxyParamCaption}\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{tocs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Created mostly for mysql\+\_\+prepare\+\_\+table(). Important when a string E\+N\+U\+M/\+S\+ET column is described with a numeric default value\+:
+
+C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} t1(a S\+ET(\textquotesingle{}a\textquotesingle{}) D\+E\+F\+A\+U\+LT 1);
+
+We cannot use generic Item\+::safe\+\_\+charset\+\_\+converter(), because the latter returns a non-\/fixed \mbox{\hyperlink{classItem}{Item}}, so val\+\_\+str() crashes afterwards. Override \mbox{\hyperlink{classItem__num}{Item\+\_\+num}} method, to return a fixed item. 
+
+Reimplemented from \mbox{\hyperlink{classItem__num_a2185b5b16fe2ec007c127b1c3567b233}{Item\+\_\+num}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

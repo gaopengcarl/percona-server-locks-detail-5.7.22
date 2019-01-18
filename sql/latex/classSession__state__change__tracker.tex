@@ -1,0 +1,156 @@
+\hypertarget{classSession__state__change__tracker}{}\section{Session\+\_\+state\+\_\+change\+\_\+tracker Class Reference}
+\label{classSession__state__change__tracker}\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+Inheritance diagram for Session\+\_\+state\+\_\+change\+\_\+tracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSession__state__change__tracker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSession__state__change__tracker_a36875c4f170408f74e058525490056f8}{Session\+\_\+state\+\_\+change\+\_\+tracker}} ()
+\item 
+bool \mbox{\hyperlink{classSession__state__change__tracker_a3ec79835d60171eb55647f978ee34220}{enable}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Initiate the value of m\+\_\+enabled based on @session\+\_\+track\+\_\+state\+\_\+change value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession__state__change__tracker_ada427c6ab34f2fac5ba8eeee84ac1ec2}{check}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+bool \mbox{\hyperlink{classSession__state__change__tracker_abab633a67ce00f87c65059317242eb6c}{update}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classSession__state__change__tracker_abd748697d89b7c7146b64438db0b404e}{store}} (T\+HD $\ast$thd, String \&buf)
+\begin{DoxyCompactList}\small\item\em Store the 1byte boolean flag in the specified buffer. Once the data is stored, we reset the flags related to state-\/change. If 1byte flag valie is 1 then there is a session state change else there is no state change information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession__state__change__tracker_a584fe743f65ba30c3edcde930eb17d16}{mark\+\_\+as\+\_\+changed}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$tracked\+\_\+item\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Mark the tracker as changed and associated session attributes accordingly. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession__state__change__tracker_a97659fcaef646c626dfd0ea57863cf6f}{is\+\_\+state\+\_\+changed}} (T\+HD $\ast$)
+\begin{DoxyCompactList}\small\item\em find if there is a session state change \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSession__state__change__tracker_a4442902d10f66caf011fed15c07de7e1}\label{classSession__state__change__tracker_a4442902d10f66caf011fed15c07de7e1}} 
+void {\bfseries ensure\+\_\+enabled} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSession__state__change__tracker_a36875c4f170408f74e058525490056f8}\label{classSession__state__change__tracker_a36875c4f170408f74e058525490056f8}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{Session\+\_\+state\+\_\+change\+\_\+tracker()}{Session\_state\_change\_tracker()}}
+{\footnotesize\ttfamily Session\+\_\+state\+\_\+change\+\_\+tracker\+::\+Session\+\_\+state\+\_\+change\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSession__state__change__tracker_ada427c6ab34f2fac5ba8eeee84ac1ec2}\label{classSession__state__change__tracker_ada427c6ab34f2fac5ba8eeee84ac1ec2}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!check@{check}}
+\index{check@{check}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Session\+\_\+state\+\_\+change\+\_\+tracker\+::check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+To be invoked when the tracker\textquotesingle{}s system variable is checked (O\+N\+\_\+\+C\+H\+E\+CK). 
+
+Implements \mbox{\hyperlink{classState__tracker_a50923266a6300e657b70dc4f0125782c}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__state__change__tracker_a3ec79835d60171eb55647f978ee34220}\label{classSession__state__change__tracker_a3ec79835d60171eb55647f978ee34220}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!enable@{enable}}
+\index{enable@{enable}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily bool Session\+\_\+state\+\_\+change\+\_\+tracker\+::enable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initiate the value of m\+\_\+enabled based on @session\+\_\+track\+\_\+state\+\_\+change value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false (always) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__state__change__tracker_a97659fcaef646c626dfd0ea57863cf6f}\label{classSession__state__change__tracker_a97659fcaef646c626dfd0ea57863cf6f}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!is\+\_\+state\+\_\+changed@{is\+\_\+state\+\_\+changed}}
+\index{is\+\_\+state\+\_\+changed@{is\+\_\+state\+\_\+changed}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{is\+\_\+state\+\_\+changed()}{is\_state\_changed()}}
+{\footnotesize\ttfamily bool Session\+\_\+state\+\_\+change\+\_\+tracker\+::is\+\_\+state\+\_\+changed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+find if there is a session state change 
+
+\begin{DoxyReturn}{Returns}
+true -\/ if there is a session state change false -\/ if there is no session state change 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__state__change__tracker_a584fe743f65ba30c3edcde930eb17d16}\label{classSession__state__change__tracker_a584fe743f65ba30c3edcde930eb17d16}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}}
+\index{mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{mark\+\_\+as\+\_\+changed()}{mark\_as\_changed()}}
+{\footnotesize\ttfamily void Session\+\_\+state\+\_\+change\+\_\+tracker\+::mark\+\_\+as\+\_\+changed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{tracked\+\_\+item\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Mark the tracker as changed and associated session attributes accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{[}IN\mbox{]} Always null. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__state__change__tracker_abd748697d89b7c7146b64438db0b404e}\label{classSession__state__change__tracker_abd748697d89b7c7146b64438db0b404e}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!store@{store}}
+\index{store@{store}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily bool Session\+\_\+state\+\_\+change\+\_\+tracker\+::store (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String \&}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Store the 1byte boolean flag in the specified buffer. Once the data is stored, we reset the flags related to state-\/change. If 1byte flag valie is 1 then there is a session state change else there is no state change information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.  buf \mbox{[}I\+N\+O\+UT\mbox{]} Buffer to store the information to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false Success true Error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__state__change__tracker_abab633a67ce00f87c65059317242eb6c}\label{classSession__state__change__tracker_abab633a67ce00f87c65059317242eb6c}} 
+\index{Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}!update@{update}}
+\index{update@{update}!Session\+\_\+state\+\_\+change\+\_\+tracker@{Session\+\_\+state\+\_\+change\+\_\+tracker}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Session\+\_\+state\+\_\+change\+\_\+tracker\+::update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+/disable the tracker based on @session\+\_\+track\+\_\+state\+\_\+change value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false (always) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}{State\+\_\+tracker}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+h\item 
+session\+\_\+tracker.\+cc\end{DoxyCompactItemize}

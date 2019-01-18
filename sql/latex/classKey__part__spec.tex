@@ -1,0 +1,52 @@
+\hypertarget{classKey__part__spec}{}\section{Key\+\_\+part\+\_\+spec Class Reference}
+\label{classKey__part__spec}\index{Key\+\_\+part\+\_\+spec@{Key\+\_\+part\+\_\+spec}}
+Inheritance diagram for Key\+\_\+part\+\_\+spec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKey__part__spec}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey__part__spec_a405f8b36a8af6f421500678dfb5bb142}\label{classKey__part__spec_a405f8b36a8af6f421500678dfb5bb142}} 
+{\bfseries Key\+\_\+part\+\_\+spec} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&name, uint len)
+\item 
+\mbox{\Hypertarget{classKey__part__spec_a78f58d90373c3a49d2a296ea78aa2eaa}\label{classKey__part__spec_a78f58d90373c3a49d2a296ea78aa2eaa}} 
+{\bfseries Key\+\_\+part\+\_\+spec} (const char $\ast$name, const size\+\_\+t name\+\_\+len, uint len)
+\item 
+\mbox{\Hypertarget{classKey__part__spec_a9da16a4768a6f68d4eae50db9d078c43}\label{classKey__part__spec_a9da16a4768a6f68d4eae50db9d078c43}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} \&other) const
+\item 
+\mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $\ast$ \mbox{\hyperlink{classKey__part__spec_adf40542629144b3dc70f9ae4b4b27c78}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey__part__spec_a1e79a883c5b5358f0397e4fe56c09f5d}\label{classKey__part__spec_a1e79a883c5b5358f0397e4fe56c09f5d}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries field\+\_\+name}
+\item 
+\mbox{\Hypertarget{classKey__part__spec_add00fda3a992ed642aad95089b330e79}\label{classKey__part__spec_add00fda3a992ed642aad95089b330e79}} 
+uint {\bfseries length}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classKey__part__spec_adf40542629144b3dc70f9ae4b4b27c78}\label{classKey__part__spec_adf40542629144b3dc70f9ae4b4b27c78}} 
+\index{Key\+\_\+part\+\_\+spec@{Key\+\_\+part\+\_\+spec}!clone@{clone}}
+\index{clone@{clone}!Key\+\_\+part\+\_\+spec@{Key\+\_\+part\+\_\+spec}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}}$\ast$ Key\+\_\+part\+\_\+spec\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a copy of this \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}}. field\+\_\+name is copied by-\/pointer as it is known to never change. At the same time \textquotesingle{}length\textquotesingle{} may be reset in mysql\+\_\+prepare\+\_\+create\+\_\+table, and this is why we supply it with a copy.
+
+\begin{DoxyReturn}{Returns}
+If out of memory, 0 is returned and an error is set in T\+HD. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+class.\+h\item 
+sql\+\_\+class.\+cc\end{DoxyCompactItemize}

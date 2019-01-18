@@ -1,0 +1,289 @@
+\hypertarget{item__geofunc_8cc}{}\section{item\+\_\+geofunc.\+cc File Reference}
+\label{item__geofunc_8cc}\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+
+
+This file defines all spatial functions.  
+
+
+{\ttfamily \#include \char`\"{}item\+\_\+geofunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gis\+\_\+bg\+\_\+traits.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+geofunc\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPoint__accumulator}{Point\+\_\+accumulator}}
+\item 
+class \mbox{\hyperlink{classGeometry__grouper}{Geometry\+\_\+grouper$<$ Base\+\_\+type $>$}}
+\item 
+class \mbox{\hyperlink{classGeomcoll__validity__checker}{Geomcoll\+\_\+validity\+\_\+checker}}
+\item 
+class \mbox{\hyperlink{classNumeric__interval}{Numeric\+\_\+interval$<$ Num\+\_\+type $>$}}
+\item 
+class \mbox{\hyperlink{classPoint__coordinate__checker}{Point\+\_\+coordinate\+\_\+checker}}
+\item 
+struct \mbox{\hyperlink{structBG__distance}{B\+G\+\_\+distance$<$ Coordinate\+System $>$}}
+\item 
+struct \mbox{\hyperlink{structBG__distance_3_01bg_1_1cs_1_1cartesian_01_4}{B\+G\+\_\+distance$<$ bg\+::cs\+::cartesian $>$}}
+\item 
+struct \mbox{\hyperlink{structBG__distance_3_01bg_1_1cs_1_1spherical__equatorial_3_01bg_1_1degree_01_4_01_4}{B\+G\+\_\+distance$<$ bg\+::cs\+::spherical\+\_\+equatorial$<$ bg\+::degree $>$ $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Point\+\_\+range $>$ }\\bool \mbox{\hyperlink{item__geofunc_8cc_a8715c1136a2595998b2dca89aeb8939c}{is\+\_\+colinear}} (const Point\+\_\+range \&ls)
+\item 
+const char $\ast$ \mbox{\hyperlink{item__geofunc_8cc_ad4fb3866ac507c56c901dfcdff8c4750}{wkbtype\+\_\+to\+\_\+geojson\+\_\+type}} (Geometry\+::wkb\+Type type)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_ac82288b6dd75eecc32f475c964ecd5b3}{append\+\_\+coordinates}} (\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$parser, \mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$array, \mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, const char $\ast$calling\+\_\+function, int max\+\_\+decimal\+\_\+digits, bool add\+\_\+bounding\+\_\+box, bool add\+\_\+short\+\_\+crs\+\_\+urn, bool add\+\_\+long\+\_\+crs\+\_\+urn, uint32 geometry\+\_\+srid)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_a53482b6dbee7a4ffce4dd3ec19466a10}{append\+\_\+linestring}} (\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$parser, \mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$points, \mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, const char $\ast$calling\+\_\+function, int max\+\_\+decimal\+\_\+digits, bool add\+\_\+bounding\+\_\+box, bool add\+\_\+short\+\_\+crs\+\_\+urn, bool add\+\_\+long\+\_\+crs\+\_\+urn, uint32 geometry\+\_\+srid)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_ac0c7608e460b49b2b158ee790e072633}{append\+\_\+polygon}} (\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$parser, \mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$polygon\+\_\+rings, \mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, const char $\ast$calling\+\_\+function, int max\+\_\+decimal\+\_\+digits, bool add\+\_\+bounding\+\_\+box, bool add\+\_\+short\+\_\+crs\+\_\+urn, bool add\+\_\+long\+\_\+crs\+\_\+urn, uint32 geometry\+\_\+srid)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_a02c7d6b4f25cadcedd50f8bb6fa7a32b}{append\+\_\+bounding\+\_\+box}} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$geometry)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_aa00de25734f352d15ef93a88fbcc95d9}{append\+\_\+crs}} (\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$geometry, int max\+\_\+decimal\+\_\+digits, bool add\+\_\+bounding\+\_\+box, bool add\+\_\+short\+\_\+crs\+\_\+urn, bool add\+\_\+long\+\_\+crs\+\_\+urn, uint32 geometry\+\_\+srid)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_aefbb5f83ec0f75fc0f2f73a96931d6b5}{append\+\_\+geometry}} (\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$parser, \mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$geometry, bool is\+\_\+root\+\_\+object, \mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, const char $\ast$calling\+\_\+function, int max\+\_\+decimal\+\_\+digits, bool add\+\_\+bounding\+\_\+box, bool add\+\_\+short\+\_\+crs\+\_\+urn, bool add\+\_\+long\+\_\+crs\+\_\+urn, uint32 geometry\+\_\+srid)
+\item 
+bool \mbox{\hyperlink{item__geofunc_8cc_a084f00f9854052db00f2c58d83b16283}{geometry\+\_\+to\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr, \mbox{\hyperlink{classItem}{Item}} $\ast$geometry\+\_\+arg, const char $\ast$calling\+\_\+function, int max\+\_\+decimal\+\_\+digits, bool add\+\_\+bounding\+\_\+box, bool add\+\_\+short\+\_\+crs\+\_\+urn, bool add\+\_\+long\+\_\+crs\+\_\+urn, uint32 $\ast$geometry\+\_\+srid)
+\item 
+\mbox{\Hypertarget{item__geofunc_8cc_a43f70f28cf8fe63bab19ecad5bcb6be7}\label{item__geofunc_8cc_a43f70f28cf8fe63bab19ecad5bcb6be7}} 
+{\footnotesize template$<$typename Coordsys $>$ }\\bool {\bfseries geometry\+\_\+collection\+\_\+centroid} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$geom, typename \mbox{\hyperlink{classBG__models}{B\+G\+\_\+models}}$<$ Coordsys $>$\+::Point $\ast$respt, my\+\_\+bool $\ast$null\+\_\+value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines all spatial functions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__geofunc_8cc_a02c7d6b4f25cadcedd50f8bb6fa7a32b}\label{item__geofunc_8cc_a02c7d6b4f25cadcedd50f8bb6fa7a32b}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!append\+\_\+bounding\+\_\+box@{append\+\_\+bounding\+\_\+box}}
+\index{append\+\_\+bounding\+\_\+box@{append\+\_\+bounding\+\_\+box}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{append\+\_\+bounding\+\_\+box()}{append\_bounding\_box()}}
+{\footnotesize\ttfamily bool append\+\_\+bounding\+\_\+box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$}]{mbr,  }\item[{\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$}]{geometry }\end{DoxyParamCaption})}
+
+Appends a Geo\+J\+S\+ON bounding box to the rapidjson output buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mbr} & Bounding box to write. \\
+\hline
+{\em geometry} & The J\+S\+ON object to append the bounding box to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_ac82288b6dd75eecc32f475c964ecd5b3}\label{item__geofunc_8cc_ac82288b6dd75eecc32f475c964ecd5b3}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!append\+\_\+coordinates@{append\+\_\+coordinates}}
+\index{append\+\_\+coordinates@{append\+\_\+coordinates}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{append\+\_\+coordinates()}{append\_coordinates()}}
+{\footnotesize\ttfamily bool append\+\_\+coordinates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$}]{parser,  }\item[{\mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$}]{array,  }\item[{\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$}]{mbr,  }\item[{const char $\ast$}]{calling\+\_\+function,  }\item[{int}]{max\+\_\+decimal\+\_\+digits,  }\item[{bool}]{add\+\_\+bounding\+\_\+box,  }\item[{bool}]{add\+\_\+short\+\_\+crs\+\_\+urn,  }\item[{bool}]{add\+\_\+long\+\_\+crs\+\_\+urn,  }\item[{uint32}]{geometry\+\_\+srid }\end{DoxyParamCaption})}
+
+Append a Geo\+J\+S\+ON array with coordinates to the writer at the current position.
+
+The W\+KB parser must be positioned at the beginning of the coordinates. There must exactly two coordinates in the array (x and y). The coordinates are rounded to the number of decimals specified in the variable max\+\_\+decimal\+\_\+digits.\+:
+
+max\+\_\+decimal\+\_\+digits == 2\+: 12.\+789 =$>$ 12.\+79 10 =$>$ 10.\+00
+
+
+\begin{DoxyParams}{Parameters}
+{\em parser} & W\+KB parser with position set to the beginning of the coordinates. \\
+\hline
+{\em array} & J\+S\+ON array to append the result to. \\
+\hline
+{\em mbr} & A bounding box, which will be updated with data from the coordinates. \\
+\hline
+{\em calling\+\_\+function} & Name of user-\/invoked function \\
+\hline
+{\em max\+\_\+decimal\+\_\+digits} & Max length of decimal numbers \\
+\hline
+{\em add\+\_\+bounding\+\_\+box} & True if a bounding box should be added \\
+\hline
+{\em add\+\_\+short\+\_\+crs\+\_\+urn} & True if we should add short format C\+RS U\+RN \\
+\hline
+{\em add\+\_\+long\+\_\+crs\+\_\+urn} & True if we should add long format C\+RS U\+RN \\
+\hline
+{\em geometry\+\_\+srid} & Spacial Reference System Identifier being used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_aa00de25734f352d15ef93a88fbcc95d9}\label{item__geofunc_8cc_aa00de25734f352d15ef93a88fbcc95d9}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!append\+\_\+crs@{append\+\_\+crs}}
+\index{append\+\_\+crs@{append\+\_\+crs}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{append\+\_\+crs()}{append\_crs()}}
+{\footnotesize\ttfamily bool append\+\_\+crs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$}]{geometry,  }\item[{int}]{max\+\_\+decimal\+\_\+digits,  }\item[{bool}]{add\+\_\+bounding\+\_\+box,  }\item[{bool}]{add\+\_\+short\+\_\+crs\+\_\+urn,  }\item[{bool}]{add\+\_\+long\+\_\+crs\+\_\+urn,  }\item[{uint32}]{geometry\+\_\+srid }\end{DoxyParamCaption})}
+
+Appends a Geo\+J\+S\+ON C\+RS object to the rapidjson output buffer.
+
+If both add\+\_\+long\+\_\+crs\+\_\+urn and add\+\_\+short\+\_\+crs\+\_\+urn is specified, the long C\+RS U\+RN is preferred as mentioned in the Geo\+J\+S\+ON specification\+:
+
+\char`\"{}\+O\+G\+C C\+R\+S U\+R\+Ns such as \char`\"{}urn\+:ogc\+:def\+:crs\+:\+O\+GC\+:1.\+3\+:C\+R\+S84\char`\"{} shall be preferred
+over legacy identifiers such as \char`\"{}E\+P\+SG\+:4326\char`\"{}\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em geometry} & The J\+S\+ON object to append the C\+RS object to. \\
+\hline
+{\em max\+\_\+decimal\+\_\+digits} & Max length of decimal numbers \\
+\hline
+{\em add\+\_\+bounding\+\_\+box} & True if a bounding box should be added \\
+\hline
+{\em add\+\_\+short\+\_\+crs\+\_\+urn} & True if we should add short format C\+RS U\+RN \\
+\hline
+{\em add\+\_\+long\+\_\+crs\+\_\+urn} & True if we should add long format C\+RS U\+RN \\
+\hline
+{\em geometry\+\_\+srid} & Spacial Reference System Identifier being used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_aefbb5f83ec0f75fc0f2f73a96931d6b5}\label{item__geofunc_8cc_aefbb5f83ec0f75fc0f2f73a96931d6b5}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!append\+\_\+geometry@{append\+\_\+geometry}}
+\index{append\+\_\+geometry@{append\+\_\+geometry}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{append\+\_\+geometry()}{append\_geometry()}}
+{\footnotesize\ttfamily bool append\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$}]{parser,  }\item[{\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$}]{geometry,  }\item[{bool}]{is\+\_\+root\+\_\+object,  }\item[{\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$}]{mbr,  }\item[{const char $\ast$}]{calling\+\_\+function,  }\item[{int}]{max\+\_\+decimal\+\_\+digits,  }\item[{bool}]{add\+\_\+bounding\+\_\+box,  }\item[{bool}]{add\+\_\+short\+\_\+crs\+\_\+urn,  }\item[{bool}]{add\+\_\+long\+\_\+crs\+\_\+urn,  }\item[{uint32}]{geometry\+\_\+srid }\end{DoxyParamCaption})}
+
+Reads a W\+KB G\+E\+O\+M\+E\+T\+RY from input and writes the equivalent Geo\+J\+S\+ON to the output. If a G\+E\+O\+M\+E\+T\+R\+Y\+C\+O\+L\+L\+E\+C\+T\+I\+ON is found, this function will call itself for each G\+E\+O\+M\+E\+T\+RY in the collection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parser} & The W\+KB input to read from, positioned at the start of G\+E\+O\+M\+E\+T\+RY header. \\
+\hline
+{\em geometry} & J\+S\+ON object to append the result to. \\
+\hline
+{\em is\+\_\+root\+\_\+object} & Indicating if the current G\+E\+O\+M\+E\+T\+RY is the root object in the output Geo\+J\+S\+ON. \\
+\hline
+{\em mbr} & A bounding box, which will be updated with data from all the G\+E\+O\+M\+E\+T\+R\+I\+ES found in the input. \\
+\hline
+{\em calling\+\_\+function} & Name of the user-\/invoked function \\
+\hline
+{\em max\+\_\+decimal\+\_\+digits} & Max length of decimal numbers \\
+\hline
+{\em add\+\_\+bounding\+\_\+box} & True if a bounding box should be added \\
+\hline
+{\em add\+\_\+short\+\_\+crs\+\_\+urn} & True if we should add short format C\+RS U\+RN \\
+\hline
+{\em add\+\_\+long\+\_\+crs\+\_\+urn} & True if we should add long format C\+RS U\+RN \\
+\hline
+{\em geometry\+\_\+srid} & Spacial Reference System Identifier being used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_a53482b6dbee7a4ffce4dd3ec19466a10}\label{item__geofunc_8cc_a53482b6dbee7a4ffce4dd3ec19466a10}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!append\+\_\+linestring@{append\+\_\+linestring}}
+\index{append\+\_\+linestring@{append\+\_\+linestring}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{append\+\_\+linestring()}{append\_linestring()}}
+{\footnotesize\ttfamily bool append\+\_\+linestring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$}]{parser,  }\item[{\mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$}]{points,  }\item[{\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$}]{mbr,  }\item[{const char $\ast$}]{calling\+\_\+function,  }\item[{int}]{max\+\_\+decimal\+\_\+digits,  }\item[{bool}]{add\+\_\+bounding\+\_\+box,  }\item[{bool}]{add\+\_\+short\+\_\+crs\+\_\+urn,  }\item[{bool}]{add\+\_\+long\+\_\+crs\+\_\+urn,  }\item[{uint32}]{geometry\+\_\+srid }\end{DoxyParamCaption})}
+
+Append a Geo\+J\+S\+ON Line\+String object to the writer at the current position.
+
+The parser must be positioned after the Line\+String header, and there must be at least one coordinate array in the linestring.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parser} & W\+KB parser with position set to after the Line\+String header. \\
+\hline
+{\em points} & J\+S\+ON array to append the result to. \\
+\hline
+{\em mbr} & A bounding box, which will be updated with data from the Line\+String. \\
+\hline
+{\em calling\+\_\+function} & Name of user-\/invoked function \\
+\hline
+{\em max\+\_\+decimal\+\_\+digits} & Max length of decimal numbers \\
+\hline
+{\em add\+\_\+bounding\+\_\+box} & True if a bounding box should be added \\
+\hline
+{\em add\+\_\+short\+\_\+crs\+\_\+urn} & True if we should add short format C\+RS U\+RN \\
+\hline
+{\em add\+\_\+long\+\_\+crs\+\_\+urn} & True if we should add long format C\+RS U\+RN \\
+\hline
+{\em geometry\+\_\+srid} & Spacial Reference System Identifier being used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_ac0c7608e460b49b2b158ee790e072633}\label{item__geofunc_8cc_ac0c7608e460b49b2b158ee790e072633}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!append\+\_\+polygon@{append\+\_\+polygon}}
+\index{append\+\_\+polygon@{append\+\_\+polygon}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{append\+\_\+polygon()}{append\_polygon()}}
+{\footnotesize\ttfamily bool append\+\_\+polygon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{Geometry\+::wkb\+\_\+parser}} $\ast$}]{parser,  }\item[{\mbox{\hyperlink{classJson__array}{Json\+\_\+array}} $\ast$}]{polygon\+\_\+rings,  }\item[{\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$}]{mbr,  }\item[{const char $\ast$}]{calling\+\_\+function,  }\item[{int}]{max\+\_\+decimal\+\_\+digits,  }\item[{bool}]{add\+\_\+bounding\+\_\+box,  }\item[{bool}]{add\+\_\+short\+\_\+crs\+\_\+urn,  }\item[{bool}]{add\+\_\+long\+\_\+crs\+\_\+urn,  }\item[{uint32}]{geometry\+\_\+srid }\end{DoxyParamCaption})}
+
+Append a Geo\+J\+S\+ON Polygon object to the writer at the current position.
+
+The parser must be positioned after the Polygon header, and all coordinate arrays must contain at least one value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parser} & W\+KB parser with position set to after the Polygon header. \\
+\hline
+{\em polygon\+\_\+rings} & J\+S\+ON array to append the result to. \\
+\hline
+{\em mbr} & A bounding box, which will be updated with data from the Polygon. \\
+\hline
+{\em calling\+\_\+function} & Name of user-\/invoked function \\
+\hline
+{\em max\+\_\+decimal\+\_\+digits} & Max length of decimal numbers \\
+\hline
+{\em add\+\_\+bounding\+\_\+box} & True if a bounding box should be added \\
+\hline
+{\em add\+\_\+short\+\_\+crs\+\_\+urn} & True if we should add short format C\+RS U\+RN \\
+\hline
+{\em add\+\_\+long\+\_\+crs\+\_\+urn} & True if we should add long format C\+RS U\+RN \\
+\hline
+{\em geometry\+\_\+srid} & Spacial Reference System Identifier being used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_a084f00f9854052db00f2c58d83b16283}\label{item__geofunc_8cc_a084f00f9854052db00f2c58d83b16283}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!geometry\+\_\+to\+\_\+json@{geometry\+\_\+to\+\_\+json}}
+\index{geometry\+\_\+to\+\_\+json@{geometry\+\_\+to\+\_\+json}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{geometry\+\_\+to\+\_\+json()}{geometry\_to\_json()}}
+{\footnotesize\ttfamily bool geometry\+\_\+to\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{wr,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{geometry\+\_\+arg,  }\item[{const char $\ast$}]{calling\+\_\+function,  }\item[{int}]{max\+\_\+decimal\+\_\+digits,  }\item[{bool}]{add\+\_\+bounding\+\_\+box,  }\item[{bool}]{add\+\_\+short\+\_\+crs\+\_\+urn,  }\item[{bool}]{add\+\_\+long\+\_\+crs\+\_\+urn,  }\item[{uint32 $\ast$}]{geometry\+\_\+srid }\end{DoxyParamCaption})}
+
+The contract for this function is found in \mbox{\hyperlink{item__json__func_8h_source}{item\+\_\+json\+\_\+func.\+h}} \mbox{\Hypertarget{item__geofunc_8cc_a8715c1136a2595998b2dca89aeb8939c}\label{item__geofunc_8cc_a8715c1136a2595998b2dca89aeb8939c}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!is\+\_\+colinear@{is\+\_\+colinear}}
+\index{is\+\_\+colinear@{is\+\_\+colinear}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{is\+\_\+colinear()}{is\_colinear()}}
+{\footnotesize\ttfamily template$<$typename Point\+\_\+range $>$ \\
+bool is\+\_\+colinear (\begin{DoxyParamCaption}\item[{const Point\+\_\+range \&}]{ls }\end{DoxyParamCaption})}
+
+Check whether all points in the sequence container are colinear. 
+\begin{DoxyParams}{Parameters}
+{\em ls} & a sequence of points with no duplicates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the points are colinear, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__geofunc_8cc_ad4fb3866ac507c56c901dfcdff8c4750}\label{item__geofunc_8cc_ad4fb3866ac507c56c901dfcdff8c4750}} 
+\index{item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}!wkbtype\+\_\+to\+\_\+geojson\+\_\+type@{wkbtype\+\_\+to\+\_\+geojson\+\_\+type}}
+\index{wkbtype\+\_\+to\+\_\+geojson\+\_\+type@{wkbtype\+\_\+to\+\_\+geojson\+\_\+type}!item\+\_\+geofunc.\+cc@{item\+\_\+geofunc.\+cc}}
+\subsubsection{\texorpdfstring{wkbtype\+\_\+to\+\_\+geojson\+\_\+type()}{wkbtype\_to\_geojson\_type()}}
+{\footnotesize\ttfamily const char$\ast$ wkbtype\+\_\+to\+\_\+geojson\+\_\+type (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Type}]{type }\end{DoxyParamCaption})}
+
+Converts a wkb\+Type to the corresponding Geo\+J\+S\+ON type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The W\+KB Type to convert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding Geo\+J\+S\+ON type, or N\+U\+LL if no such type exists. 
+\end{DoxyReturn}

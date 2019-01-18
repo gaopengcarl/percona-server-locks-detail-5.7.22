@@ -1,0 +1,32 @@
+\hypertarget{classBG__result__buf__mgr}{}\section{B\+G\+\_\+result\+\_\+buf\+\_\+mgr Class Reference}
+\label{classBG__result__buf__mgr}\index{B\+G\+\_\+result\+\_\+buf\+\_\+mgr@{B\+G\+\_\+result\+\_\+buf\+\_\+mgr}}
+
+
+{\ttfamily \#include $<$item\+\_\+geofunc.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBG__result__buf__mgr_a14cec504440e116def67d0b0b04da80e}\label{classBG__result__buf__mgr_a14cec504440e116def67d0b0b04da80e}} 
+void {\bfseries add\+\_\+buffer} (void $\ast$buf)
+\item 
+\mbox{\Hypertarget{classBG__result__buf__mgr_acea58298589fe1a4c96278bbbc0b72f7}\label{classBG__result__buf__mgr_acea58298589fe1a4c96278bbbc0b72f7}} 
+void {\bfseries forget\+\_\+buffer} (void $\ast$buf)
+\item 
+\mbox{\Hypertarget{classBG__result__buf__mgr_ab62866df67a3dab9dd850defc1a3eae8}\label{classBG__result__buf__mgr_ab62866df67a3dab9dd850defc1a3eae8}} 
+void {\bfseries free\+\_\+intermediate\+\_\+result\+\_\+buffers} ()
+\item 
+\mbox{\Hypertarget{classBG__result__buf__mgr_af87ce8d9348a9a063e71e1954e3ed4f8}\label{classBG__result__buf__mgr_af87ce8d9348a9a063e71e1954e3ed4f8}} 
+void {\bfseries free\+\_\+result\+\_\+buffer} ()
+\item 
+\mbox{\Hypertarget{classBG__result__buf__mgr_a3fbaf9c5396d981de6232b2269520bd7}\label{classBG__result__buf__mgr_a3fbaf9c5396d981de6232b2269520bd7}} 
+void {\bfseries set\+\_\+result\+\_\+buffer} (void $\ast$buf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+We have to hold result buffers in functions that return a G\+E\+O\+M\+E\+T\+RY string, because such a function\textquotesingle{}s result geometry\textquotesingle{}s buffer is directly used and set to String result object. We have to release them properly manually since they won\textquotesingle{}t be released when the String result is destroyed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc.\+h\end{DoxyCompactItemize}

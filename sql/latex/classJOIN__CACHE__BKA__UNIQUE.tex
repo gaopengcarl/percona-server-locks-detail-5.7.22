@@ -1,0 +1,88 @@
+\hypertarget{classJOIN__CACHE__BKA__UNIQUE}{}\section{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE Class Reference}
+\label{classJOIN__CACHE__BKA__UNIQUE}\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}
+Inheritance diagram for J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classJOIN__CACHE__BKA__UNIQUE}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_ad3ce48a7263d07d53985845f9a85d7c7}\label{classJOIN__CACHE__BKA__UNIQUE_ad3ce48a7263d07d53985845f9a85d7c7}} 
+{\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$j, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab\+\_\+arg, uint flags, \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} $\ast$prev)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}{init}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gafb1afc6322b69d01ea68b677b715ddc7}{reset\+\_\+cache}} (bool for\+\_\+writing)
+\begin{DoxyCompactList}\small\item\em Reset the join buffer for reading/writing\+: default implementation. \end{DoxyCompactList}\item 
+bool {\bfseries get\+\_\+record} ()
+\item 
+virtual bool {\bfseries check\+\_\+all\+\_\+match\+\_\+flags\+\_\+for\+\_\+key} (uchar $\ast$key\+\_\+chain\+\_\+ptr)
+\item 
+uint {\bfseries get\+\_\+next\+\_\+key} (uchar $\ast$$\ast$key)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a7ceb91a2321a85374cd9190de9c9a3fc}\label{classJOIN__CACHE__BKA__UNIQUE_a7ceb91a2321a85374cd9190de9c9a3fc}} 
+uchar $\ast$ {\bfseries get\+\_\+curr\+\_\+key\+\_\+chain} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga6afa1e2231c8090ecae73554fca37c41}{skip\+\_\+index\+\_\+tuple}} (range\+\_\+seq\+\_\+t rseq, char $\ast$range\+\_\+info)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a9e73916095308568c64ba010828965de}\label{classJOIN__CACHE__BKA__UNIQUE_a9e73916095308568c64ba010828965de}} 
+\mbox{\hyperlink{classJOIN__CACHE_a74b45254b4573b9531f1b8b536b18e46}{enum\+\_\+join\+\_\+cache\+\_\+type}} {\bfseries cache\+\_\+type} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_ae3957db2d79039d7455480011f97e6c7}\label{classJOIN__CACHE__BKA__UNIQUE_ae3957db2d79039d7455480011f97e6c7}} 
+uint {\bfseries get\+\_\+size\+\_\+of\+\_\+key\+\_\+offset} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a0072182d320c7268afb70eaee38d6575}\label{classJOIN__CACHE__BKA__UNIQUE_a0072182d320c7268afb70eaee38d6575}} 
+uchar $\ast$ {\bfseries get\+\_\+next\+\_\+key\+\_\+ref} (uchar $\ast$key\+\_\+ref\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_af46ffea53b70162a840e73db6d388fd3}\label{classJOIN__CACHE__BKA__UNIQUE_af46ffea53b70162a840e73db6d388fd3}} 
+void {\bfseries store\+\_\+next\+\_\+key\+\_\+ref} (uchar $\ast$key\+\_\+ref\+\_\+ptr, uchar $\ast$ref)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a2f83ada137bc4fc27915ebd5b49c9963}\label{classJOIN__CACHE__BKA__UNIQUE_a2f83ada137bc4fc27915ebd5b49c9963}} 
+bool {\bfseries is\+\_\+null\+\_\+key\+\_\+ref} (uchar $\ast$key\+\_\+ref\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_ada71ff0da51c803f8039b9397441bf17}\label{classJOIN__CACHE__BKA__UNIQUE_ada71ff0da51c803f8039b9397441bf17}} 
+void {\bfseries store\+\_\+null\+\_\+key\+\_\+ref} (uchar $\ast$key\+\_\+ref\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a8a6747505360c6fb4e4665ab58832161}\label{classJOIN__CACHE__BKA__UNIQUE_a8a6747505360c6fb4e4665ab58832161}} 
+uchar $\ast$ {\bfseries get\+\_\+next\+\_\+rec\+\_\+ref} (uchar $\ast$ref\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a5f715975aa5d4057b18a6e41fa598399}\label{classJOIN__CACHE__BKA__UNIQUE_a5f715975aa5d4057b18a6e41fa598399}} 
+void {\bfseries store\+\_\+next\+\_\+rec\+\_\+ref} (uchar $\ast$ref\+\_\+ptr, uchar $\ast$ref)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a886ebe5449a47d80480e7d28fd81128b}\label{classJOIN__CACHE__BKA__UNIQUE_a886ebe5449a47d80480e7d28fd81128b}} 
+uchar $\ast$ {\bfseries get\+\_\+curr\+\_\+emb\+\_\+key} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a7bdced8c81c06e73b62fd519bced0b25}\label{classJOIN__CACHE__BKA__UNIQUE_a7bdced8c81c06e73b62fd519bced0b25}} 
+uchar $\ast$ {\bfseries get\+\_\+emb\+\_\+key} (uchar $\ast$ref\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_af15a6d8d942865ee35d0a9331d8f027e}\label{classJOIN__CACHE__BKA__UNIQUE_af15a6d8d942865ee35d0a9331d8f027e}} 
+void {\bfseries store\+\_\+emb\+\_\+key\+\_\+ref} (uchar $\ast$ref\+\_\+ptr, uchar $\ast$ref)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a67f825d66ed053f86abb1dc138516f57}\label{classJOIN__CACHE__BKA__UNIQUE_a67f825d66ed053f86abb1dc138516f57}} 
+ulong {\bfseries rem\+\_\+space} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE__BKA__UNIQUE_a0004aceb528f404958fe7b6fbfd04124}\label{classJOIN__CACHE__BKA__UNIQUE_a0004aceb528f404958fe7b6fbfd04124}} 
+void {\bfseries init\+\_\+mrr\+\_\+buff} ()
+\item 
+bool {\bfseries skip\+\_\+record\+\_\+if\+\_\+match} ()
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries join\+\_\+matching\+\_\+records} (bool skip\+\_\+last)
+\item 
+bool {\bfseries key\+\_\+search} (uchar $\ast$key, uint key\+\_\+len, uchar $\ast$$\ast$key\+\_\+ref\+\_\+ptr)
+\item 
+virtual bool \mbox{\hyperlink{group__Query__Optimizer_gafd031be055cee296d6629313a333b56f}{check\+\_\+match}} (uchar $\ast$rec\+\_\+ptr)
+\item 
+bool {\bfseries put\+\_\+record\+\_\+in\+\_\+cache} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+join\+\_\+buffer.\+h\item 
+\mbox{\hyperlink{sql__join__buffer_8cc}{sql\+\_\+join\+\_\+buffer.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{classSys__var__mybool}{}\section{Sys\+\_\+var\+\_\+mybool Class Reference}
+\label{classSys__var__mybool}\index{Sys\+\_\+var\+\_\+mybool@{Sys\+\_\+var\+\_\+mybool}}
+
+
+{\ttfamily \#include $<$sys\+\_\+vars.\+h$>$}
+
+Inheritance diagram for Sys\+\_\+var\+\_\+mybool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSys__var__mybool}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSys__var__mybool_a8d001c59668928d91dae12d8442580ab}\label{classSys__var__mybool_a8d001c59668928d91dae12d8442580ab}} 
+{\bfseries Sys\+\_\+var\+\_\+mybool} (const char $\ast$name\+\_\+arg, const char $\ast$comment, int flag\+\_\+args, ptrdiff\+\_\+t off, size\+\_\+t size, \mbox{\hyperlink{structCMD__LINE}{C\+M\+D\+\_\+\+L\+I\+NE}} getopt, my\+\_\+bool def\+\_\+val, \mbox{\hyperlink{classPolyLock}{Poly\+Lock}} $\ast$lock=0, enum \mbox{\hyperlink{classsys__var_a664520ec82191888717c86085bfa83ce}{binlog\+\_\+status\+\_\+enum}} binlog\+\_\+status\+\_\+arg=V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+B\+I\+N\+L\+OG, on\+\_\+check\+\_\+function on\+\_\+check\+\_\+func=0, on\+\_\+update\+\_\+function on\+\_\+update\+\_\+func=0, const char $\ast$substitute=0, int parse\+\_\+flag=P\+A\+R\+S\+E\+\_\+\+N\+O\+R\+M\+AL)
+\item 
+\mbox{\Hypertarget{classSys__var__mybool_a0c3f80b9953fcfa3b7c2cef203a1ea30}\label{classSys__var__mybool_a0c3f80b9953fcfa3b7c2cef203a1ea30}} 
+bool {\bfseries session\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+\mbox{\Hypertarget{classSys__var__mybool_a75b322d7e1367054b8bc84598368b9c6}\label{classSys__var__mybool_a75b322d7e1367054b8bc84598368b9c6}} 
+bool {\bfseries global\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+void \mbox{\hyperlink{classSys__var__mybool_a7c0f82c4951aa5a3b41921a62197473d}{session\+\_\+save\+\_\+default}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+void \mbox{\hyperlink{classSys__var__mybool_aecba009ba09790acfb4201c2d1bb1f84}{global\+\_\+save\+\_\+default}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The class for boolean variables -\/ a variant of E\+N\+UM variables with the fixed list of values of \{ O\+FF , ON \}
+
+Backing store\+: my\+\_\+bool 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSys__var__mybool_aecba009ba09790acfb4201c2d1bb1f84}\label{classSys__var__mybool_aecba009ba09790acfb4201c2d1bb1f84}} 
+\index{Sys\+\_\+var\+\_\+mybool@{Sys\+\_\+var\+\_\+mybool}!global\+\_\+save\+\_\+default@{global\+\_\+save\+\_\+default}}
+\index{global\+\_\+save\+\_\+default@{global\+\_\+save\+\_\+default}!Sys\+\_\+var\+\_\+mybool@{Sys\+\_\+var\+\_\+mybool}}
+\subsubsection{\texorpdfstring{global\+\_\+save\+\_\+default()}{global\_save\_default()}}
+{\footnotesize\ttfamily void Sys\+\_\+var\+\_\+mybool\+::global\+\_\+save\+\_\+default (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save the global default value of the variable in var 
+
+Implements \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}.
+
+\mbox{\Hypertarget{classSys__var__mybool_a7c0f82c4951aa5a3b41921a62197473d}\label{classSys__var__mybool_a7c0f82c4951aa5a3b41921a62197473d}} 
+\index{Sys\+\_\+var\+\_\+mybool@{Sys\+\_\+var\+\_\+mybool}!session\+\_\+save\+\_\+default@{session\+\_\+save\+\_\+default}}
+\index{session\+\_\+save\+\_\+default@{session\+\_\+save\+\_\+default}!Sys\+\_\+var\+\_\+mybool@{Sys\+\_\+var\+\_\+mybool}}
+\subsubsection{\texorpdfstring{session\+\_\+save\+\_\+default()}{session\_save\_default()}}
+{\footnotesize\ttfamily void Sys\+\_\+var\+\_\+mybool\+::session\+\_\+save\+\_\+default (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save the session default value of the variable in var 
+
+Implements \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sys__vars_8h}{sys\+\_\+vars.\+h}}\end{DoxyCompactItemize}

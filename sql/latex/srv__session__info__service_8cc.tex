@@ -1,0 +1,167 @@
+\hypertarget{srv__session__info__service_8cc}{}\section{srv\+\_\+session\+\_\+info\+\_\+service.\+cc File Reference}
+\label{srv__session__info__service_8cc}\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+{\ttfamily \#include \char`\"{}mysql/service\+\_\+srv\+\_\+session\+\_\+info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}srv\+\_\+session.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{srv__session__info__service_8cc_a6835de20ecab494d49f5c3d26e50be76}\label{srv__session__info__service_8cc_a6835de20ecab494d49f5c3d26e50be76}} 
+\#define {\bfseries V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON}(s)~((s) \&\& \mbox{\hyperlink{classSrv__session_aae4c0d99ea138cf218f142f322362157}{Srv\+\_\+session\+::is\+\_\+valid}}((s)))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{srv__session__info__service_8cc_a1faf7cb030049f4f4dc36e096c8bcc9f}{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+my\+\_\+thread\+\_\+id \mbox{\hyperlink{srv__session__info__service_8cc_a45a565b6bac2d30fa682d64181074ff5}{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{srv__session__info__service_8cc_a5bc7bf03ec90deb50941f80d1b61b135}{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+int \mbox{\hyperlink{srv__session__info__service_8cc_a92593956625683e685732c3853a727e0}{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session, uint16\+\_\+t port)
+\item 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \mbox{\hyperlink{srv__session__info__service_8cc_a3089238408d78ff297f7ccd49b1a6d59}{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+int \mbox{\hyperlink{srv__session__info__service_8cc_a7d826d5fa27571fa80b9a24345f90b51}{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session, enum\+\_\+vio\+\_\+type type)
+\item 
+int \mbox{\hyperlink{srv__session__info__service_8cc_a9fd2668371b77060666d7a3b19b74c39}{srv\+\_\+session\+\_\+info\+\_\+killed}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+unsigned int \mbox{\hyperlink{srv__session__info__service_8cc_ac646dc5d0f3d44765ae7bd9faf82be2c}{srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count}} ()
+\item 
+unsigned int \mbox{\hyperlink{srv__session__info__service_8cc_a850d6d1189a584cf2bd13140210cde63}{srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count}} (const void $\ast$plugin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of setters and getters of some properties of a session. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a5bc7bf03ec90deb50941f80d1b61b135}\label{srv__session__info__service_8cc_a5bc7bf03ec90deb50941f80d1b61b135}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port}}
+\index{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port()}{srv\_session\_info\_get\_client\_port()}}
+{\footnotesize\ttfamily uint16\+\_\+t srv\+\_\+session\+\_\+info\+\_\+get\+\_\+client\+\_\+port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Returns the client port of a session.
+
+\begin{DoxyNote}{Note}
+The client port in S\+H\+OW P\+R\+O\+C\+E\+S\+S\+L\+I\+ST, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+P\+R\+O\+C\+E\+S\+S\+L\+I\+ST. This port is N\+OT shown in P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+S\+C\+H\+E\+M\+A.\+T\+H\+R\+E\+A\+DS.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a3089238408d78ff297f7ccd49b1a6d59}\label{srv__session__info__service_8cc_a3089238408d78ff297f7ccd49b1a6d59}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db}}
+\index{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db()}{srv\_session\_info\_get\_current\_db()}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG srv\+\_\+session\+\_\+info\+\_\+get\+\_\+current\+\_\+db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Returns the current database of a session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a45a565b6bac2d30fa682d64181074ff5}\label{srv__session__info__service_8cc_a45a565b6bac2d30fa682d64181074ff5}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id}}
+\index{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id()}{srv\_session\_info\_get\_session\_id()}}
+{\footnotesize\ttfamily my\+\_\+thread\+\_\+id srv\+\_\+session\+\_\+info\+\_\+get\+\_\+session\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Returns the ID of a session.
+
+The value returned from T\+H\+D\+::thread\+\_\+id()
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a1faf7cb030049f4f4dc36e096c8bcc9f}\label{srv__session__info__service_8cc_a1faf7cb030049f4f4dc36e096c8bcc9f}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd}}
+\index{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd@{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd()}{srv\_session\_info\_get\_thd()}}
+{\footnotesize\ttfamily T\+HD$\ast$ srv\+\_\+session\+\_\+info\+\_\+get\+\_\+thd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Returns the T\+HD of a session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a9fd2668371b77060666d7a3b19b74c39}\label{srv__session__info__service_8cc_a9fd2668371b77060666d7a3b19b74c39}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+killed@{srv\+\_\+session\+\_\+info\+\_\+killed}}
+\index{srv\+\_\+session\+\_\+info\+\_\+killed@{srv\+\_\+session\+\_\+info\+\_\+killed}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+killed()}{srv\_session\_info\_killed()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+info\+\_\+killed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Returns whether the session was killed
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 not killed 1 killed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__info__service_8cc_ac646dc5d0f3d44765ae7bd9faf82be2c}\label{srv__session__info__service_8cc_ac646dc5d0f3d44765ae7bd9faf82be2c}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count@{srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count}}
+\index{srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count@{srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count()}{srv\_session\_info\_session\_count()}}
+{\footnotesize\ttfamily unsigned int srv\+\_\+session\+\_\+info\+\_\+session\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number opened sessions in thread initialized by srv\+\_\+session service. \mbox{\Hypertarget{srv__session__info__service_8cc_a92593956625683e685732c3853a727e0}\label{srv__session__info__service_8cc_a92593956625683e685732c3853a727e0}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port@{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port}}
+\index{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port@{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port()}{srv\_session\_info\_set\_client\_port()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+info\+\_\+set\+\_\+client\+\_\+port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+Sets the client port of a session.
+
+\begin{DoxyNote}{Note}
+The client port in S\+H\+OW P\+R\+O\+C\+E\+S\+S\+L\+I\+ST, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+P\+R\+O\+C\+E\+S\+S\+L\+I\+ST. This port is N\+OT shown in P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+S\+C\+H\+E\+M\+A.\+T\+H\+R\+E\+A\+DS.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session \\
+\hline
+{\em port} & Port number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 success 1 failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a7d826d5fa27571fa80b9a24345f90b51}\label{srv__session__info__service_8cc_a7d826d5fa27571fa80b9a24345f90b51}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type@{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type}}
+\index{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type@{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type()}{srv\_session\_info\_set\_connection\_type()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+info\+\_\+set\+\_\+connection\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session,  }\item[{enum\+\_\+vio\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+Sets the connection type of a session.
+
+\begin{DoxySeeAlso}{See also}
+enum\+\_\+vio\+\_\+type
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+If N\+O\+\_\+\+V\+I\+O\+\_\+\+T\+Y\+PE passed as type the call will fail.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 success 1 failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__info__service_8cc_a850d6d1189a584cf2bd13140210cde63}\label{srv__session__info__service_8cc_a850d6d1189a584cf2bd13140210cde63}} 
+\index{srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}!srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count@{srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count}}
+\index{srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count@{srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count}!srv\+\_\+session\+\_\+info\+\_\+service.\+cc@{srv\+\_\+session\+\_\+info\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count()}{srv\_session\_info\_thread\_count()}}
+{\footnotesize\ttfamily unsigned int srv\+\_\+session\+\_\+info\+\_\+thread\+\_\+count (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})}
+
+Returns the number opened sessions in thread initialized by srv\+\_\+session service.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & Pointer to the plugin structure, passed to the plugin over the plugin init function. \\
+\hline
+\end{DoxyParams}

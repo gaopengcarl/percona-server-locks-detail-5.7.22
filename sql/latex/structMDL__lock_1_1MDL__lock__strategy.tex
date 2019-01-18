@@ -1,0 +1,85 @@
+\hypertarget{structMDL__lock_1_1MDL__lock__strategy}{}\section{M\+D\+L\+\_\+lock\+:\+:M\+D\+L\+\_\+lock\+\_\+strategy Struct Reference}
+\label{structMDL__lock_1_1MDL__lock__strategy}\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bitmap\+\_\+t \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_adcee4cc0d160ac5a2fb2c3633b103714}{m\+\_\+granted\+\_\+incompatible}} \mbox{[}M\+D\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND\mbox{]}
+\item 
+bitmap\+\_\+t \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a040ce09f82f272cc3162c9eee05d45ef}{m\+\_\+waiting\+\_\+incompatible}} \mbox{[}4\mbox{]}\mbox{[}M\+D\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND\mbox{]}
+\item 
+fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a9de2e3a39b6ce1f7b8c4f9177f84aef0}{m\+\_\+unobtrusive\+\_\+lock\+\_\+increment}} \mbox{[}M\+D\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND\mbox{]}
+\item 
+bool \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a25d40d952e36f4a0645a6f100efcd8c1}{m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count}}
+\item 
+bool($\ast$ \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_ada7f78a5cf59cf308e33bfffbb54be26}{m\+\_\+needs\+\_\+notification}} )(const \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+void($\ast$ \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a1ac597d3a597367d03f5901c8001cb51}{m\+\_\+notify\+\_\+conflicting\+\_\+locks}} )(\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx, \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)
+\item 
+bitmap\+\_\+t($\ast$ \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a36f8689c09e695f01314f2fe57faca74}{m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}} )(const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} \&lock)
+\item 
+bool($\ast$ \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a03b41088020b3b6f58bf511b2c8118d1}{m\+\_\+needs\+\_\+connection\+\_\+check}} )(const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper struct which defines how different types of locks are handled for a specific \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}}. In practice we use only two strategies\+: \char`\"{}scoped\char`\"{} lock strategy for locks in G\+L\+O\+B\+AL, C\+O\+M\+M\+IT, T\+A\+B\+L\+E\+S\+P\+A\+CE and S\+C\+H\+E\+MA namespaces and \char`\"{}object\char`\"{} lock strategy for all other namespaces. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_a36f8689c09e695f01314f2fe57faca74}\label{structMDL__lock_1_1MDL__lock__strategy_a36f8689c09e695f01314f2fe57faca74}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap@{m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}}
+\index{m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap@{m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}{m\_fast\_path\_granted\_bitmap}}
+{\footnotesize\ttfamily bitmap\+\_\+t($\ast$ M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap) (const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} \&lock)}
+
+Pointer to a static method which converts information about locks granted using \char`\"{}fast\char`\"{} path from fast\+\_\+path\+\_\+state\+\_\+t representation to bitmap of lock types. \mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_adcee4cc0d160ac5a2fb2c3633b103714}\label{structMDL__lock_1_1MDL__lock__strategy_adcee4cc0d160ac5a2fb2c3633b103714}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+granted\+\_\+incompatible@{m\+\_\+granted\+\_\+incompatible}}
+\index{m\+\_\+granted\+\_\+incompatible@{m\+\_\+granted\+\_\+incompatible}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+granted\+\_\+incompatible}{m\_granted\_incompatible}}
+{\footnotesize\ttfamily bitmap\+\_\+t M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+granted\+\_\+incompatible\mbox{[}M\+D\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND\mbox{]}}
+
+Compatibility (or rather \char`\"{}incompatibility\char`\"{}) matrices for lock types.
+
+Array of bitmaps which elements specify which granted locks are incompatible with the type of lock being requested. \mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_a25d40d952e36f4a0645a6f100efcd8c1}\label{structMDL__lock_1_1MDL__lock__strategy_a25d40d952e36f4a0645a6f100efcd8c1}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count@{m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count}}
+\index{m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count@{m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count}{m\_is\_affected\_by\_max\_write\_lock\_count}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count}
+
+Indicates that locks of this type are affected by the max\+\_\+write\+\_\+lock\+\_\+count limit. \mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_a03b41088020b3b6f58bf511b2c8118d1}\label{structMDL__lock_1_1MDL__lock__strategy_a03b41088020b3b6f58bf511b2c8118d1}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+needs\+\_\+connection\+\_\+check@{m\+\_\+needs\+\_\+connection\+\_\+check}}
+\index{m\+\_\+needs\+\_\+connection\+\_\+check@{m\+\_\+needs\+\_\+connection\+\_\+check}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+needs\+\_\+connection\+\_\+check}{m\_needs\_connection\_check}}
+{\footnotesize\ttfamily bool($\ast$ M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+needs\+\_\+connection\+\_\+check) (const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)}
+
+Pointer to a static method which determines if waiting for the lock should be aborted when when connection is lost. N\+U\+LL if locks of this type don\textquotesingle{}t require such aborts. \mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_ada7f78a5cf59cf308e33bfffbb54be26}\label{structMDL__lock_1_1MDL__lock__strategy_ada7f78a5cf59cf308e33bfffbb54be26}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+needs\+\_\+notification@{m\+\_\+needs\+\_\+notification}}
+\index{m\+\_\+needs\+\_\+notification@{m\+\_\+needs\+\_\+notification}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+needs\+\_\+notification}{m\_needs\_notification}}
+{\footnotesize\ttfamily bool($\ast$ M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+needs\+\_\+notification) (const \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)}
+
+Pointer to a static method which determines if the type of lock requested requires notification of conflicting locks. N\+U\+LL if there are no lock types requiring notification. \mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_a1ac597d3a597367d03f5901c8001cb51}\label{structMDL__lock_1_1MDL__lock__strategy_a1ac597d3a597367d03f5901c8001cb51}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+notify\+\_\+conflicting\+\_\+locks@{m\+\_\+notify\+\_\+conflicting\+\_\+locks}}
+\index{m\+\_\+notify\+\_\+conflicting\+\_\+locks@{m\+\_\+notify\+\_\+conflicting\+\_\+locks}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+notify\+\_\+conflicting\+\_\+locks}{m\_notify\_conflicting\_locks}}
+{\footnotesize\ttfamily void($\ast$ M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+notify\+\_\+conflicting\+\_\+locks) (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx, \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)}
+
+Pointer to a static method which allows notification of owners of conflicting locks about the fact that a type of lock requiring notification was requested. \mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_a9de2e3a39b6ce1f7b8c4f9177f84aef0}\label{structMDL__lock_1_1MDL__lock__strategy_a9de2e3a39b6ce1f7b8c4f9177f84aef0}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+unobtrusive\+\_\+lock\+\_\+increment@{m\+\_\+unobtrusive\+\_\+lock\+\_\+increment}}
+\index{m\+\_\+unobtrusive\+\_\+lock\+\_\+increment@{m\+\_\+unobtrusive\+\_\+lock\+\_\+increment}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+unobtrusive\+\_\+lock\+\_\+increment}{m\_unobtrusive\_lock\_increment}}
+{\footnotesize\ttfamily fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+unobtrusive\+\_\+lock\+\_\+increment\mbox{[}M\+D\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND\mbox{]}}
+
+Array of increments for \char`\"{}unobtrusive\char`\"{} types of lock requests for locks. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_aa8424d2f478663117e7ac5e435840342}{M\+D\+L\+\_\+lock\+::get\+\_\+unobtrusive\+\_\+lock\+\_\+increment()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structMDL__lock_1_1MDL__lock__strategy_a040ce09f82f272cc3162c9eee05d45ef}\label{structMDL__lock_1_1MDL__lock__strategy_a040ce09f82f272cc3162c9eee05d45ef}} 
+\index{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}!m\+\_\+waiting\+\_\+incompatible@{m\+\_\+waiting\+\_\+incompatible}}
+\index{m\+\_\+waiting\+\_\+incompatible@{m\+\_\+waiting\+\_\+incompatible}!M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy@{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}}
+\subsubsection{\texorpdfstring{m\+\_\+waiting\+\_\+incompatible}{m\_waiting\_incompatible}}
+{\footnotesize\ttfamily bitmap\+\_\+t M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+waiting\+\_\+incompatible\mbox{[}4\mbox{]}\mbox{[}M\+D\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND\mbox{]}}
+
+Arrays of bitmaps which elements specify which waiting locks are incompatible with the type of lock being requested. Basically, each array defines priorities between lock types. We need 4 separate arrays since in order to prevent starvation for some of lock request types, we use different priority matrices\+: 0) in \char`\"{}normal\char`\"{} situation. 1) in situation when the number of successively granted \char`\"{}piglet\char`\"{} requests exceeds the max\+\_\+write\+\_\+lock\+\_\+count limit. 2) in situation when the number of successively granted \char`\"{}hog\char`\"{} requests exceeds the max\+\_\+write\+\_\+lock\+\_\+count limit. 3) in situation when both \char`\"{}piglet\char`\"{} and \char`\"{}hog\char`\"{} counters exceed limit. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+cc\end{DoxyCompactItemize}

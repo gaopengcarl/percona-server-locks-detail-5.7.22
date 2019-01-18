@@ -1,0 +1,66 @@
+\hypertarget{classsp__branch__instr}{}\section{sp\+\_\+branch\+\_\+instr Class Reference}
+\label{classsp__branch__instr}\index{sp\+\_\+branch\+\_\+instr@{sp\+\_\+branch\+\_\+instr}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+branch\+\_\+instr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__branch__instr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsp__branch__instr_ad5bc8e2fede785323c1749b6269869c3}{set\+\_\+destination}} (uint old\+\_\+dest, uint new\+\_\+dest)=0
+\item 
+virtual void \mbox{\hyperlink{classsp__branch__instr_a10bd06254e30634e367405f0fba5ab0d}{backpatch}} (uint dest)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface for all SP-\/instructions with destinations that need to be updated by the SP-\/optimizer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__branch__instr_a10bd06254e30634e367405f0fba5ab0d}\label{classsp__branch__instr_a10bd06254e30634e367405f0fba5ab0d}} 
+\index{sp\+\_\+branch\+\_\+instr@{sp\+\_\+branch\+\_\+instr}!backpatch@{backpatch}}
+\index{backpatch@{backpatch}!sp\+\_\+branch\+\_\+instr@{sp\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{backpatch()}{backpatch()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+branch\+\_\+instr\+::backpatch (\begin{DoxyParamCaption}\item[{uint}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update all instruction with the given label in the backpatch list to the specified instruction pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & destination instruction pointer. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classsp__instr__hpush__jump_addad7cbed316eb02d7238e07e092c558}{sp\+\_\+instr\+\_\+hpush\+\_\+jump}}, \mbox{\hyperlink{classsp__instr__set__case__expr_a5d4c9c2460d84b449e5796186407b7b4}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}, \mbox{\hyperlink{classsp__lex__branch__instr_a0a28016e4c51d49eb9ff014b0afa7703}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}, and \mbox{\hyperlink{classsp__instr__jump_ad4ac1776111c39aa6d2af89b0ffe0af6}{sp\+\_\+instr\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__branch__instr_ad5bc8e2fede785323c1749b6269869c3}\label{classsp__branch__instr_ad5bc8e2fede785323c1749b6269869c3}} 
+\index{sp\+\_\+branch\+\_\+instr@{sp\+\_\+branch\+\_\+instr}!set\+\_\+destination@{set\+\_\+destination}}
+\index{set\+\_\+destination@{set\+\_\+destination}!sp\+\_\+branch\+\_\+instr@{sp\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{set\+\_\+destination()}{set\_destination()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+branch\+\_\+instr\+::set\+\_\+destination (\begin{DoxyParamCaption}\item[{uint}]{old\+\_\+dest,  }\item[{uint}]{new\+\_\+dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the destination; used by the SP-\/instruction-\/optimizer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+\_\+dest} & current (old) destination (instruction pointer). \\
+\hline
+{\em new\+\_\+dest} & new destination (instruction pointer). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classsp__instr__set__case__expr_a7b2952b03aa0a30f407d88fd75ebdbae}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}, \mbox{\hyperlink{classsp__lex__branch__instr_ae3ef8f864474467824615e33f0663d76}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}, and \mbox{\hyperlink{classsp__instr__jump_aee2d8071b4f12109135a0e22a9ba3c71}{sp\+\_\+instr\+\_\+jump}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\hypertarget{classSlave__reporting__capability}{}\section{Slave\+\_\+reporting\+\_\+capability Class Reference}
+\label{classSlave__reporting__capability}\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+reporting.\+h$>$}
+
+Inheritance diagram for Slave\+\_\+reporting\+\_\+capability\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSlave__reporting__capability}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSlave__reporting__capability_1_1Error}{Error}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSlave__reporting__capability_a120871d274a89b1dcb0e8e67490e4987}{Slave\+\_\+reporting\+\_\+capability}} (char const $\ast$thread\+\_\+name)
+\item 
+virtual void \mbox{\hyperlink{classSlave__reporting__capability_a4a8cc9e71b22ff1f8041585b02b0c541}{report}} (loglevel level, int err\+\_\+code, const char $\ast$msg,...) const M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((format(printf
+\item 
+\mbox{\Hypertarget{classSlave__reporting__capability_a7a32842f1146badfbb20f02bae69a700}\label{classSlave__reporting__capability_a7a32842f1146badfbb20f02bae69a700}} 
+virtual void void {\bfseries va\+\_\+report} (loglevel level, int err\+\_\+code, const char $\ast$prefix\+\_\+msg, const char $\ast$msg, va\+\_\+list v\+\_\+args) const
+\item 
+void \mbox{\hyperlink{classSlave__reporting__capability_ac9a535ead59729c45f3d244490595a8e}{clear\+\_\+error}} ()
+\item 
+int \mbox{\hyperlink{classSlave__reporting__capability_a9584c38b1663a71b9bbb8c7fcaf6133d}{has\+\_\+temporary\+\_\+error}} (T\+HD $\ast$thd, uint error\+\_\+arg=0, bool $\ast$silent=0) const
+\item 
+\mbox{\Hypertarget{classSlave__reporting__capability_a590c443cd0fef2bb44a4245159e4a9e4}\label{classSlave__reporting__capability_a590c443cd0fef2bb44a4245159e4a9e4}} 
+\mbox{\hyperlink{classSlave__reporting__capability_1_1Error}{Error}} const  \& {\bfseries last\+\_\+error} () const
+\item 
+\mbox{\Hypertarget{classSlave__reporting__capability_ad0cd4b4a5b4576e79f72bd50af5dcb63}\label{classSlave__reporting__capability_ad0cd4b4a5b4576e79f72bd50af5dcb63}} 
+bool {\bfseries is\+\_\+error} () const
+\item 
+\mbox{\Hypertarget{classSlave__reporting__capability_a4eeea55d5614205aa650f18b78f95bc3}\label{classSlave__reporting__capability_a4eeea55d5614205aa650f18b78f95bc3}} 
+virtual const char $\ast$ {\bfseries get\+\_\+for\+\_\+channel\+\_\+str} (bool upper\+\_\+case) const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+mysql\+\_\+mutex\+\_\+t \mbox{\hyperlink{classSlave__reporting__capability_a6889000967fab001bcec9f1aad8e2966}{err\+\_\+lock}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSlave__reporting__capability_ab67d1296a64f06e10be5e64499dc8025}\label{classSlave__reporting__capability_ab67d1296a64f06e10be5e64499dc8025}} 
+virtual void {\bfseries do\+\_\+report} (loglevel level, int err\+\_\+code, const char $\ast$msg, va\+\_\+list v\+\_\+args) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSlave__reporting__capability_1_1Error}{Error}} \mbox{\hyperlink{classSlave__reporting__capability_ae98a14a03e2c638a21a5c1d83a547e86}{m\+\_\+last\+\_\+error}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mix-\/in to handle the message logging and reporting for relay log info and master log info structures.
+
+By inheriting from this class, the class is imbued with capabilities to do slave reporting. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSlave__reporting__capability_a120871d274a89b1dcb0e8e67490e4987}\label{classSlave__reporting__capability_a120871d274a89b1dcb0e8e67490e4987}} 
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\subsubsection{\texorpdfstring{Slave\+\_\+reporting\+\_\+capability()}{Slave\_reporting\_capability()}}
+{\footnotesize\ttfamily Slave\+\_\+reporting\+\_\+capability\+::\+Slave\+\_\+reporting\+\_\+capability (\begin{DoxyParamCaption}\item[{char const $\ast$}]{thread\+\_\+name }\end{DoxyParamCaption})}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+\_\+name} & Printable name of the slave thread that is reporting. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSlave__reporting__capability_ac9a535ead59729c45f3d244490595a8e}\label{classSlave__reporting__capability_ac9a535ead59729c45f3d244490595a8e}} 
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!clear\+\_\+error@{clear\+\_\+error}}
+\index{clear\+\_\+error@{clear\+\_\+error}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\subsubsection{\texorpdfstring{clear\+\_\+error()}{clear\_error()}}
+{\footnotesize\ttfamily void Slave\+\_\+reporting\+\_\+capability\+::clear\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear errors. They will not show up under {\ttfamily S\+H\+OW S\+L\+A\+VE S\+T\+A\+T\+US}. \mbox{\Hypertarget{classSlave__reporting__capability_a9584c38b1663a71b9bbb8c7fcaf6133d}\label{classSlave__reporting__capability_a9584c38b1663a71b9bbb8c7fcaf6133d}} 
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!has\+\_\+temporary\+\_\+error@{has\+\_\+temporary\+\_\+error}}
+\index{has\+\_\+temporary\+\_\+error@{has\+\_\+temporary\+\_\+error}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\subsubsection{\texorpdfstring{has\+\_\+temporary\+\_\+error()}{has\_temporary\_error()}}
+{\footnotesize\ttfamily int Slave\+\_\+reporting\+\_\+capability\+::has\+\_\+temporary\+\_\+error (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{error\+\_\+arg = {\ttfamily 0},  }\item[{bool $\ast$}]{silent = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Check if the current error is of temporary nature or not.
+
+Check if the current error is of temporary nature or not. Some errors are temporary in nature, such as E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+A\+D\+L\+O\+CK and E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+M\+E\+O\+UT. Ndb also signals that the error is temporary by pushing a warning with the error code E\+R\+\_\+\+G\+E\+T\+\_\+\+T\+E\+M\+P\+O\+R\+A\+R\+Y\+\_\+\+E\+R\+R\+M\+SG, if the originating error is temporary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & a T\+HD instance, typically of the slave S\+QL thread\textquotesingle{}s.  the error code for assessment. defaults to zero which makes the function check the top of the reported errors stack.  bool indicating whether the error should be silently handled.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 as the positive and 0 as the negative verdict 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSlave__reporting__capability_a4a8cc9e71b22ff1f8041585b02b0c541}\label{classSlave__reporting__capability_a4a8cc9e71b22ff1f8041585b02b0c541}} 
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!report@{report}}
+\index{report@{report}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\subsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Slave\+\_\+reporting\+\_\+capability\+::report (\begin{DoxyParamCaption}\item[{loglevel}]{level,  }\item[{int}]{err\+\_\+code,  }\item[{const char $\ast$}]{msg,  }\item[{}]{... }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a message and, if it\textquotesingle{}s an error message, to Last\+\_\+\+Error (which will be displayed by S\+H\+OW S\+L\+A\+VE S\+T\+A\+T\+US).
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The severity level \\
+\hline
+{\em err\+\_\+code} & The error code \\
+\hline
+{\em msg} & The message (usually related to the error code, but can contain more information), in printf() format. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSlave__reporting__capability_a6889000967fab001bcec9f1aad8e2966}\label{classSlave__reporting__capability_a6889000967fab001bcec9f1aad8e2966}} 
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!err\+\_\+lock@{err\+\_\+lock}}
+\index{err\+\_\+lock@{err\+\_\+lock}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\subsubsection{\texorpdfstring{err\+\_\+lock}{err\_lock}}
+{\footnotesize\ttfamily mysql\+\_\+mutex\+\_\+t Slave\+\_\+reporting\+\_\+capability\+::err\+\_\+lock\hspace{0.3cm}{\ttfamily [mutable]}}
+
+lock used to synchronize m\+\_\+last\+\_\+error on \textquotesingle{}S\+H\+OW S\+L\+A\+VE S\+T\+A\+T\+US\textquotesingle{} \mbox{\Hypertarget{classSlave__reporting__capability_ae98a14a03e2c638a21a5c1d83a547e86}\label{classSlave__reporting__capability_ae98a14a03e2c638a21a5c1d83a547e86}} 
+\index{Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}!m\+\_\+last\+\_\+error@{m\+\_\+last\+\_\+error}}
+\index{m\+\_\+last\+\_\+error@{m\+\_\+last\+\_\+error}!Slave\+\_\+reporting\+\_\+capability@{Slave\+\_\+reporting\+\_\+capability}}
+\subsubsection{\texorpdfstring{m\+\_\+last\+\_\+error}{m\_last\_error}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSlave__reporting__capability_1_1Error}{Error}} Slave\+\_\+reporting\+\_\+capability\+::m\+\_\+last\+\_\+error\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+Last error produced by the I/O or S\+QL thread respectively. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+reporting.\+h\item 
+rpl\+\_\+reporting.\+cc\end{DoxyCompactItemize}

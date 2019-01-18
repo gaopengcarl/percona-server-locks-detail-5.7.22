@@ -1,0 +1,66 @@
+\hypertarget{classQuery__result__explain}{}\section{Query\+\_\+result\+\_\+explain Class Reference}
+\label{classQuery__result__explain}\index{Query\+\_\+result\+\_\+explain@{Query\+\_\+result\+\_\+explain}}
+
+
+{\ttfamily \#include $<$opt\+\_\+explain.\+h$>$}
+
+Inheritance diagram for Query\+\_\+result\+\_\+explain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classQuery__result__explain}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__explain_aba4aa39505e977f0a72ee04d870b610a}\label{classQuery__result__explain_aba4aa39505e977f0a72ee04d870b610a}} 
+{\bfseries Query\+\_\+result\+\_\+explain} (st\+\_\+select\+\_\+lex\+\_\+unit $\ast$unit\+\_\+arg, Query\+\_\+result $\ast$interceptor\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__explain_a5cf6fdfb0a042aa2d40ac9790f1b1e06}\label{classQuery__result__explain_a5cf6fdfb0a042aa2d40ac9790f1b1e06}} 
+virtual int {\bfseries prepare} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&list, S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$u)
+\item 
+\mbox{\Hypertarget{classQuery__result__explain_a6db5c9d513a5dffb43c03b6aee24554b}\label{classQuery__result__explain_a6db5c9d513a5dffb43c03b6aee24554b}} 
+virtual int {\bfseries prepare2} (void)
+\item 
+\mbox{\Hypertarget{classQuery__result__explain_ad62b1f37ece85a5f352ea1bdce231f5d}\label{classQuery__result__explain_ad62b1f37ece85a5f352ea1bdce231f5d}} 
+virtual bool {\bfseries initialize\+\_\+tables} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join)
+\item 
+\mbox{\Hypertarget{classQuery__result__explain_a6bbad61d28df50465ba673e437a9c71b}\label{classQuery__result__explain_a6bbad61d28df50465ba673e437a9c71b}} 
+virtual void {\bfseries cleanup} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__explain_a2803be1670f20974726da4fbba9b8e98}\label{classQuery__result__explain_a2803be1670f20974726da4fbba9b8e98}} 
+bool \mbox{\hyperlink{classQuery__result__explain_a2803be1670f20974726da4fbba9b8e98}{prepared}}
+\begin{DoxyCompactList}\small\item\em prepare() is done \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQuery__result__explain_af51c0df15caf04982e3e5ebf4472ec59}\label{classQuery__result__explain_af51c0df15caf04982e3e5ebf4472ec59}} 
+bool \mbox{\hyperlink{classQuery__result__explain_af51c0df15caf04982e3e5ebf4472ec59}{prepared2}}
+\begin{DoxyCompactList}\small\item\em prepare2() is done \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQuery__result__explain_a39e85738c3ad26c06bc643f1ea83cb66}\label{classQuery__result__explain_a39e85738c3ad26c06bc643f1ea83cb66}} 
+bool \mbox{\hyperlink{classQuery__result__explain_a39e85738c3ad26c06bc643f1ea83cb66}{initialized}}
+\begin{DoxyCompactList}\small\item\em initialize\+\_\+tables() is done \end{DoxyCompactList}\item 
+Query\+\_\+result $\ast$ \mbox{\hyperlink{classQuery__result__explain_abc8bbaa560825ef50d349690eee44037}{interceptor}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+X\+P\+L\+A\+IN functionality for Query\+\_\+result\+\_\+insert, \mbox{\hyperlink{classQuery__result__update}{Query\+\_\+result\+\_\+update}} and \mbox{\hyperlink{classQuery__result__delete}{Query\+\_\+result\+\_\+delete}}.
+
+This class objects substitute Query\+\_\+result\+\_\+insert, \mbox{\hyperlink{classQuery__result__update}{Query\+\_\+result\+\_\+update}} and \mbox{\hyperlink{classQuery__result__delete}{Query\+\_\+result\+\_\+delete}} data interceptor objects to implement E\+X\+P\+L\+A\+IN for I\+N\+S\+E\+RT, R\+E\+P\+L\+A\+CE and multi-\/table U\+P\+D\+A\+TE and D\+E\+L\+E\+TE queries. \mbox{\hyperlink{classQuery__result__explain}{Query\+\_\+result\+\_\+explain}} class object initializes tables like Query\+\_\+result\+\_\+insert, \mbox{\hyperlink{classQuery__result__update}{Query\+\_\+result\+\_\+update}} or \mbox{\hyperlink{classQuery__result__delete}{Query\+\_\+result\+\_\+delete}} data interceptor do, but it suppress table data modification by the underlying interceptor object. Thus, we can use \mbox{\hyperlink{classQuery__result__explain}{Query\+\_\+result\+\_\+explain}} object in the context of E\+X\+P\+L\+A\+IN I\+N\+S\+E\+R\+T/ R\+E\+P\+L\+A\+C\+E/\+U\+P\+D\+A\+T\+E/\+D\+E\+L\+E\+TE query like we use Query\+\_\+result\+\_\+send in the context of E\+X\+P\+L\+A\+IN S\+E\+L\+E\+CT command\+: 1) in presence of lex-\/$>$describe flag we pass \mbox{\hyperlink{classQuery__result__explain}{Query\+\_\+result\+\_\+explain}} object to the \mbox{\hyperlink{group__Query__Optimizer_gae77d58d476f44178e469e2cbe16e9e01}{handle\+\_\+query()}} function, 2) it call prepare(), prepare2() and initialize\+\_\+tables() functions to mark modified tables etc. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classQuery__result__explain_abc8bbaa560825ef50d349690eee44037}\label{classQuery__result__explain_abc8bbaa560825ef50d349690eee44037}} 
+\index{Query\+\_\+result\+\_\+explain@{Query\+\_\+result\+\_\+explain}!interceptor@{interceptor}}
+\index{interceptor@{interceptor}!Query\+\_\+result\+\_\+explain@{Query\+\_\+result\+\_\+explain}}
+\subsubsection{\texorpdfstring{interceptor}{interceptor}}
+{\footnotesize\ttfamily Query\+\_\+result$\ast$ Query\+\_\+result\+\_\+explain\+::interceptor\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to underlying Query\+\_\+result\+\_\+insert, \mbox{\hyperlink{classQuery__result__update}{Query\+\_\+result\+\_\+update}} or \mbox{\hyperlink{classQuery__result__delete}{Query\+\_\+result\+\_\+delete}} object. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+h\end{DoxyCompactItemize}

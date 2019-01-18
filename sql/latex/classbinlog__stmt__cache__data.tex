@@ -1,0 +1,65 @@
+\hypertarget{classbinlog__stmt__cache__data}{}\section{binlog\+\_\+stmt\+\_\+cache\+\_\+data Class Reference}
+\label{classbinlog__stmt__cache__data}\index{binlog\+\_\+stmt\+\_\+cache\+\_\+data@{binlog\+\_\+stmt\+\_\+cache\+\_\+data}}
+Inheritance diagram for binlog\+\_\+stmt\+\_\+cache\+\_\+data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbinlog__stmt__cache__data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbinlog__stmt__cache__data_a9b973f4f715a10ace331827178ded599}\label{classbinlog__stmt__cache__data_a9b973f4f715a10ace331827178ded599}} 
+{\bfseries binlog\+\_\+stmt\+\_\+cache\+\_\+data} (bool trx\+\_\+cache\+\_\+arg, my\+\_\+off\+\_\+t max\+\_\+binlog\+\_\+cache\+\_\+size\+\_\+arg, ulong $\ast$ptr\+\_\+binlog\+\_\+cache\+\_\+use\+\_\+arg, ulong $\ast$ptr\+\_\+binlog\+\_\+cache\+\_\+disk\+\_\+use\+\_\+arg)
+\item 
+int {\bfseries finalize} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classbinlog__stmt__cache__data_a3367fa8c1daced18065f6b9dea5385fe}{finalize}} (T\+HD $\ast$thd, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$end\+\_\+event)
+\item 
+int \mbox{\hyperlink{classbinlog__stmt__cache__data_a16bd8b16b092443137c073f18c7e11e4}{finalize}} (T\+HD $\ast$thd, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$end\+\_\+event, \mbox{\hyperlink{classXID__STATE}{X\+I\+D\+\_\+\+S\+T\+A\+TE}} $\ast$xs)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbinlog__stmt__cache__data_a3367fa8c1daced18065f6b9dea5385fe}\label{classbinlog__stmt__cache__data_a3367fa8c1daced18065f6b9dea5385fe}} 
+\index{binlog\+\_\+stmt\+\_\+cache\+\_\+data@{binlog\+\_\+stmt\+\_\+cache\+\_\+data}!finalize@{finalize}}
+\index{finalize@{finalize}!binlog\+\_\+stmt\+\_\+cache\+\_\+data@{binlog\+\_\+stmt\+\_\+cache\+\_\+data}}
+\subsubsection{\texorpdfstring{finalize()}{finalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int binlog\+\_\+cache\+\_\+data\+::finalize}
+
+This function finalizes the cache preparing for commit or rollback.
+
+The function just writes all the necessary events to the cache but does not flush the data to the binary log file. That is the role of the \mbox{\hyperlink{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}{binlog\+\_\+cache\+\_\+data\+::flush}} function.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}{binlog\+\_\+cache\+\_\+data\+::flush}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread whose transaction should be flushed \\
+\hline
+{\em cache\+\_\+data} & Pointer to the cache \\
+\hline
+{\em end\+\_\+ev} & The end event either commit/rollback\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nonzero if an error pops up when flushing the cache. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbinlog__stmt__cache__data_a16bd8b16b092443137c073f18c7e11e4}\label{classbinlog__stmt__cache__data_a16bd8b16b092443137c073f18c7e11e4}} 
+\index{binlog\+\_\+stmt\+\_\+cache\+\_\+data@{binlog\+\_\+stmt\+\_\+cache\+\_\+data}!finalize@{finalize}}
+\index{finalize@{finalize}!binlog\+\_\+stmt\+\_\+cache\+\_\+data@{binlog\+\_\+stmt\+\_\+cache\+\_\+data}}
+\subsubsection{\texorpdfstring{finalize()}{finalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int binlog\+\_\+cache\+\_\+data\+::finalize}
+
+The method writes XA E\+ND query to XA-\/prepared transaction\textquotesingle{}s cache and calls the \char`\"{}basic\char`\"{} finalize().
+
+\begin{DoxyReturn}{Returns}
+error code, 0 success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binlog.\+cc\end{DoxyCompactItemize}

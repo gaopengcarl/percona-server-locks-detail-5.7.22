@@ -1,0 +1,31 @@
+\hypertarget{classPlan__change__watchdog}{}\section{Plan\+\_\+change\+\_\+watchdog Class Reference}
+\label{classPlan__change__watchdog}\index{Plan\+\_\+change\+\_\+watchdog@{Plan\+\_\+change\+\_\+watchdog}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlan__change__watchdog_afcf9d26305e07fb0f3be5864d28bca6d}{Plan\+\_\+change\+\_\+watchdog}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab\+\_\+arg, const bool no\+\_\+changes\+\_\+arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It is not obvious to see that test\+\_\+if\+\_\+skip\+\_\+sort\+\_\+order() never changes the plan if no\+\_\+changes is true. So we double-\/check\+: creating an instance of this class saves some important access-\/path-\/related information of the current table; when the instance is destroyed, the latest access-\/path information is compared with saved data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlan__change__watchdog_afcf9d26305e07fb0f3be5864d28bca6d}\label{classPlan__change__watchdog_afcf9d26305e07fb0f3be5864d28bca6d}} 
+\index{Plan\+\_\+change\+\_\+watchdog@{Plan\+\_\+change\+\_\+watchdog}!Plan\+\_\+change\+\_\+watchdog@{Plan\+\_\+change\+\_\+watchdog}}
+\index{Plan\+\_\+change\+\_\+watchdog@{Plan\+\_\+change\+\_\+watchdog}!Plan\+\_\+change\+\_\+watchdog@{Plan\+\_\+change\+\_\+watchdog}}
+\subsubsection{\texorpdfstring{Plan\+\_\+change\+\_\+watchdog()}{Plan\_change\_watchdog()}}
+{\footnotesize\ttfamily Plan\+\_\+change\+\_\+watchdog\+::\+Plan\+\_\+change\+\_\+watchdog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{tab\+\_\+arg,  }\item[{const bool}]{no\+\_\+changes\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+\_\+arg} & table whose access path is being determined \\
+\hline
+{\em no\+\_\+changes} & whether a change to the access path is allowed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__optimizer_8cc}{sql\+\_\+optimizer.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\hypertarget{classJson__path}{}\section{Json\+\_\+path Class Reference}
+\label{classJson__path}\index{Json\+\_\+path@{Json\+\_\+path}}
+Inheritance diagram for Json\+\_\+path\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson__path}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classJson__path_a22b4d53c90300f917ab7abaedad8bfaa}{leg\+\_\+count}} () const
+\item 
+const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$ \mbox{\hyperlink{classJson__path_a33038f8cae772c5f4c8333be94389b46}{get\+\_\+leg\+\_\+at}} (const size\+\_\+t index) const
+\item 
+bool \mbox{\hyperlink{classJson__path_a72997695493718ef73ece75087713d64}{append}} (const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} \&leg)
+\item 
+\mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} \mbox{\hyperlink{classJson__path_aaa77ca94d28474ce3614aa692bd1edbe}{pop}} ()
+\item 
+void \mbox{\hyperlink{classJson__path_a7c9ebc624af2f9d494a7fbcdc3c92458}{clear}} ()
+\item 
+bool \mbox{\hyperlink{classJson__path_a4c0337db67e99b1fa92862afb06c1517}{contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis}} () const
+\item 
+bool \mbox{\hyperlink{classJson__path_a6f1be7ddf18da788f48e031a7b65c5f3}{contains\+\_\+ellipsis}} () const
+\item 
+bool \mbox{\hyperlink{classJson__path_a894bbe4696c914f7274325b202fd6ccf}{to\+\_\+string}} (String $\ast$buf) const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classJson__path_a6b1ee97299114765938fde20aaa41018}{parse\+\_\+path}} (const bool begins\+\_\+with\+\_\+column\+\_\+id, const size\+\_\+t path\+\_\+length, const char $\ast$path\+\_\+expression, \mbox{\hyperlink{classJson__path}{Json\+\_\+path}} $\ast$path, size\+\_\+t $\ast$bad\+\_\+index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__path_a72997695493718ef73ece75087713d64}\label{classJson__path_a72997695493718ef73ece75087713d64}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!append@{append}}
+\index{append@{append}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} \&}]{leg }\end{DoxyParamCaption})}
+
+Add a path leg to the end of this path. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em leg} & the leg to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__path_a7c9ebc624af2f9d494a7fbcdc3c92458}\label{classJson__path_a7c9ebc624af2f9d494a7fbcdc3c92458}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!clear@{clear}}
+\index{clear@{clear}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Json\+\_\+path\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets this to an empty path with no legs. \mbox{\Hypertarget{classJson__path_a6f1be7ddf18da788f48e031a7b65c5f3}\label{classJson__path_a6f1be7ddf18da788f48e031a7b65c5f3}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!contains\+\_\+ellipsis@{contains\+\_\+ellipsis}}
+\index{contains\+\_\+ellipsis@{contains\+\_\+ellipsis}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{contains\+\_\+ellipsis()}{contains\_ellipsis()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+::contains\+\_\+ellipsis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return true if the path contains an ellipsis token 
+
+Implements \mbox{\hyperlink{classJson__seekable__path_a3c853224d800bf230962d9521fe466d9}{Json\+\_\+seekable\+\_\+path}}.
+
+\mbox{\Hypertarget{classJson__path_a4c0337db67e99b1fa92862afb06c1517}\label{classJson__path_a4c0337db67e99b1fa92862afb06c1517}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis@{contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis}}
+\index{contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis@{contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis()}{contains\_wildcard\_or\_ellipsis()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+::contains\+\_\+wildcard\+\_\+or\+\_\+ellipsis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return true if the path contains a wildcard or ellipsis token \mbox{\Hypertarget{classJson__path_a33038f8cae772c5f4c8333be94389b46}\label{classJson__path_a33038f8cae772c5f4c8333be94389b46}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!get\+\_\+leg\+\_\+at@{get\+\_\+leg\+\_\+at}}
+\index{get\+\_\+leg\+\_\+at@{get\+\_\+leg\+\_\+at}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{get\+\_\+leg\+\_\+at()}{get\_leg\_at()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$ Json\+\_\+path\+::get\+\_\+leg\+\_\+at (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the ith (numbered from 0) leg
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & 0-\/based index into the path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if the index is out of range. Otherwise, a pointer to the corresponding \mbox{\hyperlink{classJson__path}{Json\+\_\+path}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__seekable__path_a590e675762b99402555d555fb99ffa4f}{Json\+\_\+seekable\+\_\+path}}.
+
+\mbox{\Hypertarget{classJson__path_a22b4d53c90300f917ab7abaedad8bfaa}\label{classJson__path_a22b4d53c90300f917ab7abaedad8bfaa}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!leg\+\_\+count@{leg\+\_\+count}}
+\index{leg\+\_\+count@{leg\+\_\+count}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{leg\+\_\+count()}{leg\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Json\+\_\+path\+::leg\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the number of legs in this path 
+
+Implements \mbox{\hyperlink{classJson__seekable__path_aa268c1af2eec01b70924509a23b8db59}{Json\+\_\+seekable\+\_\+path}}.
+
+\mbox{\Hypertarget{classJson__path_aaa77ca94d28474ce3614aa692bd1edbe}\label{classJson__path_aaa77ca94d28474ce3614aa692bd1edbe}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!pop@{pop}}
+\index{pop@{pop}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} Json\+\_\+path\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pop the last leg element.
+
+This effectively lets the path point at the container of the original, i.\+e. an array or an object.
+
+\begin{DoxyReturn}{Returns}
+the last leg popped off 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__path_a894bbe4696c914f7274325b202fd6ccf}\label{classJson__path_a894bbe4696c914f7274325b202fd6ccf}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{String $\ast$}]{buf }\end{DoxyParamCaption}) const}
+
+Turn into a human-\/readable string. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classJson__path_a6b1ee97299114765938fde20aaa41018}\label{classJson__path_a6b1ee97299114765938fde20aaa41018}} 
+\index{Json\+\_\+path@{Json\+\_\+path}!parse\+\_\+path@{parse\+\_\+path}}
+\index{parse\+\_\+path@{parse\+\_\+path}!Json\+\_\+path@{Json\+\_\+path}}
+\subsubsection{\texorpdfstring{parse\+\_\+path}{parse\_path}}
+{\footnotesize\ttfamily bool parse\+\_\+path (\begin{DoxyParamCaption}\item[{const bool}]{begins\+\_\+with\+\_\+column\+\_\+id,  }\item[{const size\+\_\+t}]{path\+\_\+length,  }\item[{const char $\ast$}]{path\+\_\+expression,  }\item[{\mbox{\hyperlink{classJson__path}{Json\+\_\+path}} $\ast$}]{path,  }\item[{size\+\_\+t $\ast$}]{bad\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Top level parsing factory method
+
+Initialize a \mbox{\hyperlink{classJson__path}{Json\+\_\+path}} from a path expression.
+
+The caller must specify whether the path expression begins with a column identifier or whether it begins with \$. Stops parsing on the first error. It initializes the \mbox{\hyperlink{classJson__path}{Json\+\_\+path}} and returns false if the path is parsed successfully. Otherwise, it returns false. In that case, the output bad\+\_\+index argument will contain an index into the path expression. The parsing failed near that index.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em begins\+\_\+with\+\_\+column\+\_\+id} & True if the path begins with a column id. \\
+\hline
+\mbox{\texttt{ in}}  & {\em path\+\_\+length} & The length of the path expression. \\
+\hline
+\mbox{\texttt{ in}}  & {\em path\+\_\+expression} & The string form of the path expression. \\
+\hline
+\mbox{\texttt{ out}}  & {\em path} & The \mbox{\hyperlink{classJson__path}{Json\+\_\+path}} object to be initialized. \\
+\hline
+\mbox{\texttt{ out}}  & {\em bad\+\_\+index} & If null is returned, the parsing failed around here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+json\+\_\+path.\+h\item 
+json\+\_\+path.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,562 @@
+\hypertarget{classMDL__lock}{}\section{M\+D\+L\+\_\+lock Class Reference}
+\label{classMDL__lock}\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+\_\+strategy}}
+\item 
+class \mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__lock_af49d3a2db62c2c6dda844e0d4531ab12}\label{classMDL__lock_af49d3a2db62c2c6dda844e0d4531ab12}} 
+typedef unsigned short {\bfseries bitmap\+\_\+t}
+\item 
+\mbox{\Hypertarget{classMDL__lock_a32cdf73e78c2f3288e20676e9ec19ea5}\label{classMDL__lock_a32cdf73e78c2f3288e20676e9ec19ea5}} 
+typedef \mbox{\hyperlink{classI__P__List__iterator}{Ticket\+\_\+list\+::\+List\+::\+Iterator}} {\bfseries Ticket\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classMDL__lock_afc52a5a78b9a3b911e91c2fcb932981a}\label{classMDL__lock_afc52a5a78b9a3b911e91c2fcb932981a}} 
+typedef longlong {\bfseries fast\+\_\+path\+\_\+state\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__lock_acc63c21b6c75b3087cd273bc5125e9d0}\label{classMDL__lock_acc63c21b6c75b3087cd273bc5125e9d0}} 
+const bitmap\+\_\+t $\ast$ {\bfseries incompatible\+\_\+granted\+\_\+types\+\_\+bitmap} () const
+\item 
+\mbox{\Hypertarget{classMDL__lock_aa90ab350d28e755dcfa69d90004de7aa}\label{classMDL__lock_aa90ab350d28e755dcfa69d90004de7aa}} 
+const bitmap\+\_\+t $\ast$ {\bfseries incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap} () const
+\item 
+uint \mbox{\hyperlink{classMDL__lock_afbbc9d77579dd73637b2cc95b7fc249f}{get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx}} () const
+\item 
+bool \mbox{\hyperlink{classMDL__lock_ab2be5e68445003d7a516849f2bceb18c}{switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed}} ()
+\item 
+bool \mbox{\hyperlink{classMDL__lock_a7707e02d9695b5694336787a622b0060}{has\+\_\+pending\+\_\+conflicting\+\_\+lock}} (enum\+\_\+mdl\+\_\+type type)
+\item 
+bool \mbox{\hyperlink{classMDL__lock_a8d8e8e3b98525a6c8de14a745dd3ce8f}{can\+\_\+grant\+\_\+lock}} (enum\+\_\+mdl\+\_\+type type, const \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$requestor\+\_\+ctx) const
+\item 
+void \mbox{\hyperlink{classMDL__lock_a07003cc6619a99b6cc36f564c62e4e94}{reschedule\+\_\+waiters}} ()
+\item 
+void \mbox{\hyperlink{classMDL__lock_a7100ea62bb9af3e959d8a81ba11d4bcb}{remove\+\_\+ticket}} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx, L\+F\+\_\+\+P\+I\+NS $\ast$pins, \mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}} M\+D\+L\+\_\+lock\+::$\ast$queue, \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+bool \mbox{\hyperlink{classMDL__lock_a56e5025d3f3cff97923bc283c715566d}{visit\+\_\+subgraph}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$waiting\+\_\+ticket, \mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$gvisitor)
+\item 
+\mbox{\Hypertarget{classMDL__lock_a1eddfbd81b16d050a7a7d5a31e4242c6}\label{classMDL__lock_a1eddfbd81b16d050a7a7d5a31e4242c6}} 
+bool {\bfseries needs\+\_\+notification} (const \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket) const
+\item 
+\mbox{\Hypertarget{classMDL__lock_a20b6aaea388daf444e3f2c0d31362b15}\label{classMDL__lock_a20b6aaea388daf444e3f2c0d31362b15}} 
+void {\bfseries notify\+\_\+conflicting\+\_\+locks} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx)
+\item 
+\mbox{\Hypertarget{classMDL__lock_a5bb8fcb19fe7323eb0044ebb78258c75}\label{classMDL__lock_a5bb8fcb19fe7323eb0044ebb78258c75}} 
+bool {\bfseries needs\+\_\+connection\+\_\+check} () const
+\item 
+\mbox{\Hypertarget{classMDL__lock_a7af5a6e02d50241f9c6417a01572c4ee}\label{classMDL__lock_a7af5a6e02d50241f9c6417a01572c4ee}} 
+bool {\bfseries is\+\_\+affected\+\_\+by\+\_\+max\+\_\+write\+\_\+lock\+\_\+count} () const
+\item 
+bool \mbox{\hyperlink{classMDL__lock_a39f1b569ef4a8405826d9bc9720205c0}{count\+\_\+piglets\+\_\+and\+\_\+hogs}} (enum\+\_\+mdl\+\_\+type type)
+\item 
+fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_aa5f2a62914d438aa6e97a50fc8050c74}{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment}} (enum\+\_\+mdl\+\_\+type type) const
+\item 
+bool \mbox{\hyperlink{classMDL__lock_a0438fd341e3bedb63452c44ec95a00ff}{is\+\_\+obtrusive\+\_\+lock}} (enum\+\_\+mdl\+\_\+type type) const
+\item 
+bitmap\+\_\+t \mbox{\hyperlink{classMDL__lock_a44d77e8b91c3f09ac46adb6dccf7a460}{fast\+\_\+path\+\_\+granted\+\_\+bitmap}} () const
+\item 
+\mbox{\hyperlink{classMDL__lock_aeb9c4ffed74256bb57fca7619d141bf4}{M\+D\+L\+\_\+lock}} ()
+\item 
+void \mbox{\hyperlink{classMDL__lock_aaa2f6326006b7c7ba179075c82707d59}{reinit}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key)
+\item 
+\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ \mbox{\hyperlink{classMDL__lock_ada93a4c2a1f01792f9c3e352dbf900fc}{get\+\_\+lock\+\_\+owner}} () const
+\item 
+bool \mbox{\hyperlink{classMDL__lock_a716b40d532b18db6c2527d1a46908c29}{fast\+\_\+path\+\_\+state\+\_\+cas}} (fast\+\_\+path\+\_\+state\+\_\+t $\ast$old\+\_\+state, fast\+\_\+path\+\_\+state\+\_\+t new\+\_\+state)
+\item 
+fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_afc838e4678e75b56554e1ca142439dce}{fast\+\_\+path\+\_\+state\+\_\+add}} (fast\+\_\+path\+\_\+state\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classMDL__lock_aeedaf89f7d4526d4d59c170fed9ffe2a}{fast\+\_\+path\+\_\+state\+\_\+reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classMDL__lock_aa6cbff270ec3afad0feba7e97e9747bb}{needs\+\_\+hton\+\_\+notification}} (\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}} mdl\+\_\+namespace)
+\item 
+static fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_aa8424d2f478663117e7ac5e435840342}{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment}} (const \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$request)
+\item 
+static \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ \mbox{\hyperlink{classMDL__lock_a3d8389ffdedfe45d4fdc22624a3ad84a}{create}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$\mbox{\hyperlink{classMDL__lock_aefb48179bc3f6ef64c213b253c379da4}{key}})
+\item 
+\mbox{\Hypertarget{classMDL__lock_a0b25c48d98250c1603a5c55eeace3986}\label{classMDL__lock_a0b25c48d98250c1603a5c55eeace3986}} 
+static void {\bfseries destroy} (\mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)
+\item 
+static bitmap\+\_\+t \mbox{\hyperlink{classMDL__lock_a8d5ce95948e006dbe957792a4be80928}{scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}} (const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} \&lock)
+\item 
+static bool \mbox{\hyperlink{classMDL__lock_a382145d0f9b0f94a05ef03edbe922054}{object\+\_\+lock\+\_\+needs\+\_\+notification}} (const \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+static void \mbox{\hyperlink{classMDL__lock_aa30406c0d7d46396e15c4ca66abc6fc7}{object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks}} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx, \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)
+\item 
+static bitmap\+\_\+t \mbox{\hyperlink{classMDL__lock_a580d9a0d9be93f90361cee67d0b4199f}{object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}} (const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} \&lock)
+\item 
+static bool \mbox{\hyperlink{classMDL__lock_a1ab1e1914e48faa93ba2e862cddfc274}{object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check}} (const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$lock)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} \mbox{\hyperlink{classMDL__lock_aefb48179bc3f6ef64c213b253c379da4}{key}}
+\item 
+mysql\+\_\+prlock\+\_\+t \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{m\+\_\+rwlock}}
+\item 
+\mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}} \mbox{\hyperlink{classMDL__lock_a188dd53561f6cf6148277512b706ea74}{m\+\_\+granted}}
+\item 
+\mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}} \mbox{\hyperlink{classMDL__lock_a4443cad6b484e2af5c816949ddb209dc}{m\+\_\+waiting}}
+\item 
+uint \mbox{\hyperlink{classMDL__lock_a7ef26eb4cf46309c494135291a82e20c}{m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count}}
+\item 
+volatile fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{m\+\_\+fast\+\_\+path\+\_\+state}}
+\item 
+const \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+\_\+strategy}} $\ast$ \mbox{\hyperlink{classMDL__lock_a67a214605da83d57ac8d69c1f1c4854d}{m\+\_\+strategy}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_a1627af1fd21d2ae76c27b39901e574a3}{I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED}} = 1\+U\+L\+L $<$$<$ 62
+\item 
+static const fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_ac0e55394e253bd9d0988c9a7ab243a39}{H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE}} = 1\+U\+L\+L $<$$<$ 61
+\item 
+static const fast\+\_\+path\+\_\+state\+\_\+t \mbox{\hyperlink{classMDL__lock_ace80291dc2f7786288cdf1cec54bcb55}{H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH}} = 1\+U\+L\+L $<$$<$ 60
+\item 
+static const bitmap\+\_\+t \mbox{\hyperlink{classMDL__lock_abaeb101565637f92f74d4a84bdc53fa5}{M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES}}
+\item 
+static const \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+\_\+strategy}} \mbox{\hyperlink{classMDL__lock_aed7a092b4b9aa426597f599feb6bb19b}{m\+\_\+scoped\+\_\+lock\+\_\+strategy}}
+\item 
+static const \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+\_\+strategy}} \mbox{\hyperlink{classMDL__lock_a6ed94b58baea6bf2e22b76566aa513b3}{m\+\_\+object\+\_\+lock\+\_\+strategy}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The lock context. Created internally for an acquired lock. For a given name, there exists only one \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} instance, and it exists only when the lock has been granted. Can be seen as an M\+DL subsystem\textquotesingle{}s version of \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}.
+
+This is an abstract class which lacks information about compatibility rules for lock types. They should be specified in its descendants. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMDL__lock_aeb9c4ffed74256bb57fca7619d141bf4}\label{classMDL__lock_aeb9c4ffed74256bb57fca7619d141bf4}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{M\+D\+L\+\_\+lock()}{MDL\_lock()}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do \char`\"{}expensive\char`\"{} part of \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object initialization, Called by L\+F\+\_\+\+A\+L\+L\+O\+C\+A\+T\+OR for each newly malloc()\textquotesingle{}ed \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object, is not called in cases when L\+F\+\_\+\+A\+L\+L\+O\+C\+A\+T\+OR decides to reuse object which was returned to it earlier. \char`\"{}\+Full\char`\"{} initialization happens later by calling \mbox{\hyperlink{classMDL__lock_aaa2f6326006b7c7ba179075c82707d59}{M\+D\+L\+\_\+lock\+::reinit()}}. So \begin{DoxySeeAlso}{See also}
+M\+D\+L\+\_\+lock\+::reiniti() 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__lock_a8d8e8e3b98525a6c8de14a745dd3ce8f}\label{classMDL__lock_a8d8e8e3b98525a6c8de14a745dd3ce8f}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!can\+\_\+grant\+\_\+lock@{can\+\_\+grant\+\_\+lock}}
+\index{can\+\_\+grant\+\_\+lock@{can\+\_\+grant\+\_\+lock}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{can\+\_\+grant\+\_\+lock()}{can\_grant\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::can\+\_\+grant\+\_\+lock (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type\+\_\+arg,  }\item[{const \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{requestor\+\_\+ctx }\end{DoxyParamCaption}) const}
+
+Check if request for the metadata lock can be satisfied given its current state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+arg} & The requested lock type. \\
+\hline
+{\em requestor\+\_\+ctx} & The M\+DL context of the requestor.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Lock request can be satisfied \\
+\hline
+{\em F\+A\+L\+SE} & There is some conflicting lock.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+In cases then current context already has \char`\"{}stronger\char`\"{} type of lock on the object it will be automatically granted thanks to usage of the M\+D\+L\+\_\+context\+::find\+\_\+ticket() method. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__lock_a39f1b569ef4a8405826d9bc9720205c0}\label{classMDL__lock_a39f1b569ef4a8405826d9bc9720205c0}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!count\+\_\+piglets\+\_\+and\+\_\+hogs@{count\+\_\+piglets\+\_\+and\+\_\+hogs}}
+\index{count\+\_\+piglets\+\_\+and\+\_\+hogs@{count\+\_\+piglets\+\_\+and\+\_\+hogs}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{count\+\_\+piglets\+\_\+and\+\_\+hogs()}{count\_piglets\_and\_hogs()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::count\+\_\+piglets\+\_\+and\+\_\+hogs (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If we just have granted a lock of \char`\"{}piglet\char`\"{} or \char`\"{}hog\char`\"{} type and there are pending lower priority locks, increase the appropriate counter. If this counter now exceeds the max\+\_\+write\+\_\+lock\+\_\+count threshold, switch priority matrice for the \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object.
+
+\begin{DoxyReturn}{Returns}
+true -\/ if priority matrice has been changed, false -\/ otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__lock_a3d8389ffdedfe45d4fdc22624a3ad84a}\label{classMDL__lock_a3d8389ffdedfe45d4fdc22624a3ad84a}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!create@{create}}
+\index{create@{create}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ M\+D\+L\+\_\+lock\+::create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Auxiliary functions needed for creation/destruction of \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} objects. \mbox{\Hypertarget{classMDL__lock_a44d77e8b91c3f09ac46adb6dccf7a460}\label{classMDL__lock_a44d77e8b91c3f09ac46adb6dccf7a460}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!fast\+\_\+path\+\_\+granted\+\_\+bitmap@{fast\+\_\+path\+\_\+granted\+\_\+bitmap}}
+\index{fast\+\_\+path\+\_\+granted\+\_\+bitmap@{fast\+\_\+path\+\_\+granted\+\_\+bitmap}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{fast\+\_\+path\+\_\+granted\+\_\+bitmap()}{fast\_path\_granted\_bitmap()}}
+{\footnotesize\ttfamily bitmap\+\_\+t M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+granted\+\_\+bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return set of types of lock requests which were granted using \char`\"{}fast path\char`\"{} algorithm in the bitmap\+\_\+t form.
+
+This method is only called from \mbox{\hyperlink{classMDL__lock_a8d8e8e3b98525a6c8de14a745dd3ce8f}{M\+D\+L\+\_\+lock\+::can\+\_\+grant\+\_\+lock()}} and its return value is only important when we are trying to figure out if we can grant an obtrusive lock. But this means that the H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE flag is set so all changes to m\+\_\+fast\+\_\+path\+\_\+state happen under protection of \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} (see invariant \mbox{[}I\+N\+V1\mbox{]}). Since \mbox{\hyperlink{classMDL__lock_a8d8e8e3b98525a6c8de14a745dd3ce8f}{can\+\_\+grant\+\_\+lock()}} is called only when \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} is held, it is safe to do an ordinary read of m\+\_\+fast\+\_\+path\+\_\+state here. \mbox{\Hypertarget{classMDL__lock_afc838e4678e75b56554e1ca142439dce}\label{classMDL__lock_afc838e4678e75b56554e1ca142439dce}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!fast\+\_\+path\+\_\+state\+\_\+add@{fast\+\_\+path\+\_\+state\+\_\+add}}
+\index{fast\+\_\+path\+\_\+state\+\_\+add@{fast\+\_\+path\+\_\+state\+\_\+add}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{fast\+\_\+path\+\_\+state\+\_\+add()}{fast\_path\_state\_add()}}
+{\footnotesize\ttfamily fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+state\+\_\+add (\begin{DoxyParamCaption}\item[{fast\+\_\+path\+\_\+state\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Wrapper for my\+\_\+atomic\+\_\+add64 operation on m\+\_\+fast\+\_\+path\+\_\+state member which enforces locking and other invariants. \mbox{\Hypertarget{classMDL__lock_a716b40d532b18db6c2527d1a46908c29}\label{classMDL__lock_a716b40d532b18db6c2527d1a46908c29}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!fast\+\_\+path\+\_\+state\+\_\+cas@{fast\+\_\+path\+\_\+state\+\_\+cas}}
+\index{fast\+\_\+path\+\_\+state\+\_\+cas@{fast\+\_\+path\+\_\+state\+\_\+cas}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{fast\+\_\+path\+\_\+state\+\_\+cas()}{fast\_path\_state\_cas()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+state\+\_\+cas (\begin{DoxyParamCaption}\item[{fast\+\_\+path\+\_\+state\+\_\+t $\ast$}]{old\+\_\+state,  }\item[{fast\+\_\+path\+\_\+state\+\_\+t}]{new\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Wrapper for my\+\_\+atomic\+\_\+cas64 operation on m\+\_\+fast\+\_\+path\+\_\+state member which enforces locking and other invariants. \mbox{\Hypertarget{classMDL__lock_aeedaf89f7d4526d4d59c170fed9ffe2a}\label{classMDL__lock_aeedaf89f7d4526d4d59c170fed9ffe2a}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!fast\+\_\+path\+\_\+state\+\_\+reset@{fast\+\_\+path\+\_\+state\+\_\+reset}}
+\index{fast\+\_\+path\+\_\+state\+\_\+reset@{fast\+\_\+path\+\_\+state\+\_\+reset}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{fast\+\_\+path\+\_\+state\+\_\+reset()}{fast\_path\_state\_reset()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+state\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Wrapper for resetting m\+\_\+fast\+\_\+path\+\_\+state enforcing locking invariants. \mbox{\Hypertarget{classMDL__lock_afbbc9d77579dd73637b2cc95b7fc249f}\label{classMDL__lock_afbbc9d77579dd73637b2cc95b7fc249f}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx@{get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx}}
+\index{get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx@{get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx()}{get\_incompatible\_waiting\_types\_bitmap\_idx()}}
+{\footnotesize\ttfamily uint M\+D\+L\+\_\+lock\+::get\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+idx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get index of priority matrice in \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy_a040ce09f82f272cc3162c9eee05d45ef}{M\+D\+L\+\_\+lock\+\_\+strategy\+::m\+\_\+waiting\+\_\+incompatible}} array which corresponds to current values of the m\+\_\+piglet\+\_\+lock\+\_\+count and m\+\_\+hog\+\_\+lock\+\_\+count counters and the max\+\_\+write\+\_\+lock\+\_\+count threshold. \mbox{\Hypertarget{classMDL__lock_ada93a4c2a1f01792f9c3e352dbf900fc}\label{classMDL__lock_ada93a4c2a1f01792f9c3e352dbf900fc}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!get\+\_\+lock\+\_\+owner@{get\+\_\+lock\+\_\+owner}}
+\index{get\+\_\+lock\+\_\+owner@{get\+\_\+lock\+\_\+owner}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{get\+\_\+lock\+\_\+owner()}{get\_lock\_owner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ M\+D\+L\+\_\+lock\+::get\+\_\+lock\+\_\+owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the first \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} which owns the lock.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the first \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} which has acquired the lock N\+U\+LL if there are no such contexts.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method works properly only for locks acquired using \char`\"{}slow\char`\"{} path. It won\textquotesingle{}t return context if it has used \char`\"{}fast\char`\"{} path to acquire the lock. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__lock_aa8424d2f478663117e7ac5e435840342}\label{classMDL__lock_aa8424d2f478663117e7ac5e435840342}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!get\+\_\+unobtrusive\+\_\+lock\+\_\+increment@{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment}}
+\index{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment@{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment()}{get\_unobtrusive\_lock\_increment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::get\+\_\+unobtrusive\+\_\+lock\+\_\+increment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Fast path\char`\"{} increment for request for \char`\"{}unobtrusive\char`\"{} type of lock, 0 -\/ if it is request for \char`\"{}obtrusive\char`\"{} type of lock.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+We split all lock types for each of M\+DL namespaces in two sets\+:
+\end{DoxyNote}
+A) \char`\"{}unobtrusive\char`\"{} lock types 1) Each type from this set should be compatible with all other types from the set (including itself). 2) These types should be common for D\+ML operations
+
+Our goal is to optimize acquisition and release of locks of this type by avoiding complex checks and manipulations on m\+\_\+waiting/ m\+\_\+granted bitmaps/lists. We replace them with a check of and increment/decrement of integer counters. We call the latter type of acquisition/release \char`\"{}fast path\char`\"{}. Use of \char`\"{}fast path\char`\"{} reduces the size of critical section associated with \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} lock in the common case and thus increases scalability.
+
+The amount by which acquisition/release of specific type \char`\"{}unobtrusive\char`\"{} lock increases/decreases packed counter in \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} is returned by this function.
+
+B) \char`\"{}obtrusive\char`\"{} lock types 1) Granted or pending lock of those type is incompatible with some other types of locks or with itself. 2) Not common for D\+ML operations
+
+These locks have to be always acquired involving manipulations on m\+\_\+waiting/m\+\_\+granted bitmaps/lists, i.\+e. we have to use \char`\"{}slow path\char`\"{} for them. Moreover in the presence of active/pending locks from \char`\"{}obtrusive\char`\"{} set we have to acquire using \char`\"{}slow path\char`\"{} even locks of \char`\"{}unobtrusive\char`\"{} type.
+
+\begin{DoxySeeAlso}{See also}
+M\+D\+L\+\_\+scoped\+\_\+lock/\+M\+D\+L\+\_\+object\+\_\+lock\+::m\+\_\+unobtrusive\+\_\+lock\+\_\+increment for definitions of these sets for scoped and per-\/object locks.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Fast path\char`\"{} increment for request for \char`\"{}unobtrusive\char`\"{} type of lock, 0 -\/ if it is request for \char`\"{}obtrusive\char`\"{} type of lock.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Description at method declaration for more details. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__lock_aa5f2a62914d438aa6e97a50fc8050c74}\label{classMDL__lock_aa5f2a62914d438aa6e97a50fc8050c74}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!get\+\_\+unobtrusive\+\_\+lock\+\_\+increment@{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment}}
+\index{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment@{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{get\+\_\+unobtrusive\+\_\+lock\+\_\+increment()}{get\_unobtrusive\_lock\_increment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::get\+\_\+unobtrusive\+\_\+lock\+\_\+increment (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Fast path\char`\"{} increment if type of lock is \char`\"{}unobtrusive\char`\"{} type, 0 -\/ if it is \char`\"{}obtrusive\char`\"{} type of lock. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__lock_a7707e02d9695b5694336787a622b0060}\label{classMDL__lock_a7707e02d9695b5694336787a622b0060}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!has\+\_\+pending\+\_\+conflicting\+\_\+lock@{has\+\_\+pending\+\_\+conflicting\+\_\+lock}}
+\index{has\+\_\+pending\+\_\+conflicting\+\_\+lock@{has\+\_\+pending\+\_\+conflicting\+\_\+lock}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{has\+\_\+pending\+\_\+conflicting\+\_\+lock()}{has\_pending\_conflicting\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::has\+\_\+pending\+\_\+conflicting\+\_\+lock (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+Check if we have any pending locks which conflict with existing shared lock.
+
+\begin{DoxyPrecond}{Precondition}
+The ticket must match an acquired lock.
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if there is a conflicting lock request, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__lock_a0438fd341e3bedb63452c44ec95a00ff}\label{classMDL__lock_a0438fd341e3bedb63452c44ec95a00ff}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!is\+\_\+obtrusive\+\_\+lock@{is\+\_\+obtrusive\+\_\+lock}}
+\index{is\+\_\+obtrusive\+\_\+lock@{is\+\_\+obtrusive\+\_\+lock}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{is\+\_\+obtrusive\+\_\+lock()}{is\_obtrusive\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::is\+\_\+obtrusive\+\_\+lock (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if type of lock requested is \char`\"{}obtrusive\char`\"{} type of lock.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_aa8424d2f478663117e7ac5e435840342}{M\+D\+L\+\_\+lock\+::get\+\_\+unobtrusive\+\_\+lock\+\_\+increment()}} description. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__lock_aa6cbff270ec3afad0feba7e97e9747bb}\label{classMDL__lock_aa6cbff270ec3afad0feba7e97e9747bb}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!needs\+\_\+hton\+\_\+notification@{needs\+\_\+hton\+\_\+notification}}
+\index{needs\+\_\+hton\+\_\+notification@{needs\+\_\+hton\+\_\+notification}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{needs\+\_\+hton\+\_\+notification()}{needs\_hton\_notification()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::needs\+\_\+hton\+\_\+notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}}}]{mdl\+\_\+namespace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Indicates whether object belongs to namespace which requires storage engine to be notified before acquiring and after releasing exclusive lock. \mbox{\Hypertarget{classMDL__lock_a580d9a0d9be93f90361cee67d0b4199f}\label{classMDL__lock_a580d9a0d9be93f90361cee67d0b4199f}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap@{object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}}
+\index{object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap@{object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap()}{object\_lock\_fast\_path\_granted\_bitmap()}}
+{\footnotesize\ttfamily static bitmap\+\_\+t M\+D\+L\+\_\+lock\+::object\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} \&}]{lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get bitmap of \char`\"{}unobtrusive\char`\"{} locks granted using \char`\"{}fast path\char`\"{} algorithm for per-\/object locks.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_a44d77e8b91c3f09ac46adb6dccf7a460}{M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+granted\+\_\+bitmap()}} for explanation about why it is safe to use non-\/atomic read of \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} here. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__lock_a1ab1e1914e48faa93ba2e862cddfc274}\label{classMDL__lock_a1ab1e1914e48faa93ba2e862cddfc274}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check@{object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check}}
+\index{object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check@{object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check()}{object\_lock\_needs\_connection\_check()}}
+{\footnotesize\ttfamily static bool M\+D\+L\+\_\+lock\+::object\+\_\+lock\+\_\+needs\+\_\+connection\+\_\+check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$}]{lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Check if \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object represents user-\/level lock or locking service lock, so threads waiting for it need to check if connection is lost and abort waiting when it is. \mbox{\Hypertarget{classMDL__lock_a382145d0f9b0f94a05ef03edbe922054}\label{classMDL__lock_a382145d0f9b0f94a05ef03edbe922054}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!object\+\_\+lock\+\_\+needs\+\_\+notification@{object\+\_\+lock\+\_\+needs\+\_\+notification}}
+\index{object\+\_\+lock\+\_\+needs\+\_\+notification@{object\+\_\+lock\+\_\+needs\+\_\+notification}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{object\+\_\+lock\+\_\+needs\+\_\+notification()}{object\_lock\_needs\_notification()}}
+{\footnotesize\ttfamily static bool M\+D\+L\+\_\+lock\+::object\+\_\+lock\+\_\+needs\+\_\+notification (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{ticket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Check if we are requesting X lock on the object, so threads holding conflicting S/\+SH metadata locks on it need to be notified.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_aa30406c0d7d46396e15c4ca66abc6fc7}{M\+D\+L\+\_\+lock\+::object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__lock_aa30406c0d7d46396e15c4ca66abc6fc7}\label{classMDL__lock_aa30406c0d7d46396e15c4ca66abc6fc7}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks@{object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks}}
+\index{object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks@{object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks()}{object\_lock\_notify\_conflicting\_locks()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::object\+\_\+lock\+\_\+notify\+\_\+conflicting\+\_\+locks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{ctx,  }\item[{\mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$}]{lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Notify threads holding S/\+SH metadata locks on an object, which conflict with a pending X lock.
+
+\begin{DoxyNote}{Note}
+Currently this method is guaranteed to notify shared lock owners which have M\+D\+L\+\_\+context\+::m\+\_\+needs\+\_\+thr\+\_\+lock\+\_\+abort flag set (as for others conficting locks might have been acquired on \char`\"{}fast path\char`\"{} and thus might be absent from list of granted locks). This is OK as notification for other contexts is anyway no-\/op now.
+
+We don\textquotesingle{}t notify threads holding other than S/\+SH types of conflicting locks on the object since notification should not be needed and anyway will be no-\/op for them (unless they also hold S/\+SH locks on the object).
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} for current thread. \\
+\hline
+{\em lock} & \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object representing lock which is to be acquired. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__lock_aaa2f6326006b7c7ba179075c82707d59}\label{classMDL__lock_aaa2f6326006b7c7ba179075c82707d59}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!reinit@{reinit}}
+\index{reinit@{reinit}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{reinit()}{reinit()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::reinit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Finalize initialization or re-\/initialize \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} returned from L\+F\+\_\+\+A\+L\+L\+O\+C\+A\+T\+OR\textquotesingle{}s cache to represent object identified by provided key.
+
+\begin{DoxyNote}{Note}
+All non-\/static \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} members\+: 1) either have to be reinitialized here (like I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED flag in \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}}). 2) or need to be initialized in constructor A\+ND returned to their pristine state once they are removed from \mbox{\hyperlink{classMDL__map}{M\+D\+L\+\_\+map}} container (like \mbox{\hyperlink{classMDL__lock_a188dd53561f6cf6148277512b706ea74}{M\+D\+L\+\_\+lock\+::m\+\_\+granted}} or \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}}). Otherwise it is possible that we will end up in situation when \char`\"{}new\char`\"{} (actually reused) \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object inserted in L\+F\+\_\+\+H\+A\+SH will inherit some values from old object. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__lock_a7100ea62bb9af3e959d8a81ba11d4bcb}\label{classMDL__lock_a7100ea62bb9af3e959d8a81ba11d4bcb}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!remove\+\_\+ticket@{remove\+\_\+ticket}}
+\index{remove\+\_\+ticket@{remove\+\_\+ticket}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{remove\+\_\+ticket()}{remove\_ticket()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::remove\+\_\+ticket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{ctx,  }\item[{L\+F\+\_\+\+P\+I\+NS $\ast$}]{pins,  }\item[{\mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}} M\+D\+L\+\_\+lock\+::$\ast$}]{list,  }\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{ticket }\end{DoxyParamCaption})}
+
+Remove a ticket from waiting or pending queue and wakeup up waiters. \mbox{\Hypertarget{classMDL__lock_a07003cc6619a99b6cc36f564c62e4e94}\label{classMDL__lock_a07003cc6619a99b6cc36f564c62e4e94}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!reschedule\+\_\+waiters@{reschedule\+\_\+waiters}}
+\index{reschedule\+\_\+waiters@{reschedule\+\_\+waiters}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{reschedule\+\_\+waiters()}{reschedule\_waiters()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::reschedule\+\_\+waiters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine waiting contexts which requests for the lock can be satisfied, grant lock to them and wake them up.
+
+\begin{DoxyNote}{Note}
+Together with M\+D\+L\+\_\+lock\+::add\+\_\+ticket() this method implements fair scheduling among requests with the same priority. It tries to grant lock from the head of waiters list, while add\+\_\+ticket() adds new requests to the back of this list. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__lock_a8d5ce95948e006dbe957792a4be80928}\label{classMDL__lock_a8d5ce95948e006dbe957792a4be80928}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap@{scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}}
+\index{scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap@{scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap()}{scoped\_lock\_fast\_path\_granted\_bitmap()}}
+{\footnotesize\ttfamily static bitmap\+\_\+t M\+D\+L\+\_\+lock\+::scoped\+\_\+lock\+\_\+fast\+\_\+path\+\_\+granted\+\_\+bitmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} \&}]{lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get bitmap of \char`\"{}unobtrusive\char`\"{} locks granted using \char`\"{}fast path\char`\"{} algorithm for scoped locks.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_a44d77e8b91c3f09ac46adb6dccf7a460}{M\+D\+L\+\_\+lock\+::fast\+\_\+path\+\_\+granted\+\_\+bitmap()}} for explanation about why it is safe to use non-\/atomic read of \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} here. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__lock_ab2be5e68445003d7a516849f2bceb18c}\label{classMDL__lock_ab2be5e68445003d7a516849f2bceb18c}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed@{switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed}}
+\index{switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed@{switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed()}{switch\_incompatible\_waiting\_types\_bitmap\_if\_needed()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::switch\+\_\+incompatible\+\_\+waiting\+\_\+types\+\_\+bitmap\+\_\+if\+\_\+needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Switch priority matrice for the \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object if m\+\_\+piglet\+\_\+lock\+\_\+count or/ and m\+\_\+hog\+\_\+lock\+\_\+count counters have crossed max\+\_\+write\+\_\+lock\+\_\+count threshold.
+
+\begin{DoxyReturn}{Returns}
+true -\/ if priority matrice has been changed, false -\/ otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__lock_a56e5025d3f3cff97923bc283c715566d}\label{classMDL__lock_a56e5025d3f3cff97923bc283c715566d}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!visit\+\_\+subgraph@{visit\+\_\+subgraph}}
+\index{visit\+\_\+subgraph@{visit\+\_\+subgraph}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{visit\+\_\+subgraph()}{visit\_subgraph()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+lock\+::visit\+\_\+subgraph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{waiting\+\_\+ticket,  }\item[{\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$}]{gvisitor }\end{DoxyParamCaption})}
+
+A fragment of recursive traversal of the wait-\/for graph in search for deadlocks. Direct the deadlock visitor to all contexts that own the lock the current node in the wait-\/for graph is waiting for. As long as the initial node is remembered in the visitor, a deadlock is found when the same node is seen twice. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMDL__lock_ac0e55394e253bd9d0988c9a7ab243a39}\label{classMDL__lock_ac0e55394e253bd9d0988c9a7ab243a39}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE@{H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE}}
+\index{H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE@{H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE}{HAS\_OBTRUSIVE}}
+{\footnotesize\ttfamily const fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::\+H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE = 1\+U\+L\+L $<$$<$ 61\hspace{0.3cm}{\ttfamily [static]}}
+
+Flag in \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} that indicates that there are \char`\"{}obtrusive\char`\"{} locks which are granted, waiting or for which we are about to check if they can be granted. Corresponds to \char`\"{}\+M\+D\+L\+\_\+lock\+::m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count == 0\char`\"{} predicate. Set using atomic compare-\/and-\/swap A\+ND under protection of \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} lock. Thanks to this can be read either by using atomic compare-\/and-\/swap OR using ordinary read under protection of \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} lock.
+
+Invariant \mbox{[}I\+N\+V1\mbox{]}\+: When this flag is set all changes to m\+\_\+fast\+\_\+path\+\_\+state member has to be done under protection of m\+\_\+rwlock lock. \mbox{\Hypertarget{classMDL__lock_ace80291dc2f7786288cdf1cec54bcb55}\label{classMDL__lock_ace80291dc2f7786288cdf1cec54bcb55}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH@{H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH}}
+\index{H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH@{H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH}{HAS\_SLOW\_PATH}}
+{\footnotesize\ttfamily const fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::\+H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH = 1\+U\+L\+L $<$$<$ 60\hspace{0.3cm}{\ttfamily [static]}}
+
+Flag in \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} that indicates that there are \char`\"{}slow\char`\"{} path locks which are granted, waiting or for which we are about to check if they can be granted. Corresponds to \mbox{\hyperlink{classMDL__lock_a188dd53561f6cf6148277512b706ea74}{M\+D\+L\+\_\+lock\+::m\+\_\+granted}}/m\+\_\+waiting lists being non-\/empty (except special case in \mbox{\hyperlink{classMDL__context_ab6d07a861aaf9db6fda46da196a8b0d0}{M\+D\+L\+\_\+context\+::try\+\_\+acquire\+\_\+lock()}}). Set using atomic compare-\/and-\/swap A\+ND under protection of m\+\_\+rwlock lock. The latter is necessary because value of this flag needs to be synchronized with contents of \mbox{\hyperlink{classMDL__lock_a188dd53561f6cf6148277512b706ea74}{M\+D\+L\+\_\+lock\+::m\+\_\+granted}}/m\+\_\+waiting lists. \mbox{\Hypertarget{classMDL__lock_a1627af1fd21d2ae76c27b39901e574a3}\label{classMDL__lock_a1627af1fd21d2ae76c27b39901e574a3}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED@{I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED}}
+\index{I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED@{I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED}{IS\_DESTROYED}}
+{\footnotesize\ttfamily const fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::\+I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED = 1\+U\+L\+L $<$$<$ 62\hspace{0.3cm}{\ttfamily [static]}}
+
+Flag in \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} that indicates that the \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object was marked for destruction and will be destroyed once all threads referencing to it through hazard pointers have unpinned it. Set using atomic compare-\/and-\/swap A\+ND under protection of \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} lock. Thanks to this can be read either by using atomic compare-\/and-\/swap OR using ordinary read under protection of \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} lock. \mbox{\Hypertarget{classMDL__lock_aefb48179bc3f6ef64c213b253c379da4}\label{classMDL__lock_aefb48179bc3f6ef64c213b253c379da4}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!key@{key}}
+\index{key@{key}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} M\+D\+L\+\_\+lock\+::key}
+
+The key of the object (data) being protected. \mbox{\Hypertarget{classMDL__lock_ae680877b7079a862d294ccbefed6372c}\label{classMDL__lock_ae680877b7079a862d294ccbefed6372c}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+fast\+\_\+path\+\_\+state@{m\+\_\+fast\+\_\+path\+\_\+state}}
+\index{m\+\_\+fast\+\_\+path\+\_\+state@{m\+\_\+fast\+\_\+path\+\_\+state}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+fast\+\_\+path\+\_\+state}{m\_fast\_path\_state}}
+{\footnotesize\ttfamily volatile fast\+\_\+path\+\_\+state\+\_\+t M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}
+
+Combination of I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+E\+D/\+H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+V\+E/\+H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH flags and packed counters of specific types of \char`\"{}unobtrusive\char`\"{} locks which were granted using \char`\"{}fast path\char`\"{}.
+
+\begin{DoxySeeAlso}{See also}
+M\+D\+L\+\_\+scoped\+\_\+lock\+::m\+\_\+unobtrusive\+\_\+lock\+\_\+increment and M\+D\+L\+\_\+object\+\_\+lock\+::m\+\_\+unobtrusive\+\_\+lock\+\_\+increment for details about how counts of different types of locks are packed into this field.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Doesn\textquotesingle{}t include \char`\"{}unobtrusive\char`\"{} locks granted using \char`\"{}slow path\char`\"{}.
+
+We use combination of atomic operations and protection by \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} lock to work with this member\+:
+\end{DoxyNote}
+Write and Read-\/Modify-\/Write operations are always carried out atomically. This is necessary to avoid lost updates on 32-\/bit platforms among other things. In some cases Reads can be done non-\/atomically because we don\textquotesingle{}t really care about value which they will return (for example, if further down the line there will be an atomic compare-\/and-\/swap operation, which will validate this value and provide the correct value if the validation will fail). In other cases Reads can be done non-\/atomically since they happen under protection of \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} and there is some invariant which ensures that concurrent updates of the m\+\_\+fast\+\_\+path\+\_\+state member can\textquotesingle{}t happen while \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}} is held (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_a1627af1fd21d2ae76c27b39901e574a3}{I\+S\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED}}, \mbox{\hyperlink{classMDL__lock_ac0e55394e253bd9d0988c9a7ab243a39}{H\+A\+S\+\_\+\+O\+B\+T\+R\+U\+S\+I\+VE}}, \mbox{\hyperlink{classMDL__lock_ace80291dc2f7786288cdf1cec54bcb55}{H\+A\+S\+\_\+\+S\+L\+O\+W\+\_\+\+P\+A\+TH}}).
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+I\+M\+P\+O\+R\+T\+A\+N\+T!!! In order to enforce the above rules and other invariants, \mbox{\hyperlink{classMDL__lock_ae680877b7079a862d294ccbefed6372c}{M\+D\+L\+\_\+lock\+::m\+\_\+fast\+\_\+path\+\_\+state}} should not be updated directly. Use \mbox{\hyperlink{classMDL__lock_a716b40d532b18db6c2527d1a46908c29}{fast\+\_\+path\+\_\+state\+\_\+cas()}}/add()/reset() wrapper methods instead.
+
+Needs to be volatile in order to be compatible with our my\+\_\+atomic\+\_\+$\ast$() A\+PI. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__lock_a188dd53561f6cf6148277512b706ea74}\label{classMDL__lock_a188dd53561f6cf6148277512b706ea74}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+granted@{m\+\_\+granted}}
+\index{m\+\_\+granted@{m\+\_\+granted}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+granted}{m\_granted}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}} M\+D\+L\+\_\+lock\+::m\+\_\+granted}
+
+\mbox{\hyperlink{classList}{List}} of granted tickets for this lock. \mbox{\Hypertarget{classMDL__lock_a6ed94b58baea6bf2e22b76566aa513b3}\label{classMDL__lock_a6ed94b58baea6bf2e22b76566aa513b3}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+object\+\_\+lock\+\_\+strategy@{m\+\_\+object\+\_\+lock\+\_\+strategy}}
+\index{m\+\_\+object\+\_\+lock\+\_\+strategy@{m\+\_\+object\+\_\+lock\+\_\+strategy}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+object\+\_\+lock\+\_\+strategy}{m\_object\_lock\_strategy}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}} M\+D\+L\+\_\+lock\+::m\+\_\+object\+\_\+lock\+\_\+strategy\hspace{0.3cm}{\ttfamily [static]}}
+
+Strategy instance for per-\/object locks. Supports all locked modes except I\+N\+T\+E\+N\+T\+I\+ON E\+X\+C\+L\+U\+S\+I\+VE locks. \mbox{\Hypertarget{classMDL__lock_a7ef26eb4cf46309c494135291a82e20c}\label{classMDL__lock_a7ef26eb4cf46309c494135291a82e20c}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count@{m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count}}
+\index{m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count@{m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count}{m\_obtrusive\_locks\_granted\_waiting\_count}}
+{\footnotesize\ttfamily uint M\+D\+L\+\_\+lock\+::m\+\_\+obtrusive\+\_\+locks\+\_\+granted\+\_\+waiting\+\_\+count}
+
+Number of granted or waiting lock requests of \char`\"{}obtrusive\char`\"{} type. Also includes \char`\"{}obtrusive\char`\"{} lock requests for which we about to check if they can be granted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_aa8424d2f478663117e7ac5e435840342}{M\+D\+L\+\_\+lock\+::get\+\_\+unobtrusive\+\_\+lock\+\_\+increment()}} description.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This number doesn\textquotesingle{}t include \char`\"{}unobtrusive\char`\"{} locks which were acquired using \char`\"{}slow path\char`\"{}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}\label{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+rwlock@{m\+\_\+rwlock}}
+\index{m\+\_\+rwlock@{m\+\_\+rwlock}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+rwlock}{m\_rwlock}}
+{\footnotesize\ttfamily mysql\+\_\+prlock\+\_\+t M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}
+
+Read-\/write lock protecting this lock context.
+
+\begin{DoxyNote}{Note}
+The fact that we use read-\/write lock prefers readers here is important as deadlock detector won\textquotesingle{}t work correctly otherwise.
+\end{DoxyNote}
+For example, imagine that we have following waiters graph\+: \begin{DoxyVerb}         ctxA -> obj1 -> ctxB -> obj1 -|
+          ^                            |
+          |----------------------------|
+\end{DoxyVerb}
+
+
+and both ctxA and ctxB start deadlock detection process\+:
+
+ctxA read-\/locks obj1 ctxB read-\/locks obj2 ctxA goes deeper ctxB goes deeper
+
+Now ctxC comes in who wants to start waiting on obj1, also ctxD comes in who wants to start waiting on obj2.
+
+ctxC tries to write-\/lock obj1 ctxD tries to write-\/lock obj2 ctxC is blocked ctxD is blocked
+
+Now ctxA and ctxB resume their search\+:
+
+ctxA tries to read-\/lock obj2 ctxB tries to read-\/lock obj1
+
+If m\+\_\+rwlock prefers writes (or fair) both ctxA and ctxB would be blocked because of pending write locks from ctxD and ctxC correspondingly. Thus we will get a deadlock in deadlock detector. If m\+\_\+wrlock prefers readers (actually ignoring pending writers is enough) ctxA and ctxB will continue and no deadlock will occur. \mbox{\Hypertarget{classMDL__lock_aed7a092b4b9aa426597f599feb6bb19b}\label{classMDL__lock_aed7a092b4b9aa426597f599feb6bb19b}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+scoped\+\_\+lock\+\_\+strategy@{m\+\_\+scoped\+\_\+lock\+\_\+strategy}}
+\index{m\+\_\+scoped\+\_\+lock\+\_\+strategy@{m\+\_\+scoped\+\_\+lock\+\_\+strategy}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+scoped\+\_\+lock\+\_\+strategy}{m\_scoped\_lock\_strategy}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+lock\+\_\+strategy}} M\+D\+L\+\_\+lock\+::m\+\_\+scoped\+\_\+lock\+\_\+strategy\hspace{0.3cm}{\ttfamily [static]}}
+
+Strategy instances to be used with scoped metadata locks (i.\+e. locks from G\+L\+O\+B\+AL, C\+O\+M\+M\+IT, T\+A\+B\+L\+E\+S\+P\+A\+CE and S\+C\+H\+E\+MA namespaces). The only locking modes which are supported at the moment are S\+H\+A\+R\+ED and I\+N\+T\+E\+N\+T\+I\+ON E\+X\+C\+L\+U\+S\+I\+VE and E\+X\+C\+L\+U\+S\+I\+VE. \mbox{\Hypertarget{classMDL__lock_a67a214605da83d57ac8d69c1f1c4854d}\label{classMDL__lock_a67a214605da83d57ac8d69c1f1c4854d}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+strategy@{m\+\_\+strategy}}
+\index{m\+\_\+strategy@{m\+\_\+strategy}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+strategy}{m\_strategy}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structMDL__lock_1_1MDL__lock__strategy}{M\+D\+L\+\_\+lock\+\_\+strategy}}$\ast$ M\+D\+L\+\_\+lock\+::m\+\_\+strategy}
+
+Pointer to strategy object which defines how different types of lock requests should be handled for the namespace to which this lock belongs. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__lock_aed7a092b4b9aa426597f599feb6bb19b}{M\+D\+L\+\_\+lock\+::m\+\_\+scoped\+\_\+lock\+\_\+strategy}} and \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}}\+:\mbox{\hyperlink{classMDL__lock_a6ed94b58baea6bf2e22b76566aa513b3}{m\+\_\+object\+\_\+lock\+\_\+strategy}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__lock_a4443cad6b484e2af5c816949ddb209dc}\label{classMDL__lock_a4443cad6b484e2af5c816949ddb209dc}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!m\+\_\+waiting@{m\+\_\+waiting}}
+\index{m\+\_\+waiting@{m\+\_\+waiting}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{m\+\_\+waiting}{m\_waiting}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__lock_1_1Ticket__list}{Ticket\+\_\+list}} M\+D\+L\+\_\+lock\+::m\+\_\+waiting}
+
+Tickets for contexts waiting to acquire a lock. \mbox{\Hypertarget{classMDL__lock_abaeb101565637f92f74d4a84bdc53fa5}\label{classMDL__lock_abaeb101565637f92f74d4a84bdc53fa5}} 
+\index{M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}!M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES@{M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES}}
+\index{M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES@{M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES}!M\+D\+L\+\_\+lock@{M\+D\+L\+\_\+lock}}
+\subsubsection{\texorpdfstring{M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES}{MDL\_OBJECT\_HOG\_LOCK\_TYPES}}
+{\footnotesize\ttfamily const bitmap\+\_\+t M\+D\+L\+\_\+lock\+::\+M\+D\+L\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+H\+O\+G\+\_\+\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+ES\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                          (MDL\_BIT(MDL\_SHARED\_NO\_WRITE) |}
+\DoxyCodeLine{                           MDL\_BIT(MDL\_SHARED\_NO\_READ\_WRITE) |}
+\DoxyCodeLine{                           MDL\_BIT(MDL\_EXCLUSIVE))}
+\end{DoxyCode}
+\mbox{\hyperlink{classBitmap}{Bitmap}} with \char`\"{}hog\char`\"{} lock types for object locks.
+
+Locks of these types can easily starve out lower priority locks. To prevent this we only grant them max\+\_\+write\+\_\+lock\+\_\+count times in a row while other lock types are waiting. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+cc\end{DoxyCompactItemize}

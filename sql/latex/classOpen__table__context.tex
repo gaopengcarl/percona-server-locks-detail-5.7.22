@@ -1,0 +1,71 @@
+\hypertarget{classOpen__table__context}{}\section{Open\+\_\+table\+\_\+context Class Reference}
+\label{classOpen__table__context}\index{Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOpen__table__context_a598143ade01c51a46534ce06fbb9bbab}\label{classOpen__table__context_a598143ade01c51a46534ce06fbb9bbab}} 
+enum {\bfseries enum\+\_\+open\+\_\+table\+\_\+action} \{ \newline
+{\bfseries O\+T\+\_\+\+N\+O\+\_\+\+A\+C\+T\+I\+ON} = 0, 
+{\bfseries O\+T\+\_\+\+B\+A\+C\+K\+O\+F\+F\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+RY}, 
+{\bfseries O\+T\+\_\+\+R\+E\+O\+P\+E\+N\+\_\+\+T\+A\+B\+L\+ES}, 
+{\bfseries O\+T\+\_\+\+D\+I\+S\+C\+O\+V\+ER}, 
+\newline
+{\bfseries O\+T\+\_\+\+R\+E\+P\+A\+IR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__Data__Dictionary_ga8eaa3b1fdce29eac72028f96c55607d3}{Open\+\_\+table\+\_\+context}} (T\+HD $\ast$thd, uint flags)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gade48892bc4607303f7f4d3d6df4c39de}{recover\+\_\+from\+\_\+failed\+\_\+open}} ()
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gaf35889f70c8719510fb76899cf9cf20b}{request\+\_\+backoff\+\_\+action}} (enum\+\_\+open\+\_\+table\+\_\+action action\+\_\+arg, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classOpen__table__context_aee1f9f63f32c46b08ea6d94d90c57cfd}\label{classOpen__table__context_aee1f9f63f32c46b08ea6d94d90c57cfd}} 
+bool {\bfseries can\+\_\+recover\+\_\+from\+\_\+failed\+\_\+open} () const
+\item 
+const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \& \mbox{\hyperlink{classOpen__table__context_afad4536802b51dd231dd4a4e91309abb}{start\+\_\+of\+\_\+statement\+\_\+svp}} () const
+\item 
+\mbox{\Hypertarget{classOpen__table__context_a5b28ae0b9c622cd645419e618ef00b6f}\label{classOpen__table__context_a5b28ae0b9c622cd645419e618ef00b6f}} 
+ulong {\bfseries get\+\_\+timeout} () const
+\item 
+\mbox{\Hypertarget{classOpen__table__context_a5dd83bd54b064eb0934a9183e634c1d4}\label{classOpen__table__context_a5dd83bd54b064eb0934a9183e634c1d4}} 
+uint {\bfseries get\+\_\+flags} () const
+\item 
+void \mbox{\hyperlink{classOpen__table__context_a50d842b440bbda463e5780b67fd7897a}{set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl}} ()
+\item 
+\mbox{\Hypertarget{classOpen__table__context_a6bd3420ec54cb226d7ed8f2bd51ce3ef}\label{classOpen__table__context_a6bd3420ec54cb226d7ed8f2bd51ce3ef}} 
+bool {\bfseries has\+\_\+protection\+\_\+against\+\_\+grl} () const
+\item 
+\mbox{\Hypertarget{classOpen__table__context_adfeb937fab8d48aaa3e941cbab052adf}\label{classOpen__table__context_adfeb937fab8d48aaa3e941cbab052adf}} 
+bool {\bfseries can\+\_\+back\+\_\+off} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A context of \mbox{\hyperlink{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}{open\+\_\+tables()}} function, used to recover from a failed \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table()}} or open\+\_\+routine() attempt. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classOpen__table__context_a50d842b440bbda463e5780b67fd7897a}\label{classOpen__table__context_a50d842b440bbda463e5780b67fd7897a}} 
+\index{Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}!set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl@{set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl}}
+\index{set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl@{set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl}!Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}}
+\subsubsection{\texorpdfstring{set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl()}{set\_has\_protection\_against\_grl()}}
+{\footnotesize\ttfamily void Open\+\_\+table\+\_\+context\+::set\+\_\+has\+\_\+protection\+\_\+against\+\_\+grl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set flag indicating that we have already acquired metadata lock protecting this statement against G\+RL while opening tables. \mbox{\Hypertarget{classOpen__table__context_afad4536802b51dd231dd4a4e91309abb}\label{classOpen__table__context_afad4536802b51dd231dd4a4e91309abb}} 
+\index{Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}!start\+\_\+of\+\_\+statement\+\_\+svp@{start\+\_\+of\+\_\+statement\+\_\+svp}}
+\index{start\+\_\+of\+\_\+statement\+\_\+svp@{start\+\_\+of\+\_\+statement\+\_\+svp}!Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}}
+\subsubsection{\texorpdfstring{start\+\_\+of\+\_\+statement\+\_\+svp()}{start\_of\_statement\_svp()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}}\& Open\+\_\+table\+\_\+context\+::start\+\_\+of\+\_\+statement\+\_\+svp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+When doing a back-\/off, we close all tables acquired by this statement. Return an M\+DL savepoint taken at the beginning of the statement, so that we can rollback to it before waiting on locks. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\item 
+sql\+\_\+base.\+cc\end{DoxyCompactItemize}

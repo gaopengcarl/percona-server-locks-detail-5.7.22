@@ -1,0 +1,91 @@
+\hypertarget{lock_8cc}{}\section{lock.\+cc File Reference}
+\label{lock_8cc}\index{lock.\+cc@{lock.\+cc}}
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}session\+\_\+tracker.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$hash.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+atomic.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries G\+E\+T\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+CK}~1
+\item 
+\#define {\bfseries G\+E\+T\+\_\+\+L\+O\+C\+K\+\_\+\+S\+T\+O\+R\+E\+\_\+\+L\+O\+C\+KS}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$ \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$tables, size\+\_\+t count, uint flags)
+\item 
+void {\bfseries mysql\+\_\+unlock\+\_\+tables} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$sql\+\_\+lock)
+\item 
+void \mbox{\hyperlink{group__Locking_gafad092ec9a399db99abd75b57a9ee679}{mysql\+\_\+unlock\+\_\+some\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$table, uint count)
+\item 
+void \mbox{\hyperlink{group__Locking_ga1e24a131cbe030c49d953669f804877d}{mysql\+\_\+unlock\+\_\+read\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$sql\+\_\+lock)
+\item 
+void \mbox{\hyperlink{group__Locking_gad40fe56766e1b54e2fed60814aec1e58}{mysql\+\_\+lock\+\_\+remove}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$locked, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+void \mbox{\hyperlink{group__Locking_ga07896e99c9c248c6441be5c13c484303}{mysql\+\_\+lock\+\_\+abort}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool upgrade\+\_\+lock)
+\item 
+void \mbox{\hyperlink{group__Locking_gad2320fa808c9d6523790e796d57e2331}{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$ {\bfseries mysql\+\_\+lock\+\_\+merge} (\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$a, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$b)
+\item 
+bool \mbox{\hyperlink{group__Locking_gac67865dd0ef1b003fdee2182aba9a049}{lock\+\_\+schema\+\_\+name}} (T\+HD $\ast$thd, const char $\ast$db)
+\item 
+bool \mbox{\hyperlink{group__Locking_ga1923c93a226a0a762e9a7675135f770e}{lock\+\_\+tablespace\+\_\+name}} (T\+HD $\ast$thd, const char $\ast$tablespace)
+\item 
+uchar $\ast$ {\bfseries tablespace\+\_\+set\+\_\+get\+\_\+key} (const uchar $\ast$record, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+bool \mbox{\hyperlink{group__Locking_ga377fe3850ef2fce0988a3cffb9128159}{lock\+\_\+tablespace\+\_\+names}} (T\+HD $\ast$thd, \mbox{\hyperlink{classHash__set}{Tablespace\+\_\+hash\+\_\+set}} $\ast$tablespace\+\_\+set, ulong lock\+\_\+wait\+\_\+timeout)
+\item 
+bool \mbox{\hyperlink{group__Locking_gab03d9cc9ff9682e9f2a961685fd90cb3}{lock\+\_\+object\+\_\+name}} (T\+HD $\ast$thd, \mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}} mdl\+\_\+type, const char $\ast$db, const char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+H\+A\+SH {\bfseries open\+\_\+cache}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Locking functions for mysql.
+
+Because of the new concurrent inserts, we must first get external locks before getting internal locks. If we do it in the other order, the status information is not up to date when called from the lock handler.
+
+G\+E\+N\+E\+R\+AL D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF L\+O\+C\+K\+I\+NG
+
+When not using L\+O\+CK T\+A\+B\+L\+ES\+:
+
+
+\begin{DoxyItemize}
+\item For each S\+QL statement \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}} is called for all involved tables.
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}} will call table\+\_\+handler-\/$>$external\+\_\+lock(thd,locktype) for each table. This is followed by a call to thr\+\_\+multi\+\_\+lock() for all tables.
+\end{DoxyItemize}
+\item When statement is done, we call mysql\+\_\+unlock\+\_\+tables(). This will call thr\+\_\+multi\+\_\+unlock() followed by table\+\_\+handler-\/$>$external\+\_\+lock(thd, F\+\_\+\+U\+N\+L\+C\+K) for each table.
+\item Note that mysql\+\_\+unlock\+\_\+tables() may be called several times as My\+S\+QL in some cases can free some tables earlier than others.
+\item The above is true both for normal and temporary tables.
+\item Temporary non transactional tables are never passed to thr\+\_\+multi\+\_\+lock() and we never call external\+\_\+lock(thd, F\+\_\+\+U\+N\+L\+O\+C\+K) on these.
+\end{DoxyItemize}
+
+When using L\+O\+CK T\+A\+B\+L\+ES\+:
+
+
+\begin{DoxyItemize}
+\item L\+O\+CK \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} will call \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}} for all tables. \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}} will call table\+\_\+handler-\/$>$external\+\_\+lock(thd,locktype) for each table. This is followed by a call to thr\+\_\+multi\+\_\+lock() for all tables.
+\item For each statement, we will call table\+\_\+handler-\/$>$start\+\_\+stmt(\+T\+H\+D) to inform the table handler that we are using the table.
+
+The tables used can only be tables used in L\+O\+CK T\+A\+B\+L\+ES or a temporary table.
+\item When statement is done, we will call ha\+\_\+commit\+\_\+stmt(thd);
+\item When calling U\+N\+L\+O\+CK T\+A\+B\+L\+ES we call mysql\+\_\+unlock\+\_\+tables() for all tables used in L\+O\+CK T\+A\+B\+L\+ES
+\end{DoxyItemize}
+
+If table\+\_\+handler-\/$>$external\+\_\+lock(thd, locktype) fails, we call table\+\_\+handler-\/$>$external\+\_\+lock(thd, F\+\_\+\+U\+N\+L\+C\+K) for each table that was locked, excluding one that caused failure. That means handler must cleanup itself in case external\+\_\+lock() fails.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000043}{Todo}}]Change to use my\+\_\+malloc() O\+N\+LY when using L\+O\+CK T\+A\+B\+L\+ES command or when we are forced to use mysql\+\_\+lock\+\_\+merge. \end{DoxyRefDesc}

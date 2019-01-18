@@ -1,0 +1,300 @@
+\hypertarget{classMYSQL__BIN__LOG}{}\section{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG Class Reference}
+\label{classMYSQL__BIN__LOG}\index{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+Inheritance diagram for M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMYSQL__BIN__LOG}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{group__Binary__Log_gabcd5b380680e537bdec0f093a8f2e3d6}{generate\+\_\+name}} (const char $\ast$log\+\_\+name, const char $\ast$suffix, char $\ast$buff)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a813fe731e0079eb9f533c2167d8f46cc}\label{classMYSQL__BIN__LOG_a813fe731e0079eb9f533c2167d8f46cc}} 
+bool {\bfseries is\+\_\+open} ()
+\item 
+{\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG} (uint $\ast$sync\+\_\+period, enum cache\+\_\+type io\+\_\+cache\+\_\+type\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gab8925923df0bf9cd07f7fcaf45f8db16}{find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set}} (char $\ast$binlog\+\_\+file\+\_\+name, const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set, \mbox{\hyperlink{structGtid}{Gtid}} $\ast$first\+\_\+gtid, const char $\ast$$\ast$errmsg)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gab52138e0e18c6bca2812e4051164db4f}{init\+\_\+gtid\+\_\+sets}} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$lost\+\_\+groups, bool verify\+\_\+checksum, bool need\+\_\+lock, \mbox{\hyperlink{classTransaction__boundary__parser}{Transaction\+\_\+boundary\+\_\+parser}} $\ast$trx\+\_\+parser, \mbox{\hyperlink{structGtid}{Gtid}} $\ast$gtid\+\_\+partial\+\_\+trx, bool is\+\_\+server\+\_\+starting=false)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a0f1387595b8bd6b680a421a0803fe542}\label{classMYSQL__BIN__LOG_a0f1387595b8bd6b680a421a0803fe542}} 
+void {\bfseries set\+\_\+previous\+\_\+gtid\+\_\+set\+\_\+relaylog} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$previous\+\_\+gtid\+\_\+set\+\_\+param)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga4e7e658ba27b48710cf57e3f8a8253e4}{gtid\+\_\+end\+\_\+transaction}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga44de4e3109fc4d50d4968191ab0f3544}{open\+\_\+binlog}} (const char $\ast$opt\+\_\+name)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga22e829bf97dfac49c3b05a2cbdbaf7cb}{close}} ()
+\item 
+enum\+\_\+result \mbox{\hyperlink{group__Binary__Log_ga94fdcfcfb5d2c85ca2a114ad2115b20e}{commit}} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga9590d29210bd03fce1b8f9effc7c2d2a}{rollback}} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga4789039161947fff76fa8250b120b7e3}{prepare}} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga0e843aafa062a4ab987d5ff75d450c41}{recover}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$log, \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fdle, my\+\_\+off\+\_\+t $\ast$valid\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a79577c24d3f82ce1b3fef8bd8dcd3572}\label{classMYSQL__BIN__LOG_a79577c24d3f82ce1b3fef8bd8dcd3572}} 
+int {\bfseries recover} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$log, \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fdle)
+\item 
+void {\bfseries update\+\_\+thd\+\_\+next\+\_\+event\+\_\+pos} (T\+HD $\ast$thd)
+\item 
+int {\bfseries flush\+\_\+and\+\_\+set\+\_\+pending\+\_\+rows\+\_\+event} (T\+HD $\ast$thd, \mbox{\hyperlink{classRows__log__event}{Rows\+\_\+log\+\_\+event}} $\ast$event, bool is\+\_\+transactional)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga5ebea3ac42b19b6e1c86ca33c3cb28e7}{xlock}} (void)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaee260f3856d7b1e557b91b7ecdc0b01c}{xunlock}} (void)
+\item 
+void \mbox{\hyperlink{classMYSQL__BIN__LOG_a189bd79b457e303f7c6ef936e3c932cf}{slock}} (void)
+\item 
+void \mbox{\hyperlink{classMYSQL__BIN__LOG_a594f819067f89619e7329f67043c1323}{sunlock}} (void)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a787841b511a1360826c71c272ac2e45e}\label{classMYSQL__BIN__LOG_a787841b511a1360826c71c272ac2e45e}} 
+void {\bfseries add\+\_\+bytes\+\_\+written} (ulonglong inc)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a117a10f315d9d797ab58fef7b43299d5}\label{classMYSQL__BIN__LOG_a117a10f315d9d797ab58fef7b43299d5}} 
+void {\bfseries reset\+\_\+bytes\+\_\+written} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_aaba56580d88f3226be9be42757f97593}\label{classMYSQL__BIN__LOG_aaba56580d88f3226be9be42757f97593}} 
+void {\bfseries harvest\+\_\+bytes\+\_\+written} (ulonglong $\ast$counter)
+\item 
+void {\bfseries set\+\_\+max\+\_\+size} (ulong max\+\_\+size\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_af17a43410896c12a08f8efd45ca20217}\label{classMYSQL__BIN__LOG_af17a43410896c12a08f8efd45ca20217}} 
+void {\bfseries signal\+\_\+update} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a66bc2e2949a70da5f09ca0b8138876b9}\label{classMYSQL__BIN__LOG_a66bc2e2949a70da5f09ca0b8138876b9}} 
+void {\bfseries update\+\_\+binlog\+\_\+end\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a46294e4038fe1fc530ae45ca84de339e}\label{classMYSQL__BIN__LOG_a46294e4038fe1fc530ae45ca84de339e}} 
+void {\bfseries update\+\_\+binlog\+\_\+end\+\_\+pos} (my\+\_\+off\+\_\+t pos)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga10698ebc9afd7be839f7a69b7aaac141}{wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log}} (T\+HD $\ast$thd, const struct timespec $\ast$timeout)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga1b625b440aaf82241200b3980d94c6a9}{wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log}} (T\+HD $\ast$thd, const struct timespec $\ast$timeout)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaf81ca29b12d9e21eb2d36eee2e7a51fe}{do\+\_\+write\+\_\+cache}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$cache, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)
+\item 
+void {\bfseries init\+\_\+pthread\+\_\+objects} ()
+\item 
+void {\bfseries cleanup} ()
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga8614d8fb3c4c2c255145d6cfd992e8d8}{open\+\_\+binlog}} (const char $\ast$log\+\_\+name, const char $\ast$new\+\_\+name, ulong max\+\_\+size, bool null\+\_\+created, bool need\+\_\+lock\+\_\+index, bool need\+\_\+sid\+\_\+lock, \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$extra\+\_\+description\+\_\+event)
+\item 
+bool {\bfseries open\+\_\+index\+\_\+file} (const char $\ast$index\+\_\+file\+\_\+name\+\_\+arg, const char $\ast$log\+\_\+name, bool need\+\_\+lock\+\_\+index)
+\item 
+int {\bfseries new\+\_\+file} (\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$extra\+\_\+description\+\_\+event)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga9c19cd666a1a517386dedd4078dd93e7}{write\+\_\+event}} (\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$event\+\_\+info)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gab0d497917a9a65893753ff92be180172}{write\+\_\+cache}} (T\+HD $\ast$thd, class \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$\mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}}, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gacface590afa692fc84446cde6f104231}{assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group}} (T\+HD $\ast$first\+\_\+seen)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gabc6da7d051531ecf891a1fe631697f38}{write\+\_\+gtid}} (T\+HD $\ast$thd, \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$cache\+\_\+data, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga32b5241d2e64863a3de611e7b5eb95fd}{write\+\_\+dml\+\_\+directly}} (T\+HD $\ast$thd, const char $\ast$stmt, size\+\_\+t stmt\+\_\+len)
+\item 
+void {\bfseries set\+\_\+write\+\_\+error} (T\+HD $\ast$thd, bool is\+\_\+transactional)
+\item 
+bool {\bfseries check\+\_\+write\+\_\+error} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaceb6fa03fdf46ada9510567752878a53}{write\+\_\+incident}} (T\+HD $\ast$thd, bool need\+\_\+lock\+\_\+log, const char $\ast$err\+\_\+msg, bool do\+\_\+flush\+\_\+and\+\_\+sync=true)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaed3d159f584e6c57aed2e5af51db49fb}{write\+\_\+incident}} (\mbox{\hyperlink{classIncident__log__event}{Incident\+\_\+log\+\_\+event}} $\ast$ev, T\+HD $\ast$thd, bool need\+\_\+lock\+\_\+log, const char $\ast$err\+\_\+msg, bool do\+\_\+flush\+\_\+and\+\_\+sync=true)
+\item 
+void {\bfseries start\+\_\+union\+\_\+events} (T\+HD $\ast$thd, query\+\_\+id\+\_\+t query\+\_\+id\+\_\+param)
+\item 
+void {\bfseries stop\+\_\+union\+\_\+events} (T\+HD $\ast$thd)
+\item 
+bool {\bfseries is\+\_\+query\+\_\+in\+\_\+union} (T\+HD $\ast$thd, query\+\_\+id\+\_\+t query\+\_\+id\+\_\+param)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga94f694096c1ef28962d9d7936d2d9a1e}{make\+\_\+log\+\_\+name}} (char $\ast$buf, const char $\ast$log\+\_\+ident)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaac641bdabee70ba4bd377e06e1853fcb}{is\+\_\+active}} (const char $\ast$log\+\_\+file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a8453da69cf16851231e33586e8992ea4}\label{classMYSQL__BIN__LOG_a8453da69cf16851231e33586e8992ea4}} 
+int {\bfseries remove\+\_\+logs\+\_\+from\+\_\+index} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, bool need\+\_\+update\+\_\+threads)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga2053b0b53a46eb5702b44966497c333f}{rotate}} (bool force\+\_\+rotate, bool $\ast$check\+\_\+purge)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaff1889360685bd90b1d3ffba10ba3dba}{purge}} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga9f41b228c438fe7b4c710b8fdd780cfb}{rotate\+\_\+and\+\_\+purge}} (T\+HD $\ast$thd, bool force\+\_\+rotate)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gae40c4dc6b0b8986a50661b28df3a6fa3}{flush\+\_\+and\+\_\+sync}} (const bool force=false)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a5e04e209edd9b720574d2a34ed8fc117}\label{classMYSQL__BIN__LOG_a5e04e209edd9b720574d2a34ed8fc117}} 
+int {\bfseries purge\+\_\+logs} (const char $\ast$to\+\_\+log, bool included, bool need\+\_\+lock\+\_\+index, bool need\+\_\+update\+\_\+threads, ulonglong $\ast$decrease\+\_\+log\+\_\+space, bool auto\+\_\+purge)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a10375692903569caa28cf6d0949081ac}\label{classMYSQL__BIN__LOG_a10375692903569caa28cf6d0949081ac}} 
+int {\bfseries purge\+\_\+logs\+\_\+maximum\+\_\+number} (ulong max\+\_\+nr\+\_\+files)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ac126e05bd18fabf135844faef05ff28c}\label{classMYSQL__BIN__LOG_ac126e05bd18fabf135844faef05ff28c}} 
+int {\bfseries purge\+\_\+logs\+\_\+before\+\_\+date} (time\+\_\+t purge\+\_\+time, bool auto\+\_\+purge)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ac9f15d1126e85d2acca6e06c92ea60f1}\label{classMYSQL__BIN__LOG_ac9f15d1126e85d2acca6e06c92ea60f1}} 
+int {\bfseries purge\+\_\+first\+\_\+log} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, bool included)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga5bbd66f9464d9a83f33fdcdba20d7d99}{set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name}} (const char $\ast$base\+\_\+file\+\_\+name)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gac6d69e1ee6b9099429bd919af752a0eb}{open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gad5cf0683506dfdcc484155c676786860}{close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gaddc5340a448c8179ab35b3f2e0891984}{add\+\_\+log\+\_\+to\+\_\+index}} (uchar $\ast$log\+\_\+file\+\_\+name, size\+\_\+t name\+\_\+len, bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gab57cd148796a62181465bb25db0e236c}{move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file}} (bool need\+\_\+lock\+\_\+index)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a50d38b4893900ea098471f69cbd4e14a}\label{classMYSQL__BIN__LOG_a50d38b4893900ea098471f69cbd4e14a}} 
+int {\bfseries set\+\_\+purge\+\_\+index\+\_\+file\+\_\+name} (const char $\ast$base\+\_\+file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a5b15802f896ddf6689c06f6d847d194b}\label{classMYSQL__BIN__LOG_a5b15802f896ddf6689c06f6d847d194b}} 
+int {\bfseries open\+\_\+purge\+\_\+index\+\_\+file} (bool destroy)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_aca91c2fec3e0fcfd59e3adff0549c590}\label{classMYSQL__BIN__LOG_aca91c2fec3e0fcfd59e3adff0549c590}} 
+bool {\bfseries is\+\_\+inited\+\_\+purge\+\_\+index\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a11e7a42f9b759958fcb48c5fce0645fe}\label{classMYSQL__BIN__LOG_a11e7a42f9b759958fcb48c5fce0645fe}} 
+int {\bfseries close\+\_\+purge\+\_\+index\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a94645bfd78d4d718cfcf15fb8e6a36af}\label{classMYSQL__BIN__LOG_a94645bfd78d4d718cfcf15fb8e6a36af}} 
+int {\bfseries clean\+\_\+purge\+\_\+index\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a47bcf9a0b3e76319dcb1a39a38be5386}\label{classMYSQL__BIN__LOG_a47bcf9a0b3e76319dcb1a39a38be5386}} 
+int {\bfseries sync\+\_\+purge\+\_\+index\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a474f73fafc4d1c1504c6a08a1b7cca02}\label{classMYSQL__BIN__LOG_a474f73fafc4d1c1504c6a08a1b7cca02}} 
+int {\bfseries register\+\_\+purge\+\_\+index\+\_\+entry} (const char $\ast$entry)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ad2fa3a1ea5448f3e685da73d94f62505}\label{classMYSQL__BIN__LOG_ad2fa3a1ea5448f3e685da73d94f62505}} 
+int {\bfseries register\+\_\+create\+\_\+index\+\_\+entry} (const char $\ast$entry)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ab9f8dd27495fec25114ccdec0917ed4a}\label{classMYSQL__BIN__LOG_ab9f8dd27495fec25114ccdec0917ed4a}} 
+int {\bfseries purge\+\_\+index\+\_\+entry} (T\+HD $\ast$thd, ulonglong $\ast$decrease\+\_\+log\+\_\+space, bool need\+\_\+lock\+\_\+index)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaa7f92132aa396f9d9aa44701800334be}{reset\+\_\+logs}} (T\+HD $\ast$thd, bool delete\+\_\+only=false)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaf6d6d79c98b0c8187b2761b959e67c3f}{close}} (uint exiting, bool need\+\_\+lock\+\_\+log, bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga245bb1e482896f726e11719666f2394a}{find\+\_\+log\+\_\+pos}} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, const char $\ast$log\+\_\+name, bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga8ed66e95398bcafa143ca8ad16860711}{find\+\_\+next\+\_\+log}} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga7a173d873dfe12dee3963402b0a2075e}{find\+\_\+next\+\_\+relay\+\_\+log}} (char log\+\_\+name\mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN+1\mbox{]})
+\item 
+int {\bfseries get\+\_\+current\+\_\+log} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, bool need\+\_\+lock\+\_\+log=true)
+\item 
+int {\bfseries raw\+\_\+get\+\_\+current\+\_\+log} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo)
+\item 
+uint {\bfseries next\+\_\+file\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_adf6e9e8916879fedaa6dbb7a64711c5b}\label{classMYSQL__BIN__LOG_adf6e9e8916879fedaa6dbb7a64711c5b}} 
+char $\ast$ {\bfseries get\+\_\+index\+\_\+fname} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_aca10bed947658cea2f93280247479600}\label{classMYSQL__BIN__LOG_aca10bed947658cea2f93280247479600}} 
+char $\ast$ {\bfseries get\+\_\+log\+\_\+fname} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a3e24e997aa7253e71e06bc1c0a162783}\label{classMYSQL__BIN__LOG_a3e24e997aa7253e71e06bc1c0a162783}} 
+char $\ast$ {\bfseries get\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a842c3cd1b4334ab7d31d799bb7152528}\label{classMYSQL__BIN__LOG_a842c3cd1b4334ab7d31d799bb7152528}} 
+mysql\+\_\+mutex\+\_\+t $\ast$ {\bfseries get\+\_\+log\+\_\+lock} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a948620e0fe43f6e741126e0fafac78d9}\label{classMYSQL__BIN__LOG_a948620e0fe43f6e741126e0fafac78d9}} 
+mysql\+\_\+cond\+\_\+t $\ast$ {\bfseries get\+\_\+log\+\_\+cond} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_af8ba17d0e11a4206bda6ccb25d107dab}\label{classMYSQL__BIN__LOG_af8ba17d0e11a4206bda6ccb25d107dab}} 
+I\+O\+\_\+\+C\+A\+C\+HE $\ast$ {\bfseries get\+\_\+log\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a3f3405625aac842d8c914e0cdd624081}\label{classMYSQL__BIN__LOG_a3f3405625aac842d8c914e0cdd624081}} 
+void {\bfseries lock\+\_\+index} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ab1f7b4415a660ca24b1aa50dfdd8b744}\label{classMYSQL__BIN__LOG_ab1f7b4415a660ca24b1aa50dfdd8b744}} 
+void {\bfseries unlock\+\_\+index} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a8f505e646396df598fa14b43213b4fb0}\label{classMYSQL__BIN__LOG_a8f505e646396df598fa14b43213b4fb0}} 
+I\+O\+\_\+\+C\+A\+C\+HE $\ast$ {\bfseries get\+\_\+index\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ac27362736c80e98111262f98fc0a34db}\label{classMYSQL__BIN__LOG_ac27362736c80e98111262f98fc0a34db}} 
+uint32 {\bfseries get\+\_\+open\+\_\+count} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a3d4458510472f45d92ab8cc7fa6f7ee7}\label{classMYSQL__BIN__LOG_a3d4458510472f45d92ab8cc7fa6f7ee7}} 
+my\+\_\+off\+\_\+t {\bfseries get\+\_\+binlog\+\_\+end\+\_\+pos} () const
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a718a607312f65a25b9d4d3caf11c1597}\label{classMYSQL__BIN__LOG_a718a607312f65a25b9d4d3caf11c1597}} 
+mysql\+\_\+mutex\+\_\+t $\ast$ {\bfseries get\+\_\+binlog\+\_\+end\+\_\+pos\+\_\+lock} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a127d5779d080ecb1efdcaebd442575d1}\label{classMYSQL__BIN__LOG_a127d5779d080ecb1efdcaebd442575d1}} 
+void {\bfseries lock\+\_\+binlog\+\_\+end\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a0bb1ba113cff66276d7e2018754b20b8}\label{classMYSQL__BIN__LOG_a0bb1ba113cff66276d7e2018754b20b8}} 
+void {\bfseries unlock\+\_\+binlog\+\_\+end\+\_\+pos} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga8d92fa178d27467ce506c759c5d82959}{get\+\_\+gtid\+\_\+executed}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a3e47971615718a69cdf2ac5b3843beb2}\label{classMYSQL__BIN__LOG_a3e47971615718a69cdf2ac5b3843beb2}} 
+\mbox{\hyperlink{classBinlog__crypt__data}{Binlog\+\_\+crypt\+\_\+data}} $\ast$ {\bfseries get\+\_\+crypto\+\_\+data} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a93055b51f23e5da837a5d06672d97891}\label{classMYSQL__BIN__LOG_a93055b51f23e5da837a5d06672d97891}} 
+bool {\bfseries is\+\_\+relay\+\_\+log}
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a1aefbaa485d83b24a8c960fdb792d505}\label{classMYSQL__BIN__LOG_a1aefbaa485d83b24a8c960fdb792d505}} 
+ulong {\bfseries signal\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_af36265a062029fcd0ce74dd095be2272}\label{classMYSQL__BIN__LOG_af36265a062029fcd0ce74dd095be2272}} 
+uint8 {\bfseries checksum\+\_\+alg\+\_\+reset}
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_aa636822501a6c8303fc090343c297088}\label{classMYSQL__BIN__LOG_aa636822501a6c8303fc090343c297088}} 
+binary\+\_\+log\+::enum\+\_\+binlog\+\_\+checksum\+\_\+alg {\bfseries relay\+\_\+log\+\_\+checksum\+\_\+alg}
+\item 
+\mbox{\hyperlink{classTransaction__dependency__tracker}{Transaction\+\_\+dependency\+\_\+tracker}} \mbox{\hyperlink{classMYSQL__BIN__LOG_ada239ab6da56294fdcdd7aa30e9fdbfa}{m\+\_\+dependency\+\_\+tracker}}
+\item 
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_aed05e2751dcdd7792537681c03e13a81}\label{classMYSQL__BIN__LOG_aed05e2751dcdd7792537681c03e13a81}} 
+bool {\bfseries is\+\_\+rotating\+\_\+caused\+\_\+by\+\_\+incident}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a189bd79b457e303f7c6ef936e3c932cf}\label{classMYSQL__BIN__LOG_a189bd79b457e303f7c6ef936e3c932cf}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}!slock@{slock}}
+\index{slock@{slock}!M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{slock()}{slock()}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::slock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Acquire a shared lock to block commits. This is used when calling \mbox{\hyperlink{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}{ha\+\_\+commit\+\_\+low()}} to block commits if there\textquotesingle{}s an exclusive lock acquired by S\+T\+A\+RT T\+R\+A\+N\+S\+A\+C\+T\+I\+ON W\+I\+TH C\+O\+N\+S\+I\+S\+T\+E\+NT S\+N\+A\+P\+S\+H\+OT. 
+
+Implements \mbox{\hyperlink{classTC__LOG_a5b73af1ad12c691b3417c565f7e58a1c}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_a594f819067f89619e7329f67043c1323}\label{classMYSQL__BIN__LOG_a594f819067f89619e7329f67043c1323}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}!sunlock@{sunlock}}
+\index{sunlock@{sunlock}!M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{sunlock()}{sunlock()}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::sunlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Release lock acquired with \mbox{\hyperlink{classMYSQL__BIN__LOG_a189bd79b457e303f7c6ef936e3c932cf}{slock()}}. 
+
+Implements \mbox{\hyperlink{classTC__LOG_ab383cdb4b722c9b11d284ac8b970b087}{T\+C\+\_\+\+L\+OG}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMYSQL__BIN__LOG_ada239ab6da56294fdcdd7aa30e9fdbfa}\label{classMYSQL__BIN__LOG_ada239ab6da56294fdcdd7aa30e9fdbfa}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}!m\+\_\+dependency\+\_\+tracker@{m\+\_\+dependency\+\_\+tracker}}
+\index{m\+\_\+dependency\+\_\+tracker@{m\+\_\+dependency\+\_\+tracker}!M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+\subsubsection{\texorpdfstring{m\+\_\+dependency\+\_\+tracker}{m\_dependency\_tracker}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTransaction__dependency__tracker}{Transaction\+\_\+dependency\+\_\+tracker}} M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::m\+\_\+dependency\+\_\+tracker}
+
+Manage the M\+TS dependency tracking 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+binlog.\+h\item 
+binlog.\+cc\end{DoxyCompactItemize}

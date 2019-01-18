@@ -1,0 +1,40 @@
+\hypertarget{structEvent__queue__less}{}\section{Event\+\_\+queue\+\_\+less Struct Reference}
+\label{structEvent__queue__less}\index{Event\+\_\+queue\+\_\+less@{Event\+\_\+queue\+\_\+less}}
+
+
+{\ttfamily \#include $<$event\+\_\+queue.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structEvent__queue__less_ad45c8d8cf773e3ff004a24829fad48b4}\label{structEvent__queue__less_ad45c8d8cf773e3ff004a24829fad48b4}} 
+bool \mbox{\hyperlink{structEvent__queue__less_ad45c8d8cf773e3ff004a24829fad48b4}{operator()}} (\mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$left, \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$right)
+\begin{DoxyCompactList}\small\item\em Maps compare function to strict weak ordering required by Priority\+\_\+queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structEvent__queue__less_a6a21a49d7661975780b62dea9fadb7a9}\label{structEvent__queue__less_a6a21a49d7661975780b62dea9fadb7a9}} 
+int {\bfseries event\+\_\+queue\+\_\+element\+\_\+compare\+\_\+q} (\mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$left, \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$right)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compares the execute\+\_\+at members of two \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} instances. Used as compare operator for the prioritized queue when shifting elements inside.
+
+S\+Y\+N\+O\+P\+S\+IS event\+\_\+queue\+\_\+element\+\_\+compare\+\_\+q() 
+\begin{DoxyParams}{Parameters}
+{\em left} & First \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} object \\
+\hline
+{\em right} & Second \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} object\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & left-\/$>$execute\+\_\+at $<$ right-\/$>$execute\+\_\+at 0 left-\/$>$execute\+\_\+at == right-\/$>$execute\+\_\+at 1 left-\/$>$execute\+\_\+at $>$ right-\/$>$execute\+\_\+at\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRemark}{Remarks}
+execute\+\_\+at.\+second\+\_\+part is not considered during comparison 
+\end{DoxyRemark}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{event__queue_8h}{event\+\_\+queue.\+h}}\end{DoxyCompactItemize}

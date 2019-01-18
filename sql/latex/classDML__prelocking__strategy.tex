@@ -1,0 +1,32 @@
+\hypertarget{classDML__prelocking__strategy}{}\section{D\+M\+L\+\_\+prelocking\+\_\+strategy Class Reference}
+\label{classDML__prelocking__strategy}\index{D\+M\+L\+\_\+prelocking\+\_\+strategy@{D\+M\+L\+\_\+prelocking\+\_\+strategy}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+Inheritance diagram for D\+M\+L\+\_\+prelocking\+\_\+strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDML__prelocking__strategy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga4d51adf9905616e57f7b572081f537ac}{handle\+\_\+routine}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$rt, \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_gab4041a333019fb1a8ffb4e3772f627cf}{handle\+\_\+table}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga757cc4c5e9baf4dfae041368257e46e4}{handle\+\_\+view}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Strategy for prelocking algorithm suitable for D\+ML statements.
+
+Ensures that all tables used by all statement\textquotesingle{}s S\+F/\+S\+P/triggers and required for foreign key checks are prelocked and S\+F/\+S\+Ps used are cached. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\item 
+sql\+\_\+base.\+cc\end{DoxyCompactItemize}

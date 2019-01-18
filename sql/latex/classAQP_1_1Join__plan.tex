@@ -1,0 +1,82 @@
+\hypertarget{classAQP_1_1Join__plan}{}\section{A\+QP\+:\+:Join\+\_\+plan Class Reference}
+\label{classAQP_1_1Join__plan}\index{A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+query\+\_\+plan.\+h$>$}
+
+Inheritance diagram for A\+QP\+:\+:Join\+\_\+plan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAQP_1_1Join__plan}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAQP_1_1Join__plan_a93bbcdd095b3cc551f4cd5d767c21462}{Join\+\_\+plan}} (const \mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join)
+\item 
+const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$ \mbox{\hyperlink{classAQP_1_1Join__plan_aa9112ca023025f15a0b908f8cc519d18}{get\+\_\+table\+\_\+access}} (uint access\+\_\+no) const
+\item 
+uint \mbox{\hyperlink{classAQP_1_1Join__plan_a92950b7a49e0702cf5490b0f0797a076}{get\+\_\+access\+\_\+count}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAQP_1_1Join__plan_a14c1db5217af73d3cd80b811e44f7673}\label{classAQP_1_1Join__plan_a14c1db5217af73d3cd80b811e44f7673}} 
+class {\bfseries Equal\+\_\+set\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classAQP_1_1Join__plan_aa52c20313adab56e5186c04edc232fa9}\label{classAQP_1_1Join__plan_aa52c20313adab56e5186c04edc232fa9}} 
+class {\bfseries Table\+\_\+access}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents a query plan for an n-\/way join, in the form a sequence of n table access operations that will execute as a nested loop join. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAQP_1_1Join__plan_a93bbcdd095b3cc551f4cd5d767c21462}\label{classAQP_1_1Join__plan_a93bbcdd095b3cc551f4cd5d767c21462}} 
+\index{A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}!Join\+\_\+plan@{Join\+\_\+plan}}
+\index{Join\+\_\+plan@{Join\+\_\+plan}!A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}}
+\subsubsection{\texorpdfstring{Join\+\_\+plan()}{Join\_plan()}}
+{\footnotesize\ttfamily A\+Q\+P\+::\+Join\+\_\+plan\+::\+Join\+\_\+plan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em join\+\_\+tab} & Array of access methods constituting the nested loop join. \\
+\hline
+{\em access\+\_\+count} & Length of array. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAQP_1_1Join__plan_a92950b7a49e0702cf5490b0f0797a076}\label{classAQP_1_1Join__plan_a92950b7a49e0702cf5490b0f0797a076}} 
+\index{A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}!get\+\_\+access\+\_\+count@{get\+\_\+access\+\_\+count}}
+\index{get\+\_\+access\+\_\+count@{get\+\_\+access\+\_\+count}!A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}}
+\subsubsection{\texorpdfstring{get\+\_\+access\+\_\+count()}{get\_access\_count()}}
+{\footnotesize\ttfamily uint A\+Q\+P\+::\+Join\+\_\+plan\+::get\+\_\+access\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of table access operations in the nested loop join. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAQP_1_1Join__plan_aa9112ca023025f15a0b908f8cc519d18}\label{classAQP_1_1Join__plan_aa9112ca023025f15a0b908f8cc519d18}} 
+\index{A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}!get\+\_\+table\+\_\+access@{get\+\_\+table\+\_\+access}}
+\index{get\+\_\+table\+\_\+access@{get\+\_\+table\+\_\+access}!A\+Q\+P\+::\+Join\+\_\+plan@{A\+Q\+P\+::\+Join\+\_\+plan}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+access()}{get\_table\_access()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$ A\+Q\+P\+::\+Join\+\_\+plan\+::get\+\_\+table\+\_\+access (\begin{DoxyParamCaption}\item[{uint}]{access\+\_\+no }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the n\textquotesingle{}th table access operation. 
+\begin{DoxyParams}{Parameters}
+{\em access\+\_\+no} & The index of the table access operation to fetch. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The access\+\_\+no\textquotesingle{}th table access operation. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+abstract\+\_\+query\+\_\+plan.\+h\item 
+abstract\+\_\+query\+\_\+plan.\+cc\end{DoxyCompactItemize}

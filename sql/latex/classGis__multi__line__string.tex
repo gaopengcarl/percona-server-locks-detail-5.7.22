@@ -1,0 +1,69 @@
+\hypertarget{classGis__multi__line__string}{}\section{Gis\+\_\+multi\+\_\+line\+\_\+string Class Reference}
+\label{classGis__multi__line__string}\index{Gis\+\_\+multi\+\_\+line\+\_\+string@{Gis\+\_\+multi\+\_\+line\+\_\+string}}
+Inheritance diagram for Gis\+\_\+multi\+\_\+line\+\_\+string\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGis__multi__line__string}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_aec6ec890ae4ed2d5cdc23a8042b40b87}\label{classGis__multi__line__string_aec6ec890ae4ed2d5cdc23a8042b40b87}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}$<$ \mbox{\hyperlink{classGis__line__string}{Gis\+\_\+line\+\_\+string}} $>$ {\bfseries base}
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a519cb4b08618f5ca6bd56c0a11063b2c}\label{classGis__multi__line__string_a519cb4b08618f5ca6bd56c0a11063b2c}} 
+typedef \mbox{\hyperlink{classGis__multi__line__string}{Gis\+\_\+multi\+\_\+line\+\_\+string}} {\bfseries self}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_aa4c010a4ff168327c066fda03a7f098b}\label{classGis__multi__line__string_aa4c010a4ff168327c066fda03a7f098b}} 
+uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_afcb4e3852e54ec2ddba1d541887d0639}\label{classGis__multi__line__string_afcb4e3852e54ec2ddba1d541887d0639}} 
+bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_aa863b0efd22d727dca5dbdc01f33103e}\label{classGis__multi__line__string_aa863b0efd22d727dca5dbdc01f33103e}} 
+uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a047ef7f8a31fe75e743894cf9dbffd3e}\label{classGis__multi__line__string_a047ef7f8a31fe75e743894cf9dbffd3e}} 
+bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a8f20adcf15a102c1f5ce8b3971050155}\label{classGis__multi__line__string_a8f20adcf15a102c1f5ce8b3971050155}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a95a4c172a3f7eabbc6b546208f3a05fa}\label{classGis__multi__line__string_a95a4c172a3f7eabbc6b546208f3a05fa}} 
+int {\bfseries num\+\_\+geometries} (uint32 $\ast$num) const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_ac2024b9b51bc93ac8c3420b550459e8b}\label{classGis__multi__line__string_ac2024b9b51bc93ac8c3420b550459e8b}} 
+int {\bfseries geometry\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_af2d41d7e10950cb261c3d64b2e035a68}\label{classGis__multi__line__string_af2d41d7e10950cb261c3d64b2e035a68}} 
+int {\bfseries geom\+\_\+length} (double $\ast$len) const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a41adbcd88ffda9bcc8e1a6adef2691b5}\label{classGis__multi__line__string_a41adbcd88ffda9bcc8e1a6adef2691b5}} 
+int {\bfseries is\+\_\+closed} (int $\ast$closed) const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_aa8769507ca4b26aff8610a3198e624f0}\label{classGis__multi__line__string_aa8769507ca4b26aff8610a3198e624f0}} 
+uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a4b9c21c4493bcd5c97271bf4ba5f2784}\label{classGis__multi__line__string_a4b9c21c4493bcd5c97271bf4ba5f2784}} 
+const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_ae54fd9373ddb8706768fae212a33dec6}\label{classGis__multi__line__string_ae54fd9373ddb8706768fae212a33dec6}} 
+{\bfseries Gis\+\_\+multi\+\_\+line\+\_\+string} (bool \mbox{\hyperlink{classGeometry_ada614004627a9e7af129e51a34242af9}{is\+\_\+bg\+\_\+adapter}}=true)
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_a90bb7708d8e677e44b747edb25f2542f}\label{classGis__multi__line__string_a90bb7708d8e677e44b747edb25f2542f}} 
+{\bfseries Gis\+\_\+multi\+\_\+line\+\_\+string} (const void $\ast$ptr, size\+\_\+t nbytes, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGis__multi__line__string_ae7b2d94fbd663554bc84cb2d5794a426}\label{classGis__multi__line__string_ae7b2d94fbd663554bc84cb2d5794a426}} 
+{\bfseries Gis\+\_\+multi\+\_\+line\+\_\+string} (const \mbox{\hyperlink{classGis__multi__line__string}{self}} \&mls)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

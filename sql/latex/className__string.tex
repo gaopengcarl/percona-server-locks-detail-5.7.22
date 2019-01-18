@@ -1,0 +1,93 @@
+\hypertarget{className__string}{}\section{Name\+\_\+string Class Reference}
+\label{className__string}\index{Name\+\_\+string@{Name\+\_\+string}}
+
+
+{\ttfamily \#include $<$item.\+h$>$}
+
+Inheritance diagram for Name\+\_\+string\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{className__string}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{className__string_a44026000d5ba3f8a084e14450e080c8c}\label{className__string_a44026000d5ba3f8a084e14450e080c8c}} 
+{\bfseries Name\+\_\+string} (const char $\ast$str, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{className__string_a845d1631eeaec52416c88e194d342f07}\label{className__string_a845d1631eeaec52416c88e194d342f07}} 
+{\bfseries Name\+\_\+string} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG str)
+\item 
+\mbox{\Hypertarget{className__string_acc4cce82c4e7bb1299957d8bc9279651}\label{className__string_acc4cce82c4e7bb1299957d8bc9279651}} 
+{\bfseries Name\+\_\+string} (const char $\ast$str, size\+\_\+t length, bool is\+\_\+null\+\_\+terminated)
+\item 
+\mbox{\Hypertarget{className__string_a764119d8ef321d7a518de55661cf1994}\label{className__string_a764119d8ef321d7a518de55661cf1994}} 
+{\bfseries Name\+\_\+string} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG str, bool is\+\_\+null\+\_\+terminated)
+\item 
+void \mbox{\hyperlink{className__string_ad2f16ca58a7fd5438005f065d6daf345}{copy}} (const char $\ast$str, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+void \mbox{\hyperlink{className__string_a9e0c169b1a92030ea8b43ab76984c604}{copy}} (const char $\ast$str, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{className__string_a1f7e855487ded73485883757c5d8ca35}\label{className__string_a1f7e855487ded73485883757c5d8ca35}} 
+void {\bfseries copy} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{className__string_a4a602598bd71c1dd23f4916a425489f5}\label{className__string_a4a602598bd71c1dd23f4916a425489f5}} 
+void {\bfseries copy} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG lex)
+\item 
+\mbox{\Hypertarget{className__string_aeb48a495417534c81e33c580c37be336}\label{className__string_aeb48a495417534c81e33c580c37be336}} 
+void {\bfseries copy} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$lex)
+\item 
+\mbox{\Hypertarget{className__string_ae7d0a006ef9e8d8c1f2581684f8d319f}\label{className__string_ae7d0a006ef9e8d8c1f2581684f8d319f}} 
+void {\bfseries copy} (const \mbox{\hyperlink{className__string}{Name\+\_\+string}} str)
+\item 
+bool \mbox{\hyperlink{className__string_a99fc935131dae337de98c11e36c6c3dd}{eq}} (const char $\ast$str) const
+\item 
+\mbox{\Hypertarget{className__string_a78c8a57d7e04bf9d099feeda251c89a1}\label{className__string_a78c8a57d7e04bf9d099feeda251c89a1}} 
+bool {\bfseries eq\+\_\+safe} (const char $\ast$str) const
+\item 
+bool \mbox{\hyperlink{className__string_ae359df5c3df3e956a9fe215e1aa9eba9}{eq}} (const \mbox{\hyperlink{className__string}{Name\+\_\+string}} name) const
+\item 
+\mbox{\Hypertarget{className__string_a6e98e7fb2535d6ce412a8c1facf92c19}\label{className__string_a6e98e7fb2535d6ce412a8c1facf92c19}} 
+bool {\bfseries eq\+\_\+safe} (const \mbox{\hyperlink{className__string}{Name\+\_\+string}} name) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Storage for name strings. Enpowers Simple\+\_\+cstring with allocation routines from the sql\+\_\+strmake family.
+
+This class must stay as small as possible as we often pass it into functions using call-\/by-\/value evaluation.
+
+Don\textquotesingle{}t add new members or virual methods into this class! 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{className__string_ad2f16ca58a7fd5438005f065d6daf345}\label{className__string_ad2f16ca58a7fd5438005f065d6daf345}} 
+\index{Name\+\_\+string@{Name\+\_\+string}!copy@{copy}}
+\index{copy@{copy}!Name\+\_\+string@{Name\+\_\+string}}
+\subsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Name\+\_\+string\+::copy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs }\end{DoxyParamCaption})}
+
+Allocate space using sql\+\_\+strmake() or sql\+\_\+strmake\+\_\+with\+\_\+convert(). \mbox{\Hypertarget{className__string_a9e0c169b1a92030ea8b43ab76984c604}\label{className__string_a9e0c169b1a92030ea8b43ab76984c604}} 
+\index{Name\+\_\+string@{Name\+\_\+string}!copy@{copy}}
+\index{copy@{copy}!Name\+\_\+string@{Name\+\_\+string}}
+\subsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Name\+\_\+string\+::copy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Variants for \mbox{\hyperlink{className__string_ad2f16ca58a7fd5438005f065d6daf345}{copy()}}, for various argument combinations. \mbox{\Hypertarget{className__string_a99fc935131dae337de98c11e36c6c3dd}\label{className__string_a99fc935131dae337de98c11e36c6c3dd}} 
+\index{Name\+\_\+string@{Name\+\_\+string}!eq@{eq}}
+\index{eq@{eq}!Name\+\_\+string@{Name\+\_\+string}}
+\subsubsection{\texorpdfstring{eq()}{eq()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Name\+\_\+string\+::eq (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compare name to another name in C string, case insensitively. \mbox{\Hypertarget{className__string_ae359df5c3df3e956a9fe215e1aa9eba9}\label{className__string_ae359df5c3df3e956a9fe215e1aa9eba9}} 
+\index{Name\+\_\+string@{Name\+\_\+string}!eq@{eq}}
+\index{eq@{eq}!Name\+\_\+string@{Name\+\_\+string}}
+\subsubsection{\texorpdfstring{eq()}{eq()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Name\+\_\+string\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{className__string}{Name\+\_\+string}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compare name to another name in \mbox{\hyperlink{className__string}{Name\+\_\+string}}, case insensitively. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

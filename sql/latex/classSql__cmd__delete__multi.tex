@@ -1,0 +1,106 @@
+\hypertarget{classSql__cmd__delete__multi}{}\section{Sql\+\_\+cmd\+\_\+delete\+\_\+multi Class Reference}
+\label{classSql__cmd__delete__multi}\index{Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}
+Inheritance diagram for Sql\+\_\+cmd\+\_\+delete\+\_\+multi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__delete__multi}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__delete__multi_afc00eae26a51e20282afa9bf491fe457}\label{classSql__cmd__delete__multi_afc00eae26a51e20282afa9bf491fe457}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__delete__multi_afc00eae26a51e20282afa9bf491fe457}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__delete__multi_ac23aab4d1bf9cd9d5c799d2843558810}{execute}} (T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__delete__multi_a335d296d9f32ec386cfaec2073209d60}{prepared\+\_\+statement\+\_\+test}} (T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__delete__multi_af069c73c8b62527f3bf8de0b9ce45297}{prepare}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__delete__multi_ac23aab4d1bf9cd9d5c799d2843558810}\label{classSql__cmd__delete__multi_ac23aab4d1bf9cd9d5c799d2843558810}} 
+\index{Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+delete\+\_\+multi\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+\mbox{\Hypertarget{classSql__cmd__delete__multi_af069c73c8b62527f3bf8de0b9ce45297}\label{classSql__cmd__delete__multi_af069c73c8b62527f3bf8de0b9ce45297}} 
+\index{Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}!prepare@{prepare}}
+\index{prepare@{prepare}!Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily virtual bool Sql\+\_\+cmd\+\_\+delete\+\_\+multi\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Command-\/specific resolving (doesn\textquotesingle{}t include L\+E\+X\+::prepare())
+
+\begin{DoxySeeAlso}{See also}
+select\+\_\+like\+\_\+stmt\+\_\+test()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current T\+HD.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd__dml_ad395374af7ac799573ca41d87b60b977}{Sql\+\_\+cmd\+\_\+dml}}.
+
+\mbox{\Hypertarget{classSql__cmd__delete__multi_a335d296d9f32ec386cfaec2073209d60}\label{classSql__cmd__delete__multi_a335d296d9f32ec386cfaec2073209d60}} 
+\index{Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}!prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}}
+\index{prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}!Sql\+\_\+cmd\+\_\+delete\+\_\+multi@{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}
+\subsubsection{\texorpdfstring{prepared\+\_\+statement\+\_\+test()}{prepared\_statement\_test()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+delete\+\_\+multi\+::prepared\+\_\+statement\+\_\+test (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Validate and prepare for execution a multi delete statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & current thread \\
+\hline
+{\em tables} & list of tables used in this query\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error, error message in T\+HD is set. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd__dml_af36dc69e855d0e48d0e79002576907a4}{Sql\+\_\+cmd\+\_\+dml}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+delete.\+h\item 
+sql\+\_\+delete.\+cc\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

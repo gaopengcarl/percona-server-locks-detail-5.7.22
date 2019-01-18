@@ -1,0 +1,66 @@
+\hypertarget{classPT__alter__instance}{}\section{P\+T\+\_\+alter\+\_\+instance Class Reference}
+\label{classPT__alter__instance}\index{P\+T\+\_\+alter\+\_\+instance@{P\+T\+\_\+alter\+\_\+instance}}
+Inheritance diagram for P\+T\+\_\+alter\+\_\+instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__alter__instance}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__alter__instance_ab8cf3be34125b9d3bdf62207a55475c1}\label{classPT__alter__instance_ab8cf3be34125b9d3bdf62207a55475c1}} 
+{\bfseries P\+T\+\_\+alter\+\_\+instance} (enum alter\+\_\+instance\+\_\+action\+\_\+enum alter\+\_\+instance\+\_\+action)
+\item 
+virtual \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} $\ast$ \mbox{\hyperlink{classPT__alter__instance_add0b06c63a75335090db15534050b144}{make\+\_\+cmd}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em make\+\_\+cmd for \mbox{\hyperlink{classPT__alter__instance}{P\+T\+\_\+alter\+\_\+instance}}. Contextualize parse tree node and return sql\+\_\+cmd handle. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classPT__alter__instance_a802bf9ac570878d8e0ea64a315cf6b95}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\begin{DoxyCompactList}\small\item\em Prepare parse tree node and set required information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__alter__instance_a802bf9ac570878d8e0ea64a315cf6b95}\label{classPT__alter__instance_a802bf9ac570878d8e0ea64a315cf6b95}} 
+\index{P\+T\+\_\+alter\+\_\+instance@{P\+T\+\_\+alter\+\_\+instance}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+alter\+\_\+instance@{P\+T\+\_\+alter\+\_\+instance}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily bool P\+T\+\_\+alter\+\_\+instance\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prepare parse tree node and set required information. 
+
+pc \mbox{[}in\mbox{]} Parser context
+
+\begin{DoxyReturn}{Returns}
+false Success true Error 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+\mbox{\Hypertarget{classPT__alter__instance_add0b06c63a75335090db15534050b144}\label{classPT__alter__instance_add0b06c63a75335090db15534050b144}} 
+\index{P\+T\+\_\+alter\+\_\+instance@{P\+T\+\_\+alter\+\_\+instance}!make\+\_\+cmd@{make\+\_\+cmd}}
+\index{make\+\_\+cmd@{make\+\_\+cmd}!P\+T\+\_\+alter\+\_\+instance@{P\+T\+\_\+alter\+\_\+instance}}
+\subsubsection{\texorpdfstring{make\+\_\+cmd()}{make\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} $\ast$ P\+T\+\_\+alter\+\_\+instance\+::make\+\_\+cmd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+make\+\_\+cmd for \mbox{\hyperlink{classPT__alter__instance}{P\+T\+\_\+alter\+\_\+instance}}. Contextualize parse tree node and return sql\+\_\+cmd handle. 
+
+thd \mbox{[}in\mbox{]} Thread handle
+
+\begin{DoxyReturn}{Returns}
+sql\+\_\+cmd Success N\+U\+LL Failure 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classPT__statement}{P\+T\+\_\+statement}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+nodes.\+h\item 
+parse\+\_\+tree\+\_\+nodes.\+cc\end{DoxyCompactItemize}

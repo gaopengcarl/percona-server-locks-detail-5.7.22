@@ -1,0 +1,57 @@
+\hypertarget{classFind__thd__query__lock}{}\section{Find\+\_\+thd\+\_\+query\+\_\+lock Class Reference}
+\label{classFind__thd__query__lock}\index{Find\+\_\+thd\+\_\+query\+\_\+lock@{Find\+\_\+thd\+\_\+query\+\_\+lock}}
+Inheritance diagram for Find\+\_\+thd\+\_\+query\+\_\+lock\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFind__thd__query__lock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFind__thd__query__lock_a53c15f54d9d653f5dfe62e356949f5d9}\label{classFind__thd__query__lock_a53c15f54d9d653f5dfe62e356949f5d9}} 
+{\bfseries Find\+\_\+thd\+\_\+query\+\_\+lock} (my\+\_\+thread\+\_\+id value)
+\item 
+virtual bool \mbox{\hyperlink{classFind__thd__query__lock_a966a09cb01db67bb82ff6b8446cc0fe6}{operator()}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Callback function used by mysql\+\_\+explain\+\_\+other() to find thd based on the thread id.
+
+\begin{DoxyNote}{Note}
+It acquires L\+O\+C\+K\+\_\+thd\+\_\+data mutex and L\+O\+C\+K\+\_\+query\+\_\+plan mutex, when it finds matching thd. It is the responsibility of the caller to release L\+O\+C\+K\+\_\+thd\+\_\+data. We release L\+O\+C\+K\+\_\+query\+\_\+plan in the D\+T\+OR. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFind__thd__query__lock_a966a09cb01db67bb82ff6b8446cc0fe6}\label{classFind__thd__query__lock_a966a09cb01db67bb82ff6b8446cc0fe6}} 
+\index{Find\+\_\+thd\+\_\+query\+\_\+lock@{Find\+\_\+thd\+\_\+query\+\_\+lock}!operator()@{operator()}}
+\index{operator()@{operator()}!Find\+\_\+thd\+\_\+query\+\_\+lock@{Find\+\_\+thd\+\_\+query\+\_\+lock}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual bool Find\+\_\+thd\+\_\+query\+\_\+lock\+::operator() (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Override this operator to provide implementation to find specific thd.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD of one element in global thread list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & for matching thd false otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classFind__THD__Impl_a9241342847e36bfb0c4d8330df033b4b}{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+cc\end{DoxyCompactItemize}

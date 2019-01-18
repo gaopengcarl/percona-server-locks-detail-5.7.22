@@ -1,0 +1,58 @@
+\hypertarget{classSql__cmd__xa__recover}{}\section{Sql\+\_\+cmd\+\_\+xa\+\_\+recover Class Reference}
+\label{classSql__cmd__xa__recover}\index{Sql\+\_\+cmd\+\_\+xa\+\_\+recover@{Sql\+\_\+cmd\+\_\+xa\+\_\+recover}}
+
+
+{\ttfamily \#include $<$xa.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+xa\+\_\+recover\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__xa__recover}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__recover_acff58b55340747d05b460c46ba9ec468}\label{classSql__cmd__xa__recover_acff58b55340747d05b460c46ba9ec468}} 
+{\bfseries Sql\+\_\+cmd\+\_\+xa\+\_\+recover} (bool print\+\_\+xid\+\_\+as\+\_\+hex)
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__recover_ae6e32848f930d36a15b0857086191daa}\label{classSql__cmd__xa__recover_ae6e32848f930d36a15b0857086191daa}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__xa__recover_ae6e32848f930d36a15b0857086191daa}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__xa__recover_a48a61d21f733c261c49e5f93d7ecec26}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents S\+QL statement which returns to a client a list of X\+ID\textquotesingle{}s prepared to a XA commit/rollback. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__xa__recover_a48a61d21f733c261c49e5f93d7ecec26}\label{classSql__cmd__xa__recover_a48a61d21f733c261c49e5f93d7ecec26}} 
+\index{Sql\+\_\+cmd\+\_\+xa\+\_\+recover@{Sql\+\_\+cmd\+\_\+xa\+\_\+recover}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+xa\+\_\+recover@{Sql\+\_\+cmd\+\_\+xa\+\_\+recover}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+xa\+\_\+recover\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+xa.\+h\item 
+xa.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{classItem__func__as__geojson}{}\section{Item\+\_\+func\+\_\+as\+\_\+geojson Class Reference}
+\label{classItem__func__as__geojson}\index{Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}}
+
+
+{\ttfamily \#include $<$item\+\_\+geofunc.\+h$>$}
+
+Inheritance diagram for Item\+\_\+func\+\_\+as\+\_\+geojson\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__func__as__geojson}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__as__geojson_a9b55adf58a976ab6babe483863e807f2}\label{classItem__func__as__geojson_a9b55adf58a976ab6babe483863e807f2}} 
+{\bfseries Item\+\_\+func\+\_\+as\+\_\+geojson} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$geometry)
+\item 
+\mbox{\Hypertarget{classItem__func__as__geojson_a0a1b701de410228f5ffbe7df119030b7}\label{classItem__func__as__geojson_a0a1b701de410228f5ffbe7df119030b7}} 
+{\bfseries Item\+\_\+func\+\_\+as\+\_\+geojson} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$geometry, \mbox{\hyperlink{classItem}{Item}} $\ast$maxdecimaldigits)
+\item 
+\mbox{\Hypertarget{classItem__func__as__geojson_a662562566ceed5f274d517208623dce1}\label{classItem__func__as__geojson_a662562566ceed5f274d517208623dce1}} 
+{\bfseries Item\+\_\+func\+\_\+as\+\_\+geojson} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$geometry, \mbox{\hyperlink{classItem}{Item}} $\ast$maxdecimaldigits, \mbox{\hyperlink{classItem}{Item}} $\ast$options)
+\item 
+bool \mbox{\hyperlink{classItem__func__as__geojson_ae3c03fcff07e6a227a22639d792e70f4}{fix\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref)
+\item 
+bool \mbox{\hyperlink{classItem__func__as__geojson_a5d5fa5457258b65c6123d14145c45bdd}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr)
+\item 
+\mbox{\Hypertarget{classItem__func__as__geojson_a11ce6fe239cf1869467c4be6a122c992}\label{classItem__func__as__geojson_a11ce6fe239cf1869467c4be6a122c992}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+bool \mbox{\hyperlink{classItem__func__as__geojson_a9b8654280ee07ffb07a25643f31ff0db}{parse\+\_\+options\+\_\+argument}} ()
+\item 
+bool \mbox{\hyperlink{classItem__func__as__geojson_a3cafd9620dbcc041154c7f57c349ad3d}{parse\+\_\+maxdecimaldigits\+\_\+argument}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class handles the following function\+:
+
+$<$json$>$ = S\+T\+\_\+\+A\+S\+G\+E\+O\+J\+S\+O\+N($<$geometry$>$\mbox{[}, $<$maxdecimaldigits$>$\mbox{[}, $<$options$>$\mbox{]}\mbox{]})
+
+It converts a G\+E\+O\+M\+E\+T\+RY into a valid Geo\+J\+S\+ON string. If maxdecimaldigits is specified, the coordinates written are rounded to the number of decimals specified (e.\+g with decimaldigits = 3\+: 10.\+12399 =$>$ 10.\+124).
+
+Options is a bitmask with the following flags\+: 0 No options (default values). 1 Add a bounding box to the output. 2 Add a short C\+RS U\+RN to the output. The default format is a short format (\char`\"{}\+E\+P\+S\+G\+:$<$srid$>$\char`\"{}). 4 Add a long format C\+RS U\+RN (\char`\"{}urn\+:ogc\+:def\+:crs\+:\+E\+P\+S\+G\+::$<$srid$>$\char`\"{}). This implies 2. This means that, e.\+g., bitmask 5 and 7 mean the same\+: add a bounding box and a long format C\+RS U\+RN. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__as__geojson_ae3c03fcff07e6a227a22639d792e70f4}\label{classItem__func__as__geojson_ae3c03fcff07e6a227a22639d792e70f4}} 
+\index{Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}!fix\+\_\+fields@{fix\+\_\+fields}}
+\index{fix\+\_\+fields@{fix\+\_\+fields}!Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}}
+\subsubsection{\texorpdfstring{fix\+\_\+fields()}{fix\_fields()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+as\+\_\+geojson\+::fix\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Perform type checking on all arguments\+:
+
+$<$geometry$>$ argument must be a geometry. $<$maxdecimaldigits$>$ must be an integer value. $<$options$>$ must be an integer value.
+
+Set maybe\+\_\+null to the correct value. 
+
+Reimplemented from \mbox{\hyperlink{classItem__func}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__as__geojson_a3cafd9620dbcc041154c7f57c349ad3d}\label{classItem__func__as__geojson_a3cafd9620dbcc041154c7f57c349ad3d}} 
+\index{Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}!parse\+\_\+maxdecimaldigits\+\_\+argument@{parse\+\_\+maxdecimaldigits\+\_\+argument}}
+\index{parse\+\_\+maxdecimaldigits\+\_\+argument@{parse\+\_\+maxdecimaldigits\+\_\+argument}!Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}}
+\subsubsection{\texorpdfstring{parse\+\_\+maxdecimaldigits\+\_\+argument()}{parse\_maxdecimaldigits\_argument()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+as\+\_\+geojson\+::parse\+\_\+maxdecimaldigits\+\_\+argument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Parse the value in maxdecimaldigits argument.
+
+This value M\+U\+ST be a positive integer. If value is out of range (negative value or greater than I\+N\+T\+\_\+\+M\+AX), an error will be raised. This function expects that the maxdecimaldigits argument is the second argument in the function call.
+
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise (negative value or similar). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__as__geojson_a9b8654280ee07ffb07a25643f31ff0db}\label{classItem__func__as__geojson_a9b8654280ee07ffb07a25643f31ff0db}} 
+\index{Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}!parse\+\_\+options\+\_\+argument@{parse\+\_\+options\+\_\+argument}}
+\index{parse\+\_\+options\+\_\+argument@{parse\+\_\+options\+\_\+argument}!Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}}
+\subsubsection{\texorpdfstring{parse\+\_\+options\+\_\+argument()}{parse\_options\_argument()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+as\+\_\+geojson\+::parse\+\_\+options\+\_\+argument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Parse the value in options argument.
+
+Options is a 3-\/bit bitmask with the following options\+:
+
+0 No options (default values). 1 Add a bounding box to the output. 2 Add a short C\+RS U\+RN to the output. The default format is a short format (\char`\"{}\+E\+P\+S\+G\+:$<$srid$>$\char`\"{}). 4 Add a long format C\+RS U\+RN (\char`\"{}urn\+:ogc\+:def\+:crs\+:\+E\+P\+S\+G\+::$<$srid$>$\char`\"{}). This will override option 2. E.\+g., bitmask 5 and 7 mean the same\+: add a bounding box and a long format C\+RS U\+RN.
+
+If value is out of range (below zero or greater than seven), an error will be raised. This function expects that the options argument is the third argument in the function call.
+
+\begin{DoxyReturn}{Returns}
+false on success, true otherwise (value out of range or similar). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__as__geojson_a5d5fa5457258b65c6123d14145c45bdd}\label{classItem__func__as__geojson_a5d5fa5457258b65c6123d14145c45bdd}} 
+\index{Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+func\+\_\+as\+\_\+geojson@{Item\+\_\+func\+\_\+as\+\_\+geojson}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+as\+\_\+geojson\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{wr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a Geo\+J\+S\+ON object, according to Geo\+J\+S\+ON specification revison 1.\+0. 
+
+Reimplemented from \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc.\+h\item 
+\mbox{\hyperlink{item__geofunc_8cc}{item\+\_\+geofunc.\+cc}}\end{DoxyCompactItemize}

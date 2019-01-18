@@ -1,0 +1,103 @@
+\hypertarget{classItem__func__curdate}{}\section{Item\+\_\+func\+\_\+curdate Class Reference}
+\label{classItem__func__curdate}\index{Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}}
+Inheritance diagram for Item\+\_\+func\+\_\+curdate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{classItem__func__curdate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__curdate_ad4c314cfdd15b115734191560d024213}\label{classItem__func__curdate_ad4c314cfdd15b115734191560d024213}} 
+{\bfseries Item\+\_\+func\+\_\+curdate} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos)
+\item 
+virtual bool \mbox{\hyperlink{classItem__func__curdate_a9c3b90cb34f741de0795ca7908377ce0}{itemize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\item 
+\mbox{\Hypertarget{classItem__func__curdate_abcd848b46a1c8c55359f20789aea1174}\label{classItem__func__curdate_abcd848b46a1c8c55359f20789aea1174}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+longlong \mbox{\hyperlink{classItem__func__curdate_aa8961163e017b6d68c26df334cd9c0b6}{val\+\_\+date\+\_\+temporal}} ()
+\item 
+\mbox{\Hypertarget{classItem__func__curdate_a009b480a69dded234fa02bdad9414876}\label{classItem__func__curdate_a009b480a69dded234fa02bdad9414876}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$res, my\+\_\+time\+\_\+flags\+\_\+t fuzzy\+\_\+date)
+\item 
+\mbox{\Hypertarget{classItem__func__curdate_ad88bf6ea41b0256a5ccb6d431aad7972}\label{classItem__func__curdate_ad88bf6ea41b0256a5ccb6d431aad7972}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$str)
+\item 
+bool \mbox{\hyperlink{classItem__func__curdate_abdf88efdcbd4bf821e4577dcd7765bb9}{check\+\_\+gcol\+\_\+func\+\_\+processor}} (uchar $\ast$int\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__curdate_aa1ebf2817018e18b6286fd8dc4801999}\label{classItem__func__curdate_aa1ebf2817018e18b6286fd8dc4801999}} 
+virtual \mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$ {\bfseries time\+\_\+zone} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__curdate_abdf88efdcbd4bf821e4577dcd7765bb9}\label{classItem__func__curdate_abdf88efdcbd4bf821e4577dcd7765bb9}} 
+\index{Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}!check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}}
+\index{check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}!Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}}
+\subsubsection{\texorpdfstring{check\+\_\+gcol\+\_\+func\+\_\+processor()}{check\_gcol\_func\_processor()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+curdate\+::check\+\_\+gcol\+\_\+func\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{int\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if an expression/function is allowed for a virtual column
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em int\+\_\+arg} & An array of two integers. Used only for \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}. The first cell passes the field\textquotesingle{}s number in the table. The second cell is an out parameter containing the error code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if function is not accepted 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__result__field_a12324702e7f419b47de45e3505730441}{Item\+\_\+result\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem__func__curdate_a9c3b90cb34f741de0795ca7908377ce0}\label{classItem__func__curdate_a9c3b90cb34f741de0795ca7908377ce0}} 
+\index{Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}!itemize@{itemize}}
+\index{itemize@{itemize}!Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}}
+\subsubsection{\texorpdfstring{itemize()}{itemize()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+curdate\+::itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The same as contextualize()/contextualize\+\_\+() but with additional parameter
+
+This function finalize the construction of \mbox{\hyperlink{classItem}{Item}} objects (see the \mbox{\hyperlink{classItem}{Item(\+P\+O\+S)}} constructor)\+: we can access/change parser contexts from the \mbox{\hyperlink{classItem__func__curdate_a9c3b90cb34f741de0795ca7908377ce0}{itemize()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em pc} & current parse context \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{} or to a newly allocated replacement object to use in the \mbox{\hyperlink{classItem}{Item}} tree instead\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_a6413cdbe7b14be77cc47462c9fc87ddb}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__curdate_aa8961163e017b6d68c26df334cd9c0b6}\label{classItem__func__curdate_aa8961163e017b6d68c26df334cd9c0b6}} 
+\index{Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}!val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}}
+\index{val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}!Item\+\_\+func\+\_\+curdate@{Item\+\_\+func\+\_\+curdate}}
+\subsubsection{\texorpdfstring{val\+\_\+date\+\_\+temporal()}{val\_date\_temporal()}}
+{\footnotesize\ttfamily longlong Item\+\_\+func\+\_\+curdate\+::val\+\_\+date\+\_\+temporal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return date value of item in packed longlong format. 
+
+Reimplemented from \mbox{\hyperlink{classItem__date__func_a34f95de47fe9ff5bfe16fb641ec22a42}{Item\+\_\+date\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

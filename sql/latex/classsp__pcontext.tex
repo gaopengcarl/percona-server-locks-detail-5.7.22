@@ -1,0 +1,399 @@
+\hypertarget{classsp__pcontext}{}\section{sp\+\_\+pcontext Class Reference}
+\label{classsp__pcontext}\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+
+
+{\ttfamily \#include $<$sp\+\_\+pcontext.\+h$>$}
+
+Inheritance diagram for sp\+\_\+pcontext\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__pcontext}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6}{enum\+\_\+scope}} \{ \mbox{\hyperlink{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6a7eefe8effea203d6409e38ddb6052d6f}{R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE}}, 
+\mbox{\hyperlink{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6a2db8d8068bbaf5f7f9b60edded7b0bf6}{H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a0185ee1d6e0b39b105e360779f46ae90}\label{classsp__pcontext_a0185ee1d6e0b39b105e360779f46ae90}} 
+{\bfseries sp\+\_\+pcontext} (T\+HD $\ast$thd)
+\item 
+\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ \mbox{\hyperlink{classsp__pcontext_a486b4feb63c343fea40adcf197bde017}{push\+\_\+context}} (T\+HD $\ast$thd, \mbox{\hyperlink{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6}{enum\+\_\+scope}} scope)
+\begin{DoxyCompactList}\small\item\em Create and push a new context in the tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ \mbox{\hyperlink{classsp__pcontext_ae7e4af2bd11d58a2950462a490612a31}{pop\+\_\+context}} ()
+\item 
+\mbox{\Hypertarget{classsp__pcontext_af7e13090fdd0afca3396677eb805ab63}\label{classsp__pcontext_af7e13090fdd0afca3396677eb805ab63}} 
+\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ {\bfseries parent\+\_\+context} () const
+\item 
+\mbox{\Hypertarget{classsp__pcontext_aad5e1160cd57d70ff16ee6aa8288744d}\label{classsp__pcontext_aad5e1160cd57d70ff16ee6aa8288744d}} 
+int {\bfseries get\+\_\+level} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classsp__pcontext_ae47ee327ab468137d802f15dafe35206}{diff\+\_\+handlers}} (const \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, bool exclusive) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classsp__pcontext_a1bed00024e865ddb21bfb40bd3383d70}{diff\+\_\+cursors}} (const \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, bool exclusive) const
+\item 
+uint \mbox{\hyperlink{classsp__pcontext_a8e102fc7e3bb76e872b32bb8783df72f}{max\+\_\+var\+\_\+index}} () const
+\item 
+uint \mbox{\hyperlink{classsp__pcontext_a368a6fdbad2b286956bd9e67cba15825}{current\+\_\+var\+\_\+count}} () const
+\item 
+uint \mbox{\hyperlink{classsp__pcontext_a2733cafaa598552f29d8780347040abc}{context\+\_\+var\+\_\+count}} () const
+\item 
+uint \mbox{\hyperlink{classsp__pcontext_a91b66fbcd41167516ec4486c5b1e4b43}{var\+\_\+context2runtime}} (uint i) const
+\item 
+\mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$ \mbox{\hyperlink{classsp__pcontext_a720325b7d8acd08f7ed7701c8befb6ec}{add\+\_\+variable}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, enum enum\+\_\+field\+\_\+types type, sp\+\_\+variable\+::enum\+\_\+mode mode)
+\item 
+void \mbox{\hyperlink{classsp__pcontext_ab7f7fdb12f7e3c0e9cfea81e4ee39c66}{retrieve\+\_\+field\+\_\+definitions}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ $\ast$field\+\_\+def\+\_\+lst) const
+\item 
+\mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$ \mbox{\hyperlink{classsp__pcontext_aa87f03211c0a7efcbf5df3a40471a599}{find\+\_\+variable}} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, bool current\+\_\+scope\+\_\+only) const
+\item 
+\mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$ \mbox{\hyperlink{classsp__pcontext_a4f3c91318b30516be1b5326df02ab38d}{find\+\_\+variable}} (uint offset) const
+\item 
+void \mbox{\hyperlink{classsp__pcontext_a480a92643ee11341486f2ed2aec31593}{declare\+\_\+var\+\_\+boundary}} (uint n)
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a2a097cbbff8d18ca5ad32ec5bab8fa76}\label{classsp__pcontext_a2a097cbbff8d18ca5ad32ec5bab8fa76}} 
+int {\bfseries get\+\_\+num\+\_\+case\+\_\+exprs} () const
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a4878c45987da9a7b5503ea3703c33f5a}\label{classsp__pcontext_a4878c45987da9a7b5503ea3703c33f5a}} 
+int {\bfseries push\+\_\+case\+\_\+expr\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a4dece7ec7dfe72bdc7563ec1e59afb38}\label{classsp__pcontext_a4dece7ec7dfe72bdc7563ec1e59afb38}} 
+void {\bfseries pop\+\_\+case\+\_\+expr\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a0cbd4dbc36f81d2e9c257db85df1dc4b}\label{classsp__pcontext_a0cbd4dbc36f81d2e9c257db85df1dc4b}} 
+int {\bfseries get\+\_\+current\+\_\+case\+\_\+expr\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classsp__pcontext_ade6f3e4779c4fa3991dff527ed2d2047}\label{classsp__pcontext_ade6f3e4779c4fa3991dff527ed2d2047}} 
+\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$ {\bfseries push\+\_\+label} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, uint ip)
+\item 
+\mbox{\Hypertarget{classsp__pcontext_ac2353f5c480f283fc626f0aad8543237}\label{classsp__pcontext_ac2353f5c480f283fc626f0aad8543237}} 
+\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$ {\bfseries find\+\_\+label} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a31c0db7687db96154add9e2e79718e27}\label{classsp__pcontext_a31c0db7687db96154add9e2e79718e27}} 
+\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$ {\bfseries last\+\_\+label} ()
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a9744a4b041c7fa2d8413b84ab5bac712}\label{classsp__pcontext_a9744a4b041c7fa2d8413b84ab5bac712}} 
+\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$ {\bfseries pop\+\_\+label} ()
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a81bf4ae0fe08bdcd267d00b55249d4fa}\label{classsp__pcontext_a81bf4ae0fe08bdcd267d00b55249d4fa}} 
+bool {\bfseries add\+\_\+condition} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a3330cf065ed6d671b5a149335c0b300e}\label{classsp__pcontext_a3330cf065ed6d671b5a149335c0b300e}} 
+\mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$ \mbox{\hyperlink{classsp__pcontext_a3330cf065ed6d671b5a149335c0b300e}{find\+\_\+condition}} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, bool current\+\_\+scope\+\_\+only) const
+\begin{DoxyCompactList}\small\item\em See comment for \mbox{\hyperlink{classsp__pcontext_aa87f03211c0a7efcbf5df3a40471a599}{find\+\_\+variable()}} above. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__pcontext_a8f68eddde53c9ac83544d6daab8b4f7a}\label{classsp__pcontext_a8f68eddde53c9ac83544d6daab8b4f7a}} 
+\mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$ {\bfseries add\+\_\+handler} (T\+HD $\ast$thd, \mbox{\hyperlink{classsp__handler_a702400dd1cd8b2933a38a9e4a5f1eb09}{sp\+\_\+handler\+::enum\+\_\+type}} type)
+\item 
+bool \mbox{\hyperlink{classsp__pcontext_a6e27c46b3cb4dc5f5140c8dcb7564780}{check\+\_\+duplicate\+\_\+handler}} (const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$cond\+\_\+value) const
+\item 
+\mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$ \mbox{\hyperlink{classsp__pcontext_adbcf9a679c86a5cec3cbb2bcf3caec4a}{find\+\_\+handler}} (const char $\ast$sql\+\_\+state, uint sql\+\_\+errno, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} severity) const
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a5c6665a1f12a14131c9a8e6efec39007}\label{classsp__pcontext_a5c6665a1f12a14131c9a8e6efec39007}} 
+bool {\bfseries add\+\_\+cursor} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+\mbox{\Hypertarget{classsp__pcontext_ad37530a4aa43c8330e7b62ca0fa878d1}\label{classsp__pcontext_ad37530a4aa43c8330e7b62ca0fa878d1}} 
+bool \mbox{\hyperlink{classsp__pcontext_ad37530a4aa43c8330e7b62ca0fa878d1}{find\+\_\+cursor}} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, uint $\ast$poff, bool current\+\_\+scope\+\_\+only) const
+\begin{DoxyCompactList}\small\item\em See comment for \mbox{\hyperlink{classsp__pcontext_aa87f03211c0a7efcbf5df3a40471a599}{find\+\_\+variable()}} above. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__pcontext_aeb5cd98d9ebc871444cdac80f9dab23b}\label{classsp__pcontext_aeb5cd98d9ebc871444cdac80f9dab23b}} 
+const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$ \mbox{\hyperlink{classsp__pcontext_aeb5cd98d9ebc871444cdac80f9dab23b}{find\+\_\+cursor}} (uint offset) const
+\begin{DoxyCompactList}\small\item\em Find cursor by offset (for debugging only). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__pcontext_a6840c5696fc1b817d9393d84611ec14d}\label{classsp__pcontext_a6840c5696fc1b817d9393d84611ec14d}} 
+uint {\bfseries max\+\_\+cursor\+\_\+index} () const
+\item 
+\mbox{\Hypertarget{classsp__pcontext_a9b055b8357d13b4b70c70435dc0c4019}\label{classsp__pcontext_a9b055b8357d13b4b70c70435dc0c4019}} 
+uint {\bfseries current\+\_\+cursor\+\_\+count} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The class represents parse-\/time context, which keeps track of declared variables/parameters, conditions, handlers, cursors and labels.
+
+sp\+\_\+context objects are organized in a tree according to the following rules\+:
+\begin{DoxyItemize}
+\item one \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} object corresponds for for each B\+E\+G\+IN..E\+ND block;
+\item one \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} object corresponds for each exception handler;
+\item one additional \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} object is created to contain Stored Program parameters.
+\end{DoxyItemize}
+
+\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} objects are used both at parse-\/time and at runtime.
+
+During the parsing stage \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} objects are used\+:
+\begin{DoxyItemize}
+\item to look up defined names (e.\+g. declared variables and visible labels);
+\item to check for duplicates;
+\item for error checking;
+\item to calculate offsets to be used at runtime.
+\end{DoxyItemize}
+
+During the runtime phase, a tree of \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} objects is used\+:
+\begin{DoxyItemize}
+\item for error checking (e.\+g. to check correct number of parameters);
+\item to resolve S\+QL-\/handlers. 
+\end{DoxyItemize}
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6}\label{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!enum\+\_\+scope@{enum\+\_\+scope}}
+\index{enum\+\_\+scope@{enum\+\_\+scope}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{enum\+\_\+scope}{enum\_scope}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6}{sp\+\_\+pcontext\+::enum\+\_\+scope}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE@{R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE@{R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE}}}\mbox{\Hypertarget{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6a7eefe8effea203d6409e38ddb6052d6f}\label{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6a7eefe8effea203d6409e38ddb6052d6f}} 
+R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE&R\+E\+G\+U\+L\+A\+R\+\_\+\+S\+C\+O\+PE designates regular B\+E\+G\+IN ... E\+ND blocks. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE@{H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE@{H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE}}}\mbox{\Hypertarget{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6a2db8d8068bbaf5f7f9b60edded7b0bf6}\label{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6a2db8d8068bbaf5f7f9b60edded7b0bf6}} 
+H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE&H\+A\+N\+D\+L\+E\+R\+\_\+\+S\+C\+O\+PE designates S\+QL-\/handler blocks. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__pcontext_a720325b7d8acd08f7ed7701c8befb6ec}\label{classsp__pcontext_a720325b7d8acd08f7ed7701c8befb6ec}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!add\+\_\+variable@{add\+\_\+variable}}
+\index{add\+\_\+variable@{add\+\_\+variable}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{add\+\_\+variable()}{add\_variable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$ sp\+\_\+pcontext\+::add\+\_\+variable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{enum enum\+\_\+field\+\_\+types}]{type,  }\item[{sp\+\_\+variable\+::enum\+\_\+mode}]{mode }\end{DoxyParamCaption})}
+
+Add SP-\/variable to the parsing context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em name} & Name of the SP-\/variable. \\
+\hline
+{\em type} & Type of the SP-\/variable. \\
+\hline
+{\em mode} & Mode of the SP-\/variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+instance of newly added SP-\/variable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_a6e27c46b3cb4dc5f5140c8dcb7564780}\label{classsp__pcontext_a6e27c46b3cb4dc5f5140c8dcb7564780}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!check\+\_\+duplicate\+\_\+handler@{check\+\_\+duplicate\+\_\+handler}}
+\index{check\+\_\+duplicate\+\_\+handler@{check\+\_\+duplicate\+\_\+handler}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{check\+\_\+duplicate\+\_\+handler()}{check\_duplicate\_handler()}}
+{\footnotesize\ttfamily bool sp\+\_\+pcontext\+::check\+\_\+duplicate\+\_\+handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$}]{cond\+\_\+value }\end{DoxyParamCaption}) const}
+
+This is an auxilary parsing-\/time function to check if an S\+QL-\/handler exists in the current parsing context (current scope) for the given S\+QL-\/condition. This function is used to check for duplicates during the parsing phase.
+
+This function can not be used during the runtime phase to check S\+QL-\/handler existence because it searches for the S\+QL-\/handler in the current scope only (during runtime, current and parent scopes should be checked according to the S\+QL-\/handler resolution rules).
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition\+\_\+value} & the handler condition value (not S\+QL-\/condition!).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if such S\+QL-\/handler exists. \\
+\hline
+{\em false} & otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classsp__pcontext_a2733cafaa598552f29d8780347040abc}\label{classsp__pcontext_a2733cafaa598552f29d8780347040abc}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!context\+\_\+var\+\_\+count@{context\+\_\+var\+\_\+count}}
+\index{context\+\_\+var\+\_\+count@{context\+\_\+var\+\_\+count}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{context\+\_\+var\+\_\+count()}{context\_var\_count()}}
+{\footnotesize\ttfamily uint sp\+\_\+pcontext\+::context\+\_\+var\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of variables in this context alone. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_a368a6fdbad2b286956bd9e67cba15825}\label{classsp__pcontext_a368a6fdbad2b286956bd9e67cba15825}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!current\+\_\+var\+\_\+count@{current\+\_\+var\+\_\+count}}
+\index{current\+\_\+var\+\_\+count@{current\+\_\+var\+\_\+count}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{current\+\_\+var\+\_\+count()}{current\_var\_count()}}
+{\footnotesize\ttfamily uint sp\+\_\+pcontext\+::current\+\_\+var\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the current number of variables used in the parent contexts (from the root), including this context. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_a480a92643ee11341486f2ed2aec31593}\label{classsp__pcontext_a480a92643ee11341486f2ed2aec31593}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!declare\+\_\+var\+\_\+boundary@{declare\+\_\+var\+\_\+boundary}}
+\index{declare\+\_\+var\+\_\+boundary@{declare\+\_\+var\+\_\+boundary}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{declare\+\_\+var\+\_\+boundary()}{declare\_var\_boundary()}}
+{\footnotesize\ttfamily void sp\+\_\+pcontext\+::declare\+\_\+var\+\_\+boundary (\begin{DoxyParamCaption}\item[{uint}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the current scope boundary (for default values).
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of variables to skip. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__pcontext_a1bed00024e865ddb21bfb40bd3383d70}\label{classsp__pcontext_a1bed00024e865ddb21bfb40bd3383d70}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!diff\+\_\+cursors@{diff\+\_\+cursors}}
+\index{diff\+\_\+cursors@{diff\+\_\+cursors}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{diff\+\_\+cursors()}{diff\_cursors()}}
+{\footnotesize\ttfamily size\+\_\+t sp\+\_\+pcontext\+::diff\+\_\+cursors (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$}]{ctx,  }\item[{bool}]{exclusive }\end{DoxyParamCaption}) const}
+
+Calculate and return the number of cursors to pop between the given context and this one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the other parsing context. \\
+\hline
+{\em exclusive} & specifies if the last scope should be excluded.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of cursors to pop between the given context and this one. If \textquotesingle{}exclusive\textquotesingle{} is true, don\textquotesingle{}t count the last scope we are leaving; this is used for L\+E\+A\+VE where we will jump to the cpop instructions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_ae47ee327ab468137d802f15dafe35206}\label{classsp__pcontext_ae47ee327ab468137d802f15dafe35206}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!diff\+\_\+handlers@{diff\+\_\+handlers}}
+\index{diff\+\_\+handlers@{diff\+\_\+handlers}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{diff\+\_\+handlers()}{diff\_handlers()}}
+{\footnotesize\ttfamily size\+\_\+t sp\+\_\+pcontext\+::diff\+\_\+handlers (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$}]{ctx,  }\item[{bool}]{exclusive }\end{DoxyParamCaption}) const}
+
+Calculate and return the number of handlers to pop between the given context and this one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the other parsing context. \\
+\hline
+{\em exclusive} & specifies if the last scope should be excluded.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of handlers to pop between the given context and this one. If \textquotesingle{}exclusive\textquotesingle{} is true, don\textquotesingle{}t count the last scope we are leaving; this is used for L\+E\+A\+VE where we will jump to the hpop instructions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_adbcf9a679c86a5cec3cbb2bcf3caec4a}\label{classsp__pcontext_adbcf9a679c86a5cec3cbb2bcf3caec4a}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!find\+\_\+handler@{find\+\_\+handler}}
+\index{find\+\_\+handler@{find\+\_\+handler}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{find\+\_\+handler()}{find\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$ sp\+\_\+pcontext\+::find\+\_\+handler (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sql\+\_\+state,  }\item[{uint}]{sql\+\_\+errno,  }\item[{\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}}}]{severity }\end{DoxyParamCaption}) const}
+
+Find an S\+QL handler for the given S\+QL condition according to the S\+QL-\/handler resolution rules. This function is used at runtime.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql\+\_\+state} & The S\+QL condition state \\
+\hline
+{\em sql\+\_\+errno} & The error code \\
+\hline
+{\em severity} & The S\+QL condition severity level\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the found S\+QL-\/handler or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_aa87f03211c0a7efcbf5df3a40471a599}\label{classsp__pcontext_aa87f03211c0a7efcbf5df3a40471a599}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!find\+\_\+variable@{find\+\_\+variable}}
+\index{find\+\_\+variable@{find\+\_\+variable}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{find\+\_\+variable()}{find\_variable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$ sp\+\_\+pcontext\+::find\+\_\+variable (\begin{DoxyParamCaption}\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{bool}]{current\+\_\+scope\+\_\+only }\end{DoxyParamCaption}) const}
+
+Find SP-\/variable by name.
+
+The function does a linear search (from newer to older variables, in case we have shadowed names).
+
+The function is called only at parsing time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Variable name. \\
+\hline
+{\em current\+\_\+scope\+\_\+only} & A flag if we search only in current scope.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+instance of found SP-\/variable, or N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_a4f3c91318b30516be1b5326df02ab38d}\label{classsp__pcontext_a4f3c91318b30516be1b5326df02ab38d}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!find\+\_\+variable@{find\+\_\+variable}}
+\index{find\+\_\+variable@{find\+\_\+variable}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{find\+\_\+variable()}{find\_variable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$ sp\+\_\+pcontext\+::find\+\_\+variable (\begin{DoxyParamCaption}\item[{uint}]{offset }\end{DoxyParamCaption}) const}
+
+Find SP-\/variable by the offset in the root parsing context.
+
+The function is used for two things\+:
+\begin{DoxyItemize}
+\item When evaluating parameters at the beginning, and setting out parameters at the end, of invocation. (Top frame only, so no recursion then.)
+\item For printing of \mbox{\hyperlink{classsp__instr__set}{sp\+\_\+instr\+\_\+set}}. (Debug mode only.)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Variable offset in the root parsing context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+instance of found SP-\/variable, or N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_a8e102fc7e3bb76e872b32bb8783df72f}\label{classsp__pcontext_a8e102fc7e3bb76e872b32bb8783df72f}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!max\+\_\+var\+\_\+index@{max\+\_\+var\+\_\+index}}
+\index{max\+\_\+var\+\_\+index@{max\+\_\+var\+\_\+index}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{max\+\_\+var\+\_\+index()}{max\_var\_index()}}
+{\footnotesize\ttfamily uint sp\+\_\+pcontext\+::max\+\_\+var\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the maximum number of variables used in this and all child contexts. For the root parsing context, this gives us the number of slots needed for variables during the runtime phase. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_ae7e4af2bd11d58a2950462a490612a31}\label{classsp__pcontext_ae7e4af2bd11d58a2950462a490612a31}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!pop\+\_\+context@{pop\+\_\+context}}
+\index{pop\+\_\+context@{pop\+\_\+context}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{pop\+\_\+context()}{pop\_context()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ sp\+\_\+pcontext\+::pop\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pop a node from the parsing context tree. \begin{DoxyReturn}{Returns}
+the parent node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_a486b4feb63c343fea40adcf197bde017}\label{classsp__pcontext_a486b4feb63c343fea40adcf197bde017}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!push\+\_\+context@{push\+\_\+context}}
+\index{push\+\_\+context@{push\+\_\+context}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{push\+\_\+context()}{push\_context()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ sp\+\_\+pcontext\+::push\+\_\+context (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classsp__pcontext_a6252258e34c191cbf1b5e86628cd29c6}{sp\+\_\+pcontext\+::enum\+\_\+scope}}}]{scope }\end{DoxyParamCaption})}
+
+
+
+Create and push a new context in the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread context. \\
+\hline
+{\em scope} & scope of the new parsing context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node created. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__pcontext_ab7f7fdb12f7e3c0e9cfea81e4ee39c66}\label{classsp__pcontext_ab7f7fdb12f7e3c0e9cfea81e4ee39c66}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!retrieve\+\_\+field\+\_\+definitions@{retrieve\+\_\+field\+\_\+definitions}}
+\index{retrieve\+\_\+field\+\_\+definitions@{retrieve\+\_\+field\+\_\+definitions}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{retrieve\+\_\+field\+\_\+definitions()}{retrieve\_field\_definitions()}}
+{\footnotesize\ttfamily void sp\+\_\+pcontext\+::retrieve\+\_\+field\+\_\+definitions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ $\ast$}]{field\+\_\+def\+\_\+lst }\end{DoxyParamCaption}) const}
+
+Retrieve full type information about SP-\/variables in this parsing context and its children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+\_\+def\+\_\+lst\mbox{[}out\mbox{]}} & Container to store type information. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__pcontext_a91b66fbcd41167516ec4486c5b1e4b43}\label{classsp__pcontext_a91b66fbcd41167516ec4486c5b1e4b43}} 
+\index{sp\+\_\+pcontext@{sp\+\_\+pcontext}!var\+\_\+context2runtime@{var\+\_\+context2runtime}}
+\index{var\+\_\+context2runtime@{var\+\_\+context2runtime}!sp\+\_\+pcontext@{sp\+\_\+pcontext}}
+\subsubsection{\texorpdfstring{var\+\_\+context2runtime()}{var\_context2runtime()}}
+{\footnotesize\ttfamily uint sp\+\_\+pcontext\+::var\+\_\+context2runtime (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+map index in this parsing context to runtime offset. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+pcontext.\+h\item 
+sp\+\_\+pcontext.\+cc\end{DoxyCompactItemize}

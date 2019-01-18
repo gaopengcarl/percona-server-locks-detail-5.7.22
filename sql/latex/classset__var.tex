@@ -1,0 +1,174 @@
+\hypertarget{classset__var}{}\section{set\+\_\+var Class Reference}
+\label{classset__var}\index{set\+\_\+var@{set\+\_\+var}}
+
+
+{\ttfamily \#include $<$set\+\_\+var.\+h$>$}
+
+Inheritance diagram for set\+\_\+var\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classset__var}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classset__var_a5adf33da65778929ccd5f9808ea14727}\label{classset__var_a5adf33da65778929ccd5f9808ea14727}} 
+{\bfseries set\+\_\+var} (enum\+\_\+var\+\_\+type type\+\_\+arg, \mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$var\+\_\+arg, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$base\+\_\+name\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$value\+\_\+arg)
+\item 
+int \mbox{\hyperlink{classset__var_a9d3bbbfa65cf51f9770ef2bd9c77ddcc}{check}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classset__var_a442c881d2848fa5da00c6060e91eb2b2}{update}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classset__var_ab20eacdd5174799bade9d3d80cb51168}{light\+\_\+check}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classset__var_ae336aa6a215d69563fba401c45d9ff96}{print}} (T\+HD $\ast$thd, String $\ast$str)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classset__var_aba70504fbb23bc6f80b28a57a7fbc99d}\label{classset__var_aba70504fbb23bc6f80b28a57a7fbc99d}} 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ \mbox{\hyperlink{classset__var_aba70504fbb23bc6f80b28a57a7fbc99d}{var}}
+\begin{DoxyCompactList}\small\item\em system variable to be updated \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classset__var_ab1f27659e7ce12be2f8abfa4c5b69458}\label{classset__var_ab1f27659e7ce12be2f8abfa4c5b69458}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classset__var_ab1f27659e7ce12be2f8abfa4c5b69458}{value}}
+\begin{DoxyCompactList}\small\item\em the expression that provides the new value of the variable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classset__var_add694599300d0ee023cac5452b2136c8}\label{classset__var_add694599300d0ee023cac5452b2136c8}} 
+enum\+\_\+var\+\_\+type {\bfseries type}
+\item 
+\mbox{\Hypertarget{classset__var_ac8e598c78fde147e6de8b50f59d2d354}\label{classset__var_ac8e598c78fde147e6de8b50f59d2d354}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>ulonglong \mbox{\hyperlink{classset__var_a17e98a0d6265ac6fb52bfa48f656947e}{ulonglong\_value}}\\
+\>\>{\em for all integer, set, enum sysvars }\\
+\>double \mbox{\hyperlink{classset__var_af84f10f97ad46414f06ebef7dfe16aff}{double\_value}}\\
+\>\>{\em for \mbox{\hyperlink{classSys__var__double}{Sys\_var\_double}} }\\
+\>\mbox{\hyperlink{structst__plugin__int}{plugin\_ref}} \mbox{\hyperlink{classset__var_aed7461aa3c341175e4e5d53c837eaffb}{plugin}}\\
+\>\>{\em for \mbox{\hyperlink{classSys__var__plugin}{Sys\_var\_plugin}} }\\
+\>\mbox{\hyperlink{classTime__zone}{Time\_zone}} $\ast$ \mbox{\hyperlink{classset__var_a94fd170b341a605b9486b650f85d95b5}{time\_zone}}\\
+\>\>{\em for \mbox{\hyperlink{classSys__var__tz}{Sys\_var\_tz}} }\\
+\>LEX\_STRING \mbox{\hyperlink{classset__var_acd8a16b9bf4d235ab59629f5f0f726f2}{string\_value}}\\
+\>\>{\em for \mbox{\hyperlink{classSys__var__charptr}{Sys\_var\_charptr}} and others }\\
+\>const void $\ast$ \mbox{\hyperlink{classset__var_af62fe29177dec7226a820559e3ca2fd4}{ptr}}\\
+\>\>{\em for \mbox{\hyperlink{classSys__var__struct}{Sys\_var\_struct}} }\\
+\} {\bfseries save\_result}\\
+
+\end{tabbing}\item 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classset__var_a8eeb18aa84a3652c4df76ce222e2a14c}{base}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}} descendant for assignments to the system variables. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classset__var_a9d3bbbfa65cf51f9770ef2bd9c77ddcc}\label{classset__var_a9d3bbbfa65cf51f9770ef2bd9c77ddcc}} 
+\index{set\+\_\+var@{set\+\_\+var}!check@{check}}
+\index{check@{check}!set\+\_\+var@{set\+\_\+var}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int set\+\_\+var\+::check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Verify that the supplied value is correct.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status code 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & Failure \\
+\hline
+{\em 0} & Success \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}}.
+
+\mbox{\Hypertarget{classset__var_ab20eacdd5174799bade9d3d80cb51168}\label{classset__var_ab20eacdd5174799bade9d3d80cb51168}} 
+\index{set\+\_\+var@{set\+\_\+var}!light\+\_\+check@{light\+\_\+check}}
+\index{light\+\_\+check@{light\+\_\+check}!set\+\_\+var@{set\+\_\+var}}
+\subsubsection{\texorpdfstring{light\+\_\+check()}{light\_check()}}
+{\footnotesize\ttfamily int set\+\_\+var\+::light\+\_\+check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check variable, but without assigning value (used by PS).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & E\+R\+R\+OR, message sent (normally no variables was updated) \\
+\hline
+{\em -\/1} & E\+R\+R\+OR, message not sent \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}}.
+
+\mbox{\Hypertarget{classset__var_ae336aa6a215d69563fba401c45d9ff96}\label{classset__var_ae336aa6a215d69563fba401c45d9ff96}} 
+\index{set\+\_\+var@{set\+\_\+var}!print@{print}}
+\index{print@{print}!set\+\_\+var@{set\+\_\+var}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void set\+\_\+var\+::print (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Self-\/print assignment
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string buffer to append the partial assignment to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}}.
+
+\mbox{\Hypertarget{classset__var_a442c881d2848fa5da00c6060e91eb2b2}\label{classset__var_a442c881d2848fa5da00c6060e91eb2b2}} 
+\index{set\+\_\+var@{set\+\_\+var}!update@{update}}
+\index{update@{update}!set\+\_\+var@{set\+\_\+var}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily int set\+\_\+var\+::update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update variable
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0$\vert$1 ok or E\+R\+R\+OR
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+E\+R\+R\+OR can be only due to abnormal operations involving the server\textquotesingle{}s execution evironment such as out of memory, hard disk failure or the computer blows up. Consider \mbox{\hyperlink{classset__var_a9d3bbbfa65cf51f9770ef2bd9c77ddcc}{set\+\_\+var\+::check()}} method if there is a need to return an error due to logics. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classset__var__base}{set\+\_\+var\+\_\+base}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classset__var_a8eeb18aa84a3652c4df76ce222e2a14c}\label{classset__var_a8eeb18aa84a3652c4df76ce222e2a14c}} 
+\index{set\+\_\+var@{set\+\_\+var}!base@{base}}
+\index{base@{base}!set\+\_\+var@{set\+\_\+var}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+S\+T\+R\+I\+NG set\+\_\+var\+::base}
+
+for structured variables, like keycache\+\_\+name.\+variable\+\_\+name 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{set__var_8h}{set\+\_\+var.\+h}}\item 
+set\+\_\+var.\+cc\end{DoxyCompactItemize}

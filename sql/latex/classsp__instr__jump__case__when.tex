@@ -1,0 +1,92 @@
+\hypertarget{classsp__instr__jump__case__when}{}\section{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when Class Reference}
+\label{classsp__instr__jump__case__when}\index{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classsp__instr__jump__case__when}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__jump__case__when_a9da51726bd8cadfa96967e893c884b9b}\label{classsp__instr__jump__case__when_a9da51726bd8cadfa96967e893c884b9b}} 
+{\bfseries sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when} (uint ip, L\+EX $\ast$lex, int case\+\_\+expr\+\_\+id, \mbox{\hyperlink{classItem}{Item}} $\ast$when\+\_\+expr\+\_\+item, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG when\+\_\+expr\+\_\+query)
+\item 
+\mbox{\Hypertarget{classsp__instr__jump__case__when_ab44a8df75300d6954cd7551d0fb87e37}\label{classsp__instr__jump__case__when_ab44a8df75300d6954cd7551d0fb87e37}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__jump__case__when_aaa1972f676e5c2bb3a55baf61220c5fb}{exec\+\_\+core}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__jump__case__when_a35195c6200f0d6e87bde67b83f5fd767}{invalidate}} ()
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__jump__case__when_a590288e701b813831974c6f6f61884f7}{on\+\_\+after\+\_\+expr\+\_\+parsing}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__instr__jump__case__when}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}} instruction is used in the \char`\"{}simple C\+A\+S\+E\char`\"{} implementation. It\textquotesingle{}s a jump instruction with the following condition\+: (C\+A\+SE-\/expression = W\+H\+EN-\/expression) C\+A\+SE-\/expression is retrieved from \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}}; W\+H\+EN-\/expression is kept by this instruction. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__jump__case__when_aaa1972f676e5c2bb3a55baf61220c5fb}\label{classsp__instr__jump__case__when_aaa1972f676e5c2bb3a55baf61220c5fb}} 
+\index{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}!exec\+\_\+core@{exec\+\_\+core}}
+\index{exec\+\_\+core@{exec\+\_\+core}!sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}
+\subsubsection{\texorpdfstring{exec\+\_\+core()}{exec\_core()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when\+::exec\+\_\+core (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute core function of instruction after all preparations (e.\+g. setting of proper L\+EX, saving part of the thread context).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em nextp\mbox{[}out\mbox{]}} & next instruction pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__jump__case__when_a35195c6200f0d6e87bde67b83f5fd767}\label{classsp__instr__jump__case__when_a35195c6200f0d6e87bde67b83f5fd767}} 
+\index{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Invalidate the object. 
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__branch__instr_a91d747da2e1068e2d6ac0fd7c06a4018}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__jump__case__when_a590288e701b813831974c6f6f61884f7}\label{classsp__instr__jump__case__when_a590288e701b813831974c6f6f61884f7}} 
+\index{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}!on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}}
+\index{on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}!sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when@{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}
+\subsubsection{\texorpdfstring{on\+\_\+after\+\_\+expr\+\_\+parsing()}{on\_after\_expr\_parsing()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when\+::on\+\_\+after\+\_\+expr\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Callback function which is called after the statement query string is successfully parsed, and the thread context has not been switched to the outer context. The thread context contains new L\+EX-\/object corresponding to the parsed query string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}{sp\+\_\+lex\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

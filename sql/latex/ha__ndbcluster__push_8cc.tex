@@ -1,0 +1,73 @@
+\hypertarget{ha__ndbcluster__push_8cc}{}\section{ha\+\_\+ndbcluster\+\_\+push.\+cc File Reference}
+\label{ha__ndbcluster__push_8cc}\index{ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}}
+
+
+This file defines various classes and methods used for pushing queries to the ndb data node (for execution by the S\+PJ block).  
+
+
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+glue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+push.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ha\+\_\+ndbcluster\+\_\+cond.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}abstract\+\_\+query\+\_\+plan.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ndbapi/\+Ndb\+Api.\+hpp$>$}\newline
+{\ttfamily \#include $<$ndbapi/\+Ndb\+Interpreted\+Code.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}../storage/ndb/src/ndbapi/\+Ndb\+Query\+Builder.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../storage/ndb/src/ndbapi/\+Ndb\+Query\+Operation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$ndb\+\_\+version.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH}(msgfmt, ...)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{ha__ndbcluster__push_8cc_aa7e9ce5a78228612a5e9fc7bd9aff68a}{internal\+\_\+operation\+\_\+count}} (\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}{A\+Q\+P\+::enum\+\_\+access\+\_\+type}} access\+Type)
+\item 
+void \mbox{\hyperlink{ha__ndbcluster__push_8cc_accbe081e8ce22ed8bfd4e0cf3831fa43}{ndbcluster\+\_\+build\+\_\+key\+\_\+map}} (const N\+D\+B\+T\+AB $\ast$table, const \mbox{\hyperlink{structndb__index__data}{N\+D\+B\+\_\+\+I\+N\+D\+E\+X\+\_\+\+D\+A\+TA}} \&index, const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+def, uint ix\+\_\+map\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines various classes and methods used for pushing queries to the ndb data node (for execution by the S\+PJ block). 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ha__ndbcluster__push_8cc_aae2d99e3e63fee51af7ebb5e35dac2a1}\label{ha__ndbcluster__push_8cc_aae2d99e3e63fee51af7ebb5e35dac2a1}} 
+\index{ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}!E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH@{E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH}}
+\index{E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH@{E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH}!ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}}
+\subsubsection{\texorpdfstring{E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH}{EXPLAIN\_NO\_PUSH}}
+{\footnotesize\ttfamily \#define E\+X\+P\+L\+A\+I\+N\+\_\+\+N\+O\+\_\+\+P\+U\+SH(\begin{DoxyParamCaption}\item[{}]{msgfmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}                                                                \(\backslash\)}
+\DoxyCodeLine{\{                                                                 \(\backslash\)}
+\DoxyCodeLine{  if (unlikely(current\_thd->lex->describe))   \(\backslash\)}
+\DoxyCodeLine{  \{                                                               \(\backslash\)}
+\DoxyCodeLine{    push\_warning\_printf(current\_thd,                              \(\backslash\)}
+\DoxyCodeLine{                        Sql\_condition::SL\_NOTE, ER\_YES,           \(\backslash\)}
+\DoxyCodeLine{                        (msgfmt), \_\_VA\_ARGS\_\_);                   \(\backslash\)}
+\DoxyCodeLine{  \}                                                               \(\backslash\)}
+\DoxyCodeLine{\}                                                                 \(\backslash\)}
+\DoxyCodeLine{while(0)}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ha__ndbcluster__push_8cc_aa7e9ce5a78228612a5e9fc7bd9aff68a}\label{ha__ndbcluster__push_8cc_aa7e9ce5a78228612a5e9fc7bd9aff68a}} 
+\index{ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}!internal\+\_\+operation\+\_\+count@{internal\+\_\+operation\+\_\+count}}
+\index{internal\+\_\+operation\+\_\+count@{internal\+\_\+operation\+\_\+count}!ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}}
+\subsubsection{\texorpdfstring{internal\+\_\+operation\+\_\+count()}{internal\_operation\_count()}}
+{\footnotesize\ttfamily uint internal\+\_\+operation\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}{A\+Q\+P\+::enum\+\_\+access\+\_\+type}}}]{access\+Type }\end{DoxyParamCaption})}
+
+Find the number S\+PJ operations needed to execute a given access type. (\mbox{\hyperlink{classUnique}{Unique}} index lookups are translated to two single table lookups internally.) \mbox{\Hypertarget{ha__ndbcluster__push_8cc_accbe081e8ce22ed8bfd4e0cf3831fa43}\label{ha__ndbcluster__push_8cc_accbe081e8ce22ed8bfd4e0cf3831fa43}} 
+\index{ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}!ndbcluster\+\_\+build\+\_\+key\+\_\+map@{ndbcluster\+\_\+build\+\_\+key\+\_\+map}}
+\index{ndbcluster\+\_\+build\+\_\+key\+\_\+map@{ndbcluster\+\_\+build\+\_\+key\+\_\+map}!ha\+\_\+ndbcluster\+\_\+push.\+cc@{ha\+\_\+ndbcluster\+\_\+push.\+cc}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+build\+\_\+key\+\_\+map()}{ndbcluster\_build\_key\_map()}}
+{\footnotesize\ttfamily void ndbcluster\+\_\+build\+\_\+key\+\_\+map (\begin{DoxyParamCaption}\item[{const N\+D\+B\+T\+AB $\ast$}]{table,  }\item[{const \mbox{\hyperlink{structndb__index__data}{N\+D\+B\+\_\+\+I\+N\+D\+E\+X\+\_\+\+D\+A\+TA}} \&}]{index,  }\item[{const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{key\+\_\+def,  }\item[{uint}]{ix\+\_\+map\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Fill in ix\+\_\+map\mbox{[}\mbox{]} to map from \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}}\mbox{[}\mbox{]} order into primary key / unique key order of key fields. 

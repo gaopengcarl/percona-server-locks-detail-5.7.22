@@ -1,0 +1,149 @@
+\hypertarget{classExplain__format}{}\section{Explain\+\_\+format Class Reference}
+\label{classExplain__format}\index{Explain\+\_\+format@{Explain\+\_\+format}}
+
+
+{\ttfamily \#include $<$opt\+\_\+explain\+\_\+format.\+h$>$}
+
+Inheritance diagram for Explain\+\_\+format\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classExplain__format}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format_a91ab0cd859549a7df55746df2491ca60}{is\+\_\+hierarchical}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format_ae4808c82b9c88d94ede33477753917f3}{send\+\_\+headers}} (Query\+\_\+result $\ast$result)
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format_aedfa1f1b941f522948707e4fa3368f79}{begin\+\_\+context}} (enum\+\_\+parsing\+\_\+context context, S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$subquery=0, const \mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} $\ast$flags=N\+U\+LL)=0
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format_a3d668c297dd5fb8ae34b11fe89dfc02b}{end\+\_\+context}} (enum\+\_\+parsing\+\_\+context context)=0
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format_a3907382576a43a2fa4ed554f5d13e158}{flush\+\_\+entry}} ()=0
+\item 
+virtual \mbox{\hyperlink{classqep__row}{qep\+\_\+row}} $\ast$ \mbox{\hyperlink{classExplain__format_aa822adf89028df0cdb74d39065ee9e5a}{entry}} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__format_a10101f444ad32534d35e58c088543a5e}\label{classExplain__format_a10101f444ad32534d35e58c088543a5e}} 
+Query\+\_\+result $\ast$ \mbox{\hyperlink{classExplain__format_a10101f444ad32534d35e58c088543a5e}{output}}
+\begin{DoxyCompactList}\small\item\em output resulting data there \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for structured and hierarchical E\+X\+P\+L\+A\+IN output formatters 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExplain__format_aedfa1f1b941f522948707e4fa3368f79}\label{classExplain__format_aedfa1f1b941f522948707e4fa3368f79}} 
+\index{Explain\+\_\+format@{Explain\+\_\+format}!begin\+\_\+context@{begin\+\_\+context}}
+\index{begin\+\_\+context@{begin\+\_\+context}!Explain\+\_\+format@{Explain\+\_\+format}}
+\subsubsection{\texorpdfstring{begin\+\_\+context()}{begin\_context()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+::begin\+\_\+context (\begin{DoxyParamCaption}\item[{enum\+\_\+parsing\+\_\+context}]{context,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$}]{subquery = {\ttfamily 0},  }\item[{const \mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} $\ast$}]{flags = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Enter a specified context
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & context type \\
+\hline
+{\em subquery} & for C\+T\+X\+\_\+\+W\+H\+E\+RE\+: unit of the subquery \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classExplain__format__JSON_a3de95e88857de347b30c13ca519c757f}{Explain\+\_\+format\+\_\+\+J\+S\+ON}}, and \mbox{\hyperlink{classExplain__format__traditional_a6919bd25e9feb9954a2fa4f06c8a4f5c}{Explain\+\_\+format\+\_\+traditional}}.
+
+\mbox{\Hypertarget{classExplain__format_a3d668c297dd5fb8ae34b11fe89dfc02b}\label{classExplain__format_a3d668c297dd5fb8ae34b11fe89dfc02b}} 
+\index{Explain\+\_\+format@{Explain\+\_\+format}!end\+\_\+context@{end\+\_\+context}}
+\index{end\+\_\+context@{end\+\_\+context}!Explain\+\_\+format@{Explain\+\_\+format}}
+\subsubsection{\texorpdfstring{end\+\_\+context()}{end\_context()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+::end\+\_\+context (\begin{DoxyParamCaption}\item[{enum\+\_\+parsing\+\_\+context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Leave the current context
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & current context type (for validation/debugging) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classExplain__format__JSON_a6b44f355df4e59b3d33b6c334d8fda59}{Explain\+\_\+format\+\_\+\+J\+S\+ON}}, and \mbox{\hyperlink{classExplain__format__traditional_ae8a5ab39ea6b91a4100b2d60a32f4043}{Explain\+\_\+format\+\_\+traditional}}.
+
+\mbox{\Hypertarget{classExplain__format_aa822adf89028df0cdb74d39065ee9e5a}\label{classExplain__format_aa822adf89028df0cdb74d39065ee9e5a}} 
+\index{Explain\+\_\+format@{Explain\+\_\+format}!entry@{entry}}
+\index{entry@{entry}!Explain\+\_\+format@{Explain\+\_\+format}}
+\subsubsection{\texorpdfstring{entry()}{entry()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classqep__row}{qep\+\_\+row}}$\ast$ Explain\+\_\+format\+::entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get a pointer to the current T\+A\+B\+L\+E/\+J\+O\+I\+N\+\_\+\+T\+AB property set 
+
+Implemented in \mbox{\hyperlink{classExplain__format__JSON_ab1c4bc5ad6055507a47057fe98ba55dc}{Explain\+\_\+format\+\_\+\+J\+S\+ON}}, and \mbox{\hyperlink{classExplain__format__traditional_a33fdef7dec07e61f4b0f098b768e01d9}{Explain\+\_\+format\+\_\+traditional}}.
+
+\mbox{\Hypertarget{classExplain__format_a3907382576a43a2fa4ed554f5d13e158}\label{classExplain__format_a3907382576a43a2fa4ed554f5d13e158}} 
+\index{Explain\+\_\+format@{Explain\+\_\+format}!flush\+\_\+entry@{flush\+\_\+entry}}
+\index{flush\+\_\+entry@{flush\+\_\+entry}!Explain\+\_\+format@{Explain\+\_\+format}}
+\subsubsection{\texorpdfstring{flush\+\_\+entry()}{flush\_entry()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+::flush\+\_\+entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Flush T\+A\+B\+L\+E/\+J\+O\+I\+N\+\_\+\+T\+AB property set
+
+For traditional E\+X\+P\+L\+A\+IN\+: output a single E\+X\+P\+L\+A\+IN row. 
+
+Implemented in \mbox{\hyperlink{classExplain__format__JSON_adf08f2f20ae05ca772a621f6139be6aa}{Explain\+\_\+format\+\_\+\+J\+S\+ON}}, and \mbox{\hyperlink{classExplain__format__traditional_a991e2af5a82b9f25cee94564ee4c7000}{Explain\+\_\+format\+\_\+traditional}}.
+
+\mbox{\Hypertarget{classExplain__format_a91ab0cd859549a7df55746df2491ca60}\label{classExplain__format_a91ab0cd859549a7df55746df2491ca60}} 
+\index{Explain\+\_\+format@{Explain\+\_\+format}!is\+\_\+hierarchical@{is\+\_\+hierarchical}}
+\index{is\+\_\+hierarchical@{is\+\_\+hierarchical}!Explain\+\_\+format@{Explain\+\_\+format}}
+\subsubsection{\texorpdfstring{is\+\_\+hierarchical()}{is\_hierarchical()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+::is\+\_\+hierarchical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+A hierarchical text or a plain table
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Formatter produces hierarchical text \\
+\hline
+{\em false} & Traditional explain \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classExplain__format__JSON_a5df8ad340d44c6d184be5f6397ab8d99}{Explain\+\_\+format\+\_\+\+J\+S\+ON}}, and \mbox{\hyperlink{classExplain__format__traditional_a8861c3fd3ab2ed3523a0c1fcaa172645}{Explain\+\_\+format\+\_\+traditional}}.
+
+\mbox{\Hypertarget{classExplain__format_ae4808c82b9c88d94ede33477753917f3}\label{classExplain__format_ae4808c82b9c88d94ede33477753917f3}} 
+\index{Explain\+\_\+format@{Explain\+\_\+format}!send\+\_\+headers@{send\+\_\+headers}}
+\index{send\+\_\+headers@{send\+\_\+headers}!Explain\+\_\+format@{Explain\+\_\+format}}
+\subsubsection{\texorpdfstring{send\+\_\+headers()}{send\_headers()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+::send\+\_\+headers (\begin{DoxyParamCaption}\item[{Query\+\_\+result $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Send E\+X\+P\+L\+A\+IN header item(s) to output stream
+
+\begin{DoxyNote}{Note}
+\+: This function caches the output result set pointer for further use.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em result} & output result set\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented in \mbox{\hyperlink{classExplain__format__JSON_a66a631eb1439d85e5616b86bbbddc923}{Explain\+\_\+format\+\_\+\+J\+S\+ON}}, and \mbox{\hyperlink{classExplain__format__traditional_ae6c12bfd12a99873ea63fc791515eb24}{Explain\+\_\+format\+\_\+traditional}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+format.\+h\end{DoxyCompactItemize}

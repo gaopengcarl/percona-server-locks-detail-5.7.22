@@ -1,0 +1,80 @@
+\hypertarget{classPT__hint__max__execution__time}{}\section{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time Class Reference}
+\label{classPT__hint__max__execution__time}\index{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time@{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+hints.\+h$>$}
+
+Inheritance diagram for P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__hint__max__execution__time}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__hint__max__execution__time_a1e16c251ccf24c0dc3fb92e6b35d2959}\label{classPT__hint__max__execution__time_a1e16c251ccf24c0dc3fb92e6b35d2959}} 
+{\bfseries P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time} (ulong milliseconds\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPT__hint__max__execution__time_a7d073143038eaf1eddc87b1c49f6c5aa}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+virtual void \mbox{\hyperlink{classPT__hint__max__execution__time_a5062df4e31c3ddc7a6d3b17166c7cfd1}{append\+\_\+args}} (T\+HD $\ast$thd, String $\ast$str) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__hint__max__execution__time_afea2d32efd2f5f7da6b6b6f2195654ba}\label{classPT__hint__max__execution__time_afea2d32efd2f5f7da6b6b6f2195654ba}} 
+ulong {\bfseries milliseconds}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Parse tree hint object for M\+A\+X\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N\+\_\+\+T\+I\+ME hint. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__hint__max__execution__time_a5062df4e31c3ddc7a6d3b17166c7cfd1}\label{classPT__hint__max__execution__time_a5062df4e31c3ddc7a6d3b17166c7cfd1}} 
+\index{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time@{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}!append\+\_\+args@{append\+\_\+args}}
+\index{append\+\_\+args@{append\+\_\+args}!P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time@{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}}
+\subsubsection{\texorpdfstring{append\+\_\+args()}{append\_args()}}
+{\footnotesize\ttfamily virtual void P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time\+::append\+\_\+args (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Append additional hint arguments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object \\
+\hline
+{\em str} & Pointer to String object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classPT__hint_afd39b4eeed47d9b1790f12c144aece7d}{P\+T\+\_\+hint}}.
+
+\mbox{\Hypertarget{classPT__hint__max__execution__time_a7d073143038eaf1eddc87b1c49f6c5aa}\label{classPT__hint__max__execution__time_a7d073143038eaf1eddc87b1c49f6c5aa}} 
+\index{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time@{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time@{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily bool P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function initializes M\+A\+X\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N\+\_\+\+T\+I\+ME hint
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Pointer to \mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of error, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+hints.\+h\item 
+parse\+\_\+tree\+\_\+hints.\+cc\end{DoxyCompactItemize}

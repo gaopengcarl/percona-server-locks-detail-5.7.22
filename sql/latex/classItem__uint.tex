@@ -1,0 +1,103 @@
+\hypertarget{classItem__uint}{}\section{Item\+\_\+uint Class Reference}
+\label{classItem__uint}\index{Item\+\_\+uint@{Item\+\_\+uint}}
+Inheritance diagram for Item\+\_\+uint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__uint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__uint_afb05bbd5a38a139db8aa8c91123e5fac}\label{classItem__uint_afb05bbd5a38a139db8aa8c91123e5fac}} 
+{\bfseries Item\+\_\+uint} (const char $\ast$str\+\_\+arg, uint length)
+\item 
+\mbox{\Hypertarget{classItem__uint_aa43a6d2292a025268e493f04d8ad1279}\label{classItem__uint_aa43a6d2292a025268e493f04d8ad1279}} 
+{\bfseries Item\+\_\+uint} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, const char $\ast$str\+\_\+arg, uint length)
+\item 
+\mbox{\Hypertarget{classItem__uint_afdf9b17690d9a97200c4652c42c7236c}\label{classItem__uint_afdf9b17690d9a97200c4652c42c7236c}} 
+{\bfseries Item\+\_\+uint} (ulonglong i)
+\item 
+\mbox{\Hypertarget{classItem__uint_a487e56be11b887609facf3f121158eec}\label{classItem__uint_a487e56be11b887609facf3f121158eec}} 
+{\bfseries Item\+\_\+uint} (const \mbox{\hyperlink{className__string}{Name\+\_\+string}} \&name\+\_\+arg, longlong i, uint length)
+\item 
+\mbox{\Hypertarget{classItem__uint_a989fc3a9cf2a7279696e826e9c5de654}\label{classItem__uint_a989fc3a9cf2a7279696e826e9c5de654}} 
+double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__uint_a2aa29e4d48951bea83f30b6c1b5e9e76}\label{classItem__uint_a2aa29e4d48951bea83f30b6c1b5e9e76}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__uint_a8ca5bceb015b159c32ff3f53bb8be922}\label{classItem__uint_a8ca5bceb015b159c32ff3f53bb8be922}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries clone\+\_\+item} ()
+\item 
+virtual void \mbox{\hyperlink{classItem__uint_a24c54d4822268228386af4160895372c}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__uint_ae4954aef1b5bcacab64b4f3de7cab2ba}\label{classItem__uint_ae4954aef1b5bcacab64b4f3de7cab2ba}} 
+\mbox{\hyperlink{classItem__num}{Item\+\_\+num}} $\ast$ {\bfseries neg} ()
+\item 
+\mbox{\Hypertarget{classItem__uint_a9a84dc96c449c84d92650c545c0e6606}\label{classItem__uint_a9a84dc96c449c84d92650c545c0e6606}} 
+uint {\bfseries decimal\+\_\+precision} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem__uint_a91382bc23286fc3fcd9fdab10dce8567}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__uint_a24c54d4822268228386af4160895372c}\label{classItem__uint_a24c54d4822268228386af4160895372c}} 
+\index{Item\+\_\+uint@{Item\+\_\+uint}!print@{print}}
+\index{print@{print}!Item\+\_\+uint@{Item\+\_\+uint}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+uint\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__int_a7c2f1ba97b34b9b3379d49e85d81bdc0}{Item\+\_\+int}}.
+
+\mbox{\Hypertarget{classItem__uint_a91382bc23286fc3fcd9fdab10dce8567}\label{classItem__uint_a91382bc23286fc3fcd9fdab10dce8567}} 
+\index{Item\+\_\+uint@{Item\+\_\+uint}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item\+\_\+uint@{Item\+\_\+uint}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+\_\+uint\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Store this item\textquotesingle{}s int-\/value in a field
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field where the int value is to be stored \\
+\hline
+{\em no\+\_\+conversions} & Only applies if the value to store is N\+U\+LL (null\+\_\+value is true) and N\+U\+LL is not allowed in field. In that case\+: if no\+\_\+coversion is true, do nothing and return with error T\+Y\+P\+E\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON. If no\+\_\+coversion is false, the field\textquotesingle{}s default value is stored if one exists. Otherwise an error is returned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & Storing of value went fine without warnings or errors \\
+\hline
+{\em !\+T\+Y\+P\+E\+\_\+\+OK} & Warning/error as indicated by type\+\_\+conversion\+\_\+status enum value \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__int_a61fc7a6461f8d3f027fc91b5aeca8d1b}{Item\+\_\+int}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

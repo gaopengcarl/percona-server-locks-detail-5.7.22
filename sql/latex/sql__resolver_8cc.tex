@@ -1,0 +1,33 @@
+\hypertarget{sql__resolver_8cc}{}\section{sql\+\_\+resolver.\+cc File Reference}
+\label{sql__resolver_8cc}\index{sql\+\_\+resolver.\+cc@{sql\+\_\+resolver.\+cc}}
+
+
+Implementation of name resolution stage.  
+
+
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+resolver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+explain\+\_\+format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}aggregate\+\_\+check.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}template\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{group__Query__Resolver_gab18726347ecf92d8985617dda1d60ba3}{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, uint first\+\_\+unused)
+\item 
+bool \mbox{\hyperlink{group__Query__Resolver_ga67ba0f5092d8f16edd545f8685a5f104}{subquery\+\_\+allows\+\_\+materialization}} (\mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} $\ast$predicate, T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex, const S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$outer)
+\item 
+bool \mbox{\hyperlink{group__Query__Resolver_ga180a0a53f32a387f8af2c3b9db83d09e}{setup\+\_\+order}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+bool \mbox{\hyperlink{group__Query__Resolver_ga32c1578d1ffb07ec12c09b0cce88695a}{validate\+\_\+gc\+\_\+assignment}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$values, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em validate\+\_\+gc\+\_\+assignment Check whether the other values except D\+E\+F\+A\+U\+LT are assigned for generated columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of name resolution stage. 
+

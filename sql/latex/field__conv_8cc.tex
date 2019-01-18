@@ -1,0 +1,72 @@
+\hypertarget{field__conv_8cc}{}\section{field\+\_\+conv.\+cc File Reference}
+\label{field__conv_8cc}\index{field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}}
+
+
+Functions to copy data to or from fields.  
+
+
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$m\+\_\+ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+timefunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}template\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{field__conv_8cc_aa10cb9a7779314e8b380fa8eeeb99259}{set\+\_\+field\+\_\+to\+\_\+null}} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{field__conv_8cc_a599acd756b800d3f7fe93820cc9d0c66}{set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\item 
+\mbox{\Hypertarget{field__conv_8cc_aa3cb86bf3eb0edece815bf2aba73caa7}\label{field__conv_8cc_aa3cb86bf3eb0edece815bf2aba73caa7}} 
+type\+\_\+conversion\+\_\+status {\bfseries copy\+\_\+time\+\_\+to\+\_\+time} (\mbox{\hyperlink{classField}{Field}} $\ast$from, \mbox{\hyperlink{classField}{Field}} $\ast$to)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{field__conv_8cc_ac6315ce5b8740662e0c10dd34c659fae}{field\+\_\+conv}} (\mbox{\hyperlink{classField}{Field}} $\ast$to, \mbox{\hyperlink{classField}{Field}} $\ast$from)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to copy data to or from fields. 
+
+This could be done with a single short function but opencoding this gives much more speed. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{field__conv_8cc_ac6315ce5b8740662e0c10dd34c659fae}\label{field__conv_8cc_ac6315ce5b8740662e0c10dd34c659fae}} 
+\index{field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}!field\+\_\+conv@{field\+\_\+conv}}
+\index{field\+\_\+conv@{field\+\_\+conv}!field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}}
+\subsubsection{\texorpdfstring{field\+\_\+conv()}{field\_conv()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status field\+\_\+conv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{to,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{from }\end{DoxyParamCaption})}
+
+Simple quick field convert that is called on insert. \mbox{\Hypertarget{field__conv_8cc_aa10cb9a7779314e8b380fa8eeeb99259}\label{field__conv_8cc_aa10cb9a7779314e8b380fa8eeeb99259}} 
+\index{field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}!set\+\_\+field\+\_\+to\+\_\+null@{set\+\_\+field\+\_\+to\+\_\+null}}
+\index{set\+\_\+field\+\_\+to\+\_\+null@{set\+\_\+field\+\_\+to\+\_\+null}!field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}}
+\subsubsection{\texorpdfstring{set\+\_\+field\+\_\+to\+\_\+null()}{set\_field\_to\_null()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status set\+\_\+field\+\_\+to\+\_\+null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field }\end{DoxyParamCaption})}
+
+The following piece of code is run for the case when a B\+L\+OB column that has value N\+U\+LL is queried with G\+R\+O\+UP BY N\+U\+LL and the result is inserted into a some table\textquotesingle{}s column declared having primitive type (e.\+g. I\+NT) and N\+OT N\+U\+LL.
+
+For example, the following test case will hit this piece of code\+: C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} t1 (a B\+L\+OB); C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} t2 (a I\+NT N\+OT N\+U\+LL);
+
+I\+N\+S\+E\+RT t1 V\+A\+L\+U\+ES (N\+U\+LL); I\+N\+S\+E\+RT I\+N\+TO t2(a) S\+E\+L\+E\+CT a F\+R\+OM t1 G\+R\+O\+UP BY N\+U\+LL; $<$$<$== Hit here
+
+In general, when \mbox{\hyperlink{field__conv_8cc_aa10cb9a7779314e8b380fa8eeeb99259}{set\+\_\+field\+\_\+to\+\_\+null()}} is called a \mbox{\hyperlink{classField}{Field}} has to be either declared as N\+U\+LL-\/able or be marked as temporary N\+U\+LL-\/able. But in case of I\+N\+S\+E\+RT S\+E\+L\+E\+CT from a B\+L\+OB field and when G\+R\+O\+UP BY N\+U\+LL is specified the \mbox{\hyperlink{classField}{Field}} object for a destination column doesn\textquotesingle{}t set neither N\+U\+LL-\/able nor temporary N\+U\+LL-\/able (see \mbox{\hyperlink{group__Query__Executor_gaea6e7f59b9cca648046cf55fe5a95732}{setup\+\_\+copy\+\_\+fields()}}).\mbox{\Hypertarget{field__conv_8cc_a599acd756b800d3f7fe93820cc9d0c66}\label{field__conv_8cc_a599acd756b800d3f7fe93820cc9d0c66}} 
+\index{field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}!set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions@{set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions}}
+\index{set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions@{set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions}!field\+\_\+conv.\+cc@{field\+\_\+conv.\+cc}}
+\subsubsection{\texorpdfstring{set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions()}{set\_field\_to\_null\_with\_conversions()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status set\+\_\+field\+\_\+to\+\_\+null\+\_\+with\+\_\+conversions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})}
+
+Set field to N\+U\+LL or T\+I\+M\+E\+S\+T\+A\+MP or to next auto\+\_\+increment number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & \mbox{\hyperlink{classField}{Field}} to update \\
+\hline
+{\em no\+\_\+conversions} & Set to 1 if we should return 1 if field can\textquotesingle{}t take null values. If set to 0 we will do store the \textquotesingle{}default value\textquotesingle{} if the field is a special field. If not we will give an error.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & \mbox{\hyperlink{classField}{Field}} could take 0 or an automatic conversion was used \\
+\hline
+{\em -\/1} & \mbox{\hyperlink{classField}{Field}} could not take N\+U\+LL and no conversion was used. If no\+\_\+conversion was not set, an error message is printed \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,75 @@
+\hypertarget{classItem__null__result}{}\section{Item\+\_\+null\+\_\+result Class Reference}
+\label{classItem__null__result}\index{Item\+\_\+null\+\_\+result@{Item\+\_\+null\+\_\+result}}
+
+
+{\ttfamily \#include $<$item.\+h$>$}
+
+Inheritance diagram for Item\+\_\+null\+\_\+result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classItem__null__result}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__null__result_ac719d636a8c32791369457f16e5c376a}\label{classItem__null__result_ac719d636a8c32791369457f16e5c376a}} 
+{\bfseries Item\+\_\+null\+\_\+result} (enum\+\_\+field\+\_\+types fld\+\_\+type, Item\+\_\+result res\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__null__result_a7b94e2f3ada5773c7fc795aac7afe0c4}\label{classItem__null__result_a7b94e2f3ada5773c7fc795aac7afe0c4}} 
+bool {\bfseries is\+\_\+result\+\_\+field} ()
+\item 
+\mbox{\Hypertarget{classItem__null__result_a803965c064d17bf88261b553d2c04dea}\label{classItem__null__result_a803965c064d17bf88261b553d2c04dea}} 
+void {\bfseries save\+\_\+in\+\_\+result\+\_\+field} (bool no\+\_\+conversions)
+\item 
+\mbox{\Hypertarget{classItem__null__result_ac2b067d6da3cfefd43f9aca479e925f9}\label{classItem__null__result_ac2b067d6da3cfefd43f9aca479e925f9}} 
+bool {\bfseries check\+\_\+partition\+\_\+func\+\_\+processor} (uchar $\ast$int\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__null__result_a1e6071b25a6f1520abf1ff3f28107e22}\label{classItem__null__result_a1e6071b25a6f1520abf1ff3f28107e22}} 
+enum\+\_\+field\+\_\+types {\bfseries field\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classItem__null__result_a8355283cd65a83091bdc0f132e8c42d1}\label{classItem__null__result_a8355283cd65a83091bdc0f132e8c42d1}} 
+Item\+\_\+result {\bfseries result\+\_\+type} () const
+\item 
+bool \mbox{\hyperlink{classItem__null__result_a2e623724f3729cea2a1b54c3d5f7dbd4}{check\+\_\+gcol\+\_\+func\+\_\+processor}} (uchar $\ast$int\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__null__result_a238e87402e00c49bda7d31475dda949a}\label{classItem__null__result_a238e87402e00c49bda7d31475dda949a}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries result\+\_\+field}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An item representing N\+U\+LL values for use with R\+O\+L\+L\+UP.
+
+When grouping W\+I\+TH R\+O\+L\+L\+UP, \mbox{\hyperlink{classItem__null__result}{Item\+\_\+null\+\_\+result}} items are created to represent N\+U\+LL values in the grouping columns of the R\+O\+L\+L\+UP rows. To avoid type problems during execution, these objects are created with the same field and result types as the fields of the columns they belong to. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__null__result_a2e623724f3729cea2a1b54c3d5f7dbd4}\label{classItem__null__result_a2e623724f3729cea2a1b54c3d5f7dbd4}} 
+\index{Item\+\_\+null\+\_\+result@{Item\+\_\+null\+\_\+result}!check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}}
+\index{check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}!Item\+\_\+null\+\_\+result@{Item\+\_\+null\+\_\+result}}
+\subsubsection{\texorpdfstring{check\+\_\+gcol\+\_\+func\+\_\+processor()}{check\_gcol\_func\_processor()}}
+{\footnotesize\ttfamily bool Item\+\_\+null\+\_\+result\+::check\+\_\+gcol\+\_\+func\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{int\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if an expression/function is allowed for a virtual column
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em int\+\_\+arg} & An array of two integers. Used only for \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}. The first cell passes the field\textquotesingle{}s number in the table. The second cell is an out parameter containing the error code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if function is not accepted 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__basic__constant_a6240f3253090d2fc91f87a7a1cb773a7}{Item\+\_\+basic\+\_\+constant}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,377 @@
+\hypertarget{classJson__dom}{}\section{Json\+\_\+dom Class Reference}
+\label{classJson__dom}\index{Json\+\_\+dom@{Json\+\_\+dom}}
+Inheritance diagram for Json\+\_\+dom\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.733333cm]{classJson__dom}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \{ \newline
+{\bfseries J\+\_\+\+N\+U\+LL}, 
+{\bfseries J\+\_\+\+D\+E\+C\+I\+M\+AL}, 
+{\bfseries J\+\_\+\+I\+NT}, 
+{\bfseries J\+\_\+\+U\+I\+NT}, 
+\newline
+{\bfseries J\+\_\+\+D\+O\+U\+B\+LE}, 
+{\bfseries J\+\_\+\+S\+T\+R\+I\+NG}, 
+{\bfseries J\+\_\+\+O\+B\+J\+E\+CT}, 
+{\bfseries J\+\_\+\+A\+R\+R\+AY}, 
+\newline
+{\bfseries J\+\_\+\+B\+O\+O\+L\+E\+AN}, 
+{\bfseries J\+\_\+\+D\+A\+TE}, 
+{\bfseries J\+\_\+\+T\+I\+ME}, 
+{\bfseries J\+\_\+\+D\+A\+T\+E\+T\+I\+ME}, 
+\newline
+{\bfseries J\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}, 
+{\bfseries J\+\_\+\+O\+P\+A\+Q\+UE}, 
+{\bfseries J\+\_\+\+E\+R\+R\+OR}
+ \}
+\item 
+enum \mbox{\hyperlink{classJson__dom_afb217ce26a75cf2a34494e19e2212842}{enum\+\_\+json\+\_\+opaque\+\_\+type}} \{ {\bfseries J\+\_\+\+O\+P\+A\+Q\+U\+E\+\_\+\+B\+L\+OB}, 
+{\bfseries J\+\_\+\+O\+P\+A\+Q\+U\+E\+\_\+\+B\+IT}, 
+{\bfseries J\+\_\+\+O\+P\+A\+Q\+U\+E\+\_\+\+G\+E\+O\+M\+E\+T\+RY}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{classJson__dom_a7d1dd22b98e18d568cd5d506bc3e2d11}{operator new}} (size\+\_\+t size, const std\+::nothrow\+\_\+t \&)  throw ()
+\item 
+void \mbox{\hyperlink{classJson__dom_a43b780b9e249ce9caa177a433f2212f7}{operator delete}} (void $\ast$ptr)  throw ()
+\item 
+void \mbox{\hyperlink{classJson__dom_a0321897a695f0d68840c3df4e4286c39}{operator delete}} (void $\ast$ptr, const std\+::nothrow\+\_\+t \&)  throw ()
+\item 
+void $\ast$ \mbox{\hyperlink{classJson__dom_a5cd9c48436205d68c377489fbfeddbb0}{operator new}} (size\+\_\+t size, void $\ast$ptr)  throw ()
+\item 
+void \mbox{\hyperlink{classJson__dom_ada3ed296e9b3b6509fb2a539eb592473}{operator delete}} (void $\ast$ptr1, void $\ast$ptr2)  throw ()
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__dom_a0cd11e9bcf413aaf092fbf87a85d8dc4}{parent}} () const
+\item 
+virtual \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{json\+\_\+type}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classJson__dom_a0288197126a1427a5f88fa8b94d6de3d}{is\+\_\+scalar}} () const
+\item 
+virtual bool \mbox{\hyperlink{classJson__dom_ab94257c625c7d77556fd3bf58c961187}{is\+\_\+number}} () const
+\item 
+virtual uint32 \mbox{\hyperlink{classJson__dom_a779b8c6ac78329409f8be12e6d082782}{depth}} () const =0
+\item 
+virtual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{clone}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classJson__dom_a310ec5cb1b04e112335a0bcfe510eac5}{replace\+\_\+dom\+\_\+in\+\_\+container}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$oldv, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$newv)
+\item 
+\mbox{\hyperlink{classJson__path}{Json\+\_\+path}} \mbox{\hyperlink{classJson__dom_a9de13701bd441f8eee2a778cf400a936}{get\+\_\+location}} ()
+\item 
+bool \mbox{\hyperlink{classJson__dom_adccfc76983f4efecc82a021b4707c198}{seek}} (const \mbox{\hyperlink{classJson__seekable__path}{Json\+\_\+seekable\+\_\+path}} \&path, Json\+\_\+dom\+\_\+vector $\ast$hits, bool auto\+\_\+wrap, bool only\+\_\+need\+\_\+one)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__dom_a9615aa0ae1427d5f5986a2d85d506716}{parse}} (const char $\ast$text, size\+\_\+t length, const char $\ast$$\ast$errmsg, size\+\_\+t $\ast$offset, bool preserve\+\_\+neg\+\_\+zero\+\_\+int=false)
+\item 
+static \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__dom_af266094649ea67b74f8af7630d975624}{parse}} (const \mbox{\hyperlink{classjson__binary_1_1Value}{json\+\_\+binary\+::\+Value}} \&v)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classJson__dom_a8950ef7adf835a0dc222a7083f63b355}{json\+\_\+type\+\_\+string\+\_\+map}} \mbox{[}$\,$\mbox{]}
+\item 
+static const uint32 \mbox{\hyperlink{classJson__dom_ac2b332f0624e8106149ecdb15aeabc2f}{typelit\+\_\+max\+\_\+length}} = compute\+\_\+max\+\_\+typelit()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classJson__dom_aa3e442670c5334539f3ba6842ea0b37c}{set\+\_\+parent}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$\mbox{\hyperlink{classJson__dom_a0cd11e9bcf413aaf092fbf87a85d8dc4}{parent}})
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJson__dom_a0feb651c567e45a0ede655b270d8994d}\label{classJson__dom_a0feb651c567e45a0ede655b270d8994d}} 
+class {\bfseries Json\+\_\+object}
+\item 
+\mbox{\Hypertarget{classJson__dom_a9b459c477ccb4cd61d44fed9f0d682fd}\label{classJson__dom_a9b459c477ccb4cd61d44fed9f0d682fd}} 
+class {\bfseries Json\+\_\+array}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classJson__dom_afb217ce26a75cf2a34494e19e2212842}\label{classJson__dom_afb217ce26a75cf2a34494e19e2212842}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!enum\+\_\+json\+\_\+opaque\+\_\+type@{enum\+\_\+json\+\_\+opaque\+\_\+type}}
+\index{enum\+\_\+json\+\_\+opaque\+\_\+type@{enum\+\_\+json\+\_\+opaque\+\_\+type}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{enum\+\_\+json\+\_\+opaque\+\_\+type}{enum\_json\_opaque\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classJson__dom_afb217ce26a75cf2a34494e19e2212842}{Json\+\_\+dom\+::enum\+\_\+json\+\_\+opaque\+\_\+type}}}
+
+Extended type ids so that J\+S\+O\+N\+\_\+\+T\+Y\+P\+E() can give useful type names to certain sub-\/types of J\+\_\+\+O\+P\+A\+Q\+UE. \mbox{\Hypertarget{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}\label{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!enum\+\_\+json\+\_\+type@{enum\+\_\+json\+\_\+type}}
+\index{enum\+\_\+json\+\_\+type@{enum\+\_\+json\+\_\+type}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{enum\+\_\+json\+\_\+type}{enum\_json\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{Json\+\_\+dom\+::enum\+\_\+json\+\_\+type}}}
+
+Json values in My\+S\+QL comprises the stand set of J\+S\+ON values plus a My\+S\+QL specific set. A Json {\itshape number} type is subdivided into {\itshape int}, {\itshape uint}, {\itshape double} and {\itshape decimal}.
+
+My\+S\+QL also adds four built-\/in date/time values\+: {\itshape date}, {\itshape time}, {\itshape datetime} and {\itshape timestamp}. An additional {\itshape opaque} value can store any other My\+S\+QL type.
+
+The enumeration is common to \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} and \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}.
+
+The enumeration is also used by \mbox{\hyperlink{classJson__wrapper_aba6801a36265c71f07e888c5042f63df}{Json\+\_\+wrapper\+::compare()}} to determine the ordering when comparing values of different types, so the order in which the values are defined in the enumeration, is significant. The expected order is null $<$ number $<$ string $<$ object $<$ array $<$ boolean $<$ date $<$ time $<$ datetime/timestamp $<$ opaque. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}\label{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ Json\+\_\+dom\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJson__boolean_a4af266d49e532a2155e68a5b9fbcbff9}{Json\+\_\+boolean}}, \mbox{\hyperlink{classJson__opaque_ab40f723d80c2cfcaa4077fb4187c0fc8}{Json\+\_\+opaque}}, \mbox{\hyperlink{classJson__datetime_a2c4c37beb0c84fa7cdaeb1c2f28b07c4}{Json\+\_\+datetime}}, \mbox{\hyperlink{classJson__null_a4d3a0b51950099648e5f7a773b386d49}{Json\+\_\+null}}, \mbox{\hyperlink{classJson__uint_acdc931eba3b28293ca6e16d698732d42}{Json\+\_\+uint}}, \mbox{\hyperlink{classJson__int_abfcff916299a0bd41dd18ed1596d0444}{Json\+\_\+int}}, \mbox{\hyperlink{classJson__double_a2df30c0e413cebf858b13b8ce2f9f91c}{Json\+\_\+double}}, \mbox{\hyperlink{classJson__decimal_a73afc8bc022cc9d7a31e4404613933ff}{Json\+\_\+decimal}}, \mbox{\hyperlink{classJson__string_a57fb9e6a51883be719c67d3c6ceb6af9}{Json\+\_\+string}}, \mbox{\hyperlink{classJson__array_a936f17ef11712af8bfd2d6d1aa5c9ba1}{Json\+\_\+array}}, and \mbox{\hyperlink{classJson__object_a2a723c5eb14d6532aa85097b9719f2c7}{Json\+\_\+object}}.
+
+\mbox{\Hypertarget{classJson__dom_a779b8c6ac78329409f8be12e6d082782}\label{classJson__dom_a779b8c6ac78329409f8be12e6d082782}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!depth@{depth}}
+\index{depth@{depth}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily virtual uint32 Json\+\_\+dom\+::depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+depth of the D\+OM. \char`\"{}abc\char`\"{}, \mbox{[}\mbox{]} and \{\} have depth 1. \mbox{[}\char`\"{}abc\char`\"{}\mbox{]} and \{\char`\"{}a\char`\"{}\+: \char`\"{}abc\char`\"{}\} have depth 2. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJson__scalar_aab92f03cf346f3239138e488a13254e7}{Json\+\_\+scalar}}, \mbox{\hyperlink{classJson__array_a2ab9cb0a7b55a817c9babb6a74b3922e}{Json\+\_\+array}}, and \mbox{\hyperlink{classJson__object_a639ad387120ba5bea5372896f6e30c38}{Json\+\_\+object}}.
+
+\mbox{\Hypertarget{classJson__dom_a9de13701bd441f8eee2a778cf400a936}\label{classJson__dom_a9de13701bd441f8eee2a778cf400a936}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!get\+\_\+location@{get\+\_\+location}}
+\index{get\+\_\+location@{get\+\_\+location}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{get\+\_\+location()}{get\_location()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__path}{Json\+\_\+path}} Json\+\_\+dom\+::get\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the path location of this dom, measured from the outermost document it nests inside. \mbox{\Hypertarget{classJson__dom_ab94257c625c7d77556fd3bf58c961187}\label{classJson__dom_ab94257c625c7d77556fd3bf58c961187}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!is\+\_\+number@{is\+\_\+number}}
+\index{is\+\_\+number@{is\+\_\+number}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{is\+\_\+number()}{is\_number()}}
+{\footnotesize\ttfamily virtual bool Json\+\_\+dom\+::is\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true of the object is a subclass of \mbox{\hyperlink{classJson__number}{Json\+\_\+number}} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classJson__number_ab6ef431e896247478edf9b28d4846ac7}{Json\+\_\+number}}.
+
+\mbox{\Hypertarget{classJson__dom_a0288197126a1427a5f88fa8b94d6de3d}\label{classJson__dom_a0288197126a1427a5f88fa8b94d6de3d}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!is\+\_\+scalar@{is\+\_\+scalar}}
+\index{is\+\_\+scalar@{is\+\_\+scalar}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{is\+\_\+scalar()}{is\_scalar()}}
+{\footnotesize\ttfamily virtual bool Json\+\_\+dom\+::is\+\_\+scalar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if the object is a subclass of \mbox{\hyperlink{classJson__scalar}{Json\+\_\+scalar}} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classJson__scalar_a521c56a686010b1d60f612d1c376aa85}{Json\+\_\+scalar}}.
+
+\mbox{\Hypertarget{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}\label{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} Json\+\_\+dom\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJson__boolean_a75cc6ab22cb10abd773eec0bce0308ee}{Json\+\_\+boolean}}, \mbox{\hyperlink{classJson__opaque_a28fc1b6c4e0feab7897bf6bb810f7919}{Json\+\_\+opaque}}, \mbox{\hyperlink{classJson__datetime_af03bb30e76ab42285d3ee4bc66abbc55}{Json\+\_\+datetime}}, \mbox{\hyperlink{classJson__null_a84d38b413a4894f8d8b214cdbb692974}{Json\+\_\+null}}, \mbox{\hyperlink{classJson__uint_abd22e524380fa02063f5ae9062ff742e}{Json\+\_\+uint}}, \mbox{\hyperlink{classJson__int_a7990797f02dcd489c4fac63b0d16862e}{Json\+\_\+int}}, \mbox{\hyperlink{classJson__double_af10b0251a6a1bdc530a2a6928b2396b4}{Json\+\_\+double}}, \mbox{\hyperlink{classJson__decimal_a95b359e78ebb8d88e4bd8ef10a06b116}{Json\+\_\+decimal}}, \mbox{\hyperlink{classJson__string_a017004aa85b748d8cb225bd9cd159722}{Json\+\_\+string}}, \mbox{\hyperlink{classJson__array_adbf357741dff1a92b01bfd31f97c1424}{Json\+\_\+array}}, and \mbox{\hyperlink{classJson__object_aa55889bf5bb56bea13f7ab005893637e}{Json\+\_\+object}}.
+
+\mbox{\Hypertarget{classJson__dom_a43b780b9e249ce9caa177a433f2212f7}\label{classJson__dom_a43b780b9e249ce9caa177a433f2212f7}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Json\+\_\+dom\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption}) throw  ) }
+
+Deallocate the space used by a \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. \mbox{\Hypertarget{classJson__dom_a0321897a695f0d68840c3df4e4286c39}\label{classJson__dom_a0321897a695f0d68840c3df4e4286c39}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Json\+\_\+dom\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{const std\+::nothrow\+\_\+t \&}]{ }\end{DoxyParamCaption}) throw  ) }
+
+Nothrow delete. \mbox{\Hypertarget{classJson__dom_ada3ed296e9b3b6509fb2a539eb592473}\label{classJson__dom_ada3ed296e9b3b6509fb2a539eb592473}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{operator delete()}{operator delete()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Json\+\_\+dom\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr1,  }\item[{void $\ast$}]{ptr2 }\end{DoxyParamCaption}) throw  ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+Placement delete. \mbox{\Hypertarget{classJson__dom_a7d1dd22b98e18d568cd5d506bc3e2d11}\label{classJson__dom_a7d1dd22b98e18d568cd5d506bc3e2d11}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!operator new@{operator new}}
+\index{operator new@{operator new}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{operator new()}{operator new()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void $\ast$ Json\+\_\+dom\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{const std\+::nothrow\+\_\+t \&}]{ }\end{DoxyParamCaption}) throw  ) }
+
+Allocate space on the heap for a \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object.
+
+\begin{DoxyReturn}{Returns}
+pointer to the allocated memory, or N\+U\+LL if memory could not be allocated (in which case my\+\_\+error() will have been called with the appropriate error message) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__dom_a5cd9c48436205d68c377489fbfeddbb0}\label{classJson__dom_a5cd9c48436205d68c377489fbfeddbb0}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!operator new@{operator new}}
+\index{operator new@{operator new}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{operator new()}{operator new()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void$\ast$ Json\+\_\+dom\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption}) throw  ) \hspace{0.3cm}{\ttfamily [inline]}}
+
+Placement new. \mbox{\Hypertarget{classJson__dom_a0cd11e9bcf413aaf092fbf87a85d8dc4}\label{classJson__dom_a0cd11e9bcf413aaf092fbf87a85d8dc4}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!parent@{parent}}
+\index{parent@{parent}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ Json\+\_\+dom\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the parent dom to which this dom is attached.
+
+\begin{DoxyReturn}{Returns}
+the parent dom. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__dom_a9615aa0ae1427d5f5986a2d85d506716}\label{classJson__dom_a9615aa0ae1427d5f5986a2d85d506716}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!parse@{parse}}
+\index{parse@{parse}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+dom\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{size\+\_\+t}]{length,  }\item[{const char $\ast$$\ast$}]{errmsg,  }\item[{size\+\_\+t $\ast$}]{offset,  }\item[{bool}]{preserve\+\_\+neg\+\_\+zero\+\_\+int = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parse Json text to D\+OM (using rapidjson). The text must be valid J\+S\+ON. The results when supplying an invalid document is undefined. The ownership of the returned object is henceforth with the caller.
+
+If the parsing fails because of a syntax error, the errmsg and offset arguments will be given values that point to a detailed error message and where the syntax error was located. The caller will have to generate an error message with my\+\_\+error() in this case.
+
+If the parsing fails because of some other error (such as out of memory), errmsg will point to a location that holds the value N\+U\+LL. In this case, \mbox{\hyperlink{classJson__dom_a9615aa0ae1427d5f5986a2d85d506716}{parse()}} will already have called my\+\_\+error(), and the caller doesn\textquotesingle{}t need to generate an error message.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em text} & the J\+S\+ON text \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & the length of the text \\
+\hline
+\mbox{\texttt{ out}}  & {\em errmsg} & any syntax error message (will be ignored if it is N\+U\+LL) \\
+\hline
+\mbox{\texttt{ out}}  & {\em offset} & the position in the parsed string a syntax error was found (will be ignored if it is N\+U\+LL) \\
+\hline
+\mbox{\texttt{ in}}  & {\em preserve\+\_\+neg\+\_\+zero\+\_\+int} & whether integer negative zero should be preserved. If set to T\+R\+UE, -\/0 is handled as a D\+O\+U\+B\+LE. Double negative zero (-\/0.\+0) is preserved regardless of what this parameter is set to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the built D\+OM if J\+S\+ON text was parseable, else N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__dom_af266094649ea67b74f8af7630d975624}\label{classJson__dom_af266094649ea67b74f8af7630d975624}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!parse@{parse}}
+\index{parse@{parse}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+dom\+::parse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classjson__binary_1_1Value}{json\+\_\+binary\+::\+Value}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Construct a D\+OM object based on a binary J\+S\+ON value. The ownership of the returned object is henceforth with the caller. \mbox{\Hypertarget{classJson__dom_a310ec5cb1b04e112335a0bcfe510eac5}\label{classJson__dom_a310ec5cb1b04e112335a0bcfe510eac5}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!replace\+\_\+dom\+\_\+in\+\_\+container@{replace\+\_\+dom\+\_\+in\+\_\+container}}
+\index{replace\+\_\+dom\+\_\+in\+\_\+container@{replace\+\_\+dom\+\_\+in\+\_\+container}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{replace\+\_\+dom\+\_\+in\+\_\+container()}{replace\_dom\_in\_container()}}
+{\footnotesize\ttfamily virtual void Json\+\_\+dom\+::replace\+\_\+dom\+\_\+in\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{oldv,  }\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{newv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Replace oldv contained inside this container array or object) with newv. If this container does not contain oldv, calling the method is a no-\/op. Do not call this method on a D\+OM object which is not a container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em oldv} & the value to be replace \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em newv} & the new value to put in the container \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classJson__array_af6caa961d3774eebfaaef82daeab63c9}{Json\+\_\+array}}, and \mbox{\hyperlink{classJson__object_a79f81022d00fc75981179d787d297add}{Json\+\_\+object}}.
+
+\mbox{\Hypertarget{classJson__dom_adccfc76983f4efecc82a021b4707c198}\label{classJson__dom_adccfc76983f4efecc82a021b4707c198}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!seek@{seek}}
+\index{seek@{seek}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily bool Json\+\_\+dom\+::seek (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson__seekable__path}{Json\+\_\+seekable\+\_\+path}} \&}]{path,  }\item[{Json\+\_\+dom\+\_\+vector $\ast$}]{hits,  }\item[{bool}]{auto\+\_\+wrap,  }\item[{bool}]{only\+\_\+need\+\_\+one }\end{DoxyParamCaption})}
+
+Finds all of the json sub-\/documents which match the path expression. Adds a vector element for each match.
+
+See the header comment for \mbox{\hyperlink{classJson__wrapper_afcdaa3d406f1a1ab28da1330f0cf9680}{Json\+\_\+wrapper.\+seek()}} for a discussion of complexities involving path expression with more than one ellipsis ($\ast$$\ast$) token.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & the (possibly wildcarded) address of the sub-\/documents \\
+\hline
+\mbox{\texttt{ out}}  & {\em hits} & one element per match \\
+\hline
+\mbox{\texttt{ in}}  & {\em auto\+\_\+wrap} & if true, match a tailing \mbox{[}0\mbox{]} to scalar at that position. \\
+\hline
+\mbox{\texttt{ in}}  & {\em only\+\_\+need\+\_\+one} & True if we can stop after finding one match \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__dom_aa3e442670c5334539f3ba6842ea0b37c}\label{classJson__dom_aa3e442670c5334539f3ba6842ea0b37c}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!set\+\_\+parent@{set\+\_\+parent}}
+\index{set\+\_\+parent@{set\+\_\+parent}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{set\+\_\+parent()}{set\_parent()}}
+{\footnotesize\ttfamily void Json\+\_\+dom\+::set\+\_\+parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Set the parent dom to which this dom is attached.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em parent} & the parent we\textquotesingle{}re being attached to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJson__dom_a8950ef7adf835a0dc222a7083f63b355}\label{classJson__dom_a8950ef7adf835a0dc222a7083f63b355}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!json\+\_\+type\+\_\+string\+\_\+map@{json\+\_\+type\+\_\+string\+\_\+map}}
+\index{json\+\_\+type\+\_\+string\+\_\+map@{json\+\_\+type\+\_\+string\+\_\+map}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{json\+\_\+type\+\_\+string\+\_\+map}{json\_type\_string\_map}}
+{\footnotesize\ttfamily const char $\ast$ Json\+\_\+dom\+::json\+\_\+type\+\_\+string\+\_\+map\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"NULL"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"DECIMAL"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"INTEGER"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"UNSIGNED INTEGER"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"DOUBLE"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"STRING"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"OBJECT"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"ARRAY"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"BOOLEAN"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"DATE"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"TIME"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"DATETIME"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"TIMESTAMP"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"OPAQUE"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"ERROR"},}
+\DoxyCodeLine{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{stringliteral}{"BLOB"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"BIT"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"GEOMETRY"},}
+\DoxyCodeLine{}
+\DoxyCodeLine{  NULL}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+Maps the enumeration value of type enum\+\_\+json\+\_\+type into a string. The last cell in the array contains a N\+U\+LL pointer. For example\+: json\+\_\+type\+\_\+string\+\_\+map\mbox{[}J\+\_\+\+O\+B\+J\+E\+CT\mbox{]} == \char`\"{}\+O\+B\+J\+E\+C\+T\char`\"{} \mbox{\Hypertarget{classJson__dom_ac2b332f0624e8106149ecdb15aeabc2f}\label{classJson__dom_ac2b332f0624e8106149ecdb15aeabc2f}} 
+\index{Json\+\_\+dom@{Json\+\_\+dom}!typelit\+\_\+max\+\_\+length@{typelit\+\_\+max\+\_\+length}}
+\index{typelit\+\_\+max\+\_\+length@{typelit\+\_\+max\+\_\+length}!Json\+\_\+dom@{Json\+\_\+dom}}
+\subsubsection{\texorpdfstring{typelit\+\_\+max\+\_\+length}{typelit\_max\_length}}
+{\footnotesize\ttfamily const uint32 Json\+\_\+dom\+::typelit\+\_\+max\+\_\+length = compute\+\_\+max\+\_\+typelit()\hspace{0.3cm}{\ttfamily [static]}}
+
+The maximum length of a string in json\+\_\+type\+\_\+string\+\_\+map including a final zero char. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

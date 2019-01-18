@@ -1,0 +1,137 @@
+\hypertarget{classSE__cost__constants}{}\section{S\+E\+\_\+cost\+\_\+constants Class Reference}
+\label{classSE__cost__constants}\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+
+
+{\ttfamily \#include $<$opt\+\_\+costconstants.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classSE__cost__constants_a9c48a1d96a3876f417264945ed026627}{memory\+\_\+block\+\_\+read\+\_\+cost}} () const
+\item 
+double \mbox{\hyperlink{classSE__cost__constants_af2d93f7ee2b5641b14d359bedf9ab0cf}{io\+\_\+block\+\_\+read\+\_\+cost}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual cost\+\_\+constant\+\_\+error \mbox{\hyperlink{classSE__cost__constants_a74c269c75626b79462acd12ffd655421}{set}} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name, const double value, bool default\+\_\+value)
+\item 
+cost\+\_\+constant\+\_\+error \mbox{\hyperlink{classSE__cost__constants_a91c151b976035d5772e9db4f2f5b7b34}{update}} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name, const double value)
+\item 
+cost\+\_\+constant\+\_\+error \mbox{\hyperlink{classSE__cost__constants_a41826c66d515c8c85cb21858e424bd97}{update\+\_\+default}} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name, const double value)
+\item 
+void \mbox{\hyperlink{classSE__cost__constants_a7dfacb0c46f0f3c5f3941c226fc43201}{update\+\_\+cost\+\_\+value}} (double $\ast$cost\+\_\+constant, bool $\ast$cost\+\_\+constant\+\_\+is\+\_\+default, double new\+\_\+value, bool new\+\_\+value\+\_\+is\+\_\+default)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSE__cost__constants_a89234022b3383f6f23831568979c4ab3}\label{classSE__cost__constants_a89234022b3383f6f23831568979c4ab3}} 
+class {\bfseries Cost\+\_\+model\+\_\+constants}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cost constants for a storage engine.
+
+Storage engines that want to add new cost constants should make a subclass of this class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSE__cost__constants_af2d93f7ee2b5641b14d359bedf9ab0cf}\label{classSE__cost__constants_af2d93f7ee2b5641b14d359bedf9ab0cf}} 
+\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}!io\+\_\+block\+\_\+read\+\_\+cost@{io\+\_\+block\+\_\+read\+\_\+cost}}
+\index{io\+\_\+block\+\_\+read\+\_\+cost@{io\+\_\+block\+\_\+read\+\_\+cost}!S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+\subsubsection{\texorpdfstring{io\+\_\+block\+\_\+read\+\_\+cost()}{io\_block\_read\_cost()}}
+{\footnotesize\ttfamily double S\+E\+\_\+cost\+\_\+constants\+::io\+\_\+block\+\_\+read\+\_\+cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of reading one random block from disk. \mbox{\Hypertarget{classSE__cost__constants_a9c48a1d96a3876f417264945ed026627}\label{classSE__cost__constants_a9c48a1d96a3876f417264945ed026627}} 
+\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}!memory\+\_\+block\+\_\+read\+\_\+cost@{memory\+\_\+block\+\_\+read\+\_\+cost}}
+\index{memory\+\_\+block\+\_\+read\+\_\+cost@{memory\+\_\+block\+\_\+read\+\_\+cost}!S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+\subsubsection{\texorpdfstring{memory\+\_\+block\+\_\+read\+\_\+cost()}{memory\_block\_read\_cost()}}
+{\footnotesize\ttfamily double S\+E\+\_\+cost\+\_\+constants\+::memory\+\_\+block\+\_\+read\+\_\+cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of reading one random block from an in-\/memory database buffer. \mbox{\Hypertarget{classSE__cost__constants_a74c269c75626b79462acd12ffd655421}\label{classSE__cost__constants_a74c269c75626b79462acd12ffd655421}} 
+\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}!set@{set}}
+\index{set@{set}!S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily cost\+\_\+constant\+\_\+error S\+E\+\_\+cost\+\_\+constants\+::set (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{name,  }\item[{const double}]{value,  }\item[{bool}]{default\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Set the value of one of the cost constants.
+
+If a storage engine wants to introduce a new cost constant, it should provide an implementation of this function. If the cost constant is not recognized by the function in the subclass, then this function should be called to allow the cost constant in the base class to be given the updated value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of cost constant \\
+\hline
+{\em value} & new value \\
+\hline
+{\em default} & specify whether the new value is a default value or an engine specific value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status for updating the cost constant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSE__cost__constants_a91c151b976035d5772e9db4f2f5b7b34}\label{classSE__cost__constants_a91c151b976035d5772e9db4f2f5b7b34}} 
+\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}!update@{update}}
+\index{update@{update}!S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily cost\+\_\+constant\+\_\+error S\+E\+\_\+cost\+\_\+constants\+::update (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{name,  }\item[{const double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update the value of a cost constant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the cost constant \\
+\hline
+{\em value} & the new value this cost constant should take\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status for updating the cost constant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSE__cost__constants_a7dfacb0c46f0f3c5f3941c226fc43201}\label{classSE__cost__constants_a7dfacb0c46f0f3c5f3941c226fc43201}} 
+\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}!update\+\_\+cost\+\_\+value@{update\+\_\+cost\+\_\+value}}
+\index{update\+\_\+cost\+\_\+value@{update\+\_\+cost\+\_\+value}!S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+\subsubsection{\texorpdfstring{update\+\_\+cost\+\_\+value()}{update\_cost\_value()}}
+{\footnotesize\ttfamily void S\+E\+\_\+cost\+\_\+constants\+::update\+\_\+cost\+\_\+value (\begin{DoxyParamCaption}\item[{double $\ast$}]{cost\+\_\+constant,  }\item[{bool $\ast$}]{cost\+\_\+constant\+\_\+is\+\_\+default,  }\item[{double}]{new\+\_\+value,  }\item[{bool}]{new\+\_\+value\+\_\+is\+\_\+default }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Utility function for changing the value of a cost constant.
+
+The cost constant will be updated to the new value iff\+: a) the current value is the default value, or b) the current value is not the default value and the new value is not a default value
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em cost\+\_\+constant} & pointer to the cost constant that should be updated \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em cost\+\_\+constant\+\_\+is\+\_\+default} & whether the current value has the default value or not \\
+\hline
+ & {\em new\+\_\+value} & the new value for the cost constant \\
+\hline
+ & {\em default\+\_\+value\+\_\+is\+\_\+default} & whether this is a new default value or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSE__cost__constants_a41826c66d515c8c85cb21858e424bd97}\label{classSE__cost__constants_a41826c66d515c8c85cb21858e424bd97}} 
+\index{S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}!update\+\_\+default@{update\+\_\+default}}
+\index{update\+\_\+default@{update\+\_\+default}!S\+E\+\_\+cost\+\_\+constants@{S\+E\+\_\+cost\+\_\+constants}}
+\subsubsection{\texorpdfstring{update\+\_\+default()}{update\_default()}}
+{\footnotesize\ttfamily cost\+\_\+constant\+\_\+error S\+E\+\_\+cost\+\_\+constants\+::update\+\_\+default (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{name,  }\item[{const double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Update the default value of a cost constant.
+
+If this const constant already has been given a non-\/default value, then calling this will have no effect on the current value for the cost constant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the cost constant \\
+\hline
+{\em value} & the new value this cost constant should take\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status for updating the cost constant 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+costconstants.\+h\item 
+opt\+\_\+costconstants.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classUnique}{}\section{Unique Class Reference}
+\label{classUnique}\index{Unique@{Unique}}
+Inheritance diagram for Unique\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUnique}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnique_a9f584d0ad6b0928f710664f5f052a5e6}\label{classUnique_a9f584d0ad6b0928f710664f5f052a5e6}} 
+typedef \mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$ uint $>$ {\bfseries Imerge\+\_\+cost\+\_\+buf\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnique_a61d5c27e4561d69bf2cf43a2b6f5be9a}\label{classUnique_a61d5c27e4561d69bf2cf43a2b6f5be9a}} 
+{\bfseries Unique} (qsort\+\_\+cmp2 comp\+\_\+func, void $\ast$comp\+\_\+func\+\_\+fixed\+\_\+arg, uint size\+\_\+arg, ulonglong max\+\_\+in\+\_\+memory\+\_\+size\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classUnique_a078cad68b402f73a2694ecf756fda555}\label{classUnique_a078cad68b402f73a2694ecf756fda555}} 
+ulong {\bfseries elements\+\_\+in\+\_\+tree} ()
+\item 
+\mbox{\Hypertarget{classUnique_a2321f0d50c059178ae4a7f63eac140ad}\label{classUnique_a2321f0d50c059178ae4a7f63eac140ad}} 
+bool {\bfseries unique\+\_\+add} (void $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classUnique_a73446863b4c75d42e65ed4a83e2ee1b0}\label{classUnique_a73446863b4c75d42e65ed4a83e2ee1b0}} 
+bool {\bfseries get} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classUnique_ab5ebe0252fd71674a200fb8591a04481}\label{classUnique_ab5ebe0252fd71674a200fb8591a04481}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classUnique_aab26338179087536e44df019fa6dbc3b}\label{classUnique_aab26338179087536e44df019fa6dbc3b}} 
+bool {\bfseries walk} (tree\+\_\+walk\+\_\+action action, void $\ast$walk\+\_\+action\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classUnique_a049f29e8aa73fa6facb64cfc3636dbf7}\label{classUnique_a049f29e8aa73fa6facb64cfc3636dbf7}} 
+uint {\bfseries get\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classUnique_ae27e1963c6ecf8a1d24c54cd4361d1dc}\label{classUnique_ae27e1963c6ecf8a1d24c54cd4361d1dc}} 
+ulonglong {\bfseries get\+\_\+max\+\_\+in\+\_\+memory\+\_\+size} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnique_a91ec0483ef3ddc8d07078769d6f0b35d}\label{classUnique_a91ec0483ef3ddc8d07078769d6f0b35d}} 
+static double {\bfseries get\+\_\+use\+\_\+cost} (\mbox{\hyperlink{classBounds__checked__array}{Imerge\+\_\+cost\+\_\+buf\+\_\+type}} buffer, uint nkeys, uint key\+\_\+size, ulonglong max\+\_\+in\+\_\+memory\+\_\+size, const \mbox{\hyperlink{classCost__model__table}{Cost\+\_\+model\+\_\+table}} $\ast$cost\+\_\+model)
+\item 
+\mbox{\Hypertarget{classUnique_a914d20561195c1ef0c5f17c56fe3163b}\label{classUnique_a914d20561195c1ef0c5f17c56fe3163b}} 
+static size\+\_\+t {\bfseries get\+\_\+cost\+\_\+calc\+\_\+buff\+\_\+size} (ulong nkeys, uint key\+\_\+size, ulonglong max\+\_\+in\+\_\+memory\+\_\+size)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnique_a783743aacb933eb6ba875b75fc3300ab}\label{classUnique_a783743aacb933eb6ba875b75fc3300ab}} 
+ulong {\bfseries elements}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnique_af2f1f59bf52852031f50d00bac15f6f1}\label{classUnique_af2f1f59bf52852031f50d00bac15f6f1}} 
+int {\bfseries unique\+\_\+write\+\_\+to\+\_\+file} (uchar $\ast$key, element\+\_\+count count, \mbox{\hyperlink{classUnique}{Unique}} $\ast$unique)
+\item 
+\mbox{\Hypertarget{classUnique_a7e910162199158e5f8916c6c30247447}\label{classUnique_a7e910162199158e5f8916c6c30247447}} 
+int {\bfseries unique\+\_\+write\+\_\+to\+\_\+ptrs} (uchar $\ast$key, element\+\_\+count count, \mbox{\hyperlink{classUnique}{Unique}} $\ast$unique)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+uniques.\+h\item 
+uniques.\+cc\end{DoxyCompactItemize}

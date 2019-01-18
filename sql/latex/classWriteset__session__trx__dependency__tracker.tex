@@ -1,0 +1,51 @@
+\hypertarget{classWriteset__session__trx__dependency__tracker}{}\section{Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker Class Reference}
+\label{classWriteset__session__trx__dependency__tracker}\index{Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker@{Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+trx\+\_\+tracking.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWriteset__session__trx__dependency__tracker_ae0f907be7f3b1a055026fadd9429b53b}{get\+\_\+dependency}} (T\+HD $\ast$thd, int64 \&sequence\+\_\+number, int64 \&commit\+\_\+parent)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generate logical timestamps for M\+TS using W\+R\+I\+T\+E\+S\+E\+T\+\_\+\+S\+E\+S\+S\+I\+ON in the binlog-\/transaction-\/dependency-\/tracking option. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWriteset__session__trx__dependency__tracker_ae0f907be7f3b1a055026fadd9429b53b}\label{classWriteset__session__trx__dependency__tracker_ae0f907be7f3b1a055026fadd9429b53b}} 
+\index{Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker@{Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker}!get\+\_\+dependency@{get\+\_\+dependency}}
+\index{get\+\_\+dependency@{get\+\_\+dependency}!Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker@{Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker}}
+\subsubsection{\texorpdfstring{get\+\_\+dependency()}{get\_dependency()}}
+{\footnotesize\ttfamily void Writeset\+\_\+session\+\_\+trx\+\_\+dependency\+\_\+tracker\+::get\+\_\+dependency (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{int64 \&}]{sequence\+\_\+number,  }\item[{int64 \&}]{commit\+\_\+parent }\end{DoxyParamCaption})}
+
+Main function that gets the dependencies using the W\+R\+I\+T\+E\+S\+E\+T\+\_\+\+S\+E\+S\+S\+I\+ON tracker.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & T\+HD of the caller. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sequence\+\_\+number} & sequence\+\_\+number initialized and returned. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em commit\+\_\+parent} & commit\+\_\+parent to be returned.\\
+\hline
+\end{DoxyParams}
+Get the writeset commit parent of transactions using the session dependencies.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Current T\+HD from which to extract trx context. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sequence\+\_\+number} & Sequence number of current transaction. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em commit\+\_\+parent} & Commit\+\_\+parent of current transaction, pre-\/filled with the commit\+\_\+parent calculated by the Write\+\_\+set\+\_\+trx\+\_\+dependency\+\_\+tracker as a fall-\/back. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+trx\+\_\+tracking.\+h\item 
+rpl\+\_\+trx\+\_\+tracking.\+cc\end{DoxyCompactItemize}

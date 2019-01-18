@@ -1,0 +1,101 @@
+\hypertarget{classItem__copy__int}{}\section{Item\+\_\+copy\+\_\+int Class Reference}
+\label{classItem__copy__int}\index{Item\+\_\+copy\+\_\+int@{Item\+\_\+copy\+\_\+int}}
+Inheritance diagram for Item\+\_\+copy\+\_\+int\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classItem__copy__int}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a7783577d999c07443dc6c0e06bd0deb0}\label{classItem__copy__int_a7783577d999c07443dc6c0e06bd0deb0}} 
+{\bfseries Item\+\_\+copy\+\_\+int} (\mbox{\hyperlink{classItem}{Item}} $\ast$i)
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a2ac52d4b520b3dbe251c62745e1e610a}\label{classItem__copy__int_a2ac52d4b520b3dbe251c62745e1e610a}} 
+virtual String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a5f5dc0d70721a8a9af77727dd17fe4b8}\label{classItem__copy__int_a5f5dc0d70721a8a9af77727dd17fe4b8}} 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__int_abd44d4bb60c196fe62dcabcafe0cec8f}\label{classItem__copy__int_abd44d4bb60c196fe62dcabcafe0cec8f}} 
+virtual double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a8c8586d32c4ed45d2f2b80fe6eee6920}\label{classItem__copy__int_a8c8586d32c4ed45d2f2b80fe6eee6920}} 
+virtual longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a1d18457c7ec1b8a1e8bfce1dd3c1ffe1}\label{classItem__copy__int_a1d18457c7ec1b8a1e8bfce1dd3c1ffe1}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a5bfb3c97111b999bd102e78cb4836f28}\label{classItem__copy__int_a5bfb3c97111b999bd102e78cb4836f28}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+virtual bool \mbox{\hyperlink{classItem__copy__int_adb454f84e2c727dfc8891347f51c4fae}{copy}} (const T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem__copy__int_add731c9db4197e971b70f6f4b1b988cc}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__copy__int_a6d22d22c2d58b99ce67e5ec206eca95b}\label{classItem__copy__int_a6d22d22c2d58b99ce67e5ec206eca95b}} 
+longlong {\bfseries cached\+\_\+value}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__copy__int_adb454f84e2c727dfc8891347f51c4fae}\label{classItem__copy__int_adb454f84e2c727dfc8891347f51c4fae}} 
+\index{Item\+\_\+copy\+\_\+int@{Item\+\_\+copy\+\_\+int}!copy@{copy}}
+\index{copy@{copy}!Item\+\_\+copy\+\_\+int@{Item\+\_\+copy\+\_\+int}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily bool Item\+\_\+copy\+\_\+int\+::copy (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update the cache with the value of the original item
+
+This is the method that updates the cached value. It must be explicitly called by the user of this class to store the value of the orginal item in the cache. \begin{DoxyReturn}{Returns}
+false if OK, true on error. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classItem__copy_a575caec22eeb27fb76d5aa74b1a8d492}{Item\+\_\+copy}}.
+
+\mbox{\Hypertarget{classItem__copy__int_add731c9db4197e971b70f6f4b1b988cc}\label{classItem__copy__int_add731c9db4197e971b70f6f4b1b988cc}} 
+\index{Item\+\_\+copy\+\_\+int@{Item\+\_\+copy\+\_\+int}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item\+\_\+copy\+\_\+int@{Item\+\_\+copy\+\_\+int}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+\_\+copy\+\_\+int\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Helper function which does all of the work for \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field(\+Field$\ast$, bool)}}, except some error checking common to all subclasses, which is performed by \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}} itself.
+
+Subclasses that need to specialize the behaviour of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}, should override this function instead of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field} & the field to save the item into \\
+\hline
+ & {\em no\+\_\+conversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any errors or warnings \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were errors or warnings when saving the item \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classItem__copy_af4b55bf8c530188fa2110728a512811b}{Item\+\_\+copy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

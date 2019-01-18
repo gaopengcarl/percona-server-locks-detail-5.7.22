@@ -1,0 +1,27 @@
+\hypertarget{classServer__runnable}{}\section{Server\+\_\+runnable Class Reference}
+\label{classServer__runnable}\index{Server\+\_\+runnable@{Server\+\_\+runnable}}
+
+
+{\ttfamily \#include $<$sql\+\_\+prepare.\+h$>$}
+
+Inheritance diagram for Server\+\_\+runnable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classServer__runnable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer__runnable_a6e51c48082c0f2bd541e6e4979933dcb}\label{classServer__runnable_a6e51c48082c0f2bd541e6e4979933dcb}} 
+virtual bool {\bfseries execute\+\_\+server\+\_\+code} (T\+HD $\ast$thd)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Execute a fragment of server code in an isolated context, so that it doesn\textquotesingle{}t leave any effect on T\+HD. T\+HD must have no open tables. The code must not leave any open tables around. The result of execution (if any) is stored in Ed\+\_\+result. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+prepare.\+h\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

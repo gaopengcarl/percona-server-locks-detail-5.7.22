@@ -1,0 +1,1275 @@
+\hypertarget{handler_8cc}{}\section{handler.\+cc File Reference}
+\label{handler_8cc}\index{handler.\+cc@{handler.\+cc}}
+
+
+Handler-\/calling-\/functions.  
+
+
+{\ttfamily \#include \char`\"{}handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+bit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}myisam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql\+\_\+version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}discover.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log\+\_\+event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+bitmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}probes\+\_\+mysql.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+costconstantcache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+plugin.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transaction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}trigger\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+write\+\_\+set\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pfs\+\_\+file\+\_\+provider.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$pfs\+\_\+table\+\_\+provider.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/psi/mysql\+\_\+table.\+h$>$}\newline
+{\ttfamily \#include $<$pfs\+\_\+transaction\+\_\+provider.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/psi/mysql\+\_\+transaction.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+hints.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$boost/foreach.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/tokenizer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structst__sys__tbl__chk__params}{st\+\_\+sys\+\_\+tbl\+\_\+chk\+\_\+params}}
+\item 
+class \mbox{\hyperlink{classHa__delete__table__error__handler}{Ha\+\_\+delete\+\_\+table\+\_\+error\+\_\+handler}}
+\item 
+struct \mbox{\hyperlink{structst__discover__args}{st\+\_\+discover\+\_\+args}}
+\item 
+struct \mbox{\hyperlink{structst__find__files__args}{st\+\_\+find\+\_\+files\+\_\+args}}
+\item 
+struct \mbox{\hyperlink{structst__table__exists__in__engine__args}{st\+\_\+table\+\_\+exists\+\_\+in\+\_\+engine\+\_\+args}}
+\item 
+struct \mbox{\hyperlink{structst__make__pushed__join__args}{st\+\_\+make\+\_\+pushed\+\_\+join\+\_\+args}}
+\item 
+struct \mbox{\hyperlink{structhton__list__st}{hton\+\_\+list\+\_\+st}}
+\item 
+struct \mbox{\hyperlink{structbinlog__func__st}{binlog\+\_\+func\+\_\+st}}
+\item 
+struct \mbox{\hyperlink{structbinlog__log__query__st}{binlog\+\_\+log\+\_\+query\+\_\+st}}
+\item 
+struct \mbox{\hyperlink{structblob__len__ptr}{blob\+\_\+len\+\_\+ptr}}
+\item 
+struct \mbox{\hyperlink{structHTON__NOTIFY__PARAMS}{H\+T\+O\+N\+\_\+\+N\+O\+T\+I\+F\+Y\+\_\+\+P\+A\+R\+A\+MS}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{handler_8cc_ae7af2d71cccd74a4f6a82bbfcd0e6315}{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT}}(OP,  I\+N\+D\+EX,  R\+E\+S\+U\+LT,  P\+A\+Y\+L\+O\+AD)~P\+A\+Y\+L\+O\+AD
+\item 
+\#define \mbox{\hyperlink{handler_8cc_a2fc17419233dc7abc0ff53cf4448c285}{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT}}(OP,  F\+L\+A\+GS,  P\+A\+Y\+L\+O\+AD)~P\+A\+Y\+L\+O\+AD
+\item 
+\mbox{\Hypertarget{handler_8cc_a50ffc9b0a1ee8b02f1fecc9c6aa23f25}\label{handler_8cc_a50ffc9b0a1ee8b02f1fecc9c6aa23f25}} 
+\#define {\bfseries B\+I\+T\+M\+A\+P\+\_\+\+S\+T\+A\+C\+K\+B\+U\+F\+\_\+\+S\+I\+ZE}~(128/8)
+\item 
+\mbox{\Hypertarget{handler_8cc_a960d932b48f290a41eb4d68e9df314fa}\label{handler_8cc_a960d932b48f290a41eb4d68e9df314fa}} 
+\#define {\bfseries S\+E\+T\+M\+SG}(nr,  msg)~handler\+\_\+errmsgs\mbox{[}(nr) -\/ H\+A\+\_\+\+E\+R\+R\+\_\+\+F\+I\+R\+ST\mbox{]}= (msg)
+\item 
+\#define \mbox{\hyperlink{handler_8cc_a24d44ee426ff4454b3e832c4470d6cc7}{A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS}}~1
+\item 
+\mbox{\Hypertarget{handler_8cc_a0ae691064e9be3d6320452d635a83a0c}\label{handler_8cc_a0ae691064e9be3d6320452d635a83a0c}} 
+\#define {\bfseries A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS}~16
+\item 
+\mbox{\Hypertarget{handler_8cc_af96a77535b9c2096bc6fc1bbac756bf1}\label{handler_8cc_af96a77535b9c2096bc6fc1bbac756bf1}} 
+\#define {\bfseries A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+M\+AX}~((1 $<$$<$ A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS) -\/ 1)
+\item 
+\mbox{\Hypertarget{handler_8cc_ae219583d43d24fd5ded60588edb820c5}\label{handler_8cc_ae219583d43d24fd5ded60588edb820c5}} 
+\#define {\bfseries M\+A\+X\+\_\+\+H\+T\+O\+N\+\_\+\+L\+I\+S\+T\+\_\+\+ST}~63
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{handler_8cc_a671a966e5bb62d88cb018842862e72a9}\label{handler_8cc_a671a966e5bb62d88cb018842862e72a9}} 
+typedef bool {\bfseries Log\+\_\+func}(T\+HD $\ast$, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$, bool, const uchar $\ast$, const uchar $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{handler_8cc_a38bd88274dc5594b4826fd60c8054c8e}\label{handler_8cc_a38bd88274dc5594b4826fd60c8054c8e}} 
+double {\bfseries log2} (double x)
+\item 
+\mbox{\Hypertarget{handler_8cc_a4d60ba59051e654c638ea767e4158f88}\label{handler_8cc_a4d60ba59051e654c638ea767e4158f88}} 
+const char $\ast$ {\bfseries ha\+\_\+resolve\+\_\+storage\+\_\+engine\+\_\+name} (const \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$db\+\_\+type)
+\item 
+\mbox{\Hypertarget{handler_8cc_a3200f4aefe01dc28f7ce56f219fe3a19}\label{handler_8cc_a3200f4aefe01dc28f7ce56f219fe3a19}} 
+const char $\ast$ {\bfseries ha\+\_\+legacy\+\_\+type\+\_\+name} (legacy\+\_\+db\+\_\+type legacy\+\_\+type)
+\item 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ \mbox{\hyperlink{handler_8cc_a81f4e93fa7d5ad8702a33afbf226e93b}{ha\+\_\+default\+\_\+handlerton}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Return the default storage engine handlerton used for non-\/temp tables for thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ \mbox{\hyperlink{handler_8cc_ab11b32d73b2161cf881d333c36aa28b7}{ha\+\_\+enforce\+\_\+handlerton}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Return the enforced storage engine handlerton for thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ \mbox{\hyperlink{handler_8cc_a0ac0c824f4d8dd002cb61b3bcd3947bc}{ha\+\_\+default\+\_\+temp\+\_\+handlerton}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Return the default storage engine handlerton used for explicitly created temp tables for a thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} \mbox{\hyperlink{handler_8cc_a43e5c979fe4c4a8ac2dbe60d346d5a15}{ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name)
+\item 
+\mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} \mbox{\hyperlink{handler_8cc_acd39f1826bca8434f79a47fda2af9f48}{ha\+\_\+resolve\+\_\+by\+\_\+name}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$name, bool is\+\_\+temp\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Return the storage engine handlerton for the supplied name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{handler_8cc_ae7b2c33797a3cf5c5cffd2c3159d3d54}\label{handler_8cc_ae7b2c33797a3cf5c5cffd2c3159d3d54}} 
+void {\bfseries ha\+\_\+set\+\_\+normalized\+\_\+disabled\+\_\+se\+\_\+str} (const std\+::string \&disabled\+\_\+se)
+\item 
+\mbox{\Hypertarget{handler_8cc_a429e9906d3fc4a02f1a30dab4159ac01}\label{handler_8cc_a429e9906d3fc4a02f1a30dab4159ac01}} 
+bool {\bfseries ha\+\_\+is\+\_\+storage\+\_\+engine\+\_\+disabled} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$se\+\_\+handle)
+\item 
+\mbox{\Hypertarget{handler_8cc_a2e2bb68bc738021a4fb206d506e20bfe}\label{handler_8cc_a2e2bb68bc738021a4fb206d506e20bfe}} 
+\mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} {\bfseries ha\+\_\+lock\+\_\+engine} (T\+HD $\ast$thd, const \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton)
+\item 
+\mbox{\Hypertarget{handler_8cc_ad5f92ca548cefb64baedd3c9b7cfceec}\label{handler_8cc_ad5f92ca548cefb64baedd3c9b7cfceec}} 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ {\bfseries ha\+\_\+resolve\+\_\+by\+\_\+legacy\+\_\+type} (T\+HD $\ast$thd, enum legacy\+\_\+db\+\_\+type db\+\_\+type)
+\item 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ \mbox{\hyperlink{handler_8cc_a36740c5632ede113d26c6eb270e727ae}{ha\+\_\+checktype}} (T\+HD $\ast$thd, enum legacy\+\_\+db\+\_\+type database\+\_\+type, bool no\+\_\+substitute, bool report\+\_\+error)
+\item 
+\mbox{\Hypertarget{handler_8cc_a24c6444091e866fee41326c7ae1eeed7}\label{handler_8cc_a24c6444091e866fee41326c7ae1eeed7}} 
+\mbox{\hyperlink{classhandler}{handler}} $\ast$ {\bfseries get\+\_\+new\+\_\+handler} (\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share, M\+E\+M\+\_\+\+R\+O\+OT $\ast$alloc, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$db\+\_\+type)
+\item 
+C\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND int \mbox{\hyperlink{handler_8cc_a7ceb3a3e413c9c3892b8104aecb60dbd}{ha\+\_\+init\+\_\+errors}} (void)
+\item 
+\mbox{\Hypertarget{handler_8cc_a00f451d884289748ac3f627800738788}\label{handler_8cc_a00f451d884289748ac3f627800738788}} 
+int {\bfseries ha\+\_\+finalize\+\_\+handlerton} (\mbox{\hyperlink{structst__plugin__int}{st\+\_\+plugin\+\_\+int}} $\ast$plugin)
+\item 
+\mbox{\Hypertarget{handler_8cc_af3feec89b29a546688a8d21f484d4f50}\label{handler_8cc_af3feec89b29a546688a8d21f484d4f50}} 
+int {\bfseries ha\+\_\+initialize\+\_\+handlerton} (\mbox{\hyperlink{structst__plugin__int}{st\+\_\+plugin\+\_\+int}} $\ast$plugin)
+\item 
+\mbox{\Hypertarget{handler_8cc_a30697d754d0bc55d595313e2dee78af0}\label{handler_8cc_a30697d754d0bc55d595313e2dee78af0}} 
+int {\bfseries ha\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{handler_8cc_a38a01d8d4b7f27e750d07ab842b1c317}\label{handler_8cc_a38a01d8d4b7f27e750d07ab842b1c317}} 
+void {\bfseries ha\+\_\+end} ()
+\item 
+\mbox{\Hypertarget{handler_8cc_a5a768aa83c213dfeec7dcfe085820c6b}\label{handler_8cc_a5a768aa83c213dfeec7dcfe085820c6b}} 
+void {\bfseries ha\+\_\+drop\+\_\+database} (char $\ast$path)
+\item 
+void \mbox{\hyperlink{handler_8cc_ab753a55bd518a53d30dd053833304ebd}{ha\+\_\+close\+\_\+connection}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{handler_8cc_a0d01c55915ca90c3510000e9bb5173bd}\label{handler_8cc_a0d01c55915ca90c3510000e9bb5173bd}} 
+void {\bfseries ha\+\_\+kill\+\_\+connection} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{handler_8cc_a5b334384203039e1f5fc63b69e64d544}{trans\+\_\+register\+\_\+ha}} (T\+HD $\ast$thd, bool all, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ht\+\_\+arg, const ulonglong $\ast$trxid)
+\item 
+int \mbox{\hyperlink{handler_8cc_a04a7aaf17f4439699d7de62cbc2974f7}{ha\+\_\+prepare}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{handler_8cc_a4f032461e4058493b7cf50b093fd41da}{commit\+\_\+owned\+\_\+gtids}} (T\+HD $\ast$thd, bool all, bool $\ast$need\+\_\+clear\+\_\+owned\+\_\+gtid\+\_\+ptr)
+\item 
+int \mbox{\hyperlink{handler_8cc_a14f2d772934ddbcab48ef18832a5705b}{commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{handler_8cc_a9a81ce45b63a150449fb897a34572bb1}{ha\+\_\+commit\+\_\+trans}} (T\+HD $\ast$thd, bool all, bool ignore\+\_\+global\+\_\+read\+\_\+lock)
+\item 
+int \mbox{\hyperlink{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}{ha\+\_\+commit\+\_\+low}} (T\+HD $\ast$thd, bool all, bool run\+\_\+after\+\_\+commit)
+\item 
+\mbox{\Hypertarget{handler_8cc_a07ab15c5d54394f8a869ccdfc783d81f}\label{handler_8cc_a07ab15c5d54394f8a869ccdfc783d81f}} 
+int {\bfseries ha\+\_\+rollback\+\_\+low} (T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{handler_8cc_ae22775f574293206c642086afe7490aa}\label{handler_8cc_ae22775f574293206c642086afe7490aa}} 
+int {\bfseries ha\+\_\+rollback\+\_\+trans} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{handler_8cc_a4ccf3d5a7cbb382beb306f05f8e82805}{ha\+\_\+commit\+\_\+attachable}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{handler_8cc_a48d3c7f3e6672bbac5021611a01564e9}{ha\+\_\+release\+\_\+temporary\+\_\+latches}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{handler_8cc_ade7e42569784a1c80aa5ce3d233a4266}{ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{handler_8cc_aab3122785b39b5b1d8b6c755e8c31a56}\label{handler_8cc_aab3122785b39b5b1d8b6c755e8c31a56}} 
+int {\bfseries ha\+\_\+rollback\+\_\+to\+\_\+savepoint} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__savepoint}{S\+A\+V\+E\+P\+O\+I\+NT}} $\ast$sv)
+\item 
+\mbox{\Hypertarget{handler_8cc_a5ac6b5357d795ce5af2e3e4bc7890f6c}\label{handler_8cc_a5ac6b5357d795ce5af2e3e4bc7890f6c}} 
+int {\bfseries ha\+\_\+prepare\+\_\+low} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{handler_8cc_ab62bed9d64dab80d4677b8900f5392c6}{ha\+\_\+savepoint}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__savepoint}{S\+A\+V\+E\+P\+O\+I\+NT}} $\ast$sv)
+\item 
+\mbox{\Hypertarget{handler_8cc_a39be3c753e84137ac400b46fd0fae45e}\label{handler_8cc_a39be3c753e84137ac400b46fd0fae45e}} 
+int {\bfseries ha\+\_\+release\+\_\+savepoint} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__savepoint}{S\+A\+V\+E\+P\+O\+I\+NT}} $\ast$sv)
+\item 
+\mbox{\Hypertarget{handler_8cc_ac74c6593ff0dfded4689d0ef6bfce910}\label{handler_8cc_ac74c6593ff0dfded4689d0ef6bfce910}} 
+int {\bfseries ha\+\_\+start\+\_\+consistent\+\_\+snapshot} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{handler_8cc_a5f216df527d9245cd0d0f7c11804a2ea}\label{handler_8cc_a5f216df527d9245cd0d0f7c11804a2ea}} 
+int {\bfseries ha\+\_\+store\+\_\+binlog\+\_\+info} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{handler_8cc_a2b32fdf8397d09b64032d74002008069}{ha\+\_\+flush\+\_\+logs}} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$db\+\_\+type, bool binlog\+\_\+group\+\_\+flush)
+\item 
+const char $\ast$ \mbox{\hyperlink{handler_8cc_ad012444cc24f2178ff92e9e7ecbfbc85}{get\+\_\+canonical\+\_\+filename}} (\mbox{\hyperlink{classhandler}{handler}} $\ast$file, const char $\ast$path, char $\ast$tmp\+\_\+path)
+\begin{DoxyCompactList}\small\item\em make canonical filename \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{handler_8cc_ae2294c29d2c517fd60f4d9889532c610}\label{handler_8cc_ae2294c29d2c517fd60f4d9889532c610}} 
+int \mbox{\hyperlink{handler_8cc_ae2294c29d2c517fd60f4d9889532c610}{ha\+\_\+delete\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$table\+\_\+type, const char $\ast$path, const char $\ast$db, const char $\ast$alias, bool generate\+\_\+warning)
+\begin{DoxyCompactList}\small\item\em This should return E\+N\+O\+E\+NT if the file doesn\textquotesingle{}t exists. The .frm file will be deleted only if we return 0 or E\+N\+O\+E\+NT. \end{DoxyCompactList}\item 
+ulonglong \mbox{\hyperlink{handler_8cc_a3b836b84dc3618d3825bf6cc7911ce72}{compute\+\_\+next\+\_\+insert\+\_\+id}} (ulonglong nr, struct \mbox{\hyperlink{structsystem__variables}{system\+\_\+variables}} $\ast$variables)
+\item 
+ulonglong \mbox{\hyperlink{handler_8cc_ae9f796d8fbc7dc812557a17547b8e69e}{prev\+\_\+insert\+\_\+id}} (ulonglong nr, struct \mbox{\hyperlink{structsystem__variables}{system\+\_\+variables}} $\ast$variables)
+\begin{DoxyCompactList}\small\item\em Computes the largest number X\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{handler_8cc_a10ddf5a0a2c8e742a80be49cf751cea2}{print\+\_\+keydup\+\_\+error}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key, const char $\ast$msg, myf errflag)
+\item 
+void \mbox{\hyperlink{handler_8cc_adf1eaf64ffa95e2997a43b37b577161a}{print\+\_\+keydup\+\_\+error}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key, myf errflag)
+\item 
+int \mbox{\hyperlink{handler_8cc_a717442e00ab24e3265d6b997330ffea2}{ha\+\_\+enable\+\_\+transaction}} (T\+HD $\ast$thd, bool on)
+\item 
+int \mbox{\hyperlink{handler_8cc_a16e41074d60f32b3f8e823bf33c57799}{ha\+\_\+create\+\_\+table}} (T\+HD $\ast$thd, const char $\ast$path, const char $\ast$db, const char $\ast$table\+\_\+name, \mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$create\+\_\+info, const \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ $\ast$create\+\_\+fields, bool update\+\_\+create\+\_\+info, bool is\+\_\+temp\+\_\+table)
+\item 
+int \mbox{\hyperlink{handler_8cc_ad7fbd8c7ba3e1522597328bf6439e885}{ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine}} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$name)
+\item 
+bool \mbox{\hyperlink{handler_8cc_a78cb5fc09dd37f21dede2d9c0ac24ce6}{ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists}} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$name, bool $\ast$exists)
+\item 
+bool \mbox{\hyperlink{handler_8cc_a4b52399a74d9db4f3421851b46ff6dc9}{ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table}} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, const char $\ast$db, const char $\ast$table\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Check if a given table is a system table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{handler_8cc_a148e166799444d311941a690a9e055ea}{ha\+\_\+init\+\_\+key\+\_\+cache}} (const char $\ast$name, K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$key\+\_\+cache)
+\item 
+int \mbox{\hyperlink{handler_8cc_a1bf31fef3cb90da8800035f3687ba6c1}{ha\+\_\+resize\+\_\+key\+\_\+cache}} (K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$key\+\_\+cache)
+\item 
+int \mbox{\hyperlink{handler_8cc_a2be2b29769464f494517c18082ed21b0}{ha\+\_\+change\+\_\+key\+\_\+cache}} (K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$old\+\_\+key\+\_\+cache, K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$new\+\_\+key\+\_\+cache)
+\item 
+\mbox{\Hypertarget{handler_8cc_a9480a1c732402bbee80cc2833c5a7cc9}\label{handler_8cc_a9480a1c732402bbee80cc2833c5a7cc9}} 
+int {\bfseries ha\+\_\+discover} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$name, uchar $\ast$$\ast$frmblob, size\+\_\+t $\ast$frmlen)
+\item 
+\mbox{\Hypertarget{handler_8cc_a085bf67a6ee3ff885b6bf1b2d647ea12}\label{handler_8cc_a085bf67a6ee3ff885b6bf1b2d647ea12}} 
+int {\bfseries ha\+\_\+find\+\_\+files} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$path, const char $\ast$wild, bool dir, \mbox{\hyperlink{classList}{List}}$<$ L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $>$ $\ast$files)
+\item 
+\mbox{\Hypertarget{handler_8cc_acd75ef59c3674c65c15df013a595a74f}\label{handler_8cc_acd75ef59c3674c65c15df013a595a74f}} 
+int {\bfseries ha\+\_\+table\+\_\+exists\+\_\+in\+\_\+engine} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$name)
+\item 
+\mbox{\Hypertarget{handler_8cc_ac5fb6b44cb3eb587fa551695f773ca56}\label{handler_8cc_ac5fb6b44cb3eb587fa551695f773ca56}} 
+int {\bfseries ha\+\_\+make\+\_\+pushed\+\_\+joins} (T\+HD $\ast$thd, const \mbox{\hyperlink{classAQP_1_1Join__plan}{A\+Q\+P\+::\+Join\+\_\+plan}} $\ast$plan)
+\item 
+\mbox{\Hypertarget{handler_8cc_ae97e474d3f1e94ebeebfdc075b15f49d}\label{handler_8cc_ae97e474d3f1e94ebeebfdc075b15f49d}} 
+int {\bfseries ha\+\_\+reset\+\_\+logs} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{handler_8cc_a3747bf2fea2dadd43bbdef3d0a7eaf4d}\label{handler_8cc_a3747bf2fea2dadd43bbdef3d0a7eaf4d}} 
+void {\bfseries ha\+\_\+reset\+\_\+slave} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{handler_8cc_ac1dff8b2be092d5ba58ff7d2c63207e7}\label{handler_8cc_ac1dff8b2be092d5ba58ff7d2c63207e7}} 
+void {\bfseries ha\+\_\+binlog\+\_\+wait} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{handler_8cc_a63f3d2a069ec4eddb064b54cdc162754}\label{handler_8cc_a63f3d2a069ec4eddb064b54cdc162754}} 
+int {\bfseries ha\+\_\+binlog\+\_\+index\+\_\+purge\+\_\+file} (T\+HD $\ast$thd, const char $\ast$file)
+\item 
+\mbox{\Hypertarget{handler_8cc_a4e3b21e1fa57750b6e15eb9313b6a516}\label{handler_8cc_a4e3b21e1fa57750b6e15eb9313b6a516}} 
+void {\bfseries ha\+\_\+binlog\+\_\+log\+\_\+query} (T\+HD $\ast$thd, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, enum\+\_\+binlog\+\_\+command binlog\+\_\+command, const char $\ast$query, size\+\_\+t query\+\_\+length, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{handler_8cc_abaa159ee1b659517d7ec730f6f7a8d2f}\label{handler_8cc_abaa159ee1b659517d7ec730f6f7a8d2f}} 
+int {\bfseries ha\+\_\+binlog\+\_\+end} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{handler_8cc_a136dfdf479102e63c8ddf02af552c445}{key\+\_\+uses\+\_\+partial\+\_\+cols}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint keyno)
+\item 
+void \mbox{\hyperlink{handler_8cc_a7d121a7b14ef956c0df32895a7a9a08b}{get\+\_\+sweep\+\_\+read\+\_\+cost}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, ha\+\_\+rows nrows, bool interrupted, \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$cost)
+\item 
+uint \mbox{\hyperlink{handler_8cc_a6b9ec6bf545d225aa3985db9532fea33}{calculate\+\_\+key\+\_\+len}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint key, key\+\_\+part\+\_\+map keypart\+\_\+map)
+\item 
+\mbox{\Hypertarget{handler_8cc_a01539f5e2c19a270253f97f3b2561225}\label{handler_8cc_a01539f5e2c19a270253f97f3b2561225}} 
+T\+Y\+P\+E\+L\+IB $\ast$ {\bfseries ha\+\_\+known\+\_\+exts} ()
+\item 
+\mbox{\Hypertarget{handler_8cc_a3bd5a11e87956ac70255e3d6406c096f}\label{handler_8cc_a3bd5a11e87956ac70255e3d6406c096f}} 
+bool {\bfseries ha\+\_\+show\+\_\+status} (T\+HD $\ast$thd, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$db\+\_\+type, enum ha\+\_\+stat\+\_\+type stat)
+\item 
+\mbox{\Hypertarget{handler_8cc_af17b758947efd1af55964711f645c20a}\label{handler_8cc_af17b758947efd1af55964711f645c20a}} 
+bool {\bfseries ha\+\_\+flush\+\_\+changed\+\_\+page\+\_\+bitmaps} ()
+\item 
+\mbox{\Hypertarget{handler_8cc_a8f8a16215599ad09fb68cfe63558c483}\label{handler_8cc_a8f8a16215599ad09fb68cfe63558c483}} 
+bool {\bfseries ha\+\_\+purge\+\_\+changed\+\_\+page\+\_\+bitmaps} (ulonglong lsn)
+\item 
+\mbox{\Hypertarget{handler_8cc_adf4f5904ba6371c3cdc6e244502b0afb}\label{handler_8cc_adf4f5904ba6371c3cdc6e244502b0afb}} 
+int {\bfseries binlog\+\_\+log\+\_\+row} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const uchar $\ast$before\+\_\+record, const uchar $\ast$after\+\_\+record, Log\+\_\+func $\ast$log\+\_\+func)
+\item 
+bool \mbox{\hyperlink{handler_8cc_a07ac7604e01f6334b1ef643c48efc795}{ha\+\_\+notify\+\_\+exclusive\+\_\+mdl}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, ha\+\_\+notification\+\_\+type notification\+\_\+type, bool $\ast$victimized)
+\item 
+bool \mbox{\hyperlink{handler_8cc_add21ba0eb4b746064ac6cfbaee80751d}{ha\+\_\+notify\+\_\+alter\+\_\+table}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, ha\+\_\+notification\+\_\+type notification\+\_\+type)
+\item 
+bool \mbox{\hyperlink{handler_8cc_a94d164888d64b531805b3515138e174a}{set\+\_\+tx\+\_\+isolation}} (T\+HD $\ast$thd, enum\+\_\+tx\+\_\+isolation tx\+\_\+isolation, bool one\+\_\+shot)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{handler_8cc_a6371162385912b48581214e10169cf6e}\label{handler_8cc_a6371162385912b48581214e10169cf6e}} 
+\mbox{\hyperlink{structst__plugin__int}{st\+\_\+plugin\+\_\+int}} $\ast$ {\bfseries hton2plugin} \mbox{[}M\+A\+X\+\_\+\+HA\mbox{]}
+\item 
+\mbox{\hyperlink{structst__key__create__information}{K\+E\+Y\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} {\bfseries default\+\_\+key\+\_\+create\+\_\+info}
+\item 
+\mbox{\Hypertarget{handler_8cc_af9a943900869221137733b1bbb171b76}\label{handler_8cc_af9a943900869221137733b1bbb171b76}} 
+ulong {\bfseries total\+\_\+ha} = 0
+\item 
+\mbox{\Hypertarget{handler_8cc_a91bf0afba70a64299aaa09978ded1504}\label{handler_8cc_a91bf0afba70a64299aaa09978ded1504}} 
+ulong {\bfseries total\+\_\+ha\+\_\+2pc} = 0
+\item 
+\mbox{\Hypertarget{handler_8cc_ad52db6d4a8ae1e88df16e2adc0a79d28}\label{handler_8cc_ad52db6d4a8ae1e88df16e2adc0a79d28}} 
+ulong {\bfseries savepoint\+\_\+alloc\+\_\+size} = 0
+\item 
+const char $\ast$ {\bfseries ha\+\_\+row\+\_\+type} \mbox{[}$\,$\mbox{]}
+\item 
+const char $\ast$ {\bfseries tx\+\_\+isolation\+\_\+names} \mbox{[}$\,$\mbox{]}
+\item 
+T\+Y\+P\+E\+L\+IB {\bfseries tx\+\_\+isolation\+\_\+typelib}
+\item 
+const char $\ast$ \mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\+\_\+system\+\_\+database}} = \char`\"{}mysql\char`\"{}
+\item 
+\mbox{\hyperlink{structst__handler__tablename}{st\+\_\+handler\+\_\+tablename}} {\bfseries mysqld\+\_\+system\+\_\+tables} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{handler_8cc_aa9ef4a678000a139cee773d183e4cfa1}\label{handler_8cc_aa9ef4a678000a139cee773d183e4cfa1}} 
+std\+::string {\bfseries normalized\+\_\+se\+\_\+str} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handler-\/calling-\/functions. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{handler_8cc_a24d44ee426ff4454b3e832c4470d6cc7}\label{handler_8cc_a24d44ee426ff4454b3e832c4470d6cc7}} 
+\index{handler.\+cc@{handler.\+cc}!A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS@{A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS}}
+\index{A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS@{A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS}{AUTO\_INC\_DEFAULT\_NB\_ROWS}}
+{\footnotesize\ttfamily \#define A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS~1}
+
+Update the auto\+\_\+increment field if necessary.
+
+Updates columns with type N\+E\+X\+T\+\_\+\+N\+U\+M\+B\+ER if\+:
+
+
+\begin{DoxyItemize}
+\item If column value is set to N\+U\+LL (in which case auto\+\_\+increment\+\_\+field\+\_\+not\+\_\+null is 0)
+\item If column is set to 0 and (sql\+\_\+mode \& M\+O\+D\+E\+\_\+\+N\+O\+\_\+\+A\+U\+T\+O\+\_\+\+V\+A\+L\+U\+E\+\_\+\+O\+N\+\_\+\+Z\+E\+RO) is not set. In the future we will only set N\+E\+X\+T\+\_\+\+N\+U\+M\+B\+ER fields if one sets them to N\+U\+LL (or they are not included in the insert list).
+
+In those cases, we check if the currently reserved interval still has values we have not used. If yes, we pick the smallest one and use it. Otherwise\+:
+\item If a list of intervals has been provided to the statement via S\+ET I\+N\+S\+E\+R\+T\+\_\+\+ID or via an \mbox{\hyperlink{classIntvar__log__event}{Intvar\+\_\+log\+\_\+event}} (in a replication slave), we pick the first unused interval from this list, consider it as reserved.
+\item Otherwise we set the column for the first row to the value next\+\_\+insert\+\_\+id(get\+\_\+auto\+\_\+increment(column))) which is usually max-\/used-\/column-\/value+1. We call get\+\_\+auto\+\_\+increment() for the first row in a multi-\/row statement. get\+\_\+auto\+\_\+increment() will tell us the interval of values it reserved for us.
+\item In both cases, for the following rows we use those reserved values without calling the handler again (we just progress in the interval, computing each new value from the previous one). Until we have exhausted them, then we either take the next provided interval or call get\+\_\+auto\+\_\+increment() again to reserve a new interval.
+\item In both cases, the reserved intervals are remembered in thd-\/$>$auto\+\_\+inc\+\_\+intervals\+\_\+in\+\_\+cur\+\_\+stmt\+\_\+for\+\_\+binlog if statement-\/based binlogging; the last reserved interval is remembered in auto\+\_\+inc\+\_\+interval\+\_\+for\+\_\+cur\+\_\+row. The number of reserved intervals is remembered in auto\+\_\+inc\+\_\+intervals\+\_\+count. It differs from the number of elements in thd-\/$>$auto\+\_\+inc\+\_\+intervals\+\_\+in\+\_\+cur\+\_\+stmt\+\_\+for\+\_\+binlog() because the latter list is cumulative over all statements forming one binlog event (when stored functions and triggers are used), and collapses two contiguous intervals in one (see its append() method).
+
+The idea is that generated auto\+\_\+increment values are predictable and independent of the column values in the table. This is needed to be able to replicate into a table that already has rows with a higher auto-\/increment value than the one that is inserted.
+
+After we have already generated an auto-\/increment number and the user inserts a column with a higher value than the last used one, we will start counting from the inserted value.
+
+This function\textquotesingle{}s \char`\"{}outputs\char`\"{} are\+: the table\textquotesingle{}s auto\+\_\+increment field is filled with a value, thd-\/$>$next\+\_\+insert\+\_\+id is filled with the value to use for the next row, if a value was autogenerated for the current row it is stored in thd-\/$>$insert\+\_\+id\+\_\+for\+\_\+cur\+\_\+row, if get\+\_\+auto\+\_\+increment() was called thd-\/$>$auto\+\_\+inc\+\_\+interval\+\_\+for\+\_\+cur\+\_\+row is modified, if that interval is not present in thd-\/$>$auto\+\_\+inc\+\_\+intervals\+\_\+in\+\_\+cur\+\_\+stmt\+\_\+for\+\_\+binlog it is added to this list.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000021}{Todo}}]Replace all references to \char`\"{}next number\char`\"{} or N\+E\+X\+T\+\_\+\+N\+U\+M\+B\+ER to \char`\"{}auto\+\_\+increment\char`\"{}, everywhere (see below\+: there is table-\/$>$auto\+\_\+increment\+\_\+field\+\_\+not\+\_\+null, and there also exists table-\/$>$next\+\_\+number\+\_\+field, it\textquotesingle{}s not consistent).\end{DoxyRefDesc}
+
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+\+A\+U\+T\+O\+I\+N\+C\+\_\+\+R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+ED} & get\+\_\+auto\+\_\+increment() was called and returned $\sim$(ulonglong) 0 \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+\+A\+U\+T\+O\+I\+N\+C\+\_\+\+E\+R\+A\+N\+GE} & storing value in field caused strict mode failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_ae7af2d71cccd74a4f6a82bbfcd0e6315}\label{handler_8cc_ae7af2d71cccd74a4f6a82bbfcd0e6315}} 
+\index{handler.\+cc@{handler.\+cc}!M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT@{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT@{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT}{MYSQL\_TABLE\_IO\_WAIT}}
+{\footnotesize\ttfamily \#define M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+I\+O\+\_\+\+W\+A\+IT(\begin{DoxyParamCaption}\item[{}]{OP,  }\item[{}]{I\+N\+D\+EX,  }\item[{}]{R\+E\+S\+U\+LT,  }\item[{}]{P\+A\+Y\+L\+O\+AD }\end{DoxyParamCaption})~P\+A\+Y\+L\+O\+AD}
+
+Instrumentation helper for table io\+\_\+waits. Note that this helper is intended to be used from within the handler class only, as it uses members from {\ttfamily handler} Performance schema events are instrumented as follows\+:
+\begin{DoxyItemize}
+\item in non batch mode, one event is generated per call
+\item in batch mode, the number of rows affected is saved in {\ttfamily m\+\_\+psi\+\_\+numrows}, so that {\ttfamily end\+\_\+psi\+\_\+batch\+\_\+mode()} generates a single event for the batch. 
+\begin{DoxyParams}{Parameters}
+{\em OP} & the table operation to be performed \\
+\hline
+{\em I\+N\+D\+EX} & the table index used if any, or M\+A\+X\+\_\+\+K\+EY. \\
+\hline
+{\em P\+A\+Y\+L\+O\+AD} & instrumented code to execute \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_ab6a860cb6d6cb731416080acc8f179e0}{handler\+::end\+\_\+psi\+\_\+batch\+\_\+mode}}. 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\mbox{\Hypertarget{handler_8cc_a2fc17419233dc7abc0ff53cf4448c285}\label{handler_8cc_a2fc17419233dc7abc0ff53cf4448c285}} 
+\index{handler.\+cc@{handler.\+cc}!M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT@{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT@{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT}{MYSQL\_TABLE\_LOCK\_WAIT}}
+{\footnotesize\ttfamily \#define M\+Y\+S\+Q\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+IT(\begin{DoxyParamCaption}\item[{}]{OP,  }\item[{}]{F\+L\+A\+GS,  }\item[{}]{P\+A\+Y\+L\+O\+AD }\end{DoxyParamCaption})~P\+A\+Y\+L\+O\+AD}
+
+Instrumentation helper for table io\+\_\+waits. 
+\begin{DoxyParams}{Parameters}
+{\em OP} & the table operation to be performed \\
+\hline
+{\em F\+L\+A\+GS} & per table operation flags. \\
+\hline
+{\em P\+A\+Y\+L\+O\+AD} & the code to instrument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+M\+Y\+S\+Q\+L\+\_\+\+E\+N\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+W\+A\+IT. 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{handler_8cc_a6b9ec6bf545d225aa3985db9532fea33}\label{handler_8cc_a6b9ec6bf545d225aa3985db9532fea33}} 
+\index{handler.\+cc@{handler.\+cc}!calculate\+\_\+key\+\_\+len@{calculate\+\_\+key\+\_\+len}}
+\index{calculate\+\_\+key\+\_\+len@{calculate\+\_\+key\+\_\+len}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{calculate\+\_\+key\+\_\+len()}{calculate\_key\_len()}}
+{\footnotesize\ttfamily uint calculate\+\_\+key\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint}]{key,  }\item[{key\+\_\+part\+\_\+map}]{keypart\+\_\+map }\end{DoxyParamCaption})}
+
+Calculates length of key.
+
+Given a key index and a map of key parts return length of buffer used by key parts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Table containing the key \\
+\hline
+{\em key} & \mbox{\hyperlink{classKey}{Key}} index \\
+\hline
+{\em keypart\+\_\+map} & which key parts that is used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of used key parts. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cc_a14f2d772934ddbcab48ef18832a5705b}\label{handler_8cc_a14f2d772934ddbcab48ef18832a5705b}} 
+\index{handler.\+cc@{handler.\+cc}!commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command@{commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command}}
+\index{commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command@{commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command()}{commit\_owned\_gtid\_by\_partial\_command()}}
+{\footnotesize\ttfamily int commit\+\_\+owned\+\_\+gtid\+\_\+by\+\_\+partial\+\_\+command (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+The function is a wrapper of commit\+\_\+owned\+\_\+gtids(...). It is invoked at committing a partially failed statement or transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & if error when persisting owned gtid. \\
+\hline
+{\em 0} & if succeed to commit owned gtid. \\
+\hline
+{\em 1} & if do not meet conditions to commit owned gtid. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a4f032461e4058493b7cf50b093fd41da}\label{handler_8cc_a4f032461e4058493b7cf50b093fd41da}} 
+\index{handler.\+cc@{handler.\+cc}!commit\+\_\+owned\+\_\+gtids@{commit\+\_\+owned\+\_\+gtids}}
+\index{commit\+\_\+owned\+\_\+gtids@{commit\+\_\+owned\+\_\+gtids}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{commit\+\_\+owned\+\_\+gtids()}{commit\_owned\_gtids()}}
+{\footnotesize\ttfamily int commit\+\_\+owned\+\_\+gtids (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all,  }\item[{bool $\ast$}]{need\+\_\+clear\+\_\+owned\+\_\+gtid\+\_\+ptr }\end{DoxyParamCaption})}
+
+The function computes condition to call gtid persistor wrapper, and executes it. It is invoked at committing a statement or transaction, including XA, and also at XA prepare handling.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+ & {\em all} & The execution scope, true for the transaction one, false for the statement one. \\
+\hline
+\mbox{\texttt{ out}}  & {\em need\+\_\+clear\+\_\+owned\+\_\+gtid\+\_\+ptr} & A pointer to bool variable to return the computed decision value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero as no error indication, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cc_a3b836b84dc3618d3825bf6cc7911ce72}\label{handler_8cc_a3b836b84dc3618d3825bf6cc7911ce72}} 
+\index{handler.\+cc@{handler.\+cc}!compute\+\_\+next\+\_\+insert\+\_\+id@{compute\+\_\+next\+\_\+insert\+\_\+id}}
+\index{compute\+\_\+next\+\_\+insert\+\_\+id@{compute\+\_\+next\+\_\+insert\+\_\+id}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{compute\+\_\+next\+\_\+insert\+\_\+id()}{compute\_next\_insert\_id()}}
+{\footnotesize\ttfamily ulonglong compute\+\_\+next\+\_\+insert\+\_\+id (\begin{DoxyParamCaption}\item[{ulonglong}]{nr,  }\item[{struct \mbox{\hyperlink{structsystem__variables}{system\+\_\+variables}} $\ast$}]{variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate the next auto-\/increment number based on increment and offset. computes the lowest number
+\begin{DoxyItemize}
+\item strictly greater than \char`\"{}nr\char`\"{}
+\item of the form\+: auto\+\_\+increment\+\_\+offset + N $\ast$ auto\+\_\+increment\+\_\+increment If overflow happened then return M\+A\+X\+\_\+\+U\+L\+O\+N\+G\+L\+O\+NG value as an indication of overflow. In most cases increment= offset= 1, in which case we get\+: \begin{DoxyVerb}1,2,3,4,5,... \end{DoxyVerb}
+ If increment=10 and offset=5 and previous number is 1, we get\+: \begin{DoxyVerb}1,5,15,25,35,... \end{DoxyVerb}
+ 
+\end{DoxyItemize}\mbox{\Hypertarget{handler_8cc_ad012444cc24f2178ff92e9e7ecbfbc85}\label{handler_8cc_ad012444cc24f2178ff92e9e7ecbfbc85}} 
+\index{handler.\+cc@{handler.\+cc}!get\+\_\+canonical\+\_\+filename@{get\+\_\+canonical\+\_\+filename}}
+\index{get\+\_\+canonical\+\_\+filename@{get\+\_\+canonical\+\_\+filename}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+canonical\+\_\+filename()}{get\_canonical\_filename()}}
+{\footnotesize\ttfamily const char$\ast$ get\+\_\+canonical\+\_\+filename (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandler}{handler}} $\ast$}]{file,  }\item[{const char $\ast$}]{path,  }\item[{char $\ast$}]{tmp\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+make canonical filename 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file} & table handler \\
+\hline
+\mbox{\texttt{ in}}  & {\em path} & original path \\
+\hline
+\mbox{\texttt{ out}}  & {\em tmp\+\_\+path} & buffer for canonized path\\
+\hline
+\end{DoxyParams}
+Lower case db name and table name path parts for non file based tables when lower\+\_\+case\+\_\+table\+\_\+names is 2 (store as is, compare in lower case). Filesystem path prefix (mysql\+\_\+data\+\_\+home or tmpdir) is left intact.
+
+\begin{DoxyNote}{Note}
+tmp\+\_\+path may be left intact if no conversion was performed.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em canonized} & path\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000020}{Todo}}]This may be done more efficiently when table path gets built. Convert this function to something like A\+S\+S\+E\+R\+T\+\_\+\+C\+A\+N\+O\+N\+I\+C\+A\+L\+\_\+\+F\+I\+L\+E\+N\+A\+ME. \end{DoxyRefDesc}
+\mbox{\Hypertarget{handler_8cc_a7d121a7b14ef956c0df32895a7a9a08b}\label{handler_8cc_a7d121a7b14ef956c0df32895a7a9a08b}} 
+\index{handler.\+cc@{handler.\+cc}!get\+\_\+sweep\+\_\+read\+\_\+cost@{get\+\_\+sweep\+\_\+read\+\_\+cost}}
+\index{get\+\_\+sweep\+\_\+read\+\_\+cost@{get\+\_\+sweep\+\_\+read\+\_\+cost}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+sweep\+\_\+read\+\_\+cost()}{get\_sweep\_read\_cost()}}
+{\footnotesize\ttfamily void get\+\_\+sweep\+\_\+read\+\_\+cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{ha\+\_\+rows}]{nrows,  }\item[{bool}]{interrupted,  }\item[{\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$}]{cost }\end{DoxyParamCaption})}
+
+Get cost of reading nrows table records in a \char`\"{}disk sweep\char`\"{}
+
+A disk sweep read is a sequence of handler-\/$>$rnd\+\_\+pos(rowid) calls that made for an ordered sequence of rowids.
+
+We take into account that some of the records might be in a memory buffer while others need to be read from a secondary storage device. The model for this assumes hard disk IO. A disk read is performed as follows\+:
+
+
+\begin{DoxyEnumerate}
+\item The disk head is moved to the needed cylinder
+\item The controller waits for the plate to rotate
+\item The data is transferred
+\end{DoxyEnumerate}
+
+Time to do \#3 is insignificant compared to \#2+\#1.
+
+Time to move the disk head is proportional to head travel distance.
+
+Time to wait for the plate to rotate depends on whether the disk head was moved or not.
+
+If disk head wasn\textquotesingle{}t moved, the wait time is proportional to distance between the previous block and the block we\textquotesingle{}re reading.
+
+If the head was moved, we don\textquotesingle{}t know how much we\textquotesingle{}ll need to wait for the plate to rotate. We assume the wait time to be a variate with a mean of 0.\+5 of full rotation time.
+
+Our cost units are \char`\"{}random disk seeks\char`\"{}. The cost of random disk seek is actually not a constant, it depends one range of cylinders we\textquotesingle{}re going to access. We make it constant by introducing a fuzzy concept of \char`\"{}typical 
+datafile length\char`\"{} (it\textquotesingle{}s fuzzy as it\textquotesingle{}s hard to tell whether it should include index file, temp.\+tables etc). Then random seek cost is\+:
+
+1 = half\+\_\+rotation\+\_\+cost + move\+\_\+cost $\ast$ 1/3 $\ast$ typical\+\_\+data\+\_\+file\+\_\+length
+
+We define half\+\_\+rotation\+\_\+cost as disk\+\_\+seek\+\_\+base\+\_\+cost() (see Cost\+\_\+model\+\_\+server\+::disk\+\_\+seek\+\_\+base\+\_\+cost()).
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em table} & Table to be accessed \\
+\hline
+ & {\em nrows} & Number of rows to retrieve \\
+\hline
+ & {\em interrupted} & true $<$=$>$ Assume that the disk sweep will be interrupted by other disk IO. false -\/ otherwise. \\
+\hline
+\mbox{\texttt{ out}}  & {\em cost} & the cost \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{handler_8cc_a2be2b29769464f494517c18082ed21b0}\label{handler_8cc_a2be2b29769464f494517c18082ed21b0}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+change\+\_\+key\+\_\+cache@{ha\+\_\+change\+\_\+key\+\_\+cache}}
+\index{ha\+\_\+change\+\_\+key\+\_\+cache@{ha\+\_\+change\+\_\+key\+\_\+cache}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+change\+\_\+key\+\_\+cache()}{ha\_change\_key\_cache()}}
+{\footnotesize\ttfamily int ha\+\_\+change\+\_\+key\+\_\+cache (\begin{DoxyParamCaption}\item[{K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$}]{old\+\_\+key\+\_\+cache,  }\item[{K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$}]{new\+\_\+key\+\_\+cache }\end{DoxyParamCaption})}
+
+Move all tables from one key cache to another one. \mbox{\Hypertarget{handler_8cc_a4b52399a74d9db4f3421851b46ff6dc9}\label{handler_8cc_a4b52399a74d9db4f3421851b46ff6dc9}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table@{ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table}}
+\index{ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table@{ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table()}{ha\_check\_if\_supported\_system\_table()}}
+{\footnotesize\ttfamily bool ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{hton,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Check if a given table is a system table. 
+
+The primary purpose of introducing this function is to stop system tables to be created or being moved to undesired storage engines.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000022}{Todo}}]There is another function called is\+\_\+system\+\_\+table\+\_\+name() used by get\+\_\+table\+\_\+category(), which is used to set \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} table\+\_\+category. It checks only a subset of table name like proc, event and time$\ast$. We cannot use below function in get\+\_\+table\+\_\+category(), as that affects locking mechanism. If we need to unify these functions, we need to fix locking issues generated.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em hton} & Handlerton of new engine. \\
+\hline
+{\em db} & Database name. \\
+\hline
+{\em table\+\_\+name} & Table name to be checked.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & If the table name is a valid system table or if its a valid user table.\\
+\hline
+{\em false} & If the table name is a system table name and does not belong to engine specified in the command. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a78cb5fc09dd37f21dede2d9c0ac24ce6}\label{handler_8cc_a78cb5fc09dd37f21dede2d9c0ac24ce6}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists@{ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists}}
+\index{ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists@{ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists()}{ha\_check\_if\_table\_exists()}}
+{\footnotesize\ttfamily bool ha\+\_\+check\+\_\+if\+\_\+table\+\_\+exists (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{name,  }\item[{bool $\ast$}]{exists }\end{DoxyParamCaption})}
+
+Try to find a table in a storage engine.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em db} & Normalized table schema name \\
+\hline
+ & {\em name} & Normalized table name. \\
+\hline
+\mbox{\texttt{ out}}  & {\em exists} & Only valid if the function succeeded.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & An error is found \\
+\hline
+{\em F\+A\+L\+SE} & Success, check $\ast$exists \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a36740c5632ede113d26c6eb270e727ae}\label{handler_8cc_a36740c5632ede113d26c6eb270e727ae}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+checktype@{ha\+\_\+checktype}}
+\index{ha\+\_\+checktype@{ha\+\_\+checktype}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+checktype()}{ha\_checktype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhandlerton}{handlerton}}$\ast$ ha\+\_\+checktype (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum legacy\+\_\+db\+\_\+type}]{database\+\_\+type,  }\item[{bool}]{no\+\_\+substitute,  }\item[{bool}]{report\+\_\+error }\end{DoxyParamCaption})}
+
+Use other database handler if databasehandler is not compiled in. \mbox{\Hypertarget{handler_8cc_ab753a55bd518a53d30dd053833304ebd}\label{handler_8cc_ab753a55bd518a53d30dd053833304ebd}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+close\+\_\+connection@{ha\+\_\+close\+\_\+connection}}
+\index{ha\+\_\+close\+\_\+connection@{ha\+\_\+close\+\_\+connection}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+close\+\_\+connection()}{ha\_close\_connection()}}
+{\footnotesize\ttfamily void ha\+\_\+close\+\_\+connection (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+don\textquotesingle{}t bother to rollback here, it\textquotesingle{}s done already 
+\end{DoxyNote}
+\mbox{\Hypertarget{handler_8cc_a4ccf3d5a7cbb382beb306f05f8e82805}\label{handler_8cc_a4ccf3d5a7cbb382beb306f05f8e82805}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+commit\+\_\+attachable@{ha\+\_\+commit\+\_\+attachable}}
+\index{ha\+\_\+commit\+\_\+attachable@{ha\+\_\+commit\+\_\+attachable}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+commit\+\_\+attachable()}{ha\_commit\_attachable()}}
+{\footnotesize\ttfamily int ha\+\_\+commit\+\_\+attachable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Commit the attachable transaction in storage engines.
+
+\begin{DoxyNote}{Note}
+This is slimmed down version of \mbox{\hyperlink{handler_8cc_a9a81ce45b63a150449fb897a34572bb1}{ha\+\_\+commit\+\_\+trans()}}/ha\+\_\+commit\+\_\+low() which commits attachable transaction but skips code which is unnecessary and unsafe for them (like dealing with G\+T\+I\+Ds). Since attachable transactions are read-\/only their commit only needs to release resources and cleanup state in SE.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current thread\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/ Success \\
+\hline
+{\em non-\/0} & -\/ Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}\label{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+commit\+\_\+low@{ha\+\_\+commit\+\_\+low}}
+\index{ha\+\_\+commit\+\_\+low@{ha\+\_\+commit\+\_\+low}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+commit\+\_\+low()}{ha\_commit\_low()}}
+{\footnotesize\ttfamily int ha\+\_\+commit\+\_\+low (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all,  }\item[{bool}]{run\+\_\+after\+\_\+commit }\end{DoxyParamCaption})}
+
+Commit the sessions outstanding transaction.
+
+\begin{DoxyPrecond}{Precondition}
+thd-\/$>$transaction.\+flags.\+commit\+\_\+low == true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+thd-\/$>$transaction.\+flags.\+commit\+\_\+low == false
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+This function does not care about global read lock; the caller should.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em all} & Is set in case of explicit commit (C\+O\+M\+M\+IT statement), or implicit commit issued by D\+DL. Is not set when called at the end of statement, even if autocommit=1. \\
+\hline
+\mbox{\texttt{ in}}  & {\em run\+\_\+after\+\_\+commit} & True by default, otherwise, does not execute the after\+\_\+commit hook in the function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{handler_8cc_a9a81ce45b63a150449fb897a34572bb1}\label{handler_8cc_a9a81ce45b63a150449fb897a34572bb1}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+commit\+\_\+trans@{ha\+\_\+commit\+\_\+trans}}
+\index{ha\+\_\+commit\+\_\+trans@{ha\+\_\+commit\+\_\+trans}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+commit\+\_\+trans()}{ha\_commit\_trans()}}
+{\footnotesize\ttfamily int ha\+\_\+commit\+\_\+trans (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all,  }\item[{bool}]{ignore\+\_\+global\+\_\+read\+\_\+lock }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ignore\+\_\+global\+\_\+read\+\_\+lock} & Allow commit to complete even if a global read lock is active. This can be used to allow changes to internal tables (e.\+g. slave status tables).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & transaction was rolled back \\
+\hline
+{\em 2} & error during commit, data may be inconsistent\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]Since we don\textquotesingle{}t support nested statement transactions in 5.\+0, we can\textquotesingle{}t commit or rollback stmt transactions while we are inside stored functions or triggers. So we simply do nothing now. T\+O\+DO\+: This should be fixed in later ( $>$= 5.\+1) releases. \end{DoxyRefDesc}
+\mbox{\Hypertarget{handler_8cc_a16e41074d60f32b3f8e823bf33c57799}\label{handler_8cc_a16e41074d60f32b3f8e823bf33c57799}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+create\+\_\+table@{ha\+\_\+create\+\_\+table}}
+\index{ha\+\_\+create\+\_\+table@{ha\+\_\+create\+\_\+table}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+create\+\_\+table()}{ha\_create\_table()}}
+{\footnotesize\ttfamily int ha\+\_\+create\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{path,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{\mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$}]{create\+\_\+info,  }\item[{const \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ $\ast$}]{create\+\_\+fields,  }\item[{bool}]{update\+\_\+create\+\_\+info,  }\item[{bool}]{is\+\_\+temp\+\_\+table }\end{DoxyParamCaption})}
+
+Initiates table-\/file and calls appropriate database-\/creator.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_ad7fbd8c7ba3e1522597328bf6439e885}\label{handler_8cc_ad7fbd8c7ba3e1522597328bf6439e885}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine@{ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine}}
+\index{ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine@{ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine()}{ha\_create\_table\_from\_engine()}}
+{\footnotesize\ttfamily int ha\+\_\+create\+\_\+table\+\_\+from\+\_\+engine (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Try to discover table from engine.
+
+\begin{DoxyNote}{Note}
+If found, write the frm file to disk.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & Table did not exists \\
+\hline
+{\em 0} & Table created ok \\
+\hline
+{\em $<$blockquote$>$} & 0 Error, table existed but could not be created \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a81f4e93fa7d5ad8702a33afbf226e93b}\label{handler_8cc_a81f4e93fa7d5ad8702a33afbf226e93b}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+default\+\_\+handlerton@{ha\+\_\+default\+\_\+handlerton}}
+\index{ha\+\_\+default\+\_\+handlerton@{ha\+\_\+default\+\_\+handlerton}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+default\+\_\+handlerton()}{ha\_default\_handlerton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhandlerton}{handlerton}}$\ast$ ha\+\_\+default\+\_\+handlerton (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Return the default storage engine handlerton used for non-\/temp tables for thread. 
+
+S\+Y\+N\+O\+P\+S\+IS ha\+\_\+default\+\_\+handlerton(thd) thd current thread
+
+R\+E\+T\+U\+RN pointer to handlerton \mbox{\Hypertarget{handler_8cc_a0ac0c824f4d8dd002cb61b3bcd3947bc}\label{handler_8cc_a0ac0c824f4d8dd002cb61b3bcd3947bc}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+default\+\_\+temp\+\_\+handlerton@{ha\+\_\+default\+\_\+temp\+\_\+handlerton}}
+\index{ha\+\_\+default\+\_\+temp\+\_\+handlerton@{ha\+\_\+default\+\_\+temp\+\_\+handlerton}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+default\+\_\+temp\+\_\+handlerton()}{ha\_default\_temp\_handlerton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhandlerton}{handlerton}}$\ast$ ha\+\_\+default\+\_\+temp\+\_\+handlerton (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Return the default storage engine handlerton used for explicitly created temp tables for a thread. 
+
+S\+Y\+N\+O\+P\+S\+IS ha\+\_\+default\+\_\+temp\+\_\+handlerton(thd) thd current thread
+
+R\+E\+T\+U\+RN pointer to handlerton \mbox{\Hypertarget{handler_8cc_a717442e00ab24e3265d6b997330ffea2}\label{handler_8cc_a717442e00ab24e3265d6b997330ffea2}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+enable\+\_\+transaction@{ha\+\_\+enable\+\_\+transaction}}
+\index{ha\+\_\+enable\+\_\+transaction@{ha\+\_\+enable\+\_\+transaction}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+enable\+\_\+transaction()}{ha\_enable\_transaction()}}
+{\footnotesize\ttfamily int ha\+\_\+enable\+\_\+transaction (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{on }\end{DoxyParamCaption})}
+
+Tell the storage engine that it is allowed to \char`\"{}disable transaction\char`\"{} in the handler. It is a hint that A\+C\+ID is not required -\/ it is used in N\+DB for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, for example, when data are copied to temporary table. A storage engine may treat this hint any way it likes. N\+DB for example starts to commit every now and then automatically. This hint can be safely ignored. \mbox{\Hypertarget{handler_8cc_ab11b32d73b2161cf881d333c36aa28b7}\label{handler_8cc_ab11b32d73b2161cf881d333c36aa28b7}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+enforce\+\_\+handlerton@{ha\+\_\+enforce\+\_\+handlerton}}
+\index{ha\+\_\+enforce\+\_\+handlerton@{ha\+\_\+enforce\+\_\+handlerton}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+enforce\+\_\+handlerton()}{ha\_enforce\_handlerton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhandlerton}{handlerton}}$\ast$ ha\+\_\+enforce\+\_\+handlerton (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Return the enforced storage engine handlerton for thread. 
+
+S\+Y\+N\+O\+P\+S\+IS ha\+\_\+enforce\+\_\+handlerton(thd) thd current thread
+
+~\newline
+R\+E\+T\+U\+RN pointer to handlerton \mbox{\Hypertarget{handler_8cc_a2b32fdf8397d09b64032d74002008069}\label{handler_8cc_a2b32fdf8397d09b64032d74002008069}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+flush\+\_\+logs@{ha\+\_\+flush\+\_\+logs}}
+\index{ha\+\_\+flush\+\_\+logs@{ha\+\_\+flush\+\_\+logs}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+flush\+\_\+logs()}{ha\_flush\_logs()}}
+{\footnotesize\ttfamily bool ha\+\_\+flush\+\_\+logs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{db\+\_\+type,  }\item[{bool}]{binlog\+\_\+group\+\_\+flush = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Flush the log(s) of storage engine(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em hton} & Handlerton of storage engine. \\
+\hline
+{\em binlog\+\_\+group\+\_\+flush} & true if we got invoked by binlog group commit during flush stage, false in other cases. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Succeed \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a7ceb3a3e413c9c3892b8104aecb60dbd}\label{handler_8cc_a7ceb3a3e413c9c3892b8104aecb60dbd}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+init\+\_\+errors@{ha\+\_\+init\+\_\+errors}}
+\index{ha\+\_\+init\+\_\+errors@{ha\+\_\+init\+\_\+errors}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+init\+\_\+errors()}{ha\_init\_errors()}}
+{\footnotesize\ttfamily C\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND int ha\+\_\+init\+\_\+errors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Register handler error messages for use with my\+\_\+error().
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em !=0} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a148e166799444d311941a690a9e055ea}\label{handler_8cc_a148e166799444d311941a690a9e055ea}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+init\+\_\+key\+\_\+cache@{ha\+\_\+init\+\_\+key\+\_\+cache}}
+\index{ha\+\_\+init\+\_\+key\+\_\+cache@{ha\+\_\+init\+\_\+key\+\_\+cache}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+init\+\_\+key\+\_\+cache()}{ha\_init\_key\_cache()}}
+{\footnotesize\ttfamily int ha\+\_\+init\+\_\+key\+\_\+cache (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$}]{key\+\_\+cache }\end{DoxyParamCaption})}
+
+Init a key cache if it has not been initied before. \mbox{\Hypertarget{handler_8cc_add21ba0eb4b746064ac6cfbaee80751d}\label{handler_8cc_add21ba0eb4b746064ac6cfbaee80751d}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+notify\+\_\+alter\+\_\+table@{ha\+\_\+notify\+\_\+alter\+\_\+table}}
+\index{ha\+\_\+notify\+\_\+alter\+\_\+table@{ha\+\_\+notify\+\_\+alter\+\_\+table}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+notify\+\_\+alter\+\_\+table()}{ha\_notify\_alter\_table()}}
+{\footnotesize\ttfamily bool ha\+\_\+notify\+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key,  }\item[{ha\+\_\+notification\+\_\+type}]{notification\+\_\+type }\end{DoxyParamCaption})}
+
+Notify/get permission from all interested storage engines before or after executed A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} on the table identified by key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em mdl\+\_\+key} & M\+DL key identifying table. \\
+\hline
+{\em notification\+\_\+type} & Indicates whether this is pre-\/A\+L\+T\+ER or post-\/A\+L\+T\+ER notification.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structhandlerton_a57c6461574bf87859428478d916ac1e8}{handlerton\+::notify\+\_\+alter\+\_\+table}} for rationale, details about calling convention and error reporting.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+False -\/ if notification was successful/\+A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} can proceed. True -\/ if it has failed/\+A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} should fail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cc_a07ac7604e01f6334b1ef643c48efc795}\label{handler_8cc_a07ac7604e01f6334b1ef643c48efc795}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+notify\+\_\+exclusive\+\_\+mdl@{ha\+\_\+notify\+\_\+exclusive\+\_\+mdl}}
+\index{ha\+\_\+notify\+\_\+exclusive\+\_\+mdl@{ha\+\_\+notify\+\_\+exclusive\+\_\+mdl}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+notify\+\_\+exclusive\+\_\+mdl()}{ha\_notify\_exclusive\_mdl()}}
+{\footnotesize\ttfamily bool ha\+\_\+notify\+\_\+exclusive\+\_\+mdl (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key,  }\item[{ha\+\_\+notification\+\_\+type}]{notification\+\_\+type,  }\item[{bool $\ast$}]{victimized }\end{DoxyParamCaption})}
+
+Notify/get permission from all interested storage engines before acquisition or after release of exclusive metadata lock on object represented by key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em mdl\+\_\+key} & M\+DL key identifying object on which exclusive lock is to be acquired/was released. \\
+\hline
+{\em notification\+\_\+type} & Indicates whether this is pre-\/acquire or post-\/release notification. \\
+\hline
+{\em victimized} & \textquotesingle{}true\textquotesingle{} if locking failed as we were selected as a victim in order to avoid possible deadlocks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}{handlerton\+::notify\+\_\+exclusive\+\_\+mdl}} for details about calling convention and error reporting.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+False -\/ if notification was successful/lock can be acquired, True -\/ if it has failed/lock should not be acquired. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cc_a04a7aaf17f4439699d7de62cbc2974f7}\label{handler_8cc_a04a7aaf17f4439699d7de62cbc2974f7}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+prepare@{ha\+\_\+prepare}}
+\index{ha\+\_\+prepare@{ha\+\_\+prepare}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+prepare()}{ha\_prepare()}}
+{\footnotesize\ttfamily int ha\+\_\+prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error, transaction was rolled back \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_a48d3c7f3e6672bbac5021611a01564e9}\label{handler_8cc_a48d3c7f3e6672bbac5021611a01564e9}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+release\+\_\+temporary\+\_\+latches@{ha\+\_\+release\+\_\+temporary\+\_\+latches}}
+\index{ha\+\_\+release\+\_\+temporary\+\_\+latches@{ha\+\_\+release\+\_\+temporary\+\_\+latches}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+release\+\_\+temporary\+\_\+latches()}{ha\_release\_temporary\_latches()}}
+{\footnotesize\ttfamily int ha\+\_\+release\+\_\+temporary\+\_\+latches (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This function should be called when My\+S\+QL sends rows of a S\+E\+L\+E\+CT result set or the E\+OF mark to the client. It releases a possible adaptive hash index S-\/latch held by thd in Inno\+DB and also releases a possible Inno\+DB query F\+I\+FO ticket to enter Inno\+DB. To save C\+PU time, Inno\+DB allows a thd to keep them over several calls of the Inno\+DB handler interface when a join is executed. But when we let the control to pass to the client they have to be released because if the application program uses mysql\+\_\+use\+\_\+result(), it may deadlock on the S-\/latch if the application on another connection performs another S\+QL query. In My\+S\+Q\+L-\/4.\+1 this is even more important because there a connection can have several S\+E\+L\+E\+CT queries open at the same time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & the thread handle of the current connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cc_a1bf31fef3cb90da8800035f3687ba6c1}\label{handler_8cc_a1bf31fef3cb90da8800035f3687ba6c1}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+resize\+\_\+key\+\_\+cache@{ha\+\_\+resize\+\_\+key\+\_\+cache}}
+\index{ha\+\_\+resize\+\_\+key\+\_\+cache@{ha\+\_\+resize\+\_\+key\+\_\+cache}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+resize\+\_\+key\+\_\+cache()}{ha\_resize\_key\_cache()}}
+{\footnotesize\ttfamily int ha\+\_\+resize\+\_\+key\+\_\+cache (\begin{DoxyParamCaption}\item[{K\+E\+Y\+\_\+\+C\+A\+C\+HE $\ast$}]{key\+\_\+cache }\end{DoxyParamCaption})}
+
+Resize key cache. \mbox{\Hypertarget{handler_8cc_acd39f1826bca8434f79a47fda2af9f48}\label{handler_8cc_acd39f1826bca8434f79a47fda2af9f48}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+resolve\+\_\+by\+\_\+name@{ha\+\_\+resolve\+\_\+by\+\_\+name}}
+\index{ha\+\_\+resolve\+\_\+by\+\_\+name@{ha\+\_\+resolve\+\_\+by\+\_\+name}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+resolve\+\_\+by\+\_\+name()}{ha\_resolve\_by\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} ha\+\_\+resolve\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{name,  }\item[{bool}]{is\+\_\+temp\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Return the storage engine handlerton for the supplied name. 
+
+S\+Y\+N\+O\+P\+S\+IS ha\+\_\+resolve\+\_\+by\+\_\+name(thd, name) thd current thread name name of storage engine
+
+R\+E\+T\+U\+RN pointer to storage engine plugin handle \mbox{\Hypertarget{handler_8cc_a43e5c979fe4c4a8ac2dbe60d346d5a15}\label{handler_8cc_a43e5c979fe4c4a8ac2dbe60d346d5a15}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw@{ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw}}
+\index{ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw@{ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw()}{ha\_resolve\_by\_name\_raw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} ha\+\_\+resolve\+\_\+by\+\_\+name\+\_\+raw (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{name }\end{DoxyParamCaption})}
+
+Resolve handlerton plugin by name, without checking for \char`\"{}\+D\+E\+F\+A\+U\+L\+T\char`\"{} or H\+T\+O\+N\+\_\+\+N\+O\+T\+\_\+\+U\+S\+E\+R\+\_\+\+S\+E\+L\+E\+C\+T\+A\+B\+LE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em name} & Plugin name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+plugin or N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cc_ade7e42569784a1c80aa5ce3d233a4266}\label{handler_8cc_ade7e42569784a1c80aa5ce3d233a4266}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl@{ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl}}
+\index{ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl@{ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl()}{ha\_rollback\_to\_savepoint\_can\_release\_mdl()}}
+{\footnotesize\ttfamily bool ha\+\_\+rollback\+\_\+to\+\_\+savepoint\+\_\+can\+\_\+release\+\_\+mdl (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Check if all storage engines used in transaction agree that after rollback to savepoint it is safe to release M\+DL locks acquired after savepoint creation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executes the transaction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ It is safe to release M\+DL locks. false -\/ If it is not. 
+\end{DoxyReturn}
+Checking whether it is safe to release metadata locks after rollback to savepoint in all the storage engines that are part of the transaction.\mbox{\Hypertarget{handler_8cc_ab62bed9d64dab80d4677b8900f5392c6}\label{handler_8cc_ab62bed9d64dab80d4677b8900f5392c6}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+savepoint@{ha\+\_\+savepoint}}
+\index{ha\+\_\+savepoint@{ha\+\_\+savepoint}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+savepoint()}{ha\_savepoint()}}
+{\footnotesize\ttfamily int ha\+\_\+savepoint (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structst__savepoint}{S\+A\+V\+E\+P\+O\+I\+NT}} $\ast$}]{sv }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+according to the sql standard (I\+S\+O/\+I\+EC 9075-\/2\+:2003) section \char`\"{}4.\+33.\+4 S\+Q\+L-\/statements and transaction states\char`\"{}, S\+A\+V\+E\+P\+O\+I\+NT is {\itshape not} transaction-\/initiating S\+QL-\/statement 
+\end{DoxyNote}
+\mbox{\Hypertarget{handler_8cc_a136dfdf479102e63c8ddf02af552c445}\label{handler_8cc_a136dfdf479102e63c8ddf02af552c445}} 
+\index{handler.\+cc@{handler.\+cc}!key\+\_\+uses\+\_\+partial\+\_\+cols@{key\+\_\+uses\+\_\+partial\+\_\+cols}}
+\index{key\+\_\+uses\+\_\+partial\+\_\+cols@{key\+\_\+uses\+\_\+partial\+\_\+cols}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{key\+\_\+uses\+\_\+partial\+\_\+cols()}{key\_uses\_partial\_cols()}}
+{\footnotesize\ttfamily bool key\+\_\+uses\+\_\+partial\+\_\+cols (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint}]{keyno }\end{DoxyParamCaption})}
+
+Check if key has partially-\/covered columns
+
+We can\textquotesingle{}t use DS-\/M\+RR to perform range scans when the ranges are over partially-\/covered keys, because we\textquotesingle{}ll not have full key part values (we\textquotesingle{}ll have their prefixes from the index) and will not be able to check if we\textquotesingle{}ve reached the end the range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyno} & \mbox{\hyperlink{classKey}{Key}} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000023}{Todo}}]Allow use of DS-\/M\+RR in cases where the index has partially-\/covered components but they are not used for scanning.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Yes \\
+\hline
+{\em F\+A\+L\+SE} & No \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{handler_8cc_ae9f796d8fbc7dc812557a17547b8e69e}\label{handler_8cc_ae9f796d8fbc7dc812557a17547b8e69e}} 
+\index{handler.\+cc@{handler.\+cc}!prev\+\_\+insert\+\_\+id@{prev\+\_\+insert\+\_\+id}}
+\index{prev\+\_\+insert\+\_\+id@{prev\+\_\+insert\+\_\+id}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{prev\+\_\+insert\+\_\+id()}{prev\_insert\_id()}}
+{\footnotesize\ttfamily ulonglong prev\+\_\+insert\+\_\+id (\begin{DoxyParamCaption}\item[{ulonglong}]{nr,  }\item[{struct \mbox{\hyperlink{structsystem__variables}{system\+\_\+variables}} $\ast$}]{variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes the largest number X\+: 
+
+
+\begin{DoxyItemize}
+\item smaller than or equal to \char`\"{}nr\char`\"{}
+\item of the form\+: auto\+\_\+increment\+\_\+offset + N $\ast$ auto\+\_\+increment\+\_\+increment where N$>$=0.
+\end{DoxyItemize}
+
+S\+Y\+N\+O\+P\+S\+IS prev\+\_\+insert\+\_\+id nr Number to \char`\"{}round down\char`\"{} variables variables struct containing auto\+\_\+increment\+\_\+increment and auto\+\_\+increment\+\_\+offset
+
+R\+E\+T\+U\+RN The number X if it exists, \char`\"{}nr\char`\"{} otherwise. \mbox{\Hypertarget{handler_8cc_a10ddf5a0a2c8e742a80be49cf751cea2}\label{handler_8cc_a10ddf5a0a2c8e742a80be49cf751cea2}} 
+\index{handler.\+cc@{handler.\+cc}!print\+\_\+keydup\+\_\+error@{print\+\_\+keydup\+\_\+error}}
+\index{print\+\_\+keydup\+\_\+error@{print\+\_\+keydup\+\_\+error}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{print\+\_\+keydup\+\_\+error()}{print\_keydup\_error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void print\+\_\+keydup\+\_\+error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{key,  }\item[{const char $\ast$}]{msg,  }\item[{myf}]{errflag }\end{DoxyParamCaption})}
+
+Construct and emit duplicate key error message using information from table\textquotesingle{}s record buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object which record buffer should be used as source for column values. \\
+\hline
+{\em key} & \mbox{\hyperlink{classKey}{Key}} description. \\
+\hline
+{\em msg} & Error message template to which key value should be added. \\
+\hline
+{\em errflag} & Flags for my\+\_\+error() call. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{handler_8cc_adf1eaf64ffa95e2997a43b37b577161a}\label{handler_8cc_adf1eaf64ffa95e2997a43b37b577161a}} 
+\index{handler.\+cc@{handler.\+cc}!print\+\_\+keydup\+\_\+error@{print\+\_\+keydup\+\_\+error}}
+\index{print\+\_\+keydup\+\_\+error@{print\+\_\+keydup\+\_\+error}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{print\+\_\+keydup\+\_\+error()}{print\_keydup\_error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void print\+\_\+keydup\+\_\+error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{key,  }\item[{myf}]{errflag }\end{DoxyParamCaption})}
+
+Construct and emit duplicate key error message using information from table\textquotesingle{}s record buffer.
+
+\begin{DoxySeeAlso}{See also}
+print\+\_\+keydup\+\_\+error(table, key, msg, errflag). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{handler_8cc_a94d164888d64b531805b3515138e174a}\label{handler_8cc_a94d164888d64b531805b3515138e174a}} 
+\index{handler.\+cc@{handler.\+cc}!set\+\_\+tx\+\_\+isolation@{set\+\_\+tx\+\_\+isolation}}
+\index{set\+\_\+tx\+\_\+isolation@{set\+\_\+tx\+\_\+isolation}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{set\+\_\+tx\+\_\+isolation()}{set\_tx\_isolation()}}
+{\footnotesize\ttfamily bool set\+\_\+tx\+\_\+isolation (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+tx\+\_\+isolation}]{tx\+\_\+isolation,  }\item[{bool}]{one\+\_\+shot }\end{DoxyParamCaption})}
+
+Set the transaction isolation level for the next transaction and update session tracker information about the transaction isolation level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD session setting the tx\+\_\+isolation. \\
+\hline
+{\em tx\+\_\+isolation} & The isolation level to be set. \\
+\hline
+{\em one\+\_\+shot} & True if the isolation level should be restored to session default after finishing the transaction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{handler_8cc_a5b334384203039e1f5fc63b69e64d544}\label{handler_8cc_a5b334384203039e1f5fc63b69e64d544}} 
+\index{handler.\+cc@{handler.\+cc}!trans\+\_\+register\+\_\+ha@{trans\+\_\+register\+\_\+ha}}
+\index{trans\+\_\+register\+\_\+ha@{trans\+\_\+register\+\_\+ha}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{trans\+\_\+register\+\_\+ha()}{trans\_register\_ha()}}
+{\footnotesize\ttfamily void trans\+\_\+register\+\_\+ha (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all,  }\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{ht\+\_\+arg,  }\item[{const ulonglong $\ast$}]{trxid }\end{DoxyParamCaption})}
+
+\subsection*{Transaction handling in the server }
+
+In each client connection, My\+S\+QL maintains two transactional states\+:
+\begin{DoxyItemize}
+\item a statement transaction,
+\item a standard, also called normal transaction.
+\end{DoxyItemize}
+
+\subsubsection*{Historical note }
+
+\char`\"{}\+Statement transaction\char`\"{} is a non-\/standard term that comes from the times when My\+S\+QL supported Berkeley\+DB storage engine.
+
+First of all, it should be said that in Berkeley\+DB auto-\/commit mode auto-\/commits operations that are atomic to the storage engine itself, such as a write of a record, and are too high-\/granular to be atomic from the application perspective (My\+S\+QL). One S\+QL statement could involve many Berkeley\+DB auto-\/committed operations and thus Berkeley\+DB auto-\/commit was of little use to My\+S\+QL.
+
+Secondly, instead of S\+QL standard savepoints, Berkeley\+DB provided the concept of \char`\"{}nested transactions\char`\"{}. In a nutshell, transactions could be arbitrarily nested, but when the parent transaction was committed or aborted, all its child (nested) transactions were handled committed or aborted as well. Commit of a nested transaction, in turn, made its changes visible, but not durable\+: it destroyed the nested transaction, all its changes would become available to the parent and currently active nested transactions of this parent.
+
+So the mechanism of nested transactions was employed to provide \char`\"{}all or nothing\char`\"{} guarantee of S\+QL statements required by the standard. A nested transaction would be created at start of each S\+QL statement, and destroyed (committed or aborted) at statement end. Such nested transaction was internally referred to as a \char`\"{}statement transaction\char`\"{} and gave birth to the term.
+
+(Historical note ends)
+
+Since then a statement transaction is started for each statement that accesses transactional tables or uses the binary log. If the statement succeeds, the statement transaction is committed. If the statement fails, the transaction is rolled back. Commits of statement transactions are not durable -- each such transaction is nested in the normal transaction, and if the normal transaction is rolled back, the effects of all enclosed statement transactions are undone as well. Technically, a statement transaction can be viewed as a savepoint which is maintained automatically in order to make effects of one statement atomic.
+
+The normal transaction is started by the user and is ended usually upon a user request as well. The normal transaction encloses transactions of all statements issued between its beginning and its end. In autocommit mode, the normal transaction is equivalent to the statement transaction.
+
+Since My\+S\+QL supports P\+S\+EA (pluggable storage engine architecture), more than one transactional engine can be active at a time. Hence transactions, from the server point of view, are always distributed. In particular, transactional state is maintained independently for each engine. In order to commit a transaction the two phase commit protocol is employed.
+
+Not all statements are executed in context of a transaction. Administrative and status information statements do not modify engine data, and thus do not start a statement transaction and also have no effect on the normal transaction. Examples of such statements are S\+H\+OW S\+T\+A\+T\+US and R\+E\+S\+ET S\+L\+A\+VE.
+
+Similarly D\+DL statements are not transactional, and therefore a transaction is \mbox{[}almost\mbox{]} never started for a D\+DL statement. The difference between a D\+DL statement and a purely administrative statement though is that a D\+DL statement always commits the current transaction before proceeding, if there is any.
+
+At last, S\+QL statements that work with non-\/transactional engines also have no effect on the transaction state of the connection. Even though they are written to the binary log, and the binary log is, overall, transactional, the writes are done in \char`\"{}write-\/through\char`\"{} mode, directly to the binlog file, followed with a OS cache sync, in other words, bypassing the binlog undo log (translog). They do not commit the current normal transaction. A failure of a statement that uses non-\/transactional tables would cause a rollback of the statement transaction, but in case there no non-\/transactional tables are used, no statement transaction is started.
+
+\subsubsection*{Data layout }
+
+The server stores its transaction-\/related data in thd-\/$>$transaction. This structure has two members of type T\+H\+D\+\_\+\+T\+R\+A\+NS. These members correspond to the statement and normal transactions respectively\+:
+
+
+\begin{DoxyItemize}
+\item thd-\/$>$transaction.\+stmt contains a list of engines that are participating in the given statement
+\item thd-\/$>$transaction.\+all contains a list of engines that have participated in any of the statement transactions started within the context of the normal transaction. Each element of the list contains a pointer to the storage engine, engine-\/specific transactional data, and engine-\/specific transaction flags.
+\end{DoxyItemize}
+
+In autocommit mode thd-\/$>$transaction.\+all is empty. Instead, data of thd-\/$>$transaction.\+stmt is used to commit/rollback the normal transaction.
+
+The list of registered engines has a few important properties\+:
+\begin{DoxyItemize}
+\item no engine is registered in the list twice
+\item engines are present in the list a reverse temporal order -- new participants are always added to the beginning of the list.
+\end{DoxyItemize}
+
+\subsubsection*{Transaction life cycle }
+
+When a new connection is established, thd-\/$>$transaction members are initialized to an empty state. If a statement uses any tables, all affected engines are registered in the statement engine list. In non-\/autocommit mode, the same engines are registered in the normal transaction list. At the end of the statement, the server issues a commit or a roll back for all engines in the statement list. At this point transaction flags of an engine, if any, are propagated from the statement list to the list of the normal transaction. When commit/rollback is finished, the statement list is cleared. It will be filled in again by the next statement, and emptied again at the next statement\textquotesingle{}s end.
+
+The normal transaction is committed in a similar way (by going over all engines in thd-\/$>$transaction.\+all list) but at different times\+:
+\begin{DoxyItemize}
+\item upon C\+O\+M\+M\+IT S\+QL statement is issued by the user
+\item implicitly, by the server, at the beginning of a D\+DL statement or S\+ET A\+U\+T\+O\+C\+O\+M\+M\+IT=\{0$\vert$1\} statement.
+\end{DoxyItemize}
+
+The normal transaction can be rolled back as well\+:
+\begin{DoxyItemize}
+\item if the user has requested so, by issuing R\+O\+L\+L\+B\+A\+CK S\+QL statement
+\item if one of the storage engines requested a rollback by setting thd-\/$>$transaction\+\_\+rollback\+\_\+request. This may happen in case, e.\+g., when the transaction in the engine was chosen a victim of the internal deadlock resolution algorithm and rolled back internally. When such a situation happens, there is little the server can do and the only option is to rollback transactions in all other participating engines. In this case the rollback is accompanied by an error sent to the user.
+\end{DoxyItemize}
+
+As follows from the use cases above, the normal transaction is never committed when there is an outstanding statement transaction. In most cases there is no conflict, since commits of the normal transaction are issued by a stand-\/alone administrative or D\+DL statement, thus no outstanding statement transaction of the previous statement exists. Besides, all statements that manipulate with the normal transaction are prohibited in stored functions and triggers, therefore no conflicting situation can occur in a sub-\/statement either. The remaining rare cases when the server explicitly has to commit the statement transaction prior to committing the normal one cover error-\/handling scenarios (see for example S\+Q\+L\+C\+O\+M\+\_\+\+L\+O\+C\+K\+\_\+\+T\+A\+B\+L\+ES).
+
+When committing a statement or a normal transaction, the server either uses the two-\/phase commit protocol, or issues a commit in each engine independently. The two-\/phase commit protocol is used only if\+:
+\begin{DoxyItemize}
+\item all participating engines support two-\/phase commit (provide handlerton\+::prepare P\+S\+EA A\+PI call) and
+\item transactions in at least two engines modify data (i.\+e. are not read-\/only).
+\end{DoxyItemize}
+
+Note that the two phase commit is used for statement transactions, even though they are not durable anyway. This is done to ensure logical consistency of data in a multiple-\/ engine transaction. For example, imagine that some day My\+S\+QL supports unique constraint checks deferred till the end of statement. In such case a commit in one of the engines may yield E\+R\+\_\+\+D\+U\+P\+\_\+\+K\+EY, and My\+S\+QL should be able to gracefully abort statement transactions of other participants.
+
+After the normal transaction has been committed, thd-\/$>$transaction.\+all list is cleared.
+
+When a connection is closed, the current normal transaction, if any, is rolled back.
+
+\subsubsection*{Roles and responsibilities }
+
+The server has no way to know that an engine participates in the statement and a transaction has been started in it unless the engine says so. Thus, in order to be a part of a transaction, the engine must \char`\"{}register\char`\"{} itself. This is done by invoking \mbox{\hyperlink{handler_8cc_a5b334384203039e1f5fc63b69e64d544}{trans\+\_\+register\+\_\+ha()}} server call. Normally the engine registers itself whenever handler\+::external\+\_\+lock() is called. \mbox{\hyperlink{handler_8cc_a5b334384203039e1f5fc63b69e64d544}{trans\+\_\+register\+\_\+ha()}} can be invoked many times\+: if an engine is already registered, the call does nothing. In case autocommit is not set, the engine must register itself twice -- both in the statement list and in the normal transaction list. In which list to register is a parameter of \mbox{\hyperlink{handler_8cc_a5b334384203039e1f5fc63b69e64d544}{trans\+\_\+register\+\_\+ha()}}.
+
+Note, that although the registration interface in itself is fairly clear, the current usage practice often leads to undesired effects. E.\+g. since a call to \mbox{\hyperlink{handler_8cc_a5b334384203039e1f5fc63b69e64d544}{trans\+\_\+register\+\_\+ha()}} in most engines is embedded into implementation of handler\+::external\+\_\+lock(), some D\+DL statements start a transaction (at least from the server point of view) even though they are not expected to. E.\+g. C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} does not start a transaction, since handler\+::external\+\_\+lock() is never called during C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. But C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... S\+E\+L\+E\+CT does, since handler\+::external\+\_\+lock() is called for the table that is being selected from. This has no practical effects currently, but must be kept in mind nevertheless.
+
+Once an engine is registered, the server will do the rest of the work.
+
+During statement execution, whenever any of data-\/modifying P\+S\+EA A\+PI methods is used, e.\+g. handler\+::write\+\_\+row() or handler\+::update\+\_\+row(), the read-\/write flag is raised in the statement transaction for the involved engine. Currently All P\+S\+EA calls are \char`\"{}traced\char`\"{}, and the data can not be changed in a way other than issuing a P\+S\+EA call. Important\+: unless this invariant is preserved the server will not know that a transaction in a given engine is read-\/write and will not involve the two-\/phase commit protocol!
+
+At the end of a statement, server call trans\+\_\+commit\+\_\+stmt is invoked. This call in turn invokes handlerton\+::prepare() for every involved engine. Prepare is followed by a call to handlerton\+::commit\+\_\+one\+\_\+phase() If a one-\/phase commit will suffice, handlerton\+::prepare() is not invoked and the server only calls handlerton\+::commit\+\_\+one\+\_\+phase(). At statement commit, the statement-\/related read-\/write engine flag is propagated to the corresponding flag in the normal transaction. When the commit is complete, the list of registered engines is cleared.
+
+Rollback is handled in a similar fashion.
+
+\subsubsection*{Additional notes on D\+DL and the normal transaction. }
+
+D\+D\+Ls and operations with non-\/transactional engines do not \char`\"{}register\char`\"{} in thd-\/$>$transaction lists, and thus do not modify the transaction state. Besides, each D\+DL in My\+S\+QL is prefixed with an implicit normal transaction commit (a call to trans\+\_\+commit\+\_\+implicit()), and thus leaves nothing to modify. However, as it has been pointed out with C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} .. S\+E\+L\+E\+CT, some D\+DL statements can start a {\itshape new} transaction.
+
+Behaviour of the server in this case is currently badly defined. D\+DL statements use a form of \char`\"{}semantic\char`\"{} logging to maintain atomicity\+: if C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} .. S\+E\+L\+E\+CT failed, the newly created table is deleted. In addition, some D\+DL statements issue interim transaction commits\+: e.\+g. A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} issues a commit after data is copied from the original table to the internal temporary table. Other statements, e.\+g. C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... S\+E\+L\+E\+CT do not always commit after itself. And finally there is a group of D\+DL statements such as R\+E\+N\+A\+M\+E/\+D\+R\+OP \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} that doesn\textquotesingle{}t start a new transaction and doesn\textquotesingle{}t commit.
+
+This diversity makes it hard to say what will happen if by chance a stored function is invoked during a D\+DL -- whether any modifications it makes will be committed or not is not clear. Fortunately, S\+QL grammar of few D\+D\+Ls allows invocation of a stored function.
+
+A consistent behaviour is perhaps to always commit the normal transaction after all D\+D\+Ls, just like the statement transaction is always committed at the end of all statements.\+Register a storage engine for a transaction.
+
+Every storage engine M\+U\+ST call this function when it starts a transaction or a statement (that is it must be called both for the \char`\"{}beginning of transaction\char`\"{} and \char`\"{}beginning of statement\char`\"{}). Only storage engines registered for the transaction/statement will know when to commit/rollback it.
+
+\begin{DoxyNote}{Note}
+trans\+\_\+register\+\_\+ha is idempotent -\/ storage engine may register many times per transaction. 
+\end{DoxyNote}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{handler_8cc_a2209533889aac1d458ee53005729b812}\label{handler_8cc_a2209533889aac1d458ee53005729b812}} 
+\index{handler.\+cc@{handler.\+cc}!default\+\_\+key\+\_\+create\+\_\+info@{default\+\_\+key\+\_\+create\+\_\+info}}
+\index{default\+\_\+key\+\_\+create\+\_\+info@{default\+\_\+key\+\_\+create\+\_\+info}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{default\+\_\+key\+\_\+create\+\_\+info}{default\_key\_create\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__key__create__information}{K\+E\+Y\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} default\+\_\+key\+\_\+create\+\_\+info}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{  \{ HA\_KEY\_ALG\_UNDEF, 0, \{NullS, 0\}, \{NullS, 0\}, \textcolor{keyword}{true} \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{handler_8cc_a95fb05dc90d6abba467a4afd912f98ab}\label{handler_8cc_a95fb05dc90d6abba467a4afd912f98ab}} 
+\index{handler.\+cc@{handler.\+cc}!ha\+\_\+row\+\_\+type@{ha\+\_\+row\+\_\+type}}
+\index{ha\+\_\+row\+\_\+type@{ha\+\_\+row\+\_\+type}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{ha\+\_\+row\+\_\+type}{ha\_row\_type}}
+{\footnotesize\ttfamily const char$\ast$ ha\+\_\+row\+\_\+type\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \textcolor{stringliteral}{""}, \textcolor{stringliteral}{"FIXED"}, \textcolor{stringliteral}{"DYNAMIC"}, \textcolor{stringliteral}{"COMPRESSED"}, \textcolor{stringliteral}{"REDUNDANT"}, \textcolor{stringliteral}{"COMPACT"},}
+\DoxyCodeLine{   \textcolor{stringliteral}{"?"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"TOKUDB\_UNCOMPRESSED"}, \textcolor{stringliteral}{"TOKUDB\_ZLIB"}, \textcolor{stringliteral}{"TOKUDB\_SNAPPY"}, \textcolor{stringliteral}{"TOKUDB\_QUICKLZ"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"TOKUDB\_LZMA"}, \textcolor{stringliteral}{"TOKUDB\_FAST"}, \textcolor{stringliteral}{"TOKUDB\_SMALL"}, \textcolor{stringliteral}{"TOKUDB\_DEFAULT"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"?"},\textcolor{stringliteral}{"?"},\textcolor{stringliteral}{"?"}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{handler_8cc_a2e9669474fbe960e4b34b87509dda498}\label{handler_8cc_a2e9669474fbe960e4b34b87509dda498}} 
+\index{handler.\+cc@{handler.\+cc}!mysqld\+\_\+system\+\_\+database@{mysqld\+\_\+system\+\_\+database}}
+\index{mysqld\+\_\+system\+\_\+database@{mysqld\+\_\+system\+\_\+database}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+system\+\_\+database}{mysqld\_system\_database}}
+{\footnotesize\ttfamily const char$\ast$ mysqld\+\_\+system\+\_\+database = \char`\"{}mysql\char`\"{}}
+
+Database name that hold most of mysqld system tables. Current code assumes that, there exists only some specific \char`\"{}database name\char`\"{} designated as system database. \mbox{\Hypertarget{handler_8cc_af73d5d48673b898f68fd42b2694d91e2}\label{handler_8cc_af73d5d48673b898f68fd42b2694d91e2}} 
+\index{handler.\+cc@{handler.\+cc}!mysqld\+\_\+system\+\_\+tables@{mysqld\+\_\+system\+\_\+tables}}
+\index{mysqld\+\_\+system\+\_\+tables@{mysqld\+\_\+system\+\_\+tables}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+system\+\_\+tables}{mysqld\_system\_tables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__handler__tablename}{st\+\_\+handler\+\_\+tablename}} mysqld\+\_\+system\+\_\+tables\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"db"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"user"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"host"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"func"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"proc"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"event"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"plugin"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"servers"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"procs\_priv"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"tables\_priv"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"proxies\_priv"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"columns\_priv"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"time\_zone"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"time\_zone\_name"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"time\_zone\_leap\_second"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"time\_zone\_transition"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"time\_zone\_transition\_type"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"help\_category"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"help\_keyword"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"help\_relation"}\},}
+\DoxyCodeLine{  \{\mbox{\hyperlink{handler_8cc_a2e9669474fbe960e4b34b87509dda498}{mysqld\_system\_database}}, \textcolor{stringliteral}{"help\_topic"}\},}
+\DoxyCodeLine{  \{(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)NULL, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)NULL\} }
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{handler_8cc_a50bdd1c7e785f0f48827aeb89059df54}\label{handler_8cc_a50bdd1c7e785f0f48827aeb89059df54}} 
+\index{handler.\+cc@{handler.\+cc}!tx\+\_\+isolation\+\_\+names@{tx\+\_\+isolation\+\_\+names}}
+\index{tx\+\_\+isolation\+\_\+names@{tx\+\_\+isolation\+\_\+names}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{tx\+\_\+isolation\+\_\+names}{tx\_isolation\_names}}
+{\footnotesize\ttfamily const char$\ast$ tx\+\_\+isolation\+\_\+names\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{ \textcolor{stringliteral}{"READ-UNCOMMITTED"}, \textcolor{stringliteral}{"READ-COMMITTED"}, \textcolor{stringliteral}{"REPEATABLE-READ"}, \textcolor{stringliteral}{"SERIALIZABLE"},}
+\DoxyCodeLine{  NullS\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{handler_8cc_a354a37c53d58dbaf9978dc118e8892e3}\label{handler_8cc_a354a37c53d58dbaf9978dc118e8892e3}} 
+\index{handler.\+cc@{handler.\+cc}!tx\+\_\+isolation\+\_\+typelib@{tx\+\_\+isolation\+\_\+typelib}}
+\index{tx\+\_\+isolation\+\_\+typelib@{tx\+\_\+isolation\+\_\+typelib}!handler.\+cc@{handler.\+cc}}
+\subsubsection{\texorpdfstring{tx\+\_\+isolation\+\_\+typelib}{tx\_isolation\_typelib}}
+{\footnotesize\ttfamily T\+Y\+P\+E\+L\+IB tx\+\_\+isolation\+\_\+typelib}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{array\_elements(tx\_isolation\_names)-1,\textcolor{stringliteral}{""},}
+\DoxyCodeLine{                   tx\_isolation\_names, NULL\}}
+\end{DoxyCode}

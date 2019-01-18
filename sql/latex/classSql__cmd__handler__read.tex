@@ -1,0 +1,68 @@
+\hypertarget{classSql__cmd__handler__read}{}\section{Sql\+\_\+cmd\+\_\+handler\+\_\+read Class Reference}
+\label{classSql__cmd__handler__read}\index{Sql\+\_\+cmd\+\_\+handler\+\_\+read@{Sql\+\_\+cmd\+\_\+handler\+\_\+read}}
+
+
+{\ttfamily \#include $<$sql\+\_\+handler.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+handler\+\_\+read\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__handler__read}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__handler__read_a0c16bed333be61225abe6b54a15a07cf}\label{classSql__cmd__handler__read_a0c16bed333be61225abe6b54a15a07cf}} 
+{\bfseries Sql\+\_\+cmd\+\_\+handler\+\_\+read} (enum\+\_\+ha\+\_\+read\+\_\+modes read\+\_\+mode, const char $\ast$key\+\_\+name, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$key\+\_\+expr, ha\+\_\+rkey\+\_\+function rkey\+\_\+mode)
+\item 
+\mbox{\Hypertarget{classSql__cmd__handler__read_a4d360a64eceb8bcb4aff90b2d60fb608}\label{classSql__cmd__handler__read_a4d360a64eceb8bcb4aff90b2d60fb608}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__handler__read_a4d360a64eceb8bcb4aff90b2d60fb608}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__handler__read_ab22e7bb754b8f8a9b6d64af65329ca2c}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSql__cmd__handler__read}{Sql\+\_\+cmd\+\_\+handler\+\_\+read}} represents H\+A\+N\+D\+L\+ER R\+E\+AD statement.
+
+\begin{DoxyNote}{Note}
+Some information about this statement, for example, table list element which identifies H\+A\+N\+D\+L\+ER to be read from, W\+H\+E\+RE and L\+I\+M\+IT clauses is still kept in L\+EX class. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__handler__read_ab22e7bb754b8f8a9b6d64af65329ca2c}\label{classSql__cmd__handler__read_ab22e7bb754b8f8a9b6d64af65329ca2c}} 
+\index{Sql\+\_\+cmd\+\_\+handler\+\_\+read@{Sql\+\_\+cmd\+\_\+handler\+\_\+read}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+handler\+\_\+read@{Sql\+\_\+cmd\+\_\+handler\+\_\+read}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+handler\+\_\+read\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute a H\+A\+N\+D\+L\+ER R\+E\+AD statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Closes the table that is associated (on the handler tables hash) with the name (T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::alias) of the specified table.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & on success. \\
+\hline
+{\em T\+R\+UE} & on failure. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+handler.\+h\item 
+sql\+\_\+handler.\+cc\end{DoxyCompactItemize}

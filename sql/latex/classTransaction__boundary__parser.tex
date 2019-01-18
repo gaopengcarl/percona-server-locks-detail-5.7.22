@@ -1,0 +1,123 @@
+\hypertarget{classTransaction__boundary__parser}{}\section{Transaction\+\_\+boundary\+\_\+parser Class Reference}
+\label{classTransaction__boundary__parser}\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+trx\+\_\+boundary\+\_\+parser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTransaction__boundary__parser_a873818b9bae2fce7286024e218b5117b}{Transaction\+\_\+boundary\+\_\+parser}} ()
+\item 
+void \mbox{\hyperlink{classTransaction__boundary__parser_aeaef08e74aca6c66acaacd3d8c7d9faa}{reset}} ()
+\item 
+bool \mbox{\hyperlink{classTransaction__boundary__parser_aa801e6b1fa7d54ebd3c586854945c7b7}{is\+\_\+inside\+\_\+transaction}} ()
+\item 
+bool \mbox{\hyperlink{classTransaction__boundary__parser_a59249ee780e4ba4af0d3d3fb69b6a2d2}{is\+\_\+not\+\_\+inside\+\_\+transaction}} ()
+\item 
+bool \mbox{\hyperlink{classTransaction__boundary__parser_a2d48eeaf3ec9467405a617d834dfdab4}{is\+\_\+error}} ()
+\item 
+bool \mbox{\hyperlink{classTransaction__boundary__parser_a1197dba976b325a64bbcde19cc235b40}{feed\+\_\+event}} (const char $\ast$buf, size\+\_\+t length, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$description\+\_\+event, bool throw\+\_\+warnings)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base class for verifying transaction boundaries in a replication event stream. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransaction__boundary__parser_a873818b9bae2fce7286024e218b5117b}\label{classTransaction__boundary__parser_a873818b9bae2fce7286024e218b5117b}} 
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\subsubsection{\texorpdfstring{Transaction\+\_\+boundary\+\_\+parser()}{Transaction\_boundary\_parser()}}
+{\footnotesize\ttfamily Transaction\+\_\+boundary\+\_\+parser\+::\+Transaction\+\_\+boundary\+\_\+parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransaction__boundary__parser_a1197dba976b325a64bbcde19cc235b40}\label{classTransaction__boundary__parser_a1197dba976b325a64bbcde19cc235b40}} 
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!feed\+\_\+event@{feed\+\_\+event}}
+\index{feed\+\_\+event@{feed\+\_\+event}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\subsubsection{\texorpdfstring{feed\+\_\+event()}{feed\_event()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+boundary\+\_\+parser\+::feed\+\_\+event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{size\+\_\+t}]{length,  }\item[{const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{fd\+\_\+event,  }\item[{bool}]{throw\+\_\+warnings }\end{DoxyParamCaption})}
+
+Feed the transaction boundary parser with a \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} of any type, serialized into a char$\ast$ buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the event buffer. \\
+\hline
+{\em length} & The size of the event buffer. \\
+\hline
+{\em fd\+\_\+event} & The description event of the master which logged the event. \\
+\hline
+{\em throw\+\_\+warnings} & If the function should throw warning messages while updating the boundary parser state. While initializing the \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} the relay log is scanned backwards and this could generate false errors. So, in this case, we don\textquotesingle{}t want to throw warnings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the transaction boundary parser accepted the event. true if the transaction boundary parser didn\textquotesingle{}t accepted the event.
+\end{DoxyReturn}
+Feed the transaction boundary parser with a \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} of any type, serialized into a char$\ast$ buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the event buffer. \\
+\hline
+{\em length} & The size of the event buffer. \\
+\hline
+{\em fd\+\_\+event} & The description event of the master which logged the event. \\
+\hline
+{\em throw\+\_\+warnings} & If the function should throw warning messages while updating the boundary parser state. While initializing the \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} the relay log is scanned backwards and this could generate false warnings. So, in this case, we don\textquotesingle{}t want to throw warnings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the transaction boundary parser accepted the event. true if the transaction boundary parser didn\textquotesingle{}t accepted the event. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction__boundary__parser_a2d48eeaf3ec9467405a617d834dfdab4}\label{classTransaction__boundary__parser_a2d48eeaf3ec9467405a617d834dfdab4}} 
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!is\+\_\+error@{is\+\_\+error}}
+\index{is\+\_\+error@{is\+\_\+error}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\subsubsection{\texorpdfstring{is\+\_\+error()}{is\_error()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+boundary\+\_\+parser\+::is\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+State if the transaction boundary parser was fed with a sequence of events that the parser wasn\textquotesingle{}t able to parse correctly.
+
+\begin{DoxyReturn}{Returns}
+false if the boundary parser is not in the error state. true if the boundary parser is in the error state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction__boundary__parser_aa801e6b1fa7d54ebd3c586854945c7b7}\label{classTransaction__boundary__parser_aa801e6b1fa7d54ebd3c586854945c7b7}} 
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!is\+\_\+inside\+\_\+transaction@{is\+\_\+inside\+\_\+transaction}}
+\index{is\+\_\+inside\+\_\+transaction@{is\+\_\+inside\+\_\+transaction}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\subsubsection{\texorpdfstring{is\+\_\+inside\+\_\+transaction()}{is\_inside\_transaction()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+boundary\+\_\+parser\+::is\+\_\+inside\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+State if the transaction boundary parser is inside a transaction. This \char`\"{}inside a transaction\char`\"{} means that the parser was fed with at least one event of a transaction, but the transaction wasn\textquotesingle{}t completely fed yet. This also means that the last event fed depends on following event(s) to be correctly applied.
+
+\begin{DoxyReturn}{Returns}
+false if the boundary parser is not inside a transaction. true if the boundary parser is inside a transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction__boundary__parser_a59249ee780e4ba4af0d3d3fb69b6a2d2}\label{classTransaction__boundary__parser_a59249ee780e4ba4af0d3d3fb69b6a2d2}} 
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!is\+\_\+not\+\_\+inside\+\_\+transaction@{is\+\_\+not\+\_\+inside\+\_\+transaction}}
+\index{is\+\_\+not\+\_\+inside\+\_\+transaction@{is\+\_\+not\+\_\+inside\+\_\+transaction}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\subsubsection{\texorpdfstring{is\+\_\+not\+\_\+inside\+\_\+transaction()}{is\_not\_inside\_transaction()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+boundary\+\_\+parser\+::is\+\_\+not\+\_\+inside\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+State if the transaction boundary parser is not inside a transaction. This \char`\"{}not inside a transaction\char`\"{} means that the parser was fed with an event that doesn\textquotesingle{}t depend on following events.
+
+\begin{DoxyReturn}{Returns}
+false if the boundary parser is inside a transaction. true if the boundary parser is not inside a transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction__boundary__parser_aeaef08e74aca6c66acaacd3d8c7d9faa}\label{classTransaction__boundary__parser_aeaef08e74aca6c66acaacd3d8c7d9faa}} 
+\index{Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}!reset@{reset}}
+\index{reset@{reset}!Transaction\+\_\+boundary\+\_\+parser@{Transaction\+\_\+boundary\+\_\+parser}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Transaction\+\_\+boundary\+\_\+parser\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Reset the transaction boundary parser state.
+
+Reset the transaction boundary parser.
+
+This method initialize the boundary parser state. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rpl__trx__boundary__parser_8h}{rpl\+\_\+trx\+\_\+boundary\+\_\+parser.\+h}}\item 
+rpl\+\_\+trx\+\_\+boundary\+\_\+parser.\+cc\end{DoxyCompactItemize}

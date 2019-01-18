@@ -1,0 +1,71 @@
+\hypertarget{classDefault__object__creation__ctx}{}\section{Default\+\_\+object\+\_\+creation\+\_\+ctx Class Reference}
+\label{classDefault__object__creation__ctx}\index{Default\+\_\+object\+\_\+creation\+\_\+ctx@{Default\+\_\+object\+\_\+creation\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+Inheritance diagram for Default\+\_\+object\+\_\+creation\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.992870cm]{classDefault__object__creation__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDefault__object__creation__ctx_acaf6cb03d4d0bdb8ead7c6e738553913}\label{classDefault__object__creation__ctx_acaf6cb03d4d0bdb8ead7c6e738553913}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries get\+\_\+client\+\_\+cs} ()
+\item 
+\mbox{\Hypertarget{classDefault__object__creation__ctx_abd76f37be19e8b327dd083fa56c14001}\label{classDefault__object__creation__ctx_abd76f37be19e8b327dd083fa56c14001}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries get\+\_\+connection\+\_\+cl} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDefault__object__creation__ctx_a4396b3f7a7d8cd37547e7e27df5f323c}\label{classDefault__object__creation__ctx_a4396b3f7a7d8cd37547e7e27df5f323c}} 
+{\bfseries Default\+\_\+object\+\_\+creation\+\_\+ctx} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classDefault__object__creation__ctx_a9e9f460b9114219384a0c56227b76411}\label{classDefault__object__creation__ctx_a9e9f460b9114219384a0c56227b76411}} 
+{\bfseries Default\+\_\+object\+\_\+creation\+\_\+ctx} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$client\+\_\+cs, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$connection\+\_\+cl)
+\item 
+\mbox{\Hypertarget{classDefault__object__creation__ctx_aab8727414334bed770ae1c9a30668b29}\label{classDefault__object__creation__ctx_aab8727414334bed770ae1c9a30668b29}} 
+virtual \mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} $\ast$ {\bfseries create\+\_\+backup\+\_\+ctx} (T\+HD $\ast$thd) const
+\item 
+\mbox{\Hypertarget{classDefault__object__creation__ctx_af18502ce8706e48668c0e0c88785a156}\label{classDefault__object__creation__ctx_af18502ce8706e48668c0e0c88785a156}} 
+virtual void {\bfseries change\+\_\+env} (T\+HD $\ast$thd) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ \mbox{\hyperlink{classDefault__object__creation__ctx_af69e5434f52f8465d05a7831429137b5}{m\+\_\+client\+\_\+cs}}
+\item 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ \mbox{\hyperlink{classDefault__object__creation__ctx_ac3d2574166b4be26f3a6f967e4a6ac18}{m\+\_\+connection\+\_\+cl}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classDefault__object__creation__ctx}{Default\+\_\+object\+\_\+creation\+\_\+ctx}} -- default implementation of \mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}}. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classDefault__object__creation__ctx_af69e5434f52f8465d05a7831429137b5}\label{classDefault__object__creation__ctx_af69e5434f52f8465d05a7831429137b5}} 
+\index{Default\+\_\+object\+\_\+creation\+\_\+ctx@{Default\+\_\+object\+\_\+creation\+\_\+ctx}!m\+\_\+client\+\_\+cs@{m\+\_\+client\+\_\+cs}}
+\index{m\+\_\+client\+\_\+cs@{m\+\_\+client\+\_\+cs}!Default\+\_\+object\+\_\+creation\+\_\+ctx@{Default\+\_\+object\+\_\+creation\+\_\+ctx}}
+\subsubsection{\texorpdfstring{m\+\_\+client\+\_\+cs}{m\_client\_cs}}
+{\footnotesize\ttfamily const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO$\ast$ Default\+\_\+object\+\_\+creation\+\_\+ctx\+::m\+\_\+client\+\_\+cs\hspace{0.3cm}{\ttfamily [protected]}}
+
+client\+\_\+cs stores the value of character\+\_\+set\+\_\+client session variable. The only character set attribute is used.
+
+Client character set is included into query context, because we save query in the original character set, which is client character set. So, in order to parse the query properly we have to switch client character set on parsing. \mbox{\Hypertarget{classDefault__object__creation__ctx_ac3d2574166b4be26f3a6f967e4a6ac18}\label{classDefault__object__creation__ctx_ac3d2574166b4be26f3a6f967e4a6ac18}} 
+\index{Default\+\_\+object\+\_\+creation\+\_\+ctx@{Default\+\_\+object\+\_\+creation\+\_\+ctx}!m\+\_\+connection\+\_\+cl@{m\+\_\+connection\+\_\+cl}}
+\index{m\+\_\+connection\+\_\+cl@{m\+\_\+connection\+\_\+cl}!Default\+\_\+object\+\_\+creation\+\_\+ctx@{Default\+\_\+object\+\_\+creation\+\_\+ctx}}
+\subsubsection{\texorpdfstring{m\+\_\+connection\+\_\+cl}{m\_connection\_cl}}
+{\footnotesize\ttfamily const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO$\ast$ Default\+\_\+object\+\_\+creation\+\_\+ctx\+::m\+\_\+connection\+\_\+cl\hspace{0.3cm}{\ttfamily [protected]}}
+
+connection\+\_\+cl stores the value of collation\+\_\+connection session variable. Both character set and collation attributes are used.
+
+Connection collation is included into query context, becase it defines the character set and collation of text literals in internal representation of query (item-\/objects). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

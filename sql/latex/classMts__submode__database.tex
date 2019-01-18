@@ -1,0 +1,135 @@
+\hypertarget{classMts__submode__database}{}\section{Mts\+\_\+submode\+\_\+database Class Reference}
+\label{classMts__submode__database}\index{Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+mts\+\_\+submode.\+h$>$}
+
+Inheritance diagram for Mts\+\_\+submode\+\_\+database\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMts__submode__database}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classMts__submode__database_afcfa7b9bb57cc0fc5851c5882aec84ba}{schedule\+\_\+next\+\_\+event}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ev)
+\item 
+void \mbox{\hyperlink{classMts__submode__database_abcd2265dce959fd590c45960237b3eea}{attach\+\_\+temp\+\_\+tables}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$ev)
+\item 
+void \mbox{\hyperlink{classMts__submode__database_a25224ffe29bd078e228f5d43c7d7ed0f}{detach\+\_\+temp\+\_\+tables}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$ev)
+\item 
+Slave\+\_\+worker $\ast$ \mbox{\hyperlink{classMts__submode__database_a16f0e272b7a37929ff5659fc88ed0643}{get\+\_\+least\+\_\+occupied\+\_\+worker}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, Slave\+\_\+worker\+\_\+array $\ast$ws, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ev)
+\item 
+int \mbox{\hyperlink{classMts__submode__database_a342d0daf687f50f362ddc86f767da9d0}{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, Slave\+\_\+worker $\ast$ignore=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+DB partitioned submode For significance of each method check definition of \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMts__submode__database_abcd2265dce959fd590c45960237b3eea}\label{classMts__submode__database_abcd2265dce959fd590c45960237b3eea}} 
+\index{Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}!attach\+\_\+temp\+\_\+tables@{attach\+\_\+temp\+\_\+tables}}
+\index{attach\+\_\+temp\+\_\+tables@{attach\+\_\+temp\+\_\+tables}!Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}}
+\subsubsection{\texorpdfstring{attach\+\_\+temp\+\_\+tables()}{attach\_temp\_tables()}}
+{\footnotesize\ttfamily void Mts\+\_\+submode\+\_\+database\+::attach\+\_\+temp\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Logic to attach temporary tables. 
+\begin{DoxyParams}{Parameters}
+{\em } & T\+HD thd \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} rli \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} ev \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__database_a25224ffe29bd078e228f5d43c7d7ed0f}\label{classMts__submode__database_a25224ffe29bd078e228f5d43c7d7ed0f}} 
+\index{Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}!detach\+\_\+temp\+\_\+tables@{detach\+\_\+temp\+\_\+tables}}
+\index{detach\+\_\+temp\+\_\+tables@{detach\+\_\+temp\+\_\+tables}!Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}}
+\subsubsection{\texorpdfstring{detach\+\_\+temp\+\_\+tables()}{detach\_temp\_tables()}}
+{\footnotesize\ttfamily void Mts\+\_\+submode\+\_\+database\+::detach\+\_\+temp\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Logic to detach the temporary tables from the worker threads upon event execution 
+\begin{DoxyParams}{Parameters}
+{\em } & thd T\+HD instance rli \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} instance ev \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} that is being applied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__database_a16f0e272b7a37929ff5659fc88ed0643}\label{classMts__submode__database_a16f0e272b7a37929ff5659fc88ed0643}} 
+\index{Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}!get\+\_\+least\+\_\+occupied\+\_\+worker@{get\+\_\+least\+\_\+occupied\+\_\+worker}}
+\index{get\+\_\+least\+\_\+occupied\+\_\+worker@{get\+\_\+least\+\_\+occupied\+\_\+worker}!Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}}
+\subsubsection{\texorpdfstring{get\+\_\+least\+\_\+occupied\+\_\+worker()}{get\_least\_occupied\_worker()}}
+{\footnotesize\ttfamily Slave\+\_\+worker $\ast$ Mts\+\_\+submode\+\_\+database\+::get\+\_\+least\+\_\+occupied\+\_\+worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{Slave\+\_\+worker\+\_\+array $\ast$}]{ws,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Logic to get least occupied worker when the sql mts\+\_\+submode= database 
+\begin{DoxyParams}{Parameters}
+{\em rli} & relay log info of coordinator ws arrayy of worker threads ev event for which we are searching for a worker. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+slave worker thread 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__database_afcfa7b9bb57cc0fc5851c5882aec84ba}\label{classMts__submode__database_afcfa7b9bb57cc0fc5851c5882aec84ba}} 
+\index{Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}!schedule\+\_\+next\+\_\+event@{schedule\+\_\+next\+\_\+event}}
+\index{schedule\+\_\+next\+\_\+event@{schedule\+\_\+next\+\_\+event}!Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}}
+\subsubsection{\texorpdfstring{schedule\+\_\+next\+\_\+event()}{schedule\_next\_event()}}
+{\footnotesize\ttfamily int Mts\+\_\+submode\+\_\+database\+::schedule\+\_\+next\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Does necessary arrangement before scheduling next event. 
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} rli \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1 if error 0 no error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__database_a342d0daf687f50f362ddc86f767da9d0}\label{classMts__submode__database_a342d0daf687f50f362ddc86f767da9d0}} 
+\index{Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}!wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish@{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish}}
+\index{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish@{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish}!Mts\+\_\+submode\+\_\+database@{Mts\+\_\+submode\+\_\+database}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish()}{wait\_for\_workers\_to\_finish()}}
+{\footnotesize\ttfamily int Mts\+\_\+submode\+\_\+database\+::wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{Slave\+\_\+worker $\ast$}]{ignore = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function is called by Coordinator when it identified an event requiring sequential execution. Creating sequential context for the event includes waiting for the assigned to Workers tasks to be completed and their resources such as temporary tables be returned to Coordinator\textquotesingle{}s repository. In case all workers are waited Coordinator changes its group status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rli} & \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} instance of Coordinator \\
+\hline
+{\em ignore} & Optional Worker instance pointer if the sequential context is established due for the ignore Worker. Its resources are to be retained.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Resources that are not occupied by Workers such as a list of temporary tables held in unused (zero-\/usage) records of A\+PH are relocated to the Coordinator placeholder.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+non-\/negative number of released by Workers partitions (one partition by one Worker can count multiple times)
+\end{DoxyReturn}
+or -\/1 to indicate there has been a failure on a not-\/ignored Worker as indicated by its running\+\_\+status so synchronization can\textquotesingle{}t succeed. 
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+mts\+\_\+submode.\+h\item 
+rpl\+\_\+mts\+\_\+submode.\+cc\end{DoxyCompactItemize}

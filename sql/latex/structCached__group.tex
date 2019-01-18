@@ -1,0 +1,35 @@
+\hypertarget{structCached__group}{}\section{Cached\+\_\+group Struct Reference}
+\label{structCached__group}\index{Cached\+\_\+group@{Cached\+\_\+group}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structCached__group_a6d383bed37684d8f431ecd4535c8a23d}\label{structCached__group_a6d383bed37684d8f431ecd4535c8a23d}} 
+\mbox{\hyperlink{structGtid__specification}{Gtid\+\_\+specification}} \mbox{\hyperlink{structCached__group_a6d383bed37684d8f431ecd4535c8a23d}{spec}}
+\begin{DoxyCompactList}\small\item\em The gtid for this group. \end{DoxyCompactList}\item 
+rpl\+\_\+binlog\+\_\+pos \mbox{\hyperlink{structCached__group_abd05e97d04df02bbe0661a95eda3d7c7}{binlog\+\_\+offset}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a group in the group cache.
+
+Groups in the group cache are slightly different from other groups, because not all information about them is known.
+
+Automatic groups are marked as such by setting gno$<$=0. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structCached__group_abd05e97d04df02bbe0661a95eda3d7c7}\label{structCached__group_abd05e97d04df02bbe0661a95eda3d7c7}} 
+\index{Cached\+\_\+group@{Cached\+\_\+group}!binlog\+\_\+offset@{binlog\+\_\+offset}}
+\index{binlog\+\_\+offset@{binlog\+\_\+offset}!Cached\+\_\+group@{Cached\+\_\+group}}
+\subsubsection{\texorpdfstring{binlog\+\_\+offset}{binlog\_offset}}
+{\footnotesize\ttfamily rpl\+\_\+binlog\+\_\+pos Cached\+\_\+group\+::binlog\+\_\+offset}
+
+The position of this G\+T\+ID in the cache, i.\+e., the total size of all previous groups. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\end{DoxyCompactItemize}

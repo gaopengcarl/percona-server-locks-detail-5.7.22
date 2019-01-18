@@ -1,0 +1,137 @@
+\hypertarget{classSession__gtids__tracker}{}\section{Session\+\_\+gtids\+\_\+tracker Class Reference}
+\label{classSession__gtids__tracker}\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+Inheritance diagram for Session\+\_\+gtids\+\_\+tracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.777778cm]{classSession__gtids__tracker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSession__gtids__tracker_aab77dd31ff4b4101881c55f040615d07}{Session\+\_\+gtids\+\_\+tracker}} ()
+\item 
+bool \mbox{\hyperlink{classSession__gtids__tracker_a170e0e7c09b4a143c7f3f6e710b435ce}{enable}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classSession__gtids__tracker_a92148b2f6afc9101d8a56b35525491ed}{check}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+bool \mbox{\hyperlink{classSession__gtids__tracker_a02f3fb9545c5dfbedb9022f55ce03e6c}{update}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Enable/disable the tracker based on @session\+\_\+track\+\_\+gtids\textquotesingle{}s value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession__gtids__tracker_a35a83c4f0631294a76d707c20d5f1e1f}{store}} (T\+HD $\ast$thd, String \&buf)
+\begin{DoxyCompactList}\small\item\em Store the collected gtids as length-\/encoded string in the specified buffer. Once the data is stored, we reset the flags related to state-\/change (see reset()). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession__gtids__tracker_a2c2c7bed399a66fda5748d1a6407b8f8}{mark\+\_\+as\+\_\+changed}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$tracked\+\_\+item\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Mark the tracker as changed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSession__gtids__tracker_a9c6d6d35c2bf1f61d220cece56ed2fd5}\label{classSession__gtids__tracker_a9c6d6d35c2bf1f61d220cece56ed2fd5}} 
+void {\bfseries notify\+\_\+session\+\_\+gtids\+\_\+ctx\+\_\+change} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{\mbox{\hyperlink{classSession__gtids__tracker}{Session\+\_\+gtids\+\_\+tracker}} }
+
+This is a tracker class that enables \& manages the tracking of gtids for relaying to the connectors the information needed to handle session consistency. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSession__gtids__tracker_aab77dd31ff4b4101881c55f040615d07}\label{classSession__gtids__tracker_aab77dd31ff4b4101881c55f040615d07}} 
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\subsubsection{\texorpdfstring{Session\+\_\+gtids\+\_\+tracker()}{Session\_gtids\_tracker()}}
+{\footnotesize\ttfamily Session\+\_\+gtids\+\_\+tracker\+::\+Session\+\_\+gtids\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSession__gtids__tracker_a92148b2f6afc9101d8a56b35525491ed}\label{classSession__gtids__tracker_a92148b2f6afc9101d8a56b35525491ed}} 
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!check@{check}}
+\index{check@{check}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Session\+\_\+gtids\+\_\+tracker\+::check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+To be invoked when the tracker\textquotesingle{}s system variable is checked (O\+N\+\_\+\+C\+H\+E\+CK). 
+
+Implements \mbox{\hyperlink{classState__tracker_a50923266a6300e657b70dc4f0125782c}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__gtids__tracker_a170e0e7c09b4a143c7f3f6e710b435ce}\label{classSession__gtids__tracker_a170e0e7c09b4a143c7f3f6e710b435ce}} 
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!enable@{enable}}
+\index{enable@{enable}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily bool Session\+\_\+gtids\+\_\+tracker\+::enable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called in the constructor of T\+HD 
+
+Implements \mbox{\hyperlink{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__gtids__tracker_a2c2c7bed399a66fda5748d1a6407b8f8}\label{classSession__gtids__tracker_a2c2c7bed399a66fda5748d1a6407b8f8}} 
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}}
+\index{mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\subsubsection{\texorpdfstring{mark\+\_\+as\+\_\+changed()}{mark\_as\_changed()}}
+{\footnotesize\ttfamily void Session\+\_\+gtids\+\_\+tracker\+::mark\+\_\+as\+\_\+changed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{tracked\+\_\+item\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Mark the tracker as changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} Always null. \\
+\hline
+{\em tracked\+\_\+item\+\_\+name} & \mbox{[}IN\mbox{]} Always null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__gtids__tracker_a35a83c4f0631294a76d707c20d5f1e1f}\label{classSession__gtids__tracker_a35a83c4f0631294a76d707c20d5f1e1f}} 
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!store@{store}}
+\index{store@{store}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily bool Session\+\_\+gtids\+\_\+tracker\+::store (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String \&}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Store the collected gtids as length-\/encoded string in the specified buffer. Once the data is stored, we reset the flags related to state-\/change (see reset()). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.  buf \mbox{[}I\+N\+O\+UT\mbox{]} Buffer to store the information to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false Success true Error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classSession__gtids__tracker_a02f3fb9545c5dfbedb9022f55ce03e6c}\label{classSession__gtids__tracker_a02f3fb9545c5dfbedb9022f55ce03e6c}} 
+\index{Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}!update@{update}}
+\index{update@{update}!Session\+\_\+gtids\+\_\+tracker@{Session\+\_\+gtids\+\_\+tracker}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Session\+\_\+gtids\+\_\+tracker\+::update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable/disable the tracker based on @session\+\_\+track\+\_\+gtids\textquotesingle{}s value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false (always) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}{State\+\_\+tracker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+cc\end{DoxyCompactItemize}

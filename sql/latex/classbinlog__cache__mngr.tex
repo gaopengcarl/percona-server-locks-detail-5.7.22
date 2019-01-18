@@ -1,0 +1,69 @@
+\hypertarget{classbinlog__cache__mngr}{}\section{binlog\+\_\+cache\+\_\+mngr Class Reference}
+\label{classbinlog__cache__mngr}\index{binlog\+\_\+cache\+\_\+mngr@{binlog\+\_\+cache\+\_\+mngr}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_a73a43667fbcf39a55890df9cda66879d}\label{classbinlog__cache__mngr_a73a43667fbcf39a55890df9cda66879d}} 
+{\bfseries binlog\+\_\+cache\+\_\+mngr} (my\+\_\+off\+\_\+t max\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size\+\_\+arg, ulong $\ast$ptr\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+use\+\_\+arg, ulong $\ast$ptr\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+disk\+\_\+use\+\_\+arg, my\+\_\+off\+\_\+t max\+\_\+binlog\+\_\+cache\+\_\+size\+\_\+arg, ulong $\ast$ptr\+\_\+binlog\+\_\+cache\+\_\+use\+\_\+arg, ulong $\ast$ptr\+\_\+binlog\+\_\+cache\+\_\+disk\+\_\+use\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_a4a79f5f066065c2c31fa428303288539}\label{classbinlog__cache__mngr_a4a79f5f066065c2c31fa428303288539}} 
+\mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$ {\bfseries get\+\_\+binlog\+\_\+cache\+\_\+data} (bool is\+\_\+transactional)
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_a7e823f34bc2efd9880d6e9a5b32bb941}\label{classbinlog__cache__mngr_a7e823f34bc2efd9880d6e9a5b32bb941}} 
+I\+O\+\_\+\+C\+A\+C\+HE $\ast$ {\bfseries get\+\_\+binlog\+\_\+cache\+\_\+log} (bool is\+\_\+transactional)
+\item 
+bool \mbox{\hyperlink{classbinlog__cache__mngr_a9587d264a7571d8c7d985cb563f55fc1}{is\+\_\+binlog\+\_\+empty}} () const
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_a428c03604611f2faaa4e9229f18995c7}\label{classbinlog__cache__mngr_a428c03604611f2faaa4e9229f18995c7}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_aea4ced216774b402d1ebccd770b26786}\label{classbinlog__cache__mngr_aea4ced216774b402d1ebccd770b26786}} 
+bool {\bfseries dbug\+\_\+any\+\_\+finalized} () const
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_ae3c90e75980d1ae6027fccbe45a49667}\label{classbinlog__cache__mngr_ae3c90e75980d1ae6027fccbe45a49667}} 
+int {\bfseries flush} (T\+HD $\ast$thd, my\+\_\+off\+\_\+t $\ast$bytes\+\_\+written, bool $\ast$wrote\+\_\+xid)
+\item 
+bool \mbox{\hyperlink{classbinlog__cache__mngr_a2467716f5b8e405765df05d8240bf287}{has\+\_\+empty\+\_\+transaction}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_af3be5f59a42845cc29b9723bc92de782}\label{classbinlog__cache__mngr_af3be5f59a42845cc29b9723bc92de782}} 
+\mbox{\hyperlink{classbinlog__stmt__cache__data}{binlog\+\_\+stmt\+\_\+cache\+\_\+data}} {\bfseries stmt\+\_\+cache}
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_a8e3b5f9dc7aa26481d9cee7a9652c90a}\label{classbinlog__cache__mngr_a8e3b5f9dc7aa26481d9cee7a9652c90a}} 
+\mbox{\hyperlink{classbinlog__trx__cache__data}{binlog\+\_\+trx\+\_\+cache\+\_\+data}} {\bfseries trx\+\_\+cache}
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_a4e8d04dfe9287d5d8d462a8cc8665d8d}\label{classbinlog__cache__mngr_a4e8d04dfe9287d5d8d462a8cc8665d8d}} 
+\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} {\bfseries binlog\+\_\+info}
+\item 
+\mbox{\Hypertarget{classbinlog__cache__mngr_ad0e4a310eff8db655a42b98bf8afdc4e}\label{classbinlog__cache__mngr_ad0e4a310eff8db655a42b98bf8afdc4e}} 
+bool {\bfseries has\+\_\+logged\+\_\+xid}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbinlog__cache__mngr_a2467716f5b8e405765df05d8240bf287}\label{classbinlog__cache__mngr_a2467716f5b8e405765df05d8240bf287}} 
+\index{binlog\+\_\+cache\+\_\+mngr@{binlog\+\_\+cache\+\_\+mngr}!has\+\_\+empty\+\_\+transaction@{has\+\_\+empty\+\_\+transaction}}
+\index{has\+\_\+empty\+\_\+transaction@{has\+\_\+empty\+\_\+transaction}!binlog\+\_\+cache\+\_\+mngr@{binlog\+\_\+cache\+\_\+mngr}}
+\subsubsection{\texorpdfstring{has\+\_\+empty\+\_\+transaction()}{has\_empty\_transaction()}}
+{\footnotesize\ttfamily bool binlog\+\_\+cache\+\_\+mngr\+::has\+\_\+empty\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if at least one of transacaction and statement binlog caches contains an empty transaction, other one is empty or contains an empty transaction.
+
+\begin{DoxyReturn}{Returns}
+true At least one of transacaction and statement binlog caches an empty transaction, other one is emptry or contains an empty transaction. 
+
+false Otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbinlog__cache__mngr_a9587d264a7571d8c7d985cb563f55fc1}\label{classbinlog__cache__mngr_a9587d264a7571d8c7d985cb563f55fc1}} 
+\index{binlog\+\_\+cache\+\_\+mngr@{binlog\+\_\+cache\+\_\+mngr}!is\+\_\+binlog\+\_\+empty@{is\+\_\+binlog\+\_\+empty}}
+\index{is\+\_\+binlog\+\_\+empty@{is\+\_\+binlog\+\_\+empty}!binlog\+\_\+cache\+\_\+mngr@{binlog\+\_\+cache\+\_\+mngr}}
+\subsubsection{\texorpdfstring{is\+\_\+binlog\+\_\+empty()}{is\_binlog\_empty()}}
+{\footnotesize\ttfamily bool binlog\+\_\+cache\+\_\+mngr\+::is\+\_\+binlog\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convenience method to check if both caches are empty. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binlog.\+cc\end{DoxyCompactItemize}

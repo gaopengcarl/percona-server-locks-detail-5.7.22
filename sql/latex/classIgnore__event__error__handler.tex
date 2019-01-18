@@ -1,0 +1,86 @@
+\hypertarget{classIgnore__event__error__handler}{}\section{Ignore\+\_\+event\+\_\+error\+\_\+handler Class Reference}
+\label{classIgnore__event__error__handler}\index{Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}}
+Inheritance diagram for Ignore\+\_\+event\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classIgnore__event__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIgnore__event__error__handler_a7eb15f1543e2afbf533f8c9b527a7f07}{Ignore\+\_\+event\+\_\+error\+\_\+handler}} (T\+HD $\ast$thd, const char $\ast$event\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIgnore__event__error__handler_a0ade890f86d2a321f78f90ed446328a6}{handle}} ()
+\begin{DoxyCompactList}\small\item\em Ignore all errors. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIgnore__event__error__handler_a62ca182f5f8a5faebac36dccc8b5a01d}{print\+\_\+warning}} (const char $\ast$warn\+\_\+msg, uint sql\+\_\+errno, const char $\ast$sqlstate, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Custom warning print routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ignore all errors notified from within plugin. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIgnore__event__error__handler_a7eb15f1543e2afbf533f8c9b527a7f07}\label{classIgnore__event__error__handler_a7eb15f1543e2afbf533f8c9b527a7f07}} 
+\index{Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}!Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}}
+\index{Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}!Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{Ignore\+\_\+event\+\_\+error\+\_\+handler()}{Ignore\_event\_error\_handler()}}
+{\footnotesize\ttfamily Ignore\+\_\+event\+\_\+error\+\_\+handler\+::\+Ignore\+\_\+event\+\_\+error\+\_\+handler (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{event\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd\mbox{[}in\mbox{]}} & Current thread data. \\
+\hline
+{\em warning\+\_\+message\mbox{[}in\mbox{]}} & Warning message used when error has been suppressed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIgnore__event__error__handler_a0ade890f86d2a321f78f90ed446328a6}\label{classIgnore__event__error__handler_a0ade890f86d2a321f78f90ed446328a6}} 
+\index{Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}!handle@{handle}}
+\index{handle@{handle}!Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily virtual bool Ignore\+\_\+event\+\_\+error\+\_\+handler\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Ignore all errors. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & on error rejection, otherwise false. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classAudit__error__handler_aa674ae49782d768001e7bd1d11f16c68}{Audit\+\_\+error\+\_\+handler}}.
+
+\mbox{\Hypertarget{classIgnore__event__error__handler_a62ca182f5f8a5faebac36dccc8b5a01d}\label{classIgnore__event__error__handler_a62ca182f5f8a5faebac36dccc8b5a01d}} 
+\index{Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}!print\+\_\+warning@{print\+\_\+warning}}
+\index{print\+\_\+warning@{print\+\_\+warning}!Ignore\+\_\+event\+\_\+error\+\_\+handler@{Ignore\+\_\+event\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{print\+\_\+warning()}{print\_warning()}}
+{\footnotesize\ttfamily virtual void Ignore\+\_\+event\+\_\+error\+\_\+handler\+::print\+\_\+warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warn\+\_\+msg,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{sqlstate,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Custom warning print routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em warn\+\_\+msg\mbox{[}in\mbox{]}} & Placeholding warning message to be printed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAudit__error__handler_ac3b06f010e4c72aee47ae6123e49ecc4}{Audit\+\_\+error\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+audit.\+cc\end{DoxyCompactItemize}

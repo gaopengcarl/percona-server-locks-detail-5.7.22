@@ -1,0 +1,42 @@
+\hypertarget{classIncident__log__event}{}\section{Incident\+\_\+log\+\_\+event Class Reference}
+\label{classIncident__log__event}\index{Incident\+\_\+log\+\_\+event@{Incident\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Incident\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIncident__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIncident__log__event_a419fc77135d0e270e525fee817e451c9}\label{classIncident__log__event_a419fc77135d0e270e525fee817e451c9}} 
+{\bfseries Incident\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classIncident__log__event_ac81042c6c7b3dc844bee34fe9b003280}\label{classIncident__log__event_ac81042c6c7b3dc844bee34fe9b003280}} 
+virtual bool {\bfseries write\+\_\+data\+\_\+header} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file)
+\item 
+\mbox{\Hypertarget{classIncident__log__event_a5016a5ec90cc19bdb07a17c5363b5c51}\label{classIncident__log__event_a5016a5ec90cc19bdb07a17c5363b5c51}} 
+virtual bool {\bfseries write\+\_\+data\+\_\+body} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file)
+\item 
+\mbox{\Hypertarget{classIncident__log__event_a733ac5198f78e34a6494a1710938c9c4}\label{classIncident__log__event_a733ac5198f78e34a6494a1710938c9c4}} 
+virtual size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classIncident__log__event_ac3506726f541d38ed7d08133302f101e}\label{classIncident__log__event_ac3506726f541d38ed7d08133302f101e}} 
+virtual bool {\bfseries ends\+\_\+group} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing an incident, an occurance out of the ordinary, that happened on the master.
+
+The event is used to inform the slave that something out of the ordinary happened on the master that might cause the database to be in an inconsistent state. Its the derived class of Incident\+\_\+event 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

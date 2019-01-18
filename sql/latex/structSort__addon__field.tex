@@ -1,0 +1,36 @@
+\hypertarget{structSort__addon__field}{}\section{Sort\+\_\+addon\+\_\+field Struct Reference}
+\label{structSort__addon__field}\index{Sort\+\_\+addon\+\_\+field@{Sort\+\_\+addon\+\_\+field}}
+
+
+{\ttfamily \#include $<$sql\+\_\+sort.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structSort__addon__field_a3ca66ca0518541ae9aadfd59f8741def}\label{structSort__addon__field_a3ca66ca0518541ae9aadfd59f8741def}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries field}
+\item 
+\mbox{\Hypertarget{structSort__addon__field_a89dc1e0afe5e907ec7818981f5c298d5}\label{structSort__addon__field_a89dc1e0afe5e907ec7818981f5c298d5}} 
+uint {\bfseries offset}
+\item 
+\mbox{\Hypertarget{structSort__addon__field_a5e77859ee38bf35d09625b8111852815}\label{structSort__addon__field_a5e77859ee38bf35d09625b8111852815}} 
+uint {\bfseries null\+\_\+offset}
+\item 
+\mbox{\Hypertarget{structSort__addon__field_a2812d24c6a8f17d50d1455a203bdfbe2}\label{structSort__addon__field_a2812d24c6a8f17d50d1455a203bdfbe2}} 
+uint {\bfseries max\+\_\+length}
+\item 
+\mbox{\Hypertarget{structSort__addon__field_a704635b7b09e028fbc025719a1452b77}\label{structSort__addon__field_a704635b7b09e028fbc025719a1452b77}} 
+uint8 {\bfseries null\+\_\+bit}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The structure \mbox{\hyperlink{structSort__addon__field}{Sort\+\_\+addon\+\_\+field}} describes the layout for field values appended to sorted values in records to be sorted in the sort buffer.
+
+Null bit maps for the appended values is placed before the values themselves. Offsets are from the last sorted field.
+
+The structure is used to store values of the additional fields in the sort buffer. It is used also when these values are read from a temporary file/buffer in \textquotesingle{}\mbox{\hyperlink{classFilesort__info_a972ae7583ff223e13df5b6d6cf4d0de8}{Filesort\+\_\+info\+::unpack\+\_\+addon\+\_\+fields}}\textquotesingle{}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+sort.\+h\end{DoxyCompactItemize}

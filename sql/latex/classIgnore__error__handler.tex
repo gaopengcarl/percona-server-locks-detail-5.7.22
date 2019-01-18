@@ -1,0 +1,35 @@
+\hypertarget{classIgnore__error__handler}{}\section{Ignore\+\_\+error\+\_\+handler Class Reference}
+\label{classIgnore__error__handler}\index{Ignore\+\_\+error\+\_\+handler@{Ignore\+\_\+error\+\_\+handler}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+Inheritance diagram for Ignore\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIgnore__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classIgnore__error__handler_a71059191bd9ed725f1df2eeb47fc167b}{handle\+\_\+condition}} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This internal handler implements downgrade from S\+L\+\_\+\+E\+R\+R\+OR to S\+L\+\_\+\+W\+A\+R\+N\+I\+NG for statements which support I\+G\+N\+O\+RE. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIgnore__error__handler_a71059191bd9ed725f1df2eeb47fc167b}\label{classIgnore__error__handler_a71059191bd9ed725f1df2eeb47fc167b}} 
+\index{Ignore\+\_\+error\+\_\+handler@{Ignore\+\_\+error\+\_\+handler}!handle\+\_\+condition@{handle\+\_\+condition}}
+\index{handle\+\_\+condition@{handle\+\_\+condition}!Ignore\+\_\+error\+\_\+handler@{Ignore\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{handle\+\_\+condition()}{handle\_condition()}}
+{\footnotesize\ttfamily bool Ignore\+\_\+error\+\_\+handler\+::handle\+\_\+condition (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{sqlstate,  }\item[{\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$}]{level,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This handler is used for the statements which support I\+G\+N\+O\+RE keyword. If I\+G\+N\+O\+RE is specified in the statement, this error handler converts the given errors codes to warnings. These errors occur for each record. With I\+G\+N\+O\+RE, statements are not aborted and next row is processed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\item 
+sql\+\_\+base.\+cc\end{DoxyCompactItemize}

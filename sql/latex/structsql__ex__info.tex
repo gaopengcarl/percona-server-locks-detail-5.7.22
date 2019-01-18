@@ -1,0 +1,41 @@
+\hypertarget{structsql__ex__info}{}\section{sql\+\_\+ex\+\_\+info Struct Reference}
+\label{structsql__ex__info}\index{sql\+\_\+ex\+\_\+info@{sql\+\_\+ex\+\_\+info}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structsql__ex__info_a90e3b19d97cb512779dd0bf6112d4fd0}{write\+\_\+data}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file)
+\item 
+const char $\ast$ \mbox{\hyperlink{structsql__ex__info_afc2ad48f8753d51dd01acd841eecce43}{init}} (const char $\ast$buf, const char $\ast$buf\+\_\+end, bool use\+\_\+new\+\_\+format)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsql__ex__info_a9fe87c09ce28e404230cc1bdb39fdda2}\label{structsql__ex__info_a9fe87c09ce28e404230cc1bdb39fdda2}} 
+binary\+\_\+log\+::sql\+\_\+ex\+\_\+data\+\_\+info {\bfseries data\+\_\+info}
+\item 
+\mbox{\Hypertarget{structsql__ex__info_a8145d4a9d261b8d249b945715737532c}\label{structsql__ex__info_a8145d4a9d261b8d249b945715737532c}} 
+\mbox{\hyperlink{classEvent__encrypter}{Event\+\_\+encrypter}} $\ast$ {\bfseries event\+\_\+encrypter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structsql__ex__info_afc2ad48f8753d51dd01acd841eecce43}\label{structsql__ex__info_afc2ad48f8753d51dd01acd841eecce43}} 
+\index{sql\+\_\+ex\+\_\+info@{sql\+\_\+ex\+\_\+info}!init@{init}}
+\index{init@{init}!sql\+\_\+ex\+\_\+info@{sql\+\_\+ex\+\_\+info}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily const char $\ast$ sql\+\_\+ex\+\_\+info\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{const char $\ast$}]{buf\+\_\+end,  }\item[{bool}]{use\+\_\+new\+\_\+format }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structsql__ex__info_afc2ad48f8753d51dd01acd841eecce43}{sql\+\_\+ex\+\_\+info\+::init()}} This method initializes the members of strcuture variable \mbox{\hyperlink{structsql__ex__info}{sql\+\_\+ex\+\_\+info}}, defined in a \mbox{\hyperlink{classLoad__log__event}{Load\+\_\+log\+\_\+event}}. The structure, initializes the sub struct data\+\_\+info, with the subclause characters in a L\+O\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+F\+I\+LE query. \mbox{\Hypertarget{structsql__ex__info_a90e3b19d97cb512779dd0bf6112d4fd0}\label{structsql__ex__info_a90e3b19d97cb512779dd0bf6112d4fd0}} 
+\index{sql\+\_\+ex\+\_\+info@{sql\+\_\+ex\+\_\+info}!write\+\_\+data@{write\+\_\+data}}
+\index{write\+\_\+data@{write\+\_\+data}!sql\+\_\+ex\+\_\+info@{sql\+\_\+ex\+\_\+info}}
+\subsubsection{\texorpdfstring{write\+\_\+data()}{write\_data()}}
+{\footnotesize\ttfamily bool sql\+\_\+ex\+\_\+info\+::write\+\_\+data (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000047}{Todo}}]This is sensitive to field padding. We should write a char\mbox{[}7\mbox{]}, not an old\+\_\+sql\+\_\+ex. /sven \end{DoxyRefDesc}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\hypertarget{classView__error__handler}{}\section{View\+\_\+error\+\_\+handler Class Reference}
+\label{classView__error__handler}\index{View\+\_\+error\+\_\+handler@{View\+\_\+error\+\_\+handler}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+Inheritance diagram for View\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classView__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classView__error__handler_a7f0edb97ed244eed2f94712affed6636}\label{classView__error__handler_a7f0edb97ed244eed2f94712affed6636}} 
+{\bfseries View\+\_\+error\+\_\+handler} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$top\+\_\+view)
+\item 
+\mbox{\Hypertarget{classView__error__handler_a7a1d1337585ab03d90fe9bdbf9fec504}\label{classView__error__handler_a7a1d1337585ab03d90fe9bdbf9fec504}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$message)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An Internal\+\_\+error\+\_\+handler that suppresses errors regarding views\textquotesingle{} underlying tables that occur during privilege checking. It hides errors which show view underlying table information. This happens in the cases when
+
+
+\begin{DoxyItemize}
+\item A view\textquotesingle{}s underlying table (e.\+g. referenced in its S\+E\+L\+E\+CT list) does not exist or columns of underlying table are altered. There should not be an error as no attempt was made to access it per se.
+\item Access is denied for some table, column, function or stored procedure such as mentioned above. This error gets raised automatically, since we can\textquotesingle{}t untangle its access checking from that of the view itself.
+
+There are currently two mechanisms at work that handle errors for views based on an Internal\+\_\+error\+\_\+handler. This one and another one is \mbox{\hyperlink{classShow__create__error__handler}{Show\+\_\+create\+\_\+error\+\_\+handler}}. The latter handles errors encountered during execution of S\+H\+OW C\+R\+E\+A\+TE V\+I\+EW, while this mechanism using this method is handles S\+E\+L\+E\+CT from views. The two methods should not clash. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\item 
+sql\+\_\+base.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{structfragmentation__stats__t}{}\section{fragmentation\+\_\+stats\+\_\+t Struct Reference}
+\label{structfragmentation__stats__t}\index{fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}}
+
+
+{\ttfamily \#include $<$sql\+\_\+thd\+\_\+internal\+\_\+api.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ulonglong \mbox{\hyperlink{structfragmentation__stats__t_a022daf950936a3cd6fa61b07700a45bf}{scan\+\_\+pages\+\_\+contiguous}}
+\item 
+ulonglong \mbox{\hyperlink{structfragmentation__stats__t_ad24231f2e18012a5759d4ef7b4704033}{scan\+\_\+pages\+\_\+disjointed}}
+\item 
+ulonglong \mbox{\hyperlink{structfragmentation__stats__t_a6b492cab2ba136ce2633b2178e502f4c}{scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance}}
+\item 
+ulonglong \mbox{\hyperlink{structfragmentation__stats__t_a18e421801a3c3d1ff46f436075fd8164}{scan\+\_\+data\+\_\+size}}
+\item 
+ulonglong \mbox{\hyperlink{structfragmentation__stats__t_a3ea87a795e7d41ff9f7d1f20d40d79b2}{scan\+\_\+deleted\+\_\+recs\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Page fragmentation statistics 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structfragmentation__stats__t_a18e421801a3c3d1ff46f436075fd8164}\label{structfragmentation__stats__t_a18e421801a3c3d1ff46f436075fd8164}} 
+\index{fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}!scan\+\_\+data\+\_\+size@{scan\+\_\+data\+\_\+size}}
+\index{scan\+\_\+data\+\_\+size@{scan\+\_\+data\+\_\+size}!fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}}
+\subsubsection{\texorpdfstring{scan\+\_\+data\+\_\+size}{scan\_data\_size}}
+{\footnotesize\ttfamily ulonglong fragmentation\+\_\+stats\+\_\+t\+::scan\+\_\+data\+\_\+size}
+
+size of data in all Inno\+DB pages read inside a query (in bytes) \mbox{\Hypertarget{structfragmentation__stats__t_a3ea87a795e7d41ff9f7d1f20d40d79b2}\label{structfragmentation__stats__t_a3ea87a795e7d41ff9f7d1f20d40d79b2}} 
+\index{fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}!scan\+\_\+deleted\+\_\+recs\+\_\+size@{scan\+\_\+deleted\+\_\+recs\+\_\+size}}
+\index{scan\+\_\+deleted\+\_\+recs\+\_\+size@{scan\+\_\+deleted\+\_\+recs\+\_\+size}!fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}}
+\subsubsection{\texorpdfstring{scan\+\_\+deleted\+\_\+recs\+\_\+size}{scan\_deleted\_recs\_size}}
+{\footnotesize\ttfamily ulonglong fragmentation\+\_\+stats\+\_\+t\+::scan\+\_\+deleted\+\_\+recs\+\_\+size}
+
+size of deleded records in all Inno\+DB pages read inside a query (in bytes) \mbox{\Hypertarget{structfragmentation__stats__t_a022daf950936a3cd6fa61b07700a45bf}\label{structfragmentation__stats__t_a022daf950936a3cd6fa61b07700a45bf}} 
+\index{fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}!scan\+\_\+pages\+\_\+contiguous@{scan\+\_\+pages\+\_\+contiguous}}
+\index{scan\+\_\+pages\+\_\+contiguous@{scan\+\_\+pages\+\_\+contiguous}!fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}}
+\subsubsection{\texorpdfstring{scan\+\_\+pages\+\_\+contiguous}{scan\_pages\_contiguous}}
+{\footnotesize\ttfamily ulonglong fragmentation\+\_\+stats\+\_\+t\+::scan\+\_\+pages\+\_\+contiguous}
+
+number of contiguous Inno\+DB page reads inside a query \mbox{\Hypertarget{structfragmentation__stats__t_ad24231f2e18012a5759d4ef7b4704033}\label{structfragmentation__stats__t_ad24231f2e18012a5759d4ef7b4704033}} 
+\index{fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}!scan\+\_\+pages\+\_\+disjointed@{scan\+\_\+pages\+\_\+disjointed}}
+\index{scan\+\_\+pages\+\_\+disjointed@{scan\+\_\+pages\+\_\+disjointed}!fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}}
+\subsubsection{\texorpdfstring{scan\+\_\+pages\+\_\+disjointed}{scan\_pages\_disjointed}}
+{\footnotesize\ttfamily ulonglong fragmentation\+\_\+stats\+\_\+t\+::scan\+\_\+pages\+\_\+disjointed}
+
+number of disjointed Inno\+DB page reads inside a query \mbox{\Hypertarget{structfragmentation__stats__t_a6b492cab2ba136ce2633b2178e502f4c}\label{structfragmentation__stats__t_a6b492cab2ba136ce2633b2178e502f4c}} 
+\index{fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}!scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance@{scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance}}
+\index{scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance@{scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance}!fragmentation\+\_\+stats\+\_\+t@{fragmentation\+\_\+stats\+\_\+t}}
+\subsubsection{\texorpdfstring{scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance}{scan\_pages\_total\_seek\_distance}}
+{\footnotesize\ttfamily ulonglong fragmentation\+\_\+stats\+\_\+t\+::scan\+\_\+pages\+\_\+total\+\_\+seek\+\_\+distance}
+
+total seek distance between Inno\+DB pages 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+thd\+\_\+internal\+\_\+api.\+h\end{DoxyCompactItemize}

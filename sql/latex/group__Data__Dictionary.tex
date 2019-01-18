@@ -1,0 +1,1617 @@
+\hypertarget{group__Data__Dictionary}{}\section{Data Dictionary}
+\label{group__Data__Dictionary}\index{Data Dictionary@{Data Dictionary}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMDL__deadlock__handler}{M\+D\+L\+\_\+deadlock\+\_\+handler}}
+\item 
+class \mbox{\hyperlink{classMDL__deadlock__discovery__repair__handler}{M\+D\+L\+\_\+deadlock\+\_\+discovery\+\_\+repair\+\_\+handler}}
+\item 
+class \mbox{\hyperlink{classNode}{Node}}
+\item 
+class \mbox{\hyperlink{classOr__node}{Or\+\_\+node}}
+\item 
+class \mbox{\hyperlink{classAnd__node}{And\+\_\+node}}
+\item 
+class \mbox{\hyperlink{classTable__node}{Table\+\_\+node}}
+\item 
+class \mbox{\hyperlink{classConst__ordered__table__node}{Const\+\_\+ordered\+\_\+table\+\_\+node}}
+\item 
+class \mbox{\hyperlink{classJoin__node}{Join\+\_\+node}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__Data__Dictionary_gae383b8742be40b62c710380f1b5e6a6e}{U\+N\+D\+E\+R\+\_\+\+L\+TM}}(thd)
+\item 
+\#define {\bfseries B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM}(thd,  tl)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga9103f1fde040b45e171c6df146d812f1}\label{group__Data__Dictionary_ga9103f1fde040b45e171c6df146d812f1}} 
+\#define {\bfseries W\+R\+O\+N\+G\+\_\+\+G\+R\+A\+NT}~(\mbox{\hyperlink{classField}{Field}}$\ast$) -\/1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga18d16049867f49eea9781f2593b9ce5a}\label{group__Data__Dictionary_ga18d16049867f49eea9781f2593b9ce5a}} 
+typedef \mbox{\hyperlink{classOr__node}{Or\+\_\+node}} {\bfseries Column\+\_\+node}
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gad8f06001a129ced07c83ece7a3ef3f76}\label{group__Data__Dictionary_gad8f06001a129ced07c83ece7a3ef3f76}} 
+typedef \mbox{\hyperlink{classAnd__node}{And\+\_\+node}} {\bfseries Key\+\_\+node}
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gafe5c31b4e7484950ef07cc7a5965edc1}\label{group__Data__Dictionary_gafe5c31b4e7484950ef07cc7a5965edc1}} 
+typedef \mbox{\hyperlink{classAnd__node}{And\+\_\+node}} {\bfseries All\+\_\+columns\+\_\+node}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{group__Data__Dictionary_ga14224b18bb5f7e175fde6932a590defa}{get\+\_\+table\+\_\+def\+\_\+key}} (const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, const char $\ast$$\ast$key)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga1d02e5bbc2f45e705339a4bd9b535fe7}\label{group__Data__Dictionary_ga1d02e5bbc2f45e705339a4bd9b535fe7}} 
+uchar $\ast$ {\bfseries table\+\_\+def\+\_\+key} (const uchar $\ast$record, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gad9f57ec544a178c11c18d6900e2dcf6c}\label{group__Data__Dictionary_gad9f57ec544a178c11c18d6900e2dcf6c}} 
+bool {\bfseries table\+\_\+def\+\_\+init} (void)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_gabb94e7a0682741b06d662be41fae480f}{table\+\_\+def\+\_\+start\+\_\+shutdown}} (void)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga8b09d5446051abdac04bf96a4d6a0c12}\label{group__Data__Dictionary_ga8b09d5446051abdac04bf96a4d6a0c12}} 
+void {\bfseries table\+\_\+def\+\_\+free} (void)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gabb76a30ed423c4cb98689fcedae48c60}\label{group__Data__Dictionary_gabb76a30ed423c4cb98689fcedae48c60}} 
+uint {\bfseries cached\+\_\+table\+\_\+definitions} (void)
+\item 
+\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_gad9c9e8583421876b16d148a82322e86e}{get\+\_\+table\+\_\+share}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, const char $\ast$key, size\+\_\+t key\+\_\+length, uint db\+\_\+flags, int $\ast$error, my\+\_\+hash\+\_\+value\+\_\+type hash\+\_\+value)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga0f27eb7444d2cec48296785a54e229f2}{release\+\_\+table\+\_\+share}} (\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share)
+\item 
+\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga9aad9b367e12ef2a26ab5fb1a73c4e32}{get\+\_\+cached\+\_\+table\+\_\+share}} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga54b0693677aeecf9a38e98f36d3d31eb}\label{group__Data__Dictionary_ga54b0693677aeecf9a38e98f36d3d31eb}} 
+\mbox{\hyperlink{structst__open__table__list}{O\+P\+E\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries list\+\_\+open\+\_\+tables} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$wild)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaff2849c2d4c8cec7a89054e0033a8707}\label{group__Data__Dictionary_gaff2849c2d4c8cec7a89054e0033a8707}} 
+void {\bfseries intern\+\_\+close\+\_\+table} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga055df8e4470e8dfd7f8b41f4402f6774}\label{group__Data__Dictionary_ga055df8e4470e8dfd7f8b41f4402f6774}} 
+void {\bfseries free\+\_\+io\+\_\+cache} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga8504b9f30ae84e60749639a2d03bc0d0}\label{group__Data__Dictionary_ga8504b9f30ae84e60749639a2d03bc0d0}} 
+bool {\bfseries close\+\_\+cached\+\_\+tables} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, bool wait\+\_\+for\+\_\+refresh, ulong timeout)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_gae2cc536b80faf27a1017cf4ddcc988ad}{mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga86713fadf907edf57606406a10c1f994}{close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share, bool remove\+\_\+from\+\_\+locked\+\_\+tables, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$skip\+\_\+table)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga3ded5accefd985fce6ed115038ea92f7}\label{group__Data__Dictionary_ga3ded5accefd985fce6ed115038ea92f7}} 
+void {\bfseries close\+\_\+thread\+\_\+tables} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gac52b8d7410875b0048421f9386b4b6bd}\label{group__Data__Dictionary_gac52b8d7410875b0048421f9386b4b6bd}} 
+void {\bfseries close\+\_\+thread\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$table\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaa4991367acddcb2b2a0edeb169029917}\label{group__Data__Dictionary_gaa4991367acddcb2b2a0edeb169029917}} 
+bool {\bfseries close\+\_\+temporary\+\_\+tables} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga98920037a85177667356d2364893271d}\label{group__Data__Dictionary_ga98920037a85177667356d2364893271d}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries find\+\_\+table\+\_\+in\+\_\+list} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::$\ast$link, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga97300534246ab121f6b9b9d7031fb56e}{unique\+\_\+table}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool check\+\_\+alias)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_gaa62ea49fa4b58a38f20af4754928e1be}{update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error}} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$update, const char $\ast$operation, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$duplicate)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga0734400e8b6f0dab464f0da0f177086b}{find\+\_\+temporary\+\_\+table}} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga4d31aeecf54e9bf14d05fa8a6478b7e0}{find\+\_\+temporary\+\_\+table}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tl)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga45eefb797fc5051da7202a1f96b20c1d}{find\+\_\+temporary\+\_\+table}} (T\+HD $\ast$thd, const char $\ast$table\+\_\+key, size\+\_\+t table\+\_\+key\+\_\+length)
+\item 
+int \mbox{\hyperlink{group__Data__Dictionary_gab5683a94b25579c456f2c9f55f9f9b35}{drop\+\_\+temporary\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$is\+\_\+trans)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga62f62c19b7f434d061bee6a75402aca1}\label{group__Data__Dictionary_ga62f62c19b7f434d061bee6a75402aca1}} 
+void {\bfseries close\+\_\+temporary\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool free\+\_\+share, bool delete\+\_\+table)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga4998a4b0d6b30f4f9669a8c1169ef41d}\label{group__Data__Dictionary_ga4998a4b0d6b30f4f9669a8c1169ef41d}} 
+void {\bfseries close\+\_\+temporary} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool free\+\_\+share, bool delete\+\_\+table)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga1f79c4227effeafa7bad8b4582682e9a}\label{group__Data__Dictionary_ga1f79c4227effeafa7bad8b4582682e9a}} 
+bool {\bfseries rename\+\_\+temporary\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gac19a8c14e089f35b82dc7a2ded67ea4b}{wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, enum ha\+\_\+extra\+\_\+function function)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_gac9f2e6710ec001734614f4a11cde9f0f}{drop\+\_\+open\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga0f7967950b623499bad7a7fc81612e16}{check\+\_\+if\+\_\+table\+\_\+exists}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table, bool $\ast$exists)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, \mbox{\hyperlink{classOpen__table__context}{Open\+\_\+table\+\_\+context}} $\ast$ot\+\_\+ctx)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga4458592b1c4d9ed293e5b2033349c3fb}{find\+\_\+locked\+\_\+table}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$list, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga8692f5ebd7f6483f1dcc576eb2346f52}{find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade}} (T\+HD $\ast$thd, const char $\ast$db, const char $\ast$table\+\_\+name, bool no\+\_\+error)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga098cb47bbc8bbdb790fcf28c253ab2b6}\label{group__Data__Dictionary_ga098cb47bbc8bbdb790fcf28c253ab2b6}} 
+void {\bfseries assign\+\_\+new\+\_\+table\+\_\+id} (\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga917237a2e99cef2eb34e64095d79fb1a}{tdc\+\_\+open\+\_\+view}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, const char $\ast$alias, const char $\ast$cache\+\_\+key, size\+\_\+t cache\+\_\+key\+\_\+length, uint flags)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga24fe4cc1a004bb6b5f07556a182f945b}\label{group__Data__Dictionary_ga24fe4cc1a004bb6b5f07556a182f945b}} 
+thr\+\_\+lock\+\_\+type {\bfseries read\+\_\+lock\+\_\+type\+\_\+for\+\_\+table} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool routine\+\_\+modifies\+\_\+data)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga9b858a3ae42dbb6ac5cc1809c9ec68b5}\label{group__Data__Dictionary_ga9b858a3ae42dbb6ac5cc1809c9ec68b5}} 
+uchar $\ast$ {\bfseries schema\+\_\+set\+\_\+get\+\_\+key} (const uchar $\ast$record, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+int \mbox{\hyperlink{group__Data__Dictionary_gaed504cf321c7fd98175f80785f6be954}{run\+\_\+before\+\_\+dml\+\_\+hook}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gae06de7ce22001b035ca61edf2a3dea09}{lock\+\_\+table\+\_\+names}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+start, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+end, ulong lock\+\_\+wait\+\_\+timeout, uint flags)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}{open\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$start, uint $\ast$counter, uint flags, \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}} $\ast$prelocking\+\_\+strategy)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga86a68932d1c35b3fd820c99d185d7888}{open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+l, thr\+\_\+lock\+\_\+type lock\+\_\+type, uint flags, \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}} $\ast$prelocking\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em Open and lock one table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga3b5263e110baf47c9fe2f820bc649be5}\label{group__Data__Dictionary_ga3b5263e110baf47c9fe2f820bc649be5}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries open\+\_\+ltable} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, thr\+\_\+lock\+\_\+type lock\+\_\+type, uint lock\+\_\+flags)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gab469748dd06a6477d4ce23f742af0794}{open\+\_\+and\+\_\+lock\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, uint flags, \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}} $\ast$prelocking\+\_\+strategy)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga6b93d2956c1e654ebe0e48ab3503410d}{open\+\_\+tables\+\_\+for\+\_\+query}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, uint flags)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga399ec28859bb54829b1cabbeed845f78}{lock\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, uint count, uint flags)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga92bec964ecaaa7270a429e664643b746}{close\+\_\+tables\+\_\+for\+\_\+reopen}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$tables, const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \&start\+\_\+of\+\_\+statement\+\_\+svp)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga35659d6f0f8a6d39ee3f3db7c233df52}{open\+\_\+table\+\_\+uncached}} (T\+HD $\ast$thd, const char $\ast$path, const char $\ast$db, const char $\ast$table\+\_\+name, bool add\+\_\+to\+\_\+temporary\+\_\+tables\+\_\+list, bool open\+\_\+in\+\_\+engine)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga2f6730cd1feb3014042adbf998ca9203}{rm\+\_\+temporary\+\_\+table}} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$base, const char $\ast$path)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gab5c68673b37e4f394de31ffe4ac80fcc}{open\+\_\+temporary\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tl)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gac4c1cb71807d09d53273048447abf301}{open\+\_\+temporary\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tl\+\_\+list)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gacac9a77ae494a701599bc5e1856f766c}\label{group__Data__Dictionary_gacac9a77ae494a701599bc5e1856f766c}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries find\+\_\+field\+\_\+in\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const char $\ast$name, size\+\_\+t length, bool allow\+\_\+rowid, uint $\ast$cached\+\_\+field\+\_\+index\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga53b8b9fd8dfbbaa3cdc71df88ff3e5d4}\label{group__Data__Dictionary_ga53b8b9fd8dfbbaa3cdc71df88ff3e5d4}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries find\+\_\+field\+\_\+in\+\_\+table\+\_\+ref} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, const char $\ast$name, size\+\_\+t length, const char $\ast$item\+\_\+name, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref, ulong want\+\_\+privilege, bool allow\+\_\+rowid, uint $\ast$cached\+\_\+field\+\_\+index\+\_\+ptr, bool register\+\_\+tree\+\_\+change, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$actual\+\_\+table)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga795c727f9014b6fd6d0eed974e26c5c3}\label{group__Data__Dictionary_ga795c727f9014b6fd6d0eed974e26c5c3}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries find\+\_\+field\+\_\+in\+\_\+table\+\_\+sef} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const char $\ast$name)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga40da7d22bc6c9c596a10e723d1dd5b71}\label{group__Data__Dictionary_ga40da7d22bc6c9c596a10e723d1dd5b71}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries find\+\_\+field\+\_\+in\+\_\+tables} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__ident}{Item\+\_\+ident}} $\ast$item, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$first\+\_\+table, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$last\+\_\+table, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref, find\+\_\+item\+\_\+error\+\_\+report\+\_\+type report\+\_\+error, ulong want\+\_\+privilege, bool register\+\_\+tree\+\_\+change)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gad8a568dc8a852240a792309974498e53}\label{group__Data__Dictionary_gad8a568dc8a852240a792309974498e53}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries find\+\_\+item\+\_\+in\+\_\+list} (\mbox{\hyperlink{classItem}{Item}} $\ast$find, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&items, uint $\ast$counter, find\+\_\+item\+\_\+error\+\_\+report\+\_\+type report\+\_\+error, enum\+\_\+resolution\+\_\+type $\ast$resolution)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaecb35e53c52e10034b0479c304fbf206}\label{group__Data__Dictionary_gaecb35e53c52e10034b0479c304fbf206}} 
+bool {\bfseries setup\+\_\+natural\+\_\+join\+\_\+row\+\_\+types} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$from\+\_\+clause, \mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gaa6d4287d0d00fc5733a67df33a193738}{setup\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, ulong want\+\_\+privilege, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$sum\+\_\+func\+\_\+list, bool allow\+\_\+sum\+\_\+func, bool column\+\_\+update)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga3ed6f7a411697a21f8e57aee4e40dcc9}\label{group__Data__Dictionary_ga3ed6f7a411697a21f8e57aee4e40dcc9}} 
+bool {\bfseries insert\+\_\+fields} (T\+HD $\ast$thd, \mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name, \mbox{\hyperlink{classList__iterator}{List\+\_\+iterator}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$it, bool any\+\_\+privileges)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga6b0cee97465e5202815693c02ded951b}\label{group__Data__Dictionary_ga6b0cee97465e5202815693c02ded951b}} 
+bool {\bfseries fill\+\_\+record} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&values, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$bitmap, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$insert\+\_\+into\+\_\+fields\+\_\+bitmap)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga46a03ad3f42501f08c42bc3ab9b5eb51}{check\+\_\+record}} (T\+HD $\ast$thd, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ptr)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga1f73b6e4ed87676502d07bd58eba7590}{call\+\_\+before\+\_\+insert\+\_\+triggers}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, enum \mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}} event, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$insert\+\_\+into\+\_\+fields\+\_\+bitmap)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga696dd055ce9b953fc7e8d76da097f41d}\label{group__Data__Dictionary_ga696dd055ce9b953fc7e8d76da097f41d}} 
+bool {\bfseries fill\+\_\+record\+\_\+n\+\_\+invoke\+\_\+before\+\_\+triggers} (T\+HD $\ast$thd, \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} $\ast$optype\+\_\+info, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&values, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, enum \mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}} event, int num\+\_\+fields)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gae1dd92205f9823aac391eb8889dea9d4}{fill\+\_\+record}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ptr, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&values, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$bitmap, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$insert\+\_\+into\+\_\+fields\+\_\+bitmap)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaf04201d06a91143d6c13dc72e2ab3aa7}\label{group__Data__Dictionary_gaf04201d06a91143d6c13dc72e2ab3aa7}} 
+bool {\bfseries fill\+\_\+record\+\_\+n\+\_\+invoke\+\_\+before\+\_\+triggers} (T\+HD $\ast$thd, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ptr, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&values, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, enum \mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}} event, int num\+\_\+fields)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gadded8328656d64a663d994979a50b956}\label{group__Data__Dictionary_gadded8328656d64a663d994979a50b956}} 
+my\+\_\+bool {\bfseries mysql\+\_\+rm\+\_\+tmp\+\_\+tables} (void)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaaae1459addd4c75ddbf76468ba9a26a6}\label{group__Data__Dictionary_gaaae1459addd4c75ddbf76468ba9a26a6}} 
+void {\bfseries tdc\+\_\+flush\+\_\+unused\+\_\+tables} ()
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga8faf6c6118b6677394e14994ae614075}{tdc\+\_\+remove\+\_\+table}} (T\+HD $\ast$thd, enum\+\_\+tdc\+\_\+remove\+\_\+table\+\_\+type remove\+\_\+type, const char $\ast$db, const char $\ast$table\+\_\+name, bool has\+\_\+lock)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga481e7e276a23583989ab7fc28bf70928}\label{group__Data__Dictionary_ga481e7e276a23583989ab7fc28bf70928}} 
+int {\bfseries setup\+\_\+ftfuncs} (S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga673bd1c3a18bccbfeeaedccdc1434d8c}\label{group__Data__Dictionary_ga673bd1c3a18bccbfeeaedccdc1434d8c}} 
+bool {\bfseries init\+\_\+ftfuncs} (T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga8b26ffd4f5885a763dc68dccf87ae547}\label{group__Data__Dictionary_ga8b26ffd4f5885a763dc68dccf87ae547}} 
+bool {\bfseries is\+\_\+equal} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$a, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$b)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga32e194df2b3923a1b4cf2f2567c829b7}\label{group__Data__Dictionary_ga32e194df2b3923a1b4cf2f2567c829b7}} 
+bool {\bfseries is\+\_\+equal} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$a, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$b)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga1d35c9ae33217ba2b5f2aabfbebb3908}\label{group__Data__Dictionary_ga1d35c9ae33217ba2b5f2aabfbebb3908}} 
+bool {\bfseries is\+\_\+cond\+\_\+or} (const \mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga24124224f0f88c7f84f5365b9d6746f3}\label{group__Data__Dictionary_ga24124224f0f88c7f84f5365b9d6746f3}} 
+bool {\bfseries is\+\_\+order\+\_\+deterministic} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga2df84a9b557280b7d7d36cae3c82d7bf}\label{group__Data__Dictionary_ga2df84a9b557280b7d7d36cae3c82d7bf}} 
+bool {\bfseries is\+\_\+order\+\_\+deterministic} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_ga5564f0cf7807256a52a9455fd4f45d4e}{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, Open\+\_\+tables\+\_\+backup $\ast$backup)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gac315ba0102697b41bdeeff67a61240eb}{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga4d367b48b7597012ac308bbbdaa0aca2}{close\+\_\+nontrans\+\_\+system\+\_\+tables}} (T\+HD $\ast$thd, Open\+\_\+tables\+\_\+backup $\ast$backup)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga94ca9600b012ffde28a4a0360e91c0e8}{close\+\_\+trans\+\_\+system\+\_\+tables}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga9467ef8e03a8afbe8b937d699a0537f2}{close\+\_\+mysql\+\_\+tables}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga7f08738b93443c024318ecbcc739f6f1}\label{group__Data__Dictionary_ga7f08738b93443c024318ecbcc739f6f1}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries open\+\_\+system\+\_\+table\+\_\+for\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$one\+\_\+table)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{group__Data__Dictionary_ga065f6a0326ab135938fb38fd371dace5}{open\+\_\+log\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$one\+\_\+table, Open\+\_\+tables\+\_\+backup $\ast$backup)
+\item 
+void \mbox{\hyperlink{group__Data__Dictionary_ga8f22fa867e1bb56d350834b5497c9d6d}{close\+\_\+log\+\_\+table}} (T\+HD $\ast$thd, Open\+\_\+tables\+\_\+backup $\ast$backup)
+\item 
+\mbox{\hyperlink{group__Data__Dictionary_ga8eaa3b1fdce29eac72028f96c55607d3}{Open\+\_\+table\+\_\+context\+::\+Open\+\_\+table\+\_\+context}} (T\+HD $\ast$thd, uint flags)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gaf35889f70c8719510fb76899cf9cf20b}{Open\+\_\+table\+\_\+context\+::request\+\_\+backoff\+\_\+action}} (enum\+\_\+open\+\_\+table\+\_\+action action\+\_\+arg, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{group__Data__Dictionary_gade48892bc4607303f7f4d3d6df4c39de}{Open\+\_\+table\+\_\+context\+::recover\+\_\+from\+\_\+failed\+\_\+open}} ()
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga4d51adf9905616e57f7b572081f537ac}{D\+M\+L\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+routine}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$rt, \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_gab4041a333019fb1a8ffb4e3772f627cf}{D\+M\+L\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+table}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga757cc4c5e9baf4dfae041368257e46e4}{D\+M\+L\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+view}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga7e0d0312d3f9e2abb42e91b74f045d79}{Alter\+\_\+table\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+routine}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$rt, \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga572cfaf98399c14ebe9e318b4197c6f5}{Alter\+\_\+table\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+table}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)
+\item 
+virtual bool \mbox{\hyperlink{group__Data__Dictionary_ga3da56b0df4158af2defc12e836983529}{Alter\+\_\+table\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+view}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga34629ea7d6b32851a95772a05f4dc780}\label{group__Data__Dictionary_ga34629ea7d6b32851a95772a05f4dc780}} 
+{\bfseries Table\+\_\+node\+::\+Table\+\_\+node} (const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table\+\_\+arg)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga80fe690ff59e36b27a7d275e047b7271}\label{group__Data__Dictionary_ga80fe690ff59e36b27a7d275e047b7271}} 
+\mbox{\hyperlink{classOr__node}{Column\+\_\+node}} $\ast$ {\bfseries Table\+\_\+node\+::get\+\_\+column\+\_\+node} (const \mbox{\hyperlink{classField}{Field}} $\ast$field) const
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga69e50ebcb4a7fc30f7b119a6a2cbeb4e}\label{group__Data__Dictionary_ga69e50ebcb4a7fc30f7b119a6a2cbeb4e}} 
+\mbox{\hyperlink{classOr__node}{Column\+\_\+node}} $\ast$ {\bfseries Table\+\_\+node\+::create\+\_\+column\+\_\+node} (const \mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga50d82c1751671add5ba47c4fb3baee6c}\label{group__Data__Dictionary_ga50d82c1751671add5ba47c4fb3baee6c}} 
+\mbox{\hyperlink{classAnd__node}{All\+\_\+columns\+\_\+node}} $\ast$ {\bfseries Table\+\_\+node\+::create\+\_\+all\+\_\+columns\+\_\+node} ()
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga8b4d5d1225048986bc5245de7c35aef5}\label{group__Data__Dictionary_ga8b4d5d1225048986bc5245de7c35aef5}} 
+\mbox{\hyperlink{classAnd__node}{Key\+\_\+node}} $\ast$ {\bfseries Table\+\_\+node\+::create\+\_\+key\+\_\+node} (const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaef1201635e01193a3cf29603452db4b5}\label{group__Data__Dictionary_gaef1201635e01193a3cf29603452db4b5}} 
+{\bfseries Const\+\_\+ordered\+\_\+table\+\_\+node\+::\+Const\+\_\+ordered\+\_\+table\+\_\+node} (const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table\+\_\+arg)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga07dce568f7a23b1b2dc3bbc8f25d7d98}\label{group__Data__Dictionary_ga07dce568f7a23b1b2dc3bbc8f25d7d98}} 
+\mbox{\hyperlink{classOr__node}{Column\+\_\+node}} $\ast$ {\bfseries Const\+\_\+ordered\+\_\+table\+\_\+node\+::get\+\_\+ordered\+\_\+column\+\_\+node} (const \mbox{\hyperlink{classField}{Field}} $\ast$field) const
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gab7573f60971fb824bb6d23b46072e526}\label{group__Data__Dictionary_gab7573f60971fb824bb6d23b46072e526}} 
+\mbox{\hyperlink{classOr__node}{Column\+\_\+node}} $\ast$ {\bfseries Const\+\_\+ordered\+\_\+table\+\_\+node\+::get\+\_\+const\+\_\+column\+\_\+node} (const \mbox{\hyperlink{classField}{Field}} $\ast$field) const
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga282d4f95f5a074a72a205abb1d2c289f}\label{group__Data__Dictionary_ga282d4f95f5a074a72a205abb1d2c289f}} 
+{\bfseries Join\+\_\+node\+::\+Join\+\_\+node} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, const \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaf3109df9efa01b23442083d8021387df}\label{group__Data__Dictionary_gaf3109df9efa01b23442083d8021387df}} 
+{\bfseries Join\+\_\+node\+::\+Join\+\_\+node} (const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, const \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaab922c19378cfc525876a52147dc0f90}\label{group__Data__Dictionary_gaab922c19378cfc525876a52147dc0f90}} 
+bool {\bfseries Join\+\_\+node\+::is\+\_\+ordered} () const
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mysql\+\_\+mutex\+\_\+t \mbox{\hyperlink{group__Data__Dictionary_ga99c8e1e3e72cd74032d5f11c486911fd}{L\+O\+C\+K\+\_\+open}}
+\item 
+mysql\+\_\+cond\+\_\+t \mbox{\hyperlink{group__Data__Dictionary_ga7a682517d27176617b45212332a96a9d}{C\+O\+N\+D\+\_\+open}}
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaf3f89faf859f3162a4d7476410c4a69e}\label{group__Data__Dictionary_gaf3f89faf859f3162a4d7476410c4a69e}} 
+H\+A\+SH {\bfseries table\+\_\+def\+\_\+cache}
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_ga9133e87930df59fe74ca492acf5295f7}\label{group__Data__Dictionary_ga9133e87930df59fe74ca492acf5295f7}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries not\+\_\+found\+\_\+field} = (\mbox{\hyperlink{classField}{Field}}$\ast$) 0x1
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gaba50986729b2cfd3be1c762e666d3d18}\label{group__Data__Dictionary_gaba50986729b2cfd3be1c762e666d3d18}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries view\+\_\+ref\+\_\+found} = (\mbox{\hyperlink{classField}{Field}}$\ast$) 0x2
+\item 
+\mbox{\Hypertarget{group__Data__Dictionary_gac130a94f4d55acec35aa42626af9f37f}\label{group__Data__Dictionary_gac130a94f4d55acec35aa42626af9f37f}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries not\+\_\+found\+\_\+item} = (\mbox{\hyperlink{classItem}{Item}}$\ast$$\ast$) 0x1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__Data__Dictionary_ga176a646a5a04af4bf68c0f149af5dd00}\label{group__Data__Dictionary_ga176a646a5a04af4bf68c0f149af5dd00}} 
+\index{Data Dictionary@{Data Dictionary}!B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM@{B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM}}
+\index{B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM@{B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM}{BELONGS\_TO\_P\_S\_UNDER\_LTM}}
+{\footnotesize\ttfamily \#define B\+E\+L\+O\+N\+G\+S\+\_\+\+T\+O\+\_\+\+P\+\_\+\+S\+\_\+\+U\+N\+D\+E\+R\+\_\+\+L\+TM(\begin{DoxyParamCaption}\item[{}]{thd,  }\item[{}]{tl }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\mbox{\hyperlink{group__Data__Dictionary_gae383b8742be40b62c710380f1b5e6a6e}{UNDER\_LTM}}(thd) \&\& \(\backslash\)}
+\DoxyCodeLine{    (!strcmp(\textcolor{stringliteral}{"performance\_schema"}, tl->db) \&\& \(\backslash\)}
+\DoxyCodeLine{     strcmp(tl->table\_name, \textcolor{stringliteral}{"threads"}) \&\& \(\backslash\)}
+\DoxyCodeLine{     strstr(tl->table\_name, \textcolor{stringliteral}{"setup\_"}) == NULL))}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__Data__Dictionary_gae383b8742be40b62c710380f1b5e6a6e}\label{group__Data__Dictionary_gae383b8742be40b62c710380f1b5e6a6e}} 
+\index{Data Dictionary@{Data Dictionary}!U\+N\+D\+E\+R\+\_\+\+L\+TM@{U\+N\+D\+E\+R\+\_\+\+L\+TM}}
+\index{U\+N\+D\+E\+R\+\_\+\+L\+TM@{U\+N\+D\+E\+R\+\_\+\+L\+TM}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{U\+N\+D\+E\+R\+\_\+\+L\+TM}{UNDER\_LTM}}
+{\footnotesize\ttfamily \#define U\+N\+D\+E\+R\+\_\+\+L\+TM(\begin{DoxyParamCaption}\item[{}]{thd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(thd->locked\_tables\_mode == LTM\_LOCK\_TABLES || \(\backslash\)}
+\DoxyCodeLine{   thd->locked\_tables\_mode == LTM\_PRELOCKED\_UNDER\_LOCK\_TABLES)}
+\end{DoxyCode}
+Performance Schema tables must be accessible independently of the L\+O\+CK \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} mode. These macros handle the special case of P\+\_\+S tables being used under L\+O\+CK \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} mode. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Data__Dictionary_ga1f73b6e4ed87676502d07bd58eba7590}\label{group__Data__Dictionary_ga1f73b6e4ed87676502d07bd58eba7590}} 
+\index{Data Dictionary@{Data Dictionary}!call\+\_\+before\+\_\+insert\+\_\+triggers@{call\+\_\+before\+\_\+insert\+\_\+triggers}}
+\index{call\+\_\+before\+\_\+insert\+\_\+triggers@{call\+\_\+before\+\_\+insert\+\_\+triggers}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{call\+\_\+before\+\_\+insert\+\_\+triggers()}{call\_before\_insert\_triggers()}}
+{\footnotesize\ttfamily bool call\+\_\+before\+\_\+insert\+\_\+triggers (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{enum \mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}}}]{event,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{insert\+\_\+into\+\_\+fields\+\_\+bitmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Execute B\+E\+F\+O\+RE I\+N\+S\+E\+RT trigger.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread context \\
+\hline
+{\em table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}-\/object holding list of triggers to be invoked \\
+\hline
+{\em event} & event type for triggers to be invoked \\
+\hline
+{\em insert\+\_\+into\+\_\+fields\+\_\+bitmap} & \mbox{\hyperlink{classBitmap}{Bitmap}} for fields that is set in fill\+\_\+record\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK \\
+\hline
+{\em true} & Error occurred \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga0f7967950b623499bad7a7fc81612e16}\label{group__Data__Dictionary_ga0f7967950b623499bad7a7fc81612e16}} 
+\index{Data Dictionary@{Data Dictionary}!check\+\_\+if\+\_\+table\+\_\+exists@{check\+\_\+if\+\_\+table\+\_\+exists}}
+\index{check\+\_\+if\+\_\+table\+\_\+exists@{check\+\_\+if\+\_\+table\+\_\+exists}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{check\+\_\+if\+\_\+table\+\_\+exists()}{check\_if\_table\_exists()}}
+{\footnotesize\ttfamily bool check\+\_\+if\+\_\+table\+\_\+exists (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table,  }\item[{bool $\ast$}]{exists }\end{DoxyParamCaption})}
+
+Check that table exists in table definition cache, on disk or in some storage engine.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+ & {\em table} & Table list element \\
+\hline
+\mbox{\texttt{ out}}  & {\em exists} & Out parameter which is set to T\+R\+UE if table exists and to F\+A\+L\+SE otherwise.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function acquires L\+O\+C\+K\+\_\+open internally.
+
+If there is no .F\+RM file for the table but it exists in one of engines (e.\+g. it was created on another node of N\+DB cluster) this function will fetch and create proper .F\+RM file for it.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Some error occurred \\
+\hline
+{\em F\+A\+L\+SE} & No error. \textquotesingle{}exists\textquotesingle{} out parameter set accordingly. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga46a03ad3f42501f08c42bc3ab9b5eb51}\label{group__Data__Dictionary_ga46a03ad3f42501f08c42bc3ab9b5eb51}} 
+\index{Data Dictionary@{Data Dictionary}!check\+\_\+record@{check\+\_\+record}}
+\index{check\+\_\+record@{check\+\_\+record}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{check\+\_\+record()}{check\_record()}}
+{\footnotesize\ttfamily bool check\+\_\+record (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Check the N\+OT N\+U\+LL constraint on all the fields of the current record.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em ptr} & Fields.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga86713fadf907edf57606406a10c1f994}\label{group__Data__Dictionary_ga86713fadf907edf57606406a10c1f994}} 
+\index{Data Dictionary@{Data Dictionary}!close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name@{close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name}}
+\index{close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name@{close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name()}{close\_all\_tables\_for\_name()}}
+{\footnotesize\ttfamily void close\+\_\+all\+\_\+tables\+\_\+for\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{share,  }\item[{bool}]{remove\+\_\+from\+\_\+locked\+\_\+tables,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{skip\+\_\+table }\end{DoxyParamCaption})}
+
+Close all open instances of the table but keep the M\+DL lock.
+
+Works both under L\+O\+CK T\+A\+B\+L\+ES and in the normal mode. Removes all closed instances of the table from the table cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em share} & table share, but is just a handy way to access the table cache key\\
+\hline
+\mbox{\texttt{ in}}  & {\em remove\+\_\+from\+\_\+locked\+\_\+tables} & T\+R\+UE if the table is being dropped or renamed. In that case the documented behaviour is to implicitly remove the table from L\+O\+CK T\+A\+B\+L\+ES list. \\
+\hline
+\mbox{\texttt{ in}}  & {\em skip\+\_\+table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance that should be kept open.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Must be called with an X M\+DL lock on the table. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{group__Data__Dictionary_ga8f22fa867e1bb56d350834b5497c9d6d}\label{group__Data__Dictionary_ga8f22fa867e1bb56d350834b5497c9d6d}} 
+\index{Data Dictionary@{Data Dictionary}!close\+\_\+log\+\_\+table@{close\+\_\+log\+\_\+table}}
+\index{close\+\_\+log\+\_\+table@{close\+\_\+log\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{close\+\_\+log\+\_\+table()}{close\_log\_table()}}
+{\footnotesize\ttfamily void close\+\_\+log\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup }\end{DoxyParamCaption})}
+
+Close a log table. The last table opened by \mbox{\hyperlink{group__Data__Dictionary_ga065f6a0326ab135938fb38fd371dace5}{open\+\_\+log\+\_\+table()}} is closed, then the thread context is restored. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em backup} & \mbox{[}in\mbox{]} the context to restore. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Data__Dictionary_ga9467ef8e03a8afbe8b937d699a0537f2}\label{group__Data__Dictionary_ga9467ef8e03a8afbe8b937d699a0537f2}} 
+\index{Data Dictionary@{Data Dictionary}!close\+\_\+mysql\+\_\+tables@{close\+\_\+mysql\+\_\+tables}}
+\index{close\+\_\+mysql\+\_\+tables@{close\+\_\+mysql\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{close\+\_\+mysql\+\_\+tables()}{close\_mysql\_tables()}}
+{\footnotesize\ttfamily void close\+\_\+mysql\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+A helper function to close a mysql.$\ast$ table opened in an auxiliary T\+HD during bootstrap or in the main connection, when we know that there are no locks held by the connection due to a preceding implicit commit.
+
+This function assumes that there is no statement transaction started for the operation itself, since mysql.$\ast$ tables are not transactional and when they are used the binlog is off (D\+DL binlogging is always statement-\/based.
+
+We need this function since we\textquotesingle{}d like to not just close the system table, but also release the metadata lock on it.
+
+Note, that in L\+O\+CK T\+A\+B\+L\+ES mode this function does not release the metadata lock. But in this mode the table can be opened only if it is locked explicitly with L\+O\+CK T\+A\+B\+L\+ES. \mbox{\Hypertarget{group__Data__Dictionary_ga4d367b48b7597012ac308bbbdaa0aca2}\label{group__Data__Dictionary_ga4d367b48b7597012ac308bbbdaa0aca2}} 
+\index{Data Dictionary@{Data Dictionary}!close\+\_\+nontrans\+\_\+system\+\_\+tables@{close\+\_\+nontrans\+\_\+system\+\_\+tables}}
+\index{close\+\_\+nontrans\+\_\+system\+\_\+tables@{close\+\_\+nontrans\+\_\+system\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{close\+\_\+nontrans\+\_\+system\+\_\+tables()}{close\_nontrans\_system\_tables()}}
+{\footnotesize\ttfamily void close\+\_\+nontrans\+\_\+system\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup }\end{DoxyParamCaption})}
+
+Close non-\/transactional system tables, opened with \mbox{\hyperlink{group__Data__Dictionary_ga5564f0cf7807256a52a9455fd4f45d4e}{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em backup} & Pointer to Open\+\_\+tables\+\_\+backup instance which holds information about tables which were open before we decided to access non-\/transactional system tables. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Data__Dictionary_ga92bec964ecaaa7270a429e664643b746}\label{group__Data__Dictionary_ga92bec964ecaaa7270a429e664643b746}} 
+\index{Data Dictionary@{Data Dictionary}!close\+\_\+tables\+\_\+for\+\_\+reopen@{close\+\_\+tables\+\_\+for\+\_\+reopen}}
+\index{close\+\_\+tables\+\_\+for\+\_\+reopen@{close\+\_\+tables\+\_\+for\+\_\+reopen}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{close\+\_\+tables\+\_\+for\+\_\+reopen()}{close\_tables\_for\_reopen()}}
+{\footnotesize\ttfamily void close\+\_\+tables\+\_\+for\+\_\+reopen (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$}]{tables,  }\item[{const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \&}]{start\+\_\+of\+\_\+statement\+\_\+svp }\end{DoxyParamCaption})}
+
+Prepare statement for reopening of tables and recalculation of set of prelocked tables.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em tables} & \mbox{\hyperlink{classList}{List}} of tables which we were trying to open and lock. \\
+\hline
+\mbox{\texttt{ in}}  & {\em start\+\_\+of\+\_\+statement\+\_\+svp} & M\+DL savepoint which represents the set of metadata locks which the current transaction managed to acquire before execution of the current statement and to which we should revert before trying to reopen tables. N\+U\+LL if no metadata locks were held and thus all metadata locks should be released. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Data__Dictionary_ga94ca9600b012ffde28a4a0360e91c0e8}\label{group__Data__Dictionary_ga94ca9600b012ffde28a4a0360e91c0e8}} 
+\index{Data Dictionary@{Data Dictionary}!close\+\_\+trans\+\_\+system\+\_\+tables@{close\+\_\+trans\+\_\+system\+\_\+tables}}
+\index{close\+\_\+trans\+\_\+system\+\_\+tables@{close\+\_\+trans\+\_\+system\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{close\+\_\+trans\+\_\+system\+\_\+tables()}{close\_trans\_system\_tables()}}
+{\footnotesize\ttfamily void close\+\_\+trans\+\_\+system\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Close transactional system tables, opened with \mbox{\hyperlink{group__Data__Dictionary_gac315ba0102697b41bdeeff67a61240eb}{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Data__Dictionary_gac9f2e6710ec001734614f4a11cde9f0f}\label{group__Data__Dictionary_gac9f2e6710ec001734614f4a11cde9f0f}} 
+\index{Data Dictionary@{Data Dictionary}!drop\+\_\+open\+\_\+table@{drop\+\_\+open\+\_\+table}}
+\index{drop\+\_\+open\+\_\+table@{drop\+\_\+open\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{drop\+\_\+open\+\_\+table()}{drop\_open\_table()}}
+{\footnotesize\ttfamily void drop\+\_\+open\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+Close a and drop a just created table in C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... S\+E\+L\+E\+CT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for the table to be dropped \\
+\hline
+{\em db\+\_\+name} & Name of database for this table \\
+\hline
+{\em table\+\_\+name} & Name of this table\\
+\hline
+\end{DoxyParams}
+This routine assumes that the table to be closed is open only by the calling thread, so we needn\textquotesingle{}t wait until other threads close the table. It also assumes that the table is first in thd-\/$>$open\+\_\+ables and a data lock on it, if any, has been released. To sum up, it\textquotesingle{}s tuned to work with C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... S\+E\+L\+E\+CT and C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} .. S\+E\+L\+E\+CT only. Note, that currently C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... S\+E\+L\+E\+CT is not supported under L\+O\+CK T\+A\+B\+L\+ES. This function, still, can be called in prelocked mode, e.\+g. if we do C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} .. S\+E\+L\+E\+CT f1(); \mbox{\Hypertarget{group__Data__Dictionary_gab5683a94b25579c456f2c9f55f9f9b35}\label{group__Data__Dictionary_gab5683a94b25579c456f2c9f55f9f9b35}} 
+\index{Data Dictionary@{Data Dictionary}!drop\+\_\+temporary\+\_\+table@{drop\+\_\+temporary\+\_\+table}}
+\index{drop\+\_\+temporary\+\_\+table@{drop\+\_\+temporary\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{drop\+\_\+temporary\+\_\+table()}{drop\_temporary\_table()}}
+{\footnotesize\ttfamily int drop\+\_\+temporary\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool $\ast$}]{is\+\_\+trans }\end{DoxyParamCaption})}
+
+Drop a temporary table.
+
+Try to locate the table in the list of thd-\/$>$temporary\+\_\+tables. If the table is found\+:
+\begin{DoxyItemize}
+\item if the table is being used by some outer statement, fail.
+\item if the table is locked with L\+O\+CK T\+A\+B\+L\+ES or by prelocking, unlock it and remove it from the list of locked tables (T\+H\+D\+::lock). Currently only transactional temporary tables are locked.
+\item Close the temporary table, remove its .F\+RM
+\item remove the table from the list of temporary tables
+\end{DoxyItemize}
+
+This function is used to drop user temporary tables, as well as internal tables created in C\+R\+E\+A\+TE T\+E\+M\+P\+O\+R\+A\+RY \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... S\+E\+L\+E\+CT or A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. Even though part of the work done by this function is redundant when the table is internal, as long as we link both internal and user temporary tables into the same thd-\/$>$temporary\+\_\+tables list, it\textquotesingle{}s impossible to tell here whether we\textquotesingle{}re dealing with an internal or a user temporary table.
+
+In is\+\_\+trans out-\/parameter, we return the type of the table\+: either transactional (e.\+g. innodb) as T\+R\+UE or non-\/transactional (e.\+g. myisam) as F\+A\+L\+SE.
+
+This function assumes that table to be dropped was pre-\/opened using table list provided.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & the table was found and dropped successfully. \\
+\hline
+{\em 1} & the table was not found in the list of temporary tables of this thread \\
+\hline
+{\em -\/1} & the table is in use by a outer query \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gae1dd92205f9823aac391eb8889dea9d4}\label{group__Data__Dictionary_gae1dd92205f9823aac391eb8889dea9d4}} 
+\index{Data Dictionary@{Data Dictionary}!fill\+\_\+record@{fill\+\_\+record}}
+\index{fill\+\_\+record@{fill\+\_\+record}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{fill\+\_\+record()}{fill\_record()}}
+{\footnotesize\ttfamily bool fill\+\_\+record (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$}]{ptr,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{values,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{bitmap,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{insert\+\_\+into\+\_\+fields\+\_\+bitmap }\end{DoxyParamCaption})}
+
+Fill field buffer with values from \mbox{\hyperlink{classField}{Field}} list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em table} & table reference \\
+\hline
+{\em ptr} & pointer on pointer to record \\
+\hline
+{\em values} & list of fields \\
+\hline
+{\em bitmap} & \mbox{\hyperlink{classBitmap}{Bitmap}} over fields to fill \\
+\hline
+{\em insert\+\_\+into\+\_\+fields\+\_\+bitmap} & \mbox{\hyperlink{classBitmap}{Bitmap}} for fields that is set in fill\+\_\+record\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{group__Data__Dictionary_gae1dd92205f9823aac391eb8889dea9d4}{fill\+\_\+record()}} may set table-\/$>$auto\+\_\+increment\+\_\+field\+\_\+not\+\_\+null and a caller should make sure that it is reset after their last call to this function.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK \\
+\hline
+{\em true} & Error occured \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga4458592b1c4d9ed293e5b2033349c3fb}\label{group__Data__Dictionary_ga4458592b1c4d9ed293e5b2033349c3fb}} 
+\index{Data Dictionary@{Data Dictionary}!find\+\_\+locked\+\_\+table@{find\+\_\+locked\+\_\+table}}
+\index{find\+\_\+locked\+\_\+table@{find\+\_\+locked\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{find\+\_\+locked\+\_\+table()}{find\_locked\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ find\+\_\+locked\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{list,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+Find table in the list of open tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \mbox{\hyperlink{classList}{List}} of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects to be inspected. \\
+\hline
+{\em db} & Database name \\
+\hline
+{\em table\+\_\+name} & Table name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object found, 0 if no table found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga8692f5ebd7f6483f1dcc576eb2346f52}\label{group__Data__Dictionary_ga8692f5ebd7f6483f1dcc576eb2346f52}} 
+\index{Data Dictionary@{Data Dictionary}!find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade@{find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade}}
+\index{find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade@{find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade()}{find\_table\_for\_mdl\_upgrade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ find\+\_\+table\+\_\+for\+\_\+mdl\+\_\+upgrade (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{bool}]{no\+\_\+error }\end{DoxyParamCaption})}
+
+Find instance of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} with upgradable or exclusive metadata lock from the list of open tables, emit error if no such table found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+{\em db} & Database name. \\
+\hline
+{\em table\+\_\+name} & Name of table. \\
+\hline
+{\em no\+\_\+error} & Don\textquotesingle{}t emit error if no suitable \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance were found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function checks if the connection holds a global IX metadata lock. If no such lock is found, it is not safe to upgrade the lock and E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+L\+O\+C\+K\+E\+D\+\_\+\+F\+O\+R\+\_\+\+W\+R\+I\+TE will be reported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Pointer to \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance with M\+D\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+U\+P\+G\+R\+A\+D\+A\+B\+LE M\+D\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+N\+O\+\_\+\+W\+R\+I\+TE, M\+D\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+N\+O\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+TE, or M\+D\+L\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE metadata lock, N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga0734400e8b6f0dab464f0da0f177086b}\label{group__Data__Dictionary_ga0734400e8b6f0dab464f0da0f177086b}} 
+\index{Data Dictionary@{Data Dictionary}!find\+\_\+temporary\+\_\+table@{find\+\_\+temporary\+\_\+table}}
+\index{find\+\_\+temporary\+\_\+table@{find\+\_\+temporary\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{find\+\_\+temporary\+\_\+table()}{find\_temporary\_table()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ find\+\_\+temporary\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+Find temporary table specified by database and table names in the T\+H\+D\+::temporary\+\_\+tables list.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance if a temporary table has been found; N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga4d31aeecf54e9bf14d05fa8a6478b7e0}\label{group__Data__Dictionary_ga4d31aeecf54e9bf14d05fa8a6478b7e0}} 
+\index{Data Dictionary@{Data Dictionary}!find\+\_\+temporary\+\_\+table@{find\+\_\+temporary\+\_\+table}}
+\index{find\+\_\+temporary\+\_\+table@{find\+\_\+temporary\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{find\+\_\+temporary\+\_\+table()}{find\_temporary\_table()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ find\+\_\+temporary\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tl }\end{DoxyParamCaption})}
+
+Find a temporary table specified by \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} instance in the T\+H\+D\+::temporary\+\_\+tables list.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance if a temporary table has been found; N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga45eefb797fc5051da7202a1f96b20c1d}\label{group__Data__Dictionary_ga45eefb797fc5051da7202a1f96b20c1d}} 
+\index{Data Dictionary@{Data Dictionary}!find\+\_\+temporary\+\_\+table@{find\+\_\+temporary\+\_\+table}}
+\index{find\+\_\+temporary\+\_\+table@{find\+\_\+temporary\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{find\+\_\+temporary\+\_\+table()}{find\_temporary\_table()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ find\+\_\+temporary\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{table\+\_\+key,  }\item[{size\+\_\+t}]{table\+\_\+key\+\_\+length }\end{DoxyParamCaption})}
+
+Find a temporary table specified by a key in the T\+H\+D\+::temporary\+\_\+tables list.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance if a temporary table has been found; N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga9aad9b367e12ef2a26ab5fb1a73c4e32}\label{group__Data__Dictionary_ga9aad9b367e12ef2a26ab5fb1a73c4e32}} 
+\index{Data Dictionary@{Data Dictionary}!get\+\_\+cached\+\_\+table\+\_\+share@{get\+\_\+cached\+\_\+table\+\_\+share}}
+\index{get\+\_\+cached\+\_\+table\+\_\+share@{get\+\_\+cached\+\_\+table\+\_\+share}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{get\+\_\+cached\+\_\+table\+\_\+share()}{get\_cached\_table\_share()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}$\ast$ get\+\_\+cached\+\_\+table\+\_\+share (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+Get an existing table definition from the table definition cache.
+
+Search the table definition cache for a share with the given key. If the share exists, check the m\+\_\+open\+\_\+in\+\_\+progress flag. If true, the share is in the process of being opened by another thread, so we must wait for the opening to finish. This may make the share be destroyed, if open\+\_\+table\+\_\+def() fails, so we must repeat the search in the hash table. Return the share.
+
+\begin{DoxyNote}{Note}
+While waiting for the condition variable signaling that a table share is completely opened, the thread will temporarily release L\+O\+C\+K\+\_\+open. Thus, the caller cannot rely on L\+O\+C\+K\+\_\+open being held for the duration of the call.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread descriptor \\
+\hline
+{\em db} & database name \\
+\hline
+{\em table\+\_\+name} & table name\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & a share for the table does not exist in the cache \\
+\hline
+{\em !=} & N\+U\+LL pointer to existing share in the cache \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga14224b18bb5f7e175fde6932a590defa}\label{group__Data__Dictionary_ga14224b18bb5f7e175fde6932a590defa}} 
+\index{Data Dictionary@{Data Dictionary}!get\+\_\+table\+\_\+def\+\_\+key@{get\+\_\+table\+\_\+def\+\_\+key}}
+\index{get\+\_\+table\+\_\+def\+\_\+key@{get\+\_\+table\+\_\+def\+\_\+key}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+def\+\_\+key()}{get\_table\_def\_key()}}
+{\footnotesize\ttfamily size\+\_\+t get\+\_\+table\+\_\+def\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{const char $\ast$$\ast$}]{key }\end{DoxyParamCaption})}
+
+Get table cache key for a table list element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+list\mbox{[}in\mbox{]}} & Table list element. \\
+\hline
+{\em key\mbox{[}out\mbox{]}} & On return points to table cache key for the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Unlike create\+\_\+table\+\_\+def\+\_\+key() call this function doesn\textquotesingle{}t construct key in a buffer provider by caller. Instead it relies on the fact that table list element for which key is requested has properly initialized \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} object and the fact that table definition cache key is suffix of key used in M\+DL subsystem. So to get table definition key it simply needs to return pointer to appropriate part of \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} object nested in this table list element. Indeed, this means that lifetime of key produced by this call is limited by the lifetime of table list element which it got as parameter.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Length of key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_gad9c9e8583421876b16d148a82322e86e}\label{group__Data__Dictionary_gad9c9e8583421876b16d148a82322e86e}} 
+\index{Data Dictionary@{Data Dictionary}!get\+\_\+table\+\_\+share@{get\+\_\+table\+\_\+share}}
+\index{get\+\_\+table\+\_\+share@{get\+\_\+table\+\_\+share}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+share()}{get\_table\_share()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}$\ast$ get\+\_\+table\+\_\+share (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{const char $\ast$}]{key,  }\item[{size\+\_\+t}]{key\+\_\+length,  }\item[{uint}]{db\+\_\+flags,  }\item[{int $\ast$}]{error,  }\item[{my\+\_\+hash\+\_\+value\+\_\+type}]{hash\+\_\+value }\end{DoxyParamCaption})}
+
+Get the \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} for a table.
+
+Get a table definition from the table definition cache. If the share does not exist, create a new one from the persistently stored table definition, and temporarily release L\+O\+C\+K\+\_\+open while retrieving it. Re-\/lock L\+O\+C\+K\+\_\+open when the table definition has been retrieved, and broadcast this to other threads waiting for the share to become opened.
+
+If the share exists, and is in the process of being opened, wait for opening to complete before continuing.
+
+\begin{DoxyPrecond}{Precondition}
+It is a precondition that the caller must own L\+O\+C\+K\+\_\+open before calling this function.
+\end{DoxyPrecond}
+\begin{DoxyNote}{Note}
+Callers of this function cannot rely on L\+O\+C\+K\+\_\+open being held for the duration of the call. It may be temporarily released while the table definition is opened, and it may be temporarily released while the thread is waiting for a different thread to finish opening it.
+
+After share-\/$>$m\+\_\+open\+\_\+in\+\_\+progress is set, there should be no wait for resources like row-\/ or metadata locks, table flushes, etc. Otherwise, we may end up in deadlocks that will not be detected.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread handle \\
+\hline
+ & {\em table\+\_\+list} & table that should be opened \\
+\hline
+ & {\em key} & table cache key \\
+\hline
+ & {\em key\+\_\+length} & length of key \\
+\hline
+ & {\em db\+\_\+flags} & flags to open\+\_\+table\+\_\+def()\+: O\+P\+E\+N\+\_\+\+V\+I\+EW \\
+\hline
+\mbox{\texttt{ out}}  & {\em error} & error code from open\+\_\+table\+\_\+def()\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}, or 0 if there was an error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga4d51adf9905616e57f7b572081f537ac}\label{group__Data__Dictionary_ga4d51adf9905616e57f7b572081f537ac}} 
+\index{Data Dictionary@{Data Dictionary}!handle\+\_\+routine@{handle\+\_\+routine}}
+\index{handle\+\_\+routine@{handle\+\_\+routine}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{handle\+\_\+routine()}{handle\_routine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool D\+M\+L\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+routine (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$}]{rt,  }\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{bool $\ast$}]{need\+\_\+prelocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Defines how prelocking algorithm for D\+ML statements should handle routines\+:
+\begin{DoxyItemize}
+\item For C\+A\+LL statements we do unrolling (i.\+e. open and lock tables for each sub-\/statement individually). So for such statements prelocking is enabled only if stored functions are used in parameter list and only for period during which we calculate values of parameters. Thus in this strategy we ignore procedure which is directly called by such statement and extend the prelocking set only with tables/functions used by SF called from the parameter list.
+\item For any other statement any routine which is directly or indirectly called by statement is going to be executed in prelocked mode. So in this case we simply add all tables and routines used by it to the prelocking set.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prelocking\+\_\+ctx} & Prelocking context of the statement. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rt} & Prelocking set element describing routine. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sp} & Routine body. \\
+\hline
+\mbox{\texttt{ out}}  & {\em need\+\_\+prelocking} & Set to T\+R\+UE if method detects that prelocking required, not changed otherwise.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure (O\+OM). \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}}.
+
+\mbox{\Hypertarget{group__Data__Dictionary_ga7e0d0312d3f9e2abb42e91b74f045d79}\label{group__Data__Dictionary_ga7e0d0312d3f9e2abb42e91b74f045d79}} 
+\index{Data Dictionary@{Data Dictionary}!handle\+\_\+routine@{handle\+\_\+routine}}
+\index{handle\+\_\+routine@{handle\+\_\+routine}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{handle\+\_\+routine()}{handle\_routine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Alter\+\_\+table\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+routine (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$}]{rt,  }\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{bool $\ast$}]{need\+\_\+prelocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Defines how prelocking algorithm for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement should handle routines -\/ do nothing as this statement is not supposed to call routines.
+
+We still can end up in this method when someone tries to define a foreign key referencing a view, and not just a simple view, but one that uses stored routines. 
+
+Implements \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}}.
+
+\mbox{\Hypertarget{group__Data__Dictionary_gab4041a333019fb1a8ffb4e3772f627cf}\label{group__Data__Dictionary_gab4041a333019fb1a8ffb4e3772f627cf}} 
+\index{Data Dictionary@{Data Dictionary}!handle\+\_\+table@{handle\+\_\+table}}
+\index{handle\+\_\+table@{handle\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{handle\+\_\+table()}{handle\_table()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool D\+M\+L\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool $\ast$}]{need\+\_\+prelocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Defines how prelocking algorithm for D\+ML statements should handle table list elements\+:
+\begin{DoxyItemize}
+\item If table has triggers we should add all tables and routines used by them to the prelocking set.
+\end{DoxyItemize}
+
+We do not need to acquire metadata locks on trigger names in D\+ML statements, since all D\+DL statements that change trigger metadata always lock their subject tables.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prelocking\+\_\+ctx} & Prelocking context of the statement. \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+list} & Table list element for table. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sp} & Routine body. \\
+\hline
+\mbox{\texttt{ out}}  & {\em need\+\_\+prelocking} & Set to T\+R\+UE if method detects that prelocking required, not changed otherwise.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure (O\+OM). \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}}.
+
+\mbox{\Hypertarget{group__Data__Dictionary_ga572cfaf98399c14ebe9e318b4197c6f5}\label{group__Data__Dictionary_ga572cfaf98399c14ebe9e318b4197c6f5}} 
+\index{Data Dictionary@{Data Dictionary}!handle\+\_\+table@{handle\+\_\+table}}
+\index{handle\+\_\+table@{handle\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{handle\+\_\+table()}{handle\_table()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Alter\+\_\+table\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool $\ast$}]{need\+\_\+prelocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Defines how prelocking algorithm for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement should handle table list elements.
+
+Unlike in D\+ML, we do not process triggers here.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prelocking\+\_\+ctx} & Prelocking context of the statement. \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+list} & Table list element for table. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sp} & Routine body. \\
+\hline
+\mbox{\texttt{ out}}  & {\em need\+\_\+prelocking} & Set to T\+R\+UE if method detects that prelocking required, not changed otherwise.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure (O\+OM). \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}}.
+
+\mbox{\Hypertarget{group__Data__Dictionary_ga757cc4c5e9baf4dfae041368257e46e4}\label{group__Data__Dictionary_ga757cc4c5e9baf4dfae041368257e46e4}} 
+\index{Data Dictionary@{Data Dictionary}!handle\+\_\+view@{handle\+\_\+view}}
+\index{handle\+\_\+view@{handle\+\_\+view}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{handle\+\_\+view()}{handle\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool D\+M\+L\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+view (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool $\ast$}]{need\+\_\+prelocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Defines how prelocking algorithm for D\+ML statements should handle view -\/ all view routines should be added to the prelocking set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prelocking\+\_\+ctx} & Prelocking context of the statement. \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+list} & Table list element for view. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sp} & Routine body. \\
+\hline
+\mbox{\texttt{ out}}  & {\em need\+\_\+prelocking} & Set to T\+R\+UE if method detects that prelocking required, not changed otherwise.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure (O\+OM). \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}}.
+
+\mbox{\Hypertarget{group__Data__Dictionary_ga3da56b0df4158af2defc12e836983529}\label{group__Data__Dictionary_ga3da56b0df4158af2defc12e836983529}} 
+\index{Data Dictionary@{Data Dictionary}!handle\+\_\+view@{handle\+\_\+view}}
+\index{handle\+\_\+view@{handle\+\_\+view}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{handle\+\_\+view()}{handle\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Alter\+\_\+table\+\_\+prelocking\+\_\+strategy\+::handle\+\_\+view (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool $\ast$}]{need\+\_\+prelocking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Defines how prelocking algorithm for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement should handle view -\/ do nothing. We don\textquotesingle{}t need to add view routines to the prelocking set in this case as view is not going to be materialized. 
+
+Implements \mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}}.
+
+\mbox{\Hypertarget{group__Data__Dictionary_gae06de7ce22001b035ca61edf2a3dea09}\label{group__Data__Dictionary_gae06de7ce22001b035ca61edf2a3dea09}} 
+\index{Data Dictionary@{Data Dictionary}!lock\+\_\+table\+\_\+names@{lock\+\_\+table\+\_\+names}}
+\index{lock\+\_\+table\+\_\+names@{lock\+\_\+table\+\_\+names}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{lock\+\_\+table\+\_\+names()}{lock\_table\_names()}}
+{\footnotesize\ttfamily bool lock\+\_\+table\+\_\+names (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables\+\_\+start,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables\+\_\+end,  }\item[{ulong}]{lock\+\_\+wait\+\_\+timeout,  }\item[{uint}]{flags }\end{DoxyParamCaption})}
+
+Acquire \char`\"{}strong\char`\"{} (S\+RO, S\+NW, S\+N\+RW) metadata locks on tables used by L\+O\+CK T\+A\+B\+L\+ES or by a D\+DL statement.
+
+Acquire lock \char`\"{}\+S\char`\"{} on table being created in C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement.
+
+\begin{DoxyNote}{Note}
+Under L\+O\+CK T\+A\+B\+L\+ES, we can\textquotesingle{}t take new locks, so use open\+\_\+tables\+\_\+check\+\_\+upgradable\+\_\+mdl() instead.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em tables\+\_\+start} & Start of list of tables on which locks should be acquired. \\
+\hline
+{\em tables\+\_\+end} & End of list of tables. \\
+\hline
+{\em lock\+\_\+wait\+\_\+timeout} & Seconds to wait before timeout. \\
+\hline
+{\em flags} & \mbox{\hyperlink{classBitmap}{Bitmap}} of flags to modify how the tables will be open, see \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table()}} description for details.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure (e.\+g. connection was killed) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga399ec28859bb54829b1cabbeed845f78}\label{group__Data__Dictionary_ga399ec28859bb54829b1cabbeed845f78}} 
+\index{Data Dictionary@{Data Dictionary}!lock\+\_\+tables@{lock\+\_\+tables}}
+\index{lock\+\_\+tables@{lock\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{lock\+\_\+tables()}{lock\_tables()}}
+{\footnotesize\ttfamily bool lock\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{uint}]{count,  }\item[{uint}]{flags }\end{DoxyParamCaption})}
+
+Lock all tables in a list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em tables} & Tables to lock \\
+\hline
+{\em count} & Number of opened tables \\
+\hline
+{\em flags} & Options (see \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}} for details)\\
+\hline
+\end{DoxyParams}
+You can\textquotesingle{}t call \mbox{\hyperlink{group__Data__Dictionary_ga399ec28859bb54829b1cabbeed845f78}{lock\+\_\+tables()}} while holding thr\+\_\+lock locks, as this would break the dead-\/lock-\/free handling thr\+\_\+lock gives us. You must always get all needed locks at once.
+
+If the query for which we are calling this function is marked as requiring prelocking, this function will change locked\+\_\+tables\+\_\+mode to L\+T\+M\+\_\+\+P\+R\+E\+L\+O\+C\+K\+ED.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & A lock wait timeout, deadlock or out of memory. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gae2cc536b80faf27a1017cf4ddcc988ad}\label{group__Data__Dictionary_gae2cc536b80faf27a1017cf4ddcc988ad}} 
+\index{Data Dictionary@{Data Dictionary}!mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse@{mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse}}
+\index{mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse@{mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse()}{mark\_tmp\_table\_for\_reuse()}}
+{\footnotesize\ttfamily void mark\+\_\+tmp\+\_\+table\+\_\+for\+\_\+reuse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Reset a single temporary table. Effectively this \char`\"{}closes\char`\"{} one temporary table, in a session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Temporary table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Data__Dictionary_gab469748dd06a6477d4ce23f742af0794}\label{group__Data__Dictionary_gab469748dd06a6477d4ce23f742af0794}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+and\+\_\+lock\+\_\+tables@{open\+\_\+and\+\_\+lock\+\_\+tables}}
+\index{open\+\_\+and\+\_\+lock\+\_\+tables@{open\+\_\+and\+\_\+lock\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+and\+\_\+lock\+\_\+tables()}{open\_and\_lock\_tables()}}
+{\footnotesize\ttfamily bool open\+\_\+and\+\_\+lock\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{uint}]{flags,  }\item[{\mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}} $\ast$}]{prelocking\+\_\+strategy }\end{DoxyParamCaption})}
+
+Open all tables in list, locks them and optionally process derived tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em tables} & \mbox{\hyperlink{classList}{List}} of tables for open and locking. \\
+\hline
+{\em flags} & \mbox{\hyperlink{classBitmap}{Bitmap}} of options to be used to open and lock tables (see \mbox{\hyperlink{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}{open\+\_\+tables()}} and \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}} for details). \\
+\hline
+{\em prelocking\+\_\+strategy} & Strategy which specifies how prelocking algorithm should work for this statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The thr\+\_\+lock locks will automatically be freed by close\+\_\+thread\+\_\+tables().
+
+\mbox{\hyperlink{group__Data__Dictionary_gab469748dd06a6477d4ce23f742af0794}{open\+\_\+and\+\_\+lock\+\_\+tables()}} is not intended for open-\/and-\/locking system tables in those cases when execution of statement has started already and other tables have been opened. Use \mbox{\hyperlink{group__Data__Dictionary_ga5564f0cf7807256a52a9455fd4f45d4e}{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read()}} or \mbox{\hyperlink{group__Data__Dictionary_gac315ba0102697b41bdeeff67a61240eb}{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read()}} instead.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK. \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga065f6a0326ab135938fb38fd371dace5}\label{group__Data__Dictionary_ga065f6a0326ab135938fb38fd371dace5}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+log\+\_\+table@{open\+\_\+log\+\_\+table}}
+\index{open\+\_\+log\+\_\+table@{open\+\_\+log\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+log\+\_\+table()}{open\_log\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ open\+\_\+log\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{one\+\_\+table,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup }\end{DoxyParamCaption})}
+
+Open a log table. Opening such tables is performed internally in the server implementation, and is a \textquotesingle{}nested\textquotesingle{} open, since some tables might be already opened by the current thread. The thread context before this call is saved, and is restored when calling \mbox{\hyperlink{group__Data__Dictionary_ga8f22fa867e1bb56d350834b5497c9d6d}{close\+\_\+log\+\_\+table()}}. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em one\+\_\+table} & Log table to open \\
+\hline
+{\em backup} & \mbox{[}out\mbox{]} Temporary storage used to save the thread context \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Data__Dictionary_ga86a68932d1c35b3fd820c99d185d7888}\label{group__Data__Dictionary_ga86a68932d1c35b3fd820c99d185d7888}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table@{open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table}}
+\index{open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table@{open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table()}{open\_n\_lock\_single\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+l,  }\item[{thr\+\_\+lock\+\_\+type}]{lock\+\_\+type,  }\item[{uint}]{flags,  }\item[{\mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}} $\ast$}]{prelocking\+\_\+strategy }\end{DoxyParamCaption})}
+
+
+
+Open and lock one table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+l} & table to open is first table in this list \\
+\hline
+\mbox{\texttt{ in}}  & {\em lock\+\_\+type} & lock to use for table \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & options to be used while opening and locking table (see \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table()}}, \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables()}}) \\
+\hline
+\mbox{\texttt{ in}}  & {\em prelocking\+\_\+strategy} & Strategy which specifies how prelocking algorithm should work for this statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+table 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=} & N\+U\+LL OK, opened table returned \\
+\hline
+{\em N\+U\+LL} & Error\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If ok, the following are also set\+: table\+\_\+list-\/$>$lock\+\_\+type lock\+\_\+type table\+\_\+list-\/$>$table table
+
+If table\+\_\+l is a list, not a single table, the list is temporarily broken.
+\end{DoxyNote}
+This function is meant as a replacement for open\+\_\+ltable() when M\+E\+R\+GE tables can be opened. open\+\_\+ltable() cannot open M\+E\+R\+GE tables.
+
+There may be more differences between \mbox{\hyperlink{group__Data__Dictionary_ga86a68932d1c35b3fd820c99d185d7888}{open\+\_\+n\+\_\+lock\+\_\+single\+\_\+table()}} and open\+\_\+ltable(). One known difference is that open\+\_\+ltable() does neither call thd-\/$>$decide\+\_\+logging\+\_\+format() nor handle some other logging and locking issues because it does not call \mbox{\hyperlink{group__Data__Dictionary_ga399ec28859bb54829b1cabbeed845f78}{lock\+\_\+tables()}}. \mbox{\Hypertarget{group__Data__Dictionary_ga5564f0cf7807256a52a9455fd4f45d4e}\label{group__Data__Dictionary_ga5564f0cf7807256a52a9455fd4f45d4e}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read@{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read}}
+\index{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read@{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read()}{open\_nontrans\_system\_tables\_for\_read()}}
+{\footnotesize\ttfamily bool open\+\_\+nontrans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup }\end{DoxyParamCaption})}
+
+Open and lock non-\/transactional system tables for read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em table\+\_\+list} & \mbox{\hyperlink{classList}{List}} of tables to open. \\
+\hline
+{\em backup} & Pointer to Open\+\_\+tables\+\_\+backup instance where information about currently open tables will be saved, and from which will be restored when we will end work with non-\/transactional system tables.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+T\+H\+R\+\_\+\+L\+O\+CK deadlocks are not possible here because of the restrictions we put on opening and locking of system tables for writing. Thus, the system tables can be opened and locked for reading even if some other tables have already been opened and locked.
+
+M\+DL-\/deadlocks are possible, but they are properly detected and reported.
+
+This call will eventually be removed as an Inno\+DB attachable transaction will be used to access all system tables.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}\label{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+table@{open\+\_\+table}}
+\index{open\+\_\+table@{open\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+table()}{open\_table()}}
+{\footnotesize\ttfamily bool open\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{\mbox{\hyperlink{classOpen__table__context}{Open\+\_\+table\+\_\+context}} $\ast$}]{ot\+\_\+ctx }\end{DoxyParamCaption})}
+
+Open a base table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em table\+\_\+list} & Open first table in list. \\
+\hline
+{\em ot\+\_\+ctx} & Context with flags which modify how open works and which is used to recover from a failed \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table()}} attempt. Some examples of flags\+: M\+Y\+S\+Q\+L\+\_\+\+O\+P\+E\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+F\+L\+U\+SH -\/ Open table even if someone has done a flush. No version number checking is done. M\+Y\+S\+Q\+L\+\_\+\+O\+P\+E\+N\+\_\+\+H\+A\+S\+\_\+\+M\+D\+L\+\_\+\+L\+O\+CK -\/ instead of acquiring metadata locks rely on that caller already has appropriate ones.\\
+\hline
+\end{DoxyParams}
+Uses a cache of open tables to find a \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance not in use.
+
+If \mbox{\hyperlink{structTABLE__LIST_aa5584240bf59a147fff802fb18e1704e}{T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::open\+\_\+strategy}} is set to O\+P\+E\+N\+\_\+\+I\+F\+\_\+\+E\+X\+I\+S\+TS, the table is opened only if it exists. If the open strategy is O\+P\+E\+N\+\_\+\+S\+T\+UB, the underlying table is never opened. In both cases, metadata locks are always taken according to the lock strategy.
+
+The function used to open temporary tables, but now it opens base tables only.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Open failed. \char`\"{}action\char`\"{} parameter may contain type of action needed to remedy problem before retrying again. \\
+\hline
+{\em F\+A\+L\+SE} & Success. Members of \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} structure are filled properly (e.\+g. T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::table is set for real tables and T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::view is set for views). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga8eaa3b1fdce29eac72028f96c55607d3}\label{group__Data__Dictionary_ga8eaa3b1fdce29eac72028f96c55607d3}} 
+\index{Data Dictionary@{Data Dictionary}!Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}}
+\index{Open\+\_\+table\+\_\+context@{Open\+\_\+table\+\_\+context}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{Open\+\_\+table\+\_\+context()}{Open\_table\_context()}}
+{\footnotesize\ttfamily Open\+\_\+table\+\_\+context\+::\+Open\+\_\+table\+\_\+context (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{flags }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classOpen__table__context}{Open\+\_\+table\+\_\+context}} \mbox{\Hypertarget{group__Data__Dictionary_ga35659d6f0f8a6d39ee3f3db7c233df52}\label{group__Data__Dictionary_ga35659d6f0f8a6d39ee3f3db7c233df52}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+table\+\_\+uncached@{open\+\_\+table\+\_\+uncached}}
+\index{open\+\_\+table\+\_\+uncached@{open\+\_\+table\+\_\+uncached}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+table\+\_\+uncached()}{open\_table\_uncached()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ open\+\_\+table\+\_\+uncached (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{path,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{bool}]{add\+\_\+to\+\_\+temporary\+\_\+tables\+\_\+list,  }\item[{bool}]{open\+\_\+in\+\_\+engine }\end{DoxyParamCaption})}
+
+Open a single table without table caching and don\textquotesingle{}t add it to T\+H\+D\+::open\+\_\+tables. Depending on the \textquotesingle{}add\+\_\+to\+\_\+temporary\+\_\+tables\+\_\+list\textquotesingle{} value, the opened \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance will be addded to T\+H\+D\+::temporary\+\_\+tables list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em path} & Path (without .frm) \\
+\hline
+{\em db} & Database name. \\
+\hline
+{\em table\+\_\+name} & Table name. \\
+\hline
+{\em add\+\_\+to\+\_\+temporary\+\_\+tables\+\_\+list} & Specifies if the opened \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance should be linked into T\+H\+D\+::temporary\+\_\+tables list. \\
+\hline
+{\em open\+\_\+in\+\_\+engine} & Indicates that we need to open table in storage engine in addition to constructing \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is used\+:
+\begin{DoxyItemize}
+\item by alter\+\_\+table() to open a temporary table;
+\item when creating a temporary table with C\+R\+E\+A\+TE T\+E\+M\+P\+O\+R\+A\+RY \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}.
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance for opened table. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & on error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}\label{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+tables@{open\+\_\+tables}}
+\index{open\+\_\+tables@{open\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+tables()}{open\_tables()}}
+{\footnotesize\ttfamily bool open\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$}]{start,  }\item[{uint $\ast$}]{counter,  }\item[{uint}]{flags,  }\item[{\mbox{\hyperlink{classPrelocking__strategy}{Prelocking\+\_\+strategy}} $\ast$}]{prelocking\+\_\+strategy }\end{DoxyParamCaption})}
+
+Open all tables in list
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em start} & \mbox{\hyperlink{classList}{List}} of tables to be open (it can be adjusted for statement that uses tables only implicitly, e.\+g. for \char`\"{}\+S\+E\+L\+E\+C\+T f1()\char`\"{}). \\
+\hline
+\mbox{\texttt{ out}}  & {\em counter} & Number of tables which were open. \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & \mbox{\hyperlink{classBitmap}{Bitmap}} of flags to modify how the tables will be open, see \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table()}} description for details. \\
+\hline
+\mbox{\texttt{ in}}  & {\em prelocking\+\_\+strategy} & Strategy which specifies how prelocking algorithm should work for this statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Unless we are already in prelocked mode and prelocking strategy prescribes so this function will also precache all S\+P/\+S\+Fs explicitly or implicitly (via views and triggers) used by the query and add tables needed for their execution to table list. Statement that uses S\+Fs, invokes triggers or requires foreign key checks will be marked as requiring prelocking. Prelocked mode will be enabled for such query during \mbox{\hyperlink{group__Data__Dictionary_ga399ec28859bb54829b1cabbeed845f78}{lock\+\_\+tables()}} call.
+\end{DoxyNote}
+If query for which we are opening tables is already marked as requiring prelocking it won\textquotesingle{}t do such precaching and will simply reuse table list which is already built.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Error, reported. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga6b93d2956c1e654ebe0e48ab3503410d}\label{group__Data__Dictionary_ga6b93d2956c1e654ebe0e48ab3503410d}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+tables\+\_\+for\+\_\+query@{open\+\_\+tables\+\_\+for\+\_\+query}}
+\index{open\+\_\+tables\+\_\+for\+\_\+query@{open\+\_\+tables\+\_\+for\+\_\+query}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+tables\+\_\+for\+\_\+query()}{open\_tables\_for\_query()}}
+{\footnotesize\ttfamily bool open\+\_\+tables\+\_\+for\+\_\+query (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{uint}]{flags }\end{DoxyParamCaption})}
+
+Open all tables for a query or statement, in list started by \char`\"{}tables\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em tables} & list of tables for open \\
+\hline
+{\em flags} & bitmap of flags to modify how the tables will be open\+: M\+Y\+S\+Q\+L\+\_\+\+L\+O\+C\+K\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+F\+L\+U\+SH -\/ open table even if someone has done a flush on it.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & -\/ ok \\
+\hline
+{\em true} & -\/ error\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This is to be used on prepare stage when you don\textquotesingle{}t read any data from the tables.
+
+Updates Query\+\_\+tables\+\_\+list\+::table\+\_\+count as side-\/effect. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Data__Dictionary_gab5c68673b37e4f394de31ffe4ac80fcc}\label{group__Data__Dictionary_gab5c68673b37e4f394de31ffe4ac80fcc}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+temporary\+\_\+table@{open\+\_\+temporary\+\_\+table}}
+\index{open\+\_\+temporary\+\_\+table@{open\+\_\+temporary\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+temporary\+\_\+table()}{open\_temporary\_table()}}
+{\footnotesize\ttfamily bool open\+\_\+temporary\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tl }\end{DoxyParamCaption})}
+
+Find a temporary table specified by \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} instance in the cache and prepare its \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance for use.
+
+This function tries to resolve this table in the list of temporary tables of this thread. Temporary tables are thread-\/local and \char`\"{}shadow\char`\"{} base tables with the same name.
+
+\begin{DoxyNote}{Note}
+In most cases one should use \mbox{\hyperlink{group__Data__Dictionary_gac4c1cb71807d09d53273048447abf301}{open\+\_\+temporary\+\_\+tables()}} instead of this call.
+
+One should finalize process of opening temporary table for table list element by calling open\+\_\+and\+\_\+process\+\_\+table(). This function is responsible for table version checking and handling of merge tables.
+
+We used to check global\+\_\+read\+\_\+lock before opening temporary tables. However, that limitation was artificial and is removed now.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & On success. If a temporary table exists for the given key, tl-\/$>$table is set. \\
+\hline
+{\em T\+R\+UE} & On error. my\+\_\+error() has been called. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gac4c1cb71807d09d53273048447abf301}\label{group__Data__Dictionary_gac4c1cb71807d09d53273048447abf301}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+temporary\+\_\+tables@{open\+\_\+temporary\+\_\+tables}}
+\index{open\+\_\+temporary\+\_\+tables@{open\+\_\+temporary\+\_\+tables}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+temporary\+\_\+tables()}{open\_temporary\_tables()}}
+{\footnotesize\ttfamily bool open\+\_\+temporary\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tl\+\_\+list }\end{DoxyParamCaption})}
+
+Pre-\/open temporary tables corresponding to table list elements.
+
+\begin{DoxyNote}{Note}
+One should finalize process of opening temporary tables by calling \mbox{\hyperlink{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}{open\+\_\+tables()}}. This function is responsible for table version checking and handling of merge tables.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & On success. If a temporary tables exists for the given element, tl-\/$>$table is set. \\
+\hline
+{\em T\+R\+UE} & On error. my\+\_\+error() has been called. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gac315ba0102697b41bdeeff67a61240eb}\label{group__Data__Dictionary_gac315ba0102697b41bdeeff67a61240eb}} 
+\index{Data Dictionary@{Data Dictionary}!open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read@{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read}}
+\index{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read@{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read()}{open\_trans\_system\_tables\_for\_read()}}
+{\footnotesize\ttfamily bool open\+\_\+trans\+\_\+system\+\_\+tables\+\_\+for\+\_\+read (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list }\end{DoxyParamCaption})}
+
+Open and lock transactional system tables for read.
+
+One must call \mbox{\hyperlink{group__Data__Dictionary_ga94ca9600b012ffde28a4a0360e91c0e8}{close\+\_\+trans\+\_\+system\+\_\+tables()}} to close systems tables opened with this call.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em table\+\_\+list} & \mbox{\hyperlink{classList}{List}} of tables to open.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+T\+H\+R\+\_\+\+L\+O\+CK deadlocks are not possible here because of the restrictions we put on opening and locking of system tables for writing. Thus, the system tables can be opened and locked for reading even if some other tables have already been opened and locked.
+
+M\+DL-\/deadlocks are possible, but they are properly detected and reported.
+
+Row-\/level deadlocks should be either avoided altogether using non-\/locking reads (as it is done now for Inno\+DB), or should be correctly detected and reported (in case of other transactional SE).
+
+It is now technically possible to open non-\/transactional tables (My\+I\+S\+AM system tables) using this function. That situation might still happen if the user run the server on the elder data-\/directory or manually alters the system tables to reside in My\+I\+S\+AM instead of Inno\+DB. It will be forbidden in the future.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_gade48892bc4607303f7f4d3d6df4c39de}\label{group__Data__Dictionary_gade48892bc4607303f7f4d3d6df4c39de}} 
+\index{Data Dictionary@{Data Dictionary}!recover\+\_\+from\+\_\+failed\+\_\+open@{recover\+\_\+from\+\_\+failed\+\_\+open}}
+\index{recover\+\_\+from\+\_\+failed\+\_\+open@{recover\+\_\+from\+\_\+failed\+\_\+open}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{recover\+\_\+from\+\_\+failed\+\_\+open()}{recover\_from\_failed\_open()}}
+{\footnotesize\ttfamily bool Open\+\_\+table\+\_\+context\+::recover\+\_\+from\+\_\+failed\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Recover from failed attempt of open table by performing requested action.
+
+\begin{DoxyPrecond}{Precondition}
+This function should be called only with \char`\"{}action\char`\"{} != O\+T\+\_\+\+N\+O\+\_\+\+A\+C\+T\+I\+ON and after having called 
+\end{DoxyPrecond}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Data__Dictionary_ga92bec964ecaaa7270a429e664643b746}{close\+\_\+tables\+\_\+for\+\_\+reopen()}}.
+\end{DoxySeeAlso}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & -\/ Success. One should try to open tables once again. \\
+\hline
+{\em T\+R\+UE} & -\/ Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga0f27eb7444d2cec48296785a54e229f2}\label{group__Data__Dictionary_ga0f27eb7444d2cec48296785a54e229f2}} 
+\index{Data Dictionary@{Data Dictionary}!release\+\_\+table\+\_\+share@{release\+\_\+table\+\_\+share}}
+\index{release\+\_\+table\+\_\+share@{release\+\_\+table\+\_\+share}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{release\+\_\+table\+\_\+share()}{release\_table\_share()}}
+{\footnotesize\ttfamily void release\+\_\+table\+\_\+share (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{share }\end{DoxyParamCaption})}
+
+Mark that we are not using table share anymore.
+
+
+\begin{DoxyParams}{Parameters}
+{\em share} & Table share\\
+\hline
+\end{DoxyParams}
+If the share has no open tables and (we have done a refresh or if we have already too many open table shares) then delete the definition. \mbox{\Hypertarget{group__Data__Dictionary_gaf35889f70c8719510fb76899cf9cf20b}\label{group__Data__Dictionary_gaf35889f70c8719510fb76899cf9cf20b}} 
+\index{Data Dictionary@{Data Dictionary}!request\+\_\+backoff\+\_\+action@{request\+\_\+backoff\+\_\+action}}
+\index{request\+\_\+backoff\+\_\+action@{request\+\_\+backoff\+\_\+action}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{request\+\_\+backoff\+\_\+action()}{request\_backoff\_action()}}
+{\footnotesize\ttfamily bool Open\+\_\+table\+\_\+context\+::request\+\_\+backoff\+\_\+action (\begin{DoxyParamCaption}\item[{enum\+\_\+open\+\_\+table\+\_\+action}]{action\+\_\+arg,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Check if we can back-\/off and set back off action if we can. Otherwise report and return error.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & if back-\/off is impossible. \\
+\hline
+{\em F\+A\+L\+SE} & if we can back off. Back off action has been set. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_ga2f6730cd1feb3014042adbf998ca9203}\label{group__Data__Dictionary_ga2f6730cd1feb3014042adbf998ca9203}} 
+\index{Data Dictionary@{Data Dictionary}!rm\+\_\+temporary\+\_\+table@{rm\+\_\+temporary\+\_\+table}}
+\index{rm\+\_\+temporary\+\_\+table@{rm\+\_\+temporary\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{rm\+\_\+temporary\+\_\+table()}{rm\_temporary\_table()}}
+{\footnotesize\ttfamily bool rm\+\_\+temporary\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{base,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Delete a temporary table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Handlerton for table to be deleted. \\
+\hline
+{\em path} & Path to the table to be deleted (i.\+e. path to its .frm without an extension).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & -\/ success. \\
+\hline
+{\em true} & -\/ failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gaed504cf321c7fd98175f80785f6be954}\label{group__Data__Dictionary_gaed504cf321c7fd98175f80785f6be954}} 
+\index{Data Dictionary@{Data Dictionary}!run\+\_\+before\+\_\+dml\+\_\+hook@{run\+\_\+before\+\_\+dml\+\_\+hook}}
+\index{run\+\_\+before\+\_\+dml\+\_\+hook@{run\+\_\+before\+\_\+dml\+\_\+hook}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{run\+\_\+before\+\_\+dml\+\_\+hook()}{run\_before\_dml\_hook()}}
+{\footnotesize\ttfamily int run\+\_\+before\+\_\+dml\+\_\+hook (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Run the server hook called \char`\"{}before\+\_\+dml\char`\"{}. This is a hook originated from replication that allow server plugins to execute code before any D\+ML instruction is executed. In case of negative outcome, it will set my\+\_\+error to E\+R\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+M\+L\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+E\+R\+R\+OR
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hook outcome 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Everything is fine \\
+\hline
+{\em !=0} & Error in the outcome of the hook. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gaa6d4287d0d00fc5733a67df33a193738}\label{group__Data__Dictionary_gaa6d4287d0d00fc5733a67df33a193738}} 
+\index{Data Dictionary@{Data Dictionary}!setup\+\_\+fields@{setup\+\_\+fields}}
+\index{setup\+\_\+fields@{setup\+\_\+fields}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{setup\+\_\+fields()}{setup\_fields()}}
+{\footnotesize\ttfamily bool setup\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{ref\+\_\+pointer\+\_\+array,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{ulong}]{want\+\_\+privilege,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{sum\+\_\+func\+\_\+list,  }\item[{bool}]{allow\+\_\+sum\+\_\+func,  }\item[{bool}]{column\+\_\+update }\end{DoxyParamCaption})}
+
+Resolve a list of expressions and setup appropriate data
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread handler \\
+\hline
+\mbox{\texttt{ out}}  & {\em ref\+\_\+pointer\+\_\+array} & filled in with reference pointers. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em fields} & list of expressions, populated with resolved data about expressions. \\
+\hline
+ & {\em want\+\_\+privilege} & privilege representing desired operation. whether the expressions are selected, inserted or updated, or no operation is done. will also decide inclusion in read/write maps. \\
+\hline
+ & {\em sum\+\_\+func\+\_\+list} & \\
+\hline
+ & {\em allow\+\_\+sum\+\_\+func} & true if set operations are allowed in context. \\
+\hline
+ & {\em column\+\_\+update} & if true, reject expressions that do not resolve to a base table column\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_gabb94e7a0682741b06d662be41fae480f}\label{group__Data__Dictionary_gabb94e7a0682741b06d662be41fae480f}} 
+\index{Data Dictionary@{Data Dictionary}!table\+\_\+def\+\_\+start\+\_\+shutdown@{table\+\_\+def\+\_\+start\+\_\+shutdown}}
+\index{table\+\_\+def\+\_\+start\+\_\+shutdown@{table\+\_\+def\+\_\+start\+\_\+shutdown}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{table\+\_\+def\+\_\+start\+\_\+shutdown()}{table\_def\_start\_shutdown()}}
+{\footnotesize\ttfamily void table\+\_\+def\+\_\+start\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Notify table definition cache that process of shutting down server has started so it has to keep number of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} objects minimal in order to reduce number of references to pluggable engines. \mbox{\Hypertarget{group__Data__Dictionary_ga917237a2e99cef2eb34e64095d79fb1a}\label{group__Data__Dictionary_ga917237a2e99cef2eb34e64095d79fb1a}} 
+\index{Data Dictionary@{Data Dictionary}!tdc\+\_\+open\+\_\+view@{tdc\+\_\+open\+\_\+view}}
+\index{tdc\+\_\+open\+\_\+view@{tdc\+\_\+open\+\_\+view}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{tdc\+\_\+open\+\_\+view()}{tdc\_open\_view()}}
+{\footnotesize\ttfamily bool tdc\+\_\+open\+\_\+view (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{const char $\ast$}]{alias,  }\item[{const char $\ast$}]{cache\+\_\+key,  }\item[{size\+\_\+t}]{cache\+\_\+key\+\_\+length,  }\item[{uint}]{flags }\end{DoxyParamCaption})}
+
+Open view by getting its definition from disk (and table cache in future).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em table\+\_\+list} & \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} with db, table\+\_\+name \& belong\+\_\+to\+\_\+view \\
+\hline
+{\em alias} & Alias name \\
+\hline
+{\em cache\+\_\+key} & \mbox{\hyperlink{classKey}{Key}} for table definition cache \\
+\hline
+{\em cache\+\_\+key\+\_\+length} & Length of cache\+\_\+key \\
+\hline
+{\em flags} & Flags which modify how we open the view\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000076}{Todo}}]This function is needed for special handling of views under L\+O\+CK T\+A\+B\+L\+ES. We probably should get rid of it in long term.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if success, T\+R\+UE -\/ otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Data__Dictionary_ga8faf6c6118b6677394e14994ae614075}\label{group__Data__Dictionary_ga8faf6c6118b6677394e14994ae614075}} 
+\index{Data Dictionary@{Data Dictionary}!tdc\+\_\+remove\+\_\+table@{tdc\+\_\+remove\+\_\+table}}
+\index{tdc\+\_\+remove\+\_\+table@{tdc\+\_\+remove\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{tdc\+\_\+remove\+\_\+table()}{tdc\_remove\_table()}}
+{\footnotesize\ttfamily void tdc\+\_\+remove\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+tdc\+\_\+remove\+\_\+table\+\_\+type}]{remove\+\_\+type,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{bool}]{has\+\_\+lock }\end{DoxyParamCaption})}
+
+Remove all or some (depending on parameter) instances of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} from the table definition cache.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+{\em remove\+\_\+type} & Type of removal\+: T\+D\+C\+\_\+\+R\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+A\+LL -\/ remove all \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances and \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} instance. There should be no used \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects and caller should have exclusive metadata lock on the table. T\+D\+C\+\_\+\+R\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+N\+O\+T\+\_\+\+O\+WN -\/ remove all \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances except those that belong to this thread. There should be no \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects used by other threads and caller should have exclusive metadata lock on the table. T\+D\+C\+\_\+\+R\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+U\+N\+U\+S\+ED -\/ remove all unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances (if there are no used instances will also remove \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}). T\+D\+C\+\_\+\+R\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+N\+O\+T\+\_\+\+O\+W\+N\+\_\+\+K\+E\+E\+P\+\_\+\+S\+H\+A\+RE -\/ remove all \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances except those that belong to this thread, but don\textquotesingle{}t mark \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} as old. There should be no \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects used by other threads and caller should have exclusive metadata lock on the table. \\
+\hline
+{\em db} & Name of database \\
+\hline
+{\em table\+\_\+name} & Name of table \\
+\hline
+{\em has\+\_\+lock} & If T\+R\+UE, L\+O\+C\+K\+\_\+open is already acquired\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It assumes that table instances are already not used by any (other) thread (this should be achieved by using meta-\/data locks). 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Data__Dictionary_ga97300534246ab121f6b9b9d7031fb56e}\label{group__Data__Dictionary_ga97300534246ab121f6b9b9d7031fb56e}} 
+\index{Data Dictionary@{Data Dictionary}!unique\+\_\+table@{unique\+\_\+table}}
+\index{unique\+\_\+table@{unique\+\_\+table}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{unique\+\_\+table()}{unique\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ unique\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool}]{check\+\_\+alias }\end{DoxyParamCaption})}
+
+Test that the subject table of I\+N\+S\+E\+R\+T/\+U\+P\+D\+A\+T\+E/\+D\+E\+L\+E\+T\+E/\+C\+R\+E\+A\+TE or (in case of My\+I\+S\+A\+M\+M\+RG) one of its children are not used later in the query.
+
+For My\+I\+S\+A\+M\+M\+RG tables, it is assumed that all the underlying tables of {\ttfamily table} (if any) are listed right after it and that their {\ttfamily parent\+\_\+l} field points at the main table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em table} & table to be checked (must be updatable base table) \\
+\hline
+{\em table\+\_\+list} & \mbox{\hyperlink{classList}{List}} of tables to check against \\
+\hline
+{\em check\+\_\+alias} & whether to check tables\textquotesingle{} aliases\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em non-\/\+N\+U\+LL} & The table list element for the table that represents the duplicate. \\
+\hline
+{\em N\+U\+LL} & No duplicates found. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Data__Dictionary_gaa62ea49fa4b58a38f20af4754928e1be}\label{group__Data__Dictionary_gaa62ea49fa4b58a38f20af4754928e1be}} 
+\index{Data Dictionary@{Data Dictionary}!update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error@{update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error}}
+\index{update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error@{update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error()}{update\_non\_unique\_table\_error()}}
+{\footnotesize\ttfamily void update\+\_\+non\+\_\+unique\+\_\+table\+\_\+error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{update,  }\item[{const char $\ast$}]{operation,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{duplicate }\end{DoxyParamCaption})}
+
+Issue correct error message in case we found 2 duplicate tables which prevent some update operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & table which we try to update \\
+\hline
+{\em operation} & name of update operation \\
+\hline
+{\em duplicate} & duplicate table which we found\\
+\hline
+\end{DoxyParams}
+here we hide view underlying tables if we have them. \mbox{\Hypertarget{group__Data__Dictionary_gac19a8c14e089f35b82dc7a2ded67ea4b}\label{group__Data__Dictionary_gac19a8c14e089f35b82dc7a2ded67ea4b}} 
+\index{Data Dictionary@{Data Dictionary}!wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used@{wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used}}
+\index{wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used@{wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used()}{wait\_while\_table\_is\_used()}}
+{\footnotesize\ttfamily bool wait\+\_\+while\+\_\+table\+\_\+is\+\_\+used (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{enum ha\+\_\+extra\+\_\+function}]{function }\end{DoxyParamCaption})}
+
+Force all other threads to stop using the table by upgrading metadata lock on it and remove unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances from cache.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em table} & Table to remove from cache \\
+\hline
+{\em function} & H\+A\+\_\+\+E\+X\+T\+R\+A\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+F\+O\+R\+\_\+\+D\+R\+OP if table is to be deleted H\+A\+\_\+\+E\+X\+T\+R\+A\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+E\+O\+P\+EN if table is not be used H\+A\+\_\+\+E\+X\+T\+R\+A\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+F\+O\+R\+\_\+\+R\+E\+N\+A\+ME if table is to be renamed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When returning, the table will be unusable for other threads until metadata lock is downgraded.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure (e.\+g. because thread was killed). \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__Data__Dictionary_ga7a682517d27176617b45212332a96a9d}\label{group__Data__Dictionary_ga7a682517d27176617b45212332a96a9d}} 
+\index{Data Dictionary@{Data Dictionary}!C\+O\+N\+D\+\_\+open@{C\+O\+N\+D\+\_\+open}}
+\index{C\+O\+N\+D\+\_\+open@{C\+O\+N\+D\+\_\+open}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{C\+O\+N\+D\+\_\+open}{COND\_open}}
+{\footnotesize\ttfamily mysql\+\_\+cond\+\_\+t C\+O\+N\+D\+\_\+open}
+
+C\+O\+N\+D\+\_\+open synchronizes concurrent opening of the same share\+:
+
+If a thread calls get\+\_\+table\+\_\+share, it releases the L\+O\+C\+K\+\_\+open mutex while reading the definition from file. If a different thread calls get\+\_\+table\+\_\+share for the same share at this point in time, it will find the share in the T\+DC, but with the m\+\_\+open\+\_\+in\+\_\+progress flag set to true. This will make the (second) thread wait for the C\+O\+N\+D\+\_\+open condition, while the first thread completes opening the table definition.
+
+When the first thread is done reading the table definition, it will set m\+\_\+open\+\_\+in\+\_\+progress to false and broadcast the C\+O\+N\+D\+\_\+open condition. Then, all threads waiting for C\+O\+N\+D\+\_\+open will wake up and, re-\/search the T\+DC for the share, and\+:
+
+1) If the share is gone, the thread will continue to allocate and open the table definition. This happens, e.\+g., if the first thread failed when opening the table defintion and had to destroy the share. 2) If the share is still in the cache, and m\+\_\+open\+\_\+in\+\_\+progress is still true, the thread will wait for the condition again. This happens if a different thread finished opening a different share. 3) If the share is still in the cache, and m\+\_\+open\+\_\+in\+\_\+progress has become false, the thread will check if the share is ok (no error), increment the ref counter, and return the share. \mbox{\Hypertarget{group__Data__Dictionary_ga99c8e1e3e72cd74032d5f11c486911fd}\label{group__Data__Dictionary_ga99c8e1e3e72cd74032d5f11c486911fd}} 
+\index{Data Dictionary@{Data Dictionary}!L\+O\+C\+K\+\_\+open@{L\+O\+C\+K\+\_\+open}}
+\index{L\+O\+C\+K\+\_\+open@{L\+O\+C\+K\+\_\+open}!Data Dictionary@{Data Dictionary}}
+\subsubsection{\texorpdfstring{L\+O\+C\+K\+\_\+open}{LOCK\_open}}
+{\footnotesize\ttfamily mysql\+\_\+mutex\+\_\+t L\+O\+C\+K\+\_\+open}
+
+L\+O\+C\+K\+\_\+open protects the following variables/objects\+:
+
+1) The table\+\_\+def\+\_\+cache This is the hash table mapping table name to a table share object. The hash table can only be manipulated while holding L\+O\+C\+K\+\_\+open. 2) last\+\_\+table\+\_\+id Generation of a new unique table\+\_\+map\+\_\+id for a table share is done through incrementing last\+\_\+table\+\_\+id, a global variable used for this purpose. 3) L\+O\+C\+K\+\_\+open protects the initialisation of the table share object and all its members, however, it does not protect reading the .frm file from where the table share is initialised. In get\+\_\+table\+\_\+share, the lock is temporarily released while opening the table definition in order to allow a higher degree of concurrency. Concurrent access to the same share is controlled by introducing a condition variable for signaling when opening the share is completed. 4) In particular the share-\/$>$ref\+\_\+count is updated each time a new table object is created that refers to a table share. This update is protected by L\+O\+C\+K\+\_\+open. 5) oldest\+\_\+unused\+\_\+share, end\+\_\+of\+\_\+unused\+\_\+share and share-\/$>$next and share-\/$>$prev are variables to handle the lists of table share objects, these can only be read and manipulated while holding the L\+O\+C\+K\+\_\+open mutex. 6) table\+\_\+def\+\_\+shutdown\+\_\+in\+\_\+progress can be updated only while holding L\+O\+C\+K\+\_\+open and A\+LL table cache mutexes. 7) refresh\+\_\+version This variable can only be updated while holding L\+O\+C\+K\+\_\+open A\+ND all table cache mutexes. 8) share-\/$>$version This variable is initialised while holding L\+O\+C\+K\+\_\+open. It can only be updated while holding L\+O\+C\+K\+\_\+open A\+ND all table cache mutexes. So if a table share is found through a reference its version won\textquotesingle{}t change if any of those mutexes are held. 9) share-\/$>$m\+\_\+flush\+\_\+tickets 

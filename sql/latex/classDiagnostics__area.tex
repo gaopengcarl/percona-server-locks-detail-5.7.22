@@ -1,0 +1,446 @@
+\hypertarget{classDiagnostics__area}{}\section{Diagnostics\+\_\+area Class Reference}
+\label{classDiagnostics__area}\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+
+
+{\ttfamily \#include $<$sql\+\_\+error.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131}{enum\+\_\+diagnostics\+\_\+status}} \{ \newline
+\mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a51ec0feac180616bb01f59dca5868b22}{D\+A\+\_\+\+E\+M\+P\+TY}} = 0, 
+\mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a3eacb4863806fb111ed5c7850d994812}{D\+A\+\_\+\+OK}}, 
+\mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131af68a233e4d673c41e756627618653633}{D\+A\+\_\+\+E\+OF}}, 
+\mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a74fcc13ebdfed9fdcd0662b70f515c79}{D\+A\+\_\+\+E\+R\+R\+OR}}, 
+\newline
+\mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131aefb51825f2df51a6bf2532f75b0c1ebe}{D\+A\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+ \}
+\item 
+typedef \mbox{\hyperlink{classI__P__List__iterator}{Sql\+\_\+condition\+\_\+list\+::\+Const\+\_\+\+Iterator}} \mbox{\hyperlink{classDiagnostics__area_a5302a0cdb7499883092d87a5b901b39d}{Sql\+\_\+condition\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a4a214a30f5e2af4b53f724335a2b9c53}\label{classDiagnostics__area_a4a214a30f5e2af4b53f724335a2b9c53}} 
+{\bfseries Diagnostics\+\_\+area} (bool allow\+\_\+unlimited\+\_\+conditions)
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a8f1beb4132ca08d855b4e5d9b78d61fa}\label{classDiagnostics__area_a8f1beb4132ca08d855b4e5d9b78d61fa}} 
+void {\bfseries set\+\_\+overwrite\+\_\+status} (bool can\+\_\+overwrite\+\_\+status)
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a21c931e44b8b623bc0b0bfbe4f264411}\label{classDiagnostics__area_a21c931e44b8b623bc0b0bfbe4f264411}} 
+bool {\bfseries is\+\_\+sent} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a431c427c8b396ae3330fadf52a37a262}\label{classDiagnostics__area_a431c427c8b396ae3330fadf52a37a262}} 
+void {\bfseries set\+\_\+is\+\_\+sent} (bool is\+\_\+sent)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a3d93eac8000515aa108fea036dca03fb}{set\+\_\+ok\+\_\+status}} (ulonglong affected\+\_\+rows, ulonglong last\+\_\+insert\+\_\+id, const char $\ast$message\+\_\+text)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a3b85cb8d8c79391a1612b1f03a92d7d6}{set\+\_\+eof\+\_\+status}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_adf14f5f9230b8675747efcf6ec797657}{set\+\_\+error\+\_\+status}} (uint mysql\+\_\+errno)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_acb25d767eace0d90c9abd0bb2f39deed}{set\+\_\+error\+\_\+status}} (uint mysql\+\_\+errno, const char $\ast$message\+\_\+text, const char $\ast$returned\+\_\+sqlstate)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a3ca17737803af475b84ff53f1409adf2}{disable\+\_\+status}} ()
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a81ad7fce5478744c6e2a5435330996d2}{reset\+\_\+diagnostics\+\_\+area}} ()
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_ad5104578dfb7cc5183f9d2da777538ed}\label{classDiagnostics__area_ad5104578dfb7cc5183f9d2da777538ed}} 
+bool {\bfseries is\+\_\+set} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a4ecea28d50b86a903617cde666fb4cf0}\label{classDiagnostics__area_a4ecea28d50b86a903617cde666fb4cf0}} 
+bool {\bfseries is\+\_\+error} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_adb3b7167a350d0397eb982b0202f1574}\label{classDiagnostics__area_adb3b7167a350d0397eb982b0202f1574}} 
+bool {\bfseries is\+\_\+eof} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a1ab40bad0be703212f759919d64ef099}\label{classDiagnostics__area_a1ab40bad0be703212f759919d64ef099}} 
+bool {\bfseries is\+\_\+ok} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a9b60991130aeb70ec51b00442f65c2f5}\label{classDiagnostics__area_a9b60991130aeb70ec51b00442f65c2f5}} 
+bool {\bfseries is\+\_\+disabled} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a97f1752486ea138ccfef0b0792f65e52}\label{classDiagnostics__area_a97f1752486ea138ccfef0b0792f65e52}} 
+\mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131}{enum\+\_\+diagnostics\+\_\+status}} {\bfseries status} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_afe7b83254e6addebb72d0f445086c149}\label{classDiagnostics__area_afe7b83254e6addebb72d0f445086c149}} 
+const char $\ast$ {\bfseries message\+\_\+text} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_aa6a3baf6ea099cbd8c4d4e2d5be9fcaf}\label{classDiagnostics__area_aa6a3baf6ea099cbd8c4d4e2d5be9fcaf}} 
+uint {\bfseries mysql\+\_\+errno} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a3e702bdb86ab40a44522301ebe892e7e}\label{classDiagnostics__area_a3e702bdb86ab40a44522301ebe892e7e}} 
+const char $\ast$ {\bfseries returned\+\_\+sqlstate} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_aca74b7f8eb2425f41dd88e2259cfb275}\label{classDiagnostics__area_aca74b7f8eb2425f41dd88e2259cfb275}} 
+ulonglong {\bfseries affected\+\_\+rows} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_ab4a119ddd6fc9ae4ec24e1c2cc4bc10f}\label{classDiagnostics__area_ab4a119ddd6fc9ae4ec24e1c2cc4bc10f}} 
+ulonglong {\bfseries last\+\_\+insert\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a1f1cacd0497d63ee70b76e5ade46095e}\label{classDiagnostics__area_a1f1cacd0497d63ee70b76e5ade46095e}} 
+uint {\bfseries last\+\_\+statement\+\_\+cond\+\_\+count} () const
+\item 
+ulong \mbox{\hyperlink{classDiagnostics__area_a76c5d8c11b00ca7655e2c8962e0327eb}{current\+\_\+statement\+\_\+cond\+\_\+count}} () const
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_abcfdd87b7a95d4e391114285141e1a53}{reset\+\_\+statement\+\_\+cond\+\_\+count}} ()
+\item 
+bool \mbox{\hyperlink{classDiagnostics__area_afa19c24615d1d20dd20562f3e5e7cb91}{has\+\_\+sql\+\_\+condition}} (const char $\ast$message\+\_\+text, size\+\_\+t message\+\_\+length) const
+\item 
+bool \mbox{\hyperlink{classDiagnostics__area_ad7aab3dc281defcc1d92a859b7375896}{has\+\_\+sql\+\_\+condition}} (uint sql\+\_\+errno) const
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a22c9a69c0c8bf0e8398a4d9c23d6dddc}{reset\+\_\+condition\+\_\+info}} (T\+HD $\ast$thd)
+\item 
+ulong \mbox{\hyperlink{classDiagnostics__area_a21f866b70d386e88bc576ed62ba7aaf0}{current\+\_\+row\+\_\+for\+\_\+condition}} () const
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a06030bceccad3221fa9bece84682e22f}{inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition}} ()
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_accf24b22b93d017d4e652c0f25f733c9}{reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition}} ()
+\item 
+ulong \mbox{\hyperlink{classDiagnostics__area_a1e31909ab1b87614b6e7032bd6362760}{error\+\_\+count}} (T\+HD $\ast$thd) const
+\item 
+ulong \mbox{\hyperlink{classDiagnostics__area_add2a21980c4a8b65ccaed96e466976b9}{warn\+\_\+count}} (T\+HD $\ast$thd) const
+\item 
+uint \mbox{\hyperlink{classDiagnostics__area_ac101e4a8bc5d0780a118699c8ca7a775}{cond\+\_\+count}} () const
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_ad5380f5ec1c8941babdad6fffb208461}\label{classDiagnostics__area_ad5380f5ec1c8941babdad6fffb208461}} 
+\mbox{\hyperlink{classDiagnostics__area_a5302a0cdb7499883092d87a5b901b39d}{Sql\+\_\+condition\+\_\+iterator}} {\bfseries sql\+\_\+conditions} () const
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a05da9e199b031ca2213c132ccbe75866}{reserve\+\_\+number\+\_\+of\+\_\+conditions}} (T\+HD $\ast$thd, uint count)
+\item 
+\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$ \mbox{\hyperlink{classDiagnostics__area_a19c274a315f6a7f9c40618befd62d530}{push\+\_\+warning}} (T\+HD $\ast$thd, uint mysql\+\_\+errno, const char $\ast$returned\+\_\+sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} severity, const char $\ast$message\+\_\+text)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a49941326d0fd428be3f52eb3349419ca}{mark\+\_\+preexisting\+\_\+sql\+\_\+conditions}} ()
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a8ba22c7357c66a3672791b84fe836b18}{copy\+\_\+new\+\_\+sql\+\_\+conditions}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$src\+\_\+da)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_abe64d1bc735a09bc3e29bec271b9face}{copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$src\+\_\+da)
+\item 
+void \mbox{\hyperlink{classDiagnostics__area_a8d2b08ea1b04ca4f486c3bc6b0a341bd}{copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$src\+\_\+da)
+\item 
+\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$ \mbox{\hyperlink{classDiagnostics__area_ab70c51196734cb073962ca88bc1d9377}{error\+\_\+condition}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDiagnostics__area_a786121acb870730886bdd44c874c0c57}\label{classDiagnostics__area_a786121acb870730886bdd44c874c0c57}} 
+class {\bfseries T\+HD}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores status of the currently executed statement. Cleared at the beginning of the statement, and then can hold either OK, E\+R\+R\+OR, or E\+OF status. Can not be assigned twice per statement. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classDiagnostics__area_a5302a0cdb7499883092d87a5b901b39d}\label{classDiagnostics__area_a5302a0cdb7499883092d87a5b901b39d}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!Sql\+\_\+condition\+\_\+iterator@{Sql\+\_\+condition\+\_\+iterator}}
+\index{Sql\+\_\+condition\+\_\+iterator@{Sql\+\_\+condition\+\_\+iterator}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{Sql\+\_\+condition\+\_\+iterator}{Sql\_condition\_iterator}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classI__P__List__iterator}{Sql\+\_\+condition\+\_\+list\+::\+Const\+\_\+\+Iterator}} \mbox{\hyperlink{classDiagnostics__area_a5302a0cdb7499883092d87a5b901b39d}{Diagnostics\+\_\+area\+::\+Sql\+\_\+condition\+\_\+iterator}}}
+
+Const iterator used to iterate through the condition list. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131}\label{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!enum\+\_\+diagnostics\+\_\+status@{enum\+\_\+diagnostics\+\_\+status}}
+\index{enum\+\_\+diagnostics\+\_\+status@{enum\+\_\+diagnostics\+\_\+status}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{enum\+\_\+diagnostics\+\_\+status}{enum\_diagnostics\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131}{Diagnostics\+\_\+area\+::enum\+\_\+diagnostics\+\_\+status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+A\+\_\+\+E\+M\+P\+TY@{D\+A\+\_\+\+E\+M\+P\+TY}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!D\+A\+\_\+\+E\+M\+P\+TY@{D\+A\+\_\+\+E\+M\+P\+TY}}}\mbox{\Hypertarget{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a51ec0feac180616bb01f59dca5868b22}\label{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a51ec0feac180616bb01f59dca5868b22}} 
+D\+A\+\_\+\+E\+M\+P\+TY&The area is cleared at start of a statement. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+A\+\_\+\+OK@{D\+A\+\_\+\+OK}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!D\+A\+\_\+\+OK@{D\+A\+\_\+\+OK}}}\mbox{\Hypertarget{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a3eacb4863806fb111ed5c7850d994812}\label{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a3eacb4863806fb111ed5c7850d994812}} 
+D\+A\+\_\+\+OK&Set whenever one calls my\+\_\+ok(). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+A\+\_\+\+E\+OF@{D\+A\+\_\+\+E\+OF}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!D\+A\+\_\+\+E\+OF@{D\+A\+\_\+\+E\+OF}}}\mbox{\Hypertarget{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131af68a233e4d673c41e756627618653633}\label{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131af68a233e4d673c41e756627618653633}} 
+D\+A\+\_\+\+E\+OF&Set whenever one calls my\+\_\+eof(). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+A\+\_\+\+E\+R\+R\+OR@{D\+A\+\_\+\+E\+R\+R\+OR}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!D\+A\+\_\+\+E\+R\+R\+OR@{D\+A\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a74fcc13ebdfed9fdcd0662b70f515c79}\label{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131a74fcc13ebdfed9fdcd0662b70f515c79}} 
+D\+A\+\_\+\+E\+R\+R\+OR&Set whenever one calls my\+\_\+error() or my\+\_\+message(). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+A\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{D\+A\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!D\+A\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{D\+A\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}}\mbox{\Hypertarget{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131aefb51825f2df51a6bf2532f75b0c1ebe}\label{classDiagnostics__area_a841a3c3b3036d95e150bbea3e2c4f131aefb51825f2df51a6bf2532f75b0c1ebe}} 
+D\+A\+\_\+\+D\+I\+S\+A\+B\+L\+ED&Set in case of a custom response, such as one from C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiagnostics__area_ac101e4a8bc5d0780a118699c8ca7a775}\label{classDiagnostics__area_ac101e4a8bc5d0780a118699c8ca7a775}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!cond\+\_\+count@{cond\+\_\+count}}
+\index{cond\+\_\+count@{cond\+\_\+count}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{cond\+\_\+count()}{cond\_count()}}
+{\footnotesize\ttfamily uint Diagnostics\+\_\+area\+::cond\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The number of conditions (errors, warnings and notes) in the list. \mbox{\Hypertarget{classDiagnostics__area_a8ba22c7357c66a3672791b84fe836b18}\label{classDiagnostics__area_a8ba22c7357c66a3672791b84fe836b18}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!copy\+\_\+new\+\_\+sql\+\_\+conditions@{copy\+\_\+new\+\_\+sql\+\_\+conditions}}
+\index{copy\+\_\+new\+\_\+sql\+\_\+conditions@{copy\+\_\+new\+\_\+sql\+\_\+conditions}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{copy\+\_\+new\+\_\+sql\+\_\+conditions()}{copy\_new\_sql\_conditions()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::copy\+\_\+new\+\_\+sql\+\_\+conditions (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{src\+\_\+da }\end{DoxyParamCaption})}
+
+Copy S\+QL-\/conditions that have been added since \mbox{\hyperlink{classDiagnostics__area_a49941326d0fd428be3f52eb3349419ca}{mark\+\_\+preexisting\+\_\+sql\+\_\+conditions()}} was called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em src\+\_\+da} & Diagnostics Area to copy from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_a8d2b08ea1b04ca4f486c3bc6b0a341bd}\label{classDiagnostics__area_a8d2b08ea1b04ca4f486c3bc6b0a341bd}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da@{copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da}}
+\index{copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da@{copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da()}{copy\_non\_errors\_from\_da()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::copy\+\_\+non\+\_\+errors\+\_\+from\+\_\+da (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{src\+\_\+da }\end{DoxyParamCaption})}
+
+Copy Sql\+\_\+conditions that are not S\+L\+\_\+\+E\+R\+R\+OR from the source Diagnostics Area to the current Diagnostics Area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em src\+\_\+da} & Diagnostics Area to copy from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_abe64d1bc735a09bc3e29bec271b9face}\label{classDiagnostics__area_abe64d1bc735a09bc3e29bec271b9face}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da@{copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da}}
+\index{copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da@{copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da()}{copy\_sql\_conditions\_from\_da()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::copy\+\_\+sql\+\_\+conditions\+\_\+from\+\_\+da (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{src\+\_\+da }\end{DoxyParamCaption})}
+
+Copy all S\+QL-\/conditions from src\+\_\+da to this DA.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em src\+\_\+da} & Diagnostics Area to copy from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_a21f866b70d386e88bc576ed62ba7aaf0}\label{classDiagnostics__area_a21f866b70d386e88bc576ed62ba7aaf0}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!current\+\_\+row\+\_\+for\+\_\+condition@{current\+\_\+row\+\_\+for\+\_\+condition}}
+\index{current\+\_\+row\+\_\+for\+\_\+condition@{current\+\_\+row\+\_\+for\+\_\+condition}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{current\+\_\+row\+\_\+for\+\_\+condition()}{current\_row\_for\_condition()}}
+{\footnotesize\ttfamily ulong Diagnostics\+\_\+area\+::current\+\_\+row\+\_\+for\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the current counter value. \mbox{\Hypertarget{classDiagnostics__area_a76c5d8c11b00ca7655e2c8962e0327eb}\label{classDiagnostics__area_a76c5d8c11b00ca7655e2c8962e0327eb}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!current\+\_\+statement\+\_\+cond\+\_\+count@{current\+\_\+statement\+\_\+cond\+\_\+count}}
+\index{current\+\_\+statement\+\_\+cond\+\_\+count@{current\+\_\+statement\+\_\+cond\+\_\+count}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{current\+\_\+statement\+\_\+cond\+\_\+count()}{current\_statement\_cond\_count()}}
+{\footnotesize\ttfamily ulong Diagnostics\+\_\+area\+::current\+\_\+statement\+\_\+cond\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of conditions raised by the current statement. \mbox{\Hypertarget{classDiagnostics__area_a3ca17737803af475b84ff53f1409adf2}\label{classDiagnostics__area_a3ca17737803af475b84ff53f1409adf2}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!disable\+\_\+status@{disable\+\_\+status}}
+\index{disable\+\_\+status@{disable\+\_\+status}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{disable\+\_\+status()}{disable\_status()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::disable\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mark the Diagnostics Area as \textquotesingle{}D\+I\+S\+A\+B\+L\+ED\textquotesingle{}.
+
+This is used in rare cases when the C\+O\+M\+\_\+ command at hand sends a response in a custom format. One example is the query cache, another is C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE. \mbox{\Hypertarget{classDiagnostics__area_ab70c51196734cb073962ca88bc1d9377}\label{classDiagnostics__area_ab70c51196734cb073962ca88bc1d9377}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!error\+\_\+condition@{error\+\_\+condition}}
+\index{error\+\_\+condition@{error\+\_\+condition}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{error\+\_\+condition()}{error\_condition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$ Diagnostics\+\_\+area\+::error\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+S\+QL-\/condition, which corresponds to the error state in Diagnostics Area. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiagnostics__area_a1e31909ab1b87614b6e7032bd6362760}\label{classDiagnostics__area_a1e31909ab1b87614b6e7032bd6362760}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!error\+\_\+count@{error\+\_\+count}}
+\index{error\+\_\+count@{error\+\_\+count}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{error\+\_\+count()}{error\_count()}}
+{\footnotesize\ttfamily ulong Diagnostics\+\_\+area\+::error\+\_\+count (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption}) const}
+
+The number of errors, or number of rows returned by S\+H\+OW E\+R\+R\+O\+RS, also the value of session variable @error\+\_\+count. \mbox{\Hypertarget{classDiagnostics__area_afa19c24615d1d20dd20562f3e5e7cb91}\label{classDiagnostics__area_afa19c24615d1d20dd20562f3e5e7cb91}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!has\+\_\+sql\+\_\+condition@{has\+\_\+sql\+\_\+condition}}
+\index{has\+\_\+sql\+\_\+condition@{has\+\_\+sql\+\_\+condition}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{has\+\_\+sql\+\_\+condition()}{has\_sql\_condition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Diagnostics\+\_\+area\+::has\+\_\+sql\+\_\+condition (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message\+\_\+text,  }\item[{size\+\_\+t}]{message\+\_\+length }\end{DoxyParamCaption}) const}
+
+Checks if the condition list contains S\+QL-\/condition with the given message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+text} & Message text \\
+\hline
+{\em message\+\_\+length} & Length of message\+\_\+text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the condition list contains an S\+QL-\/condition with the given message text. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiagnostics__area_ad7aab3dc281defcc1d92a859b7375896}\label{classDiagnostics__area_ad7aab3dc281defcc1d92a859b7375896}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!has\+\_\+sql\+\_\+condition@{has\+\_\+sql\+\_\+condition}}
+\index{has\+\_\+sql\+\_\+condition@{has\+\_\+sql\+\_\+condition}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{has\+\_\+sql\+\_\+condition()}{has\_sql\_condition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Diagnostics\+\_\+area\+::has\+\_\+sql\+\_\+condition (\begin{DoxyParamCaption}\item[{uint}]{sql\+\_\+errno }\end{DoxyParamCaption}) const}
+
+Checks if the condition list contains S\+QL-\/condition with the given error code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql\+\_\+errno} & Error code\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the condition list contains an S\+QL-\/condition with the given error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiagnostics__area_a06030bceccad3221fa9bece84682e22f}\label{classDiagnostics__area_a06030bceccad3221fa9bece84682e22f}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition@{inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition}}
+\index{inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition@{inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition()}{inc\_current\_row\_for\_condition()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::inc\+\_\+current\+\_\+row\+\_\+for\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increment the current row counter to point at the next row. \mbox{\Hypertarget{classDiagnostics__area_a49941326d0fd428be3f52eb3349419ca}\label{classDiagnostics__area_a49941326d0fd428be3f52eb3349419ca}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!mark\+\_\+preexisting\+\_\+sql\+\_\+conditions@{mark\+\_\+preexisting\+\_\+sql\+\_\+conditions}}
+\index{mark\+\_\+preexisting\+\_\+sql\+\_\+conditions@{mark\+\_\+preexisting\+\_\+sql\+\_\+conditions}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{mark\+\_\+preexisting\+\_\+sql\+\_\+conditions()}{mark\_preexisting\_sql\_conditions()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::mark\+\_\+preexisting\+\_\+sql\+\_\+conditions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Mark current S\+QL-\/conditions so that we can later know which S\+QL-\/conditions have been added. \mbox{\Hypertarget{classDiagnostics__area_a19c274a315f6a7f9c40618befd62d530}\label{classDiagnostics__area_a19c274a315f6a7f9c40618befd62d530}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!push\+\_\+warning@{push\+\_\+warning}}
+\index{push\+\_\+warning@{push\+\_\+warning}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{push\+\_\+warning()}{push\_warning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$ Diagnostics\+\_\+area\+::push\+\_\+warning (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{mysql\+\_\+errno,  }\item[{const char $\ast$}]{returned\+\_\+sqlstate,  }\item[{\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}}}]{severity,  }\item[{const char $\ast$}]{message\+\_\+text }\end{DoxyParamCaption})}
+
+Add a new S\+QL-\/condition to the current list and increment the respective counters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em mysql\+\_\+errno} & S\+QL-\/condition error number. \\
+\hline
+{\em returned\+\_\+sqlstate} & S\+QL-\/condition state. \\
+\hline
+{\em severity} & S\+QL-\/condition severity. \\
+\hline
+{\em message\+\_\+text} & S\+QL-\/condition message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the added S\+QL-\/condition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiagnostics__area_a05da9e199b031ca2213c132ccbe75866}\label{classDiagnostics__area_a05da9e199b031ca2213c132ccbe75866}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!reserve\+\_\+number\+\_\+of\+\_\+conditions@{reserve\+\_\+number\+\_\+of\+\_\+conditions}}
+\index{reserve\+\_\+number\+\_\+of\+\_\+conditions@{reserve\+\_\+number\+\_\+of\+\_\+conditions}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{reserve\+\_\+number\+\_\+of\+\_\+conditions()}{reserve\_number\_of\_conditions()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::reserve\+\_\+number\+\_\+of\+\_\+conditions (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{count }\end{DoxyParamCaption})}
+
+Make sure there is room for the given number of conditions. \mbox{\Hypertarget{classDiagnostics__area_a22c9a69c0c8bf0e8398a4d9c23d6dddc}\label{classDiagnostics__area_a22c9a69c0c8bf0e8398a4d9c23d6dddc}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!reset\+\_\+condition\+\_\+info@{reset\+\_\+condition\+\_\+info}}
+\index{reset\+\_\+condition\+\_\+info@{reset\+\_\+condition\+\_\+info}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{reset\+\_\+condition\+\_\+info()}{reset\_condition\_info()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::reset\+\_\+condition\+\_\+info (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Reset the current condition information stored in the Diagnostics Area. Clear all conditions, the number of conditions, reset current row counter to point to the first row. \mbox{\Hypertarget{classDiagnostics__area_accf24b22b93d017d4e652c0f25f733c9}\label{classDiagnostics__area_accf24b22b93d017d4e652c0f25f733c9}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition@{reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition}}
+\index{reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition@{reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition()}{reset\_current\_row\_for\_condition()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::reset\+\_\+current\+\_\+row\+\_\+for\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reset the current row counter. Start counting from the first row. \mbox{\Hypertarget{classDiagnostics__area_a81ad7fce5478744c6e2a5435330996d2}\label{classDiagnostics__area_a81ad7fce5478744c6e2a5435330996d2}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!reset\+\_\+diagnostics\+\_\+area@{reset\+\_\+diagnostics\+\_\+area}}
+\index{reset\+\_\+diagnostics\+\_\+area@{reset\+\_\+diagnostics\+\_\+area}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{reset\+\_\+diagnostics\+\_\+area()}{reset\_diagnostics\_area()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::reset\+\_\+diagnostics\+\_\+area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear this Diagnostics Area.
+
+Normally called at the end of a statement. \mbox{\Hypertarget{classDiagnostics__area_abcfdd87b7a95d4e391114285141e1a53}\label{classDiagnostics__area_abcfdd87b7a95d4e391114285141e1a53}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!reset\+\_\+statement\+\_\+cond\+\_\+count@{reset\+\_\+statement\+\_\+cond\+\_\+count}}
+\index{reset\+\_\+statement\+\_\+cond\+\_\+count@{reset\+\_\+statement\+\_\+cond\+\_\+count}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{reset\+\_\+statement\+\_\+cond\+\_\+count()}{reset\_statement\_cond\_count()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::reset\+\_\+statement\+\_\+cond\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reset between two C\+O\+M\+\_\+ commands. Conditions are preserved between commands, but m\+\_\+current\+\_\+statement\+\_\+cond\+\_\+count indicates the number of conditions of this particular statement only. \mbox{\Hypertarget{classDiagnostics__area_a3b85cb8d8c79391a1612b1f03a92d7d6}\label{classDiagnostics__area_a3b85cb8d8c79391a1612b1f03a92d7d6}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!set\+\_\+eof\+\_\+status@{set\+\_\+eof\+\_\+status}}
+\index{set\+\_\+eof\+\_\+status@{set\+\_\+eof\+\_\+status}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{set\+\_\+eof\+\_\+status()}{set\_eof\_status()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::set\+\_\+eof\+\_\+status (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Set E\+OF status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_adf14f5f9230b8675747efcf6ec797657}\label{classDiagnostics__area_adf14f5f9230b8675747efcf6ec797657}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!set\+\_\+error\+\_\+status@{set\+\_\+error\+\_\+status}}
+\index{set\+\_\+error\+\_\+status@{set\+\_\+error\+\_\+status}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{set\+\_\+error\+\_\+status()}{set\_error\_status()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::set\+\_\+error\+\_\+status (\begin{DoxyParamCaption}\item[{uint}]{mysql\+\_\+errno }\end{DoxyParamCaption})}
+
+Set E\+R\+R\+OR status in the Diagnostics Area. This function should be used to report fatal errors (such as out-\/of-\/memory errors) when no further processing is possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mysql\+\_\+errno} & S\+QL-\/condition error number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_acb25d767eace0d90c9abd0bb2f39deed}\label{classDiagnostics__area_acb25d767eace0d90c9abd0bb2f39deed}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!set\+\_\+error\+\_\+status@{set\+\_\+error\+\_\+status}}
+\index{set\+\_\+error\+\_\+status@{set\+\_\+error\+\_\+status}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{set\+\_\+error\+\_\+status()}{set\_error\_status()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::set\+\_\+error\+\_\+status (\begin{DoxyParamCaption}\item[{uint}]{mysql\+\_\+errno,  }\item[{const char $\ast$}]{message\+\_\+text,  }\item[{const char $\ast$}]{returned\+\_\+sqlstate }\end{DoxyParamCaption})}
+
+Set E\+R\+R\+OR status in the Diagnostics Area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mysql\+\_\+errno} & S\+QL-\/condition error number \\
+\hline
+{\em message\+\_\+text} & S\+QL-\/condition message \\
+\hline
+{\em returned\+\_\+sqlstate} & S\+QL-\/condition state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_a3d93eac8000515aa108fea036dca03fb}\label{classDiagnostics__area_a3d93eac8000515aa108fea036dca03fb}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!set\+\_\+ok\+\_\+status@{set\+\_\+ok\+\_\+status}}
+\index{set\+\_\+ok\+\_\+status@{set\+\_\+ok\+\_\+status}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{set\+\_\+ok\+\_\+status()}{set\_ok\_status()}}
+{\footnotesize\ttfamily void Diagnostics\+\_\+area\+::set\+\_\+ok\+\_\+status (\begin{DoxyParamCaption}\item[{ulonglong}]{affected\+\_\+rows,  }\item[{ulonglong}]{last\+\_\+insert\+\_\+id,  }\item[{const char $\ast$}]{message\+\_\+text }\end{DoxyParamCaption})}
+
+Set OK status -- ends commands that do not return a result set, e.\+g. I\+N\+S\+E\+R\+T/\+U\+P\+D\+A\+T\+E/\+D\+E\+L\+E\+TE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em affected\+\_\+rows} & The number of rows affected by the last statement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Diagnostics\+\_\+area\+::m\+\_\+affected\+\_\+rows. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+insert\+\_\+id} & The value to be returned by L\+A\+S\+T\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+I\+D(). \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Diagnostics\+\_\+area\+::m\+\_\+last\+\_\+insert\+\_\+id. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+text} & The OK-\/message text. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__area_add2a21980c4a8b65ccaed96e466976b9}\label{classDiagnostics__area_add2a21980c4a8b65ccaed96e466976b9}} 
+\index{Diagnostics\+\_\+area@{Diagnostics\+\_\+area}!warn\+\_\+count@{warn\+\_\+count}}
+\index{warn\+\_\+count@{warn\+\_\+count}!Diagnostics\+\_\+area@{Diagnostics\+\_\+area}}
+\subsubsection{\texorpdfstring{warn\+\_\+count()}{warn\_count()}}
+{\footnotesize\ttfamily ulong Diagnostics\+\_\+area\+::warn\+\_\+count (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption}) const}
+
+Used for @warning\+\_\+count system variable, which prints the number of rows returned by S\+H\+OW W\+A\+R\+N\+I\+N\+GS. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+error.\+h\item 
+sql\+\_\+error.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{classGroup__check}{}\section{Group\+\_\+check Class Reference}
+\label{classGroup__check}\index{Group\+\_\+check@{Group\+\_\+check}}
+
+
+{\ttfamily \#include $<$aggregate\+\_\+check.\+h$>$}
+
+Inheritance diagram for Group\+\_\+check\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGroup__check}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGroup__check_ad48e4d86d76d0f6c1d761c45ce72b030}\label{classGroup__check_ad48e4d86d76d0f6c1d761c45ce72b030}} 
+{\bfseries Group\+\_\+check} (st\+\_\+select\+\_\+lex $\ast$select\+\_\+arg, st\+\_\+mem\+\_\+root $\ast$root)
+\item 
+bool \mbox{\hyperlink{group__AGGREGATE__CHECKS_ga85f98a122e6f9accf528534acb5db686}{check\+\_\+query}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__AGGREGATE__CHECKS_ga97e11f17193e6ad1adff12b0ff2c3af6}{to\+\_\+opt\+\_\+trace}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Writes \char`\"{}check information\char`\"{} to the optimizer trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classGroup__check_a832ec3c3fec84508045c29d24da28364}{Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classGroup__check_af9558c5b2ed06aa53808f959c1620158}\label{classGroup__check_af9558c5b2ed06aa53808f959c1620158}} 
+bool {\bfseries Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+group} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classGroup__check_a6b2515eace9ac4e4547fbae4f40afe99}\label{classGroup__check_a6b2515eace9ac4e4547fbae4f40afe99}} 
+bool {\bfseries Item\+\_\+func\+\_\+any\+\_\+value\+::aggregate\+\_\+check\+\_\+group} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classGroup__check_afa660696dda5fec9df6dafd14aebce4d}\label{classGroup__check_afa660696dda5fec9df6dafd14aebce4d}} 
+bool {\bfseries Item\+\_\+ident\+::is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classGroup__check_a8aa8c21d7382ba634e7d252c2df84b9f}\label{classGroup__check_a8aa8c21d7382ba634e7d252c2df84b9f}} 
+bool {\bfseries Item\+\_\+ident\+::is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd} (uchar $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Checks for queries which have G\+R\+O\+UP BY or aggregate functions. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classGroup__check_a832ec3c3fec84508045c29d24da28364}\label{classGroup__check_a832ec3c3fec84508045c29d24da28364}} 
+\index{Group\+\_\+check@{Group\+\_\+check}!Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group@{Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group}}
+\index{Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group@{Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group}!Group\+\_\+check@{Group\+\_\+check}}
+\subsubsection{\texorpdfstring{Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group}{Item\_ident::aggregate\_check\_group}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{classItem__ident_ae79407fb0ebd076c5a45f16f36512724}{Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group}} (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Just because we need to go through \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk()}} to reach all items to validate, some work must be delegated to \char`\"{}\+Item processors\char`\"{} (members of \mbox{\hyperlink{classItem}{Item}}); this work conceptually belongs to \mbox{\hyperlink{classGroup__check}{Group\+\_\+check}}, and needs privileged access to it. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{aggregate__check_8h}{aggregate\+\_\+check.\+h}}\item 
+\mbox{\hyperlink{aggregate__check_8cc}{aggregate\+\_\+check.\+cc}}\end{DoxyCompactItemize}

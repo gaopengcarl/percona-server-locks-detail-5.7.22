@@ -1,0 +1,222 @@
+\hypertarget{classEd__connection}{}\section{Ed\+\_\+connection Class Reference}
+\label{classEd__connection}\index{Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEd__connection_a31ae0e49095b5784dcccc495d6e2bcfe}{Ed\+\_\+connection}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}{execute\+\_\+direct}} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG sql\+\_\+text)
+\item 
+bool \mbox{\hyperlink{classEd__connection_afd0499324ba204c8a00480a3706c5bfb}{execute\+\_\+direct}} (\mbox{\hyperlink{classServer__runnable}{Server\+\_\+runnable}} $\ast$server\+\_\+runnable)
+\item 
+size\+\_\+t \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count}} () const
+\item 
+ulonglong \mbox{\hyperlink{classEd__connection_afba697853fd865d59c2bfbf851e926fe}{get\+\_\+affected\+\_\+rows}} () const
+\item 
+ulonglong \mbox{\hyperlink{classEd__connection_a5a3a3b208a58521911bddc57732cecc7}{get\+\_\+last\+\_\+insert\+\_\+id}} () const
+\item 
+ulong \mbox{\hyperlink{classEd__connection_afc2fcf1d521b29f06621fc01714b69a0}{get\+\_\+warn\+\_\+count}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classEd__connection_a420c219d0c2e058af3666076a2bfaa17}{get\+\_\+last\+\_\+error}} () const
+\item 
+\mbox{\Hypertarget{classEd__connection_a56622fa194cb3ccee12bcd9bf7bedd5e}\label{classEd__connection_a56622fa194cb3ccee12bcd9bf7bedd5e}} 
+unsigned int {\bfseries get\+\_\+last\+\_\+errno} () const
+\item 
+\mbox{\Hypertarget{classEd__connection_aff7bcb2c3a704ee97bfd58ffe17a9802}\label{classEd__connection_aff7bcb2c3a704ee97bfd58ffe17a9802}} 
+const char $\ast$ {\bfseries get\+\_\+last\+\_\+sqlstate} () const
+\item 
+\mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}} $\ast$ \mbox{\hyperlink{classEd__connection_ab9b5405ab89c8dc49082adf1a3be3354}{use\+\_\+result\+\_\+set}} ()
+\item 
+\mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}} $\ast$ \mbox{\hyperlink{classEd__connection_ad80317ac21aa245c7a0d1162ac98b264}{store\+\_\+result\+\_\+set}} ()
+\item 
+bool \mbox{\hyperlink{classEd__connection_a6f1e1b950bf2e7c332e73579f1a2fd51}{has\+\_\+next\+\_\+result}} () const
+\item 
+bool \mbox{\hyperlink{classEd__connection_aa4c7282bcb1c1fdf2fa966a2106c71bd}{move\+\_\+to\+\_\+next\+\_\+result}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEd__connection_a9c7f8d2a3f98c0505dc714383b23aecd}\label{classEd__connection_a9c7f8d2a3f98c0505dc714383b23aecd}} 
+class {\bfseries Protocol\+\_\+local}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEd__connection_a31ae0e49095b5784dcccc495d6e2bcfe}\label{classEd__connection_a31ae0e49095b5784dcccc495d6e2bcfe}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{Ed\+\_\+connection()}{Ed\_connection()}}
+{\footnotesize\ttfamily Ed\+\_\+connection\+::\+Ed\+\_\+connection (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Construct a new \char`\"{}execute direct\char`\"{} connection.
+
+The connection can be used to execute S\+QL statements. If the connection failed to initialize, the error will be returned on the attempt to execute a statement.
+
+\begin{DoxyPrecond}{Precondition}
+thd must have no open tables while the connection is used. However, \mbox{\hyperlink{classEd__connection}{Ed\+\_\+connection}} works okay in L\+O\+CK T\+A\+B\+L\+ES mode. Other properties of T\+HD, such as the current warning information, errors, etc. do not matter and are preserved by \mbox{\hyperlink{classEd__connection}{Ed\+\_\+connection}}. One thread may have many Ed\+\_\+connections created for it.
+\end{DoxyPrecond}
+Create a new \char`\"{}execute direct\char`\"{} connection. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}\label{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!execute\+\_\+direct@{execute\+\_\+direct}}
+\index{execute\+\_\+direct@{execute\+\_\+direct}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{execute\+\_\+direct()}{execute\_direct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ed\+\_\+connection\+::execute\+\_\+direct (\begin{DoxyParamCaption}\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{sql\+\_\+text }\end{DoxyParamCaption})}
+
+Execute one S\+QL statement.
+
+Until this method is executed, no other methods of \mbox{\hyperlink{classEd__connection}{Ed\+\_\+connection}} can be used. Life cycle of \mbox{\hyperlink{classEd__connection}{Ed\+\_\+connection}} is\+:
+
+Initialized -\/$>$ a statement has been executed -\/$>$ look at result, move to next result -\/$>$ look at result, move to next result -\/$>$ ... moved beyond the last result == Initialized.
+
+This method can be called repeatedly. Once it\textquotesingle{}s invoked, results of the previous execution are lost.
+
+A result of \mbox{\hyperlink{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}{execute\+\_\+direct()}} can be either\+:
+
+
+\begin{DoxyItemize}
+\item success, no result set rows. In this case \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} returns 0. This happens after execution of I\+N\+S\+E\+RT, U\+P\+D\+A\+TE, D\+E\+L\+E\+TE, D\+R\+OP and similar statements. Some other methods, such as \mbox{\hyperlink{classEd__connection_afba697853fd865d59c2bfbf851e926fe}{get\+\_\+affected\+\_\+rows()}} can be used to retrieve additional result information.
+\item success, there are some result set rows (maybe 0). E.\+g. happens after S\+E\+L\+E\+CT. In this case \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} returns the number of columns in a result set and store\+\_\+result() can be used to retrieve a result set..
+\item an error, methods to retrieve error information can be used.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+execution status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success, use \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} to determine what to do next. \\
+\hline
+{\em T\+R\+UE} & error, use \mbox{\hyperlink{classEd__connection_a420c219d0c2e058af3666076a2bfaa17}{get\+\_\+last\+\_\+error()}} to see the error number.\\
+\hline
+\end{DoxyRetVals}
+A simple wrapper that uses a helper class to execute S\+QL statements. \mbox{\Hypertarget{classEd__connection_afd0499324ba204c8a00480a3706c5bfb}\label{classEd__connection_afd0499324ba204c8a00480a3706c5bfb}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!execute\+\_\+direct@{execute\+\_\+direct}}
+\index{execute\+\_\+direct@{execute\+\_\+direct}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{execute\+\_\+direct()}{execute\_direct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ed\+\_\+connection\+::execute\+\_\+direct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServer__runnable}{Server\+\_\+runnable}} $\ast$}]{server\+\_\+runnable }\end{DoxyParamCaption})}
+
+Same as the previous, but takes an instance of \mbox{\hyperlink{classServer__runnable}{Server\+\_\+runnable}} instead of S\+QL statement text.
+
+\begin{DoxyReturn}{Returns}
+execution status
+\end{DoxyReturn}
+~\newline
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success, use \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} if your code fragment is supposed to return a result set \\
+\hline
+{\em T\+R\+UE} & failure\\
+\hline
+\end{DoxyRetVals}
+Execute a fragment of server functionality without an effect on thd, and store results in memory.
+
+Conventions\+:
+\begin{DoxyItemize}
+\item the code fragment must finish with OK, E\+OF or E\+R\+R\+OR.
+\item the code fragment doesn\textquotesingle{}t have to close thread tables, free memory, commit statement transaction or do any other cleanup that is normally done in the end of \mbox{\hyperlink{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}{dispatch\+\_\+command()}}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+runnable} & A code fragment to execute. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEd__connection_afba697853fd865d59c2bfbf851e926fe}\label{classEd__connection_afba697853fd865d59c2bfbf851e926fe}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!get\+\_\+affected\+\_\+rows@{get\+\_\+affected\+\_\+rows}}
+\index{get\+\_\+affected\+\_\+rows@{get\+\_\+affected\+\_\+rows}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{get\+\_\+affected\+\_\+rows()}{get\_affected\_rows()}}
+{\footnotesize\ttfamily ulonglong Ed\+\_\+connection\+::get\+\_\+affected\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of affected (deleted, updated) rows for the current statement. Can be used for statements with \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} == 0.
+
+\begin{DoxySeeAlso}{See also}
+Documentation for C A\+PI function mysql\+\_\+affected\+\_\+rows(). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classEd__connection_af704fb99d9029578af2d1acc301b8d51}\label{classEd__connection_af704fb99d9029578af2d1acc301b8d51}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!get\+\_\+field\+\_\+count@{get\+\_\+field\+\_\+count}}
+\index{get\+\_\+field\+\_\+count@{get\+\_\+field\+\_\+count}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{get\+\_\+field\+\_\+count()}{get\_field\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Ed\+\_\+connection\+::get\+\_\+field\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of result set fields.
+
+This method is valid only if we have a result\+: \mbox{\hyperlink{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}{execute\+\_\+direct()}} has been called. Otherwise the returned value is undefined.
+
+\begin{DoxySeeAlso}{See also}
+Documentation for C A\+PI function mysql\+\_\+field\+\_\+count() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classEd__connection_a420c219d0c2e058af3666076a2bfaa17}\label{classEd__connection_a420c219d0c2e058af3666076a2bfaa17}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!get\+\_\+last\+\_\+error@{get\+\_\+last\+\_\+error}}
+\index{get\+\_\+last\+\_\+error@{get\+\_\+last\+\_\+error}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+error()}{get\_last\_error()}}
+{\footnotesize\ttfamily const char$\ast$ Ed\+\_\+connection\+::get\+\_\+last\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The following three members are only valid if \mbox{\hyperlink{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}{execute\+\_\+direct()}} or \mbox{\hyperlink{classEd__connection_aa4c7282bcb1c1fdf2fa966a2106c71bd}{move\+\_\+to\+\_\+next\+\_\+result()}} returned an error. They never fail, but if they are called when there is no result, or no error, the result is not defined. \mbox{\Hypertarget{classEd__connection_a5a3a3b208a58521911bddc57732cecc7}\label{classEd__connection_a5a3a3b208a58521911bddc57732cecc7}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!get\+\_\+last\+\_\+insert\+\_\+id@{get\+\_\+last\+\_\+insert\+\_\+id}}
+\index{get\+\_\+last\+\_\+insert\+\_\+id@{get\+\_\+last\+\_\+insert\+\_\+id}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+insert\+\_\+id()}{get\_last\_insert\_id()}}
+{\footnotesize\ttfamily ulonglong Ed\+\_\+connection\+::get\+\_\+last\+\_\+insert\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the last insert id, if any.
+
+\begin{DoxySeeAlso}{See also}
+Documentation for mysql\+\_\+insert\+\_\+id(). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classEd__connection_afc2fcf1d521b29f06621fc01714b69a0}\label{classEd__connection_afc2fcf1d521b29f06621fc01714b69a0}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!get\+\_\+warn\+\_\+count@{get\+\_\+warn\+\_\+count}}
+\index{get\+\_\+warn\+\_\+count@{get\+\_\+warn\+\_\+count}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{get\+\_\+warn\+\_\+count()}{get\_warn\_count()}}
+{\footnotesize\ttfamily ulong Ed\+\_\+connection\+::get\+\_\+warn\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the total number of warnings for the last executed statement. Note, that there is only one warning list even if a statement returns multiple results.
+
+\begin{DoxySeeAlso}{See also}
+Documentation for C A\+PI function mysql\+\_\+num\+\_\+warnings(). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classEd__connection_a6f1e1b950bf2e7c332e73579f1a2fd51}\label{classEd__connection_a6f1e1b950bf2e7c332e73579f1a2fd51}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!has\+\_\+next\+\_\+result@{has\+\_\+next\+\_\+result}}
+\index{has\+\_\+next\+\_\+result@{has\+\_\+next\+\_\+result}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{has\+\_\+next\+\_\+result()}{has\_next\_result()}}
+{\footnotesize\ttfamily bool Ed\+\_\+connection\+::has\+\_\+next\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+If the query returns multiple results, this method can be checked if there is another result beyond the next one. Never fails. \mbox{\Hypertarget{classEd__connection_aa4c7282bcb1c1fdf2fa966a2106c71bd}\label{classEd__connection_aa4c7282bcb1c1fdf2fa966a2106c71bd}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!move\+\_\+to\+\_\+next\+\_\+result@{move\+\_\+to\+\_\+next\+\_\+result}}
+\index{move\+\_\+to\+\_\+next\+\_\+result@{move\+\_\+to\+\_\+next\+\_\+result}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{move\+\_\+to\+\_\+next\+\_\+result()}{move\_to\_next\_result()}}
+{\footnotesize\ttfamily bool Ed\+\_\+connection\+::move\+\_\+to\+\_\+next\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Only valid to call if \mbox{\hyperlink{classEd__connection_a6f1e1b950bf2e7c332e73579f1a2fd51}{has\+\_\+next\+\_\+result()}} returned true. Otherwise the result is undefined. \mbox{\Hypertarget{classEd__connection_ad80317ac21aa245c7a0d1162ac98b264}\label{classEd__connection_ad80317ac21aa245c7a0d1162ac98b264}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!store\+\_\+result\+\_\+set@{store\+\_\+result\+\_\+set}}
+\index{store\+\_\+result\+\_\+set@{store\+\_\+result\+\_\+set}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{store\+\_\+result\+\_\+set()}{store\_result\_set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}} $\ast$ Ed\+\_\+connection\+::store\+\_\+result\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Provided \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} is not 0, this never fails. You must free the returned result set. This can be called only once after \mbox{\hyperlink{classEd__connection_a58f9da6381da4bc1455d7f22d1620d2d}{execute\+\_\+direct()}}. Should be used when you would like to get the results and destroy the connection.
+
+Release ownership of the current result set to the client.
+
+Since we use a simple linked list for result sets, this method uses a linear search of the previous result set to exclude the released instance from the list.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000111}{Todo}}]Use double-\/linked list, when this is really used.\end{DoxyRefDesc}
+
+
+X\+XX\+: This has never been tested with more than one result set!
+
+\begin{DoxyPrecond}{Precondition}
+There must be a result set. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classEd__connection_ab9b5405ab89c8dc49082adf1a3be3354}\label{classEd__connection_ab9b5405ab89c8dc49082adf1a3be3354}} 
+\index{Ed\+\_\+connection@{Ed\+\_\+connection}!use\+\_\+result\+\_\+set@{use\+\_\+result\+\_\+set}}
+\index{use\+\_\+result\+\_\+set@{use\+\_\+result\+\_\+set}!Ed\+\_\+connection@{Ed\+\_\+connection}}
+\subsubsection{\texorpdfstring{use\+\_\+result\+\_\+set()}{use\_result\_set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}}$\ast$ Ed\+\_\+connection\+::use\+\_\+result\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Provided \mbox{\hyperlink{classEd__connection_af704fb99d9029578af2d1acc301b8d51}{get\+\_\+field\+\_\+count()}} is not 0, this never fails. You don\textquotesingle{}t need to free the result set, this is done automatically when you advance to the next result set or destroy the connection. Not returning const because of \mbox{\hyperlink{classList}{List}} iterator not accepting Should be used when you would like \mbox{\hyperlink{classEd__connection}{Ed\+\_\+connection}} to manage result set memory for you. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+prepare.\+h\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

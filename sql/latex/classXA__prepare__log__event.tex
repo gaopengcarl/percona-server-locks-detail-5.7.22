@@ -1,0 +1,40 @@
+\hypertarget{classXA__prepare__log__event}{}\section{X\+A\+\_\+prepare\+\_\+log\+\_\+event Class Reference}
+\label{classXA__prepare__log__event}\index{X\+A\+\_\+prepare\+\_\+log\+\_\+event@{X\+A\+\_\+prepare\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for X\+A\+\_\+prepare\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classXA__prepare__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classXA__prepare__log__event_ae2553ee3cf2a5e32a134b6a7e0b5bb5a}\label{classXA__prepare__log__event_ae2553ee3cf2a5e32a134b6a7e0b5bb5a}} 
+{\bfseries X\+A\+\_\+prepare\+\_\+log\+\_\+event} (const char $\ast$buf, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classXA__prepare__log__event_a65341d479330f8673da3bc0917ccea1e}\label{classXA__prepare__log__event_a65341d479330f8673da3bc0917ccea1e}} 
+Log\+\_\+event\+\_\+type {\bfseries get\+\_\+type\+\_\+code} ()
+\item 
+\mbox{\Hypertarget{classXA__prepare__log__event_a1882d416d8e77a885b3742bf00de32cd}\label{classXA__prepare__log__event_a1882d416d8e77a885b3742bf00de32cd}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classXA__prepare__log__event_a52dc59527730c0289961f338a67cb5b8}\label{classXA__prepare__log__event_a52dc59527730c0289961f338a67cb5b8}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Similar to \mbox{\hyperlink{classXid__log__event}{Xid\+\_\+log\+\_\+event}} except that
+\begin{DoxyItemize}
+\item it is specific to XA transaction
+\item it carries out the prepare logics rather than the final committing when {\ttfamily one\+\_\+phase} member is off. From the groupping perspective the event finalizes the current \char`\"{}prepare\char`\"{} group started with XA S\+T\+A\+RT Query-\/log-\/event. When {\ttfamily one\+\_\+phase} is false Commit of Rollback for XA transaction are logged separately to the prepare-\/group events so being a groups of their own. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\end{DoxyCompactItemize}

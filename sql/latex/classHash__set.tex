@@ -1,0 +1,95 @@
+\hypertarget{classHash__set}{}\section{Hash\+\_\+set$<$ T, K $>$ Class Template Reference}
+\label{classHash__set}\index{Hash\+\_\+set$<$ T, K $>$@{Hash\+\_\+set$<$ T, K $>$}}
+
+
+{\ttfamily \#include $<$sql\+\_\+hset.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHash__set_1_1Iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHash__set_a9eb6cbec751a4982159e70310cda78ea}\label{classHash__set_a9eb6cbec751a4982159e70310cda78ea}} 
+enum \{ {\bfseries S\+T\+A\+R\+T\+\_\+\+S\+I\+ZE} = 8
+ \}
+\item 
+\mbox{\Hypertarget{classHash__set_a196f0fafe4c592464a67b4f9a915cc46}\label{classHash__set_a196f0fafe4c592464a67b4f9a915cc46}} 
+typedef T {\bfseries Value\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHash__set_a18dac5297ce6dca1a333aca94a3b5bf5}{Hash\+\_\+set}} (P\+S\+I\+\_\+memory\+\_\+key psi\+\_\+key)
+\item 
+\mbox{\hyperlink{classHash__set_a8171c917e05408fae5e5a1b12d2b3011}{$\sim$\+Hash\+\_\+set}} ()
+\item 
+bool \mbox{\hyperlink{classHash__set_ae8cd34c7227a2fd2c288a687dad59fad}{insert}} (T $\ast$value)
+\item 
+bool \mbox{\hyperlink{classHash__set_a60a9d58549e8eee25c0f934b9a13ae5c}{is\+\_\+empty}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classHash__set_af3f6728c422cebd67610c753a41d4231}{size}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, my\+\_\+hash\+\_\+get\+\_\+key K$>$\newline
+class Hash\+\_\+set$<$ T, K $>$}
+
+A type-\/safe wrapper around mysys H\+A\+SH. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHash__set_a18dac5297ce6dca1a333aca94a3b5bf5}\label{classHash__set_a18dac5297ce6dca1a333aca94a3b5bf5}} 
+\index{Hash\+\_\+set@{Hash\+\_\+set}!Hash\+\_\+set@{Hash\+\_\+set}}
+\index{Hash\+\_\+set@{Hash\+\_\+set}!Hash\+\_\+set@{Hash\+\_\+set}}
+\subsubsection{\texorpdfstring{Hash\+\_\+set()}{Hash\_set()}}
+{\footnotesize\ttfamily template$<$typename T , my\+\_\+hash\+\_\+get\+\_\+key K$>$ \\
+\mbox{\hyperlink{classHash__set}{Hash\+\_\+set}}$<$ T, K $>$\+::\mbox{\hyperlink{classHash__set}{Hash\+\_\+set}} (\begin{DoxyParamCaption}\item[{P\+S\+I\+\_\+memory\+\_\+key}]{psi\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an empty hash. Does not allocate memory, it is done upon the first insert. Thus does not cause or return errors. \mbox{\Hypertarget{classHash__set_a8171c917e05408fae5e5a1b12d2b3011}\label{classHash__set_a8171c917e05408fae5e5a1b12d2b3011}} 
+\index{Hash\+\_\+set@{Hash\+\_\+set}!````~Hash\+\_\+set@{$\sim$\+Hash\+\_\+set}}
+\index{````~Hash\+\_\+set@{$\sim$\+Hash\+\_\+set}!Hash\+\_\+set@{Hash\+\_\+set}}
+\subsubsection{\texorpdfstring{$\sim$\+Hash\+\_\+set()}{~Hash\_set()}}
+{\footnotesize\ttfamily template$<$typename T , my\+\_\+hash\+\_\+get\+\_\+key K$>$ \\
+\mbox{\hyperlink{classHash__set}{Hash\+\_\+set}}$<$ T, K $>$\+::$\sim$\mbox{\hyperlink{classHash__set}{Hash\+\_\+set}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destroy the hash by freeing the buckets table. Does not call destructors for the elements. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHash__set_ae8cd34c7227a2fd2c288a687dad59fad}\label{classHash__set_ae8cd34c7227a2fd2c288a687dad59fad}} 
+\index{Hash\+\_\+set@{Hash\+\_\+set}!insert@{insert}}
+\index{insert@{insert}!Hash\+\_\+set@{Hash\+\_\+set}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T , my\+\_\+hash\+\_\+get\+\_\+key K$>$ \\
+bool \mbox{\hyperlink{classHash__set}{Hash\+\_\+set}}$<$ T, K $>$\+::insert (\begin{DoxyParamCaption}\item[{T $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a single value into a hash. Does not tell whether the value was inserted -- if an identical value existed, it is not replaced.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Out of memory. \\
+\hline
+{\em F\+A\+L\+SE} & OK. The value either was inserted or existed in the hash. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classHash__set_a60a9d58549e8eee25c0f934b9a13ae5c}\label{classHash__set_a60a9d58549e8eee25c0f934b9a13ae5c}} 
+\index{Hash\+\_\+set@{Hash\+\_\+set}!is\+\_\+empty@{is\+\_\+empty}}
+\index{is\+\_\+empty@{is\+\_\+empty}!Hash\+\_\+set@{Hash\+\_\+set}}
+\subsubsection{\texorpdfstring{is\+\_\+empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$typename T , my\+\_\+hash\+\_\+get\+\_\+key K$>$ \\
+bool \mbox{\hyperlink{classHash__set}{Hash\+\_\+set}}$<$ T, K $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Is this hash set empty? \mbox{\Hypertarget{classHash__set_af3f6728c422cebd67610c753a41d4231}\label{classHash__set_af3f6728c422cebd67610c753a41d4231}} 
+\index{Hash\+\_\+set@{Hash\+\_\+set}!size@{size}}
+\index{size@{size}!Hash\+\_\+set@{Hash\+\_\+set}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T , my\+\_\+hash\+\_\+get\+\_\+key K$>$ \\
+size\+\_\+t \mbox{\hyperlink{classHash__set}{Hash\+\_\+set}}$<$ T, K $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of unique elements. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+hset.\+h\end{DoxyCompactItemize}

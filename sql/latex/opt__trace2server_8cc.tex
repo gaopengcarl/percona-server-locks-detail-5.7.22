@@ -1,0 +1,39 @@
+\hypertarget{opt__trace2server_8cc}{}\section{opt\+\_\+trace2server.\+cc File Reference}
+\label{opt__trace2server_8cc}\index{opt\+\_\+trace2server.\+cc@{opt\+\_\+trace2server.\+cc}}
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+show.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+head.\+h\char`\"{}}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structst__field__info}{S\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+FO}} \mbox{\hyperlink{opt__trace2server_8cc_aed86b495d0a5ae246f2398274b1170f0}{optimizer\+\_\+trace\+\_\+info}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the Optimizer trace A\+PI (WL\#5257) Helpers connecting the optimizer trace to T\+HD or Information Schema. They are dedicated \char`\"{}to the server\char`\"{} (hence the file\textquotesingle{}s name). In order to create a unit test of the optimizer trace without defining \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} (and all its parent classes), st\+\_\+select\+\_\+lex..., these helpers are defined in \mbox{\hyperlink{opt__trace2server_8cc}{opt\+\_\+trace2server.\+cc}}. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{opt__trace2server_8cc_aed86b495d0a5ae246f2398274b1170f0}\label{opt__trace2server_8cc_aed86b495d0a5ae246f2398274b1170f0}} 
+\index{opt\+\_\+trace2server.\+cc@{opt\+\_\+trace2server.\+cc}!optimizer\+\_\+trace\+\_\+info@{optimizer\+\_\+trace\+\_\+info}}
+\index{optimizer\+\_\+trace\+\_\+info@{optimizer\+\_\+trace\+\_\+info}!opt\+\_\+trace2server.\+cc@{opt\+\_\+trace2server.\+cc}}
+\subsubsection{\texorpdfstring{optimizer\+\_\+trace\+\_\+info}{optimizer\_trace\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__field__info}{S\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+FO}} optimizer\+\_\+trace\+\_\+info\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"QUERY"}, 65535, MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{false}, NULL, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"TRACE"}, 65535, MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{false}, NULL, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"MISSING\_BYTES\_BEYOND\_MAX\_MEM\_SIZE"}, 20, MYSQL\_TYPE\_LONG,}
+\DoxyCodeLine{   0, \textcolor{keyword}{false}, NULL, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"INSUFFICIENT\_PRIVILEGES"}, 1, MYSQL\_TYPE\_TINY,}
+\DoxyCodeLine{   0, \textcolor{keyword}{false}, NULL, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{NULL, 0,  MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{true}, NULL, 0\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+For creating fields of information\+\_\+schema.\+O\+P\+T\+I\+M\+I\+Z\+E\+R\+\_\+\+T\+R\+A\+CE 

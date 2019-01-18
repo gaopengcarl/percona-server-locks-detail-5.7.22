@@ -1,0 +1,39 @@
+\hypertarget{classExecute__sql__statement}{}\section{Execute\+\_\+sql\+\_\+statement Class Reference}
+\label{classExecute__sql__statement}\index{Execute\+\_\+sql\+\_\+statement@{Execute\+\_\+sql\+\_\+statement}}
+Inheritance diagram for Execute\+\_\+sql\+\_\+statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExecute__sql__statement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExecute__sql__statement_a9259d781e9cbf50cb053718c92ac6e0f}\label{classExecute__sql__statement_a9259d781e9cbf50cb053718c92ac6e0f}} 
+{\bfseries Execute\+\_\+sql\+\_\+statement} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG sql\+\_\+text)
+\item 
+virtual bool \mbox{\hyperlink{classExecute__sql__statement_a026dc9b345e89b1e63b9af783e85d1ed}{execute\+\_\+server\+\_\+code}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Execute one S\+QL statement in an isolated context. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExecute__sql__statement_a026dc9b345e89b1e63b9af783e85d1ed}\label{classExecute__sql__statement_a026dc9b345e89b1e63b9af783e85d1ed}} 
+\index{Execute\+\_\+sql\+\_\+statement@{Execute\+\_\+sql\+\_\+statement}!execute\+\_\+server\+\_\+code@{execute\+\_\+server\+\_\+code}}
+\index{execute\+\_\+server\+\_\+code@{execute\+\_\+server\+\_\+code}!Execute\+\_\+sql\+\_\+statement@{Execute\+\_\+sql\+\_\+statement}}
+\subsubsection{\texorpdfstring{execute\+\_\+server\+\_\+code()}{execute\_server\_code()}}
+{\footnotesize\ttfamily bool Execute\+\_\+sql\+\_\+statement\+::execute\+\_\+server\+\_\+code (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Parse and execute a statement. Does not prepare the query.
+
+Allows to execute a statement from within another statement. The main property of the implementation is that it does not affect the environment -- i.\+e. you can run many executions without having to cleanup/reset T\+HD in between. 
+
+Implements \mbox{\hyperlink{classServer__runnable}{Server\+\_\+runnable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

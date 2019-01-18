@@ -1,0 +1,103 @@
+\hypertarget{classRpl__transaction__write__set__ctx}{}\section{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx Class Reference}
+\label{classRpl__transaction__write__set__ctx}\index{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_a3d908f0ba5a685b14218b0c22aedb1eb}\label{classRpl__transaction__write__set__ctx_a3d908f0ba5a685b14218b0c22aedb1eb}} 
+void {\bfseries add\+\_\+write\+\_\+set} (uint64 hash)
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_ad03c62f17609a9915ecde0bdc8a39189}\label{classRpl__transaction__write__set__ctx_ad03c62f17609a9915ecde0bdc8a39189}} 
+std\+::set$<$ uint64 $>$ $\ast$ {\bfseries get\+\_\+write\+\_\+set} ()
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_adfa492edc4803f5069f5d8f4b811c4af}\label{classRpl__transaction__write__set__ctx_adfa492edc4803f5069f5d8f4b811c4af}} 
+void {\bfseries clear\+\_\+write\+\_\+set} ()
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_ac2e94f0a3a2b24e3d61c4260c226a2a5}\label{classRpl__transaction__write__set__ctx_ac2e94f0a3a2b24e3d61c4260c226a2a5}} 
+void {\bfseries set\+\_\+has\+\_\+missing\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_af508c96bd399d324d4411268d370f660}\label{classRpl__transaction__write__set__ctx_af508c96bd399d324d4411268d370f660}} 
+bool {\bfseries get\+\_\+has\+\_\+missing\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_a7ae5ffc4fab7b5e05cec6a59fca0534d}\label{classRpl__transaction__write__set__ctx_a7ae5ffc4fab7b5e05cec6a59fca0534d}} 
+void {\bfseries set\+\_\+has\+\_\+related\+\_\+foreign\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_a04b997cd4231150844b794282ddd9bf2}\label{classRpl__transaction__write__set__ctx_a04b997cd4231150844b794282ddd9bf2}} 
+bool {\bfseries get\+\_\+has\+\_\+related\+\_\+foreign\+\_\+keys} ()
+\item 
+void \mbox{\hyperlink{classRpl__transaction__write__set__ctx_a9a0fb568601fb81236c84fbdbd308a0b}{add\+\_\+savepoint}} (char $\ast$name)
+\item 
+void \mbox{\hyperlink{classRpl__transaction__write__set__ctx_ab9bb7799dbea3999e441aa53245267a3}{del\+\_\+savepoint}} (char $\ast$name)
+\item 
+void \mbox{\hyperlink{classRpl__transaction__write__set__ctx_a6b1fa58962e012c29871668e207eae1f}{rollback\+\_\+to\+\_\+savepoint}} (char $\ast$name)
+\item 
+void \mbox{\hyperlink{classRpl__transaction__write__set__ctx_a00245209aabac640cbdcbee2b47c865d}{reset\+\_\+savepoint\+\_\+list}} ()
+\item 
+void \mbox{\hyperlink{classRpl__transaction__write__set__ctx_abab0107db18fb3f09c63fd4c458d6060}{restore\+\_\+savepoint\+\_\+list}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server side support to provide a service to plugins to report if a given transaction should continue or be aborted. Its value is reset on Transaction\+\_\+ctx\+::cleanup(). Its value is set through service service\+\_\+rpl\+\_\+transaction\+\_\+ctx. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_a9a0fb568601fb81236c84fbdbd308a0b}\label{classRpl__transaction__write__set__ctx_a9a0fb568601fb81236c84fbdbd308a0b}} 
+\index{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}!add\+\_\+savepoint@{add\+\_\+savepoint}}
+\index{add\+\_\+savepoint@{add\+\_\+savepoint}!Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}}
+\subsubsection{\texorpdfstring{add\+\_\+savepoint()}{add\_savepoint()}}
+{\footnotesize\ttfamily void Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx\+::add\+\_\+savepoint (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Function to add a new S\+A\+V\+E\+P\+O\+I\+NT identifier in the savepoint map in the transaction\+\_\+ctx object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & -\/ the identifier name of the S\+A\+V\+E\+P\+O\+I\+NT. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_ab9bb7799dbea3999e441aa53245267a3}\label{classRpl__transaction__write__set__ctx_ab9bb7799dbea3999e441aa53245267a3}} 
+\index{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}!del\+\_\+savepoint@{del\+\_\+savepoint}}
+\index{del\+\_\+savepoint@{del\+\_\+savepoint}!Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}}
+\subsubsection{\texorpdfstring{del\+\_\+savepoint()}{del\_savepoint()}}
+{\footnotesize\ttfamily void Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx\+::del\+\_\+savepoint (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Function to delete a S\+A\+V\+E\+P\+O\+I\+NT identifier in the savepoint map in the transaction\+\_\+ctx object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & -\/ the identifier name of the S\+A\+V\+E\+P\+O\+I\+NT. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRpl__transaction__write__set__ctx_a00245209aabac640cbdcbee2b47c865d}\label{classRpl__transaction__write__set__ctx_a00245209aabac640cbdcbee2b47c865d}} 
+\index{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}!reset\+\_\+savepoint\+\_\+list@{reset\+\_\+savepoint\+\_\+list}}
+\index{reset\+\_\+savepoint\+\_\+list@{reset\+\_\+savepoint\+\_\+list}!Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}}
+\subsubsection{\texorpdfstring{reset\+\_\+savepoint\+\_\+list()}{reset\_savepoint\_list()}}
+{\footnotesize\ttfamily void Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx\+::reset\+\_\+savepoint\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to push savepoint data to a list and clear the savepoint map in order to create another identifier context, needed on functions ant trigger. \mbox{\Hypertarget{classRpl__transaction__write__set__ctx_abab0107db18fb3f09c63fd4c458d6060}\label{classRpl__transaction__write__set__ctx_abab0107db18fb3f09c63fd4c458d6060}} 
+\index{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}!restore\+\_\+savepoint\+\_\+list@{restore\+\_\+savepoint\+\_\+list}}
+\index{restore\+\_\+savepoint\+\_\+list@{restore\+\_\+savepoint\+\_\+list}!Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}}
+\subsubsection{\texorpdfstring{restore\+\_\+savepoint\+\_\+list()}{restore\_savepoint\_list()}}
+{\footnotesize\ttfamily void Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx\+::restore\+\_\+savepoint\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Restore previous savepoint map context, called after executed trigger or function. \mbox{\Hypertarget{classRpl__transaction__write__set__ctx_a6b1fa58962e012c29871668e207eae1f}\label{classRpl__transaction__write__set__ctx_a6b1fa58962e012c29871668e207eae1f}} 
+\index{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}!rollback\+\_\+to\+\_\+savepoint@{rollback\+\_\+to\+\_\+savepoint}}
+\index{rollback\+\_\+to\+\_\+savepoint@{rollback\+\_\+to\+\_\+savepoint}!Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}}
+\subsubsection{\texorpdfstring{rollback\+\_\+to\+\_\+savepoint()}{rollback\_to\_savepoint()}}
+{\footnotesize\ttfamily void Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx\+::rollback\+\_\+to\+\_\+savepoint (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Function to delete all data added to write set and savepoint since S\+A\+V\+E\+P\+O\+I\+NT identifier was added to savepoinbt in the transaction\+\_\+ctx object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & -\/ the identifier name of the S\+A\+V\+E\+P\+O\+I\+NT. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx.\+h\item 
+rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx.\+cc\end{DoxyCompactItemize}

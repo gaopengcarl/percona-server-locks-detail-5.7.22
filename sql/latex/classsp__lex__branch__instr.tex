@@ -1,0 +1,209 @@
+\hypertarget{classsp__lex__branch__instr}{}\section{sp\+\_\+lex\+\_\+branch\+\_\+instr Class Reference}
+\label{classsp__lex__branch__instr}\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+lex\+\_\+branch\+\_\+instr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.166667cm]{classsp__lex__branch__instr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_afd0024a01681dd4cb0a8b86cfcbdedb5}\label{classsp__lex__branch__instr_afd0024a01681dd4cb0a8b86cfcbdedb5}} 
+void {\bfseries set\+\_\+cont\+\_\+dest} (uint cont\+\_\+dest)
+\item 
+virtual uint \mbox{\hyperlink{classsp__lex__branch__instr_a07500581e51283aad3b04602a7b87c74}{opt\+\_\+mark}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$leads)
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__branch__instr_ae7d74a74399102d85e481c4e46751cfe}{opt\+\_\+move}} (uint dst, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__branch__instr}{sp\+\_\+branch\+\_\+instr}} $>$ $\ast$ibp)
+\item 
+virtual uint \mbox{\hyperlink{classsp__lex__branch__instr_a5e6dfdf34d9f45fb3f2d2386029b95c6}{get\+\_\+cont\+\_\+dest}} () const
+\item 
+virtual bool \mbox{\hyperlink{classsp__lex__branch__instr_a22c35f1cd8a840a61e4881903ad6ff03}{is\+\_\+invalid}} () const
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__branch__instr_a91d747da2e1068e2d6ac0fd7c06a4018}{invalidate}} ()
+\item 
+virtual L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classsp__lex__branch__instr_a3693c3f9cc8fdf15092dcb3d4183075b}{get\+\_\+expr\+\_\+query}} () const
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__branch__instr_ae3ef8f864474467824615e33f0663d76}{set\+\_\+destination}} (uint old\+\_\+dest, uint new\+\_\+dest)
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__branch__instr_a0a28016e4c51d49eb9ff014b0afa7703}{backpatch}} (uint dest)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a413a569356494220d3cab6ac1b7d9cb7}\label{classsp__lex__branch__instr_a413a569356494220d3cab6ac1b7d9cb7}} 
+{\bfseries sp\+\_\+lex\+\_\+branch\+\_\+instr} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, L\+EX $\ast$lex, \mbox{\hyperlink{classItem}{Item}} $\ast$expr\+\_\+item, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG expr\+\_\+query)
+\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a472e3cd9c07f29fa4dcb776f0d13985e}\label{classsp__lex__branch__instr_a472e3cd9c07f29fa4dcb776f0d13985e}} 
+{\bfseries sp\+\_\+lex\+\_\+branch\+\_\+instr} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, L\+EX $\ast$lex, \mbox{\hyperlink{classItem}{Item}} $\ast$expr\+\_\+item, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG expr\+\_\+query, uint dest)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a419b39ebb1fc5a42a616d60a8b9b706b}\label{classsp__lex__branch__instr_a419b39ebb1fc5a42a616d60a8b9b706b}} 
+uint \mbox{\hyperlink{classsp__lex__branch__instr_a419b39ebb1fc5a42a616d60a8b9b706b}{m\+\_\+dest}}
+\begin{DoxyCompactList}\small\item\em Where we will go. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a596a77218fe106f86f03774b05833c6e}\label{classsp__lex__branch__instr_a596a77218fe106f86f03774b05833c6e}} 
+uint \mbox{\hyperlink{classsp__lex__branch__instr_a596a77218fe106f86f03774b05833c6e}{m\+\_\+cont\+\_\+dest}}
+\begin{DoxyCompactList}\small\item\em Where continue handlers will go. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a5ed07ac6ab451f947115b3a7317bf3be}\label{classsp__lex__branch__instr_a5ed07ac6ab451f947115b3a7317bf3be}} 
+\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$ {\bfseries m\+\_\+optdest}
+\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a1b1fe2d6ea73fb04154f259b75f5fc29}\label{classsp__lex__branch__instr_a1b1fe2d6ea73fb04154f259b75f5fc29}} 
+\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$ {\bfseries m\+\_\+cont\+\_\+optdest}
+\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_abd90bac62d885b3f41a96a401e470f65}\label{classsp__lex__branch__instr_abd90bac62d885b3f41a96a401e470f65}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classsp__lex__branch__instr_abd90bac62d885b3f41a96a401e470f65}{m\+\_\+expr\+\_\+item}}
+\begin{DoxyCompactList}\small\item\em Expression item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__lex__branch__instr_a76410fa6cec7a8b4a57151c75bd64586}\label{classsp__lex__branch__instr_a76410fa6cec7a8b4a57151c75bd64586}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classsp__lex__branch__instr_a76410fa6cec7a8b4a57151c75bd64586}{m\+\_\+expr\+\_\+query}}
+\begin{DoxyCompactList}\small\item\em S\+QL-\/query corresponding to the expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}} is a base class for SP-\/instructions, which might perform conditional jump depending on the value of an S\+QL-\/expression. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__lex__branch__instr_a0a28016e4c51d49eb9ff014b0afa7703}\label{classsp__lex__branch__instr_a0a28016e4c51d49eb9ff014b0afa7703}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!backpatch@{backpatch}}
+\index{backpatch@{backpatch}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{backpatch()}{backpatch()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+lex\+\_\+branch\+\_\+instr\+::backpatch (\begin{DoxyParamCaption}\item[{uint}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Update all instruction with the given label in the backpatch list to the specified instruction pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & destination instruction pointer. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsp__branch__instr_a10bd06254e30634e367405f0fba5ab0d}{sp\+\_\+branch\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__set__case__expr_a5d4c9c2460d84b449e5796186407b7b4}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_a5e6dfdf34d9f45fb3f2d2386029b95c6}\label{classsp__lex__branch__instr_a5e6dfdf34d9f45fb3f2d2386029b95c6}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!get\+\_\+cont\+\_\+dest@{get\+\_\+cont\+\_\+dest}}
+\index{get\+\_\+cont\+\_\+dest@{get\+\_\+cont\+\_\+dest}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{get\+\_\+cont\+\_\+dest()}{get\_cont\_dest()}}
+{\footnotesize\ttfamily virtual uint sp\+\_\+lex\+\_\+branch\+\_\+instr\+::get\+\_\+cont\+\_\+dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get the continuation destination (instruction pointer for the C\+O\+N\+T\+I\+N\+UE H\+A\+N\+D\+L\+ER) of this instruction. \begin{DoxyReturn}{Returns}
+the continuation destination 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{sp\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_a3693c3f9cc8fdf15092dcb3d4183075b}\label{classsp__lex__branch__instr_a3693c3f9cc8fdf15092dcb3d4183075b}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!get\+\_\+expr\+\_\+query@{get\+\_\+expr\+\_\+query}}
+\index{get\+\_\+expr\+\_\+query@{get\+\_\+expr\+\_\+query}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{get\+\_\+expr\+\_\+query()}{get\_expr\_query()}}
+{\footnotesize\ttfamily virtual L\+E\+X\+\_\+\+S\+T\+R\+I\+NG sp\+\_\+lex\+\_\+branch\+\_\+instr\+::get\+\_\+expr\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the expression query string. This string can not be passed directly to the parser as it is most likely not a valid S\+QL-\/statement.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+as it can be seen in the \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query()}} implementation, \mbox{\hyperlink{classsp__lex__branch__instr_a3693c3f9cc8fdf15092dcb3d4183075b}{get\+\_\+expr\+\_\+query()}} might return E\+M\+P\+T\+Y\+\_\+\+S\+TR. E\+M\+P\+T\+Y\+\_\+\+S\+TR means that no query-\/expression is available. That happens when class provides different implementation of \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query()}}. Strictly speaking, this is a drawback of the current class hierarchy. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_ad355d3ed08ae1fef4811fe6838ed78e2}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_a91d747da2e1068e2d6ac0fd7c06a4018}\label{classsp__lex__branch__instr_a91d747da2e1068e2d6ac0fd7c06a4018}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+lex\+\_\+branch\+\_\+instr\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Invalidate the object. 
+
+Implements \mbox{\hyperlink{classsp__lex__instr_ae9945d69ab5d91d6ce215f194beea882}{sp\+\_\+lex\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__jump__case__when_a35195c6200f0d6e87bde67b83f5fd767}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_a22c35f1cd8a840a61e4881903ad6ff03}\label{classsp__lex__branch__instr_a22c35f1cd8a840a61e4881903ad6ff03}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!is\+\_\+invalid@{is\+\_\+invalid}}
+\index{is\+\_\+invalid@{is\+\_\+invalid}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid()}{is\_invalid()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+lex\+\_\+branch\+\_\+instr\+::is\+\_\+invalid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if the object (i.\+e. L\+EX-\/object) is valid and \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{exec\+\_\+core()}} can be just called.\\
+\hline
+{\em true} & if the object is not valid any longer, \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{exec\+\_\+core()}} can not be called. The original query string should be re-\/parsed and a new L\+EX-\/object should be used. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_a56788cb475ccf94f224816006d9c90e9}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_a07500581e51283aad3b04602a7b87c74}\label{classsp__lex__branch__instr_a07500581e51283aad3b04602a7b87c74}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!opt\+\_\+mark@{opt\+\_\+mark}}
+\index{opt\+\_\+mark@{opt\+\_\+mark}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{opt\+\_\+mark()}{opt\_mark()}}
+{\footnotesize\ttfamily uint sp\+\_\+lex\+\_\+branch\+\_\+instr\+::opt\+\_\+mark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$}]{leads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Mark this instruction as reachable during optimization and return the index to the next instruction. Jump instruction will add their destination to the leads list. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a10b7b33a30316fca4cff5adfe98e282c}{sp\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__set__case__expr_a40890fccd0dca44d11d61dcb0a88b043}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_ae7d74a74399102d85e481c4e46751cfe}\label{classsp__lex__branch__instr_ae7d74a74399102d85e481c4e46751cfe}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!opt\+\_\+move@{opt\+\_\+move}}
+\index{opt\+\_\+move@{opt\+\_\+move}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{opt\+\_\+move()}{opt\_move()}}
+{\footnotesize\ttfamily void sp\+\_\+lex\+\_\+branch\+\_\+instr\+::opt\+\_\+move (\begin{DoxyParamCaption}\item[{uint}]{dst,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__branch__instr}{sp\+\_\+branch\+\_\+instr}} $>$ $\ast$}]{ibp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Inform the instruction that it has been moved during optimization. Most instructions will simply update its index, but jump instructions must also take care of their destination pointers. Forward jumps get pushed to the backpatch list \textquotesingle{}ibp\textquotesingle{}. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a7b73990576fc8cd3f4a8bd16003ab44b}{sp\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__set__case__expr_abc03926238c4442d32e3bfb4d89fcac1}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}.
+
+\mbox{\Hypertarget{classsp__lex__branch__instr_ae3ef8f864474467824615e33f0663d76}\label{classsp__lex__branch__instr_ae3ef8f864474467824615e33f0663d76}} 
+\index{sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}!set\+\_\+destination@{set\+\_\+destination}}
+\index{set\+\_\+destination@{set\+\_\+destination}!sp\+\_\+lex\+\_\+branch\+\_\+instr@{sp\+\_\+lex\+\_\+branch\+\_\+instr}}
+\subsubsection{\texorpdfstring{set\+\_\+destination()}{set\_destination()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+lex\+\_\+branch\+\_\+instr\+::set\+\_\+destination (\begin{DoxyParamCaption}\item[{uint}]{old\+\_\+dest,  }\item[{uint}]{new\+\_\+dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Update the destination; used by the SP-\/instruction-\/optimizer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+\_\+dest} & current (old) destination (instruction pointer). \\
+\hline
+{\em new\+\_\+dest} & new destination (instruction pointer). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsp__branch__instr_ad5bc8e2fede785323c1749b6269869c3}{sp\+\_\+branch\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__set__case__expr_a7b2952b03aa0a30f407d88fd75ebdbae}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

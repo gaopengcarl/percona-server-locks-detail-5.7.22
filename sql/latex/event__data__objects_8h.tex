@@ -1,0 +1,43 @@
+\hypertarget{event__data__objects_8h}{}\section{event\+\_\+data\+\_\+objects.\+h File Reference}
+\label{event__data__objects_8h}\index{event\+\_\+data\+\_\+objects.\+h@{event\+\_\+data\+\_\+objects.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}m\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+alloc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/mysql\+\_\+lex\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$pfs\+\_\+stage\+\_\+provider.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/psi/mysql\+\_\+stage.\+h$>$}\newline
+{\ttfamily \#include $<$pfs\+\_\+statement\+\_\+provider.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/psi/mysql\+\_\+statement.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}}
+\item 
+class \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}}
+\item 
+class \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}}
+\item 
+class \mbox{\hyperlink{classEvent__timed}{Event\+\_\+timed}}
+\item 
+class \mbox{\hyperlink{classEvent__job__data}{Event\+\_\+job\+\_\+data}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef ulonglong {\bfseries sql\+\_\+mode\+\_\+t}
+\item 
+typedef struct st\+\_\+mysql\+\_\+lex\+\_\+string {\bfseries L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries init\+\_\+scheduler\+\_\+psi\+\_\+keys} (void)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga952e506d8f76739d416da0fb7169fac3}{construct\+\_\+drop\+\_\+event\+\_\+sql}} (T\+HD $\ast$thd, String $\ast$sp\+\_\+sql, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&schema\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&event\+\_\+name)
+\item 
+bool {\bfseries event\+\_\+basic\+\_\+db\+\_\+equal} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG db, \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}} $\ast$et)
+\item 
+bool {\bfseries event\+\_\+basic\+\_\+identifier\+\_\+equal} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG db, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}} $\ast$b)
+\end{DoxyCompactItemize}

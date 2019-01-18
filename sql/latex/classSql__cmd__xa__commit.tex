@@ -1,0 +1,61 @@
+\hypertarget{classSql__cmd__xa__commit}{}\section{Sql\+\_\+cmd\+\_\+xa\+\_\+commit Class Reference}
+\label{classSql__cmd__xa__commit}\index{Sql\+\_\+cmd\+\_\+xa\+\_\+commit@{Sql\+\_\+cmd\+\_\+xa\+\_\+commit}}
+
+
+{\ttfamily \#include $<$xa.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+xa\+\_\+commit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__xa__commit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__commit_a04ce90e7dc577b84180ea5218ed18d26}\label{classSql__cmd__xa__commit_a04ce90e7dc577b84180ea5218ed18d26}} 
+{\bfseries Sql\+\_\+cmd\+\_\+xa\+\_\+commit} (\mbox{\hyperlink{structxid__t}{xid\+\_\+t}} $\ast$xid\+\_\+arg, enum xa\+\_\+option\+\_\+words xa\+\_\+option)
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__commit_a78d03006286a2d6eac61c748efe9c895}\label{classSql__cmd__xa__commit_a78d03006286a2d6eac61c748efe9c895}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__xa__commit_a78d03006286a2d6eac61c748efe9c895}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__xa__commit_a5c883806812b74adc71d7eba693e863a}{execute}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__commit_a2c828018a3543ff2a1e5c4258b31a002}\label{classSql__cmd__xa__commit_a2c828018a3543ff2a1e5c4258b31a002}} 
+enum xa\+\_\+option\+\_\+words {\bfseries get\+\_\+xa\+\_\+opt} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents S\+QL statement which commits and terminates an XA transaction with the given xid value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__xa__commit_a5c883806812b74adc71d7eba693e863a}\label{classSql__cmd__xa__commit_a5c883806812b74adc71d7eba693e863a}} 
+\index{Sql\+\_\+cmd\+\_\+xa\+\_\+commit@{Sql\+\_\+cmd\+\_\+xa\+\_\+commit}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+xa\+\_\+commit@{Sql\+\_\+cmd\+\_\+xa\+\_\+commit}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+xa\+\_\+commit\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+xa.\+h\item 
+xa.\+cc\end{DoxyCompactItemize}

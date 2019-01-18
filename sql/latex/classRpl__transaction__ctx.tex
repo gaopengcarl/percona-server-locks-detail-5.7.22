@@ -1,0 +1,98 @@
+\hypertarget{classRpl__transaction__ctx}{}\section{Rpl\+\_\+transaction\+\_\+ctx Class Reference}
+\label{classRpl__transaction__ctx}\index{Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+transaction\+\_\+ctx.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRpl__transaction__ctx_a168393a702d87ac695bdc79b2d125605}\label{classRpl__transaction__ctx_a168393a702d87ac695bdc79b2d125605}} 
+int {\bfseries set\+\_\+rpl\+\_\+transaction\+\_\+ctx} (Transaction\+\_\+termination\+\_\+ctx transaction\+\_\+termination\+\_\+ctx)
+\item 
+bool \mbox{\hyperlink{classRpl__transaction__ctx_a9e0566ffa58a8b7d85339fefc4b1c177}{is\+\_\+transaction\+\_\+rollback}} ()
+\item 
+bool \mbox{\hyperlink{classRpl__transaction__ctx_a5a71e376fec6821b0b77d92e52810143}{is\+\_\+generated\+\_\+gtid}} ()
+\item 
+int \mbox{\hyperlink{classRpl__transaction__ctx_aeb35b76ddcd546ceb7ca9b9d8749f499}{get\+\_\+sidno}} ()
+\item 
+long long int \mbox{\hyperlink{classRpl__transaction__ctx_a7838f13fc5d27de9e6b5ffb9af1b171a}{get\+\_\+gno}} ()
+\item 
+void \mbox{\hyperlink{classRpl__transaction__ctx_ad75e6281a39901ec05c690441d68ab84}{cleanup}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server side support to provide a service to plugins to report if a given transaction should continue or be aborted. Its value is reset on Transaction\+\_\+ctx\+::cleanup(). Its value is set through service service\+\_\+rpl\+\_\+transaction\+\_\+ctx. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRpl__transaction__ctx_ad75e6281a39901ec05c690441d68ab84}\label{classRpl__transaction__ctx_ad75e6281a39901ec05c690441d68ab84}} 
+\index{Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Rpl\+\_\+transaction\+\_\+ctx\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset transaction context to default values. \mbox{\Hypertarget{classRpl__transaction__ctx_a7838f13fc5d27de9e6b5ffb9af1b171a}\label{classRpl__transaction__ctx_a7838f13fc5d27de9e6b5ffb9af1b171a}} 
+\index{Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}!get\+\_\+gno@{get\+\_\+gno}}
+\index{get\+\_\+gno@{get\+\_\+gno}!Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}}
+\subsubsection{\texorpdfstring{get\+\_\+gno()}{get\_gno()}}
+{\footnotesize\ttfamily rpl\+\_\+gno Rpl\+\_\+transaction\+\_\+ctx\+::get\+\_\+gno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get transaction gno.
+
+\begin{DoxyReturn}{Returns}
+gno gno value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRpl__transaction__ctx_aeb35b76ddcd546ceb7ca9b9d8749f499}\label{classRpl__transaction__ctx_aeb35b76ddcd546ceb7ca9b9d8749f499}} 
+\index{Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}!get\+\_\+sidno@{get\+\_\+sidno}}
+\index{get\+\_\+sidno@{get\+\_\+sidno}!Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}}
+\subsubsection{\texorpdfstring{get\+\_\+sidno()}{get\_sidno()}}
+{\footnotesize\ttfamily rpl\+\_\+sidno Rpl\+\_\+transaction\+\_\+ctx\+::get\+\_\+sidno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get transaction sidno.
+
+\begin{DoxyReturn}{Returns}
+sidno sidno value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRpl__transaction__ctx_a5a71e376fec6821b0b77d92e52810143}\label{classRpl__transaction__ctx_a5a71e376fec6821b0b77d92e52810143}} 
+\index{Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}!is\+\_\+generated\+\_\+gtid@{is\+\_\+generated\+\_\+gtid}}
+\index{is\+\_\+generated\+\_\+gtid@{is\+\_\+generated\+\_\+gtid}!Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}}
+\subsubsection{\texorpdfstring{is\+\_\+generated\+\_\+gtid()}{is\_generated\_gtid()}}
+{\footnotesize\ttfamily bool Rpl\+\_\+transaction\+\_\+ctx\+::is\+\_\+generated\+\_\+gtid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Was G\+T\+ID generated externally?
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & G\+T\+ID was generated. \\
+\hline
+{\em false} & G\+T\+ID was not generated. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRpl__transaction__ctx_a9e0566ffa58a8b7d85339fefc4b1c177}\label{classRpl__transaction__ctx_a9e0566ffa58a8b7d85339fefc4b1c177}} 
+\index{Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}!is\+\_\+transaction\+\_\+rollback@{is\+\_\+transaction\+\_\+rollback}}
+\index{is\+\_\+transaction\+\_\+rollback@{is\+\_\+transaction\+\_\+rollback}!Rpl\+\_\+transaction\+\_\+ctx@{Rpl\+\_\+transaction\+\_\+ctx}}
+\subsubsection{\texorpdfstring{is\+\_\+transaction\+\_\+rollback()}{is\_transaction\_rollback()}}
+{\footnotesize\ttfamily bool Rpl\+\_\+transaction\+\_\+ctx\+::is\+\_\+transaction\+\_\+rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get transaction outcome decision. When both sidno and gno are equal or greater than zero, transaction should continue. By default sidno and gno are 0, transaction will continue.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Transaction should abort \\
+\hline
+{\em false} & Transaction should continue \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+transaction\+\_\+ctx.\+h\item 
+rpl\+\_\+transaction\+\_\+ctx.\+cc\end{DoxyCompactItemize}

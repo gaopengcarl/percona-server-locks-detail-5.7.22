@@ -1,0 +1,39 @@
+\hypertarget{classPoint__stepper}{}\section{Point\+\_\+stepper Class Reference}
+\label{classPoint__stepper}\index{Point\+\_\+stepper@{Point\+\_\+stepper}}
+Inheritance diagram for Point\+\_\+stepper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPoint__stepper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPoint__stepper_a97ca416039d43365f69ded7c3d10df44}\label{classPoint__stepper_a97ca416039d43365f69ded7c3d10df44}} 
+{\bfseries Point\+\_\+stepper} (char dim, Geometry\+::wkb\+Byte\+Order bo, bool has\+\_\+wkb\+\_\+hdr)
+\item 
+const char $\ast$ \mbox{\hyperlink{classPoint__stepper_a1e992867e096d4bcde1cd79aa25398d6}{operator()}} (const char $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+For iterating points inside multipoint and linestring. Expected multipoint format\+: N\+UM-\/pts$\vert$\+W\+KB-\/H\+D\+R1 pt1$\vert$\+W\+KB-\/H\+D\+R2 pt2$\vert$...$\vert$\+W\+KB-\/H\+D\+Rn ptn Expected linestring format doesn\textquotesingle{}t have the W\+KB headers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPoint__stepper_a1e992867e096d4bcde1cd79aa25398d6}\label{classPoint__stepper_a1e992867e096d4bcde1cd79aa25398d6}} 
+\index{Point\+\_\+stepper@{Point\+\_\+stepper}!operator()@{operator()}}
+\index{operator()@{operator()}!Point\+\_\+stepper@{Point\+\_\+stepper}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily const char $\ast$ Point\+\_\+stepper\+::operator() (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p }\end{DoxyParamCaption})}
+
+Parsing operator. Note that the returned pointer may point past end of W\+KB string, and caller is responsible for stoping reading after last geometry is read, this is true for all parsing operator of all stepper classes. 
+\begin{DoxyParams}{Parameters}
+{\em p} & points to the 1st byte of a point\textquotesingle{}s wkb data, right after its wkb header if any; returns the next point\textquotesingle{}s wkb data\textquotesingle{}s 1st byte pointer, skipping its wkb header if any. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+cc\end{DoxyCompactItemize}

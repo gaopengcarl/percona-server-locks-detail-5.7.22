@@ -1,0 +1,93 @@
+\hypertarget{classMalloc__allocator}{}\section{Malloc\+\_\+allocator$<$ T $>$ Class Template Reference}
+\label{classMalloc__allocator}\index{Malloc\+\_\+allocator$<$ T $>$@{Malloc\+\_\+allocator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$malloc\+\_\+allocator.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMalloc__allocator_1_1rebind}{rebind}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a565715652b9b0ac9578b7700df438ca1}\label{classMalloc__allocator_a565715652b9b0ac9578b7700df438ca1}} 
+typedef T {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a0ffbf5673a8d2abc05b06d7223773b5a}\label{classMalloc__allocator_a0ffbf5673a8d2abc05b06d7223773b5a}} 
+typedef size\+\_\+t {\bfseries size\+\_\+type}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_ae614c529ab0e51cac457f967660002c8}\label{classMalloc__allocator_ae614c529ab0e51cac457f967660002c8}} 
+typedef ptrdiff\+\_\+t {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_ad3fc47addba8c0c45c4ccd687b537161}\label{classMalloc__allocator_ad3fc47addba8c0c45c4ccd687b537161}} 
+typedef T $\ast$ {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_ab9076e081c295ae92548f81b091f227a}\label{classMalloc__allocator_ab9076e081c295ae92548f81b091f227a}} 
+typedef const T $\ast$ {\bfseries const\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a23ad18f51e1f61ba7401131ae037af8e}\label{classMalloc__allocator_a23ad18f51e1f61ba7401131ae037af8e}} 
+typedef T \& {\bfseries reference}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_afd81e01005ce820e1aacdf2caa0c1549}\label{classMalloc__allocator_afd81e01005ce820e1aacdf2caa0c1549}} 
+typedef const T \& {\bfseries const\+\_\+reference}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a58d7798466db0ee1f475ffe947bb3d69}\label{classMalloc__allocator_a58d7798466db0ee1f475ffe947bb3d69}} 
+pointer {\bfseries address} (reference r) const
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a4a610b0d55814283ac3606457702e1fc}\label{classMalloc__allocator_a4a610b0d55814283ac3606457702e1fc}} 
+const\+\_\+pointer {\bfseries address} (const\+\_\+reference r) const
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_afd7f3dc0141f6cb39bd6aa54e7c42177}\label{classMalloc__allocator_afd7f3dc0141f6cb39bd6aa54e7c42177}} 
+{\bfseries Malloc\+\_\+allocator} (P\+S\+I\+\_\+memory\+\_\+key key)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a94fa3818210581322b31968af7e89eee}\label{classMalloc__allocator_a94fa3818210581322b31968af7e89eee}} 
+{\footnotesize template$<$class U $>$ }\\{\bfseries Malloc\+\_\+allocator} (const \mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}}$<$ U $>$ \&other)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_ad48052fb97f8c5b01f986bb4848783b4}\label{classMalloc__allocator_ad48052fb97f8c5b01f986bb4848783b4}} 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}}$<$ U $>$ \&other)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a3f60ef92f8e45d93c2523cccc9a4b794}\label{classMalloc__allocator_a3f60ef92f8e45d93c2523cccc9a4b794}} 
+pointer {\bfseries allocate} (size\+\_\+type n, const\+\_\+pointer hint=0)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a28330df90a3d61e8c9d919568965eefe}\label{classMalloc__allocator_a28330df90a3d61e8c9d919568965eefe}} 
+void {\bfseries deallocate} (pointer p, size\+\_\+type n)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a08566f1f97856f6c469e01254701bce6}\label{classMalloc__allocator_a08566f1f97856f6c469e01254701bce6}} 
+void {\bfseries construct} (pointer p, const T \&val)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a9870063dadea8af6e85575dfa1199c6e}\label{classMalloc__allocator_a9870063dadea8af6e85575dfa1199c6e}} 
+void {\bfseries destroy} (pointer p)
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a1b2eeae16c363cbfd7085cca13d93099}\label{classMalloc__allocator_a1b2eeae16c363cbfd7085cca13d93099}} 
+size\+\_\+type {\bfseries max\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classMalloc__allocator_a20a3ae763a1dc1c931f667717ecd584f}\label{classMalloc__allocator_a20a3ae763a1dc1c931f667717ecd584f}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries psi\+\_\+key} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Malloc\+\_\+allocator$<$ T $>$}
+
+\mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}} is a C++ S\+TL memory allocator based on my\+\_\+malloc/my\+\_\+free.
+
+This allows for P\+\_\+S instrumentation of memory allocation done by internally by S\+TL container classes.
+
+Example usage\+: vector$<$int, Malloc\+\_\+allocator$<$int$>$ $>$ v((Malloc\+\_\+allocator$<$int$>$(\+P\+S\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+S\+T\+R\+U\+M\+E\+N\+T\+E\+D)));
+
+\begin{DoxyNote}{Note}
+allocate() throws std\+::bad\+\_\+alloc() similarly to the default S\+TL memory allocator. This is necessary -\/ S\+TL functions which allocates memory expects it. Otherwise these functions will try to use the memory, leading to seg faults if memory allocation was not successful.
+
+This allocator cannot be used for std\+::basic\+\_\+string because of this libstd++ bug\+: \href{http://gcc.gnu.org/bugzilla/show_bug.cgi?id=56437}\texttt{ http\+://gcc.\+gnu.\+org/bugzilla/show\+\_\+bug.\+cgi?id=56437} \char`\"{}basic\+\_\+string assumes that allocators are default-\/constructible\char`\"{} 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+malloc\+\_\+allocator.\+h\end{DoxyCompactItemize}

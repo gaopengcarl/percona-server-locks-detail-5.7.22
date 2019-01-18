@@ -1,0 +1,349 @@
+\hypertarget{sql__prepare_8cc}{}\section{sql\+\_\+prepare.\+cc File Reference}
+\label{sql__prepare_8cc}\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+{\ttfamily \#include \char`\"{}sql\+\_\+prepare.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}probes\+\_\+mysql.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set\+\_\+var.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+cache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+analyse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+cursor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+delete.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+insert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+rewrite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+update.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+do.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transaction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+ps.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+audit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+plugin.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mysql\+\_\+com.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+connect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+query\+\_\+rewrite.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classExecute__sql__statement}{Execute\+\_\+sql\+\_\+statement}}
+\item 
+class \mbox{\hyperlink{classProtocol__local}{Protocol\+\_\+local}}
+\item 
+class \mbox{\hyperlink{classStatement__backup}{Statement\+\_\+backup}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sql__prepare_8cc_a894d8d107ee67c66ceafdf94c8c4d633}\label{sql__prepare_8cc_a894d8d107ee67c66ceafdf94c8c4d633}} 
+bool {\bfseries is\+\_\+param\+\_\+null} (const uchar $\ast$pos, ulong param\+\_\+no)
+\item 
+bool \mbox{\hyperlink{sql__prepare_8cc_a0df8e5865ec6b3e5bae4e284e40a1fbb}{is\+\_\+param\+\_\+long\+\_\+data\+\_\+type}} (\mbox{\hyperlink{classItem__param}{Item\+\_\+param}} $\ast$param)
+\item 
+bool \mbox{\hyperlink{sql__prepare_8cc_a18a9668c28906c0d45a7289da0d5afcd}{select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test}} (T\+HD $\ast$thd, \mbox{\hyperlink{classSql__cmd__dml}{Sql\+\_\+cmd\+\_\+dml}} $\ast$cmd, ulong setup\+\_\+tables\+\_\+done\+\_\+option)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_a8e717cb89df86c3e4440f73ec58198b2}{mysqld\+\_\+stmt\+\_\+prepare}} (T\+HD $\ast$thd, const char $\ast$query, uint length)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_afb51d4335dea1c2ec4f9ceb80469b235}{mysql\+\_\+sql\+\_\+stmt\+\_\+prepare}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{sql__prepare_8cc_a230ccb139578f6e2099fcd40a6ca57ad}{reinit\+\_\+stmt\+\_\+before\+\_\+use}} (T\+HD $\ast$thd, L\+EX $\ast$lex)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_a6babb439b5cbf28512dfef011601ccdd}{mysqld\+\_\+stmt\+\_\+execute}} (T\+HD $\ast$thd, ulong stmt\+\_\+id, ulong flags, uchar $\ast$params, ulong params\+\_\+length)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_a7a00244c38838cd10623212a4eb67bc4}{mysql\+\_\+sql\+\_\+stmt\+\_\+execute}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_a2790eb5e566316a175c9f17033df189e}{mysqld\+\_\+stmt\+\_\+fetch}} (T\+HD $\ast$thd, ulong stmt\+\_\+id, ulong num\+\_\+rows)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_afbc1026658a8e00c6e619039ea29ccb2}{mysqld\+\_\+stmt\+\_\+reset}} (T\+HD $\ast$thd, ulong stmt\+\_\+id)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_a6101560292a98ec49b34ff51969200a4}{mysqld\+\_\+stmt\+\_\+close}} (T\+HD $\ast$thd, ulong stmt\+\_\+id)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_a02971e8a15a4e21d5291eb5c3d67fab9}{mysql\+\_\+sql\+\_\+stmt\+\_\+close}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{sql__prepare_8cc_ad5ba240ec5304d4737f2d27920a0c816}{mysql\+\_\+stmt\+\_\+get\+\_\+longdata}} (T\+HD $\ast$thd, ulong stmt\+\_\+id, uint param\+\_\+number, uchar $\ast$str, ulong length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the implementation of prepared statements.
+
+When one prepares a statement\+:
+
+
+\begin{DoxyItemize}
+\item Server gets the query from client with command \textquotesingle{}C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE\textquotesingle{}; in the following format\+: \mbox{[}C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE\+:1\mbox{]} \mbox{[}query\mbox{]}
+\item Parse the query and recognize any parameter markers \textquotesingle{}?\textquotesingle{} and store its information list in lex-\/$>$param\+\_\+list
+\item Allocate a new statement for this prepare; and keep this in \textquotesingle{}thd-\/$>$stmt\+\_\+map\textquotesingle{}.
+\item Without executing the query, return back to client the total number of parameters along with result-\/set metadata information (if any) in the following format\+: \begin{DoxyVerb}    [STMT_ID:4]
+    [Column_count:2]
+    [Param_count:2]
+    [Params meta info (stubs only for now)]  (if Param_count > 0)
+    [Columns meta info] (if Column_count > 0)\end{DoxyVerb}
+
+\end{DoxyItemize}
+
+During prepare the tables used in a statement are opened, but no locks are acquired. Table opening will block any D\+DL during the operation, and we do not need any locks as we neither read nor modify any data during prepare. Tables are closed after prepare finishes.
+
+When one executes a statement\+:
+
+
+\begin{DoxyItemize}
+\item Server gets the command \textquotesingle{}C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+TE\textquotesingle{} to execute the previously prepared query. If there are any parameter markers, then the client will send the data in the following format\+: \begin{DoxyVerb}    [COM_STMT_EXECUTE:1]
+    [STMT_ID:4]
+    [NULL_BITS:(param_count+7)/8)]
+    [TYPES_SUPPLIED_BY_CLIENT(0/1):1]
+    [[length]data]
+    [[length]data] .. [[length]data].\end{DoxyVerb}
+ (Note\+: Except for string/binary types; all other types will not be supplied with length field)
+\item If it is a first execute or types of parameters were altered by client, then setup the conversion routines.
+\item Assign parameter items from the supplied data.
+\item Execute the query without re-\/parsing and send back the results to client
+\end{DoxyItemize}
+
+During execution of prepared statement tables are opened and locked the same way they would for normal (non-\/prepared) statement execution. Tables are unlocked and closed after the execution.
+
+When one supplies long data for a placeholder\+:
+
+
+\begin{DoxyItemize}
+\item Server gets the long data in pieces with command type \textquotesingle{}C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+S\+E\+N\+D\+\_\+\+L\+O\+N\+G\+\_\+\+D\+A\+TA\textquotesingle{}.
+\item The packet received will have the format as\+: \mbox{[}C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+S\+E\+N\+D\+\_\+\+L\+O\+N\+G\+\_\+\+D\+A\+TA\+:1\mbox{]}\mbox{[}S\+T\+M\+T\+\_\+\+ID\+:4\mbox{]}\mbox{[}parameter\+\_\+number\+:2\mbox{]}\mbox{[}data\mbox{]}
+\item data from the packet is appended to the long data value buffer for this placeholder.
+\item It\textquotesingle{}s up to the client to stop supplying data chunks at any point. The server doesn\textquotesingle{}t care; also, the server doesn\textquotesingle{}t notify the client whether it got the data or not; if there is any error, then it will be returned at statement execute. 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__prepare_8cc_a0df8e5865ec6b3e5bae4e284e40a1fbb}\label{sql__prepare_8cc_a0df8e5865ec6b3e5bae4e284e40a1fbb}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!is\+\_\+param\+\_\+long\+\_\+data\+\_\+type@{is\+\_\+param\+\_\+long\+\_\+data\+\_\+type}}
+\index{is\+\_\+param\+\_\+long\+\_\+data\+\_\+type@{is\+\_\+param\+\_\+long\+\_\+data\+\_\+type}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{is\+\_\+param\+\_\+long\+\_\+data\+\_\+type()}{is\_param\_long\_data\_type()}}
+{\footnotesize\ttfamily bool is\+\_\+param\+\_\+long\+\_\+data\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__param}{Item\+\_\+param}} $\ast$}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check whether this parameter data type is compatible with long data. Used to detect whether a long data stream has been supplied to a incompatible data type. \mbox{\Hypertarget{sql__prepare_8cc_a02971e8a15a4e21d5291eb5c3d67fab9}\label{sql__prepare_8cc_a02971e8a15a4e21d5291eb5c3d67fab9}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysql\+\_\+sql\+\_\+stmt\+\_\+close@{mysql\+\_\+sql\+\_\+stmt\+\_\+close}}
+\index{mysql\+\_\+sql\+\_\+stmt\+\_\+close@{mysql\+\_\+sql\+\_\+stmt\+\_\+close}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysql\+\_\+sql\+\_\+stmt\+\_\+close()}{mysql\_sql\_stmt\_close()}}
+{\footnotesize\ttfamily void mysql\+\_\+sql\+\_\+stmt\+\_\+close (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+S\+Q\+L\+C\+O\+M\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+TE implementation.
+
+Close an S\+QL prepared statement. As this can be called from Dynamic S\+QL, we should be careful to not close a statement that is currently being executed.
+
+\begin{DoxyReturn}{Returns}
+none\+: OK packet is sent in case of success, otherwise an error message is set in T\+HD 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sql__prepare_8cc_a7a00244c38838cd10623212a4eb67bc4}\label{sql__prepare_8cc_a7a00244c38838cd10623212a4eb67bc4}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysql\+\_\+sql\+\_\+stmt\+\_\+execute@{mysql\+\_\+sql\+\_\+stmt\+\_\+execute}}
+\index{mysql\+\_\+sql\+\_\+stmt\+\_\+execute@{mysql\+\_\+sql\+\_\+stmt\+\_\+execute}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysql\+\_\+sql\+\_\+stmt\+\_\+execute()}{mysql\_sql\_stmt\_execute()}}
+{\footnotesize\ttfamily void mysql\+\_\+sql\+\_\+stmt\+\_\+execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+S\+Q\+L\+C\+O\+M\+\_\+\+E\+X\+E\+C\+U\+TE implementation.
+
+Execute prepared statement using parameter values from lex-\/$>$prepared\+\_\+stmt\+\_\+params and send result to the client using text protocol. This is called from mysql\+\_\+execute\+\_\+command and therefore should behave like an ordinary query (e.\+g. not change global T\+HD data, such as warning count, server status, etc). This function uses text protocol to send a possible result set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none\+: in case of success, OK (or result set) packet is sent to the client, otherwise an error is set in T\+HD 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sql__prepare_8cc_afb51d4335dea1c2ec4f9ceb80469b235}\label{sql__prepare_8cc_afb51d4335dea1c2ec4f9ceb80469b235}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysql\+\_\+sql\+\_\+stmt\+\_\+prepare@{mysql\+\_\+sql\+\_\+stmt\+\_\+prepare}}
+\index{mysql\+\_\+sql\+\_\+stmt\+\_\+prepare@{mysql\+\_\+sql\+\_\+stmt\+\_\+prepare}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysql\+\_\+sql\+\_\+stmt\+\_\+prepare()}{mysql\_sql\_stmt\_prepare()}}
+{\footnotesize\ttfamily void mysql\+\_\+sql\+\_\+stmt\+\_\+prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+S\+Q\+L\+C\+O\+M\+\_\+\+P\+R\+E\+P\+A\+RE implementation.
+
+Prepare an S\+QL prepared statement. This is called from mysql\+\_\+execute\+\_\+command and should therefore behave like an ordinary query (e.\+g. should not reset any global T\+HD data).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none\+: in case of success, OK packet is sent to the client, otherwise an error message is set in T\+HD 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sql__prepare_8cc_ad5ba240ec5304d4737f2d27920a0c816}\label{sql__prepare_8cc_ad5ba240ec5304d4737f2d27920a0c816}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysql\+\_\+stmt\+\_\+get\+\_\+longdata@{mysql\+\_\+stmt\+\_\+get\+\_\+longdata}}
+\index{mysql\+\_\+stmt\+\_\+get\+\_\+longdata@{mysql\+\_\+stmt\+\_\+get\+\_\+longdata}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysql\+\_\+stmt\+\_\+get\+\_\+longdata()}{mysql\_stmt\_get\_longdata()}}
+{\footnotesize\ttfamily void mysql\+\_\+stmt\+\_\+get\+\_\+longdata (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulong}]{stmt\+\_\+id,  }\item[{uint}]{param\+\_\+number,  }\item[{uchar $\ast$}]{str,  }\item[{ulong}]{length }\end{DoxyParamCaption})}
+
+Handle long data in pieces from client.
+
+Get a part of a long data. To make the protocol efficient, we are not sending any return packets here. If something goes wrong, then we will send the error on \textquotesingle{}execute\textquotesingle{} We assume that the client takes care of checking that all parts are sent to the server. (No checking that we get a \textquotesingle{}end of column\textquotesingle{} in the server is performed).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em stmt\+\_\+id} & Stmt id \\
+\hline
+{\em param\+\_\+number} & Number of parameters \\
+\hline
+{\em str} & String to append \\
+\hline
+{\em length} & Length of string (including end \textbackslash{}0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sql__prepare_8cc_a6101560292a98ec49b34ff51969200a4}\label{sql__prepare_8cc_a6101560292a98ec49b34ff51969200a4}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysqld\+\_\+stmt\+\_\+close@{mysqld\+\_\+stmt\+\_\+close}}
+\index{mysqld\+\_\+stmt\+\_\+close@{mysqld\+\_\+stmt\+\_\+close}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+stmt\+\_\+close()}{mysqld\_stmt\_close()}}
+{\footnotesize\ttfamily void mysqld\+\_\+stmt\+\_\+close (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulong}]{stmt\+\_\+id }\end{DoxyParamCaption})}
+
+Delete a prepared statement from memory.
+
+\begin{DoxyNote}{Note}
+we don\textquotesingle{}t send any reply to this command. 
+\end{DoxyNote}
+\mbox{\Hypertarget{sql__prepare_8cc_a6babb439b5cbf28512dfef011601ccdd}\label{sql__prepare_8cc_a6babb439b5cbf28512dfef011601ccdd}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysqld\+\_\+stmt\+\_\+execute@{mysqld\+\_\+stmt\+\_\+execute}}
+\index{mysqld\+\_\+stmt\+\_\+execute@{mysqld\+\_\+stmt\+\_\+execute}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+stmt\+\_\+execute()}{mysqld\_stmt\_execute()}}
+{\footnotesize\ttfamily void mysqld\+\_\+stmt\+\_\+execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulong}]{stmt\+\_\+id,  }\item[{ulong}]{flags,  }\item[{uchar $\ast$}]{params,  }\item[{ulong}]{params\+\_\+length }\end{DoxyParamCaption})}
+
+C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+TE handler\+: execute a previously prepared statement.
+
+If there are any parameters, then replace parameter markers with the data supplied from the client, and then execute the statement. This function uses binary protocol to send a possible result set to the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & current thread \\
+\hline
+{\em stmt\+\_\+id} & statement id \\
+\hline
+{\em flags} & flags mask \\
+\hline
+{\em params} & parameter types and data, if any \\
+\hline
+{\em params\+\_\+length} & packet length, including the terminator character.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none\+: in case of success OK packet or a result set is sent to the client, otherwise an error message is set in T\+HD. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sql__prepare_8cc_a2790eb5e566316a175c9f17033df189e}\label{sql__prepare_8cc_a2790eb5e566316a175c9f17033df189e}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysqld\+\_\+stmt\+\_\+fetch@{mysqld\+\_\+stmt\+\_\+fetch}}
+\index{mysqld\+\_\+stmt\+\_\+fetch@{mysqld\+\_\+stmt\+\_\+fetch}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+stmt\+\_\+fetch()}{mysqld\_stmt\_fetch()}}
+{\footnotesize\ttfamily void mysqld\+\_\+stmt\+\_\+fetch (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulong}]{stmt\+\_\+id,  }\item[{ulong}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+CH handler\+: fetches requested amount of rows from cursor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em stmt\+\_\+id} & Packet from client (with stmt\+\_\+id \& num\+\_\+rows) \\
+\hline
+{\em num\+\_\+rows} & Length of packet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sql__prepare_8cc_a8e717cb89df86c3e4440f73ec58198b2}\label{sql__prepare_8cc_a8e717cb89df86c3e4440f73ec58198b2}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysqld\+\_\+stmt\+\_\+prepare@{mysqld\+\_\+stmt\+\_\+prepare}}
+\index{mysqld\+\_\+stmt\+\_\+prepare@{mysqld\+\_\+stmt\+\_\+prepare}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+stmt\+\_\+prepare()}{mysqld\_stmt\_prepare()}}
+{\footnotesize\ttfamily void mysqld\+\_\+stmt\+\_\+prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{query,  }\item[{uint}]{length }\end{DoxyParamCaption})}
+
+C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE handler.
+
+Given a query string with parameter markers, create a prepared statement from it and send PS info back to the client.
+
+If parameter markers are found in the query, then store the information using \mbox{\hyperlink{classItem__param}{Item\+\_\+param}} along with maintaining a list in lex-\/$>$param\+\_\+array, so that a fast and direct retrieval can be made without going through all field items.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em query} & query to be prepared \\
+\hline
+{\em length} & query string length, including ignored trailing N\+U\+LL or quote char.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function parses the query and sends the total number of parameters and resultset metadata information back to client (if any), without executing the query i.\+e. without any log/disk writes. This allows the queries to be re-\/executed without re-\/parsing during execute.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+none\+: in case of success a new statement id and metadata is sent to the client, otherwise an error message is set in T\+HD. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sql__prepare_8cc_afbc1026658a8e00c6e619039ea29ccb2}\label{sql__prepare_8cc_afbc1026658a8e00c6e619039ea29ccb2}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!mysqld\+\_\+stmt\+\_\+reset@{mysqld\+\_\+stmt\+\_\+reset}}
+\index{mysqld\+\_\+stmt\+\_\+reset@{mysqld\+\_\+stmt\+\_\+reset}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{mysqld\+\_\+stmt\+\_\+reset()}{mysqld\_stmt\_reset()}}
+{\footnotesize\ttfamily void mysqld\+\_\+stmt\+\_\+reset (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulong}]{stmt\+\_\+id }\end{DoxyParamCaption})}
+
+Reset a prepared statement in case there was a recoverable error.
+
+This function resets statement to the state it was right after prepare. It can be used to\+:
+\begin{DoxyItemize}
+\item clear an error happened during mysqld\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data
+\item cancel long data stream for all placeholders without having to call mysqld\+\_\+stmt\+\_\+execute.
+\item close an open cursor Sends \textquotesingle{}OK\textquotesingle{} packet in case of success (statement was reset) or \textquotesingle{}E\+R\+R\+OR\textquotesingle{} packet (unrecoverable error/statement not found/etc).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em stmt\+\_\+id} & Stmt id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sql__prepare_8cc_a230ccb139578f6e2099fcd40a6ca57ad}\label{sql__prepare_8cc_a230ccb139578f6e2099fcd40a6ca57ad}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!reinit\+\_\+stmt\+\_\+before\+\_\+use@{reinit\+\_\+stmt\+\_\+before\+\_\+use}}
+\index{reinit\+\_\+stmt\+\_\+before\+\_\+use@{reinit\+\_\+stmt\+\_\+before\+\_\+use}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{reinit\+\_\+stmt\+\_\+before\+\_\+use()}{reinit\_stmt\_before\_use()}}
+{\footnotesize\ttfamily bool reinit\+\_\+stmt\+\_\+before\+\_\+use (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+EX $\ast$}]{lex }\end{DoxyParamCaption})}
+
+Reinit prepared statement/stored procedure before execution. Resets the L\+EX object.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000109}{Todo}}]When the new table structure is ready, then have a status bit to indicate the table is altered, and re-\/do the setup\+\_\+$\ast$ and open the tables back.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK. \\
+\hline
+{\em true} & Error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__prepare_8cc_a18a9668c28906c0d45a7289da0d5afcd}\label{sql__prepare_8cc_a18a9668c28906c0d45a7289da0d5afcd}} 
+\index{sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}!select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test@{select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test}}
+\index{select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test@{select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test}!sql\+\_\+prepare.\+cc@{sql\+\_\+prepare.\+cc}}
+\subsubsection{\texorpdfstring{select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test()}{select\_like\_stmt\_cmd\_test()}}
+{\footnotesize\ttfamily bool select\+\_\+like\+\_\+stmt\+\_\+cmd\+\_\+test (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classSql__cmd__dml}{Sql\+\_\+cmd\+\_\+dml}} $\ast$}]{cmd,  }\item[{ulong}]{setup\+\_\+tables\+\_\+done\+\_\+option }\end{DoxyParamCaption})}
+
+Check internal S\+E\+L\+E\+CT of the prepared command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stmt} & prepared statement \\
+\hline
+{\em thd} & current thread \\
+\hline
+{\em setup\+\_\+tables\+\_\+done\+\_\+option} & options to be passed to L\+E\+X\+::unit-\/$>$prepare()\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function won\textquotesingle{}t directly open tables used in select. They should be opened either by calling function (and in this case you probably should use select\+\_\+like\+\_\+stmt\+\_\+test\+\_\+with\+\_\+open()) or by \char`\"{}specific\+\_\+prepare\char`\"{} call (like this happens in case of multi-\/update).
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error, error message is set in T\+HD \\
+\hline
+\end{DoxyRetVals}

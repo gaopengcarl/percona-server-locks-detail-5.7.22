@@ -1,0 +1,59 @@
+\hypertarget{structst__field__info}{}\section{st\+\_\+field\+\_\+info Struct Reference}
+\label{structst__field__info}\index{st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structst__field__info_aad2046c4548bf5eafe4bdbeeb7298232}{field\+\_\+name}}
+\item 
+uint \mbox{\hyperlink{structst__field__info_a82de297dd0e4835ada40570f1a0822f9}{field\+\_\+length}}
+\item 
+enum enum\+\_\+field\+\_\+types \mbox{\hyperlink{structst__field__info_a70226cb26db7fb2d7bbde155db4c6829}{field\+\_\+type}}
+\item 
+\mbox{\Hypertarget{structst__field__info_a8fe117a94b789a4e3fdef4c94d2031e4}\label{structst__field__info_a8fe117a94b789a4e3fdef4c94d2031e4}} 
+int {\bfseries value}
+\item 
+uint \mbox{\hyperlink{structst__field__info_a5cc25359e4b59962ae5b2fb6ea387fed}{field\+\_\+flags}}
+\item 
+\mbox{\Hypertarget{structst__field__info_ab9436c9efd5fd0ac0bc0198c33c7998f}\label{structst__field__info_ab9436c9efd5fd0ac0bc0198c33c7998f}} 
+const char $\ast$ {\bfseries old\+\_\+name}
+\item 
+uint \mbox{\hyperlink{structst__field__info_a7e8e6e6d5634ec75f81a0540dc3ed7dd}{open\+\_\+method}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__field__info_a5cc25359e4b59962ae5b2fb6ea387fed}\label{structst__field__info_a5cc25359e4b59962ae5b2fb6ea387fed}} 
+\index{st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}!field\+\_\+flags@{field\+\_\+flags}}
+\index{field\+\_\+flags@{field\+\_\+flags}!st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}}
+\subsubsection{\texorpdfstring{field\+\_\+flags}{field\_flags}}
+{\footnotesize\ttfamily uint st\+\_\+field\+\_\+info\+::field\+\_\+flags}
+
+This is used to set column attributes. By default, columns are {\ttfamily N\+OT} {\ttfamily N\+U\+LL} and {\ttfamily S\+I\+G\+N\+ED}, and you can deviate from the default by setting the appopriate flags. You can use either one of the flags {\ttfamily M\+Y\+\_\+\+I\+\_\+\+S\+\_\+\+M\+A\+Y\+B\+E\+\_\+\+N\+U\+LL} and  or combine them using the bitwise or operator {\ttfamily }$\vert$. Both flags are defined in \mbox{\hyperlink{table_8h_source}{table.\+h}}. \mbox{\Hypertarget{structst__field__info_a82de297dd0e4835ada40570f1a0822f9}\label{structst__field__info_a82de297dd0e4835ada40570f1a0822f9}} 
+\index{st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}!field\+\_\+length@{field\+\_\+length}}
+\index{field\+\_\+length@{field\+\_\+length}!st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}}
+\subsubsection{\texorpdfstring{field\+\_\+length}{field\_length}}
+{\footnotesize\ttfamily uint st\+\_\+field\+\_\+info\+::field\+\_\+length}
+
+For string-\/type columns, this is the maximum number of characters. Otherwise, it is the \textquotesingle{}display-\/length\textquotesingle{} for the column. For the data type M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+T\+E\+T\+I\+ME this field specifies the number of digits in the fractional part of time value. \mbox{\Hypertarget{structst__field__info_aad2046c4548bf5eafe4bdbeeb7298232}\label{structst__field__info_aad2046c4548bf5eafe4bdbeeb7298232}} 
+\index{st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}!field\+\_\+name@{field\+\_\+name}}
+\index{field\+\_\+name@{field\+\_\+name}!st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}}
+\subsubsection{\texorpdfstring{field\+\_\+name}{field\_name}}
+{\footnotesize\ttfamily const char$\ast$ st\+\_\+field\+\_\+info\+::field\+\_\+name}
+
+This is used as column name. \mbox{\Hypertarget{structst__field__info_a70226cb26db7fb2d7bbde155db4c6829}\label{structst__field__info_a70226cb26db7fb2d7bbde155db4c6829}} 
+\index{st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}!field\+\_\+type@{field\+\_\+type}}
+\index{field\+\_\+type@{field\+\_\+type}!st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}}
+\subsubsection{\texorpdfstring{field\+\_\+type}{field\_type}}
+{\footnotesize\ttfamily enum enum\+\_\+field\+\_\+types st\+\_\+field\+\_\+info\+::field\+\_\+type}
+
+This denotes data type for the column. For the most part, there seems to be one entry in the enum for each S\+QL data type, although there seem to be a number of additional entries in the enum. \mbox{\Hypertarget{structst__field__info_a7e8e6e6d5634ec75f81a0540dc3ed7dd}\label{structst__field__info_a7e8e6e6d5634ec75f81a0540dc3ed7dd}} 
+\index{st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}!open\+\_\+method@{open\+\_\+method}}
+\index{open\+\_\+method@{open\+\_\+method}!st\+\_\+field\+\_\+info@{st\+\_\+field\+\_\+info}}
+\subsubsection{\texorpdfstring{open\+\_\+method}{open\_method}}
+{\footnotesize\ttfamily uint st\+\_\+field\+\_\+info\+::open\+\_\+method}
+
+This should be one of {\ttfamily S\+K\+I\+P\+\_\+\+O\+P\+E\+N\+\_\+\+T\+A\+B\+LE}, {\ttfamily O\+P\+E\+N\+\_\+\+F\+R\+M\+\_\+\+O\+N\+LY} or {\ttfamily O\+P\+E\+N\+\_\+\+F\+U\+L\+L\+\_\+\+T\+A\+B\+LE}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\end{DoxyCompactItemize}

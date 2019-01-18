@@ -1,0 +1,80 @@
+\hypertarget{classJson__path__cache}{}\section{Json\+\_\+path\+\_\+cache Class Reference}
+\label{classJson__path__cache}\index{Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}}
+
+
+{\ttfamily \#include $<$item\+\_\+json\+\_\+func.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson__path__cache_a453c9eeaf5a571e0ff119cb1ec8654f9}{Json\+\_\+path\+\_\+cache}} (T\+HD $\ast$thd, uint size)
+\item 
+bool \mbox{\hyperlink{classJson__path__cache_acbd772d2719861bc690199d212a36d43}{parse\+\_\+and\+\_\+cache\+\_\+path}} (\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, uint arg\+\_\+idx, bool forbid\+\_\+wildcards)
+\item 
+\mbox{\hyperlink{classJson__path}{Json\+\_\+path}} $\ast$ \mbox{\hyperlink{classJson__path__cache_ab4e16c6759d543643eee5fdb2abb8eef}{get\+\_\+path}} (uint arg\+\_\+idx)
+\item 
+void \mbox{\hyperlink{classJson__path__cache_a86df523345766a8dd4ee469253c35b60}{reset\+\_\+cache}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Path cache for J\+S\+ON functions. Caches parsed path objects for arguments which are string literals. Maintains a vector of path objects and an array of ints which map path argument numbers to slots in the array. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJson__path__cache_a453c9eeaf5a571e0ff119cb1ec8654f9}\label{classJson__path__cache_a453c9eeaf5a571e0ff119cb1ec8654f9}} 
+\index{Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}!Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}}
+\index{Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}!Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}}
+\subsubsection{\texorpdfstring{Json\+\_\+path\+\_\+cache()}{Json\_path\_cache()}}
+{\footnotesize\ttfamily Json\+\_\+path\+\_\+cache\+::\+Json\+\_\+path\+\_\+cache (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{size }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classJson__path__cache}{Json\+\_\+path\+\_\+cache}} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__path__cache_ab4e16c6759d543643eee5fdb2abb8eef}\label{classJson__path__cache_ab4e16c6759d543643eee5fdb2abb8eef}} 
+\index{Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}!get\+\_\+path@{get\+\_\+path}}
+\index{get\+\_\+path@{get\+\_\+path}!Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}}
+\subsubsection{\texorpdfstring{get\+\_\+path()}{get\_path()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__path}{Json\+\_\+path}} $\ast$ Json\+\_\+path\+\_\+cache\+::get\+\_\+path (\begin{DoxyParamCaption}\item[{uint}]{arg\+\_\+idx }\end{DoxyParamCaption})}
+
+Return an already parsed path expression.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arg\+\_\+idx} & Index of the path\+\_\+expression in the J\+S\+ON function args\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the already parsed path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__path__cache_acbd772d2719861bc690199d212a36d43}\label{classJson__path__cache_acbd772d2719861bc690199d212a36d43}} 
+\index{Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}!parse\+\_\+and\+\_\+cache\+\_\+path@{parse\+\_\+and\+\_\+cache\+\_\+path}}
+\index{parse\+\_\+and\+\_\+cache\+\_\+path@{parse\+\_\+and\+\_\+cache\+\_\+path}!Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}}
+\subsubsection{\texorpdfstring{parse\+\_\+and\+\_\+cache\+\_\+path()}{parse\_and\_cache\_path()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+\_\+cache\+::parse\+\_\+and\+\_\+cache\+\_\+path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{uint}]{arg\+\_\+idx,  }\item[{bool}]{forbid\+\_\+wildcards }\end{DoxyParamCaption})}
+
+Parse a path expression if necessary. Does nothing if the path expression is constant and it has already been parsed. Assumes that we\textquotesingle{}ve already verified that the path expression is not null. Raises an error if the path expression is syntactically incorrect. Raises an error if the path expression contains wildcard tokens but is not supposed to. Otherwise puts the parsed path onto the path vector.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em args} & Array of args to a J\+S\+ON function \\
+\hline
+\mbox{\texttt{ in}}  & {\em arg\+\_\+idx} & Index of the path\+\_\+expression in args \\
+\hline
+\mbox{\texttt{ in}}  & {\em forbid\+\_\+wildcards} & True if the path shouldn\textquotesingle{}t contain $\ast$ or $\ast$$\ast$\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error or if the path is N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__path__cache_a86df523345766a8dd4ee469253c35b60}\label{classJson__path__cache_a86df523345766a8dd4ee469253c35b60}} 
+\index{Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}!reset\+\_\+cache@{reset\+\_\+cache}}
+\index{reset\+\_\+cache@{reset\+\_\+cache}!Json\+\_\+path\+\_\+cache@{Json\+\_\+path\+\_\+cache}}
+\subsubsection{\texorpdfstring{reset\+\_\+cache()}{reset\_cache()}}
+{\footnotesize\ttfamily void Json\+\_\+path\+\_\+cache\+::reset\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the cache for re-\/use when a statement is re-\/executed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+json\+\_\+func.\+h\item 
+item\+\_\+json\+\_\+func.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classPT__update}{}\section{P\+T\+\_\+update Class Reference}
+\label{classPT__update}\index{P\+T\+\_\+update@{P\+T\+\_\+update}}
+Inheritance diagram for P\+T\+\_\+update\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__update}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__update_acbc9f67a9784e989faa5ecb514bbbf2f}\label{classPT__update_acbc9f67a9784e989faa5ecb514bbbf2f}} 
+{\bfseries P\+T\+\_\+update} (\mbox{\hyperlink{classPT__hint__list}{P\+T\+\_\+hint\+\_\+list}} $\ast$opt\+\_\+hints\+\_\+arg, thr\+\_\+lock\+\_\+type opt\+\_\+low\+\_\+priority\+\_\+arg, bool opt\+\_\+ignore\+\_\+arg, \mbox{\hyperlink{classPT__join__table__list}{P\+T\+\_\+join\+\_\+table\+\_\+list}} $\ast$join\+\_\+table\+\_\+list\+\_\+arg, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$column\+\_\+list\+\_\+arg, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$value\+\_\+list\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$opt\+\_\+where\+\_\+clause\+\_\+arg, \mbox{\hyperlink{classPT__order}{P\+T\+\_\+order}} $\ast$opt\+\_\+order\+\_\+clause\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$opt\+\_\+limit\+\_\+clause\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPT__update_a899ec562dc237115c862feb157f75d8e}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+\mbox{\Hypertarget{classPT__update_a37e755527676fbd15c9e0bcedd8118f0}\label{classPT__update_a37e755527676fbd15c9e0bcedd8118f0}} 
+virtual \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} $\ast$ {\bfseries make\+\_\+cmd} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__update_a899ec562dc237115c862feb157f75d8e}\label{classPT__update_a899ec562dc237115c862feb157f75d8e}} 
+\index{P\+T\+\_\+update@{P\+T\+\_\+update}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+update@{P\+T\+\_\+update}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily bool P\+T\+\_\+update\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Do all context-\/sensitive things and mark the node as contextualized
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+nodes.\+h\item 
+parse\+\_\+tree\+\_\+nodes.\+cc\end{DoxyCompactItemize}

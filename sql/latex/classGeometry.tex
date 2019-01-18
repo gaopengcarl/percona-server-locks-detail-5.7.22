@@ -1,0 +1,740 @@
+\hypertarget{classGeometry}{}\section{Geometry Class Reference}
+\label{classGeometry}\index{Geometry@{Geometry}}
+Inheritance diagram for Geometry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{classGeometry}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}}
+\item 
+class \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classGeometry_1_1wkb__container}{wkb\+\_\+container}}
+\item 
+class \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_a935fff34dbcb8870271cc4916e671c0d}\label{classGeometry_a935fff34dbcb8870271cc4916e671c0d}} 
+enum {\bfseries wkb\+Type} \{ \newline
+{\bfseries wkb\+\_\+invalid\+\_\+type} = 0, 
+{\bfseries wkb\+\_\+first} = 1, 
+{\bfseries wkb\+\_\+point} = 1, 
+{\bfseries wkb\+\_\+linestring} = 2, 
+\newline
+{\bfseries wkb\+\_\+polygon} = 3, 
+{\bfseries wkb\+\_\+multipoint} = 4, 
+{\bfseries wkb\+\_\+multilinestring} = 5, 
+{\bfseries wkb\+\_\+multipolygon} = 6, 
+\newline
+{\bfseries wkb\+\_\+geometrycollection} = 7, 
+{\bfseries wkb\+\_\+polygon\+\_\+inner\+\_\+rings} = 31, 
+{\bfseries wkb\+\_\+last} =31
+ \}
+\item 
+\mbox{\Hypertarget{classGeometry_a3a4b1236a5f10d95e54d2c09a5e46dd5}\label{classGeometry_a3a4b1236a5f10d95e54d2c09a5e46dd5}} 
+enum {\bfseries wkb\+Byte\+Order} \{ {\bfseries wkb\+\_\+xdr} = 0, 
+{\bfseries wkb\+\_\+ndr} = 1, 
+{\bfseries wkb\+\_\+invalid}
+ \}
+\item 
+\mbox{\Hypertarget{classGeometry_a1695bdad7d895e55a265eb842918142e}\label{classGeometry_a1695bdad7d895e55a265eb842918142e}} 
+enum {\bfseries enum\+\_\+coordinate\+\_\+reference\+\_\+system} \{ {\bfseries coord\+\_\+first} = 1, 
+{\bfseries cartesian} = 1, 
+{\bfseries coord\+\_\+last} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classGeometry_a717fae78a9560c61c0cd16714d1e6858}\label{classGeometry_a717fae78a9560c61c0cd16714d1e6858}} 
+typedef uint32 {\bfseries srid\+\_\+t}
+\item 
+typedef \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$($\ast$ \mbox{\hyperlink{classGeometry_a5f04b62bea15d6fccaaef20e29539610}{create\+\_\+geom\+\_\+t}}) (char $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_a545b424e3014a4dae01fff51011b304d}\label{classGeometry_a545b424e3014a4dae01fff51011b304d}} 
+virtual const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a14c4ea0a7e049577a88e34dbecb9f65c}\label{classGeometry_a14c4ea0a7e049577a88e34dbecb9f65c}} 
+virtual uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a287f5ec5411b90bf7cf1e7f6895c112b}\label{classGeometry_a287f5ec5411b90bf7cf1e7f6895c112b}} 
+virtual bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGeometry_a162ba71735e7b098d56d4e83704326b4}\label{classGeometry_a162ba71735e7b098d56d4e83704326b4}} 
+virtual uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGeometry_a02449917cbddb5b3730a9fabd7237e26}\label{classGeometry_a02449917cbddb5b3730a9fabd7237e26}} 
+virtual bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGeometry_a5d53c2a3eba5b460c91aad300f9ff813}\label{classGeometry_a5d53c2a3eba5b460c91aad300f9ff813}} 
+virtual bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGeometry_aab7bd56424e48870b2765d552c5a01f2}\label{classGeometry_aab7bd56424e48870b2765d552c5a01f2}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr)
+\item 
+\mbox{\Hypertarget{classGeometry_aea918be253ffc8b0728063b1a715c026}\label{classGeometry_aea918be253ffc8b0728063b1a715c026}} 
+virtual bool {\bfseries dimension} (uint32 $\ast$dim, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGeometry_a9c274ce8d0d10d4a3aba9f1ac891e145}\label{classGeometry_a9c274ce8d0d10d4a3aba9f1ac891e145}} 
+bool {\bfseries dimension} (uint32 $\ast$dim) const
+\item 
+\mbox{\Hypertarget{classGeometry_ab42b36a92e67e34736495ac0a15c8c7d}\label{classGeometry_ab42b36a92e67e34736495ac0a15c8c7d}} 
+wkb\+Type {\bfseries get\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a069150d2623b0ea596205be8bbc9c3b2}\label{classGeometry_a069150d2623b0ea596205be8bbc9c3b2}} 
+enum\+\_\+coordinate\+\_\+reference\+\_\+system {\bfseries get\+\_\+coordsys} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a4ec39cf17e42e25ed8f7e0ba9b7a0c0e}\label{classGeometry_a4ec39cf17e42e25ed8f7e0ba9b7a0c0e}} 
+virtual uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a753e60820db1414c435a810edda53144}\label{classGeometry_a753e60820db1414c435a810edda53144}} 
+virtual int {\bfseries get\+\_\+x} (double $\ast$x) const
+\item 
+\mbox{\Hypertarget{classGeometry_ab6ad4f4e445f35a32ad2f6a64b13c74d}\label{classGeometry_ab6ad4f4e445f35a32ad2f6a64b13c74d}} 
+virtual int {\bfseries get\+\_\+y} (double $\ast$y) const
+\item 
+\mbox{\Hypertarget{classGeometry_a636e398274ed389a59aefebd09267527}\label{classGeometry_a636e398274ed389a59aefebd09267527}} 
+virtual int {\bfseries geom\+\_\+length} (double $\ast$len) const
+\item 
+\mbox{\Hypertarget{classGeometry_a78e0ca627310b317f1492a303d9e74c3}\label{classGeometry_a78e0ca627310b317f1492a303d9e74c3}} 
+virtual int {\bfseries is\+\_\+closed} (int $\ast$closed) const
+\item 
+\mbox{\Hypertarget{classGeometry_a828de3f44ad186ea20a185c4579847fa}\label{classGeometry_a828de3f44ad186ea20a185c4579847fa}} 
+virtual int {\bfseries num\+\_\+interior\+\_\+ring} (uint32 $\ast$n\+\_\+int\+\_\+rings) const
+\item 
+\mbox{\Hypertarget{classGeometry_a8be47d7f41364814ed47a33d6d466d30}\label{classGeometry_a8be47d7f41364814ed47a33d6d466d30}} 
+virtual int {\bfseries num\+\_\+points} (uint32 $\ast$n\+\_\+points) const
+\item 
+\mbox{\Hypertarget{classGeometry_a53fe964527cf00991842e488e2f83359}\label{classGeometry_a53fe964527cf00991842e488e2f83359}} 
+virtual int {\bfseries num\+\_\+geometries} (uint32 $\ast$num) const
+\item 
+\mbox{\Hypertarget{classGeometry_aecc8ba74dae54a9209e4e802c1804b84}\label{classGeometry_aecc8ba74dae54a9209e4e802c1804b84}} 
+virtual int {\bfseries copy\+\_\+points} (String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGeometry_add9e1a5e2c27e4319b1a3b0b37a6def3}\label{classGeometry_add9e1a5e2c27e4319b1a3b0b37a6def3}} 
+virtual int {\bfseries start\+\_\+point} (String $\ast$point) const
+\item 
+\mbox{\Hypertarget{classGeometry_aeca60da99fbd52874c2fe8d4e9d90d3f}\label{classGeometry_aeca60da99fbd52874c2fe8d4e9d90d3f}} 
+virtual int {\bfseries end\+\_\+point} (String $\ast$point) const
+\item 
+\mbox{\Hypertarget{classGeometry_ac21bb25b6222e03ae4f4cd626d1751d8}\label{classGeometry_ac21bb25b6222e03ae4f4cd626d1751d8}} 
+virtual int {\bfseries exterior\+\_\+ring} (String $\ast$ring) const
+\item 
+\mbox{\Hypertarget{classGeometry_a8a7311ea43a14cdaa24c597d6ef321e3}\label{classGeometry_a8a7311ea43a14cdaa24c597d6ef321e3}} 
+virtual int {\bfseries point\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGeometry_aa1aaee8658f1ba7066cd44ca26fd66b0}\label{classGeometry_aa1aaee8658f1ba7066cd44ca26fd66b0}} 
+virtual int {\bfseries interior\+\_\+ring\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGeometry_ac1a5f97df1540679417a1e8ce027c12a}\label{classGeometry_ac1a5f97df1540679417a1e8ce027c12a}} 
+virtual int {\bfseries geometry\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGeometry_a182ecbd492ac4b00fb7a38ea2c9ba328}\label{classGeometry_a182ecbd492ac4b00fb7a38ea2c9ba328}} 
+bool {\bfseries as\+\_\+wkt} (String $\ast$wkt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGeometry_a791e0c88c0e4615eef1ac631c76e107e}\label{classGeometry_a791e0c88c0e4615eef1ac631c76e107e}} 
+bool {\bfseries as\+\_\+wkt} (String $\ast$wkt) const
+\item 
+bool \mbox{\hyperlink{classGeometry_aeb83e5312a7333a7e908d0623b170c97}{as\+\_\+wkb}} (String $\ast$wkb, bool shallow\+\_\+copy) const
+\item 
+bool \mbox{\hyperlink{classGeometry_a3ac495912c005505a92b61d848f6db3f}{as\+\_\+geometry}} (String $\ast$wkb, bool shallow\+\_\+copy) const
+\item 
+\mbox{\Hypertarget{classGeometry_aed18120a4ddb4d7e93d6a2cb13c88309}\label{classGeometry_aed18120a4ddb4d7e93d6a2cb13c88309}} 
+void {\bfseries set\+\_\+data\+\_\+ptr} (const void $\ast$data, size\+\_\+t data\+\_\+len)
+\item 
+\mbox{\Hypertarget{classGeometry_addc4d7dba211dcc9daeb1fb213f699c9}\label{classGeometry_addc4d7dba211dcc9daeb1fb213f699c9}} 
+void {\bfseries set\+\_\+data\+\_\+ptr} (const \mbox{\hyperlink{classGeometry_1_1wkb__container}{wkb\+\_\+container}} $\ast$c)
+\item 
+\mbox{\Hypertarget{classGeometry_a37417599e497d40d5542a455f5d1f1ee}\label{classGeometry_a37417599e497d40d5542a455f5d1f1ee}} 
+void $\ast$ {\bfseries get\+\_\+data\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a958af96df1059ceae38166dabcc3e4cf}\label{classGeometry_a958af96df1059ceae38166dabcc3e4cf}} 
+bool {\bfseries envelope} (String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGeometry_af38a97eecbce037fa05c77c6d7d18ee5}\label{classGeometry_af38a97eecbce037fa05c77c6d7d18ee5}} 
+bool {\bfseries envelope} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr) const
+\item 
+\mbox{\Hypertarget{classGeometry_aa2744a2f5972b286f2b605eab44532f9}\label{classGeometry_aa2744a2f5972b286f2b605eab44532f9}} 
+bool {\bfseries is\+\_\+polygon\+\_\+ring} () const
+\item 
+\mbox{\Hypertarget{classGeometry_ad1cfcc5c0e48abbd625c22e2cda7f0d1}\label{classGeometry_ad1cfcc5c0e48abbd625c22e2cda7f0d1}} 
+bool {\bfseries is\+\_\+polygon\+\_\+outer\+\_\+ring} () const
+\item 
+\mbox{\Hypertarget{classGeometry_aa3fb7c8ad4939d3b454b2c65000dd1e9}\label{classGeometry_aa3fb7c8ad4939d3b454b2c65000dd1e9}} 
+bool {\bfseries is\+\_\+polygon\+\_\+inner\+\_\+ring} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a9958437de81dcec10d0011537a06eaf1}\label{classGeometry_a9958437de81dcec10d0011537a06eaf1}} 
+bool {\bfseries has\+\_\+geom\+\_\+header\+\_\+space} () const
+\item 
+\mbox{\Hypertarget{classGeometry_ad152ca0dce645d6d80526b3bce2d53f7}\label{classGeometry_ad152ca0dce645d6d80526b3bce2d53f7}} 
+void {\bfseries has\+\_\+geom\+\_\+header\+\_\+space} (bool b)
+\item 
+\mbox{\Hypertarget{classGeometry_a298dbc47085a4248cd34432ea710ffb4}\label{classGeometry_a298dbc47085a4248cd34432ea710ffb4}} 
+bool {\bfseries is\+\_\+components\+\_\+no\+\_\+overlapped} () const
+\item 
+\mbox{\Hypertarget{classGeometry_adf4e56545c4fe6d3d9d82b071e2b8153}\label{classGeometry_adf4e56545c4fe6d3d9d82b071e2b8153}} 
+void {\bfseries set\+\_\+components\+\_\+no\+\_\+overlapped} (bool b)
+\item 
+\mbox{\Hypertarget{classGeometry_aac78ae988796dbd7109b925ee4e9fb7a}\label{classGeometry_aac78ae988796dbd7109b925ee4e9fb7a}} 
+void {\bfseries set\+\_\+props} (uint16 flag)
+\item 
+\mbox{\Hypertarget{classGeometry_a71e9ac1496eabc3ceacf8283a4fbef79}\label{classGeometry_a71e9ac1496eabc3ceacf8283a4fbef79}} 
+uint16 {\bfseries get\+\_\+props} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a391a87bf3c3b1df6b9d5346483619d4e}\label{classGeometry_a391a87bf3c3b1df6b9d5346483619d4e}} 
+void {\bfseries set\+\_\+srid} (srid\+\_\+t id)
+\item 
+\mbox{\Hypertarget{classGeometry_ad4c45ad41b1f2137f64e1b06e32f92c3}\label{classGeometry_ad4c45ad41b1f2137f64e1b06e32f92c3}} 
+srid\+\_\+t {\bfseries get\+\_\+srid} () const
+\item 
+const void $\ast$ \mbox{\hyperlink{classGeometry_add33b390178c8ff8ec6cc3d2309c9bd6}{normalize\+\_\+ring\+\_\+order}} ()
+\item 
+\mbox{\hyperlink{classGeometry_a8e5288eb91de90ed6fe16d1a61aebd18}{Geometry}} (const void $\ast$ptr, size\+\_\+t len, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGeometry_a8e26b168baf3dc79fde314b056a7b5f4}\label{classGeometry_a8e26b168baf3dc79fde314b056a7b5f4}} 
+{\bfseries Geometry} (const \mbox{\hyperlink{classGeometry}{Geometry}} \&geo)
+\item 
+\mbox{\hyperlink{classGeometry}{Geometry}} \& \mbox{\hyperlink{classGeometry_a16062a3b3460f9c217bd766b68770a1b}{operator=}} (const \mbox{\hyperlink{classGeometry}{Geometry}} \&rhs)
+\item 
+\mbox{\Hypertarget{classGeometry_accbbd9151676948d1f686d04bd64f628}\label{classGeometry_accbbd9151676948d1f686d04bd64f628}} 
+void $\ast$ {\bfseries get\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classGeometry_acf2bd2a674ce12b701c7dbeb96750865}\label{classGeometry_acf2bd2a674ce12b701c7dbeb96750865}} 
+char $\ast$ {\bfseries get\+\_\+cptr} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a198b47df8f0784cb6649a7e8066a28cd}\label{classGeometry_a198b47df8f0784cb6649a7e8066a28cd}} 
+uchar $\ast$ {\bfseries get\+\_\+ucptr} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a815519e4076c1598fceb7330355caa2c}\label{classGeometry_a815519e4076c1598fceb7330355caa2c}} 
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ {\bfseries get\+\_\+owner} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a8c0dbb25a1e4e5bce119bd7d76936394}\label{classGeometry_a8c0dbb25a1e4e5bce119bd7d76936394}} 
+void {\bfseries set\+\_\+owner} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$o)
+\item 
+\mbox{\Hypertarget{classGeometry_a07171a9e802b315728eabc342eb835a1}\label{classGeometry_a07171a9e802b315728eabc342eb835a1}} 
+void {\bfseries set\+\_\+byte\+\_\+order} (Geometry\+::wkb\+Byte\+Order bo)
+\item 
+\mbox{\Hypertarget{classGeometry_ab26639b19b8ae8920e165bc69fcd5cc2}\label{classGeometry_ab26639b19b8ae8920e165bc69fcd5cc2}} 
+void {\bfseries set\+\_\+dimension} (char dim)
+\item 
+\mbox{\Hypertarget{classGeometry_ada33a0e36e86e5620c5c7938a61f6352}\label{classGeometry_ada33a0e36e86e5620c5c7938a61f6352}} 
+void {\bfseries set\+\_\+geotype} (Geometry\+::wkb\+Type gt)
+\item 
+\mbox{\Hypertarget{classGeometry_aeac4db7e3d813cc9c921aebb0d5d5d52}\label{classGeometry_aeac4db7e3d813cc9c921aebb0d5d5d52}} 
+void {\bfseries set\+\_\+nbytes} (size\+\_\+t n) const
+\item 
+void \mbox{\hyperlink{classGeometry_a1037b25eaa5591e899843ed79519b543}{set\+\_\+ownmem}} (bool b)
+\item 
+bool \mbox{\hyperlink{classGeometry_ac2f735f86392075949ec67c3749d86d7}{get\+\_\+ownmem}} () const
+\item 
+\mbox{\Hypertarget{classGeometry_acabef5bb20c1f154e0733f4aa09808d8}\label{classGeometry_acabef5bb20c1f154e0733f4aa09808d8}} 
+Geometry\+::wkb\+Byte\+Order {\bfseries get\+\_\+byte\+\_\+order} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a5adfb8ddfe4d1daf84a2a5c6b79ec2f8}\label{classGeometry_a5adfb8ddfe4d1daf84a2a5c6b79ec2f8}} 
+char {\bfseries get\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGeometry_ade9ea498fd56243bdd54208a4021c326}\label{classGeometry_ade9ea498fd56243bdd54208a4021c326}} 
+Geometry\+::wkb\+Type {\bfseries get\+\_\+geotype} () const
+\item 
+uint32 \mbox{\hyperlink{classGeometry_ab403ca936728c5d8ef81e0db535236b3}{get\+\_\+ogc\+\_\+geotype}} () const
+\item 
+\mbox{\Hypertarget{classGeometry_afe395a30ce5dc249bcd9565ab27a87bf}\label{classGeometry_afe395a30ce5dc249bcd9565ab27a87bf}} 
+size\+\_\+t {\bfseries get\+\_\+nbytes} () const
+\item 
+\mbox{\Hypertarget{classGeometry_aa949a2c5387289c91958b58fe593b44e}\label{classGeometry_aa949a2c5387289c91958b58fe593b44e}} 
+void {\bfseries set\+\_\+ptr} (const void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{classGeometry_ada614004627a9e7af129e51a34242af9}{is\+\_\+bg\+\_\+adapter}} () const
+\item 
+void \mbox{\hyperlink{classGeometry_ac352af286569f0f9f6a2e927a55b38ea}{set\+\_\+bg\+\_\+adapter}} (bool b) const
+\item 
+\mbox{\Hypertarget{classGeometry_adfff5fa400d97c06e5793d441205e1c4}\label{classGeometry_adfff5fa400d97c06e5793d441205e1c4}} 
+virtual void {\bfseries donate\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classGeometry_aab413c70927ab47f11fcdebca647e50c}\label{classGeometry_aab413c70927ab47f11fcdebca647e50c}} 
+\mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} {\bfseries get\+\_\+flags} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a770fd422e970c6590b8583b88d783f2c}\label{classGeometry_a770fd422e970c6590b8583b88d783f2c}} 
+void {\bfseries set\+\_\+flags} (const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_a35112436d873212cfdb614b7c25f8c3a}\label{classGeometry_a35112436d873212cfdb614b7c25f8c3a}} 
+static \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ {\bfseries create\+\_\+by\+\_\+typeid} (\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$buffer, int type\+\_\+id)
+\item 
+static \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classGeometry_af9294b8724cd69b7e1e52b84bbccc034}{construct}} (\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$buffer, const char $\ast$data, uint32 data\+\_\+len, bool has\+\_\+srid=true)
+\item 
+\mbox{\Hypertarget{classGeometry_ab077d70c78ab6b4f23fbea9814ba4082}\label{classGeometry_ab077d70c78ab6b4f23fbea9814ba4082}} 
+static \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ {\bfseries construct} (\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$buffer, const String $\ast$str, bool has\+\_\+srid=true)
+\item 
+static \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classGeometry_a71d6852fd0285a9bffaca556592cae39}{create\+\_\+from\+\_\+wkt}} (\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$buffer, \mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkt, bool init\+\_\+stream=true, bool check\+\_\+trailing=true)
+\item 
+static \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classGeometry_a4da1f81e54738cbad61df5931ed997c5}{create\+\_\+from\+\_\+wkb}} (\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$buffer, const char $\ast$wkb, uint32 len, String $\ast$res, bool init)
+\item 
+\mbox{\Hypertarget{classGeometry_a2a662813e6871bcf72836f51abf06bc7}\label{classGeometry_a2a662813e6871bcf72836f51abf06bc7}} 
+static bool {\bfseries is\+\_\+valid\+\_\+geotype} (uint32 gtype)
+\item 
+\mbox{\Hypertarget{classGeometry_a67e78566eb6c0fabd794c27de7813af0}\label{classGeometry_a67e78566eb6c0fabd794c27de7813af0}} 
+static bool {\bfseries is\+\_\+valid\+\_\+geotype} (Geometry\+::wkb\+Type gt)
+\item 
+static bool \mbox{\hyperlink{classGeometry_ae034f775d692619cc4bc8842d34a4cd8}{is\+\_\+well\+\_\+formed}} (const char $\ast$from, size\+\_\+t length, wkb\+Type type, wkb\+Byte\+Order bo)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_a5c286f8189a316c78dddb6564445dadf}\label{classGeometry_a5c286f8189a316c78dddb6564445dadf}} 
+static const uint32 {\bfseries M\+A\+X\+\_\+\+G\+E\+O\+M\+\_\+\+W\+K\+B\+\_\+\+L\+E\+N\+G\+TH} = 0x3fffffff
+\item 
+\mbox{\Hypertarget{classGeometry_a42229135d38064ee07c5d161d3f315b1}\label{classGeometry_a42229135d38064ee07c5d161d3f315b1}} 
+static const srid\+\_\+t {\bfseries default\+\_\+srid} = 0
+\item 
+\mbox{\Hypertarget{classGeometry_a098d5d8d5f17732ff21e16b6adc8d78b}\label{classGeometry_a098d5d8d5f17732ff21e16b6adc8d78b}} 
+static String {\bfseries bad\+\_\+geometry\+\_\+data}
+\item 
+\mbox{\Hypertarget{classGeometry_a1f31bf58fc9c850d8f8e2fe56fc31817}\label{classGeometry_a1f31bf58fc9c850d8f8e2fe56fc31817}} 
+static \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries ci\+\_\+collection} \mbox{[}wkb\+\_\+last+1\mbox{]} = \{ N\+U\+LL \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGeometry_ad66be02e381cdb64b19e2b1e9072311f}{append\+\_\+points}} (String $\ast$txt, uint32 n\+\_\+points, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb, uint32 offset, bool bracket\+\_\+pt=false) const
+\item 
+bool \mbox{\hyperlink{classGeometry_a59686d5382a6cd3a691d18e24d2e2811}{create\+\_\+point}} (String $\ast$result, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+bool \mbox{\hyperlink{classGeometry_ab2023acb5c6e5eaf434830c03a461072}{create\+\_\+point}} (String $\ast$result, \mbox{\hyperlink{classpoint__xy}{point\+\_\+xy}} p) const
+\item 
+bool \mbox{\hyperlink{classGeometry_a35ea9c1dd07e14bf7f414433e193461a}{get\+\_\+mbr\+\_\+for\+\_\+points}} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb, uint offset) const
+\item 
+\mbox{\Hypertarget{classGeometry_af9ad5d486b7b31a8289522b0d0612124}\label{classGeometry_af9ad5d486b7b31a8289522b0d0612124}} 
+bool {\bfseries is\+\_\+length\+\_\+verified} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a856b3a9315e460890338467aad16da68}\label{classGeometry_a856b3a9315e460890338467aad16da68}} 
+void {\bfseries set\+\_\+length\+\_\+verified} (bool b) const
+\item 
+bool \mbox{\hyperlink{classGeometry_a0b03ccd55d98e9f0c8ccf44f5d4c1ffc}{polygon\+\_\+is\+\_\+wkb\+\_\+form}} () const
+\item 
+\mbox{\Hypertarget{classGeometry_ab7c4a477cbfb7efd69d63d42fb74507f}\label{classGeometry_ab7c4a477cbfb7efd69d63d42fb74507f}} 
+void {\bfseries polygon\+\_\+is\+\_\+wkb\+\_\+form} (bool b)
+\item 
+bool \mbox{\hyperlink{classGeometry_a4b4f4a21518909f1427a82ac17ef4f6e}{has\+\_\+out\+\_\+of\+\_\+line\+\_\+components}} () const
+\item 
+\mbox{\Hypertarget{classGeometry_a4f7f515e3c8357a2e18e0099ac532f2a}\label{classGeometry_a4f7f515e3c8357a2e18e0099ac532f2a}} 
+void {\bfseries has\+\_\+out\+\_\+of\+\_\+line\+\_\+components} (bool b)
+\item 
+\mbox{\Hypertarget{classGeometry_a4b6620ec8e9cae00155553f39213a320}\label{classGeometry_a4b6620ec8e9cae00155553f39213a320}} 
+void {\bfseries clear\+\_\+wkb\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classGeometry_a29800e226535fa8461e94cc6aa8d4e6d}\label{classGeometry_a29800e226535fa8461e94cc6aa8d4e6d}} 
+virtual void {\bfseries shallow\+\_\+push} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_a8a4d21257b3f2eee5d4ec7addb78c2db}\label{classGeometry_a8a4d21257b3f2eee5d4ec7addb78c2db}} 
+static \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries find\+\_\+class} (int type\+\_\+id)
+\item 
+\mbox{\Hypertarget{classGeometry_a8f55127780f9a388386c6b76c19b06d4}\label{classGeometry_a8f55127780f9a388386c6b76c19b06d4}} 
+static \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries find\+\_\+class} (const char $\ast$name, size\+\_\+t len)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classGeometry_a8dad930f282cc91bce275f98ab13a691}{m\+\_\+owner}}
+\item 
+void $\ast$ \mbox{\hyperlink{classGeometry_a1d67d11bc1610ec1be958bacdcdca84c}{m\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_abd67c02338db6eeb009ffccadd7686cc}\label{classGeometry_abd67c02338db6eeb009ffccadd7686cc}} 
+static const int {\bfseries P\+O\+L\+Y\+G\+O\+N\+\_\+\+O\+U\+T\+E\+R\+\_\+\+R\+I\+NG} = 0x1
+\item 
+\mbox{\Hypertarget{classGeometry_a8403960a98bd97d180802faf400390d3}\label{classGeometry_a8403960a98bd97d180802faf400390d3}} 
+static const int {\bfseries P\+O\+L\+Y\+G\+O\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+R\+I\+NG} = 0x2
+\item 
+\mbox{\Hypertarget{classGeometry_afe90150ddec46062f36d19853296b2fb}\label{classGeometry_afe90150ddec46062f36d19853296b2fb}} 
+static const int {\bfseries I\+S\+\_\+\+B\+O\+O\+S\+T\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+A\+D\+A\+P\+T\+ER} = 0x4
+\item 
+\mbox{\Hypertarget{classGeometry_a7a8d24aae90613b6d1529d752de1723b}\label{classGeometry_a7a8d24aae90613b6d1529d752de1723b}} 
+static const int {\bfseries G\+E\+O\+M\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+V\+E\+R\+I\+F\+I\+ED} = 0x8
+\item 
+\mbox{\Hypertarget{classGeometry_ad53e5b70eab9332b73d1890fa93b7960}\label{classGeometry_ad53e5b70eab9332b73d1890fa93b7960}} 
+static const int {\bfseries H\+A\+S\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+TS} = 0x10
+\item 
+\mbox{\Hypertarget{classGeometry_af4287cc1537ddd8e858b07c03a0f919a}\label{classGeometry_af4287cc1537ddd8e858b07c03a0f919a}} 
+static const int {\bfseries P\+O\+L\+Y\+G\+O\+N\+\_\+\+I\+N\+\_\+\+W\+K\+B\+\_\+\+F\+O\+RM} = 0x20
+\item 
+\mbox{\Hypertarget{classGeometry_a9c4dbe8fb8b74fec23285d4f0e2b7b50}\label{classGeometry_a9c4dbe8fb8b74fec23285d4f0e2b7b50}} 
+static const int {\bfseries H\+A\+S\+\_\+\+G\+E\+O\+M\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+P\+A\+CE} = 0x40
+\item 
+\mbox{\Hypertarget{classGeometry_a6159db662288580d06dac124531fc7da}\label{classGeometry_a6159db662288580d06dac124531fc7da}} 
+static const int {\bfseries M\+U\+L\+T\+I\+P\+O\+L\+Y\+G\+O\+N\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+L\+A\+P\+P\+E\+D\+\_\+\+C\+O\+M\+PS} = 0x80
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGeometry_af4cc4635baabc8496089c8359f5a305f}{parse\+\_\+wkb\+\_\+data}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g, const char $\ast$p, size\+\_\+t num\+\_\+geoms)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classGeometry_a5f04b62bea15d6fccaaef20e29539610}\label{classGeometry_a5f04b62bea15d6fccaaef20e29539610}} 
+\index{Geometry@{Geometry}!create\+\_\+geom\+\_\+t@{create\+\_\+geom\+\_\+t}}
+\index{create\+\_\+geom\+\_\+t@{create\+\_\+geom\+\_\+t}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{create\+\_\+geom\+\_\+t}{create\_geom\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classGeometry}{Geometry}}$\ast$($\ast$ Geometry\+::create\+\_\+geom\+\_\+t) (char $\ast$)}
+
+Callback which creates \mbox{\hyperlink{classGeometry}{Geometry}} objects on top of a given placement. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGeometry_a8e5288eb91de90ed6fe16d1a61aebd18}\label{classGeometry_a8e5288eb91de90ed6fe16d1a61aebd18}} 
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{Geometry()}{Geometry()}}
+{\footnotesize\ttfamily Geometry\+::\+Geometry (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{len,  }\item[{const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&}]{flags,  }\item[{srid\+\_\+t}]{srid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor used as BG adapter or by default constructors of children classes. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & W\+KB buffer address, or N\+U\+LL for an empty object. \\
+\hline
+{\em len} & W\+KB buffer length in bytes. \\
+\hline
+{\em flags} & the flags to set, no field is used for now except geotype. \\
+\hline
+{\em srid} & srid of the geometry. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeometry_ad66be02e381cdb64b19e2b1e9072311f}\label{classGeometry_ad66be02e381cdb64b19e2b1e9072311f}} 
+\index{Geometry@{Geometry}!append\+\_\+points@{append\+\_\+points}}
+\index{append\+\_\+points@{append\+\_\+points}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{append\+\_\+points()}{append\_points()}}
+{\footnotesize\ttfamily void Geometry\+::append\+\_\+points (\begin{DoxyParamCaption}\item[{String $\ast$}]{txt,  }\item[{uint32}]{n\+\_\+points,  }\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$}]{wkb,  }\item[{uint32}]{offset,  }\item[{bool}]{bracket\+\_\+pt = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Append N points from packed format to text Before calling this function, caller must have already checked that wkb\textquotesingle{}s buffer is complete and not truncated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em txt} & Append points here \\
+\hline
+ & {\em n\+\_\+points} & Number of points \\
+\hline
+ & {\em wkb} & Packed data \\
+\hline
+ & {\em offset} & Offset between points \\
+\hline
+ & {\em bracket\+\_\+pt} & whether to bracket the point coordinate with (), multipoint need so. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGeometry_a3ac495912c005505a92b61d848f6db3f}\label{classGeometry_a3ac495912c005505a92b61d848f6db3f}} 
+\index{Geometry@{Geometry}!as\+\_\+geometry@{as\+\_\+geometry}}
+\index{as\+\_\+geometry@{as\+\_\+geometry}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{as\+\_\+geometry()}{as\_geometry()}}
+{\footnotesize\ttfamily bool Geometry\+::as\+\_\+geometry (\begin{DoxyParamCaption}\item[{String $\ast$}]{buf,  }\item[{bool}]{shallow\+\_\+copy }\end{DoxyParamCaption}) const}
+
+Write this geometry\textquotesingle{}s G\+E\+O\+M\+E\+T\+RY byte string into specified buffer, the S\+R\+ID will be written before the W\+KB string to form a G\+E\+O\+M\+E\+T\+RY byte string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The buffer to write G\+E\+O\+M\+E\+T\+RY byte string into. \\
+\hline
+{\em shallow\+\_\+copy} & Whether do shallow copy by using this object\textquotesingle{}s memory without owning it or duplicating the byte string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if got error, false if successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_aeb83e5312a7333a7e908d0623b170c97}\label{classGeometry_aeb83e5312a7333a7e908d0623b170c97}} 
+\index{Geometry@{Geometry}!as\+\_\+wkb@{as\+\_\+wkb}}
+\index{as\+\_\+wkb@{as\+\_\+wkb}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{as\+\_\+wkb()}{as\_wkb()}}
+{\footnotesize\ttfamily bool Geometry\+::as\+\_\+wkb (\begin{DoxyParamCaption}\item[{String $\ast$}]{wkb,  }\item[{bool}]{shallow\+\_\+copy }\end{DoxyParamCaption}) const}
+
+Write this geometry\textquotesingle{}s W\+KB byte string into specified buffer, the S\+R\+ID is not written into the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wkb} & The buffer to write W\+KB byte string into. \\
+\hline
+{\em shallow\+\_\+copy} & Whether do shallow copy by using this object\textquotesingle{}s memory without owning it or duplicating the byte string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if got error, false if successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_af9294b8724cd69b7e1e52b84bbccc034}\label{classGeometry_af9294b8724cd69b7e1e52b84bbccc034}} 
+\index{Geometry@{Geometry}!construct@{construct}}
+\index{construct@{construct}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Geometry\+::construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$}]{buffer,  }\item[{const char $\ast$}]{data,  }\item[{uint32}]{data\+\_\+len,  }\item[{bool}]{has\+\_\+srid = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Construct a \mbox{\hyperlink{classGeometry}{Geometry}} object using G\+E\+O\+M\+E\+T\+RY byte string. This function is called by all G\+IS functions to make a \mbox{\hyperlink{classGeometry}{Geometry}} object from a G\+E\+O\+M\+E\+T\+RY byte string, which can come from table storage, or returned from other G\+IS function, or directly provided by user via client.
+
+The W\+KB can be of either endianess --- when user directly pass W\+KB byte string to us, he/she can pass big endian W\+KB, otherwise the W\+KB is always little endian. And we should reject big endian W\+KB because all the rest of the G\+IS code assumes the internal W\+KB data being always little endian.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The place where the \mbox{\hyperlink{classGeometry}{Geometry}} object is constructed on. \\
+\hline
+{\em data} & is a byte string with an optional srid prepending a W\+KB format byte string, which is called a G\+E\+O\+M\+E\+T\+RY byte string and which is the inner storage format of all geometries in My\+S\+QL. \\
+\hline
+{\em data\+\_\+len} & number of bytes of the byte string refered by data. \\
+\hline
+{\em has\+\_\+srid} & whether data argument starts with an srid or not. By default it\textquotesingle{}s true, if false, data starts with W\+KB header, and caller is responsible to specify an srid to this object later. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constructed geometry object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_a4da1f81e54738cbad61df5931ed997c5}\label{classGeometry_a4da1f81e54738cbad61df5931ed997c5}} 
+\index{Geometry@{Geometry}!create\+\_\+from\+\_\+wkb@{create\+\_\+from\+\_\+wkb}}
+\index{create\+\_\+from\+\_\+wkb@{create\+\_\+from\+\_\+wkb}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{create\+\_\+from\+\_\+wkb()}{create\_from\_wkb()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Geometry\+::create\+\_\+from\+\_\+wkb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$}]{buffer,  }\item[{const char $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{String $\ast$}]{res,  }\item[{bool}]{init\+\_\+stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Read from \textquotesingle{}wkb\textquotesingle{} (which contains W\+KB encoded in either endianess) the geometry data, and write W\+KB of returned \mbox{\hyperlink{classGeometry}{Geometry}} object in little endianess into \textquotesingle{}res\textquotesingle{}, and also create geometry object on \textquotesingle{}buffer\textquotesingle{} and return it. The returned \mbox{\hyperlink{classGeometry}{Geometry}} object points to bytes (without W\+KB H\+E\+A\+D\+ER) in \textquotesingle{}res\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the place to create the returned \mbox{\hyperlink{classGeometry}{Geometry}} object at. \\
+\hline
+{\em wkb} & the input W\+KB buffer which contains W\+KB of either endianess. \\
+\hline
+{\em len} & the number of bytes of W\+KB in \textquotesingle{}wkb\textquotesingle{}. \\
+\hline
+{\em res} & the buffer to write little endian W\+KB into. \\
+\hline
+{\em init\+\_\+stream} & Whether set W\+KB buffer pointer to returned \mbox{\hyperlink{classGeometry}{Geometry}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the created \mbox{\hyperlink{classGeometry}{Geometry}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_a71d6852fd0285a9bffaca556592cae39}\label{classGeometry_a71d6852fd0285a9bffaca556592cae39}} 
+\index{Geometry@{Geometry}!create\+\_\+from\+\_\+wkt@{create\+\_\+from\+\_\+wkt}}
+\index{create\+\_\+from\+\_\+wkt@{create\+\_\+from\+\_\+wkt}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{create\+\_\+from\+\_\+wkt()}{create\_from\_wkt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Geometry\+::create\+\_\+from\+\_\+wkt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} $\ast$}]{buffer,  }\item[{\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$}]{trs,  }\item[{String $\ast$}]{wkt,  }\item[{bool}]{init\+\_\+stream = {\ttfamily true},  }\item[{bool}]{check\+\_\+trailing = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Read wkt text from trs, and write little endian wkb encoding into \textquotesingle{}wkt\textquotesingle{}, and create a \mbox{\hyperlink{classGeometry}{Geometry}} instance in \textquotesingle{}buffer\textquotesingle{}. If \textquotesingle{}init\+\_\+stream\textquotesingle{} is true, shallow assign data in \textquotesingle{}wkt\textquotesingle{} to the \mbox{\hyperlink{classGeometry}{Geometry}} object to be returned. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Place to create the returned \mbox{\hyperlink{classGeometry}{Geometry}} object at. \\
+\hline
+{\em trs} & W\+KT read stream. \\
+\hline
+{\em wkt} & Little endian W\+KB buffer for W\+KB data of the returned \mbox{\hyperlink{classGeometry}{Geometry}} object. \\
+\hline
+{\em init\+\_\+stream} & Whether set W\+KB buffer pointer to returned \mbox{\hyperlink{classGeometry}{Geometry}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{classGeometry}{Geometry}} object with data specified by the W\+KT. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_a59686d5382a6cd3a691d18e24d2e2811}\label{classGeometry_a59686d5382a6cd3a691d18e24d2e2811}} 
+\index{Geometry@{Geometry}!create\+\_\+point@{create\+\_\+point}}
+\index{create\+\_\+point@{create\+\_\+point}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{create\+\_\+point()}{create\_point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Geometry\+::create\+\_\+point (\begin{DoxyParamCaption}\item[{String $\ast$}]{result,  }\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$}]{wkb }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a point from data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em result} & Put result here \\
+\hline
+ & {\em wkb} & Data for point is here.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_ab2023acb5c6e5eaf434830c03a461072}\label{classGeometry_ab2023acb5c6e5eaf434830c03a461072}} 
+\index{Geometry@{Geometry}!create\+\_\+point@{create\+\_\+point}}
+\index{create\+\_\+point@{create\+\_\+point}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{create\+\_\+point()}{create\_point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Geometry\+::create\+\_\+point (\begin{DoxyParamCaption}\item[{String $\ast$}]{result,  }\item[{\mbox{\hyperlink{classpoint__xy}{point\+\_\+xy}}}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a point from coordinates.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em result} & \\
+\hline
+ & {\em p} & coordinates for point\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_a35ea9c1dd07e14bf7f414433e193461a}\label{classGeometry_a35ea9c1dd07e14bf7f414433e193461a}} 
+\index{Geometry@{Geometry}!get\+\_\+mbr\+\_\+for\+\_\+points@{get\+\_\+mbr\+\_\+for\+\_\+points}}
+\index{get\+\_\+mbr\+\_\+for\+\_\+points@{get\+\_\+mbr\+\_\+for\+\_\+points}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{get\+\_\+mbr\+\_\+for\+\_\+points()}{get\_mbr\_for\_points()}}
+{\footnotesize\ttfamily bool Geometry\+::get\+\_\+mbr\+\_\+for\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$}]{mbr,  }\item[{\mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$}]{wkb,  }\item[{uint}]{offset }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get most bounding rectangle (mbr) for X points
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em mbr} & Result \\
+\hline
+ & {\em wkb} & Data for point is here. \\
+\hline
+ & {\em offset} & Offset between points\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_ab403ca936728c5d8ef81e0db535236b3}\label{classGeometry_ab403ca936728c5d8ef81e0db535236b3}} 
+\index{Geometry@{Geometry}!get\+\_\+ogc\+\_\+geotype@{get\+\_\+ogc\+\_\+geotype}}
+\index{get\+\_\+ogc\+\_\+geotype@{get\+\_\+ogc\+\_\+geotype}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{get\+\_\+ogc\+\_\+geotype()}{get\_ogc\_geotype()}}
+{\footnotesize\ttfamily uint32 Geometry\+::get\+\_\+ogc\+\_\+geotype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Build an O\+GC standard type value from m\+\_\+flags.\+zm and m\+\_\+flags.\+geotype. For now m\+\_\+flags.\+zm is always 0 so simply call get\+\_\+geotype(). We don\textquotesingle{}t directly store the O\+GC defined values in order to save more bits of m\+\_\+flags for other purposes; and also separating zm settings from basic geometry types is easier for coding and geometry type identification.
+
+When we start to support Z/M settings we need to modify all code which call write\+\_\+wkb\+\_\+header and write\+\_\+geometry\+\_\+header to pass to them an O\+GC standard type value returned by this function or built similarly. And by doing so our internal runtime geometry type encoding will work consistently with O\+GC defined standard geometry type values in byte strings of W\+KB format.
+
+\begin{DoxyReturn}{Returns}
+O\+GC standard geometry type value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_ac2f735f86392075949ec67c3749d86d7}\label{classGeometry_ac2f735f86392075949ec67c3749d86d7}} 
+\index{Geometry@{Geometry}!get\+\_\+ownmem@{get\+\_\+ownmem}}
+\index{get\+\_\+ownmem@{get\+\_\+ownmem}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{get\+\_\+ownmem()}{get\_ownmem()}}
+{\footnotesize\ttfamily bool Geometry\+::get\+\_\+ownmem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns whether this object has its own memory. If so, the memory is released when this object is destroyed. \mbox{\Hypertarget{classGeometry_a4b4f4a21518909f1427a82ac17ef4f6e}\label{classGeometry_a4b4f4a21518909f1427a82ac17ef4f6e}} 
+\index{Geometry@{Geometry}!has\+\_\+out\+\_\+of\+\_\+line\+\_\+components@{has\+\_\+out\+\_\+of\+\_\+line\+\_\+components}}
+\index{has\+\_\+out\+\_\+of\+\_\+line\+\_\+components@{has\+\_\+out\+\_\+of\+\_\+line\+\_\+components}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{has\+\_\+out\+\_\+of\+\_\+line\+\_\+components()}{has\_out\_of\_line\_components()}}
+{\footnotesize\ttfamily bool Geometry\+::has\+\_\+out\+\_\+of\+\_\+line\+\_\+components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+If call Gis\+\_\+wkb\+\_\+vector$<$\+T$>$\+::resize() to add a component to X, the geometry may have a geometry not stored inside the W\+KB buffer of X, hence X has out of line component. For such an X, user should call \mbox{\hyperlink{classGis__wkb__vector_a570dda402fe9aef5438098fe5714086c}{Gis\+\_\+wkb\+\_\+vector$<$\+T$>$\+::reassemble()}} before fetching its W\+KB data. \mbox{\Hypertarget{classGeometry_ada614004627a9e7af129e51a34242af9}\label{classGeometry_ada614004627a9e7af129e51a34242af9}} 
+\index{Geometry@{Geometry}!is\+\_\+bg\+\_\+adapter@{is\+\_\+bg\+\_\+adapter}}
+\index{is\+\_\+bg\+\_\+adapter@{is\+\_\+bg\+\_\+adapter}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{is\+\_\+bg\+\_\+adapter()}{is\_bg\_adapter()}}
+{\footnotesize\ttfamily bool Geometry\+::is\+\_\+bg\+\_\+adapter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Whether the \mbox{\hyperlink{classGeometry}{Geometry}} object is created to be used by Boost \mbox{\hyperlink{classGeometry}{Geometry}} or only by My\+S\+QL. There are some operations that only work for one type and can or must be skipped otherwise. \begin{DoxyReturn}{Returns}
+true if it\textquotesingle{}s a BG adapter, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_ae034f775d692619cc4bc8842d34a4cd8}\label{classGeometry_ae034f775d692619cc4bc8842d34a4cd8}} 
+\index{Geometry@{Geometry}!is\+\_\+well\+\_\+formed@{is\+\_\+well\+\_\+formed}}
+\index{is\+\_\+well\+\_\+formed@{is\+\_\+well\+\_\+formed}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{is\+\_\+well\+\_\+formed()}{is\_well\_formed()}}
+{\footnotesize\ttfamily bool Geometry\+::is\+\_\+well\+\_\+formed (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{length,  }\item[{Geometry\+::wkb\+Type}]{type,  }\item[{Geometry\+::wkb\+Byte\+Order}]{bo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify that a string is a well-\/formed G\+E\+O\+M\+E\+T\+RY string.
+
+This does not check if the geometry is geometrically valid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGeometry__well__formed__checker}{Geometry\+\_\+well\+\_\+formed\+\_\+checker}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em from} & String to check \\
+\hline
+{\em length} & Length of string \\
+\hline
+{\em type} & Expected type of geometry, or Geoemtry\+::wkb\+\_\+invalid\+\_\+type if any type is allowed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the string is a well-\/formed G\+E\+O\+M\+E\+T\+RY string, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_add33b390178c8ff8ec6cc3d2309c9bd6}\label{classGeometry_add33b390178c8ff8ec6cc3d2309c9bd6}} 
+\index{Geometry@{Geometry}!normalize\+\_\+ring\+\_\+order@{normalize\+\_\+ring\+\_\+order}}
+\index{normalize\+\_\+ring\+\_\+order@{normalize\+\_\+ring\+\_\+order}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{normalize\+\_\+ring\+\_\+order()}{normalize\_ring\_order()}}
+{\footnotesize\ttfamily const void $\ast$ Geometry\+::normalize\+\_\+ring\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+In place normalize polygons\textquotesingle{} rings, making outer ring C\+CW and inner rings CW by reversing the ring\textquotesingle{}s points in the W\+KB buffer inplace. This function can not be made a virtual function since BG adapter geometry objects may also need it.
+
+\begin{DoxyReturn}{Returns}
+the W\+KB buffer address of the geometry which contains the converted W\+KB data. If geometry data is invalid, returns N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeometry_a16062a3b3460f9c217bd766b68770a1b}\label{classGeometry_a16062a3b3460f9c217bd766b68770a1b}} 
+\index{Geometry@{Geometry}!operator=@{operator=}}
+\index{operator=@{operator=}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeometry}{Geometry}} \& Geometry\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGeometry}{Geometry}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator for \mbox{\hyperlink{classGeometry}{Geometry}} class, assignment operators of children classes calls this to do general assignment. \mbox{\Hypertarget{classGeometry_a0b03ccd55d98e9f0c8ccf44f5d4c1ffc}\label{classGeometry_a0b03ccd55d98e9f0c8ccf44f5d4c1ffc}} 
+\index{Geometry@{Geometry}!polygon\+\_\+is\+\_\+wkb\+\_\+form@{polygon\+\_\+is\+\_\+wkb\+\_\+form}}
+\index{polygon\+\_\+is\+\_\+wkb\+\_\+form@{polygon\+\_\+is\+\_\+wkb\+\_\+form}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{polygon\+\_\+is\+\_\+wkb\+\_\+form()}{polygon\_is\_wkb\_form()}}
+{\footnotesize\ttfamily bool Geometry\+::polygon\+\_\+is\+\_\+wkb\+\_\+form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+In a polygon usable by boost geometry, the m\+\_\+ptr points to the outer ring object, and m\+\_\+inn\+\_\+rings points to the inner rings, thus the polygon\textquotesingle{}s data isn\textquotesingle{}t stored in a single W\+KB. Users should call \mbox{\hyperlink{classGis__polygon_a7bd6ed68da450be85891eb39142d3e60}{Gis\+\_\+polygon\+::to\+\_\+wkb\+\_\+unparsed()}} before getting the polygon\textquotesingle{}s wkb data, \mbox{\hyperlink{classGis__polygon_a7bd6ed68da450be85891eb39142d3e60}{Gis\+\_\+polygon\+::to\+\_\+wkb\+\_\+unparsed()}} will form a single W\+KB for the polygon and refer to it with m\+\_\+ptr, and release the outer ring object and the inner rings objects, and such an polygon isn\textquotesingle{}t usable by BG any more, it\textquotesingle{}s exactly what we got with \mbox{\hyperlink{classGeometry_a71d6852fd0285a9bffaca556592cae39}{Geometry\+::create\+\_\+from\+\_\+wkt}}/\+Geometry\+::create\+\_\+from\+\_\+wkt. \mbox{\Hypertarget{classGeometry_ac352af286569f0f9f6a2e927a55b38ea}\label{classGeometry_ac352af286569f0f9f6a2e927a55b38ea}} 
+\index{Geometry@{Geometry}!set\+\_\+bg\+\_\+adapter@{set\+\_\+bg\+\_\+adapter}}
+\index{set\+\_\+bg\+\_\+adapter@{set\+\_\+bg\+\_\+adapter}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{set\+\_\+bg\+\_\+adapter()}{set\_bg\_adapter()}}
+{\footnotesize\ttfamily void Geometry\+::set\+\_\+bg\+\_\+adapter (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set whether this object is a BG adapter. 
+\begin{DoxyParams}{Parameters}
+{\em b} & true if it\textquotesingle{}s a BG adapter, false otherwise. Have to declare this as const because even when a \mbox{\hyperlink{classGeometry}{Geometry}} object\textquotesingle{}s const adapter member function is called, it\textquotesingle{}s regarded as a BG adapter object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGeometry_a1037b25eaa5591e899843ed79519b543}\label{classGeometry_a1037b25eaa5591e899843ed79519b543}} 
+\index{Geometry@{Geometry}!set\+\_\+ownmem@{set\+\_\+ownmem}}
+\index{set\+\_\+ownmem@{set\+\_\+ownmem}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{set\+\_\+ownmem()}{set\_ownmem()}}
+{\footnotesize\ttfamily void Geometry\+::set\+\_\+ownmem (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set whether this object has its own memory. If so, the memory is released when this object is destroyed. 
+\begin{DoxyParams}{Parameters}
+{\em b} & true if this object has its own memory, false otherwise. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classGeometry_af4cc4635baabc8496089c8359f5a305f}\label{classGeometry_af4cc4635baabc8496089c8359f5a305f}} 
+\index{Geometry@{Geometry}!parse\+\_\+wkb\+\_\+data@{parse\+\_\+wkb\+\_\+data}}
+\index{parse\+\_\+wkb\+\_\+data@{parse\+\_\+wkb\+\_\+data}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{parse\+\_\+wkb\+\_\+data}{parse\_wkb\_data}}
+{\footnotesize\ttfamily void parse\+\_\+wkb\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g,  }\item[{const char $\ast$}]{p,  }\item[{size\+\_\+t}]{num\+\_\+geoms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Parse the wkb buffer to build the component vector m\+\_\+geo\+\_\+vect for geom. Set each geometry\textquotesingle{}s wkb pointer into the \mbox{\hyperlink{classGeometry}{Geometry}} objects inside m\+\_\+geo\+\_\+vect. Make it a standalone function in order to be able to access classes defined after class template \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}. 
+\begin{DoxyParams}{Parameters}
+{\em geom} & the geometry to analyze and parse. \\
+\hline
+{\em p} & points to the geometry\textquotesingle{}s wkb data\textquotesingle{}s 1st byte, right after its wkb header if any. \\
+\hline
+{\em num\+\_\+geoms} & number of following geometries, to be used only when parsing the W\+KB of a polygon\textquotesingle{}s inner rings because there is no W\+KB header for the inner rings only. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classGeometry_a8dad930f282cc91bce275f98ab13a691}\label{classGeometry_a8dad930f282cc91bce275f98ab13a691}} 
+\index{Geometry@{Geometry}!m\+\_\+owner@{m\+\_\+owner}}
+\index{m\+\_\+owner@{m\+\_\+owner}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+owner}{m\_owner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeometry}{Geometry}}$\ast$ Geometry\+::m\+\_\+owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+The topmost (root) geometry object, whose m\+\_\+ptr is the 1st byte of a wkb memory buffer. other geometry objects hold m\+\_\+ptr which points inside somewhere in the memory buffer. when updating a geometry object, need to ask m\+\_\+owner to reallocate memory if needed for new data. \mbox{\Hypertarget{classGeometry_a1d67d11bc1610ec1be958bacdcdca84c}\label{classGeometry_a1d67d11bc1610ec1be958bacdcdca84c}} 
+\index{Geometry@{Geometry}!m\+\_\+ptr@{m\+\_\+ptr}}
+\index{m\+\_\+ptr@{m\+\_\+ptr}!Geometry@{Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+ptr}{m\_ptr}}
+{\footnotesize\ttfamily void$\ast$ Geometry\+::m\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the geometry\textquotesingle{}s wkb data\textquotesingle{}s 1st byte, right after its wkb header if any. If the geometry is wkb\+\_\+polygon, this field is a Gis\+\_\+polygon\+\_\+ring$\ast$ pointer, pointing to the outer ring. Outer ring\textquotesingle{}s wkb data is in the same wkb buffer as the inner rings, so we can get the wkb header from the outer ring like ((Geometry$\ast$)m\+\_\+ptr)-\/$>$get\+\_\+ptr(). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

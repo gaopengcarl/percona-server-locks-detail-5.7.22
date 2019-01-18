@@ -1,0 +1,66 @@
+\hypertarget{classItem__allany__subselect}{}\section{Item\+\_\+allany\+\_\+subselect Class Reference}
+\label{classItem__allany__subselect}\index{Item\+\_\+allany\+\_\+subselect@{Item\+\_\+allany\+\_\+subselect}}
+Inheritance diagram for Item\+\_\+allany\+\_\+subselect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__allany__subselect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__allany__subselect_a806fb7ea20b54eb0a9e74ad49cb258a7}\label{classItem__allany__subselect_a806fb7ea20b54eb0a9e74ad49cb258a7}} 
+{\bfseries Item\+\_\+allany\+\_\+subselect} (\mbox{\hyperlink{classItem}{Item}} $\ast$left\+\_\+expr, chooser\+\_\+compare\+\_\+func\+\_\+creator fc, st\+\_\+select\+\_\+lex $\ast$select, bool all)
+\item 
+\mbox{\Hypertarget{classItem__allany__subselect_a2d6357e62e3a4bbba9bf34a3a995fcfd}\label{classItem__allany__subselect_a2d6357e62e3a4bbba9bf34a3a995fcfd}} 
+subs\+\_\+type {\bfseries substype} ()
+\item 
+\mbox{\Hypertarget{classItem__allany__subselect_aaa5534ab26ead2defed935ae4a07b839}\label{classItem__allany__subselect_aaa5534ab26ead2defed935ae4a07b839}} 
+trans\+\_\+res {\bfseries select\+\_\+transformer} (st\+\_\+select\+\_\+lex $\ast$select)
+\item 
+virtual void \mbox{\hyperlink{classItem__allany__subselect_ade4b2eaa6af0cde005b082598d2e31b0}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__allany__subselect_aaa717d12646231e020772c4d46cc86cd}\label{classItem__allany__subselect_aaa717d12646231e020772c4d46cc86cd}} 
+chooser\+\_\+compare\+\_\+func\+\_\+creator {\bfseries func\+\_\+creator}
+\item 
+\mbox{\Hypertarget{classItem__allany__subselect_a2b3846e39f5f8dad85ed8499656e6da0}\label{classItem__allany__subselect_a2b3846e39f5f8dad85ed8499656e6da0}} 
+\mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}} $\ast$ {\bfseries func}
+\item 
+\mbox{\Hypertarget{classItem__allany__subselect_ac431da1e3ac10d9a3817dc146a127bbd}\label{classItem__allany__subselect_ac431da1e3ac10d9a3817dc146a127bbd}} 
+bool {\bfseries all}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__allany__subselect_ade4b2eaa6af0cde005b082598d2e31b0}\label{classItem__allany__subselect_ade4b2eaa6af0cde005b082598d2e31b0}} 
+\index{Item\+\_\+allany\+\_\+subselect@{Item\+\_\+allany\+\_\+subselect}!print@{print}}
+\index{print@{print}!Item\+\_\+allany\+\_\+subselect@{Item\+\_\+allany\+\_\+subselect}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+allany\+\_\+subselect\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__in__subselect_a8c80eb807d1c1219807fd45db61fad8f}{Item\+\_\+in\+\_\+subselect}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+subselect.\+h\item 
+\mbox{\hyperlink{item__subselect_8cc}{item\+\_\+subselect.\+cc}}\end{DoxyCompactItemize}

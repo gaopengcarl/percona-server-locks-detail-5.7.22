@@ -1,0 +1,132 @@
+\hypertarget{classCurrent__schema__tracker}{}\section{Current\+\_\+schema\+\_\+tracker Class Reference}
+\label{classCurrent__schema__tracker}\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+Inheritance diagram for Current\+\_\+schema\+\_\+tracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCurrent__schema__tracker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCurrent__schema__tracker_a95e11e8c1510e1a9845d74f8dc99664f}{Current\+\_\+schema\+\_\+tracker}} ()
+\item 
+bool \mbox{\hyperlink{classCurrent__schema__tracker_a7d1b177b9d6cd378e072aea79c07252c}{enable}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classCurrent__schema__tracker_adb85ededcff63655f491046f93a82cba}{check}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+bool \mbox{\hyperlink{classCurrent__schema__tracker_a087a504d0c2ff939acecf08c891d3725}{update}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Enable/disable the tracker based on @session\+\_\+track\+\_\+schema\textquotesingle{}s value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCurrent__schema__tracker_a9d33638a5c4db24bb480f9aa0e202edb}{store}} (T\+HD $\ast$thd, String \&buf)
+\begin{DoxyCompactList}\small\item\em Store the schema name as length-\/encoded string in the specified buffer. Once the data is stored, we reset the flags related to state-\/change (see reset()). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCurrent__schema__tracker_a5b7b338910bed0627c6312b9de307dde}{mark\+\_\+as\+\_\+changed}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$tracked\+\_\+item\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Mark the tracker as changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{\mbox{\hyperlink{classCurrent__schema__tracker}{Current\+\_\+schema\+\_\+tracker}} }
+
+This is a tracker class that enables \& manages the tracking of current schema for a particular connection. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCurrent__schema__tracker_a95e11e8c1510e1a9845d74f8dc99664f}\label{classCurrent__schema__tracker_a95e11e8c1510e1a9845d74f8dc99664f}} 
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\subsubsection{\texorpdfstring{Current\+\_\+schema\+\_\+tracker()}{Current\_schema\_tracker()}}
+{\footnotesize\ttfamily Current\+\_\+schema\+\_\+tracker\+::\+Current\+\_\+schema\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCurrent__schema__tracker_adb85ededcff63655f491046f93a82cba}\label{classCurrent__schema__tracker_adb85ededcff63655f491046f93a82cba}} 
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!check@{check}}
+\index{check@{check}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Current\+\_\+schema\+\_\+tracker\+::check (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+To be invoked when the tracker\textquotesingle{}s system variable is checked (O\+N\+\_\+\+C\+H\+E\+CK). 
+
+Implements \mbox{\hyperlink{classState__tracker_a50923266a6300e657b70dc4f0125782c}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classCurrent__schema__tracker_a7d1b177b9d6cd378e072aea79c07252c}\label{classCurrent__schema__tracker_a7d1b177b9d6cd378e072aea79c07252c}} 
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!enable@{enable}}
+\index{enable@{enable}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily bool Current\+\_\+schema\+\_\+tracker\+::enable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called in the constructor of T\+HD 
+
+Implements \mbox{\hyperlink{classState__tracker_a65cd4b0d77f079f4c41620c0bf314939}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classCurrent__schema__tracker_a5b7b338910bed0627c6312b9de307dde}\label{classCurrent__schema__tracker_a5b7b338910bed0627c6312b9de307dde}} 
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}}
+\index{mark\+\_\+as\+\_\+changed@{mark\+\_\+as\+\_\+changed}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\subsubsection{\texorpdfstring{mark\+\_\+as\+\_\+changed()}{mark\_as\_changed()}}
+{\footnotesize\ttfamily void Current\+\_\+schema\+\_\+tracker\+::mark\+\_\+as\+\_\+changed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{tracked\+\_\+item\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Mark the tracker as changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{[}IN\mbox{]} Always null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_afb865d3837c0f8fc9cd36d5234142b32}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classCurrent__schema__tracker_a9d33638a5c4db24bb480f9aa0e202edb}\label{classCurrent__schema__tracker_a9d33638a5c4db24bb480f9aa0e202edb}} 
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!store@{store}}
+\index{store@{store}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily bool Current\+\_\+schema\+\_\+tracker\+::store (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String \&}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Store the schema name as length-\/encoded string in the specified buffer. Once the data is stored, we reset the flags related to state-\/change (see reset()). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.  buf \mbox{[}I\+N\+O\+UT\mbox{]} Buffer to store the information to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false Success true Error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_aee5cd5c5ed19fbd4c8ac01dbd62471e7}{State\+\_\+tracker}}.
+
+\mbox{\Hypertarget{classCurrent__schema__tracker_a087a504d0c2ff939acecf08c891d3725}\label{classCurrent__schema__tracker_a087a504d0c2ff939acecf08c891d3725}} 
+\index{Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}!update@{update}}
+\index{update@{update}!Current\+\_\+schema\+\_\+tracker@{Current\+\_\+schema\+\_\+tracker}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Current\+\_\+schema\+\_\+tracker\+::update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable/disable the tracker based on @session\+\_\+track\+\_\+schema\textquotesingle{}s value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false (always) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classState__tracker_a74ffdcb79733e8d31e9fe2dcae346022}{State\+\_\+tracker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,375 @@
+\hypertarget{classGis__wkb__vector__iterator}{}\section{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator$<$ T $>$ Class Template Reference}
+\label{classGis__wkb__vector__iterator}\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator$<$ T $>$@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$spatial.\+h$>$}
+
+Inheritance diagram for Gis\+\_\+wkb\+\_\+vector\+\_\+iterator$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGis__wkb__vector__iterator}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a12ac1d1af0833c06145cc64739daa482}\label{classGis__wkb__vector__iterator_a12ac1d1af0833c06145cc64739daa482}} 
+typedef ptrdiff\+\_\+t {\bfseries index\+\_\+type}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_aee6d535402352e23d792e32fc7aad13b}\label{classGis__wkb__vector__iterator_aee6d535402352e23d792e32fc7aad13b}} 
+typedef T {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_ab1b2f7afd1da0006c6e518492fdc791a}\label{classGis__wkb__vector__iterator_ab1b2f7afd1da0006c6e518492fdc791a}} 
+typedef ptrdiff\+\_\+t {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a03a5070e54e90929c6421626a19f28f0}\label{classGis__wkb__vector__iterator_a03a5070e54e90929c6421626a19f28f0}} 
+typedef difference\+\_\+type {\bfseries distance\+\_\+type}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a1f09af6a6bc4a89a4fbe20a26946b602}\label{classGis__wkb__vector__iterator_a1f09af6a6bc4a89a4fbe20a26946b602}} 
+typedef value\+\_\+type \& {\bfseries reference}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a4003ce5f4f12aa413dc843e007459fec}\label{classGis__wkb__vector__iterator_a4003ce5f4f12aa413dc843e007459fec}} 
+typedef value\+\_\+type $\ast$ {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a41650caa85e1e20f7af3515df356ae4f}\label{classGis__wkb__vector__iterator_a41650caa85e1e20f7af3515df356ae4f}} 
+typedef std\+::random\+\_\+access\+\_\+iterator\+\_\+tag {\bfseries iterator\+\_\+category}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+difference\+\_\+type \mbox{\hyperlink{classGis__wkb__vector__iterator_adc4bec71976681c3c3fb39da7a7068fa}{operator-\/}} (const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \&itr) const
+\begin{DoxyCompactList}\small\item\em Iterator distance operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Constructors and destructor}\par
+{\em Begin public constructors and destructor.
+
+Do not construct iterators explictily using these constructors, but call Gis\+\_\+wkb\+\_\+vector\+::begin to get an valid iterator. \begin{DoxySeeAlso}{See also}
+Gis\+\_\+wkb\+\_\+vector\+::begin 
+\end{DoxySeeAlso}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a29bf9aa4588fb09523f42e5e9bda2e89}\label{classGis__wkb__vector__iterator_a29bf9aa4588fb09523f42e5e9bda2e89}} 
+{\bfseries Gis\+\_\+wkb\+\_\+vector\+\_\+iterator} (const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \&vi)
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a9f1c4cd6bb43ad43f177de27416ef8a5}\label{classGis__wkb__vector__iterator_a9f1c4cd6bb43ad43f177de27416ef8a5}} 
+{\bfseries Gis\+\_\+wkb\+\_\+vector\+\_\+iterator} ()
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a054dfdefa4e5aeba3ea4eddb64831dc1}\label{classGis__wkb__vector__iterator_a054dfdefa4e5aeba3ea4eddb64831dc1}} 
+{\bfseries Gis\+\_\+wkb\+\_\+vector\+\_\+iterator} (const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{base}} \&obj)
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a0ac2bd387b901c967b45277678cd1bce}\label{classGis__wkb__vector__iterator_a0ac2bd387b901c967b45277678cd1bce}} 
+{\bfseries Gis\+\_\+wkb\+\_\+vector\+\_\+iterator} (index\+\_\+type idx, const \mbox{\hyperlink{classGis__wkb__vector}{owner\+\_\+t}} $\ast$owner)
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a9d18b44f90504f72ad98c2dfdcca3f2d}\label{classGis__wkb__vector__iterator_a9d18b44f90504f72ad98c2dfdcca3f2d}} 
+{\bfseries $\sim$\+Gis\+\_\+wkb\+\_\+vector\+\_\+iterator} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Iterator movement operators.}\par
+{\em Begin functions that shift the iterator position.
+
+These functions are identical to those defined in \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator}}, but we have to redefine them here because the \char`\"{}self\char`\"{} have different definitions. These functions have identical behaviors and semantics as those of \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator}}, so please refer to equivalent in that class. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \& \mbox{\hyperlink{classGis__wkb__vector__iterator_aed302f00b9144114462cdb2600521130}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator_a8df0e51b19a7d8678d70f70f325abb75}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \& \mbox{\hyperlink{classGis__wkb__vector__iterator_a919bc700a65a40d88627aec4c9172234}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/decrement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator_ad0cb8606fa53e61247e5d18254373844}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/decrement. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \& \mbox{\hyperlink{classGis__wkb__vector__iterator_a48929642421f30c99ca89791121de93a}{operator=}} (const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \&itr)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator_aabbd4bfbbf7d089178e6491cc5069acf}{operator+}} (difference\+\_\+type n) const
+\begin{DoxyCompactList}\small\item\em Iterator movement operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \& \mbox{\hyperlink{classGis__wkb__vector__iterator_a79abfc33a88bf7e7a5c2eb202b0ffcc0}{operator+=}} (difference\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Move this iterator backward by n elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator_a1a8a11a01a931641143844a3075ca41f}{operator-\/}} (difference\+\_\+type n) const
+\begin{DoxyCompactList}\small\item\em Iterator movement operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \& \mbox{\hyperlink{classGis__wkb__vector__iterator_ae2eb9ea30d4ce96a9b71abd90586133f}{operator-\/=}} (difference\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Move this iterator forward by n elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Functions that retrieve values from the iterator.}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a320ffe7a48e9c6440eb76d321ff8c5a2}{reference}} \mbox{\hyperlink{classGis__wkb__vector__iterator_a53a06c139570074e15bdd5bfdbb06878}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Dereference operator. \end{DoxyCompactList}\item 
+pointer \mbox{\hyperlink{classGis__wkb__vector__iterator_a7ac69ef71d2ffff73e024a86ce68c679}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em Arrow operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a320ffe7a48e9c6440eb76d321ff8c5a2}{reference}} \mbox{\hyperlink{classGis__wkb__vector__iterator_ad01cffdabb26e97f3024db61e24b6702}{operator\mbox{[}$\,$\mbox{]}}} (difference\+\_\+type offset) const
+\begin{DoxyCompactList}\small\item\em Iterator index operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a4d5575d2c3c10d829aa79e970d27e792}\label{classGis__wkb__vector__iterator_a4d5575d2c3c10d829aa79e970d27e792}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$ {\bfseries self}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a969de026d431b466555ed4d4f74ef193}\label{classGis__wkb__vector__iterator_a969de026d431b466555ed4d4f74ef193}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator}}$<$ T $>$ {\bfseries base}
+\item 
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a9c64c32c7b81c2bed4bad4193d862b92}\label{classGis__wkb__vector__iterator_a9c64c32c7b81c2bed4bad4193d862b92}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}$<$ T $>$ {\bfseries owner\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Gis\+\_\+wkb\+\_\+vector\+\_\+iterator$<$ T $>$}
+
+This class is the iterator class for \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}, its instances can be used to mutate their referenced data element. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vector element type \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a53a06c139570074e15bdd5bfdbb06878}\label{classGis__wkb__vector__iterator_a53a06c139570074e15bdd5bfdbb06878}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a320ffe7a48e9c6440eb76d321ff8c5a2}{reference}} \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dereference operator. 
+
+Return the reference to the cached data element The returned value can be used to read or update its referenced element. \begin{DoxyReturn}{Returns}
+The reference to the element this iterator points to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_aabbd4bfbbf7d089178e6491cc5069acf}\label{classGis__wkb__vector__iterator_aabbd4bfbbf7d089178e6491cc5069acf}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator+@{operator+}}
+\index{operator+@{operator+}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{difference\+\_\+type}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator movement operator. 
+
+Return another iterator by moving this iterator backward by n elements. 
+\begin{DoxyParams}{Parameters}
+{\em n} & The amount and direction of movement. If negative, will move forward by $\vert$n$\vert$ element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new iterator at new position. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a56ceef1b31e06b9dd58207de7bd0f20d}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator+(difference\+\_\+type n) const }} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_aed302f00b9144114462cdb2600521130}\label{classGis__wkb__vector__iterator_aed302f00b9144114462cdb2600521130}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}}\& \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pre-\/increment. 
+
+\begin{DoxyReturn}{Returns}
+This iterator after incremented. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a9cf0ed3395c51ed8c7280d0184b7ce66}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator++()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a8df0e51b19a7d8678d70f70f325abb75}\label{classGis__wkb__vector__iterator_a8df0e51b19a7d8678d70f70f325abb75}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Post-\/increment. 
+
+\begin{DoxyReturn}{Returns}
+A new iterator not incremented. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a82e26fad2ec2115454fbfeb90675f42c}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator++(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a79abfc33a88bf7e7a5c2eb202b0ffcc0}\label{classGis__wkb__vector__iterator_a79abfc33a88bf7e7a5c2eb202b0ffcc0}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}}\& \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{difference\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move this iterator backward by n elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The amount and direction of movement. If negative, will move forward by $\vert$n$\vert$ element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this iterator at new position. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a1b985aee8037b4fbe3aed2359f95dd57}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator+=(difference\+\_\+type n)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a1a8a11a01a931641143844a3075ca41f}\label{classGis__wkb__vector__iterator_a1a8a11a01a931641143844a3075ca41f}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{difference\+\_\+type}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator movement operator. 
+
+Return another iterator by moving this iterator forward by n elements. 
+\begin{DoxyParams}{Parameters}
+{\em n} & The amount and direction of movement. If negative, will move backward by $\vert$n$\vert$ element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new iterator at new position. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_ae63bd3cedff9cb57e5d6c45cb5ef4dff}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator-\/(difference\+\_\+type n) const }} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_adc4bec71976681c3c3fb39da7a7068fa}\label{classGis__wkb__vector__iterator_adc4bec71976681c3c3fb39da7a7068fa}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+difference\+\_\+type \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \&}]{itr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator distance operator. 
+
+Return the index difference of this iterator and itr, so if this iterator sits on an element with a smaller index, this call will return a negative number. 
+\begin{DoxyParams}{Parameters}
+{\em itr} & The other iterator to substract. itr can be the invalid iterator after last element or before first element, their index will be regarded as last element\textquotesingle{}s index + 1 and -\/1 respectively. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index difference. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a9662de5243a456cb63a183214deba0af}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator-\/(const self \&itr) const }} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a919bc700a65a40d88627aec4c9172234}\label{classGis__wkb__vector__iterator_a919bc700a65a40d88627aec4c9172234}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}}\& \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pre-\/decrement. 
+
+\begin{DoxyReturn}{Returns}
+This iterator after decremented. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a62e9c9573e8e44a8521f845da62f0cb2}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator-\/-\/()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_ad0cb8606fa53e61247e5d18254373844}\label{classGis__wkb__vector__iterator_ad0cb8606fa53e61247e5d18254373844}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Post-\/decrement. 
+
+\begin{DoxyReturn}{Returns}
+A new iterator not decremented. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a979655b875007b53d94dcf03065f88d8}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator-\/-\/(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_ae2eb9ea30d4ce96a9b71abd90586133f}\label{classGis__wkb__vector__iterator_ae2eb9ea30d4ce96a9b71abd90586133f}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}}\& \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{difference\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move this iterator forward by n elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The amount and direction of movement. If negative, will move backward by $\vert$n$\vert$ element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this iterator at new position. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a9a679f7fb5602553fadd480b08bee2f8}{Gis\+\_\+wkb\+\_\+vector\+\_\+const\+\_\+iterator\+::operator-\/=(difference\+\_\+type n)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a7ac69ef71d2ffff73e024a86ce68c679}\label{classGis__wkb__vector__iterator_a7ac69ef71d2ffff73e024a86ce68c679}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+pointer \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Arrow operator. 
+
+Return the pointer to the cached data element The returned value can be used to read or update its referenced element. \begin{DoxyReturn}{Returns}
+The address of the referenced object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_a48929642421f30c99ca89791121de93a}\label{classGis__wkb__vector__iterator_a48929642421f30c99ca89791121de93a}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}}\& \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGis__wkb__vector__const__iterator}{self}} \&}]{itr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assignment operator. 
+
+This iterator will point to the same key/data pair as itr, and have the same configurations as itr. 
+\begin{DoxyParams}{Parameters}
+{\em itr} & The right value of the assignment. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This iterator\textquotesingle{}s reference. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGis__wkb__vector__iterator_ad01cffdabb26e97f3024db61e24b6702}\label{classGis__wkb__vector__iterator_ad01cffdabb26e97f3024db61e24b6702}} 
+\index{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Gis\+\_\+wkb\+\_\+vector\+\_\+iterator@{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGis__wkb__vector__const__iterator_a320ffe7a48e9c6440eb76d321ff8c5a2}{reference}} \mbox{\hyperlink{classGis__wkb__vector__iterator}{Gis\+\_\+wkb\+\_\+vector\+\_\+iterator}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{difference\+\_\+type}]{offset }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator index operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset of target element relative to this iterator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the element which is at position $\ast$this + offset. The returned value can be used to read or update its referenced element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\end{DoxyCompactItemize}

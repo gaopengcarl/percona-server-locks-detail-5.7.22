@@ -1,0 +1,41 @@
+\hypertarget{structSemijoin__mat__optimize}{}\section{Semijoin\+\_\+mat\+\_\+optimize Struct Reference}
+\label{structSemijoin__mat__optimize}\index{Semijoin\+\_\+mat\+\_\+optimize@{Semijoin\+\_\+mat\+\_\+optimize}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_a64190010b2d734e906ad6c3cb63d3832}\label{structSemijoin__mat__optimize_a64190010b2d734e906ad6c3cb63d3832}} 
+struct \mbox{\hyperlink{structst__position}{st\+\_\+position}} $\ast$ \mbox{\hyperlink{structSemijoin__mat__optimize_a64190010b2d734e906ad6c3cb63d3832}{positions}}
+\begin{DoxyCompactList}\small\item\em Optimal join order calculated for inner tables of this semijoin op. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_a5a5be2d028c3bc10f2053b5d64fdc037}\label{structSemijoin__mat__optimize_a5a5be2d028c3bc10f2053b5d64fdc037}} 
+bool \mbox{\hyperlink{structSemijoin__mat__optimize_a5a5be2d028c3bc10f2053b5d64fdc037}{lookup\+\_\+allowed}}
+\begin{DoxyCompactList}\small\item\em True if data types allow the Materialize\+Lookup semijoin strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_a00ed7608a42f44e46c66118a9a325699}\label{structSemijoin__mat__optimize_a00ed7608a42f44e46c66118a9a325699}} 
+bool \mbox{\hyperlink{structSemijoin__mat__optimize_a00ed7608a42f44e46c66118a9a325699}{scan\+\_\+allowed}}
+\begin{DoxyCompactList}\small\item\em True if data types allow the Materialize\+Scan semijoin strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_a933e3977fcf5bf765573cff3740743c8}\label{structSemijoin__mat__optimize_a933e3977fcf5bf765573cff3740743c8}} 
+double \mbox{\hyperlink{structSemijoin__mat__optimize_a933e3977fcf5bf765573cff3740743c8}{expected\+\_\+rowcount}}
+\begin{DoxyCompactList}\small\item\em Expected \#rows in the materialized table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_aa9c3f89722ff096a12dd4e203e514c78}\label{structSemijoin__mat__optimize_aa9c3f89722ff096a12dd4e203e514c78}} 
+\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \mbox{\hyperlink{structSemijoin__mat__optimize_aa9c3f89722ff096a12dd4e203e514c78}{materialization\+\_\+cost}}
+\begin{DoxyCompactList}\small\item\em Materialization cost -\/ execute sub-\/join and write rows to temp.\+table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_ab0884cb4a9503fadf397370b031c21b2}\label{structSemijoin__mat__optimize_ab0884cb4a9503fadf397370b031c21b2}} 
+\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \mbox{\hyperlink{structSemijoin__mat__optimize_ab0884cb4a9503fadf397370b031c21b2}{lookup\+\_\+cost}}
+\begin{DoxyCompactList}\small\item\em Cost to make one lookup in the temptable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_ac12a0028b62abbb8fb77371a5a8d9cf7}\label{structSemijoin__mat__optimize_ac12a0028b62abbb8fb77371a5a8d9cf7}} 
+\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \mbox{\hyperlink{structSemijoin__mat__optimize_ac12a0028b62abbb8fb77371a5a8d9cf7}{scan\+\_\+cost}}
+\begin{DoxyCompactList}\small\item\em Cost of scanning the materialized table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structSemijoin__mat__optimize_af0527a7114db374cb66b121b081e3df3}\label{structSemijoin__mat__optimize_af0527a7114db374cb66b121b081e3df3}} 
+\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$$\ast$ \mbox{\hyperlink{structSemijoin__mat__optimize_af0527a7114db374cb66b121b081e3df3}{mat\+\_\+fields}}
+\begin{DoxyCompactList}\small\item\em Array of pointers to fields in the materialized table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{structSemijoin__mat__optimize}{Semijoin\+\_\+mat\+\_\+optimize}} collects data used when calculating the cost of executing a semijoin operation using a materialization strategy. It is used during optimization phase only. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\end{DoxyCompactItemize}

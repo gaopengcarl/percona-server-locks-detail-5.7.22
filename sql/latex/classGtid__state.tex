@@ -1,0 +1,658 @@
+\hypertarget{classGtid__state}{}\section{Gtid\+\_\+state Class Reference}
+\label{classGtid__state}\index{Gtid\+\_\+state@{Gtid\+\_\+state}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGtid__state_a4e93b5ffa97a101e51aa722cf5f56ef3}{Gtid\+\_\+state}} (\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$\+\_\+sid\+\_\+lock, \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$\+\_\+sid\+\_\+map)
+\item 
+int \mbox{\hyperlink{classGtid__state_a05bbafc9331c90395789157153fd3601}{init}} ()
+\item 
+int \mbox{\hyperlink{classGtid__state_ad923504d43e3b912ab1aaad9bb65a8b7}{clear}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classGtid__state_aa85f3475832c5bab63b37c8f7fd65300}{is\+\_\+executed}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid) const
+\item 
+bool \mbox{\hyperlink{classGtid__state_aa4a0e22e395f095aad358b1db91e170a}{is\+\_\+owned}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid) const
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__state_a3bedc53a5eed5898822ede2a9d5214d6}{acquire\+\_\+ownership}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid)
+\item 
+void \mbox{\hyperlink{classGtid__state_a9fa3ed5a9b5fc7d0a4ad5492b657b790}{update\+\_\+commit\+\_\+group}} (T\+HD $\ast$first\+\_\+thd)
+\item 
+void \mbox{\hyperlink{classGtid__state_adc4c103d1209489a7b7e0d179d654faf}{update\+\_\+on\+\_\+commit}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classGtid__state_a82dacb8e665689ad80e4541cea325897}{update\+\_\+on\+\_\+rollback}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classGtid__state_a7e259736e00e4fa5835ec9cdd34dc0ba}{acquire\+\_\+anonymous\+\_\+ownership}} ()
+\item 
+\mbox{\Hypertarget{classGtid__state_aedf31ed3dbdbab7cf4ce39de1ca51bee}\label{classGtid__state_aedf31ed3dbdbab7cf4ce39de1ca51bee}} 
+void \mbox{\hyperlink{classGtid__state_aedf31ed3dbdbab7cf4ce39de1ca51bee}{release\+\_\+anonymous\+\_\+ownership}} ()
+\begin{DoxyCompactList}\small\item\em Release anonymous ownership. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_ae1612d90e7c0a0f6fec94b9a05e12fbf}\label{classGtid__state_ae1612d90e7c0a0f6fec94b9a05e12fbf}} 
+int32 \mbox{\hyperlink{classGtid__state_ae1612d90e7c0a0f6fec94b9a05e12fbf}{get\+\_\+anonymous\+\_\+ownership\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Return the number of clients that hold anonymous ownership. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGtid__state_abda6d7defb7e4a1477c7a33ce8ee1263}{begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction}} ()
+\item 
+void \mbox{\hyperlink{classGtid__state_a138d09ad92a3df53b57f065b6535d7a0}{end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction}} ()
+\item 
+int32 \mbox{\hyperlink{classGtid__state_a954b493111b1b2a7ad049db64eefe050}{get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count}} ()
+\item 
+void \mbox{\hyperlink{classGtid__state_a315fbccbb1afe3414b5ef732027d2af6}{begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction}} ()
+\item 
+void \mbox{\hyperlink{classGtid__state_ad56fbf5a2c062a5b2db3eab4444c2f2f}{end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction}} ()
+\item 
+\mbox{\Hypertarget{classGtid__state_ab9e16543dafff485d212b494adb5dffb}\label{classGtid__state_ab9e16543dafff485d212b494adb5dffb}} 
+void {\bfseries end\+\_\+gtid\+\_\+violating\+\_\+transaction} (T\+HD $\ast$thd)
+\item 
+int32 \mbox{\hyperlink{classGtid__state_a77271375b558d3f23317b10752fec8bd}{get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count}} ()
+\item 
+void \mbox{\hyperlink{classGtid__state_ab955f90f6b725047427f721154020ea5}{begin\+\_\+gtid\+\_\+wait}} (enum\+\_\+gtid\+\_\+mode\+\_\+lock gtid\+\_\+mode\+\_\+lock)
+\item 
+void \mbox{\hyperlink{classGtid__state_a4b849b9b07629619b77882ddb5fde5ac}{end\+\_\+gtid\+\_\+wait}} ()
+\item 
+int32 \mbox{\hyperlink{classGtid__state_a59586299cdb464b0378338eba646fb9c}{get\+\_\+gtid\+\_\+wait\+\_\+count}} ()
+\item 
+rpl\+\_\+gno \mbox{\hyperlink{classGtid__state_ad58b3ccada19a67f2b8b5f690d08a309}{get\+\_\+last\+\_\+executed\+\_\+gno}} (rpl\+\_\+sidno sidno) const
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__state_abdb617d2a570ff813a950b3aceefb22e}{generate\+\_\+automatic\+\_\+gtid}} (T\+HD $\ast$thd, rpl\+\_\+sidno specified\+\_\+sidno=0, rpl\+\_\+gno specified\+\_\+gno=0, rpl\+\_\+sidno $\ast$locked\+\_\+sidno=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classGtid__state_ac3d84b821f0021c098306971c6cc75a6}\label{classGtid__state_ac3d84b821f0021c098306971c6cc75a6}} 
+void \mbox{\hyperlink{classGtid__state_ac3d84b821f0021c098306971c6cc75a6}{lock\+\_\+sidno}} (rpl\+\_\+sidno sidno)
+\begin{DoxyCompactList}\small\item\em Locks a mutex for the given S\+I\+D\+NO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_aa28f4660564a239c4e538b86dce1f832}\label{classGtid__state_aa28f4660564a239c4e538b86dce1f832}} 
+void \mbox{\hyperlink{classGtid__state_aa28f4660564a239c4e538b86dce1f832}{unlock\+\_\+sidno}} (rpl\+\_\+sidno sidno)
+\begin{DoxyCompactList}\small\item\em Unlocks a mutex for the given S\+I\+D\+NO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_ae8e2deb3fdc80fcb1931bc422f8382ad}\label{classGtid__state_ae8e2deb3fdc80fcb1931bc422f8382ad}} 
+void \mbox{\hyperlink{classGtid__state_ae8e2deb3fdc80fcb1931bc422f8382ad}{broadcast\+\_\+sidno}} (rpl\+\_\+sidno sidno)
+\begin{DoxyCompactList}\small\item\em Broadcasts updates for the given S\+I\+D\+NO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_a9a3acb3b64327c2a5ce389a04a8ba026}\label{classGtid__state_a9a3acb3b64327c2a5ce389a04a8ba026}} 
+void \mbox{\hyperlink{classGtid__state_a9a3acb3b64327c2a5ce389a04a8ba026}{assert\+\_\+sidno\+\_\+lock\+\_\+owner}} (rpl\+\_\+sidno sidno)
+\begin{DoxyCompactList}\small\item\em Assert that we own the given S\+I\+D\+NO. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGtid__state_aa05b5e777f238bb2b73e4b6af4666041}{wait\+\_\+for\+\_\+sidno}} (T\+HD $\ast$thd, rpl\+\_\+sidno sidno, struct timespec $\ast$abstime)
+\item 
+bool \mbox{\hyperlink{classGtid__state_ae54492cf7e8c0f562de64abac2721a37}{wait\+\_\+for\+\_\+gtid}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid, struct timespec $\ast$abstime=N\+U\+LL)
+\item 
+bool \mbox{\hyperlink{classGtid__state_ac99ab163cd352da46f80df24f8589bd4}{wait\+\_\+for\+\_\+gtid\+\_\+set}} (T\+HD $\ast$thd, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set, double timeout)
+\item 
+void \mbox{\hyperlink{classGtid__state_a774c7aef129010303e01c1be2b588814}{lock\+\_\+sidnos}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$set)
+\item 
+void \mbox{\hyperlink{classGtid__state_a1df515758938a44f381c98813130cb94}{unlock\+\_\+sidnos}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$set)
+\item 
+void \mbox{\hyperlink{classGtid__state_acf75c15c777ea5fc24e6bb6c3874974e}{broadcast\+\_\+sidnos}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$set)
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__state_a2c05e7cfec3de4245fbbb515ad253630}{ensure\+\_\+sidno}} ()
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__state_abd5725a5688d62679a43c837d6bad8fb}{add\+\_\+lost\+\_\+gtids}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+\mbox{\Hypertarget{classGtid__state_a15e9415e3475938795b264b39e067765}\label{classGtid__state_a15e9415e3475938795b264b39e067765}} 
+const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ \mbox{\hyperlink{classGtid__state_a15e9415e3475938795b264b39e067765}{get\+\_\+lost\+\_\+gtids}} () const
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} that contains the lost groups. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_abe87f89a8f7034cc51af9ea19a8f3efb}\label{classGtid__state_abe87f89a8f7034cc51af9ea19a8f3efb}} 
+const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ {\bfseries get\+\_\+executed\+\_\+gtids} () const
+\item 
+\mbox{\Hypertarget{classGtid__state_ac09ed411b9de30e97c099ef09e60a7ee}\label{classGtid__state_ac09ed411b9de30e97c099ef09e60a7ee}} 
+const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ {\bfseries get\+\_\+gtids\+\_\+only\+\_\+in\+\_\+table} () const
+\item 
+\mbox{\Hypertarget{classGtid__state_a08b781dbfe578099fc96958f14a39041}\label{classGtid__state_a08b781dbfe578099fc96958f14a39041}} 
+const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ {\bfseries get\+\_\+previous\+\_\+gtids\+\_\+logged} () const
+\item 
+\mbox{\Hypertarget{classGtid__state_add0fc358faed4567b7b4f6c71d0f7b5d}\label{classGtid__state_add0fc358faed4567b7b4f6c71d0f7b5d}} 
+const \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} $\ast$ \mbox{\hyperlink{classGtid__state_add0fc358faed4567b7b4f6c71d0f7b5d}{get\+\_\+owned\+\_\+gtids}} () const
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} that contains the owned groups. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_a56f262cfcb2e7cad774b61db9ecccde1}\label{classGtid__state_a56f262cfcb2e7cad774b61db9ecccde1}} 
+rpl\+\_\+sidno \mbox{\hyperlink{classGtid__state_a56f262cfcb2e7cad774b61db9ecccde1}{get\+\_\+server\+\_\+sidno}} () const
+\begin{DoxyCompactList}\small\item\em Return the server\textquotesingle{}s S\+ID\textquotesingle{}s S\+I\+D\+NO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_a0e47d659119962deb56ee07632ed6634}\label{classGtid__state_a0e47d659119962deb56ee07632ed6634}} 
+const rpl\+\_\+sid \& \mbox{\hyperlink{classGtid__state_a0e47d659119962deb56ee07632ed6634}{get\+\_\+server\+\_\+sid}} () const
+\begin{DoxyCompactList}\small\item\em Return the server\textquotesingle{}s S\+ID. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classGtid__state_ad19fcbc6a9a1f112c4452d170ac28e05}{get\+\_\+max\+\_\+string\+\_\+length}} () const
+\item 
+\mbox{\Hypertarget{classGtid__state_aa80c0cb53ce52933aa88ffcfb7601a0b}\label{classGtid__state_aa80c0cb53ce52933aa88ffcfb7601a0b}} 
+int \mbox{\hyperlink{classGtid__state_aa80c0cb53ce52933aa88ffcfb7601a0b}{to\+\_\+string}} (char $\ast$buf) const
+\begin{DoxyCompactList}\small\item\em Debug only\+: Generate a string in the given buffer and return the length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_a153260b2d824f4253a176f3a0504de1d}\label{classGtid__state_a153260b2d824f4253a176f3a0504de1d}} 
+char $\ast$ \mbox{\hyperlink{classGtid__state_a153260b2d824f4253a176f3a0504de1d}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Debug only\+: return a newly allocated string, or N\+U\+LL on out-\/of-\/memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__state_a2735f6ca673acb5c382acb3bf1fef6ef}\label{classGtid__state_a2735f6ca673acb5c382acb3bf1fef6ef}} 
+void \mbox{\hyperlink{classGtid__state_a2735f6ca673acb5c382acb3bf1fef6ef}{print}} () const
+\begin{DoxyCompactList}\small\item\em Debug only\+: print this \mbox{\hyperlink{classGtid__state}{Gtid\+\_\+state}} to stdout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGtid__state_a9c3eee2f214aabcf44b769f69c50c0eb}{dbug\+\_\+print}} (const char $\ast$text=\char`\"{}\char`\"{}) const
+\item 
+int \mbox{\hyperlink{classGtid__state_ae74cd18a8d4033037b733d8ed586b01a}{save}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classGtid__state_ab2f5c2e657b33be09503d912a30092e9}{save}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+int \mbox{\hyperlink{classGtid__state_a8716c3a617dc4805a1d08ee7e77f3abb}{save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table}} (bool on\+\_\+rotation)
+\item 
+int \mbox{\hyperlink{classGtid__state_a66fe208121f5e1de1f180f10558d8fec}{read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table}} ()
+\item 
+int \mbox{\hyperlink{classGtid__state_a731a0566657e636fb597085ca0ec87a4}{compress}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the state of the group log\+: the set of logged groups, the set of lost groups, the set of owned groups, the owner of each owned group, and a \mbox{\hyperlink{classMutex__cond__array}{Mutex\+\_\+cond\+\_\+array}} that protects updates to groups of each S\+I\+D\+NO.
+
+Locking\+:
+
+This data structure has a read-\/write lock that protects the number of S\+I\+D\+N\+Os, and a \mbox{\hyperlink{classMutex__cond__array}{Mutex\+\_\+cond\+\_\+array}} that contains one mutex per S\+I\+D\+NO. The rwlock is always the global\+\_\+sid\+\_\+lock.
+
+Access methods generally assert that the caller already holds the appropriate lock\+:
+
+
+\begin{DoxyItemize}
+\item before accessing any global data, hold at least the rdlock.
+\item before accessing a specific S\+I\+D\+NO in a \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} or \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} (e.\+g., calling Gtid\+\_\+set\+::\+\_\+add\+\_\+gtid(\+Gtid)), hold either the rdlock and the S\+I\+D\+NO\textquotesingle{}s mutex lock; or the wrlock. If you need to hold multiple mutexes, they must be acquired in order of increasing S\+I\+D\+NO.
+\item before starting an operation that needs to access all S\+I\+Ds (e.\+g. \mbox{\hyperlink{classGtid__set_a256a8c891ab89b5388bdae4df8798d9b}{Gtid\+\_\+set\+::to\+\_\+string()}}), hold the wrlock.
+\end{DoxyItemize}
+
+The access type (read/write) does not matter; the write lock only implies that the entire data structure is locked whereas the read lock implies that everything except S\+ID-\/specific data is locked. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGtid__state_a4e93b5ffa97a101e51aa722cf5f56ef3}\label{classGtid__state_a4e93b5ffa97a101e51aa722cf5f56ef3}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{Gtid\+\_\+state()}{Gtid\_state()}}
+{\footnotesize\ttfamily Gtid\+\_\+state\+::\+Gtid\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$}]{\+\_\+sid\+\_\+lock,  }\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{\+\_\+sid\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a new \mbox{\hyperlink{classGtid__state}{Gtid\+\_\+state}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGtid__state_a7e259736e00e4fa5835ec9cdd34dc0ba}\label{classGtid__state_a7e259736e00e4fa5835ec9cdd34dc0ba}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!acquire\+\_\+anonymous\+\_\+ownership@{acquire\+\_\+anonymous\+\_\+ownership}}
+\index{acquire\+\_\+anonymous\+\_\+ownership@{acquire\+\_\+anonymous\+\_\+ownership}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{acquire\+\_\+anonymous\+\_\+ownership()}{acquire\_anonymous\_ownership()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::acquire\+\_\+anonymous\+\_\+ownership (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Acquire anonymous ownership.
+
+The caller must hold either sid\+\_\+lock.\+rdlock or sid\+\_\+lock.\+wrlock. (The caller must have taken the lock and checked that gtid\+\_\+mode!=ON before calling this function, or else the gtid\+\_\+mode could have changed to ON by a concurrent S\+ET G\+T\+I\+D\+\_\+\+M\+O\+DE.) \mbox{\Hypertarget{classGtid__state_a3bedc53a5eed5898822ede2a9d5214d6}\label{classGtid__state_a3bedc53a5eed5898822ede2a9d5214d6}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!acquire\+\_\+ownership@{acquire\+\_\+ownership}}
+\index{acquire\+\_\+ownership@{acquire\+\_\+ownership}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{acquire\+\_\+ownership()}{acquire\_ownership()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+state\+::acquire\+\_\+ownership (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid }\end{DoxyParamCaption})}
+
+Acquires ownership of the given G\+T\+ID, on behalf of the given thread.
+
+The caller must lock the S\+I\+D\+NO before invoking this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread that will own the G\+T\+ID. \\
+\hline
+{\em gtid} & The \mbox{\hyperlink{structGtid}{Gtid}} to acquire ownership of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__state_abd5725a5688d62679a43c837d6bad8fb}\label{classGtid__state_abd5725a5688d62679a43c837d6bad8fb}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!add\+\_\+lost\+\_\+gtids@{add\+\_\+lost\+\_\+gtids}}
+\index{add\+\_\+lost\+\_\+gtids@{add\+\_\+lost\+\_\+gtids}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{add\+\_\+lost\+\_\+gtids()}{add\_lost\_gtids()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+state\+::add\+\_\+lost\+\_\+gtids (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set }\end{DoxyParamCaption})}
+
+Adds the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to lost\+\_\+gtids and executed\+\_\+gtids. lost\+\_\+gtids must be a subset of executed\+\_\+gtids.
+
+Requires that the caller holds global\+\_\+sid\+\_\+lock.\+wrlock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid\+\_\+set} & The \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__state_a315fbccbb1afe3414b5ef732027d2af6}\label{classGtid__state_a315fbccbb1afe3414b5ef732027d2af6}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction@{begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction}}
+\index{begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction@{begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction()}{begin\_anonymous\_gtid\_violating\_transaction()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::begin\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increase the global counter when starting a G\+T\+ID-\/violating transaction having G\+T\+I\+D\+\_\+\+N\+E\+XT=A\+N\+O\+N\+Y\+M\+O\+US. \mbox{\Hypertarget{classGtid__state_abda6d7defb7e4a1477c7a33ce8ee1263}\label{classGtid__state_abda6d7defb7e4a1477c7a33ce8ee1263}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction@{begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction}}
+\index{begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction@{begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction()}{begin\_automatic\_gtid\_violating\_transaction()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::begin\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increase the global counter when starting a G\+T\+ID-\/violating transaction having G\+T\+I\+D\+\_\+\+N\+E\+XT=A\+U\+T\+O\+M\+A\+T\+IC. \mbox{\Hypertarget{classGtid__state_ab955f90f6b725047427f721154020ea5}\label{classGtid__state_ab955f90f6b725047427f721154020ea5}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!begin\+\_\+gtid\+\_\+wait@{begin\+\_\+gtid\+\_\+wait}}
+\index{begin\+\_\+gtid\+\_\+wait@{begin\+\_\+gtid\+\_\+wait}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{begin\+\_\+gtid\+\_\+wait()}{begin\_gtid\_wait()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::begin\+\_\+gtid\+\_\+wait (\begin{DoxyParamCaption}\item[{enum\+\_\+gtid\+\_\+mode\+\_\+lock}]{gtid\+\_\+mode\+\_\+lock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increase the global counter when starting a call to W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+E\+X\+E\+C\+U\+T\+E\+D\+\_\+\+G\+T\+I\+D\+\_\+\+S\+ET or W\+A\+I\+T\+\_\+\+U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+F\+T\+E\+R\+\_\+\+G\+T\+I\+DS. \mbox{\Hypertarget{classGtid__state_acf75c15c777ea5fc24e6bb6c3874974e}\label{classGtid__state_acf75c15c777ea5fc24e6bb6c3874974e}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!broadcast\+\_\+sidnos@{broadcast\+\_\+sidnos}}
+\index{broadcast\+\_\+sidnos@{broadcast\+\_\+sidnos}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{broadcast\+\_\+sidnos()}{broadcast\_sidnos()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::broadcast\+\_\+sidnos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+Broadcasts the condition variable for each S\+I\+D\+NO where the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} has at least one G\+T\+ID. \mbox{\Hypertarget{classGtid__state_ad923504d43e3b912ab1aaad9bb65a8b7}\label{classGtid__state_ad923504d43e3b912ab1aaad9bb65a8b7}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!clear@{clear}}
+\index{clear@{clear}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::clear (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Reset the state and persistor after R\+E\+S\+ET M\+A\+S\+T\+ER\+: remove all logged and lost groups, but keep owned groups as they are.
+
+The caller must hold the write lock on sid\+\_\+lock before calling this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to reset the persistor\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_a731a0566657e636fb597085ca0ec87a4}\label{classGtid__state_a731a0566657e636fb597085ca0ec87a4}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!compress@{compress}}
+\index{compress@{compress}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::compress (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Compress the gtid\+\_\+executed table, read each row by the P\+K(sid, gno\+\_\+start) in increasing order, compress the first consecutive gtids range (delete consecutive gtids from the second consecutive gtid, then update the first gtid) within a single transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to compress the table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & The table was not found. \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_a9c3eee2f214aabcf44b769f69c50c0eb}\label{classGtid__state_a9c3eee2f214aabcf44b769f69c50c0eb}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!dbug\+\_\+print@{dbug\+\_\+print}}
+\index{dbug\+\_\+print@{dbug\+\_\+print}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{dbug\+\_\+print()}{dbug\_print()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::dbug\+\_\+print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Print this \mbox{\hyperlink{classGtid__state}{Gtid\+\_\+state}} to the trace file if debug is enabled; no-\/op otherwise. \mbox{\Hypertarget{classGtid__state_ad56fbf5a2c062a5b2db3eab4444c2f2f}\label{classGtid__state_ad56fbf5a2c062a5b2db3eab4444c2f2f}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction@{end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction}}
+\index{end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction@{end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction()}{end\_anonymous\_gtid\_violating\_transaction()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::end\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Decrease the global counter when ending a G\+T\+ID-\/violating transaction having G\+T\+I\+D\+\_\+\+N\+E\+XT=A\+N\+O\+N\+Y\+M\+O\+US. \mbox{\Hypertarget{classGtid__state_a138d09ad92a3df53b57f065b6535d7a0}\label{classGtid__state_a138d09ad92a3df53b57f065b6535d7a0}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction@{end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction}}
+\index{end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction@{end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction()}{end\_automatic\_gtid\_violating\_transaction()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::end\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Decrease the global counter when ending a G\+T\+ID-\/violating transaction having G\+T\+I\+D\+\_\+\+N\+E\+XT=A\+U\+T\+O\+M\+A\+T\+IC. \mbox{\Hypertarget{classGtid__state_a4b849b9b07629619b77882ddb5fde5ac}\label{classGtid__state_a4b849b9b07629619b77882ddb5fde5ac}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!end\+\_\+gtid\+\_\+wait@{end\+\_\+gtid\+\_\+wait}}
+\index{end\+\_\+gtid\+\_\+wait@{end\+\_\+gtid\+\_\+wait}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{end\+\_\+gtid\+\_\+wait()}{end\_gtid\_wait()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::end\+\_\+gtid\+\_\+wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Decrease the global counter when ending a call to W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+E\+X\+E\+C\+U\+T\+E\+D\+\_\+\+G\+T\+I\+D\+\_\+\+S\+ET or W\+A\+I\+T\+\_\+\+U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+F\+T\+E\+R\+\_\+\+G\+T\+I\+DS. \mbox{\Hypertarget{classGtid__state_a2c05e7cfec3de4245fbbb515ad253630}\label{classGtid__state_a2c05e7cfec3de4245fbbb515ad253630}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!ensure\+\_\+sidno@{ensure\+\_\+sidno}}
+\index{ensure\+\_\+sidno@{ensure\+\_\+sidno}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{ensure\+\_\+sidno()}{ensure\_sidno()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+state\+::ensure\+\_\+sidno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ensure that owned\+\_\+gtids, executed\+\_\+gtids, lost\+\_\+gtids, gtids\+\_\+only\+\_\+in\+\_\+table, previous\+\_\+gtids\+\_\+logged and sid\+\_\+locks have room for at least as many S\+I\+D\+N\+Os as sid\+\_\+map.
+
+This function must only be called in one place\+: \mbox{\hyperlink{classSid__map_a23aa9c0f385a44772e9e5c3955cca0cf}{Sid\+\_\+map\+::add\+\_\+sid()}}.
+
+Requires that the write lock on sid\+\_\+locks is held. If any object needs to be resized, then the lock will be temporarily upgraded to a write lock and then degraded to a read lock again; there will be a short period when the lock is not held at all.
+
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__state_abdb617d2a570ff813a950b3aceefb22e}\label{classGtid__state_abdb617d2a570ff813a950b3aceefb22e}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!generate\+\_\+automatic\+\_\+gtid@{generate\+\_\+automatic\+\_\+gtid}}
+\index{generate\+\_\+automatic\+\_\+gtid@{generate\+\_\+automatic\+\_\+gtid}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{generate\+\_\+automatic\+\_\+gtid()}{generate\_automatic\_gtid()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+state\+::generate\+\_\+automatic\+\_\+gtid (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{rpl\+\_\+sidno}]{specified\+\_\+sidno = {\ttfamily 0},  }\item[{rpl\+\_\+gno}]{specified\+\_\+gno = {\ttfamily 0},  }\item[{rpl\+\_\+sidno $\ast$}]{locked\+\_\+sidno = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Generates the G\+T\+ID (or A\+N\+O\+N\+Y\+M\+O\+US, if G\+T\+I\+D\+\_\+\+M\+O\+DE = O\+FF or O\+F\+F\+\_\+\+P\+E\+R\+M\+I\+S\+S\+I\+VE) for the T\+HD, and acquires ownership.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em T\+HD} & The thread. \\
+\hline
+ & {\em specified\+\_\+sidno} & Externaly generated sidno. \\
+\hline
+ & {\em specified\+\_\+gno} & Externaly generated gno. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em locked\+\_\+sidno} & This parameter should be used when there is a need of generating many G\+T\+I\+Ds without having to acquire/release a sidno\+\_\+lock many times. The caller must hold global\+\_\+sid\+\_\+lock and unlock the locked\+\_\+sidno after invocation when locked\+\_\+sidno $>$ 0 if locked\+\_\+sidno!=N\+U\+LL. The caller must not hold global\+\_\+sid\+\_\+lock when locked\+\_\+sidno==N\+U\+LL. See comments on function code to more details.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR. Error can happen in case of out of memory or if the range of G\+N\+Os was exhausted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__state_a77271375b558d3f23317b10752fec8bd}\label{classGtid__state_a77271375b558d3f23317b10752fec8bd}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count@{get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count}}
+\index{get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count@{get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count()}{get\_anonymous\_gtid\_violating\_transaction\_count()}}
+{\footnotesize\ttfamily int32 Gtid\+\_\+state\+::get\+\_\+anonymous\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of ongoing G\+T\+ID-\/violating transactions having G\+T\+I\+D\+\_\+\+N\+E\+XT=A\+U\+T\+O\+M\+A\+T\+IC. \mbox{\Hypertarget{classGtid__state_a954b493111b1b2a7ad049db64eefe050}\label{classGtid__state_a954b493111b1b2a7ad049db64eefe050}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count@{get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count}}
+\index{get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count@{get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count()}{get\_automatic\_gtid\_violating\_transaction\_count()}}
+{\footnotesize\ttfamily int32 Gtid\+\_\+state\+::get\+\_\+automatic\+\_\+gtid\+\_\+violating\+\_\+transaction\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of ongoing G\+T\+ID-\/violating transactions having G\+T\+I\+D\+\_\+\+N\+E\+XT=A\+U\+T\+O\+M\+A\+T\+IC. \mbox{\Hypertarget{classGtid__state_a59586299cdb464b0378338eba646fb9c}\label{classGtid__state_a59586299cdb464b0378338eba646fb9c}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!get\+\_\+gtid\+\_\+wait\+\_\+count@{get\+\_\+gtid\+\_\+wait\+\_\+count}}
+\index{get\+\_\+gtid\+\_\+wait\+\_\+count@{get\+\_\+gtid\+\_\+wait\+\_\+count}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{get\+\_\+gtid\+\_\+wait\+\_\+count()}{get\_gtid\_wait\_count()}}
+{\footnotesize\ttfamily int32 Gtid\+\_\+state\+::get\+\_\+gtid\+\_\+wait\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of clients that have an ongoing call to W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+E\+X\+E\+C\+U\+T\+E\+D\+\_\+\+G\+T\+I\+D\+\_\+\+S\+ET or W\+A\+I\+T\+\_\+\+U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+F\+T\+E\+R\+\_\+\+G\+T\+I\+DS. \mbox{\Hypertarget{classGtid__state_ad58b3ccada19a67f2b8b5f690d08a309}\label{classGtid__state_ad58b3ccada19a67f2b8b5f690d08a309}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!get\+\_\+last\+\_\+executed\+\_\+gno@{get\+\_\+last\+\_\+executed\+\_\+gno}}
+\index{get\+\_\+last\+\_\+executed\+\_\+gno@{get\+\_\+last\+\_\+executed\+\_\+gno}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+executed\+\_\+gno()}{get\_last\_executed\_gno()}}
+{\footnotesize\ttfamily rpl\+\_\+gno Gtid\+\_\+state\+::get\+\_\+last\+\_\+executed\+\_\+gno (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno }\end{DoxyParamCaption}) const}
+
+Return the last executed G\+NO for a given S\+I\+D\+NO, e.\+g. for the following set\+: U\+U\+ID\+:1-\/10, U\+U\+ID\+:12, U\+U\+ID\+:15-\/20 20 will be returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & The group\textquotesingle{}s S\+I\+D\+NO.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & G\+NO or 0 if set is empty. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_ad19fcbc6a9a1f112c4452d170ac28e05}\label{classGtid__state_ad19fcbc6a9a1f112c4452d170ac28e05}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!get\+\_\+max\+\_\+string\+\_\+length@{get\+\_\+max\+\_\+string\+\_\+length}}
+\index{get\+\_\+max\+\_\+string\+\_\+length@{get\+\_\+max\+\_\+string\+\_\+length}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+string\+\_\+length()}{get\_max\_string\_length()}}
+{\footnotesize\ttfamily size\+\_\+t Gtid\+\_\+state\+::get\+\_\+max\+\_\+string\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Debug only\+: Returns an upper bound on the length of the string generated by \mbox{\hyperlink{classGtid__state_aa80c0cb53ce52933aa88ffcfb7601a0b}{to\+\_\+string()}}, not counting \textquotesingle{}\textbackslash{}0\textquotesingle{}. The actual length may be shorter. \mbox{\Hypertarget{classGtid__state_a05bbafc9331c90395789157153fd3601}\label{classGtid__state_a05bbafc9331c90395789157153fd3601}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!init@{init}}
+\index{init@{init}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Add @G\+L\+O\+B\+A\+L.\+S\+E\+R\+V\+E\+R\+\_\+\+U\+U\+ID to this binlog\textquotesingle{}s \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}}.
+
+This can\textquotesingle{}t be done in the constructor because the constructor is invoked at server startup before S\+E\+R\+V\+E\+R\+\_\+\+U\+U\+ID is initialized.
+
+The caller must hold the read lock or write lock on sid\+\_\+locks before invoking this function.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em 1} & Error (out of memory or IO error). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_aa85f3475832c5bab63b37c8f7fd65300}\label{classGtid__state_aa85f3475832c5bab63b37c8f7fd65300}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!is\+\_\+executed@{is\+\_\+executed}}
+\index{is\+\_\+executed@{is\+\_\+executed}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{is\+\_\+executed()}{is\_executed()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+state\+::is\+\_\+executed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the given G\+T\+ID is logged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid} & The \mbox{\hyperlink{structGtid}{Gtid}} to check.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & The group is logged in the binary log. \\
+\hline
+{\em false} & The group is not logged in the binary log. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_aa4a0e22e395f095aad358b1db91e170a}\label{classGtid__state_aa4a0e22e395f095aad358b1db91e170a}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!is\+\_\+owned@{is\+\_\+owned}}
+\index{is\+\_\+owned@{is\+\_\+owned}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{is\+\_\+owned()}{is\_owned()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+state\+::is\+\_\+owned (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if G\+T\+ID is owned, otherwise returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid} & The \mbox{\hyperlink{structGtid}{Gtid}} to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if some thread owns the group, false if the group is not owned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__state_a774c7aef129010303e01c1be2b588814}\label{classGtid__state_a774c7aef129010303e01c1be2b588814}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!lock\+\_\+sidnos@{lock\+\_\+sidnos}}
+\index{lock\+\_\+sidnos@{lock\+\_\+sidnos}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{lock\+\_\+sidnos()}{lock\_sidnos()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::lock\+\_\+sidnos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+Locks one mutex for each S\+I\+D\+NO where the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} has at least one G\+T\+ID. Locks are acquired in order of increasing S\+I\+D\+NO. \mbox{\Hypertarget{classGtid__state_a66fe208121f5e1de1f180f10558d8fec}\label{classGtid__state_a66fe208121f5e1de1f180f10558d8fec}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table@{read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table}}
+\index{read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table@{read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table()}{read\_gtid\_executed\_from\_table()}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::read\+\_\+gtid\+\_\+executed\+\_\+from\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch gtids from gtid\+\_\+executed table and store them into gtid\+\_\+executed set.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & The table was not found. \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_ae74cd18a8d4033037b733d8ed586b01a}\label{classGtid__state_ae74cd18a8d4033037b733d8ed586b01a}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!save@{save}}
+\index{save@{save}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::save (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Save gtid owned by the thd into executed\+\_\+gtids variable and gtid\+\_\+executed table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to commit \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_ab2f5c2e657b33be09503d912a30092e9}\label{classGtid__state_ab2f5c2e657b33be09503d912a30092e9}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!save@{save}}
+\index{save@{save}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::save (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set }\end{DoxyParamCaption})}
+
+Insert the gtid set into table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid\+\_\+set} & contains a set of gtid, which holds the sidno and the gno.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_a8716c3a617dc4805a1d08ee7e77f3abb}\label{classGtid__state_a8716c3a617dc4805a1d08ee7e77f3abb}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table@{save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table}}
+\index{save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table@{save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table()}{save\_gtids\_of\_last\_binlog\_into\_table()}}
+{\footnotesize\ttfamily int Gtid\+\_\+state\+::save\+\_\+gtids\+\_\+of\+\_\+last\+\_\+binlog\+\_\+into\+\_\+table (\begin{DoxyParamCaption}\item[{bool}]{on\+\_\+rotation }\end{DoxyParamCaption})}
+
+Save the set of gtids logged in the last binlog into gtid\+\_\+executed table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+\_\+rotation} & true if it is on binlog rotation.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_a1df515758938a44f381c98813130cb94}\label{classGtid__state_a1df515758938a44f381c98813130cb94}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!unlock\+\_\+sidnos@{unlock\+\_\+sidnos}}
+\index{unlock\+\_\+sidnos@{unlock\+\_\+sidnos}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{unlock\+\_\+sidnos()}{unlock\_sidnos()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::unlock\+\_\+sidnos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+Unlocks the mutex for each S\+I\+D\+NO where the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} has at least one G\+T\+ID. \mbox{\Hypertarget{classGtid__state_a9fa3ed5a9b5fc7d0a4ad5492b657b790}\label{classGtid__state_a9fa3ed5a9b5fc7d0a4ad5492b657b790}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!update\+\_\+commit\+\_\+group@{update\+\_\+commit\+\_\+group}}
+\index{update\+\_\+commit\+\_\+group@{update\+\_\+commit\+\_\+group}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{update\+\_\+commit\+\_\+group()}{update\_commit\_group()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::update\+\_\+commit\+\_\+group (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{first\+\_\+thd }\end{DoxyParamCaption})}
+
+This function updates both the T\+HD and the \mbox{\hyperlink{classGtid__state}{Gtid\+\_\+state}} to reflect that the transaction set of transactions has ended, and it does this for the whole commit group (by following the thd-\/$>$next\+\_\+to\+\_\+commit pointer).
+
+It will\+:
+
+
+\begin{DoxyItemize}
+\item Clean up the thread state when a thread owned G\+T\+I\+Ds is empty.
+\item Release ownership of all G\+T\+I\+Ds owned by the T\+H\+Ds. This removes the G\+T\+I\+Ds from \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} and clears the ownership status in the T\+H\+Ds object.
+\item Add the owned G\+T\+I\+Ds to executed\+\_\+gtids when the thread is committing.
+\item Decrease counters of G\+T\+ID-\/violating transactions.
+\item Send a broadcast on the condition variable for every sidno for which we released ownership.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+thd} & The first thread of the group commit that needs G\+T\+I\+Ds to be updated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__state_adc4c103d1209489a7b7e0d179d654faf}\label{classGtid__state_adc4c103d1209489a7b7e0d179d654faf}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!update\+\_\+on\+\_\+commit@{update\+\_\+on\+\_\+commit}}
+\index{update\+\_\+on\+\_\+commit@{update\+\_\+on\+\_\+commit}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{update\+\_\+on\+\_\+commit()}{update\_on\_commit()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::update\+\_\+on\+\_\+commit (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Remove the G\+T\+ID owned by thread from owned G\+T\+I\+Ds, stating that thd-\/$>$owned\+\_\+gtid was committed.
+
+This will\+:
+\begin{DoxyItemize}
+\item remove owned G\+T\+ID from owned\+\_\+gtids;
+\item remove all owned G\+T\+I\+DS from thd-\/$>$owned\+\_\+gtid and thd-\/$>$owned\+\_\+gtid\+\_\+set;
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread for which owned groups are updated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__state_a82dacb8e665689ad80e4541cea325897}\label{classGtid__state_a82dacb8e665689ad80e4541cea325897}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!update\+\_\+on\+\_\+rollback@{update\+\_\+on\+\_\+rollback}}
+\index{update\+\_\+on\+\_\+rollback@{update\+\_\+on\+\_\+rollback}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{update\+\_\+on\+\_\+rollback()}{update\_on\_rollback()}}
+{\footnotesize\ttfamily void Gtid\+\_\+state\+::update\+\_\+on\+\_\+rollback (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Update the state after the given thread has rollbacked.
+
+This will\+:
+\begin{DoxyItemize}
+\item release ownership of all G\+T\+I\+Ds owned by the T\+HD;
+\item remove owned G\+T\+ID from owned\+\_\+gtids;
+\item remove all owned G\+T\+I\+DS from thd-\/$>$owned\+\_\+gtid and thd-\/$>$owned\+\_\+gtid\+\_\+set;
+\item send a broadcast on the condition variable for every sidno for which we released ownership.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread for which owned groups are updated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__state_ae54492cf7e8c0f562de64abac2721a37}\label{classGtid__state_ae54492cf7e8c0f562de64abac2721a37}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!wait\+\_\+for\+\_\+gtid@{wait\+\_\+for\+\_\+gtid}}
+\index{wait\+\_\+for\+\_\+gtid@{wait\+\_\+for\+\_\+gtid}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+gtid()}{wait\_for\_gtid()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+state\+::wait\+\_\+for\+\_\+gtid (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid,  }\item[{struct timespec $\ast$}]{abstime = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+This is only a shorthand for wait\+\_\+for\+\_\+sidno, which contains additional debug printouts and assertions for the case when the caller waits for one specific G\+T\+ID. \mbox{\Hypertarget{classGtid__state_ac99ab163cd352da46f80df24f8589bd4}\label{classGtid__state_ac99ab163cd352da46f80df24f8589bd4}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!wait\+\_\+for\+\_\+gtid\+\_\+set@{wait\+\_\+for\+\_\+gtid\+\_\+set}}
+\index{wait\+\_\+for\+\_\+gtid\+\_\+set@{wait\+\_\+for\+\_\+gtid\+\_\+set}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+gtid\+\_\+set()}{wait\_for\_gtid\_set()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+state\+::wait\+\_\+for\+\_\+gtid\+\_\+set (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set,  }\item[{double}]{timeout }\end{DoxyParamCaption})}
+
+Wait until the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is included in @G\+L\+O\+B\+A\+L.\+G\+T\+I\+D\+\_\+\+E\+X\+E\+C\+U\+T\+ED.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & The calling thread. \\
+\hline
+ & {\em gtid\+\_\+set} & \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to wait for. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout} & The maximum number of milliseconds that the function should wait, or 0 to wait indefinitely.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure\+: either timeout or thread was killed. If thread was killed, the error has been generated. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__state_aa05b5e777f238bb2b73e4b6af4666041}\label{classGtid__state_aa05b5e777f238bb2b73e4b6af4666041}} 
+\index{Gtid\+\_\+state@{Gtid\+\_\+state}!wait\+\_\+for\+\_\+sidno@{wait\+\_\+for\+\_\+sidno}}
+\index{wait\+\_\+for\+\_\+sidno@{wait\+\_\+for\+\_\+sidno}!Gtid\+\_\+state@{Gtid\+\_\+state}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+sidno()}{wait\_for\_sidno()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+state\+::wait\+\_\+for\+\_\+sidno (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{rpl\+\_\+sidno}]{sidno,  }\item[{struct timespec $\ast$}]{abstime }\end{DoxyParamCaption})}
+
+Wait for a signal on the given S\+I\+D\+NO.
+
+N\+O\+TE\+: This releases a lock!
+
+This requires that the caller holds a read lock on sid\+\_\+lock. It will release the lock before waiting; neither global\+\_\+sid\+\_\+lock nor the mutex lock on S\+I\+D\+NO will not be held when this function returns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & T\+HD object of the caller. \\
+\hline
+ & {\em sidno} & Sidno to wait for. \\
+\hline
+\mbox{\texttt{ in}}  & {\em abstime} & The absolute point in time when the wait times out and stops, or N\+U\+LL to wait indefinitely.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure\+: either timeout or thread was killed. If thread was killed, the error has been generated. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\item 
+rpl\+\_\+gtid\+\_\+state.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,215 @@
+\hypertarget{classField__time__common}{}\section{Field\+\_\+time\+\_\+common Class Reference}
+\label{classField__time__common}\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for Field\+\_\+time\+\_\+common\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classField__time__common}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classField__time__common_a4dafe0dc9d97419ac274303c339bff04}{Field\+\_\+time\+\_\+common}} (uchar $\ast$ptr\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint8 dec\+\_\+arg)
+\item 
+\mbox{\hyperlink{classField__time__common_a892bfdd20ae6cc742a79914c12201695}{Field\+\_\+time\+\_\+common}} (bool maybe\+\_\+null\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint8 dec\+\_\+arg)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__time__common_a679289fc41b3c0f5bf4f20a31d0e67d3}{store\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint8 dec)
+\item 
+\mbox{\Hypertarget{classField__time__common_ae1ce0b39f440d13ccf0c9542dffe0aaa}\label{classField__time__common_ae1ce0b39f440d13ccf0c9542dffe0aaa}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$, String $\ast$)
+\item 
+bool \mbox{\hyperlink{classField__time__common_afc75d14f8d4b343aff26653839f08466}{get\+\_\+date}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+longlong \mbox{\hyperlink{classField__time__common_a78d985bb5c8a86a8860bff1315839c10}{val\+\_\+date\+\_\+temporal}} ()
+\item 
+\mbox{\Hypertarget{classField__time__common_abad8d0f8e8633479aee82d9c371bc286}\label{classField__time__common_abad8d0f8e8633479aee82d9c371bc286}} 
+bool {\bfseries send\+\_\+binary} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$protocol)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classField__time__common_acfef2451ff4e62d79823fec4c14750be}{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME}} (const char $\ast$str, size\+\_\+t len, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US $\ast$status)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__time__common_ab30cf710ffb3f033da46e5e43430490d}{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}} (longlong nr, bool unsigned\+\_\+val, int nanoseconds, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, int $\ast$warning)
+\item 
+virtual type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__time__common_a86071ced0943d9626dd07e2cdf387875}{store\+\_\+internal}} (const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, int $\ast$error)=0
+\item 
+virtual type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__time__common_af094223508c3096845af6a1d95caa82c}{store\+\_\+internal\+\_\+with\+\_\+round}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, int $\ast$warnings)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract class for T\+I\+ME and T\+I\+M\+E(\+N). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classField__time__common_a4dafe0dc9d97419ac274303c339bff04}\label{classField__time__common_a4dafe0dc9d97419ac274303c339bff04}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{Field\+\_\+time\+\_\+common()}{Field\_time\_common()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Field\+\_\+time\+\_\+common\+::\+Field\+\_\+time\+\_\+common (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{ptr\+\_\+arg,  }\item[{uchar $\ast$}]{null\+\_\+ptr\+\_\+arg,  }\item[{uchar}]{null\+\_\+bit\+\_\+arg,  }\item[{enum utype}]{unireg\+\_\+check\+\_\+arg,  }\item[{const char $\ast$}]{field\+\_\+name\+\_\+arg,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \mbox{\hyperlink{classField__time__common}{Field\+\_\+time\+\_\+common}} 
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em null\+\_\+ptr\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em null\+\_\+bit\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em unireg\+\_\+check\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em field\+\_\+name\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em dec\+\_\+arg} & Number of second fraction digits, 0..6. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classField__time__common_a892bfdd20ae6cc742a79914c12201695}\label{classField__time__common_a892bfdd20ae6cc742a79914c12201695}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{Field\+\_\+time\+\_\+common()}{Field\_time\_common()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Field\+\_\+time\+\_\+common\+::\+Field\+\_\+time\+\_\+common (\begin{DoxyParamCaption}\item[{bool}]{maybe\+\_\+null\+\_\+arg,  }\item[{const char $\ast$}]{field\+\_\+name\+\_\+arg,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \mbox{\hyperlink{classField__time__common}{Field\+\_\+time\+\_\+common}} 
+\begin{DoxyParams}{Parameters}
+{\em maybe\+\_\+null\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em field\+\_\+name\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em dec\+\_\+arg} & Number of second fraction digits, 0..6. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__time__common_ab30cf710ffb3f033da46e5e43430490d}\label{classField__time__common_ab30cf710ffb3f033da46e5e43430490d}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}}
+\index{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+M\+E()}{convert\_number\_to\_TIME()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+time\+\_\+common\+::convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME (\begin{DoxyParamCaption}\item[{longlong}]{nr,  }\item[{bool}]{unsigned\+\_\+val,  }\item[{int}]{nanoseconds,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{int $\ast$}]{warning }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]\+: convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME returns conversion status through two different interfaces\+: return value and warning. It should be refactored to only use return value. \end{DoxyRefDesc}
+
+
+Implements \mbox{\hyperlink{classField__temporal_a08043a131a33951273dc348cbacd2858}{Field\+\_\+temporal}}.
+
+\mbox{\Hypertarget{classField__time__common_acfef2451ff4e62d79823fec4c14750be}\label{classField__time__common_acfef2451ff4e62d79823fec4c14750be}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME}}
+\index{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+M\+E()}{convert\_str\_to\_TIME()}}
+{\footnotesize\ttfamily bool Field\+\_\+time\+\_\+common\+::convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US $\ast$}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Convert a string to M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME, according to the field type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & String \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & String length \\
+\hline
+\mbox{\texttt{ in}}  & {\em cs} & String character set \\
+\hline
+\mbox{\texttt{ out}}  & {\em ltime} & The value is stored here \\
+\hline
+\mbox{\texttt{ out}}  & {\em status} & Conversion status \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Conversion went fine, ltime contains a valid time \\
+\hline
+{\em true} & Conversion failed, ltime was reset and contains nothing \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField__temporal_a69d31bd69ced4e4b918cf6c7dfba77f8}{Field\+\_\+temporal}}.
+
+\mbox{\Hypertarget{classField__time__common_afc75d14f8d4b343aff26653839f08466}\label{classField__time__common_afc75d14f8d4b343aff26653839f08466}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!get\+\_\+date@{get\+\_\+date}}
+\index{get\+\_\+date@{get\+\_\+date}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{get\+\_\+date()}{get\_date()}}
+{\footnotesize\ttfamily bool Field\+\_\+time\+\_\+common\+::get\+\_\+date (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{fuzzydate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+For a column for T\+I\+ME type, \mbox{\hyperlink{classField__time__common_afc75d14f8d4b343aff26653839f08466}{get\+\_\+date()}} takes the time value of the field, adds current date to it and returns the result as a D\+A\+T\+E\+T\+I\+ME value. 
+
+Reimplemented from \mbox{\hyperlink{classField}{Field}}.
+
+\mbox{\Hypertarget{classField__time__common_a86071ced0943d9626dd07e2cdf387875}\label{classField__time__common_a86071ced0943d9626dd07e2cdf387875}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!store\+\_\+internal@{store\+\_\+internal}}
+\index{store\+\_\+internal@{store\+\_\+internal}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{store\+\_\+internal()}{store\_internal()}}
+{\footnotesize\ttfamily virtual type\+\_\+conversion\+\_\+status Field\+\_\+time\+\_\+common\+::store\+\_\+internal (\begin{DoxyParamCaption}\item[{const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{int $\ast$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Low-\/level function to store M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value. The value must be rounded or truncated according to decimals(). 
+
+Implements \mbox{\hyperlink{classField__temporal_a21c90848108fc5d00bad242efce2b490}{Field\+\_\+temporal}}.
+
+
+
+Implemented in \mbox{\hyperlink{classField__timef_a37416bd1f9b3950b45bb0e450f87aa84}{Field\+\_\+timef}}, and \mbox{\hyperlink{classField__time_a1589d404d2bc1d05aafc429e05f5308c}{Field\+\_\+time}}.
+
+\mbox{\Hypertarget{classField__time__common_af094223508c3096845af6a1d95caa82c}\label{classField__time__common_af094223508c3096845af6a1d95caa82c}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!store\+\_\+internal\+\_\+with\+\_\+round@{store\+\_\+internal\+\_\+with\+\_\+round}}
+\index{store\+\_\+internal\+\_\+with\+\_\+round@{store\+\_\+internal\+\_\+with\+\_\+round}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{store\+\_\+internal\+\_\+with\+\_\+round()}{store\_internal\_with\_round()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+time\+\_\+common\+::store\+\_\+internal\+\_\+with\+\_\+round (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{int $\ast$}]{warnings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Function to store time value. The value is rounded according to decimals(). 
+
+Implements \mbox{\hyperlink{classField__temporal_ae2be4bf490d06f2f1707bee19dcbebf4}{Field\+\_\+temporal}}.
+
+\mbox{\Hypertarget{classField__time__common_a679289fc41b3c0f5bf4f20a31d0e67d3}\label{classField__time__common_a679289fc41b3c0f5bf4f20a31d0e67d3}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!store\+\_\+time@{store\+\_\+time}}
+\index{store\+\_\+time@{store\+\_\+time}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{store\+\_\+time()}{store\_time()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+time\+\_\+common\+::store\+\_\+time (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Store M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value with the given amount of decimal digits into a field.
+
+Note, the \char`\"{}dec\char`\"{} parameter represents number of digits of the \mbox{\hyperlink{classItem}{Item}} that previously created the M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value. It\textquotesingle{}s needed when we store the value into a C\+H\+A\+R/\+V\+A\+R\+C\+H\+A\+R/\+T\+E\+XT field to display the proper amount of fractional digits. For other field types the \char`\"{}dec\char`\"{} value does not matter and is ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ltime} & Time, date or datetime value. \\
+\hline
+{\em dec} & Number of decimals in ltime. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on error\\
+\hline
+\end{DoxyRetVals}
+This is called when storing a date in a string.
+
+\begin{DoxyNote}{Note}
+Needs to be changed if/when we want to support different time formats. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a7433aa07355def6c394687567256e6cf}{Field}}.
+
+\mbox{\Hypertarget{classField__time__common_a78d985bb5c8a86a8860bff1315839c10}\label{classField__time__common_a78d985bb5c8a86a8860bff1315839c10}} 
+\index{Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}!val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}}
+\index{val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}!Field\+\_\+time\+\_\+common@{Field\+\_\+time\+\_\+common}}
+\subsubsection{\texorpdfstring{val\+\_\+date\+\_\+temporal()}{val\_date\_temporal()}}
+{\footnotesize\ttfamily longlong Field\+\_\+time\+\_\+common\+::val\+\_\+date\+\_\+temporal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns D\+A\+T\+E/\+D\+A\+T\+E\+T\+I\+ME value in packed longlong format. This method should not be called for non-\/temporal types. Temporal field types override the default method. 
+
+Reimplemented from \mbox{\hyperlink{classField_a85b7713df40509aaa467a75eb3945614}{Field}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

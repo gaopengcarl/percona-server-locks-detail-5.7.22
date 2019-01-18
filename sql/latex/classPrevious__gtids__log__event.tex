@@ -1,0 +1,57 @@
+\hypertarget{classPrevious__gtids__log__event}{}\section{Previous\+\_\+gtids\+\_\+log\+\_\+event Class Reference}
+\label{classPrevious__gtids__log__event}\index{Previous\+\_\+gtids\+\_\+log\+\_\+event@{Previous\+\_\+gtids\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Previous\+\_\+gtids\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPrevious__gtids__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a5849e5721e6b985db5c1d0c28903d453}\label{classPrevious__gtids__log__event_a5849e5721e6b985db5c1d0c28903d453}} 
+{\bfseries Previous\+\_\+gtids\+\_\+log\+\_\+event} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$set)
+\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a39c39055321656de82d614fcfe8d61a9}\label{classPrevious__gtids__log__event_a39c39055321656de82d614fcfe8d61a9}} 
+int {\bfseries pack\+\_\+info} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$)
+\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a7ac7814f32bcceabf97aa9a2a9b7ef3b}\label{classPrevious__gtids__log__event_a7ac7814f32bcceabf97aa9a2a9b7ef3b}} 
+{\bfseries Previous\+\_\+gtids\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a7a67e2b1c50110c1d9a26d2651d40243}\label{classPrevious__gtids__log__event_a7a67e2b1c50110c1d9a26d2651d40243}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a1a7258585c046fbf54d33ffad07b6f97}\label{classPrevious__gtids__log__event_a1a7258585c046fbf54d33ffad07b6f97}} 
+const uchar $\ast$ \mbox{\hyperlink{classPrevious__gtids__log__event_a1a7258585c046fbf54d33ffad07b6f97}{get\+\_\+buf}} ()
+\begin{DoxyCompactList}\small\item\em Return the encoded buffer, or N\+U\+LL on error. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{classPrevious__gtids__log__event_a280253bba0731a81c2ae0be0fb5a1181}{get\+\_\+str}} (size\+\_\+t $\ast$length, const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} $\ast$string\+\_\+format) const
+\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a4701bc081dd3a56e13acedfbf07e0fab}\label{classPrevious__gtids__log__event_a4701bc081dd3a56e13acedfbf07e0fab}} 
+int \mbox{\hyperlink{classPrevious__gtids__log__event_a4701bc081dd3a56e13acedfbf07e0fab}{add\+\_\+to\+\_\+set}} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set) const
+\begin{DoxyCompactList}\small\item\em Add all G\+T\+I\+Ds from this event to the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a463555a9c37b0f268e6c1f4f832f2892}\label{classPrevious__gtids__log__event_a463555a9c37b0f268e6c1f4f832f2892}} 
+\mbox{\hyperlink{classLog__event_a44955437350a8b9039e32f019dfed40d}{enum\+\_\+skip\+\_\+reason}} {\bfseries do\+\_\+shall\+\_\+skip} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the subclass of Previous\+\_\+gtids\+\_\+event and \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} It is used to record the gtid\+\_\+executed in the last binary log file, for ex after flush logs, or at the starting of the binary log file 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPrevious__gtids__log__event_a280253bba0731a81c2ae0be0fb5a1181}\label{classPrevious__gtids__log__event_a280253bba0731a81c2ae0be0fb5a1181}} 
+\index{Previous\+\_\+gtids\+\_\+log\+\_\+event@{Previous\+\_\+gtids\+\_\+log\+\_\+event}!get\+\_\+str@{get\+\_\+str}}
+\index{get\+\_\+str@{get\+\_\+str}!Previous\+\_\+gtids\+\_\+log\+\_\+event@{Previous\+\_\+gtids\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+str()}{get\_str()}}
+{\footnotesize\ttfamily char $\ast$ Previous\+\_\+gtids\+\_\+log\+\_\+event\+::get\+\_\+str (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{length,  }\item[{const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} $\ast$}]{string\+\_\+format }\end{DoxyParamCaption}) const}
+
+Return the formatted string, or N\+U\+LL on error. The string is allocated using my\+\_\+malloc and it is the responsibility of the caller to free it. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

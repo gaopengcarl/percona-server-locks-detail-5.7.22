@@ -1,0 +1,154 @@
+\hypertarget{classCost__model__constants}{}\section{Cost\+\_\+model\+\_\+constants Class Reference}
+\label{classCost__model__constants}\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+
+
+{\ttfamily \#include $<$opt\+\_\+costconstants.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCost__model__constants_abfea15c18cc6e5fd5f628a867ca697af}{Cost\+\_\+model\+\_\+constants}} ()
+\item 
+virtual \mbox{\hyperlink{classCost__model__constants_ae47b6030a6f69f592639ea4e4b69274b}{$\sim$\+Cost\+\_\+model\+\_\+constants}} ()
+\item 
+const \mbox{\hyperlink{classServer__cost__constants}{Server\+\_\+cost\+\_\+constants}} $\ast$ \mbox{\hyperlink{classCost__model__constants_a745af7d6aac2594b6af661dca118d135}{get\+\_\+server\+\_\+cost\+\_\+constants}} () const
+\item 
+const \mbox{\hyperlink{classSE__cost__constants}{S\+E\+\_\+cost\+\_\+constants}} $\ast$ \mbox{\hyperlink{classCost__model__constants_a6b371182c2ed8f4b5e7e284ed88cb869}{get\+\_\+se\+\_\+cost\+\_\+constants}} (const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table) const
+\item 
+cost\+\_\+constant\+\_\+error \mbox{\hyperlink{classCost__model__constants_a106ef9b9856983ab651935e4249fe5d7}{update\+\_\+server\+\_\+cost\+\_\+constant}} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name, double value)
+\item 
+cost\+\_\+constant\+\_\+error \mbox{\hyperlink{classCost__model__constants_aefa91f35a05d4254c67d63982924918e}{update\+\_\+engine\+\_\+cost\+\_\+constant}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&se\+\_\+name, uint storage\+\_\+category, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&name, double value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCost__model__constants_ad55e6fc13b0e831511c5ee0a9b46fdfb}{inc\+\_\+ref\+\_\+count}} ()
+\item 
+unsigned int \mbox{\hyperlink{classCost__model__constants_aafb2e930ad709e1f4f57bd7fb29cfee0}{dec\+\_\+ref\+\_\+count}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCost__model__constants_af415bcef5b0ddd5323a019be898184e7}\label{classCost__model__constants_af415bcef5b0ddd5323a019be898184e7}} 
+class {\bfseries Cost\+\_\+constant\+\_\+cache}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Set of all cost constants used by the server and all storage engines. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCost__model__constants_abfea15c18cc6e5fd5f628a867ca697af}\label{classCost__model__constants_abfea15c18cc6e5fd5f628a867ca697af}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{Cost\+\_\+model\+\_\+constants()}{Cost\_model\_constants()}}
+{\footnotesize\ttfamily Cost\+\_\+model\+\_\+constants\+::\+Cost\+\_\+model\+\_\+constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a set with cost constants using the default values defined in the source code. Create default cost constants for each storage engine.\mbox{\Hypertarget{classCost__model__constants_ae47b6030a6f69f592639ea4e4b69274b}\label{classCost__model__constants_ae47b6030a6f69f592639ea4e4b69274b}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!````~Cost\+\_\+model\+\_\+constants@{$\sim$\+Cost\+\_\+model\+\_\+constants}}
+\index{````~Cost\+\_\+model\+\_\+constants@{$\sim$\+Cost\+\_\+model\+\_\+constants}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{$\sim$\+Cost\+\_\+model\+\_\+constants()}{~Cost\_model\_constants()}}
+{\footnotesize\ttfamily Cost\+\_\+model\+\_\+constants\+::$\sim$\+Cost\+\_\+model\+\_\+constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor.
+
+\begin{DoxyNote}{Note}
+The only reason for making this virtual is to be able to make a sub-\/class for use in unit testing. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCost__model__constants_aafb2e930ad709e1f4f57bd7fb29cfee0}\label{classCost__model__constants_aafb2e930ad709e1f4f57bd7fb29cfee0}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!dec\+\_\+ref\+\_\+count@{dec\+\_\+ref\+\_\+count}}
+\index{dec\+\_\+ref\+\_\+count@{dec\+\_\+ref\+\_\+count}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{dec\+\_\+ref\+\_\+count()}{dec\_ref\_count()}}
+{\footnotesize\ttfamily unsigned int Cost\+\_\+model\+\_\+constants\+::dec\+\_\+ref\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Decrement the reference counter for this cost constant set
+
+When the returned value is zero, there is nobody using this object and it can be deleted by the caller.
+
+\begin{DoxyReturn}{Returns}
+the updated reference count 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__constants_a6b371182c2ed8f4b5e7e284ed88cb869}\label{classCost__model__constants_a6b371182c2ed8f4b5e7e284ed88cb869}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!get\+\_\+se\+\_\+cost\+\_\+constants@{get\+\_\+se\+\_\+cost\+\_\+constants}}
+\index{get\+\_\+se\+\_\+cost\+\_\+constants@{get\+\_\+se\+\_\+cost\+\_\+constants}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{get\+\_\+se\+\_\+cost\+\_\+constants()}{get\_se\_cost\_constants()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classSE__cost__constants}{S\+E\+\_\+cost\+\_\+constants}} $\ast$ Cost\+\_\+model\+\_\+constants\+::get\+\_\+se\+\_\+cost\+\_\+constants (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption}) const}
+
+Return the cost constants that should be used for a given table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & the table to find cost constants for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cost constants to use for the table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__constants_a745af7d6aac2594b6af661dca118d135}\label{classCost__model__constants_a745af7d6aac2594b6af661dca118d135}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!get\+\_\+server\+\_\+cost\+\_\+constants@{get\+\_\+server\+\_\+cost\+\_\+constants}}
+\index{get\+\_\+server\+\_\+cost\+\_\+constants@{get\+\_\+server\+\_\+cost\+\_\+constants}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{get\+\_\+server\+\_\+cost\+\_\+constants()}{get\_server\_cost\_constants()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classServer__cost__constants}{Server\+\_\+cost\+\_\+constants}}$\ast$ Cost\+\_\+model\+\_\+constants\+::get\+\_\+server\+\_\+cost\+\_\+constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the cost constants that should be used for server operations.
+
+\begin{DoxyReturn}{Returns}
+the cost constants for the server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__constants_ad55e6fc13b0e831511c5ee0a9b46fdfb}\label{classCost__model__constants_ad55e6fc13b0e831511c5ee0a9b46fdfb}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!inc\+\_\+ref\+\_\+count@{inc\+\_\+ref\+\_\+count}}
+\index{inc\+\_\+ref\+\_\+count@{inc\+\_\+ref\+\_\+count}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{inc\+\_\+ref\+\_\+count()}{inc\_ref\_count()}}
+{\footnotesize\ttfamily void Cost\+\_\+model\+\_\+constants\+::inc\+\_\+ref\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Increment the reference counter for this cost constant set \mbox{\Hypertarget{classCost__model__constants_aefa91f35a05d4254c67d63982924918e}\label{classCost__model__constants_aefa91f35a05d4254c67d63982924918e}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!update\+\_\+engine\+\_\+cost\+\_\+constant@{update\+\_\+engine\+\_\+cost\+\_\+constant}}
+\index{update\+\_\+engine\+\_\+cost\+\_\+constant@{update\+\_\+engine\+\_\+cost\+\_\+constant}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{update\+\_\+engine\+\_\+cost\+\_\+constant()}{update\_engine\_cost\_constant()}}
+{\footnotesize\ttfamily cost\+\_\+constant\+\_\+error Cost\+\_\+model\+\_\+constants\+::update\+\_\+engine\+\_\+cost\+\_\+constant (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{se\+\_\+name,  }\item[{uint}]{storage\+\_\+category,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Update the value for one of the storage engine cost constants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & the T\+HD \\
+\hline
+{\em se\+\_\+name} & name of storage engine \\
+\hline
+{\em storage\+\_\+category} & storage device type \\
+\hline
+{\em name} & name of cost constant \\
+\hline
+{\em value} & new value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status for updating the cost constant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__constants_a106ef9b9856983ab651935e4249fe5d7}\label{classCost__model__constants_a106ef9b9856983ab651935e4249fe5d7}} 
+\index{Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}!update\+\_\+server\+\_\+cost\+\_\+constant@{update\+\_\+server\+\_\+cost\+\_\+constant}}
+\index{update\+\_\+server\+\_\+cost\+\_\+constant@{update\+\_\+server\+\_\+cost\+\_\+constant}!Cost\+\_\+model\+\_\+constants@{Cost\+\_\+model\+\_\+constants}}
+\subsubsection{\texorpdfstring{update\+\_\+server\+\_\+cost\+\_\+constant()}{update\_server\_cost\_constant()}}
+{\footnotesize\ttfamily cost\+\_\+constant\+\_\+error Cost\+\_\+model\+\_\+constants\+::update\+\_\+server\+\_\+cost\+\_\+constant (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Update the value for one of the server cost constants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the cost constant \\
+\hline
+{\em value} & new value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status for updating the cost constant 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+costconstants.\+h\item 
+opt\+\_\+costconstants.\+cc\end{DoxyCompactItemize}

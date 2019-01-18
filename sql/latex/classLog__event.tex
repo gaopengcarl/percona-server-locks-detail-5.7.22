@@ -1,0 +1,420 @@
+\hypertarget{classLog__event}{}\section{Log\+\_\+event Class Reference}
+\label{classLog__event}\index{Log\+\_\+event@{Log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classLog__event}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classLog__event_a44955437350a8b9039e32f019dfed40d}{enum\+\_\+skip\+\_\+reason}} \{ \mbox{\hyperlink{classLog__event_a44955437350a8b9039e32f019dfed40da8b9ef0989b09bb046b31b51b888d5f6d}{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+N\+OT}}, 
+\mbox{\hyperlink{classLog__event_a44955437350a8b9039e32f019dfed40da5cf178e7946f6b891d39e87d986f5f33}{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+I\+G\+N\+O\+RE}}, 
+\mbox{\hyperlink{classLog__event_a44955437350a8b9039e32f019dfed40da7ae688c137a25d774eb8fb2bf022242c}{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+C\+O\+U\+NT}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLog__event_ada67a22e354623768cdf9155d1d1e733}\label{classLog__event_ada67a22e354623768cdf9155d1d1e733}} 
+virtual void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)=0
+\item 
+\mbox{\Hypertarget{classLog__event_a8860f6c36437b27c568ed157a36f12a2}\label{classLog__event_a8860f6c36437b27c568ed157a36f12a2}} 
+void {\bfseries print\+\_\+timestamp} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, time\+\_\+t $\ast$ts)
+\item 
+\mbox{\Hypertarget{classLog__event_a4addf757e318ff8ba23d888e4304e02c}\label{classLog__event_a4addf757e318ff8ba23d888e4304e02c}} 
+void {\bfseries print\+\_\+header} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info, bool is\+\_\+more)
+\item 
+\mbox{\Hypertarget{classLog__event_a9d8200f60538e0b35f7a52b4db1218de}\label{classLog__event_a9d8200f60538e0b35f7a52b4db1218de}} 
+void {\bfseries print\+\_\+base64} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info, bool is\+\_\+more)
+\item 
+\mbox{\Hypertarget{classLog__event_a42485730e8bd508e54753a2344838a0e}\label{classLog__event_a42485730e8bd508e54753a2344838a0e}} 
+void $\ast$ {\bfseries operator new} (size\+\_\+t size)
+\item 
+bool \mbox{\hyperlink{classLog__event_a65dc0fdcdcc26bdf0289e0fec9cd9337}{wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, const uchar $\ast$buf, size\+\_\+t data\+\_\+length)
+\item 
+\mbox{\Hypertarget{classLog__event_ab7d4331849d34614d0ec066d1300ff26}\label{classLog__event_ab7d4331849d34614d0ec066d1300ff26}} 
+Log\+\_\+event\+\_\+type {\bfseries get\+\_\+type\+\_\+code} ()
+\item 
+virtual bool \mbox{\hyperlink{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}{is\+\_\+sbr\+\_\+logging\+\_\+format}} () const
+\item 
+virtual bool \mbox{\hyperlink{classLog__event_abd996ad9f33a59c3b03737beb2c2869d}{is\+\_\+rbr\+\_\+logging\+\_\+format}} () const
+\item 
+\mbox{\Hypertarget{classLog__event_a36936e4c8aef6409e355e88ac04c527d}\label{classLog__event_a36936e4c8aef6409e355e88ac04c527d}} 
+bool {\bfseries is\+\_\+valid} ()
+\item 
+\mbox{\Hypertarget{classLog__event_a727215ddea7b935092b3f97e3308b9cf}\label{classLog__event_a727215ddea7b935092b3f97e3308b9cf}} 
+void {\bfseries set\+\_\+artificial\+\_\+event} ()
+\item 
+\mbox{\Hypertarget{classLog__event_ad9626915a89bcd450bc21f5d02077a4d}\label{classLog__event_ad9626915a89bcd450bc21f5d02077a4d}} 
+void {\bfseries set\+\_\+relay\+\_\+log\+\_\+event} ()
+\item 
+\mbox{\Hypertarget{classLog__event_aeca51c1f34e0519609d29190d897b4e3}\label{classLog__event_aeca51c1f34e0519609d29190d897b4e3}} 
+bool {\bfseries is\+\_\+artificial\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{classLog__event_a58c2463530e94d5e16f3e4245886ec7a}\label{classLog__event_a58c2463530e94d5e16f3e4245886ec7a}} 
+bool {\bfseries is\+\_\+relay\+\_\+log\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{classLog__event_a69f2c8276fde3b380ee88d188a02a15c}\label{classLog__event_a69f2c8276fde3b380ee88d188a02a15c}} 
+bool {\bfseries is\+\_\+ignorable\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{classLog__event_a1a946665f3bf967459b86119a287cb16}\label{classLog__event_a1a946665f3bf967459b86119a287cb16}} 
+bool {\bfseries is\+\_\+no\+\_\+filter\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{classLog__event_a8a919c5844b7e081aec57460ead455ae}\label{classLog__event_a8a919c5844b7e081aec57460ead455ae}} 
+bool {\bfseries is\+\_\+using\+\_\+trans\+\_\+cache} () const
+\item 
+\mbox{\Hypertarget{classLog__event_a146abbe657f16c14db62c9bf76c87e85}\label{classLog__event_a146abbe657f16c14db62c9bf76c87e85}} 
+bool {\bfseries is\+\_\+using\+\_\+stmt\+\_\+cache} () const
+\item 
+\mbox{\Hypertarget{classLog__event_ad86176d503cc2937583e782a4107e4e3}\label{classLog__event_ad86176d503cc2937583e782a4107e4e3}} 
+bool {\bfseries is\+\_\+using\+\_\+immediate\+\_\+logging} () const
+\item 
+\mbox{\hyperlink{classLog__event_a0cd9aa0060929d5f09af84f0e8ee6136}{Log\+\_\+event}} (Log\+\_\+event\+\_\+header $\ast$header, Log\+\_\+event\+\_\+footer $\ast$footer)
+\item 
+\mbox{\Hypertarget{classLog__event_ab54506130fcded47a219109a4dfd6e8e}\label{classLog__event_ab54506130fcded47a219109a4dfd6e8e}} 
+void {\bfseries register\+\_\+temp\+\_\+buf} (char $\ast$buf)
+\item 
+\mbox{\Hypertarget{classLog__event_ab204392000058d02298c15fa4d8b9659}\label{classLog__event_ab204392000058d02298c15fa4d8b9659}} 
+void {\bfseries free\+\_\+temp\+\_\+buf} ()
+\item 
+\mbox{\Hypertarget{classLog__event_a3a03fc8396b68aecbca1ce812a37e455}\label{classLog__event_a3a03fc8396b68aecbca1ce812a37e455}} 
+virtual size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classLog__event_a2490b26defb775390f1d1e99b72ed0f1}{get\+\_\+type\+\_\+str}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLog__event_aade5bc04a4b1878b73ff29f39410a532}\label{classLog__event_aade5bc04a4b1878b73ff29f39410a532}} 
+static \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ {\bfseries read\+\_\+log\+\_\+event} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$description\+\_\+event, my\+\_\+bool crc\+\_\+check, read\+\_\+log\+\_\+event\+\_\+filter\+\_\+function f)
+\item 
+\mbox{\Hypertarget{classLog__event_a5ae877aef23d7eb1cd52b3cb1bbc1d90}\label{classLog__event_a5ae877aef23d7eb1cd52b3cb1bbc1d90}} 
+static void {\bfseries operator delete} (void $\ast$ptr, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{classLog__event_ad2b89e830fbd0b0853a695947839fd26}\label{classLog__event_ad2b89e830fbd0b0853a695947839fd26}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t, void $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classLog__event_a06ff6af3a2477ffaa9ad21243bdc9bc9}\label{classLog__event_a06ff6af3a2477ffaa9ad21243bdc9bc9}} 
+static void {\bfseries operator delete} (void $\ast$, void $\ast$)
+\item 
+static \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ \mbox{\hyperlink{classLog__event_a5b13b5e395cd4ef015dc874af6128307}{read\+\_\+log\+\_\+event}} (const char $\ast$buf, uint event\+\_\+len, const char $\ast$$\ast$error, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$description\+\_\+event, my\+\_\+bool crc\+\_\+check)
+\item 
+static const char $\ast$ \mbox{\hyperlink{classLog__event_a7fcd48f109191f0aab883877e2d0bc6d}{get\+\_\+type\+\_\+str}} (Log\+\_\+event\+\_\+type type)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLog__event_ad15ec5c07bd62d2d6d0b01552ba277b0}\label{classLog__event_ad15ec5c07bd62d2d6d0b01552ba277b0}} 
+char $\ast$ {\bfseries temp\+\_\+buf}
+\item 
+\mbox{\Hypertarget{classLog__event_aba723df706374f55355634b81eba94ed}\label{classLog__event_aba723df706374f55355634b81eba94ed}} 
+ulong {\bfseries exec\+\_\+time}
+\item 
+\mbox{\Hypertarget{classLog__event_a2fa4142b4e8425a9782563b5f06305ae}\label{classLog__event_a2fa4142b4e8425a9782563b5f06305ae}} 
+uint32 {\bfseries server\+\_\+id}
+\item 
+ulong \mbox{\hyperlink{classLog__event_a92b745a1eabd89fb67b1f7c4d626d689}{rbr\+\_\+exec\+\_\+mode}}
+\item 
+enum\+\_\+event\+\_\+cache\+\_\+type \mbox{\hyperlink{classLog__event_a243eff824952a8d0021ef80e845945fe}{event\+\_\+cache\+\_\+type}}
+\item 
+enum\+\_\+event\+\_\+logging\+\_\+type \mbox{\hyperlink{classLog__event_ac72fee64ecfbb10396489f82fc28ed1d}{event\+\_\+logging\+\_\+type}}
+\item 
+ha\+\_\+checksum \mbox{\hyperlink{classLog__event_a39cb75b9f87ead22ad5a3971946e30c0}{crc}}
+\item 
+\mbox{\Hypertarget{classLog__event_a6a73a55a888e4e1efedbd72657e39ef7}\label{classLog__event_a6a73a55a888e4e1efedbd72657e39ef7}} 
+\mbox{\hyperlink{classEvent__encrypter}{Event\+\_\+encrypter}} {\bfseries event\+\_\+encrypter}
+\item 
+ulong \mbox{\hyperlink{classLog__event_a0c7bd9c306af3c715de88e246241db9b}{mts\+\_\+group\+\_\+idx}}
+\item 
+binary\+\_\+log\+::\+Log\+\_\+event\+\_\+header $\ast$ \mbox{\hyperlink{classLog__event_ac9c5b6494544de6b569351b919f75d57}{common\+\_\+header}}
+\item 
+binary\+\_\+log\+::\+Log\+\_\+event\+\_\+footer $\ast$ \mbox{\hyperlink{classLog__event_a1280a16e7f198401154ea83667b9d0d7}{common\+\_\+footer}}
+\item 
+\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$ \mbox{\hyperlink{classLog__event_a8a1eeab37171617a328e2f62d7130def}{worker}}
+\item 
+ulonglong \mbox{\hyperlink{classLog__event_a6c443026bb826f7743d090ec1a5dec40}{future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLog__event_a4179a22317b9fc71dfaf452505325876}\label{classLog__event_a4179a22317b9fc71dfaf452505325876}} 
+enum {\bfseries enum\+\_\+event\+\_\+cache\+\_\+type} \{ \newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+A\+C\+HE} = 0, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+S\+T\+M\+T\+\_\+\+C\+A\+C\+HE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+A\+L\+\_\+\+C\+A\+C\+HE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+C\+A\+C\+HE}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+C\+O\+U\+NT}
+ \}
+\item 
+\mbox{\Hypertarget{classLog__event_ac79c873eedf144ef04f9f61cf35a131f}\label{classLog__event_ac79c873eedf144ef04f9f61cf35a131f}} 
+enum {\bfseries enum\+\_\+event\+\_\+logging\+\_\+type} \{ {\bfseries E\+V\+E\+N\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+O\+G\+G\+I\+NG} = 0, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+L\+O\+G\+G\+I\+NG}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+I\+M\+M\+E\+D\+I\+A\+T\+E\+\_\+\+L\+O\+G\+G\+I\+NG}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+C\+O\+U\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \mbox{\hyperlink{classLog__event_a24fdaf3da904d7f1e2723d8a853f8dd8}{write\+\_\+header\+\_\+to\+\_\+memory}} (uchar $\ast$buf)
+\item 
+bool \mbox{\hyperlink{classLog__event_a60f9564629374ebacd3071a13df325a5}{write\+\_\+header}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, size\+\_\+t data\+\_\+length)
+\item 
+\mbox{\Hypertarget{classLog__event_a98c2edec6e4a1247347be26b7d8a1fee}\label{classLog__event_a98c2edec6e4a1247347be26b7d8a1fee}} 
+bool {\bfseries write\+\_\+footer} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file)
+\item 
+my\+\_\+bool \mbox{\hyperlink{classLog__event_aacff30f48b3ce70749cd22cb6576cd52}{need\+\_\+checksum}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLog__event_adfcb8aa94a960cc94556875b350489a8}\label{classLog__event_adfcb8aa94a960cc94556875b350489a8}} 
+bool {\bfseries is\+\_\+valid\+\_\+param}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the abstract base class for binary log events.\hypertarget{classLog__event_Log_event_binary_format}{}\subsection{Binary Format}\label{classLog__event_Log_event_binary_format}
+The format of the event is described here.\hypertarget{classLog__event_Log_event_format_of_atomic_primitives}{}\subsubsection{Format of Atomic Primitives}\label{classLog__event_Log_event_format_of_atomic_primitives}
+
+\begin{DoxyItemize}
+\item All numbers, whether they are 16-\/, 24-\/, 32-\/, or 64-\/bit numbers, are stored in little endian, i.\+e., the least significant byte first, unless otherwise specified. 
+\end{DoxyItemize}
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classLog__event_a44955437350a8b9039e32f019dfed40d}\label{classLog__event_a44955437350a8b9039e32f019dfed40d}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!enum\+\_\+skip\+\_\+reason@{enum\+\_\+skip\+\_\+reason}}
+\index{enum\+\_\+skip\+\_\+reason@{enum\+\_\+skip\+\_\+reason}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{enum\+\_\+skip\+\_\+reason}{enum\_skip\_reason}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classLog__event_a44955437350a8b9039e32f019dfed40d}{Log\+\_\+event\+::enum\+\_\+skip\+\_\+reason}}}
+
+Enumeration of what kinds of skipping (and non-\/skipping) that can occur when the slave executes an event.
+
+\begin{DoxySeeAlso}{See also}
+shall\+\_\+skip 
+
+do\+\_\+shall\+\_\+skip 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+N\+OT@{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+N\+OT}!Log\+\_\+event@{Log\+\_\+event}}\index{Log\+\_\+event@{Log\+\_\+event}!E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+N\+OT@{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+N\+OT}}}\mbox{\Hypertarget{classLog__event_a44955437350a8b9039e32f019dfed40da8b9ef0989b09bb046b31b51b888d5f6d}\label{classLog__event_a44955437350a8b9039e32f019dfed40da8b9ef0989b09bb046b31b51b888d5f6d}} 
+E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+N\+OT&Don\textquotesingle{}t skip event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+I\+G\+N\+O\+RE@{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+I\+G\+N\+O\+RE}!Log\+\_\+event@{Log\+\_\+event}}\index{Log\+\_\+event@{Log\+\_\+event}!E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+I\+G\+N\+O\+RE@{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+I\+G\+N\+O\+RE}}}\mbox{\Hypertarget{classLog__event_a44955437350a8b9039e32f019dfed40da5cf178e7946f6b891d39e87d986f5f33}\label{classLog__event_a44955437350a8b9039e32f019dfed40da5cf178e7946f6b891d39e87d986f5f33}} 
+E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+I\+G\+N\+O\+RE&Skip event by ignoring it.
+
+This means that the slave skip counter will not be changed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+C\+O\+U\+NT@{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+C\+O\+U\+NT}!Log\+\_\+event@{Log\+\_\+event}}\index{Log\+\_\+event@{Log\+\_\+event}!E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+C\+O\+U\+NT@{E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+C\+O\+U\+NT}}}\mbox{\Hypertarget{classLog__event_a44955437350a8b9039e32f019dfed40da7ae688c137a25d774eb8fb2bf022242c}\label{classLog__event_a44955437350a8b9039e32f019dfed40da7ae688c137a25d774eb8fb2bf022242c}} 
+E\+V\+E\+N\+T\+\_\+\+S\+K\+I\+P\+\_\+\+C\+O\+U\+NT&Skip event and decrease skip counter. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLog__event_a0cd9aa0060929d5f09af84f0e8ee6136}\label{classLog__event_a0cd9aa0060929d5f09af84f0e8ee6136}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!Log\+\_\+event@{Log\+\_\+event}}
+\index{Log\+\_\+event@{Log\+\_\+event}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{Log\+\_\+event()}{Log\_event()}}
+{\footnotesize\ttfamily Log\+\_\+event\+::\+Log\+\_\+event (\begin{DoxyParamCaption}\item[{Log\+\_\+event\+\_\+header $\ast$}]{header,  }\item[{Log\+\_\+event\+\_\+footer $\ast$}]{footer }\end{DoxyParamCaption})}
+
+This minimal constructor is for when you are not even sure that there is a valid T\+HD. For example in the server when we are shutting down or flushing logs after receiving a S\+I\+G\+H\+UP (then we must write a Rotate to the binlog but we have no T\+HD, so we need this minimal constructor). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLog__event_a7fcd48f109191f0aab883877e2d0bc6d}\label{classLog__event_a7fcd48f109191f0aab883877e2d0bc6d}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!get\+\_\+type\+\_\+str@{get\+\_\+type\+\_\+str}}
+\index{get\+\_\+type\+\_\+str@{get\+\_\+type\+\_\+str}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+type\+\_\+str()}{get\_type\_str()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const char $\ast$ Log\+\_\+event\+::get\+\_\+type\+\_\+str (\begin{DoxyParamCaption}\item[{Log\+\_\+event\+\_\+type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the human readable name of the given event type.
+
+Prints a \char`\"{}session\+\_\+var=value\char`\"{} string. Used by mysqlbinlog to print some S\+ET commands just before it prints a query.\begin{DoxyReturn}{Returns}
+returns the human readable name of the event\textquotesingle{}s type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLog__event_a2490b26defb775390f1d1e99b72ed0f1}\label{classLog__event_a2490b26defb775390f1d1e99b72ed0f1}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!get\+\_\+type\+\_\+str@{get\+\_\+type\+\_\+str}}
+\index{get\+\_\+type\+\_\+str@{get\+\_\+type\+\_\+str}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+type\+\_\+str()}{get\_type\_str()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const char $\ast$ Log\+\_\+event\+::get\+\_\+type\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the human readable name of this event\textquotesingle{}s type. \mbox{\Hypertarget{classLog__event_abd996ad9f33a59c3b03737beb2c2869d}\label{classLog__event_abd996ad9f33a59c3b03737beb2c2869d}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!is\+\_\+rbr\+\_\+logging\+\_\+format@{is\+\_\+rbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+rbr\+\_\+logging\+\_\+format@{is\+\_\+rbr\+\_\+logging\+\_\+format}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+rbr\+\_\+logging\+\_\+format()}{is\_rbr\_logging\_format()}}
+{\footnotesize\ttfamily virtual bool Log\+\_\+event\+::is\+\_\+rbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return true if the event has to be logged using R\+BR for D\+M\+Ls. 
+
+Reimplemented in \mbox{\hyperlink{classRows__log__event_a6e9443d09dd4aad9e689f962ba29abfd}{Rows\+\_\+log\+\_\+event}}, and \mbox{\hyperlink{classTable__map__log__event_ab810d5c553584af2edf7fcaa3308fc77}{Table\+\_\+map\+\_\+log\+\_\+event}}.
+
+\mbox{\Hypertarget{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}\label{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+sbr\+\_\+logging\+\_\+format()}{is\_sbr\_logging\_format()}}
+{\footnotesize\ttfamily virtual bool Log\+\_\+event\+::is\+\_\+sbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return true if the event has to be logged using S\+BR for D\+M\+Ls. 
+
+Reimplemented in \mbox{\hyperlink{classExecute__load__query__log__event_a8980ecbe8b7f0431a201498aa245c88d}{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}, \mbox{\hyperlink{classDelete__file__log__event_a3cba2bd9057ac18a7ac720bbfeb2081f}{Delete\+\_\+file\+\_\+log\+\_\+event}}, \mbox{\hyperlink{classAppend__block__log__event_a6f758b2da7126c0a881bcc901f481472}{Append\+\_\+block\+\_\+log\+\_\+event}}, \mbox{\hyperlink{classUser__var__log__event_a324c3239a7fefb0ad5c0ae44984d1683}{User\+\_\+var\+\_\+log\+\_\+event}}, \mbox{\hyperlink{classRand__log__event_a3b5f698453eb2deee160e5ab771e94b2}{Rand\+\_\+log\+\_\+event}}, \mbox{\hyperlink{classIntvar__log__event_adb0ffc05f019430b9d33c4742f92819f}{Intvar\+\_\+log\+\_\+event}}, and \mbox{\hyperlink{classQuery__log__event_a2a3e67710fa962765847ed1df1552864}{Query\+\_\+log\+\_\+event}}.
+
+\mbox{\Hypertarget{classLog__event_aacff30f48b3ce70749cd22cb6576cd52}\label{classLog__event_aacff30f48b3ce70749cd22cb6576cd52}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!need\+\_\+checksum@{need\+\_\+checksum}}
+\index{need\+\_\+checksum@{need\+\_\+checksum}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{need\+\_\+checksum()}{need\_checksum()}}
+{\footnotesize\ttfamily my\+\_\+bool Log\+\_\+event\+::need\+\_\+checksum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+A decider of whether to trigger checksum computation or not. To be invoked in Log\+\_\+event\+::write() stack. The decision is positive
+
+S,M) if it\textquotesingle{}s been marked for checksumming with {\ttfamily checksum\+\_\+alg} 
+
+M) otherwise, if @global.\+binlog\+\_\+checksum is not N\+O\+NE and the event is directly written to the binlog file. The to-\/be-\/cached event decides at {\ttfamily write\+\_\+cache()} time.
+
+Otherwise the decision is negative.
+
+\begin{DoxyNote}{Note}
+A side effect of the method is altering Log\+\_\+event\+::checksum\+\_\+alg it the latter was undefined at calling.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true (positive) or false (negative) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLog__event_a5b13b5e395cd4ef015dc874af6128307}\label{classLog__event_a5b13b5e395cd4ef015dc874af6128307}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!read\+\_\+log\+\_\+event@{read\+\_\+log\+\_\+event}}
+\index{read\+\_\+log\+\_\+event@{read\+\_\+log\+\_\+event}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{read\+\_\+log\+\_\+event()}{read\_log\_event()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ Log\+\_\+event\+::read\+\_\+log\+\_\+event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{uint}]{event\+\_\+len,  }\item[{const char $\ast$$\ast$}]{error,  }\item[{const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{description\+\_\+event,  }\item[{my\+\_\+bool}]{crc\+\_\+check }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Binlog format tolerance is in (buf, event\+\_\+len, description\+\_\+event) constructors. \mbox{\Hypertarget{classLog__event_a65dc0fdcdcc26bdf0289e0fec9cd9337}\label{classLog__event_a65dc0fdcdcc26bdf0289e0fec9cd9337}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write@{wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write}}
+\index{wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write@{wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write()}{wrapper\_my\_b\_safe\_write()}}
+{\footnotesize\ttfamily bool Log\+\_\+event\+::wrapper\+\_\+my\+\_\+b\+\_\+safe\+\_\+write (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{file,  }\item[{const uchar $\ast$}]{buf,  }\item[{size\+\_\+t}]{data\+\_\+length }\end{DoxyParamCaption})}
+
+Write the given buffer to the given I\+O\+\_\+\+C\+A\+C\+HE, updating the checksum if checksums are enabled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The I\+O\+\_\+\+C\+A\+C\+HE to write to. \\
+\hline
+{\em buf} & The buffer to write. \\
+\hline
+{\em data\+\_\+length} & The number of bytes to write.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classLog__event_a60f9564629374ebacd3071a13df325a5}\label{classLog__event_a60f9564629374ebacd3071a13df325a5}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!write\+\_\+header@{write\+\_\+header}}
+\index{write\+\_\+header@{write\+\_\+header}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{write\+\_\+header()}{write\_header()}}
+{\footnotesize\ttfamily bool Log\+\_\+event\+::write\+\_\+header (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{file,  }\item[{size\+\_\+t}]{data\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the common-\/header of this event to the given I\+O\+\_\+\+C\+A\+C\+HE and updates the checksum.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The event will be written to this I\+O\+\_\+\+C\+A\+C\+HE.\\
+\hline
+{\em data\+\_\+length} & The length of the post-\/header section plus the length of the data section; i.\+e., the length of the event minus the common-\/header and the checksum. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLog__event_a24fdaf3da904d7f1e2723d8a853f8dd8}\label{classLog__event_a24fdaf3da904d7f1e2723d8a853f8dd8}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!write\+\_\+header\+\_\+to\+\_\+memory@{write\+\_\+header\+\_\+to\+\_\+memory}}
+\index{write\+\_\+header\+\_\+to\+\_\+memory@{write\+\_\+header\+\_\+to\+\_\+memory}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{write\+\_\+header\+\_\+to\+\_\+memory()}{write\_header\_to\_memory()}}
+{\footnotesize\ttfamily uint32 Log\+\_\+event\+::write\+\_\+header\+\_\+to\+\_\+memory (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Writes the common header of this event to the given memory buffer.
+
+This does not update the checksum.
+
+\begin{DoxyNote}{Note}
+This has the following form\+:
+\end{DoxyNote}
++-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/---+ $\vert$timestamp$\vert$type code$\vert$server\+\_\+id$\vert$event\+\_\+length$\vert$end\+\_\+log\+\_\+pos$\vert$flags $\vert$ $\vert$4 bytes $\vert$1 byte $\vert$4 bytes $\vert$4 bytes $\vert$4 bytes $\vert$2 bytes$\vert$ +-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/---+
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Memory buffer to write to. This must be at least L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN bytes long.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written, i.\+e., always L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN. 
+\end{DoxyReturn}
+This assertion guarantees that these debug flags are not used at the same time (they would cancel each other).
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classLog__event_a1280a16e7f198401154ea83667b9d0d7}\label{classLog__event_a1280a16e7f198401154ea83667b9d0d7}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!common\+\_\+footer@{common\+\_\+footer}}
+\index{common\+\_\+footer@{common\+\_\+footer}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{common\+\_\+footer}{common\_footer}}
+{\footnotesize\ttfamily binary\+\_\+log\+::\+Log\+\_\+event\+\_\+footer$\ast$ Log\+\_\+event\+::common\+\_\+footer}
+
+The Log\+\_\+event\+\_\+footer class contains the variable present in the common footer. Currently, footer contains only the checksum\+\_\+alg. \mbox{\Hypertarget{classLog__event_ac9c5b6494544de6b569351b919f75d57}\label{classLog__event_ac9c5b6494544de6b569351b919f75d57}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!common\+\_\+header@{common\+\_\+header}}
+\index{common\+\_\+header@{common\+\_\+header}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{common\+\_\+header}{common\_header}}
+{\footnotesize\ttfamily binary\+\_\+log\+::\+Log\+\_\+event\+\_\+header$\ast$ Log\+\_\+event\+::common\+\_\+header}
+
+The Log\+\_\+event\+\_\+header class contains the variable present in the common header \mbox{\Hypertarget{classLog__event_a39cb75b9f87ead22ad5a3971946e30c0}\label{classLog__event_a39cb75b9f87ead22ad5a3971946e30c0}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!crc@{crc}}
+\index{crc@{crc}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily ha\+\_\+checksum Log\+\_\+event\+::crc}
+
+Placeholder for event checksum while writing to binlog. \mbox{\Hypertarget{classLog__event_a243eff824952a8d0021ef80e845945fe}\label{classLog__event_a243eff824952a8d0021ef80e845945fe}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!event\+\_\+cache\+\_\+type@{event\+\_\+cache\+\_\+type}}
+\index{event\+\_\+cache\+\_\+type@{event\+\_\+cache\+\_\+type}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{event\+\_\+cache\+\_\+type}{event\_cache\_type}}
+{\footnotesize\ttfamily enum\+\_\+event\+\_\+cache\+\_\+type Log\+\_\+event\+::event\+\_\+cache\+\_\+type}
+
+Defines the type of the cache, if any, where the event will be stored before being flushed to disk. \mbox{\Hypertarget{classLog__event_ac72fee64ecfbb10396489f82fc28ed1d}\label{classLog__event_ac72fee64ecfbb10396489f82fc28ed1d}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!event\+\_\+logging\+\_\+type@{event\+\_\+logging\+\_\+type}}
+\index{event\+\_\+logging\+\_\+type@{event\+\_\+logging\+\_\+type}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{event\+\_\+logging\+\_\+type}{event\_logging\_type}}
+{\footnotesize\ttfamily enum\+\_\+event\+\_\+logging\+\_\+type Log\+\_\+event\+::event\+\_\+logging\+\_\+type}
+
+Defines when information, i.\+e. event or cache, will be flushed to disk. \mbox{\Hypertarget{classLog__event_a6c443026bb826f7743d090ec1a5dec40}\label{classLog__event_a6c443026bb826f7743d090ec1a5dec40}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos@{future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos}}
+\index{future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos@{future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos}{future\_event\_relay\_log\_pos}}
+{\footnotesize\ttfamily ulonglong Log\+\_\+event\+::future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos}
+
+A copy of the main rli value stored into event to pass to M\+TS worker rli \mbox{\Hypertarget{classLog__event_a0c7bd9c306af3c715de88e246241db9b}\label{classLog__event_a0c7bd9c306af3c715de88e246241db9b}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!mts\+\_\+group\+\_\+idx@{mts\+\_\+group\+\_\+idx}}
+\index{mts\+\_\+group\+\_\+idx@{mts\+\_\+group\+\_\+idx}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{mts\+\_\+group\+\_\+idx}{mts\_group\_idx}}
+{\footnotesize\ttfamily ulong Log\+\_\+event\+::mts\+\_\+group\+\_\+idx}
+
+Index in {\ttfamily rli-\/$>$gaq} array to indicate a group that this event is purging. The index is set by Coordinator to a group terminator event is checked by Worker at the event execution. The indexed data represent the Worker progress status. \mbox{\Hypertarget{classLog__event_a92b745a1eabd89fb67b1f7c4d626d689}\label{classLog__event_a92b745a1eabd89fb67b1f7c4d626d689}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!rbr\+\_\+exec\+\_\+mode@{rbr\+\_\+exec\+\_\+mode}}
+\index{rbr\+\_\+exec\+\_\+mode@{rbr\+\_\+exec\+\_\+mode}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{rbr\+\_\+exec\+\_\+mode}{rbr\_exec\_mode}}
+{\footnotesize\ttfamily ulong Log\+\_\+event\+::rbr\+\_\+exec\+\_\+mode}
+
+A storage to cache the global system variable\textquotesingle{}s value. Handling of a separate event will be governed its member. \mbox{\Hypertarget{classLog__event_a8a1eeab37171617a328e2f62d7130def}\label{classLog__event_a8a1eeab37171617a328e2f62d7130def}} 
+\index{Log\+\_\+event@{Log\+\_\+event}!worker@{worker}}
+\index{worker@{worker}!Log\+\_\+event@{Log\+\_\+event}}
+\subsubsection{\texorpdfstring{worker}{worker}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}$\ast$ Log\+\_\+event\+::worker}
+
+M\+TS\+: associating the event with either an assigned Worker or Coordinator. Additionally the member serves to tag deferred (I\+RU) events to avoid the event regular time destruction. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

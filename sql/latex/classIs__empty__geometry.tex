@@ -1,0 +1,70 @@
+\hypertarget{classIs__empty__geometry}{}\section{Is\+\_\+empty\+\_\+geometry Class Reference}
+\label{classIs__empty__geometry}\index{Is\+\_\+empty\+\_\+geometry@{Is\+\_\+empty\+\_\+geometry}}
+Inheritance diagram for Is\+\_\+empty\+\_\+geometry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIs__empty__geometry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classIs__empty__geometry_a30bc84d35b5a414d1366b57a6ba02f2e}{on\+\_\+wkb\+\_\+start}} (Geometry\+::wkb\+Byte\+Order bo, Geometry\+::wkb\+Type geotype, const void $\ast$wkb, uint32 len, bool has\+\_\+hdr)
+\item 
+virtual void \mbox{\hyperlink{classIs__empty__geometry_a9c4aa9285a264596e57a8c3018f6500a}{on\+\_\+wkb\+\_\+end}} (const void $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classIs__empty__geometry_ad1e1e725be3f12a273abd8250c8527a7}\label{classIs__empty__geometry_ad1e1e725be3f12a273abd8250c8527a7}} 
+virtual bool {\bfseries continue\+\_\+scan} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIs__empty__geometry_abf8322262ac3ca8e2366652b7ad431ad}\label{classIs__empty__geometry_abf8322262ac3ca8e2366652b7ad431ad}} 
+bool {\bfseries is\+\_\+empty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIs__empty__geometry_a9c4aa9285a264596e57a8c3018f6500a}\label{classIs__empty__geometry_a9c4aa9285a264596e57a8c3018f6500a}} 
+\index{Is\+\_\+empty\+\_\+geometry@{Is\+\_\+empty\+\_\+geometry}!on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}}
+\index{on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}!Is\+\_\+empty\+\_\+geometry@{Is\+\_\+empty\+\_\+geometry}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+end()}{on\_wkb\_end()}}
+{\footnotesize\ttfamily virtual void Is\+\_\+empty\+\_\+geometry\+::on\+\_\+wkb\+\_\+end (\begin{DoxyParamCaption}\item[{const void $\ast$}]{wkb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the end of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em wkb} & the position of the first byte after the W\+KB byte string which the scanner just scanned. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+\mbox{\Hypertarget{classIs__empty__geometry_a30bc84d35b5a414d1366b57a6ba02f2e}\label{classIs__empty__geometry_a30bc84d35b5a414d1366b57a6ba02f2e}} 
+\index{Is\+\_\+empty\+\_\+geometry@{Is\+\_\+empty\+\_\+geometry}!on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}}
+\index{on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}!Is\+\_\+empty\+\_\+geometry@{Is\+\_\+empty\+\_\+geometry}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+start()}{on\_wkb\_start()}}
+{\footnotesize\ttfamily virtual void Is\+\_\+empty\+\_\+geometry\+::on\+\_\+wkb\+\_\+start (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{Geometry\+::wkb\+Type}]{geotype,  }\item[{const void $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{bool}]{has\+\_\+hdr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the start of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em bo} & byte order of the W\+KB. \\
+\hline
+{\em geotype} & geometry type of the W\+KB; \\
+\hline
+{\em wkb} & W\+KB byte string, the first byte after the W\+KB header if any. \\
+\hline
+{\em len} & NO. of bytes of the W\+KB byte string starting from wkb. There can be many geometries in the \mbox{[}wkb, wkb+len) buffer. \\
+\hline
+{\em has\+\_\+hdr} & whether there is a W\+KB header right before \textquotesingle{}wkb\textquotesingle{} in the byte string. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc\+\_\+internal.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,190 @@
+\hypertarget{classsubselect__indexsubquery__engine}{}\section{subselect\+\_\+indexsubquery\+\_\+engine Class Reference}
+\label{classsubselect__indexsubquery__engine}\index{subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}}
+
+
+{\ttfamily \#include $<$item\+\_\+subselect.\+h$>$}
+
+Inheritance diagram for subselect\+\_\+indexsubquery\+\_\+engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsubselect__indexsubquery__engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_ab82444e407990fa6239accace7323951}\label{classsubselect__indexsubquery__engine_ab82444e407990fa6239accace7323951}} 
+{\bfseries subselect\+\_\+indexsubquery\+\_\+engine} (T\+HD $\ast$thd\+\_\+arg, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab\+\_\+arg, \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} $\ast$subs, \mbox{\hyperlink{classItem}{Item}} $\ast$where, \mbox{\hyperlink{classItem}{Item}} $\ast$having\+\_\+arg, bool chk\+\_\+null, bool unique\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a5eedf659adbcec020dfeabb8ffc7c261}\label{classsubselect__indexsubquery__engine_a5eedf659adbcec020dfeabb8ffc7c261}} 
+virtual bool {\bfseries exec} ()
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a40f9e9028e88c03598675963ed70e273}\label{classsubselect__indexsubquery__engine_a40f9e9028e88c03598675963ed70e273}} 
+virtual void {\bfseries print} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_ac8bf67f3d2bdfc98deae80f7464ed656}\label{classsubselect__indexsubquery__engine_ac8bf67f3d2bdfc98deae80f7464ed656}} 
+virtual enum\+\_\+engine\+\_\+type {\bfseries engine\+\_\+type} () const
+\item 
+virtual void \mbox{\hyperlink{classsubselect__indexsubquery__engine_a185f036d8ce8517de313c2b796b4b060}{cleanup}} ()
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a614a68b3201d47f6b00e3b2a8ce86fde}\label{classsubselect__indexsubquery__engine_a614a68b3201d47f6b00e3b2a8ce86fde}} 
+virtual bool {\bfseries prepare} ()
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a88543496d0b77b1bc2904e33cae9259f}\label{classsubselect__indexsubquery__engine_a88543496d0b77b1bc2904e33cae9259f}} 
+virtual void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} (\mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}} $\ast$$\ast$row)
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a39c2db5d643fd4c3aaf5df46f456e6c4}\label{classsubselect__indexsubquery__engine_a39c2db5d643fd4c3aaf5df46f456e6c4}} 
+virtual uint {\bfseries cols} () const
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_aa04e2c5657005246bae08e79531be0d2}\label{classsubselect__indexsubquery__engine_aa04e2c5657005246bae08e79531be0d2}} 
+virtual uint8 {\bfseries uncacheable} () const
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_ae0a83f2096db95fe122f1bef3aa248fa}\label{classsubselect__indexsubquery__engine_ae0a83f2096db95fe122f1bef3aa248fa}} 
+virtual void {\bfseries exclude} ()
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_ab486f97fcaa6bf614b5d8925b1f715d6}\label{classsubselect__indexsubquery__engine_ab486f97fcaa6bf614b5d8925b1f715d6}} 
+virtual table\+\_\+map {\bfseries upper\+\_\+select\+\_\+const\+\_\+tables} () const
+\item 
+virtual bool \mbox{\hyperlink{classsubselect__indexsubquery__engine_a003053e9d46291cb9323b22a29f90c9b}{change\+\_\+query\+\_\+result}} (\mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} $\ast$si, Query\+\_\+result\+\_\+subquery $\ast$result)
+\item 
+bool \mbox{\hyperlink{classsubselect__indexsubquery__engine_a29c5ef09679c4230e35209ae5594599b}{scan\+\_\+table}} ()
+\item 
+void \mbox{\hyperlink{classsubselect__indexsubquery__engine_ad87696f97f0eef746e6718d3864f2757}{copy\+\_\+ref\+\_\+key}} (bool $\ast$require\+\_\+scan, bool $\ast$convert\+\_\+error)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a99a669138cdbe5fb68974e6f87b2d231}\label{classsubselect__indexsubquery__engine_a99a669138cdbe5fb68974e6f87b2d231}} 
+\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$ {\bfseries tab}
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a39c85b26afae818e015e375993c47e81}\label{classsubselect__indexsubquery__engine_a39c85b26afae818e015e375993c47e81}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries cond}
+\item 
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a9e557150abc9efd4018e6d2bd6f920e5}\label{classsubselect__indexsubquery__engine_a9e557150abc9efd4018e6d2bd6f920e5}} 
+ulonglong {\bfseries hash}
+\item 
+bool \mbox{\hyperlink{classsubselect__indexsubquery__engine_a75965ec0649b8c70a4a6fd7bdea42754}{unique}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A subquery execution engine that evaluates the subquery by doing index lookups in a single table\textquotesingle{}s index.
+
+This engine is used to resolve subqueries in forms
+
+outer\+\_\+expr IN (S\+E\+L\+E\+CT tbl.\+key F\+R\+OM tbl W\+H\+E\+RE subq\+\_\+where)
+
+or, row-\/based\+:
+
+(oe1, .. oeN) IN (S\+E\+L\+E\+CT key\+\_\+part1, ... key\+\_\+partK F\+R\+OM tbl W\+H\+E\+RE subqwhere)
+
+i.\+e. the subquery is a single table S\+E\+L\+E\+CT without G\+R\+O\+UP BY, aggregate functions, etc. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a003053e9d46291cb9323b22a29f90c9b}\label{classsubselect__indexsubquery__engine_a003053e9d46291cb9323b22a29f90c9b}} 
+\index{subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}!change\+\_\+query\+\_\+result@{change\+\_\+query\+\_\+result}}
+\index{change\+\_\+query\+\_\+result@{change\+\_\+query\+\_\+result}!subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}}
+\subsubsection{\texorpdfstring{change\+\_\+query\+\_\+result()}{change\_query\_result()}}
+{\footnotesize\ttfamily bool subselect\+\_\+indexsubquery\+\_\+engine\+::change\+\_\+query\+\_\+result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} $\ast$}]{si,  }\item[{Query\+\_\+result\+\_\+subquery $\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+change query result emulation, never should be called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & new subselect \mbox{\hyperlink{classItem}{Item}} \\
+\hline
+{\em res} & new Query\+\_\+result object\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classsubselect__engine}{subselect\+\_\+engine}}.
+
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a185f036d8ce8517de313c2b796b4b060}\label{classsubselect__indexsubquery__engine_a185f036d8ce8517de313c2b796b4b060}} 
+\index{subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily virtual void subselect\+\_\+indexsubquery\+\_\+engine\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Cleanup engine after complete query execution, free all resources. 
+
+Implements \mbox{\hyperlink{classsubselect__engine_a0f0051f24ecc4b20f0e3f8d817293276}{subselect\+\_\+engine}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsubselect__hash__sj__engine_a2543ad3f7c4cd6ab5e774d6c4eb9ef64}{subselect\+\_\+hash\+\_\+sj\+\_\+engine}}.
+
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_ad87696f97f0eef746e6718d3864f2757}\label{classsubselect__indexsubquery__engine_ad87696f97f0eef746e6718d3864f2757}} 
+\index{subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}!copy\+\_\+ref\+\_\+key@{copy\+\_\+ref\+\_\+key}}
+\index{copy\+\_\+ref\+\_\+key@{copy\+\_\+ref\+\_\+key}!subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}}
+\subsubsection{\texorpdfstring{copy\+\_\+ref\+\_\+key()}{copy\_ref\_key()}}
+{\footnotesize\ttfamily void subselect\+\_\+indexsubquery\+\_\+engine\+::copy\+\_\+ref\+\_\+key (\begin{DoxyParamCaption}\item[{bool $\ast$}]{require\+\_\+scan,  }\item[{bool $\ast$}]{convert\+\_\+error }\end{DoxyParamCaption})}
+
+Copy ref key and check for null parts in it
+
+Construct a search tuple to be used for index lookup. If one of the key parts have a N\+U\+LL value, the following logic applies\+:
+
+For top level items, e.\+g.
+
+\char`\"{}\+W\+H\+E\+R\+E $<$outer\+\_\+value\+\_\+list$>$ I\+N (\+S\+E\+L\+E\+C\+T $<$inner\+\_\+value\+\_\+list$>$...)\char`\"{}
+
+where one of the outer values are N\+U\+LL, the IN predicate evaluates to false/\+U\+N\+K\+N\+O\+WN (we don\textquotesingle{}t care) and it\textquotesingle{}s not necessary to evaluate the subquery. That shortcut is taken in \mbox{\hyperlink{classItem__in__optimizer_a24ae21b54394fd097a1b9ec9fd812bd9}{Item\+\_\+in\+\_\+optimizer\+::val\+\_\+int()}}. Thus, if a key part with a N\+U\+LL value is found here, the N\+U\+LL is either not outer or this subquery is not top level. Therefore we cannot shortcut subquery execution if a N\+U\+LL is found here.
+
+Thus, if one of the key parts have a N\+U\+LL value there are two possibilities\+:
+
+a) The N\+U\+LL is from the outer\+\_\+value\+\_\+list. Since this is not a top level item (see above) we need to check whether this predicate evaluates to N\+U\+LL or false. That is done by checking if the subquery has a row if the conditions based on outer N\+U\+LL values are disabled. Index lookup cannot be used for this, so a table scan must be done.
+
+b) The N\+U\+LL is local to the subquery, e.\+g.\+: \begin{DoxyVerb}  "WHERE ... IN (SELECT ... WHERE inner_col IS NULL)"
+\end{DoxyVerb}
+
+
+In this case we\textquotesingle{}re looking for rows with the exact inner\+\_\+col value of N\+U\+LL, not rows that match if the \char`\"{}inner\+\_\+col I\+S N\+U\+L\+L\char`\"{} condition is disabled. Index lookup can be used for this.
+
+\begin{DoxySeeAlso}{See also}
+subselect\+\_\+indexsubquery\+\_\+engine\+::exec() 
+
+\mbox{\hyperlink{classItem__in__optimizer_a24ae21b54394fd097a1b9ec9fd812bd9}{Item\+\_\+in\+\_\+optimizer\+::val\+\_\+int()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em require\+\_\+scan} & true if a N\+U\+LL value is found that falls into category a) above, false if index lookup can be used. \\
+\hline
+\mbox{\texttt{ out}}  & {\em convert\+\_\+error} & true if an error occured during conversion of values from one type to another, false otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a29c5ef09679c4230e35209ae5594599b}\label{classsubselect__indexsubquery__engine_a29c5ef09679c4230e35209ae5594599b}} 
+\index{subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}!scan\+\_\+table@{scan\+\_\+table}}
+\index{scan\+\_\+table@{scan\+\_\+table}!subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}}
+\subsubsection{\texorpdfstring{scan\+\_\+table()}{scan\_table()}}
+{\footnotesize\ttfamily bool subselect\+\_\+indexsubquery\+\_\+engine\+::scan\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Search, using a table scan, for at least one row satisfying select condition.
+
+The caller must set item\textquotesingle{}s \textquotesingle{}value\textquotesingle{} to \textquotesingle{}false\textquotesingle{} before calling this function. This function will set it to \textquotesingle{}true\textquotesingle{} if it finds a matching row.
+
+\begin{DoxyReturn}{Returns}
+false if ok, true if read error. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsubselect__indexsubquery__engine_a75965ec0649b8c70a4a6fd7bdea42754}\label{classsubselect__indexsubquery__engine_a75965ec0649b8c70a4a6fd7bdea42754}} 
+\index{subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}!unique@{unique}}
+\index{unique@{unique}!subselect\+\_\+indexsubquery\+\_\+engine@{subselect\+\_\+indexsubquery\+\_\+engine}}
+\subsubsection{\texorpdfstring{unique}{unique}}
+{\footnotesize\ttfamily bool subselect\+\_\+indexsubquery\+\_\+engine\+::unique\hspace{0.3cm}{\ttfamily [protected]}}
+
+Whether a lookup for key value (x0,y0) (x0 and/or y0 being N\+U\+LL or not N\+U\+LL) will find at most one row. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+subselect.\+h\item 
+\mbox{\hyperlink{item__subselect_8cc}{item\+\_\+subselect.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+\hypertarget{structJson__scalar__holder}{}\section{Json\+\_\+scalar\+\_\+holder Struct Reference}
+\label{structJson__scalar__holder}\index{Json\+\_\+scalar\+\_\+holder@{Json\+\_\+scalar\+\_\+holder}}
+Inheritance diagram for Json\+\_\+scalar\+\_\+holder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structJson__scalar__holder}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structJson__scalar__holder_a401749878e6272d62e7447780d8fcad6}\label{structJson__scalar__holder_a401749878e6272d62e7447780d8fcad6}} 
+boost\+::variant$<$ boost\+::blank, \mbox{\hyperlink{classJson__string}{Json\+\_\+string}}, \mbox{\hyperlink{classJson__decimal}{Json\+\_\+decimal}}, \mbox{\hyperlink{classJson__int}{Json\+\_\+int}}, \mbox{\hyperlink{classJson__uint}{Json\+\_\+uint}}, \mbox{\hyperlink{classJson__double}{Json\+\_\+double}}, \mbox{\hyperlink{classJson__boolean}{Json\+\_\+boolean}}, \mbox{\hyperlink{classJson__null}{Json\+\_\+null}}, \mbox{\hyperlink{classJson__datetime}{Json\+\_\+datetime}}, \mbox{\hyperlink{classJson__opaque}{Json\+\_\+opaque}} $>$ {\bfseries m\+\_\+val}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Type that is capable of holding objects of any sub-\/type of \mbox{\hyperlink{classJson__scalar}{Json\+\_\+scalar}}. Used for pre-\/allocating space in query-\/duration memory for J\+S\+ON scalars that are to be returned by get\+\_\+json\+\_\+atom\+\_\+wrapper().
+
+Note\+: boost\+::blank is included in the variant to ensure that it includes a type that is known to be nothrow default-\/constructible. The presence of such a type avoids heap allocation when assigning a new value to the variant. Look for the \char`\"{}never-\/empty\char`\"{} guarantee in the Boost documentation for details. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+json\+\_\+func.\+cc\end{DoxyCompactItemize}

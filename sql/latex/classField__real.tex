@@ -1,0 +1,163 @@
+\hypertarget{classField__real}{}\section{Field\+\_\+real Class Reference}
+\label{classField__real}\index{Field\+\_\+real@{Field\+\_\+real}}
+Inheritance diagram for Field\+\_\+real\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classField__real}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__real_a0d237f324ea333dbcbf98154911b34c0}\label{classField__real_a0d237f324ea333dbcbf98154911b34c0}} 
+{\bfseries Field\+\_\+real} (uchar $\ast$ptr\+\_\+arg, uint32 len\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint8 dec\+\_\+arg, bool zero\+\_\+arg, bool unsigned\+\_\+arg)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__real_ae06ebf885e6b10b0a7c4966873d6b80f}{store\+\_\+decimal}} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__real_a2020c5eabc8cdc2c451ca0591e284150}{store\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint8 dec)
+\item 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classField__real_aea0b139caebcb6dc909b1bc397f5aba6}{val\+\_\+decimal}} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classField__real_a45eda52e25c73ee372b039045d035f50}\label{classField__real_a45eda52e25c73ee372b039045d035f50}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classField__real_ad3dcc83a9dfe6516d83bd3d80faaf30c}\label{classField__real_ad3dcc83a9dfe6516d83bd3d80faaf30c}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+\mbox{\Hypertarget{classField__real_af9694b9e50dbb08b625e3884a525af95}\label{classField__real_af9694b9e50dbb08b625e3884a525af95}} 
+bool {\bfseries truncate} (double $\ast$nr, double max\+\_\+length)
+\item 
+\mbox{\Hypertarget{classField__real_a858dae45995bdd890176c92dbddc0c2e}\label{classField__real_a858dae45995bdd890176c92dbddc0c2e}} 
+uint32 {\bfseries max\+\_\+display\+\_\+length} ()
+\item 
+virtual const uchar $\ast$ \mbox{\hyperlink{classField__real_aab922b4da48c1fd508344b1f627e0e0e}{unpack}} (uchar $\ast$to, const uchar $\ast$from, uint param\+\_\+data, bool low\+\_\+byte\+\_\+first)
+\item 
+virtual uchar $\ast$ \mbox{\hyperlink{classField__real_a350715a27630782dd1247287d2446480}{pack}} (uchar $\ast$to, const uchar $\ast$from, uint max\+\_\+length, bool low\+\_\+byte\+\_\+first)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__real_a17bb9dff64e280d9b686fd700b77d0fd}\label{classField__real_a17bb9dff64e280d9b686fd700b77d0fd}} 
+my\+\_\+bool {\bfseries not\+\_\+fixed}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__real_a350715a27630782dd1247287d2446480}\label{classField__real_a350715a27630782dd1247287d2446480}} 
+\index{Field\+\_\+real@{Field\+\_\+real}!pack@{pack}}
+\index{pack@{pack}!Field\+\_\+real@{Field\+\_\+real}}
+\subsubsection{\texorpdfstring{pack()}{pack()}}
+{\footnotesize\ttfamily uchar $\ast$ Field\+\_\+real\+::pack (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{from,  }\item[{uint}]{max\+\_\+length,  }\item[{bool}]{low\+\_\+byte\+\_\+first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+
+Reimplemented from \mbox{\hyperlink{classField_a9eaff8d3425ef0e1da69b32cbd8f2879}{Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__decimal_a85c1f4498b4f8f773056efcf6c3a901a}{Field\+\_\+decimal}}.
+
+\mbox{\Hypertarget{classField__real_ae06ebf885e6b10b0a7c4966873d6b80f}\label{classField__real_ae06ebf885e6b10b0a7c4966873d6b80f}} 
+\index{Field\+\_\+real@{Field\+\_\+real}!store\+\_\+decimal@{store\+\_\+decimal}}
+\index{store\+\_\+decimal@{store\+\_\+decimal}!Field\+\_\+real@{Field\+\_\+real}}
+\subsubsection{\texorpdfstring{store\+\_\+decimal()}{store\_decimal()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+real\+::store\+\_\+decimal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Storing decimal in integer fields.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & value for storing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is used by all integer fields, real/decimal redefine it
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & Storage of value went fine without warnings or errors \\
+\hline
+{\em !\+T\+Y\+P\+E\+\_\+\+OK} & Warning/error as indicated by type\+\_\+conversion\+\_\+status enum value \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__num_a66573c9ffc227799320c49a73a0f8de5}{Field\+\_\+num}}.
+
+\mbox{\Hypertarget{classField__real_a2020c5eabc8cdc2c451ca0591e284150}\label{classField__real_a2020c5eabc8cdc2c451ca0591e284150}} 
+\index{Field\+\_\+real@{Field\+\_\+real}!store\+\_\+time@{store\+\_\+time}}
+\index{store\+\_\+time@{store\+\_\+time}!Field\+\_\+real@{Field\+\_\+real}}
+\subsubsection{\texorpdfstring{store\+\_\+time()}{store\_time()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+real\+::store\+\_\+time (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Store M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value with the given amount of decimal digits into a field.
+
+Note, the \char`\"{}dec\char`\"{} parameter represents number of digits of the \mbox{\hyperlink{classItem}{Item}} that previously created the M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value. It\textquotesingle{}s needed when we store the value into a C\+H\+A\+R/\+V\+A\+R\+C\+H\+A\+R/\+T\+E\+XT field to display the proper amount of fractional digits. For other field types the \char`\"{}dec\char`\"{} value does not matter and is ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ltime} & Time, date or datetime value. \\
+\hline
+{\em dec} & Number of decimals in ltime. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on error\\
+\hline
+\end{DoxyRetVals}
+This is called when storing a date in a string.
+
+\begin{DoxyNote}{Note}
+Needs to be changed if/when we want to support different time formats. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classField__num_ab573b6e30982c3d517794503f14560de}{Field\+\_\+num}}.
+
+\mbox{\Hypertarget{classField__real_aab922b4da48c1fd508344b1f627e0e0e}\label{classField__real_aab922b4da48c1fd508344b1f627e0e0e}} 
+\index{Field\+\_\+real@{Field\+\_\+real}!unpack@{unpack}}
+\index{unpack@{unpack}!Field\+\_\+real@{Field\+\_\+real}}
+\subsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily const uchar $\ast$ Field\+\_\+real\+::unpack (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{from,  }\item[{uint}]{param\+\_\+data,  }\item[{bool}]{low\+\_\+byte\+\_\+first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+
+Reimplemented from \mbox{\hyperlink{classField_a42f448ff2c939d91949f7635d939b16b}{Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__decimal_a175db70d41ae30df50a1ec04d8680363}{Field\+\_\+decimal}}.
+
+\mbox{\Hypertarget{classField__real_aea0b139caebcb6dc909b1bc397f5aba6}\label{classField__real_aea0b139caebcb6dc909b1bc397f5aba6}} 
+\index{Field\+\_\+real@{Field\+\_\+real}!val\+\_\+decimal@{val\+\_\+decimal}}
+\index{val\+\_\+decimal@{val\+\_\+decimal}!Field\+\_\+real@{Field\+\_\+real}}
+\subsubsection{\texorpdfstring{val\+\_\+decimal()}{val\_decimal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ Field\+\_\+real\+::val\+\_\+decimal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{decimal\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return decimal value of integer field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em decimal\+\_\+value} & buffer for storing decimal value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is used by all integer fields, real/decimal redefine it. All longlong values fit in our decimal buffer which cal store 8$\ast$9=72 digits of integer number
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+pointer to decimal buffer with value of field 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField__num_a6fec8b8c9fc5c0b9b0429f6fbc860de3}{Field\+\_\+num}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

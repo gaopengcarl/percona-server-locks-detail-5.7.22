@@ -1,0 +1,84 @@
+\hypertarget{sys__vars__shared_8h}{}\section{sys\+\_\+vars\+\_\+shared.\+h File Reference}
+\label{sys__vars__shared_8h}\index{sys\+\_\+vars\+\_\+shared.\+h@{sys\+\_\+vars\+\_\+shared.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPolyLock}{Poly\+Lock}}
+\item 
+class \mbox{\hyperlink{classPolyLock__mutex}{Poly\+Lock\+\_\+mutex}}
+\item 
+class \mbox{\hyperlink{classPolyLock__rwlock}{Poly\+Lock\+\_\+rwlock}}
+\item 
+class \mbox{\hyperlink{classPolyLock__lock__log}{Poly\+Lock\+\_\+lock\+\_\+log}}
+\item 
+class \mbox{\hyperlink{classAutoWLock}{Auto\+W\+Lock}}
+\item 
+class \mbox{\hyperlink{classAutoRLock}{Auto\+R\+Lock}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{sys__vars__shared_8h_a090a4f0c8cea0c97d2f1a2a4395cdebe}{throw\+\_\+bounds\+\_\+warning}} (T\+HD $\ast$thd, const char $\ast$name, bool fixed, bool is\+\_\+unsigned, longlong v)
+\item 
+\mbox{\Hypertarget{sys__vars__shared_8h_a11c496726ebf2b8d8519a56114a0df5c}\label{sys__vars__shared_8h_a11c496726ebf2b8d8519a56114a0df5c}} 
+bool {\bfseries throw\+\_\+bounds\+\_\+warning} (T\+HD $\ast$thd, const char $\ast$name, bool fixed, double v)
+\item 
+\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ \mbox{\hyperlink{sys__vars__shared_8h_af3c6aae506345ca7b514ef8b212511e6}{intern\+\_\+find\+\_\+sys\+\_\+var}} (const char $\ast$str, size\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}protected\char`\"{} interface to \mbox{\hyperlink{classsys__var}{sys\+\_\+var}} -\/ server configuration variables.
+
+This header is included by files implementing support and utility functions of \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}\textquotesingle{}s (set\+\_\+var.\+cc) and files implementing classes in the \mbox{\hyperlink{classsys__var}{sys\+\_\+var}} hierarchy (sql\+\_\+plugin.\+cc) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys__vars__shared_8h_af3c6aae506345ca7b514ef8b212511e6}\label{sys__vars__shared_8h_af3c6aae506345ca7b514ef8b212511e6}} 
+\index{sys\+\_\+vars\+\_\+shared.\+h@{sys\+\_\+vars\+\_\+shared.\+h}!intern\+\_\+find\+\_\+sys\+\_\+var@{intern\+\_\+find\+\_\+sys\+\_\+var}}
+\index{intern\+\_\+find\+\_\+sys\+\_\+var@{intern\+\_\+find\+\_\+sys\+\_\+var}!sys\+\_\+vars\+\_\+shared.\+h@{sys\+\_\+vars\+\_\+shared.\+h}}
+\subsubsection{\texorpdfstring{intern\+\_\+find\+\_\+sys\+\_\+var()}{intern\_find\_sys\_var()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}$\ast$ intern\+\_\+find\+\_\+sys\+\_\+var (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Find a user set-\/table variable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Name of system variable to find \\
+\hline
+{\em length} & Length of variable. zero means that we should use strlen() on the variable\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & pointer to variable definitions \\
+\hline
+{\em 0} & Unknown variable (error message is given) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sys__vars__shared_8h_a090a4f0c8cea0c97d2f1a2a4395cdebe}\label{sys__vars__shared_8h_a090a4f0c8cea0c97d2f1a2a4395cdebe}} 
+\index{sys\+\_\+vars\+\_\+shared.\+h@{sys\+\_\+vars\+\_\+shared.\+h}!throw\+\_\+bounds\+\_\+warning@{throw\+\_\+bounds\+\_\+warning}}
+\index{throw\+\_\+bounds\+\_\+warning@{throw\+\_\+bounds\+\_\+warning}!sys\+\_\+vars\+\_\+shared.\+h@{sys\+\_\+vars\+\_\+shared.\+h}}
+\subsubsection{\texorpdfstring{throw\+\_\+bounds\+\_\+warning()}{throw\_bounds\_warning()}}
+{\footnotesize\ttfamily bool throw\+\_\+bounds\+\_\+warning (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{name,  }\item[{bool}]{fixed,  }\item[{bool}]{is\+\_\+unsigned,  }\item[{longlong}]{v }\end{DoxyParamCaption})}
+
+Throw warning (error in S\+T\+R\+I\+CT mode) if value for variable needed bounding. Plug-\/in interface also uses this.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em name} & variable\textquotesingle{}s name \\
+\hline
+{\em fixed} & did we have to correct the value? (throw warn/err if so) \\
+\hline
+{\em is\+\_\+unsigned} & is value\textquotesingle{}s type unsigned? \\
+\hline
+{\em v} & variable\textquotesingle{}s value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & on error, false otherwise (warning or ok) \\
+\hline
+\end{DoxyRetVals}

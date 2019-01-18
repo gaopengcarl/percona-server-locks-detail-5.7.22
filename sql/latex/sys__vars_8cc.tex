@@ -1,0 +1,175 @@
+\hypertarget{sys__vars_8cc}{}\section{sys\+\_\+vars.\+cc File Reference}
+\label{sys__vars_8cc}\index{sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}}
+{\ttfamily \#include \char`\"{}sys\+\_\+vars.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+aes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}myisam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connection\+\_\+handler\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connection\+\_\+handler\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}derror.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hostname.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+timefunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log\+\_\+event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+info\+\_\+factory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+info\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+mi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+msr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+mts\+\_\+submode.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+rli.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+slave.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}socket\+\_\+connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+head.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+show.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+tmp\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}table\+\_\+cache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transaction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+write\+\_\+set\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+group\+\_\+replication.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}threadpool.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a053b7859476cc9867ec62c49e68d3fa1}\label{sys__vars_8cc_a053b7859476cc9867ec62c49e68d3fa1}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS}~100000
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a1e17022257b2417147ddb7e534e41dd8}\label{sys__vars_8cc_a1e17022257b2417147ddb7e534e41dd8}} 
+\#define {\bfseries export}~/$\ast$ not static $\ast$/
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a841ba01c9d1a195516ea431c61e59bab}\label{sys__vars_8cc_a841ba01c9d1a195516ea431c61e59bab}} 
+\#define {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+H\+A\+N\+D\+L\+I\+NG}~0
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a2eb92e84d9a7a012c8fa36e4abd73ec2}\label{sys__vars_8cc_a2eb92e84d9a7a012c8fa36e4abd73ec2}} 
+\#define {\bfseries S\+S\+L\+\_\+\+O\+PT}(X)~N\+O\+\_\+\+C\+M\+D\+\_\+\+L\+I\+NE
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+export bool \mbox{\hyperlink{sys__vars_8cc_a995ff555f60375cf17a4408c516c43a2}{fix\+\_\+delay\+\_\+key\+\_\+write}} (\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$self, T\+HD $\ast$thd, enum\+\_\+var\+\_\+type type)
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a9d37bad4740cd2705b1f4691e92ea27b}\label{sys__vars_8cc_a9d37bad4740cd2705b1f4691e92ea27b}} 
+export void {\bfseries update\+\_\+parser\+\_\+max\+\_\+mem\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a65c6f057b20cde9d8b80b7ed9b837ca5}\label{sys__vars_8cc_a65c6f057b20cde9d8b80b7ed9b837ca5}} 
+export sql\+\_\+mode\+\_\+t {\bfseries expand\+\_\+sql\+\_\+mode} (sql\+\_\+mode\+\_\+t sql\+\_\+mode, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a1a26607a1ae27f03e176801b5c45b657}\label{sys__vars_8cc_a1a26607a1ae27f03e176801b5c45b657}} 
+export bool {\bfseries sql\+\_\+mode\+\_\+string\+\_\+representation} (T\+HD $\ast$thd, sql\+\_\+mode\+\_\+t sql\+\_\+mode, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$ls)
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a52c2f8b58a1853ea851125ea4de8b7e1}\label{sys__vars_8cc_a52c2f8b58a1853ea851125ea4de8b7e1}} 
+void {\bfseries init\+\_\+slow\+\_\+query\+\_\+log\+\_\+use\+\_\+global\+\_\+control} ()
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_af64504a88e390cdc08ebc8a8cb0b30e2}\label{sys__vars_8cc_af64504a88e390cdc08ebc8a8cb0b30e2}} 
+void {\bfseries init\+\_\+log\+\_\+slow\+\_\+sp\+\_\+statements} ()
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a1942b65d245f211e026bf3f95c895c7e}\label{sys__vars_8cc_a1942b65d245f211e026bf3f95c895c7e}} 
+void {\bfseries init\+\_\+log\+\_\+slow\+\_\+verbosity} ()
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_ae5c1839c5a74b772c95a2ef5b00e4444}\label{sys__vars_8cc_ae5c1839c5a74b772c95a2ef5b00e4444}} 
+const char $\ast$ {\bfseries fixup\+\_\+enforce\+\_\+gtid\+\_\+consistency\+\_\+command\+\_\+line} (char $\ast$value\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_ab0b638218934868e324ebf05717a9d38}\label{sys__vars_8cc_ab0b638218934868e324ebf05717a9d38}} 
+T\+Y\+P\+E\+L\+IB {\bfseries bool\+\_\+typelib} =\{ array\+\_\+elements(bool\+\_\+values)-\/1, \char`\"{}\char`\"{}, bool\+\_\+values, 0 \}
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a6d07035c64b88cadf1f4177f778566a4}\label{sys__vars_8cc_a6d07035c64b88cadf1f4177f778566a4}} 
+ulong {\bfseries opt\+\_\+mi\+\_\+repository\+\_\+id} = I\+N\+F\+O\+\_\+\+R\+E\+P\+O\+S\+I\+T\+O\+R\+Y\+\_\+\+F\+I\+LE
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a90af7d146183f092fcfa2fe03e6be066}\label{sys__vars_8cc_a90af7d146183f092fcfa2fe03e6be066}} 
+ulong {\bfseries opt\+\_\+rli\+\_\+repository\+\_\+id} = I\+N\+F\+O\+\_\+\+R\+E\+P\+O\+S\+I\+T\+O\+R\+Y\+\_\+\+F\+I\+LE
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a102a0ea628310f7adeef2f97bf300f4b}\label{sys__vars_8cc_a102a0ea628310f7adeef2f97bf300f4b}} 
+long {\bfseries srv\+\_\+kill\+\_\+idle\+\_\+transaction}
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_adf6be8c87f14e43ddfdc8333d238e9ff}\label{sys__vars_8cc_adf6be8c87f14e43ddfdc8333d238e9ff}} 
+const char $\ast$ {\bfseries internal\+\_\+tmp\+\_\+disk\+\_\+storage\+\_\+engine\+\_\+names} \mbox{[}$\,$\mbox{]} = \{ \char`\"{}My\+I\+S\+AM\char`\"{}, \char`\"{}Inno\+DB\char`\"{}, 0\}
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_aed1f9236583cc253522fa47e2092b8d9}\label{sys__vars_8cc_aed1f9236583cc253522fa47e2092b8d9}} 
+export \mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$ {\bfseries Sys\+\_\+autocommit\+\_\+ptr} = \&Sys\+\_\+autocommit
+\item 
+const char $\ast$ {\bfseries log\+\_\+slow\+\_\+filter\+\_\+name} \mbox{[}$\,$\mbox{]}
+\item 
+const char $\ast$ {\bfseries log\+\_\+slow\+\_\+verbosity\+\_\+name} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{sys__vars_8cc_a3989de9dcfd3c16479eb8a890def5aab}\label{sys__vars_8cc_a3989de9dcfd3c16479eb8a890def5aab}} 
+const char $\ast$ {\bfseries slow\+\_\+query\+\_\+log\+\_\+rate\+\_\+name} \mbox{[}$\,$\mbox{]} = \{\char`\"{}session\char`\"{}, \char`\"{}query\char`\"{}, 0\}
+\item 
+const \mbox{\hyperlink{structSys__var__multi__enum_1_1ALIAS}{Sys\+\_\+var\+\_\+multi\+\_\+enum\+::\+A\+L\+I\+AS}} {\bfseries enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions of all server\textquotesingle{}s session or global variables.
+
+How to add new variables\+:
+
+
+\begin{DoxyEnumerate}
+\item copy one of the existing variables, and edit the declaration.
+\item if you need special behavior on assignment or additional checks use O\+N\+\_\+\+C\+H\+E\+CK and O\+N\+\_\+\+U\+P\+D\+A\+TE callbacks.
+\item {\itshape Don\textquotesingle{}t} add new Sys\+\_\+var classes or uncle Occam will come with his razor to haunt you at nights
+\end{DoxyEnumerate}
+
+Note -\/ all storage engine variables (for example myisam\+\_\+whatever) should go into the corresponding storage engine sources (for example in storage/myisam/ha\+\_\+myisam.\+cc) ! 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys__vars_8cc_a995ff555f60375cf17a4408c516c43a2}\label{sys__vars_8cc_a995ff555f60375cf17a4408c516c43a2}} 
+\index{sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}!fix\+\_\+delay\+\_\+key\+\_\+write@{fix\+\_\+delay\+\_\+key\+\_\+write}}
+\index{fix\+\_\+delay\+\_\+key\+\_\+write@{fix\+\_\+delay\+\_\+key\+\_\+write}!sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}}
+\subsubsection{\texorpdfstring{fix\+\_\+delay\+\_\+key\+\_\+write()}{fix\_delay\_key\_write()}}
+{\footnotesize\ttfamily export bool fix\+\_\+delay\+\_\+key\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$}]{self,  }\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+var\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000122}{Todo}}]When updating myisam\+\_\+delay\+\_\+key\+\_\+write, we should do a \textquotesingle{}flush tables\textquotesingle{} of all My\+I\+S\+AM tables to ensure that they are reopen with the new attribute. \end{DoxyRefDesc}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{sys__vars_8cc_a31d1a9df337f1ad8a9c78bb67bffb37a}\label{sys__vars_8cc_a31d1a9df337f1ad8a9c78bb67bffb37a}} 
+\index{sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}!enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases@{enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases}}
+\index{enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases@{enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases}!sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}}
+\subsubsection{\texorpdfstring{enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases}{enforce\_gtid\_consistency\_aliases}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structSys__var__multi__enum_1_1ALIAS}{Sys\+\_\+var\+\_\+multi\+\_\+enum\+::\+A\+L\+I\+AS}} enforce\+\_\+gtid\+\_\+consistency\+\_\+aliases\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \{ \textcolor{stringliteral}{"OFF"}, 0 \},}
+\DoxyCodeLine{  \{ \textcolor{stringliteral}{"ON"}, 1 \},}
+\DoxyCodeLine{  \{ \textcolor{stringliteral}{"WARN"}, 2 \},}
+\DoxyCodeLine{  \{ \textcolor{stringliteral}{"FALSE"}, 0 \},}
+\DoxyCodeLine{  \{ \textcolor{stringliteral}{"TRUE"}, 1 \},}
+\DoxyCodeLine{  \{ NULL, 0 \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{sys__vars_8cc_a466f005e9525b3ad06617145d264ddaa}\label{sys__vars_8cc_a466f005e9525b3ad06617145d264ddaa}} 
+\index{sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}!log\+\_\+slow\+\_\+filter\+\_\+name@{log\+\_\+slow\+\_\+filter\+\_\+name}}
+\index{log\+\_\+slow\+\_\+filter\+\_\+name@{log\+\_\+slow\+\_\+filter\+\_\+name}!sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+slow\+\_\+filter\+\_\+name}{log\_slow\_filter\_name}}
+{\footnotesize\ttfamily const char$\ast$ log\+\_\+slow\+\_\+filter\+\_\+name\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ \textcolor{stringliteral}{"qc\_miss"}, \textcolor{stringliteral}{"full\_scan"}, \textcolor{stringliteral}{"full\_join"},}
+\DoxyCodeLine{                                      \textcolor{stringliteral}{"tmp\_table"}, \textcolor{stringliteral}{"tmp\_table\_on\_disk"}, \textcolor{stringliteral}{"filesort"}, \textcolor{stringliteral}{"filesort\_on\_disk"}, 0\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{sys__vars_8cc_a1cc9df2033d3ccaca34949523fdbc840}\label{sys__vars_8cc_a1cc9df2033d3ccaca34949523fdbc840}} 
+\index{sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}!log\+\_\+slow\+\_\+verbosity\+\_\+name@{log\+\_\+slow\+\_\+verbosity\+\_\+name}}
+\index{log\+\_\+slow\+\_\+verbosity\+\_\+name@{log\+\_\+slow\+\_\+verbosity\+\_\+name}!sys\+\_\+vars.\+cc@{sys\+\_\+vars.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+slow\+\_\+verbosity\+\_\+name}{log\_slow\_verbosity\_name}}
+{\footnotesize\ttfamily const char$\ast$ log\+\_\+slow\+\_\+verbosity\+\_\+name\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ }
+\DoxyCodeLine{  \textcolor{stringliteral}{"microtime"}, \textcolor{stringliteral}{"query\_plan"}, \textcolor{stringliteral}{"innodb"}, }
+\DoxyCodeLine{  \textcolor{stringliteral}{"profiling"}, \textcolor{stringliteral}{"profiling\_use\_getrusage"}, }
+\DoxyCodeLine{  \textcolor{stringliteral}{"minimal"}, \textcolor{stringliteral}{"standard"}, \textcolor{stringliteral}{"full"}, 0}
+\DoxyCodeLine{\}}
+\end{DoxyCode}

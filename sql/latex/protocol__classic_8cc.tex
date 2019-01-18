@@ -1,0 +1,249 @@
+\hypertarget{protocol__classic_8cc}{}\section{protocol\+\_\+classic.\+cc File Reference}
+\label{protocol__classic_8cc}\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+{\ttfamily \#include \char`\"{}protocol\+\_\+classic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_ad27e8c06c427de747d538733ba711bd4}{net\+\_\+send\+\_\+error\+\_\+packet}} (T\+HD $\ast$, uint, const char $\ast$, const char $\ast$)
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_abb42d7fab98ef6f8d8764c48accc84b8}{net\+\_\+send\+\_\+error\+\_\+packet}} (N\+ET $\ast$, uint, const char $\ast$, const char $\ast$, bool, ulong, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$)
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_a3d3b9a5a12f075d2214c04578864db56}{net\+\_\+send\+\_\+ok}} (T\+HD $\ast$, uint, uint, ulonglong, ulonglong, const char $\ast$, bool)
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_ad98c27cdf91ce2ca28be0f6706d36ce7}{net\+\_\+send\+\_\+eof}} (T\+HD $\ast$thd, uint server\+\_\+status, uint statement\+\_\+warn\+\_\+count)
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_a72a1193c7baa1af9ad0c6e45958705b5}{net\+\_\+send\+\_\+error}} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$err)
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_a331862ab9931b8844b8f1cd8bf18a542}{net\+\_\+send\+\_\+error}} (N\+ET $\ast$net, uint sql\+\_\+errno, const char $\ast$err)
+\item 
+\mbox{\Hypertarget{protocol__classic_8cc_a66adaf9a38b5f308998ef089dff8ebc7}\label{protocol__classic_8cc_a66adaf9a38b5f308998ef089dff8ebc7}} 
+uchar $\ast$ {\bfseries net\+\_\+store\+\_\+data} (uchar $\ast$to, const uchar $\ast$from, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{protocol__classic_8cc_a9352e53803abbacf4ffad5805a757099}\label{protocol__classic_8cc_a9352e53803abbacf4ffad5805a757099}} 
+uchar $\ast$ {\bfseries net\+\_\+store\+\_\+data} (uchar $\ast$to, int32 from)
+\item 
+\mbox{\Hypertarget{protocol__classic_8cc_a34ec35105bde436a9fa35006ea7840d1}\label{protocol__classic_8cc_a34ec35105bde436a9fa35006ea7840d1}} 
+uchar $\ast$ {\bfseries net\+\_\+store\+\_\+data} (uchar $\ast$to, longlong from)
+\item 
+bool \mbox{\hyperlink{protocol__classic_8cc_ad6a19555b847347297a62c3961fa8b2c}{store}} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$prot, \mbox{\hyperlink{classI__List}{I\+\_\+\+List}}$<$ \mbox{\hyperlink{classi__string}{i\+\_\+string}} $>$ $\ast$str\+\_\+list)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Low level functions for storing data to be send to the My\+S\+QL client. The actual communication is handled by the net\+\_\+xxx functions in \mbox{\hyperlink{net__serv_8cc}{net\+\_\+serv.\+cc}} 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{protocol__classic_8cc_ad98c27cdf91ce2ca28be0f6706d36ce7}\label{protocol__classic_8cc_ad98c27cdf91ce2ca28be0f6706d36ce7}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!net\+\_\+send\+\_\+eof@{net\+\_\+send\+\_\+eof}}
+\index{net\+\_\+send\+\_\+eof@{net\+\_\+send\+\_\+eof}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+send\+\_\+eof()}{net\_send\_eof()}}
+{\footnotesize\ttfamily bool net\+\_\+send\+\_\+eof (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{server\+\_\+status,  }\item[{uint}]{statement\+\_\+warn\+\_\+count }\end{DoxyParamCaption})}
+
+Send eof (= end of result set) to the client.
+
+The eof packet has the following structure\+:
+
+
+\begin{DoxyItemize}
+\item 254 \+: Marker (1 byte)
+\item warning\+\_\+count \+: Stored in 2 bytes; New in 4.\+1 protocol
+\item status\+\_\+flag \+: Stored in 2 bytes; For flags like S\+E\+R\+V\+E\+R\+\_\+\+M\+O\+R\+E\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+E\+X\+I\+S\+TS.
+\end{DoxyItemize}
+
+Note that the warning count will not be sent if \textquotesingle{}no\+\_\+flush\textquotesingle{} is set as we don\textquotesingle{}t want to report the warning count until all data is sent to the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em server\+\_\+status} & The server status \\
+\hline
+{\em statement\+\_\+warn\+\_\+count} & Total number of warnings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & The message was successfully sent \\
+\hline
+{\em T\+R\+UE} & An error occurred and the message wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{protocol__classic_8cc_a72a1193c7baa1af9ad0c6e45958705b5}\label{protocol__classic_8cc_a72a1193c7baa1af9ad0c6e45958705b5}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!net\+\_\+send\+\_\+error@{net\+\_\+send\+\_\+error}}
+\index{net\+\_\+send\+\_\+error@{net\+\_\+send\+\_\+error}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+send\+\_\+error()}{net\_send\_error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool net\+\_\+send\+\_\+error (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{err }\end{DoxyParamCaption})}
+
+Send a error string to client.
+
+Design note\+:
+
+net\+\_\+printf\+\_\+error and net\+\_\+send\+\_\+error are low-\/level functions that shall be used only when a new connection is being established or at server startup.
+
+For S\+I\+G\+N\+A\+L/\+R\+E\+S\+I\+G\+N\+AL and G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS functionality it\textquotesingle{}s critical that every error that can be intercepted is issued in one place only, my\+\_\+message\+\_\+sql.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em sql\+\_\+errno} & The error code to send \\
+\hline
+{\em err} & A pointer to the error message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & The message was sent to the client \\
+\hline
+{\em T\+R\+UE} & An error occurred and the message wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{protocol__classic_8cc_a331862ab9931b8844b8f1cd8bf18a542}\label{protocol__classic_8cc_a331862ab9931b8844b8f1cd8bf18a542}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!net\+\_\+send\+\_\+error@{net\+\_\+send\+\_\+error}}
+\index{net\+\_\+send\+\_\+error@{net\+\_\+send\+\_\+error}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+send\+\_\+error()}{net\_send\_error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool net\+\_\+send\+\_\+error (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{err }\end{DoxyParamCaption})}
+
+Send a error string to client using net struct. This is used initial connection handling code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em net} & Low-\/level net struct \\
+\hline
+{\em sql\+\_\+errno} & The error code to send \\
+\hline
+{\em err} & A pointer to the error message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & The message was sent to the client \\
+\hline
+{\em T\+R\+UE} & An error occurred and the message wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{protocol__classic_8cc_ad27e8c06c427de747d538733ba711bd4}\label{protocol__classic_8cc_ad27e8c06c427de747d538733ba711bd4}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!net\+\_\+send\+\_\+error\+\_\+packet@{net\+\_\+send\+\_\+error\+\_\+packet}}
+\index{net\+\_\+send\+\_\+error\+\_\+packet@{net\+\_\+send\+\_\+error\+\_\+packet}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+send\+\_\+error\+\_\+packet()}{net\_send\_error\_packet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool net\+\_\+send\+\_\+error\+\_\+packet (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{err,  }\item[{const char $\ast$}]{sqlstate }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em sql\+\_\+errno} & The error code to send \\
+\hline
+{\em err} & A pointer to the error message \\
+\hline
+{\em sqlstate} & S\+QL state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & The message was successfully sent \\
+\hline
+{\em T\+R\+UE} & An error occurred and the messages wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{protocol__classic_8cc_abb42d7fab98ef6f8d8764c48accc84b8}\label{protocol__classic_8cc_abb42d7fab98ef6f8d8764c48accc84b8}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!net\+\_\+send\+\_\+error\+\_\+packet@{net\+\_\+send\+\_\+error\+\_\+packet}}
+\index{net\+\_\+send\+\_\+error\+\_\+packet@{net\+\_\+send\+\_\+error\+\_\+packet}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+send\+\_\+error\+\_\+packet()}{net\_send\_error\_packet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool net\+\_\+send\+\_\+error\+\_\+packet (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{err,  }\item[{const char $\ast$}]{sqlstate,  }\item[{bool}]{bootstrap,  }\item[{ulong}]{client\+\_\+capabilities,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{character\+\_\+set\+\_\+results }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em net} & Low-\/level N\+ET struct \\
+\hline
+{\em sql\+\_\+errno} & The error code to send \\
+\hline
+{\em err} & A pointer to the error message \\
+\hline
+{\em sqlstate} & S\+QL state \\
+\hline
+{\em bootstrap} & Server is started in bootstrap mode \\
+\hline
+{\em client\+\_\+capabilities} & Client capabilities flag \\
+\hline
+{\em character\+\_\+set\+\_\+results} & Char set info\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & The message was successfully sent \\
+\hline
+{\em T\+R\+UE} & An error occurred and the messages wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{protocol__classic_8cc_a3d3b9a5a12f075d2214c04578864db56}\label{protocol__classic_8cc_a3d3b9a5a12f075d2214c04578864db56}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!net\+\_\+send\+\_\+ok@{net\+\_\+send\+\_\+ok}}
+\index{net\+\_\+send\+\_\+ok@{net\+\_\+send\+\_\+ok}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+send\+\_\+ok()}{net\_send\_ok()}}
+{\footnotesize\ttfamily bool net\+\_\+send\+\_\+ok (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{server\+\_\+status,  }\item[{uint}]{statement\+\_\+warn\+\_\+count,  }\item[{ulonglong}]{affected\+\_\+rows,  }\item[{ulonglong}]{id,  }\item[{const char $\ast$}]{message,  }\item[{bool}]{eof\+\_\+identifier }\end{DoxyParamCaption})}
+
+Return OK to the client.
+
+The OK packet has the following structure\+:
+
+Here \textquotesingle{}n\textquotesingle{} denotes the length of state change information.
+
+Bytes Name 
+
+ 1 \mbox{[}00\mbox{]} or \mbox{[}FE\mbox{]} the OK header \mbox{[}FE\mbox{]} is used as header for result set rows 1-\/9 (lenenc-\/int) affected rows 1-\/9 (lenenc-\/int) last-\/insert-\/id
+
+if capabilities \& C\+L\+I\+E\+N\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+41 \{ 2 status\+\_\+flags; Copy of thd-\/$>$server\+\_\+status; Can be used by client to check if we are inside a transaction. 2 warnings (New in 4.\+1 protocol) \} elseif capabilities \& C\+L\+I\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+NS \{ 2 status\+\_\+flags \}
+
+if capabilities \& C\+L\+I\+E\+N\+T\+\_\+\+A\+C\+C\+E\+P\+T\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+I\+N\+FO \{ 1-\/9(lenenc\+\_\+str) info (message); Stored as length of the message string + message. if n $>$ 0 \{ 1-\/9 (lenenc\+\_\+int) total length of session state change information to follow (= n) n session state change information \} \} else \{ string\mbox{[}E\+OF\mbox{]} info (message); Stored as packed length (1-\/9 bytes) + message. Is not stored if no message. \}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em server\+\_\+status} & The server status \\
+\hline
+{\em statement\+\_\+warn\+\_\+count} & Total number of warnings \\
+\hline
+{\em affected\+\_\+rows} & Number of rows changed by statement \\
+\hline
+{\em id} & Auto\+\_\+increment id for first row (if used) \\
+\hline
+{\em message} & Message to send to the client (Used by mysql\+\_\+status) \\
+\hline
+{\em eof\+\_\+indentifier} & when true \mbox{[}FE\mbox{]} will be set in OK header else \mbox{[}00\mbox{]} will be used\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & The message was successfully sent \\
+\hline
+{\em T\+R\+UE} & An error occurred and the messages wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{protocol__classic_8cc_ad6a19555b847347297a62c3961fa8b2c}\label{protocol__classic_8cc_ad6a19555b847347297a62c3961fa8b2c}} 
+\index{protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}!store@{store}}
+\index{store@{store}!protocol\+\_\+classic.\+cc@{protocol\+\_\+classic.\+cc}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily bool store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$}]{prot,  }\item[{\mbox{\hyperlink{classI__List}{I\+\_\+\+List}}$<$ \mbox{\hyperlink{classi__string}{i\+\_\+string}} $>$ $\ast$}]{str\+\_\+list }\end{DoxyParamCaption})}
+
+Send a set of strings as one long string with \textquotesingle{},\textquotesingle{} in between. 

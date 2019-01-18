@@ -1,0 +1,170 @@
+\hypertarget{classXID__STATE}{}\section{X\+I\+D\+\_\+\+S\+T\+A\+TE Class Reference}
+\label{classXID__STATE}\index{X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classXID__STATE_a142676d46c9c5724d67ae56d8738f953}\label{classXID__STATE_a142676d46c9c5724d67ae56d8738f953}} 
+enum {\bfseries xa\+\_\+states} \{ \newline
+{\bfseries X\+A\+\_\+\+N\+O\+TR} =0, 
+{\bfseries X\+A\+\_\+\+A\+C\+T\+I\+VE}, 
+{\bfseries X\+A\+\_\+\+I\+D\+LE}, 
+{\bfseries X\+A\+\_\+\+P\+R\+E\+P\+A\+R\+ED}, 
+\newline
+{\bfseries X\+A\+\_\+\+R\+O\+L\+L\+B\+A\+C\+K\+\_\+\+O\+N\+LY}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classXID__STATE_a5fb6a02c6f104f8c0a97f0fd079e2586}\label{classXID__STATE_a5fb6a02c6f104f8c0a97f0fd079e2586}} 
+void {\bfseries set\+\_\+state} (xa\+\_\+states state)
+\item 
+\mbox{\Hypertarget{classXID__STATE_a8f25d63ee09eff39230cde444041ca31}\label{classXID__STATE_a8f25d63ee09eff39230cde444041ca31}} 
+enum xa\+\_\+states {\bfseries get\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_a5500f3f4d429eb90a27f2b09173827aa}\label{classXID__STATE_a5500f3f4d429eb90a27f2b09173827aa}} 
+bool {\bfseries has\+\_\+state} (xa\+\_\+states state) const
+\item 
+\mbox{\Hypertarget{classXID__STATE_a3151a2309f51123b87ff923648ae3b77}\label{classXID__STATE_a3151a2309f51123b87ff923648ae3b77}} 
+const char $\ast$ {\bfseries state\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classXID__STATE_aff75cdf71a32a214f28bd6142e914e57}\label{classXID__STATE_aff75cdf71a32a214f28bd6142e914e57}} 
+const \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$ {\bfseries get\+\_\+xid} () const
+\item 
+\mbox{\Hypertarget{classXID__STATE_a18e584e6f57eb9dc005cd8d85e2b0d88}\label{classXID__STATE_a18e584e6f57eb9dc005cd8d85e2b0d88}} 
+\mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$ {\bfseries get\+\_\+xid} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_ac62db6387dbc7244be4cb26a35dbc793}\label{classXID__STATE_ac62db6387dbc7244be4cb26a35dbc793}} 
+bool {\bfseries has\+\_\+same\+\_\+xid} (const \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid) const
+\item 
+\mbox{\Hypertarget{classXID__STATE_a2f1010fe6c122f1c48e7c3f2353815e9}\label{classXID__STATE_a2f1010fe6c122f1c48e7c3f2353815e9}} 
+void {\bfseries set\+\_\+query\+\_\+id} (query\+\_\+id\+\_\+t query\+\_\+id)
+\item 
+\mbox{\Hypertarget{classXID__STATE_ad64d5cb9a6e2da44fdea17e95ead2d6e}\label{classXID__STATE_ad64d5cb9a6e2da44fdea17e95ead2d6e}} 
+void {\bfseries set\+\_\+error} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classXID__STATE_a39aca9b8eb3a0f6b7aabf3ce51f5dc61}\label{classXID__STATE_a39aca9b8eb3a0f6b7aabf3ce51f5dc61}} 
+void {\bfseries reset\+\_\+error} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_a35ca771775dcd97cdd91c6bc3a998538}\label{classXID__STATE_a35ca771775dcd97cdd91c6bc3a998538}} 
+void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_ad0e31e413254fcfedce267da90e519e1}\label{classXID__STATE_ad0e31e413254fcfedce267da90e519e1}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_ad00b918d615ccd11a58f230fec48338d}\label{classXID__STATE_ad00b918d615ccd11a58f230fec48338d}} 
+void {\bfseries start\+\_\+normal\+\_\+xa} (const \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid)
+\item 
+\mbox{\Hypertarget{classXID__STATE_a85f99a83bb3e3c6f37bf0c30b26bda7a}\label{classXID__STATE_a85f99a83bb3e3c6f37bf0c30b26bda7a}} 
+void {\bfseries start\+\_\+recovery\+\_\+xa} (const \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid, bool binlogged\+\_\+arg=false)
+\item 
+\mbox{\Hypertarget{classXID__STATE_afcccbc63af4b0c3df78bc23ccf01de5f}\label{classXID__STATE_afcccbc63af4b0c3df78bc23ccf01de5f}} 
+bool {\bfseries is\+\_\+in\+\_\+recovery} () const
+\item 
+\mbox{\Hypertarget{classXID__STATE_a3fd060550bcf2f04fccf7a42958a991a}\label{classXID__STATE_a3fd060550bcf2f04fccf7a42958a991a}} 
+bool {\bfseries is\+\_\+binlogged} () const
+\item 
+\mbox{\Hypertarget{classXID__STATE_ad0d446c7af5049588bdf509833736e1b}\label{classXID__STATE_ad0d446c7af5049588bdf509833736e1b}} 
+void {\bfseries set\+\_\+binlogged} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_a629d7e32f6f067486a149c69acf7e942}\label{classXID__STATE_a629d7e32f6f067486a149c69acf7e942}} 
+void {\bfseries unset\+\_\+binlogged} ()
+\item 
+\mbox{\Hypertarget{classXID__STATE_a0173bc32b5f5fccf19e989211b4b50e4}\label{classXID__STATE_a0173bc32b5f5fccf19e989211b4b50e4}} 
+void {\bfseries store\+\_\+xid\+\_\+info} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$protocol, bool print\+\_\+xid\+\_\+as\+\_\+hex) const
+\item 
+bool \mbox{\hyperlink{classXID__STATE_a5ea0c74d50c158009744d26e9631fb40}{xa\+\_\+trans\+\_\+rolled\+\_\+back}} ()
+\item 
+bool \mbox{\hyperlink{classXID__STATE_a6b29731f4de0b55da2c33ffceea49506}{check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared}} (bool report\+\_\+error) const
+\item 
+bool \mbox{\hyperlink{classXID__STATE_ac5780b7f325ef65c9c395856c8fa2e23}{check\+\_\+has\+\_\+uncommitted\+\_\+xa}} () const
+\item 
+bool \mbox{\hyperlink{classXID__STATE_ae60d37b094a4965d5d8de7b8c050d85d}{check\+\_\+in\+\_\+xa}} (bool report\+\_\+error) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classXID__STATE_ac5780b7f325ef65c9c395856c8fa2e23}\label{classXID__STATE_ac5780b7f325ef65c9c395856c8fa2e23}} 
+\index{X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}!check\+\_\+has\+\_\+uncommitted\+\_\+xa@{check\+\_\+has\+\_\+uncommitted\+\_\+xa}}
+\index{check\+\_\+has\+\_\+uncommitted\+\_\+xa@{check\+\_\+has\+\_\+uncommitted\+\_\+xa}!X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}}
+\subsubsection{\texorpdfstring{check\+\_\+has\+\_\+uncommitted\+\_\+xa()}{check\_has\_uncommitted\_xa()}}
+{\footnotesize\ttfamily bool X\+I\+D\+\_\+\+S\+T\+A\+T\+E\+::check\+\_\+has\+\_\+uncommitted\+\_\+xa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check that XA transaction has an uncommitted work. Report an error to a mysql user in case when there is an uncommitted work for XA transaction.
+
+\begin{DoxyReturn}{Returns}
+result of check 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & XA transaction is N\+OT in state I\+D\+LE, P\+R\+E\+P\+A\+R\+ED or R\+O\+L\+L\+B\+A\+C\+K\+\_\+\+O\+N\+LY. \\
+\hline
+{\em true} & XA transaction is in state I\+D\+LE or P\+R\+E\+P\+A\+R\+ED or R\+O\+L\+L\+B\+A\+C\+K\+\_\+\+O\+N\+LY. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classXID__STATE_ae60d37b094a4965d5d8de7b8c050d85d}\label{classXID__STATE_ae60d37b094a4965d5d8de7b8c050d85d}} 
+\index{X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}!check\+\_\+in\+\_\+xa@{check\+\_\+in\+\_\+xa}}
+\index{check\+\_\+in\+\_\+xa@{check\+\_\+in\+\_\+xa}!X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}}
+\subsubsection{\texorpdfstring{check\+\_\+in\+\_\+xa()}{check\_in\_xa()}}
+{\footnotesize\ttfamily bool X\+I\+D\+\_\+\+S\+T\+A\+T\+E\+::check\+\_\+in\+\_\+xa (\begin{DoxyParamCaption}\item[{bool}]{report\+\_\+error }\end{DoxyParamCaption}) const}
+
+Check if an XA transaction has been started.
+
+
+\begin{DoxyParams}{Parameters}
+{\em report\+\_\+error} & true if report an error in case when XA transaction has been stared, else false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of check 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & XA transaction hasn\textquotesingle{}t been started (X\+A\+\_\+\+N\+O\+TR) \\
+\hline
+{\em true} & XA transaction has been started (!\+X\+A\+\_\+\+N\+O\+TR) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classXID__STATE_a6b29731f4de0b55da2c33ffceea49506}\label{classXID__STATE_a6b29731f4de0b55da2c33ffceea49506}} 
+\index{X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}!check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared@{check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared}}
+\index{check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared@{check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared}!X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}}
+\subsubsection{\texorpdfstring{check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared()}{check\_xa\_idle\_or\_prepared()}}
+{\footnotesize\ttfamily bool X\+I\+D\+\_\+\+S\+T\+A\+T\+E\+::check\+\_\+xa\+\_\+idle\+\_\+or\+\_\+prepared (\begin{DoxyParamCaption}\item[{bool}]{report\+\_\+error }\end{DoxyParamCaption}) const}
+
+Check that XA transaction is in state I\+D\+LE or P\+R\+E\+P\+A\+R\+ED.
+
+
+\begin{DoxyParams}{Parameters}
+{\em report\+\_\+error} & true if state I\+D\+LE or P\+R\+E\+P\+A\+R\+ED has to be interpreted as an error, else false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of check 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & XA transaction is N\+OT in state I\+D\+LE or P\+R\+E\+P\+A\+R\+ED \\
+\hline
+{\em true} & XA transaction is in state I\+D\+LE or P\+R\+E\+P\+A\+R\+ED \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classXID__STATE_a5ea0c74d50c158009744d26e9631fb40}\label{classXID__STATE_a5ea0c74d50c158009744d26e9631fb40}} 
+\index{X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}!xa\+\_\+trans\+\_\+rolled\+\_\+back@{xa\+\_\+trans\+\_\+rolled\+\_\+back}}
+\index{xa\+\_\+trans\+\_\+rolled\+\_\+back@{xa\+\_\+trans\+\_\+rolled\+\_\+back}!X\+I\+D\+\_\+\+S\+T\+A\+TE@{X\+I\+D\+\_\+\+S\+T\+A\+TE}}
+\subsubsection{\texorpdfstring{xa\+\_\+trans\+\_\+rolled\+\_\+back()}{xa\_trans\_rolled\_back()}}
+{\footnotesize\ttfamily bool X\+I\+D\+\_\+\+S\+T\+A\+T\+E\+::xa\+\_\+trans\+\_\+rolled\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Mark a XA transaction as rollback-\/only if the RM unilaterally rolled back the transaction branch.
+
+\begin{DoxyNote}{Note}
+If a rollback was requested by the RM, this function sets the appropriate rollback error code and transits the state to X\+A\+\_\+\+R\+O\+L\+L\+B\+A\+C\+K\+\_\+\+O\+N\+LY.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true if transaction was rolled back or if the transaction state is X\+A\+\_\+\+R\+O\+L\+L\+B\+A\+C\+K\+\_\+\+O\+N\+LY. false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+xa.\+h\item 
+xa.\+cc\end{DoxyCompactItemize}

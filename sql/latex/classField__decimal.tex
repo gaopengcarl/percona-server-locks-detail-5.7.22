@@ -1,0 +1,166 @@
+\hypertarget{classField__decimal}{}\section{Field\+\_\+decimal Class Reference}
+\label{classField__decimal}\index{Field\+\_\+decimal@{Field\+\_\+decimal}}
+Inheritance diagram for Field\+\_\+decimal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classField__decimal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__decimal_a6a05ff20ee0bfd940e01296411e1a032}\label{classField__decimal_a6a05ff20ee0bfd940e01296411e1a032}} 
+{\bfseries Field\+\_\+decimal} (uchar $\ast$ptr\+\_\+arg, uint32 len\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint8 dec\+\_\+arg, bool zero\+\_\+arg, bool unsigned\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__decimal_ad5f3ee7b207b97f89d9eae7f278e9416}\label{classField__decimal_ad5f3ee7b207b97f89d9eae7f278e9416}} 
+enum\+\_\+field\+\_\+types {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classField__decimal_a9c6bee9da23e9d642cd1636069318ab9}\label{classField__decimal_a9c6bee9da23e9d642cd1636069318ab9}} 
+enum ha\+\_\+base\+\_\+keytype {\bfseries key\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField__decimal_a0beda60c893f29aa43f0143990a360cd}\label{classField__decimal_a0beda60c893f29aa43f0143990a360cd}} 
+type\+\_\+conversion\+\_\+status {\bfseries reset} (void)
+\item 
+\mbox{\Hypertarget{classField__decimal_a80f53834d46376e108c4812b736c2cb1}\label{classField__decimal_a80f53834d46376e108c4812b736c2cb1}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (const char $\ast$to, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)
+\item 
+\mbox{\Hypertarget{classField__decimal_ab5974b7859b7325cbe4d594378b39d94}\label{classField__decimal_ab5974b7859b7325cbe4d594378b39d94}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (double nr)
+\item 
+\mbox{\Hypertarget{classField__decimal_affdbaf82f11639e06b9fab6ad2c65147}\label{classField__decimal_affdbaf82f11639e06b9fab6ad2c65147}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (longlong nr, bool unsigned\+\_\+val)
+\item 
+\mbox{\Hypertarget{classField__decimal_ae4d41a764c6b25d3f22f2f053f81a7d2}\label{classField__decimal_ae4d41a764c6b25d3f22f2f053f81a7d2}} 
+double {\bfseries val\+\_\+real} (void)
+\item 
+\mbox{\Hypertarget{classField__decimal_a8568104c2c398992cab90ed3272bf5d3}\label{classField__decimal_a8568104c2c398992cab90ed3272bf5d3}} 
+longlong {\bfseries val\+\_\+int} (void)
+\item 
+\mbox{\Hypertarget{classField__decimal_a034c8e4af77ee722c954a8f0f539910b}\label{classField__decimal_a034c8e4af77ee722c954a8f0f539910b}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$, String $\ast$)
+\item 
+int \mbox{\hyperlink{classField__decimal_ab82c27bf2bef656e8ba820be255262d1}{cmp}} (const uchar $\ast$, const uchar $\ast$)
+\item 
+void \mbox{\hyperlink{classField__decimal_aa1510cbae7dff99eb2a804dd988ed6f0}{make\+\_\+sort\+\_\+key}} (uchar $\ast$buff, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classField__decimal_a9825cfba8d4da8cd9a71874ea6858839}\label{classField__decimal_a9825cfba8d4da8cd9a71874ea6858839}} 
+void {\bfseries overflow} (bool negative)
+\item 
+\mbox{\Hypertarget{classField__decimal_a60cc3f18aa276aa02c089eace1fa8db1}\label{classField__decimal_a60cc3f18aa276aa02c089eace1fa8db1}} 
+bool {\bfseries zero\+\_\+pack} () const
+\item 
+\mbox{\Hypertarget{classField__decimal_af30125b9bab79ee500c6e019297d792f}\label{classField__decimal_af30125b9bab79ee500c6e019297d792f}} 
+void {\bfseries sql\+\_\+type} (String \&str) const
+\item 
+\mbox{\hyperlink{classField__decimal}{Field\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classField__decimal_a9049654d347e58388b6f3b7f06e5bb94}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\item 
+\mbox{\hyperlink{classField__decimal}{Field\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classField__decimal_abedb8750121b8822d71ae8b6d8226964}{clone}} () const
+\item 
+virtual const uchar $\ast$ \mbox{\hyperlink{classField__decimal_a175db70d41ae30df50a1ec04d8680363}{unpack}} (uchar $\ast$to, const uchar $\ast$from, uint param\+\_\+data, bool low\+\_\+byte\+\_\+first)
+\item 
+virtual uchar $\ast$ \mbox{\hyperlink{classField__decimal_a85c1f4498b4f8f773056efcf6c3a901a}{pack}} (uchar $\ast$to, const uchar $\ast$from, uint max\+\_\+length, bool low\+\_\+byte\+\_\+first)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__decimal_a9049654d347e58388b6f3b7f06e5bb94}\label{classField__decimal_a9049654d347e58388b6f3b7f06e5bb94}} 
+\index{Field\+\_\+decimal@{Field\+\_\+decimal}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+decimal@{Field\+\_\+decimal}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__decimal}{Field\+\_\+decimal}}$\ast$ Field\+\_\+decimal\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT to use for memory allocation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField_a64979bcb9345803b031fff76a0c3d9fe}{Field}}.
+
+\mbox{\Hypertarget{classField__decimal_abedb8750121b8822d71ae8b6d8226964}\label{classField__decimal_abedb8750121b8822d71ae8b6d8226964}} 
+\index{Field\+\_\+decimal@{Field\+\_\+decimal}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+decimal@{Field\+\_\+decimal}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__decimal}{Field\+\_\+decimal}}$\ast$ Field\+\_\+decimal\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField_a01a9a9aa3a618941e839b1b8793c969d}{Field}}.
+
+\mbox{\Hypertarget{classField__decimal_ab82c27bf2bef656e8ba820be255262d1}\label{classField__decimal_ab82c27bf2bef656e8ba820be255262d1}} 
+\index{Field\+\_\+decimal@{Field\+\_\+decimal}!cmp@{cmp}}
+\index{cmp@{cmp}!Field\+\_\+decimal@{Field\+\_\+decimal}}
+\subsubsection{\texorpdfstring{cmp()}{cmp()}}
+{\footnotesize\ttfamily int Field\+\_\+decimal\+::cmp (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{a\+\_\+ptr,  }\item[{const uchar $\ast$}]{b\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Should be able to handle at least the following fixed decimal formats\+: 5.\+00 , -\/1.\+0, 05, -\/05, +5 with optional pre/end space 
+
+Implements \mbox{\hyperlink{classField}{Field}}.
+
+\mbox{\Hypertarget{classField__decimal_aa1510cbae7dff99eb2a804dd988ed6f0}\label{classField__decimal_aa1510cbae7dff99eb2a804dd988ed6f0}} 
+\index{Field\+\_\+decimal@{Field\+\_\+decimal}!make\+\_\+sort\+\_\+key@{make\+\_\+sort\+\_\+key}}
+\index{make\+\_\+sort\+\_\+key@{make\+\_\+sort\+\_\+key}!Field\+\_\+decimal@{Field\+\_\+decimal}}
+\subsubsection{\texorpdfstring{make\+\_\+sort\+\_\+key()}{make\_sort\_key()}}
+{\footnotesize\ttfamily void Field\+\_\+decimal\+::make\+\_\+sort\+\_\+key (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buff,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a copy of the current value in the record buffer, suitable for sorting using byte-\/by-\/byte comparison. Integers are always in big-\/endian regardless of hardware architecture. At most length bytes are written into the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & The buffer, assumed to be at least length bytes.\\
+\hline
+{\em length} & Number of bytes to write. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classField_af3bc27d237b6ae6ef3dc7a2aec3d79ac}{Field}}.
+
+\mbox{\Hypertarget{classField__decimal_a85c1f4498b4f8f773056efcf6c3a901a}\label{classField__decimal_a85c1f4498b4f8f773056efcf6c3a901a}} 
+\index{Field\+\_\+decimal@{Field\+\_\+decimal}!pack@{pack}}
+\index{pack@{pack}!Field\+\_\+decimal@{Field\+\_\+decimal}}
+\subsubsection{\texorpdfstring{pack()}{pack()}}
+{\footnotesize\ttfamily virtual uchar$\ast$ Field\+\_\+decimal\+::pack (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{from,  }\item[{uint}]{max\+\_\+length,  }\item[{bool}]{low\+\_\+byte\+\_\+first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+
+Reimplemented from \mbox{\hyperlink{classField__real_a350715a27630782dd1247287d2446480}{Field\+\_\+real}}.
+
+\mbox{\Hypertarget{classField__decimal_a175db70d41ae30df50a1ec04d8680363}\label{classField__decimal_a175db70d41ae30df50a1ec04d8680363}} 
+\index{Field\+\_\+decimal@{Field\+\_\+decimal}!unpack@{unpack}}
+\index{unpack@{unpack}!Field\+\_\+decimal@{Field\+\_\+decimal}}
+\subsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily virtual const uchar$\ast$ Field\+\_\+decimal\+::unpack (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{from,  }\item[{uint}]{param\+\_\+data,  }\item[{bool}]{low\+\_\+byte\+\_\+first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+
+Reimplemented from \mbox{\hyperlink{classField__real_aab922b4da48c1fd508344b1f627e0e0e}{Field\+\_\+real}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

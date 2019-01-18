@@ -1,0 +1,179 @@
+\hypertarget{classTable__cache__manager}{}\section{Table\+\_\+cache\+\_\+manager Class Reference}
+\label{classTable__cache__manager}\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+
+
+{\ttfamily \#include $<$table\+\_\+cache.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTable__cache__manager_a418d8fa95acd7c7fd3330f4244cec571}{init}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_af0e8904eae6270f9ec839d5dadba5460}{destroy}} ()
+\item 
+\mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} $\ast$ \mbox{\hyperlink{classTable__cache__manager_a39f254e5a07c0c99075b95042a4f211c}{get\+\_\+cache}} (T\+HD $\ast$thd)
+\item 
+uint \mbox{\hyperlink{classTable__cache__manager_a5aa3dcefb425c91c695456c1a2d38336}{cache\+\_\+index}} (\mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} $\ast$cache) const
+\item 
+uint \mbox{\hyperlink{classTable__cache__manager_a0e81e3a9951b143cb8c721b37c9dcd0e}{cached\+\_\+tables}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_a2b8e9bbb39f7c6b948fdf47846627a22}{lock\+\_\+all\+\_\+and\+\_\+tdc}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_a1060948378f39f0423fcad3bdf6ce5fd}{unlock\+\_\+all\+\_\+and\+\_\+tdc}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_a76f632068e35751f33f55411782ec0f5}{assert\+\_\+owner\+\_\+all}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_a37f16e870f09121bf23aba37052cab5a}{assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_ab52f0773a6d18d64609aa52e042ce4dc}{free\+\_\+table}} (T\+HD $\ast$thd, enum\+\_\+tdc\+\_\+remove\+\_\+table\+\_\+type remove\+\_\+type, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share)
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_a8b9f94963366a5384895a9fff85c3f7e}{free\+\_\+all\+\_\+unused\+\_\+tables}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache__manager_a1ceca2228f370630706bb12c74decf40}{print\+\_\+tables}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classTable__cache__manager_aa581393c5c20169a39b39d9bf3085390}{M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}} = 64
+\item 
+static const int \mbox{\hyperlink{classTable__cache__manager_ab740436c67b8ae28cbcf0f9cb3d50b47}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}} = 16
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTable__cache__manager_a08fcc4e2cad8dc13a757eb4180d2edf0}\label{classTable__cache__manager_a08fcc4e2cad8dc13a757eb4180d2edf0}} 
+class {\bfseries Table\+\_\+cache\+\_\+iterator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container class for all table cache instances in the system. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable__cache__manager_a76f632068e35751f33f55411782ec0f5}\label{classTable__cache__manager_a76f632068e35751f33f55411782ec0f5}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!assert\+\_\+owner\+\_\+all@{assert\+\_\+owner\+\_\+all}}
+\index{assert\+\_\+owner\+\_\+all@{assert\+\_\+owner\+\_\+all}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{assert\+\_\+owner\+\_\+all()}{assert\_owner\_all()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::assert\+\_\+owner\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Assert that caller owns locks on all instances of table cache. \mbox{\Hypertarget{classTable__cache__manager_a37f16e870f09121bf23aba37052cab5a}\label{classTable__cache__manager_a37f16e870f09121bf23aba37052cab5a}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc@{assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc}}
+\index{assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc@{assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc()}{assert\_owner\_all\_and\_tdc()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::assert\+\_\+owner\+\_\+all\+\_\+and\+\_\+tdc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Assert that caller owns locks on all instances of table cache and table definition cache. \mbox{\Hypertarget{classTable__cache__manager_a5aa3dcefb425c91c695456c1a2d38336}\label{classTable__cache__manager_a5aa3dcefb425c91c695456c1a2d38336}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!cache\+\_\+index@{cache\+\_\+index}}
+\index{cache\+\_\+index@{cache\+\_\+index}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{cache\+\_\+index()}{cache\_index()}}
+{\footnotesize\ttfamily uint Table\+\_\+cache\+\_\+manager\+::cache\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} $\ast$}]{cache }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get index for the table cache in container. \mbox{\Hypertarget{classTable__cache__manager_a0e81e3a9951b143cb8c721b37c9dcd0e}\label{classTable__cache__manager_a0e81e3a9951b143cb8c721b37c9dcd0e}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!cached\+\_\+tables@{cached\+\_\+tables}}
+\index{cached\+\_\+tables@{cached\+\_\+tables}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{cached\+\_\+tables()}{cached\_tables()}}
+{\footnotesize\ttfamily uint Table\+\_\+cache\+\_\+manager\+::cached\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get total number of used and unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects in all table caches.
+
+\begin{DoxyNote}{Note}
+Doesn\textquotesingle{}t require acquisition of table cache locks if inexact number of tables is acceptable. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classTable__cache__manager_af0e8904eae6270f9ec839d5dadba5460}\label{classTable__cache__manager_af0e8904eae6270f9ec839d5dadba5460}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!destroy@{destroy}}
+\index{destroy@{destroy}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destroy all instances of table cache which were used by server. \mbox{\Hypertarget{classTable__cache__manager_a8b9f94963366a5384895a9fff85c3f7e}\label{classTable__cache__manager_a8b9f94963366a5384895a9fff85c3f7e}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!free\+\_\+all\+\_\+unused\+\_\+tables@{free\+\_\+all\+\_\+unused\+\_\+tables}}
+\index{free\+\_\+all\+\_\+unused\+\_\+tables@{free\+\_\+all\+\_\+unused\+\_\+tables}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{free\+\_\+all\+\_\+unused\+\_\+tables()}{free\_all\_unused\_tables()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::free\+\_\+all\+\_\+unused\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free all unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects in all table cache instances. \mbox{\Hypertarget{classTable__cache__manager_ab52f0773a6d18d64609aa52e042ce4dc}\label{classTable__cache__manager_ab52f0773a6d18d64609aa52e042ce4dc}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!free\+\_\+table@{free\+\_\+table}}
+\index{free\+\_\+table@{free\+\_\+table}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{free\+\_\+table()}{free\_table()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::free\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+tdc\+\_\+remove\+\_\+table\+\_\+type}]{remove\+\_\+type,  }\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{share }\end{DoxyParamCaption})}
+
+Remove and free all or some (depending on parameter) \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects for the table from all table cache instances.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+{\em remove\+\_\+type} & Type of removal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Data__Dictionary_ga8faf6c6118b6677394e14994ae614075}{tdc\+\_\+remove\+\_\+table()}}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em share} & \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} for the table to be removed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Caller should own L\+O\+C\+K\+\_\+open and locks on all table cache instances. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classTable__cache__manager_a39f254e5a07c0c99075b95042a4f211c}\label{classTable__cache__manager_a39f254e5a07c0c99075b95042a4f211c}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!get\+\_\+cache@{get\+\_\+cache}}
+\index{get\+\_\+cache@{get\+\_\+cache}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+cache()}{get\_cache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}}$\ast$ Table\+\_\+cache\+\_\+manager\+::get\+\_\+cache (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get instance of table cache to be used by particular connection. \mbox{\Hypertarget{classTable__cache__manager_a418d8fa95acd7c7fd3330f4244cec571}\label{classTable__cache__manager_a418d8fa95acd7c7fd3330f4244cec571}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!init@{init}}
+\index{init@{init}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Table\+\_\+cache\+\_\+manager\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize all instances of table cache to be used by server.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & -\/ success. \\
+\hline
+{\em true} & -\/ failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__cache__manager_a2b8e9bbb39f7c6b948fdf47846627a22}\label{classTable__cache__manager_a2b8e9bbb39f7c6b948fdf47846627a22}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!lock\+\_\+all\+\_\+and\+\_\+tdc@{lock\+\_\+all\+\_\+and\+\_\+tdc}}
+\index{lock\+\_\+all\+\_\+and\+\_\+tdc@{lock\+\_\+all\+\_\+and\+\_\+tdc}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{lock\+\_\+all\+\_\+and\+\_\+tdc()}{lock\_all\_and\_tdc()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::lock\+\_\+all\+\_\+and\+\_\+tdc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acquire locks on all instances of table cache and table definition cache (i.\+e. L\+O\+C\+K\+\_\+open). \mbox{\Hypertarget{classTable__cache__manager_a1ceca2228f370630706bb12c74decf40}\label{classTable__cache__manager_a1ceca2228f370630706bb12c74decf40}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!print\+\_\+tables@{print\+\_\+tables}}
+\index{print\+\_\+tables@{print\+\_\+tables}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{print\+\_\+tables()}{print\_tables()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::print\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print debug information for the contents of all table cache instances. \mbox{\Hypertarget{classTable__cache__manager_a1060948378f39f0423fcad3bdf6ce5fd}\label{classTable__cache__manager_a1060948378f39f0423fcad3bdf6ce5fd}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!unlock\+\_\+all\+\_\+and\+\_\+tdc@{unlock\+\_\+all\+\_\+and\+\_\+tdc}}
+\index{unlock\+\_\+all\+\_\+and\+\_\+tdc@{unlock\+\_\+all\+\_\+and\+\_\+tdc}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{unlock\+\_\+all\+\_\+and\+\_\+tdc()}{unlock\_all\_and\_tdc()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+\_\+manager\+::unlock\+\_\+all\+\_\+and\+\_\+tdc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Release locks on all instances of table cache and table definition cache. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classTable__cache__manager_ab740436c67b8ae28cbcf0f9cb3d50b47}\label{classTable__cache__manager_ab740436c67b8ae28cbcf0f9cb3d50b47}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}{DEFAULT\_MAX\_TABLE\_CACHES}}
+{\footnotesize\ttfamily const int Table\+\_\+cache\+\_\+manager\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES = 16\hspace{0.3cm}{\ttfamily [static]}}
+
+Default number of table cache instances \mbox{\Hypertarget{classTable__cache__manager_aa581393c5c20169a39b39d9bf3085390}\label{classTable__cache__manager_aa581393c5c20169a39b39d9bf3085390}} 
+\index{Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}!M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES@{M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}}
+\index{M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES@{M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}!Table\+\_\+cache\+\_\+manager@{Table\+\_\+cache\+\_\+manager}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES}{MAX\_TABLE\_CACHES}}
+{\footnotesize\ttfamily const int Table\+\_\+cache\+\_\+manager\+::\+M\+A\+X\+\_\+\+T\+A\+B\+L\+E\+\_\+\+C\+A\+C\+H\+ES = 64\hspace{0.3cm}{\ttfamily [static]}}
+
+Maximum supported number of table cache instances. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table\+\_\+cache.\+h\item 
+table\+\_\+cache.\+cc\end{DoxyCompactItemize}

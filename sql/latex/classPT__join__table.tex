@@ -1,0 +1,81 @@
+\hypertarget{classPT__join__table}{}\section{P\+T\+\_\+join\+\_\+table$<$ Type $>$ Class Template Reference}
+\label{classPT__join__table}\index{P\+T\+\_\+join\+\_\+table$<$ Type $>$@{P\+T\+\_\+join\+\_\+table$<$ Type $>$}}
+Inheritance diagram for P\+T\+\_\+join\+\_\+table$<$ Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__join__table}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__join__table_a8517675355ace459ccfdfa35827c9e3d}\label{classPT__join__table_a8517675355ace459ccfdfa35827c9e3d}} 
+{\bfseries P\+T\+\_\+join\+\_\+table} (\mbox{\hyperlink{classPT__table__list}{P\+T\+\_\+table\+\_\+list}} $\ast$tab1\+\_\+node\+\_\+arg, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&join\+\_\+pos\+\_\+arg, \mbox{\hyperlink{classPT__table__list}{P\+T\+\_\+table\+\_\+list}} $\ast$tab2\+\_\+node\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classPT__join__table_a61db94fe633d5cb60ecd1470103c2bd6}\label{classPT__join__table_a61db94fe633d5cb60ecd1470103c2bd6}} 
+bool {\bfseries dbug\+\_\+exclusive\+\_\+flags} (unsigned int mask)
+\item 
+virtual bool \mbox{\hyperlink{classPT__join__table_aa012b30af4f4d06a215c95d5417dba78}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__join__table_a4bef35206622e1eaff26a9aa017cea00}\label{classPT__join__table_a4bef35206622e1eaff26a9aa017cea00}} 
+bool {\bfseries contextualize\+\_\+tabs} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__join__table_a1dd4a3c699f7e1a0d252fea79629a234}\label{classPT__join__table_a1dd4a3c699f7e1a0d252fea79629a234}} 
+\mbox{\hyperlink{classPT__table__list}{P\+T\+\_\+table\+\_\+list}} $\ast$ {\bfseries tab1\+\_\+node}
+\item 
+\mbox{\Hypertarget{classPT__join__table_ada7d9ede5e236d30eab6eb0974f83406}\label{classPT__join__table_ada7d9ede5e236d30eab6eb0974f83406}} 
+\mbox{\hyperlink{structYYLTYPE}{P\+OS}} {\bfseries join\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classPT__join__table_a315ab52bede579f46436bf59d7fc1759}\label{classPT__join__table_a315ab52bede579f46436bf59d7fc1759}} 
+\mbox{\hyperlink{classPT__table__list}{P\+T\+\_\+table\+\_\+list}} $\ast$ {\bfseries tab2\+\_\+node}
+\item 
+\mbox{\Hypertarget{classPT__join__table_aebf817361bc3d64b7c4d061ca4289b5c}\label{classPT__join__table_aebf817361bc3d64b7c4d061ca4289b5c}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries tr1}
+\item 
+\mbox{\Hypertarget{classPT__join__table_a8ddd6bb865cd1fead1ab89a96b524eac}\label{classPT__join__table_a8ddd6bb865cd1fead1ab89a96b524eac}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries tr2}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__join__table_aa012b30af4f4d06a215c95d5417dba78}\label{classPT__join__table_aa012b30af4f4d06a215c95d5417dba78}} 
+\index{P\+T\+\_\+join\+\_\+table@{P\+T\+\_\+join\+\_\+table}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+join\+\_\+table@{P\+T\+\_\+join\+\_\+table}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily template$<$P\+T\+\_\+join\+\_\+table\+\_\+type Type$>$ \\
+virtual bool \mbox{\hyperlink{classPT__join__table}{P\+T\+\_\+join\+\_\+table}}$<$ Type $>$\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Do all context-\/sensitive things and mark the node as contextualized
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classPT__join__table__using_a08c0a676d559eff0da223764a8f127f2}{P\+T\+\_\+join\+\_\+table\+\_\+using$<$ Type $>$}}, and \mbox{\hyperlink{classPT__join__table__on_a5d8bc49cbc77e4bd9c7ea3ae05c624dd}{P\+T\+\_\+join\+\_\+table\+\_\+on$<$ Type $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+nodes.\+h\end{DoxyCompactItemize}

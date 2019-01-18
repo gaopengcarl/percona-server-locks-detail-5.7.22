@@ -1,0 +1,36 @@
+\hypertarget{structst__discover__args}{}\section{st\+\_\+discover\+\_\+args Struct Reference}
+\label{structst__discover__args}\index{st\+\_\+discover\+\_\+args@{st\+\_\+discover\+\_\+args}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__discover__args_a0f883e6311ce6ec0f27e59b83090a76a}\label{structst__discover__args_a0f883e6311ce6ec0f27e59b83090a76a}} 
+const char $\ast$ {\bfseries db}
+\item 
+\mbox{\Hypertarget{structst__discover__args_aadb7eb9b46197b80e32dd19f649e81f0}\label{structst__discover__args_aadb7eb9b46197b80e32dd19f649e81f0}} 
+const char $\ast$ {\bfseries name}
+\item 
+\mbox{\Hypertarget{structst__discover__args_a4826e2b3290955abbac352ede6c28b2d}\label{structst__discover__args_a4826e2b3290955abbac352ede6c28b2d}} 
+uchar $\ast$$\ast$ {\bfseries frmblob}
+\item 
+\mbox{\Hypertarget{structst__discover__args_a1ce79da7b1816d39c715be45c26ce67b}\label{structst__discover__args_a1ce79da7b1816d39c715be45c26ce67b}} 
+size\+\_\+t $\ast$ {\bfseries frmlen}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Try to discover one table from \mbox{\hyperlink{classhandler}{handler(s)}}.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & Table did not exists \\
+\hline
+{\em 0} & OK. In this case $\ast$frmblob and $\ast$frmlen are set \\
+\hline
+{\em $>$0} & error. frmblob and frmlen may not be set \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{handler_8cc}{handler.\+cc}}\end{DoxyCompactItemize}

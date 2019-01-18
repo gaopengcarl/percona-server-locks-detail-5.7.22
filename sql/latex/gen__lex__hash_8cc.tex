@@ -1,0 +1,84 @@
+\hypertarget{gen__lex__hash_8cc}{}\section{gen\+\_\+lex\+\_\+hash.\+cc File Reference}
+\label{gen__lex__hash_8cc}\index{gen\+\_\+lex\+\_\+hash.\+cc@{gen\+\_\+lex\+\_\+hash.\+cc}}
+{\ttfamily \#include $<$my\+\_\+global.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mysql\+\_\+version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lex.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$welcome\+\_\+copyright\+\_\+notice.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhash__lex__struct}{hash\+\_\+lex\+\_\+struct}}
+\item 
+class \mbox{\hyperlink{classhash__map__info}{hash\+\_\+map\+\_\+info}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gen__lex__hash_8cc_ad4ad06fdb0c63518b64f19747af492c6}\label{gen__lex__hash_8cc_ad4ad06fdb0c63518b64f19747af492c6}} 
+void {\bfseries insert\+\_\+into\+\_\+hash} (\mbox{\hyperlink{structhash__lex__struct}{hash\+\_\+lex\+\_\+struct}} $\ast$root, const char $\ast$name, int len\+\_\+from\+\_\+begin, int index)
+\item 
+\mbox{\Hypertarget{gen__lex__hash_8cc_a3c04138a5bfe5d72780bb7e82a18e627}\label{gen__lex__hash_8cc_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}The idea of presented algorithm see in 
+"The Art of Computer Programming" by Donald E. Knuth
+Volume 3 "Sorting and searching"
+(chapter 6.3 "Digital searching" - name and number of chapter 
+   is back translation from Russian edition :))
+
+as illustration of data structures, imagine next table:
+
+static SYMBOL symbols[] = {
+  { "ADD",              SYM(ADD),0,0},
+  { "AND",              SYM(AND),0,0},
+  { "DAY",              SYM(DAY_SYM),0,0},
+};
+
+for this structure, presented program generate next searching-structure:
+
++-----------+-+-+-+
+|       len |1|2|3|
++-----------+-+-+-+
+|first_char |0|0|a|
+|last_char  |0|0|d|
+|link       |0|0|+|
+                 |
+                 V
+       +----------+-+-+-+--+
+       |    1 char|a|b|c|d |
+       +----------+-+-+-+--+
+       |first_char|d|0|0|0 |
+       |last_char |n|0|0|-1|
+       |link      |+|0|0|+ |
+                   |     |
+                   |     V
+                   |  symbols[2] ( "DAY" )
+                   V
++----------+--+-+-+-+-+-+-+-+-+-+--+
+|    2 char|d |e|f|j|h|i|j|k|l|m|n |
++----------+--+-+-+-+-+-+-+-+-+-+--+
+|first_char|0 |0|0|0|0|0|0|0|0|0|0 |
+|last_char |-1|0|0|0|0|0|0|0|0|0|-1|
+|link      |+ |0|0|0|0|0|0|0|0|0|+ |
+            |                    |
+            V                    V
+         symbols[0] ( "ADD" )  symbols[1] ( "AND" )
+
+for optimization, link is the 16-bit index in 'symbols'
+or search-array..
+
+So, we can read full search-structure as 32-bit word
+\end{DoxyVerb}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000017}{Todo}}]use instead to\+\_\+upper\+\_\+lex, special array (substitute chars) without skip codes.. 
+
+try use reverse order of comparing..\end{DoxyRefDesc}

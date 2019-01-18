@@ -1,0 +1,195 @@
+\hypertarget{net__serv_8cc}{}\section{net\+\_\+serv.\+cc File Reference}
+\label{net__serv_8cc}\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+{\ttfamily \#include $<$my\+\_\+global.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$mysql\+\_\+com.\+h$>$}\newline
+{\ttfamily \#include $<$mysqld\+\_\+error.\+h$>$}\newline
+{\ttfamily \#include $<$my\+\_\+sys.\+h$>$}\newline
+{\ttfamily \#include $<$m\+\_\+string.\+h$>$}\newline
+{\ttfamily \#include $<$violite.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}probes\+\_\+mysql.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysqld.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{net__serv_8cc_a5b280d76dab64b5af4b6ea5684238f41}\label{net__serv_8cc_a5b280d76dab64b5af4b6ea5684238f41}} 
+\#define {\bfseries V\+I\+O\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}~((size\+\_\+t) -\/1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+my\+\_\+bool \mbox{\hyperlink{net__serv_8cc_a8fc6e3b92b7d8742b8ff93526b919063}{my\+\_\+net\+\_\+init}} (N\+ET $\ast$net, Vio $\ast$vio)
+\item 
+\mbox{\Hypertarget{net__serv_8cc_ab71978513c49175a28c7ef3334a82250}\label{net__serv_8cc_ab71978513c49175a28c7ef3334a82250}} 
+void {\bfseries net\+\_\+end} (N\+ET $\ast$net)
+\item 
+\mbox{\Hypertarget{net__serv_8cc_a3fa85eff0195df8372082769e83bc401}\label{net__serv_8cc_a3fa85eff0195df8372082769e83bc401}} 
+void {\bfseries net\+\_\+claim\+\_\+memory\+\_\+ownership} (N\+ET $\ast$net)
+\item 
+my\+\_\+bool \mbox{\hyperlink{net__serv_8cc_a1804171d7de40b147aff8de101cabe4d}{net\+\_\+realloc}} (N\+ET $\ast$net, size\+\_\+t length)
+\item 
+void \mbox{\hyperlink{net__serv_8cc_a24a528253da9111e8d260a3f6f665d2c}{net\+\_\+clear}} (N\+ET $\ast$net, my\+\_\+bool check\+\_\+buffer M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+my\+\_\+bool \mbox{\hyperlink{net__serv_8cc_a8b25274dbacc2f6d54ce7efffe6c4d4b}{net\+\_\+flush}} (N\+ET $\ast$net)
+\item 
+my\+\_\+bool \mbox{\hyperlink{net__serv_8cc_aae75e6bc59f4837011c9daf6aa4242de}{my\+\_\+net\+\_\+write}} (N\+ET $\ast$net, const uchar $\ast$packet, size\+\_\+t len)
+\item 
+my\+\_\+bool \mbox{\hyperlink{net__serv_8cc_a9b0d71007bd87af2b7dcf334afd13579}{net\+\_\+write\+\_\+command}} (N\+ET $\ast$net, uchar command, const uchar $\ast$header, size\+\_\+t head\+\_\+len, const uchar $\ast$packet, size\+\_\+t len)
+\item 
+my\+\_\+bool \mbox{\hyperlink{net__serv_8cc_a8de608589273d69563710b28bca4dd16}{net\+\_\+write\+\_\+packet}} (N\+ET $\ast$net, const uchar $\ast$packet, size\+\_\+t length)
+\item 
+ulong \mbox{\hyperlink{net__serv_8cc_a95459c0280e24b9aacd761d0cc6ad749}{my\+\_\+net\+\_\+read}} (N\+ET $\ast$net)
+\item 
+\mbox{\Hypertarget{net__serv_8cc_a813a0a36437c4c7f62b50fbb86617220}\label{net__serv_8cc_a813a0a36437c4c7f62b50fbb86617220}} 
+void {\bfseries my\+\_\+net\+\_\+set\+\_\+read\+\_\+timeout} (N\+ET $\ast$net, uint timeout)
+\item 
+\mbox{\Hypertarget{net__serv_8cc_a2256fff5962624fac7e47f8aec12402c}\label{net__serv_8cc_a2256fff5962624fac7e47f8aec12402c}} 
+void {\bfseries my\+\_\+net\+\_\+set\+\_\+write\+\_\+timeout} (N\+ET $\ast$net, uint timeout)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{net__serv_8cc_add07a7030b799ebff0634a8e34750d66}\label{net__serv_8cc_add07a7030b799ebff0634a8e34750d66}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+\+N\+E\+T\+\_\+buff}
+\item 
+\mbox{\Hypertarget{net__serv_8cc_a1838f0262eb2113118925a975760c4d9}\label{net__serv_8cc_a1838f0262eb2113118925a975760c4d9}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+\+N\+E\+T\+\_\+compress\+\_\+packet}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file is the net layer A\+PI for the My\+S\+QL client/server protocol.
+
+Write and read of logical packets to/from socket.
+
+Writes are cached into net\+\_\+buffer\+\_\+length big packets. Read packets are reallocated dynamicly when reading big packets. Each logical packet has the following pre-\/info\+: 3 byte length \& 1 byte package-\/number.
+
+This file needs to be written in C as it\textquotesingle{}s used by the libmysql client as a C file. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{net__serv_8cc_a8fc6e3b92b7d8742b8ff93526b919063}\label{net__serv_8cc_a8fc6e3b92b7d8742b8ff93526b919063}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!my\+\_\+net\+\_\+init@{my\+\_\+net\+\_\+init}}
+\index{my\+\_\+net\+\_\+init@{my\+\_\+net\+\_\+init}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{my\+\_\+net\+\_\+init()}{my\_net\_init()}}
+{\footnotesize\ttfamily my\+\_\+bool my\+\_\+net\+\_\+init (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{Vio $\ast$}]{vio }\end{DoxyParamCaption})}
+
+Init with packet info. \mbox{\Hypertarget{net__serv_8cc_a95459c0280e24b9aacd761d0cc6ad749}\label{net__serv_8cc_a95459c0280e24b9aacd761d0cc6ad749}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!my\+\_\+net\+\_\+read@{my\+\_\+net\+\_\+read}}
+\index{my\+\_\+net\+\_\+read@{my\+\_\+net\+\_\+read}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{my\+\_\+net\+\_\+read()}{my\_net\_read()}}
+{\footnotesize\ttfamily ulong my\+\_\+net\+\_\+read (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net }\end{DoxyParamCaption})}
+
+Read a packet from the client/server and return it without the internal package header.
+
+If the packet is the first packet of a multi-\/packet packet (which is indicated by the length of the packet = 0xffffff) then all sub packets are read and concatenated.
+
+If the packet was compressed, its uncompressed and the length of the uncompressed packet is returned.
+
+\begin{DoxyReturn}{Returns}
+The function returns the length of the found packet or packet\+\_\+error. net-\/$>$read\+\_\+pos points to the read data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{net__serv_8cc_aae75e6bc59f4837011c9daf6aa4242de}\label{net__serv_8cc_aae75e6bc59f4837011c9daf6aa4242de}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!my\+\_\+net\+\_\+write@{my\+\_\+net\+\_\+write}}
+\index{my\+\_\+net\+\_\+write@{my\+\_\+net\+\_\+write}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{my\+\_\+net\+\_\+write()}{my\_net\_write()}}
+{\footnotesize\ttfamily my\+\_\+bool my\+\_\+net\+\_\+write (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{const uchar $\ast$}]{packet,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Write a logical packet with packet header.
+
+Format\+: Packet length (3 bytes), packet number (1 byte) When compression is used, a 3 byte compression length is added.
+
+\begin{DoxyNote}{Note}
+If compression is used, the original packet is modified! 
+\end{DoxyNote}
+\mbox{\Hypertarget{net__serv_8cc_a24a528253da9111e8d260a3f6f665d2c}\label{net__serv_8cc_a24a528253da9111e8d260a3f6f665d2c}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!net\+\_\+clear@{net\+\_\+clear}}
+\index{net\+\_\+clear@{net\+\_\+clear}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+clear()}{net\_clear()}}
+{\footnotesize\ttfamily void net\+\_\+clear (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{my\+\_\+bool check\+\_\+buffer }]{M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE(unused) }\end{DoxyParamCaption})}
+
+Clear (reinitialize) the N\+ET structure for a new command.
+
+\begin{DoxyRemark}{Remarks}
+Performs debug checking of the socket buffer to ensure that the protocol sequence is correct.
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em net} & N\+ET handler \\
+\hline
+{\em check\+\_\+buffer} & Whether to check the socket buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__serv_8cc_a8b25274dbacc2f6d54ce7efffe6c4d4b}\label{net__serv_8cc_a8b25274dbacc2f6d54ce7efffe6c4d4b}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!net\+\_\+flush@{net\+\_\+flush}}
+\index{net\+\_\+flush@{net\+\_\+flush}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+flush()}{net\_flush()}}
+{\footnotesize\ttfamily my\+\_\+bool net\+\_\+flush (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net }\end{DoxyParamCaption})}
+
+Flush write\+\_\+buffer if not empty. \mbox{\Hypertarget{net__serv_8cc_a1804171d7de40b147aff8de101cabe4d}\label{net__serv_8cc_a1804171d7de40b147aff8de101cabe4d}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!net\+\_\+realloc@{net\+\_\+realloc}}
+\index{net\+\_\+realloc@{net\+\_\+realloc}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+realloc()}{net\_realloc()}}
+{\footnotesize\ttfamily my\+\_\+bool net\+\_\+realloc (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Realloc the packet buffer. \mbox{\Hypertarget{net__serv_8cc_a9b0d71007bd87af2b7dcf334afd13579}\label{net__serv_8cc_a9b0d71007bd87af2b7dcf334afd13579}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!net\+\_\+write\+\_\+command@{net\+\_\+write\+\_\+command}}
+\index{net\+\_\+write\+\_\+command@{net\+\_\+write\+\_\+command}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+write\+\_\+command()}{net\_write\_command()}}
+{\footnotesize\ttfamily my\+\_\+bool net\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{uchar}]{command,  }\item[{const uchar $\ast$}]{header,  }\item[{size\+\_\+t}]{head\+\_\+len,  }\item[{const uchar $\ast$}]{packet,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Send a command to the server.
+
+The reason for having both header and packet is so that libmysql can easy add a header to a special command (like prepared statements) without having to re-\/alloc the string.
+
+As the command is part of the first data packet, we have to do some data juggling to put the command in there, without having to create a new packet.
+
+This function will split big packets into sub-\/packets if needed. (Each sub packet can only be 2$^\wedge$24 bytes)
+
+
+\begin{DoxyParams}{Parameters}
+{\em net} & N\+ET handler \\
+\hline
+{\em command} & Command in My\+S\+QL server (enum enum\+\_\+server\+\_\+command) \\
+\hline
+{\em header} & Header to write after command \\
+\hline
+{\em head\+\_\+len} & Length of header \\
+\hline
+{\em packet} & Query or parameter to query \\
+\hline
+{\em len} & Length of packet\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{net__serv_8cc_a8de608589273d69563710b28bca4dd16}\label{net__serv_8cc_a8de608589273d69563710b28bca4dd16}} 
+\index{net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}!net\+\_\+write\+\_\+packet@{net\+\_\+write\+\_\+packet}}
+\index{net\+\_\+write\+\_\+packet@{net\+\_\+write\+\_\+packet}!net\+\_\+serv.\+cc@{net\+\_\+serv.\+cc}}
+\subsubsection{\texorpdfstring{net\+\_\+write\+\_\+packet()}{net\_write\_packet()}}
+{\footnotesize\ttfamily my\+\_\+bool net\+\_\+write\+\_\+packet (\begin{DoxyParamCaption}\item[{N\+ET $\ast$}]{net,  }\item[{const uchar $\ast$}]{packet,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Write a My\+S\+QL protocol packet to the network handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em net} & N\+ET handler. \\
+\hline
+{\em packet} & The packet to write. \\
+\hline
+{\em length} & Length of the packet.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The packet might be encapsulated into a compressed packet.
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE on error, F\+A\+L\+SE on success. 
+\end{DoxyReturn}

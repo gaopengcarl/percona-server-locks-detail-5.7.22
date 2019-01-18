@@ -1,0 +1,140 @@
+\hypertarget{classMYSQL__TIME__cache}{}\section{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache Class Reference}
+\label{classMYSQL__TIME__cache}\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+
+
+{\ttfamily \#include $<$item\+\_\+timefunc.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMYSQL__TIME__cache_ab2263e69ce25616c73780c246d86f715}{set\+\_\+date}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+void \mbox{\hyperlink{classMYSQL__TIME__cache_a075e291a39c3869e990f69c88e333e1e}{set\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint8 dec\+\_\+arg)
+\item 
+void \mbox{\hyperlink{classMYSQL__TIME__cache_a8f17be69e8e2468d4ca7d56eff147ed6}{set\+\_\+datetime}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint8 dec\+\_\+arg)
+\item 
+void \mbox{\hyperlink{classMYSQL__TIME__cache_a928c9ffaf96b33d42e908522cddcf101}{set\+\_\+date}} (struct timeval tv, \mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$tz)
+\item 
+void \mbox{\hyperlink{classMYSQL__TIME__cache_a2267c5fc6ba0a7874eb15e9cee8519e2}{set\+\_\+time}} (struct timeval tv, uint8 dec\+\_\+arg, \mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$tz)
+\item 
+void \mbox{\hyperlink{classMYSQL__TIME__cache_a3121a1ec215a490a07f49f9adae7dc3b}{set\+\_\+datetime}} (struct timeval tv, uint8 dec\+\_\+arg, \mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$tz)
+\item 
+bool \mbox{\hyperlink{classMYSQL__TIME__cache_ad093ed979c6d1b26e1252c660488296d}{eq}} (const \mbox{\hyperlink{classMYSQL__TIME__cache}{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}} \&tm) const
+\item 
+uint8 \mbox{\hyperlink{classMYSQL__TIME__cache_a4487d3497d3f7179868f8faffcc12dae}{decimals}} () const
+\item 
+longlong \mbox{\hyperlink{classMYSQL__TIME__cache_a21c1acacd08eb405ffd062d22798e739}{val\+\_\+packed}} () const
+\item 
+bool \mbox{\hyperlink{classMYSQL__TIME__cache_a04b7f729adc80c39d4a4fa4008ad6af2}{get\+\_\+date}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint fuzzyflags) const
+\item 
+bool \mbox{\hyperlink{classMYSQL__TIME__cache_a1b68df1e56c5afae6876df13c1f673d8}{get\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime) const
+\item 
+M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ \mbox{\hyperlink{classMYSQL__TIME__cache_a85477e5e44e11713a5943b02ea51bc3d}{get\+\_\+\+T\+I\+M\+E\+\_\+ptr}} ()
+\item 
+String $\ast$ \mbox{\hyperlink{classMYSQL__TIME__cache_ae7dc05379acd79167e89bb408386b178}{val\+\_\+str}} (String $\ast$str)
+\item 
+const char $\ast$ \mbox{\hyperlink{classMYSQL__TIME__cache_a5fc8b3afaa699e30bd799095ba7e09eb}{cptr}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cache for M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value with various representations.
+
+
+\begin{DoxyItemize}
+\item M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME representation (time) is initialized during set\+\_\+\+X\+X\+X().
+\item Packed representation (time\+\_\+packed) is also initialized during set\+\_\+\+X\+X\+X().
+\item String representation (string\+\_\+buff) is not initialized during set\+\_\+\+X\+X\+X(); it\textquotesingle{}s initialized only if \mbox{\hyperlink{classMYSQL__TIME__cache_ae7dc05379acd79167e89bb408386b178}{val\+\_\+str()}} or \mbox{\hyperlink{classMYSQL__TIME__cache_a5fc8b3afaa699e30bd799095ba7e09eb}{cptr()}} are called. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMYSQL__TIME__cache_a5fc8b3afaa699e30bd799095ba7e09eb}\label{classMYSQL__TIME__cache_a5fc8b3afaa699e30bd799095ba7e09eb}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!cptr@{cptr}}
+\index{cptr@{cptr}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{cptr()}{cptr()}}
+{\footnotesize\ttfamily const char $\ast$ M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::cptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return C string representation. \mbox{\Hypertarget{classMYSQL__TIME__cache_a4487d3497d3f7179868f8faffcc12dae}\label{classMYSQL__TIME__cache_a4487d3497d3f7179868f8faffcc12dae}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!decimals@{decimals}}
+\index{decimals@{decimals}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{decimals()}{decimals()}}
+{\footnotesize\ttfamily uint8 M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::decimals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return number of decimal digits. \mbox{\Hypertarget{classMYSQL__TIME__cache_ad093ed979c6d1b26e1252c660488296d}\label{classMYSQL__TIME__cache_ad093ed979c6d1b26e1252c660488296d}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!eq@{eq}}
+\index{eq@{eq}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMYSQL__TIME__cache}{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}} \&}]{tm }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test if cached value is equal to another \mbox{\hyperlink{classMYSQL__TIME__cache}{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}} value. \mbox{\Hypertarget{classMYSQL__TIME__cache_a04b7f729adc80c39d4a4fa4008ad6af2}\label{classMYSQL__TIME__cache_a04b7f729adc80c39d4a4fa4008ad6af2}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!get\+\_\+date@{get\+\_\+date}}
+\index{get\+\_\+date@{get\+\_\+date}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{get\+\_\+date()}{get\_date()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::get\+\_\+date (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{uint}]{fuzzyflags }\end{DoxyParamCaption}) const}
+
+Store M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME representation into the given date/datetime variable checking date flags. \mbox{\Hypertarget{classMYSQL__TIME__cache_a1b68df1e56c5afae6876df13c1f673d8}\label{classMYSQL__TIME__cache_a1b68df1e56c5afae6876df13c1f673d8}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!get\+\_\+time@{get\+\_\+time}}
+\index{get\+\_\+time@{get\+\_\+time}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{get\+\_\+time()}{get\_time()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::get\+\_\+time (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Store M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME representation into the given time variable. \mbox{\Hypertarget{classMYSQL__TIME__cache_a85477e5e44e11713a5943b02ea51bc3d}\label{classMYSQL__TIME__cache_a85477e5e44e11713a5943b02ea51bc3d}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!get\+\_\+\+T\+I\+M\+E\+\_\+ptr@{get\+\_\+\+T\+I\+M\+E\+\_\+ptr}}
+\index{get\+\_\+\+T\+I\+M\+E\+\_\+ptr@{get\+\_\+\+T\+I\+M\+E\+\_\+ptr}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{get\+\_\+\+T\+I\+M\+E\+\_\+ptr()}{get\_TIME\_ptr()}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME$\ast$ M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::get\+\_\+\+T\+I\+M\+E\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return pointer to M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME representation. \mbox{\Hypertarget{classMYSQL__TIME__cache_ab2263e69ce25616c73780c246d86f715}\label{classMYSQL__TIME__cache_ab2263e69ce25616c73780c246d86f715}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!set\+\_\+date@{set\+\_\+date}}
+\index{set\+\_\+date@{set\+\_\+date}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{set\+\_\+date()}{set\_date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::set\+\_\+date (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})}
+
+Set time and time\+\_\+packed from a D\+A\+TE value. \mbox{\Hypertarget{classMYSQL__TIME__cache_a928c9ffaf96b33d42e908522cddcf101}\label{classMYSQL__TIME__cache_a928c9ffaf96b33d42e908522cddcf101}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!set\+\_\+date@{set\+\_\+date}}
+\index{set\+\_\+date@{set\+\_\+date}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{set\+\_\+date()}{set\_date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::set\+\_\+date (\begin{DoxyParamCaption}\item[{struct timeval}]{tv,  }\item[{\mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$}]{tz }\end{DoxyParamCaption})}
+
+Set time and time\+\_\+packed according to D\+A\+TE value in \char`\"{}struct timeval\char`\"{} representation and its time zone. \mbox{\Hypertarget{classMYSQL__TIME__cache_a8f17be69e8e2468d4ca7d56eff147ed6}\label{classMYSQL__TIME__cache_a8f17be69e8e2468d4ca7d56eff147ed6}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!set\+\_\+datetime@{set\+\_\+datetime}}
+\index{set\+\_\+datetime@{set\+\_\+datetime}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{set\+\_\+datetime()}{set\_datetime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::set\+\_\+datetime (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})}
+
+Set time and time\+\_\+packed from a D\+A\+T\+E\+T\+I\+ME value. \mbox{\Hypertarget{classMYSQL__TIME__cache_a3121a1ec215a490a07f49f9adae7dc3b}\label{classMYSQL__TIME__cache_a3121a1ec215a490a07f49f9adae7dc3b}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!set\+\_\+datetime@{set\+\_\+datetime}}
+\index{set\+\_\+datetime@{set\+\_\+datetime}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{set\+\_\+datetime()}{set\_datetime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::set\+\_\+datetime (\begin{DoxyParamCaption}\item[{struct timeval}]{tv,  }\item[{uint8}]{dec\+\_\+arg,  }\item[{\mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$}]{tz }\end{DoxyParamCaption})}
+
+Set time and time\+\_\+packed according to D\+A\+T\+E\+T\+I\+ME value in \char`\"{}struct timeval\char`\"{} representation and its time zone. \mbox{\Hypertarget{classMYSQL__TIME__cache_a075e291a39c3869e990f69c88e333e1e}\label{classMYSQL__TIME__cache_a075e291a39c3869e990f69c88e333e1e}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!set\+\_\+time@{set\+\_\+time}}
+\index{set\+\_\+time@{set\+\_\+time}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{set\+\_\+time()}{set\_time()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::set\+\_\+time (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})}
+
+Set time and time\+\_\+packed from a T\+I\+ME value. \mbox{\Hypertarget{classMYSQL__TIME__cache_a2267c5fc6ba0a7874eb15e9cee8519e2}\label{classMYSQL__TIME__cache_a2267c5fc6ba0a7874eb15e9cee8519e2}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!set\+\_\+time@{set\+\_\+time}}
+\index{set\+\_\+time@{set\+\_\+time}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{set\+\_\+time()}{set\_time()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::set\+\_\+time (\begin{DoxyParamCaption}\item[{struct timeval}]{tv,  }\item[{uint8}]{dec\+\_\+arg,  }\item[{\mbox{\hyperlink{classTime__zone}{Time\+\_\+zone}} $\ast$}]{tz }\end{DoxyParamCaption})}
+
+Set time and time\+\_\+packed according to T\+I\+ME value in \char`\"{}struct timeval\char`\"{} representation and its time zone. \mbox{\Hypertarget{classMYSQL__TIME__cache_a21c1acacd08eb405ffd062d22798e739}\label{classMYSQL__TIME__cache_a21c1acacd08eb405ffd062d22798e739}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!val\+\_\+packed@{val\+\_\+packed}}
+\index{val\+\_\+packed@{val\+\_\+packed}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{val\+\_\+packed()}{val\_packed()}}
+{\footnotesize\ttfamily longlong M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::val\+\_\+packed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return packed representation. \mbox{\Hypertarget{classMYSQL__TIME__cache_ae7dc05379acd79167e89bb408386b178}\label{classMYSQL__TIME__cache_ae7dc05379acd79167e89bb408386b178}} 
+\index{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}!val\+\_\+str@{val\+\_\+str}}
+\index{val\+\_\+str@{val\+\_\+str}!M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache@{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache}}
+\subsubsection{\texorpdfstring{val\+\_\+str()}{val\_str()}}
+{\footnotesize\ttfamily String $\ast$ M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+cache\+::val\+\_\+str (\begin{DoxyParamCaption}\item[{String $\ast$}]{str }\end{DoxyParamCaption})}
+
+Store string representation into String. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

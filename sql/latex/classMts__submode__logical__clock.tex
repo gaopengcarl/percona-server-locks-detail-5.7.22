@@ -1,0 +1,275 @@
+\hypertarget{classMts__submode__logical__clock}{}\section{Mts\+\_\+submode\+\_\+logical\+\_\+clock Class Reference}
+\label{classMts__submode__logical__clock}\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+mts\+\_\+submode.\+h$>$}
+
+Inheritance diagram for Mts\+\_\+submode\+\_\+logical\+\_\+clock\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMts__submode__logical__clock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classMts__submode__logical__clock_a7e2a78af961009a44eacddd88b0f517f}{schedule\+\_\+next\+\_\+event}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ev)
+\item 
+void \mbox{\hyperlink{classMts__submode__logical__clock_a611d00eee05c4badebc630d80f0208fb}{attach\+\_\+temp\+\_\+tables}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$ev)
+\item 
+void \mbox{\hyperlink{classMts__submode__logical__clock_a0cff354bc8566687d40530c2cc430128}{detach\+\_\+temp\+\_\+tables}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$ev)
+\item 
+Slave\+\_\+worker $\ast$ \mbox{\hyperlink{classMts__submode__logical__clock_a2fcd334c4225b2cabdcd42a9e4179071}{get\+\_\+least\+\_\+occupied\+\_\+worker}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, Slave\+\_\+worker\+\_\+array $\ast$ws, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ev)
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_acb83dbd9dd69537395bfe08dc5b97bc6}\label{classMts__submode__logical__clock_acb83dbd9dd69537395bfe08dc5b97bc6}} 
+void {\bfseries start\+\_\+new\+\_\+group} ()
+\item 
+void \mbox{\hyperlink{classMts__submode__logical__clock_ab1f42bc5a3528849c24ffd45b8b25aca}{withdraw\+\_\+delegated\+\_\+job}} ()
+\item 
+int \mbox{\hyperlink{classMts__submode__logical__clock_ad7c1ed46ea9c55f1c4a40cda0c81aa41}{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, Slave\+\_\+worker $\ast$ignore=N\+U\+LL)
+\item 
+bool \mbox{\hyperlink{classMts__submode__logical__clock_a6f58da5b0597884a11feccf25f3cdc96}{wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, longlong last\+\_\+committed\+\_\+arg, longlong lwm\+\_\+estimate\+\_\+arg)
+\item 
+longlong \mbox{\hyperlink{classMts__submode__logical__clock_ac91a392c2d94d6e6045f0ca8f1cbfa00}{get\+\_\+lwm\+\_\+timestamp}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, bool need\+\_\+lock)
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_a8b02848ef72e31334a02a3df9854680f}\label{classMts__submode__logical__clock_a8b02848ef72e31334a02a3df9854680f}} 
+longlong {\bfseries estimate\+\_\+lwm\+\_\+timestamp} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_a864989cdf17ff4a696b4f74dd8a00c1d}\label{classMts__submode__logical__clock_a864989cdf17ff4a696b4f74dd8a00c1d}} 
+static bool {\bfseries clock\+\_\+leq} (longlong a, longlong b)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_a691eb2ea538782d6dada60468d28cb0a}\label{classMts__submode__logical__clock_a691eb2ea538782d6dada60468d28cb0a}} 
+uint {\bfseries jobs\+\_\+done}
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_a62f1fd1935a78bbd7dac021de2354ea7}\label{classMts__submode__logical__clock_a62f1fd1935a78bbd7dac021de2354ea7}} 
+bool {\bfseries is\+\_\+error}
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_a4959abc53705fc3a371747de15f254a3}\label{classMts__submode__logical__clock_a4959abc53705fc3a371747de15f254a3}} 
+longlong {\bfseries min\+\_\+waited\+\_\+timestamp}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMts__submode__logical__clock_a744169bad4e3ea03a15e62ba4e24492b}\label{classMts__submode__logical__clock_a744169bad4e3ea03a15e62ba4e24492b}} 
+static const ulong {\bfseries I\+N\+D\+E\+X\+\_\+\+U\+N\+D\+EF} = (ulong) -\/1
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ uint, my\+\_\+thread\+\_\+id $>$ \mbox{\hyperlink{classMts__submode__logical__clock_ac75e4dcd258a79d3c4eb03ab0bf0ad02}{get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+Slave\+\_\+worker $\ast$ \mbox{\hyperlink{classMts__submode__logical__clock_a093957d2566da47579792a82f499e147}{get\+\_\+free\+\_\+worker}} (\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Parallelization using Master parallelization information For significance of each method check definition of \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMts__submode__logical__clock_a611d00eee05c4badebc630d80f0208fb}\label{classMts__submode__logical__clock_a611d00eee05c4badebc630d80f0208fb}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!attach\+\_\+temp\+\_\+tables@{attach\+\_\+temp\+\_\+tables}}
+\index{attach\+\_\+temp\+\_\+tables@{attach\+\_\+temp\+\_\+tables}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{attach\+\_\+temp\+\_\+tables()}{attach\_temp\_tables()}}
+{\footnotesize\ttfamily void Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::attach\+\_\+temp\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Logic to attach the temporary tables from the worker threads upon event execution 
+\begin{DoxyParams}{Parameters}
+{\em } & thd T\+HD instance rli \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} instance ev \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} that is being applied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__logical__clock_a0cff354bc8566687d40530c2cc430128}\label{classMts__submode__logical__clock_a0cff354bc8566687d40530c2cc430128}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!detach\+\_\+temp\+\_\+tables@{detach\+\_\+temp\+\_\+tables}}
+\index{detach\+\_\+temp\+\_\+tables@{detach\+\_\+temp\+\_\+tables}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{detach\+\_\+temp\+\_\+tables()}{detach\_temp\_tables()}}
+{\footnotesize\ttfamily void Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::detach\+\_\+temp\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Logic to detach the temporary tables from the worker threads upon event execution 
+\begin{DoxyParams}{Parameters}
+{\em } & thd T\+HD instance rli \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} instance ev \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} that is being applied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__logical__clock_a093957d2566da47579792a82f499e147}\label{classMts__submode__logical__clock_a093957d2566da47579792a82f499e147}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!get\+\_\+free\+\_\+worker@{get\+\_\+free\+\_\+worker}}
+\index{get\+\_\+free\+\_\+worker@{get\+\_\+free\+\_\+worker}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{get\+\_\+free\+\_\+worker()}{get\_free\_worker()}}
+{\footnotesize\ttfamily Slave\+\_\+worker $\ast$ Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::get\+\_\+free\+\_\+worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Protected method to fetch a worker having no events assigned. The method is supposed to be called by Coordinator, therefore comparison like w\+\_\+i-\/$>$jobs.\+len == 0 must (eventually) succeed.
+
+todo\+: consider to optimize scan that is getting more expensive with more \# of Workers.
+
+\begin{DoxyReturn}{Returns}
+a pointer to Worker or N\+U\+LL if none is free. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMts__submode__logical__clock_a2fcd334c4225b2cabdcd42a9e4179071}\label{classMts__submode__logical__clock_a2fcd334c4225b2cabdcd42a9e4179071}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!get\+\_\+least\+\_\+occupied\+\_\+worker@{get\+\_\+least\+\_\+occupied\+\_\+worker}}
+\index{get\+\_\+least\+\_\+occupied\+\_\+worker@{get\+\_\+least\+\_\+occupied\+\_\+worker}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{get\+\_\+least\+\_\+occupied\+\_\+worker()}{get\_least\_occupied\_worker()}}
+{\footnotesize\ttfamily Slave\+\_\+worker $\ast$ Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::get\+\_\+least\+\_\+occupied\+\_\+worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{Slave\+\_\+worker\+\_\+array $\ast$}]{ws,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Logic to get least occupied worker when the sql mts\+\_\+submode= master\+\_\+parallel 
+\begin{DoxyParams}{Parameters}
+{\em rli} & relay log info of coordinator ws arrayy of worker threads ev event for which we are searching for a worker. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+slave worker thread or N\+U\+LL when coordinator is killed by any worker. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__logical__clock_ac91a392c2d94d6e6045f0ca8f1cbfa00}\label{classMts__submode__logical__clock_ac91a392c2d94d6e6045f0ca8f1cbfa00}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!get\+\_\+lwm\+\_\+timestamp@{get\+\_\+lwm\+\_\+timestamp}}
+\index{get\+\_\+lwm\+\_\+timestamp@{get\+\_\+lwm\+\_\+timestamp}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{get\+\_\+lwm\+\_\+timestamp()}{get\_lwm\_timestamp()}}
+{\footnotesize\ttfamily longlong Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::get\+\_\+lwm\+\_\+timestamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{bool}]{need\+\_\+lock }\end{DoxyParamCaption})}
+
+The method finds the minimum logical timestamp (low-\/water-\/mark) of committed transactions. The successful search results in a pair of a logical timestamp value and a G\+AQ index that contains it. last\+\_\+lwm\+\_\+timestamp may still be raised though the search does not find any satisfying running index. Search is implemented as headway scanning of G\+AQ from a point of a previous search\textquotesingle{}s stop position (last\+\_\+lwm\+\_\+index). Whether the cached (memorized) index value is considered to be stale when its timestamp gets less than the current \char`\"{}stable\char`\"{} L\+WM\+: \begin{DoxyVerb} last_lwm_timestamp <= GAQ.lwm.sequence_number           (*)
+\end{DoxyVerb}
+
+
+Staleness is caused by G\+AQ garbage collection that increments the rhs of ($\ast$), see \+::move\+\_\+queue\+\_\+head(). When that\textquotesingle{}s diagnozed, the search in G\+AQ needs restarting from the queue tail.
+
+Formally, the undefined cached value of last\+\_\+lwm\+\_\+timestamp is also stale. \begin{DoxyVerb}       the last time index containg lwm
+           +------+
+           | LWM  |
+           |  |   |
+           V  V   V
+\end{DoxyVerb}
+ G\+AQ\+: xoooooxxxxx\+X\+X\+X\+XX...X $^\wedge$ $^\wedge$ $\vert$ $\vert$ L\+WM+1 $\vert$ +-\/ tne new current\+\_\+lwm
+
+$<$-\/--- logical (commit) time -\/---
+
+here `x' stands for committed, `X' for committed and discarded from the running range of the queue, `o' for not committed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rli} & \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} pointer \\
+\hline
+{\em need\+\_\+look} & Either the caller or the function must hold a mutex to avoid race with concurrent G\+AQ update.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+possibly updated current\+\_\+lwm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMts__submode__logical__clock_ac75e4dcd258a79d3c4eb03ab0bf0ad02}\label{classMts__submode__logical__clock_ac75e4dcd258a79d3c4eb03ab0bf0ad02}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id@{get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id}}
+\index{get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id@{get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id()}{get\_server\_and\_thread\_id()}}
+{\footnotesize\ttfamily std\+::pair$<$ uint, my\+\_\+thread\+\_\+id $>$ Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::get\+\_\+server\+\_\+and\+\_\+thread\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Protected method to fetch the server\+\_\+id and pseudo\+\_\+thread\+\_\+id from a temporary table 
+\begin{DoxyParams}{Parameters}
+{\em } & instance pointer of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: std\+:pair$<$uint, my\+\_\+thread\+\_\+id$>$  \+: It is the caller\textquotesingle{}s responsibility to make sure we call this function only for temp tables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMts__submode__logical__clock_a7e2a78af961009a44eacddd88b0f517f}\label{classMts__submode__logical__clock_a7e2a78af961009a44eacddd88b0f517f}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!schedule\+\_\+next\+\_\+event@{schedule\+\_\+next\+\_\+event}}
+\index{schedule\+\_\+next\+\_\+event@{schedule\+\_\+next\+\_\+event}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{schedule\+\_\+next\+\_\+event()}{schedule\_next\_event()}}
+{\footnotesize\ttfamily int Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::schedule\+\_\+next\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Does necessary arrangement before scheduling next event. The method computes the meta-\/group status of the being scheduled transaction represented by the event argument. When the status is found O\+UT (of the current meta-\/group) as encoded as is\+\_\+new\+\_\+group == true the global Scheduler (Coordinator thread) requests full synchronization with all Workers. The current being assigned group descriptor gets associated with the group\textquotesingle{}s logical timestamp aka sequence\+\_\+number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & Relay\+\_\+log\+\_\+info$\ast$ rli \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ev \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: E\+R\+\_\+\+M\+T\+S\+\_\+\+C\+A\+N\+T\+\_\+\+P\+A\+R\+A\+L\+L\+EL, E\+R\+\_\+\+M\+T\+S\+\_\+\+I\+N\+C\+O\+N\+S\+I\+S\+T\+E\+N\+T\+\_\+\+D\+A\+TA 0 if no error or slave has been killed gracefully 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__logical__clock_a6f58da5b0597884a11feccf25f3cdc96}\label{classMts__submode__logical__clock_a6f58da5b0597884a11feccf25f3cdc96}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx@{wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx}}
+\index{wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx@{wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx()}{wait\_for\_last\_committed\_trx()}}
+{\footnotesize\ttfamily bool Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::wait\+\_\+for\+\_\+last\+\_\+committed\+\_\+trx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{longlong}]{last\+\_\+committed\+\_\+arg,  }\item[{longlong}]{lwm\+\_\+estimate\+\_\+arg }\end{DoxyParamCaption})}
+
+The method implements logical timestamp conflict detection and resolution through waiting by the calling thread. The conflict or waiting condition is like the following \begin{DoxyVerb}    lwm < last_committed,
+\end{DoxyVerb}
+
+
+where lwm is a minimum logical timestamp of committed transactions. Since the lwm\textquotesingle{}s exact value is not always available its pessimistic estimate (an old version) is improved (\mbox{\hyperlink{classMts__submode__logical__clock_ac91a392c2d94d6e6045f0ca8f1cbfa00}{get\+\_\+lwm\+\_\+timestamp()}}) as the first step before to the actual waiting commitment.
+
+Special cases include\+:
+
+When {\ttfamily last\+\_\+committed\+\_\+arg} is uninitialized the calling thread must proceed without waiting for anyone. Any possible dependency with unknown commit parent transaction shall be sorted out by the parent;
+
+When the gaq index is subsequent to the last lwm index there\textquotesingle{}s no dependency of the current transaction with any regardless of lwm timestamp should it be S\+E\+Q\+\_\+\+U\+N\+I\+N\+IT. Consequently when G\+AQ consists of just one item there\textquotesingle{}s none to wait. Such latter case is left to the caller to handle.
+
+\begin{DoxyNote}{Note}
+The caller must make sure the current transaction won\textquotesingle{}t be waiting for itself. That is the method should not be caller by a Worker whose group assignment is in the G\+AQ front item.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+committed\+\_\+arg} & logical timestamp of a parent transaction \\
+\hline
+{\em gaq\+\_\+index} & Index of the current transaction in G\+AQ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false as success, true when the error flag is raised or the caller thread is found killed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMts__submode__logical__clock_ad7c1ed46ea9c55f1c4a40cda0c81aa41}\label{classMts__submode__logical__clock_ad7c1ed46ea9c55f1c4a40cda0c81aa41}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish@{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish}}
+\index{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish@{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish()}{wait\_for\_workers\_to\_finish()}}
+{\footnotesize\ttfamily int Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::wait\+\_\+for\+\_\+workers\+\_\+to\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{Slave\+\_\+worker $\ast$}]{ignore = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Waits for slave workers to finish off the pending tasks before returning. Used in this submode to make sure that all assigned jobs have been done.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Relay\+\_\+log} & info $\ast$rli coordinator rli. \\
+\hline
+{\em Slave} & worker to ignore. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 for error. 0 no error. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}}.
+
+\mbox{\Hypertarget{classMts__submode__logical__clock_ab1f42bc5a3528849c24ffd45b8b25aca}\label{classMts__submode__logical__clock_ab1f42bc5a3528849c24ffd45b8b25aca}} 
+\index{Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}!withdraw\+\_\+delegated\+\_\+job@{withdraw\+\_\+delegated\+\_\+job}}
+\index{withdraw\+\_\+delegated\+\_\+job@{withdraw\+\_\+delegated\+\_\+job}!Mts\+\_\+submode\+\_\+logical\+\_\+clock@{Mts\+\_\+submode\+\_\+logical\+\_\+clock}}
+\subsubsection{\texorpdfstring{withdraw\+\_\+delegated\+\_\+job()}{withdraw\_delegated\_job()}}
+{\footnotesize\ttfamily void Mts\+\_\+submode\+\_\+logical\+\_\+clock\+::withdraw\+\_\+delegated\+\_\+job (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Withdraw the delegated\+\_\+job increased by the group. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+mts\+\_\+submode.\+h\item 
+rpl\+\_\+mts\+\_\+submode.\+cc\end{DoxyCompactItemize}

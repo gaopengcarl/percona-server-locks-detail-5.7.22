@@ -1,0 +1,187 @@
+\hypertarget{structBinlog__transmit__observer}{}\section{Binlog\+\_\+transmit\+\_\+observer Struct Reference}
+\label{structBinlog__transmit__observer}\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structBinlog__transmit__observer_a8d787ff0a59c8492f66ba5a97e53feda}\label{structBinlog__transmit__observer_a8d787ff0a59c8492f66ba5a97e53feda}} 
+uint32 {\bfseries len}
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__transmit__observer_ab313f8145b55a6516306ce6d42920c6d}{transmit\+\_\+start}} )(\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__transmit__observer_ae7e1f7cf7a2c6dd91bb7ec35085de544}{transmit\+\_\+stop}} )(\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__transmit__observer_a12738815385bce81ff8a5b109ace7e81}{reserve\+\_\+header}} )(\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, unsigned char $\ast$header, unsigned long size, unsigned long $\ast$len)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__transmit__observer_a6b305e8efbe26c1d60ee9ca882476b36}{before\+\_\+send\+\_\+event}} )(\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, unsigned char $\ast$packet, unsigned long len, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__transmit__observer_abd4c85bf449108fec519176238621733}{after\+\_\+send\+\_\+event}} )(\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, const char $\ast$event\+\_\+buf, unsigned long len, const char $\ast$skipped\+\_\+log\+\_\+file, my\+\_\+off\+\_\+t skipped\+\_\+log\+\_\+pos)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__transmit__observer_a1accd815cbf533bc1cfb2d3985975a6b}{after\+\_\+reset\+\_\+master}} )(\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Observe and extends the binlog dumping thread. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structBinlog__transmit__observer_a1accd815cbf533bc1cfb2d3985975a6b}\label{structBinlog__transmit__observer_a1accd815cbf533bc1cfb2d3985975a6b}} 
+\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}!after\+\_\+reset\+\_\+master@{after\+\_\+reset\+\_\+master}}
+\index{after\+\_\+reset\+\_\+master@{after\+\_\+reset\+\_\+master}!Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+reset\+\_\+master}{after\_reset\_master}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+transmit\+\_\+observer\+::after\+\_\+reset\+\_\+master) (\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param)}
+
+This callback is called after resetting master status
+
+This is called when executing the command R\+E\+S\+ET M\+A\+S\+T\+ER, and is used to reset status variables added by observers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__transmit__observer_abd4c85bf449108fec519176238621733}\label{structBinlog__transmit__observer_abd4c85bf449108fec519176238621733}} 
+\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}!after\+\_\+send\+\_\+event@{after\+\_\+send\+\_\+event}}
+\index{after\+\_\+send\+\_\+event@{after\+\_\+send\+\_\+event}!Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+send\+\_\+event}{after\_send\_event}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+transmit\+\_\+observer\+::after\+\_\+send\+\_\+event) (\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, const char $\ast$event\+\_\+buf, unsigned long len, const char $\ast$skipped\+\_\+log\+\_\+file, my\+\_\+off\+\_\+t skipped\+\_\+log\+\_\+pos)}
+
+This callback is called after an event packet is sent to the slave or is skipped.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em event\+\_\+buf} & Binlog event packet buffer sent \\
+\hline
+{\em len} & length of the event packet buffer \\
+\hline
+{\em skipped\+\_\+log\+\_\+file} & Binlog file name of the event that was skipped in the master. This is null if the position was not skipped \\
+\hline
+{\em skipped\+\_\+log\+\_\+pos} & Binlog position of the event that was skipped in the master. 0 if not skipped \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__transmit__observer_a6b305e8efbe26c1d60ee9ca882476b36}\label{structBinlog__transmit__observer_a6b305e8efbe26c1d60ee9ca882476b36}} 
+\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}!before\+\_\+send\+\_\+event@{before\+\_\+send\+\_\+event}}
+\index{before\+\_\+send\+\_\+event@{before\+\_\+send\+\_\+event}!Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+send\+\_\+event}{before\_send\_event}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+transmit\+\_\+observer\+::before\+\_\+send\+\_\+event) (\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, unsigned char $\ast$packet, unsigned long len, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)}
+
+This callback is called before sending an event packet to slave
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em packet} & Binlog event packet to send \\
+\hline
+{\em len} & Length of the event packet \\
+\hline
+{\em log\+\_\+file} & Binlog file name of the event packet to send \\
+\hline
+{\em log\+\_\+pos} & Binlog position of the event packet to send\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__transmit__observer_a12738815385bce81ff8a5b109ace7e81}\label{structBinlog__transmit__observer_a12738815385bce81ff8a5b109ace7e81}} 
+\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}!reserve\+\_\+header@{reserve\+\_\+header}}
+\index{reserve\+\_\+header@{reserve\+\_\+header}!Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+\subsubsection{\texorpdfstring{reserve\+\_\+header}{reserve\_header}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+transmit\+\_\+observer\+::reserve\+\_\+header) (\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, unsigned char $\ast$header, unsigned long size, unsigned long $\ast$len)}
+
+This callback is called to reserve bytes in packet header for event transmission
+
+This callback is called when resetting transmit packet header to reserve bytes for this observer in packet header.
+
+The {\itshape header} buffer is allocated by the server code, and {\itshape size} is the size of the header buffer. Each observer can only reserve a maximum size of {\itshape size} in the header.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em header} & Pointer of the header buffer \\
+\hline
+{\em size} & Size of the header buffer \\
+\hline
+{\em len} & Header length reserved by this observer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__transmit__observer_ab313f8145b55a6516306ce6d42920c6d}\label{structBinlog__transmit__observer_ab313f8145b55a6516306ce6d42920c6d}} 
+\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}!transmit\+\_\+start@{transmit\+\_\+start}}
+\index{transmit\+\_\+start@{transmit\+\_\+start}!Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+\subsubsection{\texorpdfstring{transmit\+\_\+start}{transmit\_start}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+transmit\+\_\+observer\+::transmit\+\_\+start) (\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)}
+
+This callback is called when binlog dumping starts
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em log\+\_\+file} & Binlog file name to transmit from \\
+\hline
+{\em log\+\_\+pos} & Binlog position to transmit from\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__transmit__observer_ae7e1f7cf7a2c6dd91bb7ec35085de544}\label{structBinlog__transmit__observer_ae7e1f7cf7a2c6dd91bb7ec35085de544}} 
+\index{Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}!transmit\+\_\+stop@{transmit\+\_\+stop}}
+\index{transmit\+\_\+stop@{transmit\+\_\+stop}!Binlog\+\_\+transmit\+\_\+observer@{Binlog\+\_\+transmit\+\_\+observer}}
+\subsubsection{\texorpdfstring{transmit\+\_\+stop}{transmit\_stop}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+transmit\+\_\+observer\+::transmit\+\_\+stop) (\mbox{\hyperlink{structBinlog__transmit__param}{Binlog\+\_\+transmit\+\_\+param}} $\ast$param)}
+
+This callback is called when binlog dumping stops
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

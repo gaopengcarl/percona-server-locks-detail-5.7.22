@@ -1,0 +1,157 @@
+\hypertarget{structServer__state__observer}{}\section{Server\+\_\+state\+\_\+observer Struct Reference}
+\label{structServer__state__observer}\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structServer__state__observer_ab065bea53f1e8a43225c4ad8be05a4a1}\label{structServer__state__observer_ab065bea53f1e8a43225c4ad8be05a4a1}} 
+uint32 {\bfseries len}
+\item 
+int($\ast$ \mbox{\hyperlink{structServer__state__observer_a9f28a4ddbee0e830bf910a4e396257db}{before\+\_\+handle\+\_\+connection}} )(\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structServer__state__observer_ab56f500a600af06249a14f51fc6a8243}{before\+\_\+recovery}} )(\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structServer__state__observer_a771b6a4ff00a09b67cff5aea530c653b}{after\+\_\+engine\+\_\+recovery}} )(\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structServer__state__observer_a38fea82c3736104783402e90603c102a}{after\+\_\+recovery}} )(\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structServer__state__observer_aed8f8cbeb5187866528560b6b7a67c5c}{before\+\_\+server\+\_\+shutdown}} )(\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structServer__state__observer_a0c19c60426a1a6cf48bd7023e848da32}{after\+\_\+server\+\_\+shutdown}} )(\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Observer server state 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structServer__state__observer_a771b6a4ff00a09b67cff5aea530c653b}\label{structServer__state__observer_a771b6a4ff00a09b67cff5aea530c653b}} 
+\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}!after\+\_\+engine\+\_\+recovery@{after\+\_\+engine\+\_\+recovery}}
+\index{after\+\_\+engine\+\_\+recovery@{after\+\_\+engine\+\_\+recovery}!Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+engine\+\_\+recovery}{after\_engine\_recovery}}
+{\footnotesize\ttfamily int($\ast$ Server\+\_\+state\+\_\+observer\+::after\+\_\+engine\+\_\+recovery) (\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)}
+
+This callback is called after the end of the engine recovery.
+
+This is called before the start of the recovery procedure ie. the engine recovery.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structServer__state__observer_a38fea82c3736104783402e90603c102a}\label{structServer__state__observer_a38fea82c3736104783402e90603c102a}} 
+\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}!after\+\_\+recovery@{after\+\_\+recovery}}
+\index{after\+\_\+recovery@{after\+\_\+recovery}!Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+recovery}{after\_recovery}}
+{\footnotesize\ttfamily int($\ast$ Server\+\_\+state\+\_\+observer\+::after\+\_\+recovery) (\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)}
+
+This callback is called after the end of the recovery procedure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structServer__state__observer_a0c19c60426a1a6cf48bd7023e848da32}\label{structServer__state__observer_a0c19c60426a1a6cf48bd7023e848da32}} 
+\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}!after\+\_\+server\+\_\+shutdown@{after\+\_\+server\+\_\+shutdown}}
+\index{after\+\_\+server\+\_\+shutdown@{after\+\_\+server\+\_\+shutdown}!Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+server\+\_\+shutdown}{after\_server\_shutdown}}
+{\footnotesize\ttfamily int($\ast$ Server\+\_\+state\+\_\+observer\+::after\+\_\+server\+\_\+shutdown) (\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)}
+
+This callback is called after the end of the shutdown procedure. Can be used as a checkpoint of the proper cleanup operations in some cases.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structServer__state__observer_a9f28a4ddbee0e830bf910a4e396257db}\label{structServer__state__observer_a9f28a4ddbee0e830bf910a4e396257db}} 
+\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}!before\+\_\+handle\+\_\+connection@{before\+\_\+handle\+\_\+connection}}
+\index{before\+\_\+handle\+\_\+connection@{before\+\_\+handle\+\_\+connection}!Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+handle\+\_\+connection}{before\_handle\_connection}}
+{\footnotesize\ttfamily int($\ast$ Server\+\_\+state\+\_\+observer\+::before\+\_\+handle\+\_\+connection) (\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)}
+
+This is called just before the server is ready to accept the client connections to the Server/\+Node. It marks the possible point where the server can be said to be ready to serve client queries.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structServer__state__observer_ab56f500a600af06249a14f51fc6a8243}\label{structServer__state__observer_ab56f500a600af06249a14f51fc6a8243}} 
+\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}!before\+\_\+recovery@{before\+\_\+recovery}}
+\index{before\+\_\+recovery@{before\+\_\+recovery}!Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+recovery}{before\_recovery}}
+{\footnotesize\ttfamily int($\ast$ Server\+\_\+state\+\_\+observer\+::before\+\_\+recovery) (\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)}
+
+This callback is called before the start of the recovery
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structServer__state__observer_aed8f8cbeb5187866528560b6b7a67c5c}\label{structServer__state__observer_aed8f8cbeb5187866528560b6b7a67c5c}} 
+\index{Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}!before\+\_\+server\+\_\+shutdown@{before\+\_\+server\+\_\+shutdown}}
+\index{before\+\_\+server\+\_\+shutdown@{before\+\_\+server\+\_\+shutdown}!Server\+\_\+state\+\_\+observer@{Server\+\_\+state\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+server\+\_\+shutdown}{before\_server\_shutdown}}
+{\footnotesize\ttfamily int($\ast$ Server\+\_\+state\+\_\+observer\+::before\+\_\+server\+\_\+shutdown) (\mbox{\hyperlink{structServer__state__param}{Server\+\_\+state\+\_\+param}} $\ast$param)}
+
+This callback is called before the start of the shutdown procedure. Can be useful to initiate some cleanup operations in some cases.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

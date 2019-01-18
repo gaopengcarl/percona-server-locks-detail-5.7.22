@@ -1,0 +1,65 @@
+\hypertarget{classTransaction__dependency__tracker}{}\section{Transaction\+\_\+dependency\+\_\+tracker Class Reference}
+\label{classTransaction__dependency__tracker}\index{Transaction\+\_\+dependency\+\_\+tracker@{Transaction\+\_\+dependency\+\_\+tracker}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+trx\+\_\+tracking.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTransaction__dependency__tracker_a8d2a4a5fbf55ca180fc23f4166be212f}{get\+\_\+dependency}} (T\+HD $\ast$thd, int64 \&sequence\+\_\+number, int64 \&commit\+\_\+parent)
+\item 
+\mbox{\Hypertarget{classTransaction__dependency__tracker_abe7efcff7701487a3be223ba29160d9a}\label{classTransaction__dependency__tracker_abe7efcff7701487a3be223ba29160d9a}} 
+void {\bfseries tracking\+\_\+mode\+\_\+changed} ()
+\item 
+void \mbox{\hyperlink{classTransaction__dependency__tracker_a8788b724314af256987da1595a3a42d7}{update\+\_\+max\+\_\+committed}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classTransaction__dependency__tracker_aa7b1161abe944975d71a6936e974aae5}\label{classTransaction__dependency__tracker_aa7b1161abe944975d71a6936e974aae5}} 
+int64 {\bfseries get\+\_\+max\+\_\+committed\+\_\+timestamp} ()
+\item 
+\mbox{\Hypertarget{classTransaction__dependency__tracker_aad5125f93f22d31f845b9be0a0cdc1c9}\label{classTransaction__dependency__tracker_aad5125f93f22d31f845b9be0a0cdc1c9}} 
+int64 {\bfseries step} ()
+\item 
+\mbox{\Hypertarget{classTransaction__dependency__tracker_a75a9dc39e9ad8cf98f7dc79db6b485e7}\label{classTransaction__dependency__tracker_a75a9dc39e9ad8cf98f7dc79db6b485e7}} 
+void {\bfseries rotate} ()
+\item 
+\mbox{\Hypertarget{classTransaction__dependency__tracker_ac655a8a6f54c2f224792f9ef95698c43}\label{classTransaction__dependency__tracker_ac655a8a6f54c2f224792f9ef95698c43}} 
+\mbox{\hyperlink{classWriteset__trx__dependency__tracker}{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker}} $\ast$ {\bfseries get\+\_\+writeset} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransaction__dependency__tracker_a00ca767507c1463752c3736c1a3d487a}\label{classTransaction__dependency__tracker_a00ca767507c1463752c3736c1a3d487a}} 
+long {\bfseries m\+\_\+opt\+\_\+tracking\+\_\+mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dependency tracker is a container singleton that dispatches between the three methods associated with the binlog-\/transaction-\/dependency-\/tracking option. There is a singleton instance of each of these classes. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransaction__dependency__tracker_a8d2a4a5fbf55ca180fc23f4166be212f}\label{classTransaction__dependency__tracker_a8d2a4a5fbf55ca180fc23f4166be212f}} 
+\index{Transaction\+\_\+dependency\+\_\+tracker@{Transaction\+\_\+dependency\+\_\+tracker}!get\+\_\+dependency@{get\+\_\+dependency}}
+\index{get\+\_\+dependency@{get\+\_\+dependency}!Transaction\+\_\+dependency\+\_\+tracker@{Transaction\+\_\+dependency\+\_\+tracker}}
+\subsubsection{\texorpdfstring{get\+\_\+dependency()}{get\_dependency()}}
+{\footnotesize\ttfamily void Transaction\+\_\+dependency\+\_\+tracker\+::get\+\_\+dependency (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{int64 \&}]{sequence\+\_\+number,  }\item[{int64 \&}]{commit\+\_\+parent }\end{DoxyParamCaption})}
+
+Get the dependencies in a transaction, the main entry point for the dependency tracking work. \mbox{\Hypertarget{classTransaction__dependency__tracker_a8788b724314af256987da1595a3a42d7}\label{classTransaction__dependency__tracker_a8788b724314af256987da1595a3a42d7}} 
+\index{Transaction\+\_\+dependency\+\_\+tracker@{Transaction\+\_\+dependency\+\_\+tracker}!update\+\_\+max\+\_\+committed@{update\+\_\+max\+\_\+committed}}
+\index{update\+\_\+max\+\_\+committed@{update\+\_\+max\+\_\+committed}!Transaction\+\_\+dependency\+\_\+tracker@{Transaction\+\_\+dependency\+\_\+tracker}}
+\subsubsection{\texorpdfstring{update\+\_\+max\+\_\+committed()}{update\_max\_committed()}}
+{\footnotesize\ttfamily void Transaction\+\_\+dependency\+\_\+tracker\+::update\+\_\+max\+\_\+committed (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+The method is to be executed right before committing time. It must be invoked even if the transaction does not commit to engine being merely logged into the binary log. max\+\_\+committed\+\_\+transaction is updated with a greater timestamp value. As a side effect, the transaction context\textquotesingle{}s sequence\+\_\+number is reset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & a pointer to T\+HD instance \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+trx\+\_\+tracking.\+h\item 
+rpl\+\_\+trx\+\_\+tracking.\+cc\end{DoxyCompactItemize}

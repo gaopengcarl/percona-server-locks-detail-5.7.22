@@ -1,0 +1,716 @@
+\hypertarget{classsp__head}{}\section{sp\+\_\+head Class Reference}
+\label{classsp__head}\index{sp\+\_\+head@{sp\+\_\+head}}
+
+
+{\ttfamily \#include $<$sp\+\_\+head.\+h$>$}
+
+Inheritance diagram for sp\+\_\+head\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__head}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+{\bfseries H\+A\+S\+\_\+\+R\+E\+T\+U\+RN} = 1, 
+{\bfseries M\+U\+L\+T\+I\+\_\+\+R\+E\+S\+U\+L\+TS} = 8, 
+{\bfseries C\+O\+N\+T\+A\+I\+N\+S\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+S\+QL} = 16, 
+{\bfseries I\+S\+\_\+\+I\+N\+V\+O\+K\+ED} = 32, 
+\newline
+{\bfseries H\+A\+S\+\_\+\+S\+E\+T\+\_\+\+A\+U\+T\+O\+C\+O\+M\+M\+I\+T\+\_\+\+S\+T\+MT} = 64, 
+{\bfseries H\+A\+S\+\_\+\+C\+O\+M\+M\+I\+T\+\_\+\+O\+R\+\_\+\+R\+O\+L\+L\+B\+A\+CK} = 128, 
+{\bfseries L\+O\+G\+\_\+\+S\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+TS} = 256, 
+{\bfseries L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+L\+OG} = 512, 
+\newline
+{\bfseries H\+A\+S\+\_\+\+S\+Q\+L\+C\+O\+M\+\_\+\+R\+E\+S\+ET} = 1024, 
+{\bfseries H\+A\+S\+\_\+\+S\+Q\+L\+C\+O\+M\+\_\+\+F\+L\+U\+SH} = 2048, 
+\mbox{\hyperlink{classsp__head_a2c493addd6f76d1338bfda5f5a587371a2b0e1fb757a290996d14136d2f75a931}{M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA}} = 4096
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__head_a92f33f22ca3e595933c6d8cac926c3db}\label{classsp__head_a92f33f22ca3e595933c6d8cac926c3db}} 
+bool \mbox{\hyperlink{classsp__head_a92f33f22ca3e595933c6d8cac926c3db}{is\+\_\+invoked}} () const
+\begin{DoxyCompactList}\small\item\em Is this routine being executed? \end{DoxyCompactList}\item 
+int64 \mbox{\hyperlink{classsp__head_a1fbc49e61e66bcee9a00621f806beed2}{sp\+\_\+cache\+\_\+version}} () const
+\item 
+\mbox{\Hypertarget{classsp__head_a6f9aa0fc3f66acd5eb86f55c6b6657dd}\label{classsp__head_a6f9aa0fc3f66acd5eb86f55c6b6657dd}} 
+void \mbox{\hyperlink{classsp__head_a6f9aa0fc3f66acd5eb86f55c6b6657dd}{set\+\_\+sp\+\_\+cache\+\_\+version}} (int64 \mbox{\hyperlink{classsp__head_a1fbc49e61e66bcee9a00621f806beed2}{sp\+\_\+cache\+\_\+version}})
+\begin{DoxyCompactList}\small\item\em Set the value of the SP cache version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a5a5916757d63f55ca220987dfa0b7322}\label{classsp__head_a5a5916757d63f55ca220987dfa0b7322}} 
+\mbox{\hyperlink{classStored__program__creation__ctx}{Stored\+\_\+program\+\_\+creation\+\_\+ctx}} $\ast$ {\bfseries get\+\_\+creation\+\_\+ctx} ()
+\item 
+\mbox{\Hypertarget{classsp__head_a03c316c316db8fd1b57ca6cdcfd1e962}\label{classsp__head_a03c316c316db8fd1b57ca6cdcfd1e962}} 
+void {\bfseries set\+\_\+creation\+\_\+ctx} (\mbox{\hyperlink{classStored__program__creation__ctx}{Stored\+\_\+program\+\_\+creation\+\_\+ctx}} $\ast$creation\+\_\+ctx)
+\item 
+\mbox{\Hypertarget{classsp__head_ab529ba0d2ad8ecda32a95f9f3811502d}\label{classsp__head_ab529ba0d2ad8ecda32a95f9f3811502d}} 
+void \mbox{\hyperlink{classsp__head_ab529ba0d2ad8ecda32a95f9f3811502d}{set\+\_\+body\+\_\+start}} (T\+HD $\ast$thd, const char $\ast$begin\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Set the body-\/definition start position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a31a37a7536ba117e27a2341303fcc3ee}\label{classsp__head_a31a37a7536ba117e27a2341303fcc3ee}} 
+void \mbox{\hyperlink{classsp__head_a31a37a7536ba117e27a2341303fcc3ee}{set\+\_\+body\+\_\+end}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Set the statement-\/definition (body-\/definition) end position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a294892d6f3a47715b6eb7fa6ff35fff4}\label{classsp__head_a294892d6f3a47715b6eb7fa6ff35fff4}} 
+bool {\bfseries setup\+\_\+trigger\+\_\+fields} (T\+HD $\ast$thd, \mbox{\hyperlink{classTable__trigger__field__support}{Table\+\_\+trigger\+\_\+field\+\_\+support}} $\ast$tfs, \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} $\ast$subject\+\_\+table\+\_\+grant, bool need\+\_\+fix\+\_\+fields)
+\item 
+\mbox{\Hypertarget{classsp__head_a810d8cc16110a89c0a6755450bf981e6}\label{classsp__head_a810d8cc16110a89c0a6755450bf981e6}} 
+void {\bfseries mark\+\_\+used\+\_\+trigger\+\_\+fields} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$subject\+\_\+table)
+\item 
+bool \mbox{\hyperlink{classsp__head_a2b7d48622761c9aef8c72a322791d771}{has\+\_\+updated\+\_\+trigger\+\_\+fields}} (const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$used\+\_\+fields) const
+\item 
+bool \mbox{\hyperlink{classsp__head_abd450e9d13f6a39c7b7477ba4b12092f}{execute\+\_\+trigger}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&db\+\_\+name, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&table\+\_\+name, \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} $\ast$grant\+\_\+info)
+\item 
+bool \mbox{\hyperlink{classsp__head_a1c125eeeef415da5d45fdf16de43ecb7}{execute\+\_\+function}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, uint argcount, \mbox{\hyperlink{classField}{Field}} $\ast$return\+\_\+fld)
+\item 
+bool \mbox{\hyperlink{classsp__head_a525a0ec61c3707d2c1be6c6a56d8dd66}{execute\+\_\+procedure}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$args)
+\item 
+bool \mbox{\hyperlink{classsp__head_a3e01f461cd612f8d76b5990b874af7b5}{show\+\_\+create\+\_\+routine}} (T\+HD $\ast$thd, enum\+\_\+sp\+\_\+type type)
+\item 
+bool \mbox{\hyperlink{classsp__head_a10df6d89545f93d20ef4cb46e9c2599c}{add\+\_\+instr}} (T\+HD $\ast$thd, \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$instr)
+\item 
+bool \mbox{\hyperlink{classsp__head_ad8b540cea8cf7bc09f6cdcba57b2c69e}{modifies\+\_\+data}} () const
+\item 
+\mbox{\Hypertarget{classsp__head_a40302a2e45c03e4128994a2d1f0725e5}\label{classsp__head_a40302a2e45c03e4128994a2d1f0725e5}} 
+uint {\bfseries instructions} ()
+\item 
+\mbox{\Hypertarget{classsp__head_a366359e935e6163df4cb33240dcb3f95}\label{classsp__head_a366359e935e6163df4cb33240dcb3f95}} 
+\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$ {\bfseries last\+\_\+instruction} ()
+\item 
+bool \mbox{\hyperlink{classsp__head_acfc6754187b9fadc8e2450d73ef0e59b}{reset\+\_\+lex}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classsp__head_aaa69ac1fb3285a0e5fd7d1983daab49d}{restore\+\_\+lex}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classsp__head_a1042cc630fece9a1a7037fc1ad805f2e}\label{classsp__head_a1042cc630fece9a1a7037fc1ad805f2e}} 
+char $\ast$ {\bfseries name} (uint $\ast$lenp=0) const
+\item 
+\mbox{\Hypertarget{classsp__head_af520798ea72c88e5ccee72b48667a8c3}\label{classsp__head_af520798ea72c88e5ccee72b48667a8c3}} 
+char $\ast$ {\bfseries create\+\_\+string} (T\+HD $\ast$thd, ulong $\ast$lenp)
+\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$ \mbox{\hyperlink{classsp__head_a87c5c65936a38ef8abc5fd422d714b4b}{create\+\_\+result\+\_\+field}} (size\+\_\+t field\+\_\+max\+\_\+length, const char $\ast$field\+\_\+name, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classsp__head_a320004b2aa52ff238893df60a1a31ede}\label{classsp__head_a320004b2aa52ff238893df60a1a31ede}} 
+void {\bfseries set\+\_\+info} (longlong created, longlong modified, st\+\_\+sp\+\_\+chistics $\ast$chistics, sql\+\_\+mode\+\_\+t sql\+\_\+mode)
+\item 
+\mbox{\Hypertarget{classsp__head_a20bf4a70810de9dcfc56e4b3f9b2cda8}\label{classsp__head_a20bf4a70810de9dcfc56e4b3f9b2cda8}} 
+void {\bfseries set\+\_\+definer} (const char $\ast$definer, size\+\_\+t definerlen)
+\item 
+\mbox{\Hypertarget{classsp__head_a2b9cda76cd50a4391bc5b024bb2a92fe}\label{classsp__head_a2b9cda76cd50a4391bc5b024bb2a92fe}} 
+void {\bfseries set\+\_\+definer} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&user\+\_\+name, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&host\+\_\+name)
+\item 
+void \mbox{\hyperlink{classsp__head_ad7f429d0eff3b51e9c5965d613f4bf11}{optimize}} ()
+\item 
+void \mbox{\hyperlink{classsp__head_ab590080fc066fab935e9e2bdbc66f2f0}{add\+\_\+mark\+\_\+lead}} (uint ip, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$leads)
+\item 
+\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$ \mbox{\hyperlink{classsp__head_a2ce4927b716b5d339d3642aa85103961}{get\+\_\+instr}} (uint i)
+\item 
+void \mbox{\hyperlink{classsp__head_a9a86bedc4044da075fa749aa34c6e866}{add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$$\ast$query\+\_\+tables\+\_\+last\+\_\+ptr, enum\+\_\+sql\+\_\+command sql\+\_\+command, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$belong\+\_\+to\+\_\+view)
+\item 
+bool \mbox{\hyperlink{classsp__head_a7ce7aa5389adb5438b6fe84e08846f97}{is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function}} (const char $\ast$where)
+\item 
+bool \mbox{\hyperlink{classsp__head_a5e21bc35a54f6ae0906389b2af13d93c}{show\+\_\+routine\+\_\+code}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classsp__head_adab7115bbb7e05a3544b697b481f3db8}\label{classsp__head_adab7115bbb7e05a3544b697b481f3db8}} 
+void {\bfseries propagate\+\_\+attributes} (Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx)
+\item 
+\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ \mbox{\hyperlink{classsp__head_ae36e4506a4d63fef79403721a4739907}{get\+\_\+root\+\_\+parsing\+\_\+context}} () const
+\item 
+M\+E\+M\+\_\+\+R\+O\+OT $\ast$ \mbox{\hyperlink{classsp__head_a0a505191b322f3bb15699f83fe69330b}{get\+\_\+persistent\+\_\+mem\+\_\+root}} () const
+\item 
+M\+E\+M\+\_\+\+R\+O\+OT $\ast$ \mbox{\hyperlink{classsp__head_a1a94755ad9108d04de8dc9f66a4ec017}{get\+\_\+current\+\_\+mem\+\_\+root}} () const
+\item 
+bool \mbox{\hyperlink{classsp__head_a6e7223ece8e80d26c9b2fd53f2712724}{check\+\_\+show\+\_\+access}} (T\+HD $\ast$thd, bool $\ast$full\+\_\+access)
+\item 
+bool \mbox{\hyperlink{classsp__head_afe7c4aad6b9627d1f38b569b39f66419}{set\+\_\+security\+\_\+ctx}} (T\+HD $\ast$thd, Security\+\_\+context $\ast$$\ast$save\+\_\+ctx)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__head_afc4dcd258833ce64ce703a9a3bd9b322}\label{classsp__head_afc4dcd258833ce64ce703a9a3bd9b322}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t size)  throw ()
+\item 
+\mbox{\Hypertarget{classsp__head_a53a295f7132b0b3a13c24cb503531464}\label{classsp__head_a53a295f7132b0b3a13c24cb503531464}} 
+static void {\bfseries operator delete} (void $\ast$ptr, size\+\_\+t size)  throw ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__head_ad83c5aad553b4463038e3c429821a78e}\label{classsp__head_ad83c5aad553b4463038e3c429821a78e}} 
+enum\+\_\+sp\+\_\+type \mbox{\hyperlink{classsp__head_ad83c5aad553b4463038e3c429821a78e}{m\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Stored program type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a52ea2e94c7500a299654665e7b9a0cc8}\label{classsp__head_a52ea2e94c7500a299654665e7b9a0cc8}} 
+uint \mbox{\hyperlink{classsp__head_a52ea2e94c7500a299654665e7b9a0cc8}{m\+\_\+flags}}
+\begin{DoxyCompactList}\small\item\em Stored program flags. \end{DoxyCompactList}\item 
+P\+S\+I\+\_\+sp\+\_\+share $\ast$ \mbox{\hyperlink{classsp__head_abe1fa0b6ce7890d3f84c731be10c3863}{m\+\_\+sp\+\_\+share}}
+\item 
+\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} \mbox{\hyperlink{classsp__head_a44ffe5b534816fc045d51ed4eb3af785}{m\+\_\+return\+\_\+field\+\_\+def}}
+\item 
+\mbox{\Hypertarget{classsp__head_ac488567354fff13b29eaa9cd5b26144f}\label{classsp__head_ac488567354fff13b29eaa9cd5b26144f}} 
+\mbox{\hyperlink{classsp__parser__data}{sp\+\_\+parser\+\_\+data}} \mbox{\hyperlink{classsp__head_ac488567354fff13b29eaa9cd5b26144f}{m\+\_\+parser\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Attributes used during the parsing stage only. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a1c2de0f4a011e5b7038a9da4bf172c47}\label{classsp__head_a1c2de0f4a011e5b7038a9da4bf172c47}} 
+st\+\_\+sp\+\_\+chistics $\ast$ \mbox{\hyperlink{classsp__head_a1c2de0f4a011e5b7038a9da4bf172c47}{m\+\_\+chistics}}
+\begin{DoxyCompactList}\small\item\em Stored program characteristics. \end{DoxyCompactList}\item 
+sql\+\_\+mode\+\_\+t \mbox{\hyperlink{classsp__head_a9deb9606abdbc7358ed6f5917126058d}{m\+\_\+sql\+\_\+mode}}
+\item 
+\mbox{\Hypertarget{classsp__head_a9b76913952fa8438a82e9461bb6cfe78}\label{classsp__head_a9b76913952fa8438a82e9461bb6cfe78}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classsp__head_a9b76913952fa8438a82e9461bb6cfe78}{m\+\_\+qname}}
+\begin{DoxyCompactList}\small\item\em Fully qualified name ($<$db name$>$=\char`\"{}\char`\"{}$>$.$<$sp name$>$=\char`\"{}\char`\"{}$>$). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a7ba47e6fca020a90e6b2122c79469b7c}\label{classsp__head_a7ba47e6fca020a90e6b2122c79469b7c}} 
+bool \mbox{\hyperlink{classsp__head_a7ba47e6fca020a90e6b2122c79469b7c}{m\+\_\+explicit\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Prepend the db name? $\ast$/. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a683009a71fd418e423e6ae39d499a6e0}\label{classsp__head_a683009a71fd418e423e6ae39d499a6e0}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+db}
+\item 
+\mbox{\Hypertarget{classsp__head_a1b365478f2754a77773662b238bed723}\label{classsp__head_a1b365478f2754a77773662b238bed723}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{classsp__head_a5e026148fa4b066fe5b191587eaa6ea5}\label{classsp__head_a5e026148fa4b066fe5b191587eaa6ea5}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+params}
+\item 
+\mbox{\Hypertarget{classsp__head_a07182a721aec32b26b05f5a9e04ba8c4}\label{classsp__head_a07182a721aec32b26b05f5a9e04ba8c4}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+body}
+\item 
+\mbox{\Hypertarget{classsp__head_a2e0a379a2d7df0a03d0c1da69d441a89}\label{classsp__head_a2e0a379a2d7df0a03d0c1da69d441a89}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+body\+\_\+utf8}
+\item 
+\mbox{\Hypertarget{classsp__head_a524c167fb6673790421590dd56dc89f2}\label{classsp__head_a524c167fb6673790421590dd56dc89f2}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+defstr}
+\item 
+\mbox{\Hypertarget{classsp__head_aafac2c7a9d6616d888c4eb2025c60d74}\label{classsp__head_aafac2c7a9d6616d888c4eb2025c60d74}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+definer\+\_\+user}
+\item 
+\mbox{\Hypertarget{classsp__head_a9bde7186173cfbf1aa442feaa458d05b}\label{classsp__head_a9bde7186173cfbf1aa442feaa458d05b}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+definer\+\_\+host}
+\item 
+\mbox{\Hypertarget{classsp__head_a3465517562f6b4a445594c650980b5e7}\label{classsp__head_a3465517562f6b4a445594c650980b5e7}} 
+longlong {\bfseries m\+\_\+created}
+\item 
+\mbox{\Hypertarget{classsp__head_aa779525c25debfd42b3c1aafd17db13a}\label{classsp__head_aa779525c25debfd42b3c1aafd17db13a}} 
+longlong {\bfseries m\+\_\+modified}
+\item 
+\mbox{\Hypertarget{classsp__head_a32d1ce8702cb51f35b9de5475037da9a}\label{classsp__head_a32d1ce8702cb51f35b9de5475037da9a}} 
+ulong \mbox{\hyperlink{classsp__head_a32d1ce8702cb51f35b9de5475037da9a}{m\+\_\+recursion\+\_\+level}}
+\begin{DoxyCompactList}\small\item\em Recursion level of the current SP instance. The levels are numbered from 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ \mbox{\hyperlink{classsp__head_ac847a6b14ed40b05c7587891b419adc3}{m\+\_\+next\+\_\+cached\+\_\+sp}}
+\item 
+\mbox{\Hypertarget{classsp__head_a3cdc3a02699fd59bc9b54f4296354709}\label{classsp__head_a3cdc3a02699fd59bc9b54f4296354709}} 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ \mbox{\hyperlink{classsp__head_a3cdc3a02699fd59bc9b54f4296354709}{m\+\_\+first\+\_\+instance}}
+\begin{DoxyCompactList}\small\item\em Pointer to the first element of the above list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ \mbox{\hyperlink{classsp__head_ad340ae0be6cb8ce662082c48cfc03d27}{m\+\_\+first\+\_\+free\+\_\+instance}}
+\item 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ \mbox{\hyperlink{classsp__head_ae0c36bbb7794aab5f12f10bb29f3e31f}{m\+\_\+last\+\_\+cached\+\_\+sp}}
+\item 
+H\+A\+SH \mbox{\hyperlink{classsp__head_ab26a4954ad2a135c3876fa3e0f738ed9}{m\+\_\+sroutines}}
+\item 
+\mbox{\Hypertarget{classsp__head_a442d114d3644a71a454e8c8f22b8c6ba}\label{classsp__head_a442d114d3644a71a454e8c8f22b8c6ba}} 
+Security\+\_\+context {\bfseries m\+\_\+security\+\_\+ctx}
+\item 
+\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ \mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}} $>$ $>$ \mbox{\hyperlink{classsp__head_a55085dcc463202909164fe39c4f7bad9}{m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists}}
+\item 
+\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ \mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}} $>$ \mbox{\hyperlink{classsp__head_aff67bb1a63eae95edb8b96677229b537}{m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items}}
+\item 
+\mbox{\Hypertarget{classsp__head_ad265c159d0acb031f7a47526cc4f6f97}\label{classsp__head_ad265c159d0acb031f7a47526cc4f6f97}} 
+st\+\_\+trg\+\_\+chistics \mbox{\hyperlink{classsp__head_ad265c159d0acb031f7a47526cc4f6f97}{m\+\_\+trg\+\_\+chistics}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTrigger}{Trigger}} characteristics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__head_a5f2d84d2494019b76edcf8731b993a50}\label{classsp__head_a5f2d84d2494019b76edcf8731b993a50}} 
+class \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} $\ast$ \mbox{\hyperlink{classsp__head_a5f2d84d2494019b76edcf8731b993a50}{m\+\_\+trg\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} instance, where this trigger belongs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ \mbox{\hyperlink{classsp__head_a4b89bf4f505bfbf1b646caa220eff8e0}{sp\+\_\+start\+\_\+parsing}} (T\+HD $\ast$, enum\+\_\+sp\+\_\+type, \mbox{\hyperlink{classsp__name}{sp\+\_\+name}} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} represents one instance of a stored program. It might be of any type (stored procedure, function, trigger, event). 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classsp__head_a2c493addd6f76d1338bfda5f5a587371}\label{classsp__head_a2c493addd6f76d1338bfda5f5a587371}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Possible values of m\+\_\+flags \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA@{M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA}!sp\+\_\+head@{sp\+\_\+head}}\index{sp\+\_\+head@{sp\+\_\+head}!M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA@{M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA}}}\mbox{\Hypertarget{classsp__head_a2c493addd6f76d1338bfda5f5a587371a2b0e1fb757a290996d14136d2f75a931}\label{classsp__head_a2c493addd6f76d1338bfda5f5a587371a2b0e1fb757a290996d14136d2f75a931}} 
+M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA&Marks routines that directly (i.\+e. not by calling other routines) change tables. Note that this flag is set automatically based on type of statements used in the stored routine and is different from routine characteristic provided by user in a form of C\+O\+N\+T\+A\+I\+NS S\+QL, R\+E\+A\+DS S\+QL D\+A\+TA, M\+O\+D\+I\+F\+I\+ES S\+QL D\+A\+TA clauses. The latter are accepted by parser but pretty much ignored after that. We don\textquotesingle{}t rely on them\+: a) for compatibility reasons. b) because in C\+O\+N\+T\+A\+I\+NS S\+QL case they don\textquotesingle{}t provide enough information anyway. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__head_a10df6d89545f93d20ef4cb46e9c2599c}\label{classsp__head_a10df6d89545f93d20ef4cb46e9c2599c}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!add\+\_\+instr@{add\+\_\+instr}}
+\index{add\+\_\+instr@{add\+\_\+instr}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{add\+\_\+instr()}{add\_instr()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::add\+\_\+instr (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$}]{instr }\end{DoxyParamCaption})}
+
+Add instruction to SP.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em instr} & Instruction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_ab590080fc066fab935e9e2bdbc66f2f0}\label{classsp__head_ab590080fc066fab935e9e2bdbc66f2f0}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!add\+\_\+mark\+\_\+lead@{add\+\_\+mark\+\_\+lead}}
+\index{add\+\_\+mark\+\_\+lead@{add\+\_\+mark\+\_\+lead}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{add\+\_\+mark\+\_\+lead()}{add\_mark\_lead()}}
+{\footnotesize\ttfamily void sp\+\_\+head\+::add\+\_\+mark\+\_\+lead (\begin{DoxyParamCaption}\item[{uint}]{ip,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$}]{leads }\end{DoxyParamCaption})}
+
+Helper used during flow analysis during code optimization. See the implementation of {\ttfamily opt\+\_\+mark()}. 
+\begin{DoxyParams}{Parameters}
+{\em ip} & the instruction to add to the leads list \\
+\hline
+{\em leads} & the list of remaining paths to explore in the graph that represents the code, during flow analysis. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__head_a9a86bedc4044da075fa749aa34c6e866}\label{classsp__head_a9a86bedc4044da075fa749aa34c6e866}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list@{add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list}}
+\index{add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list@{add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list()}{add\_used\_tables\_to\_table\_list()}}
+{\footnotesize\ttfamily void sp\+\_\+head\+::add\+\_\+used\+\_\+tables\+\_\+to\+\_\+table\+\_\+list (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$$\ast$}]{query\+\_\+tables\+\_\+last\+\_\+ptr,  }\item[{enum\+\_\+sql\+\_\+command}]{sql\+\_\+command,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{belong\+\_\+to\+\_\+view }\end{DoxyParamCaption})}
+
+Add tables used by routine to the table list.
+
+Converts multi-\/set of tables used by this routine to table list and adds this list to the end of table list specified by \textquotesingle{}query\+\_\+tables\+\_\+last\+\_\+ptr\textquotesingle{}.
+
+Elements of list will be allocated in PS memroot, so this list will be persistent between PS executions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em query\+\_\+tables\+\_\+last\+\_\+ptr} & Pointer to the next\+\_\+global member of last element of the list where tables will be added (or to its root). \\
+\hline
+\mbox{\texttt{ in}}  & {\em sql\+\_\+command} & S\+QL-\/command for which we are adding elements to the table list. \\
+\hline
+\mbox{\texttt{ in}}  & {\em belong\+\_\+to\+\_\+view} & Uppermost view which uses this routine, N\+U\+LL if none. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__head_a6e7223ece8e80d26c9b2fd53f2712724}\label{classsp__head_a6e7223ece8e80d26c9b2fd53f2712724}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!check\+\_\+show\+\_\+access@{check\+\_\+show\+\_\+access}}
+\index{check\+\_\+show\+\_\+access@{check\+\_\+show\+\_\+access}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{check\+\_\+show\+\_\+access()}{check\_show\_access()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::check\+\_\+show\+\_\+access (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool $\ast$}]{full\+\_\+access }\end{DoxyParamCaption})}
+
+Check if a user has access right to a SP.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ out}}  & {\em full\+\_\+access} & Set to 1 if the user has S\+E\+L\+E\+CT to the \textquotesingle{}mysql.\+proc\textquotesingle{} table or is the owner of the stored program.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a87c5c65936a38ef8abc5fd422d714b4b}\label{classsp__head_a87c5c65936a38ef8abc5fd422d714b4b}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!create\+\_\+result\+\_\+field@{create\+\_\+result\+\_\+field}}
+\index{create\+\_\+result\+\_\+field@{create\+\_\+result\+\_\+field}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{create\+\_\+result\+\_\+field()}{create\_result\_field()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}} $\ast$ sp\+\_\+head\+::create\+\_\+result\+\_\+field (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{field\+\_\+max\+\_\+length,  }\item[{const char $\ast$}]{field\+\_\+name,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Create \mbox{\hyperlink{classField}{Field}}-\/object corresponding to the R\+E\+T\+U\+RN field of a stored function. This operation makes sense for stored functions only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+\_\+max\+\_\+length} & the max length (in the sense of \mbox{\hyperlink{classItem}{Item}} classes). \\
+\hline
+{\em field\+\_\+name} & the field name (item name). \\
+\hline
+{\em table} & the field\textquotesingle{}s table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly created and initialized \mbox{\hyperlink{classField}{Field}}-\/instance, or N\+U\+LL in case of error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a1c125eeeef415da5d45fdf16de43ecb7}\label{classsp__head_a1c125eeeef415da5d45fdf16de43ecb7}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!execute\+\_\+function@{execute\+\_\+function}}
+\index{execute\+\_\+function@{execute\+\_\+function}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{execute\+\_\+function()}{execute\_function()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::execute\+\_\+function (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{uint}]{argcount,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{return\+\_\+fld }\end{DoxyParamCaption})}
+
+Execute a function.
+
+
+\begin{DoxyItemize}
+\item evaluate parameters
+\item changes security context for S\+U\+ID routines
+\item switch to new memroot
+\item call sp\+\_\+head\+::execute
+\item restore old memroot
+\item evaluate the return value
+\item restores security context
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em argp} & Passed arguments (these are items from containing statement?) \\
+\hline
+{\em argcount} & Number of passed arguments. We need to check if this is correct. \\
+\hline
+{\em return\+\_\+value\+\_\+fld} & Save result here.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000069}{Todo}}]We should create \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} once per command and reuse it on subsequent executions of a function/trigger.\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000070}{Todo}}]In future we should associate call arena/mem\+\_\+root with \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} and allocate all these objects (and \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} itself) on it directly rather than juggle with arenas.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a525a0ec61c3707d2c1be6c6a56d8dd66}\label{classsp__head_a525a0ec61c3707d2c1be6c6a56d8dd66}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!execute\+\_\+procedure@{execute\+\_\+procedure}}
+\index{execute\+\_\+procedure@{execute\+\_\+procedure}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{execute\+\_\+procedure()}{execute\_procedure()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::execute\+\_\+procedure (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{args }\end{DoxyParamCaption})}
+
+Execute a procedure.
+
+The function does the following steps\+:
+\begin{DoxyItemize}
+\item Set all parameters
+\item changes security context for S\+U\+ID routines
+\item call sp\+\_\+head\+::execute
+\item copy back values of I\+N\+O\+UT and O\+UT parameters
+\item restores security context
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em args} & \mbox{\hyperlink{classList}{List}} of values passed as arguments.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_abd450e9d13f6a39c7b7477ba4b12092f}\label{classsp__head_abd450e9d13f6a39c7b7477ba4b12092f}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!execute\+\_\+trigger@{execute\+\_\+trigger}}
+\index{execute\+\_\+trigger@{execute\+\_\+trigger}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{execute\+\_\+trigger()}{execute\_trigger()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::execute\+\_\+trigger (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{db\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{table\+\_\+name,  }\item[{\mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} $\ast$}]{grant\+\_\+info }\end{DoxyParamCaption})}
+
+Execute trigger stored program.
+
+
+\begin{DoxyItemize}
+\item changes security context for triggers
+\item switch to new memroot
+\item call sp\+\_\+head\+::execute
+\item restore old memroot
+\item restores security context
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+{\em db} & database name \\
+\hline
+{\em table} & table name \\
+\hline
+{\em grant\+\_\+info} & \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} structure to be filled with information about definer\textquotesingle{}s privileges on subject table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000068}{Todo}}]
+\begin{DoxyItemize}
+\item T\+O\+DO\+: we should create \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} once per command and reuse it on subsequent executions of a trigger.
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a1a94755ad9108d04de8dc9f66a4ec017}\label{classsp__head_a1a94755ad9108d04de8dc9f66a4ec017}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!get\+\_\+current\+\_\+mem\+\_\+root@{get\+\_\+current\+\_\+mem\+\_\+root}}
+\index{get\+\_\+current\+\_\+mem\+\_\+root@{get\+\_\+current\+\_\+mem\+\_\+root}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+mem\+\_\+root()}{get\_current\_mem\_root()}}
+{\footnotesize\ttfamily M\+E\+M\+\_\+\+R\+O\+OT$\ast$ sp\+\_\+head\+::get\+\_\+current\+\_\+mem\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+currently used mem-\/root. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a2ce4927b716b5d339d3642aa85103961}\label{classsp__head_a2ce4927b716b5d339d3642aa85103961}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!get\+\_\+instr@{get\+\_\+instr}}
+\index{get\+\_\+instr@{get\+\_\+instr}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{get\+\_\+instr()}{get\_instr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}}$\ast$ sp\+\_\+head\+::get\+\_\+instr (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get SP-\/instruction at given index.
+
+N\+O\+TE\+: it is important to have {\itshape unsigned} int here, sometimes we get (-\/1) passed here, so it get\textquotesingle{}s converted to M\+A\+X\+\_\+\+I\+NT, and the result of the function call is N\+U\+LL. \mbox{\Hypertarget{classsp__head_a0a505191b322f3bb15699f83fe69330b}\label{classsp__head_a0a505191b322f3bb15699f83fe69330b}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!get\+\_\+persistent\+\_\+mem\+\_\+root@{get\+\_\+persistent\+\_\+mem\+\_\+root}}
+\index{get\+\_\+persistent\+\_\+mem\+\_\+root@{get\+\_\+persistent\+\_\+mem\+\_\+root}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{get\+\_\+persistent\+\_\+mem\+\_\+root()}{get\_persistent\_mem\_root()}}
+{\footnotesize\ttfamily M\+E\+M\+\_\+\+R\+O\+OT$\ast$ sp\+\_\+head\+::get\+\_\+persistent\+\_\+mem\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+SP-\/persistent mem-\/root. Instructions and expressions are stored in its memory between executions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_ae36e4506a4d63fef79403721a4739907}\label{classsp__head_ae36e4506a4d63fef79403721a4739907}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!get\+\_\+root\+\_\+parsing\+\_\+context@{get\+\_\+root\+\_\+parsing\+\_\+context}}
+\index{get\+\_\+root\+\_\+parsing\+\_\+context@{get\+\_\+root\+\_\+parsing\+\_\+context}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{get\+\_\+root\+\_\+parsing\+\_\+context()}{get\_root\_parsing\_context()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}}$\ast$ sp\+\_\+head\+::get\+\_\+root\+\_\+parsing\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+root parsing context for this stored program. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a2b7d48622761c9aef8c72a322791d771}\label{classsp__head_a2b7d48622761c9aef8c72a322791d771}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!has\+\_\+updated\+\_\+trigger\+\_\+fields@{has\+\_\+updated\+\_\+trigger\+\_\+fields}}
+\index{has\+\_\+updated\+\_\+trigger\+\_\+fields@{has\+\_\+updated\+\_\+trigger\+\_\+fields}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{has\+\_\+updated\+\_\+trigger\+\_\+fields()}{has\_updated\_trigger\_fields()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::has\+\_\+updated\+\_\+trigger\+\_\+fields (\begin{DoxyParamCaption}\item[{const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{used\+\_\+fields }\end{DoxyParamCaption}) const}
+
+Check whether any table\textquotesingle{}s fields are used in trigger.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em used\+\_\+fields} & bitmap of fields to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Check result 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Some table fields are used in trigger \\
+\hline
+{\em false} & None of table fields are used in trigger \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classsp__head_a7ce7aa5389adb5438b6fe84e08846f97}\label{classsp__head_a7ce7aa5389adb5438b6fe84e08846f97}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function@{is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function}}
+\index{is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function@{is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function()}{is\_not\_allowed\_in\_function()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::is\+\_\+not\+\_\+allowed\+\_\+in\+\_\+function (\begin{DoxyParamCaption}\item[{const char $\ast$}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if this stored routine contains statements disallowed in a stored function or trigger, and set an appropriate error message if this is the case. \mbox{\Hypertarget{classsp__head_ad8b540cea8cf7bc09f6cdcba57b2c69e}\label{classsp__head_ad8b540cea8cf7bc09f6cdcba57b2c69e}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!modifies\+\_\+data@{modifies\+\_\+data}}
+\index{modifies\+\_\+data@{modifies\+\_\+data}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{modifies\+\_\+data()}{modifies\_data()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::modifies\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if any substatement in the routine directly (not through another routine) modifies data/changes table.
+
+\begin{DoxySeeAlso}{See also}
+Comment for \mbox{\hyperlink{classsp__head_a2c493addd6f76d1338bfda5f5a587371a2b0e1fb757a290996d14136d2f75a931}{M\+O\+D\+I\+F\+I\+E\+S\+\_\+\+D\+A\+TA}} flag. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsp__head_ad7f429d0eff3b51e9c5965d613f4bf11}\label{classsp__head_ad7f429d0eff3b51e9c5965d613f4bf11}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!optimize@{optimize}}
+\index{optimize@{optimize}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily void sp\+\_\+head\+::optimize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Do some minimal optimization of the code\+:
+\begin{DoxyEnumerate}
+\item Mark used instructions
+\item While doing this, shortcut jumps to jump instructions
+\item Compact the code, removing unused instructions.
+\end{DoxyEnumerate}
+
+This is the main mark and move loop; it relies on the following methods in \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} and its subclasses\+:
+
+
+\begin{DoxyItemize}
+\item opt\+\_\+mark() \+: Mark instruction as reachable
+\item opt\+\_\+shortcut\+\_\+jump()\+: Shortcut jumps to the final destination; used by opt\+\_\+mark().
+\item opt\+\_\+move() \+: Update moved instruction
+\item set\+\_\+destination() \+: Set the new destination (jump instructions only) 
+\end{DoxyItemize}\mbox{\Hypertarget{classsp__head_acfc6754187b9fadc8e2450d73ef0e59b}\label{classsp__head_acfc6754187b9fadc8e2450d73ef0e59b}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!reset\+\_\+lex@{reset\+\_\+lex}}
+\index{reset\+\_\+lex@{reset\+\_\+lex}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{reset\+\_\+lex()}{reset\_lex()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::reset\+\_\+lex (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Reset L\+EX-\/object during parsing, before we parse a sub statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_aaa69ac1fb3285a0e5fd7d1983daab49d}\label{classsp__head_aaa69ac1fb3285a0e5fd7d1983daab49d}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!restore\+\_\+lex@{restore\+\_\+lex}}
+\index{restore\+\_\+lex@{restore\+\_\+lex}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{restore\+\_\+lex()}{restore\_lex()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::restore\+\_\+lex (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Restore L\+EX-\/object during parsing, after we have parsed a sub statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_afe7c4aad6b9627d1f38b569b39f66419}\label{classsp__head_afe7c4aad6b9627d1f38b569b39f66419}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!set\+\_\+security\+\_\+ctx@{set\+\_\+security\+\_\+ctx}}
+\index{set\+\_\+security\+\_\+ctx@{set\+\_\+security\+\_\+ctx}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{set\+\_\+security\+\_\+ctx()}{set\_security\_ctx()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::set\+\_\+security\+\_\+ctx (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Security\+\_\+context $\ast$$\ast$}]{save\+\_\+ctx }\end{DoxyParamCaption})}
+
+Change routine security context, and check if there is an E\+X\+E\+C\+U\+TE privilege in new context. If there is no E\+X\+E\+C\+U\+TE privilege, change the context back and return an error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ out}}  & {\em save\+\_\+ctx} & Where to save the old security context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000071}{Todo}}]Cache if the definer has the rights to use the object on the first usage and reset the cache only if someone does a G\+R\+A\+NT statement that \textquotesingle{}may\textquotesingle{} affect this.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a3e01f461cd612f8d76b5990b874af7b5}\label{classsp__head_a3e01f461cd612f8d76b5990b874af7b5}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!show\+\_\+create\+\_\+routine@{show\+\_\+create\+\_\+routine}}
+\index{show\+\_\+create\+\_\+routine@{show\+\_\+create\+\_\+routine}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{show\+\_\+create\+\_\+routine()}{show\_create\_routine()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::show\+\_\+create\+\_\+routine (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+sp\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+Implement S\+H\+OW C\+R\+E\+A\+TE statement for stored routines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em type} & Stored routine type (S\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+C\+E\+D\+U\+RE or S\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a5e21bc35a54f6ae0906389b2af13d93c}\label{classsp__head_a5e21bc35a54f6ae0906389b2af13d93c}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!show\+\_\+routine\+\_\+code@{show\+\_\+routine\+\_\+code}}
+\index{show\+\_\+routine\+\_\+code@{show\+\_\+routine\+\_\+code}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{show\+\_\+routine\+\_\+code()}{show\_routine\_code()}}
+{\footnotesize\ttfamily bool sp\+\_\+head\+::show\+\_\+routine\+\_\+code (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Return the routine instructions as a result set. \begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__head_a1fbc49e61e66bcee9a00621f806beed2}\label{classsp__head_a1fbc49e61e66bcee9a00621f806beed2}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!sp\+\_\+cache\+\_\+version@{sp\+\_\+cache\+\_\+version}}
+\index{sp\+\_\+cache\+\_\+version@{sp\+\_\+cache\+\_\+version}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{sp\+\_\+cache\+\_\+version()}{sp\_cache\_version()}}
+{\footnotesize\ttfamily int64 sp\+\_\+head\+::sp\+\_\+cache\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the value of the SP cache version, as remembered when the routine was inserted into the cache. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsp__head_a4b89bf4f505bfbf1b646caa220eff8e0}\label{classsp__head_a4b89bf4f505bfbf1b646caa220eff8e0}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!sp\+\_\+start\+\_\+parsing@{sp\+\_\+start\+\_\+parsing}}
+\index{sp\+\_\+start\+\_\+parsing@{sp\+\_\+start\+\_\+parsing}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{sp\+\_\+start\+\_\+parsing}{sp\_start\_parsing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__head}{sp\+\_\+head}}$\ast$ sp\+\_\+start\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{,  }\item[{enum\+\_\+sp\+\_\+type}]{,  }\item[{\mbox{\hyperlink{classsp__name}{sp\+\_\+name}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Start parsing of a stored program.
+
+This function encapsulates all the steps necessary to initialize \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} to start parsing SP.
+
+Every successful call of \mbox{\hyperlink{classsp__head_a4b89bf4f505bfbf1b646caa220eff8e0}{sp\+\_\+start\+\_\+parsing()}} must finish with sp\+\_\+finish\+\_\+parsing().
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em sp\+\_\+type} & The stored program type \\
+\hline
+{\em \mbox{\hyperlink{classsp__name}{sp\+\_\+name}}} & The stored progam name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+properly initialized \mbox{\hyperlink{classsp__head}{sp\+\_\+head}}-\/instance in case of success, or N\+U\+LL is case of out-\/of-\/memory error. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsp__head_aff67bb1a63eae95edb8b96677229b537}\label{classsp__head_aff67bb1a63eae95edb8b96677229b537}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items@{m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items}}
+\index{m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items@{m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items}{m\_cur\_instr\_trig\_field\_items}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$\mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}}$>$ sp\+\_\+head\+::m\+\_\+cur\+\_\+instr\+\_\+trig\+\_\+field\+\_\+items}
+
+\mbox{\hyperlink{classList}{List}} of all the \mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}} items created while parsing sp instruction. After parsing, in add\+\_\+instr method this list is moved to per instruction \mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}} list \char`\"{}sp\+\_\+lex\+\_\+instr\+::m\+\_\+trig\+\_\+field\+\_\+list\char`\"{}. \mbox{\Hypertarget{classsp__head_ad340ae0be6cb8ce662082c48cfc03d27}\label{classsp__head_ad340ae0be6cb8ce662082c48cfc03d27}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+first\+\_\+free\+\_\+instance@{m\+\_\+first\+\_\+free\+\_\+instance}}
+\index{m\+\_\+first\+\_\+free\+\_\+instance@{m\+\_\+first\+\_\+free\+\_\+instance}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+first\+\_\+free\+\_\+instance}{m\_first\_free\_instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__head}{sp\+\_\+head}}$\ast$ sp\+\_\+head\+::m\+\_\+first\+\_\+free\+\_\+instance}
+
+Pointer to the first free (non-\/I\+N\+V\+O\+K\+ED) routine in the list of cached instances for this SP. This pointer is set only for the first SP in the list of instances (see above m\+\_\+first\+\_\+cached\+\_\+sp pointer). The pointer equal to 0 if we have no free instances. For non-\/first instance value of this pointer meaningless (point to itself); \mbox{\Hypertarget{classsp__head_ae0c36bbb7794aab5f12f10bb29f3e31f}\label{classsp__head_ae0c36bbb7794aab5f12f10bb29f3e31f}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+last\+\_\+cached\+\_\+sp@{m\+\_\+last\+\_\+cached\+\_\+sp}}
+\index{m\+\_\+last\+\_\+cached\+\_\+sp@{m\+\_\+last\+\_\+cached\+\_\+sp}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+last\+\_\+cached\+\_\+sp}{m\_last\_cached\_sp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__head}{sp\+\_\+head}}$\ast$ sp\+\_\+head\+::m\+\_\+last\+\_\+cached\+\_\+sp}
+
+Pointer to the last element in the list of instances of the SP. For non-\/first instance value of this pointer meaningless (point to itself); \mbox{\Hypertarget{classsp__head_a55085dcc463202909164fe39c4f7bad9}\label{classsp__head_a55085dcc463202909164fe39c4f7bad9}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists@{m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists}}
+\index{m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists@{m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists}{m\_list\_of\_trig\_fields\_item\_lists}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$\mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}}$>$ $>$ sp\+\_\+head\+::m\+\_\+list\+\_\+of\+\_\+trig\+\_\+fields\+\_\+item\+\_\+lists}
+
+\mbox{\hyperlink{classList}{List}} of item (\mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}} objects)\textquotesingle{}s lists representing fields in old/new version of row in trigger. We use this list for checking whether all such fields are valid or not at trigger creation time and for binding these fields to \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object at table open (although for latter pointer to table being opened is probably enough). \mbox{\Hypertarget{classsp__head_ac847a6b14ed40b05c7587891b419adc3}\label{classsp__head_ac847a6b14ed40b05c7587891b419adc3}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+next\+\_\+cached\+\_\+sp@{m\+\_\+next\+\_\+cached\+\_\+sp}}
+\index{m\+\_\+next\+\_\+cached\+\_\+sp@{m\+\_\+next\+\_\+cached\+\_\+sp}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+next\+\_\+cached\+\_\+sp}{m\_next\_cached\_sp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__head}{sp\+\_\+head}}$\ast$ sp\+\_\+head\+::m\+\_\+next\+\_\+cached\+\_\+sp}
+
+A list of diferent recursion level instances for the same procedure. For every recursion level we have a \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} instance. This instances connected in the list. The list ordered by increasing recursion level (m\+\_\+recursion\+\_\+level). \mbox{\Hypertarget{classsp__head_a44ffe5b534816fc045d51ed4eb3af785}\label{classsp__head_a44ffe5b534816fc045d51ed4eb3af785}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+return\+\_\+field\+\_\+def@{m\+\_\+return\+\_\+field\+\_\+def}}
+\index{m\+\_\+return\+\_\+field\+\_\+def@{m\+\_\+return\+\_\+field\+\_\+def}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+return\+\_\+field\+\_\+def}{m\_return\_field\_def}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} sp\+\_\+head\+::m\+\_\+return\+\_\+field\+\_\+def}
+
+Definition of the R\+E\+T\+U\+RN-\/field (from the R\+E\+T\+U\+R\+NS-\/clause). It\textquotesingle{}s used (and valid) for stored functions only. \mbox{\Hypertarget{classsp__head_abe1fa0b6ce7890d3f84c731be10c3863}\label{classsp__head_abe1fa0b6ce7890d3f84c731be10c3863}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+sp\+\_\+share@{m\+\_\+sp\+\_\+share}}
+\index{m\+\_\+sp\+\_\+share@{m\+\_\+sp\+\_\+share}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+sp\+\_\+share}{m\_sp\_share}}
+{\footnotesize\ttfamily P\+S\+I\+\_\+sp\+\_\+share$\ast$ sp\+\_\+head\+::m\+\_\+sp\+\_\+share}
+
+Instrumentation interface for SP. \mbox{\Hypertarget{classsp__head_a9deb9606abdbc7358ed6f5917126058d}\label{classsp__head_a9deb9606abdbc7358ed6f5917126058d}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+sql\+\_\+mode@{m\+\_\+sql\+\_\+mode}}
+\index{m\+\_\+sql\+\_\+mode@{m\+\_\+sql\+\_\+mode}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+sql\+\_\+mode}{m\_sql\_mode}}
+{\footnotesize\ttfamily sql\+\_\+mode\+\_\+t sp\+\_\+head\+::m\+\_\+sql\+\_\+mode}
+
+The value of sql\+\_\+mode system variable at the C\+R\+E\+A\+TE-\/time.
+
+It should be stored along with the character sets in the \mbox{\hyperlink{classStored__program__creation__ctx}{Stored\+\_\+program\+\_\+creation\+\_\+ctx}}. \mbox{\Hypertarget{classsp__head_ab26a4954ad2a135c3876fa3e0f738ed9}\label{classsp__head_ab26a4954ad2a135c3876fa3e0f738ed9}} 
+\index{sp\+\_\+head@{sp\+\_\+head}!m\+\_\+sroutines@{m\+\_\+sroutines}}
+\index{m\+\_\+sroutines@{m\+\_\+sroutines}!sp\+\_\+head@{sp\+\_\+head}}
+\subsubsection{\texorpdfstring{m\+\_\+sroutines}{m\_sroutines}}
+{\footnotesize\ttfamily H\+A\+SH sp\+\_\+head\+::m\+\_\+sroutines}
+
+Set containing names of stored routines used by this routine. Note that unlike elements of similar set for statement elements of this set are not linked in one list. Because of this we are able save memory by using for this set same objects that are used in \textquotesingle{}sroutines\textquotesingle{} sets for statements of which this stored routine consists. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+head.\+h\item 
+sp\+\_\+head.\+cc\end{DoxyCompactItemize}

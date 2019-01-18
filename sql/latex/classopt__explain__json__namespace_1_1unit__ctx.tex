@@ -1,0 +1,78 @@
+\hypertarget{classopt__explain__json__namespace_1_1unit__ctx}{}\section{opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:unit\+\_\+ctx Class Reference}
+\label{classopt__explain__json__namespace_1_1unit__ctx}\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx}}
+Inheritance diagram for opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:unit\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.951807cm]{classopt__explain__json__namespace_1_1unit__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1unit__ctx_a5df7618acb9c973f314baa9238e4d383}\label{classopt__explain__json__namespace_1_1unit__ctx_a5df7618acb9c973f314baa9238e4d383}} 
+{\bfseries unit\+\_\+ctx} (enum\+\_\+parsing\+\_\+context type\+\_\+arg, const char $\ast$name\+\_\+arg, \mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$parent\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1unit__ctx_a9b2badee39a1d53dccdc909b9e5e4d04}{has\+\_\+no\+\_\+subqueries}} () const
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1unit__ctx_aa35f66993446f004672b7ed305df8643}\label{classopt__explain__json__namespace_1_1unit__ctx_aa35f66993446f004672b7ed305df8643}} 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1unit__ctx_aa35f66993446f004672b7ed305df8643}{format\+\_\+unit}} (\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$json)
+\begin{DoxyCompactList}\small\item\em Helper function to format output for H\+A\+V\+I\+NG, O\+R\+D\+E\+R/\+G\+R\+O\+UP BY subqueries. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1unit__ctx_a157b828a313f01ec8bd7c4a53644f6b2}{add\+\_\+subquery}} (subquery\+\_\+list\+\_\+enum subquery\+\_\+type, \mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx}{subquery\+\_\+ctx}} $\ast$ctx)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Helper base class to host H\+A\+V\+I\+NG, O\+R\+D\+ER BY and G\+R\+O\+UP BY subquery nodes 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1unit__ctx_a157b828a313f01ec8bd7c4a53644f6b2}\label{classopt__explain__json__namespace_1_1unit__ctx_a157b828a313f01ec8bd7c4a53644f6b2}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx}!add\+\_\+subquery@{add\+\_\+subquery}}
+\index{add\+\_\+subquery@{add\+\_\+subquery}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx}}
+\subsubsection{\texorpdfstring{add\+\_\+subquery()}{add\_subquery()}}
+{\footnotesize\ttfamily virtual bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx\+::add\+\_\+subquery (\begin{DoxyParamCaption}\item[{subquery\+\_\+list\+\_\+enum}]{subquery\+\_\+type,  }\item[{\mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx}{subquery\+\_\+ctx}} $\ast$}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Append a subquery node to the specified list of the unit node
+
+
+\begin{DoxyParams}{Parameters}
+{\em subquery\+\_\+type} & Describes the \mbox{\hyperlink{classItem}{Item}} tree where the subquery exists \\
+\hline
+{\em ctx} & Subquery node\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_ad9df2d2b16093c51e1c5557227b2fd56}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classopt__explain__json__namespace_1_1duplication__weedout__ctx_a2b570476015c26f58d8b7ec13cc11b4d}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::duplication\+\_\+weedout\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1materialize__ctx_adcc1a9841e17f5abf74faf8d719d9700}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::materialize\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1sort__with__subqueries__ctx_a57c77821336044d261cca101925dfdf2}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::sort\+\_\+with\+\_\+subqueries\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1join__ctx_a5005892466618a6abcc3a5971c1d7433}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::join\+\_\+ctx}}, and \mbox{\hyperlink{classopt__explain__json__namespace_1_1union__result__ctx_a9e6c30603c339d970f2c8609fdda759a}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::union\+\_\+result\+\_\+ctx}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1unit__ctx_a9b2badee39a1d53dccdc909b9e5e4d04}\label{classopt__explain__json__namespace_1_1unit__ctx_a9b2badee39a1d53dccdc909b9e5e4d04}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx}!has\+\_\+no\+\_\+subqueries@{has\+\_\+no\+\_\+subqueries}}
+\index{has\+\_\+no\+\_\+subqueries@{has\+\_\+no\+\_\+subqueries}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx}}
+\subsubsection{\texorpdfstring{has\+\_\+no\+\_\+subqueries()}{has\_no\_subqueries()}}
+{\footnotesize\ttfamily bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::unit\+\_\+ctx\+::has\+\_\+no\+\_\+subqueries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Helper function to distinguish subquery-\/less nodes
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & \mbox{\hyperlink{classNode}{Node}} hosts no subqueries \\
+\hline
+{\em false} & \mbox{\hyperlink{classNode}{Node}} hosts some subqueries \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+json.\+cc\end{DoxyCompactItemize}

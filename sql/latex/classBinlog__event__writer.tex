@@ -1,0 +1,107 @@
+\hypertarget{classBinlog__event__writer}{}\section{Binlog\+\_\+event\+\_\+writer Class Reference}
+\label{classBinlog__event__writer}\index{Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBinlog__event__writer_abdbdd3929b68adde1c58d85362e79a54}{Binlog\+\_\+event\+\_\+writer}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$output\+\_\+cache\+\_\+arg, T\+HD $\ast$thd\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{classBinlog__event__writer_a51e3a81384cdd0830e6d08a0676df008}{write\+\_\+event\+\_\+part}} (uchar $\ast$$\ast$buf\+\_\+p, uint32 $\ast$buf\+\_\+len\+\_\+p, uint32 $\ast$event\+\_\+len\+\_\+p)
+\item 
+bool \mbox{\hyperlink{classBinlog__event__writer_aaec80471064cbf01336851346860ee09}{write\+\_\+full\+\_\+event}} (uchar $\ast$buf, uint32 buf\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBinlog__event__writer_ae3f6e7df74ca248704d03fc16ad950da}\label{classBinlog__event__writer_ae3f6e7df74ca248704d03fc16ad950da}} 
+\mbox{\hyperlink{classEvent__encrypter}{Event\+\_\+encrypter}} {\bfseries event\+\_\+encrypter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Auxiliary class to copy serialized events to the binary log and correct some of the fields that are not known until just before writing the event.
+
+This class allows feeding events in parts, so it is practical to use in do\+\_\+write\+\_\+cache() which reads events from an I\+O\+\_\+\+C\+A\+C\+HE where events may span mutiple cache pages.
+
+The following fields are fixed before writing the event\+:
+\begin{DoxyItemize}
+\item end\+\_\+log\+\_\+pos is set
+\item the checksum is computed if checksums are enabled
+\item the length is incremented by the checksum size if checksums are enabled 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBinlog__event__writer_abdbdd3929b68adde1c58d85362e79a54}\label{classBinlog__event__writer_abdbdd3929b68adde1c58d85362e79a54}} 
+\index{Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}!Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}}
+\index{Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}!Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}}
+\subsubsection{\texorpdfstring{Binlog\+\_\+event\+\_\+writer()}{Binlog\_event\_writer()}}
+{\footnotesize\ttfamily Binlog\+\_\+event\+\_\+writer\+::\+Binlog\+\_\+event\+\_\+writer (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{output\+\_\+cache\+\_\+arg,  }\item[{T\+HD $\ast$}]{thd\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a new \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}}. Should be called once before starting to flush the transaction or statement cache to the binlog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+cache\+\_\+arg} & I\+O\+\_\+\+C\+A\+C\+HE to write to. \\
+\hline
+{\em thd\+\_\+arg} & T\+HD to account written binlog byte statistics to \\
+\hline
+{\em have\+\_\+checksum\+\_\+al} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBinlog__event__writer_a51e3a81384cdd0830e6d08a0676df008}\label{classBinlog__event__writer_a51e3a81384cdd0830e6d08a0676df008}} 
+\index{Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}!write\+\_\+event\+\_\+part@{write\+\_\+event\+\_\+part}}
+\index{write\+\_\+event\+\_\+part@{write\+\_\+event\+\_\+part}!Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}}
+\subsubsection{\texorpdfstring{write\+\_\+event\+\_\+part()}{write\_event\_part()}}
+{\footnotesize\ttfamily bool Binlog\+\_\+event\+\_\+writer\+::write\+\_\+event\+\_\+part (\begin{DoxyParamCaption}\item[{uchar $\ast$$\ast$}]{buf\+\_\+p,  }\item[{uint32 $\ast$}]{buf\+\_\+len\+\_\+p,  }\item[{uint32 $\ast$}]{event\+\_\+len\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write part of an event to disk.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf\+\_\+p\mbox{[}\+IN,O\+U\+T\mbox{]}} & Points to buffer with data to write. The caller must set this initially, and it will be increased by the number of bytes written.\\
+\hline
+{\em buf\+\_\+len\+\_\+p\mbox{[}\+IN,O\+U\+T\mbox{]}} & Points to the remaining length of the buffer, i.\+e., from buf\+\_\+p to the end of the buffer. The caller must set this initially, and it will be decreased by the number of written bytes.\\
+\hline
+{\em event\+\_\+len\+\_\+p\mbox{[}\+IN,O\+U\+T\mbox{]}} & Points to the remaining length of the event, i.\+e., the size of the event minus what was already written. This must be initialized to zero by the caller, must be remembered by the caller between calls, and is updated by this function\+: when an event begins it is set to the length of the event, and for each call it is decreased by the number of written bytes.\\
+\hline
+\end{DoxyParams}
+It is allowed that buf\+\_\+len\+\_\+p is less than event\+\_\+len\+\_\+p (i.\+e., event is only partial) and that event\+\_\+len\+\_\+p is less than buf\+\_\+len\+\_\+p (i.\+e., there is more than this event in the buffer). This function will write as much as is available of one event, but never more than one. It is required that buf\+\_\+len\+\_\+p $>$= L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Error, i.\+e., my\+\_\+b\+\_\+write failed. \\
+\hline
+{\em false} & Success. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classBinlog__event__writer_aaec80471064cbf01336851346860ee09}\label{classBinlog__event__writer_aaec80471064cbf01336851346860ee09}} 
+\index{Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}!write\+\_\+full\+\_\+event@{write\+\_\+full\+\_\+event}}
+\index{write\+\_\+full\+\_\+event@{write\+\_\+full\+\_\+event}!Binlog\+\_\+event\+\_\+writer@{Binlog\+\_\+event\+\_\+writer}}
+\subsubsection{\texorpdfstring{write\+\_\+full\+\_\+event()}{write\_full\_event()}}
+{\footnotesize\ttfamily bool Binlog\+\_\+event\+\_\+writer\+::write\+\_\+full\+\_\+event (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf,  }\item[{uint32}]{buf\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write a full event to disk.
+
+This is a wrapper around write\+\_\+event\+\_\+part, which handles the special case where you have a complete event in the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to write. \\
+\hline
+{\em buf\+\_\+len} & Number of bytes to write.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Error, i.\+e., my\+\_\+b\+\_\+write failed. \\
+\hline
+{\em false} & Success. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binlog.\+cc\end{DoxyCompactItemize}

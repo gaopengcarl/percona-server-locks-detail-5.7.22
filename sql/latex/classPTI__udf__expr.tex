@@ -1,0 +1,54 @@
+\hypertarget{classPTI__udf__expr}{}\section{P\+T\+I\+\_\+udf\+\_\+expr Class Reference}
+\label{classPTI__udf__expr}\index{P\+T\+I\+\_\+udf\+\_\+expr@{P\+T\+I\+\_\+udf\+\_\+expr}}
+Inheritance diagram for P\+T\+I\+\_\+udf\+\_\+expr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPTI__udf__expr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPTI__udf__expr_aa3aa8d64d33d725e1abe3f0c91727def}\label{classPTI__udf__expr_aa3aa8d64d33d725e1abe3f0c91727def}} 
+{\bfseries P\+T\+I\+\_\+udf\+\_\+expr} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$expr\+\_\+arg, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&select\+\_\+alias\+\_\+arg, const \mbox{\hyperlink{structSymbol__location}{Symbol\+\_\+location}} \&expr\+\_\+loc\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPTI__udf__expr_abccd7283f1cf0fb7bbe2d4c04d1f1934}{itemize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPTI__udf__expr_abccd7283f1cf0fb7bbe2d4c04d1f1934}\label{classPTI__udf__expr_abccd7283f1cf0fb7bbe2d4c04d1f1934}} 
+\index{P\+T\+I\+\_\+udf\+\_\+expr@{P\+T\+I\+\_\+udf\+\_\+expr}!itemize@{itemize}}
+\index{itemize@{itemize}!P\+T\+I\+\_\+udf\+\_\+expr@{P\+T\+I\+\_\+udf\+\_\+expr}}
+\subsubsection{\texorpdfstring{itemize()}{itemize()}}
+{\footnotesize\ttfamily bool P\+T\+I\+\_\+udf\+\_\+expr\+::itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The same as contextualize()/contextualize\+\_\+() but with additional parameter
+
+This function finalize the construction of \mbox{\hyperlink{classItem}{Item}} objects (see the \mbox{\hyperlink{classItem}{Item(\+P\+O\+S)}} constructor)\+: we can access/change parser contexts from the \mbox{\hyperlink{classPTI__udf__expr_abccd7283f1cf0fb7bbe2d4c04d1f1934}{itemize()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em pc} & current parse context \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{} or to a newly allocated replacement object to use in the \mbox{\hyperlink{classItem}{Item}} tree instead\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+items.\+h\item 
+parse\+\_\+tree\+\_\+items.\+cc\end{DoxyCompactItemize}

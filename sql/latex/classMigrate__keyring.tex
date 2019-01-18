@@ -1,0 +1,107 @@
+\hypertarget{classMigrate__keyring}{}\section{Migrate\+\_\+keyring Class Reference}
+\label{classMigrate__keyring}\index{Migrate\+\_\+keyring@{Migrate\+\_\+keyring}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMigrate__keyring_a9a6479fd21c4bf412773951cfa47ac53}{Migrate\+\_\+keyring}} ()
+\item 
+bool \mbox{\hyperlink{classMigrate__keyring_ad9053c75711365701f3462e85165053b}{init}} (int argc, char $\ast$$\ast$argv, char $\ast$source\+\_\+plugin, char $\ast$destination\+\_\+plugin, char $\ast$user, char $\ast$host, char $\ast$password, char $\ast$socket, ulong port)
+\item 
+bool \mbox{\hyperlink{classMigrate__keyring_aed008849efeecefdebeee6047d54ff54}{execute}} ()
+\item 
+\mbox{\hyperlink{classMigrate__keyring_a72feb62bf75af75fb767e5ff3e320bbd}{$\sim$\+Migrate\+\_\+keyring}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMigrate__keyring_a9a6479fd21c4bf412773951cfa47ac53}\label{classMigrate__keyring_a9a6479fd21c4bf412773951cfa47ac53}} 
+\index{Migrate\+\_\+keyring@{Migrate\+\_\+keyring}!Migrate\+\_\+keyring@{Migrate\+\_\+keyring}}
+\index{Migrate\+\_\+keyring@{Migrate\+\_\+keyring}!Migrate\+\_\+keyring@{Migrate\+\_\+keyring}}
+\subsubsection{\texorpdfstring{Migrate\+\_\+keyring()}{Migrate\_keyring()}}
+{\footnotesize\ttfamily Migrate\+\_\+keyring\+::\+Migrate\+\_\+keyring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Standard constructor.
+
+Standard constructor \mbox{\Hypertarget{classMigrate__keyring_a72feb62bf75af75fb767e5ff3e320bbd}\label{classMigrate__keyring_a72feb62bf75af75fb767e5ff3e320bbd}} 
+\index{Migrate\+\_\+keyring@{Migrate\+\_\+keyring}!````~Migrate\+\_\+keyring@{$\sim$\+Migrate\+\_\+keyring}}
+\index{````~Migrate\+\_\+keyring@{$\sim$\+Migrate\+\_\+keyring}!Migrate\+\_\+keyring@{Migrate\+\_\+keyring}}
+\subsubsection{\texorpdfstring{$\sim$\+Migrate\+\_\+keyring()}{~Migrate\_keyring()}}
+{\footnotesize\ttfamily Migrate\+\_\+keyring\+::$\sim$\+Migrate\+\_\+keyring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Standard destructor
+
+Standard destructor to close connection handle. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMigrate__keyring_aed008849efeecefdebeee6047d54ff54}\label{classMigrate__keyring_aed008849efeecefdebeee6047d54ff54}} 
+\index{Migrate\+\_\+keyring@{Migrate\+\_\+keyring}!execute@{execute}}
+\index{execute@{execute}!Migrate\+\_\+keyring@{Migrate\+\_\+keyring}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Migrate\+\_\+keyring\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Migrate keys from source keyring to destination keyring.
+
+This function does the following in sequence\+:
+\begin{DoxyEnumerate}
+\item Load source plugin.
+\item Load destination plugin.
+\item Disable access to keyring service A\+P\+Is.
+\item Fetch all keys from source plugin and upon sucess store in destination plugin.
+\item Enable access to keyring service A\+P\+Is.
+\item Unload source plugin.
+\item Unload destination plugin.
+\end{DoxyEnumerate}
+
+N\+O\+TE\+: In case there is any error while fetching keys from source plugin, this function would remove all keys stored as part of fetch.
+
+\begin{DoxyReturn}{Returns}
+0 Success 
+
+1 Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMigrate__keyring_ad9053c75711365701f3462e85165053b}\label{classMigrate__keyring_ad9053c75711365701f3462e85165053b}} 
+\index{Migrate\+\_\+keyring@{Migrate\+\_\+keyring}!init@{init}}
+\index{init@{init}!Migrate\+\_\+keyring@{Migrate\+\_\+keyring}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Migrate\+\_\+keyring\+::init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{source\+\_\+plugin,  }\item[{char $\ast$}]{destination\+\_\+plugin,  }\item[{char $\ast$}]{user,  }\item[{char $\ast$}]{host,  }\item[{char $\ast$}]{password,  }\item[{char $\ast$}]{socket,  }\item[{ulong}]{port }\end{DoxyParamCaption})}
+
+Initialize all needed parameters to proceed with migration process.
+
+This function does the following\+:
+\begin{DoxyEnumerate}
+\item Validate all keyring migration specific options.
+\item Get a connection handle by connecting to server if connection specific options are set.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Pointer to argc of original program \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Pointer to argv of original program \\
+\hline
+\mbox{\texttt{ in}}  & {\em source\+\_\+plugin} & Pointer to source plugin option \\
+\hline
+\mbox{\texttt{ in}}  & {\em destination\+\_\+plugin} & Pointer to destination plugin option \\
+\hline
+\mbox{\texttt{ in}}  & {\em user} & User to login to server \\
+\hline
+\mbox{\texttt{ in}}  & {\em host} & Host on which to connect to server \\
+\hline
+\mbox{\texttt{ in}}  & {\em password} & Password used to connect to server \\
+\hline
+\mbox{\texttt{ in}}  & {\em socket} & The socket file to use for connection \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & Port number to use for connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 Success 
+
+1 Failure 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+migrate\+\_\+keyring.\+h\item 
+migrate\+\_\+keyring.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classMaterialized__cursor}{}\section{Materialized\+\_\+cursor Class Reference}
+\label{classMaterialized__cursor}\index{Materialized\+\_\+cursor@{Materialized\+\_\+cursor}}
+Inheritance diagram for Materialized\+\_\+cursor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMaterialized__cursor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMaterialized__cursor_a14c78fe15c0d024d569070fc9edd85f2}\label{classMaterialized__cursor_a14c78fe15c0d024d569070fc9edd85f2}} 
+{\bfseries Materialized\+\_\+cursor} (Query\+\_\+result $\ast$\mbox{\hyperlink{classServer__side__cursor_aabbf3cb174ae4f57cc7bfc35f9149c25}{result}}, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+int \mbox{\hyperlink{classMaterialized__cursor_aaad0fe0d3f6b74209f9e6f82e118b621}{send\+\_\+result\+\_\+set\+\_\+metadata}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&send\+\_\+result\+\_\+set\+\_\+metadata)
+\item 
+\mbox{\Hypertarget{classMaterialized__cursor_ae515a36bdbdfad49338c56e0df0e97da}\label{classMaterialized__cursor_ae515a36bdbdfad49338c56e0df0e97da}} 
+virtual bool {\bfseries is\+\_\+open} () const
+\item 
+\mbox{\Hypertarget{classMaterialized__cursor_a25710046c4d9f9b1d0ad002010f05785}\label{classMaterialized__cursor_a25710046c4d9f9b1d0ad002010f05785}} 
+virtual int {\bfseries open} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+virtual bool \mbox{\hyperlink{classMaterialized__cursor_a1536d980f3500d1c52070c8ef09a7423}{fetch}} (ulong num\+\_\+rows)
+\item 
+\mbox{\Hypertarget{classMaterialized__cursor_a34dc2e3eb7ab0adfde89ecdd3bbb84bf}\label{classMaterialized__cursor_a34dc2e3eb7ab0adfde89ecdd3bbb84bf}} 
+virtual void {\bfseries close} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classMaterialized__cursor}{Materialized\+\_\+cursor}} -- an insensitive materialized server-\/side cursor. The result set of this cursor is saved in a temporary table at open. The cursor itself is simply an interface for the handler of the temporary table. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMaterialized__cursor_a1536d980f3500d1c52070c8ef09a7423}\label{classMaterialized__cursor_a1536d980f3500d1c52070c8ef09a7423}} 
+\index{Materialized\+\_\+cursor@{Materialized\+\_\+cursor}!fetch@{fetch}}
+\index{fetch@{fetch}!Materialized\+\_\+cursor@{Materialized\+\_\+cursor}}
+\subsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily bool Materialized\+\_\+cursor\+::fetch (\begin{DoxyParamCaption}\item[{ulong}]{num\+\_\+rows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Fetch up to the given number of rows from a materialized cursor.
+
+Precondition\+: the cursor is open.
+
+If the cursor points after the last row, the fetch will automatically close the cursor and not send any data (except the \textquotesingle{}E\+OF\textquotesingle{} packet with S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+L\+A\+S\+T\+\_\+\+R\+O\+W\+\_\+\+S\+E\+NT). This is an extra round trip and probably should be improved to return S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+L\+A\+S\+T\+\_\+\+R\+O\+W\+\_\+\+S\+E\+NT along with the last row. 
+
+Implements \mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}}.
+
+\mbox{\Hypertarget{classMaterialized__cursor_aaad0fe0d3f6b74209f9e6f82e118b621}\label{classMaterialized__cursor_aaad0fe0d3f6b74209f9e6f82e118b621}} 
+\index{Materialized\+\_\+cursor@{Materialized\+\_\+cursor}!send\+\_\+result\+\_\+set\+\_\+metadata@{send\+\_\+result\+\_\+set\+\_\+metadata}}
+\index{send\+\_\+result\+\_\+set\+\_\+metadata@{send\+\_\+result\+\_\+set\+\_\+metadata}!Materialized\+\_\+cursor@{Materialized\+\_\+cursor}}
+\subsubsection{\texorpdfstring{send\+\_\+result\+\_\+set\+\_\+metadata()}{send\_result\_set\_metadata()}}
+{\footnotesize\ttfamily int Materialized\+\_\+cursor\+::send\+\_\+result\+\_\+set\+\_\+metadata (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{send\+\_\+result\+\_\+set\+\_\+metadata }\end{DoxyParamCaption})}
+
+Preserve the original metadata to be sent to the client. Initiate sending of the original metadata to the client (call Protocol\+::send\+\_\+result\+\_\+set\+\_\+metadata()).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread identifier. \\
+\hline
+{\em send\+\_\+result\+\_\+set\+\_\+metadata} & \mbox{\hyperlink{classList}{List}} of fields that would be sent. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+cursor.\+cc\end{DoxyCompactItemize}

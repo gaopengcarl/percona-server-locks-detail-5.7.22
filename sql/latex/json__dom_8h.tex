@@ -1,0 +1,218 @@
+\hypertarget{json__dom_8h}{}\section{json\+\_\+dom.\+h File Reference}
+\label{json__dom_8h}\index{json\+\_\+dom.\+h@{json\+\_\+dom.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}malloc\+\_\+allocator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+decimal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binary\+\_\+log\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json\+\_\+binary.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+alloc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}prealloced\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}
+\item 
+struct \mbox{\hyperlink{structJson__key__comparator}{Json\+\_\+key\+\_\+comparator}}
+\item 
+class \mbox{\hyperlink{classJson__object}{Json\+\_\+object}}
+\item 
+class \mbox{\hyperlink{classJson__array}{Json\+\_\+array}}
+\item 
+class \mbox{\hyperlink{classJson__scalar}{Json\+\_\+scalar}}
+\item 
+class \mbox{\hyperlink{classJson__string}{Json\+\_\+string}}
+\item 
+class \mbox{\hyperlink{classJson__number}{Json\+\_\+number}}
+\item 
+class \mbox{\hyperlink{classJson__decimal}{Json\+\_\+decimal}}
+\item 
+class \mbox{\hyperlink{classJson__double}{Json\+\_\+double}}
+\item 
+class \mbox{\hyperlink{classJson__int}{Json\+\_\+int}}
+\item 
+class \mbox{\hyperlink{classJson__uint}{Json\+\_\+uint}}
+\item 
+class \mbox{\hyperlink{classJson__null}{Json\+\_\+null}}
+\item 
+class \mbox{\hyperlink{classJson__datetime}{Json\+\_\+datetime}}
+\item 
+class \mbox{\hyperlink{classJson__opaque}{Json\+\_\+opaque}}
+\item 
+class \mbox{\hyperlink{classJson__boolean}{Json\+\_\+boolean}}
+\item 
+class \mbox{\hyperlink{classJson__wrapper__object__iterator}{Json\+\_\+wrapper\+\_\+object\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{json__dom_8h_a9e0d6d40c86dcaf14198961c176068b7}\label{json__dom_8h_a9e0d6d40c86dcaf14198961c176068b7}} 
+\#define \mbox{\hyperlink{json__dom_8h_a9e0d6d40c86dcaf14198961c176068b7}{J\+S\+O\+N\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+P\+TH}}~100
+\begin{DoxyCompactList}\small\item\em The maximum number of nesting levels allowed in a J\+S\+ON document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{json__dom_8h_a78a8f3d31c814515ae7cc593bca75a59}\label{json__dom_8h_a78a8f3d31c814515ae7cc593bca75a59}} 
+typedef Prealloced\+\_\+array$<$ \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}, 16, false $>$ {\bfseries Json\+\_\+wrapper\+\_\+vector}
+\item 
+\mbox{\Hypertarget{json__dom_8h_a15dead9cb1bfe2e737468f0fad9e2b70}\label{json__dom_8h_a15dead9cb1bfe2e737468f0fad9e2b70}} 
+typedef Prealloced\+\_\+array$<$ \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$, 16 $>$ {\bfseries Json\+\_\+dom\+\_\+vector}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$, \mbox{\hyperlink{structJson__key__comparator}{Json\+\_\+key\+\_\+comparator}}, \mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}}$<$ std\+::pair$<$ const std\+::string, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ $>$ $>$ $>$ \mbox{\hyperlink{json__dom_8h_abe717bc1839c6f504624dec1e85062c5}{Json\+\_\+object\+\_\+map}}
+\item 
+\mbox{\Hypertarget{json__dom_8h_a77a73063f3883573ce190fab4523f27d}\label{json__dom_8h_a77a73063f3883573ce190fab4523f27d}} 
+typedef bool $\ast$ {\bfseries warning\+\_\+method}(\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}}, unsigned int, int)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{json__dom_8h_ad5150927a04c19e60622eb3365975c18}{double\+\_\+quote}} (const char $\ast$cptr, size\+\_\+t length, String $\ast$buf)
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{json__dom_8h_ae3afb1a174363a8942fc6cb0fc2f493e}{merge\+\_\+doms}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$left, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$right)
+\item 
+bool \mbox{\hyperlink{json__dom_8h_a4e1321856fbcd3a52b6a7b5b0c621392}{is\+\_\+valid\+\_\+json\+\_\+syntax}} (const char $\ast$text, size\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When a J\+S\+ON value is retrieved from a column, a prior it exists in a binary form, cf. Json\+\_\+binary\+::\+Value class. 
+
+However, when we need to manipulate the J\+S\+ON values we mostly convert them from binary form to a structured in-\/memory from called D\+OM (from domain object model) which uses a recursive tree representation of the J\+S\+ON value corresponding closely to a parse tree. This form is more suitable for manipulation. 
+
+The J\+S\+ON type is mostly represented internally as a \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} which hides if the representation is a binary or D\+OM one. This makes is possible to avoid building a D\+OM unless we really need one. 
+
+The file defines two sets of classes\+: a) The \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} hierarchy and b) \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} and its companion class \mbox{\hyperlink{classJson__wrapper__object__iterator}{Json\+\_\+wrapper\+\_\+object\+\_\+iterator}}. For both sets, arrays are traversed using an operator\mbox{[}\mbox{]}. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{json__dom_8h_abe717bc1839c6f504624dec1e85062c5}\label{json__dom_8h_abe717bc1839c6f504624dec1e85062c5}} 
+\index{json\+\_\+dom.\+h@{json\+\_\+dom.\+h}!Json\+\_\+object\+\_\+map@{Json\+\_\+object\+\_\+map}}
+\index{Json\+\_\+object\+\_\+map@{Json\+\_\+object\+\_\+map}!json\+\_\+dom.\+h@{json\+\_\+dom.\+h}}
+\subsubsection{\texorpdfstring{Json\+\_\+object\+\_\+map}{Json\_object\_map}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$, \mbox{\hyperlink{structJson__key__comparator}{Json\+\_\+key\+\_\+comparator}}, \mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}}$<$std\+::pair$<$const std\+::string, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$$>$ $>$ $>$ \mbox{\hyperlink{json__dom_8h_abe717bc1839c6f504624dec1e85062c5}{Json\+\_\+object\+\_\+map}}}
+
+A type used to hold J\+S\+ON object elements in a map, see the \mbox{\hyperlink{classJson__object}{Json\+\_\+object}} class. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{json__dom_8h_ad5150927a04c19e60622eb3365975c18}\label{json__dom_8h_ad5150927a04c19e60622eb3365975c18}} 
+\index{json\+\_\+dom.\+h@{json\+\_\+dom.\+h}!double\+\_\+quote@{double\+\_\+quote}}
+\index{double\+\_\+quote@{double\+\_\+quote}!json\+\_\+dom.\+h@{json\+\_\+dom.\+h}}
+\subsubsection{\texorpdfstring{double\+\_\+quote()}{double\_quote()}}
+{\footnotesize\ttfamily bool double\+\_\+quote (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cptr,  }\item[{size\+\_\+t}]{length,  }\item[{String $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Function for double-\/quoting a string and escaping characters to make up a valid E\+M\+CA Json text.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cptr} & the unquoted character string \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & its length \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em buf} & the destination buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error
+\end{DoxyReturn}
+Perform quoting on a J\+S\+ON string to make an external representation of it. it wraps double quotes (text quotes) around the string (cptr) an also performs escaping according to the following table\+: 
+\begin{DoxyPre}
+Common name     C-style  Original unescaped     Transformed to
+                escape   UTF-8 bytes            escape sequence
+\subsubsection*{notation                        in UTF-8 bytes
+}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+quote           "       x22                    x5C x22
+backslash       \textbackslash{}       x5C                    x5C x5C
+backspace       {\bfseries x08} x5C x62
+formfeed               x0C                    x5C x66
+linefeed        ~\newline
+       x0A                    x5C x6E
+carriage-return        x0D                    x5C x72
+tab                    x09                    x5C x74
+unicode           A hex number in the      x5C x75
+                        range of 00-1F,          followed by
+                        except for the ones      4 hex digits
+                        handled above (backspace,
+                        formfeed, linefeed,
+                        carriage-return,
+\subsubsection*{and tab).
+}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+\end{DoxyPre}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cptr} & pointer to string data \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & the length of the string \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em buf} & the destination buffer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{json__dom_8h_a4e1321856fbcd3a52b6a7b5b0c621392}\label{json__dom_8h_a4e1321856fbcd3a52b6a7b5b0c621392}} 
+\index{json\+\_\+dom.\+h@{json\+\_\+dom.\+h}!is\+\_\+valid\+\_\+json\+\_\+syntax@{is\+\_\+valid\+\_\+json\+\_\+syntax}}
+\index{is\+\_\+valid\+\_\+json\+\_\+syntax@{is\+\_\+valid\+\_\+json\+\_\+syntax}!json\+\_\+dom.\+h@{json\+\_\+dom.\+h}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+json\+\_\+syntax()}{is\_valid\_json\_syntax()}}
+{\footnotesize\ttfamily bool is\+\_\+valid\+\_\+json\+\_\+syntax (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Check if a string contains valid J\+S\+ON text, without generating a \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} representation of the document.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em text} & pointer to the beginning of the string \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & the length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the string is valid J\+S\+ON text, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{json__dom_8h_ae3afb1a174363a8942fc6cb0fc2f493e}\label{json__dom_8h_ae3afb1a174363a8942fc6cb0fc2f493e}} 
+\index{json\+\_\+dom.\+h@{json\+\_\+dom.\+h}!merge\+\_\+doms@{merge\+\_\+doms}}
+\index{merge\+\_\+doms@{merge\+\_\+doms}!json\+\_\+dom.\+h@{json\+\_\+dom.\+h}}
+\subsubsection{\texorpdfstring{merge\+\_\+doms()}{merge\_doms()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ merge\+\_\+doms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Merge two doms. The right dom is either subsumed into the left dom or the contents of the right dom are transferred to the left dom and the right dom is deleted. After calling this function, the caller should not reference the right dom again. It has been deleted.
+
+Returns N\+U\+LL if there is a memory allocation failure. In this case both doms are deleted.
+
+scalars -\/ If any of the documents that are being merged is a scalar, each scalar document is autowrapped as a single value array before merging.
+
+arrays -\/ When merging a left array with a right array, then the result is the left array concatenated with the right array. For instance, \mbox{[} 1, 2 \mbox{]} merged with \mbox{[} 3, 4 \mbox{]} is \mbox{[} 1, 2, 3, 4 \mbox{]}.
+
+array and object -\/ When merging an array with an object, the object is autowrapped as an array and then the rule above is applied. So \mbox{[} 1, 2 \mbox{]} merged with \{ \char`\"{}a\char`\"{} \+: true \} is \mbox{[} 1, 2, \{ \char`\"{}a\char`\"{}\+: true \} \mbox{]}.
+
+objects -\/ When merging two objects, the two objects are concatenated into a single, larger object. So \{ \char`\"{}a\char`\"{} \+: \char`\"{}foo\char`\"{} \} merged with \{ \char`\"{}b\char`\"{} \+: 5 \} is \{ \char`\"{}a\char`\"{} \+: \char`\"{}foo\char`\"{}, \char`\"{}b\char`\"{} \+: 5 \}.
+
+duplicates -\/ When two objects are merged and they share a key, the values associated with the shared key are merged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & \mbox{[}inout\mbox{]} The recipient dom. \\
+\hline
+{\em right} & \mbox{[}inout\mbox{]} The dom to be consumed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A composite dom which subsumes the left and right doms, or N\+U\+LL if a failure happened while merging 
+\end{DoxyReturn}

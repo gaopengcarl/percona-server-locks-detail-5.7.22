@@ -1,0 +1,91 @@
+\hypertarget{classNdb__binlog__extra__row__info}{}\section{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info Class Reference}
+\label{classNdb__binlog__extra__row__info}\index{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info@{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_ae293983c75f3f7a9942f7ca18ef727a5}\label{classNdb__binlog__extra__row__info_ae293983c75f3f7a9942f7ca18ef727a5}} 
+enum {\bfseries Flags} \{ {\bfseries N\+D\+B\+\_\+\+E\+R\+I\+F\+\_\+\+T\+R\+A\+N\+S\+ID} = 0x1, 
+{\bfseries N\+D\+B\+\_\+\+E\+R\+I\+F\+\_\+\+C\+F\+T\+\_\+\+F\+L\+A\+GS} = 0x2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classNdb__binlog__extra__row__info_a5bbe4660bdabf94c12fe396c07803df3}{load\+From\+Buffer}} (const uchar $\ast$extra\+\_\+row\+\_\+info\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_aa13eaf343562036427cc9d330abfcb78}\label{classNdb__binlog__extra__row__info_aa13eaf343562036427cc9d330abfcb78}} 
+Uint16 {\bfseries get\+Flags} () const
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_adb3a1e01979aa8e9f4b92de34fd8701e}\label{classNdb__binlog__extra__row__info_adb3a1e01979aa8e9f4b92de34fd8701e}} 
+void {\bfseries set\+Flags} (Uint16 \+\_\+flags)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a48700a67040b89f72de5009cb7dde138}\label{classNdb__binlog__extra__row__info_a48700a67040b89f72de5009cb7dde138}} 
+Uint64 {\bfseries get\+Transaction\+Id} () const
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_ade470b2f72071d90fe97c6d4b33f6b70}\label{classNdb__binlog__extra__row__info_ade470b2f72071d90fe97c6d4b33f6b70}} 
+void {\bfseries set\+Transaction\+Id} (Uint64 \+\_\+transaction\+Id)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a27813bb8364e7f212cc554a2f6204120}\label{classNdb__binlog__extra__row__info_a27813bb8364e7f212cc554a2f6204120}} 
+Uint16 {\bfseries get\+Conflict\+Flags} () const
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a5e4e3d4cb1fdc94b911b6034c7ea5b61}\label{classNdb__binlog__extra__row__info_a5e4e3d4cb1fdc94b911b6034c7ea5b61}} 
+void {\bfseries set\+Conflict\+Flags} (Uint16 \+\_\+conflict\+Flags)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_ab463c2bf86295c1de31f672babe4afb1}\label{classNdb__binlog__extra__row__info_ab463c2bf86295c1de31f672babe4afb1}} 
+uchar $\ast$ {\bfseries get\+Buff\+Ptr} ()
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a6b27e126a779090ed6a2e2db19b7f654}\label{classNdb__binlog__extra__row__info_a6b27e126a779090ed6a2e2db19b7f654}} 
+uchar $\ast$ {\bfseries generate\+Buffer} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a2141bbc50c88bde0c4263251abb1d584}\label{classNdb__binlog__extra__row__info_a2141bbc50c88bde0c4263251abb1d584}} 
+static const Uint32 {\bfseries F\+L\+A\+G\+S\+\_\+\+S\+I\+ZE} = sizeof(Uint16)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_ab18b0bbd8e82e1c6ce2cbcd3942993b0}\label{classNdb__binlog__extra__row__info_ab18b0bbd8e82e1c6ce2cbcd3942993b0}} 
+static const Uint32 {\bfseries T\+R\+A\+N\+S\+I\+D\+\_\+\+S\+I\+ZE} = sizeof(Uint64)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_aac4a59a3df273f3a60b52cfa8f76870e}\label{classNdb__binlog__extra__row__info_aac4a59a3df273f3a60b52cfa8f76870e}} 
+static const Uint32 {\bfseries C\+F\+T\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+I\+ZE} = sizeof(Uint16)
+\item 
+static const Uint32 {\bfseries Max\+Len}
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_aebcdf9e9c10415a1cb978d14c978fc55}\label{classNdb__binlog__extra__row__info_aebcdf9e9c10415a1cb978d14c978fc55}} 
+static const Uint64 {\bfseries Invalid\+Transaction\+Id} = $\sim$Uint64(0)
+\item 
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a29342fbcc7af5fb653d6ec2c51fcfe9e}\label{classNdb__binlog__extra__row__info_a29342fbcc7af5fb653d6ec2c51fcfe9e}} 
+static const Uint16 {\bfseries Unset\+Conflict\+Flags} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a5bbe4660bdabf94c12fe396c07803df3}\label{classNdb__binlog__extra__row__info_a5bbe4660bdabf94c12fe396c07803df3}} 
+\index{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info@{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info}!load\+From\+Buffer@{load\+From\+Buffer}}
+\index{load\+From\+Buffer@{load\+From\+Buffer}!Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info@{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info}}
+\subsubsection{\texorpdfstring{load\+From\+Buffer()}{loadFromBuffer()}}
+{\footnotesize\ttfamily int Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info\+::load\+From\+Buffer (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{extra\+\_\+row\+\_\+info\+\_\+ptr }\end{DoxyParamCaption})}
+
+Correct length, retrieve conflict flags, converting if necessary
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNdb__binlog__extra__row__info_a9247b130b51b5f431c742886937ff405}\label{classNdb__binlog__extra__row__info_a9247b130b51b5f431c742886937ff405}} 
+\index{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info@{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info}!Max\+Len@{Max\+Len}}
+\index{Max\+Len@{Max\+Len}!Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info@{Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info}}
+\subsubsection{\texorpdfstring{Max\+Len}{MaxLen}}
+{\footnotesize\ttfamily const Uint32 Ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info\+::\+Max\+Len\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    EXTRA\_ROW\_INFO\_HDR\_BYTES +}
+\DoxyCodeLine{    FLAGS\_SIZE +}
+\DoxyCodeLine{    TRANSID\_SIZE +}
+\DoxyCodeLine{    CFT\_FLAGS\_SIZE}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info.\+h\item 
+ndb\+\_\+binlog\+\_\+extra\+\_\+row\+\_\+info.\+cc\end{DoxyCompactItemize}

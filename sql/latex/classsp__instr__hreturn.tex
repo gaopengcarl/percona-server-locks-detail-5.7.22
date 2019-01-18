@@ -1,0 +1,75 @@
+\hypertarget{classsp__instr__hreturn}{}\section{sp\+\_\+instr\+\_\+hreturn Class Reference}
+\label{classsp__instr__hreturn}\index{sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}}
+Inheritance diagram for sp\+\_\+instr\+\_\+hreturn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsp__instr__hreturn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__hreturn_aa1f8dd94925b56b01467d2b812e6e7b2}\label{classsp__instr__hreturn_aa1f8dd94925b56b01467d2b812e6e7b2}} 
+{\bfseries sp\+\_\+instr\+\_\+hreturn} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx)
+\item 
+\mbox{\Hypertarget{classsp__instr__hreturn_a0f0ed5a58a488054ff64bd1a42799cb4}\label{classsp__instr__hreturn_a0f0ed5a58a488054ff64bd1a42799cb4}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__hreturn_a8491a8712319d0ba1b698c18ae4d8b48}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual uint \mbox{\hyperlink{classsp__instr__hreturn_aad1c6b1378f1f2f26fb3be33622f0ce2}{opt\+\_\+shortcut\+\_\+jump}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$start)
+\item 
+virtual uint \mbox{\hyperlink{classsp__instr__hreturn_a2154f9d995bbd7aa47b0fe714ef3c33f}{opt\+\_\+mark}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$leads)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__hreturn_a8491a8712319d0ba1b698c18ae4d8b48}\label{classsp__instr__hreturn_a8491a8712319d0ba1b698c18ae4d8b48}} 
+\index{sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+hreturn\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__instr__jump_a2b76438345358e22b6029129828d66d5}{sp\+\_\+instr\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__instr__hreturn_a2154f9d995bbd7aa47b0fe714ef3c33f}\label{classsp__instr__hreturn_a2154f9d995bbd7aa47b0fe714ef3c33f}} 
+\index{sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}!opt\+\_\+mark@{opt\+\_\+mark}}
+\index{opt\+\_\+mark@{opt\+\_\+mark}!sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}}
+\subsubsection{\texorpdfstring{opt\+\_\+mark()}{opt\_mark()}}
+{\footnotesize\ttfamily uint sp\+\_\+instr\+\_\+hreturn\+::opt\+\_\+mark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$}]{leads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Mark this instruction as reachable during optimization and return the index to the next instruction. Jump instruction will add their destination to the leads list. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr__jump_a4daedb439c97a78adf9957fc35121dbe}{sp\+\_\+instr\+\_\+jump}}.
+
+\mbox{\Hypertarget{classsp__instr__hreturn_aad1c6b1378f1f2f26fb3be33622f0ce2}\label{classsp__instr__hreturn_aad1c6b1378f1f2f26fb3be33622f0ce2}} 
+\index{sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}!opt\+\_\+shortcut\+\_\+jump@{opt\+\_\+shortcut\+\_\+jump}}
+\index{opt\+\_\+shortcut\+\_\+jump@{opt\+\_\+shortcut\+\_\+jump}!sp\+\_\+instr\+\_\+hreturn@{sp\+\_\+instr\+\_\+hreturn}}
+\subsubsection{\texorpdfstring{opt\+\_\+shortcut\+\_\+jump()}{opt\_shortcut\_jump()}}
+{\footnotesize\ttfamily virtual uint sp\+\_\+instr\+\_\+hreturn\+::opt\+\_\+shortcut\+\_\+jump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$}]{start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Override \mbox{\hyperlink{classsp__instr__jump}{sp\+\_\+instr\+\_\+jump}}\textquotesingle{}s shortcut; we stop here. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr__jump_a7c0f595bd9f39e9b38cc1e06333c3db0}{sp\+\_\+instr\+\_\+jump}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

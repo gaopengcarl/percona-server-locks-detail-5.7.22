@@ -1,0 +1,83 @@
+\hypertarget{classPT__hint}{}\section{P\+T\+\_\+hint Class Reference}
+\label{classPT__hint}\index{P\+T\+\_\+hint@{P\+T\+\_\+hint}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+hints.\+h$>$}
+
+Inheritance diagram for P\+T\+\_\+hint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.856354cm]{classPT__hint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__hint_a2a524a425b2f915c04c798b33bb95a93}\label{classPT__hint_a2a524a425b2f915c04c798b33bb95a93}} 
+{\bfseries P\+T\+\_\+hint} (opt\+\_\+hints\+\_\+enum hint\+\_\+type\+\_\+arg, bool switch\+\_\+state\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classPT__hint_ac52f17a452fc96eb770a5c85408136e8}\label{classPT__hint_ac52f17a452fc96eb770a5c85408136e8}} 
+opt\+\_\+hints\+\_\+enum {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classPT__hint_a8101ba50ba356579e681ca3a22e12a03}\label{classPT__hint_a8101ba50ba356579e681ca3a22e12a03}} 
+bool {\bfseries switch\+\_\+on} () const
+\item 
+virtual void \mbox{\hyperlink{classPT__hint_a42634c81732506b8b11eeb9c93ba590f}{print\+\_\+warn}} (T\+HD $\ast$thd, uint err\+\_\+code, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$qb\+\_\+name\+\_\+arg, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$table\+\_\+name\+\_\+arg, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$key\+\_\+name\+\_\+arg, \mbox{\hyperlink{classPT__hint}{P\+T\+\_\+hint}} $\ast$hint) const
+\item 
+virtual void \mbox{\hyperlink{classPT__hint_afd39b4eeed47d9b1790f12c144aece7d}{append\+\_\+args}} (T\+HD $\ast$thd, String $\ast$str) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The class is a base class for representation of the different types of the hints. For the complex hints it is also used as a container for additional argumnets. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__hint_afd39b4eeed47d9b1790f12c144aece7d}\label{classPT__hint_afd39b4eeed47d9b1790f12c144aece7d}} 
+\index{P\+T\+\_\+hint@{P\+T\+\_\+hint}!append\+\_\+args@{append\+\_\+args}}
+\index{append\+\_\+args@{append\+\_\+args}!P\+T\+\_\+hint@{P\+T\+\_\+hint}}
+\subsubsection{\texorpdfstring{append\+\_\+args()}{append\_args()}}
+{\footnotesize\ttfamily virtual void P\+T\+\_\+hint\+::append\+\_\+args (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Append additional hint arguments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object \\
+\hline
+{\em str} & Pointer to String object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classPT__hint__max__execution__time_a5062df4e31c3ddc7a6d3b17166c7cfd1}{P\+T\+\_\+hint\+\_\+max\+\_\+execution\+\_\+time}}, \mbox{\hyperlink{classPT__hint__qb__name_af186344b8fe2dcc76c187ce8dec59422}{P\+T\+\_\+hint\+\_\+qb\+\_\+name}}, and \mbox{\hyperlink{classPT__qb__level__hint_a7eb50bc395daa14498c03d9753bbf4a4}{P\+T\+\_\+qb\+\_\+level\+\_\+hint}}.
+
+\mbox{\Hypertarget{classPT__hint_a42634c81732506b8b11eeb9c93ba590f}\label{classPT__hint_a42634c81732506b8b11eeb9c93ba590f}} 
+\index{P\+T\+\_\+hint@{P\+T\+\_\+hint}!print\+\_\+warn@{print\+\_\+warn}}
+\index{print\+\_\+warn@{print\+\_\+warn}!P\+T\+\_\+hint@{P\+T\+\_\+hint}}
+\subsubsection{\texorpdfstring{print\+\_\+warn()}{print\_warn()}}
+{\footnotesize\ttfamily void P\+T\+\_\+hint\+::print\+\_\+warn (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{err\+\_\+code,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{qb\+\_\+name\+\_\+arg,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{table\+\_\+name\+\_\+arg,  }\item[{L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{key\+\_\+name\+\_\+arg,  }\item[{\mbox{\hyperlink{classPT__hint}{P\+T\+\_\+hint}} $\ast$}]{hint }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Print warning issuing in processing of the hint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object \\
+\hline
+{\em err\+\_\+code} & Error code \\
+\hline
+{\em qb\+\_\+name\+\_\+arg} & QB name \\
+\hline
+{\em table\+\_\+name\+\_\+arg} & table name \\
+\hline
+{\em key\+\_\+name\+\_\+arg} & key name \\
+\hline
+{\em hint} & Pointer to hint object \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+hints.\+h\item 
+parse\+\_\+tree\+\_\+hints.\+cc\end{DoxyCompactItemize}

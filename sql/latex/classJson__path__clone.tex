@@ -1,0 +1,128 @@
+\hypertarget{classJson__path__clone}{}\section{Json\+\_\+path\+\_\+clone Class Reference}
+\label{classJson__path__clone}\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+
+
+{\ttfamily \#include $<$json\+\_\+path.\+h$>$}
+
+Inheritance diagram for Json\+\_\+path\+\_\+clone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson__path__clone}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classJson__path__clone_a7b3217b45baaa958cc2a48a1e03bbe31}{leg\+\_\+count}} () const
+\item 
+const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$ \mbox{\hyperlink{classJson__path__clone_afc7f1eee2eb7e50ab90c0a52dd2e7fa4}{get\+\_\+leg\+\_\+at}} (const size\+\_\+t index) const
+\item 
+bool \mbox{\hyperlink{classJson__path__clone_a10400af44b31abfc2a77c7feedc954c0}{append}} (const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$leg)
+\item 
+bool \mbox{\hyperlink{classJson__path__clone_aa9a9fa559013cddfa0f1096b72a917e0}{set}} (\mbox{\hyperlink{classJson__seekable__path}{Json\+\_\+seekable\+\_\+path}} $\ast$source)
+\item 
+const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$ \mbox{\hyperlink{classJson__path__clone_afbf830602783d78bb7283fcaf35e7d9e}{pop}} ()
+\item 
+void \mbox{\hyperlink{classJson__path__clone_a85503f72b0c86c105fa2573e4fdb2d47}{clear}} ()
+\item 
+bool \mbox{\hyperlink{classJson__path__clone_ab1c40c5424e17ba7dddaf168c36fbced}{contains\+\_\+ellipsis}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A lightweight path expression. This exists so that paths can be cloned from the path legs of other paths without allocating heap memory to copy those legs into. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__path__clone_a10400af44b31abfc2a77c7feedc954c0}\label{classJson__path__clone_a10400af44b31abfc2a77c7feedc954c0}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!append@{append}}
+\index{append@{append}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+\_\+clone\+::append (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$}]{leg }\end{DoxyParamCaption})}
+
+Add a path leg to the end of this cloned path. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em leg} & the leg to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__path__clone_a85503f72b0c86c105fa2573e4fdb2d47}\label{classJson__path__clone_a85503f72b0c86c105fa2573e4fdb2d47}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!clear@{clear}}
+\index{clear@{clear}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Json\+\_\+path\+\_\+clone\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets this to an empty path with no legs. \mbox{\Hypertarget{classJson__path__clone_ab1c40c5424e17ba7dddaf168c36fbced}\label{classJson__path__clone_ab1c40c5424e17ba7dddaf168c36fbced}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!contains\+\_\+ellipsis@{contains\+\_\+ellipsis}}
+\index{contains\+\_\+ellipsis@{contains\+\_\+ellipsis}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{contains\+\_\+ellipsis()}{contains\_ellipsis()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+\_\+clone\+::contains\+\_\+ellipsis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return true if the path contains an ellipsis token 
+
+Implements \mbox{\hyperlink{classJson__seekable__path_a3c853224d800bf230962d9521fe466d9}{Json\+\_\+seekable\+\_\+path}}.
+
+\mbox{\Hypertarget{classJson__path__clone_afc7f1eee2eb7e50ab90c0a52dd2e7fa4}\label{classJson__path__clone_afc7f1eee2eb7e50ab90c0a52dd2e7fa4}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!get\+\_\+leg\+\_\+at@{get\+\_\+leg\+\_\+at}}
+\index{get\+\_\+leg\+\_\+at@{get\+\_\+leg\+\_\+at}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{get\+\_\+leg\+\_\+at()}{get\_leg\_at()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$ Json\+\_\+path\+\_\+clone\+::get\+\_\+leg\+\_\+at (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the ith (numbered from 0) leg
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & 0-\/based index into the cloned path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if the index is out of range. Otherwise, a pointer to the corresponding \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__seekable__path_a590e675762b99402555d555fb99ffa4f}{Json\+\_\+seekable\+\_\+path}}.
+
+\mbox{\Hypertarget{classJson__path__clone_a7b3217b45baaa958cc2a48a1e03bbe31}\label{classJson__path__clone_a7b3217b45baaa958cc2a48a1e03bbe31}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!leg\+\_\+count@{leg\+\_\+count}}
+\index{leg\+\_\+count@{leg\+\_\+count}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{leg\+\_\+count()}{leg\_count()}}
+{\footnotesize\ttfamily size\+\_\+t Json\+\_\+path\+\_\+clone\+::leg\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the number of legs in this cloned path 
+
+Implements \mbox{\hyperlink{classJson__seekable__path_aa268c1af2eec01b70924509a23b8db59}{Json\+\_\+seekable\+\_\+path}}.
+
+\mbox{\Hypertarget{classJson__path__clone_afbf830602783d78bb7283fcaf35e7d9e}\label{classJson__path__clone_afbf830602783d78bb7283fcaf35e7d9e}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!pop@{pop}}
+\index{pop@{pop}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classJson__path__leg}{Json\+\_\+path\+\_\+leg}} $\ast$ Json\+\_\+path\+\_\+clone\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pop the last leg element.
+
+\begin{DoxyReturn}{Returns}
+the last leg popped off 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__path__clone_aa9a9fa559013cddfa0f1096b72a917e0}\label{classJson__path__clone_aa9a9fa559013cddfa0f1096b72a917e0}} 
+\index{Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}!set@{set}}
+\index{set@{set}!Json\+\_\+path\+\_\+clone@{Json\+\_\+path\+\_\+clone}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily bool Json\+\_\+path\+\_\+clone\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__seekable__path}{Json\+\_\+seekable\+\_\+path}} $\ast$}]{source }\end{DoxyParamCaption})}
+
+Clear this clone and then add all of the legs from another path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em other} & The source path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+json\+\_\+path.\+h\item 
+json\+\_\+path.\+cc\end{DoxyCompactItemize}

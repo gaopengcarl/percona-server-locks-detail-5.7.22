@@ -1,0 +1,70 @@
+\hypertarget{classItem__int__with__ref}{}\section{Item\+\_\+int\+\_\+with\+\_\+ref Class Reference}
+\label{classItem__int__with__ref}\index{Item\+\_\+int\+\_\+with\+\_\+ref@{Item\+\_\+int\+\_\+with\+\_\+ref}}
+Inheritance diagram for Item\+\_\+int\+\_\+with\+\_\+ref\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{classItem__int__with__ref}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__int__with__ref_af0a6d2f5ee9bc5f6a87719a95ffada92}\label{classItem__int__with__ref_af0a6d2f5ee9bc5f6a87719a95ffada92}} 
+{\bfseries Item\+\_\+int\+\_\+with\+\_\+ref} (enum\+\_\+field\+\_\+types field\+\_\+type\+\_\+arg, longlong i, \mbox{\hyperlink{classItem}{Item}} $\ast$ref\+\_\+arg, my\+\_\+bool unsigned\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__int__with__ref_af8f51b2afadcdbcedfbf03754369c96c}\label{classItem__int__with__ref_af8f51b2afadcdbcedfbf03754369c96c}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries clone\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem__int__with__ref_a3a12e419a8bc426c17172ac759ed2364}\label{classItem__int__with__ref_a3a12e419a8bc426c17172ac759ed2364}} 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries real\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem__int__with__ref_af272b8c99af4b333e18b01a555afa4e8}\label{classItem__int__with__ref_af272b8c99af4b333e18b01a555afa4e8}} 
+enum\+\_\+field\+\_\+types {\bfseries field\+\_\+type} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem__int__with__ref_a3b0eb8a477df3718cd623935eaaa73de}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__int__with__ref_acf3803ca61df664a11a4414a1d7f4673}\label{classItem__int__with__ref_acf3803ca61df664a11a4414a1d7f4673}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries ref}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__int__with__ref_a3b0eb8a477df3718cd623935eaaa73de}\label{classItem__int__with__ref_a3b0eb8a477df3718cd623935eaaa73de}} 
+\index{Item\+\_\+int\+\_\+with\+\_\+ref@{Item\+\_\+int\+\_\+with\+\_\+ref}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item\+\_\+int\+\_\+with\+\_\+ref@{Item\+\_\+int\+\_\+with\+\_\+ref}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+\_\+int\+\_\+with\+\_\+ref\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Store this item\textquotesingle{}s int-\/value in a field
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field where the int value is to be stored \\
+\hline
+{\em no\+\_\+conversions} & Only applies if the value to store is N\+U\+LL (null\+\_\+value is true) and N\+U\+LL is not allowed in field. In that case\+: if no\+\_\+coversion is true, do nothing and return with error T\+Y\+P\+E\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+V\+I\+O\+L\+A\+T\+I\+ON. If no\+\_\+coversion is false, the field\textquotesingle{}s default value is stored if one exists. Otherwise an error is returned.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & Storing of value went fine without warnings or errors \\
+\hline
+{\em !\+T\+Y\+P\+E\+\_\+\+OK} & Warning/error as indicated by type\+\_\+conversion\+\_\+status enum value \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__int_a61fc7a6461f8d3f027fc91b5aeca8d1b}{Item\+\_\+int}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

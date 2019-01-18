@@ -1,0 +1,488 @@
+\hypertarget{structTABLE__SHARE}{}\section{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE Struct Reference}
+\label{structTABLE__SHARE}\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a3584a4257b4863abf5d121aa68b7367c}\label{structTABLE__SHARE_a3584a4257b4863abf5d121aa68b7367c}} 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ {\bfseries db\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_abfb6bd113ca575bf522db1c577c2d7ae}\label{structTABLE__SHARE_abfb6bd113ca575bf522db1c577c2d7ae}} 
+void {\bfseries set\+\_\+table\+\_\+cache\+\_\+key} (char $\ast$key\+\_\+buff, size\+\_\+t key\+\_\+length)
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_abc8c03e819aebd0e94325f86184268ae}\label{structTABLE__SHARE_abc8c03e819aebd0e94325f86184268ae}} 
+void {\bfseries set\+\_\+table\+\_\+cache\+\_\+key} (char $\ast$key\+\_\+buff, const char $\ast$key, size\+\_\+t key\+\_\+length)
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a85e93a607f794a912567104ff63cc8e2}\label{structTABLE__SHARE_a85e93a607f794a912567104ff63cc8e2}} 
+bool {\bfseries honor\+\_\+global\+\_\+locks} ()
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_af38b8e445ebfe7c978c5b13a4c750a92}\label{structTABLE__SHARE_af38b8e445ebfe7c978c5b13a4c750a92}} 
+ulonglong {\bfseries get\+\_\+table\+\_\+def\+\_\+version} ()
+\item 
+bool \mbox{\hyperlink{structTABLE__SHARE_aa639ddd12ec5072322dee1af1a64efb4}{has\+\_\+old\+\_\+version}} () const
+\item 
+enum enum\+\_\+table\+\_\+ref\+\_\+type \mbox{\hyperlink{structTABLE__SHARE_ad3a3e3e4c725c1814866341fd65002bf}{get\+\_\+table\+\_\+ref\+\_\+type}} () const
+\item 
+ulonglong \mbox{\hyperlink{structTABLE__SHARE_a87f19366f330007fb29fa6261961fb06}{get\+\_\+table\+\_\+ref\+\_\+version}} () const
+\item 
+bool \mbox{\hyperlink{structTABLE__SHARE_a084ed977027000a392ff8992d540f257}{visit\+\_\+subgraph}} (\mbox{\hyperlink{classWait__for__flush}{Wait\+\_\+for\+\_\+flush}} $\ast$waiting\+\_\+ticket, \mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$gvisitor)
+\item 
+bool \mbox{\hyperlink{structTABLE__SHARE_a7570f5c5956dfda8b27bef43e24492d5}{wait\+\_\+for\+\_\+old\+\_\+version}} (T\+HD $\ast$thd, struct timespec $\ast$abstime, uint deadlock\+\_\+weight)
+\item 
+void \mbox{\hyperlink{structTABLE__SHARE_a18fb7405f4f0af28970bdcbf85aed419}{destroy}} ()
+\item 
+bool \mbox{\hyperlink{structTABLE__SHARE_a8fb1d77c5db742bdbaf613c0d7923581}{has\+\_\+compressed\+\_\+columns}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T\+A\+B\+L\+E\+\_\+\+C\+A\+T\+E\+G\+O\+RY \mbox{\hyperlink{structTABLE__SHARE_aaf3e5f8c4f8f32d7e7b3451800e03243}{table\+\_\+category}}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a05598e1a3c67f5a1264b53b19447fe64}\label{structTABLE__SHARE_a05598e1a3c67f5a1264b53b19447fe64}} 
+H\+A\+SH {\bfseries name\+\_\+hash}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a0c48fc8b8cf0916d4ef839f4c4bc62df}\label{structTABLE__SHARE_a0c48fc8b8cf0916d4ef839f4c4bc62df}} 
+M\+E\+M\+\_\+\+R\+O\+OT {\bfseries mem\+\_\+root}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a3ba1c703b3ae9c458d7794b2ca1fa1a9}\label{structTABLE__SHARE_a3ba1c703b3ae9c458d7794b2ca1fa1a9}} 
+T\+Y\+P\+E\+L\+IB {\bfseries keynames}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a791c2e0578d0065faf65694d47fcd0f0}\label{structTABLE__SHARE_a791c2e0578d0065faf65694d47fcd0f0}} 
+T\+Y\+P\+E\+L\+IB {\bfseries fieldnames}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_adb2550b7ed3fef5452a08ed447d410aa}\label{structTABLE__SHARE_adb2550b7ed3fef5452a08ed447d410aa}} 
+T\+Y\+P\+E\+L\+IB $\ast$ {\bfseries intervals}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aa8049afbfa5ce54ee4101c98704b4933}\label{structTABLE__SHARE_aa8049afbfa5ce54ee4101c98704b4933}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries L\+O\+C\+K\+\_\+ha\+\_\+data}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a95dbf649aea92b7488a9216a78404883}\label{structTABLE__SHARE_a95dbf649aea92b7488a9216a78404883}} 
+\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$ {\bfseries next}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_addcfee0201d0799d45d79ecf78a101ba}\label{structTABLE__SHARE_addcfee0201d0799d45d79ecf78a101ba}} 
+\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$$\ast$ {\bfseries prev}
+\item 
+\mbox{\hyperlink{classTable__cache__element}{Table\+\_\+cache\+\_\+element}} $\ast$$\ast$ \mbox{\hyperlink{structTABLE__SHARE_a0b2d66b9a33c0007107a15690955b44f}{cache\+\_\+element}}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a57b1c0c764dfc135df05cdacb56f4c46}\label{structTABLE__SHARE_a57b1c0c764dfc135df05cdacb56f4c46}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries field}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a6a38d8b72d995fdba683a5265b8a26ca}\label{structTABLE__SHARE_a6a38d8b72d995fdba683a5265b8a26ca}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries found\+\_\+next\+\_\+number\+\_\+field}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ae67f48414a9d935537f95dfbf288d467}\label{structTABLE__SHARE_ae67f48414a9d935537f95dfbf288d467}} 
+\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$ {\bfseries key\+\_\+info}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aef62713dc31c737942c61dc2b65e23ce}\label{structTABLE__SHARE_aef62713dc31c737942c61dc2b65e23ce}} 
+uint $\ast$ {\bfseries blob\+\_\+field}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a3d1ba87cc3d5f809c9399afc7c9883b4}\label{structTABLE__SHARE_a3d1ba87cc3d5f809c9399afc7c9883b4}} 
+uchar $\ast$ {\bfseries default\+\_\+values}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a2020d16e55b0a5b5a8f3e1ea92a18be3}\label{structTABLE__SHARE_a2020d16e55b0a5b5a8f3e1ea92a18be3}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries comment}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a2434e31ab3462ba94c12fa8136d6c268}\label{structTABLE__SHARE_a2434e31ab3462ba94c12fa8136d6c268}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries compress}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a3eccf6126b6b28290eb0f988c5c5f0d7}\label{structTABLE__SHARE_a3eccf6126b6b28290eb0f988c5c5f0d7}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries encrypt\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ab3ba77668981a22fe9b77da248948e40}\label{structTABLE__SHARE_ab3ba77668981a22fe9b77da248948e40}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries table\+\_\+charset}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aad30c4966a570f75fb3fb17d9962596e}\label{structTABLE__SHARE_aad30c4966a570f75fb3fb17d9962596e}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries all\+\_\+set}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a60e9c1bddf08dc0e703e99d53b08c09b}\label{structTABLE__SHARE_a60e9c1bddf08dc0e703e99d53b08c09b}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries table\+\_\+cache\+\_\+key}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a392437f27551e89f8d88942c07223565}\label{structTABLE__SHARE_a392437f27551e89f8d88942c07223565}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries db}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a8c14684072ff35282948ddd9b96c1e71}\label{structTABLE__SHARE_a8c14684072ff35282948ddd9b96c1e71}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries table\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a962464167871d031816fb1d4bd424a7d}\label{structTABLE__SHARE_a962464167871d031816fb1d4bd424a7d}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries path}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a4a025f1d1b2742fd2637f08c2b3edd65}\label{structTABLE__SHARE_a4a025f1d1b2742fd2637f08c2b3edd65}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries normalized\+\_\+path}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a698bb3d756057cfe16293ae7ed7f58a9}\label{structTABLE__SHARE_a698bb3d756057cfe16293ae7ed7f58a9}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries connect\+\_\+string}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a6382e1f6d36df15729858757c0d21ed7}\label{structTABLE__SHARE_a6382e1f6d36df15729858757c0d21ed7}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries keys\+\_\+in\+\_\+use}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a39dd05a4d77195d1d70551bd033efa71}\label{structTABLE__SHARE_a39dd05a4d77195d1d70551bd033efa71}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries keys\+\_\+for\+\_\+keyread}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a6ab3db171120813ac9114644677e2ebf}\label{structTABLE__SHARE_a6ab3db171120813ac9114644677e2ebf}} 
+ha\+\_\+rows {\bfseries min\+\_\+rows}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ada4d1117f2d61d4a88f01a752bc63b0d}\label{structTABLE__SHARE_ada4d1117f2d61d4a88f01a752bc63b0d}} 
+ha\+\_\+rows {\bfseries max\+\_\+rows}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a5a1145ab003fb15eab782f7ba1365565}\label{structTABLE__SHARE_a5a1145ab003fb15eab782f7ba1365565}} 
+ulong {\bfseries avg\+\_\+row\+\_\+length}
+\item 
+ulong \mbox{\hyperlink{structTABLE__SHARE_ae04c033776f1dc39863ebf60b842c505}{version}}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a366454b8e22e3ffac5ea81b2f7ac3645}\label{structTABLE__SHARE_a366454b8e22e3ffac5ea81b2f7ac3645}} 
+ulong {\bfseries mysql\+\_\+version}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a52cc1e26103087d0a0053a6e00f37898}\label{structTABLE__SHARE_a52cc1e26103087d0a0053a6e00f37898}} 
+ulong {\bfseries reclength}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a0215455778e239d06c981c81ed7f267d}\label{structTABLE__SHARE_a0215455778e239d06c981c81ed7f267d}} 
+ulong {\bfseries stored\+\_\+rec\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a5abe32cb7b03f2a5aafd131ae64bd3f4}\label{structTABLE__SHARE_a5abe32cb7b03f2a5aafd131ae64bd3f4}} 
+\mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} {\bfseries db\+\_\+plugin}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ae7fce774da971ed7499601c8632fe06a}\label{structTABLE__SHARE_ae7fce774da971ed7499601c8632fe06a}} 
+enum row\+\_\+type {\bfseries row\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a2a4af8d43306e0f3f43567743cc3bd46}\label{structTABLE__SHARE_a2a4af8d43306e0f3f43567743cc3bd46}} 
+enum tmp\+\_\+table\+\_\+type {\bfseries tmp\+\_\+table}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a78058d2d9158f790bc4089aed345ef75}\label{structTABLE__SHARE_a78058d2d9158f790bc4089aed345ef75}} 
+uint {\bfseries ref\+\_\+count}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aee18a60e57328051e38caa228779263c}\label{structTABLE__SHARE_aee18a60e57328051e38caa228779263c}} 
+uint {\bfseries key\+\_\+block\+\_\+size}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a1bad47f770139b365a44fc79ba57852f}\label{structTABLE__SHARE_a1bad47f770139b365a44fc79ba57852f}} 
+uint {\bfseries stats\+\_\+sample\+\_\+pages}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a22ef93ba1be0e82beef2706ddbbb6512}\label{structTABLE__SHARE_a22ef93ba1be0e82beef2706ddbbb6512}} 
+enum\+\_\+stats\+\_\+auto\+\_\+recalc {\bfseries stats\+\_\+auto\+\_\+recalc}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a82a94d999733481683853c906ad45d94}\label{structTABLE__SHARE_a82a94d999733481683853c906ad45d94}} 
+uint {\bfseries null\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aaf22b6e5444378383bd7cdaad2a66d44}\label{structTABLE__SHARE_aaf22b6e5444378383bd7cdaad2a66d44}} 
+uint {\bfseries last\+\_\+null\+\_\+bit\+\_\+pos}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a76603c713aa380320e0435ab864e767b}\label{structTABLE__SHARE_a76603c713aa380320e0435ab864e767b}} 
+uint {\bfseries fields}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ac357dd06f093ab53685f90e4479e45ca}\label{structTABLE__SHARE_ac357dd06f093ab53685f90e4479e45ca}} 
+uint {\bfseries stored\+\_\+fields}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a64102a74e7bfcf15064b20f07f2e1f7d}\label{structTABLE__SHARE_a64102a74e7bfcf15064b20f07f2e1f7d}} 
+uint {\bfseries rec\+\_\+buff\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a9976c96f5d6adf1bcfb696372b1061bc}\label{structTABLE__SHARE_a9976c96f5d6adf1bcfb696372b1061bc}} 
+uint {\bfseries keys}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ad1b07ac2e68655a53c490c2d06bfb703}\label{structTABLE__SHARE_ad1b07ac2e68655a53c490c2d06bfb703}} 
+uint {\bfseries key\+\_\+parts}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a8ca7519886ed6d8704fb08c8d94081ce}\label{structTABLE__SHARE_a8ca7519886ed6d8704fb08c8d94081ce}} 
+uint {\bfseries max\+\_\+key\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a49dfb606b2701d241a38ab90925b90b1}\label{structTABLE__SHARE_a49dfb606b2701d241a38ab90925b90b1}} 
+uint {\bfseries max\+\_\+unique\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a39e11b6e0462615dd0fbecb6811965cb}\label{structTABLE__SHARE_a39e11b6e0462615dd0fbecb6811965cb}} 
+uint {\bfseries total\+\_\+key\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ae93d5d4b08f553f12d688eb32295e1e2}\label{structTABLE__SHARE_ae93d5d4b08f553f12d688eb32295e1e2}} 
+uint {\bfseries uniques}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ae2df0c7a7a4a7e4c9dfded723c9948e1}\label{structTABLE__SHARE_ae2df0c7a7a4a7e4c9dfded723c9948e1}} 
+uint {\bfseries null\+\_\+fields}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a670fbacdf132a16c4ec47fe26887c93f}\label{structTABLE__SHARE_a670fbacdf132a16c4ec47fe26887c93f}} 
+uint {\bfseries blob\+\_\+fields}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a52db1f6bd2ddde9de2b960efc2db0c3c}\label{structTABLE__SHARE_a52db1f6bd2ddde9de2b960efc2db0c3c}} 
+uint {\bfseries varchar\+\_\+fields}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a5fcfb8b9d796499b8722c85f54df6cbc}\label{structTABLE__SHARE_a5fcfb8b9d796499b8722c85f54df6cbc}} 
+uint {\bfseries db\+\_\+create\+\_\+options}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ad820af3d19c7aed9d52570b3921159a4}\label{structTABLE__SHARE_ad820af3d19c7aed9d52570b3921159a4}} 
+uint {\bfseries db\+\_\+options\+\_\+in\+\_\+use}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ab4a2285b27cd4868844282ad874a8400}\label{structTABLE__SHARE_ab4a2285b27cd4868844282ad874a8400}} 
+uint {\bfseries db\+\_\+record\+\_\+offset}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a8819a5f792902ecd73f3d590544324a3}\label{structTABLE__SHARE_a8819a5f792902ecd73f3d590544324a3}} 
+uint {\bfseries rowid\+\_\+field\+\_\+offset}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_acc0c46f0b8cfed9be7b8d1f7ce440449}\label{structTABLE__SHARE_acc0c46f0b8cfed9be7b8d1f7ce440449}} 
+uint {\bfseries primary\+\_\+key}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a03be8a6444b62c4c642b1a1cf1aef14a}\label{structTABLE__SHARE_a03be8a6444b62c4c642b1a1cf1aef14a}} 
+uint {\bfseries next\+\_\+number\+\_\+index}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a98dc7a8320626d42c84cf5473104f90e}\label{structTABLE__SHARE_a98dc7a8320626d42c84cf5473104f90e}} 
+uint {\bfseries next\+\_\+number\+\_\+key\+\_\+offset}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a5301f811144dcc37ef5a478d196773c1}\label{structTABLE__SHARE_a5301f811144dcc37ef5a478d196773c1}} 
+uint {\bfseries next\+\_\+number\+\_\+keypart}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a96c8476b11df30f0e238e5f0c2d03a96}\label{structTABLE__SHARE_a96c8476b11df30f0e238e5f0c2d03a96}} 
+uint {\bfseries error}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a8c74c898ddc010ac3c031a920106bb68}\label{structTABLE__SHARE_a8c74c898ddc010ac3c031a920106bb68}} 
+uint {\bfseries open\+\_\+errno}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a7e291314f259c65960ef7e05fc1462c3}\label{structTABLE__SHARE_a7e291314f259c65960ef7e05fc1462c3}} 
+uint {\bfseries errarg}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a3231c5370a6444e035f1e8683f005560}\label{structTABLE__SHARE_a3231c5370a6444e035f1e8683f005560}} 
+uint {\bfseries column\+\_\+bitmap\+\_\+size}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a1496e1a4e2d543c8f1072a137693f4b7}\label{structTABLE__SHARE_a1496e1a4e2d543c8f1072a137693f4b7}} 
+uchar {\bfseries frm\+\_\+version}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ad3537815c0d091c7a294f9cd20ed21c1}\label{structTABLE__SHARE_ad3537815c0d091c7a294f9cd20ed21c1}} 
+uint {\bfseries vfields}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aa9ebd79ee0f823daf2f6d1dc37a9276e}\label{structTABLE__SHARE_aa9ebd79ee0f823daf2f6d1dc37a9276e}} 
+bool {\bfseries null\+\_\+field\+\_\+first}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a82eaf36f0c2bb14813d2eede76ea1484}\label{structTABLE__SHARE_a82eaf36f0c2bb14813d2eede76ea1484}} 
+bool {\bfseries system}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a8f5c9bd8f6c0322e3dacfdd9c1b6ee47}\label{structTABLE__SHARE_a8f5c9bd8f6c0322e3dacfdd9c1b6ee47}} 
+bool {\bfseries crypted}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a469bc62a7f83b21473a0bcd2d56093c3}\label{structTABLE__SHARE_a469bc62a7f83b21473a0bcd2d56093c3}} 
+bool {\bfseries db\+\_\+low\+\_\+byte\+\_\+first}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_acef8f30c73bc89688f3878032e1a01a8}\label{structTABLE__SHARE_acef8f30c73bc89688f3878032e1a01a8}} 
+bool {\bfseries crashed}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a84367de5b2560cd024e03a48948a471d}\label{structTABLE__SHARE_a84367de5b2560cd024e03a48948a471d}} 
+bool {\bfseries is\+\_\+view}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a97f617d7027236acc192a9ac8a8751fd}\label{structTABLE__SHARE_a97f617d7027236acc192a9ac8a8751fd}} 
+bool {\bfseries m\+\_\+open\+\_\+in\+\_\+progress}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a4047b56bc5e89193b7d1947cacc1d914}\label{structTABLE__SHARE_a4047b56bc5e89193b7d1947cacc1d914}} 
+Table\+\_\+id {\bfseries table\+\_\+map\+\_\+id}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a527306fd6c94f70d9dc1f6c19f91347e}\label{structTABLE__SHARE_a527306fd6c94f70d9dc1f6c19f91347e}} 
+int {\bfseries cached\+\_\+row\+\_\+logging\+\_\+check}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_aa82bcc12ba8052df51dd1ef1e464f1e5}\label{structTABLE__SHARE_aa82bcc12ba8052df51dd1ef1e464f1e5}} 
+enum ha\+\_\+storage\+\_\+media {\bfseries default\+\_\+storage\+\_\+media}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ad916b8032c5b4752dcc3f3a4e8e73122}\label{structTABLE__SHARE_ad916b8032c5b4752dcc3f3a4e8e73122}} 
+char $\ast$ {\bfseries tablespace}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_abc667bb92ffaf26c47534487f138c3b9}\label{structTABLE__SHARE_abc667bb92ffaf26c47534487f138c3b9}} 
+bool {\bfseries auto\+\_\+partitioned}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a8188c2ec7195f2e944e137c3c55ce6c7}\label{structTABLE__SHARE_a8188c2ec7195f2e944e137c3c55ce6c7}} 
+char $\ast$ {\bfseries partition\+\_\+info\+\_\+str}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_ae7ac57eb29df9d2ddf7d6e4dd4f99e40}\label{structTABLE__SHARE_ae7ac57eb29df9d2ddf7d6e4dd4f99e40}} 
+uint {\bfseries partition\+\_\+info\+\_\+str\+\_\+len}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a896a1d742942f0a3a9eab68ce9851fc7}\label{structTABLE__SHARE_a896a1d742942f0a3a9eab68ce9851fc7}} 
+uint {\bfseries partition\+\_\+info\+\_\+buffer\+\_\+size}
+\item 
+\mbox{\Hypertarget{structTABLE__SHARE_a95776e305df5a49446e9b3a12c8e9755}\label{structTABLE__SHARE_a95776e305df5a49446e9b3a12c8e9755}} 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ {\bfseries default\+\_\+part\+\_\+db\+\_\+type}
+\item 
+const \mbox{\hyperlink{structst__table__field__def}{T\+A\+B\+L\+E\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+EF}} $\ast$ \mbox{\hyperlink{structTABLE__SHARE_a2eae47fa6d1ab98ea2af1b1073170274}{table\+\_\+field\+\_\+def\+\_\+cache}}
+\item 
+\mbox{\hyperlink{classHandler__share}{Handler\+\_\+share}} $\ast$ \mbox{\hyperlink{structTABLE__SHARE_a20f65b925c665708bd19df8190115c66}{ha\+\_\+share}}
+\item 
+P\+S\+I\+\_\+table\+\_\+share $\ast$ \mbox{\hyperlink{structTABLE__SHARE_a40d5321098268634196a67766c666d93}{m\+\_\+psi}}
+\item 
+\mbox{\hyperlink{classI__P__List}{Wait\+\_\+for\+\_\+flush\+\_\+list}} \mbox{\hyperlink{structTABLE__SHARE_aa9f03d5defc37e2c2c919f59d77988a0}{m\+\_\+flush\+\_\+tickets}}
+\item 
+const \mbox{\hyperlink{classFile__parser}{File\+\_\+parser}} $\ast$ \mbox{\hyperlink{structTABLE__SHARE_a6d49595d1beeea24f9e653efaa0d41a2}{view\+\_\+def}}
+\item 
+bool \mbox{\hyperlink{structTABLE__SHARE_ada4f1d80a7e68e1f1bcc8715fbe55179}{rfr\+\_\+lookup\+\_\+warning}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure is shared between different table objects. There is one instance of table share per one table in the database. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structTABLE__SHARE_a18fb7405f4f0af28970bdcbf85aed419}\label{structTABLE__SHARE_a18fb7405f4f0af28970bdcbf85aed419}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!destroy@{destroy}}
+\index{destroy@{destroy}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Release resources and free memory occupied by the table share.
+
+Release resources (plugins) used by the share and free its memory. \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} is self-\/contained -- it\textquotesingle{}s stored in its own M\+E\+M\+\_\+\+R\+O\+OT. Free this M\+E\+M\+\_\+\+R\+O\+OT. \mbox{\Hypertarget{structTABLE__SHARE_ad3a3e3e4c725c1814866341fd65002bf}\label{structTABLE__SHARE_ad3a3e3e4c725c1814866341fd65002bf}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!get\+\_\+table\+\_\+ref\+\_\+type@{get\+\_\+table\+\_\+ref\+\_\+type}}
+\index{get\+\_\+table\+\_\+ref\+\_\+type@{get\+\_\+table\+\_\+ref\+\_\+type}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+ref\+\_\+type()}{get\_table\_ref\_type()}}
+{\footnotesize\ttfamily enum enum\+\_\+table\+\_\+ref\+\_\+type T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::get\+\_\+table\+\_\+ref\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convert unrelated members of \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} to one enum representing its type.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000131}{Todo}}]perhaps we need to have a member instead of a function. \end{DoxyRefDesc}
+\mbox{\Hypertarget{structTABLE__SHARE_a87f19366f330007fb29fa6261961fb06}\label{structTABLE__SHARE_a87f19366f330007fb29fa6261961fb06}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!get\+\_\+table\+\_\+ref\+\_\+version@{get\+\_\+table\+\_\+ref\+\_\+version}}
+\index{get\+\_\+table\+\_\+ref\+\_\+version@{get\+\_\+table\+\_\+ref\+\_\+version}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+ref\+\_\+version()}{get\_table\_ref\_version()}}
+{\footnotesize\ttfamily ulonglong T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::get\+\_\+table\+\_\+ref\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a table metadata version. for base tables and views, we return table\+\_\+map\+\_\+id. It is assigned from a global counter incremented for each new table loaded into the table definition cache (T\+DC). for temporary tables it\textquotesingle{}s table\+\_\+map\+\_\+id again. But for temporary tables table\+\_\+map\+\_\+id is assigned from thd-\/$>$query\+\_\+id. The latter is assigned from a thread local counter incremented for every new S\+QL statement. Since temporary tables are thread-\/local, each temporary table gets a unique id. for everything else (e.\+g. information schema tables), the version id is zero.
+
+This choice of version id is a large compromise to have a working prepared statement validation in 5.\+1. In future version ids will be persistent, as described in WL\#4180.
+
+Let\textquotesingle{}s try to explain why and how this limited solution allows to validate prepared statements.
+
+Firstly, sets (in mathematical sense) of version numbers never intersect for different table types. Therefore, version id of a temporary table is never compared with a version id of a view, and vice versa.
+
+Secondly, for base tables and views, we know that each D\+DL flushes the respective share from the T\+DC. This ensures that whenever a table is altered or dropped and recreated, it gets a new version id. Unfortunately, since elements of the T\+DC are also flushed on L\+RU basis, this choice of version ids leads to false positives. E.\+g. when the T\+DC size is too small, we may have a S\+E\+L\+E\+CT F\+R\+OM I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+T\+A\+B\+L\+ES flush all its elements, which in turn will lead to a validation error and a subsequent reprepare of all prepared statements. This is considered acceptable, since as long as prepared statements are automatically reprepared, spurious invalidation is only a performance hit. Besides, no better simple solution exists.
+
+For temporary tables, using thd-\/$>$query\+\_\+id ensures that if a temporary table was altered or recreated, a new version id is assigned. This suits validation needs very well and will perhaps never change.
+
+Metadata of information schema tables never changes. Thus we can safely assume 0 for a good enough version id.
+
+Finally, by taking into account table type, we always track that a change has taken place when a view is replaced with a base table, a base table is replaced with a temporary table and so on.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structTABLE__LIST_a187525004d9f242ed0b6291d333ebea0}{T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structTABLE__SHARE_a8fb1d77c5db742bdbaf613c0d7923581}\label{structTABLE__SHARE_a8fb1d77c5db742bdbaf613c0d7923581}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!has\+\_\+compressed\+\_\+columns@{has\+\_\+compressed\+\_\+columns}}
+\index{has\+\_\+compressed\+\_\+columns@{has\+\_\+compressed\+\_\+columns}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{has\+\_\+compressed\+\_\+columns()}{has\_compressed\_columns()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::has\+\_\+compressed\+\_\+columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks if \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} has at least one field with C\+O\+L\+U\+M\+N\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED flag. \mbox{\Hypertarget{structTABLE__SHARE_aa639ddd12ec5072322dee1af1a64efb4}\label{structTABLE__SHARE_aa639ddd12ec5072322dee1af1a64efb4}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!has\+\_\+old\+\_\+version@{has\+\_\+old\+\_\+version}}
+\index{has\+\_\+old\+\_\+version@{has\+\_\+old\+\_\+version}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{has\+\_\+old\+\_\+version()}{has\_old\_version()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::has\+\_\+old\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Is this table share being expelled from the table definition cache? \mbox{\Hypertarget{structTABLE__SHARE_a084ed977027000a392ff8992d540f257}\label{structTABLE__SHARE_a084ed977027000a392ff8992d540f257}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!visit\+\_\+subgraph@{visit\+\_\+subgraph}}
+\index{visit\+\_\+subgraph@{visit\+\_\+subgraph}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{visit\+\_\+subgraph()}{visit\_subgraph()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::visit\+\_\+subgraph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWait__for__flush}{Wait\+\_\+for\+\_\+flush}} $\ast$}]{wait\+\_\+for\+\_\+flush,  }\item[{\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$}]{gvisitor }\end{DoxyParamCaption})}
+
+Traverse portion of wait-\/for graph which is reachable through this table share in search for deadlocks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em waiting\+\_\+ticket} & Ticket representing wait for this share. \\
+\hline
+{\em dvisitor} & Deadlock detection visitor.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & A deadlock is found. A victim is remembered by the visitor. \\
+\hline
+{\em F\+A\+L\+SE} & No deadlocks, it\textquotesingle{}s OK to begin wait. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structTABLE__SHARE_a7570f5c5956dfda8b27bef43e24492d5}\label{structTABLE__SHARE_a7570f5c5956dfda8b27bef43e24492d5}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!wait\+\_\+for\+\_\+old\+\_\+version@{wait\+\_\+for\+\_\+old\+\_\+version}}
+\index{wait\+\_\+for\+\_\+old\+\_\+version@{wait\+\_\+for\+\_\+old\+\_\+version}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+old\+\_\+version()}{wait\_for\_old\_version()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::wait\+\_\+for\+\_\+old\+\_\+version (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{struct timespec $\ast$}]{abstime,  }\item[{uint}]{deadlock\+\_\+weight }\end{DoxyParamCaption})}
+
+Wait until the subject share is removed from the table definition cache and make sure it\textquotesingle{}s destroyed.
+
+\begin{DoxyNote}{Note}
+This method may access the share concurrently with another thread if the share is in the process of being opened, i.\+e., that m\+\_\+open\+\_\+in\+\_\+progress is true. In this case, close\+\_\+cached\+\_\+tables() may iterate over elements in the table definition cache, and call this method regardless of the share being opened or not. This works anyway since a new flush ticket is added below, and L\+O\+C\+K\+\_\+open ensures that the share may not be destroyed by another thread in the time between finding this share (having an old version) and adding the flush ticket. Thus, after this thread has added the flush ticket, the thread opening the table will eventually call free\+\_\+table\+\_\+share (as a result of releasing the share after using it, or as a result of a failing open\+\_\+table\+\_\+def()), which will notify the owners of the flush tickets, and the last one being notified will actually destroy the share.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+context} & M\+DL context for thread which is going to wait. \\
+\hline
+{\em abstime} & Timeout for waiting as absolute time value. \\
+\hline
+{\em deadlock\+\_\+weight} & Weight of this wait for deadlock detector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+L\+O\+C\+K\+\_\+open is write locked, the share is used (has non-\/zero reference count), is marked for flush and this connection does not reference the share. L\+O\+C\+K\+\_\+open will be unlocked temporarily during execution.
+\end{DoxyPrecond}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & -\/ Success. \\
+\hline
+{\em T\+R\+UE} & -\/ Error (O\+OM, deadlock, timeout, etc...). \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structTABLE__SHARE_a0b2d66b9a33c0007107a15690955b44f}\label{structTABLE__SHARE_a0b2d66b9a33c0007107a15690955b44f}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!cache\+\_\+element@{cache\+\_\+element}}
+\index{cache\+\_\+element@{cache\+\_\+element}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{cache\+\_\+element}{cache\_element}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable__cache__element}{Table\+\_\+cache\+\_\+element}}$\ast$$\ast$ T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::cache\+\_\+element}
+
+Array of table\+\_\+cache\+\_\+instances pointers to elements of table caches respresenting this table in each of \mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} instances. Allocated along with the share itself in alloc\+\_\+table\+\_\+share(). Each element of the array is protected by Table\+\_\+cache\+::m\+\_\+lock in the corresponding \mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}}. False sharing should not be a problem in this case as elements of this array are supposed to be updated rarely. \mbox{\Hypertarget{structTABLE__SHARE_a20f65b925c665708bd19df8190115c66}\label{structTABLE__SHARE_a20f65b925c665708bd19df8190115c66}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!ha\+\_\+share@{ha\+\_\+share}}
+\index{ha\+\_\+share@{ha\+\_\+share}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{ha\+\_\+share}{ha\_share}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandler__share}{Handler\+\_\+share}}$\ast$ T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::ha\+\_\+share}
+
+Main handler\textquotesingle{}s share \mbox{\Hypertarget{structTABLE__SHARE_aa9f03d5defc37e2c2c919f59d77988a0}\label{structTABLE__SHARE_aa9f03d5defc37e2c2c919f59d77988a0}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!m\+\_\+flush\+\_\+tickets@{m\+\_\+flush\+\_\+tickets}}
+\index{m\+\_\+flush\+\_\+tickets@{m\+\_\+flush\+\_\+tickets}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{m\+\_\+flush\+\_\+tickets}{m\_flush\_tickets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classI__P__List}{Wait\+\_\+for\+\_\+flush\+\_\+list}} T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::m\+\_\+flush\+\_\+tickets}
+
+\mbox{\hyperlink{classList}{List}} of tickets representing threads waiting for the share to be flushed. \mbox{\Hypertarget{structTABLE__SHARE_a40d5321098268634196a67766c666d93}\label{structTABLE__SHARE_a40d5321098268634196a67766c666d93}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!m\+\_\+psi@{m\+\_\+psi}}
+\index{m\+\_\+psi@{m\+\_\+psi}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{m\+\_\+psi}{m\_psi}}
+{\footnotesize\ttfamily P\+S\+I\+\_\+table\+\_\+share$\ast$ T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::m\+\_\+psi}
+
+Instrumentation for this table share. \mbox{\Hypertarget{structTABLE__SHARE_ada4f1d80a7e68e1f1bcc8715fbe55179}\label{structTABLE__SHARE_ada4f1d80a7e68e1f1bcc8715fbe55179}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!rfr\+\_\+lookup\+\_\+warning@{rfr\+\_\+lookup\+\_\+warning}}
+\index{rfr\+\_\+lookup\+\_\+warning@{rfr\+\_\+lookup\+\_\+warning}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{rfr\+\_\+lookup\+\_\+warning}{rfr\_lookup\_warning}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::rfr\+\_\+lookup\+\_\+warning}
+
+True in the case if tokudb read-\/free-\/replication is used for the table without explicit pk and corresponding warning was issued to disable repeated warning. \mbox{\Hypertarget{structTABLE__SHARE_aaf3e5f8c4f8f32d7e7b3451800e03243}\label{structTABLE__SHARE_aaf3e5f8c4f8f32d7e7b3451800e03243}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!table\+\_\+category@{table\+\_\+category}}
+\index{table\+\_\+category@{table\+\_\+category}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{table\+\_\+category}{table\_category}}
+{\footnotesize\ttfamily T\+A\+B\+L\+E\+\_\+\+C\+A\+T\+E\+G\+O\+RY T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::table\+\_\+category}
+
+Category of this table. \mbox{\Hypertarget{structTABLE__SHARE_a2eae47fa6d1ab98ea2af1b1073170274}\label{structTABLE__SHARE_a2eae47fa6d1ab98ea2af1b1073170274}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!table\+\_\+field\+\_\+def\+\_\+cache@{table\+\_\+field\+\_\+def\+\_\+cache}}
+\index{table\+\_\+field\+\_\+def\+\_\+cache@{table\+\_\+field\+\_\+def\+\_\+cache}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{table\+\_\+field\+\_\+def\+\_\+cache}{table\_field\_def\_cache}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structst__table__field__def}{T\+A\+B\+L\+E\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+EF}}$\ast$ T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::table\+\_\+field\+\_\+def\+\_\+cache}
+
+Cache the checked structure of this table.
+
+The pointer data is used to describe the structure that a instance of the table must have. Each element of the array specifies a field that must exist on the table.
+
+The pointer is cached in order to perform the check only once -- when the table is loaded from the disk. \mbox{\Hypertarget{structTABLE__SHARE_ae04c033776f1dc39863ebf60b842c505}\label{structTABLE__SHARE_ae04c033776f1dc39863ebf60b842c505}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!version@{version}}
+\index{version@{version}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily ulong T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::version}
+
+\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} version, if changed the \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} must be reopened. N\+O\+TE\+: The \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} will not be reopened during L\+O\+CK T\+A\+B\+L\+ES in close\+\_\+thread\+\_\+tables!!! \mbox{\Hypertarget{structTABLE__SHARE_a6d49595d1beeea24f9e653efaa0d41a2}\label{structTABLE__SHARE_a6d49595d1beeea24f9e653efaa0d41a2}} 
+\index{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}!view\+\_\+def@{view\+\_\+def}}
+\index{view\+\_\+def@{view\+\_\+def}!T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE@{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}}
+\subsubsection{\texorpdfstring{view\+\_\+def}{view\_def}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classFile__parser}{File\+\_\+parser}}$\ast$ T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+E\+::view\+\_\+def}
+
+For shares representing views \mbox{\hyperlink{classFile__parser}{File\+\_\+parser}} object with view definition read from .F\+RM file. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

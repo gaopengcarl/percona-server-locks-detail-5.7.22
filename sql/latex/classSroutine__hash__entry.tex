@@ -1,0 +1,52 @@
+\hypertarget{classSroutine__hash__entry}{}\section{Sroutine\+\_\+hash\+\_\+entry Class Reference}
+\label{classSroutine__hash__entry}\index{Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}}
+
+
+{\ttfamily \#include $<$sp.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} \mbox{\hyperlink{classSroutine__hash__entry_a5ad1ee11879a690fc6a3c7370cdd336b}{mdl\+\_\+request}}
+\item 
+\mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$ \mbox{\hyperlink{classSroutine__hash__entry_a5a3994c4b9f777644d75cbdd994dda92}{next}}
+\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{classSroutine__hash__entry_afb4a584b7fe6061c1b1be339f162f3bd}{belong\+\_\+to\+\_\+view}}
+\item 
+int64 \mbox{\hyperlink{classSroutine__hash__entry_aeade37d74fafe8a860b1c6e37c45df97}{m\+\_\+sp\+\_\+cache\+\_\+version}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure that represents element in the set of stored routines used by statement or routine. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSroutine__hash__entry_afb4a584b7fe6061c1b1be339f162f3bd}\label{classSroutine__hash__entry_afb4a584b7fe6061c1b1be339f162f3bd}} 
+\index{Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}!belong\+\_\+to\+\_\+view@{belong\+\_\+to\+\_\+view}}
+\index{belong\+\_\+to\+\_\+view@{belong\+\_\+to\+\_\+view}!Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}}
+\subsubsection{\texorpdfstring{belong\+\_\+to\+\_\+view}{belong\_to\_view}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ Sroutine\+\_\+hash\+\_\+entry\+::belong\+\_\+to\+\_\+view}
+
+Uppermost view which directly or indirectly uses this routine. 0 if routine is not used in view. Note that it also can be 0 if statement uses routine both via view and directly. \mbox{\Hypertarget{classSroutine__hash__entry_aeade37d74fafe8a860b1c6e37c45df97}\label{classSroutine__hash__entry_aeade37d74fafe8a860b1c6e37c45df97}} 
+\index{Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}!m\+\_\+sp\+\_\+cache\+\_\+version@{m\+\_\+sp\+\_\+cache\+\_\+version}}
+\index{m\+\_\+sp\+\_\+cache\+\_\+version@{m\+\_\+sp\+\_\+cache\+\_\+version}!Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}}
+\subsubsection{\texorpdfstring{m\+\_\+sp\+\_\+cache\+\_\+version}{m\_sp\_cache\_version}}
+{\footnotesize\ttfamily int64 Sroutine\+\_\+hash\+\_\+entry\+::m\+\_\+sp\+\_\+cache\+\_\+version}
+
+This is for prepared statement validation purposes. A statement looks up and pre-\/loads all its stored functions at prepare. Later on, if a function is gone from the cache, execute may fail. Remember the version of \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} at prepare to be able to invalidate the prepared statement at execute if it changes. \mbox{\Hypertarget{classSroutine__hash__entry_a5ad1ee11879a690fc6a3c7370cdd336b}\label{classSroutine__hash__entry_a5ad1ee11879a690fc6a3c7370cdd336b}} 
+\index{Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}!mdl\+\_\+request@{mdl\+\_\+request}}
+\index{mdl\+\_\+request@{mdl\+\_\+request}!Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}}
+\subsubsection{\texorpdfstring{mdl\+\_\+request}{mdl\_request}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} Sroutine\+\_\+hash\+\_\+entry\+::mdl\+\_\+request}
+
+Metadata lock request for routine. \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} in this request is also used as a key for set. \mbox{\Hypertarget{classSroutine__hash__entry_a5a3994c4b9f777644d75cbdd994dda92}\label{classSroutine__hash__entry_a5a3994c4b9f777644d75cbdd994dda92}} 
+\index{Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}!next@{next}}
+\index{next@{next}!Sroutine\+\_\+hash\+\_\+entry@{Sroutine\+\_\+hash\+\_\+entry}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}}$\ast$ Sroutine\+\_\+hash\+\_\+entry\+::next}
+
+Next element in list linking all routines in set. See also comments for L\+E\+X\+::sroutine/sroutine\+\_\+list and \mbox{\hyperlink{classsp__head_ab26a4954ad2a135c3876fa3e0f738ed9}{sp\+\_\+head\+::m\+\_\+sroutines}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sp.\+h\end{DoxyCompactItemize}

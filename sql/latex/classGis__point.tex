@@ -1,0 +1,150 @@
+\hypertarget{classGis__point}{}\section{Gis\+\_\+point Class Reference}
+\label{classGis__point}\index{Gis\+\_\+point@{Gis\+\_\+point}}
+Inheritance diagram for Gis\+\_\+point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGis__point}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__point_a0c92d4c85bfd3d6686bb7e0fdc1e09e8}\label{classGis__point_a0c92d4c85bfd3d6686bb7e0fdc1e09e8}} 
+typedef \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} {\bfseries self}
+\item 
+\mbox{\Hypertarget{classGis__point_ab65888e9834a69f94a89e0fba77a8ab5}\label{classGis__point_ab65888e9834a69f94a89e0fba77a8ab5}} 
+typedef \mbox{\hyperlink{classGeometry}{Geometry}} {\bfseries base}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__point_a79e607bb290edc8b1a4e86b79a97f22a}\label{classGis__point_a79e607bb290edc8b1a4e86b79a97f22a}} 
+uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGis__point_a64dd5abd2a543747750b9e4d07ac0cd7}\label{classGis__point_a64dd5abd2a543747750b9e4d07ac0cd7}} 
+bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGis__point_a5296d038670df3fcbdae4d006eda0bce}\label{classGis__point_a5296d038670df3fcbdae4d006eda0bce}} 
+uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGis__point_a10cc1c1ec090e12c83a5fcb556577a52}\label{classGis__point_a10cc1c1ec090e12c83a5fcb556577a52}} 
+bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__point_a898ab61cc39bb5cde1beedd34af2b848}\label{classGis__point_a898ab61cc39bb5cde1beedd34af2b848}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__point_aa458a191406eb4757660c27a25f4016a}\label{classGis__point_aa458a191406eb4757660c27a25f4016a}} 
+int {\bfseries get\+\_\+xy} (\mbox{\hyperlink{classpoint__xy}{point\+\_\+xy}} $\ast$p) const
+\item 
+\mbox{\Hypertarget{classGis__point_ac84e30fdbdb53bd5a469f97fed0fec45}\label{classGis__point_ac84e30fdbdb53bd5a469f97fed0fec45}} 
+int {\bfseries get\+\_\+x} (double $\ast$x) const
+\item 
+\mbox{\Hypertarget{classGis__point_a8e6cb4958ee03cf661801bdf4b4782fc}\label{classGis__point_a8e6cb4958ee03cf661801bdf4b4782fc}} 
+int {\bfseries get\+\_\+y} (double $\ast$y) const
+\item 
+\mbox{\Hypertarget{classGis__point_a4dd8555722822221bcf12ce4ec891e0a}\label{classGis__point_a4dd8555722822221bcf12ce4ec891e0a}} 
+uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGis__point_a137364b77834f0e375b505100fa5a9c5}\label{classGis__point_a137364b77834f0e375b505100fa5a9c5}} 
+const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classGis__point_a2343c7d47b0a528022e788bc6784f6ad}\label{classGis__point_a2343c7d47b0a528022e788bc6784f6ad}} 
+{\bfseries Gis\+\_\+point} (bool \mbox{\hyperlink{classGeometry_ada614004627a9e7af129e51a34242af9}{is\+\_\+bg\+\_\+adapter}}=true)
+\item 
+\mbox{\Hypertarget{classGis__point_a2f4b05b90674da73bf19ba056d4af894}\label{classGis__point_a2f4b05b90674da73bf19ba056d4af894}} 
+\mbox{\hyperlink{classGis__point_a2f4b05b90674da73bf19ba056d4af894}{Gis\+\_\+point}} (const void $\ast$ptr, size\+\_\+t nbytes, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\begin{DoxyCompactList}\small\item\em Default constructor, no initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGis__point_aac3a957b0d48776210befcb2e13edf74}\label{classGis__point_aac3a957b0d48776210befcb2e13edf74}} 
+{\bfseries Gis\+\_\+point} (const \mbox{\hyperlink{classGis__point}{self}} \&pt)
+\item 
+\mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \& \mbox{\hyperlink{classGis__point_a2b94bce44d9e070a8d4795d8c0a3654d}{operator=}} (const \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \&rhs)
+\item 
+void \mbox{\hyperlink{classGis__point_ace10c7ba2a76d04093877818d0a08728}{set\+\_\+ptr}} (void $\ast$ptr, size\+\_\+t len)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t K$>$ }\\double \mbox{\hyperlink{classGis__point_aa7ec388d5e99b76956e5b50b4ba3a500}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get a coordinate. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::size\+\_\+t K$>$ }\\void \mbox{\hyperlink{classGis__point_af22de0c9afb8fe99da0cfb70ecdfe64a}{set}} (double const \&value)
+\begin{DoxyCompactList}\small\item\em Set a coordinate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGis__point_a4a59b9884d0b59b3c2993103d68019f7}\label{classGis__point_a4a59b9884d0b59b3c2993103d68019f7}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \&pt) const
+\item 
+\mbox{\Hypertarget{classGis__point_aefe8ea7acd67984e5bc39c63002dac41}\label{classGis__point_aefe8ea7acd67984e5bc39c63002dac41}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \&pt) const
+\item 
+\mbox{\Hypertarget{classGis__point_aa75839705316d1bb769358603bca610a}\label{classGis__point_aa75839705316d1bb769358603bca610a}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \&pt) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGis__point_aa7ec388d5e99b76956e5b50b4ba3a500}\label{classGis__point_aa7ec388d5e99b76956e5b50b4ba3a500}} 
+\index{Gis\+\_\+point@{Gis\+\_\+point}!get@{get}}
+\index{get@{get}!Gis\+\_\+point@{Gis\+\_\+point}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t K$>$ \\
+double Gis\+\_\+point\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a coordinate. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & coordinate to get \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+the coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGis__point_a2b94bce44d9e070a8d4795d8c0a3654d}\label{classGis__point_a2b94bce44d9e070a8d4795d8c0a3654d}} 
+\index{Gis\+\_\+point@{Gis\+\_\+point}!operator=@{operator=}}
+\index{operator=@{operator=}!Gis\+\_\+point@{Gis\+\_\+point}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \& Gis\+\_\+point\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Deep assignment from point \textquotesingle{}p\textquotesingle{} to this object. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} to duplicate from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGis__point_af22de0c9afb8fe99da0cfb70ecdfe64a}\label{classGis__point_af22de0c9afb8fe99da0cfb70ecdfe64a}} 
+\index{Gis\+\_\+point@{Gis\+\_\+point}!set@{set}}
+\index{set@{set}!Gis\+\_\+point@{Gis\+\_\+point}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t K$>$ \\
+void Gis\+\_\+point\+::set (\begin{DoxyParamCaption}\item[{double const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a coordinate. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & coordinate to set \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & value to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGis__point_ace10c7ba2a76d04093877818d0a08728}\label{classGis__point_ace10c7ba2a76d04093877818d0a08728}} 
+\index{Gis\+\_\+point@{Gis\+\_\+point}!set\+\_\+ptr@{set\+\_\+ptr}}
+\index{set\+\_\+ptr@{set\+\_\+ptr}!Gis\+\_\+point@{Gis\+\_\+point}}
+\subsubsection{\texorpdfstring{set\+\_\+ptr()}{set\_ptr()}}
+{\footnotesize\ttfamily void Gis\+\_\+point\+::set\+\_\+ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Shallow assignment, let this point object refer to the specified memory address as its W\+KB data, and this object never owns the memory assigned. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & W\+KB data address for the point. \\
+\hline
+{\em len} & W\+KB data length for the point. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

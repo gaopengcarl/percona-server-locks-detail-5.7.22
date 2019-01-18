@@ -1,0 +1,24 @@
+\hypertarget{classLocking__service__deadlock__error__handler}{}\section{Locking\+\_\+service\+\_\+deadlock\+\_\+error\+\_\+handler Class Reference}
+\label{classLocking__service__deadlock__error__handler}\index{Locking\+\_\+service\+\_\+deadlock\+\_\+error\+\_\+handler@{Locking\+\_\+service\+\_\+deadlock\+\_\+error\+\_\+handler}}
+Inheritance diagram for Locking\+\_\+service\+\_\+deadlock\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLocking__service__deadlock__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLocking__service__deadlock__error__handler_a5bbbd2a5021c16e9dab58bf99904d6cf}\label{classLocking__service__deadlock__error__handler_a5bbbd2a5021c16e9dab58bf99904d6cf}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+We want to convert E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+A\+D\+L\+O\+CK error to E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+A\+D\+L\+O\+CK error. The former means that implicit rollback of transaction has occurred which doesn\textquotesingle{}t (and should not) happen when we get deadlock while waiting for locking service locks.
+
+We also want to convert E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+M\+E\+O\+UT as this error indicates that it helps to restart the transaction. This does not apply to locking service locks. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+locking\+\_\+service.\+cc\end{DoxyCompactItemize}

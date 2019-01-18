@@ -1,0 +1,56 @@
+\hypertarget{classSql__cmd__drop__server}{}\section{Sql\+\_\+cmd\+\_\+drop\+\_\+server Class Reference}
+\label{classSql__cmd__drop__server}\index{Sql\+\_\+cmd\+\_\+drop\+\_\+server@{Sql\+\_\+cmd\+\_\+drop\+\_\+server}}
+
+
+{\ttfamily \#include $<$sql\+\_\+servers.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+drop\+\_\+server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__drop__server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__drop__server_a865cebcca1e426db88c4cbe7f78d555a}\label{classSql__cmd__drop__server_a865cebcca1e426db88c4cbe7f78d555a}} 
+{\bfseries Sql\+\_\+cmd\+\_\+drop\+\_\+server} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG server\+\_\+name, bool if\+\_\+exists)
+\item 
+\mbox{\Hypertarget{classSql__cmd__drop__server_a1563a8181a1eefd88e85f76366b80c4b}\label{classSql__cmd__drop__server_a1563a8181a1eefd88e85f76366b80c4b}} 
+enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__drop__server_a1563a8181a1eefd88e85f76366b80c4b}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSql__cmd__drop__server_a19ff682e57c46d10212a552e97806270}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the D\+R\+OP S\+E\+R\+V\+ER statement. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__drop__server_a19ff682e57c46d10212a552e97806270}\label{classSql__cmd__drop__server_a19ff682e57c46d10212a552e97806270}} 
+\index{Sql\+\_\+cmd\+\_\+drop\+\_\+server@{Sql\+\_\+cmd\+\_\+drop\+\_\+server}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+drop\+\_\+server@{Sql\+\_\+cmd\+\_\+drop\+\_\+server}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+drop\+\_\+server\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Drop an existing server by deleting the matching row from the mysql.\+servers table and removing the cache entry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+servers.\+h\item 
+sql\+\_\+servers.\+cc\end{DoxyCompactItemize}

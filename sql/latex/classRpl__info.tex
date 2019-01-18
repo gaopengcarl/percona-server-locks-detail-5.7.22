@@ -1,0 +1,177 @@
+\hypertarget{classRpl__info}{}\section{Rpl\+\_\+info Class Reference}
+\label{classRpl__info}\index{Rpl\+\_\+info@{Rpl\+\_\+info}}
+Inheritance diagram for Rpl\+\_\+info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classRpl__info}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRpl__info_a1c4ec6f3b1db365afee63f16925144f4}{set\+\_\+rpl\+\_\+info\+\_\+handler}} (\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$param\+\_\+handler)
+\item 
+\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$ \mbox{\hyperlink{classRpl__info_a1fd496522e010306eaab144e69a4056f}{get\+\_\+rpl\+\_\+info\+\_\+handler}} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_ab8846f598534bbc8c42cdb629699c98f}\label{classRpl__info_ab8846f598534bbc8c42cdb629699c98f}} 
+enum\+\_\+return\+\_\+check {\bfseries check\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_a91f37106d849693896e0d615f1639539}\label{classRpl__info_a91f37106d849693896e0d615f1639539}} 
+int {\bfseries remove\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_aebfc5c391d493de3316791316c511150}\label{classRpl__info_aebfc5c391d493de3316791316c511150}} 
+int {\bfseries clean\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_a0013787650cdc0d3d0e432a2bd3b0a35}\label{classRpl__info_a0013787650cdc0d3d0e432a2bd3b0a35}} 
+bool {\bfseries is\+\_\+transactional} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_ab14e97b283d66a636e4220f4b39c33b7}\label{classRpl__info_ab14e97b283d66a636e4220f4b39c33b7}} 
+bool {\bfseries update\+\_\+is\+\_\+transactional} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_a8f82dffc76d7c297faaa4b0b6ed2d46f}\label{classRpl__info_a8f82dffc76d7c297faaa4b0b6ed2d46f}} 
+char $\ast$ {\bfseries get\+\_\+description\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_a6f866844c1509312b74d56ac1343e5b9}\label{classRpl__info_a6f866844c1509312b74d56ac1343e5b9}} 
+bool {\bfseries copy\+\_\+info} (\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$from, \mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$to)
+\item 
+\mbox{\Hypertarget{classRpl__info_a6adf0871b7679b618aef2e678d8ac144}\label{classRpl__info_a6adf0871b7679b618aef2e678d8ac144}} 
+uint {\bfseries get\+\_\+internal\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{classRpl__info_af6e4d6b26233654c5c5e1813443da52d}\label{classRpl__info_af6e4d6b26233654c5c5e1813443da52d}} 
+char $\ast$ {\bfseries get\+\_\+channel} ()
+\item 
+virtual bool \mbox{\hyperlink{classRpl__info_a0b3b3cf032e7017f1760379364ff1738}{set\+\_\+info\+\_\+search\+\_\+keys}} (\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$to)=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRpl__info_aca502ea41fe6d766d867946767d493de}\label{classRpl__info_aca502ea41fe6d766d867946767d493de}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries data\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRpl__info_ac5f4390d6d479a9cb6fd1039871449e0}\label{classRpl__info_ac5f4390d6d479a9cb6fd1039871449e0}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries run\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRpl__info_aa8baad85a72558b2849d726460b0f63d}\label{classRpl__info_aa8baad85a72558b2849d726460b0f63d}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries sleep\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRpl__info_a55c3a0a6afa75317b9450ff70e4f63a5}\label{classRpl__info_a55c3a0a6afa75317b9450ff70e4f63a5}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries info\+\_\+thd\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRpl__info_abf577b9e5545fc41cbec46b4a9b4268b}\label{classRpl__info_abf577b9e5545fc41cbec46b4a9b4268b}} 
+mysql\+\_\+cond\+\_\+t {\bfseries data\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRpl__info_a7cc32a9e238ae1ce9fdf9d482527e356}\label{classRpl__info_a7cc32a9e238ae1ce9fdf9d482527e356}} 
+mysql\+\_\+cond\+\_\+t {\bfseries start\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRpl__info_acce53ab5891e40e5b6c576592f984666}\label{classRpl__info_acce53ab5891e40e5b6c576592f984666}} 
+mysql\+\_\+cond\+\_\+t {\bfseries stop\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRpl__info_a4a06fe0c58a7a9dae7b495110b2427c1}\label{classRpl__info_a4a06fe0c58a7a9dae7b495110b2427c1}} 
+mysql\+\_\+cond\+\_\+t {\bfseries sleep\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRpl__info_ae7c5d028176d2a373ab274325ca4a4e9}\label{classRpl__info_ae7c5d028176d2a373ab274325ca4a4e9}} 
+T\+HD $\ast$ {\bfseries info\+\_\+thd}
+\item 
+\mbox{\Hypertarget{classRpl__info_a4415e5f9763894ed3de78702773e8333}\label{classRpl__info_a4415e5f9763894ed3de78702773e8333}} 
+bool {\bfseries inited}
+\item 
+\mbox{\Hypertarget{classRpl__info_ad98e532e1169e88db8ad6f2852f6084f}\label{classRpl__info_ad98e532e1169e88db8ad6f2852f6084f}} 
+volatile bool {\bfseries abort\+\_\+slave}
+\item 
+\mbox{\Hypertarget{classRpl__info_af9ec7652a0f58d575b2927d3664a9e21}\label{classRpl__info_af9ec7652a0f58d575b2927d3664a9e21}} 
+volatile uint {\bfseries slave\+\_\+running}
+\item 
+\mbox{\Hypertarget{classRpl__info_a12ec9046fb41f764596ea1e4c4a8466e}\label{classRpl__info_a12ec9046fb41f764596ea1e4c4a8466e}} 
+volatile ulong {\bfseries slave\+\_\+run\+\_\+id}
+\item 
+\mbox{\Hypertarget{classRpl__info_ae6619c0706a7bb5c39ad5c120587470b}\label{classRpl__info_ae6619c0706a7bb5c39ad5c120587470b}} 
+int {\bfseries events\+\_\+until\+\_\+exit}
+\item 
+\mbox{\Hypertarget{classRpl__info_afee152ccea76f6d225ea46932dc70cb8}\label{classRpl__info_afee152ccea76f6d225ea46932dc70cb8}} 
+Atomic\+\_\+int32 {\bfseries is\+\_\+stopping}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRpl__info_a80e37c06a77a388428bba6e05ab77d4c}\label{classRpl__info_a80e37c06a77a388428bba6e05ab77d4c}} 
+{\bfseries Rpl\+\_\+info} (const char $\ast$type, uint param\+\_\+id, const char $\ast$param\+\_\+channel)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$ \mbox{\hyperlink{classRpl__info_a0ce35fc9ef5b03d26b6cb34dd04b0583}{handler}}
+\item 
+uint \mbox{\hyperlink{classRpl__info_a409b8a0921617ffd71e40977be694eef}{internal\+\_\+id}}
+\item 
+char \mbox{\hyperlink{classRpl__info_add75a7f8b28db1173a07ae12960b2e7b}{channel}} \mbox{[}C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRpl__info_a1fd496522e010306eaab144e69a4056f}\label{classRpl__info_a1fd496522e010306eaab144e69a4056f}} 
+\index{Rpl\+\_\+info@{Rpl\+\_\+info}!get\+\_\+rpl\+\_\+info\+\_\+handler@{get\+\_\+rpl\+\_\+info\+\_\+handler}}
+\index{get\+\_\+rpl\+\_\+info\+\_\+handler@{get\+\_\+rpl\+\_\+info\+\_\+handler}!Rpl\+\_\+info@{Rpl\+\_\+info}}
+\subsubsection{\texorpdfstring{get\+\_\+rpl\+\_\+info\+\_\+handler()}{get\_rpl\_info\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}}$\ast$ Rpl\+\_\+info\+::get\+\_\+rpl\+\_\+info\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the persistency component/handler.
+
+\begin{DoxyReturn}{Returns}
+the handler if there is one. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRpl__info_a0b3b3cf032e7017f1760379364ff1738}\label{classRpl__info_a0b3b3cf032e7017f1760379364ff1738}} 
+\index{Rpl\+\_\+info@{Rpl\+\_\+info}!set\+\_\+info\+\_\+search\+\_\+keys@{set\+\_\+info\+\_\+search\+\_\+keys}}
+\index{set\+\_\+info\+\_\+search\+\_\+keys@{set\+\_\+info\+\_\+search\+\_\+keys}!Rpl\+\_\+info@{Rpl\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+info\+\_\+search\+\_\+keys()}{set\_info\_search\_keys()}}
+{\footnotesize\ttfamily virtual bool Rpl\+\_\+info\+::set\+\_\+info\+\_\+search\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+To search in the slave repositories, each slave info object (mi, rli or worker) should use a primary key. This function sets the field values of the slave info objects with the search information, which is nothing but PK in mysql slave info tables. Ex\+: field\+\_\+value\mbox{[}23\mbox{]}=\char`\"{}channel\+\_\+name\char`\"{} in the master info object.
+
+Currently, used only for \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} repository. 
+
+Implemented in \mbox{\hyperlink{classRelay__log__info_a41736eb133d061e07653c5207d6913e0}{Relay\+\_\+log\+\_\+info}}.
+
+\mbox{\Hypertarget{classRpl__info_a1c4ec6f3b1db365afee63f16925144f4}\label{classRpl__info_a1c4ec6f3b1db365afee63f16925144f4}} 
+\index{Rpl\+\_\+info@{Rpl\+\_\+info}!set\+\_\+rpl\+\_\+info\+\_\+handler@{set\+\_\+rpl\+\_\+info\+\_\+handler}}
+\index{set\+\_\+rpl\+\_\+info\+\_\+handler@{set\+\_\+rpl\+\_\+info\+\_\+handler}!Rpl\+\_\+info@{Rpl\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+rpl\+\_\+info\+\_\+handler()}{set\_rpl\_info\_handler()}}
+{\footnotesize\ttfamily void Rpl\+\_\+info\+::set\+\_\+rpl\+\_\+info\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$}]{param\+\_\+handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the persistency component/handler.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hanlder} & Pointer to the handler. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classRpl__info_add75a7f8b28db1173a07ae12960b2e7b}\label{classRpl__info_add75a7f8b28db1173a07ae12960b2e7b}} 
+\index{Rpl\+\_\+info@{Rpl\+\_\+info}!channel@{channel}}
+\index{channel@{channel}!Rpl\+\_\+info@{Rpl\+\_\+info}}
+\subsubsection{\texorpdfstring{channel}{channel}}
+{\footnotesize\ttfamily char Rpl\+\_\+info\+::channel\mbox{[}C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Every slave info object acts on a particular channel in Multisource Replication. \mbox{\Hypertarget{classRpl__info_a0ce35fc9ef5b03d26b6cb34dd04b0583}\label{classRpl__info_a0ce35fc9ef5b03d26b6cb34dd04b0583}} 
+\index{Rpl\+\_\+info@{Rpl\+\_\+info}!handler@{handler}}
+\index{handler@{handler}!Rpl\+\_\+info@{Rpl\+\_\+info}}
+\subsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}}$\ast$ Rpl\+\_\+info\+::handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the repository\textquotesingle{}s handler. \mbox{\Hypertarget{classRpl__info_a409b8a0921617ffd71e40977be694eef}\label{classRpl__info_a409b8a0921617ffd71e40977be694eef}} 
+\index{Rpl\+\_\+info@{Rpl\+\_\+info}!internal\+\_\+id@{internal\+\_\+id}}
+\index{internal\+\_\+id@{internal\+\_\+id}!Rpl\+\_\+info@{Rpl\+\_\+info}}
+\subsubsection{\texorpdfstring{internal\+\_\+id}{internal\_id}}
+{\footnotesize\ttfamily uint Rpl\+\_\+info\+::internal\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+Uniquely and internaly identifies an info entry (.e.\+g. a row or file). This information is completely transparent to users and is used only during startup to retrieve information from the repositories.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000061}{Todo}}], This is not anymore required for Master\+\_\+info and \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}, since Channel can be used to uniquely identify this. To preserve backward compatibility, we keep this for Master\+\_\+info and \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}. However, \{id, channel\} is still required for a worker info. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+info.\+h\item 
+rpl\+\_\+info.\+cc\end{DoxyCompactItemize}

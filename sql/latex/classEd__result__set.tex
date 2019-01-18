@@ -1,0 +1,78 @@
+\hypertarget{classEd__result__set}{}\section{Ed\+\_\+result\+\_\+set Class Reference}
+\label{classEd__result__set}\index{Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}}
+
+
+{\ttfamily \#include $<$sql\+\_\+prepare.\+h$>$}
+
+Inheritance diagram for Ed\+\_\+result\+\_\+set\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEd__result__set}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEd__result__set_a9e91651b1015c127a3e17366d0e29570}\label{classEd__result__set_a9e91651b1015c127a3e17366d0e29570}} 
+{\bfseries operator List$<$ Ed\+\_\+row $>$ \&} ()
+\item 
+\mbox{\Hypertarget{classEd__result__set_ae1634455218db1e77df75f82586b4752}\label{classEd__result__set_ae1634455218db1e77df75f82586b4752}} 
+unsigned int {\bfseries size} () const
+\item 
+\mbox{\hyperlink{classEd__result__set_a28ecefda6146f1314328ab6250009b43}{Ed\+\_\+result\+\_\+set}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classEd__row}{Ed\+\_\+row}} $>$ $\ast$rows\+\_\+arg, size\+\_\+t column\+\_\+count, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root\+\_\+arg)
+\item 
+\mbox{\hyperlink{classEd__result__set_aa1b5f342e1cecd455b506d6b30738d4a}{$\sim$\+Ed\+\_\+result\+\_\+set}} ()
+\item 
+\mbox{\Hypertarget{classEd__result__set_ad0ecedae357128d4ab06d5212c886807}\label{classEd__result__set_ad0ecedae357128d4ab06d5212c886807}} 
+size\+\_\+t {\bfseries get\+\_\+field\+\_\+count} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classEd__result__set_a81f3670478a727c2747d61d680e851fe}{operator delete}} (void $\ast$ptr, size\+\_\+t size)  throw ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEd__result__set_ad9477b51a277c85e69d28ab6d88cc7f6}\label{classEd__result__set_ad9477b51a277c85e69d28ab6d88cc7f6}} 
+class {\bfseries Ed\+\_\+connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}} -- a container with result set rows. \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000113}{Todo}}]Implement support for result set metadata and automatic type conversion. \end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEd__result__set_a28ecefda6146f1314328ab6250009b43}\label{classEd__result__set_a28ecefda6146f1314328ab6250009b43}} 
+\index{Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}!Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}}
+\index{Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}!Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}}
+\subsubsection{\texorpdfstring{Ed\+\_\+result\+\_\+set()}{Ed\_result\_set()}}
+{\footnotesize\ttfamily Ed\+\_\+result\+\_\+set\+::\+Ed\+\_\+result\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classEd__row}{Ed\+\_\+row}} $>$ $\ast$}]{rows\+\_\+arg,  }\item[{size\+\_\+t}]{column\+\_\+count\+\_\+arg,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root\+\_\+arg }\end{DoxyParamCaption})}
+
+Initialize an instance of \mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}}.
+
+Instances of the class, as well as all result set rows, are always allocated in the memory root passed over as the second argument. In the constructor, we take over ownership of the memory root. It will be freed when the class is destroyed.
+
+sic\+: Ed\+\_\+result\+\_\+est is not designed to be allocated on stack. \mbox{\Hypertarget{classEd__result__set_aa1b5f342e1cecd455b506d6b30738d4a}\label{classEd__result__set_aa1b5f342e1cecd455b506d6b30738d4a}} 
+\index{Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}!````~Ed\+\_\+result\+\_\+set@{$\sim$\+Ed\+\_\+result\+\_\+set}}
+\index{````~Ed\+\_\+result\+\_\+set@{$\sim$\+Ed\+\_\+result\+\_\+set}!Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}}
+\subsubsection{\texorpdfstring{$\sim$\+Ed\+\_\+result\+\_\+set()}{~Ed\_result\_set()}}
+{\footnotesize\ttfamily Ed\+\_\+result\+\_\+set\+::$\sim$\+Ed\+\_\+result\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+We don\textquotesingle{}t call member destructors, they all are P\+OD types. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEd__result__set_a81f3670478a727c2747d61d680e851fe}\label{classEd__result__set_a81f3670478a727c2747d61d680e851fe}} 
+\index{Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Ed\+\_\+result\+\_\+set@{Ed\+\_\+result\+\_\+set}}
+\subsubsection{\texorpdfstring{operator delete()}{operator delete()}}
+{\footnotesize\ttfamily void Ed\+\_\+result\+\_\+set\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) throw  ) \hspace{0.3cm}{\ttfamily [static]}}
+
+Use operator delete to free memory of \mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}}. Accessing members of a class after the class has been destroyed is a violation of the C++ standard but is commonly used in the server code. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+prepare.\+h\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

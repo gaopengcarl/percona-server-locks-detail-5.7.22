@@ -1,0 +1,50 @@
+\hypertarget{classReprepare__observer}{}\section{Reprepare\+\_\+observer Class Reference}
+\label{classReprepare__observer}\index{Reprepare\+\_\+observer@{Reprepare\+\_\+observer}}
+
+
+{\ttfamily \#include $<$sql\+\_\+prepare.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classReprepare__observer_a46318688ac06952559ad6f60a5a1cd53}{report\+\_\+error}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classReprepare__observer_a26aac757fb29b15628482fc212c9def5}\label{classReprepare__observer_a26aac757fb29b15628482fc212c9def5}} 
+bool {\bfseries is\+\_\+invalidated} () const
+\item 
+\mbox{\Hypertarget{classReprepare__observer_a522187c629e08a9abae8110a282149d1}\label{classReprepare__observer_a522187c629e08a9abae8110a282149d1}} 
+void {\bfseries reset\+\_\+reprepare\+\_\+observer} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface that is used to take an action when the locking module notices that a table version has changed since the last execution. \char`\"{}\+Table\char`\"{} here may refer to any kind of table -- a base table, a temporary table, a view or an information schema table.
+
+When we open and lock tables for execution of a prepared statement, we must verify that they did not change since statement prepare. If some table did change, the statement parse tree {\itshape may} be no longer valid, e.\+g. in case it contains optimizations that depend on table metadata.
+
+This class provides an interface (a method) that is invoked when such a situation takes place. The implementation of the method simply reports an error, but the exact details depend on the nature of the S\+QL statement.
+
+At most 1 instance of this class is active at a time, in which case T\+H\+D\+::m\+\_\+reprepare\+\_\+observer is not N\+U\+LL.
+
+\begin{DoxySeeAlso}{See also}
+check\+\_\+and\+\_\+update\+\_\+table\+\_\+version() for details of the version tracking algorithm
+
+Open\+\_\+tables\+\_\+state\+::m\+\_\+reprepare\+\_\+observer for the life cycle of metadata observers. 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classReprepare__observer_a46318688ac06952559ad6f60a5a1cd53}\label{classReprepare__observer_a46318688ac06952559ad6f60a5a1cd53}} 
+\index{Reprepare\+\_\+observer@{Reprepare\+\_\+observer}!report\+\_\+error@{report\+\_\+error}}
+\index{report\+\_\+error@{report\+\_\+error}!Reprepare\+\_\+observer@{Reprepare\+\_\+observer}}
+\subsubsection{\texorpdfstring{report\+\_\+error()}{report\_error()}}
+{\footnotesize\ttfamily bool Reprepare\+\_\+observer\+::report\+\_\+error (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Check if a change of metadata is OK. In future the signature of this method may be extended to accept the old and the new versions, but since currently the check is very simple, we only need the T\+HD to report an error.
+
+Push an error to the error stack and return T\+R\+UE for now. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+prepare.\+h\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{hostname_8cc}{}\section{hostname.\+cc File Reference}
+\label{hostname_8cc}\index{hostname.\+cc@{hostname.\+cc}}
+
+
+Get hostname for an IP address.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hostname.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hash\+\_\+filo.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$m\+\_\+ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}violite.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/utsname.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hostname_8cc_ab47a0850122902b8fe9fd0a9d0997b81}\label{hostname_8cc_ab47a0850122902b8fe9fd0a9d0997b81}} 
+void {\bfseries hostname\+\_\+cache\+\_\+refresh} ()
+\item 
+\mbox{\Hypertarget{hostname_8cc_ad3f978fdc30337bda521beb20beb3ce1}\label{hostname_8cc_ad3f978fdc30337bda521beb20beb3ce1}} 
+uint {\bfseries hostname\+\_\+cache\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{hostname_8cc_ae43181ea4f214d2eec9acad2b360ad04}\label{hostname_8cc_ae43181ea4f214d2eec9acad2b360ad04}} 
+void {\bfseries hostname\+\_\+cache\+\_\+resize} (uint size)
+\item 
+\mbox{\Hypertarget{hostname_8cc_aa29b2d93ecc303fccf90087fc39966e8}\label{hostname_8cc_aa29b2d93ecc303fccf90087fc39966e8}} 
+bool {\bfseries hostname\+\_\+cache\+\_\+init} (uint size)
+\item 
+\mbox{\Hypertarget{hostname_8cc_a9cfc789a05c82c4ab11349f7e0c7a917}\label{hostname_8cc_a9cfc789a05c82c4ab11349f7e0c7a917}} 
+void {\bfseries hostname\+\_\+cache\+\_\+free} ()
+\item 
+\mbox{\Hypertarget{hostname_8cc_af51b7a8eed0b1ab1a3882e71e6a14d84}\label{hostname_8cc_af51b7a8eed0b1ab1a3882e71e6a14d84}} 
+void {\bfseries hostname\+\_\+cache\+\_\+lock} ()
+\item 
+\mbox{\Hypertarget{hostname_8cc_ae8d669e59b3317837d8e7cc630629507}\label{hostname_8cc_ae8d669e59b3317837d8e7cc630629507}} 
+void {\bfseries hostname\+\_\+cache\+\_\+unlock} ()
+\item 
+\mbox{\Hypertarget{hostname_8cc_a7a1f3c4163e830912b8453600759ca2c}\label{hostname_8cc_a7a1f3c4163e830912b8453600759ca2c}} 
+\mbox{\hyperlink{classHost__entry}{Host\+\_\+entry}} $\ast$ {\bfseries hostname\+\_\+cache\+\_\+first} ()
+\item 
+\mbox{\Hypertarget{hostname_8cc_a79b13232e4d6b7e6d15d16d190083b47}\label{hostname_8cc_a79b13232e4d6b7e6d15d16d190083b47}} 
+void {\bfseries inc\+\_\+host\+\_\+errors} (const char $\ast$ip\+\_\+string, \mbox{\hyperlink{structHost__errors}{Host\+\_\+errors}} $\ast$errors)
+\item 
+\mbox{\Hypertarget{hostname_8cc_a48bbd40b33c42e95aed003496206bbaf}\label{hostname_8cc_a48bbd40b33c42e95aed003496206bbaf}} 
+void {\bfseries reset\+\_\+host\+\_\+connect\+\_\+errors} (const char $\ast$ip\+\_\+string)
+\item 
+int \mbox{\hyperlink{hostname_8cc_a17b2cae22ed158832ca6e0de92b42690}{ip\+\_\+to\+\_\+hostname}} (struct sockaddr\+\_\+storage $\ast$ip\+\_\+storage, const char $\ast$ip\+\_\+string, char $\ast$$\ast$hostname, uint $\ast$connect\+\_\+errors)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Get hostname for an IP address. 
+
+Hostnames are checked with reverse name lookup and checked that they doesn\textquotesingle{}t resemble an IP address. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hostname_8cc_a17b2cae22ed158832ca6e0de92b42690}\label{hostname_8cc_a17b2cae22ed158832ca6e0de92b42690}} 
+\index{hostname.\+cc@{hostname.\+cc}!ip\+\_\+to\+\_\+hostname@{ip\+\_\+to\+\_\+hostname}}
+\index{ip\+\_\+to\+\_\+hostname@{ip\+\_\+to\+\_\+hostname}!hostname.\+cc@{hostname.\+cc}}
+\subsubsection{\texorpdfstring{ip\+\_\+to\+\_\+hostname()}{ip\_to\_hostname()}}
+{\footnotesize\ttfamily int ip\+\_\+to\+\_\+hostname (\begin{DoxyParamCaption}\item[{struct sockaddr\+\_\+storage $\ast$}]{ip\+\_\+storage,  }\item[{const char $\ast$}]{ip\+\_\+string,  }\item[{char $\ast$$\ast$}]{hostname,  }\item[{uint $\ast$}]{connect\+\_\+errors }\end{DoxyParamCaption})}
+
+Resolve IP-\/address to host name.
+
+This function does the following things\+:
+\begin{DoxyItemize}
+\item resolves IP-\/address;
+\item employs Forward Confirmed Reverse D\+NS technique to validate IP-\/address;
+\item returns host name if IP-\/address is validated;
+\item set value to out-\/variable connect\+\_\+errors -- this variable represents the number of connection errors from the specified IP-\/address.
+\item update the host\+\_\+cache statistics
+\end{DoxyItemize}
+
+N\+O\+TE\+: connect\+\_\+errors are counted (are supported) only for the clients where IP-\/address can be resolved and F\+Cr\+D\+NS check is passed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ip\+\_\+storage} & IP address (sockaddr). Must be set. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ip\+\_\+string} & IP address (string). Must be set. \\
+\hline
+\mbox{\texttt{ out}}  & {\em hostname} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em connect\+\_\+errors} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em R\+C\+\_\+\+B\+L\+O\+C\+K\+E\+D\+\_\+\+H\+O\+ST} & The host is blocked.\\
+\hline
+\end{DoxyRetVals}
+The function does not set/report My\+S\+QL server error in case of failure. It\textquotesingle{}s caller\textquotesingle{}s responsibility to handle failures of this function properly. 

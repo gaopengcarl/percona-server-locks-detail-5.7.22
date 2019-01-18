@@ -1,0 +1,131 @@
+\hypertarget{classThread__to__plugin__map}{}\section{Thread\+\_\+to\+\_\+plugin\+\_\+map Class Reference}
+\label{classThread__to__plugin__map}\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classThread__to__plugin__map_ad5ad833c4c25b30f299108c5a10da632}{init}} ()
+\item 
+bool \mbox{\hyperlink{classThread__to__plugin__map_a4cea7a05e63e700584bf305dc28aaa2c}{deinit}} ()
+\item 
+bool \mbox{\hyperlink{classThread__to__plugin__map_a75f7af73079c1d725fd501035ac5902e}{add}} (my\+\_\+thread\+\_\+t thread, const void $\ast$plugin)
+\item 
+unsigned int \mbox{\hyperlink{classThread__to__plugin__map_aedea66a850c6c690e95c56b9e305dd63}{remove}} (my\+\_\+thread\+\_\+t thread)
+\item 
+bool \mbox{\hyperlink{classThread__to__plugin__map_a6f1775e4723f2b68eecc1f347dce506a}{clear}} ()
+\item 
+unsigned int \mbox{\hyperlink{classThread__to__plugin__map_af09cfc90c390b4e58386f0ea2ae18d50}{size}} ()
+\item 
+unsigned int \mbox{\hyperlink{classThread__to__plugin__map_ad58c72ec47a7a136e4ff4a6281581259}{count}} (const void $\ast$plugin)
+\item 
+unsigned int \mbox{\hyperlink{classThread__to__plugin__map_a90bd103e25c4a006a672f64dbaa08c2c}{kill}} (const void $\ast$plugin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classThread__to__plugin__map_a75f7af73079c1d725fd501035ac5902e}\label{classThread__to__plugin__map_a75f7af73079c1d725fd501035ac5902e}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!add@{add}}
+\index{add@{add}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily bool Thread\+\_\+to\+\_\+plugin\+\_\+map\+::add (\begin{DoxyParamCaption}\item[{my\+\_\+thread\+\_\+t}]{thread,  }\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a pthread to the list
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & plugin\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classThread__to__plugin__map_a6f1775e4723f2b68eecc1f347dce506a}\label{classThread__to__plugin__map_a6f1775e4723f2b68eecc1f347dce506a}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!clear@{clear}}
+\index{clear@{clear}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily bool Thread\+\_\+to\+\_\+plugin\+\_\+map\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Empties the map
+
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classThread__to__plugin__map_ad58c72ec47a7a136e4ff4a6281581259}\label{classThread__to__plugin__map_ad58c72ec47a7a136e4ff4a6281581259}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!count@{count}}
+\index{count@{count}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily unsigned int Thread\+\_\+to\+\_\+plugin\+\_\+map\+::count (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number threads for a plugin
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & The plugin for which we need info. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classThread__to__plugin__map_a4cea7a05e63e700584bf305dc28aaa2c}\label{classThread__to__plugin__map_a4cea7a05e63e700584bf305dc28aaa2c}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!deinit@{deinit}}
+\index{deinit@{deinit}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily bool Thread\+\_\+to\+\_\+plugin\+\_\+map\+::deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deinitializes the map
+
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classThread__to__plugin__map_ad5ad833c4c25b30f299108c5a10da632}\label{classThread__to__plugin__map_ad5ad833c4c25b30f299108c5a10da632}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!init@{init}}
+\index{init@{init}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Thread\+\_\+to\+\_\+plugin\+\_\+map\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes the map
+
+
+\begin{DoxyParams}{Parameters}
+{\em null\+\_\+val} & null value to be returned when element not found in the map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classThread__to__plugin__map_a90bd103e25c4a006a672f64dbaa08c2c}\label{classThread__to__plugin__map_a90bd103e25c4a006a672f64dbaa08c2c}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!kill@{kill}}
+\index{kill@{kill}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily unsigned int Thread\+\_\+to\+\_\+plugin\+\_\+map\+::kill (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Kills all threads associated with a plugin
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & The plugin for which we need info. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classThread__to__plugin__map_aedea66a850c6c690e95c56b9e305dd63}\label{classThread__to__plugin__map_aedea66a850c6c690e95c56b9e305dd63}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!remove@{remove}}
+\index{remove@{remove}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily unsigned int Thread\+\_\+to\+\_\+plugin\+\_\+map\+::remove (\begin{DoxyParamCaption}\item[{my\+\_\+thread\+\_\+t}]{thread }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes a pthread from the list
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread} & Thread to remove from the list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classThread__to__plugin__map_af09cfc90c390b4e58386f0ea2ae18d50}\label{classThread__to__plugin__map_af09cfc90c390b4e58386f0ea2ae18d50}} 
+\index{Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}!size@{size}}
+\index{size@{size}!Thread\+\_\+to\+\_\+plugin\+\_\+map@{Thread\+\_\+to\+\_\+plugin\+\_\+map}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily unsigned int Thread\+\_\+to\+\_\+plugin\+\_\+map\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of all threads 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{srv__session_8cc}{srv\+\_\+session.\+cc}}\end{DoxyCompactItemize}

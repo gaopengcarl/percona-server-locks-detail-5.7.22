@@ -1,0 +1,74 @@
+\hypertarget{structNdb__index__stat__opt}{}\section{Ndb\+\_\+index\+\_\+stat\+\_\+opt Struct Reference}
+\label{structNdb__index__stat__opt}\index{Ndb\+\_\+index\+\_\+stat\+\_\+opt@{Ndb\+\_\+index\+\_\+stat\+\_\+opt}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structNdb__index__stat__opt_1_1Val}{Val}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_aca34aa0d0e12856c58c1e498274fb984}\label{structNdb__index__stat__opt_aca34aa0d0e12856c58c1e498274fb984}} 
+enum {\bfseries Unit} \{ {\bfseries Ubool} = 1, 
+{\bfseries Usize} = 2, 
+{\bfseries Utime} = 3, 
+{\bfseries Umsec} = 4
+ \}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_a70ffce7a2a4e903d8067b359ca61c755}\label{structNdb__index__stat__opt_a70ffce7a2a4e903d8067b359ca61c755}} 
+enum {\bfseries Flag} \{ {\bfseries Freadonly} = (1 $<$$<$ 0), 
+{\bfseries Fcontrol} = (1 $<$$<$ 1)
+ \}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_a205e4f18699d9497d4d9f113af2a5d91}\label{structNdb__index__stat__opt_a205e4f18699d9497d4d9f113af2a5d91}} 
+enum {\bfseries Idx} \{ \newline
+{\bfseries Iloop\+\_\+enable} = 0, 
+{\bfseries Iloop\+\_\+idle} = 1, 
+{\bfseries Iloop\+\_\+busy} = 2, 
+{\bfseries Iupdate\+\_\+batch} = 3, 
+\newline
+{\bfseries Iread\+\_\+batch} = 4, 
+{\bfseries Iidle\+\_\+batch} = 5, 
+{\bfseries Icheck\+\_\+batch} = 6, 
+{\bfseries Icheck\+\_\+delay} = 7, 
+\newline
+{\bfseries Idelete\+\_\+batch} = 8, 
+{\bfseries Iclean\+\_\+delay} = 9, 
+{\bfseries Ierror\+\_\+batch} = 10, 
+{\bfseries Ierror\+\_\+delay} = 11, 
+\newline
+{\bfseries Ievict\+\_\+batch} = 12, 
+{\bfseries Ievict\+\_\+delay} = 13, 
+{\bfseries Icache\+\_\+limit} = 14, 
+{\bfseries Icache\+\_\+lowpct} = 15, 
+\newline
+{\bfseries Izero\+\_\+total} = 16, 
+{\bfseries Imax} = 17
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_a4be7697b97a5e00179bd999ee544efd2}\label{structNdb__index__stat__opt_a4be7697b97a5e00179bd999ee544efd2}} 
+{\bfseries Ndb\+\_\+index\+\_\+stat\+\_\+opt} (char $\ast$buf)
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_a39d47942af95b2959e0f4565da2f0130}\label{structNdb__index__stat__opt_a39d47942af95b2959e0f4565da2f0130}} 
+uint {\bfseries get} (Idx i) const
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_afa540120fc5676822a0d1972d682e944}\label{structNdb__index__stat__opt_afa540120fc5676822a0d1972d682e944}} 
+void {\bfseries set} (Idx i, uint the\+\_\+val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_a5c16a20d3ae6fae6a81bff4af48b8484}\label{structNdb__index__stat__opt_a5c16a20d3ae6fae6a81bff4af48b8484}} 
+\mbox{\hyperlink{structNdb__index__stat__opt_1_1Val}{Val}} {\bfseries val} \mbox{[}Imax\mbox{]}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat__opt_a29430b30269a85bee9f6994d9fd035fd}\label{structNdb__index__stat__opt_a29430b30269a85bee9f6994d9fd035fd}} 
+char $\ast$ {\bfseries option}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndb\+\_\+index\+\_\+stat.\+cc\end{DoxyCompactItemize}

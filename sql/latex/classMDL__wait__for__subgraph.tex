@@ -1,0 +1,54 @@
+\hypertarget{classMDL__wait__for__subgraph}{}\section{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph Class Reference}
+\label{classMDL__wait__for__subgraph}\index{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph@{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+Inheritance diagram for M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMDL__wait__for__subgraph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classMDL__wait__for__subgraph_ad14f796a25430ecabd24572efa22f3f5}{accept\+\_\+visitor}} (\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$gvisitor)=0
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__subgraph_af2324a32575e85834c2561dc65df8f1b}\label{classMDL__wait__for__subgraph_af2324a32575e85834c2561dc65df8f1b}} 
+virtual uint {\bfseries get\+\_\+deadlock\+\_\+weight} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__subgraph_a5119d1bfb2134d441d8bda0cfb4eb738}\label{classMDL__wait__for__subgraph_a5119d1bfb2134d441d8bda0cfb4eb738}} 
+static const uint {\bfseries D\+E\+A\+D\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+D\+ML} = 0
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__subgraph_a1e7921734bd77f21429dc603e676a49c}\label{classMDL__wait__for__subgraph_a1e7921734bd77f21429dc603e676a49c}} 
+static const uint {\bfseries D\+E\+A\+D\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+U\+LL} = 50
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__subgraph_a70d33347828ce8ca522fa494f98bfbc4}\label{classMDL__wait__for__subgraph_a70d33347828ce8ca522fa494f98bfbc4}} 
+static const uint {\bfseries D\+E\+A\+D\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+D\+DL} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class representing an edge in the waiters graph to be traversed by deadlock detection algorithm. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__wait__for__subgraph_ad14f796a25430ecabd24572efa22f3f5}\label{classMDL__wait__for__subgraph_ad14f796a25430ecabd24572efa22f3f5}} 
+\index{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph@{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}!accept\+\_\+visitor@{accept\+\_\+visitor}}
+\index{accept\+\_\+visitor@{accept\+\_\+visitor}!M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph@{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}}
+\subsubsection{\texorpdfstring{accept\+\_\+visitor()}{accept\_visitor()}}
+{\footnotesize\ttfamily virtual bool M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph\+::accept\+\_\+visitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$}]{gvisitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Accept a wait-\/for graph visitor to inspect the node this edge is leading to. 
+
+Implemented in \mbox{\hyperlink{classMDL__ticket_af1bd23371e97d8bf6b0ff9de43e7e418}{M\+D\+L\+\_\+ticket}}, and \mbox{\hyperlink{classWait__for__flush_a5d355af9c8dd888cf46b6c5c24552900}{Wait\+\_\+for\+\_\+flush}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\item 
+mdl.\+cc\end{DoxyCompactItemize}

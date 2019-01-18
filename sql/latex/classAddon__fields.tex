@@ -1,0 +1,85 @@
+\hypertarget{classAddon__fields}{}\section{Addon\+\_\+fields Class Reference}
+\label{classAddon__fields}\index{Addon\+\_\+fields@{Addon\+\_\+fields}}
+
+
+{\ttfamily \#include $<$sql\+\_\+sort.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAddon__fields_ae54c8a62c8125cae46c915afca145bb9}\label{classAddon__fields_ae54c8a62c8125cae46c915afca145bb9}} 
+{\bfseries Addon\+\_\+fields} (\mbox{\hyperlink{classBounds__checked__array}{Addon\+\_\+fields\+\_\+array}} arr)
+\item 
+\mbox{\Hypertarget{classAddon__fields_a0e750b142aba2f4824eee4e19ef40f0a}\label{classAddon__fields_a0e750b142aba2f4824eee4e19ef40f0a}} 
+\mbox{\hyperlink{structSort__addon__field}{Sort\+\_\+addon\+\_\+field}} $\ast$ {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classAddon__fields_ac2e893c3c4ce24c8b1a12303615fae86}\label{classAddon__fields_ac2e893c3c4ce24c8b1a12303615fae86}} 
+\mbox{\hyperlink{structSort__addon__field}{Sort\+\_\+addon\+\_\+field}} $\ast$ {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classAddon__fields_ad7977f405e0c1a9add1a19f88a35ff12}\label{classAddon__fields_ad7977f405e0c1a9add1a19f88a35ff12}} 
+size\+\_\+t {\bfseries num\+\_\+field\+\_\+descriptors} () const
+\item 
+\mbox{\Hypertarget{classAddon__fields_a3d4df887ce1013f12313f6a689420735}\label{classAddon__fields_a3d4df887ce1013f12313f6a689420735}} 
+uchar $\ast$ \mbox{\hyperlink{classAddon__fields_a3d4df887ce1013f12313f6a689420735}{allocate\+\_\+addon\+\_\+buf}} (uint sz)
+\begin{DoxyCompactList}\small\item\em rr\+\_\+unpack\+\_\+from\+\_\+tempfile needs an extra buffer when unpacking. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAddon__fields_a47012cfc53ab4ae15ded69d7e4103888}\label{classAddon__fields_a47012cfc53ab4ae15ded69d7e4103888}} 
+uchar $\ast$ {\bfseries get\+\_\+addon\+\_\+buf} ()
+\item 
+\mbox{\Hypertarget{classAddon__fields_ae5c0583185a8449d9b745bbada733842}\label{classAddon__fields_ae5c0583185a8449d9b745bbada733842}} 
+uint {\bfseries get\+\_\+addon\+\_\+buf\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classAddon__fields_aa98acd8f2f9885d4c138991598ed8784}\label{classAddon__fields_aa98acd8f2f9885d4c138991598ed8784}} 
+void {\bfseries set\+\_\+using\+\_\+packed\+\_\+addons} (bool val)
+\item 
+\mbox{\Hypertarget{classAddon__fields_ad63b16e79dfdb2ffea01d51c2de41ae1}\label{classAddon__fields_ad63b16e79dfdb2ffea01d51c2de41ae1}} 
+bool {\bfseries using\+\_\+packed\+\_\+addons} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAddon__fields_aab331eaba2a26219024f17de695b2f06}\label{classAddon__fields_aab331eaba2a26219024f17de695b2f06}} 
+static bool {\bfseries can\+\_\+pack\+\_\+addon\+\_\+fields} (uint record\+\_\+length)
+\item 
+static uint \mbox{\hyperlink{classAddon__fields_a0cd4ab5178755aec49e999f78127864b}{read\+\_\+addon\+\_\+length}} (uchar $\ast$p)
+\item 
+static void \mbox{\hyperlink{classAddon__fields_a0d834a609fc85decc8d6ee3eaafbf109}{store\+\_\+addon\+\_\+length}} (uchar $\ast$p, uint sz)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAddon__fields_a546be09b1f8945b97deeca339cf601e4}\label{classAddon__fields_a546be09b1f8945b97deeca339cf601e4}} 
+static const uint {\bfseries size\+\_\+of\+\_\+length\+\_\+field} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class wraps information about usage of addon fields. An \mbox{\hyperlink{classAddon__fields}{Addon\+\_\+fields}} object is used both during packing of data in the filesort buffer, and later during unpacking in \textquotesingle{}\mbox{\hyperlink{classFilesort__info_a972ae7583ff223e13df5b6d6cf4d0de8}{Filesort\+\_\+info\+::unpack\+\_\+addon\+\_\+fields}}\textquotesingle{}.
+
+\begin{DoxySeeAlso}{See also}
+documentation for the \mbox{\hyperlink{structSort__addon__field}{Sort\+\_\+addon\+\_\+field}} struct. 
+
+documentation for get\+\_\+addon\+\_\+fields() 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAddon__fields_a0cd4ab5178755aec49e999f78127864b}\label{classAddon__fields_a0cd4ab5178755aec49e999f78127864b}} 
+\index{Addon\+\_\+fields@{Addon\+\_\+fields}!read\+\_\+addon\+\_\+length@{read\+\_\+addon\+\_\+length}}
+\index{read\+\_\+addon\+\_\+length@{read\+\_\+addon\+\_\+length}!Addon\+\_\+fields@{Addon\+\_\+fields}}
+\subsubsection{\texorpdfstring{read\+\_\+addon\+\_\+length()}{read\_addon\_length()}}
+{\footnotesize\ttfamily static uint Addon\+\_\+fields\+::read\+\_\+addon\+\_\+length (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Total number of bytes used for packed addon fields. the size of the length field + size of null bits + sum of field sizes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAddon__fields_a0d834a609fc85decc8d6ee3eaafbf109}\label{classAddon__fields_a0d834a609fc85decc8d6ee3eaafbf109}} 
+\index{Addon\+\_\+fields@{Addon\+\_\+fields}!store\+\_\+addon\+\_\+length@{store\+\_\+addon\+\_\+length}}
+\index{store\+\_\+addon\+\_\+length@{store\+\_\+addon\+\_\+length}!Addon\+\_\+fields@{Addon\+\_\+fields}}
+\subsubsection{\texorpdfstring{store\+\_\+addon\+\_\+length()}{store\_addon\_length()}}
+{\footnotesize\ttfamily static void Addon\+\_\+fields\+::store\+\_\+addon\+\_\+length (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{p,  }\item[{uint}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Stores the number of bytes used for packed addon fields. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+sort.\+h\end{DoxyCompactItemize}

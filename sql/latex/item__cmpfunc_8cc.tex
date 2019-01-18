@@ -1,0 +1,179 @@
+\hypertarget{item__cmpfunc_8cc}{}\section{item\+\_\+cmpfunc.\+cc File Reference}
+\label{item__cmpfunc_8cc}\index{item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}}
+
+
+This file defines all compare functions.  
+
+
+{\ttfamily \#include $<$m\+\_\+ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}template\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+json\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}aggregate\+\_\+check.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classCmp__longlong}{Cmp\+\_\+longlong}}
+\item 
+class \mbox{\hyperlink{classCmp__row}{Cmp\+\_\+row}}
+\item 
+class \mbox{\hyperlink{classCmp__string}{Cmp\+\_\+string}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__cmpfunc_8cc_a608cf497718e23eb01739e881833cb35}\label{item__cmpfunc_8cc_a608cf497718e23eb01739e881833cb35}} 
+\#define {\bfseries O\+L\+D\+\_\+\+C\+MP}
+\item 
+\mbox{\Hypertarget{item__cmpfunc_8cc_aece192481bc55c135e84f3820a433728}\label{item__cmpfunc_8cc_aece192481bc55c135e84f3820a433728}} 
+\#define {\bfseries likeconv}(cs,  A)~(uchar) (cs)-\/$>$sort\+\_\+order\mbox{[}(uchar) (A)\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum\+\_\+field\+\_\+types \mbox{\hyperlink{item__cmpfunc_8cc_a62111cd977853a7f76e52aff59436e29}{agg\+\_\+field\+\_\+type}} (\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$items, uint nitems)
+\begin{DoxyCompactList}\small\item\em Aggregates field types from the array of items. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{item__cmpfunc_8cc_a722b67c2fcc8d0c01e0bae5b536fb064}{get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str}} (T\+HD $\ast$thd, String $\ast$str, timestamp\+\_\+type warn\+\_\+type, const char $\ast$warn\+\_\+name, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$l\+\_\+time)
+\item 
+\mbox{\Hypertarget{item__cmpfunc_8cc_a421ef5759a7287767eee490f1d5fbda0}\label{item__cmpfunc_8cc_a421ef5759a7287767eee490f1d5fbda0}} 
+longlong {\bfseries get\+\_\+time\+\_\+value} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$$\ast$item\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$cache\+\_\+arg, const \mbox{\hyperlink{classItem}{Item}} $\ast$warn\+\_\+item, bool $\ast$is\+\_\+null)
+\item 
+\mbox{\Hypertarget{item__cmpfunc_8cc_a4bbeecc581ded0dc173719ae00df87a0}\label{item__cmpfunc_8cc_a4bbeecc581ded0dc173719ae00df87a0}} 
+longlong {\bfseries get\+\_\+datetime\+\_\+value} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$$\ast$item\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$cache\+\_\+arg, const \mbox{\hyperlink{classItem}{Item}} $\ast$warn\+\_\+item, bool $\ast$is\+\_\+null)
+\item 
+{\footnotesize template$<$typename L\+Lor\+U\+LL $>$ }\\longlong \mbox{\hyperlink{item__cmpfunc_8cc_aa3592c71a9dc3a3335e9445a8acb23c1}{compare\+\_\+between\+\_\+int\+\_\+result}} (bool compare\+\_\+as\+\_\+temporal\+\_\+dates, bool compare\+\_\+as\+\_\+temporal\+\_\+times, bool negated, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, my\+\_\+bool $\ast$null\+\_\+value)
+\item 
+\mbox{\Hypertarget{item__cmpfunc_8cc_aa7838ed81acbceefc34b43904dd4cc4e}\label{item__cmpfunc_8cc_aa7838ed81acbceefc34b43904dd4cc4e}} 
+int {\bfseries cmp\+\_\+longlong} (const in\+\_\+longlong\+::packed\+\_\+longlong $\ast$a, const in\+\_\+longlong\+::packed\+\_\+longlong $\ast$b)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{item__cmpfunc_8cc_a96df67726ea2a49c5f779cb7d3cdbbd3}{and\+\_\+expressions}} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$org\+\_\+item)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines all compare functions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__cmpfunc_8cc_a62111cd977853a7f76e52aff59436e29}\label{item__cmpfunc_8cc_a62111cd977853a7f76e52aff59436e29}} 
+\index{item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}!agg\+\_\+field\+\_\+type@{agg\+\_\+field\+\_\+type}}
+\index{agg\+\_\+field\+\_\+type@{agg\+\_\+field\+\_\+type}!item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}}
+\subsubsection{\texorpdfstring{agg\+\_\+field\+\_\+type()}{agg\_field\_type()}}
+{\footnotesize\ttfamily enum\+\_\+field\+\_\+types agg\+\_\+field\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{items,  }\item[{uint}]{nitems }\end{DoxyParamCaption})}
+
+
+
+Aggregates field types from the array of items. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em items} & array of items to aggregate the type from \mbox{[}in\mbox{]} nitems number of items in the array\\
+\hline
+\end{DoxyParams}
+This function aggregates field types from the array of items. Found type is supposed to be used later as the result field type of a multi-\/argument function. Aggregation itself is performed by the \mbox{\hyperlink{classField_ab20100743e6462945e5c0a5130a9ab9d}{Field\+::field\+\_\+type\+\_\+merge()}} function.
+
+\begin{DoxyNote}{Note}
+The term \char`\"{}aggregation\char`\"{} is used here in the sense of inferring the result type of a function from its argument types.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+aggregated field type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__cmpfunc_8cc_a96df67726ea2a49c5f779cb7d3cdbbd3}\label{item__cmpfunc_8cc_a96df67726ea2a49c5f779cb7d3cdbbd3}} 
+\index{item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}!and\+\_\+expressions@{and\+\_\+expressions}}
+\index{and\+\_\+expressions@{and\+\_\+expressions}!item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}}
+\subsubsection{\texorpdfstring{and\+\_\+expressions()}{and\_expressions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ and\+\_\+expressions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{org\+\_\+item }\end{DoxyParamCaption})}
+
+Create an A\+ND expression from two expressions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & expression or N\+U\+LL \\
+\hline
+{\em b} & expression. \\
+\hline
+{\em org\+\_\+item} & Don\textquotesingle{}t modify a if a == $\ast$org\+\_\+item. If a == N\+U\+LL, org\+\_\+item is set to point at b, to ensure that future calls will not modify b.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This will not modify item pointed to by org\+\_\+item or b The idea is that one can call this in a loop and create and \textquotesingle{}and\textquotesingle{} over all items without modifying any of the original items.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & Error \\
+\hline
+{\em \mbox{\hyperlink{classItem}{Item}}} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{item__cmpfunc_8cc_aa3592c71a9dc3a3335e9445a8acb23c1}\label{item__cmpfunc_8cc_aa3592c71a9dc3a3335e9445a8acb23c1}} 
+\index{item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}!compare\+\_\+between\+\_\+int\+\_\+result@{compare\+\_\+between\+\_\+int\+\_\+result}}
+\index{compare\+\_\+between\+\_\+int\+\_\+result@{compare\+\_\+between\+\_\+int\+\_\+result}!item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}}
+\subsubsection{\texorpdfstring{compare\+\_\+between\+\_\+int\+\_\+result()}{compare\_between\_int\_result()}}
+{\footnotesize\ttfamily template$<$typename L\+Lor\+U\+LL $>$ \\
+longlong compare\+\_\+between\+\_\+int\+\_\+result (\begin{DoxyParamCaption}\item[{bool}]{compare\+\_\+as\+\_\+temporal\+\_\+dates,  }\item[{bool}]{compare\+\_\+as\+\_\+temporal\+\_\+times,  }\item[{bool}]{negated,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{my\+\_\+bool $\ast$}]{null\+\_\+value }\end{DoxyParamCaption})}
+
+A helper function for Item\+\_\+func\+\_\+between\+::val\+\_\+int() to avoid over/underflow when comparing large values.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L\+Lor\+U\+LL} & ulonglong or longlong\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em compare\+\_\+as\+\_\+temporal\+\_\+dates} & copy of \mbox{\hyperlink{classItem__func__between}{Item\+\_\+func\+\_\+between}} member variable \\
+\hline
+{\em compare\+\_\+as\+\_\+temporal\+\_\+times} & copy of \mbox{\hyperlink{classItem__func__between}{Item\+\_\+func\+\_\+between}} member variable \\
+\hline
+{\em negated} & copy of \mbox{\hyperlink{classItem__func__between}{Item\+\_\+func\+\_\+between}} member variable \\
+\hline
+{\em args} & copy of \mbox{\hyperlink{classItem__func__between}{Item\+\_\+func\+\_\+between}} member variable \\
+\hline
+{\em null\+\_\+value} & \mbox{[}out\mbox{]} set to true if result is not true/false\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if\+: args\mbox{[}1\mbox{]} $<$= args\mbox{[}0\mbox{]} $<$= args\mbox{[}2\mbox{]} \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{item__cmpfunc_8cc_a722b67c2fcc8d0c01e0bae5b536fb064}\label{item__cmpfunc_8cc_a722b67c2fcc8d0c01e0bae5b536fb064}} 
+\index{item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}!get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str@{get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str}}
+\index{get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str@{get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str}!item\+\_\+cmpfunc.\+cc@{item\+\_\+cmpfunc.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str()}{get\_mysql\_time\_from\_str()}}
+{\footnotesize\ttfamily bool get\+\_\+mysql\+\_\+time\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str,  }\item[{timestamp\+\_\+type}]{warn\+\_\+type,  }\item[{const char $\ast$}]{warn\+\_\+name,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{l\+\_\+time }\end{DoxyParamCaption})}
+
+Parse date provided in a string to a M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em str} & A string to convert \\
+\hline
+\mbox{\texttt{ in}}  & {\em warn\+\_\+type} & Type of the timestamp for issuing the warning \\
+\hline
+\mbox{\texttt{ in}}  & {\em warn\+\_\+name} & \mbox{\hyperlink{classField}{Field}} name for issuing the warning \\
+\hline
+\mbox{\texttt{ out}}  & {\em l\+\_\+time} & The M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME objects is initialized.\\
+\hline
+\end{DoxyParams}
+Parses a date provided in the string str into a M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME object. If the string contains an incorrect date or doesn\textquotesingle{}t correspond to a date at all then a warning is issued. The warn\+\_\+type and the warn\+\_\+name arguments are used as the name and the type of the field when issuing the warning. If any input was discarded (trailing or non-\/timestamp-\/y characters), return value will be T\+R\+UE.
+
+\begin{DoxyReturn}{Returns}
+Status flag 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em True} & Indicates failure. \\
+\hline
+\end{DoxyRetVals}

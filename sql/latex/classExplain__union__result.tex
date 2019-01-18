@@ -1,0 +1,55 @@
+\hypertarget{classExplain__union__result}{}\section{Explain\+\_\+union\+\_\+result Class Reference}
+\label{classExplain__union__result}\index{Explain\+\_\+union\+\_\+result@{Explain\+\_\+union\+\_\+result}}
+Inheritance diagram for Explain\+\_\+union\+\_\+result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExplain__union__result}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__union__result_a58074d53ee719e9aa5e59b9b71935af5}\label{classExplain__union__result_a58074d53ee719e9aa5e59b9b71935af5}} 
+{\bfseries Explain\+\_\+union\+\_\+result} (T\+HD $\ast$thd\+\_\+arg, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__union__result_a4b0245d95901da2967a83d5b62bcde8b}\label{classExplain__union__result_a4b0245d95901da2967a83d5b62bcde8b}} 
+virtual bool {\bfseries explain\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{classExplain__union__result_acc5afd025d41ae3d405f8a5f03bbcddc}\label{classExplain__union__result_acc5afd025d41ae3d405f8a5f03bbcddc}} 
+virtual bool {\bfseries explain\+\_\+table\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classExplain__union__result_ae716570af3a023e525c208af2723c8bf}\label{classExplain__union__result_ae716570af3a023e525c208af2723c8bf}} 
+virtual bool {\bfseries explain\+\_\+join\+\_\+type} ()
+\item 
+\mbox{\Hypertarget{classExplain__union__result_a47af9f54512900ea81337271cb8f8a11}\label{classExplain__union__result_a47af9f54512900ea81337271cb8f8a11}} 
+virtual bool {\bfseries explain\+\_\+extra} ()
+\item 
+virtual bool \mbox{\hyperlink{classExplain__union__result_a5c825b2170b63e866d0694bb29ee1535}{can\+\_\+walk\+\_\+clauses}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classExplain__union__result}{Explain\+\_\+union\+\_\+result}} class outputs E\+X\+P\+L\+A\+IN row for U\+N\+I\+ON 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExplain__union__result_a5c825b2170b63e866d0694bb29ee1535}\label{classExplain__union__result_a5c825b2170b63e866d0694bb29ee1535}} 
+\index{Explain\+\_\+union\+\_\+result@{Explain\+\_\+union\+\_\+result}!can\+\_\+walk\+\_\+clauses@{can\+\_\+walk\+\_\+clauses}}
+\index{can\+\_\+walk\+\_\+clauses@{can\+\_\+walk\+\_\+clauses}!Explain\+\_\+union\+\_\+result@{Explain\+\_\+union\+\_\+result}}
+\subsubsection{\texorpdfstring{can\+\_\+walk\+\_\+clauses()}{can\_walk\_clauses()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+union\+\_\+result\+::can\+\_\+walk\+\_\+clauses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Returns true if the W\+H\+E\+RE, O\+R\+D\+ER BY, G\+R\+O\+UP BY, etc clauses can safely be traversed\+: it means that we can iterate through them (no element is added/removed/replaced); the internal details of an element can change though (in particular if that element is an \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}}).
+
+By default, if we are explaining another connection, this is not safe. 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a82fdfa033238cfb356903c475ef4a177}{Explain}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+cc\end{DoxyCompactItemize}

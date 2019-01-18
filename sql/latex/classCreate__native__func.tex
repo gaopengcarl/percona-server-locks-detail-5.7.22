@@ -1,0 +1,100 @@
+\hypertarget{classCreate__native__func}{}\section{Create\+\_\+native\+\_\+func Class Reference}
+\label{classCreate__native__func}\index{Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}}
+Inheritance diagram for Create\+\_\+native\+\_\+func\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classCreate__native__func}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classCreate__native__func_ac93ced4c4ed523538b76d34d17377a40}{create\+\_\+func}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$item\+\_\+list)
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classCreate__native__func_a52a42d6a191ca6e9627fb34d91e97ebc}{create\+\_\+native}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$item\+\_\+list)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCreate__native__func_ab7c1b96607b6ddefce7c4e3abd7935d8}{Create\+\_\+native\+\_\+func}} ()
+\item 
+virtual \mbox{\hyperlink{classCreate__native__func_ae8d4b19b44ee25dd94d052de24ca517a}{$\sim$\+Create\+\_\+native\+\_\+func}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adapter for native functions with a variable number of arguments. The main use of this class is to discard the following calls\+: {\ttfamily foo(expr1 A\+S name1, expr2 A\+S name2, ...)} which are syntactically correct (the syntax can refer to a U\+DF), but semantically invalid for native functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCreate__native__func_ab7c1b96607b6ddefce7c4e3abd7935d8}\label{classCreate__native__func_ab7c1b96607b6ddefce7c4e3abd7935d8}} 
+\index{Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}!Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}}
+\index{Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}!Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}}
+\subsubsection{\texorpdfstring{Create\+\_\+native\+\_\+func()}{Create\_native\_func()}}
+{\footnotesize\ttfamily Create\+\_\+native\+\_\+func\+::\+Create\+\_\+native\+\_\+func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Constructor. \mbox{\Hypertarget{classCreate__native__func_ae8d4b19b44ee25dd94d052de24ca517a}\label{classCreate__native__func_ae8d4b19b44ee25dd94d052de24ca517a}} 
+\index{Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}!````~Create\+\_\+native\+\_\+func@{$\sim$\+Create\+\_\+native\+\_\+func}}
+\index{````~Create\+\_\+native\+\_\+func@{$\sim$\+Create\+\_\+native\+\_\+func}!Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}}
+\subsubsection{\texorpdfstring{$\sim$\+Create\+\_\+native\+\_\+func()}{~Create\_native\_func()}}
+{\footnotesize\ttfamily virtual Create\+\_\+native\+\_\+func\+::$\sim$\+Create\+\_\+native\+\_\+func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCreate__native__func_ac93ced4c4ed523538b76d34d17377a40}\label{classCreate__native__func_ac93ced4c4ed523538b76d34d17377a40}} 
+\index{Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}!create\+\_\+func@{create\+\_\+func}}
+\index{create\+\_\+func@{create\+\_\+func}!Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}}
+\subsubsection{\texorpdfstring{create\+\_\+func()}{create\_func()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Create\+\_\+native\+\_\+func\+::create\+\_\+func (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{\mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$}]{item\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The builder create method. Given the function name and list or arguments, this method creates an {\ttfamily \mbox{\hyperlink{classItem}{Item}}} that represents the function call. In case or errors, a N\+U\+LL item is returned, and an error is reported. Note that the {\ttfamily thd} object may be modified by the builder. In particular, the following members/methods can be set/called, depending on the function called and the function possible side effects. 
+\begin{DoxyItemize}
+\item {\ttfamily thd-\/$>$lex-\/$>$binlog\+\_\+row\+\_\+based\+\_\+if\+\_\+mixed} 
+\item {\ttfamily thd-\/$>$lex-\/$>$current\+\_\+context()} 
+\item {\ttfamily thd-\/$>$lex-\/$>$safe\+\_\+to\+\_\+cache\+\_\+query} 
+\item {\ttfamily thd-\/$>$lex-\/$>$uncacheable(\+U\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+S\+I\+D\+E\+E\+F\+F\+E\+C\+T)} 
+\item {\ttfamily thd-\/$>$lex-\/$>$uncacheable(\+U\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+R\+A\+N\+D)} 
+\item {\ttfamily thd-\/$>$lex-\/$>$add\+\_\+time\+\_\+zone\+\_\+tables\+\_\+to\+\_\+query\+\_\+tables(thd)} 
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em name} & The function name \\
+\hline
+{\em item\+\_\+list} & The list of arguments to the function, can be N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An item representing the parsed function call, or N\+U\+LL 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCreate__func_a04aa802c4546f72d1c10db1983cece5b}{Create\+\_\+func}}.
+
+\mbox{\Hypertarget{classCreate__native__func_a52a42d6a191ca6e9627fb34d91e97ebc}\label{classCreate__native__func_a52a42d6a191ca6e9627fb34d91e97ebc}} 
+\index{Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}!create\+\_\+native@{create\+\_\+native}}
+\index{create\+\_\+native@{create\+\_\+native}!Create\+\_\+native\+\_\+func@{Create\+\_\+native\+\_\+func}}
+\subsubsection{\texorpdfstring{create\+\_\+native()}{create\_native()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classItem}{Item}}$\ast$ Create\+\_\+native\+\_\+func\+::create\+\_\+native (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{\mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$}]{item\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Builder method, with no arguments. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em name} & The native function name \\
+\hline
+{\em item\+\_\+list} & The function parameters, none of which are named \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An item representing the function call 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCreate__func__year__week_aa84a28971435f78b2c86aeefc51f2fda}{Create\+\_\+func\+\_\+year\+\_\+week}}, \mbox{\hyperlink{classCreate__func__unix__timestamp_a548121860625597d1a279e92b1878bd3}{Create\+\_\+func\+\_\+unix\+\_\+timestamp}}, \mbox{\hyperlink{classCreate__func__round_a7a7236f725259e58247056aa553d5c3a}{Create\+\_\+func\+\_\+round}}, \mbox{\hyperlink{classCreate__func__rand_af2a86fc4bb43775dfae5afea2d4b9c43}{Create\+\_\+func\+\_\+rand}}, \mbox{\hyperlink{classCreate__func__master__gtid__set__wait_a065b81f5ebe1464cb88b799e078e7f4f}{Create\+\_\+func\+\_\+master\+\_\+gtid\+\_\+set\+\_\+wait}}, \mbox{\hyperlink{classCreate__func__executed__gtid__set__wait_a40744208e09a3966d613f6f2c684cca4}{Create\+\_\+func\+\_\+executed\+\_\+gtid\+\_\+set\+\_\+wait}}, \mbox{\hyperlink{classCreate__func__master__pos__wait_a34aaf7be08bc1d0a534cfda606609db4}{Create\+\_\+func\+\_\+master\+\_\+pos\+\_\+wait}}, \mbox{\hyperlink{classCreate__func__make__set_a28f2047782d054b91b5ecf250a516de8}{Create\+\_\+func\+\_\+make\+\_\+set}}, \mbox{\hyperlink{classCreate__func__log_a2e3f17df14bf2be60aaecebff6f5e9fb}{Create\+\_\+func\+\_\+log}}, \mbox{\hyperlink{classCreate__func__locate_a70e25481c64f950226c09d8b5e341570}{Create\+\_\+func\+\_\+locate}}, \mbox{\hyperlink{classCreate__func__least_aecea792d02a625414e171b0fb176d450}{Create\+\_\+func\+\_\+least}}, \mbox{\hyperlink{classCreate__func__last__insert__id_a9c0bbed64602ba5cf43063888aadd260}{Create\+\_\+func\+\_\+last\+\_\+insert\+\_\+id}}, \mbox{\hyperlink{classCreate__func__json__unquote_af1136c2c462949f01e9550966aebfe20}{Create\+\_\+func\+\_\+json\+\_\+unquote}}, \mbox{\hyperlink{classCreate__func__json__quote_a98de91127a9af27f04dbc0097a376c99}{Create\+\_\+func\+\_\+json\+\_\+quote}}, \mbox{\hyperlink{classCreate__func__json__merge_a071ffb8f513c621ee895332c462543b1}{Create\+\_\+func\+\_\+json\+\_\+merge}}, \mbox{\hyperlink{classCreate__func__json__merge__preserve_a1d77a769bfdb6bd100ab55ea085322a6}{Create\+\_\+func\+\_\+json\+\_\+merge\+\_\+preserve}}, \mbox{\hyperlink{classCreate__func__json__merge__patch_a7d91e95c4f197d192c4cd0f4f5465185}{Create\+\_\+func\+\_\+json\+\_\+merge\+\_\+patch}}, \mbox{\hyperlink{classCreate__func__json__remove_a6c192ba1efd2ab6a5be04f43396f6919}{Create\+\_\+func\+\_\+json\+\_\+remove}}, \mbox{\hyperlink{classCreate__func__json__array_a61d0a2e46dbcdd2c61ef5abb343c878f}{Create\+\_\+func\+\_\+json\+\_\+array}}, \mbox{\hyperlink{classCreate__func__json__replace_aed59696780378d09108bf96b66f11b7b}{Create\+\_\+func\+\_\+json\+\_\+replace}}, \mbox{\hyperlink{classCreate__func__json__set_a5092a2329a52dccc1bbaa1c28f32b1cc}{Create\+\_\+func\+\_\+json\+\_\+set}}, \mbox{\hyperlink{classCreate__func__json__search_a0c112f98731df77db850281e684a7370}{Create\+\_\+func\+\_\+json\+\_\+search}}, \mbox{\hyperlink{classCreate__func__json__row__object_a96c8a889c0f044d6c09ea7bf1ba590e9}{Create\+\_\+func\+\_\+json\+\_\+row\+\_\+object}}, \mbox{\hyperlink{classCreate__func__json__array__insert_a891b8b69b675ad8202e4fbe8759ed49d}{Create\+\_\+func\+\_\+json\+\_\+array\+\_\+insert}}, \mbox{\hyperlink{classCreate__func__json__insert_ab7967512618da859ff114954f094d605}{Create\+\_\+func\+\_\+json\+\_\+insert}}, \mbox{\hyperlink{classCreate__func__json__array__append_aecbe64dad41e281a2323793693b35b5f}{Create\+\_\+func\+\_\+json\+\_\+array\+\_\+append}}, \mbox{\hyperlink{classCreate__func__json__extract_a5df6886f28b355be27a3b36d07c91458}{Create\+\_\+func\+\_\+json\+\_\+extract}}, \mbox{\hyperlink{classCreate__func__json__keys_a626d6471078a8b9393a6bc98e8e8906e}{Create\+\_\+func\+\_\+json\+\_\+keys}}, \mbox{\hyperlink{classCreate__func__json__depth_a143fa7a6b3c0bf42055c7f039603bbbc}{Create\+\_\+func\+\_\+json\+\_\+depth}}, \mbox{\hyperlink{classCreate__func__json__length_a2f1cf5a8bea82cf9108d83b80d628fe8}{Create\+\_\+func\+\_\+json\+\_\+length}}, \mbox{\hyperlink{classCreate__func__json__contains__path_a3e06c9e6e3e5b7d375141ff8e33082cd}{Create\+\_\+func\+\_\+json\+\_\+contains\+\_\+path}}, \mbox{\hyperlink{classCreate__func__json__contains_a6086cefe61628441eddec2f4488dbaea}{Create\+\_\+func\+\_\+json\+\_\+contains}}, \mbox{\hyperlink{classCreate__func__buffer__deprecated_a87f697ca068455b16f4f9b73cb31c499}{Create\+\_\+func\+\_\+buffer\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__buffer_afc9659d40eb597f6c6a3b1e09478767a}{Create\+\_\+func\+\_\+buffer}}, \mbox{\hyperlink{classCreate__func__greatest_a29348f80d1e11fb8aaeb7da4735ad29e}{Create\+\_\+func\+\_\+greatest}}, \mbox{\hyperlink{classCreate__func__geomfromgeojson_a1c72f63838d7c6d2c54ffbcc8323e113}{Create\+\_\+func\+\_\+geomfromgeojson}}, \mbox{\hyperlink{classCreate__func__polygonfromwkb__deprecated_a5eec1c4da2bfbb22a7804ea5a000badd}{Create\+\_\+func\+\_\+polygonfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__polyfromwkb__deprecated_a918890964239746813b0bf0786c89370}{Create\+\_\+func\+\_\+polyfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__pointfromwkb__deprecated_a3d3d96288a0fd07206e11c3b3f5277bc}{Create\+\_\+func\+\_\+pointfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__multipolygonfromwkb__deprecated_a81e85bfb32c7c2bbad16e0d0c3fe9b95}{Create\+\_\+func\+\_\+multipolygonfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__multipointfromwkb__deprecated_a5f109e5e5ae27fa6c53ceb0976197204}{Create\+\_\+func\+\_\+multipointfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__multilinestringfromwkb__deprecated_a88004232b80c2ff45f41748a7d293bb6}{Create\+\_\+func\+\_\+multilinestringfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__mpolyfromwkb__deprecated_a54509d67c49eaac43edf999c131c4dc1}{Create\+\_\+func\+\_\+mpolyfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__mpointfromwkb__deprecated_ad724e9ffb73a5aaa630acc577bf341b7}{Create\+\_\+func\+\_\+mpointfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__mlinefromwkb__deprecated_afc7d5e74ffec6ebd48da9ae7e781cd51}{Create\+\_\+func\+\_\+mlinefromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__linestringfromwkb__deprecated_a56b6284f5656055950fd717336310323}{Create\+\_\+func\+\_\+linestringfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__linefromwkb__deprecated_a970684ef7c4db5f25bbd81be427b525d}{Create\+\_\+func\+\_\+linefromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geomfromwkb__deprecated_a3de8d67c5e21d24004f3168fc26c32a4}{Create\+\_\+func\+\_\+geomfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geometryfromwkb__deprecated_ad703efb8f0aeacc91ff8d08301a55dd7}{Create\+\_\+func\+\_\+geometryfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geometrycollectionfromwkb__deprecated_a143fde30a0fff5b0f79456a9ea9c5ae0}{Create\+\_\+func\+\_\+geometrycollectionfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geomcollfromwkb__deprecated_a37dd2357ed2c8bb8f97450aaaa47c158}{Create\+\_\+func\+\_\+geomcollfromwkb\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geometry__from__wkb_a2dc1bd3f589aca8e3fcab072829d7886}{Create\+\_\+func\+\_\+geometry\+\_\+from\+\_\+wkb}}, \mbox{\hyperlink{classCreate__func__polygonfromtext__deprecated_ae42cae5e01546d848a75369762244ca5}{Create\+\_\+func\+\_\+polygonfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__polyfromtext__deprecated_ae2d1f5b987f4eee048383dff2fbb7d92}{Create\+\_\+func\+\_\+polyfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__pointfromtext__deprecated_a15b37997c76797c4da46be0fd82afae1}{Create\+\_\+func\+\_\+pointfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__multipolygonfromtext__deprecated_aa97a2a418f12fe63eb87ac20182a7790}{Create\+\_\+func\+\_\+multipolygonfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__multipointfromtext__deprecated_a0855754fc0c084171c2acc7500603cf3}{Create\+\_\+func\+\_\+multipointfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__multilinestringfromtext__deprecated_a8994e5152dc5e7d389dab02346f5e1eb}{Create\+\_\+func\+\_\+multilinestringfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__mpolyfromtext__deprecated_af27e8741d038b263573cd51ad78608c3}{Create\+\_\+func\+\_\+mpolyfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__mpointfromtext__deprecated_a51dc673c0da67b8c4cc35ede863275aa}{Create\+\_\+func\+\_\+mpointfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__mlinefromtext__deprecated_ac980d27d0c98fd6a1957cdef2642f1dd}{Create\+\_\+func\+\_\+mlinefromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__linestringfromtext__deprecated_ada58651e2d023a4363d088fd5370f8af}{Create\+\_\+func\+\_\+linestringfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__linefromtext__deprecated_aa8e6c707d1a042ae6b57389b005f7e35}{Create\+\_\+func\+\_\+linefromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geomfromtext__deprecated_a48d582343e1887825483f737898d2b1f}{Create\+\_\+func\+\_\+geomfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geometryfromtext__deprecated_ad8af1636a8592df47f1608e873a26929}{Create\+\_\+func\+\_\+geometryfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geometrycollectionfromtext__deprecated_a82b818db18364fb0619ad2ca6a1551ce}{Create\+\_\+func\+\_\+geometrycollectionfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geomcollfromtext__deprecated_a07bdd5b9d90da6e646fd169dbdf04ea2}{Create\+\_\+func\+\_\+geomcollfromtext\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__geometry__from__text_aa8fb6a66aca86650e8f96dafcfcd7463}{Create\+\_\+func\+\_\+geometry\+\_\+from\+\_\+text}}, \mbox{\hyperlink{classCreate__func__geohash_aba1f0c13d0c25590b1e9f591845b4e3f}{Create\+\_\+func\+\_\+geohash}}, \mbox{\hyperlink{classCreate__func__from__unixtime_ae8b86de49c1990a2b50667c52e6f126b}{Create\+\_\+func\+\_\+from\+\_\+unixtime}}, \mbox{\hyperlink{classCreate__func__field_a74dbd10291221446703e9082ad8d607d}{Create\+\_\+func\+\_\+field}}, \mbox{\hyperlink{classCreate__func__export__set_a52c8daab9c206e6daeb20865a98b8ba9}{Create\+\_\+func\+\_\+export\+\_\+set}}, \mbox{\hyperlink{classCreate__func__encrypt_a2111cf7426f1e501cee525d73f84f159}{Create\+\_\+func\+\_\+encrypt}}, \mbox{\hyperlink{classCreate__func__elt_a54ed451dd740c907447d8bced85b13c2}{Create\+\_\+func\+\_\+elt}}, \mbox{\hyperlink{classCreate__func__distance__deprecated_a0ede2268cdcde449bf54ed374e0027ad}{Create\+\_\+func\+\_\+distance\+\_\+deprecated}}, \mbox{\hyperlink{classCreate__func__distance__sphere_a8225c0c2a7b8b2234fb42ed6f19c9182}{Create\+\_\+func\+\_\+distance\+\_\+sphere}}, \mbox{\hyperlink{classCreate__func__distance_a19ecaaefefe96129814406a898dcc269}{Create\+\_\+func\+\_\+distance}}, \mbox{\hyperlink{classCreate__func__des__encrypt_af04e4d13c157aec97305a5e78e94fb44}{Create\+\_\+func\+\_\+des\+\_\+encrypt}}, \mbox{\hyperlink{classCreate__func__des__decrypt_a0801bef773e934745df2028becae038c}{Create\+\_\+func\+\_\+des\+\_\+decrypt}}, \mbox{\hyperlink{classCreate__func__concat__ws_a7b67c059213f42b94703ed6a30de6e75}{Create\+\_\+func\+\_\+concat\+\_\+ws}}, \mbox{\hyperlink{classCreate__func__concat_aa4eb53f1b8f4e77ebfd67598c18b67ce}{Create\+\_\+func\+\_\+concat}}, \mbox{\hyperlink{classCreate__func__buffer__strategy_a63dbe67c96b063b8cb7932becd95cd26}{Create\+\_\+func\+\_\+buffer\+\_\+strategy}}, \mbox{\hyperlink{classCreate__func__atan_a7d087ec61fb03bc1107e3ba766e44c33}{Create\+\_\+func\+\_\+atan}}, \mbox{\hyperlink{classCreate__func__as__geojson_a8baba217f761c737954b6639f21ee4b8}{Create\+\_\+func\+\_\+as\+\_\+geojson}}, and \mbox{\hyperlink{classCreate__func__aes__base_a08aeb5f62e341f0d8e63972b7309aed6}{Create\+\_\+func\+\_\+aes\+\_\+base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__create_8cc}{item\+\_\+create.\+cc}}\end{DoxyCompactItemize}

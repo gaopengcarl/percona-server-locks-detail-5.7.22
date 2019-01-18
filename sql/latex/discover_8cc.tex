@@ -1,0 +1,60 @@
+\hypertarget{discover_8cc}{}\section{discover.\+cc File Reference}
+\label{discover_8cc}\index{discover.\+cc@{discover.\+cc}}
+
+
+Functions for discover of frm file from handler.  
+
+
+{\ttfamily \#include \char`\"{}discover.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysqld.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}table.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$my\+\_\+dir.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pfs\+\_\+file\+\_\+provider.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+file.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{discover_8cc_a54814a9a4e2e0a768bc943c072a94b07}{readfrm}} (const char $\ast$name, uchar $\ast$$\ast$frmdata, size\+\_\+t $\ast$len)
+\item 
+\mbox{\Hypertarget{discover_8cc_af16f39f4c0429db0d5e429c65ccb7ec3}\label{discover_8cc_af16f39f4c0429db0d5e429c65ccb7ec3}} 
+int {\bfseries writefrm} (const char $\ast$name, const uchar $\ast$frmdata, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for discover of frm file from handler. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{discover_8cc_a54814a9a4e2e0a768bc943c072a94b07}\label{discover_8cc_a54814a9a4e2e0a768bc943c072a94b07}} 
+\index{discover.\+cc@{discover.\+cc}!readfrm@{readfrm}}
+\index{readfrm@{readfrm}!discover.\+cc@{discover.\+cc}}
+\subsubsection{\texorpdfstring{readfrm()}{readfrm()}}
+{\footnotesize\ttfamily int readfrm (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{uchar $\ast$$\ast$}]{frmdata,  }\item[{size\+\_\+t $\ast$}]{len }\end{DoxyParamCaption})}
+
+Read the contents of a .frm file.
+
+frmdata and len are set to 0 on error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & path to table-\/file \char`\"{}db/name\char`\"{} \\
+\hline
+{\em frmdata} & frm data \\
+\hline
+{\em len} & length of the read frmdata\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & Could not open file \\
+\hline
+{\em 2} & Could not stat file \\
+\hline
+{\em 3} & Could not allocate data for read. Could not read file \\
+\hline
+\end{DoxyRetVals}

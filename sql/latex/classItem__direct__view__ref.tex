@@ -1,0 +1,249 @@
+\hypertarget{classItem__direct__view__ref}{}\section{Item\+\_\+direct\+\_\+view\+\_\+ref Class Reference}
+\label{classItem__direct__view__ref}\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+
+
+{\ttfamily \#include $<$item.\+h$>$}
+
+Inheritance diagram for Item\+\_\+direct\+\_\+view\+\_\+ref\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__direct__view__ref}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_a11f7a234024cdcefe82598162283e1e1}\label{classItem__direct__view__ref_a11f7a234024cdcefe82598162283e1e1}} 
+{\bfseries Item\+\_\+direct\+\_\+view\+\_\+ref} (\mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$item, const char $\ast$alias\+\_\+name\+\_\+arg, const char $\ast$table\+\_\+name\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tl)
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_ae9d07bcb61242c66495fdc2efa4dee9f}\label{classItem__direct__view__ref_ae9d07bcb61242c66495fdc2efa4dee9f}} 
+virtual bool {\bfseries subst\+\_\+argument\+\_\+checker} (uchar $\ast$$\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem__direct__view__ref_acb21497e89521376904d0cfa9a8b9340}{fix\+\_\+fields}} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+table\+\_\+map \mbox{\hyperlink{classItem__direct__view__ref_a53a4a787845b0c131234d3d9fb56d768}{used\+\_\+tables}} () const
+\item 
+bool \mbox{\hyperlink{classItem__direct__view__ref_ae9d8bc691bf2687ea154e83f8943bdf7}{eq}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$item, bool binary\+\_\+cmp) const
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_a99b51f031b188df5f74a2ebfa995c2ee}\label{classItem__direct__view__ref_a99b51f031b188df5f74a2ebfa995c2ee}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries get\+\_\+tmp\+\_\+table\+\_\+item} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_a664792201971437d50b42eec2ebe9337}\label{classItem__direct__view__ref_a664792201971437d50b42eec2ebe9337}} 
+virtual Ref\+\_\+\+Type {\bfseries ref\+\_\+type} () const
+\item 
+virtual bool \mbox{\hyperlink{classItem__direct__view__ref_af222b3c64ab25fe5d914154f0eb73039}{check\+\_\+column\+\_\+privileges}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem__direct__view__ref_a82d411e16d677c1a1eead5c386f6bdd0}{mark\+\_\+field\+\_\+in\+\_\+map}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_a1addab290f0aa5794adfec8b863a7825}\label{classItem__direct__view__ref_a1addab290f0aa5794adfec8b863a7825}} 
+virtual longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_ae77890916badf4368e6dab8d9cf4ade8}\label{classItem__direct__view__ref_ae77890916badf4368e6dab8d9cf4ade8}} 
+virtual double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_a3d3f5daf320a5f494d073ed853aa705e}\label{classItem__direct__view__ref_a3d3f5daf320a5f494d073ed853aa705e}} 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$dec)
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_ad9eae8e5302dc520e53891bf28071bb8}\label{classItem__direct__view__ref_ad9eae8e5302dc520e53891bf28071bb8}} 
+virtual String $\ast$ {\bfseries val\+\_\+str} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classItem__direct__view__ref_addadee858f933ad08e2bb3bb533067f3}{val\+\_\+bool}} ()
+\item 
+virtual bool \mbox{\hyperlink{classItem__direct__view__ref_a4b28cab9b54ffdfe277bd2c26cb50709}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr)
+\item 
+\mbox{\Hypertarget{classItem__direct__view__ref_a627f2e69200c084c75437818666a9c55}\label{classItem__direct__view__ref_a627f2e69200c084c75437818666a9c55}} 
+virtual bool {\bfseries is\+\_\+null} ()
+\item 
+virtual bool \mbox{\hyperlink{classItem__direct__view__ref_a29104c4d5e1f37059a1b0e357bb0cfc9}{send}} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$prot, String $\ast$tmp)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem__direct__view__ref_ac1cdb42acbcec19d8d004f86f96d8db8}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for fields from derived tables and views. The same as \mbox{\hyperlink{classItem__direct__ref}{Item\+\_\+direct\+\_\+ref}}, but call \mbox{\hyperlink{classItem__direct__view__ref_acb21497e89521376904d0cfa9a8b9340}{fix\+\_\+fields()}} of reference if not called yet. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__direct__view__ref_af222b3c64ab25fe5d914154f0eb73039}\label{classItem__direct__view__ref_af222b3c64ab25fe5d914154f0eb73039}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!check\+\_\+column\+\_\+privileges@{check\+\_\+column\+\_\+privileges}}
+\index{check\+\_\+column\+\_\+privileges@{check\+\_\+column\+\_\+privileges}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{check\+\_\+column\+\_\+privileges()}{check\_column\_privileges()}}
+{\footnotesize\ttfamily bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::check\+\_\+column\+\_\+privileges (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check privileges of view column 
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_ae9d8bc691bf2687ea154e83f8943bdf7}\label{classItem__direct__view__ref_ae9d8bc691bf2687ea154e83f8943bdf7}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!eq@{eq}}
+\index{eq@{eq}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{bool}]{binary\+\_\+cmp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Compare two view column references for equality.
+
+A view column reference is considered equal to another column reference if the second one is a view column and if both column references resolve to the same item. It is assumed that both items are of the same type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & item to compare with \\
+\hline
+{\em binary\+\_\+cmp} & make binary comparison\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Referenced item is equal to given item \\
+\hline
+{\em F\+A\+L\+SE} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_aeeefca8b7da367005015a5f978e9753b}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_acb21497e89521376904d0cfa9a8b9340}\label{classItem__direct__view__ref_acb21497e89521376904d0cfa9a8b9340}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!fix\+\_\+fields@{fix\+\_\+fields}}
+\index{fix\+\_\+fields@{fix\+\_\+fields}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{fix\+\_\+fields()}{fix\_fields()}}
+{\footnotesize\ttfamily bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::fix\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{reference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prepare referenced field then call usual \mbox{\hyperlink{classItem__ref_a6a78e05b0db89e799f61808c621b808f}{Item\+\_\+direct\+\_\+ref\+::fix\+\_\+fields}} .
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em reference} & reference on reference where this item stored\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_a6a78e05b0db89e799f61808c621b808f}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_a82d411e16d677c1a1eead5c386f6bdd0}\label{classItem__direct__view__ref_a82d411e16d677c1a1eead5c386f6bdd0}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!mark\+\_\+field\+\_\+in\+\_\+map@{mark\+\_\+field\+\_\+in\+\_\+map}}
+\index{mark\+\_\+field\+\_\+in\+\_\+map@{mark\+\_\+field\+\_\+in\+\_\+map}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{mark\+\_\+field\+\_\+in\+\_\+map()}{mark\_field\_in\_map()}}
+{\footnotesize\ttfamily virtual bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::mark\+\_\+field\+\_\+in\+\_\+map (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Mark underlying field in read or write map of a table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \mbox{\hyperlink{classMark__field}{Mark\+\_\+field}} object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_ada2ce79ccf5ef1273b9e1654448944c1}{Item}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_ac1cdb42acbcec19d8d004f86f96d8db8}\label{classItem__direct__view__ref_ac1cdb42acbcec19d8d004f86f96d8db8}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+\_\+direct\+\_\+view\+\_\+ref\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Helper function which does all of the work for \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field(\+Field$\ast$, bool)}}, except some error checking common to all subclasses, which is performed by \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}} itself.
+
+Subclasses that need to specialize the behaviour of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}, should override this function instead of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field} & the field to save the item into \\
+\hline
+ & {\em no\+\_\+conversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any errors or warnings \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were errors or warnings when saving the item \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_a08a7488069b002097708079cd73e84fb}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_a29104c4d5e1f37059a1b0e357bb0cfc9}\label{classItem__direct__view__ref_a29104c4d5e1f37059a1b0e357bb0cfc9}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!send@{send}}
+\index{send@{send}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$}]{protocol,  }\item[{String $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is only called from items that is not of type item\+\_\+field. 
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_a8a0631a3f2c781f2215d220df1e80869}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_a53a4a787845b0c131234d3d9fb56d768}\label{classItem__direct__view__ref_a53a4a787845b0c131234d3d9fb56d768}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!used\+\_\+tables@{used\+\_\+tables}}
+\index{used\+\_\+tables@{used\+\_\+tables}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{used\+\_\+tables()}{used\_tables()}}
+{\footnotesize\ttfamily table\+\_\+map Item\+\_\+direct\+\_\+view\+\_\+ref\+::used\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Takes into account whether an \mbox{\hyperlink{classItem}{Item}} in a derived table / view is part of an inner table of an outer join.
+
+1) If the field is an outer reference, return O\+U\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+R\+E\+F\+\_\+\+B\+IT. 2) Else 2a) If the field is const\+\_\+for\+\_\+execution and the field is used in the inner part of an outer join, return the inner tables of the outer join. (A \textquotesingle{}const\textquotesingle{} field that depends on the inner table of an outer join shouldn\textquotesingle{}t be interpreted as const.) 2b) Else return the used\+\_\+tables info of the underlying field.
+
+\begin{DoxyNote}{Note}
+The call to const\+\_\+for\+\_\+execution has been replaced by \char`\"{}!(inner\+\_\+map \& $\sim$\+I\+N\+N\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+I\+T)\char`\"{} to avoid multiple and recursive calls to used\+\_\+tables. This can create a problem when Views are created using other views 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_addadee858f933ad08e2bb3bb533067f3}\label{classItem__direct__view__ref_addadee858f933ad08e2bb3bb533067f3}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!val\+\_\+bool@{val\+\_\+bool}}
+\index{val\+\_\+bool@{val\+\_\+bool}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{val\+\_\+bool()}{val\_bool()}}
+{\footnotesize\ttfamily bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::val\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]Make this functions class dependent \end{DoxyRefDesc}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__direct__ref_ae552bb7da0a5629c75850d6d0e07d344}{Item\+\_\+direct\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__direct__view__ref_a4b28cab9b54ffdfe277bd2c26cb50709}\label{classItem__direct__view__ref_a4b28cab9b54ffdfe277bd2c26cb50709}} 
+\index{Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+direct\+\_\+view\+\_\+ref@{Item\+\_\+direct\+\_\+view\+\_\+ref}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+direct\+\_\+view\+\_\+ref\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get a J\+S\+ON value from an \mbox{\hyperlink{classItem}{Item}}.
+
+All subclasses that can return a J\+S\+ON value, should override this function. The function in the base class is not expected to be called. If it is called, it most likely means that some subclass is missing an override of \mbox{\hyperlink{classItem__direct__view__ref_a4b28cab9b54ffdfe277bd2c26cb50709}{val\+\_\+json()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em result} & The resulting \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_ab7fe1fd26301ae6f9692105dc06403f1}{Item\+\_\+ref}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

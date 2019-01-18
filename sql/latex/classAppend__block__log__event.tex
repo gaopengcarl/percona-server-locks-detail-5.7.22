@@ -1,0 +1,66 @@
+\hypertarget{classAppend__block__log__event}{}\section{Append\+\_\+block\+\_\+log\+\_\+event Class Reference}
+\label{classAppend__block__log__event}\index{Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Append\+\_\+block\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAppend__block__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAppend__block__log__event_a8272a8006f485eb6d1e42cc6e4be584c}\label{classAppend__block__log__event_a8272a8006f485eb6d1e42cc6e4be584c}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\hyperlink{classAppend__block__log__event_a8154c6cc6d365d7e66dbc9278cec56da}{Append\+\_\+block\+\_\+log\+\_\+event}} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classAppend__block__log__event_a9d9957eed61da5e3fd987b4eee7dc33b}\label{classAppend__block__log__event_a9d9957eed61da5e3fd987b4eee7dc33b}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+bool \mbox{\hyperlink{classAppend__block__log__event_a6f758b2da7126c0a881bcc901f481472}{is\+\_\+sbr\+\_\+logging\+\_\+format}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This event is created to contain the file data. One L\+O\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+F\+I\+LE can have 0 or more instances of this event written to the binary log depending on the size of the file. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAppend__block__log__event_a8154c6cc6d365d7e66dbc9278cec56da}\label{classAppend__block__log__event_a8154c6cc6d365d7e66dbc9278cec56da}} 
+\index{Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}!Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}}
+\index{Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}!Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{Append\+\_\+block\+\_\+log\+\_\+event()}{Append\_block\_log\_event()}}
+{\footnotesize\ttfamily Append\+\_\+block\+\_\+log\+\_\+event\+::\+Append\+\_\+block\+\_\+log\+\_\+event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{uint}]{event\+\_\+len,  }\item[{const Format\+\_\+description\+\_\+event $\ast$}]{description\+\_\+event }\end{DoxyParamCaption})}
+
+Create\+\_\+file\+\_\+log\+\_\+event\+::do\+\_\+apply\+\_\+event() Constructor for \mbox{\hyperlink{classCreate__file__log__event}{Create\+\_\+file\+\_\+log\+\_\+event}} to intantiate an event from the relay log on the slave.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAppend__block__log__event_a6f758b2da7126c0a881bcc901f481472}\label{classAppend__block__log__event_a6f758b2da7126c0a881bcc901f481472}} 
+\index{Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}!is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}!Append\+\_\+block\+\_\+log\+\_\+event@{Append\+\_\+block\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+sbr\+\_\+logging\+\_\+format()}{is\_sbr\_logging\_format()}}
+{\footnotesize\ttfamily bool Append\+\_\+block\+\_\+log\+\_\+event\+::is\+\_\+sbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return true if the event has to be logged using S\+BR for D\+M\+Ls. 
+
+Reimplemented from \mbox{\hyperlink{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}{Log\+\_\+event}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,266 @@
+\hypertarget{structst__key}{}\section{st\+\_\+key Struct Reference}
+\label{structst__key}\index{st\+\_\+key@{st\+\_\+key}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structst__key_afaabcd2590cce5bf8db525d11a093fca}{has\+\_\+records\+\_\+per\+\_\+key}} (uint key\+\_\+part\+\_\+no) const
+\item 
+rec\+\_\+per\+\_\+key\+\_\+t \mbox{\hyperlink{structst__key_a74a67a852132dc677396f5e446d2d67a}{records\+\_\+per\+\_\+key}} (uint key\+\_\+part\+\_\+no) const
+\item 
+void \mbox{\hyperlink{structst__key_a5f3505facd17da0a896875df1b2fdb49}{set\+\_\+records\+\_\+per\+\_\+key}} (uint key\+\_\+part\+\_\+no, rec\+\_\+per\+\_\+key\+\_\+t rec\+\_\+per\+\_\+key\+\_\+est)
+\item 
+bool \mbox{\hyperlink{structst__key_a8fb59a5bb0f270960ef6ffac8190869e}{supports\+\_\+records\+\_\+per\+\_\+key}} () const
+\item 
+void \mbox{\hyperlink{structst__key_afc4c27a73647808d4bec5eb623882dbe}{set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array}} (ulong $\ast$rec\+\_\+per\+\_\+key\+\_\+arg, rec\+\_\+per\+\_\+key\+\_\+t $\ast$rec\+\_\+per\+\_\+key\+\_\+float\+\_\+arg)
+\item 
+double \mbox{\hyperlink{structst__key_ae2a5ab21c66d08495387149a0206b0be}{in\+\_\+memory\+\_\+estimate}} () const
+\item 
+void \mbox{\hyperlink{structst__key_afcffbcd4e79b07f12e8c0ffd0ac13c67}{set\+\_\+in\+\_\+memory\+\_\+estimate}} (double \mbox{\hyperlink{structst__key_ae2a5ab21c66d08495387149a0206b0be}{in\+\_\+memory\+\_\+estimate}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{structst__key_a1d13519288addbb6c0d1bba3c6f44968}{key\+\_\+length}}
+\item 
+ulong \mbox{\hyperlink{structst__key_ae731249c40a20dc905cea7be9864ab39}{flags}}
+\item 
+ulong \mbox{\hyperlink{structst__key_ac21c3d5f4fe81d2a398c1ed80c755516}{actual\+\_\+flags}}
+\item 
+uint \mbox{\hyperlink{structst__key_abd3126670f8060d4d3c29a1637836ac3}{user\+\_\+defined\+\_\+key\+\_\+parts}}
+\item 
+uint \mbox{\hyperlink{structst__key_ae6e21b5421c8c6f5a53fc5ec3dbeea80}{actual\+\_\+key\+\_\+parts}}
+\item 
+uint \mbox{\hyperlink{structst__key_a752659925a2775974f1e6c7c558c1cbc}{unused\+\_\+key\+\_\+parts}}
+\item 
+uint \mbox{\hyperlink{structst__key_ac733c94b20da4e1547c0845b482d4a7a}{usable\+\_\+key\+\_\+parts}}
+\item 
+\mbox{\Hypertarget{structst__key_a88481206c13b4c027ca7cc2e681e8770}\label{structst__key_a88481206c13b4c027ca7cc2e681e8770}} 
+uint {\bfseries block\+\_\+size}
+\item 
+\mbox{\Hypertarget{structst__key_aa24116ccb4248bdf7f0d88c992cb3ea2}\label{structst__key_aa24116ccb4248bdf7f0d88c992cb3ea2}} 
+enum ha\+\_\+key\+\_\+alg {\bfseries algorithm}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structst__plugin__int}{plugin\_ref}} \mbox{\hyperlink{structst__key_a8e1a4faaf158f6e15d49873be131d4b8}{parser}}\\
+\>LEX\_STRING $\ast$ \mbox{\hyperlink{structst__key_a3afb9443467034d75bd1cb838b3a77c0}{parser\_name}}\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structst__key_a5f3157f7ddd3ce51b5bbfe2cdac00aa1}\label{structst__key_a5f3157f7ddd3ce51b5bbfe2cdac00aa1}} 
+\mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ {\bfseries key\+\_\+part}
+\item 
+char $\ast$ \mbox{\hyperlink{structst__key_a09208aa087528b4658256b6d1056a5ce}{name}}
+\item 
+ulong $\ast$ \mbox{\hyperlink{structst__key_a4b511c5f76c528b7b1f020c9b6caa101}{rec\+\_\+per\+\_\+key}}
+\item 
+\mbox{\Hypertarget{structst__key_a2cc66fa079eadcfc1dc6ad7927e101c0}\label{structst__key_a2cc66fa079eadcfc1dc6ad7927e101c0}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int {\bfseries bdb\_return\_if\_eq}\\
+\} {\bfseries handler}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structst__key_a7eae957b043bf979df108f68eba21e10}\label{structst__key_a7eae957b043bf979df108f68eba21e10}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries table}
+\item 
+\mbox{\Hypertarget{structst__key_ae3ce14677a171d91d3f78cdadd221d47}\label{structst__key_ae3ce14677a171d91d3f78cdadd221d47}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries comment}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structst__key_afaabcd2590cce5bf8db525d11a093fca}\label{structst__key_afaabcd2590cce5bf8db525d11a093fca}} 
+\index{st\+\_\+key@{st\+\_\+key}!has\+\_\+records\+\_\+per\+\_\+key@{has\+\_\+records\+\_\+per\+\_\+key}}
+\index{has\+\_\+records\+\_\+per\+\_\+key@{has\+\_\+records\+\_\+per\+\_\+key}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{has\+\_\+records\+\_\+per\+\_\+key()}{has\_records\_per\_key()}}
+{\footnotesize\ttfamily bool st\+\_\+key\+::has\+\_\+records\+\_\+per\+\_\+key (\begin{DoxyParamCaption}\item[{uint}]{key\+\_\+part\+\_\+no }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if records per key estimate is available for given key part.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+part\+\_\+no} & key part number, must be in \mbox{[}0, \mbox{\hyperlink{structst__key_ae6e21b5421c8c6f5a53fc5ec3dbeea80}{K\+E\+Y\+::actual\+\_\+key\+\_\+parts}})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if records per key estimate is available, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structst__key_ae2a5ab21c66d08495387149a0206b0be}\label{structst__key_ae2a5ab21c66d08495387149a0206b0be}} 
+\index{st\+\_\+key@{st\+\_\+key}!in\+\_\+memory\+\_\+estimate@{in\+\_\+memory\+\_\+estimate}}
+\index{in\+\_\+memory\+\_\+estimate@{in\+\_\+memory\+\_\+estimate}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{in\+\_\+memory\+\_\+estimate()}{in\_memory\_estimate()}}
+{\footnotesize\ttfamily double st\+\_\+key\+::in\+\_\+memory\+\_\+estimate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve the estimate for how much of the index data that is available in a memory buffer.
+
+The returned estimate will be in the interval \mbox{[}0..1\mbox{]}.
+
+\begin{DoxyReturn}{Returns}
+Estimate for how much of index data is available in memory buffer 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+U\+N\+K\+N\+O\+WN} & no estimate available \\
+\hline
+{\em !=} & I\+N\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+U\+N\+K\+N\+O\+WN estimate \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structst__key_a74a67a852132dc677396f5e446d2d67a}\label{structst__key_a74a67a852132dc677396f5e446d2d67a}} 
+\index{st\+\_\+key@{st\+\_\+key}!records\+\_\+per\+\_\+key@{records\+\_\+per\+\_\+key}}
+\index{records\+\_\+per\+\_\+key@{records\+\_\+per\+\_\+key}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{records\+\_\+per\+\_\+key()}{records\_per\_key()}}
+{\footnotesize\ttfamily rec\+\_\+per\+\_\+key\+\_\+t st\+\_\+key\+::records\+\_\+per\+\_\+key (\begin{DoxyParamCaption}\item[{uint}]{key\+\_\+part\+\_\+no }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve an estimate for the average number of records per distinct value, when looking only at the first key\+\_\+part\+\_\+no+1 columns.
+
+If no record per key estimate is available for this key part, R\+E\+C\+\_\+\+P\+E\+R\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+part\+\_\+no} & key part number, must be in \mbox{[}0, \mbox{\hyperlink{structst__key_ae6e21b5421c8c6f5a53fc5ec3dbeea80}{K\+E\+Y\+::actual\+\_\+key\+\_\+parts}})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of records having the same key value 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em R\+E\+C\+\_\+\+P\+E\+R\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN} & no records per key estimate available \\
+\hline
+{\em !=} & R\+E\+C\+\_\+\+P\+E\+R\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN record per key estimate \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structst__key_afcffbcd4e79b07f12e8c0ffd0ac13c67}\label{structst__key_afcffbcd4e79b07f12e8c0ffd0ac13c67}} 
+\index{st\+\_\+key@{st\+\_\+key}!set\+\_\+in\+\_\+memory\+\_\+estimate@{set\+\_\+in\+\_\+memory\+\_\+estimate}}
+\index{set\+\_\+in\+\_\+memory\+\_\+estimate@{set\+\_\+in\+\_\+memory\+\_\+estimate}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{set\+\_\+in\+\_\+memory\+\_\+estimate()}{set\_in\_memory\_estimate()}}
+{\footnotesize\ttfamily void st\+\_\+key\+::set\+\_\+in\+\_\+memory\+\_\+estimate (\begin{DoxyParamCaption}\item[{double}]{in\+\_\+memory\+\_\+estimate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the estimate for how much of this index that is currently in a memory buffer.
+
+The estimate must be in the interval \mbox{[}0..1\mbox{]} or take the value I\+N\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+U\+N\+K\+N\+O\+WN. \mbox{\Hypertarget{structst__key_afc4c27a73647808d4bec5eb623882dbe}\label{structst__key_afc4c27a73647808d4bec5eb623882dbe}} 
+\index{st\+\_\+key@{st\+\_\+key}!set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array@{set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array}}
+\index{set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array@{set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array()}{set\_rec\_per\_key\_array()}}
+{\footnotesize\ttfamily void st\+\_\+key\+::set\+\_\+rec\+\_\+per\+\_\+key\+\_\+array (\begin{DoxyParamCaption}\item[{ulong $\ast$}]{rec\+\_\+per\+\_\+key\+\_\+arg,  }\item[{rec\+\_\+per\+\_\+key\+\_\+t $\ast$}]{rec\+\_\+per\+\_\+key\+\_\+float\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assign storage for the rec per key arrays to the K\+EY object.
+
+This is used when allocating memory and creating K\+EY objects. The caller is responsible for allocating the correct size for the two arrays. If needed, the caller is also responsible for de-\/allocating the memory when the K\+EY object is no longer used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rec\+\_\+per\+\_\+key\+\_\+arg} & pointer to allocated array for storing records per key using ulong \\
+\hline
+{\em rec\+\_\+per\+\_\+key\+\_\+float\+\_\+arg} & pointer to allocated array for storing records per key using float \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structst__key_a5f3505facd17da0a896875df1b2fdb49}\label{structst__key_a5f3505facd17da0a896875df1b2fdb49}} 
+\index{st\+\_\+key@{st\+\_\+key}!set\+\_\+records\+\_\+per\+\_\+key@{set\+\_\+records\+\_\+per\+\_\+key}}
+\index{set\+\_\+records\+\_\+per\+\_\+key@{set\+\_\+records\+\_\+per\+\_\+key}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{set\+\_\+records\+\_\+per\+\_\+key()}{set\_records\_per\_key()}}
+{\footnotesize\ttfamily void st\+\_\+key\+::set\+\_\+records\+\_\+per\+\_\+key (\begin{DoxyParamCaption}\item[{uint}]{key\+\_\+part\+\_\+no,  }\item[{rec\+\_\+per\+\_\+key\+\_\+t}]{rec\+\_\+per\+\_\+key\+\_\+est }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the records per key estimate for a key part.
+
+The records per key estimate must be in \mbox{[}1.\+0,..$>$ or take the value R\+E\+C\+\_\+\+P\+E\+R\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+part\+\_\+no} & the number of key parts that the estimate includes, must be in \mbox{[}0, \mbox{\hyperlink{structst__key_ae6e21b5421c8c6f5a53fc5ec3dbeea80}{K\+E\+Y\+::actual\+\_\+key\+\_\+parts}}) \\
+\hline
+{\em rec\+\_\+per\+\_\+key\+\_\+est} & new records per key estimate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structst__key_a8fb59a5bb0f270960ef6ffac8190869e}\label{structst__key_a8fb59a5bb0f270960ef6ffac8190869e}} 
+\index{st\+\_\+key@{st\+\_\+key}!supports\+\_\+records\+\_\+per\+\_\+key@{supports\+\_\+records\+\_\+per\+\_\+key}}
+\index{supports\+\_\+records\+\_\+per\+\_\+key@{supports\+\_\+records\+\_\+per\+\_\+key}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{supports\+\_\+records\+\_\+per\+\_\+key()}{supports\_records\_per\_key()}}
+{\footnotesize\ttfamily bool st\+\_\+key\+::supports\+\_\+records\+\_\+per\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if this key supports storing records per key information.
+
+\begin{DoxyReturn}{Returns}
+true if it has support for storing records per key information, false otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__key_ac47864872e2973bbcd45370aa26ce812}\label{structst__key_ac47864872e2973bbcd45370aa26ce812}} 
+\subsubsection{\texorpdfstring{"@12}{@12}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+Note that parser is used when the table is opened for use, and parser\+\_\+name is used when the table is being created. \mbox{\Hypertarget{structst__key_ac21c3d5f4fe81d2a398c1ed80c755516}\label{structst__key_ac21c3d5f4fe81d2a398c1ed80c755516}} 
+\index{st\+\_\+key@{st\+\_\+key}!actual\+\_\+flags@{actual\+\_\+flags}}
+\index{actual\+\_\+flags@{actual\+\_\+flags}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{actual\+\_\+flags}{actual\_flags}}
+{\footnotesize\ttfamily ulong st\+\_\+key\+::actual\+\_\+flags}
+
+dupp key and pack flags for actual key parts \mbox{\Hypertarget{structst__key_ae6e21b5421c8c6f5a53fc5ec3dbeea80}\label{structst__key_ae6e21b5421c8c6f5a53fc5ec3dbeea80}} 
+\index{st\+\_\+key@{st\+\_\+key}!actual\+\_\+key\+\_\+parts@{actual\+\_\+key\+\_\+parts}}
+\index{actual\+\_\+key\+\_\+parts@{actual\+\_\+key\+\_\+parts}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{actual\+\_\+key\+\_\+parts}{actual\_key\_parts}}
+{\footnotesize\ttfamily uint st\+\_\+key\+::actual\+\_\+key\+\_\+parts}
+
+How many key\+\_\+parts including hidden parts \mbox{\Hypertarget{structst__key_ae731249c40a20dc905cea7be9864ab39}\label{structst__key_ae731249c40a20dc905cea7be9864ab39}} 
+\index{st\+\_\+key@{st\+\_\+key}!flags@{flags}}
+\index{flags@{flags}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily ulong st\+\_\+key\+::flags}
+
+dupp key and pack flags \mbox{\Hypertarget{structst__key_a1d13519288addbb6c0d1bba3c6f44968}\label{structst__key_a1d13519288addbb6c0d1bba3c6f44968}} 
+\index{st\+\_\+key@{st\+\_\+key}!key\+\_\+length@{key\+\_\+length}}
+\index{key\+\_\+length@{key\+\_\+length}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{key\+\_\+length}{key\_length}}
+{\footnotesize\ttfamily uint st\+\_\+key\+::key\+\_\+length}
+
+Tot length of key \mbox{\Hypertarget{structst__key_a09208aa087528b4658256b6d1056a5ce}\label{structst__key_a09208aa087528b4658256b6d1056a5ce}} 
+\index{st\+\_\+key@{st\+\_\+key}!name@{name}}
+\index{name@{name}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ st\+\_\+key\+::name}
+
+Name of key \mbox{\Hypertarget{structst__key_a8e1a4faaf158f6e15d49873be131d4b8}\label{structst__key_a8e1a4faaf158f6e15d49873be131d4b8}} 
+\index{st\+\_\+key@{st\+\_\+key}!parser@{parser}}
+\index{parser@{parser}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__plugin__int}{plugin\+\_\+ref}} st\+\_\+key\+::parser}
+
+Fulltext \mbox{[}pre\mbox{]}parser \mbox{\Hypertarget{structst__key_a3afb9443467034d75bd1cb838b3a77c0}\label{structst__key_a3afb9443467034d75bd1cb838b3a77c0}} 
+\index{st\+\_\+key@{st\+\_\+key}!parser\+\_\+name@{parser\+\_\+name}}
+\index{parser\+\_\+name@{parser\+\_\+name}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{parser\+\_\+name}{parser\_name}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+S\+T\+R\+I\+NG$\ast$ st\+\_\+key\+::parser\+\_\+name}
+
+Fulltext \mbox{[}pre\mbox{]}parser name \mbox{\Hypertarget{structst__key_a4b511c5f76c528b7b1f020c9b6caa101}\label{structst__key_a4b511c5f76c528b7b1f020c9b6caa101}} 
+\index{st\+\_\+key@{st\+\_\+key}!rec\+\_\+per\+\_\+key@{rec\+\_\+per\+\_\+key}}
+\index{rec\+\_\+per\+\_\+key@{rec\+\_\+per\+\_\+key}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{rec\+\_\+per\+\_\+key}{rec\_per\_key}}
+{\footnotesize\ttfamily ulong$\ast$ st\+\_\+key\+::rec\+\_\+per\+\_\+key}
+
+Array of A\+VG(\#records with the same field value) for 1st ... Nth key part. 0 means \textquotesingle{}not known\textquotesingle{}. For internally created temporary tables this member is N\+U\+LL. \mbox{\Hypertarget{structst__key_a752659925a2775974f1e6c7c558c1cbc}\label{structst__key_a752659925a2775974f1e6c7c558c1cbc}} 
+\index{st\+\_\+key@{st\+\_\+key}!unused\+\_\+key\+\_\+parts@{unused\+\_\+key\+\_\+parts}}
+\index{unused\+\_\+key\+\_\+parts@{unused\+\_\+key\+\_\+parts}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{unused\+\_\+key\+\_\+parts}{unused\_key\_parts}}
+{\footnotesize\ttfamily uint st\+\_\+key\+::unused\+\_\+key\+\_\+parts}
+
+\mbox{\hyperlink{classKey}{Key}} parts allocated for primary key parts extension but not used due to some reasons(no primary key, duplicated key parts) \mbox{\Hypertarget{structst__key_ac733c94b20da4e1547c0845b482d4a7a}\label{structst__key_ac733c94b20da4e1547c0845b482d4a7a}} 
+\index{st\+\_\+key@{st\+\_\+key}!usable\+\_\+key\+\_\+parts@{usable\+\_\+key\+\_\+parts}}
+\index{usable\+\_\+key\+\_\+parts@{usable\+\_\+key\+\_\+parts}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{usable\+\_\+key\+\_\+parts}{usable\_key\_parts}}
+{\footnotesize\ttfamily uint st\+\_\+key\+::usable\+\_\+key\+\_\+parts}
+
+Should normally be = key\+\_\+parts \mbox{\Hypertarget{structst__key_abd3126670f8060d4d3c29a1637836ac3}\label{structst__key_abd3126670f8060d4d3c29a1637836ac3}} 
+\index{st\+\_\+key@{st\+\_\+key}!user\+\_\+defined\+\_\+key\+\_\+parts@{user\+\_\+defined\+\_\+key\+\_\+parts}}
+\index{user\+\_\+defined\+\_\+key\+\_\+parts@{user\+\_\+defined\+\_\+key\+\_\+parts}!st\+\_\+key@{st\+\_\+key}}
+\subsubsection{\texorpdfstring{user\+\_\+defined\+\_\+key\+\_\+parts}{user\_defined\_key\_parts}}
+{\footnotesize\ttfamily uint st\+\_\+key\+::user\+\_\+defined\+\_\+key\+\_\+parts}
+
+How many key\+\_\+parts 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+key.\+h\end{DoxyCompactItemize}

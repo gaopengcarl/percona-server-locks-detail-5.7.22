@@ -1,0 +1,305 @@
+\hypertarget{classAlter__info}{}\section{Alter\+\_\+info Class Reference}
+\label{classAlter__info}\index{Alter\+\_\+info@{Alter\+\_\+info}}
+
+
+{\ttfamily \#include $<$sql\+\_\+alter.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__info_a6703ae7d3b074ddcab98a55a13cef76c}\label{classAlter__info_a6703ae7d3b074ddcab98a55a13cef76c}} 
+enum {\bfseries enum\+\_\+enable\+\_\+or\+\_\+disable} \{ {\bfseries L\+E\+A\+V\+E\+\_\+\+A\+S\+\_\+\+IS}, 
+{\bfseries E\+N\+A\+B\+LE}, 
+{\bfseries D\+I\+S\+A\+B\+LE}
+ \}
+\item 
+enum \mbox{\hyperlink{classAlter__info_a01de1481ff05e3f4fc1efb2f63c2274c}{enum\+\_\+alter\+\_\+table\+\_\+algorithm}} \{ {\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+I\+N\+P\+L\+A\+CE}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+C\+O\+PY}
+ \}
+\item 
+enum \mbox{\hyperlink{classAlter__info_a10a92184da9b9d35060e9014fd4e0946}{enum\+\_\+alter\+\_\+table\+\_\+lock}} \{ {\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+N\+O\+NE}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}
+ \}
+\item 
+enum \mbox{\hyperlink{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5}{enum\+\_\+with\+\_\+validation}} \{ \mbox{\hyperlink{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5a22b20f085e866c35f95a13f599ece203}{A\+L\+T\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT}}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+W\+I\+T\+H\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+ON}, 
+{\bfseries A\+L\+T\+E\+R\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__info_a579ae4060f2b43170a4677f568745b76}\label{classAlter__info_a579ae4060f2b43170a4677f568745b76}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\hyperlink{classAlter__info_a29143ad6c3785957b694487bcb37dccc}{Alter\+\_\+info}} (const \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} \&rhs, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+bool \mbox{\hyperlink{classAlter__info_a5d721db444541bf1ef0e0ed218976d75}{set\+\_\+requested\+\_\+algorithm}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$str)
+\item 
+bool \mbox{\hyperlink{classAlter__info_a1099c6e4fdc5090644593b0b1b8ba632}{set\+\_\+requested\+\_\+lock}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$str)
+\item 
+bool \mbox{\hyperlink{classAlter__info_a9b969540dfb6e102317110171387b467}{has\+\_\+compressed\+\_\+columns}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classAlter__drop}{Alter\+\_\+drop}} $>$ \mbox{\hyperlink{classAlter__info_a4bc7d6d9511a71d514d57cd07c9cafe8}{drop\+\_\+list}}
+\item 
+\mbox{\Hypertarget{classAlter__info_a51f2960eca8a34b31ba4093b3e95ef56}\label{classAlter__info_a51f2960eca8a34b31ba4093b3e95ef56}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classAlter__column}{Alter\+\_\+column}} $>$ {\bfseries alter\+\_\+list}
+\item 
+\mbox{\Hypertarget{classAlter__info_a5ed1d155d24bc36cea170494aebcb920}\label{classAlter__info_a5ed1d155d24bc36cea170494aebcb920}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey}{Key}} $>$ {\bfseries key\+\_\+list}
+\item 
+\mbox{\Hypertarget{classAlter__info_ac9910381b91ec581f28ab2d8f1cf9775}\label{classAlter__info_ac9910381b91ec581f28ab2d8f1cf9775}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classAlter__rename__key}{Alter\+\_\+rename\+\_\+key}} $>$ {\bfseries alter\+\_\+rename\+\_\+key\+\_\+list}
+\item 
+\mbox{\Hypertarget{classAlter__info_a6b27832b0133cbb7d771f0e20c0cd190}\label{classAlter__info_a6b27832b0133cbb7d771f0e20c0cd190}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ {\bfseries create\+\_\+list}
+\item 
+\mbox{\Hypertarget{classAlter__info_a43e6209b58c1cfe6649c24e3516a3c37}\label{classAlter__info_a43e6209b58c1cfe6649c24e3516a3c37}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey}{Key}} $>$ {\bfseries delayed\+\_\+key\+\_\+list}
+\item 
+\mbox{\Hypertarget{classAlter__info_a853d59f6102f73d64cfcfdd3c098d3f9}\label{classAlter__info_a853d59f6102f73d64cfcfdd3c098d3f9}} 
+\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$ {\bfseries delayed\+\_\+key\+\_\+info}
+\item 
+\mbox{\Hypertarget{classAlter__info_a20db5aaeb7c3c6918755f7d304b786a8}\label{classAlter__info_a20db5aaeb7c3c6918755f7d304b786a8}} 
+uint {\bfseries delayed\+\_\+key\+\_\+count}
+\item 
+\mbox{\Hypertarget{classAlter__info_aed0910ea63ef9795d7cca30a614cfd07}\label{classAlter__info_aed0910ea63ef9795d7cca30a614cfd07}} 
+uint {\bfseries flags}
+\item 
+\mbox{\Hypertarget{classAlter__info_aa6440a38f28240f424a645011078edaf}\label{classAlter__info_aa6440a38f28240f424a645011078edaf}} 
+enum\+\_\+enable\+\_\+or\+\_\+disable {\bfseries keys\+\_\+onoff}
+\item 
+\mbox{\Hypertarget{classAlter__info_a45bd7cd0df1c7870c846ddd9505f2447}\label{classAlter__info_a45bd7cd0df1c7870c846ddd9505f2447}} 
+\mbox{\hyperlink{classList}{List}}$<$ String $>$ {\bfseries partition\+\_\+names}
+\item 
+\mbox{\Hypertarget{classAlter__info_ac9fecb19ad0e8004732100bd4ff60a3e}\label{classAlter__info_ac9fecb19ad0e8004732100bd4ff60a3e}} 
+uint {\bfseries num\+\_\+parts}
+\item 
+\mbox{\Hypertarget{classAlter__info_a20ed2d17c97846b6f95df52317447403}\label{classAlter__info_a20ed2d17c97846b6f95df52317447403}} 
+\mbox{\hyperlink{classAlter__info_a01de1481ff05e3f4fc1efb2f63c2274c}{enum\+\_\+alter\+\_\+table\+\_\+algorithm}} {\bfseries requested\+\_\+algorithm}
+\item 
+\mbox{\Hypertarget{classAlter__info_aedb67139b75cece602d6694817818a1a}\label{classAlter__info_aedb67139b75cece602d6694817818a1a}} 
+\mbox{\hyperlink{classAlter__info_a10a92184da9b9d35060e9014fd4e0946}{enum\+\_\+alter\+\_\+table\+\_\+lock}} {\bfseries requested\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classAlter__info_a397285cb4ecee6f115a1c02dfbf35fc7}\label{classAlter__info_a397285cb4ecee6f115a1c02dfbf35fc7}} 
+\mbox{\hyperlink{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5}{enum\+\_\+with\+\_\+validation}} {\bfseries with\+\_\+validation}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__info_a1f13a48848a9e22d02c86b2d2f453332}\label{classAlter__info_a1f13a48848a9e22d02c86b2d2f453332}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+A\+D\+D\+\_\+\+C\+O\+L\+U\+MN} = 1\+L $<$$<$ 0
+\item 
+\mbox{\Hypertarget{classAlter__info_a3ed99874f06de46716d0c5fa1bbab4b5}\label{classAlter__info_a3ed99874f06de46716d0c5fa1bbab4b5}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN} = 1\+L $<$$<$ 1
+\item 
+\mbox{\Hypertarget{classAlter__info_a50330901ba9f4112e9e46e6a2c1ec047}\label{classAlter__info_a50330901ba9f4112e9e46e6a2c1ec047}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+U\+MN} = 1\+L $<$$<$ 2
+\item 
+\mbox{\Hypertarget{classAlter__info_a2e860f0828abf5d8f46295d43fb37c75}\label{classAlter__info_a2e860f0828abf5d8f46295d43fb37c75}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+A\+D\+D\+\_\+\+I\+N\+D\+EX} = 1\+L $<$$<$ 3
+\item 
+\mbox{\Hypertarget{classAlter__info_ab844c7f33c57c5b24cd7746de361209c}\label{classAlter__info_ab844c7f33c57c5b24cd7746de361209c}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+D\+R\+O\+P\+\_\+\+I\+N\+D\+EX} = 1\+L $<$$<$ 4
+\item 
+\mbox{\Hypertarget{classAlter__info_ae16b1ea1921f0d2349e2ca4f4de6ba04}\label{classAlter__info_ae16b1ea1921f0d2349e2ca4f4de6ba04}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+N\+A\+ME} = 1\+L $<$$<$ 5
+\item 
+\mbox{\Hypertarget{classAlter__info_a49bcdf352fc1cd37d4a08d944c0a6f5b}\label{classAlter__info_a49bcdf352fc1cd37d4a08d944c0a6f5b}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+O\+R\+D\+ER} = 1\+L $<$$<$ 6
+\item 
+\mbox{\Hypertarget{classAlter__info_a39134988997610114efd69d863acd050}\label{classAlter__info_a39134988997610114efd69d863acd050}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+O\+P\+T\+I\+O\+NS} = 1\+L $<$$<$ 7
+\item 
+\mbox{\Hypertarget{classAlter__info_a3af45d7723ec4d33be14e2d5a51e0e31}\label{classAlter__info_a3af45d7723ec4d33be14e2d5a51e0e31}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+F\+A\+U\+LT} = 1\+L $<$$<$ 8
+\item 
+\mbox{\Hypertarget{classAlter__info_a77d4dada10937d9dc8aaa56e7a47c931}\label{classAlter__info_a77d4dada10937d9dc8aaa56e7a47c931}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+K\+E\+Y\+S\+\_\+\+O\+N\+O\+FF} = 1\+L $<$$<$ 9
+\item 
+\mbox{\Hypertarget{classAlter__info_a4821a8d826cfb1053142ed0b47d6640e}\label{classAlter__info_a4821a8d826cfb1053142ed0b47d6640e}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+C\+R\+E\+A\+TE} = 1\+L $<$$<$ 10
+\item 
+\mbox{\Hypertarget{classAlter__info_a58f5dd70db37a80b3b62dc4522049ab1}\label{classAlter__info_a58f5dd70db37a80b3b62dc4522049ab1}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+A\+D\+D\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 11
+\item 
+\mbox{\Hypertarget{classAlter__info_a257c8df105e54bda066806c25aa7b466}\label{classAlter__info_a257c8df105e54bda066806c25aa7b466}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+D\+R\+O\+P\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 12
+\item 
+\mbox{\Hypertarget{classAlter__info_a405d92a75856431b2d171926471517e7}\label{classAlter__info_a405d92a75856431b2d171926471517e7}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 13
+\item 
+\mbox{\Hypertarget{classAlter__info_af784905691eb5058c718d27c6177d42c}\label{classAlter__info_af784905691eb5058c718d27c6177d42c}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+O\+R\+G\+A\+N\+I\+Z\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 14
+\item 
+\mbox{\Hypertarget{classAlter__info_ad1750142a820dba59e885f250b81d45f}\label{classAlter__info_ad1750142a820dba59e885f250b81d45f}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 15
+\item 
+\mbox{\Hypertarget{classAlter__info_a1fc8a4335b267f7322447c162b949b24}\label{classAlter__info_a1fc8a4335b267f7322447c162b949b24}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+A\+D\+M\+I\+N\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 16
+\item 
+\mbox{\Hypertarget{classAlter__info_addf292478f3191d072b5ebacf3346335}\label{classAlter__info_addf292478f3191d072b5ebacf3346335}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+R\+E\+O\+RG} = 1\+L $<$$<$ 17
+\item 
+\mbox{\Hypertarget{classAlter__info_a92c66e6848e0f3f6bceeec9d93b542ec}\label{classAlter__info_a92c66e6848e0f3f6bceeec9d93b542ec}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+B\+U\+I\+L\+D\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 18
+\item 
+\mbox{\Hypertarget{classAlter__info_af97e903ac6fe35ab4c49f9acbc3ef97b}\label{classAlter__info_af97e903ac6fe35ab4c49f9acbc3ef97b}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+A\+L\+L\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 19
+\item 
+\mbox{\Hypertarget{classAlter__info_a74d5d07a09ce903fac3ee31951b1aac3}\label{classAlter__info_a74d5d07a09ce903fac3ee31951b1aac3}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+O\+N\+I\+NG} = 1\+L $<$$<$ 20
+\item 
+\mbox{\Hypertarget{classAlter__info_a8f727ef476b323a6078a7f7e94fa3cb7}\label{classAlter__info_a8f727ef476b323a6078a7f7e94fa3cb7}} 
+static const uint {\bfseries A\+D\+D\+\_\+\+F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+EY} = 1\+L $<$$<$ 21
+\item 
+\mbox{\Hypertarget{classAlter__info_a0d74955e176b2bb37ccce14371bea0d6}\label{classAlter__info_a0d74955e176b2bb37ccce14371bea0d6}} 
+static const uint {\bfseries D\+R\+O\+P\+\_\+\+F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+EY} = 1\+L $<$$<$ 22
+\item 
+\mbox{\Hypertarget{classAlter__info_a60f8748fd86c69de133e37f352a59d8f}\label{classAlter__info_a60f8748fd86c69de133e37f352a59d8f}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+E\+X\+C\+H\+A\+N\+G\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 23
+\item 
+\mbox{\Hypertarget{classAlter__info_ae31a825a0c70deeb3e90f4e8733ee369}\label{classAlter__info_ae31a825a0c70deeb3e90f4e8733ee369}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+L $<$$<$ 24
+\item 
+\mbox{\Hypertarget{classAlter__info_a2d6b32dd2c66d6d2c70229bde5209e63}\label{classAlter__info_a2d6b32dd2c66d6d2c70229bde5209e63}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+O\+R\+D\+ER} = 1\+L $<$$<$ 25
+\item 
+\mbox{\Hypertarget{classAlter__info_adb58c1543cf980c74ff559426f833b66}\label{classAlter__info_adb58c1543cf980c74ff559426f833b66}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX} = 1\+L $<$$<$ 26
+\item 
+\mbox{\Hypertarget{classAlter__info_a750825ff74b5bb7828fd019f096469bc}\label{classAlter__info_a750825ff74b5bb7828fd019f096469bc}} 
+static const uint {\bfseries A\+L\+T\+E\+R\+\_\+\+U\+P\+G\+R\+A\+D\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+O\+N\+I\+NG} = 1\+L $<$$<$ 27
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data describing the table being created by C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} or altered by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classAlter__info_a01de1481ff05e3f4fc1efb2f63c2274c}\label{classAlter__info_a01de1481ff05e3f4fc1efb2f63c2274c}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!enum\+\_\+alter\+\_\+table\+\_\+algorithm@{enum\+\_\+alter\+\_\+table\+\_\+algorithm}}
+\index{enum\+\_\+alter\+\_\+table\+\_\+algorithm@{enum\+\_\+alter\+\_\+table\+\_\+algorithm}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{enum\+\_\+alter\+\_\+table\+\_\+algorithm}{enum\_alter\_table\_algorithm}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classAlter__info_a01de1481ff05e3f4fc1efb2f63c2274c}{Alter\+\_\+info\+::enum\+\_\+alter\+\_\+table\+\_\+algorithm}}}
+
+The different values of the A\+L\+G\+O\+R\+I\+T\+HM clause. Describes which algorithm to use when altering the table. \mbox{\Hypertarget{classAlter__info_a10a92184da9b9d35060e9014fd4e0946}\label{classAlter__info_a10a92184da9b9d35060e9014fd4e0946}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!enum\+\_\+alter\+\_\+table\+\_\+lock@{enum\+\_\+alter\+\_\+table\+\_\+lock}}
+\index{enum\+\_\+alter\+\_\+table\+\_\+lock@{enum\+\_\+alter\+\_\+table\+\_\+lock}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{enum\+\_\+alter\+\_\+table\+\_\+lock}{enum\_alter\_table\_lock}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classAlter__info_a10a92184da9b9d35060e9014fd4e0946}{Alter\+\_\+info\+::enum\+\_\+alter\+\_\+table\+\_\+lock}}}
+
+The different values of the L\+O\+CK clause. Describes the level of concurrency during A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. \mbox{\Hypertarget{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5}\label{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!enum\+\_\+with\+\_\+validation@{enum\+\_\+with\+\_\+validation}}
+\index{enum\+\_\+with\+\_\+validation@{enum\+\_\+with\+\_\+validation}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{enum\+\_\+with\+\_\+validation}{enum\_with\_validation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5}{Alter\+\_\+info\+::enum\+\_\+with\+\_\+validation}}}
+
+Status of validation clause in A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement. Used during partitions and GC alterations. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+T\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+L\+T\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT}!Alter\+\_\+info@{Alter\+\_\+info}}\index{Alter\+\_\+info@{Alter\+\_\+info}!A\+L\+T\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT@{A\+L\+T\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT}}}\mbox{\Hypertarget{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5a22b20f085e866c35f95a13f599ece203}\label{classAlter__info_a4779e4302f27cfae682bf2e5a2e891a5a22b20f085e866c35f95a13f599ece203}} 
+A\+L\+T\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT&Default value, used when it\textquotesingle{}s not specified in the statement. Means W\+I\+TH V\+A\+L\+I\+D\+A\+T\+I\+ON for partitions alterations and W\+I\+T\+H\+O\+UT V\+A\+L\+I\+D\+A\+T\+I\+ON for altering virtual GC. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAlter__info_a29143ad6c3785957b694487bcb37dccc}\label{classAlter__info_a29143ad6c3785957b694487bcb37dccc}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!Alter\+\_\+info@{Alter\+\_\+info}}
+\index{Alter\+\_\+info@{Alter\+\_\+info}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{Alter\+\_\+info()}{Alter\_info()}}
+{\footnotesize\ttfamily Alter\+\_\+info\+::\+Alter\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} \&}]{rhs,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption})}
+
+Construct a copy of this object to be used for mysql\+\_\+alter\+\_\+table and mysql\+\_\+create\+\_\+table.
+
+Historically, these two functions modify their \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} arguments. This behaviour breaks re-\/execution of prepared statements and stored procedures and is compensated by always supplying a copy of \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} to these functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} to make copy of \\
+\hline
+{\em mem\+\_\+root} & Mem\+\_\+root for new \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+You need to use check the error in T\+HD for out of memory condition after calling this function. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlter__info_a9b969540dfb6e102317110171387b467}\label{classAlter__info_a9b969540dfb6e102317110171387b467}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!has\+\_\+compressed\+\_\+columns@{has\+\_\+compressed\+\_\+columns}}
+\index{has\+\_\+compressed\+\_\+columns@{has\+\_\+compressed\+\_\+columns}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{has\+\_\+compressed\+\_\+columns()}{has\_compressed\_columns()}}
+{\footnotesize\ttfamily bool Alter\+\_\+info\+::has\+\_\+compressed\+\_\+columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks if there are any columns with C\+O\+L\+U\+M\+N\+\_\+\+F\+O\+R\+M\+AT C\+O\+M\+R\+P\+E\+S\+S\+ED attribute among field definitions in create\+\_\+list.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & there are no compressed columns \\
+\hline
+{\em true} & there is at least one compressed column \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classAlter__info_a5d721db444541bf1ef0e0ed218976d75}\label{classAlter__info_a5d721db444541bf1ef0e0ed218976d75}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!set\+\_\+requested\+\_\+algorithm@{set\+\_\+requested\+\_\+algorithm}}
+\index{set\+\_\+requested\+\_\+algorithm@{set\+\_\+requested\+\_\+algorithm}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+requested\+\_\+algorithm()}{set\_requested\_algorithm()}}
+{\footnotesize\ttfamily bool Alter\+\_\+info\+::set\+\_\+requested\+\_\+algorithm (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{str }\end{DoxyParamCaption})}
+
+Parses the given string and sets requested\+\_\+algorithm if the string value matches a supported value. Supported values\+: I\+N\+P\+L\+A\+CE, C\+O\+PY, D\+E\+F\+A\+U\+LT
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String containing the supplied value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Supported value found, state updated \\
+\hline
+{\em true} & Not supported value, no changes made \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classAlter__info_a1099c6e4fdc5090644593b0b1b8ba632}\label{classAlter__info_a1099c6e4fdc5090644593b0b1b8ba632}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!set\+\_\+requested\+\_\+lock@{set\+\_\+requested\+\_\+lock}}
+\index{set\+\_\+requested\+\_\+lock@{set\+\_\+requested\+\_\+lock}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+requested\+\_\+lock()}{set\_requested\_lock()}}
+{\footnotesize\ttfamily bool Alter\+\_\+info\+::set\+\_\+requested\+\_\+lock (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{str }\end{DoxyParamCaption})}
+
+Parses the given string and sets requested\+\_\+lock if the string value matches a supported value. Supported values\+: N\+O\+NE, S\+H\+A\+R\+ED, E\+X\+C\+L\+U\+S\+I\+VE, D\+E\+F\+A\+U\+LT
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String containing the supplied value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Supported value found, state updated \\
+\hline
+{\em true} & Not supported value, no changes made \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classAlter__info_a4bc7d6d9511a71d514d57cd07c9cafe8}\label{classAlter__info_a4bc7d6d9511a71d514d57cd07c9cafe8}} 
+\index{Alter\+\_\+info@{Alter\+\_\+info}!drop\+\_\+list@{drop\+\_\+list}}
+\index{drop\+\_\+list@{drop\+\_\+list}!Alter\+\_\+info@{Alter\+\_\+info}}
+\subsubsection{\texorpdfstring{drop\+\_\+list}{drop\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}}$<$\mbox{\hyperlink{classAlter__drop}{Alter\+\_\+drop}}$>$ Alter\+\_\+info\+::drop\+\_\+list}
+
+Columns and keys to be dropped. After mysql\+\_\+prepare\+\_\+alter\+\_\+table() it contains only foreign keys and virtual generated columns to be dropped. This information is necessary for the storage engine to do in-\/place alter. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+alter.\+h\item 
+sql\+\_\+alter.\+cc\end{DoxyCompactItemize}

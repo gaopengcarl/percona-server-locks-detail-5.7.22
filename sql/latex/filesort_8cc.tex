@@ -1,0 +1,250 @@
+\hypertarget{filesort_8cc}{}\section{filesort.\+cc File Reference}
+\label{filesort_8cc}\index{filesort.\+cc@{filesort.\+cc}}
+
+
+Sorts a database.  
+
+
+{\ttfamily \#include \char`\"{}filesort.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$m\+\_\+ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+sort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}probes\+\_\+mysql.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+range.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bounded\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}filesort\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+costmodel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}priority\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+sum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json\+\_\+dom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}template\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pfs\+\_\+file\+\_\+provider.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classFilesort__error__handler}{Filesort\+\_\+error\+\_\+handler}}
+\begin{DoxyCompactList}\small\item\em Error handler for filesort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{filesort_8cc_a33b28daf02d239e17b4db5fe528e7623}\label{filesort_8cc_a33b28daf02d239e17b4db5fe528e7623}} 
+\#define {\bfseries D\+B\+L\+\_\+\+E\+X\+P\+\_\+\+D\+IG}~(sizeof(double)$\ast$8-\/D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort}} (T\+HD $\ast$thd, \mbox{\hyperlink{classFilesort}{Filesort}} $\ast$filesort, bool sort\+\_\+positions, ha\+\_\+rows $\ast$examined\+\_\+rows, ha\+\_\+rows $\ast$found\+\_\+rows, ha\+\_\+rows $\ast$returned\+\_\+rows)
+\item 
+\mbox{\Hypertarget{filesort_8cc_a1c16f18403365ecce656d4ac4b36bb47}\label{filesort_8cc_a1c16f18403365ecce656d4ac4b36bb47}} 
+void {\bfseries filesort\+\_\+free\+\_\+buffers} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool full)
+\item 
+\mbox{\Hypertarget{filesort_8cc_aefc964771bf9fe49ae8de9fc9e5b23a5}\label{filesort_8cc_aefc964771bf9fe49ae8de9fc9e5b23a5}} 
+void {\bfseries copy\+\_\+native\+\_\+longlong} (uchar $\ast$to, size\+\_\+t to\+\_\+length, longlong val, bool is\+\_\+unsigned)
+\item 
+\mbox{\Hypertarget{filesort_8cc_af2ff3cf79cf8d0a0dd9061f8651d238c}\label{filesort_8cc_af2ff3cf79cf8d0a0dd9061f8651d238c}} 
+{\bfseries if} (item-\/$>$val\+\_\+json(\&wr))
+\item 
+\mbox{\Hypertarget{filesort_8cc_aad0fa3202da52fca82930153c524e268}\label{filesort_8cc_aad0fa3202da52fca82930153c524e268}} 
+{\bfseries if} (item-\/$>$null\+\_\+value)
+\item 
+int \mbox{\hyperlink{filesort_8cc_a18ea596659394e452890e48fc84ae257}{merge\+\_\+many\+\_\+buff}} (\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$param, \mbox{\hyperlink{classBounds__checked__array}{Sort\+\_\+buffer}} sort\+\_\+buffer, \mbox{\hyperlink{classBounds__checked__array}{Merge\+\_\+chunk\+\_\+array}} chunk\+\_\+array, size\+\_\+t $\ast$p\+\_\+num\+\_\+chunks, I\+O\+\_\+\+C\+A\+C\+HE $\ast$t\+\_\+file)
+\item 
+uint \mbox{\hyperlink{filesort_8cc_a86792285c18f8e5f102164b022ba4e2b}{read\+\_\+to\+\_\+buffer}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$fromfile, \mbox{\hyperlink{structMerge__chunk}{Merge\+\_\+chunk}} $\ast$merge\+\_\+chunk, \mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$param)
+\item 
+int \mbox{\hyperlink{filesort_8cc_ab16f653b56d04fb65e58d24fd05d8c60}{merge\+\_\+buffers}} (\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$param, I\+O\+\_\+\+C\+A\+C\+HE $\ast$from\+\_\+file, I\+O\+\_\+\+C\+A\+C\+HE $\ast$to\+\_\+file, \mbox{\hyperlink{classBounds__checked__array}{Sort\+\_\+buffer}} sort\+\_\+buffer, \mbox{\hyperlink{structMerge__chunk}{Merge\+\_\+chunk}} $\ast$last\+\_\+chunk, \mbox{\hyperlink{classBounds__checked__array}{Merge\+\_\+chunk\+\_\+array}} chunk\+\_\+array, int flag)
+\item 
+uint \mbox{\hyperlink{filesort_8cc_af2b02d8e944d1fc9ccaf16547453c156}{sortlength}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__sort__field}{st\+\_\+sort\+\_\+field}} $\ast$sortorder, uint s\+\_\+length, bool $\ast$multi\+\_\+byte\+\_\+charset, bool $\ast$use\+\_\+hash)
+\begin{DoxyCompactList}\small\item\em Declared here so we can unit test it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{filesort_8cc_a7cb1b25a65dbec9e84d8e50a44a28d9e}\label{filesort_8cc_a7cb1b25a65dbec9e84d8e50a44a28d9e}} 
+void {\bfseries change\+\_\+double\+\_\+for\+\_\+sort} (double nr, uchar $\ast$to)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{filesort_8cc_ad0ae996e21449739b6c47071a9d58042}\label{filesort_8cc_ad0ae996e21449739b6c47071a9d58042}} 
+const bool {\bfseries Is\+\_\+big\+\_\+endian} = false
+\item 
+\mbox{\Hypertarget{filesort_8cc_adb26a658b625b654548af2ac4d2f645a}\label{filesort_8cc_adb26a658b625b654548af2ac4d2f645a}} 
+static void uchar $\ast$ {\bfseries to}
+\item 
+\mbox{\Hypertarget{filesort_8cc_a1a18e7e9b3679de4fd62bbd8fe1d1641}\label{filesort_8cc_a1a18e7e9b3679de4fd62bbd8fe1d1641}} 
+static void uchar size\+\_\+t {\bfseries length}
+\item 
+static void uchar size\+\_\+t ulonglong $\ast$ {\bfseries hash}
+\item 
+\mbox{\Hypertarget{filesort_8cc_a3464ca1d837b023e3f42e78b0000ecea}\label{filesort_8cc_a3464ca1d837b023e3f42e78b0000ecea}} 
+\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} {\bfseries wr}
+\item 
+{\bfseries else}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sorts a database. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}\label{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}} 
+\index{filesort.\+cc@{filesort.\+cc}!filesort@{filesort}}
+\index{filesort@{filesort}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{filesort()}{filesort()}}
+{\footnotesize\ttfamily bool filesort (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classFilesort}{Filesort}} $\ast$}]{filesort,  }\item[{bool}]{sort\+\_\+positions,  }\item[{ha\+\_\+rows $\ast$}]{examined\+\_\+rows,  }\item[{ha\+\_\+rows $\ast$}]{found\+\_\+rows,  }\item[{ha\+\_\+rows $\ast$}]{returned\+\_\+rows }\end{DoxyParamCaption})}
+
+Sort a table. Creates a set of pointers that can be used to read the rows in sorted order. This should be done with the functions in \mbox{\hyperlink{records_8cc}{records.\+cc}}.
+
+Before calling filesort, one must have done table-\/$>$file-\/$>$info(\+H\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E)
+
+The result set is stored in table-\/$>$sort.\+io\+\_\+cache or table-\/$>$sort.\+sorted\+\_\+result, or left in the main filesort buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Current thread \\
+\hline
+ & {\em filesort} & Table and how to sort it \\
+\hline
+ & {\em sort\+\_\+positions} & Set to T\+R\+UE if we want to force sorting by position (Needed by U\+P\+D\+A\+T\+E/\+I\+N\+S\+E\+RT or A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} or when rowids are required by executor) \\
+\hline
+\mbox{\texttt{ out}}  & {\em examined\+\_\+rows} & Store number of examined rows here This is the number of found rows before applying W\+H\+E\+RE condition. \\
+\hline
+\mbox{\texttt{ out}}  & {\em found\+\_\+rows} & Store the number of found rows here. This is the number of found rows after applying W\+H\+E\+RE condition. \\
+\hline
+\mbox{\texttt{ out}}  & {\em returned\+\_\+rows} & Number of rows in the result, could be less than found\+\_\+rows if L\+I\+M\+IT is provided.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If we sort by position (like if sort\+\_\+positions is 1) \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}} will call table-\/$>$prepare\+\_\+for\+\_\+position().
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+False if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filesort_8cc_ab16f653b56d04fb65e58d24fd05d8c60}\label{filesort_8cc_ab16f653b56d04fb65e58d24fd05d8c60}} 
+\index{filesort.\+cc@{filesort.\+cc}!merge\+\_\+buffers@{merge\+\_\+buffers}}
+\index{merge\+\_\+buffers@{merge\+\_\+buffers}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{merge\+\_\+buffers()}{merge\_buffers()}}
+{\footnotesize\ttfamily int merge\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$}]{param,  }\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{from\+\_\+file,  }\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{to\+\_\+file,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Sort\+\_\+buffer}}}]{sort\+\_\+buffer,  }\item[{\mbox{\hyperlink{structMerge__chunk}{Merge\+\_\+chunk}} $\ast$}]{last\+\_\+chunk,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Merge\+\_\+chunk\+\_\+array}}}]{chunk\+\_\+array,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+Merge buffers to one buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em param} & Sort parameter \\
+\hline
+ & {\em from\+\_\+file} & File with source data (Merge\+\_\+chunks point to this file) \\
+\hline
+ & {\em to\+\_\+file} & File to write the sorted result data. \\
+\hline
+ & {\em sort\+\_\+buffer} & Buffer for data to store up to M\+E\+R\+G\+E\+B\+U\+F\+F2 sort keys. \\
+\hline
+\mbox{\texttt{ out}}  & {\em last\+\_\+chunk} & Store here \mbox{\hyperlink{structMerge__chunk}{Merge\+\_\+chunk}} describing data written to to\+\_\+file. \\
+\hline
+ & {\em chunk\+\_\+array} & Array of chunks to merge. \\
+\hline
+ & {\em flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 OK 
+
+other error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filesort_8cc_a18ea596659394e452890e48fc84ae257}\label{filesort_8cc_a18ea596659394e452890e48fc84ae257}} 
+\index{filesort.\+cc@{filesort.\+cc}!merge\+\_\+many\+\_\+buff@{merge\+\_\+many\+\_\+buff}}
+\index{merge\+\_\+many\+\_\+buff@{merge\+\_\+many\+\_\+buff}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{merge\+\_\+many\+\_\+buff()}{merge\_many\_buff()}}
+{\footnotesize\ttfamily int merge\+\_\+many\+\_\+buff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$}]{param,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Sort\+\_\+buffer}}}]{sort\+\_\+buffer,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Merge\+\_\+chunk\+\_\+array}}}]{chunk\+\_\+array,  }\item[{size\+\_\+t $\ast$}]{p\+\_\+num\+\_\+chunks,  }\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{t\+\_\+file }\end{DoxyParamCaption})}
+
+Merges buffers to make $<$ M\+E\+R\+G\+E\+B\+U\+F\+F2 buffers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Sort parameters. \\
+\hline
+{\em sort\+\_\+buffer} & The main memory buffer. \\
+\hline
+{\em chunk\+\_\+array} & Array of chunk descriptors to merge. \\
+\hline
+{\em p\+\_\+num\+\_\+chunks} & \mbox{[}out\mbox{]} output\+: the number of chunks left in the output file. \\
+\hline
+{\em t\+\_\+file} & Where to store the result. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filesort_8cc_a86792285c18f8e5f102164b022ba4e2b}\label{filesort_8cc_a86792285c18f8e5f102164b022ba4e2b}} 
+\index{filesort.\+cc@{filesort.\+cc}!read\+\_\+to\+\_\+buffer@{read\+\_\+to\+\_\+buffer}}
+\index{read\+\_\+to\+\_\+buffer@{read\+\_\+to\+\_\+buffer}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{read\+\_\+to\+\_\+buffer()}{read\_to\_buffer()}}
+{\footnotesize\ttfamily uint read\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{fromfile,  }\item[{\mbox{\hyperlink{structMerge__chunk}{Merge\+\_\+chunk}} $\ast$}]{merge\+\_\+chunk,  }\item[{\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$}]{param }\end{DoxyParamCaption})}
+
+Read data to buffer.
+
+\begin{DoxyReturn}{Returns}
+(uint)-\/1 if something goes wrong 
+\end{DoxyReturn}
+\mbox{\Hypertarget{filesort_8cc_af2b02d8e944d1fc9ccaf16547453c156}\label{filesort_8cc_af2b02d8e944d1fc9ccaf16547453c156}} 
+\index{filesort.\+cc@{filesort.\+cc}!sortlength@{sortlength}}
+\index{sortlength@{sortlength}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{sortlength()}{sortlength()}}
+{\footnotesize\ttfamily uint sortlength (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structst__sort__field}{st\+\_\+sort\+\_\+field}} $\ast$}]{sortorder,  }\item[{uint}]{s\+\_\+length,  }\item[{bool $\ast$}]{multi\+\_\+byte\+\_\+charset,  }\item[{bool $\ast$}]{use\+\_\+hash }\end{DoxyParamCaption})}
+
+
+
+Declared here so we can unit test it. 
+
+Calculate length of sort key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread handler \\
+\hline
+ & {\em sortorder} & Order of items to sort \\
+\hline
+ & {\em s\+\_\+length} & Number of items to sort \\
+\hline
+\mbox{\texttt{ out}}  & {\em multi\+\_\+byte\+\_\+charset} & Set to 1 if we are using multi-\/byte charset (In which case we have to use strxnfrm()) \\
+\hline
+\mbox{\texttt{ out}}  & {\em use\+\_\+hash} & Set to true when make\+\_\+sortkey should calculate and append hash for each sort key \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classSort__param_af1550d8933ac48ff4f9ac337429b1794}{Sort\+\_\+param\+::make\+\_\+sortkey()}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+sortorder-\/$>$length is updated for each sort item. ~\newline
+ sortorder-\/$>$need\+\_\+strxnfrm is set 1 if we have to use strxnfrm
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Total length of sort buffer in bytes 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{filesort_8cc_a0544c3fe466e421738dae463968b70ba}\label{filesort_8cc_a0544c3fe466e421738dae463968b70ba}} 
+\index{filesort.\+cc@{filesort.\+cc}!else@{else}}
+\index{else@{else}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    wr.\mbox{\hyperlink{classJson__wrapper_a7ccea914b374ff03975dda48cefe16de}{make\_sort\_key}}(to, length)}
+\end{DoxyCode}
+\mbox{\Hypertarget{filesort_8cc_a2508700f5bde310552de8d451286b550}\label{filesort_8cc_a2508700f5bde310552de8d451286b550}} 
+\index{filesort.\+cc@{filesort.\+cc}!hash@{hash}}
+\index{hash@{hash}!filesort.\+cc@{filesort.\+cc}}
+\subsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily $\ast$ hash}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  DBUG\_ASSERT(!item->maybe\_null || to[-1] == 1)}
+\end{DoxyCode}

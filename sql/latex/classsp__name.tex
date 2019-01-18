@@ -1,0 +1,80 @@
+\hypertarget{classsp__name}{}\section{sp\+\_\+name Class Reference}
+\label{classsp__name}\index{sp\+\_\+name@{sp\+\_\+name}}
+Inheritance diagram for sp\+\_\+name\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__name}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__name_aa9d453be69ea04499e2c4845e627adba}\label{classsp__name_aa9d453be69ea04499e2c4845e627adba}} 
+{\bfseries sp\+\_\+name} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&db, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&name, bool use\+\_\+explicit\+\_\+name)
+\item 
+\mbox{\hyperlink{classsp__name_ac3c55e826c7449a541ff7033d368bb2a}{sp\+\_\+name}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$key, char $\ast$qname\+\_\+buff)
+\item 
+void \mbox{\hyperlink{classsp__name_a95e689b3d9e830936eb4460df42e2d39}{init\+\_\+qname}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__name_ad562a35d4d21dae094258fe65b4baa5c}\label{classsp__name_ad562a35d4d21dae094258fe65b4baa5c}} 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG {\bfseries m\+\_\+db}
+\item 
+\mbox{\Hypertarget{classsp__name_a9e88b6dcfd1315cd5640c9a7a01eee10}\label{classsp__name_a9e88b6dcfd1315cd5640c9a7a01eee10}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{classsp__name_a57b240b04ab34f71cb7c42e0a1b32ccf}\label{classsp__name_a57b240b04ab34f71cb7c42e0a1b32ccf}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries m\+\_\+qname}
+\item 
+bool \mbox{\hyperlink{classsp__name_a6ddb16b2a338929f8cab46a8c37f1f5f}{m\+\_\+explicit\+\_\+name}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsp__name_ac3c55e826c7449a541ff7033d368bb2a}\label{classsp__name_ac3c55e826c7449a541ff7033d368bb2a}} 
+\index{sp\+\_\+name@{sp\+\_\+name}!sp\+\_\+name@{sp\+\_\+name}}
+\index{sp\+\_\+name@{sp\+\_\+name}!sp\+\_\+name@{sp\+\_\+name}}
+\subsubsection{\texorpdfstring{sp\+\_\+name()}{sp\_name()}}
+{\footnotesize\ttfamily sp\+\_\+name\+::sp\+\_\+name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{key,  }\item[{char $\ast$}]{qname\+\_\+buff }\end{DoxyParamCaption})}
+
+Create temporary \mbox{\hyperlink{classsp__name}{sp\+\_\+name}} object from M\+DL key.
+
+Create temporary \mbox{\hyperlink{classsp__name}{sp\+\_\+name}} object from M\+DL key.
+
+\begin{DoxyNote}{Note}
+The lifetime of this object is bound to the lifetime of the \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}}. This should be fine as \mbox{\hyperlink{classsp__name}{sp\+\_\+name}} objects created by this constructor are mainly used for SP-\/cache lookups.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & M\+DL key containing database and routine name. \\
+\hline
+{\em qname\+\_\+buff} & Buffer to be used for storing quoted routine name (should be at least 2$\ast$\+N\+A\+M\+E\+\_\+\+L\+EN+1+1 bytes). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__name_a95e689b3d9e830936eb4460df42e2d39}\label{classsp__name_a95e689b3d9e830936eb4460df42e2d39}} 
+\index{sp\+\_\+name@{sp\+\_\+name}!init\+\_\+qname@{init\+\_\+qname}}
+\index{init\+\_\+qname@{init\+\_\+qname}!sp\+\_\+name@{sp\+\_\+name}}
+\subsubsection{\texorpdfstring{init\+\_\+qname()}{init\_qname()}}
+{\footnotesize\ttfamily void sp\+\_\+name\+::init\+\_\+qname (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Init the qualified name from the db and name. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsp__name_a6ddb16b2a338929f8cab46a8c37f1f5f}\label{classsp__name_a6ddb16b2a338929f8cab46a8c37f1f5f}} 
+\index{sp\+\_\+name@{sp\+\_\+name}!m\+\_\+explicit\+\_\+name@{m\+\_\+explicit\+\_\+name}}
+\index{m\+\_\+explicit\+\_\+name@{m\+\_\+explicit\+\_\+name}!sp\+\_\+name@{sp\+\_\+name}}
+\subsubsection{\texorpdfstring{m\+\_\+explicit\+\_\+name}{m\_explicit\_name}}
+{\footnotesize\ttfamily bool sp\+\_\+name\+::m\+\_\+explicit\+\_\+name}
+
+Prepend the db name? 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+head.\+h\item 
+sp\+\_\+head.\+cc\end{DoxyCompactItemize}

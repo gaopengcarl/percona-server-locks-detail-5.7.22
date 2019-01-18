@@ -1,0 +1,434 @@
+\hypertarget{classItem__func__spatial__operation}{}\section{Item\+\_\+func\+\_\+spatial\+\_\+operation Class Reference}
+\label{classItem__func__spatial__operation}\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+Inheritance diagram for Item\+\_\+func\+\_\+spatial\+\_\+operation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__spatial__operation}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a6a1a3a67118090846caa6a5c7b830185}\label{classItem__func__spatial__operation_a6a1a3a67118090846caa6a5c7b830185}} 
+enum {\bfseries op\+\_\+type} \{ \newline
+{\bfseries op\+\_\+shape} = 0, 
+{\bfseries op\+\_\+not} = 0x80000000, 
+{\bfseries op\+\_\+union} = 0x10000000, 
+{\bfseries op\+\_\+intersection} = 0x20000000, 
+\newline
+{\bfseries op\+\_\+symdifference} = 0x30000000, 
+{\bfseries op\+\_\+difference} = 0x40000000, 
+{\bfseries op\+\_\+backdifference} = 0x50000000, 
+{\bfseries op\+\_\+any} = 0x70000000
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a31eb298e8ace503c71863edc9587776c}\label{classItem__func__spatial__operation_a31eb298e8ace503c71863edc9587776c}} 
+{\bfseries Item\+\_\+func\+\_\+spatial\+\_\+operation} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b, Item\+\_\+func\+\_\+spatial\+\_\+operation\+::op\+\_\+type sp\+\_\+op)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a231acffd5ee83b8a0b348bc38d93816a}\label{classItem__func__spatial__operation_a231acffd5ee83b8a0b348bc38d93816a}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a362575045914f7b5ef21f50cb5544758}\label{classItem__func__spatial__operation_a362575045914f7b5ef21f50cb5544758}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+virtual void \mbox{\hyperlink{classItem__func__spatial__operation_ac7bb51665071406b92daf9728254fdfe}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_a5adb62f7747c6e2ff52994d82d42d6c2}{bg\+\_\+geo\+\_\+set\+\_\+op}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_a7f61f6bb0b698dd8edb26b9527988997}{combine\+\_\+sub\+\_\+results}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_ada24827906646fb03027634bdd613b4b}{simplify\+\_\+multilinestring}} (\mbox{\hyperlink{classGis__multi__line__string}{Gis\+\_\+multi\+\_\+line\+\_\+string}} $\ast$mls, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_acbd3c3c1484c7490cdc35635680782dd}{geometry\+\_\+collection\+\_\+set\+\_\+operation}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a1d9eafb0e4891302085006da42557045}\label{classItem__func__spatial__operation_a1d9eafb0e4891302085006da42557045}} 
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ {\bfseries empty\+\_\+result} (String $\ast$str, uint32 srid)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_afa6cf65438e1db9cde96b00f3f579f35}\label{classItem__func__spatial__operation_afa6cf65438e1db9cde96b00f3f579f35}} 
+bool {\bfseries assign\+\_\+result} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$geo, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Geotypes $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_ac3f0b6c08ba648eafb07e6c274ee9c59}{intersection\+\_\+operation}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Geotypes $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_a8d9dbfc298e9f8a3fbf140168e992197}{union\+\_\+operation}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Geotypes $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_a3c362428b07f46f367c2e1e35f17cf40}{difference\+\_\+operation}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Geotypes $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_ae775d509dca190eff1d735dd13c512a7}{symdifference\+\_\+operation}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_ae1b75a16acf6064441032b4f2219edb4}{geocol\+\_\+symdifference}} (const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc1, const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_a66f93912a837031cc66af8c61f63c6b6}{geocol\+\_\+difference}} (const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc1, const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_abf688dc5305ee501e952523d5131207d}{geocol\+\_\+intersection}} (const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc1, const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc2, String $\ast$result)
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ \mbox{\hyperlink{classItem__func__spatial__operation_a9827ef61e810b39f28574cc670bfb7b3}{geocol\+\_\+union}} (const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc1, const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&bggc2, String $\ast$result)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a8ad87a8857db93077d7e90f5d2ad685e}\label{classItem__func__spatial__operation_a8ad87a8857db93077d7e90f5d2ad685e}} 
+String {\bfseries tmp\+\_\+value1}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a0ce19ac6d0e6b828f093de4e6e98e665}\label{classItem__func__spatial__operation_a0ce19ac6d0e6b828f093de4e6e98e665}} 
+String {\bfseries tmp\+\_\+value2}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a38aab305ffaa5ae8e33e1ceceb5828f8}\label{classItem__func__spatial__operation_a38aab305ffaa5ae8e33e1ceceb5828f8}} 
+\mbox{\hyperlink{classBG__result__buf__mgr}{B\+G\+\_\+result\+\_\+buf\+\_\+mgr}} {\bfseries bg\+\_\+resbuf\+\_\+mgr}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_aac0e170e3397dfc0e3a75f575c17cba5}\label{classItem__func__spatial__operation_aac0e170e3397dfc0e3a75f575c17cba5}} 
+{\footnotesize template$<$typename Geotypes $>$ }\\class {\bfseries B\+G\+\_\+setop\+\_\+wrapper}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__operation_a032d9506339ef50d02218b7a9d98fd04}\label{classItem__func__spatial__operation_a032d9506339ef50d02218b7a9d98fd04}} 
+class {\bfseries B\+G\+\_\+geometry\+\_\+collection}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__spatial__operation_a5adb62f7747c6e2ff52994d82d42d6c2}\label{classItem__func__spatial__operation_a5adb62f7747c6e2ff52994d82d42d6c2}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!bg\+\_\+geo\+\_\+set\+\_\+op@{bg\+\_\+geo\+\_\+set\+\_\+op}}
+\index{bg\+\_\+geo\+\_\+set\+\_\+op@{bg\+\_\+geo\+\_\+set\+\_\+op}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{bg\+\_\+geo\+\_\+set\+\_\+op()}{bg\_geo\_set\_op()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::bg\+\_\+geo\+\_\+set\+\_\+op (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Call boost geometry set operations to compute set operation result, and returns the result as a \mbox{\hyperlink{classGeometry}{Geometry}} object.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & buffer containing the G\+E\+O\+M\+E\+T\+RY byte string of the returned geometry.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the set operation results in an empty point set, return a geometry collection containing 0 objects. If null\+\_\+value is set to true, always returns 0. The returned geometry object can be used in the same val\+\_\+str call. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_a7f61f6bb0b698dd8edb26b9527988997}\label{classItem__func__spatial__operation_a7f61f6bb0b698dd8edb26b9527988997}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!combine\+\_\+sub\+\_\+results@{combine\+\_\+sub\+\_\+results}}
+\index{combine\+\_\+sub\+\_\+results@{combine\+\_\+sub\+\_\+results}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{combine\+\_\+sub\+\_\+results()}{combine\_sub\_results()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::combine\+\_\+sub\+\_\+results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{geo1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{geo2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Combine sub-\/results of set operation into a geometry collection. This function eliminates points in geo2 that are within geo1(polygons or linestrings). We have to do so because BG set operations return results in 3 forms --- multipolygon, multilinestring and multipoint, however given a type of set operation and the operands, the returned 3 types of results may intersect, and we want to eliminate the points already in the polygons/linestrings. And in future we also need to remove the linestrings that are already in the polygons, this isn\textquotesingle{}t done now because there are no such set operation results to combine.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em geo1} & First operand, a Multipolygon or Multilinestring object computed by BG set operation. \\
+\hline
+{\em geo2} & Second operand, a Multipoint object computed by BG set operation. \\
+\hline
+{\em result} & Holds result geometry\textquotesingle{}s W\+KB data in G\+E\+O\+M\+E\+T\+RY format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A geometry combined from geo1 and geo2. Either or both of geo1 and geo2 can be N\+U\+LL, so we may end up with a multipoint, a multipolygon/multilinestring, a geometry collection, or an empty geometry collection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_a3c362428b07f46f367c2e1e35f17cf40}\label{classItem__func__spatial__operation_a3c362428b07f46f367c2e1e35f17cf40}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!difference\+\_\+operation@{difference\+\_\+operation}}
+\index{difference\+\_\+operation@{difference\+\_\+operation}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{difference\+\_\+operation()}{difference\_operation()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::difference\+\_\+operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do difference operation for two geometries, dispatch to specific BG function wrapper calls according to set operation type, and the 1st or both operand types.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & A wrapper for all geometry types. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result geometry whose W\+KB data is held in result. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_a66f93912a837031cc66af8c61f63c6b6}\label{classItem__func__spatial__operation_a66f93912a837031cc66af8c61f63c6b6}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!geocol\+\_\+difference@{geocol\+\_\+difference}}
+\index{geocol\+\_\+difference@{geocol\+\_\+difference}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{geocol\+\_\+difference()}{geocol\_difference()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::geocol\+\_\+difference (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc1,  }\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do difference operation on geometry collections. For each component CX in g1, we do CX\+:= CX difference CY for all components CY in g2. When at last CX isn\textquotesingle{}t empty, it\textquotesingle{}s put into result geometry collection GC. If all subresults can be computed successfully, the geometry collection GC is our result.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em bggc1} & First geometry operand, a geometry collection. \\
+\hline
+ & {\em bggc2} & Second geometry operand, a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result, which must be a geometry collection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The difference result, whose W\+KB data is stored in \textquotesingle{}result\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_abf688dc5305ee501e952523d5131207d}\label{classItem__func__spatial__operation_abf688dc5305ee501e952523d5131207d}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!geocol\+\_\+intersection@{geocol\+\_\+intersection}}
+\index{geocol\+\_\+intersection@{geocol\+\_\+intersection}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{geocol\+\_\+intersection()}{geocol\_intersection()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::geocol\+\_\+intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc1,  }\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do intersection operation on geometry collections. We do intersection for all pairs of components in g1 and g2, put the results in a geometry collection. If all subresults can be computed successfully, the geometry collection is our result.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em bggc1} & First geometry operand, a geometry collection. \\
+\hline
+ & {\em bggc2} & Second geometry operand, a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result, which must be a geometry collection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The intersection result, whose W\+KB data is stored in \textquotesingle{}result\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_ae1b75a16acf6064441032b4f2219edb4}\label{classItem__func__spatial__operation_ae1b75a16acf6064441032b4f2219edb4}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!geocol\+\_\+symdifference@{geocol\+\_\+symdifference}}
+\index{geocol\+\_\+symdifference@{geocol\+\_\+symdifference}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{geocol\+\_\+symdifference()}{geocol\_symdifference()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::geocol\+\_\+symdifference (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc1,  }\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Symmetric difference of geometry collections.
+
+Symdifference(g1, g2) is implemented as union(difference(g1, g2), difference(g2, g1)).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em bggc1} & First geometry operand, a geometry collection. \\
+\hline
+ & {\em bggc2} & Second geometry operand, a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result, which must be a geometry collection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The symdifference result, whose W\+KB data is stored in \textquotesingle{}result\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_a9827ef61e810b39f28574cc670bfb7b3}\label{classItem__func__spatial__operation_a9827ef61e810b39f28574cc670bfb7b3}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!geocol\+\_\+union@{geocol\+\_\+union}}
+\index{geocol\+\_\+union@{geocol\+\_\+union}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{geocol\+\_\+union()}{geocol\_union()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::geocol\+\_\+union (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc1,  }\item[{const \mbox{\hyperlink{classBG__geometry__collection}{B\+G\+\_\+geometry\+\_\+collection}} \&}]{bggc2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do union operation on geometry collections. We do union for all pairs of components in g1 and g2, whenever a union can be done, we do so and put the results in a geometry collection GC and remove the two components from g1 and g2 respectively. Finally no components in g1 and g2 overlap and GC is our result.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em bggc1} & First geometry operand, a geometry collection. \\
+\hline
+ & {\em bggc2} & Second geometry operand, a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result, which must be a geometry collection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The union result, whose W\+KB data is stored in \textquotesingle{}result\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_acbd3c3c1484c7490cdc35635680782dd}\label{classItem__func__spatial__operation_acbd3c3c1484c7490cdc35635680782dd}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!geometry\+\_\+collection\+\_\+set\+\_\+operation@{geometry\+\_\+collection\+\_\+set\+\_\+operation}}
+\index{geometry\+\_\+collection\+\_\+set\+\_\+operation@{geometry\+\_\+collection\+\_\+set\+\_\+operation}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{geometry\+\_\+collection\+\_\+set\+\_\+operation()}{geometry\_collection\_set\_operation()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::geometry\+\_\+collection\+\_\+set\+\_\+operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do set operation on geometry collections. BG doesn\textquotesingle{}t directly support geometry collections in any function, so we have to do so by computing the set operation result of all two operands\textquotesingle{} components, which must be the 6 basic types of geometries, and then we combine the sub-\/results.
+
+This function dispatches to specific set operation types.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First geometry operand, a geometry collection. \\
+\hline
+ & {\em g2} & Second geometry operand, a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result, which must be a geometry collection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The set operation result, whose W\+KB data is stored in \textquotesingle{}result\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_ac3f0b6c08ba648eafb07e6c274ee9c59}\label{classItem__func__spatial__operation_ac3f0b6c08ba648eafb07e6c274ee9c59}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!intersection\+\_\+operation@{intersection\+\_\+operation}}
+\index{intersection\+\_\+operation@{intersection\+\_\+operation}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{intersection\+\_\+operation()}{intersection\_operation()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::intersection\+\_\+operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do intersection operation for two geometries, dispatch to specific BG function wrapper calls according to set operation type, and the 1st or both operand types.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & A wrapper for all geometry types. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result geometry whose W\+KB data is held in result. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_ac7bb51665071406b92daf9728254fdfe}\label{classItem__func__spatial__operation_ac7bb51665071406b92daf9728254fdfe}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!print@{print}}
+\index{print@{print}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Item\+\_\+func\+\_\+spatial\+\_\+operation\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__spatial__operation_ada24827906646fb03027634bdd613b4b}\label{classItem__func__spatial__operation_ada24827906646fb03027634bdd613b4b}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!simplify\+\_\+multilinestring@{simplify\+\_\+multilinestring}}
+\index{simplify\+\_\+multilinestring@{simplify\+\_\+multilinestring}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{simplify\+\_\+multilinestring()}{simplify\_multilinestring()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::simplify\+\_\+multilinestring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGis__multi__line__string}{Gis\+\_\+multi\+\_\+line\+\_\+string}} $\ast$}]{mls,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Simplify a multilinestring result from the BG intersection function.
+
+The multilinestring may contain linestrings with two points where both points are the same. Those are intersection points that should be returned to the user as points. This function loops through the multilinestring, separating true linestrings and linestring-\/encoded points, and returns the simplest geometric result possible\+: point, linestring, multilinestring, multipoint, or geometry collection.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em mls} & The multilinestring to simplify \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & The G\+E\+O\+M\+E\+T\+RY string (S\+R\+ID+W\+KB) of the returned object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The simplest geometry type representing the input. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_ae775d509dca190eff1d735dd13c512a7}\label{classItem__func__spatial__operation_ae775d509dca190eff1d735dd13c512a7}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!symdifference\+\_\+operation@{symdifference\+\_\+operation}}
+\index{symdifference\+\_\+operation@{symdifference\+\_\+operation}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{symdifference\+\_\+operation()}{symdifference\_operation()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::symdifference\+\_\+operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do symdifference operation for two geometries, dispatch to specific BG function wrapper calls according to set operation type, and the 1st or both operand types.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & A wrapper for all geometry types. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result geometry whose W\+KB data is held in result. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__spatial__operation_a8d9dbfc298e9f8a3fbf140168e992197}\label{classItem__func__spatial__operation_a8d9dbfc298e9f8a3fbf140168e992197}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}!union\+\_\+operation@{union\+\_\+operation}}
+\index{union\+\_\+operation@{union\+\_\+operation}!Item\+\_\+func\+\_\+spatial\+\_\+operation@{Item\+\_\+func\+\_\+spatial\+\_\+operation}}
+\subsubsection{\texorpdfstring{union\+\_\+operation()}{union\_operation()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ Item\+\_\+func\+\_\+spatial\+\_\+operation\+::union\+\_\+operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{String $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Do union operation for two geometries, dispatch to specific BG function wrapper calls according to set operation type, and the 1st or both operand types.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & A wrapper for all geometry types. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Holds W\+KB data of the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result geometry whose W\+KB data is held in result. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc.\+h\item 
+\mbox{\hyperlink{item__geofunc__setops_8cc}{item\+\_\+geofunc\+\_\+setops.\+cc}}\end{DoxyCompactItemize}

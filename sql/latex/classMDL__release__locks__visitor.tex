@@ -1,0 +1,45 @@
+\hypertarget{classMDL__release__locks__visitor}{}\section{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor Class Reference}
+\label{classMDL__release__locks__visitor}\index{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor@{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+Inheritance diagram for M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMDL__release__locks__visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classMDL__release__locks__visitor_a2d71ff221e448ea473b5994d0d52df20}{release}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to find out if the lock represented by a given ticket should be released. Users of release\+\_\+locks() need to subclass this and specify an implementation of \mbox{\hyperlink{classMDL__release__locks__visitor_a2d71ff221e448ea473b5994d0d52df20}{release()}}. Only for locks with explicit duration. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__release__locks__visitor_a2d71ff221e448ea473b5994d0d52df20}\label{classMDL__release__locks__visitor_a2d71ff221e448ea473b5994d0d52df20}} 
+\index{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor@{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor}!release@{release}}
+\index{release@{release}!M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor@{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily virtual bool M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor\+::release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{ticket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Check if the given ticket represents a lock that should be released.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if the lock should be released, false otherwise. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classRelease__locking__service__locks_a95d3c4e147418ae0fe72017ad4068cd3}{Release\+\_\+locking\+\_\+service\+\_\+locks}}, and \mbox{\hyperlink{classRelease__all__locking__service__locks_a7578e5263f465bfc6acb3ac35d137501}{Release\+\_\+all\+\_\+locking\+\_\+service\+\_\+locks}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\end{DoxyCompactItemize}

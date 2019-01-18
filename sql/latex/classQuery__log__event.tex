@@ -1,0 +1,146 @@
+\hypertarget{classQuery__log__event}{}\section{Query\+\_\+log\+\_\+event Class Reference}
+\label{classQuery__log__event}\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Query\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQuery__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__log__event_ace9dae10ee6c2c11ef34d678baa594d5}\label{classQuery__log__event_ace9dae10ee6c2c11ef34d678baa594d5}} 
+void {\bfseries print\+\_\+query\+\_\+header} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classQuery__log__event_a151ce375bee8d6ec0058c7bd31712a15}\label{classQuery__log__event_a151ce375bee8d6ec0058c7bd31712a15}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\hyperlink{classQuery__log__event_a3420653875185a8dff0c28831ef7bd2a}{Query\+\_\+log\+\_\+event}} ()
+\item 
+\mbox{\hyperlink{classQuery__log__event_a13b9cc67eca9afb925b298ab2e02a03d}{Query\+\_\+log\+\_\+event}} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event, Log\+\_\+event\+\_\+type event\+\_\+type)
+\item 
+\mbox{\Hypertarget{classQuery__log__event_a443215abfdd80c4621298306bb404369}\label{classQuery__log__event_a443215abfdd80c4621298306bb404369}} 
+virtual ulong {\bfseries get\+\_\+post\+\_\+header\+\_\+size\+\_\+for\+\_\+derived} ()
+\item 
+\mbox{\Hypertarget{classQuery__log__event_a298d688fcc930e47087634b31aeee824}\label{classQuery__log__event_a298d688fcc930e47087634b31aeee824}} 
+bool {\bfseries is\+\_\+trans\+\_\+keyword} () const
+\item 
+bool \mbox{\hyperlink{classQuery__log__event_a2a3e67710fa962765847ed1df1552864}{is\+\_\+sbr\+\_\+logging\+\_\+format}} () const
+\item 
+bool \mbox{\hyperlink{classQuery__log__event_a694cad8964206f7838bae799319fc707}{starts\+\_\+group}} ()
+\item 
+\mbox{\Hypertarget{classQuery__log__event_af5065b48c330a7b077229c428b404bdb}\label{classQuery__log__event_af5065b48c330a7b077229c428b404bdb}} 
+virtual bool {\bfseries ends\+\_\+group} ()
+\item 
+\mbox{\Hypertarget{classQuery__log__event_aaf5b47e15475d02ed443a7722f434074}\label{classQuery__log__event_aaf5b47e15475d02ed443a7722f434074}} 
+bool {\bfseries is\+\_\+query\+\_\+prefix\+\_\+match} (const char $\ast$pattern, uint p\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__log__event_ac10c7f4266d762e17a3b9869a650c47f}\label{classQuery__log__event_ac10c7f4266d762e17a3b9869a650c47f}} 
+static bool {\bfseries rewrite\+\_\+db\+\_\+in\+\_\+buffer} (char $\ast$$\ast$buf, ulong $\ast$event\+\_\+len, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fde)
+\item 
+static size\+\_\+t \mbox{\hyperlink{classQuery__log__event_afde3125ae01398ecb57c7c14282959f4}{get\+\_\+query}} (const char $\ast$buf, size\+\_\+t length, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fd\+\_\+event, char $\ast$$\ast$query)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__log__event_a5300528bde78ce5095beea7781e32b73}\label{classQuery__log__event_a5300528bde78ce5095beea7781e32b73}} 
+my\+\_\+thread\+\_\+id {\bfseries slave\+\_\+proxy\+\_\+id}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__log__event_ad901ebfcf01edc91bd16fddd685d3d57}\label{classQuery__log__event_ad901ebfcf01edc91bd16fddd685d3d57}} 
+Log\+\_\+event\+\_\+header\+::\+Byte $\ast$ {\bfseries data\+\_\+buf}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A  event is written to the binary log whenever the database is modified on the master, unless row based logging is used.
+
+\mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} is created for logging, and is called after an update to the database is done. It is used when the server acts as the master.
+
+Virtual inheritance is required here to handle the diamond problem in the class \mbox{\hyperlink{classExecute__load__query__log__event}{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}. The diamond structure is explained in  
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classQuery__log__event_a3420653875185a8dff0c28831ef7bd2a}\label{classQuery__log__event_a3420653875185a8dff0c28831ef7bd2a}} 
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{Query\+\_\+log\+\_\+event()}{Query\_log\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Query\+\_\+log\+\_\+event\+::\+Query\+\_\+log\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The simplest constructor that could possibly work. This is used for creating static objects that have a special meaning and are invisible to the log. \mbox{\Hypertarget{classQuery__log__event_a13b9cc67eca9afb925b298ab2e02a03d}\label{classQuery__log__event_a13b9cc67eca9afb925b298ab2e02a03d}} 
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{Query\+\_\+log\+\_\+event()}{Query\_log\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Query\+\_\+log\+\_\+event\+::\+Query\+\_\+log\+\_\+event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{uint}]{event\+\_\+len,  }\item[{const Format\+\_\+description\+\_\+event $\ast$}]{description\+\_\+event,  }\item[{Log\+\_\+event\+\_\+type}]{event\+\_\+type }\end{DoxyParamCaption})}
+
+This is used by the S\+QL slave thread to prepare the event before execution. The buffer contains the following\+: +-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/---+-\/-\/-\/---+-\/-\/-\/-\/-\/-\/---+-\/---+-\/-\/-\/-\/---+ $\vert$ catlog $\vert$ time\+\_\+zone $\vert$ user $\vert$ host $\vert$ db name $\vert$ \textbackslash{}0 $\vert$ Query $\vert$ +-\/-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/---+-\/-\/-\/---+-\/-\/-\/-\/-\/-\/---+-\/---+-\/-\/-\/-\/---+
+
+To support the query cache we append the following buffer to the above +-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/---+ $\vert$db len $\vert$ uninitiatlized space of size of db len $\vert$ F\+L\+A\+GS $\vert$ +-\/-\/-\/-\/---+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+-\/-\/-\/-\/---+
+
+The area of buffer starting from Query field all the way to the end belongs to the Query buffer and its structure is described in \mbox{\hyperlink{group__Runtime__Environment_ga8b3573b4adc788a4eeddbf6d1cb12582}{alloc\+\_\+query()}} in sql\+\_\+parse.\+cc
+
+We append the db length at the end of the buffer. This will be used by \mbox{\hyperlink{classQuery__cache_a8af9f720ae6120e8eed290f6f255e5bc}{Query\+\_\+cache\+::send\+\_\+result\+\_\+to\+\_\+client()}} in case the query cache is On.
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuery__log__event_afde3125ae01398ecb57c7c14282959f4}\label{classQuery__log__event_afde3125ae01398ecb57c7c14282959f4}} 
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!get\+\_\+query@{get\+\_\+query}}
+\index{get\+\_\+query@{get\+\_\+query}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+query()}{get\_query()}}
+{\footnotesize\ttfamily size\+\_\+t Query\+\_\+log\+\_\+event\+::get\+\_\+query (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{size\+\_\+t}]{length,  }\item[{const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{fd\+\_\+event,  }\item[{char $\ast$$\ast$}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Return the query string pointer (and its size) from a Query log event using only the event buffer (we don\textquotesingle{}t instantiate a \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} object for this).
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em buf} & Pointer to the event buffer. \\
+\hline
+ & {\em length} & The size of the event buffer. \\
+\hline
+ & {\em description\+\_\+event} & The description event of the master which logged the event. \\
+\hline
+\mbox{\texttt{ out}}  & {\em query} & The pointer to receive the query pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size of the query. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__log__event_a2a3e67710fa962765847ed1df1552864}\label{classQuery__log__event_a2a3e67710fa962765847ed1df1552864}} 
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+sbr\+\_\+logging\+\_\+format()}{is\_sbr\_logging\_format()}}
+{\footnotesize\ttfamily bool Query\+\_\+log\+\_\+event\+::is\+\_\+sbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+When a query log event contains a non-\/transaction control statement, we assume that it is changing database content (D\+ML) and was logged using binlog\+\_\+format=statement.
+
+\begin{DoxyReturn}{Returns}
+True the event represents a statement that was logged using S\+BR that can change database content. False for transaction control statements. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}{Log\+\_\+event}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classExecute__load__query__log__event_a8980ecbe8b7f0431a201498aa245c88d}{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}.
+
+\mbox{\Hypertarget{classQuery__log__event_a694cad8964206f7838bae799319fc707}\label{classQuery__log__event_a694cad8964206f7838bae799319fc707}} 
+\index{Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}!starts\+\_\+group@{starts\+\_\+group}}
+\index{starts\+\_\+group@{starts\+\_\+group}!Query\+\_\+log\+\_\+event@{Query\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{starts\+\_\+group()}{starts\_group()}}
+{\footnotesize\ttfamily bool Query\+\_\+log\+\_\+event\+::starts\+\_\+group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Notice, D\+DL queries are logged without B\+E\+G\+I\+N/\+C\+O\+M\+M\+IT parentheses and identification of such single-\/query group occures within logics of {\ttfamily get\+\_\+slave\+\_\+worker()}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

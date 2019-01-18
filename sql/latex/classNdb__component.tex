@@ -1,0 +1,116 @@
+\hypertarget{classNdb__component}{}\section{Ndb\+\_\+component Class Reference}
+\label{classNdb__component}\index{Ndb\+\_\+component@{Ndb\+\_\+component}}
+
+
+{\ttfamily \#include $<$ndb\+\_\+component.\+h$>$}
+
+Inheritance diagram for Ndb\+\_\+component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNdb__component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNdb__component_aaf4024753fb4282668f80f531243a389}\label{classNdb__component_aaf4024753fb4282668f80f531243a389}} 
+virtual int {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classNdb__component_ae72c69a9eec16a14e954cd01ccd45802}\label{classNdb__component_ae72c69a9eec16a14e954cd01ccd45802}} 
+virtual int {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{classNdb__component_a407e260a3c2088fd1f5dbc6f2f0c5216}\label{classNdb__component_a407e260a3c2088fd1f5dbc6f2f0c5216}} 
+virtual int {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{classNdb__component_afebd4dc208d9be7416c9e5a01f91688d}\label{classNdb__component_afebd4dc208d9be7416c9e5a01f91688d}} 
+virtual int {\bfseries deinit} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNdb__component_ad12d0d1f27286955b4d5df258abdb696}{Ndb\+\_\+component}} (const char $\ast$name)
+\item 
+virtual int \mbox{\hyperlink{classNdb__component_aa9e189140a854ec9dc044ba61f66cffb}{do\+\_\+init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classNdb__component_a4a67d55b4657f82d2e65de8cfd54e541}{do\+\_\+run}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classNdb__component_abb9ab4eb1e2451914a7ba29a4511479c}{do\+\_\+deinit}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classNdb__component_a2fd060c1bfaa3c3e4771a1f5a2090e56}{do\+\_\+wakeup}} ()=0
+\item 
+bool \mbox{\hyperlink{classNdb__component_afad79804c86f06145a1578094ffcb69d}{is\+\_\+stop\+\_\+requested}} ()
+\item 
+\mbox{\Hypertarget{classNdb__component_ab8ebcfe1856707eb11f6750c76651e04}\label{classNdb__component_ab8ebcfe1856707eb11f6750c76651e04}} 
+void {\bfseries log\+\_\+verbose} (unsigned verbose\+\_\+level, const char $\ast$fmt,...) M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((format(printf
+\item 
+\mbox{\Hypertarget{classNdb__component_a1ab09ed7b94cb6f028a32da182a686aa}\label{classNdb__component_a1ab09ed7b94cb6f028a32da182a686aa}} 
+void void {\bfseries log\+\_\+error} (const char $\ast$fmt,...) M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((format(printf
+\item 
+\mbox{\Hypertarget{classNdb__component_aad5c3999a0fd8aa7ec1b14af59382380}\label{classNdb__component_aad5c3999a0fd8aa7ec1b14af59382380}} 
+void void void {\bfseries log\+\_\+warning} (const char $\ast$fmt,...) M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((format(printf
+\item 
+\mbox{\Hypertarget{classNdb__component_a1cb05b361e24c5df938e0a790d8d4790}\label{classNdb__component_a1cb05b361e24c5df938e0a790d8d4790}} 
+void void void void {\bfseries log\+\_\+info} (const char $\ast$fmt,...) M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((format(printf
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNdb__component_a713c3e527d3116a112333cb3618efa57}\label{classNdb__component_a713c3e527d3116a112333cb3618efa57}} 
+void $\ast$ {\bfseries Ndb\+\_\+component\+\_\+run\+\_\+C} (void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Baseclass encapsulating the different components in ndbcluster.
+
+N\+O\+T\+E! The intention should be to not correlate to number of threads since that is an implementation detail in each component. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNdb__component_ad12d0d1f27286955b4d5df258abdb696}\label{classNdb__component_ad12d0d1f27286955b4d5df258abdb696}} 
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\subsubsection{\texorpdfstring{Ndb\+\_\+component()}{Ndb\_component()}}
+{\footnotesize\ttfamily Ndb\+\_\+component\+::\+Ndb\+\_\+component (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Con/de-\/structor is protected...so that sub-\/class needs to provide own 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNdb__component_abb9ab4eb1e2451914a7ba29a4511479c}\label{classNdb__component_abb9ab4eb1e2451914a7ba29a4511479c}} 
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!do\+\_\+deinit@{do\+\_\+deinit}}
+\index{do\+\_\+deinit@{do\+\_\+deinit}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\subsubsection{\texorpdfstring{do\+\_\+deinit()}{do\_deinit()}}
+{\footnotesize\ttfamily virtual int Ndb\+\_\+component\+::do\+\_\+deinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Component deinit function \mbox{\Hypertarget{classNdb__component_aa9e189140a854ec9dc044ba61f66cffb}\label{classNdb__component_aa9e189140a854ec9dc044ba61f66cffb}} 
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!do\+\_\+init@{do\+\_\+init}}
+\index{do\+\_\+init@{do\+\_\+init}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\subsubsection{\texorpdfstring{do\+\_\+init()}{do\_init()}}
+{\footnotesize\ttfamily virtual int Ndb\+\_\+component\+::do\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Component init function \mbox{\Hypertarget{classNdb__component_a4a67d55b4657f82d2e65de8cfd54e541}\label{classNdb__component_a4a67d55b4657f82d2e65de8cfd54e541}} 
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!do\+\_\+run@{do\+\_\+run}}
+\index{do\+\_\+run@{do\+\_\+run}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\subsubsection{\texorpdfstring{do\+\_\+run()}{do\_run()}}
+{\footnotesize\ttfamily virtual void Ndb\+\_\+component\+::do\+\_\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Component run function \mbox{\Hypertarget{classNdb__component_a2fd060c1bfaa3c3e4771a1f5a2090e56}\label{classNdb__component_a2fd060c1bfaa3c3e4771a1f5a2090e56}} 
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!do\+\_\+wakeup@{do\+\_\+wakeup}}
+\index{do\+\_\+wakeup@{do\+\_\+wakeup}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\subsubsection{\texorpdfstring{do\+\_\+wakeup()}{do\_wakeup()}}
+{\footnotesize\ttfamily virtual void Ndb\+\_\+component\+::do\+\_\+wakeup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Component wakeup function
+\begin{DoxyItemize}
+\item called when component is set to stop, should wakeup component from waiting 
+\end{DoxyItemize}\mbox{\Hypertarget{classNdb__component_afad79804c86f06145a1578094ffcb69d}\label{classNdb__component_afad79804c86f06145a1578094ffcb69d}} 
+\index{Ndb\+\_\+component@{Ndb\+\_\+component}!is\+\_\+stop\+\_\+requested@{is\+\_\+stop\+\_\+requested}}
+\index{is\+\_\+stop\+\_\+requested@{is\+\_\+stop\+\_\+requested}!Ndb\+\_\+component@{Ndb\+\_\+component}}
+\subsubsection{\texorpdfstring{is\+\_\+stop\+\_\+requested()}{is\_stop\_requested()}}
+{\footnotesize\ttfamily bool Ndb\+\_\+component\+::is\+\_\+stop\+\_\+requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+For usage in threads main loop 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ndb\+\_\+component.\+h\item 
+ndb\+\_\+component.\+cc\end{DoxyCompactItemize}

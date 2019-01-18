@@ -1,0 +1,112 @@
+\hypertarget{classQuery__result__union}{}\section{Query\+\_\+result\+\_\+union Class Reference}
+\label{classQuery__result__union}\index{Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}}
+Inheritance diagram for Query\+\_\+result\+\_\+union\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQuery__result__union}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__union_a6d06ea913a8d192a662f035d0c691e23}\label{classQuery__result__union_a6d06ea913a8d192a662f035d0c691e23}} 
+int {\bfseries prepare} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&list, S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$u)
+\item 
+virtual bool \mbox{\hyperlink{classQuery__result__union_ad110a83be28d4f91cfd4c7c534defcc9}{postponed\+\_\+prepare}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&types)
+\item 
+\mbox{\Hypertarget{classQuery__result__union_a3ead2cb4d67c6246adf2a91b31387355}\label{classQuery__result__union_a3ead2cb4d67c6246adf2a91b31387355}} 
+bool {\bfseries send\+\_\+data} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&items)
+\item 
+\mbox{\Hypertarget{classQuery__result__union_ad4f828a3be0b5367341e8f2a1a838132}\label{classQuery__result__union_ad4f828a3be0b5367341e8f2a1a838132}} 
+bool {\bfseries send\+\_\+eof} ()
+\item 
+\mbox{\Hypertarget{classQuery__result__union_a589932080b51b7e32d0c53c199be7541}\label{classQuery__result__union_a589932080b51b7e32d0c53c199be7541}} 
+virtual bool {\bfseries flush} ()
+\item 
+void \mbox{\hyperlink{classQuery__result__union_aa4640fb9c092f60d01389ae784486863}{cleanup}} ()
+\item 
+bool \mbox{\hyperlink{classQuery__result__union_a354c2b031a23e5d027e68a2490f0932b}{create\+\_\+result\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$column\+\_\+types, bool is\+\_\+distinct, ulonglong options, const char $\ast$alias, bool bit\+\_\+fields\+\_\+as\+\_\+long, bool create\+\_\+table)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__union_a990651c7bcdacb10625249bd84bba9fa}\label{classQuery__result__union_a990651c7bcdacb10625249bd84bba9fa}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries table}
+\item 
+\mbox{\Hypertarget{classQuery__result__union_a50fe9e5d0da2b73b0c8c549dcb5cf925}\label{classQuery__result__union_a50fe9e5d0da2b73b0c8c549dcb5cf925}} 
+bool {\bfseries is\+\_\+union\+\_\+mixed\+\_\+with\+\_\+union\+\_\+all}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__union_afaed536fb5d5548f269dc481d4f229f4}\label{classQuery__result__union_afaed536fb5d5548f269dc481d4f229f4}} 
+bool {\bfseries T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::create\+\_\+derived} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuery__result__union_aa4640fb9c092f60d01389ae784486863}\label{classQuery__result__union_aa4640fb9c092f60d01389ae784486863}} 
+\index{Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Query\+\_\+result\+\_\+union\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset and empty the temporary table that stores the materialized query result.
+
+\begin{DoxyNote}{Note}
+The cleanup performed here is exactly the same as for the two temp tables of \mbox{\hyperlink{classJOIN}{J\+O\+IN}} -\/ exec\+\_\+tmp\+\_\+table\+\_\+\mbox{[}1 $\vert$ 2\mbox{]}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classQuery__result__union_a354c2b031a23e5d027e68a2490f0932b}\label{classQuery__result__union_a354c2b031a23e5d027e68a2490f0932b}} 
+\index{Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}!create\+\_\+result\+\_\+table@{create\+\_\+result\+\_\+table}}
+\index{create\+\_\+result\+\_\+table@{create\+\_\+result\+\_\+table}!Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}}
+\subsubsection{\texorpdfstring{create\+\_\+result\+\_\+table()}{create\_result\_table()}}
+{\footnotesize\ttfamily bool Query\+\_\+result\+\_\+union\+::create\+\_\+result\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd\+\_\+arg,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{column\+\_\+types,  }\item[{bool}]{is\+\_\+union\+\_\+distinct,  }\item[{ulonglong}]{options,  }\item[{const char $\ast$}]{table\+\_\+alias,  }\item[{bool}]{bit\+\_\+fields\+\_\+as\+\_\+long,  }\item[{bool}]{create\+\_\+table }\end{DoxyParamCaption})}
+
+Create a temporary table to store the result of \mbox{\hyperlink{classQuery__result__union}{Query\+\_\+result\+\_\+union}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em column\+\_\+types} & a list of items used to define columns of the temporary table \\
+\hline
+{\em is\+\_\+union\+\_\+distinct} & if set, the temporary table will eliminate duplicates on insert \\
+\hline
+{\em options} & create options \\
+\hline
+{\em table\+\_\+alias} & name of the temporary table \\
+\hline
+{\em bit\+\_\+fields\+\_\+as\+\_\+long} & convert bit fields to ulonglong\\
+\hline
+\end{DoxyParams}
+Create a temporary table that is used to store the result of a U\+N\+I\+ON, derived table, or a materialized cursor.
+
+\begin{DoxyReturn}{Returns}
+false if table created, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__result__union_ad110a83be28d4f91cfd4c7c534defcc9}\label{classQuery__result__union_ad110a83be28d4f91cfd4c7c534defcc9}} 
+\index{Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}!postponed\+\_\+prepare@{postponed\+\_\+prepare}}
+\index{postponed\+\_\+prepare@{postponed\+\_\+prepare}!Query\+\_\+result\+\_\+union@{Query\+\_\+result\+\_\+union}}
+\subsubsection{\texorpdfstring{postponed\+\_\+prepare()}{postponed\_prepare()}}
+{\footnotesize\ttfamily virtual bool Query\+\_\+result\+\_\+union\+::postponed\+\_\+prepare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Do prepare() and prepare2() if they have been postponed until column type information is computed (used by \mbox{\hyperlink{classQuery__result__union__direct}{Query\+\_\+result\+\_\+union\+\_\+direct}}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & Column types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classQuery__result__union__direct_af8c3f38e8a9597784871d3d9a6d5839a}{Query\+\_\+result\+\_\+union\+\_\+direct}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+union.\+h\item 
+sql\+\_\+union.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\hypertarget{classsp__instr__freturn}{}\section{sp\+\_\+instr\+\_\+freturn Class Reference}
+\label{classsp__instr__freturn}\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+freturn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsp__instr__freturn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__freturn_a452e2ea55b6fb83df97c920b6207c116}\label{classsp__instr__freturn_a452e2ea55b6fb83df97c920b6207c116}} 
+{\bfseries sp\+\_\+instr\+\_\+freturn} (uint ip, L\+EX $\ast$lex, \mbox{\hyperlink{classItem}{Item}} $\ast$expr\+\_\+item, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG expr\+\_\+query, enum enum\+\_\+field\+\_\+types return\+\_\+field\+\_\+type)
+\item 
+\mbox{\Hypertarget{classsp__instr__freturn_aca248f31e8ba3391d81121e5619bcf6b}\label{classsp__instr__freturn_aca248f31e8ba3391d81121e5619bcf6b}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual uint \mbox{\hyperlink{classsp__instr__freturn_a9556622fcb532514742de4c9fdf4d506}{opt\+\_\+mark}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$leads)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__freturn_a80fe2f90bc144b28a1a97dbff8b35e0b}{exec\+\_\+core}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__freturn_aefb864f222cf52f923cf0ba0ce67943b}{is\+\_\+invalid}} () const
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__freturn_a02bf622965c9cdbe481ce87a3e1051cf}{invalidate}} ()
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__freturn_aea65606ff061db0c9eb71b0aedecddfd}{on\+\_\+after\+\_\+expr\+\_\+parsing}} (T\+HD $\ast$thd)
+\item 
+virtual L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classsp__instr__freturn_adccc76ff6c7a1c0f72b58eda6e542e19}{get\+\_\+expr\+\_\+query}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__instr__freturn}{sp\+\_\+instr\+\_\+freturn}} represents R\+E\+T\+U\+RN statement in stored functions. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__freturn_a80fe2f90bc144b28a1a97dbff8b35e0b}\label{classsp__instr__freturn_a80fe2f90bc144b28a1a97dbff8b35e0b}} 
+\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}!exec\+\_\+core@{exec\+\_\+core}}
+\index{exec\+\_\+core@{exec\+\_\+core}!sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+\subsubsection{\texorpdfstring{exec\+\_\+core()}{exec\_core()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+freturn\+::exec\+\_\+core (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute core function of instruction after all preparations (e.\+g. setting of proper L\+EX, saving part of the thread context).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em nextp\mbox{[}out\mbox{]}} & next instruction pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__freturn_adccc76ff6c7a1c0f72b58eda6e542e19}\label{classsp__instr__freturn_adccc76ff6c7a1c0f72b58eda6e542e19}} 
+\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}!get\+\_\+expr\+\_\+query@{get\+\_\+expr\+\_\+query}}
+\index{get\+\_\+expr\+\_\+query@{get\+\_\+expr\+\_\+query}!sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+\subsubsection{\texorpdfstring{get\+\_\+expr\+\_\+query()}{get\_expr\_query()}}
+{\footnotesize\ttfamily virtual L\+E\+X\+\_\+\+S\+T\+R\+I\+NG sp\+\_\+instr\+\_\+freturn\+::get\+\_\+expr\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the expression query string. This string can not be passed directly to the parser as it is most likely not a valid S\+QL-\/statement.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+as it can be seen in the \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query()}} implementation, \mbox{\hyperlink{classsp__instr__freturn_adccc76ff6c7a1c0f72b58eda6e542e19}{get\+\_\+expr\+\_\+query()}} might return E\+M\+P\+T\+Y\+\_\+\+S\+TR. E\+M\+P\+T\+Y\+\_\+\+S\+TR means that no query-\/expression is available. That happens when class provides different implementation of \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query()}}. Strictly speaking, this is a drawback of the current class hierarchy. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_ad355d3ed08ae1fef4811fe6838ed78e2}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__freturn_a02bf622965c9cdbe481ce87a3e1051cf}\label{classsp__instr__freturn_a02bf622965c9cdbe481ce87a3e1051cf}} 
+\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+freturn\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Invalidate the object. 
+
+Implements \mbox{\hyperlink{classsp__lex__instr_ae9945d69ab5d91d6ce215f194beea882}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__freturn_aefb864f222cf52f923cf0ba0ce67943b}\label{classsp__instr__freturn_aefb864f222cf52f923cf0ba0ce67943b}} 
+\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}!is\+\_\+invalid@{is\+\_\+invalid}}
+\index{is\+\_\+invalid@{is\+\_\+invalid}!sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid()}{is\_invalid()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+freturn\+::is\+\_\+invalid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if the object (i.\+e. L\+EX-\/object) is valid and \mbox{\hyperlink{classsp__instr__freturn_a80fe2f90bc144b28a1a97dbff8b35e0b}{exec\+\_\+core()}} can be just called.\\
+\hline
+{\em true} & if the object is not valid any longer, \mbox{\hyperlink{classsp__instr__freturn_a80fe2f90bc144b28a1a97dbff8b35e0b}{exec\+\_\+core()}} can not be called. The original query string should be re-\/parsed and a new L\+EX-\/object should be used. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_a56788cb475ccf94f224816006d9c90e9}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__freturn_aea65606ff061db0c9eb71b0aedecddfd}\label{classsp__instr__freturn_aea65606ff061db0c9eb71b0aedecddfd}} 
+\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}!on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}}
+\index{on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}!sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+\subsubsection{\texorpdfstring{on\+\_\+after\+\_\+expr\+\_\+parsing()}{on\_after\_expr\_parsing()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+freturn\+::on\+\_\+after\+\_\+expr\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Callback function which is called after the statement query string is successfully parsed, and the thread context has not been switched to the outer context. The thread context contains new L\+EX-\/object corresponding to the parsed query string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__freturn_a9556622fcb532514742de4c9fdf4d506}\label{classsp__instr__freturn_a9556622fcb532514742de4c9fdf4d506}} 
+\index{sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}!opt\+\_\+mark@{opt\+\_\+mark}}
+\index{opt\+\_\+mark@{opt\+\_\+mark}!sp\+\_\+instr\+\_\+freturn@{sp\+\_\+instr\+\_\+freturn}}
+\subsubsection{\texorpdfstring{opt\+\_\+mark()}{opt\_mark()}}
+{\footnotesize\ttfamily virtual uint sp\+\_\+instr\+\_\+freturn\+::opt\+\_\+mark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$}]{leads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Mark this instruction as reachable during optimization and return the index to the next instruction. Jump instruction will add their destination to the leads list. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a10b7b33a30316fca4cff5adfe98e282c}{sp\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

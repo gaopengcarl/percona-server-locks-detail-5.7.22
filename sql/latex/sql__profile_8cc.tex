@@ -1,0 +1,94 @@
+\hypertarget{sql__profile_8cc}{}\section{sql\+\_\+profile.\+cc File Reference}
+\label{sql__profile_8cc}\index{sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}}
+{\ttfamily \#include \char`\"{}sql\+\_\+profile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+show.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sql__profile_8cc_a2f51ded26fa78e9160fc2a8e2457e718}\label{sql__profile_8cc_a2f51ded26fa78e9160fc2a8e2457e718}} 
+\#define {\bfseries T\+I\+M\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS}~9
+\item 
+\#define \mbox{\hyperlink{sql__profile_8cc_adc4b3d5ffc77f775fbeff5158b22ec70}{T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE}}~(T\+I\+M\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS$\ast$100)+(T\+I\+M\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS-\/3)
+\item 
+\mbox{\Hypertarget{sql__profile_8cc_a9318d6acefb784da749a6542f435ccd5}\label{sql__profile_8cc_a9318d6acefb784da749a6542f435ccd5}} 
+\#define {\bfseries M\+A\+X\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+H\+I\+S\+T\+O\+RY}~101U
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sql__profile_8cc_ad34f54df980e667682ae5c555062ccc0}{fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classItem}{Item}} $\ast$cond)
+\item 
+\mbox{\Hypertarget{sql__profile_8cc_a4c1ddfe3f581d84cbedd4641a08cd00e}\label{sql__profile_8cc_a4c1ddfe3f581d84cbedd4641a08cd00e}} 
+int {\bfseries make\+\_\+profile\+\_\+table\+\_\+for\+\_\+show} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__schema__table}{S\+T\+\_\+\+S\+C\+H\+E\+M\+A\+\_\+\+T\+A\+B\+LE}} $\ast$schema\+\_\+table)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structst__field__info}{S\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+FO}} {\bfseries query\+\_\+profile\+\_\+statistics\+\_\+info} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement query profiling as as list of metaphorical fences, with one fence per query, and each fencepost a change of thd-\/$>$proc\+\_\+info state (with a snapshot of system statistics). When asked, we can then iterate over the fenceposts and calculate the distance between them, to inform the user what happened during a particular query or thd-\/$>$proc\+\_\+info state.
+
+User variables that inform profiling behavior\+:
+\begin{DoxyItemize}
+\item \char`\"{}profiling\char`\"{}, boolean, session only, \char`\"{}\+Are queries profiled?\char`\"{}
+\item \char`\"{}profiling\+\_\+history\+\_\+size\char`\"{}, integer, session + global, \char`\"{}\+Num queries stored?\char`\"{} 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sql__profile_8cc_adc4b3d5ffc77f775fbeff5158b22ec70}\label{sql__profile_8cc_adc4b3d5ffc77f775fbeff5158b22ec70}} 
+\index{sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}!T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE@{T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE}}
+\index{T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE@{T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE}!sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE}{TIME\_I\_S\_DECIMAL\_SIZE}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+I\+\_\+\+S\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+I\+ZE~(T\+I\+M\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS$\ast$100)+(T\+I\+M\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS-\/3)}
+
+two vals encoded\+: (dec$\ast$100)+len 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__profile_8cc_ad34f54df980e667682ae5c555062ccc0}\label{sql__profile_8cc_ad34f54df980e667682ae5c555062ccc0}} 
+\index{sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}!fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info@{fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info}}
+\index{fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info@{fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info}!sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}}
+\subsubsection{\texorpdfstring{fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info()}{fill\_query\_profile\_statistics\_info()}}
+{\footnotesize\ttfamily int fill\+\_\+query\+\_\+profile\+\_\+statistics\+\_\+info (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond }\end{DoxyParamCaption})}
+
+Connects Information\+\_\+\+Schema and Profiling. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{sql__profile_8cc_a7a1fd5844e5718f7b1636582ccf98c4a}\label{sql__profile_8cc_a7a1fd5844e5718f7b1636582ccf98c4a}} 
+\index{sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}!query\+\_\+profile\+\_\+statistics\+\_\+info@{query\+\_\+profile\+\_\+statistics\+\_\+info}}
+\index{query\+\_\+profile\+\_\+statistics\+\_\+info@{query\+\_\+profile\+\_\+statistics\+\_\+info}!sql\+\_\+profile.\+cc@{sql\+\_\+profile.\+cc}}
+\subsubsection{\texorpdfstring{query\+\_\+profile\+\_\+statistics\+\_\+info}{query\_profile\_statistics\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__field__info}{S\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+FO}} query\+\_\+profile\+\_\+statistics\+\_\+info\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"QUERY\_ID"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{false}, \textcolor{stringliteral}{"Query\_id"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"SEQ"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{false}, \textcolor{stringliteral}{"Seq"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"STATE"}, 30, MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{false}, \textcolor{stringliteral}{"Status"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"DURATION"}, \mbox{\hyperlink{sql__profile_8cc_adc4b3d5ffc77f775fbeff5158b22ec70}{TIME\_I\_S\_DECIMAL\_SIZE}}, MYSQL\_TYPE\_DECIMAL, 0, \textcolor{keyword}{false}, \textcolor{stringliteral}{"Duration"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"CPU\_USER"}, \mbox{\hyperlink{sql__profile_8cc_adc4b3d5ffc77f775fbeff5158b22ec70}{TIME\_I\_S\_DECIMAL\_SIZE}}, MYSQL\_TYPE\_DECIMAL, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"CPU\_user"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"CPU\_SYSTEM"}, \mbox{\hyperlink{sql__profile_8cc_adc4b3d5ffc77f775fbeff5158b22ec70}{TIME\_I\_S\_DECIMAL\_SIZE}}, MYSQL\_TYPE\_DECIMAL, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"CPU\_system"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"CONTEXT\_VOLUNTARY"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Context\_voluntary"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"CONTEXT\_INVOLUNTARY"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Context\_involuntary"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"BLOCK\_OPS\_IN"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Block\_ops\_in"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"BLOCK\_OPS\_OUT"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Block\_ops\_out"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"MESSAGES\_SENT"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Messages\_sent"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"MESSAGES\_RECEIVED"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Messages\_received"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"PAGE\_FAULTS\_MAJOR"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Page\_faults\_major"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"PAGE\_FAULTS\_MINOR"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Page\_faults\_minor"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"SWAPS"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Swaps"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"SOURCE\_FUNCTION"}, 30, MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Source\_function"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"SOURCE\_FILE"}, 20, MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Source\_file"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"SOURCE\_LINE"}, 20, MYSQL\_TYPE\_LONG, 0, \textcolor{keyword}{true}, \textcolor{stringliteral}{"Source\_line"}, SKIP\_OPEN\_TABLE\},}
+\DoxyCodeLine{  \{NULL, 0,  MYSQL\_TYPE\_STRING, 0, \textcolor{keyword}{true}, NULL, 0\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}

@@ -1,0 +1,56 @@
+\hypertarget{classSql__cmd__alter__server}{}\section{Sql\+\_\+cmd\+\_\+alter\+\_\+server Class Reference}
+\label{classSql__cmd__alter__server}\index{Sql\+\_\+cmd\+\_\+alter\+\_\+server@{Sql\+\_\+cmd\+\_\+alter\+\_\+server}}
+
+
+{\ttfamily \#include $<$sql\+\_\+servers.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+alter\+\_\+server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__alter__server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__alter__server_a5cbaf31ef0e25f235f5c01baace42577}\label{classSql__cmd__alter__server_a5cbaf31ef0e25f235f5c01baace42577}} 
+{\bfseries Sql\+\_\+cmd\+\_\+alter\+\_\+server} (\mbox{\hyperlink{classServer__options}{Server\+\_\+options}} $\ast$server\+\_\+options)
+\item 
+\mbox{\Hypertarget{classSql__cmd__alter__server_a8f4053c329131d853efb7a7b85ab044b}\label{classSql__cmd__alter__server_a8f4053c329131d853efb7a7b85ab044b}} 
+enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__alter__server_a8f4053c329131d853efb7a7b85ab044b}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSql__cmd__alter__server_a3f4f8ff26edf3f1780fc7ab7a98ccd2d}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the A\+L\+T\+ER S\+E\+R\+V\+ER statement. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__alter__server_a3f4f8ff26edf3f1780fc7ab7a98ccd2d}\label{classSql__cmd__alter__server_a3f4f8ff26edf3f1780fc7ab7a98ccd2d}} 
+\index{Sql\+\_\+cmd\+\_\+alter\+\_\+server@{Sql\+\_\+cmd\+\_\+alter\+\_\+server}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+alter\+\_\+server@{Sql\+\_\+cmd\+\_\+alter\+\_\+server}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+alter\+\_\+server\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Alter an existing server by updating the matching row in the mysql.\+servers table and updating the cache entry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+servers.\+h\item 
+sql\+\_\+servers.\+cc\end{DoxyCompactItemize}

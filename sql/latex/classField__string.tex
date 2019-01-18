@@ -1,0 +1,288 @@
+\hypertarget{classField__string}{}\section{Field\+\_\+string Class Reference}
+\label{classField__string}\index{Field\+\_\+string@{Field\+\_\+string}}
+Inheritance diagram for Field\+\_\+string\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classField__string}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__string_ad1b5794f1a3885c64daa685bb8257b86}\label{classField__string_ad1b5794f1a3885c64daa685bb8257b86}} 
+{\bfseries Field\+\_\+string} (uchar $\ast$ptr\+\_\+arg, uint32 len\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\Hypertarget{classField__string_ae4415915f710b707bf8c4e925086aeb5}\label{classField__string_ae4415915f710b707bf8c4e925086aeb5}} 
+{\bfseries Field\+\_\+string} (uint32 len\+\_\+arg, bool maybe\+\_\+null\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\Hypertarget{classField__string_aaa008612d778979434eb916848358524}\label{classField__string_aaa008612d778979434eb916848358524}} 
+enum\+\_\+field\+\_\+types {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classField__string_a7399f99754c73b30c85f67de281dfe85}\label{classField__string_a7399f99754c73b30c85f67de281dfe85}} 
+bool {\bfseries match\+\_\+collation\+\_\+to\+\_\+optimize\+\_\+range} () const
+\item 
+\mbox{\Hypertarget{classField__string_a799ed31adf2d1e5c9dc320fc2e16a43b}\label{classField__string_a799ed31adf2d1e5c9dc320fc2e16a43b}} 
+enum ha\+\_\+base\+\_\+keytype {\bfseries key\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField__string_adf0eee2d19e4c68edcb9451e4fd620bc}\label{classField__string_adf0eee2d19e4c68edcb9451e4fd620bc}} 
+bool {\bfseries zero\+\_\+pack} () const
+\item 
+\mbox{\Hypertarget{classField__string_a0f49e6aad46aaf8a846264f458ed9548}\label{classField__string_a0f49e6aad46aaf8a846264f458ed9548}} 
+type\+\_\+conversion\+\_\+status {\bfseries reset} (void)
+\item 
+\mbox{\Hypertarget{classField__string_ac1cf40598a1ca888b7450add9b7093fd}\label{classField__string_ac1cf40598a1ca888b7450add9b7093fd}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (const char $\ast$to, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)
+\item 
+\mbox{\Hypertarget{classField__string_a38c0df8c1a15e0ef3ff5f4a82fd152ce}\label{classField__string_a38c0df8c1a15e0ef3ff5f4a82fd152ce}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (longlong nr, bool unsigned\+\_\+val)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__string_a154a1bcd6578f53da8bccb43cc57cb60}{store}} (double nr)
+\item 
+\mbox{\Hypertarget{classField__string_a5e846ae91c7e2478f7b50f3070069a80}\label{classField__string_a5e846ae91c7e2478f7b50f3070069a80}} 
+double {\bfseries val\+\_\+real} (void)
+\item 
+\mbox{\Hypertarget{classField__string_a3f67f8d9013fbcee8958706a3e972260}\label{classField__string_a3f67f8d9013fbcee8958706a3e972260}} 
+longlong {\bfseries val\+\_\+int} (void)
+\item 
+\mbox{\Hypertarget{classField__string_a7192ad6ae7280acc6eb82a4bb831b68b}\label{classField__string_a7192ad6ae7280acc6eb82a4bb831b68b}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$, String $\ast$)
+\item 
+\mbox{\Hypertarget{classField__string_a08f448ec418b3edb8e1908f759127f30}\label{classField__string_a08f448ec418b3edb8e1908f759127f30}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classField__string_a91fb25508ef43ca2ab9598a2486e2b26}\label{classField__string_a91fb25508ef43ca2ab9598a2486e2b26}} 
+int {\bfseries cmp} (const uchar $\ast$, const uchar $\ast$)
+\item 
+void \mbox{\hyperlink{classField__string_a0d422b315c798e5281087fa31376921a}{make\+\_\+sort\+\_\+key}} (uchar $\ast$buff, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classField__string_ae38d154e925b8a5ad3d22694cd54d13c}\label{classField__string_ae38d154e925b8a5ad3d22694cd54d13c}} 
+void {\bfseries sql\+\_\+type} (String \&str) const
+\item 
+virtual uchar $\ast$ \mbox{\hyperlink{classField__string_a2394757ed93148a4ad7199e93ace382b}{pack}} (uchar $\ast$to, const uchar $\ast$from, uint max\+\_\+length, bool low\+\_\+byte\+\_\+first)
+\item 
+virtual const uchar $\ast$ \mbox{\hyperlink{classField__string_a2b13c788916d9efdb0683d9c92b0ccbf}{unpack}} (uchar $\ast$to, const uchar $\ast$from, uint param\+\_\+data, bool low\+\_\+byte\+\_\+first)
+\item 
+\mbox{\Hypertarget{classField__string_a7cc072cb2d79712c9d35a8fd33225a5e}\label{classField__string_a7cc072cb2d79712c9d35a8fd33225a5e}} 
+uint {\bfseries pack\+\_\+length\+\_\+from\+\_\+metadata} (uint field\+\_\+metadata)
+\item 
+bool \mbox{\hyperlink{classField__string_aa3397924d82ab8bb0c954b19c12de9a0}{compatible\+\_\+field\+\_\+size}} (uint field\+\_\+metadata, \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, uint16 mflags, int $\ast$order\+\_\+var)
+\item 
+\mbox{\Hypertarget{classField__string_a592c4d6b64c3cf190024a2bb426020d1}\label{classField__string_a592c4d6b64c3cf190024a2bb426020d1}} 
+uint {\bfseries row\+\_\+pack\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classField__string_a1a80511f7d40f24e63d69935824cbb4d}\label{classField__string_a1a80511f7d40f24e63d69935824cbb4d}} 
+int {\bfseries pack\+\_\+cmp} (const uchar $\ast$a, const uchar $\ast$b, uint key\+\_\+length, my\+\_\+bool insert\+\_\+or\+\_\+update)
+\item 
+\mbox{\Hypertarget{classField__string_a0ba08eb157bb3bfb77a04aa97d17e156}\label{classField__string_a0ba08eb157bb3bfb77a04aa97d17e156}} 
+int {\bfseries pack\+\_\+cmp} (const uchar $\ast$b, uint key\+\_\+length, my\+\_\+bool insert\+\_\+or\+\_\+update)
+\item 
+\mbox{\Hypertarget{classField__string_af91436da887b39531e60e13f4d186158}\label{classField__string_af91436da887b39531e60e13f4d186158}} 
+uint {\bfseries packed\+\_\+col\+\_\+length} (const uchar $\ast$to, uint length)
+\item 
+uint \mbox{\hyperlink{classField__string_aefd90b60a7e413fd914d1eb481ed4545}{max\+\_\+packed\+\_\+col\+\_\+length}} ()
+\item 
+\mbox{\Hypertarget{classField__string_ac9f28a84bd98e81963c2d7190d2444a6}\label{classField__string_ac9f28a84bd98e81963c2d7190d2444a6}} 
+enum\+\_\+field\+\_\+types {\bfseries real\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField__string_aa0ccf5e4d92fbbf3ac90038ca5f02fe2}\label{classField__string_aa0ccf5e4d92fbbf3ac90038ca5f02fe2}} 
+bool {\bfseries has\+\_\+charset} (void) const
+\item 
+\mbox{\Hypertarget{classField__string_a506d28bba30e8eca0a09c99fe1fc2faf}\label{classField__string_a506d28bba30e8eca0a09c99fe1fc2faf}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries new\+\_\+field} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$root, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$new\+\_\+table, bool keep\+\_\+type)
+\item 
+\mbox{\hyperlink{classField__string}{Field\+\_\+string}} $\ast$ \mbox{\hyperlink{classField__string_ab6707f46310451d7eceaaab26bc7dfe0}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\item 
+\mbox{\hyperlink{classField__string}{Field\+\_\+string}} $\ast$ \mbox{\hyperlink{classField__string_afeb8a339d94887f12168ab9ffa12ff33}{clone}} () const
+\item 
+\mbox{\Hypertarget{classField__string_a475448f69355525e3b66ffffbf4ac54f}\label{classField__string_a475448f69355525e3b66ffffbf4ac54f}} 
+virtual size\+\_\+t {\bfseries get\+\_\+key\+\_\+image} (uchar $\ast$buff, size\+\_\+t length, imagetype type)
+\item 
+\mbox{\Hypertarget{classField__string_ad34fee226dfd12de70573793b609b799}\label{classField__string_ad34fee226dfd12de70573793b609b799}} 
+virtual bool {\bfseries is\+\_\+text\+\_\+key\+\_\+type} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__string_ad9afee7ee1b5ccc418b7e53d55312853}\label{classField__string_ad9afee7ee1b5ccc418b7e53d55312853}} 
+bool {\bfseries can\+\_\+alter\+\_\+field\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__string_ab6707f46310451d7eceaaab26bc7dfe0}\label{classField__string_ab6707f46310451d7eceaaab26bc7dfe0}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__string}{Field\+\_\+string}}$\ast$ Field\+\_\+string\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT to use for memory allocation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField_a64979bcb9345803b031fff76a0c3d9fe}{Field}}.
+
+\mbox{\Hypertarget{classField__string_afeb8a339d94887f12168ab9ffa12ff33}\label{classField__string_afeb8a339d94887f12168ab9ffa12ff33}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__string}{Field\+\_\+string}}$\ast$ Field\+\_\+string\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField_a01a9a9aa3a618941e839b1b8793c969d}{Field}}.
+
+\mbox{\Hypertarget{classField__string_aa3397924d82ab8bb0c954b19c12de9a0}\label{classField__string_aa3397924d82ab8bb0c954b19c12de9a0}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!compatible\+\_\+field\+\_\+size@{compatible\+\_\+field\+\_\+size}}
+\index{compatible\+\_\+field\+\_\+size@{compatible\+\_\+field\+\_\+size}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{compatible\+\_\+field\+\_\+size()}{compatible\_field\_size()}}
+{\footnotesize\ttfamily bool Field\+\_\+string\+::compatible\+\_\+field\+\_\+size (\begin{DoxyParamCaption}\item[{uint}]{metadata,  }\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{uint16}]{mflags,  }\item[{int $\ast$}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check to see if field size is compatible with destination.
+
+This method is used in row-\/based replication to verify that the slave\textquotesingle{}s field size is less than or equal to the master\textquotesingle{}s field size. The encoded field metadata (from the master or source) is decoded and compared to the size of this field (the slave or destination).
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+The comparison is made so that if the source data (from the master) is less than the target data (on the slave), -\/1 is returned in {\ttfamily {\ttfamily $\ast$order\+\_\+var}}. This implies that a conversion is necessary, but that it is lossy and can result in truncation of the value.
+
+If the source data is strictly greater than the target data, 1 is returned in {\ttfamily $\ast$order\+\_\+var}. This implies that the source type can is contained in the target type and that a conversion is necessary but is non-\/lossy.
+
+If no conversion is required to fit the source type in the target type, 0 is returned in {\ttfamily $\ast$order\+\_\+var}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+\_\+metadata} & Encoded size in field metadata \\
+\hline
+{\em mflags} & Flags from the table map event for the table. \\
+\hline
+{\em order\+\_\+var} & Pointer to variable where the order between the source field and this field will be returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if this field\textquotesingle{}s size is compatible with the master\textquotesingle{}s field size, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_ab603b7f21a9116358e400dd7282cee50}{Field}}.
+
+\mbox{\Hypertarget{classField__string_a0d422b315c798e5281087fa31376921a}\label{classField__string_a0d422b315c798e5281087fa31376921a}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!make\+\_\+sort\+\_\+key@{make\+\_\+sort\+\_\+key}}
+\index{make\+\_\+sort\+\_\+key@{make\+\_\+sort\+\_\+key}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{make\+\_\+sort\+\_\+key()}{make\_sort\_key()}}
+{\footnotesize\ttfamily void Field\+\_\+string\+::make\+\_\+sort\+\_\+key (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buff,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a copy of the current value in the record buffer, suitable for sorting using byte-\/by-\/byte comparison. Integers are always in big-\/endian regardless of hardware architecture. At most length bytes are written into the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & The buffer, assumed to be at least length bytes.\\
+\hline
+{\em length} & Number of bytes to write. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classField_af3bc27d237b6ae6ef3dc7a2aec3d79ac}{Field}}.
+
+\mbox{\Hypertarget{classField__string_aefd90b60a7e413fd914d1eb481ed4545}\label{classField__string_aefd90b60a7e413fd914d1eb481ed4545}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!max\+\_\+packed\+\_\+col\+\_\+length@{max\+\_\+packed\+\_\+col\+\_\+length}}
+\index{max\+\_\+packed\+\_\+col\+\_\+length@{max\+\_\+packed\+\_\+col\+\_\+length}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{max\+\_\+packed\+\_\+col\+\_\+length()}{max\_packed\_col\_length()}}
+{\footnotesize\ttfamily uint Field\+\_\+string\+::max\+\_\+packed\+\_\+col\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is a wrapper around pack\+\_\+length() used by \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}} to determine how many bytes we need for packing \char`\"{}addon fields\char`\"{}. \begin{DoxyReturn}{Returns}
+maximum size of a row when stored in the filesort buffer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a05d15db9879fe9ae68415819b3dbf96f}{Field}}.
+
+\mbox{\Hypertarget{classField__string_a2394757ed93148a4ad7199e93ace382b}\label{classField__string_a2394757ed93148a4ad7199e93ace382b}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!pack@{pack}}
+\index{pack@{pack}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{pack()}{pack()}}
+{\footnotesize\ttfamily uchar $\ast$ Field\+\_\+string\+::pack (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{from,  }\item[{uint}]{max\+\_\+length,  }\item[{bool}]{low\+\_\+byte\+\_\+first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+
+Reimplemented from \mbox{\hyperlink{classField_a9eaff8d3425ef0e1da69b32cbd8f2879}{Field}}.
+
+\mbox{\Hypertarget{classField__string_a154a1bcd6578f53da8bccb43cc57cb60}\label{classField__string_a154a1bcd6578f53da8bccb43cc57cb60}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!store@{store}}
+\index{store@{store}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+string\+::store (\begin{DoxyParamCaption}\item[{double}]{nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Store double value in \mbox{\hyperlink{classField__string}{Field\+\_\+string}} or \mbox{\hyperlink{classField__varstring}{Field\+\_\+varstring}}.
+
+Pretty prints double number into field\+\_\+length characters buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr} & number \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField__str_ad4b48698ff57cae15a2df92f1145b102}{Field\+\_\+str}}.
+
+\mbox{\Hypertarget{classField__string_a2b13c788916d9efdb0683d9c92b0ccbf}\label{classField__string_a2b13c788916d9efdb0683d9c92b0ccbf}} 
+\index{Field\+\_\+string@{Field\+\_\+string}!unpack@{unpack}}
+\index{unpack@{unpack}!Field\+\_\+string@{Field\+\_\+string}}
+\subsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily const uchar $\ast$ Field\+\_\+string\+::unpack (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{from,  }\item[{uint}]{param\+\_\+data,  }\item[{bool}]{low\+\_\+byte\+\_\+first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Unpack a string field from row data.
+
+This method is used to unpack a string field from a master whose size of the field is less than that of the slave. Note that there can be a variety of field types represented with this class. Certain types like E\+N\+UM or S\+ET are processed differently. Hence, the upper byte of the {\ttfamily param\+\_\+data} argument contains the result of field-\/$>$real\+\_\+type() from the master.
+
+\begin{DoxyNote}{Note}
+For information about how the length is packed, see {\ttfamily Field\+\_\+string\+::do\+\_\+save\+\_\+field\+\_\+metadata} 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em to} & Destination of the data \\
+\hline
+{\em from} & Source of the data \\
+\hline
+{\em param\+\_\+data} & Real type (upper) and length (lower) values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New pointer into memory based on from + length of the data 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a42f448ff2c939d91949f7635d939b16b}{Field}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

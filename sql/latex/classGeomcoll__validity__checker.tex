@@ -1,0 +1,70 @@
+\hypertarget{classGeomcoll__validity__checker}{}\section{Geomcoll\+\_\+validity\+\_\+checker Class Reference}
+\label{classGeomcoll__validity__checker}\index{Geomcoll\+\_\+validity\+\_\+checker@{Geomcoll\+\_\+validity\+\_\+checker}}
+Inheritance diagram for Geomcoll\+\_\+validity\+\_\+checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeomcoll__validity__checker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeomcoll__validity__checker_a6a91e8d2b7527ab66ce059590d601bac}\label{classGeomcoll__validity__checker_a6a91e8d2b7527ab66ce059590d601bac}} 
+{\bfseries Geomcoll\+\_\+validity\+\_\+checker} (Geometry\+::srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGeomcoll__validity__checker_a4961f3abf371ea14b2e21ebf6c3d387c}\label{classGeomcoll__validity__checker_a4961f3abf371ea14b2e21ebf6c3d387c}} 
+bool {\bfseries is\+\_\+valid} () const
+\item 
+virtual void \mbox{\hyperlink{classGeomcoll__validity__checker_adac22fc99851bc6ef079b7d1ff045abb}{on\+\_\+wkb\+\_\+start}} (Geometry\+::wkb\+Byte\+Order bo, Geometry\+::wkb\+Type geotype, const void $\ast$wkb, uint32 len, bool has\+\_\+hdr)
+\item 
+virtual void \mbox{\hyperlink{classGeomcoll__validity__checker_ab01b921860de69974b27ba422c55ae82}{on\+\_\+wkb\+\_\+end}} (const void $\ast$wkb)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Checks the validity of a geometry collection, which is valid if and only if all its components are valid. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeomcoll__validity__checker_ab01b921860de69974b27ba422c55ae82}\label{classGeomcoll__validity__checker_ab01b921860de69974b27ba422c55ae82}} 
+\index{Geomcoll\+\_\+validity\+\_\+checker@{Geomcoll\+\_\+validity\+\_\+checker}!on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}}
+\index{on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}!Geomcoll\+\_\+validity\+\_\+checker@{Geomcoll\+\_\+validity\+\_\+checker}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+end()}{on\_wkb\_end()}}
+{\footnotesize\ttfamily virtual void Geomcoll\+\_\+validity\+\_\+checker\+::on\+\_\+wkb\+\_\+end (\begin{DoxyParamCaption}\item[{const void $\ast$}]{wkb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the end of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em wkb} & the position of the first byte after the W\+KB byte string which the scanner just scanned. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+\mbox{\Hypertarget{classGeomcoll__validity__checker_adac22fc99851bc6ef079b7d1ff045abb}\label{classGeomcoll__validity__checker_adac22fc99851bc6ef079b7d1ff045abb}} 
+\index{Geomcoll\+\_\+validity\+\_\+checker@{Geomcoll\+\_\+validity\+\_\+checker}!on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}}
+\index{on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}!Geomcoll\+\_\+validity\+\_\+checker@{Geomcoll\+\_\+validity\+\_\+checker}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+start()}{on\_wkb\_start()}}
+{\footnotesize\ttfamily virtual void Geomcoll\+\_\+validity\+\_\+checker\+::on\+\_\+wkb\+\_\+start (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{Geometry\+::wkb\+Type}]{geotype,  }\item[{const void $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{bool}]{has\+\_\+hdr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the start of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em bo} & byte order of the W\+KB. \\
+\hline
+{\em geotype} & geometry type of the W\+KB; \\
+\hline
+{\em wkb} & W\+KB byte string, the first byte after the W\+KB header if any. \\
+\hline
+{\em len} & NO. of bytes of the W\+KB byte string starting from wkb. There can be many geometries in the \mbox{[}wkb, wkb+len) buffer. \\
+\hline
+{\em has\+\_\+hdr} & whether there is a W\+KB header right before \textquotesingle{}wkb\textquotesingle{} in the byte string. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__geofunc_8cc}{item\+\_\+geofunc.\+cc}}\end{DoxyCompactItemize}

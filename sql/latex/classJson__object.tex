@@ -1,0 +1,304 @@
+\hypertarget{classJson__object}{}\section{Json\+\_\+object Class Reference}
+\label{classJson__object}\index{Json\+\_\+object@{Json\+\_\+object}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson__object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Json\+\_\+object\+\_\+map\+::const\+\_\+iterator \mbox{\hyperlink{classJson__object_a318e93bc476422e10673ec7471062eca}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__object_aa55889bf5bb56bea13f7ab005893637e}{json\+\_\+type}} () const
+\item 
+bool \mbox{\hyperlink{classJson__object_a9383baf9e13ae8a8d51a95fbca9bc1f3}{add\+\_\+clone}} (const std\+::string \&key, const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$value)
+\item 
+bool \mbox{\hyperlink{classJson__object_aefbdc06876ad7e0b8a7a925df1bfb1ee}{add\+\_\+alias}} (const std\+::string \&key, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$value)
+\item 
+bool \mbox{\hyperlink{classJson__object_a1446f0234194bec97b216d7eb42e790c}{consume}} (\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$other)
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__object_aadf27479595825213a12ab1a1f21ae2f}{get}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{classJson__object_af7b096486e0873bc9c023aeed6141310}{remove}} (const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$child)
+\item 
+bool \mbox{\hyperlink{classJson__object_a10505fc7dde4d63422006c3c8e7702b2}{remove}} (const std\+::string \&key)
+\item 
+size\+\_\+t \mbox{\hyperlink{classJson__object_a7f3be77191de283316c29ac72cd3a4a5}{cardinality}} () const
+\item 
+uint32 \mbox{\hyperlink{classJson__object_a639ad387120ba5bea5372896f6e30c38}{depth}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__object_a2a723c5eb14d6532aa85097b9719f2c7}{clone}} () const
+\item 
+void \mbox{\hyperlink{classJson__object_a79f81022d00fc75981179d787d297add}{replace\+\_\+dom\+\_\+in\+\_\+container}} (\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$oldv, \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$newv)
+\item 
+void \mbox{\hyperlink{classJson__object_adb32a3a28d5bb946ab618872808aca3b}{clear}} ()
+\item 
+\mbox{\Hypertarget{classJson__object_aec4d73cdcb80930dbc984ab1b426b0da}\label{classJson__object_aec4d73cdcb80930dbc984ab1b426b0da}} 
+\mbox{\hyperlink{classJson__object_a318e93bc476422e10673ec7471062eca}{const\+\_\+iterator}} \mbox{\hyperlink{classJson__object_aec4d73cdcb80930dbc984ab1b426b0da}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const\+\_\+iterator that refers to the first element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJson__object_a76d5b92262bd7f9239962a73df6c261a}\label{classJson__object_a76d5b92262bd7f9239962a73df6c261a}} 
+\mbox{\hyperlink{classJson__object_a318e93bc476422e10673ec7471062eca}{const\+\_\+iterator}} \mbox{\hyperlink{classJson__object_a76d5b92262bd7f9239962a73df6c261a}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const\+\_\+iterator that refers past the last element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJson__object_a0fc81386771579edb4902c2343df0677}{merge\+\_\+patch}} (\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$patch)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJson__object_a98e93450f231dee2765955e5acaef3eb}\label{classJson__object_a98e93450f231dee2765955e5acaef3eb}} 
+class {\bfseries Json\+\_\+wrapper}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a J\+S\+ON container value of type \char`\"{}object\char`\"{} (E\+C\+MA), type J\+\_\+\+O\+B\+J\+E\+CT here. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classJson__object_a318e93bc476422e10673ec7471062eca}\label{classJson__object_a318e93bc476422e10673ec7471062eca}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{const\+\_\+iterator}{const\_iterator}}
+{\footnotesize\ttfamily typedef Json\+\_\+object\+\_\+map\+::const\+\_\+iterator \mbox{\hyperlink{classJson__object_a318e93bc476422e10673ec7471062eca}{Json\+\_\+object\+::const\+\_\+iterator}}}
+
+Constant iterator over the elements in the J\+S\+ON object. Each element is represented as a std\+::pair where first is a std\+::string that represents the key name, and second is a pointer to a \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} that represents the value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__object_aefbdc06876ad7e0b8a7a925df1bfb1ee}\label{classJson__object_aefbdc06876ad7e0b8a7a925df1bfb1ee}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!add\+\_\+alias@{add\+\_\+alias}}
+\index{add\+\_\+alias@{add\+\_\+alias}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{add\+\_\+alias()}{add\_alias()}}
+{\footnotesize\ttfamily bool Json\+\_\+object\+::add\+\_\+alias (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+Add the value to the object iff they key isn\textquotesingle{}t already set.
+
+Ownership of the value is effectively transferred to the object and the value will be deallocated by the object so only add values that can be deallocated safely (no stack variables please!)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & the J\+S\+ON key of to be added \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & a J\+S\+ON value\+: the key\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__object_a9383baf9e13ae8a8d51a95fbca9bc1f3}\label{classJson__object_a9383baf9e13ae8a8d51a95fbca9bc1f3}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!add\+\_\+clone@{add\+\_\+clone}}
+\index{add\+\_\+clone@{add\+\_\+clone}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{add\+\_\+clone()}{add\_clone()}}
+{\footnotesize\ttfamily bool Json\+\_\+object\+::add\+\_\+clone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+Add a clone of the value to the object iff the key isn\textquotesingle{}t already set. If it is set, the value is not modified by this call (\char`\"{}first value wins\char`\"{}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & the J\+S\+ON element key of to be added \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & a J\+S\+ON value\+: the element key\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__object_a7f3be77191de283316c29ac72cd3a4a5}\label{classJson__object_a7f3be77191de283316c29ac72cd3a4a5}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!cardinality@{cardinality}}
+\index{cardinality@{cardinality}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{cardinality()}{cardinality()}}
+{\footnotesize\ttfamily size\+\_\+t Json\+\_\+object\+::cardinality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The number of elements in the J\+S\+ON object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__object_adb32a3a28d5bb946ab618872808aca3b}\label{classJson__object_adb32a3a28d5bb946ab618872808aca3b}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!clear@{clear}}
+\index{clear@{clear}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Json\+\_\+object\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove all elements in the object. \mbox{\Hypertarget{classJson__object_a2a723c5eb14d6532aa85097b9719f2c7}\label{classJson__object_a2a723c5eb14d6532aa85097b9719f2c7}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+object\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__object_a1446f0234194bec97b216d7eb42e790c}\label{classJson__object_a1446f0234194bec97b216d7eb42e790c}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!consume@{consume}}
+\index{consume@{consume}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{consume()}{consume()}}
+{\footnotesize\ttfamily bool Json\+\_\+object\+::consume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Transfer all of the key/value pairs in the other object into this object. The other object is deleted. If this object and the other object share a key, then the two values of the key are merged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{[}in\mbox{]} a pointer to the object which will be consumed \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__object_a639ad387120ba5bea5372896f6e30c38}\label{classJson__object_a639ad387120ba5bea5372896f6e30c38}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!depth@{depth}}
+\index{depth@{depth}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily uint32 Json\+\_\+object\+::depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+depth of the D\+OM. \char`\"{}abc\char`\"{}, \mbox{[}\mbox{]} and \{\} have depth 1. \mbox{[}\char`\"{}abc\char`\"{}\mbox{]} and \{\char`\"{}a\char`\"{}\+: \char`\"{}abc\char`\"{}\} have depth 2. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a779b8c6ac78329409f8be12e6d082782}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__object_aadf27479595825213a12ab1a1f21ae2f}\label{classJson__object_aadf27479595825213a12ab1a1f21ae2f}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!get@{get}}
+\index{get@{get}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+object\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+
+Return the value at key. The value is not cloned, so make one if you need it. Do not delete the returned value, please! If the key is not present, return a null pointer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & the key of the element whose value we want \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJson__object_aa55889bf5bb56bea13f7ab005893637e}\label{classJson__object_aa55889bf5bb56bea13f7ab005893637e}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} Json\+\_\+object\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__object_a0fc81386771579edb4902c2343df0677}\label{classJson__object_a0fc81386771579edb4902c2343df0677}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!merge\+\_\+patch@{merge\+\_\+patch}}
+\index{merge\+\_\+patch@{merge\+\_\+patch}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{merge\+\_\+patch()}{merge\_patch()}}
+{\footnotesize\ttfamily bool Json\+\_\+object\+::merge\+\_\+patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__object}{Json\+\_\+object}} $\ast$}]{patch }\end{DoxyParamCaption})}
+
+Implementation of the Merge\+Patch function specified in R\+FC 7396\+: \begin{DoxyVerb}define MergePatch(Target, Patch):
+  if Patch is an Object:
+    if Target is not an Object:
+      Target = {} # Ignore the contents and set it to an empty Object
+    for each Key/Value pair in Patch:
+      if Value is null:
+        if Key exists in Target:
+          remove the Key/Value pair from Target
+      else:
+        Target[Key] = MergePatch(Target[Key], Value)
+    return Target
+  else:
+    return Patch
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em patch} & The object that describes the patch. The ownership of the patch object is transferred to the target object. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on memory allocation error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__object_af7b096486e0873bc9c023aeed6141310}\label{classJson__object_af7b096486e0873bc9c023aeed6141310}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!remove@{remove}}
+\index{remove@{remove}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Json\+\_\+object\+::remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{child }\end{DoxyParamCaption})}
+
+Remove the child element addressed by key. The removed child is deleted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em child} & the child to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If that really was a child of this object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__object_a10505fc7dde4d63422006c3c8e7702b2}\label{classJson__object_a10505fc7dde4d63422006c3c8e7702b2}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!remove@{remove}}
+\index{remove@{remove}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Json\+\_\+object\+::remove (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+Remove the child element addressed by key. The removed child is deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key of the element to remove \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if an element was removed \\
+\hline
+{\em false} & if there was no element with that key \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classJson__object_a79f81022d00fc75981179d787d297add}\label{classJson__object_a79f81022d00fc75981179d787d297add}} 
+\index{Json\+\_\+object@{Json\+\_\+object}!replace\+\_\+dom\+\_\+in\+\_\+container@{replace\+\_\+dom\+\_\+in\+\_\+container}}
+\index{replace\+\_\+dom\+\_\+in\+\_\+container@{replace\+\_\+dom\+\_\+in\+\_\+container}!Json\+\_\+object@{Json\+\_\+object}}
+\subsubsection{\texorpdfstring{replace\+\_\+dom\+\_\+in\+\_\+container()}{replace\_dom\_in\_container()}}
+{\footnotesize\ttfamily void Json\+\_\+object\+::replace\+\_\+dom\+\_\+in\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{oldv,  }\item[{\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$}]{newv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Replace oldv contained inside this container array or object) with newv. If this container does not contain oldv, calling the method is a no-\/op. Do not call this method on a D\+OM object which is not a container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em oldv} & the value to be replace \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em newv} & the new value to put in the container \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson__dom_a310ec5cb1b04e112335a0bcfe510eac5}{Json\+\_\+dom}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

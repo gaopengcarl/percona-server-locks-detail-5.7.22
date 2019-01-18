@@ -1,0 +1,238 @@
+\hypertarget{classsp__parser__data}{}\section{sp\+\_\+parser\+\_\+data Class Reference}
+\label{classsp__parser__data}\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+
+
+{\ttfamily \#include $<$sp\+\_\+head.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsp__parser__data_a2d911e54b0127570092c3aaabd7a989e}{start\+\_\+parsing\+\_\+sp\+\_\+body}} (T\+HD $\ast$thd, \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp)
+\item 
+void \mbox{\hyperlink{classsp__parser__data_af738f001cac1cf6ae2df63556a71184d}{finish\+\_\+parsing\+\_\+sp\+\_\+body}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classsp__parser__data_a699c459aa777584cb6596fe00d20cd88}{is\+\_\+parsing\+\_\+sp\+\_\+body}} () const
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a79932972dc0df031deee939ed941bde4}\label{classsp__parser__data_a79932972dc0df031deee939ed941bde4}} 
+void {\bfseries process\+\_\+new\+\_\+sp\+\_\+instr} (T\+HD $\ast$thd, \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$i)
+\item 
+const char $\ast$ \mbox{\hyperlink{classsp__parser__data_a4665278dcaa28b14d1f3d4ae88694f66}{pop\+\_\+expr\+\_\+start\+\_\+ptr}} ()
+\item 
+void \mbox{\hyperlink{classsp__parser__data_a77dfbb5239b57530590b027d237f7ef9}{push\+\_\+expr\+\_\+start\+\_\+ptr}} (const char $\ast$expr\+\_\+start\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a0a46626b49bb618bdc9d958c1e4316dc}\label{classsp__parser__data_a0a46626b49bb618bdc9d958c1e4316dc}} 
+const char $\ast$ {\bfseries get\+\_\+current\+\_\+stmt\+\_\+start\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a90e347ac665cefda282954e6a288b359}\label{classsp__parser__data_a90e347ac665cefda282954e6a288b359}} 
+void {\bfseries set\+\_\+current\+\_\+stmt\+\_\+start\+\_\+ptr} (const char $\ast$stmt\+\_\+start\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_af4f911a106447b19c032864697a6716d}\label{classsp__parser__data_af4f911a106447b19c032864697a6716d}} 
+const char $\ast$ {\bfseries get\+\_\+option\+\_\+start\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classsp__parser__data_ae31f9d70f50de7d2482bcd71b67278ef}\label{classsp__parser__data_ae31f9d70f50de7d2482bcd71b67278ef}} 
+void {\bfseries set\+\_\+option\+\_\+start\+\_\+ptr} (const char $\ast$option\+\_\+start\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a630d37ca1142dc1ed54a3968f2ec0002}\label{classsp__parser__data_a630d37ca1142dc1ed54a3968f2ec0002}} 
+const char $\ast$ {\bfseries get\+\_\+parameter\+\_\+start\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a8bf4da82cb200a17f71a344a9c9957e5}\label{classsp__parser__data_a8bf4da82cb200a17f71a344a9c9957e5}} 
+void {\bfseries set\+\_\+parameter\+\_\+start\+\_\+ptr} (const char $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_acb84c0a364cfcaffb48921fa8f15bd08}\label{classsp__parser__data_acb84c0a364cfcaffb48921fa8f15bd08}} 
+const char $\ast$ {\bfseries get\+\_\+parameter\+\_\+end\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classsp__parser__data_aa41fdd15736a7fb56882dffc4b1a7441}\label{classsp__parser__data_aa41fdd15736a7fb56882dffc4b1a7441}} 
+void {\bfseries set\+\_\+parameter\+\_\+end\+\_\+ptr} (const char $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a53fda383b67ff836b28879658495c4b6}\label{classsp__parser__data_a53fda383b67ff836b28879658495c4b6}} 
+const char $\ast$ {\bfseries get\+\_\+body\+\_\+start\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a839060f76adb03ac1e45faa9f55613c0}\label{classsp__parser__data_a839060f76adb03ac1e45faa9f55613c0}} 
+void {\bfseries set\+\_\+body\+\_\+start\+\_\+ptr} (const char $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a059c22430c4a3a0622230af3aba5db72}\label{classsp__parser__data_a059c22430c4a3a0622230af3aba5db72}} 
+void {\bfseries push\+\_\+lex} (L\+EX $\ast$lex)
+\item 
+\mbox{\Hypertarget{classsp__parser__data_a508d3a2dcdf123ee81f3f5a75b4b8f81}\label{classsp__parser__data_a508d3a2dcdf123ee81f3f5a75b4b8f81}} 
+L\+EX $\ast$ {\bfseries pop\+\_\+lex} ()
+\item 
+bool \mbox{\hyperlink{classsp__parser__data_a24e19c38db70699bffb8147e1f1d4178}{add\+\_\+backpatch\+\_\+entry}} (\mbox{\hyperlink{classsp__branch__instr}{sp\+\_\+branch\+\_\+instr}} $\ast$i, \mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$label)
+\item 
+void \mbox{\hyperlink{classsp__parser__data_afef12cbb1f7562091238e01a492f9201}{do\+\_\+backpatch}} (\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$label, uint dest)
+\item 
+bool \mbox{\hyperlink{classsp__parser__data_af658fd5aa0ce26b21268b34be0fd2c29}{new\+\_\+cont\+\_\+backpatch}} ()
+\item 
+bool \mbox{\hyperlink{classsp__parser__data_abfbd10313fd6eb4fc52276afd8e9dc24}{add\+\_\+cont\+\_\+backpatch\+\_\+entry}} (\mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}} $\ast$i)
+\item 
+void \mbox{\hyperlink{classsp__parser__data_a5c7d82d576eae213a1613809a47910d5}{do\+\_\+cont\+\_\+backpatch}} (uint dest)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__parser__data}{sp\+\_\+parser\+\_\+data}} provides a scope for attributes used at the SP-\/parsing stage only. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__parser__data_a24e19c38db70699bffb8147e1f1d4178}\label{classsp__parser__data_a24e19c38db70699bffb8147e1f1d4178}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!add\+\_\+backpatch\+\_\+entry@{add\+\_\+backpatch\+\_\+entry}}
+\index{add\+\_\+backpatch\+\_\+entry@{add\+\_\+backpatch\+\_\+entry}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{add\+\_\+backpatch\+\_\+entry()}{add\_backpatch\_entry()}}
+{\footnotesize\ttfamily bool sp\+\_\+parser\+\_\+data\+::add\+\_\+backpatch\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__branch__instr}{sp\+\_\+branch\+\_\+instr}} $\ast$}]{i,  }\item[{\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$}]{label }\end{DoxyParamCaption})}
+
+Put the instruction on the backpatch list, associated with the label.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The SP-\/instruction. \\
+\hline
+{\em label} & The label.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__parser__data_abfbd10313fd6eb4fc52276afd8e9dc24}\label{classsp__parser__data_abfbd10313fd6eb4fc52276afd8e9dc24}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!add\+\_\+cont\+\_\+backpatch\+\_\+entry@{add\+\_\+cont\+\_\+backpatch\+\_\+entry}}
+\index{add\+\_\+cont\+\_\+backpatch\+\_\+entry@{add\+\_\+cont\+\_\+backpatch\+\_\+entry}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{add\+\_\+cont\+\_\+backpatch\+\_\+entry()}{add\_cont\_backpatch\_entry()}}
+{\footnotesize\ttfamily bool sp\+\_\+parser\+\_\+data\+::add\+\_\+cont\+\_\+backpatch\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}} $\ast$}]{i }\end{DoxyParamCaption})}
+
+Add a SP-\/instruction to the current level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The SP-\/instruction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__parser__data_afef12cbb1f7562091238e01a492f9201}\label{classsp__parser__data_afef12cbb1f7562091238e01a492f9201}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!do\+\_\+backpatch@{do\+\_\+backpatch}}
+\index{do\+\_\+backpatch@{do\+\_\+backpatch}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{do\+\_\+backpatch()}{do\_backpatch()}}
+{\footnotesize\ttfamily void sp\+\_\+parser\+\_\+data\+::do\+\_\+backpatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__label}{sp\+\_\+label}} $\ast$}]{label,  }\item[{uint}]{dest }\end{DoxyParamCaption})}
+
+Update all instruction with the given label in the backpatch list to the given instruction pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & The label. \\
+\hline
+{\em dest} & The instruction pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__parser__data_a5c7d82d576eae213a1613809a47910d5}\label{classsp__parser__data_a5c7d82d576eae213a1613809a47910d5}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!do\+\_\+cont\+\_\+backpatch@{do\+\_\+cont\+\_\+backpatch}}
+\index{do\+\_\+cont\+\_\+backpatch@{do\+\_\+cont\+\_\+backpatch}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{do\+\_\+cont\+\_\+backpatch()}{do\_cont\_backpatch()}}
+{\footnotesize\ttfamily void sp\+\_\+parser\+\_\+data\+::do\+\_\+cont\+\_\+backpatch (\begin{DoxyParamCaption}\item[{uint}]{dest }\end{DoxyParamCaption})}
+
+Backpatch (and pop) the current level to the given instruction pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The instruction pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__parser__data_af738f001cac1cf6ae2df63556a71184d}\label{classsp__parser__data_af738f001cac1cf6ae2df63556a71184d}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!finish\+\_\+parsing\+\_\+sp\+\_\+body@{finish\+\_\+parsing\+\_\+sp\+\_\+body}}
+\index{finish\+\_\+parsing\+\_\+sp\+\_\+body@{finish\+\_\+parsing\+\_\+sp\+\_\+body}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{finish\+\_\+parsing\+\_\+sp\+\_\+body()}{finish\_parsing\_sp\_body()}}
+{\footnotesize\ttfamily void sp\+\_\+parser\+\_\+data\+::finish\+\_\+parsing\+\_\+sp\+\_\+body (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Finish parsing of a stored program body statement.
+
+This method switches T\+H\+D\+::mem\+\_\+root and T\+H\+D\+::free\+\_\+list back when SP-\/body parsing is completed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__parser__data_a699c459aa777584cb6596fe00d20cd88}\label{classsp__parser__data_a699c459aa777584cb6596fe00d20cd88}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!is\+\_\+parsing\+\_\+sp\+\_\+body@{is\+\_\+parsing\+\_\+sp\+\_\+body}}
+\index{is\+\_\+parsing\+\_\+sp\+\_\+body@{is\+\_\+parsing\+\_\+sp\+\_\+body}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{is\+\_\+parsing\+\_\+sp\+\_\+body()}{is\_parsing\_sp\_body()}}
+{\footnotesize\ttfamily bool sp\+\_\+parser\+\_\+data\+::is\+\_\+parsing\+\_\+sp\+\_\+body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if SP-\/body statement is being parsed. \\
+\hline
+{\em false} & otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classsp__parser__data_af658fd5aa0ce26b21268b34be0fd2c29}\label{classsp__parser__data_af658fd5aa0ce26b21268b34be0fd2c29}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!new\+\_\+cont\+\_\+backpatch@{new\+\_\+cont\+\_\+backpatch}}
+\index{new\+\_\+cont\+\_\+backpatch@{new\+\_\+cont\+\_\+backpatch}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{new\+\_\+cont\+\_\+backpatch()}{new\_cont\_backpatch()}}
+{\footnotesize\ttfamily bool sp\+\_\+parser\+\_\+data\+::new\+\_\+cont\+\_\+backpatch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Start a new backpatch level for the SP-\/instruction requiring continue destination. If the SP-\/instruction is N\+U\+LL, the level is just increased.
+
+\begin{DoxyNote}{Note}
+Only subclasses of \mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}} need backpatching of continue destinations (and no other classes do)\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classsp__instr__jump__if__not}{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}}
+\item \mbox{\hyperlink{classsp__instr__set__case__expr}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}
+\item \mbox{\hyperlink{classsp__instr__jump__case__when}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}
+\end{DoxyItemize}
+\end{DoxyNote}
+That\textquotesingle{}s why the methods below accept \mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}} to make this relationship clear. And these two functions are the only places where set\+\_\+cont\+\_\+dest() is used, so set\+\_\+cont\+\_\+dest() is also a member of \mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000067}{Todo}}]These functions should probably be declared in a separate interface class, but currently we try to minimize the \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} hierarchy.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+false always. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__parser__data_a4665278dcaa28b14d1f3d4ae88694f66}\label{classsp__parser__data_a4665278dcaa28b14d1f3d4ae88694f66}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!pop\+\_\+expr\+\_\+start\+\_\+ptr@{pop\+\_\+expr\+\_\+start\+\_\+ptr}}
+\index{pop\+\_\+expr\+\_\+start\+\_\+ptr@{pop\+\_\+expr\+\_\+start\+\_\+ptr}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{pop\+\_\+expr\+\_\+start\+\_\+ptr()}{pop\_expr\_start\_ptr()}}
+{\footnotesize\ttfamily const char$\ast$ sp\+\_\+parser\+\_\+data\+::pop\+\_\+expr\+\_\+start\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve expression start pointer in the query string.
+
+This function is named \textquotesingle{}pop\textquotesingle{} to highlight that it changes the internal state, and two subsequent calls may not return same value.
+
+\begin{DoxyNote}{Note}
+It\textquotesingle{}s true only in the debug mode, but this check is very useful in the parser to ensure we \char`\"{}pop\char`\"{} every \char`\"{}pushed\char`\"{} pointer, because we have lots of branches, and it\textquotesingle{}s pretty easy to forget something somewhere. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classsp__parser__data_a77dfbb5239b57530590b027d237f7ef9}\label{classsp__parser__data_a77dfbb5239b57530590b027d237f7ef9}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!push\+\_\+expr\+\_\+start\+\_\+ptr@{push\+\_\+expr\+\_\+start\+\_\+ptr}}
+\index{push\+\_\+expr\+\_\+start\+\_\+ptr@{push\+\_\+expr\+\_\+start\+\_\+ptr}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{push\+\_\+expr\+\_\+start\+\_\+ptr()}{push\_expr\_start\_ptr()}}
+{\footnotesize\ttfamily void sp\+\_\+parser\+\_\+data\+::push\+\_\+expr\+\_\+start\+\_\+ptr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{expr\+\_\+start\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remember expression start pointer in the query string.
+
+This function is named \textquotesingle{}push\textquotesingle{} to highlight that the pointer must be retrieved (pop) later.
+
+\begin{DoxySeeAlso}{See also}
+the note for \mbox{\hyperlink{classsp__parser__data_a4665278dcaa28b14d1f3d4ae88694f66}{pop\+\_\+expr\+\_\+start\+\_\+ptr()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsp__parser__data_a2d911e54b0127570092c3aaabd7a989e}\label{classsp__parser__data_a2d911e54b0127570092c3aaabd7a989e}} 
+\index{sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}!start\+\_\+parsing\+\_\+sp\+\_\+body@{start\+\_\+parsing\+\_\+sp\+\_\+body}}
+\index{start\+\_\+parsing\+\_\+sp\+\_\+body@{start\+\_\+parsing\+\_\+sp\+\_\+body}!sp\+\_\+parser\+\_\+data@{sp\+\_\+parser\+\_\+data}}
+\subsubsection{\texorpdfstring{start\+\_\+parsing\+\_\+sp\+\_\+body()}{start\_parsing\_sp\_body()}}
+{\footnotesize\ttfamily void sp\+\_\+parser\+\_\+data\+::start\+\_\+parsing\+\_\+sp\+\_\+body (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+Start parsing a stored program body statement.
+
+This method switches T\+H\+D\+::mem\+\_\+root and T\+H\+D\+::free\+\_\+list in order to parse SP-\/body. The current values are kept to be restored after the body statement is parsed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em sp} & Stored Program being parsed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+head.\+h\item 
+sp\+\_\+head.\+cc\end{DoxyCompactItemize}

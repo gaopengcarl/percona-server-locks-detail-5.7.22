@@ -1,0 +1,93 @@
+\hypertarget{classJOIN_1_1ORDER__with__src}{}\section{J\+O\+IN\+:\+:O\+R\+D\+E\+R\+\_\+with\+\_\+src Class Reference}
+\label{classJOIN_1_1ORDER__with__src}\index{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}}
+
+
+{\ttfamily \#include $<$sql\+\_\+optimizer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a60528945102cba026e2b0492acd1b2a6}\label{classJOIN_1_1ORDER__with__src_a60528945102cba026e2b0492acd1b2a6}} 
+{\bfseries O\+R\+D\+E\+R\+\_\+with\+\_\+src} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order\+\_\+arg, Explain\+\_\+sort\+\_\+clause src\+\_\+arg)
+\item 
+\mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} \& \mbox{\hyperlink{classJOIN_1_1ORDER__with__src_a49eb9a1753368a1a8cb497ec2b76e468}{operator=}} (null $\ast$)
+\item 
+\mbox{\hyperlink{classJOIN_1_1ORDER__with__src_a6fce7a1ed37a7f05a46aa76f08f345c6}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} (null $\ast$)
+\item 
+\mbox{\hyperlink{classJOIN_1_1ORDER__with__src_a2d64ba9d78fc1497d0c814f3d1a78a05}{operator O\+R\+D\+E\+R $\ast$}} ()
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a546d0d7e71edbdde02c67169baa5c33a}\label{classJOIN_1_1ORDER__with__src_a546d0d7e71edbdde02c67169baa5c33a}} 
+{\bfseries operator const O\+R\+D\+E\+R $\ast$} () const
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a34ff798995c88533567f4a219028151f}\label{classJOIN_1_1ORDER__with__src_a34ff798995c88533567f4a219028151f}} 
+\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_aa9a352d4a1e209ae2759e30de6454d89}\label{classJOIN_1_1ORDER__with__src_aa9a352d4a1e209ae2759e30de6454d89}} 
+void {\bfseries clean} ()
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a80dcf11d85f621e2bae083e3a980cf65}\label{classJOIN_1_1ORDER__with__src_a80dcf11d85f621e2bae083e3a980cf65}} 
+void {\bfseries set\+\_\+flag} (Explain\+\_\+sort\+\_\+property flag)
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a722f2945f99c8331eed2c1d7d11d03e3}\label{classJOIN_1_1ORDER__with__src_a722f2945f99c8331eed2c1d7d11d03e3}} 
+void {\bfseries reset\+\_\+flag} (Explain\+\_\+sort\+\_\+property flag)
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a5640c4434c2f3dd00839e4d281492138}\label{classJOIN_1_1ORDER__with__src_a5640c4434c2f3dd00839e4d281492138}} 
+bool {\bfseries get\+\_\+flag} (Explain\+\_\+sort\+\_\+property flag) const
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a6334ae44d23f9ab096747439e47ce742}\label{classJOIN_1_1ORDER__with__src_a6334ae44d23f9ab096747439e47ce742}} 
+int {\bfseries get\+\_\+flags} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a77ff2003cab67d23d00cd4ee8f6091ea}\label{classJOIN_1_1ORDER__with__src_a77ff2003cab67d23d00cd4ee8f6091ea}} 
+\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$ {\bfseries order}
+\item 
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a437c9c0b0c14ac60e47e74315f612b70}\label{classJOIN_1_1ORDER__with__src_a437c9c0b0c14ac60e47e74315f612b70}} 
+Explain\+\_\+sort\+\_\+clause {\bfseries src}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper for O\+R\+D\+E\+R$\ast$ pointer to trace origins of O\+R\+D\+ER list
+
+As far as O\+R\+D\+ER is just a head object of O\+R\+D\+ER expression chain, we need some wrapper object to associate flags with the whole O\+R\+D\+ER list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a6fce7a1ed37a7f05a46aa76f08f345c6}\label{classJOIN_1_1ORDER__with__src_a6fce7a1ed37a7f05a46aa76f08f345c6}} 
+\index{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}!O\+R\+D\+E\+R\+\_\+with\+\_\+src@{O\+R\+D\+E\+R\+\_\+with\+\_\+src}}
+\index{O\+R\+D\+E\+R\+\_\+with\+\_\+src@{O\+R\+D\+E\+R\+\_\+with\+\_\+src}!J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}}
+\subsubsection{\texorpdfstring{O\+R\+D\+E\+R\+\_\+with\+\_\+src()}{ORDER\_with\_src()}}
+{\footnotesize\ttfamily J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src (\begin{DoxyParamCaption}\item[{null $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Type-\/safe constructor from N\+U\+LL
+
+See a commentary for the \char`\"{}null\char`\"{} type above. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a2d64ba9d78fc1497d0c814f3d1a78a05}\label{classJOIN_1_1ORDER__with__src_a2d64ba9d78fc1497d0c814f3d1a78a05}} 
+\index{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}!operator O\+R\+D\+E\+R $\ast$@{operator O\+R\+D\+E\+R $\ast$}}
+\index{operator O\+R\+D\+E\+R $\ast$@{operator O\+R\+D\+E\+R $\ast$}!J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}}
+\subsubsection{\texorpdfstring{operator O\+R\+D\+E\+R $\ast$()}{operator ORDER *()}}
+{\footnotesize\ttfamily J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src\+::operator \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Transparent access to the wrapped order list
+
+These operators are safe, since we don\textquotesingle{}t do any conversion of \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} value, but just an access to the wrapped O\+R\+D\+ER pointer value. We can use \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} objects instead O\+R\+D\+ER pointers in a transparent way without accessor functions.
+
+\begin{DoxyNote}{Note}
+This operator also implements safe \char`\"{}operator bool()\char`\"{} functionality. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classJOIN_1_1ORDER__with__src_a49eb9a1753368a1a8cb497ec2b76e468}\label{classJOIN_1_1ORDER__with__src_a49eb9a1753368a1a8cb497ec2b76e468}} 
+\index{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}!operator=@{operator=}}
+\index{operator=@{operator=}!J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src@{J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}}\& J\+O\+I\+N\+::\+O\+R\+D\+E\+R\+\_\+with\+\_\+src\+::operator= (\begin{DoxyParamCaption}\item[{null $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Type-\/safe N\+U\+LL assignment
+
+See a commentary for the \char`\"{}null\char`\"{} type above. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+optimizer.\+h\end{DoxyCompactItemize}

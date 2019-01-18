@@ -1,0 +1,78 @@
+\hypertarget{classItem__char__typecast}{}\section{Item\+\_\+char\+\_\+typecast Class Reference}
+\label{classItem__char__typecast}\index{Item\+\_\+char\+\_\+typecast@{Item\+\_\+char\+\_\+typecast}}
+Inheritance diagram for Item\+\_\+char\+\_\+typecast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__char__typecast}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__char__typecast_a4a6ee4a29216d206dac8518628234730}\label{classItem__char__typecast_a4a6ee4a29216d206dac8518628234730}} 
+{\bfseries Item\+\_\+char\+\_\+typecast} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, int length\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__char__typecast_a8089fff3d6a57f0ec0fa260ebfbe9cfa}\label{classItem__char__typecast_a8089fff3d6a57f0ec0fa260ebfbe9cfa}} 
+{\bfseries Item\+\_\+char\+\_\+typecast} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, int length\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__char__typecast_a0b311a0e6e5229c2c1274fc444aad9ae}\label{classItem__char__typecast_a0b311a0e6e5229c2c1274fc444aad9ae}} 
+enum Functype {\bfseries functype} () const
+\item 
+bool \mbox{\hyperlink{classItem__char__typecast_a8ed432731786b97255a7a47901c79768}{eq}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$item, bool binary\+\_\+cmp) const
+\item 
+\mbox{\Hypertarget{classItem__char__typecast_aa8018b2a5607b505cf0e2b4c176c995b}\label{classItem__char__typecast_aa8018b2a5607b505cf0e2b4c176c995b}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__char__typecast_a023ba2bca8106d164cd42c631aa22c77}\label{classItem__char__typecast_a023ba2bca8106d164cd42c631aa22c77}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__char__typecast_ad3d045cb8b4ba0461befb32cc393c2c4}\label{classItem__char__typecast_ad3d045cb8b4ba0461befb32cc393c2c4}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+virtual void \mbox{\hyperlink{classItem__char__typecast_adf128fa02d763bb58d3501358a1d1e1a}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__char__typecast_a8ed432731786b97255a7a47901c79768}\label{classItem__char__typecast_a8ed432731786b97255a7a47901c79768}} 
+\index{Item\+\_\+char\+\_\+typecast@{Item\+\_\+char\+\_\+typecast}!eq@{eq}}
+\index{eq@{eq}!Item\+\_\+char\+\_\+typecast@{Item\+\_\+char\+\_\+typecast}}
+\subsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily bool Item\+\_\+char\+\_\+typecast\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{bool}]{binary\+\_\+cmp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyNote}{Note}
+Please keep in sync with \mbox{\hyperlink{classItem__sum_aeab749252b834e0be4f00aac8ca523f5}{Item\+\_\+sum\+::eq()}}. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_a3de3f23377e6f0006dfccd375086365f}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__char__typecast_adf128fa02d763bb58d3501358a1d1e1a}\label{classItem__char__typecast_adf128fa02d763bb58d3501358a1d1e1a}} 
+\index{Item\+\_\+char\+\_\+typecast@{Item\+\_\+char\+\_\+typecast}!print@{print}}
+\index{print@{print}!Item\+\_\+char\+\_\+typecast@{Item\+\_\+char\+\_\+typecast}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+char\+\_\+typecast\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+strfunc.\+h\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

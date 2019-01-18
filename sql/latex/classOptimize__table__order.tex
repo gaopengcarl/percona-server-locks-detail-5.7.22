@@ -1,0 +1,27 @@
+\hypertarget{classOptimize__table__order}{}\section{Optimize\+\_\+table\+\_\+order Class Reference}
+\label{classOptimize__table__order}\index{Optimize\+\_\+table\+\_\+order@{Optimize\+\_\+table\+\_\+order}}
+
+
+{\ttfamily \#include $<$sql\+\_\+planner.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOptimize__table__order_a108167d5d39ff1eaf262c4ec13842dc0}\label{classOptimize__table__order_a108167d5d39ff1eaf262c4ec13842dc0}} 
+{\bfseries Optimize\+\_\+table\+\_\+order} (T\+HD $\ast$thd\+\_\+arg, \mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join\+\_\+arg, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$sjm\+\_\+nest\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{group__Query__Planner_gaf585184987b0097465505d600394b8f3}{choose\+\_\+table\+\_\+order}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class determines the optimal join order for tables within a basic query block, ie a query specification clause, possibly extended with semi-\/joined tables from embedded subqueries.
+
+This class takes as prerequisite a join class where all dependencies among tables have been sorted out, all possible access paths have been sorted out, and all statistics information has been filled in.
+
+The class has a sole public function that will calculate the most optimal plan based on the inputs and the environment, such as prune level and greedy optimizer search depth. For more information, see the function headers for the private functions greedy\+\_\+search(), best\+\_\+extension\+\_\+by\+\_\+limited\+\_\+search() and eq\+\_\+ref\+\_\+extension\+\_\+by\+\_\+limited\+\_\+search(). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+planner.\+h\item 
+\mbox{\hyperlink{sql__planner_8cc}{sql\+\_\+planner.\+cc}}\end{DoxyCompactItemize}

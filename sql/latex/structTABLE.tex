@@ -1,0 +1,819 @@
+\hypertarget{structTABLE}{}\section{T\+A\+B\+LE Struct Reference}
+\label{structTABLE}\index{T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structTABLE_a4c6c0d87326e6006abe59c861c947ad3}{init}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tl)
+\item 
+\mbox{\Hypertarget{structTABLE_a75fd468ce3ac5db1274edba60e8b2773}\label{structTABLE_a75fd468ce3ac5db1274edba60e8b2773}} 
+bool {\bfseries fill\+\_\+item\+\_\+list} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$item\+\_\+list) const
+\item 
+\mbox{\Hypertarget{structTABLE_a544afc7debef1d4b41a7a84416c93cc4}\label{structTABLE_a544afc7debef1d4b41a7a84416c93cc4}} 
+void {\bfseries reset\+\_\+item\+\_\+list} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$item\+\_\+list) const
+\item 
+\mbox{\Hypertarget{structTABLE_a1a0b5080e41bde51d498bf5c50eef31b}\label{structTABLE_a1a0b5080e41bde51d498bf5c50eef31b}} 
+void {\bfseries clear\+\_\+column\+\_\+bitmaps} (void)
+\item 
+void \mbox{\hyperlink{structTABLE_aeae1505f7281ef739f97287727b4685e}{prepare\+\_\+for\+\_\+position}} (void)
+\item 
+void \mbox{\hyperlink{structTABLE_a864f1784006008c88847ba29dc09e30e}{mark\+\_\+column\+\_\+used}} (T\+HD $\ast$thd, \mbox{\hyperlink{classField}{Field}} $\ast$field, enum enum\+\_\+mark\+\_\+columns mark)
+\item 
+\mbox{\Hypertarget{structTABLE_a4656894cb85a96fa480ee184baac0497}\label{structTABLE_a4656894cb85a96fa480ee184baac0497}} 
+void {\bfseries mark\+\_\+columns\+\_\+used\+\_\+by\+\_\+index\+\_\+no\+\_\+reset} (uint index, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$map, uint key\+\_\+parts=0)
+\item 
+\mbox{\Hypertarget{structTABLE_a003bb64333b08fc537981677ea61b04c}\label{structTABLE_a003bb64333b08fc537981677ea61b04c}} 
+void {\bfseries mark\+\_\+columns\+\_\+used\+\_\+by\+\_\+index} (uint index)
+\item 
+\mbox{\Hypertarget{structTABLE_a670d7c4738958709183cf92e537fda90}\label{structTABLE_a670d7c4738958709183cf92e537fda90}} 
+void {\bfseries mark\+\_\+auto\+\_\+increment\+\_\+column} (void)
+\item 
+void \mbox{\hyperlink{structTABLE_a1976cb0e08aae6b4d4b304038dc8cc03}{mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update}} (bool mark\+\_\+binlog\+\_\+columns)
+\begin{DoxyCompactList}\small\item\em Mark columns needed for doing an update of a row. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE_a747f849a680a18deccc998dc994c813c}\label{structTABLE_a747f849a680a18deccc998dc994c813c}} 
+void {\bfseries mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+delete} (void)
+\item 
+\mbox{\Hypertarget{structTABLE_af89aa9b00b3aedab92faadb36915a8b8}\label{structTABLE_af89aa9b00b3aedab92faadb36915a8b8}} 
+void {\bfseries mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+insert} (void)
+\item 
+void \mbox{\hyperlink{structTABLE_a80aa5acb1308e30d425ab0c9b07fa809}{mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image}} (void)
+\item 
+\mbox{\Hypertarget{structTABLE_a01663f182cd533bfa9f3afeb95a445cc}\label{structTABLE_a01663f182cd533bfa9f3afeb95a445cc}} 
+void {\bfseries mark\+\_\+generated\+\_\+columns} (bool is\+\_\+update)
+\item 
+\mbox{\Hypertarget{structTABLE_ac10d3a702c37c164217ad53c32bb442a}\label{structTABLE_ac10d3a702c37c164217ad53c32bb442a}} 
+bool {\bfseries is\+\_\+field\+\_\+used\+\_\+by\+\_\+generated\+\_\+columns} (uint field\+\_\+index)
+\item 
+void \mbox{\hyperlink{structTABLE_a018e1c973c05f94e62c753e80559c1c1}{mark\+\_\+gcol\+\_\+in\+\_\+maps}} (\mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+\mbox{\Hypertarget{structTABLE_aa84efd6d51982ece61e97da8d9e22854}\label{structTABLE_aa84efd6d51982ece61e97da8d9e22854}} 
+void {\bfseries column\+\_\+bitmaps\+\_\+set} (M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$read\+\_\+set\+\_\+arg, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$write\+\_\+set\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structTABLE_a061044c0def9e1598b6edb9b2f224390}\label{structTABLE_a061044c0def9e1598b6edb9b2f224390}} 
+void {\bfseries column\+\_\+bitmaps\+\_\+set\+\_\+no\+\_\+signal} (M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$read\+\_\+set\+\_\+arg, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$write\+\_\+set\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structTABLE_a2cc2dea9449705b60647bc7c35146ecf}\label{structTABLE_a2cc2dea9449705b60647bc7c35146ecf}} 
+void {\bfseries use\+\_\+all\+\_\+columns} ()
+\item 
+\mbox{\Hypertarget{structTABLE_ac561b968570615b47045ae5ddbf89b7e}\label{structTABLE_ac561b968570615b47045ae5ddbf89b7e}} 
+void {\bfseries default\+\_\+column\+\_\+bitmaps} ()
+\item 
+bool \mbox{\hyperlink{structTABLE_a2557166f01a25c157d4c16dd3305bddb}{needs\+\_\+reopen}} ()
+\item 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ \mbox{\hyperlink{structTABLE_a81f6a41f3ec445d4b029f067b90d1ddd}{visible\+\_\+field\+\_\+ptr}} () const
+\item 
+uint \mbox{\hyperlink{structTABLE_a844377a21852fe7925a6a7248fc2bce4}{visible\+\_\+field\+\_\+count}} () const
+\item 
+bool \mbox{\hyperlink{structTABLE_a6e1532a0f768fbb90b2151a4890b4936}{alloc\+\_\+keys}} (uint key\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Allocate space for keys. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE_ad78429d129e0432b21bfdb41c05f928a}{add\+\_\+tmp\+\_\+key}} (\mbox{\hyperlink{classBitmap}{Field\+\_\+map}} $\ast$key\+\_\+parts, char $\ast$key\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Add one key to a temporary table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE_af31de97ed7509006102fdda07eff437b}\label{structTABLE_af31de97ed7509006102fdda07eff437b}} 
+void {\bfseries use\+\_\+index} (int key\+\_\+to\+\_\+save)
+\item 
+\mbox{\Hypertarget{structTABLE_a57cdc5d8841e7c7ad94f3b497a1b958f}\label{structTABLE_a57cdc5d8841e7c7ad94f3b497a1b958f}} 
+void {\bfseries set\+\_\+keyread} (bool flag)
+\item 
+bool \mbox{\hyperlink{structTABLE_a8c111124df42ff0b1749cea69411c8c0}{index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol}} (uint index\+\_\+no)
+\item 
+bool \mbox{\hyperlink{structTABLE_aded373553a351dbb53ae979e21aacd48}{update\+\_\+const\+\_\+key\+\_\+parts}} (\mbox{\hyperlink{classItem}{Item}} $\ast$conds)
+\item 
+bool \mbox{\hyperlink{structTABLE_ab03bd2dcb8c01194f4d28d2948aa5ba7}{check\+\_\+read\+\_\+removal}} (uint index)
+\item 
+\mbox{\Hypertarget{structTABLE_add2899766fc6076026b1293f81beb3ae}\label{structTABLE_add2899766fc6076026b1293f81beb3ae}} 
+my\+\_\+ptrdiff\+\_\+t {\bfseries default\+\_\+values\+\_\+offset} () const
+\item 
+\mbox{\Hypertarget{structTABLE_afb5468e80b5ff4fa5c4f6bc13193a1e4}\label{structTABLE_afb5468e80b5ff4fa5c4f6bc13193a1e4}} 
+bool \mbox{\hyperlink{structTABLE_afb5468e80b5ff4fa5c4f6bc13193a1e4}{is\+\_\+created}} () const
+\begin{DoxyCompactList}\small\item\em Return true if table is instantiated, and false otherwise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTABLE_a2c88ea05c0c70fc854b9c809f797f89b}{set\+\_\+created}} ()
+\item 
+void \mbox{\hyperlink{structTABLE_a2bac1524ecf90bda2145cfc92b16b040}{set\+\_\+deleted}} ()
+\item 
+\mbox{\Hypertarget{structTABLE_ae7f93d0edeaba3cd20926c4759e719bf}\label{structTABLE_ae7f93d0edeaba3cd20926c4759e719bf}} 
+void \mbox{\hyperlink{structTABLE_ae7f93d0edeaba3cd20926c4759e719bf}{set\+\_\+nullable}} ()
+\begin{DoxyCompactList}\small\item\em Set table as nullable, ie it is inner wrt some outer join. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE_aaa8cfdd3cd189ee07376ed1176dc3956}\label{structTABLE_aaa8cfdd3cd189ee07376ed1176dc3956}} 
+bool \mbox{\hyperlink{structTABLE_aaa8cfdd3cd189ee07376ed1176dc3956}{is\+\_\+nullable}} () const
+\begin{DoxyCompactList}\small\item\em Return whether table is nullable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE_aad8a536a238e7ab616e3dfae56b61e40}{has\+\_\+gcol}} () const
+\item 
+bool \mbox{\hyperlink{structTABLE_a6a653e5bb4044b0c8f1971bba39a97dd}{has\+\_\+virtual\+\_\+gcol}} () const
+\item 
+\mbox{\Hypertarget{structTABLE_aca811c9af637050315ab5b8f327751c5}\label{structTABLE_aca811c9af637050315ab5b8f327751c5}} 
+void \mbox{\hyperlink{structTABLE_aca811c9af637050315ab5b8f327751c5}{set\+\_\+null\+\_\+row}} ()
+\begin{DoxyCompactList}\small\item\em Set current row as \char`\"{}null row\char`\"{}, for use in null-\/complemented outer join. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE_a97b146e42cd1fd1c8e6264439e7f64c9}\label{structTABLE_a97b146e42cd1fd1c8e6264439e7f64c9}} 
+void \mbox{\hyperlink{structTABLE_a97b146e42cd1fd1c8e6264439e7f64c9}{reset\+\_\+null\+\_\+row}} ()
+\begin{DoxyCompactList}\small\item\em Clear \char`\"{}null row\char`\"{} status for the current row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE_a2191adf5a1a988c85541e06ab3e6a86e}{has\+\_\+null\+\_\+row}} () const
+\item 
+void \mbox{\hyperlink{structTABLE_a78110c9df0b2db3c47ec226cff4c5ffb}{init\+\_\+cost\+\_\+model}} (const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$cost\+\_\+model\+\_\+server)
+\item 
+const \mbox{\hyperlink{classCost__model__table}{Cost\+\_\+model\+\_\+table}} $\ast$ \mbox{\hyperlink{structTABLE_aa0655205bca6a8f6624bedde7ed1ad91}{cost\+\_\+model}} () const
+\item 
+bool \mbox{\hyperlink{structTABLE_a76b3b77275d88395fda596ed7b99ceee}{refix\+\_\+gc\+\_\+items}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{structTABLE_a909ba0f0bb359144360ba9ef643cb3de}{cleanup\+\_\+gc\+\_\+items}} ()
+\item 
+bool \mbox{\hyperlink{structTABLE_aad42ff12f12139f49e9e698c3e3d6bda}{has\+\_\+compressed\+\_\+columns}} () const
+\item 
+bool \mbox{\hyperlink{structTABLE_a2666e011d09910672bd790a11aa67bd2}{has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries}} () const
+\item 
+void \mbox{\hyperlink{structTABLE_a367a4243ea58d8fe6d1df7c27fd8741b}{update\+\_\+compressed\+\_\+columns\+\_\+info}} (const \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ \&fields)
+\item 
+\mbox{\Hypertarget{structTABLE_a962fb2190c6a59bf8995b83dcf3dc2c5}\label{structTABLE_a962fb2190c6a59bf8995b83dcf3dc2c5}} 
+void {\bfseries set\+\_\+binlog\+\_\+drop\+\_\+if\+\_\+temp} (bool should\+\_\+binlog)
+\item 
+\mbox{\Hypertarget{structTABLE_a7d98a59590beab25dab224c48352cd50}\label{structTABLE_a7d98a59590beab25dab224c48352cd50}} 
+bool {\bfseries should\+\_\+binlog\+\_\+drop\+\_\+if\+\_\+temp} (void) const
+\item 
+bool \mbox{\hyperlink{structTABLE_a4700cba1178e407b48dc49b217a3aac6}{contains\+\_\+records}} (T\+HD $\ast$thd, bool $\ast$retval)
+\item 
+void \mbox{\hyperlink{structTABLE_a347de73c59a7bd37a8348f0c55b7037e}{blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTABLE_aebc263efffc909babcfb7671ed0fbd1a}\label{structTABLE_aebc263efffc909babcfb7671ed0fbd1a}} 
+\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$ {\bfseries s}
+\item 
+\mbox{\Hypertarget{structTABLE_acb38f481e70f825c5e79f504e6b35212}\label{structTABLE_acb38f481e70f825c5e79f504e6b35212}} 
+\mbox{\hyperlink{classhandler}{handler}} $\ast$ {\bfseries file}
+\item 
+\mbox{\Hypertarget{structTABLE_a8a37d60b9f88048f2067d405c253428c}\label{structTABLE_a8a37d60b9f88048f2067d405c253428c}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries next}
+\item 
+\mbox{\Hypertarget{structTABLE_aeaa65b004e9cb541da5c68f39bbe3bdd}\label{structTABLE_aeaa65b004e9cb541da5c68f39bbe3bdd}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries prev}
+\item 
+\mbox{\Hypertarget{structTABLE_a3f1c3c41eb5fe8126653e5b70547637a}\label{structTABLE_a3f1c3c41eb5fe8126653e5b70547637a}} 
+T\+HD $\ast$ {\bfseries in\+\_\+use}
+\item 
+\mbox{\Hypertarget{structTABLE_aa411e95b12f6f74f19d192530a61a465}\label{structTABLE_aa411e95b12f6f74f19d192530a61a465}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries field}
+\item 
+\mbox{\Hypertarget{structTABLE_aaa53929163870759d60694cb14319a01}\label{structTABLE_aaa53929163870759d60694cb14319a01}} 
+uint \mbox{\hyperlink{structTABLE_aaa53929163870759d60694cb14319a01}{hidden\+\_\+field\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Count of hidden fields, if internal temporary table; 0 otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE_a61135ed7b23c1394052d8c587e5b644f}\label{structTABLE_a61135ed7b23c1394052d8c587e5b644f}} 
+uchar $\ast$ {\bfseries record} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{structTABLE_ad9092c85b0f239731896652c7db12436}\label{structTABLE_ad9092c85b0f239731896652c7db12436}} 
+uchar $\ast$ {\bfseries write\+\_\+row\+\_\+record}
+\item 
+\mbox{\Hypertarget{structTABLE_a5df28551fda11e25ed1776748e8eac17}\label{structTABLE_a5df28551fda11e25ed1776748e8eac17}} 
+uchar $\ast$ {\bfseries insert\+\_\+values}
+\item 
+\mbox{\Hypertarget{structTABLE_a40abea1ca4b0cc634bd771ef9df85386}\label{structTABLE_a40abea1ca4b0cc634bd771ef9df85386}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries covering\+\_\+keys}
+\item 
+\mbox{\Hypertarget{structTABLE_a0c4d43db4cd22b1b249eacead0848259}\label{structTABLE_a0c4d43db4cd22b1b249eacead0848259}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries quick\+\_\+keys}
+\item 
+\mbox{\Hypertarget{structTABLE_af0ca8b04db4ac8a160dc77853daa68ee}\label{structTABLE_af0ca8b04db4ac8a160dc77853daa68ee}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries merge\+\_\+keys}
+\item 
+\mbox{\Hypertarget{structTABLE_a140447aac5096b4a2ca2bf3ad5701a08}\label{structTABLE_a140447aac5096b4a2ca2bf3ad5701a08}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries possible\+\_\+quick\+\_\+keys}
+\item 
+\mbox{\Hypertarget{structTABLE_a24c7ff095d2241f2ff476a3d0c5a6f80}\label{structTABLE_a24c7ff095d2241f2ff476a3d0c5a6f80}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries keys\+\_\+in\+\_\+use\+\_\+for\+\_\+query}
+\item 
+\mbox{\Hypertarget{structTABLE_a4b5bc3560d19d3feb9f2a8c3ad3bd4cf}\label{structTABLE_a4b5bc3560d19d3feb9f2a8c3ad3bd4cf}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries keys\+\_\+in\+\_\+use\+\_\+for\+\_\+group\+\_\+by}
+\item 
+\mbox{\Hypertarget{structTABLE_ab1f3713a0482e9fbdc703338a65ee74a}\label{structTABLE_ab1f3713a0482e9fbdc703338a65ee74a}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries keys\+\_\+in\+\_\+use\+\_\+for\+\_\+order\+\_\+by}
+\item 
+\mbox{\Hypertarget{structTABLE_ae411e56ef2d95e4bd494c0b9abf75b2a}\label{structTABLE_ae411e56ef2d95e4bd494c0b9abf75b2a}} 
+\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$ {\bfseries key\+\_\+info}
+\item 
+\mbox{\Hypertarget{structTABLE_ad25e8ebf0a4df11e94f866b34a67e8d5}\label{structTABLE_ad25e8ebf0a4df11e94f866b34a67e8d5}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries next\+\_\+number\+\_\+field}
+\item 
+\mbox{\Hypertarget{structTABLE_ad46b6fa6afc36d7668d6ea78d750b8fc}\label{structTABLE_ad46b6fa6afc36d7668d6ea78d750b8fc}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries found\+\_\+next\+\_\+number\+\_\+field}
+\item 
+\mbox{\Hypertarget{structTABLE_a1960115b511a6a72d56cfef55fc14b81}\label{structTABLE_a1960115b511a6a72d56cfef55fc14b81}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries vfield}
+\item 
+\mbox{\Hypertarget{structTABLE_adb835dff029c6069d7a55d2f99d3f275}\label{structTABLE_adb835dff029c6069d7a55d2f99d3f275}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries hash\+\_\+field}
+\item 
+\mbox{\Hypertarget{structTABLE_adda7bdaf9050a99d906922ee06e66e38}\label{structTABLE_adda7bdaf9050a99d906922ee06e66e38}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries fts\+\_\+doc\+\_\+id\+\_\+field}
+\item 
+\mbox{\Hypertarget{structTABLE_a926a025ef6db400d2cc92f7411e7b907}\label{structTABLE_a926a025ef6db400d2cc92f7411e7b907}} 
+\mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} $\ast$ {\bfseries triggers}
+\item 
+\mbox{\Hypertarget{structTABLE_a63eac2f83dd99209bf5e15784470e186}\label{structTABLE_a63eac2f83dd99209bf5e15784470e186}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries pos\+\_\+in\+\_\+table\+\_\+list}
+\item 
+\mbox{\Hypertarget{structTABLE_a6d6e225267828f347492e0f32dd3320b}\label{structTABLE_a6d6e225267828f347492e0f32dd3320b}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries pos\+\_\+in\+\_\+locked\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structTABLE_a3b3e94b3be2736505a0faf2d41ba75cf}\label{structTABLE_a3b3e94b3be2736505a0faf2d41ba75cf}} 
+\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$ {\bfseries group}
+\item 
+\mbox{\Hypertarget{structTABLE_a08aaa05159eb35821cf9b3efe93d388e}\label{structTABLE_a08aaa05159eb35821cf9b3efe93d388e}} 
+const char $\ast$ {\bfseries alias}
+\item 
+\mbox{\Hypertarget{structTABLE_a1c84ebe329cf6999d5e7a67cd86f0bfe}\label{structTABLE_a1c84ebe329cf6999d5e7a67cd86f0bfe}} 
+uchar $\ast$ {\bfseries null\+\_\+flags}
+\item 
+\mbox{\Hypertarget{structTABLE_a736d134f98176f2aab48a55d7ab4e7f8}\label{structTABLE_a736d134f98176f2aab48a55d7ab4e7f8}} 
+my\+\_\+bitmap\+\_\+map $\ast$ {\bfseries bitmap\+\_\+init\+\_\+value}
+\item 
+\mbox{\Hypertarget{structTABLE_aae5e8aa3207506ad2dc679519627c135}\label{structTABLE_aae5e8aa3207506ad2dc679519627c135}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries def\+\_\+read\+\_\+set}
+\item 
+\mbox{\Hypertarget{structTABLE_ada7d47b7d30a9b480b75099dd34f4563}\label{structTABLE_ada7d47b7d30a9b480b75099dd34f4563}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries def\+\_\+write\+\_\+set}
+\item 
+\mbox{\Hypertarget{structTABLE_aac73751a3de72fb801523e318db5a3af}\label{structTABLE_aac73751a3de72fb801523e318db5a3af}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries tmp\+\_\+set}
+\item 
+\mbox{\Hypertarget{structTABLE_ac0fc1b03160dab161cab2b6d31684f29}\label{structTABLE_ac0fc1b03160dab161cab2b6d31684f29}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries cond\+\_\+set}
+\item 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP \mbox{\hyperlink{structTABLE_adc4c495f334d7d4f3822800df766f246}{def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert}}
+\item 
+\mbox{\Hypertarget{structTABLE_a7ba5116b879f7519ab38c0049106c486}\label{structTABLE_a7ba5116b879f7519ab38c0049106c486}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$ {\bfseries read\+\_\+set}
+\item 
+\mbox{\Hypertarget{structTABLE_afbd0be22b3e09e76ffc38f08d04ff9a8}\label{structTABLE_afbd0be22b3e09e76ffc38f08d04ff9a8}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$ {\bfseries write\+\_\+set}
+\item 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$ \mbox{\hyperlink{structTABLE_a409fb1cb388b91a9bccf07d9e5cea8c6}{fields\+\_\+set\+\_\+during\+\_\+insert}}
+\item 
+\mbox{\Hypertarget{structTABLE_a02c249be928b0e68a9c56e0345d3cd28}\label{structTABLE_a02c249be928b0e68a9c56e0345d3cd28}} 
+query\+\_\+id\+\_\+t {\bfseries query\+\_\+id}
+\item 
+\mbox{\Hypertarget{structTABLE_a46aef02528737e99f9a4977fe46858dd}\label{structTABLE_a46aef02528737e99f9a4977fe46858dd}} 
+ha\+\_\+rows {\bfseries quick\+\_\+rows} \mbox{[}M\+A\+X\+\_\+\+K\+EY\mbox{]}
+\item 
+\mbox{\Hypertarget{structTABLE_aa24f2d7d04a070d6ea419a50d5ae32e4}\label{structTABLE_aa24f2d7d04a070d6ea419a50d5ae32e4}} 
+key\+\_\+part\+\_\+map {\bfseries const\+\_\+key\+\_\+parts} \mbox{[}M\+A\+X\+\_\+\+K\+EY\mbox{]}
+\item 
+\mbox{\Hypertarget{structTABLE_afc47fda43a08cb4c89af499687666820}\label{structTABLE_afc47fda43a08cb4c89af499687666820}} 
+uint {\bfseries quick\+\_\+key\+\_\+parts} \mbox{[}M\+A\+X\+\_\+\+K\+EY\mbox{]}
+\item 
+\mbox{\Hypertarget{structTABLE_a8a3695f54245f5a73f671663a2c42539}\label{structTABLE_a8a3695f54245f5a73f671663a2c42539}} 
+uint {\bfseries quick\+\_\+n\+\_\+ranges} \mbox{[}M\+A\+X\+\_\+\+K\+EY\mbox{]}
+\item 
+\mbox{\Hypertarget{structTABLE_a3d9c3fea2f799efd5dfc4e032616ef7a}\label{structTABLE_a3d9c3fea2f799efd5dfc4e032616ef7a}} 
+ha\+\_\+rows {\bfseries quick\+\_\+condition\+\_\+rows}
+\item 
+\mbox{\Hypertarget{structTABLE_a8f369ea55cf38c5a4986a7f4c32c2ac4}\label{structTABLE_a8f369ea55cf38c5a4986a7f4c32c2ac4}} 
+uint {\bfseries lock\+\_\+position}
+\item 
+\mbox{\Hypertarget{structTABLE_a4a14b51619ae1cc39114004c1b231860}\label{structTABLE_a4a14b51619ae1cc39114004c1b231860}} 
+uint {\bfseries lock\+\_\+data\+\_\+start}
+\item 
+\mbox{\Hypertarget{structTABLE_adb3a535f4642bd789d550c66bde50a66}\label{structTABLE_adb3a535f4642bd789d550c66bde50a66}} 
+uint {\bfseries lock\+\_\+count}
+\item 
+\mbox{\Hypertarget{structTABLE_ac9f4c2d452c3d8f5491ca6e3f9573989}\label{structTABLE_ac9f4c2d452c3d8f5491ca6e3f9573989}} 
+uint {\bfseries temp\+\_\+pool\+\_\+slot}
+\item 
+\mbox{\Hypertarget{structTABLE_a5c0ed73ef7b67cf2c3a5de7cf02a8048}\label{structTABLE_a5c0ed73ef7b67cf2c3a5de7cf02a8048}} 
+uint {\bfseries db\+\_\+stat}
+\item 
+\mbox{\Hypertarget{structTABLE_a87e2168d71994bc754d3a5ffc7718e86}\label{structTABLE_a87e2168d71994bc754d3a5ffc7718e86}} 
+int {\bfseries current\+\_\+lock}
+\item 
+\mbox{\Hypertarget{structTABLE_a44fcf0051d0edc646b261c7c1a6d56ba}\label{structTABLE_a44fcf0051d0edc646b261c7c1a6d56ba}} 
+my\+\_\+bool {\bfseries null\+\_\+row}
+\item 
+\mbox{\Hypertarget{structTABLE_abb2eaffbfa8f9f6b8bc642322388c16a}\label{structTABLE_abb2eaffbfa8f9f6b8bc642322388c16a}} 
+uint8 {\bfseries status}
+\item 
+\mbox{\Hypertarget{structTABLE_a4406735595e9dc27dc9903c0a8d192f9}\label{structTABLE_a4406735595e9dc27dc9903c0a8d192f9}} 
+my\+\_\+bool {\bfseries copy\+\_\+blobs}
+\item 
+\mbox{\Hypertarget{structTABLE_ae2916c452b9046268d07722158b546dd}\label{structTABLE_ae2916c452b9046268d07722158b546dd}} 
+my\+\_\+bool {\bfseries force\+\_\+index}
+\item 
+my\+\_\+bool \mbox{\hyperlink{structTABLE_a5555a069b95c932eeaa61b78313ddbf7}{force\+\_\+index\+\_\+order}}
+\item 
+my\+\_\+bool \mbox{\hyperlink{structTABLE_aaeda0a79564d3f6d473cd77f155e16cb}{force\+\_\+index\+\_\+group}}
+\item 
+\mbox{\Hypertarget{structTABLE_a14280524336e72fe444115a647d81ac0}\label{structTABLE_a14280524336e72fe444115a647d81ac0}} 
+my\+\_\+bool {\bfseries distinct}
+\item 
+\mbox{\Hypertarget{structTABLE_ab76e41189410a59d029f0a1413d039a7}\label{structTABLE_ab76e41189410a59d029f0a1413d039a7}} 
+my\+\_\+bool {\bfseries const\+\_\+table}
+\item 
+\mbox{\Hypertarget{structTABLE_afb5fd0db17dcb0328abc85f3fa5077d0}\label{structTABLE_afb5fd0db17dcb0328abc85f3fa5077d0}} 
+my\+\_\+bool {\bfseries no\+\_\+rows}
+\item 
+my\+\_\+bool \mbox{\hyperlink{structTABLE_a4580bb49e147af8adb714508a1891acb}{key\+\_\+read}}
+\item 
+my\+\_\+bool \mbox{\hyperlink{structTABLE_af5b5d196e9820dbb42d6bd2a2524b801}{no\+\_\+keyread}}
+\item 
+\mbox{\Hypertarget{structTABLE_ae75a3833977edde44825073d4405a924}\label{structTABLE_ae75a3833977edde44825073d4405a924}} 
+my\+\_\+bool {\bfseries locked\+\_\+by\+\_\+logger}
+\item 
+my\+\_\+bool \mbox{\hyperlink{structTABLE_a5b99d728b08a795783c2a5b0a1c997f7}{no\+\_\+replicate}}
+\item 
+\mbox{\Hypertarget{structTABLE_aa4f624caa999825b45b3188da99fdfda}\label{structTABLE_aa4f624caa999825b45b3188da99fdfda}} 
+my\+\_\+bool {\bfseries locked\+\_\+by\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE_a878be8327ffa6549a30f1f2b64738538}\label{structTABLE_a878be8327ffa6549a30f1f2b64738538}} 
+my\+\_\+bool {\bfseries fulltext\+\_\+searched}
+\item 
+\mbox{\Hypertarget{structTABLE_a6561eca65af3e8c609e7e934ac61ce53}\label{structTABLE_a6561eca65af3e8c609e7e934ac61ce53}} 
+my\+\_\+bool {\bfseries no\+\_\+cache}
+\item 
+\mbox{\Hypertarget{structTABLE_a6facb4318b88c022b50f71e6e64469c7}\label{structTABLE_a6facb4318b88c022b50f71e6e64469c7}} 
+my\+\_\+bool {\bfseries open\+\_\+by\+\_\+handler}
+\item 
+\mbox{\Hypertarget{structTABLE_a8c519955a025cf04d7233efba246b13e}\label{structTABLE_a8c519955a025cf04d7233efba246b13e}} 
+my\+\_\+bool {\bfseries auto\+\_\+increment\+\_\+field\+\_\+not\+\_\+null}
+\item 
+\mbox{\Hypertarget{structTABLE_a0bc4aa765153ca2537c201e6191cb1e3}\label{structTABLE_a0bc4aa765153ca2537c201e6191cb1e3}} 
+my\+\_\+bool {\bfseries insert\+\_\+or\+\_\+update}
+\item 
+\mbox{\Hypertarget{structTABLE_a45046eadb292eaed7b6cb0c65d4dcee3}\label{structTABLE_a45046eadb292eaed7b6cb0c65d4dcee3}} 
+my\+\_\+bool {\bfseries alias\+\_\+name\+\_\+used}
+\item 
+\mbox{\Hypertarget{structTABLE_a8e32ec72f999c22686a8307aaf09a746}\label{structTABLE_a8e32ec72f999c22686a8307aaf09a746}} 
+my\+\_\+bool {\bfseries get\+\_\+fields\+\_\+in\+\_\+item\+\_\+tree}
+\item 
+my\+\_\+bool \mbox{\hyperlink{structTABLE_a3cfec9aee859fac059aa0f7cbecfbc92}{m\+\_\+needs\+\_\+reopen}}
+\item 
+\mbox{\Hypertarget{structTABLE_a34eff226c2435c5aac5cba939383931d}\label{structTABLE_a34eff226c2435c5aac5cba939383931d}} 
+uint {\bfseries max\+\_\+keys}
+\item 
+\mbox{\Hypertarget{structTABLE_a3bf86a63fe36539e57890646c1f45b7a}\label{structTABLE_a3bf86a63fe36539e57890646c1f45b7a}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>class \mbox{\hyperlink{classJOIN__TAB}{JOIN\_TAB}} $\ast$ {\bfseries join\_tab}\\
+\>class \mbox{\hyperlink{classQEP__TAB}{QEP\_TAB}} $\ast$ {\bfseries qep\_tab}\\
+\>enum thr\_lock\_type {\bfseries lock\_type}\\
+\>bool {\bfseries not\_exists\_optimize}\\
+\>bool {\bfseries impossible\_range}\\
+\} {\bfseries reginfo}\\
+
+\end{tabbing}\item 
+M\+E\+M\+\_\+\+R\+O\+OT \mbox{\hyperlink{structTABLE_aa76fd5e13a8b5101a247413701978730}{mem\+\_\+root}}
+\item 
+\mbox{\hyperlink{classBlob__mem__storage}{Blob\+\_\+mem\+\_\+storage}} $\ast$ \mbox{\hyperlink{structTABLE_ae97224c2b47679281629de05a4155a71}{blob\+\_\+storage}}
+\item 
+\mbox{\Hypertarget{structTABLE_adc88a409c13b2f237761fd9952bb6a5f}\label{structTABLE_adc88a409c13b2f237761fd9952bb6a5f}} 
+\mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} {\bfseries grant}
+\item 
+\mbox{\Hypertarget{structTABLE_a10250db5c43170e27fe3c4467b6d5bb5}\label{structTABLE_a10250db5c43170e27fe3c4467b6d5bb5}} 
+\mbox{\hyperlink{classFilesort__info}{Filesort\+\_\+info}} {\bfseries sort}
+\item 
+\mbox{\Hypertarget{structTABLE_a0b6463a858185a43b8b6693854ced600}\label{structTABLE_a0b6463a858185a43b8b6693854ced600}} 
+\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$ {\bfseries part\+\_\+info}
+\item 
+\mbox{\Hypertarget{structTABLE_aae53cc4b6ac27afa0bc807c51312620b}\label{structTABLE_aae53cc4b6ac27afa0bc807c51312620b}} 
+bool {\bfseries all\+\_\+partitions\+\_\+pruned\+\_\+away}
+\item 
+\mbox{\Hypertarget{structTABLE_aacdbd7b3d2bd42afc1ff0c3dcf6c57f4}\label{structTABLE_aacdbd7b3d2bd42afc1ff0c3dcf6c57f4}} 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ {\bfseries mdl\+\_\+ticket}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTABLE_a49b28bfe60a1eb8b9230573472166d12}\label{structTABLE_a49b28bfe60a1eb8b9230573472166d12}} 
+class {\bfseries Table\+\_\+cache\+\_\+element}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structTABLE_ad78429d129e0432b21bfdb41c05f928a}\label{structTABLE_ad78429d129e0432b21bfdb41c05f928a}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!add\+\_\+tmp\+\_\+key@{add\+\_\+tmp\+\_\+key}}
+\index{add\+\_\+tmp\+\_\+key@{add\+\_\+tmp\+\_\+key}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{add\+\_\+tmp\+\_\+key()}{add\_tmp\_key()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::add\+\_\+tmp\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBitmap}{Field\+\_\+map}} $\ast$}]{key\+\_\+parts,  }\item[{char $\ast$}]{key\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Add one key to a temporary table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+parts} & bitmap of fields that take a part in the key. \\
+\hline
+{\em key\+\_\+name} & name of the key\\
+\hline
+\end{DoxyParams}
+Creates a key for this table from fields which corresponds the bits set to 1 in the \textquotesingle{}key\+\_\+parts\textquotesingle{} bitmap. The \textquotesingle{}key\+\_\+name\textquotesingle{} name is given to the newly created key. \begin{DoxySeeAlso}{See also}
+add\+\_\+derived\+\_\+key
+\end{DoxySeeAlso}
+somehow manage to create keys in tmp\+\_\+table\+\_\+param for unification purposes
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE O\+OM error. 
+
+F\+A\+L\+SE the key was created or ignored (too long key). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a6e1532a0f768fbb90b2151a4890b4936}\label{structTABLE_a6e1532a0f768fbb90b2151a4890b4936}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!alloc\+\_\+keys@{alloc\+\_\+keys}}
+\index{alloc\+\_\+keys@{alloc\+\_\+keys}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{alloc\+\_\+keys()}{alloc\_keys()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::alloc\+\_\+keys (\begin{DoxyParamCaption}\item[{uint}]{key\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Allocate space for keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+count} & number of keys to allocate.\\
+\hline
+\end{DoxyParams}
+Allocate space enough to fit \textquotesingle{}key\+\_\+count\textquotesingle{} keys for this table.
+
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE space was successfully allocated. 
+
+T\+R\+UE O\+OM error occur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a347de73c59a7bd37a8348f0c55b7037e}\label{structTABLE_a347de73c59a7bd37a8348f0c55b7037e}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value@{blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value}}
+\index{blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value@{blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value()}{blobs\_need\_not\_keep\_old\_value()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Virtual fields of type B\+L\+OB have a flag m\+\_\+keep\+\_\+old\+\_\+value. This flag is set to false for all such fields in this table. \mbox{\Hypertarget{structTABLE_ab03bd2dcb8c01194f4d28d2948aa5ba7}\label{structTABLE_ab03bd2dcb8c01194f4d28d2948aa5ba7}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!check\+\_\+read\+\_\+removal@{check\+\_\+read\+\_\+removal}}
+\index{check\+\_\+read\+\_\+removal@{check\+\_\+read\+\_\+removal}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{check\+\_\+read\+\_\+removal()}{check\_read\_removal()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::check\+\_\+read\+\_\+removal (\begin{DoxyParamCaption}\item[{uint}]{index }\end{DoxyParamCaption})}
+
+Read removal is possible if the selected quick read method is using full unique index
+
+\begin{DoxySeeAlso}{See also}
+H\+A\+\_\+\+R\+E\+A\+D\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+M\+O\+V\+AL
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Number of the index used for read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & success, read removal started \\
+\hline
+{\em false} & read removal not started \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structTABLE_a909ba0f0bb359144360ba9ef643cb3de}\label{structTABLE_a909ba0f0bb359144360ba9ef643cb3de}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!cleanup\+\_\+gc\+\_\+items@{cleanup\+\_\+gc\+\_\+items}}
+\index{cleanup\+\_\+gc\+\_\+items@{cleanup\+\_\+gc\+\_\+items}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+gc\+\_\+items()}{cleanup\_gc\_items()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::cleanup\+\_\+gc\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clean any state in items associated with generated columns to be ready for the next statement. \mbox{\Hypertarget{structTABLE_a4700cba1178e407b48dc49b217a3aac6}\label{structTABLE_a4700cba1178e407b48dc49b217a3aac6}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!contains\+\_\+records@{contains\+\_\+records}}
+\index{contains\+\_\+records@{contains\+\_\+records}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{contains\+\_\+records()}{contains\_records()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::contains\+\_\+records (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool $\ast$}]{retval }\end{DoxyParamCaption})}
+
+Check if table contains any records.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & The thread object \\
+\hline
+\mbox{\texttt{ out}}  & {\em retval} & Pointer to boolean value (true if table is not empty).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false for success, true for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_aa0655205bca6a8f6624bedde7ed1ad91}\label{structTABLE_aa0655205bca6a8f6624bedde7ed1ad91}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!cost\+\_\+model@{cost\+\_\+model}}
+\index{cost\+\_\+model@{cost\+\_\+model}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{cost\+\_\+model()}{cost\_model()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCost__model__table}{Cost\+\_\+model\+\_\+table}}$\ast$ T\+A\+B\+L\+E\+::cost\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the cost model object for this table. \mbox{\Hypertarget{structTABLE_aad42ff12f12139f49e9e698c3e3d6bda}\label{structTABLE_aad42ff12f12139f49e9e698c3e3d6bda}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!has\+\_\+compressed\+\_\+columns@{has\+\_\+compressed\+\_\+columns}}
+\index{has\+\_\+compressed\+\_\+columns@{has\+\_\+compressed\+\_\+columns}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{has\+\_\+compressed\+\_\+columns()}{has\_compressed\_columns()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::has\+\_\+compressed\+\_\+columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks if \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} has at least one field with C\+O\+L\+U\+M\+N\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED flag. \mbox{\Hypertarget{structTABLE_a2666e011d09910672bd790a11aa67bd2}\label{structTABLE_a2666e011d09910672bd790a11aa67bd2}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries@{has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries}}
+\index{has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries@{has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries()}{has\_compressed\_columns\_with\_dictionaries()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::has\+\_\+compressed\+\_\+columns\+\_\+with\+\_\+dictionaries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks if \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} has at least one field with C\+O\+L\+U\+M\+N\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED flag and non-\/empty zip\+\_\+dict. \mbox{\Hypertarget{structTABLE_aad8a536a238e7ab616e3dfae56b61e40}\label{structTABLE_aad8a536a238e7ab616e3dfae56b61e40}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!has\+\_\+gcol@{has\+\_\+gcol}}
+\index{has\+\_\+gcol@{has\+\_\+gcol}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{has\+\_\+gcol()}{has\_gcol()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::has\+\_\+gcol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if table contains one or more generated columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a2191adf5a1a988c85541e06ab3e6a86e}\label{structTABLE_a2191adf5a1a988c85541e06ab3e6a86e}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!has\+\_\+null\+\_\+row@{has\+\_\+null\+\_\+row}}
+\index{has\+\_\+null\+\_\+row@{has\+\_\+null\+\_\+row}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{has\+\_\+null\+\_\+row()}{has\_null\_row()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::has\+\_\+null\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if current row is null-\/extended 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a6a653e5bb4044b0c8f1971bba39a97dd}\label{structTABLE_a6a653e5bb4044b0c8f1971bba39a97dd}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!has\+\_\+virtual\+\_\+gcol@{has\+\_\+virtual\+\_\+gcol}}
+\index{has\+\_\+virtual\+\_\+gcol@{has\+\_\+virtual\+\_\+gcol}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{has\+\_\+virtual\+\_\+gcol()}{has\_virtual\_gcol()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::has\+\_\+virtual\+\_\+gcol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if table contains one or more virtual generated columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a8c111124df42ff0b1749cea69411c8c0}\label{structTABLE_a8c111124df42ff0b1749cea69411c8c0}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol@{index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol}}
+\index{index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol@{index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol()}{index\_contains\_some\_virtual\_gcol()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::index\+\_\+contains\+\_\+some\+\_\+virtual\+\_\+gcol (\begin{DoxyParamCaption}\item[{uint}]{index\+\_\+no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check whether the given index has a virtual generated columns.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+no} & the given index to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if if index is defined over at least one virtual generated column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a4c6c0d87326e6006abe59c861c947ad3}\label{structTABLE_a4c6c0d87326e6006abe59c861c947ad3}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!init@{init}}
+\index{init@{init}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::init (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tl }\end{DoxyParamCaption})}
+
+Initialize \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance (newly created, or coming either from table cache or T\+H\+D\+::temporary\+\_\+tables list) and prepare it for further use during statement execution. Set the \textquotesingle{}alias\textquotesingle{} attribute from the specified \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} element. Remember the \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} element in the T\+A\+B\+L\+E\+::pos\+\_\+in\+\_\+table\+\_\+list member.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em tl} & \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} element. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structTABLE_a78110c9df0b2db3c47ec226cff4c5ffb}\label{structTABLE_a78110c9df0b2db3c47ec226cff4c5ffb}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!init\+\_\+cost\+\_\+model@{init\+\_\+cost\+\_\+model}}
+\index{init\+\_\+cost\+\_\+model@{init\+\_\+cost\+\_\+model}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{init\+\_\+cost\+\_\+model()}{init\_cost\_model()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::init\+\_\+cost\+\_\+model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$}]{cost\+\_\+model\+\_\+server }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the optimizer cost model.
+
+This function should be called each time a new query is started.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cost\+\_\+model\+\_\+server} & the main cost model object for the query \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structTABLE_a864f1784006008c88847ba29dc09e30e}\label{structTABLE_a864f1784006008c88847ba29dc09e30e}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!mark\+\_\+column\+\_\+used@{mark\+\_\+column\+\_\+used}}
+\index{mark\+\_\+column\+\_\+used@{mark\+\_\+column\+\_\+used}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{mark\+\_\+column\+\_\+used()}{mark\_column\_used()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::mark\+\_\+column\+\_\+used (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{enum enum\+\_\+mark\+\_\+columns}]{mark }\end{DoxyParamCaption})}
+
+Mark column as either read or written (or none) according to mark\+\_\+used.
+
+\begin{DoxyNote}{Note}
+If marking a written field, set thd-\/$>$dup\+\_\+field if the column is already marked.
+
+If T\+A\+B\+L\+E\+::get\+\_\+fields\+\_\+in\+\_\+item\+\_\+tree is set, set the flag bit G\+E\+T\+\_\+\+F\+I\+X\+E\+D\+\_\+\+F\+I\+E\+L\+D\+S\+\_\+\+F\+L\+AG for the field.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler (only used for duplicate handling) \\
+\hline
+{\em field} & The column to be marked as used \\
+\hline
+{\em mark\+\_\+used} & =M\+A\+R\+K\+\_\+\+C\+O\+L\+U\+M\+N\+S\+\_\+\+N\+O\+NE\+: Only update flag field, if applicable =M\+A\+R\+K\+\_\+\+C\+O\+L\+U\+M\+N\+S\+\_\+\+R\+E\+AD\+: Mark column as read =M\+A\+R\+K\+\_\+\+C\+O\+L\+U\+M\+N\+S\+\_\+\+W\+R\+I\+TE\+: Mark column as written =M\+A\+R\+K\+\_\+\+C\+O\+L\+U\+M\+N\+S\+\_\+\+T\+E\+MP\+: Mark column as read, used by \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}} and processing of generated columns \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structTABLE_a1976cb0e08aae6b4d4b304038dc8cc03}\label{structTABLE_a1976cb0e08aae6b4d4b304038dc8cc03}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update@{mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update}}
+\index{mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update@{mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update()}{mark\_columns\_needed\_for\_update()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+update (\begin{DoxyParamCaption}\item[{bool}]{mark\+\_\+binlog\+\_\+columns }\end{DoxyParamCaption})}
+
+
+
+Mark columns needed for doing an update of a row. 
+
+Some engines needs to have all columns in an update (to be able to build a complete row). If this is the case, we mark all not updated columns to be read.
+
+If this is not the case, we do like in the delete case and mark if neeed, either the primary key column or all columns to be read. (see mark\+\_\+columns\+\_\+needed\+\_\+for\+\_\+delete() for details)
+
+If the engine has H\+A\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+C\+O\+L\+U\+M\+N\+S\+\_\+\+F\+O\+R\+\_\+\+D\+E\+L\+E\+TE, we will mark all U\+S\+ED key columns as \textquotesingle{}to-\/be-\/read\textquotesingle{}. This allows the engine to loop over the given record to find all changed keys and doesn\textquotesingle{}t have to retrieve the row again.
+
+Unlike other similar methods, it doesn\textquotesingle{}t mark fields used by triggers, that is the responsibility of the caller to do, by using Table\+\_\+trigger\+\_\+dispatcher\+::mark\+\_\+used\+\_\+fields(\+T\+R\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+P\+D\+A\+T\+E)!
+
+Note\+: Marking additional columns as per binlog\+\_\+row\+\_\+image requirements will influence query execution plan. For example in the case of binlog\+\_\+row\+\_\+image=F\+U\+LL the entire read\+\_\+set and write\+\_\+set needs to be flagged. This will influence update query to think that \textquotesingle{}used key is being modified\textquotesingle{} and query will create a temporary table to process the update operation. Which will result in performance degradation. Hence callers who don\textquotesingle{}t want their query execution to be influenced as per binlog\+\_\+row\+\_\+image requirements can skip marking binlog specific columns here and they should make an explicit call to \textquotesingle{}\mbox{\hyperlink{structTABLE_a80aa5acb1308e30d425ab0c9b07fa809}{mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image()}}\textquotesingle{} function to mark binlog\+\_\+row\+\_\+image specific columns. \mbox{\Hypertarget{structTABLE_a80aa5acb1308e30d425ab0c9b07fa809}\label{structTABLE_a80aa5acb1308e30d425ab0c9b07fa809}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image@{mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image}}
+\index{mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image@{mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image()}{mark\_columns\_per\_binlog\_row\_image()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::mark\+\_\+columns\+\_\+per\+\_\+binlog\+\_\+row\+\_\+image (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+If in R\+BR we may need to mark some extra columns, depending on the binlog-\/row-\/image command line argument.\mbox{\Hypertarget{structTABLE_a018e1c973c05f94e62c753e80559c1c1}\label{structTABLE_a018e1c973c05f94e62c753e80559c1c1}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!mark\+\_\+gcol\+\_\+in\+\_\+maps@{mark\+\_\+gcol\+\_\+in\+\_\+maps}}
+\index{mark\+\_\+gcol\+\_\+in\+\_\+maps@{mark\+\_\+gcol\+\_\+in\+\_\+maps}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{mark\+\_\+gcol\+\_\+in\+\_\+maps()}{mark\_gcol\_in\_maps()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::mark\+\_\+gcol\+\_\+in\+\_\+maps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field }\end{DoxyParamCaption})}
+
+Adds a generated column and its dependencies to the read\+\_\+set/write\+\_\+set bitmaps.
+
+If the value of a generated column (gcol) must be calculated, it needs to be in write\+\_\+set (to satisfy the assertion in Field\+::store); the value of its underlying base columns is necessary to the calculation so those must be in read\+\_\+set.
+
+A gcol must be calculated in two cases\+:
+\begin{DoxyItemize}
+\item we\textquotesingle{}re sending the gcol to the engine
+\item the gcol is virtual and we\textquotesingle{}re reading it from the engine without using a covering index on it. 
+\end{DoxyItemize}\mbox{\Hypertarget{structTABLE_a2557166f01a25c157d4c16dd3305bddb}\label{structTABLE_a2557166f01a25c157d4c16dd3305bddb}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!needs\+\_\+reopen@{needs\+\_\+reopen}}
+\index{needs\+\_\+reopen@{needs\+\_\+reopen}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{needs\+\_\+reopen()}{needs\_reopen()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::needs\+\_\+reopen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Should this instance of the table be reopened? \mbox{\Hypertarget{structTABLE_aeae1505f7281ef739f97287727b4685e}\label{structTABLE_aeae1505f7281ef739f97287727b4685e}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!prepare\+\_\+for\+\_\+position@{prepare\+\_\+for\+\_\+position}}
+\index{prepare\+\_\+for\+\_\+position@{prepare\+\_\+for\+\_\+position}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{prepare\+\_\+for\+\_\+position()}{prepare\_for\_position()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::prepare\+\_\+for\+\_\+position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Tell handler we are going to call position() and rnd\+\_\+pos() later.
+
+This is needed for handlers that uses the primary key to find the row. In this case we have to extend the read bitmap with the primary key fields.
+
+\begin{DoxyNote}{Note}
+\+: Calling this function does not initialize the table for reading using rnd\+\_\+pos(). rnd\+\_\+init() still has to be called before rnd\+\_\+pos(). 
+\end{DoxyNote}
+\mbox{\Hypertarget{structTABLE_a76b3b77275d88395fda596ed7b99ceee}\label{structTABLE_a76b3b77275d88395fda596ed7b99ceee}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!refix\+\_\+gc\+\_\+items@{refix\+\_\+gc\+\_\+items}}
+\index{refix\+\_\+gc\+\_\+items@{refix\+\_\+gc\+\_\+items}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{refix\+\_\+gc\+\_\+items()}{refix\_gc\_items()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::refix\+\_\+gc\+\_\+items (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Fix table\textquotesingle{}s generated columns\textquotesingle{} (GC) expressions
+
+When a table is opened from the dictionary, the G\+Cs\textquotesingle{} expressions are fixed during opening (see fix\+\_\+fields\+\_\+gcol\+\_\+func()). After query execution, Item\+::cleanup() is called on them (see \mbox{\hyperlink{structTABLE_a909ba0f0bb359144360ba9ef643cb3de}{cleanup\+\_\+gc\+\_\+items()}}). When the table is opened from the table cache, the G\+Cs need to be fixed again and this function does that.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & the current thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if error, else false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a2c88ea05c0c70fc854b9c809f797f89b}\label{structTABLE_a2c88ea05c0c70fc854b9c809f797f89b}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!set\+\_\+created@{set\+\_\+created}}
+\index{set\+\_\+created@{set\+\_\+created}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{set\+\_\+created()}{set\_created()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::set\+\_\+created (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the table as \char`\"{}created\char`\"{}, and enable flags in storage engine that could not be enabled without an instantiated table. \mbox{\Hypertarget{structTABLE_a2bac1524ecf90bda2145cfc92b16b040}\label{structTABLE_a2bac1524ecf90bda2145cfc92b16b040}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!set\+\_\+deleted@{set\+\_\+deleted}}
+\index{set\+\_\+deleted@{set\+\_\+deleted}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{set\+\_\+deleted()}{set\_deleted()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::set\+\_\+deleted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the contents of table to be \char`\"{}deleted\char`\"{}, ie \char`\"{}not created\char`\"{}, after having deleted the contents. \mbox{\Hypertarget{structTABLE_a367a4243ea58d8fe6d1df7c27fd8741b}\label{structTABLE_a367a4243ea58d8fe6d1df7c27fd8741b}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!update\+\_\+compressed\+\_\+columns\+\_\+info@{update\+\_\+compressed\+\_\+columns\+\_\+info}}
+\index{update\+\_\+compressed\+\_\+columns\+\_\+info@{update\+\_\+compressed\+\_\+columns\+\_\+info}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{update\+\_\+compressed\+\_\+columns\+\_\+info()}{update\_compressed\_columns\_info()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+::update\+\_\+compressed\+\_\+columns\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ \&}]{fields }\end{DoxyParamCaption})}
+
+Updates zip\+\_\+dict\+\_\+name in the \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}\textquotesingle{}s field definitions based on the values from the supplied list of \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} objects. \mbox{\Hypertarget{structTABLE_aded373553a351dbb53ae979e21aacd48}\label{structTABLE_aded373553a351dbb53ae979e21aacd48}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!update\+\_\+const\+\_\+key\+\_\+parts@{update\+\_\+const\+\_\+key\+\_\+parts}}
+\index{update\+\_\+const\+\_\+key\+\_\+parts@{update\+\_\+const\+\_\+key\+\_\+parts}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{update\+\_\+const\+\_\+key\+\_\+parts()}{update\_const\_key\_parts()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+::update\+\_\+const\+\_\+key\+\_\+parts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{conds }\end{DoxyParamCaption})}
+
+Update T\+A\+B\+L\+E\+::const\+\_\+key\+\_\+parts for single table U\+P\+D\+A\+T\+E/\+D\+E\+L\+E\+TE query
+
+
+\begin{DoxyParams}{Parameters}
+{\em conds} & W\+H\+E\+RE clause expression\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & error (O\+OM) \\
+\hline
+{\em F\+A\+L\+SE} & success\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Set const\+\_\+key\+\_\+parts bits if key fields are equal to constants in the W\+H\+E\+RE expression. 
+\end{DoxyNote}
+\mbox{\Hypertarget{structTABLE_a844377a21852fe7925a6a7248fc2bce4}\label{structTABLE_a844377a21852fe7925a6a7248fc2bce4}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!visible\+\_\+field\+\_\+count@{visible\+\_\+field\+\_\+count}}
+\index{visible\+\_\+field\+\_\+count@{visible\+\_\+field\+\_\+count}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{visible\+\_\+field\+\_\+count()}{visible\_field\_count()}}
+{\footnotesize\ttfamily uint T\+A\+B\+L\+E\+::visible\+\_\+field\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+count of visible fields 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE_a81f6a41f3ec445d4b029f067b90d1ddd}\label{structTABLE_a81f6a41f3ec445d4b029f067b90d1ddd}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!visible\+\_\+field\+\_\+ptr@{visible\+\_\+field\+\_\+ptr}}
+\index{visible\+\_\+field\+\_\+ptr@{visible\+\_\+field\+\_\+ptr}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{visible\+\_\+field\+\_\+ptr()}{visible\_field\_ptr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField}{Field}}$\ast$$\ast$ T\+A\+B\+L\+E\+::visible\+\_\+field\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+first non-\/hidden column 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structTABLE_ae97224c2b47679281629de05a4155a71}\label{structTABLE_ae97224c2b47679281629de05a4155a71}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!blob\+\_\+storage@{blob\+\_\+storage}}
+\index{blob\+\_\+storage@{blob\+\_\+storage}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{blob\+\_\+storage}{blob\_storage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBlob__mem__storage}{Blob\+\_\+mem\+\_\+storage}}$\ast$ T\+A\+B\+L\+E\+::blob\+\_\+storage}
+
+Initialized in \mbox{\hyperlink{classItem__func__group__concat_a5c268b187518bc006184424a74a5113b}{Item\+\_\+func\+\_\+group\+\_\+concat\+::setup}} for appropriate temporary table if G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+AT is used with O\+R\+D\+ER BY $\vert$ D\+I\+S\+T\+I\+N\+CT and B\+L\+OB field count $>$ 0. \mbox{\Hypertarget{structTABLE_adc4c495f334d7d4f3822800df766f246}\label{structTABLE_adc4c495f334d7d4f3822800df766f246}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert@{def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert}}
+\index{def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert@{def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert}{def\_fields\_set\_during\_insert}}
+{\footnotesize\ttfamily M\+Y\+\_\+\+B\+I\+T\+M\+AP T\+A\+B\+L\+E\+::def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert}
+
+\mbox{\hyperlink{classBitmap}{Bitmap}} of table fields (columns), which are explicitly set in the I\+N\+S\+E\+RT I\+N\+TO statement. It is declared here to avoid memory allocation on M\+E\+M\+\_\+\+R\+O\+OT).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structTABLE_a409fb1cb388b91a9bccf07d9e5cea8c6}{fields\+\_\+set\+\_\+during\+\_\+insert}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structTABLE_a409fb1cb388b91a9bccf07d9e5cea8c6}\label{structTABLE_a409fb1cb388b91a9bccf07d9e5cea8c6}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!fields\+\_\+set\+\_\+during\+\_\+insert@{fields\+\_\+set\+\_\+during\+\_\+insert}}
+\index{fields\+\_\+set\+\_\+during\+\_\+insert@{fields\+\_\+set\+\_\+during\+\_\+insert}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{fields\+\_\+set\+\_\+during\+\_\+insert}{fields\_set\_during\_insert}}
+{\footnotesize\ttfamily M\+Y\+\_\+\+B\+I\+T\+M\+AP$\ast$ T\+A\+B\+L\+E\+::fields\+\_\+set\+\_\+during\+\_\+insert}
+
+A pointer to the bitmap of table fields (columns), which are explicitly set in the I\+N\+S\+E\+RT I\+N\+TO statement.
+
+fields\+\_\+set\+\_\+during\+\_\+insert points to def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert for base (non-\/temporary) tables. In other cases, it is N\+U\+LL. Triggers can not be defined for temporary tables, so this bitmap does not matter for temporary tables.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structTABLE_adc4c495f334d7d4f3822800df766f246}{def\+\_\+fields\+\_\+set\+\_\+during\+\_\+insert}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structTABLE_aaeda0a79564d3f6d473cd77f155e16cb}\label{structTABLE_aaeda0a79564d3f6d473cd77f155e16cb}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!force\+\_\+index\+\_\+group@{force\+\_\+index\+\_\+group}}
+\index{force\+\_\+index\+\_\+group@{force\+\_\+index\+\_\+group}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{force\+\_\+index\+\_\+group}{force\_index\_group}}
+{\footnotesize\ttfamily my\+\_\+bool T\+A\+B\+L\+E\+::force\+\_\+index\+\_\+group}
+
+Flag set when the statement contains F\+O\+R\+CE I\+N\+D\+EX F\+OR G\+R\+O\+UP BY See \mbox{\hyperlink{structTABLE__LIST_a088e2115774d6bc3dbc2d11d5db45a93}{T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::process\+\_\+index\+\_\+hints()}}. \mbox{\Hypertarget{structTABLE_a5555a069b95c932eeaa61b78313ddbf7}\label{structTABLE_a5555a069b95c932eeaa61b78313ddbf7}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!force\+\_\+index\+\_\+order@{force\+\_\+index\+\_\+order}}
+\index{force\+\_\+index\+\_\+order@{force\+\_\+index\+\_\+order}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{force\+\_\+index\+\_\+order}{force\_index\_order}}
+{\footnotesize\ttfamily my\+\_\+bool T\+A\+B\+L\+E\+::force\+\_\+index\+\_\+order}
+
+Flag set when the statement contains F\+O\+R\+CE I\+N\+D\+EX F\+OR O\+R\+D\+ER BY See \mbox{\hyperlink{structTABLE__LIST_a088e2115774d6bc3dbc2d11d5db45a93}{T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::process\+\_\+index\+\_\+hints()}}. \mbox{\Hypertarget{structTABLE_a4580bb49e147af8adb714508a1891acb}\label{structTABLE_a4580bb49e147af8adb714508a1891acb}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!key\+\_\+read@{key\+\_\+read}}
+\index{key\+\_\+read@{key\+\_\+read}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{key\+\_\+read}{key\_read}}
+{\footnotesize\ttfamily my\+\_\+bool T\+A\+B\+L\+E\+::key\+\_\+read}
+
+If set, the optimizer has found that row retrieval should access index tree only. \mbox{\Hypertarget{structTABLE_a3cfec9aee859fac059aa0f7cbecfbc92}\label{structTABLE_a3cfec9aee859fac059aa0f7cbecfbc92}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!m\+\_\+needs\+\_\+reopen@{m\+\_\+needs\+\_\+reopen}}
+\index{m\+\_\+needs\+\_\+reopen@{m\+\_\+needs\+\_\+reopen}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{m\+\_\+needs\+\_\+reopen}{m\_needs\_reopen}}
+{\footnotesize\ttfamily my\+\_\+bool T\+A\+B\+L\+E\+::m\+\_\+needs\+\_\+reopen}
+
+This table must be reopened and is not to be reused. N\+O\+TE\+: The \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} will not be reopened during L\+O\+CK T\+A\+B\+L\+ES in close\+\_\+thread\+\_\+tables!!! \mbox{\Hypertarget{structTABLE_aa76fd5e13a8b5101a247413701978730}\label{structTABLE_aa76fd5e13a8b5101a247413701978730}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!mem\+\_\+root@{mem\+\_\+root}}
+\index{mem\+\_\+root@{mem\+\_\+root}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{mem\+\_\+root}{mem\_root}}
+{\footnotesize\ttfamily M\+E\+M\+\_\+\+R\+O\+OT T\+A\+B\+L\+E\+::mem\+\_\+root}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000132}{Todo}}]This member should not be declared in-\/line. That makes it impossible for any function that does memory allocation to take a const reference to a \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object. \end{DoxyRefDesc}
+\mbox{\Hypertarget{structTABLE_af5b5d196e9820dbb42d6bd2a2524b801}\label{structTABLE_af5b5d196e9820dbb42d6bd2a2524b801}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!no\+\_\+keyread@{no\+\_\+keyread}}
+\index{no\+\_\+keyread@{no\+\_\+keyread}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{no\+\_\+keyread}{no\_keyread}}
+{\footnotesize\ttfamily my\+\_\+bool T\+A\+B\+L\+E\+::no\+\_\+keyread}
+
+Certain statements which need the full row, set this to ban index-\/only access. \mbox{\Hypertarget{structTABLE_a5b99d728b08a795783c2a5b0a1c997f7}\label{structTABLE_a5b99d728b08a795783c2a5b0a1c997f7}} 
+\index{T\+A\+B\+LE@{T\+A\+B\+LE}!no\+\_\+replicate@{no\+\_\+replicate}}
+\index{no\+\_\+replicate@{no\+\_\+replicate}!T\+A\+B\+LE@{T\+A\+B\+LE}}
+\subsubsection{\texorpdfstring{no\+\_\+replicate}{no\_replicate}}
+{\footnotesize\ttfamily my\+\_\+bool T\+A\+B\+L\+E\+::no\+\_\+replicate}
+
+If set, indicate that the table is not replicated by the server. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classSql__cmd__delete}{}\section{Sql\+\_\+cmd\+\_\+delete Class Reference}
+\label{classSql__cmd__delete}\index{Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}}
+Inheritance diagram for Sql\+\_\+cmd\+\_\+delete\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__delete}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__delete_ae462d171ae952267d9618dee3be4cdec}\label{classSql__cmd__delete_ae462d171ae952267d9618dee3be4cdec}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__delete_ae462d171ae952267d9618dee3be4cdec}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__delete_aa04524eb8b0ecf5f8059fdd176990781}{execute}} (T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__delete_a9605fcb766fdc88c97d30ad9e02addd1}{prepared\+\_\+statement\+\_\+test}} (T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__delete_ad761a1c8d8c0412fddd38a3303986806}{prepare}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__delete_aa04524eb8b0ecf5f8059fdd176990781}\label{classSql__cmd__delete_aa04524eb8b0ecf5f8059fdd176990781}} 
+\index{Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+delete\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+\mbox{\Hypertarget{classSql__cmd__delete_ad761a1c8d8c0412fddd38a3303986806}\label{classSql__cmd__delete_ad761a1c8d8c0412fddd38a3303986806}} 
+\index{Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}!prepare@{prepare}}
+\index{prepare@{prepare}!Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily virtual bool Sql\+\_\+cmd\+\_\+delete\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Command-\/specific resolving (doesn\textquotesingle{}t include L\+E\+X\+::prepare())
+
+\begin{DoxySeeAlso}{See also}
+select\+\_\+like\+\_\+stmt\+\_\+test()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current T\+HD.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd__dml_ad395374af7ac799573ca41d87b60b977}{Sql\+\_\+cmd\+\_\+dml}}.
+
+\mbox{\Hypertarget{classSql__cmd__delete_a9605fcb766fdc88c97d30ad9e02addd1}\label{classSql__cmd__delete_a9605fcb766fdc88c97d30ad9e02addd1}} 
+\index{Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}!prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}}
+\index{prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}!Sql\+\_\+cmd\+\_\+delete@{Sql\+\_\+cmd\+\_\+delete}}
+\subsubsection{\texorpdfstring{prepared\+\_\+statement\+\_\+test()}{prepared\_statement\_test()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+delete\+::prepared\+\_\+statement\+\_\+test (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Validate D\+E\+L\+E\+TE statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & current thread\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error, error message is set in T\+HD \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd__dml_af36dc69e855d0e48d0e79002576907a4}{Sql\+\_\+cmd\+\_\+dml}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+delete.\+h\item 
+sql\+\_\+delete.\+cc\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

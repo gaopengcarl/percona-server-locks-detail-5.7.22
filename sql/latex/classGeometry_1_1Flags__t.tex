@@ -1,0 +1,57 @@
+\hypertarget{classGeometry_1_1Flags__t}{}\section{Geometry\+:\+:Flags\+\_\+t Class Reference}
+\label{classGeometry_1_1Flags__t}\index{Geometry\+::\+Flags\+\_\+t@{Geometry\+::\+Flags\+\_\+t}}
+
+
+{\ttfamily \#include $<$spatial.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_aabc09c38cf3fb4e9923e3e00e3466845}\label{classGeometry_1_1Flags__t_aabc09c38cf3fb4e9923e3e00e3466845}} 
+{\bfseries Flags\+\_\+t} (const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&o)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_ab62f27f6be199d599c84a8ff8f81ce62}\label{classGeometry_1_1Flags__t_ab62f27f6be199d599c84a8ff8f81ce62}} 
+{\bfseries Flags\+\_\+t} (wkb\+Type type, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a699fd9e29308cfb90564fe3d54756f7c}\label{classGeometry_1_1Flags__t_a699fd9e29308cfb90564fe3d54756f7c}} 
+\mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \& {\bfseries operator=} (const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a2fc7d0da7a1a647b1638554632a1db12}\label{classGeometry_1_1Flags__t_a2fc7d0da7a1a647b1638554632a1db12}} 
+uint64 {\bfseries bo}\+:1
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a28e7446b130e112011fd4e4a75a20831}\label{classGeometry_1_1Flags__t_a28e7446b130e112011fd4e4a75a20831}} 
+uint64 {\bfseries dim}\+:2
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a210e7dbf2447a85feb55c3fb688190f5}\label{classGeometry_1_1Flags__t_a210e7dbf2447a85feb55c3fb688190f5}} 
+uint64 {\bfseries nomem}\+:1
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_afbe4385203ae8860dfaf706870a23fde}\label{classGeometry_1_1Flags__t_afbe4385203ae8860dfaf706870a23fde}} 
+uint64 {\bfseries geotype}\+:5
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a74c08b3441c93ea3ba987f3abec32516}\label{classGeometry_1_1Flags__t_a74c08b3441c93ea3ba987f3abec32516}} 
+uint64 {\bfseries nbytes}\+:30
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a7d2c07166a95d2265a30ef53cd87b789}\label{classGeometry_1_1Flags__t_a7d2c07166a95d2265a30ef53cd87b789}} 
+uint64 {\bfseries props}\+:12
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a28ac482aaf3f30ef2e5e6ea4b5d79a93}\label{classGeometry_1_1Flags__t_a28ac482aaf3f30ef2e5e6ea4b5d79a93}} 
+uint64 {\bfseries zm}\+:2
+\item 
+\mbox{\Hypertarget{classGeometry_1_1Flags__t_a9413b83407f328769922afcb1e15474f}\label{classGeometry_1_1Flags__t_a9413b83407f328769922afcb1e15474f}} 
+uint64 {\bfseries unused}\+:11
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Highest byte is stores byte order, dimension, nomem and geotype as follows\+: bo\+: byte order, 1 for little endian(ndr), 0 for big endian(xdr); Currently it must be always wkb\+\_\+ndr since it is My\+S\+QL\textquotesingle{}s portable geometry format. dimension\+: 0$\sim$3 for 1$\sim$4 dimensions; nomem\+: indicating whether this object has its own memory. If so, the memory is released when the object is destroyed. Some objects may refer to an existing W\+KB buffer and access it read only. geotype\+: stores the wkb\+Type enum numbers, at most 32 values, valid range so far\+: \mbox{[}0, 7\mbox{]} and 31.
+
+nybytes\+: takes the following 30 bits, stores number of effective and valid data bytes of current object\textquotesingle{}s wkb data.
+
+props\+: bits OR\textquotesingle{}ed for various other runtime properties of the geometry object. Bits are defined above. No properties are stored permanently, all properties here are specified/used at runtime while the \mbox{\hyperlink{classGeometry}{Geometry}} object is alive. zm\+: not used now, always be 0, i.\+e. always 2D geometries. In future, they represent Z and/or M settings, 1\+: Z, 2\+: M, 3\+: ZM. unused\+: reserved for future use, it\textquotesingle{}s unused now. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\end{DoxyCompactItemize}

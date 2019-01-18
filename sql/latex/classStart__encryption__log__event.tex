@@ -1,0 +1,53 @@
+\hypertarget{classStart__encryption__log__event}{}\section{Start\+\_\+encryption\+\_\+log\+\_\+event Class Reference}
+\label{classStart__encryption__log__event}\index{Start\+\_\+encryption\+\_\+log\+\_\+event@{Start\+\_\+encryption\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Start\+\_\+encryption\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStart__encryption__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a4412bb2a90ba7fa067c5089e9042fd6a}\label{classStart__encryption__log__event_a4412bb2a90ba7fa067c5089e9042fd6a}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a93f1e9a2b959d00104e5c9d8b3d9ec8d}\label{classStart__encryption__log__event_a93f1e9a2b959d00104e5c9d8b3d9ec8d}} 
+{\bfseries Start\+\_\+encryption\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a61ca5f707fac4b3ba0145f29b5adb1c6}\label{classStart__encryption__log__event_a61ca5f707fac4b3ba0145f29b5adb1c6}} 
+Log\+\_\+event\+\_\+type {\bfseries get\+\_\+type\+\_\+code} ()
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a774f8995458bd22953b07d96b6fac529}\label{classStart__encryption__log__event_a774f8995458bd22953b07d96b6fac529}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a3922e517c39c9f3bfdae1cf95af9c000}\label{classStart__encryption__log__event_a3922e517c39c9f3bfdae1cf95af9c000}} 
+uint {\bfseries crypto\+\_\+scheme}
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a7e0d8026e095840b3cc24f3b2ff43d0f}\label{classStart__encryption__log__event_a7e0d8026e095840b3cc24f3b2ff43d0f}} 
+uint {\bfseries key\+\_\+version}
+\item 
+\mbox{\Hypertarget{classStart__encryption__log__event_a642038d466f8501e830570e40aedf016}\label{classStart__encryption__log__event_a642038d466f8501e830570e40aedf016}} 
+uchar {\bfseries nonce} \mbox{[}Binlog\+\_\+crypt\+\_\+data\+::\+B\+I\+N\+L\+O\+G\+\_\+\+N\+O\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classStart__encryption__log__event}{Start\+\_\+encryption\+\_\+log\+\_\+event}} marks the beginning of encrypted data (all events after this event are encrypted).
+
+It contains the cryptographic scheme used for the encryption as well as any data required to decrypt (except the actual key).
+
+For binlog cryptoscheme 1\+: key version, and nonce for iv generation. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+\hypertarget{classMDL__wait__for__graph__visitor}{}\section{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor Class Reference}
+\label{classMDL__wait__for__graph__visitor}\index{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor@{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+Inheritance diagram for M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMDL__wait__for__graph__visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__graph__visitor_a2259e75285cccd10033a2149210380e4}\label{classMDL__wait__for__graph__visitor_a2259e75285cccd10033a2149210380e4}} 
+virtual bool {\bfseries enter\+\_\+node} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$node)=0
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__graph__visitor_ada707ebe023838f7f8a92bbd05385ad5}\label{classMDL__wait__for__graph__visitor_ada707ebe023838f7f8a92bbd05385ad5}} 
+virtual void {\bfseries leave\+\_\+node} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$node)=0
+\item 
+\mbox{\Hypertarget{classMDL__wait__for__graph__visitor_ad16d349c249c3d6d2ec4959e90a04d77}\label{classMDL__wait__for__graph__visitor_ad16d349c249c3d6d2ec4959e90a04d77}} 
+virtual bool {\bfseries inspect\+\_\+edge} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$dest)=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{classMDL__wait__for__graph__visitor_ad2e6efb3798e08ce8efa992b0ccbba38}{m\+\_\+lock\+\_\+open\+\_\+count}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class for inspection of a connected subgraph of the wait-\/for graph. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMDL__wait__for__graph__visitor_ad2e6efb3798e08ce8efa992b0ccbba38}\label{classMDL__wait__for__graph__visitor_ad2e6efb3798e08ce8efa992b0ccbba38}} 
+\index{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor@{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}!m\+\_\+lock\+\_\+open\+\_\+count@{m\+\_\+lock\+\_\+open\+\_\+count}}
+\index{m\+\_\+lock\+\_\+open\+\_\+count@{m\+\_\+lock\+\_\+open\+\_\+count}!M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor@{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}}
+\subsubsection{\texorpdfstring{m\+\_\+lock\+\_\+open\+\_\+count}{m\_lock\_open\_count}}
+{\footnotesize\ttfamily uint M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor\+::m\+\_\+lock\+\_\+open\+\_\+count}
+
+X\+XX, hack\+: During deadlock search, we may need to inspect T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+R\+Es and acquire L\+O\+C\+K\+\_\+open. Since L\+O\+C\+K\+\_\+open is not a recursive mutex, count here how many times we \char`\"{}took\char`\"{} it (but only take and release once). Not using a native recursive mutex or rwlock in 5.\+5 for L\+O\+C\+K\+\_\+open since it has significant performance impacts. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\item 
+mdl.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,101 @@
+\hypertarget{classMDL__wait}{}\section{M\+D\+L\+\_\+wait Class Reference}
+\label{classMDL__wait}\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__wait_a737e84aa2586749f901d7880e7534a03}\label{classMDL__wait_a737e84aa2586749f901d7880e7534a03}} 
+enum {\bfseries enum\+\_\+wait\+\_\+status} \{ \newline
+{\bfseries E\+M\+P\+TY} = 0, 
+{\bfseries G\+R\+A\+N\+T\+ED}, 
+{\bfseries V\+I\+C\+T\+IM}, 
+{\bfseries T\+I\+M\+E\+O\+UT}, 
+\newline
+{\bfseries K\+I\+L\+L\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDL__wait_ac850dcbdaddab5440bdf2033256559a2}{M\+D\+L\+\_\+wait}} ()
+\item 
+\mbox{\hyperlink{classMDL__wait_ad75646f009b4c73a4616db585623b0f7}{$\sim$\+M\+D\+L\+\_\+wait}} ()
+\item 
+bool \mbox{\hyperlink{classMDL__wait_a5d2a1397b1b462b9a7308ba573add0a8}{set\+\_\+status}} (enum\+\_\+wait\+\_\+status result\+\_\+arg)
+\item 
+enum\+\_\+wait\+\_\+status \mbox{\hyperlink{classMDL__wait_af26291f41cc59cb379fb593f8af4bc2c}{get\+\_\+status}} ()
+\item 
+void \mbox{\hyperlink{classMDL__wait_ad31def1340b5e95c79479c53c1c2af84}{reset\+\_\+status}} ()
+\item 
+enum\+\_\+wait\+\_\+status \mbox{\hyperlink{classMDL__wait_ae5a547f550dbc3ef77d14f16e7cad58b}{timed\+\_\+wait}} (\mbox{\hyperlink{classMDL__context__owner}{M\+D\+L\+\_\+context\+\_\+owner}} $\ast$owner, struct timespec $\ast$abs\+\_\+timeout, bool signal\+\_\+timeout, const P\+S\+I\+\_\+stage\+\_\+info $\ast$wait\+\_\+state\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A reliable way to wait on an M\+DL lock. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMDL__wait_ac850dcbdaddab5440bdf2033256559a2}\label{classMDL__wait_ac850dcbdaddab5440bdf2033256559a2}} 
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\subsubsection{\texorpdfstring{M\+D\+L\+\_\+wait()}{MDL\_wait()}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+wait\+::\+M\+D\+L\+\_\+wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construct an empty wait slot. \mbox{\Hypertarget{classMDL__wait_ad75646f009b4c73a4616db585623b0f7}\label{classMDL__wait_ad75646f009b4c73a4616db585623b0f7}} 
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!````~M\+D\+L\+\_\+wait@{$\sim$\+M\+D\+L\+\_\+wait}}
+\index{````~M\+D\+L\+\_\+wait@{$\sim$\+M\+D\+L\+\_\+wait}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\subsubsection{\texorpdfstring{$\sim$\+M\+D\+L\+\_\+wait()}{~MDL\_wait()}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+wait\+::$\sim$\+M\+D\+L\+\_\+wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroy system resources. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__wait_af26291f41cc59cb379fb593f8af4bc2c}\label{classMDL__wait_af26291f41cc59cb379fb593f8af4bc2c}} 
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!get\+\_\+status@{get\+\_\+status}}
+\index{get\+\_\+status@{get\+\_\+status}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\subsubsection{\texorpdfstring{get\+\_\+status()}{get\_status()}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+wait\+::enum\+\_\+wait\+\_\+status M\+D\+L\+\_\+wait\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Query the current value of the wait slot. \mbox{\Hypertarget{classMDL__wait_ad31def1340b5e95c79479c53c1c2af84}\label{classMDL__wait_ad31def1340b5e95c79479c53c1c2af84}} 
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!reset\+\_\+status@{reset\+\_\+status}}
+\index{reset\+\_\+status@{reset\+\_\+status}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\subsubsection{\texorpdfstring{reset\+\_\+status()}{reset\_status()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+wait\+::reset\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the current value of the wait slot. \mbox{\Hypertarget{classMDL__wait_a5d2a1397b1b462b9a7308ba573add0a8}\label{classMDL__wait_a5d2a1397b1b462b9a7308ba573add0a8}} 
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!set\+\_\+status@{set\+\_\+status}}
+\index{set\+\_\+status@{set\+\_\+status}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\subsubsection{\texorpdfstring{set\+\_\+status()}{set\_status()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+wait\+::set\+\_\+status (\begin{DoxyParamCaption}\item[{enum\+\_\+wait\+\_\+status}]{status\+\_\+arg }\end{DoxyParamCaption})}
+
+Set the status unless it\textquotesingle{}s already set. Return F\+A\+L\+SE if set, T\+R\+UE otherwise. \mbox{\Hypertarget{classMDL__wait_ae5a547f550dbc3ef77d14f16e7cad58b}\label{classMDL__wait_ae5a547f550dbc3ef77d14f16e7cad58b}} 
+\index{M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}!timed\+\_\+wait@{timed\+\_\+wait}}
+\index{timed\+\_\+wait@{timed\+\_\+wait}!M\+D\+L\+\_\+wait@{M\+D\+L\+\_\+wait}}
+\subsubsection{\texorpdfstring{timed\+\_\+wait()}{timed\_wait()}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+wait\+::enum\+\_\+wait\+\_\+status M\+D\+L\+\_\+wait\+::timed\+\_\+wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context__owner}{M\+D\+L\+\_\+context\+\_\+owner}} $\ast$}]{owner,  }\item[{struct timespec $\ast$}]{abs\+\_\+timeout,  }\item[{bool}]{set\+\_\+status\+\_\+on\+\_\+timeout,  }\item[{const P\+S\+I\+\_\+stage\+\_\+info $\ast$}]{wait\+\_\+state\+\_\+name }\end{DoxyParamCaption})}
+
+Wait for the status to be assigned to this wait slot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & M\+DL context owner. \\
+\hline
+{\em abs\+\_\+timeout} & Absolute time after which waiting should stop. \\
+\hline
+{\em set\+\_\+status\+\_\+on\+\_\+timeout} & T\+R\+UE -\/ If in case of timeout waiting context should close the wait slot by sending T\+I\+M\+E\+O\+UT to itself. F\+A\+L\+SE -\/ Otherwise. \\
+\hline
+{\em wait\+\_\+state\+\_\+name} & Thread state name to be set for duration of wait.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Signal posted. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\item 
+mdl.\+cc\end{DoxyCompactItemize}

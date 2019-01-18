@@ -1,0 +1,50 @@
+\hypertarget{classDelete__rows__log__event__old}{}\section{Delete\+\_\+rows\+\_\+log\+\_\+event\+\_\+old Class Reference}
+\label{classDelete__rows__log__event__old}\index{Delete\+\_\+rows\+\_\+log\+\_\+event\+\_\+old@{Delete\+\_\+rows\+\_\+log\+\_\+event\+\_\+old}}
+
+
+{\ttfamily \#include $<$log\+\_\+event\+\_\+old.\+h$>$}
+
+Inheritance diagram for Delete\+\_\+rows\+\_\+log\+\_\+event\+\_\+old\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDelete__rows__log__event__old}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event__old_afb9299d1d0b17e7dca9fbfdd3336e631}\label{classDelete__rows__log__event__old_afb9299d1d0b17e7dca9fbfdd3336e631}} 
+enum \{ {\bfseries T\+Y\+P\+E\+\_\+\+C\+O\+DE} = binary\+\_\+log\+:\+:P\+R\+E\+\_\+\+G\+A\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event__old_a6996e013bb189cb49a1af96f903f2b29}\label{classDelete__rows__log__event__old_a6996e013bb189cb49a1af96f903f2b29}} 
+{\bfseries Delete\+\_\+rows\+\_\+log\+\_\+event\+\_\+old} (T\+HD $\ast$, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$, ulong, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, bool is\+\_\+transactional)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event__old_accd11a0bcdfd1293f87dfeb18364e358}\label{classDelete__rows__log__event__old_accd11a0bcdfd1293f87dfeb18364e358}} 
+static bool {\bfseries binlog\+\_\+row\+\_\+logging\+\_\+function} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool is\+\_\+transactional, const uchar $\ast$before\+\_\+record, const uchar $\ast$after\+\_\+record M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event__old_aaf0d6b6faba7094598e5d565b340dfd7}\label{classDelete__rows__log__event__old_aaf0d6b6faba7094598e5d565b340dfd7}} 
+uchar $\ast$ {\bfseries m\+\_\+after\+\_\+image}
+\item 
+\mbox{\Hypertarget{classDelete__rows__log__event__old_a3fedb29a85d8b84e6cafc3a15c6818cf}\label{classDelete__rows__log__event__old_a3fedb29a85d8b84e6cafc3a15c6818cf}} 
+uchar $\ast$ {\bfseries m\+\_\+memory}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Old class for binlog events that delete existing rows from a table (event type code P\+R\+E\+\_\+\+G\+A\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT). Such events are never produced by this version of the server, but they may be read from a relay log created by an old server. New servers create events of class \mbox{\hyperlink{classDelete__rows__log__event}{Delete\+\_\+rows\+\_\+log\+\_\+event}} (event type code D\+E\+L\+E\+T\+E\+\_\+\+R\+O\+W\+S\+\_\+\+E\+V\+E\+NT) instead. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event__old_8h}{log\+\_\+event\+\_\+old.\+h}}\item 
+log\+\_\+event\+\_\+old.\+cc\end{DoxyCompactItemize}

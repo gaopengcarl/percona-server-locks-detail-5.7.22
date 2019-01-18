@@ -1,0 +1,328 @@
+\hypertarget{classField__json}{}\section{Field\+\_\+json Class Reference}
+\label{classField__json}\index{Field\+\_\+json@{Field\+\_\+json}}
+
+
+A field that stores a J\+S\+ON value.  
+
+
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for Field\+\_\+json\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classField__json}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__json_ac75f08dce481c4b2bbe7a459e8310ef9}\label{classField__json_ac75f08dce481c4b2bbe7a459e8310ef9}} 
+{\bfseries Field\+\_\+json} (uchar $\ast$ptr\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uint null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share, uint blob\+\_\+pack\+\_\+length)
+\item 
+\mbox{\Hypertarget{classField__json_a9de674b8e75a87ecd91880a2350e9faf}\label{classField__json_a9de674b8e75a87ecd91880a2350e9faf}} 
+{\bfseries Field\+\_\+json} (uint32 len\+\_\+arg, bool maybe\+\_\+null\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__json_a5a9e31ff7a6ed0f789747e7ef79a000f}\label{classField__json_a5a9e31ff7a6ed0f789747e7ef79a000f}} 
+enum\+\_\+field\+\_\+types {\bfseries type} () const
+\item 
+void \mbox{\hyperlink{classField__json_acced64a853ec0146230e4152054a4b65}{sql\+\_\+type}} (String \&str) const
+\item 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ \mbox{\hyperlink{classField__json_a1ea43b4e58fea6167615f66a74bdda5e}{charset}} () const
+\item 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ \mbox{\hyperlink{classField__json_a7a95dcafef3f774f2636f230996b0849}{sort\+\_\+charset}} () const
+\item 
+bool \mbox{\hyperlink{classField__json_a935f845046fd5b3e0a031e736cca69e2}{has\+\_\+charset}} () const
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_a158c3f1c43417d7f5d4aa8cbd572aaf5}{store}} (const char $\ast$to, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$\mbox{\hyperlink{classField__json_a1ea43b4e58fea6167615f66a74bdda5e}{charset}})
+\item 
+\mbox{\Hypertarget{classField__json_a2242a237a4e212ba5eadba6f5053df3c}\label{classField__json_a2242a237a4e212ba5eadba6f5053df3c}} 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_a2242a237a4e212ba5eadba6f5053df3c}{store}} (double nr)
+\begin{DoxyCompactList}\small\item\em Store a double in a J\+S\+ON field. Will raise an error for now. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classField__json_aed2d12d164f33b14f5c085795e47672a}\label{classField__json_aed2d12d164f33b14f5c085795e47672a}} 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_aed2d12d164f33b14f5c085795e47672a}{store}} (longlong nr, bool unsigned\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Store an integer in a J\+S\+ON field. Will raise an error for now. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classField__json_a979954944f1ee5334945f83135acdb8e}\label{classField__json_a979954944f1ee5334945f83135acdb8e}} 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_a979954944f1ee5334945f83135acdb8e}{store\+\_\+decimal}} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Store a decimal in a J\+S\+ON field. Will raise an error for now. \end{DoxyCompactList}\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_a7340a06a3ea62eaab391a9187ab68414}{store\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$json)
+\item 
+\mbox{\Hypertarget{classField__json_a5731d3f5f045aa66468f6f9242c920a0}\label{classField__json_a5731d3f5f045aa66468f6f9242c920a0}} 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_a5731d3f5f045aa66468f6f9242c920a0}{store\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint8 dec\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em Store a T\+I\+ME value in a J\+S\+ON field. Will raise an error for now. \end{DoxyCompactList}\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__json_a14e5d7ad204fd25768140bff8fa7aafa}{store}} (\mbox{\hyperlink{classField__json}{Field\+\_\+json}} $\ast$field)
+\item 
+bool \mbox{\hyperlink{classField__json_ad3cb25bf3b17303a553ebbeec77b503c}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr)
+\item 
+longlong \mbox{\hyperlink{classField__json_ad4ef5b9c29c33a94bbd24a324cd3b3d1}{val\+\_\+int}} ()
+\item 
+double \mbox{\hyperlink{classField__json_a762fad5750af247d8d2ebbc3dedf2113}{val\+\_\+real}} ()
+\item 
+String $\ast$ \mbox{\hyperlink{classField__json_a1a8e0ba0f036d69c1b7567fcf7d9493a}{val\+\_\+str}} (String $\ast$tmp, String $\ast$str)
+\item 
+\mbox{\Hypertarget{classField__json_a850a4631c2a02d1c0424b900acc455ab}\label{classField__json_a850a4631c2a02d1c0424b900acc455ab}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$m)
+\item 
+\mbox{\Hypertarget{classField__json_a0b5b91977d62e5dc1c552ad74a48be71}\label{classField__json_a0b5b91977d62e5dc1c552ad74a48be71}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+\mbox{\Hypertarget{classField__json_ade8e49ba299c2580c4189e99ecdaf4aa}\label{classField__json_ade8e49ba299c2580c4189e99ecdaf4aa}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classField__json_a11344951b6e0e08fd89726b23b0c8426}\label{classField__json_a11344951b6e0e08fd89726b23b0c8426}} 
+\mbox{\hyperlink{classField__json}{Field\+\_\+json}} $\ast$ \mbox{\hyperlink{classField__json_a11344951b6e0e08fd89726b23b0c8426}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em Create a shallow clone of this field in the specified M\+E\+M\+\_\+\+R\+O\+OT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classField__json_a5a39dbb204102637da9435f0fc380b52}\label{classField__json_a5a39dbb204102637da9435f0fc380b52}} 
+\mbox{\hyperlink{classField__json}{Field\+\_\+json}} $\ast$ \mbox{\hyperlink{classField__json_a5a39dbb204102637da9435f0fc380b52}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Create a shallow clone of this field. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classField__json_a12d3ba38a6c987f627dce55780947578}{is\+\_\+equal}} (\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $\ast$new\+\_\+field)
+\item 
+\mbox{\Hypertarget{classField__json_acb15d1d878cf54040194c61e5d513d89}\label{classField__json_acb15d1d878cf54040194c61e5d513d89}} 
+Item\+\_\+result {\bfseries cast\+\_\+to\+\_\+int\+\_\+type} () const
+\item 
+void \mbox{\hyperlink{classField__json_a601df7458aaa98d5c1f80d5bc2d35f3d}{make\+\_\+sort\+\_\+key}} (uchar $\ast$to, size\+\_\+t length)
+\item 
+ulonglong \mbox{\hyperlink{classField__json_ad9ff7288981a5d476df6b8362d4891cd}{make\+\_\+hash\+\_\+key}} (ulonglong $\ast$hash\+\_\+val)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A field that stores a J\+S\+ON value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__json_a1ea43b4e58fea6167615f66a74bdda5e}\label{classField__json_a1ea43b4e58fea6167615f66a74bdda5e}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!charset@{charset}}
+\index{charset@{charset}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{charset()}{charset()}}
+{\footnotesize\ttfamily const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO$\ast$ Field\+\_\+json\+::charset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return a text charset so that string functions automatically convert the field value to string and treat it as a non-\/binary string. 
+
+Reimplemented from \mbox{\hyperlink{classField__str}{Field\+\_\+str}}.
+
+\mbox{\Hypertarget{classField__json_a935f845046fd5b3e0a031e736cca69e2}\label{classField__json_a935f845046fd5b3e0a031e736cca69e2}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!has\+\_\+charset@{has\+\_\+charset}}
+\index{has\+\_\+charset@{has\+\_\+charset}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{has\+\_\+charset()}{has\_charset()}}
+{\footnotesize\ttfamily bool Field\+\_\+json\+::has\+\_\+charset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+J\+S\+ON columns don\textquotesingle{}t have an associated charset. Returning false here prevents S\+H\+OW C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} from attaching a C\+H\+A\+R\+A\+C\+T\+ER S\+ET clause to the column. 
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_a12d3ba38a6c987f627dce55780947578}\label{classField__json_a12d3ba38a6c987f627dce55780947578}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!is\+\_\+equal@{is\+\_\+equal}}
+\index{is\+\_\+equal@{is\+\_\+equal}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{is\+\_\+equal()}{is\_equal()}}
+{\footnotesize\ttfamily uint Field\+\_\+json\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $\ast$}]{new\+\_\+field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if a new field is compatible with this one. 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+field} & the new field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if new\+\_\+field is compatible with this field, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob_aad2a7c5fe21d9c7cfd20aeea52c58ed5}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_ad9ff7288981a5d476df6b8362d4891cd}\label{classField__json_ad9ff7288981a5d476df6b8362d4891cd}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!make\+\_\+hash\+\_\+key@{make\+\_\+hash\+\_\+key}}
+\index{make\+\_\+hash\+\_\+key@{make\+\_\+hash\+\_\+key}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{make\+\_\+hash\+\_\+key()}{make\_hash\_key()}}
+{\footnotesize\ttfamily ulonglong Field\+\_\+json\+::make\+\_\+hash\+\_\+key (\begin{DoxyParamCaption}\item[{ulonglong $\ast$}]{hash\+\_\+val }\end{DoxyParamCaption})}
+
+Make a hash key that can be used by \mbox{\hyperlink{sql__executor_8cc}{sql\+\_\+executor.\+cc}}/unique\+\_\+hash in order to support S\+E\+L\+E\+CT D\+I\+S\+T\+I\+N\+CT
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hash\+\_\+val} & An initial hash value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classField__json_a601df7458aaa98d5c1f80d5bc2d35f3d}\label{classField__json_a601df7458aaa98d5c1f80d5bc2d35f3d}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!make\+\_\+sort\+\_\+key@{make\+\_\+sort\+\_\+key}}
+\index{make\+\_\+sort\+\_\+key@{make\+\_\+sort\+\_\+key}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{make\+\_\+sort\+\_\+key()}{make\_sort\_key()}}
+{\footnotesize\ttfamily void Field\+\_\+json\+::make\+\_\+sort\+\_\+key (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buff,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a copy of the current value in the record buffer, suitable for sorting using byte-\/by-\/byte comparison. Integers are always in big-\/endian regardless of hardware architecture. At most length bytes are written into the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buff} & The buffer, assumed to be at least length bytes.\\
+\hline
+{\em length} & Number of bytes to write. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob_adfbed1cc92f6593bc9f5961cb138b5a8}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_a7a95dcafef3f774f2636f230996b0849}\label{classField__json_a7a95dcafef3f774f2636f230996b0849}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!sort\+\_\+charset@{sort\+\_\+charset}}
+\index{sort\+\_\+charset@{sort\+\_\+charset}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{sort\+\_\+charset()}{sort\_charset()}}
+{\footnotesize\ttfamily const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO$\ast$ Field\+\_\+json\+::sort\+\_\+charset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Sort should treat the field as binary and not attempt any conversions. 
+
+Reimplemented from \mbox{\hyperlink{classField}{Field}}.
+
+\mbox{\Hypertarget{classField__json_acced64a853ec0146230e4152054a4b65}\label{classField__json_acced64a853ec0146230e4152054a4b65}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!sql\+\_\+type@{sql\+\_\+type}}
+\index{sql\+\_\+type@{sql\+\_\+type}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{sql\+\_\+type()}{sql\_type()}}
+{\footnotesize\ttfamily void Field\+\_\+json\+::sql\+\_\+type (\begin{DoxyParamCaption}\item[{String \&}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the type of this field (json). 
+\begin{DoxyParams}{Parameters}
+{\em str} & the string that receives the type \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_a158c3f1c43417d7f5d4aa8cbd572aaf5}\label{classField__json_a158c3f1c43417d7f5d4aa8cbd572aaf5}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!store@{store}}
+\index{store@{store}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{store()}{store()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+json\+::store (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{length,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Store data in this J\+S\+ON field.
+
+J\+S\+ON data is usually stored using \mbox{\hyperlink{classField__json_a14e5d7ad204fd25768140bff8fa7aafa}{store(\+Field\+\_\+json$\ast$)}} or \mbox{\hyperlink{classField__json_a7340a06a3ea62eaab391a9187ab68414}{store\+\_\+json()}}, so this function will only be called if non-\/J\+S\+ON data is attempted stored in a J\+S\+ON field. This results in an error in most cases.
+
+It will attempt to parse the string (unless it\textquotesingle{}s binary) as J\+S\+ON text, and store a binary representation of J\+S\+ON document if the string could be parsed.
+
+Note that we override \mbox{\hyperlink{classField__json_a158c3f1c43417d7f5d4aa8cbd572aaf5}{store()}} and not store\+\_\+internal() because Field\+\_\+blob\+::store() contains logic that bypasses store\+\_\+internal() in some cases we care about. In particular\+:
+
+
+\begin{DoxyItemize}
+\item When supplied an empty string, we want to raise a J\+S\+ON syntax error instead of silently inserting an empty byte string.
+\item When called from G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+AT with O\+R\+D\+ER BY or D\+I\+S\+T\+I\+N\+CT, we want to do the same data conversion as usual, whereas Field\+\_\+blob\+::store() jumps directly to Field\+\_\+blob\+::store\+\_\+to\+\_\+mem() with the unprocessed input data.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & the start of the data to be stored \\
+\hline
+{\em length} & the length of the data \\
+\hline
+{\em cs} & the character set of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero on success, non-\/zero on failure 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_a14e5d7ad204fd25768140bff8fa7aafa}\label{classField__json_a14e5d7ad204fd25768140bff8fa7aafa}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!store@{store}}
+\index{store@{store}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{store()}{store()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+json\+::store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField__json}{Field\+\_\+json}} $\ast$}]{field }\end{DoxyParamCaption})}
+
+Copy the contents of a non-\/null J\+S\+ON field into this field.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em field} & the field to copy data from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero on success, non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classField__json_a7340a06a3ea62eaab391a9187ab68414}\label{classField__json_a7340a06a3ea62eaab391a9187ab68414}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!store\+\_\+json@{store\+\_\+json}}
+\index{store\+\_\+json@{store\+\_\+json}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{store\+\_\+json()}{store\_json()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+json\+::store\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{json }\end{DoxyParamCaption})}
+
+Store a J\+S\+ON value as binary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & the J\+S\+ON value to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero on success, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classField__json_ad4ef5b9c29c33a94bbd24a324cd3b3d1}\label{classField__json_ad4ef5b9c29c33a94bbd24a324cd3b3d1}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!val\+\_\+int@{val\+\_\+int}}
+\index{val\+\_\+int@{val\+\_\+int}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+int()}{val\_int()}}
+{\footnotesize\ttfamily longlong Field\+\_\+json\+::val\+\_\+int (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the J\+S\+ON as an int if possible. This requires a J\+S\+ON scalar of suitable type.
+
+\begin{DoxyReturn}{Returns}
+the J\+S\+ON value as an int 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_ad3cb25bf3b17303a553ebbeec77b503c}\label{classField__json_ad3cb25bf3b17303a553ebbeec77b503c}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Field\+\_\+json\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{wr }\end{DoxyParamCaption})}
+
+Retrieve the field\textquotesingle{}s value as a J\+S\+ON wrapper. It there is an error, wr is not modified and we return false, else true.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em wr} & the J\+S\+ON value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a value is retrieved (or N\+U\+LL), false if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classField__json_a762fad5750af247d8d2ebbc3dedf2113}\label{classField__json_a762fad5750af247d8d2ebbc3dedf2113}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!val\+\_\+real@{val\+\_\+real}}
+\index{val\+\_\+real@{val\+\_\+real}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+real()}{val\_real()}}
+{\footnotesize\ttfamily double Field\+\_\+json\+::val\+\_\+real (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the J\+S\+ON as a double if possible. This requires a J\+S\+ON scalar of suitable type.
+
+\begin{DoxyReturn}{Returns}
+the J\+S\+ON value as a double 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__json_a1a8e0ba0f036d69c1b7567fcf7d9493a}\label{classField__json_a1a8e0ba0f036d69c1b7567fcf7d9493a}} 
+\index{Field\+\_\+json@{Field\+\_\+json}!val\+\_\+str@{val\+\_\+str}}
+\index{val\+\_\+str@{val\+\_\+str}!Field\+\_\+json@{Field\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+str()}{val\_str()}}
+{\footnotesize\ttfamily String $\ast$ Field\+\_\+json\+::val\+\_\+str (\begin{DoxyParamCaption}\item[{String $\ast$}]{tmp,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the J\+S\+ON value stored in this field as text
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em buf1} & string buffer for converting J\+S\+ON value to string \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em buf2} & unused \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

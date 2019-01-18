@@ -1,0 +1,58 @@
+\hypertarget{item__geofunc__setops_8cc}{}\section{item\+\_\+geofunc\+\_\+setops.\+cc File Reference}
+\label{item__geofunc__setops_8cc}\index{item\+\_\+geofunc\+\_\+setops.\+cc@{item\+\_\+geofunc\+\_\+setops.\+cc}}
+
+
+This file defines implementations of G\+IS set operation functions.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+geofunc\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$set$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBG__setop__wrapper}{B\+G\+\_\+setop\+\_\+wrapper$<$ Geom\+\_\+types $>$}}
+\item 
+class \mbox{\hyperlink{classSingleton__extractor}{Singleton\+\_\+extractor}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__geofunc__setops_8cc_af62037de6879d90c10c398978d9d076b}\label{item__geofunc__setops_8cc_af62037de6879d90c10c398978d9d076b}} 
+\#define {\bfseries B\+G\+O\+P\+C\+A\+LL}(Geo\+Out\+Type,  geom\+\_\+out,  bgop,  Geo\+Type1,  g1,  Geo\+Type2,  g2,  wkbres,  nullval)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__geofunc__setops_8cc_aad4a4be5aaf9cfd80a57e07c94cb0d54}\label{item__geofunc__setops_8cc_aad4a4be5aaf9cfd80a57e07c94cb0d54}} 
+Geometry\+::wkb\+Type {\bfseries base\+\_\+type} (Geometry\+::wkb\+Type gt)
+\item 
+bool \mbox{\hyperlink{item__geofunc__setops_8cc_a351ac61f5e86431fd379a7c77d64e432}{simplify\+\_\+multi\+\_\+geometry}} (String $\ast$str, String $\ast$result\+\_\+buffer)
+\item 
+\mbox{\Hypertarget{item__geofunc__setops_8cc_accf37d8f09ad08bd535b5573581566be}\label{item__geofunc__setops_8cc_accf37d8f09ad08bd535b5573581566be}} 
+bool {\bfseries is\+\_\+areal} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines implementations of G\+IS set operation functions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__geofunc__setops_8cc_a351ac61f5e86431fd379a7c77d64e432}\label{item__geofunc__setops_8cc_a351ac61f5e86431fd379a7c77d64e432}} 
+\index{item\+\_\+geofunc\+\_\+setops.\+cc@{item\+\_\+geofunc\+\_\+setops.\+cc}!simplify\+\_\+multi\+\_\+geometry@{simplify\+\_\+multi\+\_\+geometry}}
+\index{simplify\+\_\+multi\+\_\+geometry@{simplify\+\_\+multi\+\_\+geometry}!item\+\_\+geofunc\+\_\+setops.\+cc@{item\+\_\+geofunc\+\_\+setops.\+cc}}
+\subsubsection{\texorpdfstring{simplify\+\_\+multi\+\_\+geometry()}{simplify\_multi\_geometry()}}
+{\footnotesize\ttfamily bool simplify\+\_\+multi\+\_\+geometry (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{String $\ast$}]{result\+\_\+buffer }\end{DoxyParamCaption})}
+
+Simplify multi-\/geometry data. If str contains a multi-\/geometry or geometry collection with one component, the component is made as content of str. If str contains a nested geometry collection, the effective concrete geometry object is returned. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em str} & A string buffer containing a G\+E\+O\+M\+E\+T\+RY byte string. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result\+\_\+buffer} & if not N\+U\+LL and if a simplification is to be done, we will copy the G\+E\+O\+M\+E\+T\+RY byte string from str into result\+\_\+buffer and simplify the one stored in result\+\_\+buffer, and the one in str is intact. If there is any data in result\+\_\+buffer before calling this function, it is overwritten; If no simplification done, the result\+\_\+buffer is intact if it is provided. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the geometry is simplified or not. 
+\end{DoxyReturn}

@@ -1,0 +1,28 @@
+\hypertarget{classDeprecated__trigger__syntax__handler}{}\section{Deprecated\+\_\+trigger\+\_\+syntax\+\_\+handler Class Reference}
+\label{classDeprecated__trigger__syntax__handler}\index{Deprecated\+\_\+trigger\+\_\+syntax\+\_\+handler@{Deprecated\+\_\+trigger\+\_\+syntax\+\_\+handler}}
+Inheritance diagram for Deprecated\+\_\+trigger\+\_\+syntax\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDeprecated__trigger__syntax__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDeprecated__trigger__syntax__handler_ace98671a088293d8bce57608c34585bb}\label{classDeprecated__trigger__syntax__handler_ace98671a088293d8bce57608c34585bb}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$message)
+\item 
+\mbox{\Hypertarget{classDeprecated__trigger__syntax__handler_a04609466fe737a1432eca48fce0a8a4f}\label{classDeprecated__trigger__syntax__handler_a04609466fe737a1432eca48fce0a8a4f}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$ {\bfseries get\+\_\+trigger\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classDeprecated__trigger__syntax__handler_af72cd2027f5d2025dc144e1e9ec4e6e9}\label{classDeprecated__trigger__syntax__handler_af72cd2027f5d2025dc144e1e9ec4e6e9}} 
+const char $\ast$ {\bfseries get\+\_\+error\+\_\+message} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An error handler that catches all non-\/O\+OM errors which can occur during parsing of trigger body. Such errors are ignored and corresponding error message is used to construct a more verbose error message which contains name of problematic trigger. This error message is later emitted when one tries to perform D\+ML or some of D\+DL on this table. Also, if possible, grabs name of the trigger being parsed so it can be used to correctly drop problematic trigger. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+trigger.\+cc\end{DoxyCompactItemize}

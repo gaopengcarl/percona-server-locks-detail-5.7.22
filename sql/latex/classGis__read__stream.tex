@@ -1,0 +1,71 @@
+\hypertarget{classGis__read__stream}{}\section{Gis\+\_\+read\+\_\+stream Class Reference}
+\label{classGis__read__stream}\index{Gis\+\_\+read\+\_\+stream@{Gis\+\_\+read\+\_\+stream}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a0da4f1dae46a3d0a6a9028ddafb5c997}\label{classGis__read__stream_a0da4f1dae46a3d0a6a9028ddafb5c997}} 
+enum {\bfseries enum\+\_\+tok\+\_\+types} \{ \newline
+{\bfseries unknown}, 
+{\bfseries eostream}, 
+{\bfseries word}, 
+{\bfseries numeric}, 
+\newline
+{\bfseries l\+\_\+bra}, 
+{\bfseries r\+\_\+bra}, 
+{\bfseries comma}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__read__stream_aa6d49b2701aec881ea424fad279cb00d}\label{classGis__read__stream_aa6d49b2701aec881ea424fad279cb00d}} 
+{\bfseries Gis\+\_\+read\+\_\+stream} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset, const char $\ast$buffer, int size)
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a8c589a8fffd9809a4f64f71e48f604b3}\label{classGis__read__stream_a8c589a8fffd9809a4f64f71e48f604b3}} 
+enum enum\+\_\+tok\+\_\+types {\bfseries get\+\_\+next\+\_\+toc\+\_\+type} ()
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a4b71b7d4b7a65445ae76c65069cb4b24}\label{classGis__read__stream_a4b71b7d4b7a65445ae76c65069cb4b24}} 
+bool {\bfseries get\+\_\+next\+\_\+word} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$)
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a48cf425d2f028a3c42264a845a3b7c79}\label{classGis__read__stream_a48cf425d2f028a3c42264a845a3b7c79}} 
+bool {\bfseries get\+\_\+next\+\_\+number} (double $\ast$)
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a7ac6848bd87a1ff8b4dcc9ccfc29a7e2}\label{classGis__read__stream_a7ac6848bd87a1ff8b4dcc9ccfc29a7e2}} 
+bool {\bfseries check\+\_\+next\+\_\+symbol} (char)
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a5e0b4c4f59d72a1c719ac1c3db9fe708}\label{classGis__read__stream_a5e0b4c4f59d72a1c719ac1c3db9fe708}} 
+bool {\bfseries is\+\_\+end\+\_\+of\+\_\+stream} ()
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a11dc2762100d6a0c2361422c7dbaf1d2}\label{classGis__read__stream_a11dc2762100d6a0c2361422c7dbaf1d2}} 
+void {\bfseries skip\+\_\+space} ()
+\item 
+\mbox{\Hypertarget{classGis__read__stream_ae0552452209673117c864986014965ed}\label{classGis__read__stream_ae0552452209673117c864986014965ed}} 
+bool {\bfseries skip\+\_\+char} (char skip)
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a990a0c5432a4051c1d04891792055612}\label{classGis__read__stream_a990a0c5432a4051c1d04891792055612}} 
+void {\bfseries set\+\_\+error\+\_\+msg} (const char $\ast$msg)
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a05bf0daeed20f9375e27a02790500155}\label{classGis__read__stream_a05bf0daeed20f9375e27a02790500155}} 
+char $\ast$ {\bfseries get\+\_\+error\+\_\+msg} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a1e1aed4d688709c5ee84528fe06a4f01}\label{classGis__read__stream_a1e1aed4d688709c5ee84528fe06a4f01}} 
+const char $\ast$ {\bfseries m\+\_\+cur}
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a43852791d2bdc7098b7073c040cf4a8a}\label{classGis__read__stream_a43852791d2bdc7098b7073c040cf4a8a}} 
+const char $\ast$ {\bfseries m\+\_\+limit}
+\item 
+\mbox{\Hypertarget{classGis__read__stream_a44b44b04d89da6cc6d3949038e2fde3f}\label{classGis__read__stream_a44b44b04d89da6cc6d3949038e2fde3f}} 
+char $\ast$ {\bfseries m\+\_\+err\+\_\+msg}
+\item 
+\mbox{\Hypertarget{classGis__read__stream_aa9176db3c761a9bcfc2afdce3cd5dce1}\label{classGis__read__stream_aa9176db3c761a9bcfc2afdce3cd5dce1}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries m\+\_\+charset}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gstream.\+h\item 
+gstream.\+cc\end{DoxyCompactItemize}

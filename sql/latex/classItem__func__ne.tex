@@ -1,0 +1,79 @@
+\hypertarget{classItem__func__ne}{}\section{Item\+\_\+func\+\_\+ne Class Reference}
+\label{classItem__func__ne}\index{Item\+\_\+func\+\_\+ne@{Item\+\_\+func\+\_\+ne}}
+Inheritance diagram for Item\+\_\+func\+\_\+ne\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classItem__func__ne}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__ne_af54b02e65d6cbd3d1134bba003cfa0be}\label{classItem__func__ne_af54b02e65d6cbd3d1134bba003cfa0be}} 
+{\bfseries Item\+\_\+func\+\_\+ne} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classItem__func__ne_a63de0a859ec08e94cbfc27c7bac0bb34}\label{classItem__func__ne_a63de0a859ec08e94cbfc27c7bac0bb34}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__func__ne_a39bfa3bc4d4f7f662677b4a0390effa5}\label{classItem__func__ne_a39bfa3bc4d4f7f662677b4a0390effa5}} 
+enum Functype {\bfseries functype} () const
+\item 
+\mbox{\Hypertarget{classItem__func__ne_aeade08422973bcba97c5fa9e082954ac}\label{classItem__func__ne_aeade08422973bcba97c5fa9e082954ac}} 
+cond\+\_\+result {\bfseries eq\+\_\+cmp\+\_\+result} () const
+\item 
+\mbox{\Hypertarget{classItem__func__ne_a3e0babd5194c73ae9cce124468cbd584}\label{classItem__func__ne_a3e0babd5194c73ae9cce124468cbd584}} 
+optimize\+\_\+type {\bfseries select\+\_\+optimize} () const
+\item 
+\mbox{\Hypertarget{classItem__func__ne_a6c747f01e12b63e055bddab49e6bff8f}\label{classItem__func__ne_a6c747f01e12b63e055bddab49e6bff8f}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__func__ne_a2ea1a7165722dac5d173f1cff8b920ef}{negated\+\_\+item}} ()
+\item 
+float \mbox{\hyperlink{classItem__func__ne_a0f99e61ddf29602bc36b419068b44d11}{get\+\_\+filtering\+\_\+effect}} (table\+\_\+map filter\+\_\+for\+\_\+table, table\+\_\+map read\+\_\+tables, const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$fields\+\_\+to\+\_\+ignore, double rows\+\_\+in\+\_\+table)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__ne_a0f99e61ddf29602bc36b419068b44d11}\label{classItem__func__ne_a0f99e61ddf29602bc36b419068b44d11}} 
+\index{Item\+\_\+func\+\_\+ne@{Item\+\_\+func\+\_\+ne}!get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}}
+\index{get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}!Item\+\_\+func\+\_\+ne@{Item\+\_\+func\+\_\+ne}}
+\subsubsection{\texorpdfstring{get\+\_\+filtering\+\_\+effect()}{get\_filtering\_effect()}}
+{\footnotesize\ttfamily float Item\+\_\+func\+\_\+ne\+::get\+\_\+filtering\+\_\+effect (\begin{DoxyParamCaption}\item[{table\+\_\+map}]{filter\+\_\+for\+\_\+table,  }\item[{table\+\_\+map}]{read\+\_\+tables,  }\item[{const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{fields\+\_\+to\+\_\+ignore,  }\item[{double}]{rows\+\_\+in\+\_\+table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calculate the filter contribution that is relevant for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} for this item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+\_\+for\+\_\+table} & The table we are calculating filter effect for \\
+\hline
+{\em read\+\_\+tables} & Tables earlier in the join sequence. Predicates for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that rely on values from these tables can be part of the filter effect. \\
+\hline
+{\em fields\+\_\+to\+\_\+ignore} & Fields in \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that should not be part of the filter calculation. The filtering effect of these fields is already part of the calculation somehow (e.\+g. because there is a predicate \char`\"{}col = $<$const$>$\char`\"{}, and the optimizer has decided to do ref access on \textquotesingle{}col\textquotesingle{}). \\
+\hline
+{\em rows\+\_\+in\+\_\+table} & The number of rows in table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the filtering effect (between 0 and 1) this \mbox{\hyperlink{classItem}{Item}} contributes with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a83f65da25aae04ad1aecebc1d43832c0}{Item}}.
+
+\mbox{\Hypertarget{classItem__func__ne_a2ea1a7165722dac5d173f1cff8b920ef}\label{classItem__func__ne_a2ea1a7165722dac5d173f1cff8b920ef}} 
+\index{Item\+\_\+func\+\_\+ne@{Item\+\_\+func\+\_\+ne}!negated\+\_\+item@{negated\+\_\+item}}
+\index{negated\+\_\+item@{negated\+\_\+item}!Item\+\_\+func\+\_\+ne@{Item\+\_\+func\+\_\+ne}}
+\subsubsection{\texorpdfstring{negated\+\_\+item()}{negated\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+func\+\_\+ne\+::negated\+\_\+item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+just fake method, should never be called. 
+
+Reimplemented from \mbox{\hyperlink{classItem__bool__rowready__func2_a93c59c6f9aa848020c85975f792ba85a}{Item\+\_\+bool\+\_\+rowready\+\_\+func2}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

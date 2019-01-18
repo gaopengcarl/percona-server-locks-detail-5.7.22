@@ -1,0 +1,427 @@
+\hypertarget{classAlter__inplace__info}{}\section{Alter\+\_\+inplace\+\_\+info Class Reference}
+\label{classAlter__inplace__info}\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+
+
+{\ttfamily \#include $<$handler.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef ulonglong \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a2bd6a2de6ddfc25a6db9b6fb9748c40c}\label{classAlter__inplace__info_a2bd6a2de6ddfc25a6db9b6fb9748c40c}} 
+{\bfseries Alter\+\_\+inplace\+\_\+info} (\mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$create\+\_\+info\+\_\+arg, \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} $\ast$alter\+\_\+info\+\_\+arg, \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info\+\_\+arg, uint key\+\_\+count\+\_\+arg, \mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$modified\+\_\+part\+\_\+info\+\_\+arg)
+\item 
+void \mbox{\hyperlink{classAlter__inplace__info_a675fa8a5eedb1072620e3b831de6d946}{report\+\_\+unsupported\+\_\+error}} (const char $\ast$not\+\_\+supported, const char $\ast$try\+\_\+instead)
+\item 
+void \mbox{\hyperlink{classAlter__inplace__info_a7dfe0287b43d7e00273e9dc53e495b2b}{add\+\_\+renamed\+\_\+key}} (\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$old\+\_\+key, \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$new\+\_\+key)
+\item 
+void \mbox{\hyperlink{classAlter__inplace__info_ac7de4c704b1da1dfb94388e12b3f6336}{add\+\_\+modified\+\_\+key}} (\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$old\+\_\+key, \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$new\+\_\+key)
+\item 
+void \mbox{\hyperlink{classAlter__inplace__info_adbda99c1a72be418fd275cb1eea583c4}{add\+\_\+dropped\+\_\+key}} (\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$old\+\_\+key)
+\item 
+void \mbox{\hyperlink{classAlter__inplace__info_abea1eb531573b17be5f6622b2c8c4405}{add\+\_\+added\+\_\+key}} (\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$new\+\_\+key)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$ \mbox{\hyperlink{classAlter__inplace__info_a98ccd138fdc5742b611b7328fc1c77a4}{create\+\_\+info}}
+\item 
+\mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} $\ast$ \mbox{\hyperlink{classAlter__inplace__info_a025d7b7318cc152b91c63e89e9dbd2c8}{alter\+\_\+info}}
+\item 
+\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$ \mbox{\hyperlink{classAlter__inplace__info_a1774915f106804ab1aeb6629d58bcae4}{key\+\_\+info\+\_\+buffer}}
+\item 
+uint \mbox{\hyperlink{classAlter__inplace__info_a06a73897d45e7a856647d308fae2bc95}{key\+\_\+count}}
+\item 
+uint \mbox{\hyperlink{classAlter__inplace__info_a41e2dc4598fb84412237f845b501d086}{index\+\_\+drop\+\_\+count}}
+\item 
+\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$$\ast$ \mbox{\hyperlink{classAlter__inplace__info_ad4fe56b44525e8f3487d04d08ee9f7af}{index\+\_\+drop\+\_\+buffer}}
+\item 
+uint \mbox{\hyperlink{classAlter__inplace__info_a824b2d597ed6cfd9b7e45a01694e6561}{index\+\_\+add\+\_\+count}}
+\item 
+uint $\ast$ \mbox{\hyperlink{classAlter__inplace__info_adbd681149c93f943ff27833983ba1843}{index\+\_\+add\+\_\+buffer}}
+\item 
+uint \mbox{\hyperlink{classAlter__inplace__info_a9344a798cee362d987c0198d6a36a1fa}{index\+\_\+rename\+\_\+count}}
+\item 
+\mbox{\hyperlink{structKEY__PAIR}{K\+E\+Y\+\_\+\+P\+A\+IR}} $\ast$ \mbox{\hyperlink{classAlter__inplace__info_a647f50b8e6b500412aa5aa4f6b1e676b}{index\+\_\+rename\+\_\+buffer}}
+\item 
+\mbox{\hyperlink{classinplace__alter__handler__ctx}{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}} $\ast$ \mbox{\hyperlink{classAlter__inplace__info_a840f4313301458d892e80fd5bb7c6bcd}{handler\+\_\+ctx}}
+\item 
+\mbox{\hyperlink{classinplace__alter__handler__ctx}{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}} $\ast$$\ast$ \mbox{\hyperlink{classAlter__inplace__info_aeacdbdf2da7047907f86f6b78b4cda9e}{group\+\_\+commit\+\_\+ctx}}
+\item 
+\mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} \mbox{\hyperlink{classAlter__inplace__info_aacb64dbd4ca006d7203f84e41890dbfd}{handler\+\_\+flags}}
+\item 
+\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$ \mbox{\hyperlink{classAlter__inplace__info_aa6d44a3120935d9ef9577beeb89f8c51}{modified\+\_\+part\+\_\+info}}
+\item 
+bool \mbox{\hyperlink{classAlter__inplace__info_acb2fbc0369799ac74f9cc74cb14d1bdf}{online}}
+\item 
+const char $\ast$ \mbox{\hyperlink{classAlter__inplace__info_a13eca57ab999f94ec5bf6b3c242cbb17}{unsupported\+\_\+reason}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a87f839b722911bc61459067ebd540241}\label{classAlter__inplace__info_a87f839b722911bc61459067ebd540241}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 0
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_aa159fbfdb3dc6d44026c39c51af77df9}\label{classAlter__inplace__info_aa159fbfdb3dc6d44026c39c51af77df9}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 1
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a983d3b02fc04380df2e66437ac1046d4}\label{classAlter__inplace__info_a983d3b02fc04380df2e66437ac1046d4}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 2
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_aa2ccdd254d2074e807577f113e2509a1}\label{classAlter__inplace__info_aa2ccdd254d2074e807577f113e2509a1}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 3
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a3e230586b506ac7a97bd164ed347fc87}\label{classAlter__inplace__info_a3e230586b506ac7a97bd164ed347fc87}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+P\+K\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 4
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_ac8fcd6469638be24fe60f83c8bf6f0b2}\label{classAlter__inplace__info_ac8fcd6469638be24fe60f83c8bf6f0b2}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+P\+K\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 5
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a0e1c5dac583a4c143c4b9b1daa9b4730}\label{classAlter__inplace__info_a0e1c5dac583a4c143c4b9b1daa9b4730}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+C\+O\+L\+U\+MN} = 1\+U\+L\+L $<$$<$ 6
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a3b9f30c6a43c0e750ff01d0f335e181c}\label{classAlter__inplace__info_a3b9f30c6a43c0e750ff01d0f335e181c}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+B\+A\+S\+E\+\_\+\+C\+O\+L\+U\+MN} = 1\+U\+L\+L $<$$<$ 7
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a20b484d5b3832ad711ce0c8c928c1072}\label{classAlter__inplace__info_a20b484d5b3832ad711ce0c8c928c1072}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+C\+O\+L\+U\+MN} = 1\+U\+L\+L $<$$<$ 8
+\item 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+C\+O\+L\+U\+MN}
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_adff2155cc00d1f866b63c2fc7c1adad4}\label{classAlter__inplace__info_adff2155cc00d1f866b63c2fc7c1adad4}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+C\+O\+L\+U\+MN} = 1\+U\+L\+L $<$$<$ 9
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_afd53e3907c5f7931adf78f5bf7829756}\label{classAlter__inplace__info_afd53e3907c5f7931adf78f5bf7829756}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+C\+O\+L\+U\+MN} = 1\+U\+L\+L $<$$<$ 10
+\item 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN}
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a53b1804a8b8e1de91ed32268e78a4605}\label{classAlter__inplace__info_a53b1804a8b8e1de91ed32268e78a4605}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+N\+A\+ME} = 1\+U\+L\+L $<$$<$ 11
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a0c6a0fd2d9a2430b969de93d89261203}\label{classAlter__inplace__info_a0c6a0fd2d9a2430b969de93d89261203}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+T\+Y\+PE} = 1\+U\+L\+L $<$$<$ 12
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_ae7ce2168a2bc78f75fbcebfde8af4118}\label{classAlter__inplace__info_ae7ce2168a2bc78f75fbcebfde8af4118}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+T\+Y\+PE} = 1\+U\+L\+L $<$$<$ 13
+\item 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} \mbox{\hyperlink{classAlter__inplace__info_a8169d3b1b033846bd832c449fdf3a733}{A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH}} = 1\+U\+L\+L $<$$<$ 14
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_ac496936de5c3a628017315735cad5e4e}\label{classAlter__inplace__info_ac496936de5c3a628017315735cad5e4e}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} \mbox{\hyperlink{classAlter__inplace__info_ac496936de5c3a628017315735cad5e4e}{A\+L\+T\+E\+R\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+O\+R\+D\+ER}} = 1\+U\+L\+L $<$$<$ 15
+\begin{DoxyCompactList}\small\item\em A virtual column has changed its position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlter__inplace__info_ac9163ccb2a66198096e9c4f0c8709a2d}\label{classAlter__inplace__info_ac9163ccb2a66198096e9c4f0c8709a2d}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} \mbox{\hyperlink{classAlter__inplace__info_ac9163ccb2a66198096e9c4f0c8709a2d}{A\+L\+T\+E\+R\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+O\+R\+D\+ER}} = 1\+U\+L\+L $<$$<$ 16
+\begin{DoxyCompactList}\small\item\em A stored column has changed its position (disregarding virtual columns) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlter__inplace__info_aa6c6c90494e5f48a3c817dc6788e6564}\label{classAlter__inplace__info_aa6c6c90494e5f48a3c817dc6788e6564}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+N\+U\+L\+L\+A\+B\+LE} = 1\+U\+L\+L $<$$<$ 17
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_aa29e1f10312b58f38d0709a6c35786ed}\label{classAlter__inplace__info_aa29e1f10312b58f38d0709a6c35786ed}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L\+A\+B\+LE} = 1\+U\+L\+L $<$$<$ 18
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_afb9565691c055b2b49ab2ec87ff7454d}\label{classAlter__inplace__info_afb9565691c055b2b49ab2ec87ff7454d}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+D\+E\+F\+A\+U\+LT} = 1\+U\+L\+L $<$$<$ 19
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a84ad8fe94de590f02003f37cd6566907}\label{classAlter__inplace__info_a84ad8fe94de590f02003f37cd6566907}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+G\+C\+O\+L\+\_\+\+E\+X\+PR} = 1\+U\+L\+L $<$$<$ 20
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a304a4d869e675841bfb2723b6273e34a}\label{classAlter__inplace__info_a304a4d869e675841bfb2723b6273e34a}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+G\+C\+O\+L\+\_\+\+E\+X\+PR} = 1\+U\+L\+L $<$$<$ 21
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a1a654558af50d19d603eb5d66dddaf9f}\label{classAlter__inplace__info_a1a654558af50d19d603eb5d66dddaf9f}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+EY} = 1\+U\+L\+L $<$$<$ 22
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a88fe61a62890270a02926af32cbad9f8}\label{classAlter__inplace__info_a88fe61a62890270a02926af32cbad9f8}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+EY} = 1\+U\+L\+L $<$$<$ 23
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_addf4222a3de67be18b129433aceca71a}\label{classAlter__inplace__info_addf4222a3de67be18b129433aceca71a}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries C\+H\+A\+N\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+P\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 24
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a7bef8a7c2a8f630a2a06b69a9062954f}\label{classAlter__inplace__info_a7bef8a7c2a8f630a2a06b69a9062954f}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+N\+A\+ME} = 1\+U\+L\+L $<$$<$ 25
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a4d2a49245eeb261c2fdb3a2c5e51ab42}\label{classAlter__inplace__info_a4d2a49245eeb261c2fdb3a2c5e51ab42}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+T\+Y\+PE} = 1\+U\+L\+L $<$$<$ 26
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a58e881499776ebe1f209d5f554e8d248}\label{classAlter__inplace__info_a58e881499776ebe1f209d5f554e8d248}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+F\+O\+R\+M\+AT} = 1\+U\+L\+L $<$$<$ 27
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a39b286626ed96a9cdf1e473807ef528f}\label{classAlter__inplace__info_a39b286626ed96a9cdf1e473807ef528f}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 28
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a0d55ea9f597d0f2f7bf1d44a08860d40}\label{classAlter__inplace__info_a0d55ea9f597d0f2f7bf1d44a08860d40}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries D\+R\+O\+P\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 29
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_aa5c2aca77ee1f958f428aa29f759f6d3}\label{classAlter__inplace__info_aa5c2aca77ee1f958f428aa29f759f6d3}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 30
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a0213ab172f7b6705bd238ec3cff14386}\label{classAlter__inplace__info_a0213ab172f7b6705bd238ec3cff14386}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries C\+O\+A\+L\+E\+S\+C\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 31
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a83bd66e67d3c577a97a9f8e0396f5dcb}\label{classAlter__inplace__info_a83bd66e67d3c577a97a9f8e0396f5dcb}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries R\+E\+O\+R\+G\+A\+N\+I\+Z\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 32
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a2684ea9ef1c0ab512983423294864f33}\label{classAlter__inplace__info_a2684ea9ef1c0ab512983423294864f33}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+R\+E\+O\+RG} = 1\+U\+L\+L $<$$<$ 33
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a807dadf45c665e23b2049e3a2dfbe587}\label{classAlter__inplace__info_a807dadf45c665e23b2049e3a2dfbe587}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+O\+N\+I\+NG} = 1\+U\+L\+L $<$$<$ 34
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_afd9c30ba36e1f2962f124b2ee52474b2}\label{classAlter__inplace__info_afd9c30ba36e1f2962f124b2ee52474b2}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+A\+L\+L\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON} = 1\+U\+L\+L $<$$<$ 35
+\item 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} \mbox{\hyperlink{classAlter__inplace__info_ac6e4d8e123abd811e1bc0fed6de44baf}{R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX}} = 1\+U\+L\+L $<$$<$ 36
+\item 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} \mbox{\hyperlink{classAlter__inplace__info_a30dd1964ce7046dee60a5b9284cdfe0b}{R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE}} = 1\+U\+L\+L $<$$<$ 37
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a2c5cf87998f955aaebd6f2aec97860e1}\label{classAlter__inplace__info_a2c5cf87998f955aaebd6f2aec97860e1}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+D\+D\+\_\+\+S\+P\+A\+T\+I\+A\+L\+\_\+\+I\+N\+D\+EX} = 1\+U\+L\+L $<$$<$ 38
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a6392309c2e372836fd117416b334a878}\label{classAlter__inplace__info_a6392309c2e372836fd117416b334a878}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+C\+O\+M\+M\+E\+NT} = 1\+U\+L\+L $<$$<$ 39
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a4491e95fc4d9fb2336b8aef558a71171}\label{classAlter__inplace__info_a4491e95fc4d9fb2336b8aef558a71171}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries A\+L\+T\+E\+R\+\_\+\+U\+P\+G\+R\+A\+D\+E\+\_\+\+P\+A\+R\+T\+I\+T\+I\+O\+N\+I\+NG} = 1\+U\+L\+L $<$$<$ 40
+\item 
+\mbox{\Hypertarget{classAlter__inplace__info_a2788baed5f23124c3eeb996d089f99b1}\label{classAlter__inplace__info_a2788baed5f23124c3eeb996d089f99b1}} 
+static const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} {\bfseries V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+C\+O\+L\+U\+MN} = 1\+U\+L\+L $<$$<$ 41
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class describing changes to be done by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. Instance of this class is passed to storage engine in order to determine if this A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} can be done using in-\/place algorithm. It is also used for executing the A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} using in-\/place algorithm. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}\label{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS@{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}}
+\index{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS@{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}{HA\_ALTER\_FLAGS}}
+{\footnotesize\ttfamily typedef ulonglong \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{Alter\+\_\+inplace\+\_\+info\+::\+H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}}}
+
+Bits to show in detail what operations the storage engine is to execute.
+
+All these operations are supported as in-\/place operations by the S\+QL layer. This means that operations that by their nature must be performed by copying the table to a temporary table, will not have their own flags here (e.\+g. A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} F\+O\+R\+CE, A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} E\+N\+G\+I\+NE).
+
+We generally try to specify handler flags only if there are real changes. But in cases when it is cumbersome to determine if some attribute has really changed we might choose to set flag pessimistically, for example, relying on parser output only. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlter__inplace__info_abea1eb531573b17be5f6622b2c8c4405}\label{classAlter__inplace__info_abea1eb531573b17be5f6622b2c8c4405}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!add\+\_\+added\+\_\+key@{add\+\_\+added\+\_\+key}}
+\index{add\+\_\+added\+\_\+key@{add\+\_\+added\+\_\+key}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+added\+\_\+key()}{add\_added\_key()}}
+{\footnotesize\ttfamily void Alter\+\_\+inplace\+\_\+info\+::add\+\_\+added\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{new\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add key to array of indexes to be added. \mbox{\Hypertarget{classAlter__inplace__info_adbda99c1a72be418fd275cb1eea583c4}\label{classAlter__inplace__info_adbda99c1a72be418fd275cb1eea583c4}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!add\+\_\+dropped\+\_\+key@{add\+\_\+dropped\+\_\+key}}
+\index{add\+\_\+dropped\+\_\+key@{add\+\_\+dropped\+\_\+key}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+dropped\+\_\+key()}{add\_dropped\_key()}}
+{\footnotesize\ttfamily void Alter\+\_\+inplace\+\_\+info\+::add\+\_\+dropped\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{old\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Drop key to array of indexes to be dropped. \mbox{\Hypertarget{classAlter__inplace__info_ac7de4c704b1da1dfb94388e12b3f6336}\label{classAlter__inplace__info_ac7de4c704b1da1dfb94388e12b3f6336}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!add\+\_\+modified\+\_\+key@{add\+\_\+modified\+\_\+key}}
+\index{add\+\_\+modified\+\_\+key@{add\+\_\+modified\+\_\+key}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+modified\+\_\+key()}{add\_modified\_key()}}
+{\footnotesize\ttfamily void Alter\+\_\+inplace\+\_\+info\+::add\+\_\+modified\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{old\+\_\+key,  }\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{new\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add old and new version of modified key to arrays of indexes to be dropped and added (correspondingly). \mbox{\Hypertarget{classAlter__inplace__info_a7dfe0287b43d7e00273e9dc53e495b2b}\label{classAlter__inplace__info_a7dfe0287b43d7e00273e9dc53e495b2b}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!add\+\_\+renamed\+\_\+key@{add\+\_\+renamed\+\_\+key}}
+\index{add\+\_\+renamed\+\_\+key@{add\+\_\+renamed\+\_\+key}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+renamed\+\_\+key()}{add\_renamed\_key()}}
+{\footnotesize\ttfamily void Alter\+\_\+inplace\+\_\+info\+::add\+\_\+renamed\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{old\+\_\+key,  }\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{new\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add old and new version of key to array of indexes to be renamed. \mbox{\Hypertarget{classAlter__inplace__info_a675fa8a5eedb1072620e3b831de6d946}\label{classAlter__inplace__info_a675fa8a5eedb1072620e3b831de6d946}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!report\+\_\+unsupported\+\_\+error@{report\+\_\+unsupported\+\_\+error}}
+\index{report\+\_\+unsupported\+\_\+error@{report\+\_\+unsupported\+\_\+error}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{report\+\_\+unsupported\+\_\+error()}{report\_unsupported\_error()}}
+{\footnotesize\ttfamily void Alter\+\_\+inplace\+\_\+info\+::report\+\_\+unsupported\+\_\+error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{not\+\_\+supported,  }\item[{const char $\ast$}]{try\+\_\+instead }\end{DoxyParamCaption})}
+
+Used after check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter() to report error if the result does not match the L\+O\+C\+K/\+A\+L\+G\+O\+R\+I\+T\+HM requirements set by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em not\+\_\+supported} & Part of statement that was not supported. \\
+\hline
+{\em try\+\_\+instead} & Suggestion as to what the user should replace not\+\_\+supported with. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classAlter__inplace__info_a5d07b26b1e13ed6a72dfaec709d62256}\label{classAlter__inplace__info_a5d07b26b1e13ed6a72dfaec709d62256}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!A\+D\+D\+\_\+\+C\+O\+L\+U\+MN@{A\+D\+D\+\_\+\+C\+O\+L\+U\+MN}}
+\index{A\+D\+D\+\_\+\+C\+O\+L\+U\+MN@{A\+D\+D\+\_\+\+C\+O\+L\+U\+MN}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{A\+D\+D\+\_\+\+C\+O\+L\+U\+MN}{ADD\_COLUMN}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} Alter\+\_\+inplace\+\_\+info\+::\+A\+D\+D\+\_\+\+C\+O\+L\+U\+MN\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= ADD\_VIRTUAL\_COLUMN |}
+\DoxyCodeLine{                                          ADD\_STORED\_BASE\_COLUMN |}
+\DoxyCodeLine{                                          ADD\_STORED\_GENERATED\_COLUMN}
+\end{DoxyCode}
+\mbox{\Hypertarget{classAlter__inplace__info_a8169d3b1b033846bd832c449fdf3a733}\label{classAlter__inplace__info_a8169d3b1b033846bd832c449fdf3a733}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH@{A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH}}
+\index{A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH@{A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH}{ALTER\_COLUMN\_EQUAL\_PACK\_LENGTH}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} Alter\+\_\+inplace\+\_\+info\+::\+A\+L\+T\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+TH = 1\+U\+L\+L $<$$<$ 14\hspace{0.3cm}{\ttfamily [static]}}
+
+Change column datatype in such way that new type has compatible packed representation with old type, so it is theoretically possible to perform change by only updating data dictionary without changing table rows. \mbox{\Hypertarget{classAlter__inplace__info_a025d7b7318cc152b91c63e89e9dbd2c8}\label{classAlter__inplace__info_a025d7b7318cc152b91c63e89e9dbd2c8}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!alter\+\_\+info@{alter\+\_\+info}}
+\index{alter\+\_\+info@{alter\+\_\+info}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{alter\+\_\+info}{alter\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}}$\ast$ Alter\+\_\+inplace\+\_\+info\+::alter\+\_\+info}
+
+Alter options, fields and keys for the new version of table.
+
+\begin{DoxyNote}{Note}
+The referenced instance of \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} object was already used to create new .F\+RM file for table being altered. So it has been processed by mysql\+\_\+prepare\+\_\+create\+\_\+table() already. In particular, this means that in \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} objects for fields which were present in some form in the old version of table, Create\+\_\+field\+::field member points to corresponding \mbox{\hyperlink{classField}{Field}} instance for old version of table. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classAlter__inplace__info_a98ccd138fdc5742b611b7328fc1c77a4}\label{classAlter__inplace__info_a98ccd138fdc5742b611b7328fc1c77a4}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!create\+\_\+info@{create\+\_\+info}}
+\index{create\+\_\+info@{create\+\_\+info}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{create\+\_\+info}{create\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}}$\ast$ Alter\+\_\+inplace\+\_\+info\+::create\+\_\+info}
+
+Create options (like M\+A\+X\+\_\+\+R\+O\+WS) for the new version of table.
+
+\begin{DoxyNote}{Note}
+The referenced instance of H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO object was already used to create new .F\+RM file for table being altered. So it has been processed by mysql\+\_\+prepare\+\_\+create\+\_\+table() already. For example, this means that it has H\+A\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+P\+A\+C\+K\+\_\+\+R\+E\+C\+O\+RD flag in H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+F\+O\+::table\+\_\+options member correctly set. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classAlter__inplace__info_a1c0db1b0cabe62efd45b72cf052c2fd2}\label{classAlter__inplace__info_a1c0db1b0cabe62efd45b72cf052c2fd2}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN@{D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN}}
+\index{D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN@{D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN}{DROP\_COLUMN}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} Alter\+\_\+inplace\+\_\+info\+::\+D\+R\+O\+P\+\_\+\+C\+O\+L\+U\+MN\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DROP\_VIRTUAL\_COLUMN |}
+\DoxyCodeLine{                                           DROP\_STORED\_COLUMN}
+\end{DoxyCode}
+\mbox{\Hypertarget{classAlter__inplace__info_aeacdbdf2da7047907f86f6b78b4cda9e}\label{classAlter__inplace__info_aeacdbdf2da7047907f86f6b78b4cda9e}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!group\+\_\+commit\+\_\+ctx@{group\+\_\+commit\+\_\+ctx}}
+\index{group\+\_\+commit\+\_\+ctx@{group\+\_\+commit\+\_\+ctx}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{group\+\_\+commit\+\_\+ctx}{group\_commit\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classinplace__alter__handler__ctx}{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}}$\ast$$\ast$ Alter\+\_\+inplace\+\_\+info\+::group\+\_\+commit\+\_\+ctx}
+
+If the table uses several handlers, like ha\+\_\+partition uses one handler per partition, this contains a Null terminated array of ctx pointers that should all be committed together. Or N\+U\+LL if only handler\+\_\+ctx should be committed. Set to N\+U\+LL if the low level \mbox{\hyperlink{classhandler_a0786a5f57ccd3c97bff07b1afeae9c06}{handler\+::commit\+\_\+inplace\+\_\+alter\+\_\+table}} uses it, to signal to the main handler that everything was committed as atomically.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classinplace__alter__handler__ctx}{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}} for information about object lifecycle. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classAlter__inplace__info_a840f4313301458d892e80fd5bb7c6bcd}\label{classAlter__inplace__info_a840f4313301458d892e80fd5bb7c6bcd}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!handler\+\_\+ctx@{handler\+\_\+ctx}}
+\index{handler\+\_\+ctx@{handler\+\_\+ctx}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{handler\+\_\+ctx}{handler\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classinplace__alter__handler__ctx}{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}}$\ast$ Alter\+\_\+inplace\+\_\+info\+::handler\+\_\+ctx}
+
+Context information to allow handlers to keep context between in-\/place alter A\+PI calls.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classinplace__alter__handler__ctx}{inplace\+\_\+alter\+\_\+handler\+\_\+ctx}} for information about object lifecycle. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classAlter__inplace__info_aacb64dbd4ca006d7203f84e41890dbfd}\label{classAlter__inplace__info_aacb64dbd4ca006d7203f84e41890dbfd}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!handler\+\_\+flags@{handler\+\_\+flags}}
+\index{handler\+\_\+flags@{handler\+\_\+flags}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{handler\+\_\+flags}{handler\_flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} Alter\+\_\+inplace\+\_\+info\+::handler\+\_\+flags}
+
+Flags describing in detail which operations the storage engine is to execute. \mbox{\Hypertarget{classAlter__inplace__info_adbd681149c93f943ff27833983ba1843}\label{classAlter__inplace__info_adbd681149c93f943ff27833983ba1843}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!index\+\_\+add\+\_\+buffer@{index\+\_\+add\+\_\+buffer}}
+\index{index\+\_\+add\+\_\+buffer@{index\+\_\+add\+\_\+buffer}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{index\+\_\+add\+\_\+buffer}{index\_add\_buffer}}
+{\footnotesize\ttfamily uint$\ast$ Alter\+\_\+inplace\+\_\+info\+::index\+\_\+add\+\_\+buffer}
+
+Array of indexes into key\+\_\+info\+\_\+buffer for K\+E\+Ys to be added, sorted in increasing order. \mbox{\Hypertarget{classAlter__inplace__info_a824b2d597ed6cfd9b7e45a01694e6561}\label{classAlter__inplace__info_a824b2d597ed6cfd9b7e45a01694e6561}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!index\+\_\+add\+\_\+count@{index\+\_\+add\+\_\+count}}
+\index{index\+\_\+add\+\_\+count@{index\+\_\+add\+\_\+count}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{index\+\_\+add\+\_\+count}{index\_add\_count}}
+{\footnotesize\ttfamily uint Alter\+\_\+inplace\+\_\+info\+::index\+\_\+add\+\_\+count}
+
+Size of index\+\_\+add\+\_\+buffer array. \mbox{\Hypertarget{classAlter__inplace__info_ad4fe56b44525e8f3487d04d08ee9f7af}\label{classAlter__inplace__info_ad4fe56b44525e8f3487d04d08ee9f7af}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!index\+\_\+drop\+\_\+buffer@{index\+\_\+drop\+\_\+buffer}}
+\index{index\+\_\+drop\+\_\+buffer@{index\+\_\+drop\+\_\+buffer}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{index\+\_\+drop\+\_\+buffer}{index\_drop\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__key}{K\+EY}}$\ast$$\ast$ Alter\+\_\+inplace\+\_\+info\+::index\+\_\+drop\+\_\+buffer}
+
+Array of pointers to K\+E\+Ys to be dropped belonging to the \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance for the old version of the table. \mbox{\Hypertarget{classAlter__inplace__info_a41e2dc4598fb84412237f845b501d086}\label{classAlter__inplace__info_a41e2dc4598fb84412237f845b501d086}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!index\+\_\+drop\+\_\+count@{index\+\_\+drop\+\_\+count}}
+\index{index\+\_\+drop\+\_\+count@{index\+\_\+drop\+\_\+count}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{index\+\_\+drop\+\_\+count}{index\_drop\_count}}
+{\footnotesize\ttfamily uint Alter\+\_\+inplace\+\_\+info\+::index\+\_\+drop\+\_\+count}
+
+Size of index\+\_\+drop\+\_\+buffer array. \mbox{\Hypertarget{classAlter__inplace__info_a647f50b8e6b500412aa5aa4f6b1e676b}\label{classAlter__inplace__info_a647f50b8e6b500412aa5aa4f6b1e676b}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!index\+\_\+rename\+\_\+buffer@{index\+\_\+rename\+\_\+buffer}}
+\index{index\+\_\+rename\+\_\+buffer@{index\+\_\+rename\+\_\+buffer}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{index\+\_\+rename\+\_\+buffer}{index\_rename\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKEY__PAIR}{K\+E\+Y\+\_\+\+P\+A\+IR}}$\ast$ Alter\+\_\+inplace\+\_\+info\+::index\+\_\+rename\+\_\+buffer}
+
+Array of \mbox{\hyperlink{structKEY__PAIR}{K\+E\+Y\+\_\+\+P\+A\+IR}} objects describing indexes being renamed. For each index renamed it contains object with \mbox{\hyperlink{structKEY__PAIR_a877ecf9a313678a20cb24c1dde207245}{K\+E\+Y\+\_\+\+P\+A\+I\+R\+::old\+\_\+key}} pointing to K\+EY object belonging to the \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance for old version of table representing old version of index and with \mbox{\hyperlink{structKEY__PAIR_a25f827d0b994f28eeed47376cea439b6}{K\+E\+Y\+\_\+\+P\+A\+I\+R\+::new\+\_\+key}} pointing to K\+EY object for new version of index in key\+\_\+info\+\_\+buffer member. \mbox{\Hypertarget{classAlter__inplace__info_a9344a798cee362d987c0198d6a36a1fa}\label{classAlter__inplace__info_a9344a798cee362d987c0198d6a36a1fa}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!index\+\_\+rename\+\_\+count@{index\+\_\+rename\+\_\+count}}
+\index{index\+\_\+rename\+\_\+count@{index\+\_\+rename\+\_\+count}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{index\+\_\+rename\+\_\+count}{index\_rename\_count}}
+{\footnotesize\ttfamily uint Alter\+\_\+inplace\+\_\+info\+::index\+\_\+rename\+\_\+count}
+
+Size of index\+\_\+rename\+\_\+buffer array. \mbox{\Hypertarget{classAlter__inplace__info_a06a73897d45e7a856647d308fae2bc95}\label{classAlter__inplace__info_a06a73897d45e7a856647d308fae2bc95}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!key\+\_\+count@{key\+\_\+count}}
+\index{key\+\_\+count@{key\+\_\+count}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{key\+\_\+count}{key\_count}}
+{\footnotesize\ttfamily uint Alter\+\_\+inplace\+\_\+info\+::key\+\_\+count}
+
+Size of key\+\_\+info\+\_\+buffer array. \mbox{\Hypertarget{classAlter__inplace__info_a1774915f106804ab1aeb6629d58bcae4}\label{classAlter__inplace__info_a1774915f106804ab1aeb6629d58bcae4}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!key\+\_\+info\+\_\+buffer@{key\+\_\+info\+\_\+buffer}}
+\index{key\+\_\+info\+\_\+buffer@{key\+\_\+info\+\_\+buffer}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{key\+\_\+info\+\_\+buffer}{key\_info\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__key}{K\+EY}}$\ast$ Alter\+\_\+inplace\+\_\+info\+::key\+\_\+info\+\_\+buffer}
+
+Array of K\+E\+Ys for new version of table -\/ including K\+E\+Ys to be added.
+
+\begin{DoxyNote}{Note}
+Currently this array is produced as result of mysql\+\_\+prepare\+\_\+create\+\_\+table() call. This means that it follows different convention for K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+F\+O\+::fieldnr values than objects in T\+A\+B\+L\+E\+::key\+\_\+info array.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000024}{Todo}}]This is mainly due to the fact that we need to keep compatibility with removed handler\+::add\+\_\+index() call. We plan to switch to T\+A\+B\+L\+E\+::key\+\_\+info numbering later.\end{DoxyRefDesc}
+
+
+K\+E\+Ys are sorted -\/ see sort\+\_\+keys(). \mbox{\Hypertarget{classAlter__inplace__info_aa6d44a3120935d9ef9577beeb89f8c51}\label{classAlter__inplace__info_aa6d44a3120935d9ef9577beeb89f8c51}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!modified\+\_\+part\+\_\+info@{modified\+\_\+part\+\_\+info}}
+\index{modified\+\_\+part\+\_\+info@{modified\+\_\+part\+\_\+info}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{modified\+\_\+part\+\_\+info}{modified\_part\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpartition__info}{partition\+\_\+info}}$\ast$ Alter\+\_\+inplace\+\_\+info\+::modified\+\_\+part\+\_\+info}
+
+Partition\+\_\+info taking into account the partition changes to be performed. Contains all partitions which are present in the old version of the table with partitions to be dropped or changed marked as such + all partitions to be added in the new version of table marked as such. \mbox{\Hypertarget{classAlter__inplace__info_acb2fbc0369799ac74f9cc74cb14d1bdf}\label{classAlter__inplace__info_acb2fbc0369799ac74f9cc74cb14d1bdf}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!online@{online}}
+\index{online@{online}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{online}{online}}
+{\footnotesize\ttfamily bool Alter\+\_\+inplace\+\_\+info\+::online}
+
+true for online operation (L\+O\+CK=N\+O\+NE) \mbox{\Hypertarget{classAlter__inplace__info_a30dd1964ce7046dee60a5b9284cdfe0b}\label{classAlter__inplace__info_a30dd1964ce7046dee60a5b9284cdfe0b}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE@{R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE}}
+\index{R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE@{R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE}{RECREATE\_TABLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} Alter\+\_\+inplace\+\_\+info\+::\+R\+E\+C\+R\+E\+A\+T\+E\+\_\+\+T\+A\+B\+LE = 1\+U\+L\+L $<$$<$ 37\hspace{0.3cm}{\ttfamily [static]}}
+
+Recreate the table for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} F\+O\+R\+CE, A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} E\+N\+G\+I\+NE and O\+P\+T\+I\+M\+I\+ZE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} operations. \mbox{\Hypertarget{classAlter__inplace__info_ac6e4d8e123abd811e1bc0fed6de44baf}\label{classAlter__inplace__info_ac6e4d8e123abd811e1bc0fed6de44baf}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX@{R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX}}
+\index{R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX@{R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX}{RENAME\_INDEX}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAlter__inplace__info_a45258f36b4942b5cabee7239463daaca}{H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS}} Alter\+\_\+inplace\+\_\+info\+::\+R\+E\+N\+A\+M\+E\+\_\+\+I\+N\+D\+EX = 1\+U\+L\+L $<$$<$ 36\hspace{0.3cm}{\ttfamily [static]}}
+
+Rename index. Note that we set this flag only if there are no other changes to the index being renamed. Also for simplicity we don\textquotesingle{}t detect renaming of indexes which is done by dropping index and then re-\/creating index with identical definition under different name. \mbox{\Hypertarget{classAlter__inplace__info_a13eca57ab999f94ec5bf6b3c242cbb17}\label{classAlter__inplace__info_a13eca57ab999f94ec5bf6b3c242cbb17}} 
+\index{Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}!unsupported\+\_\+reason@{unsupported\+\_\+reason}}
+\index{unsupported\+\_\+reason@{unsupported\+\_\+reason}!Alter\+\_\+inplace\+\_\+info@{Alter\+\_\+inplace\+\_\+info}}
+\subsubsection{\texorpdfstring{unsupported\+\_\+reason}{unsupported\_reason}}
+{\footnotesize\ttfamily const char$\ast$ Alter\+\_\+inplace\+\_\+info\+::unsupported\+\_\+reason}
+
+Can be set by handler to describe why a given operation cannot be done in-\/place (H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED) or why it cannot be done online (H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+\_\+\+L\+O\+CK or H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+\_\+\+L\+O\+C\+K\+\_\+\+A\+F\+T\+E\+R\+\_\+\+P\+R\+E\+P\+A\+RE) If set, it will be used with E\+R\+\_\+\+A\+L\+T\+E\+R\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+R\+E\+A\+S\+ON if results from \mbox{\hyperlink{classhandler_a67890a9deb89b9ef0128601e7687fcba}{handler\+::check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter()}} doesn\textquotesingle{}t match requirements set by user. If not set, the more generic E\+R\+\_\+\+A\+L\+T\+E\+R\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED will be used.
+
+Please set to a properly localized string, for example using my\+\_\+get\+\_\+err\+\_\+msg(), so that the error message as a whole is localized. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+handler.\+h\item 
+\mbox{\hyperlink{handler_8cc}{handler.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\hypertarget{classStage__manager}{}\section{Stage\+\_\+manager Class Reference}
+\label{classStage__manager}\index{Stage\+\_\+manager@{Stage\+\_\+manager}}
+
+
+{\ttfamily \#include $<$binlog.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classStage__manager_1_1Mutex__queue}{Mutex\+\_\+queue}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} \{ {\bfseries F\+L\+U\+S\+H\+\_\+\+S\+T\+A\+GE}, 
+{\bfseries S\+Y\+N\+C\+\_\+\+S\+T\+A\+GE}, 
+{\bfseries C\+O\+M\+M\+I\+T\+\_\+\+S\+T\+A\+GE}, 
+{\bfseries S\+T\+A\+G\+E\+\_\+\+C\+O\+U\+N\+T\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStage__manager_ab2945fd6e7fe996e58b4805628391e5c}\label{classStage__manager_ab2945fd6e7fe996e58b4805628391e5c}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classStage__manager_ad3b92f020a94a4b01b62152394217ce6}\label{classStage__manager_ad3b92f020a94a4b01b62152394217ce6}} 
+void {\bfseries deinit} ()
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga71a83004e5774879856189f84d00094f}{enroll\+\_\+for}} (\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} stage, T\+HD $\ast$first, mysql\+\_\+mutex\+\_\+t $\ast$stage\+\_\+mutex)
+\item 
+\mbox{\Hypertarget{classStage__manager_ac810a7d045dabc354a472221dad3f783}\label{classStage__manager_ac810a7d045dabc354a472221dad3f783}} 
+std\+::pair$<$ bool, T\+HD $\ast$ $>$ {\bfseries pop\+\_\+front} (\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} stage)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gad3389586ace2de50ee7606d7acc98849}{clear\+\_\+preempt\+\_\+status}} (T\+HD $\ast$head)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classStage__manager_aa5e8259651b127bec0dc58776abb2441}{fetch\+\_\+queue\+\_\+for}} (\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} stage)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaa85432b55b5d1d84283e83c4399ad524}{wait\+\_\+count\+\_\+or\+\_\+timeout}} (ulong count, ulong usec, \mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} stage)
+\item 
+void {\bfseries signal\+\_\+done} (T\+HD $\ast$queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for maintaining the commit stages for binary log group commit. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}\label{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}} 
+\index{Stage\+\_\+manager@{Stage\+\_\+manager}!Stage\+ID@{Stage\+ID}}
+\index{Stage\+ID@{Stage\+ID}!Stage\+\_\+manager@{Stage\+\_\+manager}}
+\subsubsection{\texorpdfstring{Stage\+ID}{StageID}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+\_\+manager\+::\+Stage\+ID}}}
+
+Constants for queues for different stages. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStage__manager_aa5e8259651b127bec0dc58776abb2441}\label{classStage__manager_aa5e8259651b127bec0dc58776abb2441}} 
+\index{Stage\+\_\+manager@{Stage\+\_\+manager}!fetch\+\_\+queue\+\_\+for@{fetch\+\_\+queue\+\_\+for}}
+\index{fetch\+\_\+queue\+\_\+for@{fetch\+\_\+queue\+\_\+for}!Stage\+\_\+manager@{Stage\+\_\+manager}}
+\subsubsection{\texorpdfstring{fetch\+\_\+queue\+\_\+for()}{fetch\_queue\_for()}}
+{\footnotesize\ttfamily T\+HD$\ast$ Stage\+\_\+manager\+::fetch\+\_\+queue\+\_\+for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}}}]{stage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fetch the entire queue and empty it.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the first session of the queue. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+binlog.\+h\item 
+binlog.\+cc\end{DoxyCompactItemize}

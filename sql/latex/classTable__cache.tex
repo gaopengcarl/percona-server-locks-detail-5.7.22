@@ -1,0 +1,194 @@
+\hypertarget{classTable__cache}{}\section{Table\+\_\+cache Class Reference}
+\label{classTable__cache}\index{Table\+\_\+cache@{Table\+\_\+cache}}
+
+
+{\ttfamily \#include $<$table\+\_\+cache.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTable__cache_a24ff101df5431dc1fe69fd83f34db9f8}{init}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache_a455cced61e30205fde43e97a40f7889b}{destroy}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache_a04900b8af1fb846ca4110593291c0447}{lock}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache_a101b725dc04235f5be210378363a816c}{unlock}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache_a60266ef71fbd59bdcc415880898fb1b4}{assert\+\_\+owner}} ()
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classTable__cache_a9edaddf4d6af456120fcb89a30bce264}{get\+\_\+table}} (T\+HD $\ast$thd, my\+\_\+hash\+\_\+value\+\_\+type hash\+\_\+value, const char $\ast$key, size\+\_\+t key\+\_\+length, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$$\ast$share)
+\item 
+void \mbox{\hyperlink{classTable__cache_a44a41982d66f7084599befd4ad92f1b9}{release\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{classTable__cache_a0a74ea3cbfcab0314e4ef160979a2962}{add\+\_\+used\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+void \mbox{\hyperlink{classTable__cache_ae6ac88435d0e282a272cb76836a68e7f}{remove\+\_\+table}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+uint \mbox{\hyperlink{classTable__cache_ac2d4ee1ea253452eb204577ce0111d0a}{cached\+\_\+tables}} () const
+\item 
+void \mbox{\hyperlink{classTable__cache_a761f02e59e45c74fdaf47815ed01ce09}{free\+\_\+all\+\_\+unused\+\_\+tables}} ()
+\item 
+void \mbox{\hyperlink{classTable__cache_ad83b8dd133dfe3b3091124d1a75ff693}{print\+\_\+tables}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classTable__cache_ab87a81918be08e180793e64050a94564}{init\+\_\+psi\+\_\+keys}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cache for open \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects.
+
+The idea behind this cache is that most statements don\textquotesingle{}t need to go to a central table definition cache to get a \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object and therefore don\textquotesingle{}t need to lock L\+O\+C\+K\+\_\+open mutex. Instead they only need to go to one \mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} instance (the specific instance is determined by thread id) and only lock the mutex protecting this cache. D\+DL statements that need to remove all \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects from all caches need to lock mutexes for all \mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} instances, but they are rare.
+
+This significantly increases scalability in some scenarios. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable__cache_a0a74ea3cbfcab0314e4ef160979a2962}\label{classTable__cache_a0a74ea3cbfcab0314e4ef160979a2962}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!add\+\_\+used\+\_\+table@{add\+\_\+used\+\_\+table}}
+\index{add\+\_\+used\+\_\+table@{add\+\_\+used\+\_\+table}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{add\+\_\+used\+\_\+table()}{add\_used\_table()}}
+{\footnotesize\ttfamily bool Table\+\_\+cache\+::add\+\_\+used\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add newly created \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object which is going to be used right away to the table cache.
+
+\begin{DoxyNote}{Note}
+Caller should own lock on the table cache.
+
+Sets T\+A\+B\+L\+E\+::in\+\_\+use member as side effect.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & -\/ success. \\
+\hline
+{\em true} & -\/ failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__cache_a60266ef71fbd59bdcc415880898fb1b4}\label{classTable__cache_a60266ef71fbd59bdcc415880898fb1b4}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!assert\+\_\+owner@{assert\+\_\+owner}}
+\index{assert\+\_\+owner@{assert\+\_\+owner}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{assert\+\_\+owner()}{assert\_owner()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::assert\+\_\+owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assert that caller owns lock on the table cache. \mbox{\Hypertarget{classTable__cache_ac2d4ee1ea253452eb204577ce0111d0a}\label{classTable__cache_ac2d4ee1ea253452eb204577ce0111d0a}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!cached\+\_\+tables@{cached\+\_\+tables}}
+\index{cached\+\_\+tables@{cached\+\_\+tables}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{cached\+\_\+tables()}{cached\_tables()}}
+{\footnotesize\ttfamily uint Table\+\_\+cache\+::cached\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get number of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances in the cache. \mbox{\Hypertarget{classTable__cache_a455cced61e30205fde43e97a40f7889b}\label{classTable__cache_a455cced61e30205fde43e97a40f7889b}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!destroy@{destroy}}
+\index{destroy@{destroy}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destroy instance of table cache. \mbox{\Hypertarget{classTable__cache_a761f02e59e45c74fdaf47815ed01ce09}\label{classTable__cache_a761f02e59e45c74fdaf47815ed01ce09}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!free\+\_\+all\+\_\+unused\+\_\+tables@{free\+\_\+all\+\_\+unused\+\_\+tables}}
+\index{free\+\_\+all\+\_\+unused\+\_\+tables@{free\+\_\+all\+\_\+unused\+\_\+tables}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{free\+\_\+all\+\_\+unused\+\_\+tables()}{free\_all\_unused\_tables()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::free\+\_\+all\+\_\+unused\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free all unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects in the table cache. \mbox{\Hypertarget{classTable__cache_a9edaddf4d6af456120fcb89a30bce264}\label{classTable__cache_a9edaddf4d6af456120fcb89a30bce264}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!get\+\_\+table@{get\+\_\+table}}
+\index{get\+\_\+table@{get\+\_\+table}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{get\+\_\+table()}{get\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ Table\+\_\+cache\+::get\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{my\+\_\+hash\+\_\+value\+\_\+type}]{hash\+\_\+value,  }\item[{const char $\ast$}]{key,  }\item[{size\+\_\+t}]{key\+\_\+length,  }\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$$\ast$}]{share }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get an unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance from the table cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+ & {\em hash\+\_\+value} & Hash value for the key identifying table. \\
+\hline
+ & {\em key} & \mbox{\hyperlink{classKey}{Key}} identifying table. \\
+\hline
+ & {\em key\+\_\+length} & Length of key for the table. \\
+\hline
+\mbox{\texttt{ out}}  & {\em share} & N\+U\+LL -\/ if table cache doesn\textquotesingle{}t contain any information about the table (i.\+e. doesn\textquotesingle{}t have neither used nor unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects for it). Pointer to \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} for the table otherwise.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Caller should own lock on the table cache. 
+
+Sets T\+A\+B\+L\+E\+::in\+\_\+use member as side effect.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em non-\/\+N\+U\+LL} & -\/ pointer to unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object, \char`\"{}share\char`\"{} out-\/parameter contains pointer to \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} for this table. \\
+\hline
+{\em N\+U\+LL} & -\/ no unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object was found, \char`\"{}share\char`\"{} parameter contains pointer to \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} for this table if there are used \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects in cache and N\+U\+LL otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__cache_a24ff101df5431dc1fe69fd83f34db9f8}\label{classTable__cache_a24ff101df5431dc1fe69fd83f34db9f8}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!init@{init}}
+\index{init@{init}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Table\+\_\+cache\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize instance of table cache.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & -\/ success. \\
+\hline
+{\em true} & -\/ failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__cache_ab87a81918be08e180793e64050a94564}\label{classTable__cache_ab87a81918be08e180793e64050a94564}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!init\+\_\+psi\+\_\+keys@{init\+\_\+psi\+\_\+keys}}
+\index{init\+\_\+psi\+\_\+keys@{init\+\_\+psi\+\_\+keys}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{init\+\_\+psi\+\_\+keys()}{init\_psi\_keys()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::init\+\_\+psi\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Init P\+\_\+S instrumentation key for mutex protecting \mbox{\hyperlink{classTable__cache}{Table\+\_\+cache}} instance. \mbox{\Hypertarget{classTable__cache_a04900b8af1fb846ca4110593291c0447}\label{classTable__cache_a04900b8af1fb846ca4110593291c0447}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!lock@{lock}}
+\index{lock@{lock}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::lock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Acquire lock on table cache instance. \mbox{\Hypertarget{classTable__cache_ad83b8dd133dfe3b3091124d1a75ff693}\label{classTable__cache_ad83b8dd133dfe3b3091124d1a75ff693}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!print\+\_\+tables@{print\+\_\+tables}}
+\index{print\+\_\+tables@{print\+\_\+tables}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{print\+\_\+tables()}{print\_tables()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::print\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print debug information for the contents of the table cache. \mbox{\Hypertarget{classTable__cache_a44a41982d66f7084599befd4ad92f1b9}\label{classTable__cache_a44a41982d66f7084599befd4ad92f1b9}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!release\+\_\+table@{release\+\_\+table}}
+\index{release\+\_\+table@{release\+\_\+table}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{release\+\_\+table()}{release\_table()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::release\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Put used \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance back to the table cache and mark it as unused.
+
+\begin{DoxyNote}{Note}
+Caller should own lock on the table cache. 
+
+Sets T\+A\+B\+L\+E\+::in\+\_\+use member as side effect. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classTable__cache_ae6ac88435d0e282a272cb76836a68e7f}\label{classTable__cache_ae6ac88435d0e282a272cb76836a68e7f}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!remove\+\_\+table@{remove\+\_\+table}}
+\index{remove\+\_\+table@{remove\+\_\+table}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{remove\+\_\+table()}{remove\_table()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::remove\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepare used or unused \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance for destruction by removing it from the table cache.
+
+\begin{DoxyNote}{Note}
+Caller should own lock on the table cache. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classTable__cache_a101b725dc04235f5be210378363a816c}\label{classTable__cache_a101b725dc04235f5be210378363a816c}} 
+\index{Table\+\_\+cache@{Table\+\_\+cache}!unlock@{unlock}}
+\index{unlock@{unlock}!Table\+\_\+cache@{Table\+\_\+cache}}
+\subsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void Table\+\_\+cache\+::unlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release lock on table cache instance. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table\+\_\+cache.\+h\item 
+table\+\_\+cache.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{classJoin__tab__compare__default}{}\section{Join\+\_\+tab\+\_\+compare\+\_\+default Class Reference}
+\label{classJoin__tab__compare__default}\index{Join\+\_\+tab\+\_\+compare\+\_\+default@{Join\+\_\+tab\+\_\+compare\+\_\+default}}
+
+
+{\ttfamily \#include $<$sql\+\_\+select.\+h$>$}
+
+Inheritance diagram for Join\+\_\+tab\+\_\+compare\+\_\+default\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJoin__tab__compare__default}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJoin__tab__compare__default_a349c9036cb7053ea9331262d8c630b83}\label{classJoin__tab__compare__default_a349c9036cb7053ea9331262d8c630b83}} 
+bool {\bfseries operator()} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$jt1, const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$jt2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}\+Less than\char`\"{} comparison function object used to compare two \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} objects based on a number of factors in this order\+:
+
+
+\begin{DoxyItemize}
+\item table before another table that depends on it (straight join, outer join etc), then
+\item table before another table that depends on it to use a key as access method, then
+\item table with smallest number of records first, then
+\item the table with lowest-\/value pointer (i.\+e., the one located in the lowest memory address) first.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em jt1} & first \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} object \\
+\hline
+{\em jt2} & second \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The order relation implemented by \mbox{\hyperlink{classJoin__tab__compare__default}{Join\+\_\+tab\+\_\+compare\+\_\+default}} is not transitive, i.\+e. it is possible to choose a, b and c such that (a $<$ b) \&\& (b $<$ c) but (c $<$ a). This is the case in the following example\+:
+\end{DoxyNote}
+a\+: dependent = $<$none$>$ found\+\_\+records = 3 b\+: dependent = $<$none$>$ found\+\_\+records = 4 c\+: dependent = b found\+\_\+records = 2
+
+a $<$ b\+: because a has fewer records b $<$ c\+: because c depends on b (e.\+g outer join dependency) c $<$ a\+: because c has fewer records
+
+This implies that the result of a sort using the relation implemented by \mbox{\hyperlink{classJoin__tab__compare__default}{Join\+\_\+tab\+\_\+compare\+\_\+default}} () depends on the order in which elements are compared, i.\+e. the result is implementation-\/specific.
+
+\begin{DoxyReturn}{Returns}
+true if jt1 is smaller than jt2, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__select_8h}{sql\+\_\+select.\+h}}\end{DoxyCompactItemize}

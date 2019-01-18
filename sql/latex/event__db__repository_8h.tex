@@ -1,0 +1,65 @@
+\hypertarget{event__db__repository_8h}{}\section{event\+\_\+db\+\_\+repository.\+h File Reference}
+\label{event__db__repository_8h}\index{event\+\_\+db\+\_\+repository.\+h@{event\+\_\+db\+\_\+repository.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thr\+\_\+lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/mysql\+\_\+lex\+\_\+string.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEvent__db__repository}{Event\+\_\+db\+\_\+repository}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{event__db__repository_8h_aae4159c1d82a5e7462befa8e1e047968}\label{event__db__repository_8h_aae4159c1d82a5e7462befa8e1e047968}} 
+typedef struct st\+\_\+mysql\+\_\+lex\+\_\+string {\bfseries L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga0c86e1e2e740030ff97685e49de3063c}\label{group__Event__Scheduler_ga0c86e1e2e740030ff97685e49de3063c}} 
+enum {\bfseries enum\+\_\+events\+\_\+table\+\_\+field} \{ \newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+DB} = 0, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+N\+A\+ME}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+B\+O\+DY}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+E\+F\+I\+N\+ER}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+AT}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+E\+X\+PR}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+R\+E\+A\+T\+ED}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+O\+D\+I\+F\+I\+ED}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L\+A\+S\+T\+\_\+\+E\+X\+E\+C\+U\+T\+ED}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+T\+A\+R\+TS}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+N\+DS}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+T\+A\+T\+US}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+ON}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+Q\+L\+\_\+\+M\+O\+DE}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+M\+M\+E\+NT}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+R\+I\+G\+I\+N\+A\+T\+OR}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+I\+M\+E\+\_\+\+Z\+O\+NE}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+NT}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+L\+L\+A\+T\+I\+O\+N\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+B\+\_\+\+C\+O\+L\+L\+A\+T\+I\+ON}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+B\+O\+D\+Y\+\_\+\+U\+T\+F8}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+U\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries events\+\_\+table\+\_\+index\+\_\+read\+\_\+for\+\_\+db} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$schema\+\_\+table, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$event\+\_\+table)
+\item 
+int {\bfseries events\+\_\+table\+\_\+scan\+\_\+all} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$schema\+\_\+table, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$event\+\_\+table)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data Dictionary related operations of Event Scheduler.
+
+This is a private header file of \mbox{\hyperlink{classEvents}{Events}} module. Please do not include it directly. All public declarations of \mbox{\hyperlink{classEvents}{Events}} module should be stored in \mbox{\hyperlink{events_8h}{events.\+h}} and \mbox{\hyperlink{event__data__objects_8h}{event\+\_\+data\+\_\+objects.\+h}}. 

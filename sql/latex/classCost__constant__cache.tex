@@ -1,0 +1,107 @@
+\hypertarget{classCost__constant__cache}{}\section{Cost\+\_\+constant\+\_\+cache Class Reference}
+\label{classCost__constant__cache}\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+
+
+{\ttfamily \#include $<$opt\+\_\+costconstantcache.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCost__constant__cache_aa428329188f6a76a121615419d4ef73f}{Cost\+\_\+constant\+\_\+cache}} ()
+\item 
+\mbox{\hyperlink{classCost__constant__cache_a31b347d1012ee2fa400fecd7a2819b2b}{$\sim$\+Cost\+\_\+constant\+\_\+cache}} ()
+\item 
+void \mbox{\hyperlink{classCost__constant__cache_a27341cb9a16b958f01fc394f3c1c8118}{init}} ()
+\item 
+void \mbox{\hyperlink{classCost__constant__cache_a9606f8ca892056e98dd852f24994ee70}{close}} ()
+\item 
+void \mbox{\hyperlink{classCost__constant__cache_a44df0f5b25e6e62b9df8d15451616921}{reload}} ()
+\item 
+const \mbox{\hyperlink{classCost__model__constants}{Cost\+\_\+model\+\_\+constants}} $\ast$ \mbox{\hyperlink{classCost__constant__cache_ade6946bec347063cbf5ad09cafbb97a0}{get\+\_\+cost\+\_\+constants}} ()
+\item 
+void \mbox{\hyperlink{classCost__constant__cache_a9f8a07c3d8481469e7aebadd3b11298f}{release\+\_\+cost\+\_\+constants}} (const \mbox{\hyperlink{classCost__model__constants}{Cost\+\_\+model\+\_\+constants}} $\ast$cost\+\_\+constants)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements a cache for \char`\"{}cost constant sets\char`\"{}. This cache is responsible for creating the set of cost constant, giving new sessions access to the latest versions of the cost constants, and for re-\/reading the cost constant tables in the case where these have been updated.
+
+The cost constant cache keeps a copy of the current set of cost constants. Each time a new session initializes its \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} object (by calling \mbox{\hyperlink{classCost__model__server_a267c97e430cec8665c0c62ad722d80c1}{Cost\+\_\+model\+\_\+server\+::init()}} in lex\+\_\+start()), the \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} object will request the cost constant cache to give it the current version of the cost constants. This is done by calling \mbox{\hyperlink{classCost__constant__cache_ade6946bec347063cbf5ad09cafbb97a0}{Cost\+\_\+constant\+\_\+cache\+::get\+\_\+cost\+\_\+constants()}}. This function will just return a pointer to the current set of cost constants. As time goes, new cost constant sets might be created and added to the cost constant cache. In order to know when a cost constant set can be deleted, reference counting is used. Each time a session asks for the cost constants, the reference counter is incremented. When the session releases the cost constant set by calling \+::release\+\_\+cost\+\_\+constants(), the reference counter will be decremented. When the reference counter becomes zero, the cost constant set is deleted. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCost__constant__cache_aa428329188f6a76a121615419d4ef73f}\label{classCost__constant__cache_aa428329188f6a76a121615419d4ef73f}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{Cost\+\_\+constant\+\_\+cache()}{Cost\_constant\_cache()}}
+{\footnotesize\ttfamily Cost\+\_\+constant\+\_\+cache\+::\+Cost\+\_\+constant\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an empty cost constant cache. To initialize it with default cost constants, \+::init() must be called. To use cost constants from the cost constant tables, \+::reload() must be called.
+
+Minimal initialization of the object. The main initialization is done by calling \mbox{\hyperlink{classCost__constant__cache_a27341cb9a16b958f01fc394f3c1c8118}{init()}}. \mbox{\Hypertarget{classCost__constant__cache_a31b347d1012ee2fa400fecd7a2819b2b}\label{classCost__constant__cache_a31b347d1012ee2fa400fecd7a2819b2b}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!````~Cost\+\_\+constant\+\_\+cache@{$\sim$\+Cost\+\_\+constant\+\_\+cache}}
+\index{````~Cost\+\_\+constant\+\_\+cache@{$\sim$\+Cost\+\_\+constant\+\_\+cache}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{$\sim$\+Cost\+\_\+constant\+\_\+cache()}{~Cost\_constant\_cache()}}
+{\footnotesize\ttfamily Cost\+\_\+constant\+\_\+cache\+::$\sim$\+Cost\+\_\+constant\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for the cost constant cache. Before the cost constant cache is deleted, \+::close() must have been called. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCost__constant__cache_a9606f8ca892056e98dd852f24994ee70}\label{classCost__constant__cache_a9606f8ca892056e98dd852f24994ee70}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!close@{close}}
+\index{close@{close}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Cost\+\_\+constant\+\_\+cache\+::close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Close the cost constant cache.
+
+All resources owned by the cost constant cache are released. \mbox{\Hypertarget{classCost__constant__cache_ade6946bec347063cbf5ad09cafbb97a0}\label{classCost__constant__cache_ade6946bec347063cbf5ad09cafbb97a0}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!get\+\_\+cost\+\_\+constants@{get\+\_\+cost\+\_\+constants}}
+\index{get\+\_\+cost\+\_\+constants@{get\+\_\+cost\+\_\+constants}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{get\+\_\+cost\+\_\+constants()}{get\_cost\_constants()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCost__model__constants}{Cost\+\_\+model\+\_\+constants}}$\ast$ Cost\+\_\+constant\+\_\+cache\+::get\+\_\+cost\+\_\+constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the currently used set of cost constants.
+
+This function will just return a pointer to a shared version of the cost constants. For tracking of how many sessions that is using the set and to be able to know when it is safe to delete the cost constant object, reference counting is used. This function will increase the ref count for the returned cost constant object. To decrease the reference counter when the cost constants are no longer used, \mbox{\hyperlink{classCost__constant__cache_a9f8a07c3d8481469e7aebadd3b11298f}{release\+\_\+cost\+\_\+constants()}} must be called.
+
+\begin{DoxyNote}{Note}
+To ensure that the reference counter is only incremented once for each session that uses the cost constant set, this function should only be called once per session.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+pointer to the cost constants 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__constant__cache_a27341cb9a16b958f01fc394f3c1c8118}\label{classCost__constant__cache_a27341cb9a16b958f01fc394f3c1c8118}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!init@{init}}
+\index{init@{init}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Cost\+\_\+constant\+\_\+cache\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize the cost module.
+
+The cost constants will be initialized with the default values found in the source code. To start using the cost constant values found in the configuration tables, the \+::reload() function must be called. \mbox{\Hypertarget{classCost__constant__cache_a9f8a07c3d8481469e7aebadd3b11298f}\label{classCost__constant__cache_a9f8a07c3d8481469e7aebadd3b11298f}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!release\+\_\+cost\+\_\+constants@{release\+\_\+cost\+\_\+constants}}
+\index{release\+\_\+cost\+\_\+constants@{release\+\_\+cost\+\_\+constants}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{release\+\_\+cost\+\_\+constants()}{release\_cost\_constants()}}
+{\footnotesize\ttfamily void Cost\+\_\+constant\+\_\+cache\+::release\+\_\+cost\+\_\+constants (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCost__model__constants}{Cost\+\_\+model\+\_\+constants}} $\ast$}]{cost\+\_\+constants }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Releases the cost constant set.
+
+This will decrement the reference counter on the cost constant set and if nobody is using it, it will be deleted. This function should be called each time a client (a session) no longer has any use for a cost constant set that it has previously gotten from calling \+::get\+\_\+cost\+\_\+constants()
+
+
+\begin{DoxyParams}{Parameters}
+{\em cost\+\_\+constants} & pointer to the cost constant set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCost__constant__cache_a44df0f5b25e6e62b9df8d15451616921}\label{classCost__constant__cache_a44df0f5b25e6e62b9df8d15451616921}} 
+\index{Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}!reload@{reload}}
+\index{reload@{reload}!Cost\+\_\+constant\+\_\+cache@{Cost\+\_\+constant\+\_\+cache}}
+\subsubsection{\texorpdfstring{reload()}{reload()}}
+{\footnotesize\ttfamily void Cost\+\_\+constant\+\_\+cache\+::reload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reload all cost constants from the configuration tables. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+costconstantcache.\+h\item 
+opt\+\_\+costconstantcache.\+cc\end{DoxyCompactItemize}

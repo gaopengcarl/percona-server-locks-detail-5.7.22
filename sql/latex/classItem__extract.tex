@@ -1,0 +1,87 @@
+\hypertarget{classItem__extract}{}\section{Item\+\_\+extract Class Reference}
+\label{classItem__extract}\index{Item\+\_\+extract@{Item\+\_\+extract}}
+Inheritance diagram for Item\+\_\+extract\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__extract}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__extract_ad7cbdb788ced07e03fed248f5eca4c9f}\label{classItem__extract_ad7cbdb788ced07e03fed248f5eca4c9f}} 
+{\bfseries Item\+\_\+extract} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, interval\+\_\+type type\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__extract_a120ef829fa78ee8d2a75cd1cf83ab290}\label{classItem__extract_a120ef829fa78ee8d2a75cd1cf83ab290}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__extract_a6dda0995f7668c716827b7a84e2a26d4}\label{classItem__extract_a6dda0995f7668c716827b7a84e2a26d4}} 
+enum Functype {\bfseries functype} () const
+\item 
+\mbox{\Hypertarget{classItem__extract_a104bce831b226736039eecbabd65d70c}\label{classItem__extract_a104bce831b226736039eecbabd65d70c}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__extract_a2f12bbe23249854aa3f567d670b588b5}\label{classItem__extract_a2f12bbe23249854aa3f567d670b588b5}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+bool \mbox{\hyperlink{classItem__extract_ad12d12826c6f4231a4dde0150732c5aa}{eq}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$item, bool binary\+\_\+cmp) const
+\item 
+virtual void \mbox{\hyperlink{classItem__extract_a5a2c762763085131a38bd15816bd361b}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__extract_af37c2ff85774212ddbfc8182a5061690}\label{classItem__extract_af37c2ff85774212ddbfc8182a5061690}} 
+bool {\bfseries check\+\_\+partition\+\_\+func\+\_\+processor} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem__extract_acdbbbdbef6060d8c1501732dbeb615eb}\label{classItem__extract_acdbbbdbef6060d8c1501732dbeb615eb}} 
+bool {\bfseries check\+\_\+valid\+\_\+arguments\+\_\+processor} (uchar $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__extract_ab36f987f5104fd4ea5c4f2805b489a35}\label{classItem__extract_ab36f987f5104fd4ea5c4f2805b489a35}} 
+const interval\+\_\+type {\bfseries int\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__extract_ad12d12826c6f4231a4dde0150732c5aa}\label{classItem__extract_ad12d12826c6f4231a4dde0150732c5aa}} 
+\index{Item\+\_\+extract@{Item\+\_\+extract}!eq@{eq}}
+\index{eq@{eq}!Item\+\_\+extract@{Item\+\_\+extract}}
+\subsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily bool Item\+\_\+extract\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{bool}]{binary\+\_\+cmp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyNote}{Note}
+Please keep in sync with \mbox{\hyperlink{classItem__sum_aeab749252b834e0be4f00aac8ca523f5}{Item\+\_\+sum\+::eq()}}. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_a3de3f23377e6f0006dfccd375086365f}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__extract_a5a2c762763085131a38bd15816bd361b}\label{classItem__extract_a5a2c762763085131a38bd15816bd361b}} 
+\index{Item\+\_\+extract@{Item\+\_\+extract}!print@{print}}
+\index{print@{print}!Item\+\_\+extract@{Item\+\_\+extract}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+extract\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

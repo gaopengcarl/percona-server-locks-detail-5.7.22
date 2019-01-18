@@ -1,0 +1,63 @@
+\hypertarget{classLog__to__csv__event__handler}{}\section{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler Class Reference}
+\label{classLog__to__csv__event__handler}\index{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler@{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler}}
+
+
+{\ttfamily \#include $<$log.\+h$>$}
+
+Inheritance diagram for Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLog__to__csv__event__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classLog__to__csv__event__handler_a70587b1ff21463136fe16302d13b3740}{log\+\_\+slow}} (T\+HD $\ast$thd, ulonglong current\+\_\+utime, ulonglong query\+\_\+start\+\_\+arg, const char $\ast$user\+\_\+host, size\+\_\+t user\+\_\+host\+\_\+len, ulonglong query\+\_\+utime, ulonglong lock\+\_\+utime, bool is\+\_\+command, const char $\ast$sql\+\_\+text, size\+\_\+t sql\+\_\+text\+\_\+len)
+\item 
+virtual bool \mbox{\hyperlink{classLog__to__csv__event__handler_a9e6adb8b8ca2c5d12dfb4a788f615d67}{log\+\_\+general}} (T\+HD $\ast$thd, ulonglong event\+\_\+utime, const char $\ast$user\+\_\+host, size\+\_\+t user\+\_\+host\+\_\+len, my\+\_\+thread\+\_\+id thread\+\_\+id, const char $\ast$command\+\_\+type, size\+\_\+t command\+\_\+type\+\_\+len, const char $\ast$sql\+\_\+text, size\+\_\+t sql\+\_\+text\+\_\+len, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$client\+\_\+cs)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLog__to__csv__event__handler_a29c57bd3a5d5e62664217e3cd1fb457d}\label{classLog__to__csv__event__handler_a29c57bd3a5d5e62664217e3cd1fb457d}} 
+class {\bfseries Query\+\_\+logger}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class responsible for table based logging. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLog__to__csv__event__handler_a9e6adb8b8ca2c5d12dfb4a788f615d67}\label{classLog__to__csv__event__handler_a9e6adb8b8ca2c5d12dfb4a788f615d67}} 
+\index{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler@{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler}!log\+\_\+general@{log\+\_\+general}}
+\index{log\+\_\+general@{log\+\_\+general}!Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler@{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler}}
+\subsubsection{\texorpdfstring{log\+\_\+general()}{log\_general()}}
+{\footnotesize\ttfamily bool Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler\+::log\+\_\+general (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulonglong}]{event\+\_\+utime,  }\item[{const char $\ast$}]{user\+\_\+host,  }\item[{size\+\_\+t}]{user\+\_\+host\+\_\+len,  }\item[{my\+\_\+thread\+\_\+id}]{thread\+\_\+id,  }\item[{const char $\ast$}]{command\+\_\+type,  }\item[{size\+\_\+t}]{command\+\_\+type\+\_\+len,  }\item[{const char $\ast$}]{sql\+\_\+text,  }\item[{size\+\_\+t}]{sql\+\_\+text\+\_\+len,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{client\+\_\+cs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classLog__event__handler_aa9f98b8c0b48eb846877fe9d2496560e}{Log\+\_\+event\+\_\+handler\+::log\+\_\+general()}}. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classLog__event__handler_aa9f98b8c0b48eb846877fe9d2496560e}{Log\+\_\+event\+\_\+handler}}.
+
+\mbox{\Hypertarget{classLog__to__csv__event__handler_a70587b1ff21463136fe16302d13b3740}\label{classLog__to__csv__event__handler_a70587b1ff21463136fe16302d13b3740}} 
+\index{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler@{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler}!log\+\_\+slow@{log\+\_\+slow}}
+\index{log\+\_\+slow@{log\+\_\+slow}!Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler@{Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler}}
+\subsubsection{\texorpdfstring{log\+\_\+slow()}{log\_slow()}}
+{\footnotesize\ttfamily bool Log\+\_\+to\+\_\+csv\+\_\+event\+\_\+handler\+::log\+\_\+slow (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{ulonglong}]{current\+\_\+utime,  }\item[{ulonglong}]{query\+\_\+start\+\_\+arg,  }\item[{const char $\ast$}]{user\+\_\+host,  }\item[{size\+\_\+t}]{user\+\_\+host\+\_\+len,  }\item[{ulonglong}]{query\+\_\+utime,  }\item[{ulonglong}]{lock\+\_\+utime,  }\item[{bool}]{is\+\_\+command,  }\item[{const char $\ast$}]{sql\+\_\+text,  }\item[{size\+\_\+t}]{sql\+\_\+text\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classLog__event__handler_a4a391622d5b047d66ed8466ffa2af98b}{Log\+\_\+event\+\_\+handler\+::log\+\_\+slow()}}. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classLog__event__handler_a4a391622d5b047d66ed8466ffa2af98b}{Log\+\_\+event\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+log.\+h\item 
+\mbox{\hyperlink{log_8cc}{log.\+cc}}\end{DoxyCompactItemize}

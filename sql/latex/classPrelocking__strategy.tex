@@ -1,0 +1,32 @@
+\hypertarget{classPrelocking__strategy}{}\section{Prelocking\+\_\+strategy Class Reference}
+\label{classPrelocking__strategy}\index{Prelocking\+\_\+strategy@{Prelocking\+\_\+strategy}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+Inheritance diagram for Prelocking\+\_\+strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPrelocking__strategy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPrelocking__strategy_aff816c4dc712af6528b676cede95c6c2}\label{classPrelocking__strategy_aff816c4dc712af6528b676cede95c6c2}} 
+virtual bool {\bfseries handle\+\_\+routine} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{classSroutine__hash__entry}{Sroutine\+\_\+hash\+\_\+entry}} $\ast$rt, \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, bool $\ast$need\+\_\+prelocking)=0
+\item 
+\mbox{\Hypertarget{classPrelocking__strategy_afbfc79c3385af9040226acc73920c4e7}\label{classPrelocking__strategy_afbfc79c3385af9040226acc73920c4e7}} 
+virtual bool {\bfseries handle\+\_\+table} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)=0
+\item 
+\mbox{\Hypertarget{classPrelocking__strategy_a6d65358a6a1c9d4d736f828e1ed9649e}\label{classPrelocking__strategy_a6d65358a6a1c9d4d736f828e1ed9649e}} 
+virtual bool {\bfseries handle\+\_\+view} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool $\ast$need\+\_\+prelocking)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract class for a strategy specifying how the prelocking algorithm should extend the prelocking set while processing already existing elements in the set. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\end{DoxyCompactItemize}

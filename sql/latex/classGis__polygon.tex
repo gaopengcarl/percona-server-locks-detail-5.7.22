@@ -1,0 +1,150 @@
+\hypertarget{classGis__polygon}{}\section{Gis\+\_\+polygon Class Reference}
+\label{classGis__polygon}\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+Inheritance diagram for Gis\+\_\+polygon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGis__polygon}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__polygon_ac2a86535224cdabe48dcc9280184d664}\label{classGis__polygon_ac2a86535224cdabe48dcc9280184d664}} 
+typedef \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} {\bfseries self}
+\item 
+\mbox{\Hypertarget{classGis__polygon_a68d50982cd3fb522b91d9a62c0e540ca}\label{classGis__polygon_a68d50982cd3fb522b91d9a62c0e540ca}} 
+typedef \mbox{\hyperlink{classGis__polygon__ring}{Gis\+\_\+polygon\+\_\+ring}} {\bfseries ring\+\_\+type}
+\item 
+\mbox{\Hypertarget{classGis__polygon_acd4d7dec322b7b9caf7cfe5d366f79e4}\label{classGis__polygon_acd4d7dec322b7b9caf7cfe5d366f79e4}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}$<$ \mbox{\hyperlink{classGis__polygon__ring}{ring\+\_\+type}} $>$ {\bfseries inner\+\_\+container\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__polygon_a04f83aefe7743f9f55c45c5d3bfe5dcc}\label{classGis__polygon_a04f83aefe7743f9f55c45c5d3bfe5dcc}} 
+uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a1469876ed801b26c1d701d7a977e5795}\label{classGis__polygon_a1469876ed801b26c1d701d7a977e5795}} 
+bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGis__polygon_a953cbccc022a7677826ff4e710dbf296}\label{classGis__polygon_a953cbccc022a7677826ff4e710dbf296}} 
+uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGis__polygon_a0c0ce8609552b3aaab9a367c9b98319d}\label{classGis__polygon_a0c0ce8609552b3aaab9a367c9b98319d}} 
+bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a463d2153208810279f44a588e0a05f4b}\label{classGis__polygon_a463d2153208810279f44a588e0a05f4b}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__polygon_ad665298724a2ec91d3890d2a6f456017}\label{classGis__polygon_ad665298724a2ec91d3890d2a6f456017}} 
+int {\bfseries exterior\+\_\+ring} (String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a89e6432cbd6596686a8dd29459b96acf}\label{classGis__polygon_a89e6432cbd6596686a8dd29459b96acf}} 
+int {\bfseries num\+\_\+interior\+\_\+ring} (uint32 $\ast$n\+\_\+int\+\_\+rings) const
+\item 
+\mbox{\Hypertarget{classGis__polygon_aff4007e82c05d92ea513e026b7097216}\label{classGis__polygon_aff4007e82c05d92ea513e026b7097216}} 
+int {\bfseries interior\+\_\+ring\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGis__polygon_aabc3f7a3c48d75b90de5de64f38f7e26}\label{classGis__polygon_aabc3f7a3c48d75b90de5de64f38f7e26}} 
+uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a0225332532a5b227531cfdb37e89ede9}\label{classGis__polygon_a0225332532a5b227531cfdb37e89ede9}} 
+const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classGis__polygon_ac37f8713e03bbf9b97ad061bf368b1e3}\label{classGis__polygon_ac37f8713e03bbf9b97ad061bf368b1e3}} 
+\mbox{\hyperlink{classGis__polygon__ring}{ring\+\_\+type}} \& {\bfseries outer} () const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a649d555ec815fc17c6a02c25dd71ee41}\label{classGis__polygon_a649d555ec815fc17c6a02c25dd71ee41}} 
+\mbox{\hyperlink{classGis__wkb__vector}{inner\+\_\+container\+\_\+type}} \& {\bfseries inners} () const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a5c1c0a72f515727e686db428beb730e0}\label{classGis__polygon_a5c1c0a72f515727e686db428beb730e0}} 
+void \mbox{\hyperlink{classGis__polygon_a5c1c0a72f515727e686db428beb730e0}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears outer and inner rings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGis__polygon_a25118bf79ef6463986e7c2b081909d72}\label{classGis__polygon_a25118bf79ef6463986e7c2b081909d72}} 
+{\bfseries Gis\+\_\+polygon} (const void $\ast$wkb, size\+\_\+t nbytes, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGis__polygon_a923318b7066fd3b2c6da7e58436e897c}\label{classGis__polygon_a923318b7066fd3b2c6da7e58436e897c}} 
+{\bfseries Gis\+\_\+polygon} (bool isbgadapter=true)
+\item 
+\mbox{\hyperlink{classGis__polygon_a5d3928384d1b9de85ceddfa783a1be1c}{Gis\+\_\+polygon}} (const \mbox{\hyperlink{classGis__polygon}{self}} \&r)
+\item 
+\mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} \& \mbox{\hyperlink{classGis__polygon_a939b261fcd715c924a5a33dfa579c6e1}{operator=}} (const \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} \&rhs)
+\item 
+void \mbox{\hyperlink{classGis__polygon_a7bd6ed68da450be85891eb39142d3e60}{to\+\_\+wkb\+\_\+unparsed}} ()
+\item 
+void \mbox{\hyperlink{classGis__polygon_a68ca304142cc018fe18788b3a1662093}{set\+\_\+ptr}} (void $\ast$ptr, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classGis__polygon_aa67b7b102aeac0a562f66c59d120d021}\label{classGis__polygon_aa67b7b102aeac0a562f66c59d120d021}} 
+void {\bfseries donate\+\_\+data} ()
+\item 
+bool \mbox{\hyperlink{classGis__polygon_affcf00a3922cccdded80d21b59ee6634}{set\+\_\+polygon\+\_\+ring\+\_\+order}} ()
+\item 
+\mbox{\Hypertarget{classGis__polygon_ab52978e7ca1f3c199a5be351498965cd}\label{classGis__polygon_ab52978e7ca1f3c199a5be351498965cd}} 
+\mbox{\hyperlink{classGis__wkb__vector}{inner\+\_\+container\+\_\+type}} $\ast$ {\bfseries inner\+\_\+rings} () const
+\item 
+\mbox{\Hypertarget{classGis__polygon_a2e82637430ca68a6059aae0615ef9b59}\label{classGis__polygon_a2e82637430ca68a6059aae0615ef9b59}} 
+void {\bfseries set\+\_\+inner\+\_\+rings} (\mbox{\hyperlink{classGis__wkb__vector}{inner\+\_\+container\+\_\+type}} $\ast$inns)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGis__polygon_a5d3928384d1b9de85ceddfa783a1be1c}\label{classGis__polygon_a5d3928384d1b9de85ceddfa783a1be1c}} 
+\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}!Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}!Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+\subsubsection{\texorpdfstring{Gis\+\_\+polygon()}{Gis\_polygon()}}
+{\footnotesize\ttfamily Gis\+\_\+polygon\+::\+Gis\+\_\+polygon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGis__polygon}{self}} \&}]{r }\end{DoxyParamCaption})}
+
+Copy constructor. Coordinate type, closed-\/ness and direction will never change. 
+\begin{DoxyParams}{Parameters}
+{\em r} & another polygon of same coordinate type, ring closed-\/ness and ring direction. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGis__polygon_a939b261fcd715c924a5a33dfa579c6e1}\label{classGis__polygon_a939b261fcd715c924a5a33dfa579c6e1}} 
+\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}!operator=@{operator=}}
+\index{operator=@{operator=}!Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} \& Gis\+\_\+polygon\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Deep assignment from polygon \textquotesingle{}o\textquotesingle{} to this object. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} instance to duplicate from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGis__polygon_affcf00a3922cccdded80d21b59ee6634}\label{classGis__polygon_affcf00a3922cccdded80d21b59ee6634}} 
+\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}!set\+\_\+polygon\+\_\+ring\+\_\+order@{set\+\_\+polygon\+\_\+ring\+\_\+order}}
+\index{set\+\_\+polygon\+\_\+ring\+\_\+order@{set\+\_\+polygon\+\_\+ring\+\_\+order}!Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+\subsubsection{\texorpdfstring{set\+\_\+polygon\+\_\+ring\+\_\+order()}{set\_polygon\_ring\_order()}}
+{\footnotesize\ttfamily bool Gis\+\_\+polygon\+::set\+\_\+polygon\+\_\+ring\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set this polygon\textquotesingle{}s outer ring to be C\+CW and inner rings to be CW. \begin{DoxyReturn}{Returns}
+on error returns true, on success returns false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGis__polygon_a68ca304142cc018fe18788b3a1662093}\label{classGis__polygon_a68ca304142cc018fe18788b3a1662093}} 
+\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}!set\+\_\+ptr@{set\+\_\+ptr}}
+\index{set\+\_\+ptr@{set\+\_\+ptr}!Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+\subsubsection{\texorpdfstring{set\+\_\+ptr()}{set\_ptr()}}
+{\footnotesize\ttfamily void Gis\+\_\+polygon\+::set\+\_\+ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Set W\+KB data to this object, the W\+KB data will be used read only. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & W\+KB data pointer. \\
+\hline
+{\em len} & W\+KB data number of bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGis__polygon_a7bd6ed68da450be85891eb39142d3e60}\label{classGis__polygon_a7bd6ed68da450be85891eb39142d3e60}} 
+\index{Gis\+\_\+polygon@{Gis\+\_\+polygon}!to\+\_\+wkb\+\_\+unparsed@{to\+\_\+wkb\+\_\+unparsed}}
+\index{to\+\_\+wkb\+\_\+unparsed@{to\+\_\+wkb\+\_\+unparsed}!Gis\+\_\+polygon@{Gis\+\_\+polygon}}
+\subsubsection{\texorpdfstring{to\+\_\+wkb\+\_\+unparsed()}{to\_wkb\_unparsed()}}
+{\footnotesize\ttfamily void Gis\+\_\+polygon\+::to\+\_\+wkb\+\_\+unparsed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Make the polygon\textquotesingle{}s data in a single buffer as W\+KB format. This polygon must be one for BG use before this call, and after this call it can never be passed into BG functions directly after this call, and it is suitable as a \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} for My\+S\+QL G\+IS code, because it\textquotesingle{}s exactly the same as a \mbox{\hyperlink{classGis__polygon}{Gis\+\_\+polygon}} object returned by \mbox{\hyperlink{classGeometry_a71d6852fd0285a9bffaca556592cae39}{Geometry\+::create\+\_\+from\+\_\+wkt}}/wkb. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

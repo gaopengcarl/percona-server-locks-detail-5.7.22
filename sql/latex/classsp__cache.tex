@@ -1,0 +1,51 @@
+\hypertarget{classsp__cache}{}\section{sp\+\_\+cache Class Reference}
+\label{classsp__cache}\index{sp\+\_\+cache@{sp\+\_\+cache}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsp__cache_a1271ecde8fa8f445cc6d243b2e8bef5c}{insert}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp)
+\item 
+\mbox{\Hypertarget{classsp__cache_a2df7f2a12bff634edaf679adc43d349d}\label{classsp__cache_a2df7f2a12bff634edaf679adc43d349d}} 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ {\bfseries lookup} (char $\ast$name, size\+\_\+t namelen)
+\item 
+\mbox{\Hypertarget{classsp__cache_ad41e6d23ab4e71c46849810392e687fa}\label{classsp__cache_ad41e6d23ab4e71c46849810392e687fa}} 
+void {\bfseries remove} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp)
+\item 
+void \mbox{\hyperlink{classsp__cache_aa3507d52d0cdf324f311a7130eea1057}{enforce\+\_\+limit}} (ulong upper\+\_\+limit\+\_\+for\+\_\+elements)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__cache_aa3507d52d0cdf324f311a7130eea1057}\label{classsp__cache_aa3507d52d0cdf324f311a7130eea1057}} 
+\index{sp\+\_\+cache@{sp\+\_\+cache}!enforce\+\_\+limit@{enforce\+\_\+limit}}
+\index{enforce\+\_\+limit@{enforce\+\_\+limit}!sp\+\_\+cache@{sp\+\_\+cache}}
+\subsubsection{\texorpdfstring{enforce\+\_\+limit()}{enforce\_limit()}}
+{\footnotesize\ttfamily void sp\+\_\+cache\+::enforce\+\_\+limit (\begin{DoxyParamCaption}\item[{ulong}]{upper\+\_\+limit\+\_\+for\+\_\+elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove all elements from a stored routine cache if the current number of elements exceeds the argument value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em upper\+\_\+limit\+\_\+for\+\_\+elements} & Soft upper limit of elements that can be stored in the cache. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__cache_a1271ecde8fa8f445cc6d243b2e8bef5c}\label{classsp__cache_a1271ecde8fa8f445cc6d243b2e8bef5c}} 
+\index{sp\+\_\+cache@{sp\+\_\+cache}!insert@{insert}}
+\index{insert@{insert}!sp\+\_\+cache@{sp\+\_\+cache}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily bool sp\+\_\+cache\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inserts a \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} object into a hash table.
+
+\begin{DoxyReturn}{Returns}
+Success status 
+
+T\+R\+UE Failure 
+
+F\+A\+L\+SE Success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+cache.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{classLinestring__stepper}{}\section{Linestring\+\_\+stepper Class Reference}
+\label{classLinestring__stepper}\index{Linestring\+\_\+stepper@{Linestring\+\_\+stepper}}
+Inheritance diagram for Linestring\+\_\+stepper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLinestring__stepper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLinestring__stepper_a13e559afd01d5c7b690797a81f88041f}\label{classLinestring__stepper_a13e559afd01d5c7b690797a81f88041f}} 
+{\bfseries Linestring\+\_\+stepper} (char dim, Geometry\+::wkb\+Byte\+Order bo, bool has\+\_\+wkb\+\_\+hdr)
+\item 
+const char $\ast$ \mbox{\hyperlink{classLinestring__stepper_ac9d6663371fe790dce1b5b2280c6e419}{operator()}} (const char $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+For iterating linestrings inside multilinestring and polygon. Expected multilinestring format\+: N\+UM-\/ls$\vert$\+W\+KB-\/H\+D\+R1 ls1$\vert$\+W\+KB-\/H\+D\+R2 ls2$\vert$.... Expected polygon format doesn\textquotesingle{}t have the W\+KB headers, and the 1st one is exterior ring, following if any are interior rings.
+
+In both cases, the linestrX is of linestring format, with no W\+KB header in its each point. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLinestring__stepper_ac9d6663371fe790dce1b5b2280c6e419}\label{classLinestring__stepper_ac9d6663371fe790dce1b5b2280c6e419}} 
+\index{Linestring\+\_\+stepper@{Linestring\+\_\+stepper}!operator()@{operator()}}
+\index{operator()@{operator()}!Linestring\+\_\+stepper@{Linestring\+\_\+stepper}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily const char $\ast$ Linestring\+\_\+stepper\+::operator() (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p }\end{DoxyParamCaption})}
+
+Parsing operator. 
+\begin{DoxyParams}{Parameters}
+{\em p} & points to the 1st byte of a linestring\textquotesingle{}s wkb data, right after its wkb header if any; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next linestring\textquotesingle{}s wkb data\textquotesingle{}s 1st byte pointer, skipping its wkb header if any. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+cc\end{DoxyCompactItemize}

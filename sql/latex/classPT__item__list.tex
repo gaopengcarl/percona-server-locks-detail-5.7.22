@@ -1,0 +1,78 @@
+\hypertarget{classPT__item__list}{}\section{P\+T\+\_\+item\+\_\+list Class Reference}
+\label{classPT__item__list}\index{P\+T\+\_\+item\+\_\+list@{P\+T\+\_\+item\+\_\+list}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+helpers.\+h$>$}
+
+Inheritance diagram for P\+T\+\_\+item\+\_\+list\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__item__list}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classPT__item__list_a5ddeca0fe325bc50ddcf4bd17da8efa8}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+\mbox{\Hypertarget{classPT__item__list_a0379ee3cdc93f12bfa459b04d3006c99}\label{classPT__item__list_a0379ee3cdc93f12bfa459b04d3006c99}} 
+bool {\bfseries is\+\_\+empty} () const
+\item 
+\mbox{\Hypertarget{classPT__item__list_aaef9ec87ddaa51d62a987a31cb3746b3}\label{classPT__item__list_aaef9ec87ddaa51d62a987a31cb3746b3}} 
+uint {\bfseries elements} () const
+\item 
+\mbox{\Hypertarget{classPT__item__list_a89567972ba2f2d0df413a8ba3c6f0246}\label{classPT__item__list_a89567972ba2f2d0df413a8ba3c6f0246}} 
+bool {\bfseries push\+\_\+back} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classPT__item__list_a80c821cdfef3b30e89fa2311bdb8cbac}\label{classPT__item__list_a80c821cdfef3b30e89fa2311bdb8cbac}} 
+bool {\bfseries push\+\_\+front} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classPT__item__list_a0115c5587b92eb74151840877ca775d5}\label{classPT__item__list_a0115c5587b92eb74151840877ca775d5}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries pop\+\_\+front} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__item__list_a8f77474dee6e60fd438d2c9bb9ec4a31}\label{classPT__item__list_a8f77474dee6e60fd438d2c9bb9ec4a31}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries value}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Wrapper class for an \mbox{\hyperlink{classItem}{Item}} list head, used to allocate \mbox{\hyperlink{classItem}{Item}} lists in the parser in a context-\/independent way 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__item__list_a5ddeca0fe325bc50ddcf4bd17da8efa8}\label{classPT__item__list_a5ddeca0fe325bc50ddcf4bd17da8efa8}} 
+\index{P\+T\+\_\+item\+\_\+list@{P\+T\+\_\+item\+\_\+list}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+item\+\_\+list@{P\+T\+\_\+item\+\_\+list}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily virtual bool P\+T\+\_\+item\+\_\+list\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Do all context-\/sensitive things and mark the node as contextualized
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classPT__select__item__list_a76b3fc28ad05e3c04a5d6223e8cbeade}{P\+T\+\_\+select\+\_\+item\+\_\+list}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+helpers.\+h\end{DoxyCompactItemize}

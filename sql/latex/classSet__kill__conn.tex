@@ -1,0 +1,28 @@
+\hypertarget{classSet__kill__conn}{}\section{Set\+\_\+kill\+\_\+conn Class Reference}
+\label{classSet__kill__conn}\index{Set\+\_\+kill\+\_\+conn@{Set\+\_\+kill\+\_\+conn}}
+Inheritance diagram for Set\+\_\+kill\+\_\+conn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSet__kill__conn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSet__kill__conn_a7c3e441119db857ba4e5ca98416ad3fd}\label{classSet__kill__conn_a7c3e441119db857ba4e5ca98416ad3fd}} 
+void {\bfseries set\+\_\+dump\+\_\+thread\+\_\+flag} ()
+\item 
+\mbox{\Hypertarget{classSet__kill__conn_a0bf0fd58a77df7126d31bf4ae82a7e99}\label{classSet__kill__conn_a0bf0fd58a77df7126d31bf4ae82a7e99}} 
+int {\bfseries get\+\_\+dump\+\_\+thread\+\_\+count} () const
+\item 
+\mbox{\Hypertarget{classSet__kill__conn_adf8895e794959003e2a463ac89951170}\label{classSet__kill__conn_adf8895e794959003e2a463ac89951170}} 
+virtual void {\bfseries operator()} (T\+HD $\ast$killing\+\_\+thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements callback function used by close\+\_\+connections() to set K\+I\+L\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON flag on all thds in thd list. If m\+\_\+kill\+\_\+dump\+\_\+thread\+\_\+flag is not set it kills all other threads except dump threads. If this flag is set, it kills dump threads. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mysqld.\+cc\end{DoxyCompactItemize}

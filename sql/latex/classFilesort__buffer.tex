@@ -1,0 +1,189 @@
+\hypertarget{classFilesort__buffer}{}\section{Filesort\+\_\+buffer Class Reference}
+\label{classFilesort__buffer}\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+
+
+{\ttfamily \#include $<$filesort\+\_\+utils.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFilesort__buffer_adb7d7a439a496d0ab703c193dced5e32}{sort\+\_\+buffer}} (const \mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$param, uint count)
+\item 
+void \mbox{\hyperlink{classFilesort__buffer_a7772b898cdbd3117acb45a59c9b79cf1}{reverse\+\_\+record\+\_\+pointers}} ()
+\item 
+void \mbox{\hyperlink{classFilesort__buffer_acde96dcd74d1e6594c7055196e316d35}{init\+\_\+record\+\_\+pointers}} ()
+\item 
+void \mbox{\hyperlink{classFilesort__buffer_a2154d7e1b6689811f69d7906a7b3d9dd}{init\+\_\+next\+\_\+record\+\_\+pointer}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classFilesort__buffer_aa6530a61d921471327a2477d05e3d321}{space\+\_\+used\+\_\+for\+\_\+data}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classFilesort__buffer_ad49ea9addecd96e260b3ad82b36b1739}{spaceleft}} () const
+\item 
+bool \mbox{\hyperlink{classFilesort__buffer_aecbe946a71096aab8e07249d318304f1}{isfull}} () const
+\item 
+uchar $\ast$ \mbox{\hyperlink{classFilesort__buffer_a4ab5d2686a9d85b333e9250015b32a1c}{get\+\_\+next\+\_\+record\+\_\+pointer}} ()
+\item 
+void \mbox{\hyperlink{classFilesort__buffer_a69e06f3b69cc78e6450de38e2508e208}{adjust\+\_\+next\+\_\+record\+\_\+pointer}} (uint val)
+\item 
+size\+\_\+t \mbox{\hyperlink{classFilesort__buffer_a65a2f7a974695eab8917c28cf82078f3}{sort\+\_\+buffer\+\_\+size}} () const
+\item 
+uchar $\ast$ \mbox{\hyperlink{classFilesort__buffer_a200aa06db9842f368384b0943d01c806}{alloc\+\_\+sort\+\_\+buffer}} (uint num\+\_\+records, uint record\+\_\+length)
+\item 
+\mbox{\Hypertarget{classFilesort__buffer_a967d857a913b61ef3957d094ac227eca}\label{classFilesort__buffer_a967d857a913b61ef3957d094ac227eca}} 
+void \mbox{\hyperlink{classFilesort__buffer_a967d857a913b61ef3957d094ac227eca}{free\+\_\+sort\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Frees the buffer. \end{DoxyCompactList}\item 
+uchar $\ast$$\ast$ \mbox{\hyperlink{classFilesort__buffer_ab833d1ea135e1651b55087cbe923dbf5}{get\+\_\+sort\+\_\+keys}} ()
+\item 
+uchar $\ast$ \mbox{\hyperlink{classFilesort__buffer_aaa6a3d39db88fecaec624037485fd727}{get\+\_\+sorted\+\_\+record}} (uint ix)
+\item 
+\mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$ uchar $>$ \mbox{\hyperlink{classFilesort__buffer_ac13e1d504a855446db9b9eb540bd69b2}{get\+\_\+raw\+\_\+buf}} ()
+\item 
+\mbox{\hyperlink{classFilesort__buffer}{Filesort\+\_\+buffer}} \& \mbox{\hyperlink{classFilesort__buffer_a3706c904c133aa91efa0838984053a7d}{operator=}} (const \mbox{\hyperlink{classFilesort__buffer}{Filesort\+\_\+buffer}} \&rhs)
+\item 
+\mbox{\Hypertarget{classFilesort__buffer_a4115fea712de87218fb7576173e55625}\label{classFilesort__buffer_a4115fea712de87218fb7576173e55625}} 
+uint {\bfseries get\+\_\+sort\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classFilesort__buffer_a3f0a1cdc26a4a5238ff5eeff9b3677fd}\label{classFilesort__buffer_a3f0a1cdc26a4a5238ff5eeff9b3677fd}} 
+void {\bfseries set\+\_\+sort\+\_\+length} (uint val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A wrapper class around the buffer used by \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}}. The sort buffer is a contiguous chunk of memory, containing both records to be sorted, and pointers to said records\+:
+
+$<$start of buffer $\vert$ still unused $\vert$ end of buffer$>$ $\vert$rec 0$\vert$record 1 $\vert$rec 2$\vert$ ............ $\vert$ptr to rec2$\vert$ptr to rec1$\vert$ptr to rec0$\vert$
+
+Records will be inserted \char`\"{}left-\/to-\/right\char`\"{}. Records are not necessarily fixed-\/size, they can be packed and stored without any \char`\"{}gaps\char`\"{}.
+
+Record pointers will be inserted \char`\"{}right-\/to-\/left\char`\"{}, as a side-\/effect of inserting the actual records.
+
+We wrap the buffer in order to be able to do lazy initialization of the pointers\+: the buffer is often much larger than what we actually need.
+
+With this allocation scheme, and lazy initialization of the pointers, we are able to pack variable-\/sized records in the buffer, and thus possibly have space for more records than we initially estimated.
+
+The buffer must be kept available for multiple executions of the same sort operation, so we have explicit allocate and free functions, rather than doing alloc/free in C\+T\+O\+R/\+D\+T\+OR. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilesort__buffer_a69e06f3b69cc78e6450de38e2508e208}\label{classFilesort__buffer_a69e06f3b69cc78e6450de38e2508e208}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!adjust\+\_\+next\+\_\+record\+\_\+pointer@{adjust\+\_\+next\+\_\+record\+\_\+pointer}}
+\index{adjust\+\_\+next\+\_\+record\+\_\+pointer@{adjust\+\_\+next\+\_\+record\+\_\+pointer}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{adjust\+\_\+next\+\_\+record\+\_\+pointer()}{adjust\_next\_record\_pointer()}}
+{\footnotesize\ttfamily void Filesort\+\_\+buffer\+::adjust\+\_\+next\+\_\+record\+\_\+pointer (\begin{DoxyParamCaption}\item[{uint}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adjusts for actual record length. \mbox{\hyperlink{classFilesort__buffer_a4ab5d2686a9d85b333e9250015b32a1c}{get\+\_\+next\+\_\+record\+\_\+pointer()}} above was pessimistic, and assumed that the record could not be packed. \mbox{\Hypertarget{classFilesort__buffer_a200aa06db9842f368384b0943d01c806}\label{classFilesort__buffer_a200aa06db9842f368384b0943d01c806}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!alloc\+\_\+sort\+\_\+buffer@{alloc\+\_\+sort\+\_\+buffer}}
+\index{alloc\+\_\+sort\+\_\+buffer@{alloc\+\_\+sort\+\_\+buffer}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{alloc\+\_\+sort\+\_\+buffer()}{alloc\_sort\_buffer()}}
+{\footnotesize\ttfamily uchar $\ast$ Filesort\+\_\+buffer\+::alloc\+\_\+sort\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint}]{num\+\_\+records,  }\item[{uint}]{record\+\_\+length }\end{DoxyParamCaption})}
+
+Allocates the buffer, but does {\itshape not} initialize pointers. Total size = (num\+\_\+records $\ast$ record\+\_\+length) + (num\+\_\+records $\ast$ sizeof(pointer)) space for records space for pointer to records Caller is responsible for raising an error if allocation fails.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+records} & Number of records. \\
+\hline
+{\em record\+\_\+length} & (maximum) size of each record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated area, or N\+U\+LL in case of out-\/of-\/memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilesort__buffer_a4ab5d2686a9d85b333e9250015b32a1c}\label{classFilesort__buffer_a4ab5d2686a9d85b333e9250015b32a1c}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!get\+\_\+next\+\_\+record\+\_\+pointer@{get\+\_\+next\+\_\+record\+\_\+pointer}}
+\index{get\+\_\+next\+\_\+record\+\_\+pointer@{get\+\_\+next\+\_\+record\+\_\+pointer}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{get\+\_\+next\+\_\+record\+\_\+pointer()}{get\_next\_record\_pointer()}}
+{\footnotesize\ttfamily uchar$\ast$ Filesort\+\_\+buffer\+::get\+\_\+next\+\_\+record\+\_\+pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Where should the next record be stored? \mbox{\Hypertarget{classFilesort__buffer_ac13e1d504a855446db9b9eb540bd69b2}\label{classFilesort__buffer_ac13e1d504a855446db9b9eb540bd69b2}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!get\+\_\+raw\+\_\+buf@{get\+\_\+raw\+\_\+buf}}
+\index{get\+\_\+raw\+\_\+buf@{get\+\_\+raw\+\_\+buf}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{get\+\_\+raw\+\_\+buf()}{get\_raw\_buf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$uchar$>$ Filesort\+\_\+buffer\+::get\+\_\+raw\+\_\+buf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The entire buffer, as a character array. This is for reusing the memory for merge buffers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilesort__buffer_ab833d1ea135e1651b55087cbe923dbf5}\label{classFilesort__buffer_ab833d1ea135e1651b55087cbe923dbf5}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!get\+\_\+sort\+\_\+keys@{get\+\_\+sort\+\_\+keys}}
+\index{get\+\_\+sort\+\_\+keys@{get\+\_\+sort\+\_\+keys}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{get\+\_\+sort\+\_\+keys()}{get\_sort\_keys()}}
+{\footnotesize\ttfamily uchar$\ast$$\ast$ Filesort\+\_\+buffer\+::get\+\_\+sort\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Used to access the \char`\"{}right-\/to-\/left\char`\"{} array of record pointers as an ordinary \char`\"{}left-\/to-\/right\char`\"{} array, so that we can pass it directly on to std\+::sort(). \mbox{\Hypertarget{classFilesort__buffer_aaa6a3d39db88fecaec624037485fd727}\label{classFilesort__buffer_aaa6a3d39db88fecaec624037485fd727}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!get\+\_\+sorted\+\_\+record@{get\+\_\+sorted\+\_\+record}}
+\index{get\+\_\+sorted\+\_\+record@{get\+\_\+sorted\+\_\+record}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{get\+\_\+sorted\+\_\+record()}{get\_sorted\_record()}}
+{\footnotesize\ttfamily uchar$\ast$ Filesort\+\_\+buffer\+::get\+\_\+sorted\+\_\+record (\begin{DoxyParamCaption}\item[{uint}]{ix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets sorted record number ix. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classFilesort__buffer_ab833d1ea135e1651b55087cbe923dbf5}{get\+\_\+sort\+\_\+keys()}} Only valid after buffer has been sorted! 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classFilesort__buffer_a2154d7e1b6689811f69d7906a7b3d9dd}\label{classFilesort__buffer_a2154d7e1b6689811f69d7906a7b3d9dd}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!init\+\_\+next\+\_\+record\+\_\+pointer@{init\+\_\+next\+\_\+record\+\_\+pointer}}
+\index{init\+\_\+next\+\_\+record\+\_\+pointer@{init\+\_\+next\+\_\+record\+\_\+pointer}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{init\+\_\+next\+\_\+record\+\_\+pointer()}{init\_next\_record\_pointer()}}
+{\footnotesize\ttfamily void Filesort\+\_\+buffer\+::init\+\_\+next\+\_\+record\+\_\+pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepares the buffer for the next batch of records to process. \mbox{\Hypertarget{classFilesort__buffer_acde96dcd74d1e6594c7055196e316d35}\label{classFilesort__buffer_acde96dcd74d1e6594c7055196e316d35}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!init\+\_\+record\+\_\+pointers@{init\+\_\+record\+\_\+pointers}}
+\index{init\+\_\+record\+\_\+pointers@{init\+\_\+record\+\_\+pointers}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{init\+\_\+record\+\_\+pointers()}{init\_record\_pointers()}}
+{\footnotesize\ttfamily void Filesort\+\_\+buffer\+::init\+\_\+record\+\_\+pointers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes all the record pointers. \mbox{\Hypertarget{classFilesort__buffer_aecbe946a71096aab8e07249d318304f1}\label{classFilesort__buffer_aecbe946a71096aab8e07249d318304f1}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!isfull@{isfull}}
+\index{isfull@{isfull}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{isfull()}{isfull()}}
+{\footnotesize\ttfamily bool Filesort\+\_\+buffer\+::isfull (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Is the buffer full? \mbox{\Hypertarget{classFilesort__buffer_a3706c904c133aa91efa0838984053a7d}\label{classFilesort__buffer_a3706c904c133aa91efa0838984053a7d}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFilesort__buffer}{Filesort\+\_\+buffer}}\& Filesort\+\_\+buffer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFilesort__buffer}{Filesort\+\_\+buffer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+We need an assignment operator, see \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}}. This happens to have the same semantics as the one that would be generated by the compiler. We still implement it here, to show shallow assignment explicitly\+: we have two objects sharing the same array. \mbox{\Hypertarget{classFilesort__buffer_a7772b898cdbd3117acb45a59c9b79cf1}\label{classFilesort__buffer_a7772b898cdbd3117acb45a59c9b79cf1}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!reverse\+\_\+record\+\_\+pointers@{reverse\+\_\+record\+\_\+pointers}}
+\index{reverse\+\_\+record\+\_\+pointers@{reverse\+\_\+record\+\_\+pointers}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{reverse\+\_\+record\+\_\+pointers()}{reverse\_record\_pointers()}}
+{\footnotesize\ttfamily void Filesort\+\_\+buffer\+::reverse\+\_\+record\+\_\+pointers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reverses the record pointer array, to avoid recording new results for non-\/deterministic mtr tests. \mbox{\Hypertarget{classFilesort__buffer_adb7d7a439a496d0ab703c193dced5e32}\label{classFilesort__buffer_adb7d7a439a496d0ab703c193dced5e32}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!sort\+\_\+buffer@{sort\+\_\+buffer}}
+\index{sort\+\_\+buffer@{sort\+\_\+buffer}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{sort\+\_\+buffer()}{sort\_buffer()}}
+{\footnotesize\ttfamily void Filesort\+\_\+buffer\+::sort\+\_\+buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$}]{param,  }\item[{uint}]{count }\end{DoxyParamCaption})}
+
+Sort me... \mbox{\Hypertarget{classFilesort__buffer_a65a2f7a974695eab8917c28cf82078f3}\label{classFilesort__buffer_a65a2f7a974695eab8917c28cf82078f3}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!sort\+\_\+buffer\+\_\+size@{sort\+\_\+buffer\+\_\+size}}
+\index{sort\+\_\+buffer\+\_\+size@{sort\+\_\+buffer\+\_\+size}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{sort\+\_\+buffer\+\_\+size()}{sort\_buffer\_size()}}
+{\footnotesize\ttfamily size\+\_\+t Filesort\+\_\+buffer\+::sort\+\_\+buffer\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+total size of buffer\+: pointer array + record buffers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilesort__buffer_aa6530a61d921471327a2477d05e3d321}\label{classFilesort__buffer_aa6530a61d921471327a2477d05e3d321}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!space\+\_\+used\+\_\+for\+\_\+data@{space\+\_\+used\+\_\+for\+\_\+data}}
+\index{space\+\_\+used\+\_\+for\+\_\+data@{space\+\_\+used\+\_\+for\+\_\+data}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{space\+\_\+used\+\_\+for\+\_\+data()}{space\_used\_for\_data()}}
+{\footnotesize\ttfamily size\+\_\+t Filesort\+\_\+buffer\+::space\+\_\+used\+\_\+for\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of bytes currently in use for data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilesort__buffer_ad49ea9addecd96e260b3ad82b36b1739}\label{classFilesort__buffer_ad49ea9addecd96e260b3ad82b36b1739}} 
+\index{Filesort\+\_\+buffer@{Filesort\+\_\+buffer}!spaceleft@{spaceleft}}
+\index{spaceleft@{spaceleft}!Filesort\+\_\+buffer@{Filesort\+\_\+buffer}}
+\subsubsection{\texorpdfstring{spaceleft()}{spaceleft()}}
+{\footnotesize\ttfamily size\+\_\+t Filesort\+\_\+buffer\+::spaceleft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of bytes left in the buffer. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+filesort\+\_\+utils.\+h\item 
+filesort\+\_\+utils.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{classJson__opaque}{}\section{Json\+\_\+opaque Class Reference}
+\label{classJson__opaque}\index{Json\+\_\+opaque@{Json\+\_\+opaque}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+opaque\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classJson__opaque}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson__opaque_ad4165bb22dbe8d6a07a70e4739ab0206}{Json\+\_\+opaque}} (enum\+\_\+field\+\_\+types mytype, const char $\ast$v, size\+\_\+t \mbox{\hyperlink{classJson__opaque_a2fbbcd3d9081289cc0c591630e219ae1}{size}})
+\item 
+\mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__opaque_a28fc1b6c4e0feab7897bf6bb810f7919}{json\+\_\+type}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classJson__opaque_a88b1367f0b9ae23450f478c08dd2bc36}{value}} () const
+\item 
+enum\+\_\+field\+\_\+types \mbox{\hyperlink{classJson__opaque_a26750dc18ad9eb5333e82a0b25815f29}{type}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classJson__opaque_a2fbbcd3d9081289cc0c591630e219ae1}{size}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__opaque_ab40f723d80c2cfcaa4077fb4187c0fc8}{clone}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a My\+S\+QL value opaquely, i.\+e. the Json D\+OM can not serialize or deserialize these values. This should be used to store values that don\textquotesingle{}t map to the other \mbox{\hyperlink{classJson__scalar}{Json\+\_\+scalar}} classes. Using the \char`\"{}to\+\_\+string\char`\"{} method on such values (via \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}) will yield a base 64 encoded string tagged with the My\+S\+QL type with this syntax\+:
+
+\char`\"{}base64\+:type\+X\+X\+:$<$base 64 encoded value$>$\char`\"{} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJson__opaque_ad4165bb22dbe8d6a07a70e4739ab0206}\label{classJson__opaque_ad4165bb22dbe8d6a07a70e4739ab0206}} 
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\subsubsection{\texorpdfstring{Json\+\_\+opaque()}{Json\_opaque()}}
+{\footnotesize\ttfamily Json\+\_\+opaque\+::\+Json\+\_\+opaque (\begin{DoxyParamCaption}\item[{enum\+\_\+field\+\_\+types}]{mytype,  }\item[{const char $\ast$}]{v,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+An opaque My\+S\+QL value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mytype} & the My\+S\+QL type of the value \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & the binary value to be stored in the D\+OM. A copy is taken. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & the size of the binary value in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\#enum\+\_\+field\+\_\+types 
+
+Class documentation 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__opaque_ab40f723d80c2cfcaa4077fb4187c0fc8}\label{classJson__opaque_ab40f723d80c2cfcaa4077fb4187c0fc8}} 
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+opaque\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__opaque_a28fc1b6c4e0feab7897bf6bb810f7919}\label{classJson__opaque_a28fc1b6c4e0feab7897bf6bb810f7919}} 
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} Json\+\_\+opaque\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__opaque_a2fbbcd3d9081289cc0c591630e219ae1}\label{classJson__opaque_a2fbbcd3d9081289cc0c591630e219ae1}} 
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!size@{size}}
+\index{size@{size}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Json\+\_\+opaque\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the size in bytes of the value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__opaque_a26750dc18ad9eb5333e82a0b25815f29}\label{classJson__opaque_a26750dc18ad9eb5333e82a0b25815f29}} 
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!type@{type}}
+\index{type@{type}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily enum\+\_\+field\+\_\+types Json\+\_\+opaque\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the My\+S\+QL type of the value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__opaque_a88b1367f0b9ae23450f478c08dd2bc36}\label{classJson__opaque_a88b1367f0b9ae23450f478c08dd2bc36}} 
+\index{Json\+\_\+opaque@{Json\+\_\+opaque}!value@{value}}
+\index{value@{value}!Json\+\_\+opaque@{Json\+\_\+opaque}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily const char$\ast$ Json\+\_\+opaque\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a pointer to the opaque value. Use \mbox{\hyperlink{classJson__opaque_a2fbbcd3d9081289cc0c591630e219ae1}{size()}} to get its size. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

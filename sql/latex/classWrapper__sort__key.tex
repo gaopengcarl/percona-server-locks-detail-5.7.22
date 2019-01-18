@@ -1,0 +1,62 @@
+\hypertarget{classWrapper__sort__key}{}\section{Wrapper\+\_\+sort\+\_\+key Class Reference}
+\label{classWrapper__sort__key}\index{Wrapper\+\_\+sort\+\_\+key@{Wrapper\+\_\+sort\+\_\+key}}
+
+
+Wrapper around a sort key buffer.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWrapper__sort__key_a2637e3d716aa2fef970f7d978f3e5f59}\label{classWrapper__sort__key_a2637e3d716aa2fef970f7d978f3e5f59}} 
+{\bfseries Wrapper\+\_\+sort\+\_\+key} (uchar $\ast$buf, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classWrapper__sort__key_ade7b13ed98198f789485c73b7b53ef01}\label{classWrapper__sort__key_ade7b13ed98198f789485c73b7b53ef01}} 
+size\+\_\+t \mbox{\hyperlink{classWrapper__sort__key_ade7b13ed98198f789485c73b7b53ef01}{remaining}} () const
+\begin{DoxyCompactList}\small\item\em Get the remaining space in the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWrapper__sort__key_a30240a1542484ec349d9df74392c7a37}\label{classWrapper__sort__key_a30240a1542484ec349d9df74392c7a37}} 
+void \mbox{\hyperlink{classWrapper__sort__key_a30240a1542484ec349d9df74392c7a37}{append}} (uchar ch)
+\begin{DoxyCompactList}\small\item\em Append a character to the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWrapper__sort__key_a96c87424b808b7491b251936fa1ac252}\label{classWrapper__sort__key_a96c87424b808b7491b251936fa1ac252}} 
+void \mbox{\hyperlink{classWrapper__sort__key_a96c87424b808b7491b251936fa1ac252}{pad\+\_\+fill}} (uchar pad\+\_\+character, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Pad the buffer with the specified character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWrapper__sort__key_ac22304eb125f9784d9d133a5a99be48b}{copy\+\_\+int}} (size\+\_\+t target\+\_\+length, const uchar $\ast$from, size\+\_\+t from\+\_\+length, bool is\+\_\+unsigned)
+\item 
+void \mbox{\hyperlink{classWrapper__sort__key_a0c56a83c72d63abf2c6bded0f2d62e11}{append\+\_\+str\+\_\+and\+\_\+len}} (const char $\ast$str, size\+\_\+t len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper around a sort key buffer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWrapper__sort__key_a0c56a83c72d63abf2c6bded0f2d62e11}\label{classWrapper__sort__key_a0c56a83c72d63abf2c6bded0f2d62e11}} 
+\index{Wrapper\+\_\+sort\+\_\+key@{Wrapper\+\_\+sort\+\_\+key}!append\+\_\+str\+\_\+and\+\_\+len@{append\+\_\+str\+\_\+and\+\_\+len}}
+\index{append\+\_\+str\+\_\+and\+\_\+len@{append\+\_\+str\+\_\+and\+\_\+len}!Wrapper\+\_\+sort\+\_\+key@{Wrapper\+\_\+sort\+\_\+key}}
+\subsubsection{\texorpdfstring{append\+\_\+str\+\_\+and\+\_\+len()}{append\_str\_and\_len()}}
+{\footnotesize\ttfamily void Wrapper\+\_\+sort\+\_\+key\+::append\+\_\+str\+\_\+and\+\_\+len (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append a string to the buffer, and add the length of the string to the end of the buffer. The space between the end of the string and the beginning of the length field is padded with zeros. \mbox{\Hypertarget{classWrapper__sort__key_ac22304eb125f9784d9d133a5a99be48b}\label{classWrapper__sort__key_ac22304eb125f9784d9d133a5a99be48b}} 
+\index{Wrapper\+\_\+sort\+\_\+key@{Wrapper\+\_\+sort\+\_\+key}!copy\+\_\+int@{copy\+\_\+int}}
+\index{copy\+\_\+int@{copy\+\_\+int}!Wrapper\+\_\+sort\+\_\+key@{Wrapper\+\_\+sort\+\_\+key}}
+\subsubsection{\texorpdfstring{copy\+\_\+int()}{copy\_int()}}
+{\footnotesize\ttfamily void Wrapper\+\_\+sort\+\_\+key\+::copy\+\_\+int (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{target\+\_\+length,  }\item[{const uchar $\ast$}]{from,  }\item[{size\+\_\+t}]{from\+\_\+length,  }\item[{bool}]{is\+\_\+unsigned }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy an integer to the buffer and format it in a way that makes it possible to sort the integers with memcpy().
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+length} & the number of bytes to write to the buffer \\
+\hline
+{\em from} & the buffer to copy the integer from (in little-\/endian format) \\
+\hline
+{\em from\+\_\+length} & the size of the from buffer \\
+\hline
+{\em is\+\_\+unsigned} & true if the from buffer contains an unsigned integer, false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

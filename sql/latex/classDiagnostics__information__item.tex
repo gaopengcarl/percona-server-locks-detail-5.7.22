@@ -1,0 +1,81 @@
+\hypertarget{classDiagnostics__information__item}{}\section{Diagnostics\+\_\+information\+\_\+item Class Reference}
+\label{classDiagnostics__information__item}\index{Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}}
+
+
+{\ttfamily \#include $<$sql\+\_\+get\+\_\+diagnostics.\+h$>$}
+
+Inheritance diagram for Diagnostics\+\_\+information\+\_\+item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDiagnostics__information__item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classDiagnostics__information__item_a127b94424c2760818c42af7961522362}{set\+\_\+value}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDiagnostics__information__item_a40fbb8d9257b51c3ba2035bd39507fcf}{Diagnostics\+\_\+information\+\_\+item}} (\mbox{\hyperlink{classItem}{Item}} $\ast$target)
+\item 
+virtual \mbox{\hyperlink{classDiagnostics__information__item_aea065efb18863b1da4370c32ca2f6258}{$\sim$\+Diagnostics\+\_\+information\+\_\+item}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A diagnostics information item. Used to associate a specific diagnostics information item to a target variable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDiagnostics__information__item_a40fbb8d9257b51c3ba2035bd39507fcf}\label{classDiagnostics__information__item_a40fbb8d9257b51c3ba2035bd39507fcf}} 
+\index{Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}!Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}}
+\index{Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}!Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}}
+\subsubsection{\texorpdfstring{Diagnostics\+\_\+information\+\_\+item()}{Diagnostics\_information\_item()}}
+{\footnotesize\ttfamily Diagnostics\+\_\+information\+\_\+item\+::\+Diagnostics\+\_\+information\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Constructor, used to represent a diagnostics information item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & A target that gets the value of this item. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiagnostics__information__item_aea065efb18863b1da4370c32ca2f6258}\label{classDiagnostics__information__item_aea065efb18863b1da4370c32ca2f6258}} 
+\index{Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}!````~Diagnostics\+\_\+information\+\_\+item@{$\sim$\+Diagnostics\+\_\+information\+\_\+item}}
+\index{````~Diagnostics\+\_\+information\+\_\+item@{$\sim$\+Diagnostics\+\_\+information\+\_\+item}!Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}}
+\subsubsection{\texorpdfstring{$\sim$\+Diagnostics\+\_\+information\+\_\+item()}{~Diagnostics\_information\_item()}}
+{\footnotesize\ttfamily virtual Diagnostics\+\_\+information\+\_\+item\+::$\sim$\+Diagnostics\+\_\+information\+\_\+item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classDiagnostics__information__item}{Diagnostics\+\_\+information\+\_\+item}} objects are allocated in thd-\/$>$mem\+\_\+root. Do not rely on the destructor for any cleanup. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiagnostics__information__item_a127b94424c2760818c42af7961522362}\label{classDiagnostics__information__item_a127b94424c2760818c42af7961522362}} 
+\index{Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Diagnostics\+\_\+information\+\_\+item@{Diagnostics\+\_\+information\+\_\+item}}
+\subsubsection{\texorpdfstring{set\+\_\+value()}{set\_value()}}
+{\footnotesize\ttfamily bool Diagnostics\+\_\+information\+\_\+item\+::set\+\_\+value (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{value }\end{DoxyParamCaption})}
+
+Set a value for this item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em value} & The obtained value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+get\+\_\+diagnostics.\+h\item 
+sql\+\_\+get\+\_\+diagnostics.\+cc\end{DoxyCompactItemize}

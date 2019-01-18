@@ -1,0 +1,52 @@
+\hypertarget{classTable__cache__iterator}{}\section{Table\+\_\+cache\+\_\+iterator Class Reference}
+\label{classTable__cache__iterator}\index{Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}}
+
+
+{\ttfamily \#include $<$table\+\_\+cache.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTable__cache__iterator_a5c702829feb5c5044cc03dd0597b4232}{Table\+\_\+cache\+\_\+iterator}} (const \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share\+\_\+arg)
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classTable__cache__iterator_af5dc1e3ac1faa2b8639e221f774d4a19}{operator++}} (int)
+\item 
+\mbox{\Hypertarget{classTable__cache__iterator_ac8db937191dc68e89fb7c5653a90d3b8}\label{classTable__cache__iterator_ac8db937191dc68e89fb7c5653a90d3b8}} 
+void {\bfseries rewind} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Iterator which allows to go through all used \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instances for the table in all table caches. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTable__cache__iterator_a5c702829feb5c5044cc03dd0597b4232}\label{classTable__cache__iterator_a5c702829feb5c5044cc03dd0597b4232}} 
+\index{Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}!Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}}
+\index{Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}!Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}}
+\subsubsection{\texorpdfstring{Table\+\_\+cache\+\_\+iterator()}{Table\_cache\_iterator()}}
+{\footnotesize\ttfamily Table\+\_\+cache\+\_\+iterator\+::\+Table\+\_\+cache\+\_\+iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{share\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct iterator over all used \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} objects for the table share.
+
+\begin{DoxyNote}{Note}
+Assumes that caller owns locks on all table caches. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable__cache__iterator_af5dc1e3ac1faa2b8639e221f774d4a19}\label{classTable__cache__iterator_af5dc1e3ac1faa2b8639e221f774d4a19}} 
+\index{Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Table\+\_\+cache\+\_\+iterator@{Table\+\_\+cache\+\_\+iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ Table\+\_\+cache\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get current used \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance and move iterator to the next one.
+
+\begin{DoxyNote}{Note}
+Assumes that caller owns locks on all table caches. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table\+\_\+cache.\+h\end{DoxyCompactItemize}

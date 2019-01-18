@@ -1,0 +1,190 @@
+\hypertarget{classOwned__gtids}{}\section{Owned\+\_\+gtids Class Reference}
+\label{classOwned__gtids}\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classOwned__gtids_1_1Gtid__iterator}{Gtid\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOwned__gtids_a7b91d015754445c004455b37096da3f1}{Owned\+\_\+gtids}} (\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$sid\+\_\+lock)
+\item 
+\mbox{\Hypertarget{classOwned__gtids_ad91e433dfe634b5c501a681a145aabfb}\label{classOwned__gtids_ad91e433dfe634b5c501a681a145aabfb}} 
+\mbox{\hyperlink{classOwned__gtids_ad91e433dfe634b5c501a681a145aabfb}{$\sim$\+Owned\+\_\+gtids}} ()
+\begin{DoxyCompactList}\small\item\em Destroys this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}}. \end{DoxyCompactList}\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classOwned__gtids_a323fa3724e5214e36bac9153e9cb3585}{add\+\_\+gtid\+\_\+owner}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid, my\+\_\+thread\+\_\+id owner)
+\item 
+\mbox{\Hypertarget{classOwned__gtids_aa4499c42b596c5ebd0e0cf7227783532}\label{classOwned__gtids_aa4499c42b596c5ebd0e0cf7227783532}} 
+void {\bfseries get\+\_\+gtids} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} \&gtid\+\_\+set) const
+\item 
+void \mbox{\hyperlink{classOwned__gtids_afc63a8ed9cff1f2dddd102176535073d}{remove\+\_\+gtid}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid, const my\+\_\+thread\+\_\+id owner)
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classOwned__gtids_aed0354047916db07b6a854e621f48674}{ensure\+\_\+sidno}} (rpl\+\_\+sidno sidno)
+\item 
+bool \mbox{\hyperlink{classOwned__gtids_a39d5a45f8d36a5ae5efb668babcd9e09}{is\+\_\+intersection\+\_\+nonempty}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other) const
+\item 
+\mbox{\Hypertarget{classOwned__gtids_a64a21addf48daf859e338e8f8f49695e}\label{classOwned__gtids_a64a21addf48daf859e338e8f8f49695e}} 
+bool \mbox{\hyperlink{classOwned__gtids_a64a21addf48daf859e338e8f8f49695e}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} is empty. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOwned__gtids_a87a9e66aa429f4d562c24623bd113093}\label{classOwned__gtids_a87a9e66aa429f4d562c24623bd113093}} 
+rpl\+\_\+sidno \mbox{\hyperlink{classOwned__gtids_a87a9e66aa429f4d562c24623bd113093}{get\+\_\+max\+\_\+sidno}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximal sidno that this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} currently has space for. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOwned__gtids_a746e2bc47416a49a418fa6dd0abb8421}{to\+\_\+string}} (char $\ast$out) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classOwned__gtids_a0d71e2cdcab169bbe86b9f6067b1c93a}{get\+\_\+max\+\_\+string\+\_\+length}} () const
+\item 
+bool \mbox{\hyperlink{classOwned__gtids_a2dc24132eb1138e5c291da8db213e47c}{thread\+\_\+owns\+\_\+anything}} (my\+\_\+thread\+\_\+id thd\+\_\+id) const
+\item 
+char $\ast$ \mbox{\hyperlink{classOwned__gtids_ad4abec5df6285656ea7f69a4bef7ba79}{to\+\_\+string}} () const
+\item 
+\mbox{\Hypertarget{classOwned__gtids_adaa9384e98baaa628266f8d5e6a70c38}\label{classOwned__gtids_adaa9384e98baaa628266f8d5e6a70c38}} 
+void \mbox{\hyperlink{classOwned__gtids_adaa9384e98baaa628266f8d5e6a70c38}{print}} () const
+\begin{DoxyCompactList}\small\item\em Debug only\+: print this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} to stdout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOwned__gtids_aa2aa4bc59310407ed3f5b00db77d0021}{dbug\+\_\+print}} (const char $\ast$text=\char`\"{}\char`\"{}) const
+\item 
+bool \mbox{\hyperlink{classOwned__gtids_a5a377386748e0fbb46229e097388bf05}{is\+\_\+owned\+\_\+by}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid, const my\+\_\+thread\+\_\+id thd\+\_\+id) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the set of G\+T\+I\+Ds that are owned by some thread.
+
+This data structure has a read-\/write lock that protects the number of S\+I\+D\+N\+Os. The lock is provided by the invoker of the constructor and it is generally the caller\textquotesingle{}s responsibility to acquire the read lock. Access methods assert that the caller already holds the read (or write) lock. If a method of this class grows the number of S\+I\+D\+N\+Os, then the method temporarily upgrades this lock to a write lock and then degrades it to a read lock again; there will be a short period when the lock is not held at all.
+
+The internal representation is a multi-\/valued map from G\+T\+I\+Ds to threads, mapping G\+T\+I\+Ds to one or more threads that owns it.
+
+In Group Replication multiple threads can own a G\+T\+ID whereas if GR is disabeld there is at most one owner per G\+T\+ID. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOwned__gtids_a7b91d015754445c004455b37096da3f1}\label{classOwned__gtids_a7b91d015754445c004455b37096da3f1}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{Owned\+\_\+gtids()}{Owned\_gtids()}}
+{\footnotesize\ttfamily Owned\+\_\+gtids\+::\+Owned\+\_\+gtids (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$}]{sid\+\_\+lock }\end{DoxyParamCaption})}
+
+Constructs a new, empty \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid\+\_\+lock} & Read-\/write lock that protects updates to the number of S\+I\+Ds. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classOwned__gtids_a323fa3724e5214e36bac9153e9cb3585}\label{classOwned__gtids_a323fa3724e5214e36bac9153e9cb3585}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!add\+\_\+gtid\+\_\+owner@{add\+\_\+gtid\+\_\+owner}}
+\index{add\+\_\+gtid\+\_\+owner@{add\+\_\+gtid\+\_\+owner}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{add\+\_\+gtid\+\_\+owner()}{add\_gtid\_owner()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Owned\+\_\+gtids\+::add\+\_\+gtid\+\_\+owner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid,  }\item[{my\+\_\+thread\+\_\+id}]{owner }\end{DoxyParamCaption})}
+
+Add a G\+T\+ID to this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid} & The \mbox{\hyperlink{structGtid}{Gtid}} to add. \\
+\hline
+{\em owner} & The my\+\_\+thread\+\_\+id of the group to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOwned__gtids_aa2aa4bc59310407ed3f5b00db77d0021}\label{classOwned__gtids_aa2aa4bc59310407ed3f5b00db77d0021}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!dbug\+\_\+print@{dbug\+\_\+print}}
+\index{dbug\+\_\+print@{dbug\+\_\+print}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{dbug\+\_\+print()}{dbug\_print()}}
+{\footnotesize\ttfamily void Owned\+\_\+gtids\+::dbug\+\_\+print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Print this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} to the trace file if debug is enabled; no-\/op otherwise. \mbox{\Hypertarget{classOwned__gtids_aed0354047916db07b6a854e621f48674}\label{classOwned__gtids_aed0354047916db07b6a854e621f48674}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!ensure\+\_\+sidno@{ensure\+\_\+sidno}}
+\index{ensure\+\_\+sidno@{ensure\+\_\+sidno}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{ensure\+\_\+sidno()}{ensure\_sidno()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Owned\+\_\+gtids\+::ensure\+\_\+sidno (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno }\end{DoxyParamCaption})}
+
+Ensures that this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} object can accomodate S\+I\+D\+N\+Os up to the given S\+I\+D\+NO.
+
+If this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} object needs to be resized, then the lock will be temporarily upgraded to a write lock and then degraded to a read lock again; there will be a short period when the lock is not held at all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & The S\+I\+D\+NO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOwned__gtids_a0d71e2cdcab169bbe86b9f6067b1c93a}\label{classOwned__gtids_a0d71e2cdcab169bbe86b9f6067b1c93a}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!get\+\_\+max\+\_\+string\+\_\+length@{get\+\_\+max\+\_\+string\+\_\+length}}
+\index{get\+\_\+max\+\_\+string\+\_\+length@{get\+\_\+max\+\_\+string\+\_\+length}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+string\+\_\+length()}{get\_max\_string\_length()}}
+{\footnotesize\ttfamily size\+\_\+t Owned\+\_\+gtids\+::get\+\_\+max\+\_\+string\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return an upper bound on the length of the string representation of this Owned\+\_\+groups. The actual length may be smaller. This includes the trailing \textquotesingle{}\textbackslash{}0\textquotesingle{}. \mbox{\Hypertarget{classOwned__gtids_a39d5a45f8d36a5ae5efb668babcd9e09}\label{classOwned__gtids_a39d5a45f8d36a5ae5efb668babcd9e09}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!is\+\_\+intersection\+\_\+nonempty@{is\+\_\+intersection\+\_\+nonempty}}
+\index{is\+\_\+intersection\+\_\+nonempty@{is\+\_\+intersection\+\_\+nonempty}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{is\+\_\+intersection\+\_\+nonempty()}{is\_intersection\_nonempty()}}
+{\footnotesize\ttfamily bool Owned\+\_\+gtids\+::is\+\_\+intersection\+\_\+nonempty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{other }\end{DoxyParamCaption}) const}
+
+Returns true if there is a least one element of this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} set in the other \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \mbox{\Hypertarget{classOwned__gtids_a5a377386748e0fbb46229e097388bf05}\label{classOwned__gtids_a5a377386748e0fbb46229e097388bf05}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!is\+\_\+owned\+\_\+by@{is\+\_\+owned\+\_\+by}}
+\index{is\+\_\+owned\+\_\+by@{is\+\_\+owned\+\_\+by}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{is\+\_\+owned\+\_\+by()}{is\_owned\_by()}}
+{\footnotesize\ttfamily bool Owned\+\_\+gtids\+::is\+\_\+owned\+\_\+by (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid,  }\item[{const my\+\_\+thread\+\_\+id}]{thd\+\_\+id }\end{DoxyParamCaption}) const}
+
+If thd\+\_\+id==0, returns true when gtid is not owned by any thread. If thd\+\_\+id!=0, returns true when gtid is owned by that thread. \mbox{\Hypertarget{classOwned__gtids_afc63a8ed9cff1f2dddd102176535073d}\label{classOwned__gtids_afc63a8ed9cff1f2dddd102176535073d}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!remove\+\_\+gtid@{remove\+\_\+gtid}}
+\index{remove\+\_\+gtid@{remove\+\_\+gtid}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{remove\+\_\+gtid()}{remove\_gtid()}}
+{\footnotesize\ttfamily void Owned\+\_\+gtids\+::remove\+\_\+gtid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid,  }\item[{const my\+\_\+thread\+\_\+id}]{owner }\end{DoxyParamCaption})}
+
+Removes the given G\+T\+ID.
+
+If the group does not exist in this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}} object, does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid} & The \mbox{\hyperlink{structGtid}{Gtid}}. \\
+\hline
+{\em owner} & thread\+\_\+id of the owner thread \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOwned__gtids_a2dc24132eb1138e5c291da8db213e47c}\label{classOwned__gtids_a2dc24132eb1138e5c291da8db213e47c}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!thread\+\_\+owns\+\_\+anything@{thread\+\_\+owns\+\_\+anything}}
+\index{thread\+\_\+owns\+\_\+anything@{thread\+\_\+owns\+\_\+anything}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{thread\+\_\+owns\+\_\+anything()}{thread\_owns\_anything()}}
+{\footnotesize\ttfamily bool Owned\+\_\+gtids\+::thread\+\_\+owns\+\_\+anything (\begin{DoxyParamCaption}\item[{my\+\_\+thread\+\_\+id}]{thd\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the given thread is the owner of any groups. \mbox{\Hypertarget{classOwned__gtids_a746e2bc47416a49a418fa6dd0abb8421}\label{classOwned__gtids_a746e2bc47416a49a418fa6dd0abb8421}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Owned\+\_\+gtids\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write a string representation of this Owned\+\_\+groups to the given buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Buffer to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of characters written. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOwned__gtids_ad4abec5df6285656ea7f69a4bef7ba79}\label{classOwned__gtids_ad4abec5df6285656ea7f69a4bef7ba79}} 
+\index{Owned\+\_\+gtids@{Owned\+\_\+gtids}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Owned\+\_\+gtids@{Owned\+\_\+gtids}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char$\ast$ Owned\+\_\+gtids\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Debug only\+: return a newly allocated string representation of this \mbox{\hyperlink{classOwned__gtids}{Owned\+\_\+gtids}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\item 
+rpl\+\_\+gtid\+\_\+owned.\+cc\end{DoxyCompactItemize}

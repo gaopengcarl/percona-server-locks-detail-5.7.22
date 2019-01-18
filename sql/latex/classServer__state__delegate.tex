@@ -1,0 +1,134 @@
+\hypertarget{classServer__state__delegate}{}\section{Server\+\_\+state\+\_\+delegate Class Reference}
+\label{classServer__state__delegate}\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+Inheritance diagram for Server\+\_\+state\+\_\+delegate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classServer__state__delegate}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer__state__delegate_a101a9d74be984136643ce3b30b304943}\label{classServer__state__delegate_a101a9d74be984136643ce3b30b304943}} 
+typedef \mbox{\hyperlink{structServer__state__observer}{Server\+\_\+state\+\_\+observer}} {\bfseries Observer}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classServer__state__delegate_a2571fe4639eca1ab37417c1cef9a051f}{before\+\_\+handle\+\_\+connection}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classServer__state__delegate_a9a19117db22f1ac1371cfe804ab1d49a}{before\+\_\+recovery}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classServer__state__delegate_a770a99160c8bbc8fe97b28c53a972a50}{after\+\_\+engine\+\_\+recovery}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classServer__state__delegate_a8d4a66660e9d9f463eb3719271cfffe8}{after\+\_\+recovery}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classServer__state__delegate_a37e23e031cc508febdd6e6a74198e95a}{before\+\_\+server\+\_\+shutdown}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classServer__state__delegate_a16548382b069173cb1e1bb29b621dfe5}{after\+\_\+server\+\_\+shutdown}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classServer__state__delegate_a770a99160c8bbc8fe97b28c53a972a50}\label{classServer__state__delegate_a770a99160c8bbc8fe97b28c53a972a50}} 
+\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}!after\+\_\+engine\+\_\+recovery@{after\+\_\+engine\+\_\+recovery}}
+\index{after\+\_\+engine\+\_\+recovery@{after\+\_\+engine\+\_\+recovery}!Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+\subsubsection{\texorpdfstring{after\+\_\+engine\+\_\+recovery()}{after\_engine\_recovery()}}
+{\footnotesize\ttfamily int Server\+\_\+state\+\_\+delegate\+::after\+\_\+engine\+\_\+recovery (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This hook M\+U\+ST be invoked after the recovery from the engine is complete.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, $>$0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer__state__delegate_a8d4a66660e9d9f463eb3719271cfffe8}\label{classServer__state__delegate_a8d4a66660e9d9f463eb3719271cfffe8}} 
+\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}!after\+\_\+recovery@{after\+\_\+recovery}}
+\index{after\+\_\+recovery@{after\+\_\+recovery}!Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+\subsubsection{\texorpdfstring{after\+\_\+recovery()}{after\_recovery()}}
+{\footnotesize\ttfamily int Server\+\_\+state\+\_\+delegate\+::after\+\_\+recovery (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This hook M\+U\+ST be invoked after the server has completed the local recovery. The server can proceed with the further operations like engaging in distributed recovery etc.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, $>$0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer__state__delegate_a16548382b069173cb1e1bb29b621dfe5}\label{classServer__state__delegate_a16548382b069173cb1e1bb29b621dfe5}} 
+\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}!after\+\_\+server\+\_\+shutdown@{after\+\_\+server\+\_\+shutdown}}
+\index{after\+\_\+server\+\_\+shutdown@{after\+\_\+server\+\_\+shutdown}!Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+\subsubsection{\texorpdfstring{after\+\_\+server\+\_\+shutdown()}{after\_server\_shutdown()}}
+{\footnotesize\ttfamily int Server\+\_\+state\+\_\+delegate\+::after\+\_\+server\+\_\+shutdown (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This hook M\+U\+ST be invoked after server shutdown operation is complete.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, $>$0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer__state__delegate_a2571fe4639eca1ab37417c1cef9a051f}\label{classServer__state__delegate_a2571fe4639eca1ab37417c1cef9a051f}} 
+\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}!before\+\_\+handle\+\_\+connection@{before\+\_\+handle\+\_\+connection}}
+\index{before\+\_\+handle\+\_\+connection@{before\+\_\+handle\+\_\+connection}!Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+\subsubsection{\texorpdfstring{before\+\_\+handle\+\_\+connection()}{before\_handle\_connection()}}
+{\footnotesize\ttfamily int Server\+\_\+state\+\_\+delegate\+::before\+\_\+handle\+\_\+connection (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This hook M\+U\+ST be invoked after A\+LL recovery operations are performed and the server is ready to serve clients.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, $>$0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer__state__delegate_a9a19117db22f1ac1371cfe804ab1d49a}\label{classServer__state__delegate_a9a19117db22f1ac1371cfe804ab1d49a}} 
+\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}!before\+\_\+recovery@{before\+\_\+recovery}}
+\index{before\+\_\+recovery@{before\+\_\+recovery}!Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+\subsubsection{\texorpdfstring{before\+\_\+recovery()}{before\_recovery()}}
+{\footnotesize\ttfamily int Server\+\_\+state\+\_\+delegate\+::before\+\_\+recovery (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This hook M\+U\+ST be invoked before A\+NY recovery action is started.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, $>$0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer__state__delegate_a37e23e031cc508febdd6e6a74198e95a}\label{classServer__state__delegate_a37e23e031cc508febdd6e6a74198e95a}} 
+\index{Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}!before\+\_\+server\+\_\+shutdown@{before\+\_\+server\+\_\+shutdown}}
+\index{before\+\_\+server\+\_\+shutdown@{before\+\_\+server\+\_\+shutdown}!Server\+\_\+state\+\_\+delegate@{Server\+\_\+state\+\_\+delegate}}
+\subsubsection{\texorpdfstring{before\+\_\+server\+\_\+shutdown()}{before\_server\_shutdown()}}
+{\footnotesize\ttfamily int Server\+\_\+state\+\_\+delegate\+::before\+\_\+server\+\_\+shutdown (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This hook M\+U\+ST be invoked before server shutdown action is initiated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, $>$0 otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+handler.\+h\item 
+rpl\+\_\+handler.\+cc\end{DoxyCompactItemize}

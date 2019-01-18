@@ -1,0 +1,646 @@
+\hypertarget{classJOIN}{}\section{J\+O\+IN Class Reference}
+\label{classJOIN}\index{J\+O\+IN@{J\+O\+IN}}
+Inheritance diagram for J\+O\+IN\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJOIN}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN_a4077cfaa78289ac3eee99ef18050f87d}\label{classJOIN_a4077cfaa78289ac3eee99ef18050f87d}} 
+enum \{ {\bfseries ordered\+\_\+index\+\_\+void}, 
+{\bfseries ordered\+\_\+index\+\_\+group\+\_\+by}, 
+{\bfseries ordered\+\_\+index\+\_\+order\+\_\+by}
+ \}
+\item 
+enum \mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694}{enum\+\_\+plan\+\_\+state}} \{ \mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694a4022679ac4b71899e09ae694d12f63e8}{N\+O\+\_\+\+P\+L\+AN}}, 
+\mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694ab70074c02eaeac14f21d9fe7fd4d9890}{Z\+E\+R\+O\+\_\+\+R\+E\+S\+U\+LT}}, 
+\mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694a3056ab60db67d76fbb710cd6d7113cf6}{N\+O\+\_\+\+T\+A\+B\+L\+ES}}, 
+\mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694af3eb17fcff8c8d8425b6e449079aa981}{P\+L\+A\+N\+\_\+\+R\+E\+A\+DY}}
+ \}
+\begin{DoxyCompactList}\small\item\em State of execution plan. Currently used only for E\+X\+P\+L\+A\+IN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN_ae61cb563ddbc36edfe43024c8a479190}\label{classJOIN_ae61cb563ddbc36edfe43024c8a479190}} 
+{\bfseries J\+O\+IN} (T\+HD $\ast$thd\+\_\+arg, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select)
+\item 
+\mbox{\Hypertarget{classJOIN_a3bba78a49b4feb9f60e1044471c41126}\label{classJOIN_a3bba78a49b4feb9f60e1044471c41126}} 
+bool \mbox{\hyperlink{classJOIN_a3bba78a49b4feb9f60e1044471c41126}{plan\+\_\+is\+\_\+const}} () const
+\begin{DoxyCompactList}\small\item\em True if plan is const, ie it will return zero or one rows. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJOIN_a0c4c676ce74a6a273c6fc5492406e462}{plan\+\_\+is\+\_\+single\+\_\+table}} ()
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga7f722315c64ce97cff639d705107c660}{optimize}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gad4e09d71987062663db1836d651ec4d4}{reset}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}{exec}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gabed62f6e6cc8f6d042c806a154ea7137}{prepare\+\_\+result}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaf2d76654da99be4012095c016ea5d4d2}{destroy}} ()
+\item 
+\mbox{\Hypertarget{classJOIN_a4ce13fe6078588aa794923f13cd47be4}\label{classJOIN_a4ce13fe6078588aa794923f13cd47be4}} 
+void {\bfseries restore\+\_\+tmp} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga140c4ff912190f1c0f6279897103a720}{alloc\+\_\+func\+\_\+list}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gae713fbd3faf5b5aefad41408fd11685a}{make\+\_\+sum\+\_\+func\+\_\+list}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&\mbox{\hyperlink{classJOIN_a6664196553f3202cfc4e740358d6bc0d}{all\+\_\+fields}}, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&send\+\_\+fields, bool before\+\_\+group\+\_\+by, bool recompute=F\+A\+L\+SE)
+\item 
+void \mbox{\hyperlink{classJOIN_acce1ebb89b6ce7cacb5afdabf72d8f1a}{copy\+\_\+ref\+\_\+ptr\+\_\+array}} (\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} dst\+\_\+arr, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} src\+\_\+arr)
+\item 
+\mbox{\Hypertarget{classJOIN_a90e9fefe03b9ff58097f8dc1e3479522}\label{classJOIN_a90e9fefe03b9ff58097f8dc1e3479522}} 
+void \mbox{\hyperlink{classJOIN_a90e9fefe03b9ff58097f8dc1e3479522}{set\+\_\+items\+\_\+ref\+\_\+array}} (\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} src\+\_\+arr)
+\begin{DoxyCompactList}\small\item\em Overwrites \textquotesingle{}ref\+\_\+ptrs\textquotesingle{} and remembers the the source as \textquotesingle{}current\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a660825c0cb1fc93270b5436f65878121}\label{classJOIN_a660825c0cb1fc93270b5436f65878121}} 
+void \mbox{\hyperlink{classJOIN_a660825c0cb1fc93270b5436f65878121}{init\+\_\+items\+\_\+ref\+\_\+array}} ()
+\begin{DoxyCompactList}\small\item\em Initializes \textquotesingle{}items0\textquotesingle{} and remembers that it is \textquotesingle{}current\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaac99b2256ee62ddd1a435289c2acb8e2}{optimize\+\_\+rollup}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga076b7e6736c0bf0a9e9bf7542e4746c8}{rollup\+\_\+process\+\_\+const\+\_\+fields}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga7e92b14b52e210ce225ad4c0312f9bca}{rollup\+\_\+make\+\_\+fields}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&\mbox{\hyperlink{classJOIN_a6664196553f3202cfc4e740358d6bc0d}{all\+\_\+fields}}, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$$\ast$func)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga148b2123bee3ebd0718d334e9f109db8}{rollup\+\_\+send\+\_\+data}} (uint idx)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga15c9baf548fef3d59f993a3c13575593}{rollup\+\_\+write\+\_\+data}} (uint idx, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+void {\bfseries remove\+\_\+subq\+\_\+pushed\+\_\+predicates} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaa62d47da29f3853e87b1069ee5c1ff21}{join\+\_\+free}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga633799af14ae0a6e3abbac98b428c46f}{cleanup}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gacff1c1a49375e2f52301214084924bf3}{clear}} ()
+\item 
+\mbox{\Hypertarget{classJOIN_a5af6119a4837a9d4c46889c50a86f6d0}\label{classJOIN_a5af6119a4837a9d4c46889c50a86f6d0}} 
+bool {\bfseries save\+\_\+join\+\_\+tab} ()
+\item 
+\mbox{\Hypertarget{classJOIN_a3f009002c1a2d995fddaf6a3cc262944}\label{classJOIN_a3f009002c1a2d995fddaf6a3cc262944}} 
+void {\bfseries restore\+\_\+join\+\_\+tab} ()
+\item 
+\mbox{\Hypertarget{classJOIN_afe6e128f38e17719d85a215c03e4481a}\label{classJOIN_afe6e128f38e17719d85a215c03e4481a}} 
+bool {\bfseries init\+\_\+save\+\_\+join\+\_\+tab} ()
+\item 
+bool \mbox{\hyperlink{classJOIN_a1db66213c1a83ccccd913b4173a28a85}{send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set}} () const
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga4408ac7e9a04a594110d2009cfcd54c9}{cache\+\_\+const\+\_\+exprs}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga92bf64a03ec666f565627fbb48ba4677}{generate\+\_\+derived\+\_\+keys}} ()
+\begin{DoxyCompactList}\small\item\em Add keys to derived tables\textquotesingle{}/views\textquotesingle{} result tables in a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga54392f4f40ec2c57b8263f22fa3d4296}{drop\+\_\+unused\+\_\+derived\+\_\+keys}} ()
+\begin{DoxyCompactList}\small\item\em Drop unused keys for each materialized derived table/view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}{get\+\_\+best\+\_\+combination}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaaea10268473cae92c3bdbcf0ea4f97cc}{attach\+\_\+join\+\_\+conditions}} (plan\+\_\+idx last\+\_\+tab)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaeaa6edcfa6c4d934dd42d505d9de2fef}{update\+\_\+equalities\+\_\+for\+\_\+sjm}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga8c14b8b1b7b5f002b219140b565000db}{add\+\_\+sorting\+\_\+to\+\_\+table}} (uint idx, \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} $\ast$\mbox{\hyperlink{classJOIN_ac06839682aae707b0e1d4fafd53abaf5}{order}})
+\begin{DoxyCompactList}\small\item\em Add \mbox{\hyperlink{classFilesort}{Filesort}} object to the given table to sort if with filesort. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gab466b49a22220854ef8f11a2c4a2ae8a}{decide\+\_\+subquery\+\_\+strategy}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaef4f64b9b280796d9abe945b2eda94ac}{refine\+\_\+best\+\_\+rowcount}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga0db5dc577ffd7662b800cc6307183c2b}{mark\+\_\+const\+\_\+table}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$table, \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$key)
+\item 
+\mbox{\Hypertarget{classJOIN_aba37f9bde33de6c07c9b42fc88bfbe71}\label{classJOIN_aba37f9bde33de6c07c9b42fc88bfbe71}} 
+\mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694}{enum\+\_\+plan\+\_\+state}} \mbox{\hyperlink{classJOIN_aba37f9bde33de6c07c9b42fc88bfbe71}{get\+\_\+plan\+\_\+state}} () const
+\begin{DoxyCompactList}\small\item\em See enum\+\_\+plan\+\_\+state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_ad0c77a0fc6c92c8213cf822c113f6723}\label{classJOIN_ad0c77a0fc6c92c8213cf822c113f6723}} 
+bool {\bfseries is\+\_\+optimized} () const
+\item 
+\mbox{\Hypertarget{classJOIN_aa8f4286f294bd6c2af1498f00404fb6b}\label{classJOIN_aa8f4286f294bd6c2af1498f00404fb6b}} 
+void {\bfseries set\+\_\+optimized} ()
+\item 
+\mbox{\Hypertarget{classJOIN_a36c6b0cda782b4e777712ef71b1eb17f}\label{classJOIN_a36c6b0cda782b4e777712ef71b1eb17f}} 
+bool {\bfseries is\+\_\+executed} () const
+\item 
+\mbox{\Hypertarget{classJOIN_a4fba0c97939c6c1bff0888c2a561fc33}\label{classJOIN_a4fba0c97939c6c1bff0888c2a561fc33}} 
+void {\bfseries set\+\_\+executed} ()
+\item 
+\mbox{\Hypertarget{classJOIN_a3f468b303c72a8da7366d8dc43c8db82}\label{classJOIN_a3f468b303c72a8da7366d8dc43c8db82}} 
+void {\bfseries reset\+\_\+executed} ()
+\item 
+const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$ \mbox{\hyperlink{classJOIN_ae401f39f0804185f108edebcb639c7dc}{cost\+\_\+model}} () const
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga7c20a9b8d13f14275a4ee01f44f8cfa2}{fts\+\_\+index\+\_\+access}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+Next\+\_\+select\+\_\+func \mbox{\hyperlink{group__Query__Executor_ga8a8f8266528e6e4f33f31333f5f3cd8a}{get\+\_\+end\+\_\+select\+\_\+func}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN_a4d41e9f6535ca7cc781f9521a8d77655}\label{classJOIN_a4d41e9f6535ca7cc781f9521a8d77655}} 
+S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$const \mbox{\hyperlink{classJOIN_a4d41e9f6535ca7cc781f9521a8d77655}{select\+\_\+lex}}
+\begin{DoxyCompactList}\small\item\em Query block that is optimized and executed using this \mbox{\hyperlink{classJOIN}{J\+O\+IN}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a80e1b946c275f9fdcdd48cf420db2d97}\label{classJOIN_a80e1b946c275f9fdcdd48cf420db2d97}} 
+S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$const \mbox{\hyperlink{classJOIN_a80e1b946c275f9fdcdd48cf420db2d97}{unit}}
+\begin{DoxyCompactList}\small\item\em Query expression referring this query block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_aad08d5f16c8e6368ec5ece80d0c9a736}\label{classJOIN_aad08d5f16c8e6368ec5ece80d0c9a736}} 
+T\+HD $\ast$const \mbox{\hyperlink{classJOIN_aad08d5f16c8e6368ec5ece80d0c9a736}{thd}}
+\begin{DoxyCompactList}\small\item\em Thread handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$ \mbox{\hyperlink{classJOIN_a0f4a3bf606f174303181a5c7d730bdbb}{join\+\_\+tab}}
+\item 
+\mbox{\Hypertarget{classJOIN_a1c5675a6a8615860bb97887c472e0eae}\label{classJOIN_a1c5675a6a8615860bb97887c472e0eae}} 
+\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$ \mbox{\hyperlink{classJOIN_a1c5675a6a8615860bb97887c472e0eae}{qep\+\_\+tab}}
+\begin{DoxyCompactList}\small\item\em Array of Q\+E\+P\+\_\+\+T\+A\+Bs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$$\ast$ \mbox{\hyperlink{classJOIN_a5fa8910d3510d28caa7910981ed3a2e2}{best\+\_\+ref}}
+\item 
+\mbox{\Hypertarget{classJOIN_a31f2c64e0cc2be4e57350572a6634c5f}\label{classJOIN_a31f2c64e0cc2be4e57350572a6634c5f}} 
+\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$$\ast$ \mbox{\hyperlink{classJOIN_a31f2c64e0cc2be4e57350572a6634c5f}{map2table}}
+\begin{DoxyCompactList}\small\item\em mapping between table indexes and J\+O\+I\+N\+\_\+\+T\+A\+Bs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_ab59e4544f7d0d0c2bf65f6cbe3a18a5f}\label{classJOIN_ab59e4544f7d0d0c2bf65f6cbe3a18a5f}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries sort\+\_\+by\+\_\+table}
+\item 
+uint \mbox{\hyperlink{classJOIN_a38273ba29a6c872841db203f65c0ce33}{tables}}
+\begin{DoxyCompactList}\small\item\em Total number of tables in query block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_aa90ba68a61954de3f46fed65cc314324}\label{classJOIN_aa90ba68a61954de3f46fed65cc314324}} 
+uint \mbox{\hyperlink{classJOIN_aa90ba68a61954de3f46fed65cc314324}{primary\+\_\+tables}}
+\begin{DoxyCompactList}\small\item\em Number of primary input tables in query block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a57f73fad6fda570d39fea4c83dc89a86}\label{classJOIN_a57f73fad6fda570d39fea4c83dc89a86}} 
+uint \mbox{\hyperlink{classJOIN_a57f73fad6fda570d39fea4c83dc89a86}{const\+\_\+tables}}
+\begin{DoxyCompactList}\small\item\em Number of primary tables deemed constant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a3a1946a4df1d68300207ed736103f941}\label{classJOIN_a3a1946a4df1d68300207ed736103f941}} 
+uint \mbox{\hyperlink{classJOIN_a3a1946a4df1d68300207ed736103f941}{tmp\+\_\+tables}}
+\begin{DoxyCompactList}\small\item\em Number of temporary tables used by query. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a833e48fa5627d42fe968476e2a45e24b}\label{classJOIN_a833e48fa5627d42fe968476e2a45e24b}} 
+uint {\bfseries send\+\_\+group\+\_\+parts}
+\item 
+bool \mbox{\hyperlink{classJOIN_aa89b84b461352b7f0e5d5a8784235b7d}{sort\+\_\+and\+\_\+group}}
+\item 
+\mbox{\Hypertarget{classJOIN_afc0a21771c3cb4c59685178ee005fdb7}\label{classJOIN_afc0a21771c3cb4c59685178ee005fdb7}} 
+bool {\bfseries first\+\_\+record}
+\item 
+\mbox{\Hypertarget{classJOIN_ae69fb3e1c9529b41c58c8add0f4feafc}\label{classJOIN_ae69fb3e1c9529b41c58c8add0f4feafc}} 
+bool \mbox{\hyperlink{classJOIN_ae69fb3e1c9529b41c58c8add0f4feafc}{grouped}}
+\begin{DoxyCompactList}\small\item\em If query contains G\+R\+O\+UP BY clause. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_ab6535fcc7539ddc69d5e66f208187ef2}\label{classJOIN_ab6535fcc7539ddc69d5e66f208187ef2}} 
+bool \mbox{\hyperlink{classJOIN_ab6535fcc7539ddc69d5e66f208187ef2}{do\+\_\+send\+\_\+rows}}
+\begin{DoxyCompactList}\small\item\em If true, send produced rows using query\+\_\+result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_aad8b0c458e076b6c42e4a49466af1d3e}\label{classJOIN_aad8b0c458e076b6c42e4a49466af1d3e}} 
+table\+\_\+map \mbox{\hyperlink{classJOIN_aad8b0c458e076b6c42e4a49466af1d3e}{all\+\_\+table\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em Set of tables contained in query. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a3c5ac053e5f83bd9b05849feecc2bbed}\label{classJOIN_a3c5ac053e5f83bd9b05849feecc2bbed}} 
+table\+\_\+map \mbox{\hyperlink{classJOIN_a3c5ac053e5f83bd9b05849feecc2bbed}{const\+\_\+table\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em Set of tables found to be const. \end{DoxyCompactList}\item 
+table\+\_\+map \mbox{\hyperlink{classJOIN_a4d7b5537fed06b1b5cf1ba9c360748f2}{found\+\_\+const\+\_\+table\+\_\+map}}
+\item 
+\mbox{\Hypertarget{classJOIN_a678ae8eb222b029e30232f4f4df85f97}\label{classJOIN_a678ae8eb222b029e30232f4f4df85f97}} 
+ha\+\_\+rows {\bfseries send\+\_\+records}
+\item 
+\mbox{\Hypertarget{classJOIN_a22a71586fbda0e227af393099dcdfce2}\label{classJOIN_a22a71586fbda0e227af393099dcdfce2}} 
+ha\+\_\+rows {\bfseries found\+\_\+records}
+\item 
+\mbox{\Hypertarget{classJOIN_a5a22e298d1e2c732306accfac89ecb15}\label{classJOIN_a5a22e298d1e2c732306accfac89ecb15}} 
+ha\+\_\+rows {\bfseries examined\+\_\+rows}
+\item 
+\mbox{\Hypertarget{classJOIN_a5ae7d28898a7723ae5b65b0d6e00169d}\label{classJOIN_a5ae7d28898a7723ae5b65b0d6e00169d}} 
+ha\+\_\+rows {\bfseries row\+\_\+limit}
+\item 
+\mbox{\Hypertarget{classJOIN_a321000aad5588f9d0cb7fae64c0d8c15}\label{classJOIN_a321000aad5588f9d0cb7fae64c0d8c15}} 
+ha\+\_\+rows {\bfseries m\+\_\+select\+\_\+limit}
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classJOIN_a0f59ebaac87aaddbf8aac00e28d1aac0}{fetch\+\_\+limit}}
+\item 
+\mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}} $\ast$ \mbox{\hyperlink{classJOIN_ac7719669bdf6d624e13ab7c6789a84f9}{best\+\_\+positions}}
+\item 
+\mbox{\Hypertarget{classJOIN_a354837a5e93513c8917cbe6a68a5d679}\label{classJOIN_a354837a5e93513c8917cbe6a68a5d679}} 
+\mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}} $\ast$ {\bfseries positions}
+\item 
+\mbox{\Hypertarget{classJOIN_a35244b461d40df9387e1afdf8a7409c2}\label{classJOIN_a35244b461d40df9387e1afdf8a7409c2}} 
+Next\+\_\+select\+\_\+func {\bfseries first\+\_\+select}
+\item 
+double \mbox{\hyperlink{classJOIN_ac35bd82ae5071ba3d5c7cd2ee50f8e0d}{best\+\_\+read}}
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classJOIN_af4191f65d4fe5d1c0ddf5e7d1065b3c2}{best\+\_\+rowcount}}
+\item 
+\mbox{\Hypertarget{classJOIN_a927f438649f44e3869354c7e6355e345}\label{classJOIN_a927f438649f44e3869354c7e6355e345}} 
+double \mbox{\hyperlink{classJOIN_a927f438649f44e3869354c7e6355e345}{sort\+\_\+cost}}
+\begin{DoxyCompactList}\small\item\em Expected cost of filesort. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a83fe84ae6244177a704c73b8d1490d45}\label{classJOIN_a83fe84ae6244177a704c73b8d1490d45}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$ {\bfseries fields}
+\item 
+\mbox{\Hypertarget{classJOIN_a171e4827435c98c8a0c8aa2d5beeba80}\label{classJOIN_a171e4827435c98c8a0c8aa2d5beeba80}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCached__item}{Cached\+\_\+item}} $>$ {\bfseries group\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classJOIN_a9ed0ec0f30f64ba48e7ab37710ec8088}\label{classJOIN_a9ed0ec0f30f64ba48e7ab37710ec8088}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCached__item}{Cached\+\_\+item}} $>$ {\bfseries group\+\_\+fields\+\_\+cache}
+\item 
+\mbox{\Hypertarget{classJOIN_a143b8b13380d62825c50caef62a792f8}\label{classJOIN_a143b8b13380d62825c50caef62a792f8}} 
+\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$ {\bfseries sum\+\_\+funcs}
+\item 
+\mbox{\Hypertarget{classJOIN_a365335b1295740646632aec80e0e9dde}\label{classJOIN_a365335b1295740646632aec80e0e9dde}} 
+\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$$\ast$ {\bfseries sum\+\_\+funcs\+\_\+end}
+\item 
+\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$ \mbox{\hyperlink{classJOIN_ae436940b22d4633041116b1cde227dc0}{sum\+\_\+funcs2}}
+\item 
+\mbox{\Hypertarget{classJOIN_ad2d0e99c490ff6562b1c1dd340655dea}\label{classJOIN_ad2d0e99c490ff6562b1c1dd340655dea}} 
+\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$$\ast$ {\bfseries sum\+\_\+funcs\+\_\+end2}
+\item 
+\mbox{\Hypertarget{classJOIN_a7344d307c29bc2f918d2758e1443e24f}\label{classJOIN_a7344d307c29bc2f918d2758e1443e24f}} 
+Temp\+\_\+table\+\_\+param {\bfseries tmp\+\_\+table\+\_\+param}
+\item 
+\mbox{\Hypertarget{classJOIN_a1b430ca4c21d45c1d69db921a8c2e92b}\label{classJOIN_a1b430ca4c21d45c1d69db921a8c2e92b}} 
+\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$ {\bfseries lock}
+\item 
+\mbox{\Hypertarget{classJOIN_a4bb83d4cb348049167b6feef355f96f8}\label{classJOIN_a4bb83d4cb348049167b6feef355f96f8}} 
+\mbox{\hyperlink{structst__rollup}{R\+O\+L\+L\+UP}} \mbox{\hyperlink{classJOIN_a4bb83d4cb348049167b6feef355f96f8}{rollup}}
+\begin{DoxyCompactList}\small\item\em Used with rollup. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_ac6a0d71ac6c3a9e02df48057d633a415}\label{classJOIN_ac6a0d71ac6c3a9e02df48057d633a415}} 
+bool \mbox{\hyperlink{classJOIN_ac6a0d71ac6c3a9e02df48057d633a415}{implicit\+\_\+grouping}}
+\begin{DoxyCompactList}\small\item\em True if aggregated but no G\+R\+O\+UP BY. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a4526a3c9814896f2f91a656c2a0a9326}\label{classJOIN_a4526a3c9814896f2f91a656c2a0a9326}} 
+bool \mbox{\hyperlink{classJOIN_a4526a3c9814896f2f91a656c2a0a9326}{select\+\_\+distinct}}
+\begin{DoxyCompactList}\small\item\em Set if S\+E\+L\+E\+CT D\+I\+S\+T\+I\+N\+CT. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJOIN_ac1f17fa2397efcd2f1c9fd378ac991b6}{group\+\_\+optimized\+\_\+away}}
+\item 
+\mbox{\Hypertarget{classJOIN_a4db755c5e40a9e7ef838b00b590aa848}\label{classJOIN_a4db755c5e40a9e7ef838b00b590aa848}} 
+bool {\bfseries simple\+\_\+order}
+\item 
+\mbox{\Hypertarget{classJOIN_afce5441711efcb3602f122d95db36d26}\label{classJOIN_afce5441711efcb3602f122d95db36d26}} 
+bool {\bfseries simple\+\_\+group}
+\item 
+\mbox{\Hypertarget{classJOIN_af629440a422e975f9c6b9329861d6584}\label{classJOIN_af629440a422e975f9c6b9329861d6584}} 
+enum J\+O\+I\+N\+:: \{ ... \}  {\bfseries ordered\+\_\+index\+\_\+usage}
+\item 
+bool \mbox{\hyperlink{classJOIN_a344b18fe9de3b8ca73352e0f662595f8}{no\+\_\+order}}
+\item 
+bool \mbox{\hyperlink{classJOIN_a02bbd306d5b25097db48b42b1a70e1b1}{skip\+\_\+sort\+\_\+order}}
+\item 
+\mbox{\Hypertarget{classJOIN_a17915056890671d0238eb13b45747a73}\label{classJOIN_a17915056890671d0238eb13b45747a73}} 
+bool {\bfseries need\+\_\+tmp}
+\item 
+\mbox{\Hypertarget{classJOIN_a974d5a40e96eee336a9d303105c3e5fe}\label{classJOIN_a974d5a40e96eee336a9d303105c3e5fe}} 
+\mbox{\hyperlink{classMem__root__array}{Key\+\_\+use\+\_\+array}} {\bfseries keyuse\+\_\+array}
+\item 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \& \mbox{\hyperlink{classJOIN_a6664196553f3202cfc4e740358d6bc0d}{all\+\_\+fields}}
+\item 
+\mbox{\Hypertarget{classJOIN_aced73f1c43be033f6ec2bd414b5d23a4}\label{classJOIN_aced73f1c43be033f6ec2bd414b5d23a4}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{classJOIN_aced73f1c43be033f6ec2bd414b5d23a4}{tmp\+\_\+all\+\_\+fields1}}
+\begin{DoxyCompactList}\small\item\em Above list changed to use temporary table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_aa6588df86c19bbd48cf01bbad7985688}\label{classJOIN_aa6588df86c19bbd48cf01bbad7985688}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries tmp\+\_\+all\+\_\+fields2}
+\item 
+\mbox{\Hypertarget{classJOIN_a8570de35c855f909fc99851a7f2173b2}\label{classJOIN_a8570de35c855f909fc99851a7f2173b2}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries tmp\+\_\+all\+\_\+fields3}
+\item 
+\mbox{\Hypertarget{classJOIN_a522b145c66767b34d18f4ffa52ba5aab}\label{classJOIN_a522b145c66767b34d18f4ffa52ba5aab}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \mbox{\hyperlink{classJOIN_a522b145c66767b34d18f4ffa52ba5aab}{tmp\+\_\+fields\+\_\+list1}}
+\begin{DoxyCompactList}\small\item\em Part, shared with list above, emulate following list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a21042a46f616775109f191a6d9006498}\label{classJOIN_a21042a46f616775109f191a6d9006498}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries tmp\+\_\+fields\+\_\+list2}
+\item 
+\mbox{\Hypertarget{classJOIN_a65fed4e7e961345b7f4dfaaaeb6d731d}\label{classJOIN_a65fed4e7e961345b7f4dfaaaeb6d731d}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries tmp\+\_\+fields\+\_\+list3}
+\item 
+\mbox{\Hypertarget{classJOIN_ac17a879dfb3c22c1e1701d5f8d7bafd8}\label{classJOIN_ac17a879dfb3c22c1e1701d5f8d7bafd8}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \& \mbox{\hyperlink{classJOIN_ac17a879dfb3c22c1e1701d5f8d7bafd8}{fields\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em hold field list \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN_a3af313be65a65eb809cb2f11e6e84b0b}\label{classJOIN_a3af313be65a65eb809cb2f11e6e84b0b}} 
+int \mbox{\hyperlink{classJOIN_a3af313be65a65eb809cb2f11e6e84b0b}{error}}
+\begin{DoxyCompactList}\small\item\em set in \mbox{\hyperlink{group__Query__Optimizer_ga7f722315c64ce97cff639d705107c660}{optimize()}}, \mbox{\hyperlink{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}{exec()}}, \mbox{\hyperlink{group__Query__Optimizer_gabed62f6e6cc8f6d042c806a154ea7137}{prepare\+\_\+result()}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} \mbox{\hyperlink{classJOIN_ac06839682aae707b0e1d4fafd53abaf5}{order}}
+\item 
+\mbox{\Hypertarget{classJOIN_a9172112162601c387e3bb4feaaaedc3c}\label{classJOIN_a9172112162601c387e3bb4feaaaedc3c}} 
+\mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} {\bfseries group\+\_\+list}
+\item 
+\mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} \mbox{\hyperlink{classJOIN_a547b3eff0d36ad2366592b7fd575cd88}{explain\+\_\+flags}}
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classJOIN_af432939b3df4197b8ebdc46ce8c82e4d}{where\+\_\+cond}}
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classJOIN_a69dc26a844c4680287a0a5281881073a}{having\+\_\+cond}}
+\item 
+\mbox{\Hypertarget{classJOIN_a618d5eab4f68e0f8d1e3ca58d3aff4d8}\label{classJOIN_a618d5eab4f68e0f8d1e3ca58d3aff4d8}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classJOIN_a618d5eab4f68e0f8d1e3ca58d3aff4d8}{having\+\_\+for\+\_\+explain}}
+\begin{DoxyCompactList}\small\item\em Saved optimized H\+A\+V\+I\+NG for E\+X\+P\+L\+A\+IN. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{classJOIN_a6ebe9f41a938e8bcf950852141aa5cad}{tables\+\_\+list}}
+\item 
+\mbox{\Hypertarget{classJOIN_a2cfe2d5740ee6498dfd34aca71a032de}\label{classJOIN_a2cfe2d5740ee6498dfd34aca71a032de}} 
+C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$ {\bfseries cond\+\_\+equal}
+\item 
+\mbox{\Hypertarget{classJOIN_a69414d2af96dd69713bbe5f1804f37e4}\label{classJOIN_a69414d2af96dd69713bbe5f1804f37e4}} 
+plan\+\_\+idx {\bfseries return\+\_\+tab}
+\item 
+\mbox{\Hypertarget{classJOIN_a8b69d65e635279e69f4ca23dd2035ed4}\label{classJOIN_a8b69d65e635279e69f4ca23dd2035ed4}} 
+const \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} {\bfseries ref\+\_\+ptrs}
+\item 
+\mbox{\Hypertarget{classJOIN_ac871e06ade890b1fe2376ad9cfdfdad4}\label{classJOIN_ac871e06ade890b1fe2376ad9cfdfdad4}} 
+\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} {\bfseries items0}
+\item 
+\mbox{\Hypertarget{classJOIN_a3093588ea39a20b0ff794650c9accc90}\label{classJOIN_a3093588ea39a20b0ff794650c9accc90}} 
+\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} {\bfseries items1}
+\item 
+\mbox{\Hypertarget{classJOIN_a9731ce345e9cea52cd47ed356f9f206b}\label{classJOIN_a9731ce345e9cea52cd47ed356f9f206b}} 
+\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} {\bfseries items2}
+\item 
+\mbox{\Hypertarget{classJOIN_aaf2e265dfb134450bc8677082a155fdf}\label{classJOIN_aaf2e265dfb134450bc8677082a155fdf}} 
+\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} {\bfseries items3}
+\item 
+\mbox{\Hypertarget{classJOIN_ab35e0fcc4a92600b507b9ba539051d56}\label{classJOIN_ab35e0fcc4a92600b507b9ba539051d56}} 
+\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} {\bfseries current\+\_\+ref\+\_\+ptrs}
+\item 
+\mbox{\Hypertarget{classJOIN_addac585920592d95d4976472a85f20fd}\label{classJOIN_addac585920592d95d4976472a85f20fd}} 
+const char $\ast$ \mbox{\hyperlink{classJOIN_addac585920592d95d4976472a85f20fd}{zero\+\_\+result\+\_\+cause}}
+\begin{DoxyCompactList}\small\item\em not 0 if exec must return zero result \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJOIN_a2a6bdffc54ec0343c81cf6c7e17e220a}{child\+\_\+subquery\+\_\+can\+\_\+materialize}}
+\item 
+bool \mbox{\hyperlink{classJOIN_a5de6e2e20ebbd43a75a32f6bf4cf07f7}{allow\+\_\+outer\+\_\+refs}}
+\item 
+\mbox{\Hypertarget{classJOIN_a482cba72534a769e51ff81019ccbea3c}\label{classJOIN_a482cba72534a769e51ff81019ccbea3c}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $>$ {\bfseries sj\+\_\+tmp\+\_\+tables}
+\item 
+\mbox{\Hypertarget{classJOIN_ab490f36367cdfd30ca601b3df06aa539}\label{classJOIN_ab490f36367cdfd30ca601b3df06aa539}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classSemijoin__mat__exec}{Semijoin\+\_\+mat\+\_\+exec}} $>$ {\bfseries sjm\+\_\+exec\+\_\+list}
+\item 
+bool \mbox{\hyperlink{classJOIN_aaf4e8ed1fc6de12c4faeb43fd31439c3}{set\+\_\+group\+\_\+rpa}}
+\item 
+bool \mbox{\hyperlink{classJOIN_a988da063141c9923352565697bdf3c78}{group\+\_\+sent}}
+\item 
+\mbox{\Hypertarget{classJOIN_a0bd7e728e0241d1dbead24ad49febee5}\label{classJOIN_a0bd7e728e0241d1dbead24ad49febee5}} 
+bool \mbox{\hyperlink{classJOIN_a0bd7e728e0241d1dbead24ad49febee5}{calc\+\_\+found\+\_\+rows}}
+\begin{DoxyCompactList}\small\item\em If true, calculate found rows for this query block. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJOIN_a82f34e62a218c8ac3871e0dd32ccc8a3}{with\+\_\+json\+\_\+agg}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694}\label{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694}} 
+\index{J\+O\+IN@{J\+O\+IN}!enum\+\_\+plan\+\_\+state@{enum\+\_\+plan\+\_\+state}}
+\index{enum\+\_\+plan\+\_\+state@{enum\+\_\+plan\+\_\+state}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{enum\+\_\+plan\+\_\+state}{enum\_plan\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694}{J\+O\+I\+N\+::enum\+\_\+plan\+\_\+state}}}
+
+
+
+State of execution plan. Currently used only for E\+X\+P\+L\+A\+IN. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+P\+L\+AN@{N\+O\+\_\+\+P\+L\+AN}!J\+O\+IN@{J\+O\+IN}}\index{J\+O\+IN@{J\+O\+IN}!N\+O\+\_\+\+P\+L\+AN@{N\+O\+\_\+\+P\+L\+AN}}}\mbox{\Hypertarget{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694a4022679ac4b71899e09ae694d12f63e8}\label{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694a4022679ac4b71899e09ae694d12f63e8}} 
+N\+O\+\_\+\+P\+L\+AN&No plan is ready yet. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z\+E\+R\+O\+\_\+\+R\+E\+S\+U\+LT@{Z\+E\+R\+O\+\_\+\+R\+E\+S\+U\+LT}!J\+O\+IN@{J\+O\+IN}}\index{J\+O\+IN@{J\+O\+IN}!Z\+E\+R\+O\+\_\+\+R\+E\+S\+U\+LT@{Z\+E\+R\+O\+\_\+\+R\+E\+S\+U\+LT}}}\mbox{\Hypertarget{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694ab70074c02eaeac14f21d9fe7fd4d9890}\label{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694ab70074c02eaeac14f21d9fe7fd4d9890}} 
+Z\+E\+R\+O\+\_\+\+R\+E\+S\+U\+LT&Zero result cause is set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+T\+A\+B\+L\+ES@{N\+O\+\_\+\+T\+A\+B\+L\+ES}!J\+O\+IN@{J\+O\+IN}}\index{J\+O\+IN@{J\+O\+IN}!N\+O\+\_\+\+T\+A\+B\+L\+ES@{N\+O\+\_\+\+T\+A\+B\+L\+ES}}}\mbox{\Hypertarget{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694a3056ab60db67d76fbb710cd6d7113cf6}\label{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694a3056ab60db67d76fbb710cd6d7113cf6}} 
+N\+O\+\_\+\+T\+A\+B\+L\+ES&Plan has no tables. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+L\+A\+N\+\_\+\+R\+E\+A\+DY@{P\+L\+A\+N\+\_\+\+R\+E\+A\+DY}!J\+O\+IN@{J\+O\+IN}}\index{J\+O\+IN@{J\+O\+IN}!P\+L\+A\+N\+\_\+\+R\+E\+A\+DY@{P\+L\+A\+N\+\_\+\+R\+E\+A\+DY}}}\mbox{\Hypertarget{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694af3eb17fcff8c8d8425b6e449079aa981}\label{classJOIN_a965b8cb3ded4b0e826a3cab5f7d88694af3eb17fcff8c8d8425b6e449079aa981}} 
+P\+L\+A\+N\+\_\+\+R\+E\+A\+DY&Plan is ready. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJOIN_acce1ebb89b6ce7cacb5afdabf72d8f1a}\label{classJOIN_acce1ebb89b6ce7cacb5afdabf72d8f1a}} 
+\index{J\+O\+IN@{J\+O\+IN}!copy\+\_\+ref\+\_\+ptr\+\_\+array@{copy\+\_\+ref\+\_\+ptr\+\_\+array}}
+\index{copy\+\_\+ref\+\_\+ptr\+\_\+array@{copy\+\_\+ref\+\_\+ptr\+\_\+array}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{copy\+\_\+ref\+\_\+ptr\+\_\+array()}{copy\_ref\_ptr\_array()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::copy\+\_\+ref\+\_\+ptr\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{dst\+\_\+arr,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{src\+\_\+arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overwrites one slice with the contents of another slice. In the normal case, dst and src have the same size(). However\+: the rollup slices may have smaller size than slice\+\_\+sz. \mbox{\Hypertarget{classJOIN_ae401f39f0804185f108edebcb639c7dc}\label{classJOIN_ae401f39f0804185f108edebcb639c7dc}} 
+\index{J\+O\+IN@{J\+O\+IN}!cost\+\_\+model@{cost\+\_\+model}}
+\index{cost\+\_\+model@{cost\+\_\+model}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{cost\+\_\+model()}{cost\_model()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}}$\ast$ J\+O\+I\+N\+::cost\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve the cost model object to be used for this join.
+
+\begin{DoxyReturn}{Returns}
+Cost model object for the join 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJOIN_a0c4c676ce74a6a273c6fc5492406e462}\label{classJOIN_a0c4c676ce74a6a273c6fc5492406e462}} 
+\index{J\+O\+IN@{J\+O\+IN}!plan\+\_\+is\+\_\+single\+\_\+table@{plan\+\_\+is\+\_\+single\+\_\+table}}
+\index{plan\+\_\+is\+\_\+single\+\_\+table@{plan\+\_\+is\+\_\+single\+\_\+table}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{plan\+\_\+is\+\_\+single\+\_\+table()}{plan\_is\_single\_table()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::plan\+\_\+is\+\_\+single\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+True if plan contains one non-\/const primary table (ie not including tables taking part in semi-\/join materialization). \mbox{\Hypertarget{classJOIN_a1db66213c1a83ccccd913b4173a28a85}\label{classJOIN_a1db66213c1a83ccccd913b4173a28a85}} 
+\index{J\+O\+IN@{J\+O\+IN}!send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set@{send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set}}
+\index{send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set@{send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set()}{send\_row\_on\_empty\_set()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::send\+\_\+row\+\_\+on\+\_\+empty\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return whether the caller should send a row even if the join produced no rows if\+:
+\begin{DoxyItemize}
+\item there is an aggregate function (sum\+\_\+func\+\_\+count!=0), and
+\item the query is not grouped, and
+\item a possible H\+A\+V\+I\+NG clause evaluates to T\+R\+UE.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+\+: if there is a having clause, it must be evaluated before returning the row. 
+\end{DoxyNote}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJOIN_a6664196553f3202cfc4e740358d6bc0d}\label{classJOIN_a6664196553f3202cfc4e740358d6bc0d}} 
+\index{J\+O\+IN@{J\+O\+IN}!all\+\_\+fields@{all\+\_\+fields}}
+\index{all\+\_\+fields@{all\+\_\+fields}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{all\+\_\+fields}{all\_fields}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}}$<$\mbox{\hyperlink{classItem}{Item}}$>$\& J\+O\+I\+N\+::all\+\_\+fields}
+
+to store all expressions used in query \mbox{\Hypertarget{classJOIN_a5de6e2e20ebbd43a75a32f6bf4cf07f7}\label{classJOIN_a5de6e2e20ebbd43a75a32f6bf4cf07f7}} 
+\index{J\+O\+IN@{J\+O\+IN}!allow\+\_\+outer\+\_\+refs@{allow\+\_\+outer\+\_\+refs}}
+\index{allow\+\_\+outer\+\_\+refs@{allow\+\_\+outer\+\_\+refs}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{allow\+\_\+outer\+\_\+refs}{allow\_outer\_refs}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::allow\+\_\+outer\+\_\+refs}
+
+True if plan search is allowed to use references to expressions outer to this \mbox{\hyperlink{classJOIN}{J\+O\+IN}} (for example may set up a \textquotesingle{}ref\textquotesingle{} access looking up an outer expression in the index, etc). \mbox{\Hypertarget{classJOIN_ac7719669bdf6d624e13ab7c6789a84f9}\label{classJOIN_ac7719669bdf6d624e13ab7c6789a84f9}} 
+\index{J\+O\+IN@{J\+O\+IN}!best\+\_\+positions@{best\+\_\+positions}}
+\index{best\+\_\+positions@{best\+\_\+positions}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{best\+\_\+positions}{best\_positions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}}$\ast$ J\+O\+I\+N\+::best\+\_\+positions}
+
+This is the result of join optimization.
+
+\begin{DoxyNote}{Note}
+This is a scratch array, not used after \mbox{\hyperlink{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}{get\+\_\+best\+\_\+combination()}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classJOIN_ac35bd82ae5071ba3d5c7cd2ee50f8e0d}\label{classJOIN_ac35bd82ae5071ba3d5c7cd2ee50f8e0d}} 
+\index{J\+O\+IN@{J\+O\+IN}!best\+\_\+read@{best\+\_\+read}}
+\index{best\+\_\+read@{best\+\_\+read}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{best\+\_\+read}{best\_read}}
+{\footnotesize\ttfamily double J\+O\+I\+N\+::best\+\_\+read}
+
+The cost of best complete join plan found so far during optimization, after optimization phase -\/ cost of picked join order (not taking into account the changes made by test\+\_\+if\+\_\+skip\+\_\+sort\+\_\+order()). \mbox{\Hypertarget{classJOIN_a5fa8910d3510d28caa7910981ed3a2e2}\label{classJOIN_a5fa8910d3510d28caa7910981ed3a2e2}} 
+\index{J\+O\+IN@{J\+O\+IN}!best\+\_\+ref@{best\+\_\+ref}}
+\index{best\+\_\+ref@{best\+\_\+ref}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{best\+\_\+ref}{best\_ref}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}$\ast$$\ast$ J\+O\+I\+N\+::best\+\_\+ref}
+
+Array of plan operators representing the current (partial) best plan. The array is allocated in J\+O\+I\+N\+::make\+\_\+join\+\_\+plan() and is valid only inside this function. Initially ($\ast$best\+\_\+ref\mbox{[}i\mbox{]}) == join\+\_\+tab\mbox{[}i\mbox{]}. The optimizer reorders best\+\_\+ref. \mbox{\Hypertarget{classJOIN_af4191f65d4fe5d1c0ddf5e7d1065b3c2}\label{classJOIN_af4191f65d4fe5d1c0ddf5e7d1065b3c2}} 
+\index{J\+O\+IN@{J\+O\+IN}!best\+\_\+rowcount@{best\+\_\+rowcount}}
+\index{best\+\_\+rowcount@{best\+\_\+rowcount}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{best\+\_\+rowcount}{best\_rowcount}}
+{\footnotesize\ttfamily ha\+\_\+rows J\+O\+I\+N\+::best\+\_\+rowcount}
+
+The estimated row count of the plan with best read time (see above). \mbox{\Hypertarget{classJOIN_a2a6bdffc54ec0343c81cf6c7e17e220a}\label{classJOIN_a2a6bdffc54ec0343c81cf6c7e17e220a}} 
+\index{J\+O\+IN@{J\+O\+IN}!child\+\_\+subquery\+\_\+can\+\_\+materialize@{child\+\_\+subquery\+\_\+can\+\_\+materialize}}
+\index{child\+\_\+subquery\+\_\+can\+\_\+materialize@{child\+\_\+subquery\+\_\+can\+\_\+materialize}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{child\+\_\+subquery\+\_\+can\+\_\+materialize}{child\_subquery\_can\_materialize}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::child\+\_\+subquery\+\_\+can\+\_\+materialize}
+
+True if, at this stage of processing, subquery materialization is allowed for children subqueries of this \mbox{\hyperlink{classJOIN}{J\+O\+IN}} (those in the S\+E\+L\+E\+CT list, in W\+H\+E\+RE, etc). If false, and we have to evaluate a subquery at this stage, then we must choose E\+X\+I\+S\+TS. \mbox{\Hypertarget{classJOIN_a547b3eff0d36ad2366592b7fd575cd88}\label{classJOIN_a547b3eff0d36ad2366592b7fd575cd88}} 
+\index{J\+O\+IN@{J\+O\+IN}!explain\+\_\+flags@{explain\+\_\+flags}}
+\index{explain\+\_\+flags@{explain\+\_\+flags}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{explain\+\_\+flags}{explain\_flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} J\+O\+I\+N\+::explain\+\_\+flags}
+
+Buffer to gather G\+R\+O\+UP BY, O\+R\+D\+ER BY and D\+I\+S\+T\+I\+N\+CT Q\+EP details for E\+X\+P\+L\+A\+IN \mbox{\Hypertarget{classJOIN_a0f59ebaac87aaddbf8aac00e28d1aac0}\label{classJOIN_a0f59ebaac87aaddbf8aac00e28d1aac0}} 
+\index{J\+O\+IN@{J\+O\+IN}!fetch\+\_\+limit@{fetch\+\_\+limit}}
+\index{fetch\+\_\+limit@{fetch\+\_\+limit}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{fetch\+\_\+limit}{fetch\_limit}}
+{\footnotesize\ttfamily ha\+\_\+rows J\+O\+I\+N\+::fetch\+\_\+limit}
+
+Used to fetch no more than given amount of rows per one fetch operation of server side cursor. The value is checked in end\+\_\+send and end\+\_\+send\+\_\+group in fashion, similar to offset\+\_\+limit\+\_\+cnt\+:
+\begin{DoxyItemize}
+\item fetch\+\_\+limit= H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR if there is no cursor.
+\item when we open a cursor, we set fetch\+\_\+limit to 0,
+\item on each fetch iteration we add num\+\_\+rows to fetch to fetch\+\_\+limit 
+\end{DoxyItemize}\mbox{\Hypertarget{classJOIN_a4d7b5537fed06b1b5cf1ba9c360748f2}\label{classJOIN_a4d7b5537fed06b1b5cf1ba9c360748f2}} 
+\index{J\+O\+IN@{J\+O\+IN}!found\+\_\+const\+\_\+table\+\_\+map@{found\+\_\+const\+\_\+table\+\_\+map}}
+\index{found\+\_\+const\+\_\+table\+\_\+map@{found\+\_\+const\+\_\+table\+\_\+map}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{found\+\_\+const\+\_\+table\+\_\+map}{found\_const\_table\_map}}
+{\footnotesize\ttfamily table\+\_\+map J\+O\+I\+N\+::found\+\_\+const\+\_\+table\+\_\+map}
+
+Const tables which are either\+:
+\begin{DoxyItemize}
+\item not empty
+\item empty but inner to a L\+E\+FT \mbox{\hyperlink{classJOIN}{J\+O\+IN}}, thus \char`\"{}considered\char`\"{} not empty for the rest of execution (a N\+U\+LL-\/complemented row will be used). 
+\end{DoxyItemize}\mbox{\Hypertarget{classJOIN_ac1f17fa2397efcd2f1c9fd378ac991b6}\label{classJOIN_ac1f17fa2397efcd2f1c9fd378ac991b6}} 
+\index{J\+O\+IN@{J\+O\+IN}!group\+\_\+optimized\+\_\+away@{group\+\_\+optimized\+\_\+away}}
+\index{group\+\_\+optimized\+\_\+away@{group\+\_\+optimized\+\_\+away}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{group\+\_\+optimized\+\_\+away}{group\_optimized\_away}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::group\+\_\+optimized\+\_\+away}
+
+If we have the G\+R\+O\+UP BY statement in the query, but the group\+\_\+list was emptied by optimizer, this flag is T\+R\+UE. It happens when fields in the G\+R\+O\+UP BY are from constant table \mbox{\Hypertarget{classJOIN_a988da063141c9923352565697bdf3c78}\label{classJOIN_a988da063141c9923352565697bdf3c78}} 
+\index{J\+O\+IN@{J\+O\+IN}!group\+\_\+sent@{group\+\_\+sent}}
+\index{group\+\_\+sent@{group\+\_\+sent}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{group\+\_\+sent}{group\_sent}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::group\+\_\+sent}
+
+Exec time only\+: T\+R\+UE $<$=$>$ current group has been sent \mbox{\Hypertarget{classJOIN_a69dc26a844c4680287a0a5281881073a}\label{classJOIN_a69dc26a844c4680287a0a5281881073a}} 
+\index{J\+O\+IN@{J\+O\+IN}!having\+\_\+cond@{having\+\_\+cond}}
+\index{having\+\_\+cond@{having\+\_\+cond}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{having\+\_\+cond}{having\_cond}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ J\+O\+I\+N\+::having\+\_\+cond}
+
+Optimized H\+A\+V\+I\+NG clause item tree (valid for one single execution). Used in \mbox{\hyperlink{classJOIN}{J\+O\+IN}} execution, as last \char`\"{}row filtering\char`\"{} step. With one exception\+: may be pushed to the J\+O\+I\+N\+\_\+\+T\+A\+Bs of temporary tables used in D\+I\+S\+T\+I\+N\+CT / G\+R\+O\+UP BY (see J\+O\+I\+N\+::make\+\_\+tmp\+\_\+tables\+\_\+info()); in that case having\+\_\+cond is set to N\+U\+LL, but is first saved to having\+\_\+for\+\_\+explain so that E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED can still print it. Initialized by S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::get\+\_\+optimizable\+\_\+conditions(). \mbox{\Hypertarget{classJOIN_a0f4a3bf606f174303181a5c7d730bdbb}\label{classJOIN_a0f4a3bf606f174303181a5c7d730bdbb}} 
+\index{J\+O\+IN@{J\+O\+IN}!join\+\_\+tab@{join\+\_\+tab}}
+\index{join\+\_\+tab@{join\+\_\+tab}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{join\+\_\+tab}{join\_tab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}$\ast$ J\+O\+I\+N\+::join\+\_\+tab}
+
+Optimal query execution plan. Initialized with a tentative plan in J\+O\+I\+N\+::make\+\_\+join\+\_\+plan() and later replaced with the optimal plan in \mbox{\hyperlink{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}{get\+\_\+best\+\_\+combination()}}. \mbox{\Hypertarget{classJOIN_a344b18fe9de3b8ca73352e0f662595f8}\label{classJOIN_a344b18fe9de3b8ca73352e0f662595f8}} 
+\index{J\+O\+IN@{J\+O\+IN}!no\+\_\+order@{no\+\_\+order}}
+\index{no\+\_\+order@{no\+\_\+order}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{no\+\_\+order}{no\_order}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::no\+\_\+order}
+
+Is set only in case if we have a G\+R\+O\+UP BY clause and no O\+R\+D\+ER BY after constant elimination of \textquotesingle{}order\textquotesingle{}. \mbox{\Hypertarget{classJOIN_ac06839682aae707b0e1d4fafd53abaf5}\label{classJOIN_ac06839682aae707b0e1d4fafd53abaf5}} 
+\index{J\+O\+IN@{J\+O\+IN}!order@{order}}
+\index{order@{order}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} J\+O\+I\+N\+::order}
+
+O\+R\+D\+ER BY and G\+R\+O\+UP BY lists, to transform with prepare,optimize and exec \mbox{\Hypertarget{classJOIN_aaf4e8ed1fc6de12c4faeb43fd31439c3}\label{classJOIN_aaf4e8ed1fc6de12c4faeb43fd31439c3}} 
+\index{J\+O\+IN@{J\+O\+IN}!set\+\_\+group\+\_\+rpa@{set\+\_\+group\+\_\+rpa}}
+\index{set\+\_\+group\+\_\+rpa@{set\+\_\+group\+\_\+rpa}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{set\+\_\+group\+\_\+rpa}{set\_group\_rpa}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::set\+\_\+group\+\_\+rpa}
+
+T\+R\+UE $<$=$>$ ref\+\_\+pointer\+\_\+array is set to items3. \mbox{\Hypertarget{classJOIN_a02bbd306d5b25097db48b42b1a70e1b1}\label{classJOIN_a02bbd306d5b25097db48b42b1a70e1b1}} 
+\index{J\+O\+IN@{J\+O\+IN}!skip\+\_\+sort\+\_\+order@{skip\+\_\+sort\+\_\+order}}
+\index{skip\+\_\+sort\+\_\+order@{skip\+\_\+sort\+\_\+order}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{skip\+\_\+sort\+\_\+order}{skip\_sort\_order}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::skip\+\_\+sort\+\_\+order}
+
+Is set if we have a G\+R\+O\+UP BY and we have O\+R\+D\+ER BY on a constant. \mbox{\Hypertarget{classJOIN_aa89b84b461352b7f0e5d5a8784235b7d}\label{classJOIN_aa89b84b461352b7f0e5d5a8784235b7d}} 
+\index{J\+O\+IN@{J\+O\+IN}!sort\+\_\+and\+\_\+group@{sort\+\_\+and\+\_\+group}}
+\index{sort\+\_\+and\+\_\+group@{sort\+\_\+and\+\_\+group}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{sort\+\_\+and\+\_\+group}{sort\_and\_group}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::sort\+\_\+and\+\_\+group}
+
+Indicates that grouping will be performed on the result set during query execution. This field belongs to query execution.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Executor_gaa0bd2dbcf106da50227e2eb4932b588d}{make\+\_\+group\+\_\+fields}}, \mbox{\hyperlink{group__Query__Executor_ga108fbed43151ab58878335fbb84503c1}{alloc\+\_\+group\+\_\+fields}}, \mbox{\hyperlink{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}{J\+O\+I\+N\+::exec}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classJOIN_ae436940b22d4633041116b1cde227dc0}\label{classJOIN_ae436940b22d4633041116b1cde227dc0}} 
+\index{J\+O\+IN@{J\+O\+IN}!sum\+\_\+funcs2@{sum\+\_\+funcs2}}
+\index{sum\+\_\+funcs2@{sum\+\_\+funcs2}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{sum\+\_\+funcs2}{sum\_funcs2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}}$\ast$$\ast$ J\+O\+I\+N\+::sum\+\_\+funcs2}
+
+second copy of sumfuncs (for queries with 2 temporary tables \mbox{\Hypertarget{classJOIN_a38273ba29a6c872841db203f65c0ce33}\label{classJOIN_a38273ba29a6c872841db203f65c0ce33}} 
+\index{J\+O\+IN@{J\+O\+IN}!tables@{tables}}
+\index{tables@{tables}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{tables}{tables}}
+{\footnotesize\ttfamily uint J\+O\+I\+N\+::tables}
+
+
+
+Total number of tables in query block. 
+
+Before plan has been created, \char`\"{}tables\char`\"{} denote number of input tables in the query block and \char`\"{}primary\+\_\+tables\char`\"{} is equal to \char`\"{}tables\char`\"{}. After plan has been created (after \mbox{\hyperlink{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}{J\+O\+I\+N\+::get\+\_\+best\+\_\+combination()}}), the \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} objects are enumerated as follows\+:
+\begin{DoxyItemize}
+\item \char`\"{}tables\char`\"{} gives the total number of allocated \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} objects
+\item \char`\"{}primary\+\_\+tables\char`\"{} gives the number of input tables, including materialized temporary tables from semi-\/join operation.
+\item \char`\"{}const\+\_\+tables\char`\"{} are those tables among primary\+\_\+tables that are detected to be constant.
+\item \char`\"{}tmp\+\_\+tables\char`\"{} is 0, 1 or 2 and counts the maximum possible number of intermediate tables in post-\/processing (ie sorting and duplicate removal). Later, tmp\+\_\+tables will be adjusted to the correct number of intermediate tables, \begin{DoxySeeAlso}{See also}
+J\+O\+I\+N\+::make\+\_\+tmp\+\_\+tables\+\_\+info.
+\end{DoxySeeAlso}
+
+\item The remaining tables (ie. tables -\/ primary\+\_\+tables -\/ tmp\+\_\+tables) are input tables to materialized semi-\/join operations. The tables are ordered as follows in the join\+\_\+tab array\+:
+\begin{DoxyEnumerate}
+\item const primary table
+\item non-\/const primary tables
+\item intermediate sort/group tables
+\item possible holes in array
+\item semi-\/joined tables used with materialization strategy 
+\end{DoxyEnumerate}
+\end{DoxyItemize}\mbox{\Hypertarget{classJOIN_a6ebe9f41a938e8bcf950852141aa5cad}\label{classJOIN_a6ebe9f41a938e8bcf950852141aa5cad}} 
+\index{J\+O\+IN@{J\+O\+IN}!tables\+\_\+list@{tables\+\_\+list}}
+\index{tables\+\_\+list@{tables\+\_\+list}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{tables\+\_\+list}{tables\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ J\+O\+I\+N\+::tables\+\_\+list}
+
+Pointer set to select\+\_\+lex-\/$>$get\+\_\+table\+\_\+list() at the start of optimization. May be changed (to N\+U\+LL) only if \mbox{\hyperlink{opt__sum_8cc_a89d353b7a877388083c43aed53124034}{opt\+\_\+sum\+\_\+query()}} optimizes tables away. \mbox{\Hypertarget{classJOIN_af432939b3df4197b8ebdc46ce8c82e4d}\label{classJOIN_af432939b3df4197b8ebdc46ce8c82e4d}} 
+\index{J\+O\+IN@{J\+O\+IN}!where\+\_\+cond@{where\+\_\+cond}}
+\index{where\+\_\+cond@{where\+\_\+cond}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{where\+\_\+cond}{where\_cond}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ J\+O\+I\+N\+::where\+\_\+cond}
+
+\mbox{\hyperlink{classJOIN_a69dc26a844c4680287a0a5281881073a}{J\+O\+I\+N\+::having\+\_\+cond}} is initially equal to select\+\_\+lex-\/$>$having\+\_\+cond, but may later be changed by optimizations performed by \mbox{\hyperlink{classJOIN}{J\+O\+IN}}. The relationship between the \mbox{\hyperlink{classJOIN_a69dc26a844c4680287a0a5281881073a}{J\+O\+I\+N\+::having\+\_\+cond}} condition and the associated variable select\+\_\+lex-\/$>$having\+\_\+value is so that having\+\_\+value can be\+:
+\begin{DoxyItemize}
+\item C\+O\+N\+D\+\_\+\+U\+N\+D\+EF if a having clause was not specified in the query or if it has not been optimized yet
+\item C\+O\+N\+D\+\_\+\+T\+R\+UE if the having clause is always true, in which case \mbox{\hyperlink{classJOIN_a69dc26a844c4680287a0a5281881073a}{J\+O\+I\+N\+::having\+\_\+cond}} is set to N\+U\+LL.
+\item C\+O\+N\+D\+\_\+\+F\+A\+L\+SE if the having clause is impossible, in which case \mbox{\hyperlink{classJOIN_a69dc26a844c4680287a0a5281881073a}{J\+O\+I\+N\+::having\+\_\+cond}} is set to N\+U\+LL
+\item C\+O\+N\+D\+\_\+\+OK otherwise, meaning that the having clause needs to be further evaluated All of the above also applies to the where\+\_\+cond/select\+\_\+lex-\/$>$cond\+\_\+value pair.\+Optimized W\+H\+E\+RE clause item tree (valid for one single execution). Used in \mbox{\hyperlink{classJOIN}{J\+O\+IN}} execution if no tables. Otherwise, attached in pieces to J\+O\+I\+N\+\_\+\+T\+A\+Bs and then not used in \mbox{\hyperlink{classJOIN}{J\+O\+IN}} execution. Printed by E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED. Initialized by S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::get\+\_\+optimizable\+\_\+conditions(). 
+\end{DoxyItemize}\mbox{\Hypertarget{classJOIN_a82f34e62a218c8ac3871e0dd32ccc8a3}\label{classJOIN_a82f34e62a218c8ac3871e0dd32ccc8a3}} 
+\index{J\+O\+IN@{J\+O\+IN}!with\+\_\+json\+\_\+agg@{with\+\_\+json\+\_\+agg}}
+\index{with\+\_\+json\+\_\+agg@{with\+\_\+json\+\_\+agg}!J\+O\+IN@{J\+O\+IN}}
+\subsubsection{\texorpdfstring{with\+\_\+json\+\_\+agg}{with\_json\_agg}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::with\+\_\+json\+\_\+agg}
+
+This will force tmp table to N\+OT use index + update for group operation as it\textquotesingle{}ll cause \mbox{[}de\mbox{]}serialization for each json aggregated value and is very ineffective (times worse). Server should use filesort, or tmp table + filesort to resolve G\+R\+O\+UP BY with J\+S\+ON aggregate functions. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+optimizer.\+h\item 
+\mbox{\hyperlink{sql__executor_8cc}{sql\+\_\+executor.\+cc}}\item 
+\mbox{\hyperlink{sql__optimizer_8cc}{sql\+\_\+optimizer.\+cc}}\item 
+\mbox{\hyperlink{sql__select_8cc}{sql\+\_\+select.\+cc}}\end{DoxyCompactItemize}

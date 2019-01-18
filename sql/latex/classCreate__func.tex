@@ -1,0 +1,80 @@
+\hypertarget{classCreate__func}{}\section{Create\+\_\+func Class Reference}
+\label{classCreate__func}\index{Create\+\_\+func@{Create\+\_\+func}}
+
+
+{\ttfamily \#include $<$item\+\_\+create.\+h$>$}
+
+Inheritance diagram for Create\+\_\+func\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classCreate__func}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classCreate__func_a04aa802c4546f72d1c10db1983cece5b}{create\+\_\+func}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$item\+\_\+list)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCreate__func_ac010933937e5d5bb116bdf948f5ba48e}{Create\+\_\+func}} ()
+\item 
+virtual \mbox{\hyperlink{classCreate__func_a5d42932df08fda80ffe9d5ee275f4bdf}{$\sim$\+Create\+\_\+func}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public function builder interface. The parser (sql/sql\+\_\+yacc.\+yy) uses a factory / builder pattern to construct an {\ttfamily \mbox{\hyperlink{classItem}{Item}}} object for each function call. All the concrete function builders implements this interface, either directly or indirectly with some adapter helpers. Keeping the function creation separated from the bison grammar allows to simplify the parser, and avoid the need to introduce a new token for each function, which has undesirable side effects in the grammar. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCreate__func_ac010933937e5d5bb116bdf948f5ba48e}\label{classCreate__func_ac010933937e5d5bb116bdf948f5ba48e}} 
+\index{Create\+\_\+func@{Create\+\_\+func}!Create\+\_\+func@{Create\+\_\+func}}
+\index{Create\+\_\+func@{Create\+\_\+func}!Create\+\_\+func@{Create\+\_\+func}}
+\subsubsection{\texorpdfstring{Create\+\_\+func()}{Create\_func()}}
+{\footnotesize\ttfamily Create\+\_\+func\+::\+Create\+\_\+func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Constructor \mbox{\Hypertarget{classCreate__func_a5d42932df08fda80ffe9d5ee275f4bdf}\label{classCreate__func_a5d42932df08fda80ffe9d5ee275f4bdf}} 
+\index{Create\+\_\+func@{Create\+\_\+func}!````~Create\+\_\+func@{$\sim$\+Create\+\_\+func}}
+\index{````~Create\+\_\+func@{$\sim$\+Create\+\_\+func}!Create\+\_\+func@{Create\+\_\+func}}
+\subsubsection{\texorpdfstring{$\sim$\+Create\+\_\+func()}{~Create\_func()}}
+{\footnotesize\ttfamily virtual Create\+\_\+func\+::$\sim$\+Create\+\_\+func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCreate__func_a04aa802c4546f72d1c10db1983cece5b}\label{classCreate__func_a04aa802c4546f72d1c10db1983cece5b}} 
+\index{Create\+\_\+func@{Create\+\_\+func}!create\+\_\+func@{create\+\_\+func}}
+\index{create\+\_\+func@{create\+\_\+func}!Create\+\_\+func@{Create\+\_\+func}}
+\subsubsection{\texorpdfstring{create\+\_\+func()}{create\_func()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classItem}{Item}}$\ast$ Create\+\_\+func\+::create\+\_\+func (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{\mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$}]{item\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+The builder create method. Given the function name and list or arguments, this method creates an {\ttfamily \mbox{\hyperlink{classItem}{Item}}} that represents the function call. In case or errors, a N\+U\+LL item is returned, and an error is reported. Note that the {\ttfamily thd} object may be modified by the builder. In particular, the following members/methods can be set/called, depending on the function called and the function possible side effects. 
+\begin{DoxyItemize}
+\item {\ttfamily thd-\/$>$lex-\/$>$binlog\+\_\+row\+\_\+based\+\_\+if\+\_\+mixed} 
+\item {\ttfamily thd-\/$>$lex-\/$>$current\+\_\+context()} 
+\item {\ttfamily thd-\/$>$lex-\/$>$safe\+\_\+to\+\_\+cache\+\_\+query} 
+\item {\ttfamily thd-\/$>$lex-\/$>$uncacheable(\+U\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+S\+I\+D\+E\+E\+F\+F\+E\+C\+T)} 
+\item {\ttfamily thd-\/$>$lex-\/$>$uncacheable(\+U\+N\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+R\+A\+N\+D)} 
+\item {\ttfamily thd-\/$>$lex-\/$>$add\+\_\+time\+\_\+zone\+\_\+tables\+\_\+to\+\_\+query\+\_\+tables(thd)} 
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em name} & The function name \\
+\hline
+{\em item\+\_\+list} & The list of arguments to the function, can be N\+U\+LL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An item representing the parsed function call, or N\+U\+LL 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCreate__func__arg3_a0c0451ba2b1028246891f8519e6b9616}{Create\+\_\+func\+\_\+arg3}}, \mbox{\hyperlink{classCreate__func__arg2_af00a3acb69525f4aee007ef21ca43e30}{Create\+\_\+func\+\_\+arg2}}, \mbox{\hyperlink{classCreate__func__arg1_ac81a14acd40843819ac0da8111760aab}{Create\+\_\+func\+\_\+arg1}}, \mbox{\hyperlink{classCreate__qfunc_a25b2d459957d202dfbc28d08674d1816}{Create\+\_\+qfunc}}, \mbox{\hyperlink{classCreate__func__arg0_a79ec91336e8f6276501fbc1bc6c30e5e}{Create\+\_\+func\+\_\+arg0}}, and \mbox{\hyperlink{classCreate__native__func_ac93ced4c4ed523538b76d34d17377a40}{Create\+\_\+native\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+create.\+h\end{DoxyCompactItemize}

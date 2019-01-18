@@ -1,0 +1,66 @@
+\hypertarget{classInterruptible__wait}{}\section{Interruptible\+\_\+wait Class Reference}
+\label{classInterruptible__wait}\index{Interruptible\+\_\+wait@{Interruptible\+\_\+wait}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInterruptible__wait_ab3538dc34c7b581c2b562cf5b546c633}\label{classInterruptible__wait_ab3538dc34c7b581c2b562cf5b546c633}} 
+{\bfseries Interruptible\+\_\+wait} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classInterruptible__wait_abd3438921a2523eb4e1d9483c8acab28}{set\+\_\+timeout}} (ulonglong timeout)
+\item 
+int \mbox{\hyperlink{classInterruptible__wait_ae91a46ef68f95f016291b82c101e081e}{wait}} (mysql\+\_\+cond\+\_\+t $\ast$, mysql\+\_\+mutex\+\_\+t $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enables a session to wait on a condition until a timeout or a network disconnect occurs.
+
+\begin{DoxyRemark}{Remarks}
+The connection is polled every m\+\_\+interrupt\+\_\+interval nanoseconds. 
+\end{DoxyRemark}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterruptible__wait_abd3438921a2523eb4e1d9483c8acab28}\label{classInterruptible__wait_abd3438921a2523eb4e1d9483c8acab28}} 
+\index{Interruptible\+\_\+wait@{Interruptible\+\_\+wait}!set\+\_\+timeout@{set\+\_\+timeout}}
+\index{set\+\_\+timeout@{set\+\_\+timeout}!Interruptible\+\_\+wait@{Interruptible\+\_\+wait}}
+\subsubsection{\texorpdfstring{set\+\_\+timeout()}{set\_timeout()}}
+{\footnotesize\ttfamily void Interruptible\+\_\+wait\+::set\+\_\+timeout (\begin{DoxyParamCaption}\item[{ulonglong}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the absolute timeout.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & The amount of time in nanoseconds to wait \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterruptible__wait_ae91a46ef68f95f016291b82c101e081e}\label{classInterruptible__wait_ae91a46ef68f95f016291b82c101e081e}} 
+\index{Interruptible\+\_\+wait@{Interruptible\+\_\+wait}!wait@{wait}}
+\index{wait@{wait}!Interruptible\+\_\+wait@{Interruptible\+\_\+wait}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily int Interruptible\+\_\+wait\+::wait (\begin{DoxyParamCaption}\item[{mysql\+\_\+cond\+\_\+t $\ast$}]{cond,  }\item[{mysql\+\_\+mutex\+\_\+t $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+The timed wait.
+
+Wait for a given condition to be signaled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & The condition variable to wait on. \\
+\hline
+{\em mutex} & The associated mutex.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The absolute timeout is preserved across calls.
+\end{DoxyRemark}
+
+\begin{DoxyRetVals}{Return values}
+{\em return} & value from mysql\+\_\+cond\+\_\+timedwait \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__func_8cc}{item\+\_\+func.\+cc}}\end{DoxyCompactItemize}

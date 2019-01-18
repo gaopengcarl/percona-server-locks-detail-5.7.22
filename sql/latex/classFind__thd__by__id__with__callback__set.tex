@@ -1,0 +1,53 @@
+\hypertarget{classFind__thd__by__id__with__callback__set}{}\section{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE $>$ Class Template Reference}
+\label{classFind__thd__by__id__with__callback__set}\index{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E $>$@{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E $>$}}
+Inheritance diagram for Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFind__thd__by__id__with__callback__set}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFind__thd__by__id__with__callback__set_af49db01fd275588fdaebcc9586c2c040}\label{classFind__thd__by__id__with__callback__set_af49db01fd275588fdaebcc9586c2c040}} 
+typedef void($\ast$ {\bfseries callback\+\_\+t}) (T\+HD $\ast$thd, I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE $\ast$result)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFind__thd__by__id__with__callback__set_a06d7e976c5a266f5174d985e4dac7cc4}\label{classFind__thd__by__id__with__callback__set_a06d7e976c5a266f5174d985e4dac7cc4}} 
+{\bfseries Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set} (my\+\_\+thread\+\_\+id t\+\_\+id, callback\+\_\+t cb, I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE in)
+\item 
+virtual bool \mbox{\hyperlink{classFind__thd__by__id__with__callback__set_a3a8c6f9be71c9572a34fece05ef95add}{operator()}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE$>$\newline
+class Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E $>$}
+
+Template class for scanning the thd list in the \mbox{\hyperlink{classGlobal__THD__manager}{Global\+\_\+\+T\+H\+D\+\_\+manager}} and modifying and element from the list. This template is for functions that need to change data of a T\+HD without getting into races.
+
+If the T\+HD is found, a callback is executed under T\+H\+D\+::\+Lock\+\_\+thd\+\_\+data. A pointer to a member variable is passed as a second parameter to the callback. The callback should store its result there.
+
+After the search has been completed the result value can be obtained by calling get\+\_\+result(). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFind__thd__by__id__with__callback__set_a3a8c6f9be71c9572a34fece05ef95add}\label{classFind__thd__by__id__with__callback__set_a3a8c6f9be71c9572a34fece05ef95add}} 
+\index{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set@{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set}!operator()@{operator()}}
+\index{operator()@{operator()}!Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set@{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE $>$ \\
+virtual bool \mbox{\hyperlink{classFind__thd__by__id__with__callback__set}{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set}}$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+PE $>$\+::operator() (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Callback called for every T\+HD in the thd\+\_\+list.
+
+When a thread is found the callback function passed to the constructor is invoked under T\+H\+D\+::\+Lock\+\_\+thd\+\_\+data 
+
+Implements \mbox{\hyperlink{classFind__THD__Impl_a9241342847e36bfb0c4d8330df033b4b}{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{srv__session_8cc}{srv\+\_\+session.\+cc}}\end{DoxyCompactItemize}

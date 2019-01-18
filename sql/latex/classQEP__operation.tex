@@ -1,0 +1,112 @@
+\hypertarget{classQEP__operation}{}\section{Q\+E\+P\+\_\+operation Class Reference}
+\label{classQEP__operation}\index{Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}}
+
+
+{\ttfamily \#include $<$sql\+\_\+executor.\+h$>$}
+
+Inheritance diagram for Q\+E\+P\+\_\+operation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classQEP__operation}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQEP__operation_a2ae145e1ebfcc37dac626052a034ed25}\label{classQEP__operation_a2ae145e1ebfcc37dac626052a034ed25}} 
+enum {\bfseries enum\+\_\+op\+\_\+type} \{ {\bfseries O\+T\+\_\+\+C\+A\+C\+HE}, 
+{\bfseries O\+T\+\_\+\+T\+M\+P\+\_\+\+T\+A\+B\+LE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQEP__operation_ab5ad1582685b000231aa888d4fe9ab2b}\label{classQEP__operation_ab5ad1582685b000231aa888d4fe9ab2b}} 
+{\bfseries Q\+E\+P\+\_\+operation} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classQEP__operation_a855dbd15985c3c4c71fa5cddb71474df}\label{classQEP__operation_a855dbd15985c3c4c71fa5cddb71474df}} 
+virtual enum\+\_\+op\+\_\+type {\bfseries type} ()=0
+\item 
+virtual int \mbox{\hyperlink{classQEP__operation_a27930ae9c3ab63a046135704707190fa}{init}} ()
+\item 
+virtual enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{classQEP__operation_af7cac289b2b1a38349cc27e8a4ff7597}{put\+\_\+record}} ()=0
+\item 
+virtual enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{classQEP__operation_a4faf706cddaf3ae613fe92434776df5e}{end\+\_\+send}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classQEP__operation_a5a3acf4022e1369ca5eadef33f61ac80}{mem\+\_\+free}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$ \mbox{\hyperlink{classQEP__operation_aed9c7ecad9e27f9d3d73062a4890534a}{qep\+\_\+tab}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classQEP__operation}{Q\+E\+P\+\_\+operation}} is an interface class for operations in query execution plan.
+
+Currently following operations are implemented\+: \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} -\/ caches partial join result and joins with attached table \mbox{\hyperlink{classQEP__tmp__table}{Q\+E\+P\+\_\+tmp\+\_\+table}} -\/ materializes join result in attached table
+
+An operation\textquotesingle{}s life cycle is as follows\+: .) it is initialized on the \mbox{\hyperlink{classQEP__operation_a27930ae9c3ab63a046135704707190fa}{init()}} call .) accumulates records one by one when \mbox{\hyperlink{classQEP__operation_af7cac289b2b1a38349cc27e8a4ff7597}{put\+\_\+record()}} is called. .) finalize record sending when \mbox{\hyperlink{classQEP__operation_a4faf706cddaf3ae613fe92434776df5e}{end\+\_\+send()}} is called. .) free all internal buffers on the free() call.
+
+Each operation is attached to a join\+\_\+tab, to which exactly depends on the operation type\+: \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} is attached to the table following the table being cached, Q\+E\+P\+\_\+tmp\+\_\+buffer is attached to a tmp table. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQEP__operation_a4faf706cddaf3ae613fe92434776df5e}\label{classQEP__operation_a4faf706cddaf3ae613fe92434776df5e}} 
+\index{Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}!end\+\_\+send@{end\+\_\+send}}
+\index{end\+\_\+send@{end\+\_\+send}!Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}}
+\subsubsection{\texorpdfstring{end\+\_\+send()}{end\_send()}}
+{\footnotesize\ttfamily virtual enum\+\_\+nested\+\_\+loop\+\_\+state Q\+E\+P\+\_\+operation\+::end\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Finalize records sending. 
+
+Implemented in \mbox{\hyperlink{classJOIN__CACHE_a1c3046624063d752fe21c895e13a00c9}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}, and \mbox{\hyperlink{group__Query__Executor_ga1cbaa4a44140f41c161eaab87c25f473}{Q\+E\+P\+\_\+tmp\+\_\+table}}.
+
+\mbox{\Hypertarget{classQEP__operation_a27930ae9c3ab63a046135704707190fa}\label{classQEP__operation_a27930ae9c3ab63a046135704707190fa}} 
+\index{Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}!init@{init}}
+\index{init@{init}!Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual int Q\+E\+P\+\_\+operation\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Initialize operation\textquotesingle{}s internal state. Called once per query execution. 
+
+Reimplemented in \mbox{\hyperlink{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}, \mbox{\hyperlink{group__Query__Optimizer_ga327376f63198bf31a770fb89242d49aa}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}}, \mbox{\hyperlink{group__Query__Optimizer_gab3dbb0f8b69dc30985e0d9a0ff94121f}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+NL}}, and \mbox{\hyperlink{classJOIN__CACHE_a1dcdce348bba725c675b327eb90aa924}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{classQEP__operation_a5a3acf4022e1369ca5eadef33f61ac80}\label{classQEP__operation_a5a3acf4022e1369ca5eadef33f61ac80}} 
+\index{Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}!mem\+\_\+free@{mem\+\_\+free}}
+\index{mem\+\_\+free@{mem\+\_\+free}!Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}}
+\subsubsection{\texorpdfstring{mem\+\_\+free()}{mem\_free()}}
+{\footnotesize\ttfamily virtual void Q\+E\+P\+\_\+operation\+::mem\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Internal state cleanup. 
+
+Reimplemented in \mbox{\hyperlink{classJOIN__CACHE_a1607e84802fbf32ca66112ebdd0860b7}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{classQEP__operation_af7cac289b2b1a38349cc27e8a4ff7597}\label{classQEP__operation_af7cac289b2b1a38349cc27e8a4ff7597}} 
+\index{Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}!put\+\_\+record@{put\+\_\+record}}
+\index{put\+\_\+record@{put\+\_\+record}!Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}}
+\subsubsection{\texorpdfstring{put\+\_\+record()}{put\_record()}}
+{\footnotesize\ttfamily virtual enum\+\_\+nested\+\_\+loop\+\_\+state Q\+E\+P\+\_\+operation\+::put\+\_\+record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Put a new record into the operation\textquotesingle{}s buffer \begin{DoxyReturn}{Returns}
+return one of enum\+\_\+nested\+\_\+loop\+\_\+state values. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classJOIN__CACHE_a28c138049387c559d0ea74d7a6fbcfc0}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}, and \mbox{\hyperlink{classQEP__tmp__table_ad402039d362a460ab3b4f7035cd843ce}{Q\+E\+P\+\_\+tmp\+\_\+table}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classQEP__operation_aed9c7ecad9e27f9d3d73062a4890534a}\label{classQEP__operation_aed9c7ecad9e27f9d3d73062a4890534a}} 
+\index{Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}!qep\+\_\+tab@{qep\+\_\+tab}}
+\index{qep\+\_\+tab@{qep\+\_\+tab}!Q\+E\+P\+\_\+operation@{Q\+E\+P\+\_\+operation}}
+\subsubsection{\texorpdfstring{qep\+\_\+tab}{qep\_tab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}}$\ast$ Q\+E\+P\+\_\+operation\+::qep\+\_\+tab}
+
+For \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} \+: Table to be joined with the partial join records from the cache For J\+O\+I\+N\+\_\+\+T\+M\+P\+\_\+\+B\+U\+F\+F\+ER \+: join\+\_\+tab of tmp table 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+executor.\+h\end{DoxyCompactItemize}

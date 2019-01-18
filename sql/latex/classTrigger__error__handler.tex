@@ -1,0 +1,29 @@
+\hypertarget{classTrigger__error__handler}{}\section{Trigger\+\_\+error\+\_\+handler Class Reference}
+\label{classTrigger__error__handler}\index{Trigger\+\_\+error\+\_\+handler@{Trigger\+\_\+error\+\_\+handler}}
+Inheritance diagram for Trigger\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTrigger__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTrigger__error__handler_a8924f16b25d3e9d1e45f45d47173d614}\label{classTrigger__error__handler_a8924f16b25d3e9d1e45f45d47173d614}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classTrigger__error__handler}{Trigger\+\_\+error\+\_\+handler}} is intended to intercept and silence S\+QL conditions that might happen during trigger loading for S\+H\+OW statements. The potential S\+QL conditions are\+:
+
+
+\begin{DoxyItemize}
+\item E\+R\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR -- this error is thrown if a trigger definition file is damaged or contains invalid C\+R\+E\+A\+TE T\+R\+I\+G\+G\+ER statement. That should not happen in normal life.
+\item E\+R\+\_\+\+T\+R\+G\+\_\+\+N\+O\+\_\+\+D\+E\+F\+I\+N\+ER -- this warning is thrown when we\textquotesingle{}re loading a trigger created/imported in/from the version of My\+S\+QL, which does not support trigger definers.
+\item E\+R\+\_\+\+T\+R\+G\+\_\+\+N\+O\+\_\+\+C\+R\+E\+A\+T\+I\+O\+N\+\_\+\+C\+TX -- this warning is thrown when we\textquotesingle{}re loading a trigger created/imported in/from the version of My\+S\+QL, which does not support trigger creation contexts. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+show.\+cc\end{DoxyCompactItemize}

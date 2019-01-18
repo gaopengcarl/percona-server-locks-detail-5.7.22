@@ -1,0 +1,86 @@
+\hypertarget{classQUICK__SELECT__DESC}{}\section{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC Class Reference}
+\label{classQUICK__SELECT__DESC}\index{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}}
+Inheritance diagram for Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQUICK__SELECT__DESC}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_ac5f6963e36ad6260bf2a4489eb07153d}\label{classQUICK__SELECT__DESC_ac5f6963e36ad6260bf2a4489eb07153d}} 
+{\bfseries Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC} (\mbox{\hyperlink{classQUICK__RANGE__SELECT}{Q\+U\+I\+C\+K\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+E\+L\+E\+CT}} $\ast$q, uint used\+\_\+key\+\_\+parts, bool $\ast$create\+\_\+err)
+\item 
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_aa48553e3d4b0c24195fbc9d7f7afaad4}\label{classQUICK__SELECT__DESC_aa48553e3d4b0c24195fbc9d7f7afaad4}} 
+int {\bfseries get\+\_\+next} ()
+\item 
+bool \mbox{\hyperlink{classQUICK__SELECT__DESC_a1f9448b2def7b3aba93f9fbeee99a1cb}{reverse\+\_\+sorted}} () const
+\item 
+bool \mbox{\hyperlink{classQUICK__SELECT__DESC_a2ac3395790181ce6e03646506650db69}{reverse\+\_\+sort\+\_\+possible}} () const
+\item 
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_ac9dd526dc09bcf5d8f803ba7b2ba4f58}\label{classQUICK__SELECT__DESC_ac9dd526dc09bcf5d8f803ba7b2ba4f58}} 
+int {\bfseries get\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_aa8ee8e3f50e0ce5e84ffb30875687ce5}\label{classQUICK__SELECT__DESC_aa8ee8e3f50e0ce5e84ffb30875687ce5}} 
+virtual bool {\bfseries is\+\_\+loose\+\_\+index\+\_\+scan} () const
+\item 
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_a4296f0c56be91add830d55e21693566b}\label{classQUICK__SELECT__DESC_a4296f0c56be91add830d55e21693566b}} 
+virtual bool {\bfseries is\+\_\+agg\+\_\+loose\+\_\+index\+\_\+scan} () const
+\item 
+\mbox{\hyperlink{classQUICK__SELECT__I}{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+I}} $\ast$ \mbox{\hyperlink{classQUICK__SELECT__DESC_a6ba03676b457b888636ee10c8a77bf7e}{make\+\_\+reverse}} (uint used\+\_\+key\+\_\+parts\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_a6ba03676b457b888636ee10c8a77bf7e}\label{classQUICK__SELECT__DESC_a6ba03676b457b888636ee10c8a77bf7e}} 
+\index{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}!make\+\_\+reverse@{make\+\_\+reverse}}
+\index{make\+\_\+reverse@{make\+\_\+reverse}!Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}}
+\subsubsection{\texorpdfstring{make\+\_\+reverse()}{make\_reverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classQUICK__SELECT__I}{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+I}}$\ast$ Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+S\+C\+::make\+\_\+reverse (\begin{DoxyParamCaption}\item[{uint}]{used\+\_\+key\+\_\+parts\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Create a compatible quick select with the result ordered in an opposite way
+
+
+\begin{DoxyParams}{Parameters}
+{\em used\+\_\+key\+\_\+parts\+\_\+arg} & Number of used key parts\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & in case of errors (O\+OM etc) \\
+\hline
+{\em pointer} & to a newly created \mbox{\hyperlink{classQUICK__SELECT__DESC}{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}} if success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classQUICK__RANGE__SELECT_a280387b7e06179c666ae990bee3c9894}{Q\+U\+I\+C\+K\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+E\+L\+E\+CT}}.
+
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_a2ac3395790181ce6e03646506650db69}\label{classQUICK__SELECT__DESC_a2ac3395790181ce6e03646506650db69}} 
+\index{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}!reverse\+\_\+sort\+\_\+possible@{reverse\+\_\+sort\+\_\+possible}}
+\index{reverse\+\_\+sort\+\_\+possible@{reverse\+\_\+sort\+\_\+possible}!Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}}
+\subsubsection{\texorpdfstring{reverse\+\_\+sort\+\_\+possible()}{reverse\_sort\_possible()}}
+{\footnotesize\ttfamily bool Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+S\+C\+::reverse\+\_\+sort\+\_\+possible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Whether the range access method is capable of returning records in reverse order. 
+
+Reimplemented from \mbox{\hyperlink{classQUICK__RANGE__SELECT_a91c847083168b315d7a92d7e2e1d5485}{Q\+U\+I\+C\+K\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+E\+L\+E\+CT}}.
+
+\mbox{\Hypertarget{classQUICK__SELECT__DESC_a1f9448b2def7b3aba93f9fbeee99a1cb}\label{classQUICK__SELECT__DESC_a1f9448b2def7b3aba93f9fbeee99a1cb}} 
+\index{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}!reverse\+\_\+sorted@{reverse\+\_\+sorted}}
+\index{reverse\+\_\+sorted@{reverse\+\_\+sorted}!Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC@{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}}
+\subsubsection{\texorpdfstring{reverse\+\_\+sorted()}{reverse\_sorted()}}
+{\footnotesize\ttfamily bool Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+S\+C\+::reverse\+\_\+sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Whether the range access method returns records in reverse order. 
+
+Reimplemented from \mbox{\hyperlink{classQUICK__RANGE__SELECT_a4673131942deb7ef48be474cfc4030e9}{Q\+U\+I\+C\+K\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+E\+L\+E\+CT}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+range.\+h\item 
+opt\+\_\+range.\+cc\end{DoxyCompactItemize}

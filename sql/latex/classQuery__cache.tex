@@ -1,0 +1,509 @@
+\hypertarget{classQuery__cache}{}\section{Query\+\_\+cache Class Reference}
+\label{classQuery__cache}\index{Query\+\_\+cache@{Query\+\_\+cache}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__cache_ab5f9da7c64dcadd51213964d2288c14c}\label{classQuery__cache_ab5f9da7c64dcadd51213964d2288c14c}} 
+enum {\bfseries enum\+\_\+qcci\+\_\+lock\+\_\+mode} \{ {\bfseries C\+A\+L\+L\+E\+R\+\_\+\+H\+O\+L\+D\+S\+\_\+\+L\+O\+CK}, 
+{\bfseries L\+O\+C\+K\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+H\+E\+C\+K\+I\+NG}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a5303b56588dbeffb235d08e13f2bbb4f}\label{classQuery__cache_a5303b56588dbeffb235d08e13f2bbb4f}} 
+{\bfseries Query\+\_\+cache} (ulong query\+\_\+cache\+\_\+limit=U\+L\+O\+N\+G\+\_\+\+M\+AX, ulong min\+\_\+allocation\+\_\+unit=Q\+U\+E\+R\+Y\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+I\+N\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+U\+N\+IT, ulong min\+\_\+result\+\_\+data\+\_\+size=Q\+U\+E\+R\+Y\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+I\+N\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE, uint def\+\_\+query\+\_\+hash\+\_\+size=Q\+U\+E\+R\+Y\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+E\+F\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+ZE, uint def\+\_\+table\+\_\+hash\+\_\+size=Q\+U\+E\+R\+Y\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+E\+F\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+ZE)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a5367fca59aea9c2bc05dddc2548bec73}\label{classQuery__cache_a5367fca59aea9c2bc05dddc2548bec73}} 
+bool {\bfseries is\+\_\+disabled} (void)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a9c175f78ac3992282c8b7951a909bd52}\label{classQuery__cache_a9c175f78ac3992282c8b7951a909bd52}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a5f7784c30f875bdbeacd6d6e98c77317}\label{classQuery__cache_a5f7784c30f875bdbeacd6d6e98c77317}} 
+ulong {\bfseries resize} (ulong query\+\_\+cache\+\_\+size)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a241ffb7c0e78d3e1607baba672108131}\label{classQuery__cache_a241ffb7c0e78d3e1607baba672108131}} 
+void {\bfseries result\+\_\+size\+\_\+limit} (ulong limit)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac57ad22970fd96a2acadaaad1b8024a1}\label{classQuery__cache_ac57ad22970fd96a2acadaaad1b8024a1}} 
+ulong {\bfseries set\+\_\+min\+\_\+res\+\_\+unit} (ulong size)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a1f303c0b4f9f1173b1c14418664eff72}\label{classQuery__cache_a1f303c0b4f9f1173b1c14418664eff72}} 
+void {\bfseries store\+\_\+query} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$used\+\_\+tables)
+\item 
+int \mbox{\hyperlink{classQuery__cache_a8af9f720ae6120e8eed290f6f255e5bc}{send\+\_\+result\+\_\+to\+\_\+client}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&sql)
+\item 
+void \mbox{\hyperlink{classQuery__cache_ab13c2d43f8c1ff95146328a543feb7dc}{invalidate\+\_\+single}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+used, my\+\_\+bool using\+\_\+transactions)
+\item 
+void \mbox{\hyperlink{classQuery__cache_ab334e040975e65b11bcb63cee0c85006}{invalidate}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used, my\+\_\+bool using\+\_\+transactions)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a506bb96141d4090d8837abe53f4e7bee}\label{classQuery__cache_a506bb96141d4090d8837abe53f4e7bee}} 
+void {\bfseries invalidate} (\mbox{\hyperlink{structst__changed__table__list}{C\+H\+A\+N\+G\+E\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a037be6321714caca056fbf35e26bc9bb}\label{classQuery__cache_a037be6321714caca056fbf35e26bc9bb}} 
+void {\bfseries invalidate\+\_\+locked\+\_\+for\+\_\+write} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ae54d3b365c00937756904914a32e2f09}\label{classQuery__cache_ae54d3b365c00937756904914a32e2f09}} 
+void {\bfseries invalidate} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, my\+\_\+bool using\+\_\+transactions)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a5ab7055f9ca91513d3c2d95336c16386}\label{classQuery__cache_a5ab7055f9ca91513d3c2d95336c16386}} 
+void {\bfseries invalidate} (T\+HD $\ast$thd, const char $\ast$key, uint32 key\+\_\+length, my\+\_\+bool using\+\_\+transactions)
+\item 
+void \mbox{\hyperlink{classQuery__cache_ab3da39c0186987975866d23bc98006bf}{invalidate}} (const char $\ast$db)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac2fb18a2ba5e523f723cfa578cd26f35}\label{classQuery__cache_ac2fb18a2ba5e523f723cfa578cd26f35}} 
+void {\bfseries invalidate\+\_\+by\+\_\+\+My\+I\+S\+A\+M\+\_\+filename} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ad75f17c7084a777703961310a899175a}\label{classQuery__cache_ad75f17c7084a777703961310a899175a}} 
+void {\bfseries flush} ()
+\item 
+void \mbox{\hyperlink{classQuery__cache_a0f90dda21146e016edb908c7a74fe846}{pack}} (ulong join\+\_\+limit=Q\+U\+E\+R\+Y\+\_\+\+C\+A\+C\+H\+E\+\_\+\+P\+A\+C\+K\+\_\+\+L\+I\+M\+IT, uint iteration\+\_\+limit=Q\+U\+E\+R\+Y\+\_\+\+C\+A\+C\+H\+E\+\_\+\+P\+A\+C\+K\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac085384ba3e450ea57bd7451eb8bf4fb}\label{classQuery__cache_ac085384ba3e450ea57bd7451eb8bf4fb}} 
+void {\bfseries destroy} ()
+\item 
+void \mbox{\hyperlink{classQuery__cache_a965d2c25ed3393f9331db62131a26491}{insert}} (\mbox{\hyperlink{structQuery__cache__tls}{Query\+\_\+cache\+\_\+tls}} $\ast$query\+\_\+cache\+\_\+tls, const char $\ast$packet, ulong length, unsigned pkt\+\_\+nr)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a08fdc14991052f46fd05e66f24f41d06}\label{classQuery__cache_a08fdc14991052f46fd05e66f24f41d06}} 
+void {\bfseries end\+\_\+of\+\_\+result} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classQuery__cache_aa18f02b2ad00fe95615c7680fb9e950e}\label{classQuery__cache_aa18f02b2ad00fe95615c7680fb9e950e}} 
+void {\bfseries abort} (\mbox{\hyperlink{structQuery__cache__tls}{Query\+\_\+cache\+\_\+tls}} $\ast$query\+\_\+cache\+\_\+tls)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ae9781fdcc31918a7db54a082489e078b}\label{classQuery__cache_ae9781fdcc31918a7db54a082489e078b}} 
+void {\bfseries wreck} (uint line, const char $\ast$message)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a9195bcf86b947d30b25ba1b306ce3cee}\label{classQuery__cache_a9195bcf86b947d30b25ba1b306ce3cee}} 
+void {\bfseries bins\+\_\+dump} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_ab1d0d23b5b9b3f3179bee004b1a8b6ed}\label{classQuery__cache_ab1d0d23b5b9b3f3179bee004b1a8b6ed}} 
+void {\bfseries cache\+\_\+dump} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a22277ca34cecfc45c5cc9f93e4fde865}\label{classQuery__cache_a22277ca34cecfc45c5cc9f93e4fde865}} 
+void {\bfseries queries\+\_\+dump} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a92e1548765c72db16455788091fbce0c}\label{classQuery__cache_a92e1548765c72db16455788091fbce0c}} 
+void {\bfseries tables\+\_\+dump} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a7becb2465433997c2133306b7ee1b445}\label{classQuery__cache_a7becb2465433997c2133306b7ee1b445}} 
+bool {\bfseries check\+\_\+integrity} (enum\+\_\+qcci\+\_\+lock\+\_\+mode locking)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ada68dcccda00beca27428cfa924b3e45}\label{classQuery__cache_ada68dcccda00beca27428cfa924b3e45}} 
+my\+\_\+bool {\bfseries in\+\_\+list} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$root, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$point, const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac9016e01fb25019ea073c0a8cd93a496}\label{classQuery__cache_ac9016e01fb25019ea073c0a8cd93a496}} 
+my\+\_\+bool {\bfseries in\+\_\+table\+\_\+list} (\mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$root, \mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$point, const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a9f7637c8f64a10ab85db480eea511976}\label{classQuery__cache_a9f7637c8f64a10ab85db480eea511976}} 
+my\+\_\+bool {\bfseries in\+\_\+blocks} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$point)
+\item 
+bool \mbox{\hyperlink{classQuery__cache_af6f115d2cdd660b8a92dc7943926a1ee}{try\+\_\+lock}} (bool use\+\_\+timeout=F\+A\+L\+SE)
+\item 
+void \mbox{\hyperlink{classQuery__cache_a5b961e23b944723d4dbdc278ad8cee9c}{lock}} (void)
+\item 
+void \mbox{\hyperlink{classQuery__cache_ac89ccc6622e7b96b09a24ac6e43f4364}{lock\+\_\+and\+\_\+suspend}} (void)
+\item 
+void \mbox{\hyperlink{classQuery__cache_affb7d26533e0ed4ea0cbe1347c582bc7}{unlock}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a7abf33f75154e1fc488e1105401f884e}\label{classQuery__cache_a7abf33f75154e1fc488e1105401f884e}} 
+ulong {\bfseries query\+\_\+cache\+\_\+size}
+\item 
+\mbox{\Hypertarget{classQuery__cache_aacfe4cdb8cb9e1a2365aac472df92988}\label{classQuery__cache_aacfe4cdb8cb9e1a2365aac472df92988}} 
+ulong {\bfseries query\+\_\+cache\+\_\+limit}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a67b94a657d977199d42dc31c174919a0}\label{classQuery__cache_a67b94a657d977199d42dc31c174919a0}} 
+ulong {\bfseries free\+\_\+memory}
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac8b4a8c9a689c66f593b74e6d0a84861}\label{classQuery__cache_ac8b4a8c9a689c66f593b74e6d0a84861}} 
+ulong {\bfseries queries\+\_\+in\+\_\+cache}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a06a205c9a377249f08881e702ec9f821}\label{classQuery__cache_a06a205c9a377249f08881e702ec9f821}} 
+ulong {\bfseries hits}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a23867e84a33fdccb9b9e5f882891a863}\label{classQuery__cache_a23867e84a33fdccb9b9e5f882891a863}} 
+ulong {\bfseries inserts}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a1b640294b0b3c706de024b9a3fedbd93}\label{classQuery__cache_a1b640294b0b3c706de024b9a3fedbd93}} 
+ulong {\bfseries refused}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a55803d660d8f95b7c2f9cd256258aab6}\label{classQuery__cache_a55803d660d8f95b7c2f9cd256258aab6}} 
+ulong {\bfseries free\+\_\+memory\+\_\+blocks}
+\item 
+\mbox{\Hypertarget{classQuery__cache_adc4b6202b1b09e9010791a5f5bc19bc5}\label{classQuery__cache_adc4b6202b1b09e9010791a5f5bc19bc5}} 
+ulong {\bfseries total\+\_\+blocks}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a04c0e1a392e87d0dbd1e328fc7ac1ccb}\label{classQuery__cache_a04c0e1a392e87d0dbd1e328fc7ac1ccb}} 
+ulong {\bfseries lowmem\+\_\+prunes}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classQuery__cache_aee3618ded5824d751e181940cc42cb9c}{flush\+\_\+cache}} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a4f7ae04e310c4cc3cd948ea8b21ebcc9}\label{classQuery__cache_a4f7ae04e310c4cc3cd948ea8b21ebcc9}} 
+my\+\_\+bool {\bfseries free\+\_\+old\+\_\+query} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a4ecefee5736900dc4aedbb0aa6eb591d}\label{classQuery__cache_a4ecefee5736900dc4aedbb0aa6eb591d}} 
+void {\bfseries free\+\_\+query} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$point)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a1528402a21759f956de650522e9a3eb8}\label{classQuery__cache_a1528402a21759f956de650522e9a3eb8}} 
+my\+\_\+bool {\bfseries allocate\+\_\+data\+\_\+chain} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$result\+\_\+block, ulong data\+\_\+len, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$query\+\_\+block, my\+\_\+bool first\+\_\+block)
+\item 
+\mbox{\Hypertarget{classQuery__cache_aca4605d71c29bb3f92cee313cf0566e0}\label{classQuery__cache_aca4605d71c29bb3f92cee313cf0566e0}} 
+void {\bfseries invalidate\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a5a2c04c44f6a79792706367975f293a4}\label{classQuery__cache_a5a2c04c44f6a79792706367975f293a4}} 
+void {\bfseries invalidate\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a750176c9306dda6cd5c046109ced6d44}\label{classQuery__cache_a750176c9306dda6cd5c046109ced6d44}} 
+void {\bfseries invalidate\+\_\+table} (T\+HD $\ast$thd, uchar $\ast$key, size\+\_\+t key\+\_\+length)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a979adb0f7e6f647495e26b1c8b4e20eb}\label{classQuery__cache_a979adb0f7e6f647495e26b1c8b4e20eb}} 
+void {\bfseries invalidate\+\_\+table} (T\+HD $\ast$thd, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$table\+\_\+block)
+\item 
+void \mbox{\hyperlink{classQuery__cache_ace363a32da254abbbba48b8f41f85e3a}{invalidate\+\_\+query\+\_\+block\+\_\+list}} (T\+HD $\ast$thd, \mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$list\+\_\+root)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a877fd47cd010b0d3f2e4493e6c36ee0a}\label{classQuery__cache_a877fd47cd010b0d3f2e4493e6c36ee0a}} 
+T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE {\bfseries register\+\_\+tables\+\_\+from\+\_\+list} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used, T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE counter, \mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$block\+\_\+table)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a494c72f83c6f3b7beabe723205acd8cf}\label{classQuery__cache_a494c72f83c6f3b7beabe723205acd8cf}} 
+my\+\_\+bool {\bfseries register\+\_\+all\+\_\+tables} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$block, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used, T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE tables)
+\item 
+my\+\_\+bool \mbox{\hyperlink{classQuery__cache_a052098d7f5bad1396ef0d40006364457}{insert\+\_\+table}} (size\+\_\+t key\+\_\+len, const char $\ast$key, \mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$node, size\+\_\+t db\+\_\+length, uint8 cache\+\_\+type, qc\+\_\+engine\+\_\+callback callback, ulonglong engine\+\_\+data)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a76ccd869e7747eec081e407d26bdce5d}\label{classQuery__cache_a76ccd869e7747eec081e407d26bdce5d}} 
+void {\bfseries unlink\+\_\+table} (\mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$node)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a8f66c6e42a78489797a15656442b1bde}\label{classQuery__cache_a8f66c6e42a78489797a15656442b1bde}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries get\+\_\+free\+\_\+block} (size\+\_\+t len, my\+\_\+bool not\+\_\+less, size\+\_\+t min)
+\item 
+\mbox{\Hypertarget{classQuery__cache_ab13454d77bfdad5f7df2158417798257}\label{classQuery__cache_ab13454d77bfdad5f7df2158417798257}} 
+void {\bfseries free\+\_\+memory\+\_\+block} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$point)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a005349af72c370d2a749c211ca8e1001}\label{classQuery__cache_a005349af72c370d2a749c211ca8e1001}} 
+void {\bfseries split\+\_\+block} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$block, ulong len)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a0cf5c21a7d434413a4acc98395bcc904}\label{classQuery__cache_a0cf5c21a7d434413a4acc98395bcc904}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries join\+\_\+free\+\_\+blocks} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$first\+\_\+block, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$block\+\_\+in\+\_\+list)
+\item 
+\mbox{\Hypertarget{classQuery__cache_aba40a5f257a0721adfbab0f24ee48d91}\label{classQuery__cache_aba40a5f257a0721adfbab0f24ee48d91}} 
+my\+\_\+bool {\bfseries append\+\_\+next\+\_\+free\+\_\+block} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$block, ulong add\+\_\+size)
+\item 
+\mbox{\Hypertarget{classQuery__cache_aa90fcbde6bfc811951af98ae1a4f41b3}\label{classQuery__cache_aa90fcbde6bfc811951af98ae1a4f41b3}} 
+void {\bfseries exclude\+\_\+from\+\_\+free\+\_\+memory\+\_\+list} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$free\+\_\+block)
+\item 
+\mbox{\Hypertarget{classQuery__cache_af1c339440439f27b69e20f4675817d37}\label{classQuery__cache_af1c339440439f27b69e20f4675817d37}} 
+void {\bfseries insert\+\_\+into\+\_\+free\+\_\+memory\+\_\+list} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$new\+\_\+block)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a07660a9db89fd626e76b250c826a89b3}\label{classQuery__cache_a07660a9db89fd626e76b250c826a89b3}} 
+my\+\_\+bool {\bfseries move\+\_\+by\+\_\+type} (uchar $\ast$$\ast$border, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$before, ulong $\ast$gap, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$i)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a6aa4a247b1e0a85cab57b5d76388e37b}\label{classQuery__cache_a6aa4a247b1e0a85cab57b5d76388e37b}} 
+uint {\bfseries find\+\_\+bin} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classQuery__cache_acb707c83ca31efd0478de581d393584c}\label{classQuery__cache_acb707c83ca31efd0478de581d393584c}} 
+void {\bfseries move\+\_\+to\+\_\+query\+\_\+list\+\_\+end} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$block)
+\item 
+\mbox{\Hypertarget{classQuery__cache_af9d4c35695e83ca6b7b1d3b5389ed9bd}\label{classQuery__cache_af9d4c35695e83ca6b7b1d3b5389ed9bd}} 
+void {\bfseries insert\+\_\+into\+\_\+free\+\_\+memory\+\_\+sorted\+\_\+list} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$new\+\_\+block, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$list)
+\item 
+void \mbox{\hyperlink{classQuery__cache_a5996f1fe820f63528b5c65a08d1f985b}{pack\+\_\+cache}} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a5256300f972b454b11c13fa579628ed2}\label{classQuery__cache_a5256300f972b454b11c13fa579628ed2}} 
+void {\bfseries relink} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$oblock, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$nblock, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$next, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$prev, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$pnext, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$pprev)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a823887b74f893756318527ddeeeb72a1}\label{classQuery__cache_a823887b74f893756318527ddeeeb72a1}} 
+my\+\_\+bool {\bfseries join\+\_\+results} (ulong join\+\_\+limit)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a86df5e8ec9cbbb1c3208d91e1a6bc33a}\label{classQuery__cache_a86df5e8ec9cbbb1c3208d91e1a6bc33a}} 
+ulong {\bfseries init\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a00431874e25963c84e31283a6fd64c7e}\label{classQuery__cache_a00431874e25963c84e31283a6fd64c7e}} 
+void {\bfseries make\+\_\+disabled} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_af5b46dde632a226df2309b8a022668fa}\label{classQuery__cache_af5b46dde632a226df2309b8a022668fa}} 
+void {\bfseries free\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_abded68a376e3059397e33522d8ef27a4}\label{classQuery__cache_abded68a376e3059397e33522d8ef27a4}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries write\+\_\+block\+\_\+data} (size\+\_\+t data\+\_\+len, uchar $\ast$data, size\+\_\+t header\+\_\+len, Query\+\_\+cache\+\_\+block\+::block\+\_\+type type, T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE ntab=0)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a25f754a7f9f6529b9ac4d9b443953ff3}\label{classQuery__cache_a25f754a7f9f6529b9ac4d9b443953ff3}} 
+my\+\_\+bool {\bfseries append\+\_\+result\+\_\+data} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$result, ulong data\+\_\+len, uchar $\ast$data, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$parent)
+\item 
+my\+\_\+bool \mbox{\hyperlink{classQuery__cache_a8c24cf21dfd267d54185e10696edc7b0}{write\+\_\+result\+\_\+data}} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$result, ulong data\+\_\+len, uchar $\ast$data, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$parent, Query\+\_\+cache\+\_\+block\+::block\+\_\+type type=Query\+\_\+cache\+\_\+block\+::\+R\+E\+S\+U\+LT)
+\item 
+\mbox{\Hypertarget{classQuery__cache_aeaedf32ab95683a85b4d0c7c1d974d7e}\label{classQuery__cache_aeaedf32ab95683a85b4d0c7c1d974d7e}} 
+ulong {\bfseries get\+\_\+min\+\_\+first\+\_\+result\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_a1c77ed6805d85edb120a013b36c998df}\label{classQuery__cache_a1c77ed6805d85edb120a013b36c998df}} 
+ulong {\bfseries get\+\_\+min\+\_\+append\+\_\+result\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classQuery__cache_ae75540e410ef352c05a293dc0e83e885}\label{classQuery__cache_ae75540e410ef352c05a293dc0e83e885}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries allocate\+\_\+block} (size\+\_\+t len, my\+\_\+bool not\+\_\+less, size\+\_\+t min)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a0d774063d818fc5862ef2f31d80a56c4}\label{classQuery__cache_a0d774063d818fc5862ef2f31d80a56c4}} 
+T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE {\bfseries is\+\_\+cacheable} (T\+HD $\ast$thd, L\+EX $\ast$lex, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used, uint8 $\ast$tables\+\_\+type)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a8d96e787626046c489bcd5e57766d8d8}\label{classQuery__cache_a8d96e787626046c489bcd5e57766d8d8}} 
+T\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE {\bfseries process\+\_\+and\+\_\+count\+\_\+tables} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used, uint8 $\ast$tables\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__cache_aeb977b53aacec459bdb282cbc506bb1f}\label{classQuery__cache_aeb977b53aacec459bdb282cbc506bb1f}} 
+static void {\bfseries double\+\_\+linked\+\_\+list\+\_\+exclude} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$point, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$list\+\_\+pointer)
+\item 
+\mbox{\Hypertarget{classQuery__cache_accd60a1ec0f44d1f74f699c1d71ba192}\label{classQuery__cache_accd60a1ec0f44d1f74f699c1d71ba192}} 
+static void {\bfseries double\+\_\+linked\+\_\+list\+\_\+simple\+\_\+include} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$point, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$list\+\_\+pointer)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a6f674a2d5020c663dd7eb7ccbde5d7bc}\label{classQuery__cache_a6f674a2d5020c663dd7eb7ccbde5d7bc}} 
+static void {\bfseries double\+\_\+linked\+\_\+list\+\_\+join} (\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$head\+\_\+tail, \mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$tail\+\_\+head)
+\item 
+\mbox{\Hypertarget{classQuery__cache_a3ecdcd323a41dbffb7a85f21541028c4}\label{classQuery__cache_a3ecdcd323a41dbffb7a85f21541028c4}} 
+static size\+\_\+t {\bfseries filename\+\_\+2\+\_\+table\+\_\+key} (char $\ast$key, const char $\ast$filename, size\+\_\+t $\ast$db\+\_\+length)
+\item 
+\mbox{\Hypertarget{classQuery__cache_aa76ae1dcbbb837cf0caf224c01315bbd}\label{classQuery__cache_aa76ae1dcbbb837cf0caf224c01315bbd}} 
+static my\+\_\+bool {\bfseries ask\+\_\+handler\+\_\+allowance} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables\+\_\+used)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a7e619e7685b1b742dcb298c2c2ebb38e}\label{classQuery__cache_a7e619e7685b1b742dcb298c2c2ebb38e}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries structure\+\_\+guard\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a798a6d1b5cc33e3906e9e741bbbcc65d}\label{classQuery__cache_a798a6d1b5cc33e3906e9e741bbbcc65d}} 
+uchar $\ast$ {\bfseries cache}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a6cbcf06463cbfa7fffe4bd8a8e102613}\label{classQuery__cache_a6cbcf06463cbfa7fffe4bd8a8e102613}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries first\+\_\+block}
+\item 
+\mbox{\Hypertarget{classQuery__cache_afdb637aeb5aa0cb325ee0d53cf88e53e}\label{classQuery__cache_afdb637aeb5aa0cb325ee0d53cf88e53e}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries queries\+\_\+blocks}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a802584de7e5075a6c523f39337cc2c60}\label{classQuery__cache_a802584de7e5075a6c523f39337cc2c60}} 
+\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$ {\bfseries tables\+\_\+blocks}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a0bccc405adce2c0ba1c58df293660e47}\label{classQuery__cache_a0bccc405adce2c0ba1c58df293660e47}} 
+\mbox{\hyperlink{structQuery__cache__memory__bin}{Query\+\_\+cache\+\_\+memory\+\_\+bin}} $\ast$ {\bfseries bins}
+\item 
+\mbox{\Hypertarget{classQuery__cache_aa0552d5ee9c8bd343c668936138be2fc}\label{classQuery__cache_aa0552d5ee9c8bd343c668936138be2fc}} 
+\mbox{\hyperlink{structQuery__cache__memory__bin__step}{Query\+\_\+cache\+\_\+memory\+\_\+bin\+\_\+step}} $\ast$ {\bfseries steps}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a833bf3256cd9b54e19182a3335c4496f}\label{classQuery__cache_a833bf3256cd9b54e19182a3335c4496f}} 
+H\+A\+SH {\bfseries queries}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a0fe58cf2840d4938b758816a32cbe0e7}\label{classQuery__cache_a0fe58cf2840d4938b758816a32cbe0e7}} 
+H\+A\+SH {\bfseries tables}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a4db08c50f0aff2f118be74d15dea9c2e}\label{classQuery__cache_a4db08c50f0aff2f118be74d15dea9c2e}} 
+ulong {\bfseries min\+\_\+allocation\+\_\+unit}
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac44099994c8de1d01110126f6c3e8d33}\label{classQuery__cache_ac44099994c8de1d01110126f6c3e8d33}} 
+ulong {\bfseries min\+\_\+result\+\_\+data\+\_\+size}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a81bb8fa89076999b3b1c028eb1c6fa1a}\label{classQuery__cache_a81bb8fa89076999b3b1c028eb1c6fa1a}} 
+uint {\bfseries def\+\_\+query\+\_\+hash\+\_\+size}
+\item 
+\mbox{\Hypertarget{classQuery__cache_ac0e68c4dec284c200f68ded3e45d57fd}\label{classQuery__cache_ac0e68c4dec284c200f68ded3e45d57fd}} 
+uint {\bfseries def\+\_\+table\+\_\+hash\+\_\+size}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a77f6aeee67b64bdbe071c716d76d41e1}\label{classQuery__cache_a77f6aeee67b64bdbe071c716d76d41e1}} 
+uint {\bfseries mem\+\_\+bin\+\_\+num}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a0c58f72f595fbfde9add6b00959ec40d}\label{classQuery__cache_a0c58f72f595fbfde9add6b00959ec40d}} 
+uint {\bfseries mem\+\_\+bin\+\_\+steps}
+\item 
+\mbox{\Hypertarget{classQuery__cache_a0b90791be47250a072ff4823df5e4a73}\label{classQuery__cache_a0b90791be47250a072ff4823df5e4a73}} 
+my\+\_\+bool {\bfseries initialized}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Free all resources allocated by the cache.
+
+This function frees all resources allocated by the cache. You have to call init\+\_\+cache() before using the cache again. This function requires the structure\+\_\+guard\+\_\+mutex to be locked. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuery__cache_aee3618ded5824d751e181940cc42cb9c}\label{classQuery__cache_aee3618ded5824d751e181940cc42cb9c}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!flush\+\_\+cache@{flush\+\_\+cache}}
+\index{flush\+\_\+cache@{flush\+\_\+cache}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{flush\+\_\+cache()}{flush\_cache()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::flush\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flush the cache.
+
+This function will flush cache contents. It assumes we have \textquotesingle{}structure\+\_\+guard\+\_\+mutex\textquotesingle{} locked. The function sets the m\+\_\+cache\+\_\+status flag and releases the lock, so other threads may proceed skipping the cache as if it is disabled. Concurrent flushes are performed in turn. After \mbox{\hyperlink{classQuery__cache_aee3618ded5824d751e181940cc42cb9c}{flush\+\_\+cache()}} call, the cache is flushed, all the freed memory is accumulated in bin\mbox{[}0\mbox{]}, and the \textquotesingle{}structure\+\_\+guard\+\_\+mutex\textquotesingle{} is locked. However, since we could release the mutex during execution, the rest of the cache state could have been changed, and should not be relied on. \mbox{\Hypertarget{classQuery__cache_a965d2c25ed3393f9331db62131a26491}\label{classQuery__cache_a965d2c25ed3393f9331db62131a26491}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!insert@{insert}}
+\index{insert@{insert}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuery__cache__tls}{Query\+\_\+cache\+\_\+tls}} $\ast$}]{query\+\_\+cache\+\_\+tls,  }\item[{const char $\ast$}]{packet,  }\item[{ulong}]{length,  }\item[{unsigned}]{pkt\+\_\+nr }\end{DoxyParamCaption})}
+
+Insert the packet into the query cache. \mbox{\Hypertarget{classQuery__cache_a052098d7f5bad1396ef0d40006364457}\label{classQuery__cache_a052098d7f5bad1396ef0d40006364457}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!insert\+\_\+table@{insert\+\_\+table}}
+\index{insert\+\_\+table@{insert\+\_\+table}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{insert\+\_\+table()}{insert\_table()}}
+{\footnotesize\ttfamily my\+\_\+bool Query\+\_\+cache\+::insert\+\_\+table (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{key\+\_\+len,  }\item[{const char $\ast$}]{key,  }\item[{\mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$}]{node,  }\item[{size\+\_\+t}]{db\+\_\+length,  }\item[{uint8}]{cache\+\_\+type,  }\item[{qc\+\_\+engine\+\_\+callback}]{callback,  }\item[{ulonglong}]{engine\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Insert used table name into the cache.
+
+\begin{DoxyReturn}{Returns}
+Error status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & On error \\
+\hline
+{\em T\+R\+UE} & On success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classQuery__cache_ab334e040975e65b11bcb63cee0c85006}\label{classQuery__cache_ab334e040975e65b11bcb63cee0c85006}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::invalidate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables\+\_\+used,  }\item[{my\+\_\+bool}]{using\+\_\+transactions }\end{DoxyParamCaption})}
+
+Remove all cached queries that use any of the tables in the list.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classQuery__cache_ab13c2d43f8c1ff95146328a543feb7dc}{Query\+\_\+cache\+::invalidate\+\_\+single()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classQuery__cache_ab3da39c0186987975866d23bc98006bf}\label{classQuery__cache_ab3da39c0186987975866d23bc98006bf}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::invalidate (\begin{DoxyParamCaption}\item[{const char $\ast$}]{db }\end{DoxyParamCaption})}
+
+Remove all cached queries that uses the given database. \mbox{\Hypertarget{classQuery__cache_ace363a32da254abbbba48b8f41f85e3a}\label{classQuery__cache_ace363a32da254abbbba48b8f41f85e3a}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!invalidate\+\_\+query\+\_\+block\+\_\+list@{invalidate\+\_\+query\+\_\+block\+\_\+list}}
+\index{invalidate\+\_\+query\+\_\+block\+\_\+list@{invalidate\+\_\+query\+\_\+block\+\_\+list}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{invalidate\+\_\+query\+\_\+block\+\_\+list()}{invalidate\_query\_block\_list()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::invalidate\+\_\+query\+\_\+block\+\_\+list (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structQuery__cache__block__table}{Query\+\_\+cache\+\_\+block\+\_\+table}} $\ast$}]{list\+\_\+root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Invalidate a linked list of query cache blocks.
+
+Each block tries to acquire a block level lock before free\+\_\+query is a called. This function will in turn affect related table-\/ and result-\/blocks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em list\+\_\+root} & A pointer to a circular list of query blocks. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuery__cache_ab13c2d43f8c1ff95146328a543feb7dc}\label{classQuery__cache_ab13c2d43f8c1ff95146328a543feb7dc}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!invalidate\+\_\+single@{invalidate\+\_\+single}}
+\index{invalidate\+\_\+single@{invalidate\+\_\+single}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{invalidate\+\_\+single()}{invalidate\_single()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::invalidate\+\_\+single (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+used,  }\item[{my\+\_\+bool}]{using\+\_\+transactions }\end{DoxyParamCaption})}
+
+Remove all cached queries that use the given table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em table\+\_\+used} & \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} representing the table to be invalidated. \\
+\hline
+{\em using\+\_\+transactions} & If we are inside a transaction only add the table to a list of changed tables for now, don\textquotesingle{}t invalidate directly. The table will instead be invalidated once the transaction commits. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuery__cache_a5b961e23b944723d4dbdc278ad8cee9c}\label{classQuery__cache_a5b961e23b944723d4dbdc278ad8cee9c}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!lock@{lock}}
+\index{lock@{lock}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::lock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Serialize access to the query cache. If the lock cannot be granted the thread hangs in a conditional wait which is signalled on each unlock.
+
+It is used by all methods which invalidates one or more tables. \mbox{\Hypertarget{classQuery__cache_ac89ccc6622e7b96b09a24ac6e43f4364}\label{classQuery__cache_ac89ccc6622e7b96b09a24ac6e43f4364}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!lock\+\_\+and\+\_\+suspend@{lock\+\_\+and\+\_\+suspend}}
+\index{lock\+\_\+and\+\_\+suspend@{lock\+\_\+and\+\_\+suspend}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{lock\+\_\+and\+\_\+suspend()}{lock\_and\_suspend()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::lock\+\_\+and\+\_\+suspend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Serialize access to the query cache. If the lock cannot be granted the thread hangs in a conditional wait which is signalled on each unlock.
+
+This method also suspends the query cache so that other threads attempting to lock the cache with \mbox{\hyperlink{classQuery__cache_af6f115d2cdd660b8a92dc7943926a1ee}{try\+\_\+lock()}} will fail directly without waiting.
+
+It is used by all methods which flushes or destroys the whole cache. \mbox{\Hypertarget{classQuery__cache_a0f90dda21146e016edb908c7a74fe846}\label{classQuery__cache_a0f90dda21146e016edb908c7a74fe846}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!pack@{pack}}
+\index{pack@{pack}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{pack()}{pack()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::pack (\begin{DoxyParamCaption}\item[{ulong}]{join\+\_\+limit = {\ttfamily QUERY\+\_\+CACHE\+\_\+PACK\+\_\+LIMIT},  }\item[{uint}]{iteration\+\_\+limit = {\ttfamily QUERY\+\_\+CACHE\+\_\+PACK\+\_\+ITERATION} }\end{DoxyParamCaption})}
+
+Rearrange the memory blocks and join result in cache in 1 block (if result length $>$ join\+\_\+limit)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em join\+\_\+limit} & If the minimum length of a result block to be joined. \\
+\hline
+\mbox{\texttt{ in}}  & {\em iteration\+\_\+limit} & The maximum number of packing and joining sequences. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuery__cache_a5996f1fe820f63528b5c65a08d1f985b}\label{classQuery__cache_a5996f1fe820f63528b5c65a08d1f985b}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!pack\+\_\+cache@{pack\+\_\+cache}}
+\index{pack\+\_\+cache@{pack\+\_\+cache}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{pack\+\_\+cache()}{pack\_cache()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::pack\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Rearrange all memory blocks so that free memory joins at the \textquotesingle{}bottom\textquotesingle{} of the allocated memory block containing all cache data. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classQuery__cache_a0f90dda21146e016edb908c7a74fe846}{Query\+\_\+cache\+::pack(ulong join\+\_\+limit, uint iteration\+\_\+limit)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classQuery__cache_a8af9f720ae6120e8eed290f6f255e5bc}\label{classQuery__cache_a8af9f720ae6120e8eed290f6f255e5bc}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!send\+\_\+result\+\_\+to\+\_\+client@{send\+\_\+result\+\_\+to\+\_\+client}}
+\index{send\+\_\+result\+\_\+to\+\_\+client@{send\+\_\+result\+\_\+to\+\_\+client}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{send\+\_\+result\+\_\+to\+\_\+client()}{send\_result\_to\_client()}}
+{\footnotesize\ttfamily int Query\+\_\+cache\+::send\+\_\+result\+\_\+to\+\_\+client (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{sql }\end{DoxyParamCaption})}
+
+N\+O\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+C\+H\+E\+C\+KS
+
+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+L\+I\+B\+R\+A\+RY \mbox{\Hypertarget{classQuery__cache_af6f115d2cdd660b8a92dc7943926a1ee}\label{classQuery__cache_af6f115d2cdd660b8a92dc7943926a1ee}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!try\+\_\+lock@{try\+\_\+lock}}
+\index{try\+\_\+lock@{try\+\_\+lock}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{try\+\_\+lock()}{try\_lock()}}
+{\footnotesize\ttfamily bool Query\+\_\+cache\+::try\+\_\+lock (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+timeout = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Serialize access to the query cache. If the lock cannot be granted the thread hangs in a conditional wait which is signalled on each unlock.
+
+The lock attempt will also fail without wait if \mbox{\hyperlink{classQuery__cache_ac89ccc6622e7b96b09a24ac6e43f4364}{lock\+\_\+and\+\_\+suspend()}} is in effect by another thread. This enables a quick path in execution to skip waits when the outcome is known.
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+\_\+timeout} & T\+R\+UE if the lock can abort because of a timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+use\+\_\+timeout is optional and default value is F\+A\+L\+SE.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & An exclusive lock was taken \\
+\hline
+{\em T\+R\+UE} & The locking attempt failed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classQuery__cache_affb7d26533e0ed4ea0cbe1347c582bc7}\label{classQuery__cache_affb7d26533e0ed4ea0cbe1347c582bc7}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!unlock@{unlock}}
+\index{unlock@{unlock}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void Query\+\_\+cache\+::unlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Set the query cache to U\+N\+L\+O\+C\+K\+ED and signal waiting threads. \mbox{\Hypertarget{classQuery__cache_a8c24cf21dfd267d54185e10696edc7b0}\label{classQuery__cache_a8c24cf21dfd267d54185e10696edc7b0}} 
+\index{Query\+\_\+cache@{Query\+\_\+cache}!write\+\_\+result\+\_\+data@{write\+\_\+result\+\_\+data}}
+\index{write\+\_\+result\+\_\+data@{write\+\_\+result\+\_\+data}!Query\+\_\+cache@{Query\+\_\+cache}}
+\subsubsection{\texorpdfstring{write\+\_\+result\+\_\+data()}{write\_result\_data()}}
+{\footnotesize\ttfamily my\+\_\+bool Query\+\_\+cache\+::write\+\_\+result\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$$\ast$}]{result,  }\item[{ulong}]{data\+\_\+len,  }\item[{uchar $\ast$}]{data,  }\item[{\mbox{\hyperlink{structQuery__cache__block}{Query\+\_\+cache\+\_\+block}} $\ast$}]{parent,  }\item[{Query\+\_\+cache\+\_\+block\+::block\+\_\+type}]{type = {\ttfamily Query\+\_\+cache\+\_\+block\+:\+:RESULT} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+L\+I\+B\+R\+A\+RY 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+cache.\+h\item 
+sql\+\_\+cache.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\hypertarget{classSql__cmd__dml}{}\section{Sql\+\_\+cmd\+\_\+dml Class Reference}
+\label{classSql__cmd__dml}\index{Sql\+\_\+cmd\+\_\+dml@{Sql\+\_\+cmd\+\_\+dml}}
+Inheritance diagram for Sql\+\_\+cmd\+\_\+dml\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.941177cm]{classSql__cmd__dml}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__dml_af36dc69e855d0e48d0e79002576907a4}{prepared\+\_\+statement\+\_\+test}} (T\+HD $\ast$thd)=0
+\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__dml_ad395374af7ac799573ca41d87b60b977}{prepare}} (T\+HD $\ast$thd)=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__dml_ad395374af7ac799573ca41d87b60b977}\label{classSql__cmd__dml_ad395374af7ac799573ca41d87b60b977}} 
+\index{Sql\+\_\+cmd\+\_\+dml@{Sql\+\_\+cmd\+\_\+dml}!prepare@{prepare}}
+\index{prepare@{prepare}!Sql\+\_\+cmd\+\_\+dml@{Sql\+\_\+cmd\+\_\+dml}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily virtual bool Sql\+\_\+cmd\+\_\+dml\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Command-\/specific resolving (doesn\textquotesingle{}t include L\+E\+X\+::prepare())
+
+\begin{DoxySeeAlso}{See also}
+select\+\_\+like\+\_\+stmt\+\_\+test()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current T\+HD.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classSql__cmd__update_af3b765bea10980878c0d4c0e677ce88f}{Sql\+\_\+cmd\+\_\+update}}, \mbox{\hyperlink{classSql__cmd__delete__multi_af069c73c8b62527f3bf8de0b9ce45297}{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}, \mbox{\hyperlink{classSql__cmd__delete_ad761a1c8d8c0412fddd38a3303986806}{Sql\+\_\+cmd\+\_\+delete}}, and \mbox{\hyperlink{classSql__cmd__truncate__table_a330e8a3864e8646a4ac4053c8a93db6d}{Sql\+\_\+cmd\+\_\+truncate\+\_\+table}}.
+
+\mbox{\Hypertarget{classSql__cmd__dml_af36dc69e855d0e48d0e79002576907a4}\label{classSql__cmd__dml_af36dc69e855d0e48d0e79002576907a4}} 
+\index{Sql\+\_\+cmd\+\_\+dml@{Sql\+\_\+cmd\+\_\+dml}!prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}}
+\index{prepared\+\_\+statement\+\_\+test@{prepared\+\_\+statement\+\_\+test}!Sql\+\_\+cmd\+\_\+dml@{Sql\+\_\+cmd\+\_\+dml}}
+\subsubsection{\texorpdfstring{prepared\+\_\+statement\+\_\+test()}{prepared\_statement\_test()}}
+{\footnotesize\ttfamily virtual bool Sql\+\_\+cmd\+\_\+dml\+::prepared\+\_\+statement\+\_\+test (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Validate PS and do name resolution\+:
+
+Check A\+C\+Ls Open tables Prepare the query when needed (resolve names etc)
+
+\begin{DoxySeeAlso}{See also}
+check\+\_\+prepared\+\_\+statement()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classSql__cmd__update_ae0fcfae54301cb796e4bc9adfc2c8ec5}{Sql\+\_\+cmd\+\_\+update}}, \mbox{\hyperlink{classSql__cmd__delete__multi_a335d296d9f32ec386cfaec2073209d60}{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}, \mbox{\hyperlink{classSql__cmd__delete_a9605fcb766fdc88c97d30ad9e02addd1}{Sql\+\_\+cmd\+\_\+delete}}, and \mbox{\hyperlink{classSql__cmd__truncate__table_acad0a1ad1b5137184b19d333abc3b1ba}{Sql\+\_\+cmd\+\_\+truncate\+\_\+table}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+cmd\+\_\+dml.\+h\end{DoxyCompactItemize}

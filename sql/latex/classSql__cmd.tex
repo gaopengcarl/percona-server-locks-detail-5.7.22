@@ -1,0 +1,79 @@
+\hypertarget{classSql__cmd}{}\section{Sql\+\_\+cmd Class Reference}
+\label{classSql__cmd}\index{Sql\+\_\+cmd@{Sql\+\_\+cmd}}
+Inheritance diagram for Sql\+\_\+cmd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classSql__cmd}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd_ae58cec31333016fc94fb25c0d2f4ff01}\label{classSql__cmd_ae58cec31333016fc94fb25c0d2f4ff01}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd_ae58cec31333016fc94fb25c0d2f4ff01}{sql\+\_\+command\+\_\+code}} () const =0
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{execute}} (T\+HD $\ast$thd)=0
+\item 
+virtual void \mbox{\hyperlink{classSql__cmd_a57dad9cab4d6349656cf38a03131b58a}{cleanup}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+of an S\+QL command.
+
+This class is an interface between the parser and the runtime. The parser builds the appropriate derived classes of \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} to represent a S\+QL statement in the parsed tree. The \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{execute()}} method in the derived classes of \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} contain the runtime implementation. Note that this interface is used for S\+QL statements recently implemented, the code for older statements tend to load the L\+EX structure with more attributes instead. Implement new statements by sub-\/classing \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}}, as this improves code modularity (see the \textquotesingle{}big switch\textquotesingle{} in \mbox{\hyperlink{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}{dispatch\+\_\+command()}}), and decreases the total size of the L\+EX structure (therefore saving memory in stored programs). The recommended name of a derived class of \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} is Sql\+\_\+cmd\+\_\+$<$derived$>$.
+
+Notice that the \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} class should not be confused with the Statement class. Statement is a class that is used to manage an S\+QL command or a set of S\+QL commands. When the S\+QL statement text is analyzed, the parser will create one or more \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} objects to represent the actual S\+QL commands. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd_a57dad9cab4d6349656cf38a03131b58a}\label{classSql__cmd_a57dad9cab4d6349656cf38a03131b58a}} 
+\index{Sql\+\_\+cmd@{Sql\+\_\+cmd}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Sql\+\_\+cmd@{Sql\+\_\+cmd}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily virtual void Sql\+\_\+cmd\+::cleanup (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Command-\/specific reinitialization before execution of prepared statement
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{sql__prepare_8cc_a230ccb139578f6e2099fcd40a6ca57ad}{reinit\+\_\+stmt\+\_\+before\+\_\+use()}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Currently this function is overloaded for I\+N\+S\+E\+R\+T/\+R\+E\+P\+L\+A\+CE stmts only.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Current T\+HD. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classSql__cmd__truncate__table_aef61dc712f14dc3f3c0a343806f5de54}{Sql\+\_\+cmd\+\_\+truncate\+\_\+table}}.
+
+\mbox{\Hypertarget{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}\label{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}} 
+\index{Sql\+\_\+cmd@{Sql\+\_\+cmd}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd@{Sql\+\_\+cmd}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual bool Sql\+\_\+cmd\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classSql__cmd__discard__import__tablespace_a6a9f29aed00bc40b029e159b515d847d}{Sql\+\_\+cmd\+\_\+discard\+\_\+import\+\_\+tablespace}}, \mbox{\hyperlink{classSql__cmd__alter__table_af5e5efa7c0d8a3a4c4122c20e86a658f}{Sql\+\_\+cmd\+\_\+alter\+\_\+table}}, \mbox{\hyperlink{classSql__cmd__drop__server_a19ff682e57c46d10212a552e97806270}{Sql\+\_\+cmd\+\_\+drop\+\_\+server}}, \mbox{\hyperlink{classSql__cmd__alter__server_a3f4f8ff26edf3f1780fc7ab7a98ccd2d}{Sql\+\_\+cmd\+\_\+alter\+\_\+server}}, \mbox{\hyperlink{classSql__cmd__xa__rollback_ab6ad1f2611953c4c083908827b1e7997}{Sql\+\_\+cmd\+\_\+xa\+\_\+rollback}}, \mbox{\hyperlink{classSql__cmd__create__server_a8e7f8717451abfb04ef6ddbacfe76428}{Sql\+\_\+cmd\+\_\+create\+\_\+server}}, \mbox{\hyperlink{classSql__cmd__resignal_a90366018b66b37bf6fd101b01c49dbf2}{Sql\+\_\+cmd\+\_\+resignal}}, \mbox{\hyperlink{classSql__cmd__change__repl__filter_ad07a5ae16f5018f6235ea978e523a6df}{Sql\+\_\+cmd\+\_\+change\+\_\+repl\+\_\+filter}}, \mbox{\hyperlink{classSql__cmd__alter__instance_a20c7c73bdbc58422a829474682fdf8c4}{Sql\+\_\+cmd\+\_\+alter\+\_\+instance}}, \mbox{\hyperlink{classSql__cmd__alter__table__truncate__partition_a00d67d3b9cc8ab79100cbc74ec89702c}{Sql\+\_\+cmd\+\_\+alter\+\_\+table\+\_\+truncate\+\_\+partition}}, \mbox{\hyperlink{classSql__cmd__signal_a302864ac4023450ad3171525426eb1dc}{Sql\+\_\+cmd\+\_\+signal}}, \mbox{\hyperlink{classSql__cmd__xa__commit_a5c883806812b74adc71d7eba693e863a}{Sql\+\_\+cmd\+\_\+xa\+\_\+commit}}, \mbox{\hyperlink{classSql__cmd__alter__table__repair__partition_a48d4d8c83b4d7c15b0f6232eae9dfe5a}{Sql\+\_\+cmd\+\_\+alter\+\_\+table\+\_\+repair\+\_\+partition}}, \mbox{\hyperlink{classSql__cmd__shutdown_ae56998e3f20e85707c230561f32a56f3}{Sql\+\_\+cmd\+\_\+shutdown}}, \mbox{\hyperlink{classSql__cmd__uninstall__plugin_ad5aad6804dee065f60f1a57d01ced199}{Sql\+\_\+cmd\+\_\+uninstall\+\_\+plugin}}, \mbox{\hyperlink{classSql__cmd__xa__recover_a48a61d21f733c261c49e5f93d7ecec26}{Sql\+\_\+cmd\+\_\+xa\+\_\+recover}}, \mbox{\hyperlink{classSql__cmd__repair__table_abb68d28756b9713e0d46774b3cafe39c}{Sql\+\_\+cmd\+\_\+repair\+\_\+table}}, \mbox{\hyperlink{classSql__cmd__update_a948016f5dbbc804c7fcd5e0cf75364bc}{Sql\+\_\+cmd\+\_\+update}}, \mbox{\hyperlink{classSql__cmd__handler__close_a42c36537c4cdb865a98dd73aaa50e209}{Sql\+\_\+cmd\+\_\+handler\+\_\+close}}, \mbox{\hyperlink{classSql__cmd__alter__table__optimize__partition_a16ec9cb4ba62fbc49842abd1044bdc2a}{Sql\+\_\+cmd\+\_\+alter\+\_\+table\+\_\+optimize\+\_\+partition}}, \mbox{\hyperlink{classSql__cmd__xa__prepare_a238c596649cac951d4c839ae253b1624}{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare}}, \mbox{\hyperlink{classSql__cmd__delete__multi_ac23aab4d1bf9cd9d5c799d2843558810}{Sql\+\_\+cmd\+\_\+delete\+\_\+multi}}, \mbox{\hyperlink{classSql__cmd__install__plugin_a8e128952dea83f34e1293bd1f8e14b21}{Sql\+\_\+cmd\+\_\+install\+\_\+plugin}}, \mbox{\hyperlink{classSql__cmd__optimize__table_a91077d83c5c27dae2f78a4b47c8f06a3}{Sql\+\_\+cmd\+\_\+optimize\+\_\+table}}, \mbox{\hyperlink{classSql__cmd__alter__table__check__partition_a8966c4ecbcc51851144d89eebe38b4d4}{Sql\+\_\+cmd\+\_\+alter\+\_\+table\+\_\+check\+\_\+partition}}, \mbox{\hyperlink{classSql__cmd__delete_aa04524eb8b0ecf5f8059fdd176990781}{Sql\+\_\+cmd\+\_\+delete}}, \mbox{\hyperlink{classSql__cmd__xa__end_a82de55b8107137497f77ce51a9d16fad}{Sql\+\_\+cmd\+\_\+xa\+\_\+end}}, \mbox{\hyperlink{classSql__cmd__handler__read_ab22e7bb754b8f8a9b6d64af65329ca2c}{Sql\+\_\+cmd\+\_\+handler\+\_\+read}}, \mbox{\hyperlink{classSql__cmd__check__table_a05c38a51158692165f18f7c16199c468}{Sql\+\_\+cmd\+\_\+check\+\_\+table}}, \mbox{\hyperlink{classSql__cmd__alter__table__analyze__partition_a71c5e17563536e65e9a048a1205b4fbd}{Sql\+\_\+cmd\+\_\+alter\+\_\+table\+\_\+analyze\+\_\+partition}}, \mbox{\hyperlink{classSql__cmd__xa__start_a1aec90983e7360a72906ac004b792d4f}{Sql\+\_\+cmd\+\_\+xa\+\_\+start}}, \mbox{\hyperlink{classSql__cmd__analyze__table_ab6efba3102a2c21c273245fcd3de28e5}{Sql\+\_\+cmd\+\_\+analyze\+\_\+table}}, \mbox{\hyperlink{classSql__cmd__truncate__table_ab47847ea764e186a542fb8fc834cdad2}{Sql\+\_\+cmd\+\_\+truncate\+\_\+table}}, \mbox{\hyperlink{classSql__cmd__handler__open_a79b3b42813bdf3d60fd796e149674d55}{Sql\+\_\+cmd\+\_\+handler\+\_\+open}}, \mbox{\hyperlink{classSql__cmd__get__diagnostics_aecafd1b2d00aace5a5b238b764aadbab}{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}}, and \mbox{\hyperlink{classSql__cmd__alter__table__exchange__partition_a4fe65ee03e6db3c42a6c6db1475bbf09}{Sql\+\_\+cmd\+\_\+alter\+\_\+table\+\_\+exchange\+\_\+partition}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+cmd.\+h\end{DoxyCompactItemize}

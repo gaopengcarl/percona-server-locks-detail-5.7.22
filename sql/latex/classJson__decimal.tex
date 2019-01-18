@@ -1,0 +1,134 @@
+\hypertarget{classJson__decimal}{}\section{Json\+\_\+decimal Class Reference}
+\label{classJson__decimal}\index{Json\+\_\+decimal@{Json\+\_\+decimal}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+decimal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classJson__decimal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJson__decimal_a0bd560296509187158bf0ca9b01d9579}\label{classJson__decimal_a0bd560296509187158bf0ca9b01d9579}} 
+{\bfseries Json\+\_\+decimal} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} \&\mbox{\hyperlink{classJson__decimal_ab5a0c36eb896377174cb30939b8802e4}{value}})
+\item 
+int \mbox{\hyperlink{classJson__decimal_ae65238ee764087fe5b03a9bf86131ea1}{binary\+\_\+size}} () const
+\item 
+bool \mbox{\hyperlink{classJson__decimal_a34fbae9992bfb9665b47a0c14dc1528b}{get\+\_\+binary}} (char $\ast$dest) const
+\item 
+\mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__decimal_a95b359e78ebb8d88e4bd8ef10a06b116}{json\+\_\+type}} () const
+\item 
+const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classJson__decimal_ab5a0c36eb896377174cb30939b8802e4}{value}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__decimal_a73afc8bc022cc9d7a31e4404613933ff}{clone}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classJson__decimal_ac9b373f1acb0c29a32caf136d1f9e31a}{convert\+\_\+from\+\_\+binary}} (const char $\ast$bin, size\+\_\+t len, \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$dec)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJson__decimal_a6e857732dc22dde57ddaeaae01e5dcf2}\label{classJson__decimal_a6e857732dc22dde57ddaeaae01e5dcf2}} 
+static const int {\bfseries M\+A\+X\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+S\+I\+ZE} = \mbox{\hyperlink{my__decimal_8h_a5a34aae7126c775b3d1302db2732f202}{D\+E\+C\+I\+M\+A\+L\+\_\+\+M\+A\+X\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+I\+ZE}} + 2
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a My\+S\+QL decimal number, type J\+\_\+\+D\+E\+C\+I\+M\+AL. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__decimal_ae65238ee764087fe5b03a9bf86131ea1}\label{classJson__decimal_ae65238ee764087fe5b03a9bf86131ea1}} 
+\index{Json\+\_\+decimal@{Json\+\_\+decimal}!binary\+\_\+size@{binary\+\_\+size}}
+\index{binary\+\_\+size@{binary\+\_\+size}!Json\+\_\+decimal@{Json\+\_\+decimal}}
+\subsubsection{\texorpdfstring{binary\+\_\+size()}{binary\_size()}}
+{\footnotesize\ttfamily int Json\+\_\+decimal\+::binary\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of bytes needed to store this decimal in a \mbox{\hyperlink{classJson__opaque}{Json\+\_\+opaque}}. \begin{DoxyReturn}{Returns}
+the number of bytes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__decimal_a73afc8bc022cc9d7a31e4404613933ff}\label{classJson__decimal_a73afc8bc022cc9d7a31e4404613933ff}} 
+\index{Json\+\_\+decimal@{Json\+\_\+decimal}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+decimal@{Json\+\_\+decimal}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ Json\+\_\+decimal\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__decimal_ac9b373f1acb0c29a32caf136d1f9e31a}\label{classJson__decimal_ac9b373f1acb0c29a32caf136d1f9e31a}} 
+\index{Json\+\_\+decimal@{Json\+\_\+decimal}!convert\+\_\+from\+\_\+binary@{convert\+\_\+from\+\_\+binary}}
+\index{convert\+\_\+from\+\_\+binary@{convert\+\_\+from\+\_\+binary}!Json\+\_\+decimal@{Json\+\_\+decimal}}
+\subsubsection{\texorpdfstring{convert\+\_\+from\+\_\+binary()}{convert\_from\_binary()}}
+{\footnotesize\ttfamily bool Json\+\_\+decimal\+::convert\+\_\+from\+\_\+binary (\begin{DoxyParamCaption}\item[{const char $\ast$}]{bin,  }\item[{size\+\_\+t}]{len,  }\item[{\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{dec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Convert a binary value produced by \mbox{\hyperlink{classJson__decimal_a34fbae9992bfb9665b47a0c14dc1528b}{get\+\_\+binary()}} back to a \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bin} & the binary representation \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & the length of the binary representation \\
+\hline
+\mbox{\texttt{ out}}  & {\em dec} & the \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} object to receive the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__decimal_a34fbae9992bfb9665b47a0c14dc1528b}\label{classJson__decimal_a34fbae9992bfb9665b47a0c14dc1528b}} 
+\index{Json\+\_\+decimal@{Json\+\_\+decimal}!get\+\_\+binary@{get\+\_\+binary}}
+\index{get\+\_\+binary@{get\+\_\+binary}!Json\+\_\+decimal@{Json\+\_\+decimal}}
+\subsubsection{\texorpdfstring{get\+\_\+binary()}{get\_binary()}}
+{\footnotesize\ttfamily bool Json\+\_\+decimal\+::get\+\_\+binary (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest }\end{DoxyParamCaption}) const}
+
+Get the binary representation of the wrapped \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}}, so that this value can be stored inside of a \mbox{\hyperlink{classJson__opaque}{Json\+\_\+opaque}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination buffer to which the binary representation is written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__decimal_a95b359e78ebb8d88e4bd8ef10a06b116}\label{classJson__decimal_a95b359e78ebb8d88e4bd8ef10a06b116}} 
+\index{Json\+\_\+decimal@{Json\+\_\+decimal}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+decimal@{Json\+\_\+decimal}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} Json\+\_\+decimal\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__decimal_ab5a0c36eb896377174cb30939b8802e4}\label{classJson__decimal_ab5a0c36eb896377174cb30939b8802e4}} 
+\index{Json\+\_\+decimal@{Json\+\_\+decimal}!value@{value}}
+\index{value@{value}!Json\+\_\+decimal@{Json\+\_\+decimal}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}}$\ast$ Json\+\_\+decimal\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a pointer to the My\+S\+QL decimal held by this object. Ownership is {\itshape not} transferred. \begin{DoxyReturn}{Returns}
+the decimal 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

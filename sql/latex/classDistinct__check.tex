@@ -1,0 +1,50 @@
+\hypertarget{classDistinct__check}{}\section{Distinct\+\_\+check Class Reference}
+\label{classDistinct__check}\index{Distinct\+\_\+check@{Distinct\+\_\+check}}
+
+
+{\ttfamily \#include $<$aggregate\+\_\+check.\+h$>$}
+
+Inheritance diagram for Distinct\+\_\+check\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDistinct__check}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDistinct__check_a86242898503a8f66b84d47d3cb6b9abf}\label{classDistinct__check_a86242898503a8f66b84d47d3cb6b9abf}} 
+{\bfseries Distinct\+\_\+check} (st\+\_\+select\+\_\+lex $\ast$select\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{group__AGGREGATE__CHECKS_ga83e75b415b78e10ade375ad320ea446c}{check\+\_\+query}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classDistinct__check_a428fcc2df9fde928311ae13c84f03bcc}{Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classDistinct__check_a0393446fee3e58f5293b667a13670b61}\label{classDistinct__check_a0393446fee3e58f5293b667a13670b61}} 
+bool {\bfseries Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+distinct} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classDistinct__check_a7afbe3195aa38f18eba80a8cfd419d87}\label{classDistinct__check_a7afbe3195aa38f18eba80a8cfd419d87}} 
+bool {\bfseries Item\+\_\+func\+\_\+any\+\_\+value\+::aggregate\+\_\+check\+\_\+distinct} (uchar $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Checks for queries which have D\+I\+S\+T\+I\+N\+CT. 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classDistinct__check_a428fcc2df9fde928311ae13c84f03bcc}\label{classDistinct__check_a428fcc2df9fde928311ae13c84f03bcc}} 
+\index{Distinct\+\_\+check@{Distinct\+\_\+check}!Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct@{Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct}}
+\index{Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct@{Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct}!Distinct\+\_\+check@{Distinct\+\_\+check}}
+\subsubsection{\texorpdfstring{Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct}{Item\_sum::aggregate\_check\_distinct}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{classItem__sum_a469f9e37bdb5f0c186b4fc2190f01fdb}{Item\+\_\+sum\+::aggregate\+\_\+check\+\_\+distinct}} (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Just because we need to go through \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item\+::walk()}} to reach all items to validate, some work must be delegated to \char`\"{}\+Item processors\char`\"{} (members of \mbox{\hyperlink{classItem}{Item}}); this work conceptually belongs to \mbox{\hyperlink{classDistinct__check}{Distinct\+\_\+check}}, and needs privileged access to it. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{aggregate__check_8h}{aggregate\+\_\+check.\+h}}\item 
+\mbox{\hyperlink{aggregate__check_8cc}{aggregate\+\_\+check.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+\hypertarget{classItem__json__typecast}{}\section{Item\+\_\+json\+\_\+typecast Class Reference}
+\label{classItem__json__typecast}\index{Item\+\_\+json\+\_\+typecast@{Item\+\_\+json\+\_\+typecast}}
+
+
+{\ttfamily \#include $<$item\+\_\+json\+\_\+func.\+h$>$}
+
+Inheritance diagram for Item\+\_\+json\+\_\+typecast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__json__typecast}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__json__typecast_aa1c1944e2cf228e0f45d3dc97b7d6730}\label{classItem__json__typecast_aa1c1944e2cf228e0f45d3dc97b7d6730}} 
+{\bfseries Item\+\_\+json\+\_\+typecast} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+void \mbox{\hyperlink{classItem__json__typecast_a94def4699135226915f3350f5cb6dde7}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__json__typecast_a7587dda4f32b7f2c3f20c94670c69c18}\label{classItem__json__typecast_a7587dda4f32b7f2c3f20c94670c69c18}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__json__typecast_a9211af3ee6f86d3d3ed20747effc35d1}\label{classItem__json__typecast_a9211af3ee6f86d3d3ed20747effc35d1}} 
+const char $\ast$ {\bfseries cast\+\_\+type} () const
+\item 
+bool \mbox{\hyperlink{classItem__json__typecast_a09e8b9b3ec04c6e654bbb540f47d7b91}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a \char`\"{}\+C\+A\+S\+T( $<$value$>$ A\+S J\+S\+O\+N )\char`\"{} coercion. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__json__typecast_a94def4699135226915f3350f5cb6dde7}\label{classItem__json__typecast_a94def4699135226915f3350f5cb6dde7}} 
+\index{Item\+\_\+json\+\_\+typecast@{Item\+\_\+json\+\_\+typecast}!print@{print}}
+\index{print@{print}!Item\+\_\+json\+\_\+typecast@{Item\+\_\+json\+\_\+typecast}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+json\+\_\+typecast\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__json__typecast_a09e8b9b3ec04c6e654bbb540f47d7b91}\label{classItem__json__typecast_a09e8b9b3ec04c6e654bbb540f47d7b91}} 
+\index{Item\+\_\+json\+\_\+typecast@{Item\+\_\+json\+\_\+typecast}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+json\+\_\+typecast@{Item\+\_\+json\+\_\+typecast}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+json\+\_\+typecast\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get a J\+S\+ON value from an \mbox{\hyperlink{classItem}{Item}}.
+
+All subclasses that can return a J\+S\+ON value, should override this function. The function in the base class is not expected to be called. If it is called, it most likely means that some subclass is missing an override of \mbox{\hyperlink{classItem__json__typecast_a09e8b9b3ec04c6e654bbb540f47d7b91}{val\+\_\+json()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em result} & The resulting \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+json\+\_\+func.\+h\item 
+item\+\_\+json\+\_\+func.\+cc\end{DoxyCompactItemize}

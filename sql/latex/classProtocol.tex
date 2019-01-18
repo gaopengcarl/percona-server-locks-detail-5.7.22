@@ -1,0 +1,507 @@
+\hypertarget{classProtocol}{}\section{Protocol Class Reference}
+\label{classProtocol}\index{Protocol@{Protocol}}
+Inheritance diagram for Protocol\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classProtocol}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classProtocol_ab1d147a8122f4ea4f8516ee23c514b02}{enum\+\_\+protocol\+\_\+type}} \{ \newline
+{\bfseries P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+E\+XT} = 0, 
+{\bfseries P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+B\+I\+N\+A\+RY} = 1, 
+{\bfseries P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+L\+O\+C\+AL} = 2, 
+{\bfseries P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+R\+R\+OR} = 3, 
+\newline
+{\bfseries P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+L\+U\+G\+IN} = 4
+ \}
+\item 
+enum \{ {\bfseries S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+R\+O\+WS} = 1, 
+{\bfseries S\+E\+N\+D\+\_\+\+D\+E\+F\+A\+U\+L\+TS} = 2, 
+{\bfseries S\+E\+N\+D\+\_\+\+E\+OF} = 4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classProtocol_a864cc6313ff0a75ce7a69dd7c89de4a7}{read\+\_\+packet}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classProtocol_a636debc9b25f4e60864902cdd1b3e87a}{get\+\_\+command}} (C\+O\+M\+\_\+\+D\+A\+TA $\ast$com\+\_\+data, enum\+\_\+server\+\_\+command $\ast$cmd)=0
+\item 
+\mbox{\Hypertarget{classProtocol_aa44c608bf9b7e57e930b91bf6c1d08f7}\label{classProtocol_aa44c608bf9b7e57e930b91bf6c1d08f7}} 
+virtual enum \mbox{\hyperlink{classProtocol_ab1d147a8122f4ea4f8516ee23c514b02}{enum\+\_\+protocol\+\_\+type}} {\bfseries type} ()=0
+\item 
+\mbox{\Hypertarget{classProtocol_a1c9653bc39aaea28198633fd798bfe9a}\label{classProtocol_a1c9653bc39aaea28198633fd798bfe9a}} 
+virtual enum enum\+\_\+vio\+\_\+type {\bfseries connection\+\_\+type} ()=0
+\item 
+\mbox{\Hypertarget{classProtocol_a0b94a6ffc8dd31e6921432cc35fa6385}\label{classProtocol_a0b94a6ffc8dd31e6921432cc35fa6385}} 
+virtual bool {\bfseries store\+\_\+null} ()=0
+\item 
+\mbox{\Hypertarget{classProtocol_a5b017df1ed6f4672d01b104c7d874e92}\label{classProtocol_a5b017df1ed6f4672d01b104c7d874e92}} 
+virtual bool {\bfseries store\+\_\+tiny} (longlong from)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a8d69a42de2289d066d851f4fb8c28191}\label{classProtocol_a8d69a42de2289d066d851f4fb8c28191}} 
+virtual bool {\bfseries store\+\_\+short} (longlong from)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a36c3efb62fe0f899583b595a6cc12619}\label{classProtocol_a36c3efb62fe0f899583b595a6cc12619}} 
+virtual bool {\bfseries store\+\_\+long} (longlong from)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a84d763243a8ed7cc2aba14c62d295071}\label{classProtocol_a84d763243a8ed7cc2aba14c62d295071}} 
+virtual bool {\bfseries store\+\_\+longlong} (longlong from, bool unsigned\+\_\+flag)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a1659b5319cf3652e19901af39cd49ba0}\label{classProtocol_a1659b5319cf3652e19901af39cd49ba0}} 
+virtual bool {\bfseries store\+\_\+decimal} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$, uint, uint)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a1c5150aca2a7de8e35e950bf067dd111}\label{classProtocol_a1c5150aca2a7de8e35e950bf067dd111}} 
+virtual bool {\bfseries store} (const char $\ast$from, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$fromcs)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a92f9322a5bc87dd18a4de563ae45e49e}\label{classProtocol_a92f9322a5bc87dd18a4de563ae45e49e}} 
+virtual bool {\bfseries store} (float from, uint32 decimals, String $\ast$buffer)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a07a617fd8dc08af488891f262b2b4a16}\label{classProtocol_a07a617fd8dc08af488891f262b2b4a16}} 
+virtual bool {\bfseries store} (double from, uint32 decimals, String $\ast$buffer)=0
+\item 
+\mbox{\Hypertarget{classProtocol_afb4df65976d86deb0982c3f17ad571ea}\label{classProtocol_afb4df65976d86deb0982c3f17ad571ea}} 
+virtual bool {\bfseries store} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$time, uint precision)=0
+\item 
+\mbox{\Hypertarget{classProtocol_a7712fec6e80842c0bcf27d7c24ca9d57}\label{classProtocol_a7712fec6e80842c0bcf27d7c24ca9d57}} 
+virtual bool {\bfseries store\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$time)=0
+\item 
+\mbox{\Hypertarget{classProtocol_af6bc1815beaf5e727c4908ba3aa16ef2}\label{classProtocol_af6bc1815beaf5e727c4908ba3aa16ef2}} 
+virtual bool {\bfseries store\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$time, uint precision)=0
+\item 
+\mbox{\Hypertarget{classProtocol_aa6ed0869bd5ba27aff0e84b046391310}\label{classProtocol_aa6ed0869bd5ba27aff0e84b046391310}} 
+virtual bool {\bfseries store} (\mbox{\hyperlink{classProto__field}{Proto\+\_\+field}} $\ast$field)=0
+\item 
+\mbox{\Hypertarget{classProtocol_adc94cefd9bdba20f8b9698a9fe783f40}\label{classProtocol_adc94cefd9bdba20f8b9698a9fe783f40}} 
+bool {\bfseries store} (int from)
+\item 
+\mbox{\Hypertarget{classProtocol_a0423b50aaac27ea58626560425f655ce}\label{classProtocol_a0423b50aaac27ea58626560425f655ce}} 
+bool {\bfseries store} (uint32 from)
+\item 
+\mbox{\Hypertarget{classProtocol_a30d3cec3a68d57edad62efdf6d6d806e}\label{classProtocol_a30d3cec3a68d57edad62efdf6d6d806e}} 
+bool {\bfseries store} (longlong from)
+\item 
+\mbox{\Hypertarget{classProtocol_a49d24faa3d8c2b42c25d4b6551205a81}\label{classProtocol_a49d24faa3d8c2b42c25d4b6551205a81}} 
+bool {\bfseries store} (ulonglong from)
+\item 
+bool \mbox{\hyperlink{classProtocol_aa8bf8380dcfeb6df40de6a40f5485a7f}{store}} (const char $\ast$from, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$fromcs)
+\item 
+\mbox{\Hypertarget{classProtocol_a785ec8433646a7293a48a326752359e0}\label{classProtocol_a785ec8433646a7293a48a326752359e0}} 
+bool {\bfseries store} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classProtocol_ab19cb1dc9ce09fea3a3f922faccf6318}\label{classProtocol_ab19cb1dc9ce09fea3a3f922faccf6318}} 
+bool {\bfseries store} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&s, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+virtual ulong \mbox{\hyperlink{classProtocol_afc5e8ccb3c29f4b78f7f68cf00b6a713}{get\+\_\+client\+\_\+capabilities}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_aea1d05eaf76707b3772a00a43ea0e49b}{has\+\_\+client\+\_\+capability}} (unsigned long client\+\_\+capability)=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_af4ed0f36d7e3458766d522432bf4f2d5}{connection\+\_\+alive}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classProtocol_a6935bf41e00716012ba86e1f5c4b055b}{start\+\_\+row}} ()=0
+\item 
+\mbox{\Hypertarget{classProtocol_a724fab7f9d70946691413f0eb6918574}\label{classProtocol_a724fab7f9d70946691413f0eb6918574}} 
+virtual bool {\bfseries end\+\_\+row} ()=0
+\item 
+\mbox{\Hypertarget{classProtocol_a4a133181418b4d411e29abdc9d05ebea}\label{classProtocol_a4a133181418b4d411e29abdc9d05ebea}} 
+virtual void {\bfseries abort\+\_\+row} ()=0
+\item 
+\mbox{\Hypertarget{classProtocol_af98a04182a8e41b79dd7370913f3e5c8}\label{classProtocol_af98a04182a8e41b79dd7370913f3e5c8}} 
+virtual void {\bfseries end\+\_\+partial\+\_\+result\+\_\+set} ()=0
+\item 
+virtual int \mbox{\hyperlink{classProtocol_a63405d2f87f50f33ee57fcd4de65ae24}{shutdown}} (bool server\+\_\+shutdown=false)=0
+\item 
+virtual uint \mbox{\hyperlink{classProtocol_a869af76c99d8e668112b65f7a2338ac8}{get\+\_\+rw\+\_\+status}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_a7b500a3f2e52a98903d853b8f365ac7d}{get\+\_\+compression}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_aa815f52ff0474421cd5db5ea5da84a85}{start\+\_\+result\+\_\+metadata}} (uint num\+\_\+cols, uint flags, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$resultcs)=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_ab1c4f70c198fa10fbf4aed0dfc2c4847}{send\+\_\+field\+\_\+metadata}} (\mbox{\hyperlink{classSend__field}{Send\+\_\+field}} $\ast$field, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_a48bb540f0317bf418c129f441f2e82b9}{end\+\_\+result\+\_\+metadata}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_a5af2742550f44725128e121eb647eb34}{send\+\_\+ok}} (uint server\+\_\+status, uint statement\+\_\+warn\+\_\+count, ulonglong affected\+\_\+rows, ulonglong last\+\_\+insert\+\_\+id, const char $\ast$message)=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_a9a2cc208a15a3a81f99ace4c1009c01d}{send\+\_\+eof}} (uint server\+\_\+status, uint statement\+\_\+warn\+\_\+count)=0
+\item 
+virtual bool \mbox{\hyperlink{classProtocol_a7718f78528dde01063f4da3d074909e2}{send\+\_\+error}} (uint sql\+\_\+errno, const char $\ast$err\+\_\+msg, const char $\ast$sql\+\_\+state)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classProtocol_acd8b08258a48b752a3943389fc923302}\label{classProtocol_acd8b08258a48b752a3943389fc923302}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Flags available to alter the way the messages are sent to the client \mbox{\Hypertarget{classProtocol_ab1d147a8122f4ea4f8516ee23c514b02}\label{classProtocol_ab1d147a8122f4ea4f8516ee23c514b02}} 
+\index{Protocol@{Protocol}!enum\+\_\+protocol\+\_\+type@{enum\+\_\+protocol\+\_\+type}}
+\index{enum\+\_\+protocol\+\_\+type@{enum\+\_\+protocol\+\_\+type}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{enum\+\_\+protocol\+\_\+type}{enum\_protocol\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classProtocol_ab1d147a8122f4ea4f8516ee23c514b02}{Protocol\+::enum\+\_\+protocol\+\_\+type}}}
+
+Enum used by type() to specify the protocol type 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classProtocol_af4ed0f36d7e3458766d522432bf4f2d5}\label{classProtocol_af4ed0f36d7e3458766d522432bf4f2d5}} 
+\index{Protocol@{Protocol}!connection\+\_\+alive@{connection\+\_\+alive}}
+\index{connection\+\_\+alive@{connection\+\_\+alive}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{connection\+\_\+alive()}{connection\_alive()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::connection\+\_\+alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Checks if the protocol\textquotesingle{}s connection with the client is still alive. It should always return true unless the protocol closed the connection.
+
+\begin{DoxyReturn}{Returns}
+true if the connection is still alive false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a95428a9297fa1eda8fd44a5e1dba65a9}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_afdd93469cdacbec6cc7ac1a4379c7c40}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_a76a10534621100f5f07105bc26fd6ada}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_a48bb540f0317bf418c129f441f2e82b9}\label{classProtocol_a48bb540f0317bf418c129f441f2e82b9}} 
+\index{Protocol@{Protocol}!end\+\_\+result\+\_\+metadata@{end\+\_\+result\+\_\+metadata}}
+\index{end\+\_\+result\+\_\+metadata@{end\+\_\+result\+\_\+metadata}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{end\+\_\+result\+\_\+metadata()}{end\_result\_metadata()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::end\+\_\+result\+\_\+metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Signals the client that the metadata sending is done. Clears the server after sending the metadata.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & An error occurred \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a5df97b8f8dbf62682cfc4e79b76ae1ea}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_adc7012afe880218e2903dac0a22f0f8c}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_a1183e18916adea57032a957a99aaee4b}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_afc5e8ccb3c29f4b78f7f68cf00b6a713}\label{classProtocol_afc5e8ccb3c29f4b78f7f68cf00b6a713}} 
+\index{Protocol@{Protocol}!get\+\_\+client\+\_\+capabilities@{get\+\_\+client\+\_\+capabilities}}
+\index{get\+\_\+client\+\_\+capabilities@{get\+\_\+client\+\_\+capabilities}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{get\+\_\+client\+\_\+capabilities()}{get\_client\_capabilities()}}
+{\footnotesize\ttfamily virtual ulong Protocol\+::get\+\_\+client\+\_\+capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the client capabilities stored on the protocol. The available capabilites are defined in mysql\+\_\+com.\+h 
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_af675b178de4d07c875e50db63ce751e4}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__classic_aa6779b7a3f3b57f592743b031bbd8eb3}{Protocol\+\_\+classic}}, and \mbox{\hyperlink{classProtocol__local_a9b6d4b8d61490809b99080455b359189}{Protocol\+\_\+local}}.
+
+\mbox{\Hypertarget{classProtocol_a636debc9b25f4e60864902cdd1b3e87a}\label{classProtocol_a636debc9b25f4e60864902cdd1b3e87a}} 
+\index{Protocol@{Protocol}!get\+\_\+command@{get\+\_\+command}}
+\index{get\+\_\+command@{get\+\_\+command}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{get\+\_\+command()}{get\_command()}}
+{\footnotesize\ttfamily virtual int Protocol\+::get\+\_\+command (\begin{DoxyParamCaption}\item[{C\+O\+M\+\_\+\+D\+A\+TA $\ast$}]{com\+\_\+data,  }\item[{enum\+\_\+server\+\_\+command $\ast$}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Reads the command from the protocol and creates a command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em com\+\_\+data} & out parameter \\
+\hline
+{\em cmd} & out parameter \\
+\hline
+{\em pkt} & packet to be parsed \\
+\hline
+{\em length} & size of the packet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 fatal protcol error 0 ok 1 non-\/fatal protocol or parsing error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__local_a35eec2045f7d376af31f3d473f8a5718}{Protocol\+\_\+local}}, \mbox{\hyperlink{classProtocol__classic_aba5dc41da980210f755d7b8c2c1ab7bf}{Protocol\+\_\+classic}}, and \mbox{\hyperlink{classProtocol__callback_a87b4bf121b5c2851ae2948ca0ea02e37}{Protocol\+\_\+callback}}.
+
+\mbox{\Hypertarget{classProtocol_a7b500a3f2e52a98903d853b8f365ac7d}\label{classProtocol_a7b500a3f2e52a98903d853b8f365ac7d}} 
+\index{Protocol@{Protocol}!get\+\_\+compression@{get\+\_\+compression}}
+\index{get\+\_\+compression@{get\+\_\+compression}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{get\+\_\+compression()}{get\_compression()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::get\+\_\+compression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns if the protocol is compressed or not.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Not compressed \\
+\hline
+{\em true} & Compressed \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_ae835b42ece0c406a7c3e64195b16ed55}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_a968e04275fa9c80a11f0ca5ac7613d31}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_a1047a7e461d69ff592d8cabe9d89fbe2}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_a869af76c99d8e668112b65f7a2338ac8}\label{classProtocol_a869af76c99d8e668112b65f7a2338ac8}} 
+\index{Protocol@{Protocol}!get\+\_\+rw\+\_\+status@{get\+\_\+rw\+\_\+status}}
+\index{get\+\_\+rw\+\_\+status@{get\+\_\+rw\+\_\+status}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{get\+\_\+rw\+\_\+status()}{get\_rw\_status()}}
+{\footnotesize\ttfamily virtual uint Protocol\+::get\+\_\+rw\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the read/writing status
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & Read \\
+\hline
+{\em 2} & Write \\
+\hline
+{\em 0} & Other(\+Idle, Killed) \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a2cc42f90003a4a72504b5fc2ae945f03}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_a6699b46f137f58d32c7a0f934a221376}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_aecc686ca92164845b33a39683eb7ac2b}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_aea1d05eaf76707b3772a00a43ea0e49b}\label{classProtocol_aea1d05eaf76707b3772a00a43ea0e49b}} 
+\index{Protocol@{Protocol}!has\+\_\+client\+\_\+capability@{has\+\_\+client\+\_\+capability}}
+\index{has\+\_\+client\+\_\+capability@{has\+\_\+client\+\_\+capability}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{has\+\_\+client\+\_\+capability()}{has\_client\_capability()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::has\+\_\+client\+\_\+capability (\begin{DoxyParamCaption}\item[{unsigned long}]{client\+\_\+capability }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Checks if the client capabilities include the one specified as parameter.
+
+\begin{DoxyReturn}{Returns}
+true if it includes the specified capability false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a576ec71a457f4b71c3be94b0b59e053b}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__classic_a13ece31bc9fee31fdc6668d326bbb413}{Protocol\+\_\+classic}}, and \mbox{\hyperlink{classProtocol__local_a896ec7f823e6040519d04952dc9f2fe3}{Protocol\+\_\+local}}.
+
+\mbox{\Hypertarget{classProtocol_a864cc6313ff0a75ce7a69dd7c89de4a7}\label{classProtocol_a864cc6313ff0a75ce7a69dd7c89de4a7}} 
+\index{Protocol@{Protocol}!read\+\_\+packet@{read\+\_\+packet}}
+\index{read\+\_\+packet@{read\+\_\+packet}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{read\+\_\+packet()}{read\_packet()}}
+{\footnotesize\ttfamily virtual int Protocol\+::read\+\_\+packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Read packet from client
+
+\begin{DoxyReturn}{Returns}
+-\/1 fatal error 0 ok 1 non-\/fatal error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__local_a81ecc940d6b680cc855a5c34012686c6}{Protocol\+\_\+local}}, \mbox{\hyperlink{classProtocol__classic_afabebba2b775725054454c1cbe2e3721}{Protocol\+\_\+classic}}, and \mbox{\hyperlink{classProtocol__callback_a42c79ab20047c154ff73d8d732563928}{Protocol\+\_\+callback}}.
+
+\mbox{\Hypertarget{classProtocol_a9a2cc208a15a3a81f99ace4c1009c01d}\label{classProtocol_a9a2cc208a15a3a81f99ace4c1009c01d}} 
+\index{Protocol@{Protocol}!send\+\_\+eof@{send\+\_\+eof}}
+\index{send\+\_\+eof@{send\+\_\+eof}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{send\+\_\+eof()}{send\_eof()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::send\+\_\+eof (\begin{DoxyParamCaption}\item[{uint}]{server\+\_\+status,  }\item[{uint}]{statement\+\_\+warn\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Send eof message to the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+status} & The server status \\
+\hline
+{\em statement\+\_\+warn\+\_\+count} & Total number of warnings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & The message was successfully sent \\
+\hline
+{\em true} & An error occurred and the messages wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a67fbe75c90e0c993d5e3e15455fbeb99}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_a1aad5312e410648afe13f0ba3d252e36}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_a73b13a1041c96721d6ea08b5fa0eaf50}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_a7718f78528dde01063f4da3d074909e2}\label{classProtocol_a7718f78528dde01063f4da3d074909e2}} 
+\index{Protocol@{Protocol}!send\+\_\+error@{send\+\_\+error}}
+\index{send\+\_\+error@{send\+\_\+error}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{send\+\_\+error()}{send\_error()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::send\+\_\+error (\begin{DoxyParamCaption}\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{err\+\_\+msg,  }\item[{const char $\ast$}]{sql\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Send error message to the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql\+\_\+errno} & The error code to send \\
+\hline
+{\em err} & A pointer to the error message \\
+\hline
+{\em sqlstate} & S\+QL state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & The message was successfully sent \\
+\hline
+{\em true} & An error occurred and the messages wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_ac888175afcd3ef8ebee8565d324e4f65}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_a8f024e3c4a806e4e969ec452126f5769}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_afb9c6d98e56396be053ba7d1550f2911}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_ab1c4f70c198fa10fbf4aed0dfc2c4847}\label{classProtocol_ab1c4f70c198fa10fbf4aed0dfc2c4847}} 
+\index{Protocol@{Protocol}!send\+\_\+field\+\_\+metadata@{send\+\_\+field\+\_\+metadata}}
+\index{send\+\_\+field\+\_\+metadata@{send\+\_\+field\+\_\+metadata}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{send\+\_\+field\+\_\+metadata()}{send\_field\_metadata()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::send\+\_\+field\+\_\+metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSend__field}{Send\+\_\+field}} $\ast$}]{field,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{charset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Sends field metadata.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & \mbox{\hyperlink{classField}{Field}} metadata to be send to the client \\
+\hline
+{\em field} & \mbox{\hyperlink{classField}{Field}} to be send to the client \\
+\hline
+{\em charset} & \mbox{\hyperlink{classField}{Field}}\textquotesingle{}s charset\+: in case it is different than the one used by the connection it will be used to convert the value to the connection\textquotesingle{}s charset\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & The metadata was successfully sent \\
+\hline
+{\em true} & An error occurred \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a490af13a555c3603ecd47d9666a0018e}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_a4134598d48b8fb89a69fcae71d348ed2}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_af37f17c0d8853dd2b308bf14826e637c}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_a5af2742550f44725128e121eb647eb34}\label{classProtocol_a5af2742550f44725128e121eb647eb34}} 
+\index{Protocol@{Protocol}!send\+\_\+ok@{send\+\_\+ok}}
+\index{send\+\_\+ok@{send\+\_\+ok}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{send\+\_\+ok()}{send\_ok()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::send\+\_\+ok (\begin{DoxyParamCaption}\item[{uint}]{server\+\_\+status,  }\item[{uint}]{statement\+\_\+warn\+\_\+count,  }\item[{ulonglong}]{affected\+\_\+rows,  }\item[{ulonglong}]{last\+\_\+insert\+\_\+id,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Send ok message to the client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+status} & The server status \\
+\hline
+{\em statement\+\_\+warn\+\_\+count} & Total number of warnings \\
+\hline
+{\em affected\+\_\+rows} & Number of rows changed by statement \\
+\hline
+{\em last\+\_\+insert\+\_\+id} & Last insert id (Auto\+\_\+increment id for first row if used) \\
+\hline
+{\em message} & Message to send to the client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & The message was successfully sent \\
+\hline
+{\em true} & An error occurred and the messages wasn\textquotesingle{}t sent properly \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_ab66d2b345a29403acd422e76c95903ed}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_ace027ac8707dd2e774e1955319ffe615}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_a482f606dfaeea989625fd9d837769f32}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_a63405d2f87f50f33ee57fcd4de65ae24}\label{classProtocol_a63405d2f87f50f33ee57fcd4de65ae24}} 
+\index{Protocol@{Protocol}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily virtual int Protocol\+::shutdown (\begin{DoxyParamCaption}\item[{bool}]{server\+\_\+shutdown = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Thread is being shut down, disconnect and free resources
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+shutdown} & If false then this is normal thread shutdown. If true then the server is shutting down. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a787ca2bd8aea693536edcae3387b4798}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__local_a7f88c42439a65e26a2651d3ec4c64e0c}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_aec124efa16faabe9b2afa3ff7510d189}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_aa815f52ff0474421cd5db5ea5da84a85}\label{classProtocol_aa815f52ff0474421cd5db5ea5da84a85}} 
+\index{Protocol@{Protocol}!start\+\_\+result\+\_\+metadata@{start\+\_\+result\+\_\+metadata}}
+\index{start\+\_\+result\+\_\+metadata@{start\+\_\+result\+\_\+metadata}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{start\+\_\+result\+\_\+metadata()}{start\_result\_metadata()}}
+{\footnotesize\ttfamily virtual bool Protocol\+::start\+\_\+result\+\_\+metadata (\begin{DoxyParamCaption}\item[{uint}]{num\+\_\+cols,  }\item[{uint}]{flags,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{resultcs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Prepares the server for metadata sending. Notifies the client that the metadata sending will start.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+cols} & Number of columns that will be sent \\
+\hline
+{\em flags} & Flags to alter the metadata sending Can be any of the following\+: S\+E\+N\+D\+\_\+\+N\+U\+M\+\_\+\+R\+O\+WS, S\+E\+N\+D\+\_\+\+D\+E\+F\+A\+U\+L\+TS, S\+E\+N\+D\+\_\+\+E\+OF \\
+\hline
+{\em resultcs} & Charset to convert to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & An error occurred \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classProtocol__callback_a9a65f2ff5bcab0fb5af02b82b205f386}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__binary_a2edc9bbded2ebdb50ccdcce29630d5f5}{Protocol\+\_\+binary}}, \mbox{\hyperlink{classProtocol__local_adcef21ebd2f41ca61731c874ccfb1762}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_a9685e817c254cdb457e9b7932e610259}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_a6935bf41e00716012ba86e1f5c4b055b}\label{classProtocol_a6935bf41e00716012ba86e1f5c4b055b}} 
+\index{Protocol@{Protocol}!start\+\_\+row@{start\+\_\+row}}
+\index{start\+\_\+row@{start\+\_\+row}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{start\+\_\+row()}{start\_row()}}
+{\footnotesize\ttfamily virtual void Protocol\+::start\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Result set sending functions
+
+Server uses following schema to send result\+: ... sending metadata ... $\vert$ start\+\_\+result\+\_\+metadata(...) $\vert$ \mbox{\hyperlink{classProtocol_a6935bf41e00716012ba86e1f5c4b055b}{start\+\_\+row()}} $\vert$ send\+\_\+field\+\_\+metadata(...) $\vert$ end\+\_\+row() ... same for each field sent ... $\vert$ end\+\_\+result\+\_\+metadata(...) $\vert$ ... sending result ... $\vert$ start\+\_\+row(...) $\vert$ store\+\_\+xxx(...) ... store\+\_\+xxx(..) is called for each field ... $\vert$ end\+\_\+row(...) ... same for each row, until all rows are sent ... $\vert$ send\+\_\+ok/eof/error(...) However, a protocol implementation might use different schema. For example, \mbox{\hyperlink{classProtocol__callback}{Protocol\+\_\+callback}} ignores start/end\+\_\+row when metadata is being sent. 
+
+Implemented in \mbox{\hyperlink{classProtocol__binary_ae3111e401880cd6d68b3587e2fbb8091}{Protocol\+\_\+binary}}, \mbox{\hyperlink{classProtocol__callback_a951efbe2b108b81630d827830f89b3d7}{Protocol\+\_\+callback}}, \mbox{\hyperlink{classProtocol__text_a72aad9182cd1313187654ba88712d54a}{Protocol\+\_\+text}}, \mbox{\hyperlink{classProtocol__local_a9cc8d72321e90ebed9432e01bac634b4}{Protocol\+\_\+local}}, and \mbox{\hyperlink{classProtocol__classic_acebdc50db1e9403c19bb8909af300fec}{Protocol\+\_\+classic}}.
+
+\mbox{\Hypertarget{classProtocol_aa8bf8380dcfeb6df40de6a40f5485a7f}\label{classProtocol_aa8bf8380dcfeb6df40de6a40f5485a7f}} 
+\index{Protocol@{Protocol}!store@{store}}
+\index{store@{store}!Protocol@{Protocol}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily bool Protocol\+::store (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{fromcs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Send \textbackslash{}0 end terminated string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & NullS or \textbackslash{}0 terminated string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+In most cases one should use store(from, length, cs) instead of this function
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+false ok true error 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+protocol.\+h\end{DoxyCompactItemize}

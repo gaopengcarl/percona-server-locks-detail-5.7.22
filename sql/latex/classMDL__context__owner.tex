@@ -1,0 +1,119 @@
+\hypertarget{classMDL__context__owner}{}\section{M\+D\+L\+\_\+context\+\_\+owner Class Reference}
+\label{classMDL__context__owner}\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classMDL__context__owner_abac4e3f3e71847b2e0db7d64c89ab0b0}{enter\+\_\+cond}} (mysql\+\_\+cond\+\_\+t $\ast$cond, mysql\+\_\+mutex\+\_\+t $\ast$mutex, const P\+S\+I\+\_\+stage\+\_\+info $\ast$stage, P\+S\+I\+\_\+stage\+\_\+info $\ast$old\+\_\+stage, const char $\ast$src\+\_\+function, const char $\ast$src\+\_\+file, int src\+\_\+line)=0
+\item 
+\mbox{\Hypertarget{classMDL__context__owner_a6cacf5fcbca060f6fc42edcd3901d4d5}\label{classMDL__context__owner_a6cacf5fcbca060f6fc42edcd3901d4d5}} 
+virtual void {\bfseries exit\+\_\+cond} (const P\+S\+I\+\_\+stage\+\_\+info $\ast$stage, const char $\ast$src\+\_\+function, const char $\ast$src\+\_\+file, int src\+\_\+line)=0
+\item 
+virtual int \mbox{\hyperlink{classMDL__context__owner_aa38a69293832e50edb8c194b0fc1c6e9}{is\+\_\+killed}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classMDL__context__owner_a189aa48c8373e98fcc412290c92226a8}{is\+\_\+connected}} ()=0
+\item 
+virtual T\+HD $\ast$ \mbox{\hyperlink{classMDL__context__owner_a6e93b957e332a9811d4a2d4195bd3e21}{get\+\_\+thd}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classMDL__context__owner_a39cca8e5663058a27d0075811d238df4}{notify\+\_\+shared\+\_\+lock}} (\mbox{\hyperlink{classMDL__context__owner}{M\+D\+L\+\_\+context\+\_\+owner}} $\ast$in\+\_\+use, bool needs\+\_\+thr\+\_\+lock\+\_\+abort)=0
+\item 
+virtual bool \mbox{\hyperlink{classMDL__context__owner_a3f8c368fe7da7c6d8d0162f3617005be}{notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, bool $\ast$victimized)=0
+\item 
+virtual void \mbox{\hyperlink{classMDL__context__owner_a7e81e421fe965e530fd0c63d2f6c7dbd}{notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key)=0
+\item 
+virtual uint \mbox{\hyperlink{classMDL__context__owner_aeb463c745055a155a494c3989fffac74}{get\+\_\+rand\+\_\+seed}} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface to separate the M\+DL module from the T\+HD, and the rest of the server code. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__context__owner_abac4e3f3e71847b2e0db7d64c89ab0b0}\label{classMDL__context__owner_abac4e3f3e71847b2e0db7d64c89ab0b0}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!enter\+\_\+cond@{enter\+\_\+cond}}
+\index{enter\+\_\+cond@{enter\+\_\+cond}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{enter\+\_\+cond()}{enter\_cond()}}
+{\footnotesize\ttfamily virtual void M\+D\+L\+\_\+context\+\_\+owner\+::enter\+\_\+cond (\begin{DoxyParamCaption}\item[{mysql\+\_\+cond\+\_\+t $\ast$}]{cond,  }\item[{mysql\+\_\+mutex\+\_\+t $\ast$}]{mutex,  }\item[{const P\+S\+I\+\_\+stage\+\_\+info $\ast$}]{stage,  }\item[{P\+S\+I\+\_\+stage\+\_\+info $\ast$}]{old\+\_\+stage,  }\item[{const char $\ast$}]{src\+\_\+function,  }\item[{const char $\ast$}]{src\+\_\+file,  }\item[{int}]{src\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Enter a condition wait. For {\ttfamily \mbox{\hyperlink{classMDL__context__owner_abac4e3f3e71847b2e0db7d64c89ab0b0}{enter\+\_\+cond()}}} / {\ttfamily exit\+\_\+cond()} to work the mutex must be held before {\ttfamily \mbox{\hyperlink{classMDL__context__owner_abac4e3f3e71847b2e0db7d64c89ab0b0}{enter\+\_\+cond()}}}; this mutex must then be released before {\ttfamily exit\+\_\+cond()}. Usage must be\+: lock mutex; \mbox{\hyperlink{classMDL__context__owner_abac4e3f3e71847b2e0db7d64c89ab0b0}{enter\+\_\+cond()}}; your code; unlock mutex; exit\+\_\+cond(). 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em cond} & the condition to wait on \\
+\hline
+ & {\em mutex} & the associated mutex \\
+\hline
+\mbox{\texttt{ in}}  & {\em stage} & the stage to enter, or N\+U\+LL \\
+\hline
+\mbox{\texttt{ out}}  & {\em old\+\_\+stage} & the previous stage, or N\+U\+LL \\
+\hline
+ & {\em src\+\_\+function} & function name of the caller \\
+\hline
+ & {\em src\+\_\+file} & file name of the caller \\
+\hline
+ & {\em src\+\_\+line} & line number of the caller \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+E\+N\+T\+E\+R\+\_\+\+C\+O\+N\+D(), T\+H\+D\+::enter\+\_\+cond() 
+
+E\+X\+I\+T\+\_\+\+C\+O\+N\+D(), T\+H\+D\+::exit\+\_\+cond() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__context__owner_aeb463c745055a155a494c3989fffac74}\label{classMDL__context__owner_aeb463c745055a155a494c3989fffac74}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!get\+\_\+rand\+\_\+seed@{get\+\_\+rand\+\_\+seed}}
+\index{get\+\_\+rand\+\_\+seed@{get\+\_\+rand\+\_\+seed}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{get\+\_\+rand\+\_\+seed()}{get\_rand\_seed()}}
+{\footnotesize\ttfamily virtual uint M\+D\+L\+\_\+context\+\_\+owner\+::get\+\_\+rand\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get random seed specific to this T\+HD to be used for initialization of P\+R\+NG for the \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}}. \mbox{\Hypertarget{classMDL__context__owner_a6e93b957e332a9811d4a2d4195bd3e21}\label{classMDL__context__owner_a6e93b957e332a9811d4a2d4195bd3e21}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!get\+\_\+thd@{get\+\_\+thd}}
+\index{get\+\_\+thd@{get\+\_\+thd}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{get\+\_\+thd()}{get\_thd()}}
+{\footnotesize\ttfamily virtual T\+HD$\ast$ M\+D\+L\+\_\+context\+\_\+owner\+::get\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Within M\+DL subsystem this one is only used for D\+E\+B\+U\+G\+\_\+\+S\+Y\+NC. Do not use it to peek/poke into other parts of T\+HD from M\+DL. However it is OK to use this method in callbacks provided by S\+QL-\/layer to M\+DL subsystem (since S\+QL-\/layer has full access to T\+HD anyway). \mbox{\Hypertarget{classMDL__context__owner_a189aa48c8373e98fcc412290c92226a8}\label{classMDL__context__owner_a189aa48c8373e98fcc412290c92226a8}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!is\+\_\+connected@{is\+\_\+connected}}
+\index{is\+\_\+connected@{is\+\_\+connected}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{is\+\_\+connected()}{is\_connected()}}
+{\footnotesize\ttfamily virtual bool M\+D\+L\+\_\+context\+\_\+owner\+::is\+\_\+connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Does the owner still have connection to the client? \mbox{\Hypertarget{classMDL__context__owner_aa38a69293832e50edb8c194b0fc1c6e9}\label{classMDL__context__owner_aa38a69293832e50edb8c194b0fc1c6e9}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!is\+\_\+killed@{is\+\_\+killed}}
+\index{is\+\_\+killed@{is\+\_\+killed}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{is\+\_\+killed()}{is\_killed()}}
+{\footnotesize\ttfamily virtual int M\+D\+L\+\_\+context\+\_\+owner\+::is\+\_\+killed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Has the owner thread been killed? \mbox{\Hypertarget{classMDL__context__owner_a7e81e421fe965e530fd0c63d2f6c7dbd}\label{classMDL__context__owner_a7e81e421fe965e530fd0c63d2f6c7dbd}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive@{notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive}}
+\index{notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive@{notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive()}{notify\_hton\_post\_release\_exclusive()}}
+{\footnotesize\ttfamily virtual void M\+D\+L\+\_\+context\+\_\+owner\+::notify\+\_\+hton\+\_\+post\+\_\+release\+\_\+exclusive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Notify interested storage engines that we have just released exclusive lock for the key. \mbox{\Hypertarget{classMDL__context__owner_a3f8c368fe7da7c6d8d0162f3617005be}\label{classMDL__context__owner_a3f8c368fe7da7c6d8d0162f3617005be}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive@{notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive}}
+\index{notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive@{notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive()}{notify\_hton\_pre\_acquire\_exclusive()}}
+{\footnotesize\ttfamily virtual bool M\+D\+L\+\_\+context\+\_\+owner\+::notify\+\_\+hton\+\_\+pre\+\_\+acquire\+\_\+exclusive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key,  }\item[{bool $\ast$}]{victimized }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Notify/get permission from interested storage engines before acquiring exclusive lock for the key.
+
+The returned argument \textquotesingle{}victimized\textquotesingle{} specify reason for lock not granted. If \textquotesingle{}true\textquotesingle{}, lock was refused in an attempt to resolve a possible M\+DL-\/$>$G\+SL deadlock. Locking may then be retried.
+
+\begin{DoxyReturn}{Returns}
+False if notification was successful and it is OK to acquire lock, True if one of S\+Es asks to abort lock acquisition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__context__owner_a39cca8e5663058a27d0075811d238df4}\label{classMDL__context__owner_a39cca8e5663058a27d0075811d238df4}} 
+\index{M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}!notify\+\_\+shared\+\_\+lock@{notify\+\_\+shared\+\_\+lock}}
+\index{notify\+\_\+shared\+\_\+lock@{notify\+\_\+shared\+\_\+lock}!M\+D\+L\+\_\+context\+\_\+owner@{M\+D\+L\+\_\+context\+\_\+owner}}
+\subsubsection{\texorpdfstring{notify\+\_\+shared\+\_\+lock()}{notify\_shared\_lock()}}
+{\footnotesize\ttfamily virtual void M\+D\+L\+\_\+context\+\_\+owner\+::notify\+\_\+shared\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context__owner}{M\+D\+L\+\_\+context\+\_\+owner}} $\ast$}]{in\+\_\+use,  }\item[{bool}]{needs\+\_\+thr\+\_\+lock\+\_\+abort }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+T\+H\+D\+::notify\+\_\+shared\+\_\+lock() 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\end{DoxyCompactItemize}

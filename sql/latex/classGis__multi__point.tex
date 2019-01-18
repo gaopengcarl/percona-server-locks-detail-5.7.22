@@ -1,0 +1,63 @@
+\hypertarget{classGis__multi__point}{}\section{Gis\+\_\+multi\+\_\+point Class Reference}
+\label{classGis__multi__point}\index{Gis\+\_\+multi\+\_\+point@{Gis\+\_\+multi\+\_\+point}}
+Inheritance diagram for Gis\+\_\+multi\+\_\+point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGis__multi__point}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a8842232daa6011d946643a332fdf7e0b}\label{classGis__multi__point_a8842232daa6011d946643a332fdf7e0b}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}$<$ \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} $>$ {\bfseries base\+\_\+type}
+\item 
+\mbox{\Hypertarget{classGis__multi__point_ab19e2be41b4d23b5a0f678d43278dbdd}\label{classGis__multi__point_ab19e2be41b4d23b5a0f678d43278dbdd}} 
+typedef \mbox{\hyperlink{classGis__multi__point}{Gis\+\_\+multi\+\_\+point}} {\bfseries self}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a3b575998c70121f0f78e33b1925f79b5}\label{classGis__multi__point_a3b575998c70121f0f78e33b1925f79b5}} 
+uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_ac626d004e3691b93aa81adaa53d46427}\label{classGis__multi__point_ac626d004e3691b93aa81adaa53d46427}} 
+bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGis__multi__point_aeb6df188fc6b4d704e96ad345ade8973}\label{classGis__multi__point_aeb6df188fc6b4d704e96ad345ade8973}} 
+uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGis__multi__point_ac8b57eb19841ed6a84e941134e0da41e}\label{classGis__multi__point_ac8b57eb19841ed6a84e941134e0da41e}} 
+bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a039412c711feba258f75345669bc3c58}\label{classGis__multi__point_a039412c711feba258f75345669bc3c58}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a152e533c816001508587283dcfa83903}\label{classGis__multi__point_a152e533c816001508587283dcfa83903}} 
+int {\bfseries num\+\_\+geometries} (uint32 $\ast$num) const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_aea315c4f99f1400b970de91d13589263}\label{classGis__multi__point_aea315c4f99f1400b970de91d13589263}} 
+int {\bfseries geometry\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a5afb975a609aa4964ee35d0aef945cd4}\label{classGis__multi__point_a5afb975a609aa4964ee35d0aef945cd4}} 
+uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_ab28194ea629aa0345dbf4ef895e27667}\label{classGis__multi__point_ab28194ea629aa0345dbf4ef895e27667}} 
+const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a555a9ff39ab0af624de46cdbfcfb0aff}\label{classGis__multi__point_a555a9ff39ab0af624de46cdbfcfb0aff}} 
+{\bfseries Gis\+\_\+multi\+\_\+point} (bool \mbox{\hyperlink{classGeometry_ada614004627a9e7af129e51a34242af9}{is\+\_\+bg\+\_\+adapter}}=true)
+\item 
+\mbox{\Hypertarget{classGis__multi__point_a297bb64167714a04d93e3ae1f5184ee2}\label{classGis__multi__point_a297bb64167714a04d93e3ae1f5184ee2}} 
+{\bfseries Gis\+\_\+multi\+\_\+point} (const void $\ast$ptr, size\+\_\+t nbytes, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGis__multi__point_aa516587fb7addd9b7a39858284f5cfd4}\label{classGis__multi__point_aa516587fb7addd9b7a39858284f5cfd4}} 
+{\bfseries Gis\+\_\+multi\+\_\+point} (const \mbox{\hyperlink{classGis__multi__point}{self}} \&mpts)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

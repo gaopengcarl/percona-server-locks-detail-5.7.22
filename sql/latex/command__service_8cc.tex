@@ -1,0 +1,55 @@
+\hypertarget{command__service_8cc}{}\section{command\+\_\+service.\+cc File Reference}
+\label{command__service_8cc}\index{command\+\_\+service.\+cc@{command\+\_\+service.\+cc}}
+{\ttfamily \#include \char`\"{}mysql/service\+\_\+command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}srv\+\_\+session.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{command__service_8cc_a65552c79c7a87e53017836852d23f424}{command\+\_\+service\+\_\+run\+\_\+command}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session, enum enum\+\_\+server\+\_\+command command, const union C\+O\+M\+\_\+\+D\+A\+TA $\ast$data, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$client\+\_\+cs, const struct st\+\_\+command\+\_\+service\+\_\+cbs $\ast$callbacks, enum cs\+\_\+text\+\_\+or\+\_\+binary text\+\_\+or\+\_\+binary, void $\ast$service\+\_\+callbacks\+\_\+ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command service implementation. For more information please check the function comments. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{command__service_8cc_a65552c79c7a87e53017836852d23f424}\label{command__service_8cc_a65552c79c7a87e53017836852d23f424}} 
+\index{command\+\_\+service.\+cc@{command\+\_\+service.\+cc}!command\+\_\+service\+\_\+run\+\_\+command@{command\+\_\+service\+\_\+run\+\_\+command}}
+\index{command\+\_\+service\+\_\+run\+\_\+command@{command\+\_\+service\+\_\+run\+\_\+command}!command\+\_\+service.\+cc@{command\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{command\+\_\+service\+\_\+run\+\_\+command()}{command\_service\_run\_command()}}
+{\footnotesize\ttfamily int command\+\_\+service\+\_\+run\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session,  }\item[{enum enum\+\_\+server\+\_\+command}]{command,  }\item[{const union C\+O\+M\+\_\+\+D\+A\+TA $\ast$}]{data,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{client\+\_\+cs,  }\item[{const struct st\+\_\+command\+\_\+service\+\_\+cbs $\ast$}]{callbacks,  }\item[{enum cs\+\_\+text\+\_\+or\+\_\+binary}]{text\+\_\+or\+\_\+binary,  }\item[{void $\ast$}]{service\+\_\+callbacks\+\_\+ctx }\end{DoxyParamCaption})}
+
+Executes a server command in a session.
+
+There are two cases. Execution in a physical thread \+:
+\begin{DoxyEnumerate}
+\item initialized by the srv\+\_\+session service
+\item N\+OT initialized by the srv\+\_\+session service
+\end{DoxyEnumerate}
+
+In case of 1, if there is currently attached session, and it is different from the passed one, the former will be automatically detached. The session to be used for the execution will then be attached. After the command is executed, the attached session will not be detached. It will be detached by a next call to run\+\_\+command() with another session as parameter. In other words, for all sessions used in a physical thread, there will be at most one in attached state.
+
+In case of 2, the current state (current\+\_\+thd) will be preserved. Then the given session will move to attached state and the command will be executed. After the execution the state of the session will be changed to detached and the preserved state (current\+\_\+thd) will be restored.
+
+The client charset is used for commands like C\+O\+M\+\_\+\+Q\+U\+E\+RY and C\+O\+M\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+RE to know how to threat the char$\ast$ fields. This charset will be used until the next call of run\+\_\+command when it may be changed again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & The session \\
+\hline
+{\em command} & The command to be executed. \\
+\hline
+{\em data} & The data needed for the command to be executed \\
+\hline
+{\em client\+\_\+cs} & The charset for the string data input(\+C\+O\+M\+\_\+\+Q\+U\+E\+R\+Y for example) \\
+\hline
+{\em callbacks} & Callbacks to be used by the server to encode data and to communicate with the client (plugin) side. \\
+\hline
+{\em text\+\_\+or\+\_\+binary} & See enum cs\+\_\+text\+\_\+or\+\_\+binary \\
+\hline
+{\em service\+\_\+callbacks\+\_\+ctx} & Context passed to the command service callbacks\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 success 1 failure 
+\end{DoxyReturn}

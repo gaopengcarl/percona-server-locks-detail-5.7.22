@@ -1,0 +1,78 @@
+\hypertarget{classItem__func__truth}{}\section{Item\+\_\+func\+\_\+truth Class Reference}
+\label{classItem__func__truth}\index{Item\+\_\+func\+\_\+truth@{Item\+\_\+func\+\_\+truth}}
+
+
+{\ttfamily \#include $<$item\+\_\+cmpfunc.\+h$>$}
+
+Inheritance diagram for Item\+\_\+func\+\_\+truth\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{classItem__func__truth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classItem__func__truth_a1c0f8cdf192cec99a3e0b5eafa1845bf}{val\+\_\+bool}} ()
+\item 
+\mbox{\Hypertarget{classItem__func__truth_ae0ab634e7c2813949eba092d20dc3394}\label{classItem__func__truth_ae0ab634e7c2813949eba092d20dc3394}} 
+virtual longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__func__truth_a76ff27fcdbcdac84cc8902195d978748}\label{classItem__func__truth_a76ff27fcdbcdac84cc8902195d978748}} 
+virtual void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+virtual void \mbox{\hyperlink{classItem__func__truth_aa17f138c8366c33e377d3e64384415c1}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__truth_aca8fb3ebe1a9d39a40e85ebb0258b36d}\label{classItem__func__truth_aca8fb3ebe1a9d39a40e85ebb0258b36d}} 
+{\bfseries Item\+\_\+func\+\_\+truth} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, bool a\+\_\+value, bool a\+\_\+affirmative)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract \mbox{\hyperlink{classItem}{Item}} class, to represent {\ttfamily X IS \mbox{[}N\+OT\mbox{]} (T\+R\+UE $\vert$ F\+A\+L\+SE)} boolean predicates. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__truth_aa17f138c8366c33e377d3e64384415c1}\label{classItem__func__truth_aa17f138c8366c33e377d3e64384415c1}} 
+\index{Item\+\_\+func\+\_\+truth@{Item\+\_\+func\+\_\+truth}!print@{print}}
+\index{print@{print}!Item\+\_\+func\+\_\+truth@{Item\+\_\+func\+\_\+truth}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+func\+\_\+truth\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__truth_a1c0f8cdf192cec99a3e0b5eafa1845bf}\label{classItem__func__truth_a1c0f8cdf192cec99a3e0b5eafa1845bf}} 
+\index{Item\+\_\+func\+\_\+truth@{Item\+\_\+func\+\_\+truth}!val\+\_\+bool@{val\+\_\+bool}}
+\index{val\+\_\+bool@{val\+\_\+bool}!Item\+\_\+func\+\_\+truth@{Item\+\_\+func\+\_\+truth}}
+\subsubsection{\texorpdfstring{val\+\_\+bool()}{val\_bool()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+truth\+::val\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]Make this functions class dependent \end{DoxyRefDesc}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

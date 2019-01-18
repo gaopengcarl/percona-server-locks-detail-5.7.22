@@ -1,0 +1,204 @@
+\hypertarget{classMDL__ticket}{}\section{M\+D\+L\+\_\+ticket Class Reference}
+\label{classMDL__ticket}\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+Inheritance diagram for M\+D\+L\+\_\+ticket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMDL__ticket}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classMDL__ticket_aac8808e99159aafeabd6ed1bde13894f}{enum\+\_\+psi\+\_\+status}} \{ {\bfseries P\+E\+N\+D\+I\+NG} = 0, 
+{\bfseries G\+R\+A\+N\+T\+ED}, 
+{\bfseries P\+R\+E\+\_\+\+A\+C\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+I\+FY}, 
+{\bfseries P\+O\+S\+T\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+N\+O\+T\+I\+FY}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classMDL__ticket_a453c69eade5322291a6b3df6833892d5}{has\+\_\+pending\+\_\+conflicting\+\_\+lock}} () const
+\item 
+\mbox{\Hypertarget{classMDL__ticket_a2b0c1bd15feca45b1b67791de5a3a027}\label{classMDL__ticket_a2b0c1bd15feca45b1b67791de5a3a027}} 
+\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ {\bfseries get\+\_\+ctx} () const
+\item 
+\mbox{\Hypertarget{classMDL__ticket_a8dd08e1eb3ca1bd5842cdb028bcfc5cd}\label{classMDL__ticket_a8dd08e1eb3ca1bd5842cdb028bcfc5cd}} 
+bool {\bfseries is\+\_\+upgradable\+\_\+or\+\_\+exclusive} () const
+\item 
+\mbox{\Hypertarget{classMDL__ticket_ad87cffc63ead6571484ac6f142f0b19f}\label{classMDL__ticket_ad87cffc63ead6571484ac6f142f0b19f}} 
+enum\+\_\+mdl\+\_\+type {\bfseries get\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classMDL__ticket_aeb8547f86d05a1eb3990834edc7af9a0}\label{classMDL__ticket_aeb8547f86d05a1eb3990834edc7af9a0}} 
+\mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ {\bfseries get\+\_\+lock} () const
+\item 
+const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$ \mbox{\hyperlink{classMDL__ticket_ada5b318a2cce4e1daccf7b69b0e19284}{get\+\_\+key}} () const
+\item 
+void \mbox{\hyperlink{classMDL__ticket_a4fd3f255fe828cbf0d95a5d02d70d302}{downgrade\+\_\+lock}} (enum\+\_\+mdl\+\_\+type type)
+\item 
+bool \mbox{\hyperlink{classMDL__ticket_a3db14474f09df6e82fe7db48cc4463df}{has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type}} (enum\+\_\+mdl\+\_\+type type) const
+\item 
+\mbox{\Hypertarget{classMDL__ticket_a7bdbcd1e0281b6ebfe11d6e132cc9e4f}\label{classMDL__ticket_a7bdbcd1e0281b6ebfe11d6e132cc9e4f}} 
+bool {\bfseries is\+\_\+incompatible\+\_\+when\+\_\+granted} (enum\+\_\+mdl\+\_\+type type) const
+\item 
+\mbox{\Hypertarget{classMDL__ticket_a6ee3c2a726b128b58ef8121f00970378}\label{classMDL__ticket_a6ee3c2a726b128b58ef8121f00970378}} 
+bool {\bfseries is\+\_\+incompatible\+\_\+when\+\_\+waiting} (enum\+\_\+mdl\+\_\+type type) const
+\item 
+virtual bool \mbox{\hyperlink{classMDL__ticket_af1bd23371e97d8bf6b0ff9de43e7e418}{accept\+\_\+visitor}} (\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$dvisitor)
+\item 
+virtual uint \mbox{\hyperlink{classMDL__ticket_a9f3cbfd4b31f7715eae746904e840a02}{get\+\_\+deadlock\+\_\+weight}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ \mbox{\hyperlink{classMDL__ticket_a74155707577dfd12cc7f47229e4f0d17}{next\+\_\+in\+\_\+context}}
+\item 
+\mbox{\Hypertarget{classMDL__ticket_a88281cdb21f74551799ae0940b89aed1}\label{classMDL__ticket_a88281cdb21f74551799ae0940b89aed1}} 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$$\ast$ {\bfseries prev\+\_\+in\+\_\+context}
+\item 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ \mbox{\hyperlink{classMDL__ticket_ad9c009e5c097d2159dd142aa7f58e010}{next\+\_\+in\+\_\+lock}}
+\item 
+\mbox{\Hypertarget{classMDL__ticket_a873d87712e75f3e7f58399575571198d}\label{classMDL__ticket_a873d87712e75f3e7f58399575571198d}} 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$$\ast$ {\bfseries prev\+\_\+in\+\_\+lock}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__ticket_aab25f1f33d2f55eb5c79f0f7b6bfaecd}\label{classMDL__ticket_aab25f1f33d2f55eb5c79f0f7b6bfaecd}} 
+class {\bfseries M\+D\+L\+\_\+context}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A granted metadata lock.
+
+\begin{DoxyWarning}{Warning}
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} members are private to the M\+DL subsystem.
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+Multiple shared locks on a same object are represented by a single ticket. The same does not apply for other lock types.
+
+There are two groups of \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} members\+:
+\begin{DoxyItemize}
+\item \char`\"{}\+Externally accessible\char`\"{}. These members can be accessed from threads/contexts different than ticket owner in cases when ticket participates in some list of granted or waiting tickets for a lock. Therefore one should change these members before including then to waiting/granted lists or while holding lock protecting those lists.
+\item \char`\"{}\+Context private\char`\"{}. Such members are private to thread/context owning this ticket. I.\+e. they should not be accessed from other threads/contexts. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classMDL__ticket_aac8808e99159aafeabd6ed1bde13894f}\label{classMDL__ticket_aac8808e99159aafeabd6ed1bde13894f}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!enum\+\_\+psi\+\_\+status@{enum\+\_\+psi\+\_\+status}}
+\index{enum\+\_\+psi\+\_\+status@{enum\+\_\+psi\+\_\+status}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{enum\+\_\+psi\+\_\+status}{enum\_psi\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classMDL__ticket_aac8808e99159aafeabd6ed1bde13894f}{M\+D\+L\+\_\+ticket\+::enum\+\_\+psi\+\_\+status}}}
+
+Status of lock request represented by the ticket as reflected in P\+\_\+S. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__ticket_af1bd23371e97d8bf6b0ff9de43e7e418}\label{classMDL__ticket_af1bd23371e97d8bf6b0ff9de43e7e418}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!accept\+\_\+visitor@{accept\+\_\+visitor}}
+\index{accept\+\_\+visitor@{accept\+\_\+visitor}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{accept\+\_\+visitor()}{accept\_visitor()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+ticket\+::accept\+\_\+visitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$}]{gvisitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Implement \mbox{\hyperlink{classMDL__wait__for__subgraph}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}} interface.
+
+Traverse a portion of wait-\/for graph which is reachable through the edge represented by this ticket and search for deadlocks.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & A deadlock is found. A pointer to deadlock victim is saved in the visitor. \\
+\hline
+{\em F\+A\+L\+SE} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classMDL__wait__for__subgraph_ad14f796a25430ecabd24572efa22f3f5}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}}.
+
+\mbox{\Hypertarget{classMDL__ticket_a4fd3f255fe828cbf0d95a5d02d70d302}\label{classMDL__ticket_a4fd3f255fe828cbf0d95a5d02d70d302}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!downgrade\+\_\+lock@{downgrade\+\_\+lock}}
+\index{downgrade\+\_\+lock@{downgrade\+\_\+lock}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{downgrade\+\_\+lock()}{downgrade\_lock()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+ticket\+::downgrade\+\_\+lock (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{new\+\_\+type }\end{DoxyParamCaption})}
+
+Downgrade an E\+X\+C\+L\+U\+S\+I\+VE or S\+H\+A\+R\+E\+D\+\_\+\+N\+O\+\_\+\+W\+R\+I\+TE lock to shared metadata lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of lock to which exclusive lock should be downgraded. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__ticket_a9f3cbfd4b31f7715eae746904e840a02}\label{classMDL__ticket_a9f3cbfd4b31f7715eae746904e840a02}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!get\+\_\+deadlock\+\_\+weight@{get\+\_\+deadlock\+\_\+weight}}
+\index{get\+\_\+deadlock\+\_\+weight@{get\+\_\+deadlock\+\_\+weight}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{get\+\_\+deadlock\+\_\+weight()}{get\_deadlock\_weight()}}
+{\footnotesize\ttfamily uint M\+D\+L\+\_\+ticket\+::get\+\_\+deadlock\+\_\+weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the \textquotesingle{}weight\textquotesingle{} of this ticket for the victim selection algorithm. Requests with lower weight are preferred to requests with higher weight when choosing a victim.
+
+\begin{DoxyNote}{Note}
+When M\+D\+L\+\_\+context\+::m\+\_\+force\+\_\+dml\+\_\+deadlock\+\_\+weight is set, the return value of this method is ignored and D\+E\+A\+D\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+D\+ML is used for the context. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classMDL__wait__for__subgraph}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}}.
+
+\mbox{\Hypertarget{classMDL__ticket_ada5b318a2cce4e1daccf7b69b0e19284}\label{classMDL__ticket_ada5b318a2cce4e1daccf7b69b0e19284}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!get\+\_\+key@{get\+\_\+key}}
+\index{get\+\_\+key@{get\+\_\+key}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{get\+\_\+key()}{get\_key()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$ M\+D\+L\+\_\+ticket\+::get\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return a key identifying this lock. \mbox{\Hypertarget{classMDL__ticket_a453c69eade5322291a6b3df6833892d5}\label{classMDL__ticket_a453c69eade5322291a6b3df6833892d5}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!has\+\_\+pending\+\_\+conflicting\+\_\+lock@{has\+\_\+pending\+\_\+conflicting\+\_\+lock}}
+\index{has\+\_\+pending\+\_\+conflicting\+\_\+lock@{has\+\_\+pending\+\_\+conflicting\+\_\+lock}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{has\+\_\+pending\+\_\+conflicting\+\_\+lock()}{has\_pending\_conflicting\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+ticket\+::has\+\_\+pending\+\_\+conflicting\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if we have any pending locks which conflict with existing shared lock.
+
+\begin{DoxyPrecond}{Precondition}
+The ticket must match an acquired lock.
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if there is a conflicting lock request, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__ticket_a3db14474f09df6e82fe7db48cc4463df}\label{classMDL__ticket_a3db14474f09df6e82fe7db48cc4463df}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type@{has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type}}
+\index{has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type@{has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type()}{has\_stronger\_or\_equal\_type()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+ticket\+::has\+\_\+stronger\+\_\+or\+\_\+equal\+\_\+type (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type }\end{DoxyParamCaption}) const}
+
+Check if ticket represents metadata lock of \char`\"{}stronger\char`\"{} or equal type than specified one. I.\+e. if metadata lock represented by ticket won\textquotesingle{}t allow any of locks which are not allowed by specified type of lock.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if ticket has stronger or equal type F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMDL__ticket_a74155707577dfd12cc7f47229e4f0d17}\label{classMDL__ticket_a74155707577dfd12cc7f47229e4f0d17}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!next\+\_\+in\+\_\+context@{next\+\_\+in\+\_\+context}}
+\index{next\+\_\+in\+\_\+context@{next\+\_\+in\+\_\+context}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{next\+\_\+in\+\_\+context}{next\_in\_context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}$\ast$ M\+D\+L\+\_\+ticket\+::next\+\_\+in\+\_\+context}
+
+Pointers for participating in the list of lock requests for this context. Context private. \mbox{\Hypertarget{classMDL__ticket_ad9c009e5c097d2159dd142aa7f58e010}\label{classMDL__ticket_ad9c009e5c097d2159dd142aa7f58e010}} 
+\index{M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}!next\+\_\+in\+\_\+lock@{next\+\_\+in\+\_\+lock}}
+\index{next\+\_\+in\+\_\+lock@{next\+\_\+in\+\_\+lock}!M\+D\+L\+\_\+ticket@{M\+D\+L\+\_\+ticket}}
+\subsubsection{\texorpdfstring{next\+\_\+in\+\_\+lock}{next\_in\_lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}$\ast$ M\+D\+L\+\_\+ticket\+::next\+\_\+in\+\_\+lock}
+
+Pointers for participating in the list of satisfied/pending requests for the lock. Externally accessible. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\item 
+mdl.\+cc\end{DoxyCompactItemize}

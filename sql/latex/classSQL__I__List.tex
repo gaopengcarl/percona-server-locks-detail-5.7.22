@@ -1,0 +1,78 @@
+\hypertarget{classSQL__I__List}{}\section{S\+Q\+L\+\_\+\+I\+\_\+\+List$<$ T $>$ Class Template Reference}
+\label{classSQL__I__List}\index{S\+Q\+L\+\_\+\+I\+\_\+\+List$<$ T $>$@{S\+Q\+L\+\_\+\+I\+\_\+\+List$<$ T $>$}}
+
+
+{\ttfamily \#include $<$sql\+\_\+list.\+h$>$}
+
+Inheritance diagram for S\+Q\+L\+\_\+\+I\+\_\+\+List$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSQL__I__List}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSQL__I__List_ad0dee940c35877d4332bd2dd26151c9a}\label{classSQL__I__List_ad0dee940c35877d4332bd2dd26151c9a}} 
+{\bfseries S\+Q\+L\+\_\+\+I\+\_\+\+List} (const \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}} \&tmp)
+\item 
+\mbox{\Hypertarget{classSQL__I__List_a08465e0794405462be9e1cd1e221fb6d}\label{classSQL__I__List_a08465e0794405462be9e1cd1e221fb6d}} 
+void {\bfseries empty} ()
+\item 
+\mbox{\Hypertarget{classSQL__I__List_a4638ca19e15c687e66a578bc8a1622c4}\label{classSQL__I__List_a4638ca19e15c687e66a578bc8a1622c4}} 
+void {\bfseries link\+\_\+in\+\_\+list} (T $\ast$element, T $\ast$$\ast$next\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classSQL__I__List_a17a9898e64afa8821e30a53dcedad43e}\label{classSQL__I__List_a17a9898e64afa8821e30a53dcedad43e}} 
+void {\bfseries save\+\_\+and\+\_\+clear} (\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ T $>$ $\ast$save)
+\item 
+\mbox{\Hypertarget{classSQL__I__List_a3a29ec49d93f06286129f7f81e3b2d87}\label{classSQL__I__List_a3a29ec49d93f06286129f7f81e3b2d87}} 
+void {\bfseries push\+\_\+front} (\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ T $>$ $\ast$save)
+\item 
+\mbox{\Hypertarget{classSQL__I__List_a40602a5f0db6969c9f43b02d101cd93a}\label{classSQL__I__List_a40602a5f0db6969c9f43b02d101cd93a}} 
+void {\bfseries push\+\_\+back} (\mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ T $>$ $\ast$save)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSQL__I__List_a479a62a37484f593bf24cf93d3cb9389}\label{classSQL__I__List_a479a62a37484f593bf24cf93d3cb9389}} 
+uint {\bfseries elements}
+\item 
+T $\ast$ \mbox{\hyperlink{classSQL__I__List_a32fbd6fa95e47ab0cd1f17ad902133ff}{first}}
+\item 
+T $\ast$$\ast$ \mbox{\hyperlink{classSQL__I__List_a73dfc554232c8d15637767d2c61b7578}{next}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class S\+Q\+L\+\_\+\+I\+\_\+\+List$<$ T $>$}
+
+Simple intrusive linked list.
+
+\begin{DoxyRemark}{Remarks}
+Similar in nature to \mbox{\hyperlink{classbase__list}{base\+\_\+list}}, but intrusive. It keeps a a pointer to the first element in the list and a indirect reference to the last element. 
+\end{DoxyRemark}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSQL__I__List_a32fbd6fa95e47ab0cd1f17ad902133ff}\label{classSQL__I__List_a32fbd6fa95e47ab0cd1f17ad902133ff}} 
+\index{S\+Q\+L\+\_\+\+I\+\_\+\+List@{S\+Q\+L\+\_\+\+I\+\_\+\+List}!first@{first}}
+\index{first@{first}!S\+Q\+L\+\_\+\+I\+\_\+\+List@{S\+Q\+L\+\_\+\+I\+\_\+\+List}}
+\subsubsection{\texorpdfstring{first}{first}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T$\ast$ \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ T $>$\+::first}
+
+The first element in the list. \mbox{\Hypertarget{classSQL__I__List_a73dfc554232c8d15637767d2c61b7578}\label{classSQL__I__List_a73dfc554232c8d15637767d2c61b7578}} 
+\index{S\+Q\+L\+\_\+\+I\+\_\+\+List@{S\+Q\+L\+\_\+\+I\+\_\+\+List}!next@{next}}
+\index{next@{next}!S\+Q\+L\+\_\+\+I\+\_\+\+List@{S\+Q\+L\+\_\+\+I\+\_\+\+List}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T$\ast$$\ast$ \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ T $>$\+::next}
+
+A reference to the next element in the list. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp.\+h\item 
+sql\+\_\+list.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\hypertarget{events_8h}{}\section{events.\+h File Reference}
+\label{events_8h}\index{events.\+h@{events.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/mysql\+\_\+lex\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+time.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEvents}{Events}}
+\begin{DoxyCompactList}\small\item\em A facade to the functionality of the Event Scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct charset\+\_\+info\+\_\+st {\bfseries C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO}
+\item 
+typedef struct st\+\_\+mysql\+\_\+lex\+\_\+string {\bfseries L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries sortcmp\+\_\+lex\+\_\+string} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG s, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG t, C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+event\+\_\+basic\+\_\+root}
+\item 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+on\+\_\+empty\+\_\+queue}
+\item 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+for\+\_\+next\+\_\+activation}
+\item 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+for\+\_\+scheduler\+\_\+to\+\_\+stop}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A public interface of Events\+\_\+\+Scheduler module. 

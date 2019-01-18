@@ -1,0 +1,39 @@
+\hypertarget{classObject__creation__ctx}{}\section{Object\+\_\+creation\+\_\+ctx Class Reference}
+\label{classObject__creation__ctx}\index{Object\+\_\+creation\+\_\+ctx@{Object\+\_\+creation\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+Inheritance diagram for Object\+\_\+creation\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.992870cm]{classObject__creation__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObject__creation__ctx_afa626d99a0d6bc2f6ef8c61b1c2bc6f9}\label{classObject__creation__ctx_afa626d99a0d6bc2f6ef8c61b1c2bc6f9}} 
+\mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} $\ast$ {\bfseries set\+\_\+n\+\_\+backup} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classObject__creation__ctx_a13d0960b25a1798435df6c9d32bccbc3}\label{classObject__creation__ctx_a13d0960b25a1798435df6c9d32bccbc3}} 
+void {\bfseries restore\+\_\+env} (T\+HD $\ast$thd, \mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} $\ast$backup\+\_\+ctx)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObject__creation__ctx_a3b65a79491550ad1bc51dc9b89beec3a}\label{classObject__creation__ctx_a3b65a79491550ad1bc51dc9b89beec3a}} 
+virtual \mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} $\ast$ {\bfseries create\+\_\+backup\+\_\+ctx} (T\+HD $\ast$thd) const =0
+\item 
+\mbox{\Hypertarget{classObject__creation__ctx_a8268ee57f5648955df4046cf611fa87b}\label{classObject__creation__ctx_a8268ee57f5648955df4046cf611fa87b}} 
+virtual void {\bfseries change\+\_\+env} (T\+HD $\ast$thd) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classObject__creation__ctx}{Object\+\_\+creation\+\_\+ctx}} -- interface for creation context of database objects (views, stored routines, events, triggers). Creation context -- is a set of attributes, that should be fixed at the creation time and then be used each time the object is parsed or executed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

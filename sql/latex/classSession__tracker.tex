@@ -1,0 +1,192 @@
+\hypertarget{classSession__tracker}{}\section{Session\+\_\+tracker Class Reference}
+\label{classSession__tracker}\index{Session\+\_\+tracker@{Session\+\_\+tracker}}
+
+
+{\ttfamily \#include $<$session\+\_\+tracker.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSession__tracker_a96857c2a4bb6477cdaba666a9cc571a2}{Session\+\_\+tracker}} ()
+\item 
+\mbox{\hyperlink{classSession__tracker_a1bf5d9cab3063c2a1b28e2535815ad6e}{$\sim$\+Session\+\_\+tracker}} ()
+\item 
+void \mbox{\hyperlink{classSession__tracker_a9998b3724108bcffd2c2e66c8c497d85}{init}} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$char\+\_\+set)
+\begin{DoxyCompactList}\small\item\em Initialize session tracker objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession__tracker_a912c89049fcc0ff1dbe0b06e05e790e8}{enable}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Enables the tracker objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession__tracker_a8763d1413a6a2a425fc9541fd2098178}{server\+\_\+boot\+\_\+verify}} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$char\+\_\+set, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG var\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Method called during the server startup to verify the contents of @session\+\_\+track\+\_\+system\+\_\+variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState__tracker}{State\+\_\+tracker}} $\ast$ \mbox{\hyperlink{classSession__tracker_a6df3f03511206e6dc60a66ccd7f6e30f}{get\+\_\+tracker}} (enum\+\_\+session\+\_\+tracker tracker) const
+\begin{DoxyCompactList}\small\item\em Returns the pointer to the tracker object for the specified tracker. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession__tracker_a7a754beda4f780ce535a3ea201155b29}{enabled\+\_\+any}} ()
+\begin{DoxyCompactList}\small\item\em Checks if m\+\_\+enabled flag is set for any of the tracker objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSession__tracker_a603b8cbe6094c55ea9c25a2e60f9d52b}{changed\+\_\+any}} ()
+\begin{DoxyCompactList}\small\item\em Checks if m\+\_\+changed flag is set for any of the tracker objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSession__tracker_ac0a967ff6aac07ea844b322abfa1b8de}{store}} (T\+HD $\ast$thd, String \&main\+\_\+buf)
+\begin{DoxyCompactList}\small\item\em Store all change information in the specified buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSession__tracker_a089ec631401d15a5726dc57ddc096cf9}\label{classSession__tracker_a089ec631401d15a5726dc57ddc096cf9}} 
+void {\bfseries deinit} ()
+\item 
+\mbox{\Hypertarget{classSession__tracker_a969a0bba42650752328a8004a0e9d290}\label{classSession__tracker_a969a0bba42650752328a8004a0e9d290}} 
+void {\bfseries claim\+\_\+memory\+\_\+ownership} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{\mbox{\hyperlink{classSession__tracker}{Session\+\_\+tracker}} }
+
+This class holds an object each for all tracker classes and provides methods necessary for systematic detection and generation of session state change information. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSession__tracker_a96857c2a4bb6477cdaba666a9cc571a2}\label{classSession__tracker_a96857c2a4bb6477cdaba666a9cc571a2}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{Session\+\_\+tracker()}{Session\_tracker()}}
+{\footnotesize\ttfamily Session\+\_\+tracker\+::\+Session\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classSession__tracker_a1bf5d9cab3063c2a1b28e2535815ad6e}\label{classSession__tracker_a1bf5d9cab3063c2a1b28e2535815ad6e}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!````~Session\+\_\+tracker@{$\sim$\+Session\+\_\+tracker}}
+\index{````~Session\+\_\+tracker@{$\sim$\+Session\+\_\+tracker}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{$\sim$\+Session\+\_\+tracker()}{~Session\_tracker()}}
+{\footnotesize\ttfamily Session\+\_\+tracker\+::$\sim$\+Session\+\_\+tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSession__tracker_a603b8cbe6094c55ea9c25a2e60f9d52b}\label{classSession__tracker_a603b8cbe6094c55ea9c25a2e60f9d52b}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!changed\+\_\+any@{changed\+\_\+any}}
+\index{changed\+\_\+any@{changed\+\_\+any}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{changed\+\_\+any()}{changed\_any()}}
+{\footnotesize\ttfamily bool Session\+\_\+tracker\+::changed\+\_\+any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if m\+\_\+changed flag is set for any of the tracker objects. 
+
+Checks if m\+\_\+changed flag is set for any of the tracker objects.
+
+\begin{DoxyReturn}{Returns}
+true At least one of the entities being tracker has changed. false None of the entities being tracked has changed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__tracker_a912c89049fcc0ff1dbe0b06e05e790e8}\label{classSession__tracker_a912c89049fcc0ff1dbe0b06e05e790e8}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!enable@{enable}}
+\index{enable@{enable}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Session\+\_\+tracker\+::enable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Enables the tracker objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thread handle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__tracker_a7a754beda4f780ce535a3ea201155b29}\label{classSession__tracker_a7a754beda4f780ce535a3ea201155b29}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!enabled\+\_\+any@{enabled\+\_\+any}}
+\index{enabled\+\_\+any@{enabled\+\_\+any}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{enabled\+\_\+any()}{enabled\_any()}}
+{\footnotesize\ttfamily bool Session\+\_\+tracker\+::enabled\+\_\+any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if m\+\_\+enabled flag is set for any of the tracker objects. 
+
+Checks if m\+\_\+enabled flag is set for any of the tracker objects.
+
+\begin{DoxyReturn}{Returns}
+true -\/ At least one of the trackers is enabled. false -\/ None of the trackers is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__tracker_a6df3f03511206e6dc60a66ccd7f6e30f}\label{classSession__tracker_a6df3f03511206e6dc60a66ccd7f6e30f}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!get\+\_\+tracker@{get\+\_\+tracker}}
+\index{get\+\_\+tracker@{get\+\_\+tracker}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{get\+\_\+tracker()}{get\_tracker()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState__tracker}{State\+\_\+tracker}} $\ast$ Session\+\_\+tracker\+::get\+\_\+tracker (\begin{DoxyParamCaption}\item[{enum\+\_\+session\+\_\+tracker}]{tracker }\end{DoxyParamCaption}) const}
+
+
+
+Returns the pointer to the tracker object for the specified tracker. 
+
+Returns the pointer to the tracker object for the specified tracker.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tracker} & \mbox{[}IN\mbox{]} Tracker type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the tracker object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__tracker_a9998b3724108bcffd2c2e66c8c497d85}\label{classSession__tracker_a9998b3724108bcffd2c2e66c8c497d85}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!init@{init}}
+\index{init@{init}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Session\+\_\+tracker\+::init (\begin{DoxyParamCaption}\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{char\+\_\+set }\end{DoxyParamCaption})}
+
+
+
+Initialize session tracker objects. 
+
+Initialize \mbox{\hyperlink{classSession__tracker}{Session\+\_\+tracker}} objects and enable them based on the tracker\+\_\+xxx variables\textquotesingle{} value that the session inherit from global variables at the time of session initialization (see plugin\+\_\+thdvar\+\_\+init).
+
+
+\begin{DoxyParams}{Parameters}
+{\em char\+\_\+set} & \mbox{[}IN\mbox{]} The character set info.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__tracker_a8763d1413a6a2a425fc9541fd2098178}\label{classSession__tracker_a8763d1413a6a2a425fc9541fd2098178}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!server\+\_\+boot\+\_\+verify@{server\+\_\+boot\+\_\+verify}}
+\index{server\+\_\+boot\+\_\+verify@{server\+\_\+boot\+\_\+verify}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{server\+\_\+boot\+\_\+verify()}{server\_boot\_verify()}}
+{\footnotesize\ttfamily bool Session\+\_\+tracker\+::server\+\_\+boot\+\_\+verify (\begin{DoxyParamCaption}\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{char\+\_\+set,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{var\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Method called during the server startup to verify the contents of @session\+\_\+track\+\_\+system\+\_\+variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char\+\_\+set} & The character set info. \\
+\hline
+{\em var\+\_\+list} & Value of @session\+\_\+track\+\_\+system\+\_\+variables.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false Success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__tracker_ac0a967ff6aac07ea844b322abfa1b8de}\label{classSession__tracker_ac0a967ff6aac07ea844b322abfa1b8de}} 
+\index{Session\+\_\+tracker@{Session\+\_\+tracker}!store@{store}}
+\index{store@{store}!Session\+\_\+tracker@{Session\+\_\+tracker}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily void Session\+\_\+tracker\+::store (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String \&}]{buf }\end{DoxyParamCaption})}
+
+
+
+Store all change information in the specified buffer. 
+
+Stores the session state change information of all changes session state type entities into the specified buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \mbox{[}IN\mbox{]} The thd handle. \\
+\hline
+{\em buf} & \mbox{[}O\+UT\mbox{]} Reference to the string buffer to which the state change data needs to be written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+session\+\_\+tracker.\+h\item 
+session\+\_\+tracker.\+cc\end{DoxyCompactItemize}

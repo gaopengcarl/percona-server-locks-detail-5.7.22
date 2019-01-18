@@ -1,0 +1,179 @@
+\hypertarget{classAQP_1_1Table__access}{}\section{A\+QP\+:\+:Table\+\_\+access Class Reference}
+\label{classAQP_1_1Table__access}\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+query\+\_\+plan.\+h$>$}
+
+Inheritance diagram for A\+QP\+:\+:Table\+\_\+access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAQP_1_1Table__access}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}} $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_a3e8216cc34a55ab3b132e36a4809fd37}{get\+\_\+join\+\_\+plan}} () const
+\item 
+\mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}{enum\+\_\+access\+\_\+type}} \mbox{\hyperlink{classAQP_1_1Table__access_aa0f6bf2c2cdc429e39313adcec8745e3}{get\+\_\+access\+\_\+type}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_af056c478a5e8b26a90114bb44af0c1a4}{get\+\_\+other\+\_\+access\+\_\+reason}} () const
+\item 
+\mbox{\hyperlink{namespaceAQP_a79358adf81977651643ef6c1672e18f8}{enum\+\_\+join\+\_\+type}} \mbox{\hyperlink{classAQP_1_1Table__access_ade9e74888c7a810648a7802234aaf150}{get\+\_\+join\+\_\+type}} (const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$parent) const
+\item 
+uint \mbox{\hyperlink{classAQP_1_1Table__access_af85fb3397460129a42ddea12be9d3cc1}{get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields}} () const
+\item 
+const \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_a5160036ccc841dc61d1728f86a30bd80}{get\+\_\+key\+\_\+field}} (uint field\+\_\+no) const
+\item 
+const \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_a569b503d8f970211dab3544b300bddc6}{get\+\_\+key\+\_\+part\+\_\+info}} (uint field\+\_\+no) const
+\item 
+uint \mbox{\hyperlink{classAQP_1_1Table__access_a157f02f305d45857fcba1274345b93f2}{get\+\_\+access\+\_\+no}} () const
+\item 
+int \mbox{\hyperlink{classAQP_1_1Table__access_a48078f34bde5ffd5b683e90b3cabc37b}{get\+\_\+index\+\_\+no}} () const
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_a1b4a0ca9060c584c52274371c2d7e479}{get\+\_\+table}} () const
+\item 
+\mbox{\Hypertarget{classAQP_1_1Table__access_ab689a0b71ded58da14e139a32324ab04}\label{classAQP_1_1Table__access_ab689a0b71ded58da14e139a32324ab04}} 
+double {\bfseries get\+\_\+fanout} () const
+\item 
+Item\+\_\+equal $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_afe29ae74c412b36511d0b42bbcb584a2}{get\+\_\+item\+\_\+equal}} (const \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$field\+\_\+item) const
+\item 
+void \mbox{\hyperlink{classAQP_1_1Table__access_a994b8967ecebbdcf1340116d590eef6a}{dbug\+\_\+print}} () const
+\item 
+bool \mbox{\hyperlink{classAQP_1_1Table__access_a40d58fab243f6b31a9250f697995c783}{uses\+\_\+join\+\_\+cache}} () const
+\item 
+const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$ \mbox{\hyperlink{classAQP_1_1Table__access_a8aec8683398027cb6a5302c344285113}{get\+\_\+firstmatch\+\_\+last\+\_\+skipped}} () const
+\item 
+bool \mbox{\hyperlink{classAQP_1_1Table__access_a21b7ec7cb60cdf31ea1fe3f8a779fb43}{filesort\+\_\+before\+\_\+join}} () const
+\item 
+void \mbox{\hyperlink{classAQP_1_1Table__access_a0c2933d26dabe26c0f07025f81ec21c3}{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAQP_1_1Table__access_abdd7cfdd7b0a4ca563736d3f0bd75183}\label{classAQP_1_1Table__access_abdd7cfdd7b0a4ca563736d3f0bd75183}} 
+class {\bfseries Join\+\_\+plan}
+\item 
+\mbox{\Hypertarget{classAQP_1_1Table__access_a37caf970fcd05669da4d4a7df539a8ba}\label{classAQP_1_1Table__access_a37caf970fcd05669da4d4a7df539a8ba}} 
+bool {\bfseries equal} (const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$, const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents an access operation on a table, such as a table scan, or a scan or lookup via an index. A \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} object is always owned by a \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}} object, such that the life time of the \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} object ends when the life time of the owning \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}} object ends. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAQP_1_1Table__access_a994b8967ecebbdcf1340116d590eef6a}\label{classAQP_1_1Table__access_a994b8967ecebbdcf1340116d590eef6a}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!dbug\+\_\+print@{dbug\+\_\+print}}
+\index{dbug\+\_\+print@{dbug\+\_\+print}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{dbug\+\_\+print()}{dbug\_print()}}
+{\footnotesize\ttfamily void A\+Q\+P\+::\+Table\+\_\+access\+::dbug\+\_\+print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Write an entry in the trace file about the contents of this object. \mbox{\Hypertarget{classAQP_1_1Table__access_a21b7ec7cb60cdf31ea1fe3f8a779fb43}\label{classAQP_1_1Table__access_a21b7ec7cb60cdf31ea1fe3f8a779fb43}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!filesort\+\_\+before\+\_\+join@{filesort\+\_\+before\+\_\+join}}
+\index{filesort\+\_\+before\+\_\+join@{filesort\+\_\+before\+\_\+join}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{filesort\+\_\+before\+\_\+join()}{filesort\_before\_join()}}
+{\footnotesize\ttfamily bool A\+Q\+P\+::\+Table\+\_\+access\+::filesort\+\_\+before\+\_\+join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if this table will be presorted to an intermediate record storage before it is joined with its siblings. Table will be presorted before joining with child tables, if\+: 1) This is the first non-\/const table 2) There are more tables to be joined 3) It is not already decide to write entire join result to temp. 4a) The G\+R\+O\+UP BY is \textquotesingle{}simple\textquotesingle{} and does not match an orderd index 4b) The O\+R\+D\+ER BY is \textquotesingle{}simple\textquotesingle{} and does not match an orderd index
+
+A \textquotesingle{}simple\textquotesingle{} order/group by contain only column references to the first non-\/const table\mbox{\Hypertarget{classAQP_1_1Table__access_a157f02f305d45857fcba1274345b93f2}\label{classAQP_1_1Table__access_a157f02f305d45857fcba1274345b93f2}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+access\+\_\+no@{get\+\_\+access\+\_\+no}}
+\index{get\+\_\+access\+\_\+no@{get\+\_\+access\+\_\+no}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+access\+\_\+no()}{get\_access\_no()}}
+{\footnotesize\ttfamily uint A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+access\+\_\+no (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of this \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} within the enclosing \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}}. (This number will be in the range 0 to \mbox{\hyperlink{classAQP_1_1Join__plan_a92950b7a49e0702cf5490b0f0797a076}{Join\+\_\+plan\+::get\+\_\+access\+\_\+count()}} -\/ 1.) \mbox{\Hypertarget{classAQP_1_1Table__access_aa0f6bf2c2cdc429e39313adcec8745e3}\label{classAQP_1_1Table__access_aa0f6bf2c2cdc429e39313adcec8745e3}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+access\+\_\+type@{get\+\_\+access\+\_\+type}}
+\index{get\+\_\+access\+\_\+type@{get\+\_\+access\+\_\+type}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+access\+\_\+type()}{get\_access\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceAQP_a4aaae4a1dc295a865368c9822d4dd0a5}{enum\+\_\+access\+\_\+type}} A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+access\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the type of this operation. \mbox{\Hypertarget{classAQP_1_1Table__access_a8aec8683398027cb6a5302c344285113}\label{classAQP_1_1Table__access_a8aec8683398027cb6a5302c344285113}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+firstmatch\+\_\+last\+\_\+skipped@{get\+\_\+firstmatch\+\_\+last\+\_\+skipped}}
+\index{get\+\_\+firstmatch\+\_\+last\+\_\+skipped@{get\+\_\+firstmatch\+\_\+last\+\_\+skipped}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+firstmatch\+\_\+last\+\_\+skipped()}{get\_firstmatch\_last\_skipped()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+firstmatch\+\_\+last\+\_\+skipped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if \textquotesingle{}First\+Match\textquotesingle{} strategy is used for this table and return the last table \textquotesingle{}firstmatch\textquotesingle{} will skip over. The tables \mbox{[}\textquotesingle{}last\+\_\+skipped\textquotesingle{}..\textquotesingle{}this\textquotesingle{}\mbox{]} will form a range of tables which we skipped when a \textquotesingle{}firstmatch\textquotesingle{} is found \mbox{\Hypertarget{classAQP_1_1Table__access_a48078f34bde5ffd5b683e90b3cabc37b}\label{classAQP_1_1Table__access_a48078f34bde5ffd5b683e90b3cabc37b}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+index\+\_\+no@{get\+\_\+index\+\_\+no}}
+\index{get\+\_\+index\+\_\+no@{get\+\_\+index\+\_\+no}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+index\+\_\+no()}{get\_index\_no()}}
+{\footnotesize\ttfamily int A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+index\+\_\+no (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of the index to use for this access operation ( or -\/1 for non-\/index operations). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAQP_1_1Table__access_afe29ae74c412b36511d0b42bbcb584a2}\label{classAQP_1_1Table__access_afe29ae74c412b36511d0b42bbcb584a2}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+item\+\_\+equal@{get\+\_\+item\+\_\+equal}}
+\index{get\+\_\+item\+\_\+equal@{get\+\_\+item\+\_\+equal}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+item\+\_\+equal()}{get\_item\_equal()}}
+{\footnotesize\ttfamily Item\+\_\+equal $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+item\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$}]{field\+\_\+item }\end{DoxyParamCaption}) const}
+
+Get the Item\+\_\+equal\textquotesingle{}s set relevant for the specified \textquotesingle{}\mbox{\hyperlink{classItem__field}{Item\+\_\+field}}\textquotesingle{} \mbox{\Hypertarget{classAQP_1_1Table__access_a3e8216cc34a55ab3b132e36a4809fd37}\label{classAQP_1_1Table__access_a3e8216cc34a55ab3b132e36a4809fd37}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+join\+\_\+plan@{get\+\_\+join\+\_\+plan}}
+\index{get\+\_\+join\+\_\+plan@{get\+\_\+join\+\_\+plan}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+join\+\_\+plan()}{get\_join\_plan()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}} $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+join\+\_\+plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the \mbox{\hyperlink{classAQP_1_1Join__plan}{Join\+\_\+plan}} that this \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} belongs to. \mbox{\Hypertarget{classAQP_1_1Table__access_ade9e74888c7a810648a7802234aaf150}\label{classAQP_1_1Table__access_ade9e74888c7a810648a7802234aaf150}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+join\+\_\+type@{get\+\_\+join\+\_\+type}}
+\index{get\+\_\+join\+\_\+type@{get\+\_\+join\+\_\+type}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+join\+\_\+type()}{get\_join\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceAQP_a79358adf81977651643ef6c1672e18f8}{enum\+\_\+join\+\_\+type}} A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+join\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} $\ast$}]{predecessor }\end{DoxyParamCaption}) const}
+
+Determine join type between this table access and some other table access that preceeds it in the join plan.. Fall Through\+: \textquotesingle{}this\textquotesingle{} is a member in an outer join, but \textquotesingle{}predecessor\textquotesingle{} may still be embedded in the same inner join as \textquotesingle{}this\textquotesingle{}.\mbox{\Hypertarget{classAQP_1_1Table__access_a5160036ccc841dc61d1728f86a30bd80}\label{classAQP_1_1Table__access_a5160036ccc841dc61d1728f86a30bd80}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+key\+\_\+field@{get\+\_\+key\+\_\+field}}
+\index{get\+\_\+key\+\_\+field@{get\+\_\+key\+\_\+field}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+key\+\_\+field()}{get\_key\_field()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classItem}{Item}} $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+key\+\_\+field (\begin{DoxyParamCaption}\item[{uint}]{field\+\_\+no }\end{DoxyParamCaption}) const}
+
+Get the field\+\_\+no\textquotesingle{}th key values for this operation. It is an error to call this method on an operation that is not an index lookup operation. \mbox{\Hypertarget{classAQP_1_1Table__access_a569b503d8f970211dab3544b300bddc6}\label{classAQP_1_1Table__access_a569b503d8f970211dab3544b300bddc6}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+key\+\_\+part\+\_\+info@{get\+\_\+key\+\_\+part\+\_\+info}}
+\index{get\+\_\+key\+\_\+part\+\_\+info@{get\+\_\+key\+\_\+part\+\_\+info}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+key\+\_\+part\+\_\+info()}{get\_key\_part\_info()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+key\+\_\+part\+\_\+info (\begin{DoxyParamCaption}\item[{uint}]{field\+\_\+no }\end{DoxyParamCaption}) const}
+
+Get the field\+\_\+no\textquotesingle{}th \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} for this operation. It is an error to call this method on an operation that is not an index lookup operation. \mbox{\Hypertarget{classAQP_1_1Table__access_af85fb3397460129a42ddea12be9d3cc1}\label{classAQP_1_1Table__access_af85fb3397460129a42ddea12be9d3cc1}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields@{get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields}}
+\index{get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields@{get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields()}{get\_no\_of\_key\_fields()}}
+{\footnotesize\ttfamily uint A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+no\+\_\+of\+\_\+key\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of key values for this operation. It is an error to call this method on an operation that is not an index lookup operation. \mbox{\Hypertarget{classAQP_1_1Table__access_af056c478a5e8b26a90114bb44af0c1a4}\label{classAQP_1_1Table__access_af056c478a5e8b26a90114bb44af0c1a4}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+other\+\_\+access\+\_\+reason@{get\+\_\+other\+\_\+access\+\_\+reason}}
+\index{get\+\_\+other\+\_\+access\+\_\+reason@{get\+\_\+other\+\_\+access\+\_\+reason}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+other\+\_\+access\+\_\+reason()}{get\_other\_access\_reason()}}
+{\footnotesize\ttfamily const char $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+other\+\_\+access\+\_\+reason (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a description of the reason for getting access\+\_\+type==A\+T\+\_\+\+O\+T\+H\+ER. To be used for informational messages. \begin{DoxyReturn}{Returns}
+A string that should be assumed to have the same life time as the \mbox{\hyperlink{classAQP_1_1Table__access}{Table\+\_\+access}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAQP_1_1Table__access_a1b4a0ca9060c584c52274371c2d7e479}\label{classAQP_1_1Table__access_a1b4a0ca9060c584c52274371c2d7e479}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!get\+\_\+table@{get\+\_\+table}}
+\index{get\+\_\+table@{get\+\_\+table}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{get\+\_\+table()}{get\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ A\+Q\+P\+::\+Table\+\_\+access\+::get\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the table that this operation accesses. \mbox{\Hypertarget{classAQP_1_1Table__access_a0c2933d26dabe26c0f07025f81ec21c3}\label{classAQP_1_1Table__access_a0c2933d26dabe26c0f07025f81ec21c3}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method@{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method}}
+\index{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method@{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method()}{set\_pushed\_table\_access\_method()}}
+{\footnotesize\ttfamily void A\+Q\+P\+::\+Table\+\_\+access\+::set\+\_\+pushed\+\_\+table\+\_\+access\+\_\+method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Change the query plan for this part of the join to use the pushed functions \mbox{\Hypertarget{classAQP_1_1Table__access_a40d58fab243f6b31a9250f697995c783}\label{classAQP_1_1Table__access_a40d58fab243f6b31a9250f697995c783}} 
+\index{A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}!uses\+\_\+join\+\_\+cache@{uses\+\_\+join\+\_\+cache}}
+\index{uses\+\_\+join\+\_\+cache@{uses\+\_\+join\+\_\+cache}!A\+Q\+P\+::\+Table\+\_\+access@{A\+Q\+P\+::\+Table\+\_\+access}}
+\subsubsection{\texorpdfstring{uses\+\_\+join\+\_\+cache()}{uses\_join\_cache()}}
+{\footnotesize\ttfamily bool A\+Q\+P\+::\+Table\+\_\+access\+::uses\+\_\+join\+\_\+cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if the results from this operation will joined with results from the next operation using a join buffer (instead of plain nested loop). \begin{DoxyReturn}{Returns}
+True if using a join buffer. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+abstract\+\_\+query\+\_\+plan.\+h\item 
+abstract\+\_\+query\+\_\+plan.\+cc\end{DoxyCompactItemize}

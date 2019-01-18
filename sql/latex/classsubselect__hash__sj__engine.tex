@@ -1,0 +1,126 @@
+\hypertarget{classsubselect__hash__sj__engine}{}\section{subselect\+\_\+hash\+\_\+sj\+\_\+engine Class Reference}
+\label{classsubselect__hash__sj__engine}\index{subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}}
+
+
+{\ttfamily \#include $<$item\+\_\+subselect.\+h$>$}
+
+Inheritance diagram for subselect\+\_\+hash\+\_\+sj\+\_\+engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsubselect__hash__sj__engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_ae8f557b225efe1b3e56190a2176ae6e9}\label{classsubselect__hash__sj__engine_ae8f557b225efe1b3e56190a2176ae6e9}} 
+{\bfseries subselect\+\_\+hash\+\_\+sj\+\_\+engine} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} $\ast$in\+\_\+predicate, \mbox{\hyperlink{classsubselect__single__select__engine}{subselect\+\_\+single\+\_\+select\+\_\+engine}} $\ast$old\+\_\+engine)
+\item 
+bool \mbox{\hyperlink{classsubselect__hash__sj__engine_af8a5ad2eafdc200158334f926434ccda}{setup}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$tmp\+\_\+columns)
+\item 
+virtual void \mbox{\hyperlink{classsubselect__hash__sj__engine_a2543ad3f7c4cd6ab5e774d6c4eb9ef64}{cleanup}} ()
+\item 
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_a2b4f9425771780d9a02583c75091fe18}\label{classsubselect__hash__sj__engine_a2b4f9425771780d9a02583c75091fe18}} 
+virtual bool {\bfseries prepare} ()
+\item 
+virtual bool \mbox{\hyperlink{classsubselect__hash__sj__engine_a96da55efcf5b1945df7d53dcc41d6499}{exec}} ()
+\item 
+virtual void \mbox{\hyperlink{classsubselect__hash__sj__engine_a5bf7f2070358f915ec2d959cd4bad4fa}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_acf3655fa59fe03b1c3489087d98e6cfc}\label{classsubselect__hash__sj__engine_acf3655fa59fe03b1c3489087d98e6cfc}} 
+virtual uint {\bfseries cols} () const
+\item 
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_adba821a697b1e782fcd3d418f5a797b4}\label{classsubselect__hash__sj__engine_adba821a697b1e782fcd3d418f5a797b4}} 
+virtual enum\+\_\+engine\+\_\+type {\bfseries engine\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_a1a39d9ec40b34425583929694beead72}\label{classsubselect__hash__sj__engine_a1a39d9ec40b34425583929694beead72}} 
+const \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$ {\bfseries get\+\_\+qep\+\_\+tab} () const
+\item 
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_aa2ad60804a6ea70dc80fe54e9b41a6bb}\label{classsubselect__hash__sj__engine_aa2ad60804a6ea70dc80fe54e9b41a6bb}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries get\+\_\+cond\+\_\+for\+\_\+explain} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Compute an IN predicate via a hash semi-\/join. The subquery is materialized during the first evaluation of the IN predicate. The IN predicate is executed via the functionality inherited from \mbox{\hyperlink{classsubselect__indexsubquery__engine}{subselect\+\_\+indexsubquery\+\_\+engine}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_a2543ad3f7c4cd6ab5e774d6c4eb9ef64}\label{classsubselect__hash__sj__engine_a2543ad3f7c4cd6ab5e774d6c4eb9ef64}} 
+\index{subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void subselect\+\_\+hash\+\_\+sj\+\_\+engine\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Cleanup performed after each PS execution.
+
+Called in the end of S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::prepare for PS from Item\+\_\+subselect\+::cleanup. 
+
+Reimplemented from \mbox{\hyperlink{classsubselect__indexsubquery__engine_a185f036d8ce8517de313c2b796b4b060}{subselect\+\_\+indexsubquery\+\_\+engine}}.
+
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_a96da55efcf5b1945df7d53dcc41d6499}\label{classsubselect__hash__sj__engine_a96da55efcf5b1945df7d53dcc41d6499}} 
+\index{subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}!exec@{exec}}
+\index{exec@{exec}!subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}}
+\subsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily bool subselect\+\_\+hash\+\_\+sj\+\_\+engine\+::exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute a subquery IN predicate via materialization.
+
+If needed materialize the subquery into a temporary table, then copmpute the predicate via a lookup into this table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & if error \\
+\hline
+{\em F\+A\+L\+SE} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classsubselect__indexsubquery__engine}{subselect\+\_\+indexsubquery\+\_\+engine}}.
+
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_a5bf7f2070358f915ec2d959cd4bad4fa}\label{classsubselect__hash__sj__engine_a5bf7f2070358f915ec2d959cd4bad4fa}} 
+\index{subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}!print@{print}}
+\index{print@{print}!subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void subselect\+\_\+hash\+\_\+sj\+\_\+engine\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Print the state of this engine into a string for debugging and views. 
+
+Reimplemented from \mbox{\hyperlink{classsubselect__indexsubquery__engine}{subselect\+\_\+indexsubquery\+\_\+engine}}.
+
+\mbox{\Hypertarget{classsubselect__hash__sj__engine_af8a5ad2eafdc200158334f926434ccda}\label{classsubselect__hash__sj__engine_af8a5ad2eafdc200158334f926434ccda}} 
+\index{subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}!setup@{setup}}
+\index{setup@{setup}!subselect\+\_\+hash\+\_\+sj\+\_\+engine@{subselect\+\_\+hash\+\_\+sj\+\_\+engine}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily bool subselect\+\_\+hash\+\_\+sj\+\_\+engine\+::setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{tmp\+\_\+columns }\end{DoxyParamCaption})}
+
+Create all structures needed for subquery execution using hash semijoin.
+
+
+\begin{DoxyItemize}
+\item Create a temporary table to store the result of the IN subquery. The temporary table has one hash index on all its columns. If single-\/column, the index allows at most one N\+U\+LL row.
+\item Create a new result sink that sends the result stream of the subquery to the temporary table,
+\item Create and initialize a new \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}, and T\+A\+B\+L\+E\+\_\+\+R\+EF objects to perform lookups into the indexed temporary table.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp\+\_\+columns} & columns of temporary table\\
+\hline
+\end{DoxyParams}
+\+: Currently Item\+\_\+subselect\+::init() already chooses and creates at parse time an engine with a corresponding \mbox{\hyperlink{classJOIN}{J\+O\+IN}} to execute the subquery.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & if error \\
+\hline
+{\em F\+A\+L\+SE} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+subselect.\+h\item 
+\mbox{\hyperlink{item__subselect_8cc}{item\+\_\+subselect.\+cc}}\end{DoxyCompactItemize}

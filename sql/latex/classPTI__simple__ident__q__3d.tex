@@ -1,0 +1,76 @@
+\hypertarget{classPTI__simple__ident__q__3d}{}\section{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d Class Reference}
+\label{classPTI__simple__ident__q__3d}\index{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d@{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+items.\+h$>$}
+
+Inheritance diagram for P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classPTI__simple__ident__q__3d}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPTI__simple__ident__q__3d_ad8e2652cb426a1c6c29033b439044801}\label{classPTI__simple__ident__q__3d_ad8e2652cb426a1c6c29033b439044801}} 
+{\bfseries P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, const char $\ast$db\+\_\+arg, const char $\ast$table\+\_\+arg, const char $\ast$field\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPTI__simple__ident__q__3d_ad94d0e373c6cb86832c3206b706eaf0b}{itemize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPTI__simple__ident__q__3d_a854d23ce54a6c94fba485cc72c765c8f}\label{classPTI__simple__ident__q__3d_a854d23ce54a6c94fba485cc72c765c8f}} 
+const char $\ast$ {\bfseries db}
+\item 
+\mbox{\Hypertarget{classPTI__simple__ident__q__3d_a185f88db6a451b9aa5b8181718974bef}\label{classPTI__simple__ident__q__3d_a185f88db6a451b9aa5b8181718974bef}} 
+const char $\ast$ {\bfseries table}
+\item 
+\mbox{\Hypertarget{classPTI__simple__ident__q__3d_addd060d282dcee2c6914be77d60ab151}\label{classPTI__simple__ident__q__3d_addd060d282dcee2c6914be77d60ab151}} 
+const char $\ast$ {\bfseries field}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Parse tree \mbox{\hyperlink{classItem}{Item}} wrapper for 3-\/dimentional simple\+\_\+ident-\/s 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPTI__simple__ident__q__3d_ad94d0e373c6cb86832c3206b706eaf0b}\label{classPTI__simple__ident__q__3d_ad94d0e373c6cb86832c3206b706eaf0b}} 
+\index{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d@{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d}!itemize@{itemize}}
+\index{itemize@{itemize}!P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d@{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d}}
+\subsubsection{\texorpdfstring{itemize()}{itemize()}}
+{\footnotesize\ttfamily virtual bool P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+3d\+::itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+The same as contextualize()/contextualize\+\_\+() but with additional parameter
+
+This function finalize the construction of \mbox{\hyperlink{classItem}{Item}} objects (see the \mbox{\hyperlink{classItem}{Item(\+P\+O\+S)}} constructor)\+: we can access/change parser contexts from the \mbox{\hyperlink{classPTI__simple__ident__q__3d_ad94d0e373c6cb86832c3206b706eaf0b}{itemize()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em pc} & current parse context \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{} or to a newly allocated replacement object to use in the \mbox{\hyperlink{classItem}{Item}} tree instead\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classPTI__simple__ident__q__2d_a1cd2321d602048802e283a067c2bb986}{P\+T\+I\+\_\+simple\+\_\+ident\+\_\+q\+\_\+2d}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+items.\+h\end{DoxyCompactItemize}

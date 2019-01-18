@@ -1,0 +1,75 @@
+\hypertarget{classWait__for__flush}{}\section{Wait\+\_\+for\+\_\+flush Class Reference}
+\label{classWait__for__flush}\index{Wait\+\_\+for\+\_\+flush@{Wait\+\_\+for\+\_\+flush}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+Inheritance diagram for Wait\+\_\+for\+\_\+flush\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWait__for__flush}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWait__for__flush_ab31bfc72003cfd06524e6684a145bd1f}\label{classWait__for__flush_ab31bfc72003cfd06524e6684a145bd1f}} 
+{\bfseries Wait\+\_\+for\+\_\+flush} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx\+\_\+arg, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share\+\_\+arg, uint deadlock\+\_\+weight\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classWait__for__flush_aac79a7a9a462ff44040a331ac80d205b}\label{classWait__for__flush_aac79a7a9a462ff44040a331ac80d205b}} 
+\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ {\bfseries get\+\_\+ctx} () const
+\item 
+virtual bool \mbox{\hyperlink{classWait__for__flush_a5d355af9c8dd888cf46b6c5c24552900}{accept\+\_\+visitor}} (\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$dvisitor)
+\item 
+\mbox{\Hypertarget{classWait__for__flush_afb9f4fbb266e8f286acad4369460fd3d}\label{classWait__for__flush_afb9f4fbb266e8f286acad4369460fd3d}} 
+virtual uint {\bfseries get\+\_\+deadlock\+\_\+weight} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWait__for__flush}{Wait\+\_\+for\+\_\+flush}} $\ast$ \mbox{\hyperlink{classWait__for__flush_a4c6991330bc28f7cdbc2a924dfef3a38}{next\+\_\+in\+\_\+share}}
+\item 
+\mbox{\Hypertarget{classWait__for__flush_a3bfca0789d5737d3c2dfc7d33f2e67cc}\label{classWait__for__flush_a3bfca0789d5737d3c2dfc7d33f2e67cc}} 
+\mbox{\hyperlink{classWait__for__flush}{Wait\+\_\+for\+\_\+flush}} $\ast$$\ast$ {\bfseries prev\+\_\+in\+\_\+share}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing the fact that some thread waits for table share to be flushed. Is used to represent information about such waits in M\+DL deadlock detector. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWait__for__flush_a5d355af9c8dd888cf46b6c5c24552900}\label{classWait__for__flush_a5d355af9c8dd888cf46b6c5c24552900}} 
+\index{Wait\+\_\+for\+\_\+flush@{Wait\+\_\+for\+\_\+flush}!accept\+\_\+visitor@{accept\+\_\+visitor}}
+\index{accept\+\_\+visitor@{accept\+\_\+visitor}!Wait\+\_\+for\+\_\+flush@{Wait\+\_\+for\+\_\+flush}}
+\subsubsection{\texorpdfstring{accept\+\_\+visitor()}{accept\_visitor()}}
+{\footnotesize\ttfamily bool Wait\+\_\+for\+\_\+flush\+::accept\+\_\+visitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$}]{gvisitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Traverse portion of wait-\/for graph which is reachable through edge represented by this flush ticket in search for deadlocks.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & A deadlock is found. A victim is remembered by the visitor. \\
+\hline
+{\em F\+A\+L\+SE} & Success, no deadlocks. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classMDL__wait__for__subgraph_ad14f796a25430ecabd24572efa22f3f5}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classWait__for__flush_a4c6991330bc28f7cdbc2a924dfef3a38}\label{classWait__for__flush_a4c6991330bc28f7cdbc2a924dfef3a38}} 
+\index{Wait\+\_\+for\+\_\+flush@{Wait\+\_\+for\+\_\+flush}!next\+\_\+in\+\_\+share@{next\+\_\+in\+\_\+share}}
+\index{next\+\_\+in\+\_\+share@{next\+\_\+in\+\_\+share}!Wait\+\_\+for\+\_\+flush@{Wait\+\_\+for\+\_\+flush}}
+\subsubsection{\texorpdfstring{next\+\_\+in\+\_\+share}{next\_in\_share}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWait__for__flush}{Wait\+\_\+for\+\_\+flush}}$\ast$ Wait\+\_\+for\+\_\+flush\+::next\+\_\+in\+\_\+share}
+
+Pointers for participating in the list of waiters for table share. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

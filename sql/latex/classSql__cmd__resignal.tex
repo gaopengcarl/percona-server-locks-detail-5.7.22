@@ -1,0 +1,78 @@
+\hypertarget{classSql__cmd__resignal}{}\section{Sql\+\_\+cmd\+\_\+resignal Class Reference}
+\label{classSql__cmd__resignal}\index{Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}}
+
+
+{\ttfamily \#include $<$sql\+\_\+signal.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+resignal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__resignal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSql__cmd__resignal_a54565abda6241ad99d005593e0c246b6}{Sql\+\_\+cmd\+\_\+resignal}} (const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$cond, \mbox{\hyperlink{classSet__signal__information}{Set\+\_\+signal\+\_\+information}} $\ast$set)
+\item 
+\mbox{\Hypertarget{classSql__cmd__resignal_a6e244d9820315cd1bf44c6408d941e56}\label{classSql__cmd__resignal_a6e244d9820315cd1bf44c6408d941e56}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__resignal_a6e244d9820315cd1bf44c6408d941e56}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__resignal_a90366018b66b37bf6fd101b01c49dbf2}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSql__cmd__resignal}{Sql\+\_\+cmd\+\_\+resignal}} represents a R\+E\+S\+I\+G\+N\+AL statement. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSql__cmd__resignal_a54565abda6241ad99d005593e0c246b6}\label{classSql__cmd__resignal_a54565abda6241ad99d005593e0c246b6}} 
+\index{Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}!Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}}
+\index{Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}!Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}}
+\subsubsection{\texorpdfstring{Sql\+\_\+cmd\+\_\+resignal()}{Sql\_cmd\_resignal()}}
+{\footnotesize\ttfamily Sql\+\_\+cmd\+\_\+resignal\+::\+Sql\+\_\+cmd\+\_\+resignal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$}]{cond,  }\item[{\mbox{\hyperlink{classSet__signal__information}{Set\+\_\+signal\+\_\+information}} $\ast$}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor, used to represent a R\+E\+S\+I\+G\+N\+AL statement. 
+\begin{DoxyParams}{Parameters}
+{\em cond} & the S\+QL condition to resignal (optional, may be N\+U\+LL). \\
+\hline
+{\em set} & the collection of signal informations to resignal. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__resignal_a90366018b66b37bf6fd101b01c49dbf2}\label{classSql__cmd__resignal_a90366018b66b37bf6fd101b01c49dbf2}} 
+\index{Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+resignal@{Sql\+\_\+cmd\+\_\+resignal}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+resignal\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute R\+E\+S\+I\+G\+N\+AL S\+QL-\/statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & in case of error \\
+\hline
+{\em false} & on success \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+signal.\+h\item 
+sql\+\_\+signal.\+cc\end{DoxyCompactItemize}

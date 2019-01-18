@@ -1,0 +1,87 @@
+\hypertarget{classstore__key}{}\section{store\+\_\+key Class Reference}
+\label{classstore__key}\index{store\+\_\+key@{store\+\_\+key}}
+
+
+{\ttfamily \#include $<$sql\+\_\+select.\+h$>$}
+
+Inheritance diagram for store\+\_\+key\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classstore__key}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstore__key_aaf0d1c720a5e918b4148b9aa5faa8ab5}\label{classstore__key_aaf0d1c720a5e918b4148b9aa5faa8ab5}} 
+enum {\bfseries store\+\_\+key\+\_\+result} \{ {\bfseries S\+T\+O\+R\+E\+\_\+\+K\+E\+Y\+\_\+\+OK}, 
+{\bfseries S\+T\+O\+R\+E\+\_\+\+K\+E\+Y\+\_\+\+F\+A\+T\+AL}, 
+{\bfseries S\+T\+O\+R\+E\+\_\+\+K\+E\+Y\+\_\+\+C\+O\+NV}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstore__key_a5a4ca6ff9b86660b16b133baf9483799}\label{classstore__key_a5a4ca6ff9b86660b16b133baf9483799}} 
+{\bfseries store\+\_\+key} (T\+HD $\ast$thd, \mbox{\hyperlink{classField}{Field}} $\ast$field\+\_\+arg, uchar $\ast$ptr, uchar $\ast$null, uint length)
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{classstore__key_a1c78dad4f3335d03b297cf30592914bf}{name}} () const =0
+\item 
+enum store\+\_\+key\+\_\+result \mbox{\hyperlink{classstore__key_a55d3bd31a4655a157fee7b42a15adfb4}{copy}} ()
+\begin{DoxyCompactList}\small\item\em sets ignore truncation warnings mode and calls the real copy method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstore__key_a8b3ef308055ac00b14d554b814dae48d}\label{classstore__key_a8b3ef308055ac00b14d554b814dae48d}} 
+bool {\bfseries null\+\_\+key}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstore__key_a72a836c14b2b1c4d23b102d9ab364771}\label{classstore__key_a72a836c14b2b1c4d23b102d9ab364771}} 
+virtual enum store\+\_\+key\+\_\+result {\bfseries copy\+\_\+inner} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstore__key_a2d5e9db5322a5227c8e1649f8e5c19c6}\label{classstore__key_a2d5e9db5322a5227c8e1649f8e5c19c6}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries to\+\_\+field}
+\item 
+\mbox{\Hypertarget{classstore__key_ac8e938dc9fdd8d0a44614d2c90927722}\label{classstore__key_ac8e938dc9fdd8d0a44614d2c90927722}} 
+uchar $\ast$ {\bfseries null\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classstore__key_a602fe0f2c3a67c453d328030c977c583}\label{classstore__key_a602fe0f2c3a67c453d328030c977c583}} 
+uchar {\bfseries err}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class to copying an field/item to a key struct 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstore__key_a55d3bd31a4655a157fee7b42a15adfb4}\label{classstore__key_a55d3bd31a4655a157fee7b42a15adfb4}} 
+\index{store\+\_\+key@{store\+\_\+key}!copy@{copy}}
+\index{copy@{copy}!store\+\_\+key@{store\+\_\+key}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily enum store\+\_\+key\+\_\+result store\+\_\+key\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets ignore truncation warnings mode and calls the real copy method 
+
+this function makes sure truncation warnings when preparing the key buffers don\textquotesingle{}t end up as errors (because of an enclosing I\+N\+S\+E\+R\+T/\+U\+P\+D\+A\+TE). \mbox{\Hypertarget{classstore__key_a1c78dad4f3335d03b297cf30592914bf}\label{classstore__key_a1c78dad4f3335d03b297cf30592914bf}} 
+\index{store\+\_\+key@{store\+\_\+key}!name@{name}}
+\index{name@{name}!store\+\_\+key@{store\+\_\+key}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual const char$\ast$ store\+\_\+key\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Not actually needed 
+
+Implemented in \mbox{\hyperlink{classstore__key__const__item_a1c578851203067d4ab3c90b81d7b3cfa}{store\+\_\+key\+\_\+const\+\_\+item}}, \mbox{\hyperlink{classstore__key__hash__item_a213002a48540add6652dfc3d908ee367}{store\+\_\+key\+\_\+hash\+\_\+item}}, \mbox{\hyperlink{classstore__key__item_a88e2baa208896dcde9ba66e9715efc3c}{store\+\_\+key\+\_\+item}}, and \mbox{\hyperlink{classstore__key__field_acc151e2c25c0fe5c09d2a28c4595413b}{store\+\_\+key\+\_\+field}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__select_8h}{sql\+\_\+select.\+h}}\end{DoxyCompactItemize}

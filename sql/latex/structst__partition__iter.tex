@@ -1,0 +1,54 @@
+\hypertarget{structst__partition__iter}{}\section{st\+\_\+partition\+\_\+iter Struct Reference}
+\label{structst__partition__iter}\index{st\+\_\+partition\+\_\+iter@{st\+\_\+partition\+\_\+iter}}
+
+
+{\ttfamily \#include $<$partition\+\_\+info.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structst__partition__iter_1_1st__field__value__range}{st\+\_\+field\+\_\+value\+\_\+range}}
+\item 
+struct \mbox{\hyperlink{structst__partition__iter_1_1st__part__num__range}{st\+\_\+part\+\_\+num\+\_\+range}}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__partition__iter_a600a5aa4dbcdc0def035e3a54418de59}\label{structst__partition__iter_a600a5aa4dbcdc0def035e3a54418de59}} 
+partition\+\_\+iter\+\_\+func {\bfseries get\+\_\+next}
+\item 
+\mbox{\Hypertarget{structst__partition__iter_a2e351e9a45d9e7835106cf26b2510fef}\label{structst__partition__iter_a2e351e9a45d9e7835106cf26b2510fef}} 
+bool {\bfseries ret\+\_\+null\+\_\+part}
+\item 
+\mbox{\Hypertarget{structst__partition__iter_a14bce9a5404ec929914e0f5ca53fca48}\label{structst__partition__iter_a14bce9a5404ec929914e0f5ca53fca48}} 
+bool {\bfseries ret\+\_\+null\+\_\+part\+\_\+orig}
+\item 
+\mbox{\Hypertarget{structst__partition__iter_a2987f22df81d909341e83b8cc84bfb90}\label{structst__partition__iter_a2987f22df81d909341e83b8cc84bfb90}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \mbox{\hyperlink{structst__partition__iter_1_1st__part__num__range}{st\_part\_num\_range}} {\bfseries part\_nums}\\
+\>struct \mbox{\hyperlink{structst__partition__iter_1_1st__field__value__range}{st\_field\_value\_range}} {\bfseries field\_vals}\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structst__partition__iter_a9291e8ea7becd2a634d391aea8c63fd7}\label{structst__partition__iter_a9291e8ea7becd2a634d391aea8c63fd7}} 
+\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$ {\bfseries part\+\_\+info}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Partition set iterator. Used to enumerate a set of \mbox{[}sub\mbox{]}partitions obtained in partition interval analysis (see get\+\_\+partitions\+\_\+in\+\_\+range\+\_\+iter).
+
+For the user, the only meaningful field is get\+\_\+next, which may be used as follows\+: part\+\_\+iterator.\+get\+\_\+next(\&part\+\_\+iterator);
+
+Initialization is done by any of the following calls\+:
+\begin{DoxyItemize}
+\item get\+\_\+partitions\+\_\+in\+\_\+range\+\_\+iter-\/type function call
+\item init\+\_\+single\+\_\+partition\+\_\+iterator()
+\item init\+\_\+all\+\_\+partitions\+\_\+iterator() Cleanup is not needed. 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+partition\+\_\+info.\+h\end{DoxyCompactItemize}

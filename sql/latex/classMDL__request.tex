@@ -1,0 +1,171 @@
+\hypertarget{classMDL__request}{}\section{M\+D\+L\+\_\+request Class Reference}
+\label{classMDL__request}\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMDL__request_ab04208d9a63353d65b5384b2352657ea}{init\+\_\+with\+\_\+source}} (\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}} namespace\+\_\+arg, const char $\ast$db\+\_\+arg, const char $\ast$name\+\_\+arg, enum\+\_\+mdl\+\_\+type mdl\+\_\+type\+\_\+arg, enum\+\_\+mdl\+\_\+duration mdl\+\_\+duration\+\_\+arg, const char $\ast$src\+\_\+file, uint src\+\_\+line)
+\item 
+void \mbox{\hyperlink{classMDL__request_a4e16a57d0955ac62887ff87d46dee5ad}{init\+\_\+by\+\_\+key\+\_\+with\+\_\+source}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$key\+\_\+arg, enum\+\_\+mdl\+\_\+type mdl\+\_\+type\+\_\+arg, enum\+\_\+mdl\+\_\+duration mdl\+\_\+duration\+\_\+arg, const char $\ast$src\+\_\+file, uint src\+\_\+line)
+\item 
+void \mbox{\hyperlink{classMDL__request_a6cc77971b2b370098d3e6d89f816180e}{set\+\_\+type}} (enum\+\_\+mdl\+\_\+type type\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{classMDL__request_a2eba1fb8ec80fc083ddee0b45c683294}{is\+\_\+write\+\_\+lock\+\_\+request}} () const
+\item 
+bool \mbox{\hyperlink{classMDL__request_a0464ab737f8f687f27626d2595a7125a}{is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request}} () const
+\item 
+\mbox{\Hypertarget{classMDL__request_ae00606a0fc45f65d897307baaa4773c0}\label{classMDL__request_ae00606a0fc45f65d897307baaa4773c0}} 
+\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} \&rhs)
+\item 
+\mbox{\Hypertarget{classMDL__request_a4899c84cffa559f5490ec0bfb9e9929f}\label{classMDL__request_a4899c84cffa559f5490ec0bfb9e9929f}} 
+{\bfseries M\+D\+L\+\_\+request} (const \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$rhs)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__request_a46c82cd2ca417fc6f1b9c63c71e47889}\label{classMDL__request_a46c82cd2ca417fc6f1b9c63c71e47889}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t size, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)  throw ()
+\item 
+\mbox{\Hypertarget{classMDL__request_a6fed43bd7ebb8e9b356a1732dd274416}\label{classMDL__request_a6fed43bd7ebb8e9b356a1732dd274416}} 
+static void {\bfseries operator delete} (void $\ast$ptr, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum enum\+\_\+mdl\+\_\+type \mbox{\hyperlink{classMDL__request_a13f9ecefea91a5355e694339ed9f7943}{type}}
+\item 
+enum enum\+\_\+mdl\+\_\+duration \mbox{\hyperlink{classMDL__request_a1bbba71916cc45c7a3912175ef76cf69}{duration}}
+\item 
+\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$ \mbox{\hyperlink{classMDL__request_ad9d3b3f440b67b7665b3a2701a14e2b2}{next\+\_\+in\+\_\+list}}
+\item 
+\mbox{\Hypertarget{classMDL__request_a9e7ba7a3d2a1b9374f0dbe0be197854a}\label{classMDL__request_a9e7ba7a3d2a1b9374f0dbe0be197854a}} 
+\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$$\ast$ {\bfseries prev\+\_\+in\+\_\+list}
+\item 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ \mbox{\hyperlink{classMDL__request_a99421002fe2ea1580766846c0ef339ae}{ticket}}
+\item 
+\mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} \mbox{\hyperlink{classMDL__request_ab30e06e36d9191120575cc0c0402554a}{key}}
+\item 
+\mbox{\Hypertarget{classMDL__request_aa55387aeb49a4f81ecaa87fd481a310b}\label{classMDL__request_aa55387aeb49a4f81ecaa87fd481a310b}} 
+const char $\ast$ {\bfseries m\+\_\+src\+\_\+file}
+\item 
+\mbox{\Hypertarget{classMDL__request_aeb5f59ed9b9bfa377f8f4afab470653b}\label{classMDL__request_aeb5f59ed9b9bfa377f8f4afab470653b}} 
+uint {\bfseries m\+\_\+src\+\_\+line}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pending metadata lock request.
+
+A lock request and a granted metadata lock are represented by different classes because they have different allocation sites and hence different lifetimes. The allocation of lock requests is controlled from outside of the M\+DL subsystem, while allocation of granted locks (tickets) is controlled within the M\+DL subsystem.
+
+\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} is a C structure, you don\textquotesingle{}t need to call a constructor or destructor for it. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__request_a4e16a57d0955ac62887ff87d46dee5ad}\label{classMDL__request_a4e16a57d0955ac62887ff87d46dee5ad}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!init\+\_\+by\+\_\+key\+\_\+with\+\_\+source@{init\+\_\+by\+\_\+key\+\_\+with\+\_\+source}}
+\index{init\+\_\+by\+\_\+key\+\_\+with\+\_\+source@{init\+\_\+by\+\_\+key\+\_\+with\+\_\+source}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{init\+\_\+by\+\_\+key\+\_\+with\+\_\+source()}{init\_by\_key\_with\_source()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+request\+::init\+\_\+by\+\_\+key\+\_\+with\+\_\+source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{key\+\_\+arg,  }\item[{enum\+\_\+mdl\+\_\+type}]{mdl\+\_\+type\+\_\+arg,  }\item[{enum\+\_\+mdl\+\_\+duration}]{mdl\+\_\+duration\+\_\+arg,  }\item[{const char $\ast$}]{src\+\_\+file,  }\item[{uint}]{src\+\_\+line }\end{DoxyParamCaption})}
+
+Initialize a lock request using pre-\/built \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}}.
+
+\begin{DoxySeeAlso}{See also}
+M\+D\+L\+\_\+request\+::init(namespace, db, name, type).
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+arg} & The pre-\/built M\+DL key for the request. \\
+\hline
+{\em mdl\+\_\+type\+\_\+arg} & The M\+DL lock type for the request. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__request_ab04208d9a63353d65b5384b2352657ea}\label{classMDL__request_ab04208d9a63353d65b5384b2352657ea}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!init\+\_\+with\+\_\+source@{init\+\_\+with\+\_\+source}}
+\index{init\+\_\+with\+\_\+source@{init\+\_\+with\+\_\+source}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{init\+\_\+with\+\_\+source()}{init\_with\_source()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+request\+::init\+\_\+with\+\_\+source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}}}]{mdl\+\_\+namespace,  }\item[{const char $\ast$}]{db\+\_\+arg,  }\item[{const char $\ast$}]{name\+\_\+arg,  }\item[{enum\+\_\+mdl\+\_\+type}]{mdl\+\_\+type\+\_\+arg,  }\item[{enum\+\_\+mdl\+\_\+duration}]{mdl\+\_\+duration\+\_\+arg,  }\item[{const char $\ast$}]{src\+\_\+file,  }\item[{uint}]{src\+\_\+line }\end{DoxyParamCaption})}
+
+Initialize a lock request.
+
+This is to be used for every lock request.
+
+Note that initialization and allocation are split into two calls. This is to allow flexible memory management of lock requests. Normally a lock request is stored in statement memory (e.\+g. is a member of struct \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}), but we would also like to allow allocation of lock requests in other memory roots, for example in the grant subsystem, to lock privilege tables.
+
+The M\+DL subsystem does not own or manage memory of lock requests.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+namespace} & Id of namespace of object to be locked \\
+\hline
+{\em db} & Name of database to which the object belongs \\
+\hline
+{\em name} & Name of of the object \\
+\hline
+{\em mdl\+\_\+type} & The M\+DL lock type for the request. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__request_a0464ab737f8f687f27626d2595a7125a}\label{classMDL__request_a0464ab737f8f687f27626d2595a7125a}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request@{is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request}}
+\index{is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request@{is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request()}{is\_ddl\_or\_lock\_tables\_lock\_request()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+request\+::is\+\_\+ddl\+\_\+or\+\_\+lock\+\_\+tables\+\_\+lock\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Is this a request for a strong, D\+D\+L/\+L\+O\+CK T\+A\+B\+L\+ES-\/type, of lock? \mbox{\Hypertarget{classMDL__request_a2eba1fb8ec80fc083ddee0b45c683294}\label{classMDL__request_a2eba1fb8ec80fc083ddee0b45c683294}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!is\+\_\+write\+\_\+lock\+\_\+request@{is\+\_\+write\+\_\+lock\+\_\+request}}
+\index{is\+\_\+write\+\_\+lock\+\_\+request@{is\+\_\+write\+\_\+lock\+\_\+request}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{is\+\_\+write\+\_\+lock\+\_\+request()}{is\_write\_lock\_request()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+request\+::is\+\_\+write\+\_\+lock\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Is this a request for a lock which allow data to be updated?
+
+\begin{DoxyNote}{Note}
+This method returns true for M\+D\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+U\+P\+G\+R\+A\+D\+A\+B\+LE type of lock. Even though this type of lock doesn\textquotesingle{}t allow updates it will always be upgraded to one that does. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__request_a6cc77971b2b370098d3e6d89f816180e}\label{classMDL__request_a6cc77971b2b370098d3e6d89f816180e}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!set\+\_\+type@{set\+\_\+type}}
+\index{set\+\_\+type@{set\+\_\+type}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{set\+\_\+type()}{set\_type()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+request\+::set\+\_\+type (\begin{DoxyParamCaption}\item[{enum\+\_\+mdl\+\_\+type}]{type\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set type of lock request. Can be only applied to pending locks. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMDL__request_a1bbba71916cc45c7a3912175ef76cf69}\label{classMDL__request_a1bbba71916cc45c7a3912175ef76cf69}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!duration@{duration}}
+\index{duration@{duration}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily enum enum\+\_\+mdl\+\_\+duration M\+D\+L\+\_\+request\+::duration}
+
+Duration for requested lock. \mbox{\Hypertarget{classMDL__request_ab30e06e36d9191120575cc0c0402554a}\label{classMDL__request_ab30e06e36d9191120575cc0c0402554a}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!key@{key}}
+\index{key@{key}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} M\+D\+L\+\_\+request\+::key}
+
+A lock is requested based on a fully qualified name and type. \mbox{\Hypertarget{classMDL__request_ad9d3b3f440b67b7665b3a2701a14e2b2}\label{classMDL__request_ad9d3b3f440b67b7665b3a2701a14e2b2}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!next\+\_\+in\+\_\+list@{next\+\_\+in\+\_\+list}}
+\index{next\+\_\+in\+\_\+list@{next\+\_\+in\+\_\+list}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{next\+\_\+in\+\_\+list}{next\_in\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}}$\ast$ M\+D\+L\+\_\+request\+::next\+\_\+in\+\_\+list}
+
+Pointers for participating in the list of lock requests for this context. \mbox{\Hypertarget{classMDL__request_a99421002fe2ea1580766846c0ef339ae}\label{classMDL__request_a99421002fe2ea1580766846c0ef339ae}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!ticket@{ticket}}
+\index{ticket@{ticket}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{ticket}{ticket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}$\ast$ M\+D\+L\+\_\+request\+::ticket}
+
+Pointer to the lock ticket object for this lock request. Valid only if this lock request is satisfied. \mbox{\Hypertarget{classMDL__request_a13f9ecefea91a5355e694339ed9f7943}\label{classMDL__request_a13f9ecefea91a5355e694339ed9f7943}} 
+\index{M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}!type@{type}}
+\index{type@{type}!M\+D\+L\+\_\+request@{M\+D\+L\+\_\+request}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum enum\+\_\+mdl\+\_\+type M\+D\+L\+\_\+request\+::type}
+
+Type of metadata lock. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\item 
+mdl.\+cc\end{DoxyCompactItemize}

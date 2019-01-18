@@ -1,0 +1,877 @@
+\hypertarget{classpartition__info}{}\section{partition\+\_\+info Class Reference}
+\label{classpartition__info}\index{partition\+\_\+info@{partition\+\_\+info}}
+Inheritance diagram for partition\+\_\+info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpartition__info}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpartition__info_ad6fd69c98229fea111fc267bab9d62d9}\label{classpartition__info_ad6fd69c98229fea111fc267bab9d62d9}} 
+enum {\bfseries enum\+\_\+key\+\_\+algorithm} \{ {\bfseries K\+E\+Y\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries K\+E\+Y\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+51} = 1, 
+{\bfseries K\+E\+Y\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+55} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{classpartition__info_aaef02282065db06059d0d77a6d6096e9}{enum\+\_\+can\+\_\+prune}} \{ {\bfseries P\+R\+U\+N\+E\+\_\+\+NO} =0, 
+{\bfseries P\+R\+U\+N\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}, 
+{\bfseries P\+R\+U\+N\+E\+\_\+\+Y\+ES}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpartition__info_a34c0ee21d55eddccfc31b01922f88c2c}\label{classpartition__info_a34c0ee21d55eddccfc31b01922f88c2c}} 
+\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$ {\bfseries get\+\_\+clone} (bool reset=false)
+\item 
+\mbox{\Hypertarget{classpartition__info_ac675c4b204fbbdb5fe67bf9f539adbf0}\label{classpartition__info_ac675c4b204fbbdb5fe67bf9f539adbf0}} 
+\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$ {\bfseries get\+\_\+full\+\_\+clone} ()
+\item 
+bool \mbox{\hyperlink{classpartition__info_ae85efb249bbcbe50f9ab3a77c120baae}{set\+\_\+named\+\_\+partition\+\_\+bitmap}} (const char $\ast$part\+\_\+name, size\+\_\+t length)
+\item 
+bool \mbox{\hyperlink{classpartition__info_a2d9a2052edfc8a92e7fc432de99dcdfb}{set\+\_\+partition\+\_\+bitmaps}} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list)
+\item 
+bool \mbox{\hyperlink{classpartition__info_aa0f0326670ced67fb5eb07101467c9e1}{set\+\_\+read\+\_\+partitions}} (\mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$partition\+\_\+names)
+\item 
+\mbox{\Hypertarget{classpartition__info_aa90fc74aaab23046ab0144e99ab5a9ee}\label{classpartition__info_aa90fc74aaab23046ab0144e99ab5a9ee}} 
+bool {\bfseries is\+\_\+sub\+\_\+partitioned} () const
+\item 
+\mbox{\Hypertarget{classpartition__info_aa328d88e86b77cd4b077274a9181c199}\label{classpartition__info_aa328d88e86b77cd4b077274a9181c199}} 
+uint {\bfseries get\+\_\+tot\+\_\+partitions} () const
+\item 
+\mbox{\Hypertarget{classpartition__info_a6cdf663baa8f7e1846abb8b50f06ab95}\label{classpartition__info_a6cdf663baa8f7e1846abb8b50f06ab95}} 
+bool {\bfseries set\+\_\+up\+\_\+defaults\+\_\+for\+\_\+partitioning} (Partition\+\_\+handler $\ast$part\+\_\+handler, \mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$info, uint start\+\_\+no)
+\item 
+\mbox{\Hypertarget{classpartition__info_a67f5f9500fd5a61a72cbaca0b87c90f4}\label{classpartition__info_a67f5f9500fd5a61a72cbaca0b87c90f4}} 
+char $\ast$ {\bfseries find\+\_\+duplicate\+\_\+field} ()
+\item 
+\mbox{\Hypertarget{classpartition__info_a422f87390f55b84a0d699ddda97936fd}\label{classpartition__info_a422f87390f55b84a0d699ddda97936fd}} 
+char $\ast$ {\bfseries find\+\_\+duplicate\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classpartition__info_ae5eb06a50b6b6bbfb18ae23e11ac0cb2}\label{classpartition__info_ae5eb06a50b6b6bbfb18ae23e11ac0cb2}} 
+bool {\bfseries check\+\_\+engine\+\_\+mix} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$engine\+\_\+type, bool default\+\_\+engine)
+\item 
+\mbox{\Hypertarget{classpartition__info_abdd5fceb6d9c7a8b3975bee9cf56005e}\label{classpartition__info_abdd5fceb6d9c7a8b3975bee9cf56005e}} 
+bool {\bfseries check\+\_\+range\+\_\+constants} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classpartition__info_a99cf27906251b4ca4e3477a74c4f58a1}\label{classpartition__info_a99cf27906251b4ca4e3477a74c4f58a1}} 
+bool {\bfseries check\+\_\+list\+\_\+constants} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classpartition__info_a37f67216b15dcf72ca525d9886e349f9}\label{classpartition__info_a37f67216b15dcf72ca525d9886e349f9}} 
+bool {\bfseries check\+\_\+partition\+\_\+info} (T\+HD $\ast$thd, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$$\ast$eng\+\_\+type, \mbox{\hyperlink{classhandler}{handler}} $\ast$file, \mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$info, bool check\+\_\+partition\+\_\+function)
+\item 
+\mbox{\Hypertarget{classpartition__info_a489d116176a8f50a822f2a8ac169db49}\label{classpartition__info_a489d116176a8f50a822f2a8ac169db49}} 
+void {\bfseries print\+\_\+no\+\_\+partition\+\_\+found} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{classpartition__info_ab96d993193c15c1d60f3143afb25af49}\label{classpartition__info_ab96d993193c15c1d60f3143afb25af49}} 
+void {\bfseries print\+\_\+debug} (const char $\ast$str, uint $\ast$)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classpartition__info_a4c064402f7f3865b0160d53002eb9cde}{get\+\_\+column\+\_\+item}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item, \mbox{\hyperlink{classField}{Field}} $\ast$field)
+\item 
+bool \mbox{\hyperlink{classpartition__info_a98dd2b320d2cca66c97e8741997a6156}{fix\+\_\+partition\+\_\+values}} (T\+HD $\ast$thd, \mbox{\hyperlink{structp__elem__val}{part\+\_\+elem\+\_\+value}} $\ast$val, \mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $\ast$part\+\_\+elem, uint part\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classpartition__info_a9abb993996a8f4d94741ee4cad296e25}{fix\+\_\+column\+\_\+value\+\_\+functions}} (T\+HD $\ast$thd, \mbox{\hyperlink{structp__elem__val}{part\+\_\+elem\+\_\+value}} $\ast$val, uint part\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classpartition__info_a354a3ee80e93b200e73ff44212c4c92f}{fix\+\_\+parser\+\_\+data}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classpartition__info_abaa009c70b5e2383605e77c3c38e8bdf}{add\+\_\+max\+\_\+value}} ()
+\item 
+void \mbox{\hyperlink{classpartition__info_a913eddd328bcead14cf7417076dcf66b}{init\+\_\+col\+\_\+val}} (\mbox{\hyperlink{structp__column__list__val}{part\+\_\+column\+\_\+list\+\_\+val}} $\ast$col\+\_\+val, \mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+bool \mbox{\hyperlink{classpartition__info_a8ea72d9a4627a51a579b50b30a7de7ac}{reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val}} ()
+\item 
+\mbox{\hyperlink{structp__column__list__val}{part\+\_\+column\+\_\+list\+\_\+val}} $\ast$ \mbox{\hyperlink{classpartition__info_a1639184674abb6b682cc323448cffc11}{add\+\_\+column\+\_\+value}} ()
+\item 
+\mbox{\Hypertarget{classpartition__info_a729d7bcd816a1b122e4684e783042ebb}\label{classpartition__info_a729d7bcd816a1b122e4684e783042ebb}} 
+bool {\bfseries set\+\_\+part\+\_\+expr} (char $\ast$start\+\_\+token, \mbox{\hyperlink{classItem}{Item}} $\ast$item\+\_\+ptr, char $\ast$end\+\_\+token, bool is\+\_\+subpart)
+\item 
+\mbox{\Hypertarget{classpartition__info_affb286c00b3cfcd57f4768a70123ca06}\label{classpartition__info_affb286c00b3cfcd57f4768a70123ca06}} 
+bool {\bfseries set\+\_\+up\+\_\+charset\+\_\+field\+\_\+preps} ()
+\item 
+\mbox{\Hypertarget{classpartition__info_ac9da6525770b55c1aba3d2d91bb78aed}\label{classpartition__info_ac9da6525770b55c1aba3d2d91bb78aed}} 
+bool {\bfseries check\+\_\+partition\+\_\+field\+\_\+length} ()
+\item 
+bool \mbox{\hyperlink{classpartition__info_a647bd6471092f8a592f1a1c6d2a1bd21}{init\+\_\+column\+\_\+part}} ()
+\item 
+bool \mbox{\hyperlink{classpartition__info_a79b9f2066ee5adbf961db510b676ffb3}{add\+\_\+column\+\_\+list\+\_\+value}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classpartition__info_ad62b6fb2f526bfe40d115d049bf568ee}\label{classpartition__info_ad62b6fb2f526bfe40d115d049bf568ee}} 
+void {\bfseries set\+\_\+show\+\_\+version\+\_\+string} (String $\ast$packet)
+\item 
+\mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $\ast$ \mbox{\hyperlink{classpartition__info_ae5173593085db5bcd998cb45a16d0cf8}{get\+\_\+part\+\_\+elem}} (const char $\ast$partition\+\_\+name, char $\ast$file\+\_\+name, uint32 $\ast$part\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get part\+\_\+elem and part\+\_\+id from partition name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpartition__info_a553fbd0c7a93c6ba8b57661101225a62}{report\+\_\+part\+\_\+expr\+\_\+error}} (bool use\+\_\+subpart\+\_\+expr)
+\item 
+bool \mbox{\hyperlink{classpartition__info_a9f22a0747e2378cce25466838adef569}{set\+\_\+used\+\_\+partition}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&values, \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} \&info, bool copy\+\_\+default\+\_\+values, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$used\+\_\+partitions)
+\item 
+bool \mbox{\hyperlink{classpartition__info_aec4b89bf3f8f3477dd3b3a2817902019}{can\+\_\+prune\+\_\+insert}} (T\+HD $\ast$thd, enum\+\_\+duplicates duplic, \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} \&update, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&update\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, bool empty\+\_\+values, \mbox{\hyperlink{classpartition__info_aaef02282065db06059d0d77a6d6096e9}{enum\+\_\+can\+\_\+prune}} $\ast$can\+\_\+prune\+\_\+partitions, bool $\ast$prune\+\_\+needs\+\_\+default\+\_\+values, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$used\+\_\+partitions)
+\item 
+bool \mbox{\hyperlink{classpartition__info_af7c79a0377139a83f9dec79652257a2a}{has\+\_\+same\+\_\+partitioning}} (\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$new\+\_\+part\+\_\+info)
+\item 
+\mbox{\Hypertarget{classpartition__info_a31291bca5530d96fd662d1943e44c4e3}\label{classpartition__info_a31291bca5530d96fd662d1943e44c4e3}} 
+bool {\bfseries is\+\_\+partition\+\_\+used} (uint part\+\_\+id) const
+\item 
+\mbox{\Hypertarget{classpartition__info_ae5bab24a959f565f0db21be65b36cca0}\label{classpartition__info_ae5bab24a959f565f0db21be65b36cca0}} 
+bool {\bfseries is\+\_\+partition\+\_\+locked} (uint part\+\_\+id) const
+\item 
+\mbox{\Hypertarget{classpartition__info_a530587ce98195f08b981ec7989b4a461}\label{classpartition__info_a530587ce98195f08b981ec7989b4a461}} 
+uint {\bfseries num\+\_\+partitions\+\_\+used} ()
+\item 
+\mbox{\Hypertarget{classpartition__info_a7e689007c87461e3927f44ac7c82d90a}\label{classpartition__info_a7e689007c87461e3927f44ac7c82d90a}} 
+uint {\bfseries get\+\_\+first\+\_\+used\+\_\+partition} () const
+\item 
+\mbox{\Hypertarget{classpartition__info_a2faaecb6ffa95e8f2e5ccbf8848679a5}\label{classpartition__info_a2faaecb6ffa95e8f2e5ccbf8848679a5}} 
+uint {\bfseries get\+\_\+next\+\_\+used\+\_\+partition} (uint part\+\_\+id) const
+\item 
+bool \mbox{\hyperlink{classpartition__info_aee6a2a93cef622dc6707a744525ea704}{same\+\_\+key\+\_\+column\+\_\+order}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ $\ast$create\+\_\+list)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpartition__info_aec8255b139ee86d7344901a8b197fac7}\label{classpartition__info_aec8255b139ee86d7344901a8b197fac7}} 
+static int {\bfseries compare\+\_\+column\+\_\+values} (const void $\ast$a, const void $\ast$b)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpartition__info_ae84fb3ae14a78d70a0580bfdde1956c5}\label{classpartition__info_ae84fb3ae14a78d70a0580bfdde1956c5}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $>$ {\bfseries partitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_a63fb2b9b04362cf03667c6d0da19a127}\label{classpartition__info_a63fb2b9b04362cf03667c6d0da19a127}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $>$ {\bfseries temp\+\_\+partitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_a6031d3e8f2527080af1f00147e05885c}\label{classpartition__info_a6031d3e8f2527080af1f00147e05885c}} 
+\mbox{\hyperlink{classList}{List}}$<$ char $>$ {\bfseries part\+\_\+field\+\_\+list}
+\item 
+\mbox{\Hypertarget{classpartition__info_ab5e810fde7393164e35d81326dc6119d}\label{classpartition__info_ab5e810fde7393164e35d81326dc6119d}} 
+\mbox{\hyperlink{classList}{List}}$<$ char $>$ {\bfseries subpart\+\_\+field\+\_\+list}
+\item 
+\mbox{\Hypertarget{classpartition__info_ae1a566a488e515fab953dd018d60d37c}\label{classpartition__info_ae1a566a488e515fab953dd018d60d37c}} 
+get\+\_\+part\+\_\+id\+\_\+func {\bfseries get\+\_\+partition\+\_\+id}
+\item 
+\mbox{\Hypertarget{classpartition__info_a32fbe9ff487c6f966fb6cd0e0610fd43}\label{classpartition__info_a32fbe9ff487c6f966fb6cd0e0610fd43}} 
+get\+\_\+part\+\_\+id\+\_\+func {\bfseries get\+\_\+part\+\_\+partition\+\_\+id}
+\item 
+\mbox{\Hypertarget{classpartition__info_ac846fba155618d638e4fff26640b3b8a}\label{classpartition__info_ac846fba155618d638e4fff26640b3b8a}} 
+get\+\_\+subpart\+\_\+id\+\_\+func {\bfseries get\+\_\+subpartition\+\_\+id}
+\item 
+\mbox{\Hypertarget{classpartition__info_a48240df94db759fcf91ac6aa4bf31a23}\label{classpartition__info_a48240df94db759fcf91ac6aa4bf31a23}} 
+get\+\_\+part\+\_\+id\+\_\+func {\bfseries get\+\_\+part\+\_\+partition\+\_\+id\+\_\+charset}
+\item 
+\mbox{\Hypertarget{classpartition__info_aab0f11850f6615b7859fb88cbc1e0439}\label{classpartition__info_aab0f11850f6615b7859fb88cbc1e0439}} 
+get\+\_\+subpart\+\_\+id\+\_\+func {\bfseries get\+\_\+subpartition\+\_\+id\+\_\+charset}
+\item 
+\mbox{\Hypertarget{classpartition__info_a6ad9f488b0a488b3afe890218b8e8fca}\label{classpartition__info_a6ad9f488b0a488b3afe890218b8e8fca}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries part\+\_\+field\+\_\+array}
+\item 
+\mbox{\Hypertarget{classpartition__info_a79a1d4446db44811c1cbd847f4ca0780}\label{classpartition__info_a79a1d4446db44811c1cbd847f4ca0780}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries subpart\+\_\+field\+\_\+array}
+\item 
+\mbox{\Hypertarget{classpartition__info_a2d30cf87c0c4812a60e06837cde4a909}\label{classpartition__info_a2d30cf87c0c4812a60e06837cde4a909}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries part\+\_\+charset\+\_\+field\+\_\+array}
+\item 
+\mbox{\Hypertarget{classpartition__info_a5a0e2ee1a6d5a702d13988afea2f9479}\label{classpartition__info_a5a0e2ee1a6d5a702d13988afea2f9479}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries subpart\+\_\+charset\+\_\+field\+\_\+array}
+\item 
+\mbox{\Hypertarget{classpartition__info_aeae86bc7ab3dd1969589ae2b912dc7e2}\label{classpartition__info_aeae86bc7ab3dd1969589ae2b912dc7e2}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$ {\bfseries full\+\_\+part\+\_\+field\+\_\+array}
+\item 
+\mbox{\Hypertarget{classpartition__info_a46aef1cd4bf917eb14c8f9959bc047f0}\label{classpartition__info_a46aef1cd4bf917eb14c8f9959bc047f0}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries full\+\_\+part\+\_\+field\+\_\+set}
+\item 
+\mbox{\Hypertarget{classpartition__info_a11503d9e5e1988fa1fe5f1da5638bf81}\label{classpartition__info_a11503d9e5e1988fa1fe5f1da5638bf81}} 
+uchar $\ast$$\ast$ {\bfseries part\+\_\+field\+\_\+buffers}
+\item 
+\mbox{\Hypertarget{classpartition__info_a9520447e380d5f513c6923b3ed772d55}\label{classpartition__info_a9520447e380d5f513c6923b3ed772d55}} 
+uchar $\ast$$\ast$ {\bfseries subpart\+\_\+field\+\_\+buffers}
+\item 
+\mbox{\Hypertarget{classpartition__info_a780bbb0eacf35e14fa315cdacf24ea66}\label{classpartition__info_a780bbb0eacf35e14fa315cdacf24ea66}} 
+uchar $\ast$$\ast$ {\bfseries restore\+\_\+part\+\_\+field\+\_\+ptrs}
+\item 
+\mbox{\Hypertarget{classpartition__info_ae04b56bff31a713f4d02ac293f837a7f}\label{classpartition__info_ae04b56bff31a713f4d02ac293f837a7f}} 
+uchar $\ast$$\ast$ {\bfseries restore\+\_\+subpart\+\_\+field\+\_\+ptrs}
+\item 
+\mbox{\Hypertarget{classpartition__info_aeec2b54ced88b3fceab1d27c049af278}\label{classpartition__info_aeec2b54ced88b3fceab1d27c049af278}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries part\+\_\+expr}
+\item 
+\mbox{\Hypertarget{classpartition__info_a772c8f4582ba3787f603cfb3e6b82659}\label{classpartition__info_a772c8f4582ba3787f603cfb3e6b82659}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries subpart\+\_\+expr}
+\item 
+\mbox{\Hypertarget{classpartition__info_acb41a6573a74fb20315552204cbaec0b}\label{classpartition__info_acb41a6573a74fb20315552204cbaec0b}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries item\+\_\+free\+\_\+list}
+\item 
+\mbox{\Hypertarget{classpartition__info_a9ef20001bf9c11c9e1589642751a1bb7}\label{classpartition__info_a9ef20001bf9c11c9e1589642751a1bb7}} 
+struct \mbox{\hyperlink{structst__ddl__log__memory__entry}{st\+\_\+ddl\+\_\+log\+\_\+memory\+\_\+entry}} $\ast$ {\bfseries first\+\_\+log\+\_\+entry}
+\item 
+\mbox{\Hypertarget{classpartition__info_ab4466c77fb8b0e6a6a929b2070711086}\label{classpartition__info_ab4466c77fb8b0e6a6a929b2070711086}} 
+struct \mbox{\hyperlink{structst__ddl__log__memory__entry}{st\+\_\+ddl\+\_\+log\+\_\+memory\+\_\+entry}} $\ast$ {\bfseries exec\+\_\+log\+\_\+entry}
+\item 
+\mbox{\Hypertarget{classpartition__info_a5c26128df3381830f2e9b19c8a902377}\label{classpartition__info_a5c26128df3381830f2e9b19c8a902377}} 
+struct \mbox{\hyperlink{structst__ddl__log__memory__entry}{st\+\_\+ddl\+\_\+log\+\_\+memory\+\_\+entry}} $\ast$ {\bfseries frm\+\_\+log\+\_\+entry}
+\item 
+\mbox{\Hypertarget{classpartition__info_ada32ee20990cad3ec68521eb55adebe4}\label{classpartition__info_ada32ee20990cad3ec68521eb55adebe4}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries read\+\_\+partitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_a810b71d635f57a13a1acf4cb97a2a1a2}\label{classpartition__info_a810b71d635f57a13a1acf4cb97a2a1a2}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries lock\+\_\+partitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_a707cb9fa045b4ffe8e54b3ed7eae4d1c}\label{classpartition__info_a707cb9fa045b4ffe8e54b3ed7eae4d1c}} 
+bool {\bfseries bitmaps\+\_\+are\+\_\+initialized}
+\item 
+\mbox{\Hypertarget{classpartition__info_abbae24ff138f58f7277da576c2b74ec1}\label{classpartition__info_abbae24ff138f58f7277da576c2b74ec1}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>longlong $\ast$ {\bfseries range\_int\_array}\\
+\>\mbox{\hyperlink{structLIST__PART__ENTRY}{LIST\_PART\_ENTRY}} $\ast$ {\bfseries list\_array}\\
+\>\mbox{\hyperlink{structp__column__list__val}{part\_column\_list\_val}} $\ast$ {\bfseries range\_col\_array}\\
+\>\mbox{\hyperlink{structp__column__list__val}{part\_column\_list\_val}} $\ast$ {\bfseries list\_col\_array}\\
+\}; \\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{classpartition__info_af951de1c23fb1bbafa9aac5268334b1d}\label{classpartition__info_af951de1c23fb1bbafa9aac5268334b1d}} 
+get\+\_\+partitions\+\_\+in\+\_\+range\+\_\+iter {\bfseries get\+\_\+part\+\_\+iter\+\_\+for\+\_\+interval}
+\item 
+\mbox{\Hypertarget{classpartition__info_a2fdd9aa600cbbc3404d1d4dcf4c71a16}\label{classpartition__info_a2fdd9aa600cbbc3404d1d4dcf4c71a16}} 
+get\+\_\+partitions\+\_\+in\+\_\+range\+\_\+iter {\bfseries get\+\_\+subpart\+\_\+iter\+\_\+for\+\_\+interval}
+\item 
+\mbox{\Hypertarget{classpartition__info_a0d9bcac5a40502b6fb72f27f244c2a45}\label{classpartition__info_a0d9bcac5a40502b6fb72f27f244c2a45}} 
+longlong {\bfseries err\+\_\+value}
+\item 
+\mbox{\Hypertarget{classpartition__info_a849fea603d49cfa3e356cc224db8a489}\label{classpartition__info_a849fea603d49cfa3e356cc224db8a489}} 
+char $\ast$ {\bfseries part\+\_\+info\+\_\+string}
+\item 
+\mbox{\Hypertarget{classpartition__info_a07a9c1b0f378840bd473faa1e352bb75}\label{classpartition__info_a07a9c1b0f378840bd473faa1e352bb75}} 
+char $\ast$ {\bfseries part\+\_\+func\+\_\+string}
+\item 
+\mbox{\Hypertarget{classpartition__info_a8c0b9343063674ff6fe106db307c67a2}\label{classpartition__info_a8c0b9343063674ff6fe106db307c67a2}} 
+char $\ast$ {\bfseries subpart\+\_\+func\+\_\+string}
+\item 
+\mbox{\Hypertarget{classpartition__info_a9f7b3909086d30618ef99f54aa6a3920}\label{classpartition__info_a9f7b3909086d30618ef99f54aa6a3920}} 
+\mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $\ast$ {\bfseries curr\+\_\+part\+\_\+elem}
+\item 
+\mbox{\Hypertarget{classpartition__info_af49e5a783578145583159c7938a99dd4}\label{classpartition__info_af49e5a783578145583159c7938a99dd4}} 
+\mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $\ast$ {\bfseries current\+\_\+partition}
+\item 
+\mbox{\Hypertarget{classpartition__info_a4b768b028d143b45e586ddf130a5e4ee}\label{classpartition__info_a4b768b028d143b45e586ddf130a5e4ee}} 
+\mbox{\hyperlink{structp__elem__val}{part\+\_\+elem\+\_\+value}} $\ast$ {\bfseries curr\+\_\+list\+\_\+val}
+\item 
+\mbox{\Hypertarget{classpartition__info_a7a6c8977c740a7ac1ab067043c001c45}\label{classpartition__info_a7a6c8977c740a7ac1ab067043c001c45}} 
+uint {\bfseries curr\+\_\+list\+\_\+object}
+\item 
+\mbox{\Hypertarget{classpartition__info_ac722295f6fa86d037c5568344ef82a32}\label{classpartition__info_ac722295f6fa86d037c5568344ef82a32}} 
+uint {\bfseries num\+\_\+columns}
+\item 
+\mbox{\Hypertarget{classpartition__info_af191a6d847477f4ac5e8fdb9c912e1ed}\label{classpartition__info_af191a6d847477f4ac5e8fdb9c912e1ed}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries table}
+\item 
+\mbox{\Hypertarget{classpartition__info_ad4564be134d86d88c6ab91d40401772f}\label{classpartition__info_ad4564be134d86d88c6ab91d40401772f}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries all\+\_\+fields\+\_\+in\+\_\+\+PF}
+\item 
+\mbox{\Hypertarget{classpartition__info_a93658fae629e7d49140703cdd660c73d}\label{classpartition__info_a93658fae629e7d49140703cdd660c73d}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries all\+\_\+fields\+\_\+in\+\_\+\+P\+PF}
+\item 
+\mbox{\Hypertarget{classpartition__info_a2b5d830bffbdf4cb2a0873f0c6d0cc17}\label{classpartition__info_a2b5d830bffbdf4cb2a0873f0c6d0cc17}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries all\+\_\+fields\+\_\+in\+\_\+\+S\+PF}
+\item 
+\mbox{\Hypertarget{classpartition__info_ab2270a572c7c67bb76b7017bc2764a17}\label{classpartition__info_ab2270a572c7c67bb76b7017bc2764a17}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries some\+\_\+fields\+\_\+in\+\_\+\+PF}
+\item 
+\mbox{\Hypertarget{classpartition__info_ae1e584d3cf9fcef5c78f36d018fc0181}\label{classpartition__info_ae1e584d3cf9fcef5c78f36d018fc0181}} 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ {\bfseries default\+\_\+engine\+\_\+type}
+\item 
+\mbox{\Hypertarget{classpartition__info_a561bb7c40f0cf8aa36b0e26ba5db1214}\label{classpartition__info_a561bb7c40f0cf8aa36b0e26ba5db1214}} 
+partition\+\_\+type {\bfseries part\+\_\+type}
+\item 
+\mbox{\Hypertarget{classpartition__info_a4d642624316fe46c77751dc2488aa13e}\label{classpartition__info_a4d642624316fe46c77751dc2488aa13e}} 
+partition\+\_\+type {\bfseries subpart\+\_\+type}
+\item 
+\mbox{\Hypertarget{classpartition__info_a9b4f0a444930a6dc1f0618f151b91ca4}\label{classpartition__info_a9b4f0a444930a6dc1f0618f151b91ca4}} 
+size\+\_\+t {\bfseries part\+\_\+info\+\_\+len}
+\item 
+\mbox{\Hypertarget{classpartition__info_a32abacfc7644b21a6340d353ad7615a3}\label{classpartition__info_a32abacfc7644b21a6340d353ad7615a3}} 
+size\+\_\+t {\bfseries part\+\_\+func\+\_\+len}
+\item 
+\mbox{\Hypertarget{classpartition__info_aec4d10842763368a70a3a094303b4ff9}\label{classpartition__info_aec4d10842763368a70a3a094303b4ff9}} 
+size\+\_\+t {\bfseries subpart\+\_\+func\+\_\+len}
+\item 
+\mbox{\Hypertarget{classpartition__info_a19a8c5280cb4635ddad141e9d868c97c}\label{classpartition__info_a19a8c5280cb4635ddad141e9d868c97c}} 
+uint {\bfseries num\+\_\+parts}
+\item 
+\mbox{\Hypertarget{classpartition__info_a59e34b18c5e26c448f51924e819ebbd3}\label{classpartition__info_a59e34b18c5e26c448f51924e819ebbd3}} 
+uint {\bfseries num\+\_\+subparts}
+\item 
+\mbox{\Hypertarget{classpartition__info_a1e62080e91fc0e787b9d2e3b17639222}\label{classpartition__info_a1e62080e91fc0e787b9d2e3b17639222}} 
+uint {\bfseries count\+\_\+curr\+\_\+subparts}
+\item 
+\mbox{\Hypertarget{classpartition__info_a777d1b509e50598d72dfab52e47958b0}\label{classpartition__info_a777d1b509e50598d72dfab52e47958b0}} 
+uint {\bfseries num\+\_\+list\+\_\+values}
+\item 
+\mbox{\Hypertarget{classpartition__info_ad9aecb44d8d1ebe3635c9416d31d4747}\label{classpartition__info_ad9aecb44d8d1ebe3635c9416d31d4747}} 
+uint {\bfseries num\+\_\+part\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classpartition__info_a702a77528a2c24ad2f3cfbca19c6d4d0}\label{classpartition__info_a702a77528a2c24ad2f3cfbca19c6d4d0}} 
+uint {\bfseries num\+\_\+subpart\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classpartition__info_a09c671593fbfc7491a88ee5ad7f43122}\label{classpartition__info_a09c671593fbfc7491a88ee5ad7f43122}} 
+uint {\bfseries num\+\_\+full\+\_\+part\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classpartition__info_a5595c6edb634da27a38dd65a0bfb66e1}\label{classpartition__info_a5595c6edb634da27a38dd65a0bfb66e1}} 
+uint {\bfseries has\+\_\+null\+\_\+part\+\_\+id}
+\item 
+\mbox{\Hypertarget{classpartition__info_ae9eb42651c485f0b8421b419e00a411c}\label{classpartition__info_ae9eb42651c485f0b8421b419e00a411c}} 
+uint16 {\bfseries linear\+\_\+hash\+\_\+mask}
+\item 
+\mbox{\Hypertarget{classpartition__info_af95b32e5293ba8a2d8d3019b3730067c}\label{classpartition__info_af95b32e5293ba8a2d8d3019b3730067c}} 
+enum\+\_\+key\+\_\+algorithm {\bfseries key\+\_\+algorithm}
+\item 
+\mbox{\Hypertarget{classpartition__info_a5432b3afff917262f9d9e29bcd912fa6}\label{classpartition__info_a5432b3afff917262f9d9e29bcd912fa6}} 
+bool {\bfseries use\+\_\+default\+\_\+partitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_a47d3965742a1fc0064ab5a2d8418bf4a}\label{classpartition__info_a47d3965742a1fc0064ab5a2d8418bf4a}} 
+bool {\bfseries use\+\_\+default\+\_\+num\+\_\+partitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_adc650629bd35b6de4336059762dc9277}\label{classpartition__info_adc650629bd35b6de4336059762dc9277}} 
+bool {\bfseries use\+\_\+default\+\_\+subpartitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_a10e6f18bbc415a1fa5b0fddf35202b5e}\label{classpartition__info_a10e6f18bbc415a1fa5b0fddf35202b5e}} 
+bool {\bfseries use\+\_\+default\+\_\+num\+\_\+subpartitions}
+\item 
+\mbox{\Hypertarget{classpartition__info_ab9595e8a5f524a61ed63a2fc91ca14a3}\label{classpartition__info_ab9595e8a5f524a61ed63a2fc91ca14a3}} 
+bool {\bfseries default\+\_\+partitions\+\_\+setup}
+\item 
+\mbox{\Hypertarget{classpartition__info_ae524144d0bad3662e0221cb9a74b59c9}\label{classpartition__info_ae524144d0bad3662e0221cb9a74b59c9}} 
+bool {\bfseries defined\+\_\+max\+\_\+value}
+\item 
+\mbox{\Hypertarget{classpartition__info_ad7248aa702196b3150d6063be3bd821f}\label{classpartition__info_ad7248aa702196b3150d6063be3bd821f}} 
+bool {\bfseries list\+\_\+of\+\_\+part\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classpartition__info_aa7a3466cd22b56a8a5e63efffac8fc8e}\label{classpartition__info_aa7a3466cd22b56a8a5e63efffac8fc8e}} 
+bool {\bfseries list\+\_\+of\+\_\+subpart\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classpartition__info_acb21ce1df0812d24ea95371ce208edc8}\label{classpartition__info_acb21ce1df0812d24ea95371ce208edc8}} 
+bool {\bfseries linear\+\_\+hash\+\_\+ind}
+\item 
+\mbox{\Hypertarget{classpartition__info_ace4b96f4cecda4c0ce4f7c663fccb574}\label{classpartition__info_ace4b96f4cecda4c0ce4f7c663fccb574}} 
+bool {\bfseries fixed}
+\item 
+\mbox{\Hypertarget{classpartition__info_ace17e5f60c33624d58764ffca2d638db}\label{classpartition__info_ace17e5f60c33624d58764ffca2d638db}} 
+bool {\bfseries is\+\_\+auto\+\_\+partitioned}
+\item 
+\mbox{\Hypertarget{classpartition__info_a3bad3a6591bfb09a608537016d55ad23}\label{classpartition__info_a3bad3a6591bfb09a608537016d55ad23}} 
+bool {\bfseries has\+\_\+null\+\_\+value}
+\item 
+\mbox{\Hypertarget{classpartition__info_af6039a95b692ba2c577f3c647b2b561b}\label{classpartition__info_af6039a95b692ba2c577f3c647b2b561b}} 
+bool {\bfseries column\+\_\+list}
+\item 
+bool \mbox{\hyperlink{classpartition__info_a4de898d070131804a841bd7535098eb1}{is\+\_\+pruning\+\_\+completed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classpartition__info_aaef02282065db06059d0d77a6d6096e9}\label{classpartition__info_aaef02282065db06059d0d77a6d6096e9}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!enum\+\_\+can\+\_\+prune@{enum\+\_\+can\+\_\+prune}}
+\index{enum\+\_\+can\+\_\+prune@{enum\+\_\+can\+\_\+prune}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{enum\+\_\+can\+\_\+prune}{enum\_can\_prune}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classpartition__info_aaef02282065db06059d0d77a6d6096e9}{partition\+\_\+info\+::enum\+\_\+can\+\_\+prune}}}
+
+P\+R\+U\+N\+E\+\_\+\+NO -\/ Unable to prune. P\+R\+U\+N\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS -\/ Partitioning field is only set to D\+E\+F\+A\+U\+LT values, only need to check pruning for one row where the D\+E\+F\+A\+U\+L\+TS values are set. P\+R\+U\+N\+E\+\_\+\+Y\+ES -\/ Pruning is possible, calculate the used partition set by evaluate the partition\+\_\+id on row by row basis. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpartition__info_a79b9f2066ee5adbf961db510b676ffb3}\label{classpartition__info_a79b9f2066ee5adbf961db510b676ffb3}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!add\+\_\+column\+\_\+list\+\_\+value@{add\+\_\+column\+\_\+list\+\_\+value}}
+\index{add\+\_\+column\+\_\+list\+\_\+value@{add\+\_\+column\+\_\+list\+\_\+value}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+column\+\_\+list\+\_\+value()}{add\_column\_list\_value()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::add\+\_\+column\+\_\+list\+\_\+value (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Add a column value in V\+A\+L\+U\+ES L\+E\+SS T\+H\+AN or V\+A\+L\+U\+ES IN.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread object \\
+\hline
+{\em item} & \mbox{\hyperlink{classItem}{Item}} object representing column value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Failure \\
+\hline
+{\em F\+A\+L\+SE} & Success\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Called from parser. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_a1639184674abb6b682cc323448cffc11}\label{classpartition__info_a1639184674abb6b682cc323448cffc11}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!add\+\_\+column\+\_\+value@{add\+\_\+column\+\_\+value}}
+\index{add\+\_\+column\+\_\+value@{add\+\_\+column\+\_\+value}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+column\+\_\+value()}{add\_column\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structp__column__list__val}{part\+\_\+column\+\_\+list\+\_\+val}} $\ast$ partition\+\_\+info\+::add\+\_\+column\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new column value in current list.
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new part\+\_\+column\+\_\+list\+\_\+val 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em !=} & 0 A part\+\_\+column\+\_\+list\+\_\+val object which have been inserted into its list \\
+\hline
+{\em N\+U\+LL} & Memory allocation failure\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Called from parser. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_abaa009c70b5e2383605e77c3c38e8bdf}\label{classpartition__info_abaa009c70b5e2383605e77c3c38e8bdf}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!add\+\_\+max\+\_\+value@{add\+\_\+max\+\_\+value}}
+\index{add\+\_\+max\+\_\+value@{add\+\_\+max\+\_\+value}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+max\+\_\+value()}{add\_max\_value()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::add\+\_\+max\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new column value in current list with maxvalue.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Error \\
+\hline
+{\em F\+A\+L\+SE} & Success\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Called from parser. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_aec4b89bf3f8f3477dd3b3a2817902019}\label{classpartition__info_aec4b89bf3f8f3477dd3b3a2817902019}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!can\+\_\+prune\+\_\+insert@{can\+\_\+prune\+\_\+insert}}
+\index{can\+\_\+prune\+\_\+insert@{can\+\_\+prune\+\_\+insert}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{can\+\_\+prune\+\_\+insert()}{can\_prune\_insert()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::can\+\_\+prune\+\_\+insert (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+duplicates}]{duplic,  }\item[{\mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} \&}]{update,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{update\+\_\+fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{bool}]{empty\+\_\+values,  }\item[{\mbox{\hyperlink{classpartition__info_aaef02282065db06059d0d77a6d6096e9}{enum\+\_\+can\+\_\+prune}} $\ast$}]{can\+\_\+prune\+\_\+partitions,  }\item[{bool $\ast$}]{prune\+\_\+needs\+\_\+default\+\_\+values,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{used\+\_\+partitions }\end{DoxyParamCaption})}
+
+Checks if possible to do prune partitions on insert.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+ & {\em duplic} & How to handle duplicates \\
+\hline
+ & {\em update} & In case of ON D\+U\+P\+L\+I\+C\+A\+TE U\+P\+D\+A\+TE, default function fields \\
+\hline
+ & {\em update\+\_\+fields} & In case of ON D\+U\+P\+L\+I\+C\+A\+TE U\+P\+D\+A\+TE, which fields to update \\
+\hline
+ & {\em fields} & Listed fields \\
+\hline
+ & {\em empty\+\_\+values} & True if values is empty (only defaults) \\
+\hline
+\mbox{\texttt{ out}}  & {\em prune\+\_\+needs\+\_\+default\+\_\+values} & Set on return if copying of default values is needed \\
+\hline
+\mbox{\texttt{ out}}  & {\em can\+\_\+prune\+\_\+partitions} & Enum showing if possible to prune \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em used\+\_\+partitions} & If possible to prune the bitmap is initialized and cleared\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpartition__info_a9abb993996a8f4d94741ee4cad296e25}\label{classpartition__info_a9abb993996a8f4d94741ee4cad296e25}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!fix\+\_\+column\+\_\+value\+\_\+functions@{fix\+\_\+column\+\_\+value\+\_\+functions}}
+\index{fix\+\_\+column\+\_\+value\+\_\+functions@{fix\+\_\+column\+\_\+value\+\_\+functions}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{fix\+\_\+column\+\_\+value\+\_\+functions()}{fix\_column\_value\_functions()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::fix\+\_\+column\+\_\+value\+\_\+functions (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structp__elem__val}{part\+\_\+elem\+\_\+value}} $\ast$}]{val,  }\item[{uint}]{part\+\_\+id }\end{DoxyParamCaption})}
+
+Evaluate V\+A\+L\+U\+ES functions for column list values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread object \\
+\hline
+{\em col\+\_\+val} & \mbox{\hyperlink{classList}{List}} of column values \\
+\hline
+{\em part\+\_\+id} & Partition id we are fixing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Error \\
+\hline
+{\em F\+A\+L\+SE} & Success\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Fix column V\+A\+L\+U\+ES and store in memory array adapted to the data type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_a354a3ee80e93b200e73ff44212c4c92f}\label{classpartition__info_a354a3ee80e93b200e73ff44212c4c92f}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!fix\+\_\+parser\+\_\+data@{fix\+\_\+parser\+\_\+data}}
+\index{fix\+\_\+parser\+\_\+data@{fix\+\_\+parser\+\_\+data}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{fix\+\_\+parser\+\_\+data()}{fix\_parser\_data()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::fix\+\_\+parser\+\_\+data (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Fix partition data from parser.
+
+The parser generates generic data structures, we need to set them up as the rest of the code expects to find them. This is in reality part of the syntax check of the parser code.
+
+It is necessary to call this function in the case of a C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} statement, in this case we do it early in the check\+\_\+partition\+\_\+info function.
+
+It is necessary to call this function for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} where we assign a completely new partition structure, in this case we do it in prep\+\_\+alter\+\_\+part\+\_\+table after discovering that the partition structure is entirely redefined.
+
+It\textquotesingle{}s necessary to call this method also for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} A\+D\+D/\+R\+E\+O\+R\+G\+A\+N\+I\+ZE of partitions, in this we call it in prep\+\_\+alter\+\_\+part\+\_\+table after making some initial checks but before going deep to check the partition info, we also assign the column\+\_\+list variable before calling this function here.
+
+Finally we also call it immediately after returning from parsing the partitioning text found in the frm file.
+
+This function mainly fixes the V\+A\+L\+U\+ES parts, these are handled differently whether or not we use column list partitioning. Since the parser doesn\textquotesingle{}t know which we are using we need to set-\/up the old data structures after the parser is complete when we know if what type of partitioning the base table is using.
+
+For column lists we will handle this in the fix\+\_\+column\+\_\+value\+\_\+function. For column lists it is sufficient to verify that the number of columns and number of elements are in synch with each other. So only partitioning using functions need to be set-\/up to their data structures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Failure \\
+\hline
+{\em F\+A\+L\+SE} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpartition__info_a98dd2b320d2cca66c97e8741997a6156}\label{classpartition__info_a98dd2b320d2cca66c97e8741997a6156}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!fix\+\_\+partition\+\_\+values@{fix\+\_\+partition\+\_\+values}}
+\index{fix\+\_\+partition\+\_\+values@{fix\+\_\+partition\+\_\+values}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{fix\+\_\+partition\+\_\+values()}{fix\_partition\_values()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::fix\+\_\+partition\+\_\+values (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structp__elem__val}{part\+\_\+elem\+\_\+value}} $\ast$}]{val,  }\item[{\mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $\ast$}]{part\+\_\+elem,  }\item[{uint}]{part\+\_\+id }\end{DoxyParamCaption})}
+
+This function handles the case of function-\/based partitioning.
+
+It fixes some data structures created in the parser and puts them in the format required by the rest of the partitioning code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread object \\
+\hline
+{\em col\+\_\+val} & Array of one value \\
+\hline
+{\em part\+\_\+elem} & The partition instance \\
+\hline
+{\em part\+\_\+id} & Id of partition instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Failure \\
+\hline
+{\em F\+A\+L\+SE} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpartition__info_a4c064402f7f3865b0160d53002eb9cde}\label{classpartition__info_a4c064402f7f3865b0160d53002eb9cde}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!get\+\_\+column\+\_\+item@{get\+\_\+column\+\_\+item}}
+\index{get\+\_\+column\+\_\+item@{get\+\_\+column\+\_\+item}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{get\+\_\+column\+\_\+item()}{get\_column\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ partition\+\_\+info\+::get\+\_\+column\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field }\end{DoxyParamCaption})}
+
+Get column item with a proper character set according to the field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \mbox{\hyperlink{classItem}{Item}} object to start with \\
+\hline
+{\em field} & \mbox{\hyperlink{classField}{Field}} for which the item will be compared to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Column item 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & Error \\
+\hline
+{\em item} & Returned item \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpartition__info_ae5173593085db5bcd998cb45a16d0cf8}\label{classpartition__info_ae5173593085db5bcd998cb45a16d0cf8}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!get\+\_\+part\+\_\+elem@{get\+\_\+part\+\_\+elem}}
+\index{get\+\_\+part\+\_\+elem@{get\+\_\+part\+\_\+elem}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{get\+\_\+part\+\_\+elem()}{get\_part\_elem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpartition__element}{partition\+\_\+element}} $\ast$ partition\+\_\+info\+::get\+\_\+part\+\_\+elem (\begin{DoxyParamCaption}\item[{const char $\ast$}]{partition\+\_\+name,  }\item[{char $\ast$}]{file\+\_\+name,  }\item[{uint32 $\ast$}]{part\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get part\+\_\+elem and part\+\_\+id from partition name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em partition\+\_\+name} & Name of partition to search for. \\
+\hline
+{\em file\+\_\+name\mbox{[}out\mbox{]}} & Partition file name (part after table name, \#P\#$<$part$>$\mbox{[}\#\+SP\#$<$subpart$>$\mbox{]}), skipped if N\+U\+LL. \\
+\hline
+{\em part\+\_\+id\mbox{[}out\mbox{]}} & Id of found partition or N\+O\+T\+\_\+\+A\+\_\+\+P\+A\+R\+T\+I\+T\+I\+O\+N\+\_\+\+ID.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Pointer} & to part\+\_\+elem of \mbox{[}sub\mbox{]}partition, if not found N\+U\+LL\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Since names of partitions A\+ND subpartitions must be unique, this function searches both partitions and subpartitions and if name of a partition is given for a subpartitioned table, part\+\_\+elem will be the partition, but part\+\_\+id will be N\+O\+T\+\_\+\+A\+\_\+\+P\+A\+R\+T\+I\+T\+I\+O\+N\+\_\+\+ID and file\+\_\+name not set. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_af7c79a0377139a83f9dec79652257a2a}\label{classpartition__info_af7c79a0377139a83f9dec79652257a2a}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!has\+\_\+same\+\_\+partitioning@{has\+\_\+same\+\_\+partitioning}}
+\index{has\+\_\+same\+\_\+partitioning@{has\+\_\+same\+\_\+partitioning}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{has\+\_\+same\+\_\+partitioning()}{has\_same\_partitioning()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::has\+\_\+same\+\_\+partitioning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpartition__info}{partition\+\_\+info}} $\ast$}]{new\+\_\+part\+\_\+info }\end{DoxyParamCaption})}
+
+Check if the new part\+\_\+info has the same partitioning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+part\+\_\+info} & New partition definition to compare with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if not considered to have changed the partitioning. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Allowed change (only .frm change, compatible distribution). \\
+\hline
+{\em false} & Different partitioning, will need redistribution of rows.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Currently only used to allow changing from non-\/set key\+\_\+algorithm to a specified key\+\_\+algorithm, to avoid rebuild when upgrading from 5.\+1 of such partitioned tables using numeric columns in the partitioning expression. For more info see bug\#14521864. Does not check if columns etc has changed, i.\+e. only for alter\+\_\+info-\/$>$flags == A\+L\+T\+E\+R\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_a913eddd328bcead14cf7417076dcf66b}\label{classpartition__info_a913eddd328bcead14cf7417076dcf66b}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!init\+\_\+col\+\_\+val@{init\+\_\+col\+\_\+val}}
+\index{init\+\_\+col\+\_\+val@{init\+\_\+col\+\_\+val}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{init\+\_\+col\+\_\+val()}{init\_col\_val()}}
+{\footnotesize\ttfamily void partition\+\_\+info\+::init\+\_\+col\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structp__column__list__val}{part\+\_\+column\+\_\+list\+\_\+val}} $\ast$}]{col\+\_\+val,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Initialise part\+\_\+elem\+\_\+value object at setting of a new object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+val} & Column value object to be initialised \\
+\hline
+{\em item} & \mbox{\hyperlink{classItem}{Item}} object representing column value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Failure \\
+\hline
+{\em F\+A\+L\+SE} & Success\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Helper functions to functions called by parser. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_a647bd6471092f8a592f1a1c6d2a1bd21}\label{classpartition__info_a647bd6471092f8a592f1a1c6d2a1bd21}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!init\+\_\+column\+\_\+part@{init\+\_\+column\+\_\+part}}
+\index{init\+\_\+column\+\_\+part@{init\+\_\+column\+\_\+part}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{init\+\_\+column\+\_\+part()}{init\_column\_part()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::init\+\_\+column\+\_\+part (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize a new column for V\+A\+L\+U\+ES \{L\+E\+SS T\+H\+A\+N$\vert$\+IN\}.
+
+Initialize part\+\_\+info object for receiving a set of column values for a partition, called when parser reaches V\+A\+L\+U\+ES L\+E\+SS T\+H\+AN or V\+A\+L\+U\+ES IN.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Failure \\
+\hline
+{\em F\+A\+L\+SE} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpartition__info_a8ea72d9a4627a51a579b50b30a7de7ac}\label{classpartition__info_a8ea72d9a4627a51a579b50b30a7de7ac}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val@{reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val}}
+\index{reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val@{reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val()}{reorganize\_into\_single\_field\_col\_val()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::reorganize\+\_\+into\+\_\+single\+\_\+field\+\_\+col\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reorganize the preallocated buffer into a single field col list.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Failure \\
+\hline
+{\em false} & Success\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+In the case of A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} A\+D\+D/\+R\+E\+O\+R\+G\+A\+N\+I\+ZE P\+A\+R\+T\+I\+T\+I\+ON for L\+I\+ST partitions we can specify list values as\+: V\+A\+L\+U\+ES IN (v1, v2,,,, v17) if we\textquotesingle{}re using the first partitioning variant with a function or a column list partitioned table with one partition field. In this case the parser knows not the number of columns start with and allocates M\+A\+X\+\_\+\+R\+E\+F\+\_\+\+P\+A\+R\+TS in the array. If we try to allocate something beyond M\+A\+X\+\_\+\+R\+E\+F\+\_\+\+P\+A\+R\+TS we will call this function to reorganize into a structure with num\+\_\+columns = 1. Also when the parser knows that we used L\+I\+ST partitioning and we used a V\+A\+L\+U\+ES IN like above where number of values was smaller than M\+A\+X\+\_\+\+R\+E\+F\+\_\+\+P\+A\+R\+TS or equal, then we will reorganize after discovering this in the parser. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_a553fbd0c7a93c6ba8b57661101225a62}\label{classpartition__info_a553fbd0c7a93c6ba8b57661101225a62}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!report\+\_\+part\+\_\+expr\+\_\+error@{report\+\_\+part\+\_\+expr\+\_\+error}}
+\index{report\+\_\+part\+\_\+expr\+\_\+error@{report\+\_\+part\+\_\+expr\+\_\+error}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{report\+\_\+part\+\_\+expr\+\_\+error()}{report\_part\_expr\_error()}}
+{\footnotesize\ttfamily void partition\+\_\+info\+::report\+\_\+part\+\_\+expr\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+subpart\+\_\+expr }\end{DoxyParamCaption})}
+
+Check what kind of error to report.
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+\_\+subpart\+\_\+expr} & Use the subpart\+\_\+expr instead of part\+\_\+expr \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpartition__info_aee6a2a93cef622dc6707a744525ea704}\label{classpartition__info_aee6a2a93cef622dc6707a744525ea704}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!same\+\_\+key\+\_\+column\+\_\+order@{same\+\_\+key\+\_\+column\+\_\+order}}
+\index{same\+\_\+key\+\_\+column\+\_\+order@{same\+\_\+key\+\_\+column\+\_\+order}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{same\+\_\+key\+\_\+column\+\_\+order()}{same\_key\_column\_order()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::same\+\_\+key\+\_\+column\+\_\+order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ $\ast$}]{create\+\_\+list }\end{DoxyParamCaption})}
+
+Check if the partitioning columns are in the same order as the given list.
+
+Used to see if I\+N\+P\+L\+A\+CE alter can be allowed or not. If the order is different then the rows must be redistributed for K\+EY \mbox{[}sub\mbox{]}partitioning.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em create\+\_\+list} & Column list after A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is same order as before A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, else false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpartition__info_ae85efb249bbcbe50f9ab3a77c120baae}\label{classpartition__info_ae85efb249bbcbe50f9ab3a77c120baae}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!set\+\_\+named\+\_\+partition\+\_\+bitmap@{set\+\_\+named\+\_\+partition\+\_\+bitmap}}
+\index{set\+\_\+named\+\_\+partition\+\_\+bitmap@{set\+\_\+named\+\_\+partition\+\_\+bitmap}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+named\+\_\+partition\+\_\+bitmap()}{set\_named\_partition\_bitmap()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::set\+\_\+named\+\_\+partition\+\_\+bitmap (\begin{DoxyParamCaption}\item[{const char $\ast$}]{part\+\_\+name,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Mark named \mbox{[}sub\mbox{]}partition to be used/locked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+\_\+elem} & Partition element that matched. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpartition__info_a2d9a2052edfc8a92e7fc432de99dcdfb}\label{classpartition__info_a2d9a2052edfc8a92e7fc432de99dcdfb}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!set\+\_\+partition\+\_\+bitmaps@{set\+\_\+partition\+\_\+bitmaps}}
+\index{set\+\_\+partition\+\_\+bitmaps@{set\+\_\+partition\+\_\+bitmaps}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+partition\+\_\+bitmaps()}{set\_partition\_bitmaps()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::set\+\_\+partition\+\_\+bitmaps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list }\end{DoxyParamCaption})}
+
+Set read/lock\+\_\+partitions bitmap over non pruned partitions
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+list} & Possible \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} which can contain list of partition names to query\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Failed to allocate memory for bitmap or list of partitions did not match\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+OK to call multiple times without the need for free\+\_\+bitmaps. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classpartition__info_aa0f0326670ced67fb5eb07101467c9e1}\label{classpartition__info_aa0f0326670ced67fb5eb07101467c9e1}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!set\+\_\+read\+\_\+partitions@{set\+\_\+read\+\_\+partitions}}
+\index{set\+\_\+read\+\_\+partitions@{set\+\_\+read\+\_\+partitions}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+read\+\_\+partitions()}{set\_read\_partitions()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::set\+\_\+read\+\_\+partitions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$}]{partition\+\_\+names }\end{DoxyParamCaption})}
+
+Prune away partitions not mentioned in the P\+A\+R\+T\+I\+T\+I\+ON () clause, if used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+list} & Table list pointing to table to prune.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpartition__info_a9f22a0747e2378cce25466838adef569}\label{classpartition__info_a9f22a0747e2378cce25466838adef569}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!set\+\_\+used\+\_\+partition@{set\+\_\+used\+\_\+partition}}
+\index{set\+\_\+used\+\_\+partition@{set\+\_\+used\+\_\+partition}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+used\+\_\+partition()}{set\_used\_partition()}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::set\+\_\+used\+\_\+partition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{values,  }\item[{\mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} \&}]{info,  }\item[{bool}]{copy\+\_\+default\+\_\+values,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{used\+\_\+partitions }\end{DoxyParamCaption})}
+
+Mark the partition, the record belongs to, as used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fields} & Fields to set \\
+\hline
+{\em values} & Values to use \\
+\hline
+{\em info} & \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} used for default values handling \\
+\hline
+{\em copy\+\_\+default\+\_\+values} & True if we should copy default values \\
+\hline
+{\em used\+\_\+partitions} & \mbox{\hyperlink{classBitmap}{Bitmap}} to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operational status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpartition__info_a4de898d070131804a841bd7535098eb1}\label{classpartition__info_a4de898d070131804a841bd7535098eb1}} 
+\index{partition\+\_\+info@{partition\+\_\+info}!is\+\_\+pruning\+\_\+completed@{is\+\_\+pruning\+\_\+completed}}
+\index{is\+\_\+pruning\+\_\+completed@{is\+\_\+pruning\+\_\+completed}!partition\+\_\+info@{partition\+\_\+info}}
+\subsubsection{\texorpdfstring{is\+\_\+pruning\+\_\+completed}{is\_pruning\_completed}}
+{\footnotesize\ttfamily bool partition\+\_\+info\+::is\+\_\+pruning\+\_\+completed}
+
+True if pruning has been completed and can not be pruned any further, even if there are subqueries or stored programs in the condition.
+
+Some times it is needed to run prune\+\_\+partitions() a second time to prune read partitions after tables are locked, when subquery and stored functions might have been evaluated. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partition\+\_\+info.\+h\item 
+partition\+\_\+info.\+cc\end{DoxyCompactItemize}

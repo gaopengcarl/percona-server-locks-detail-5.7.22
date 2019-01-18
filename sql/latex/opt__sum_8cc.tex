@@ -1,0 +1,95 @@
+\hypertarget{opt__sum_8cc}{}\section{opt\+\_\+sum.\+cc File Reference}
+\label{opt__sum_8cc}\index{opt\+\_\+sum.\+cc@{opt\+\_\+sum.\+cc}}
+{\ttfamily \#include \char`\"{}key.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+sum.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{opt__sum_8cc_a89d353b7a877388083c43aed53124034}{opt\+\_\+sum\+\_\+query}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields, \mbox{\hyperlink{classItem}{Item}} $\ast$conds)
+\item 
+bool \mbox{\hyperlink{opt__sum_8cc_acae7cc2d8de0971fd45df71329943de4}{simple\+\_\+pred}} (\mbox{\hyperlink{classItem__func}{Item\+\_\+func}} $\ast$func\+\_\+item, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, bool $\ast$inv\+\_\+order)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Optimising of M\+I\+N(), M\+A\+X() and C\+O\+U\+N\+T($\ast$) queries without \textquotesingle{}group by\textquotesingle{} clause by replacing the aggregate expression with a constant. ~\newline
+ Given a table with a compound key on columns (a,b,c), the following types of queries are optimised (assuming the table handler supports the required methods)
+
+\begin{DoxyVerb}SELECT COUNT(*) FROM t1[,t2,t3,...]
+SELECT MIN(b) FROM t1 WHERE a=const
+SELECT MAX(c) FROM t1 WHERE a=const AND b=const
+SELECT MAX(b) FROM t1 WHERE a=const AND b<const
+SELECT MIN(b) FROM t1 WHERE a=const AND b>const
+SELECT MIN(b) FROM t1 WHERE a=const AND b BETWEEN const AND const
+SELECT MAX(b) FROM t1 WHERE a=const AND b BETWEEN const AND const
+\end{DoxyVerb}
+
+
+Instead of \textquotesingle{}$<$\textquotesingle{} one can use \textquotesingle{}$<$=\textquotesingle{}, \textquotesingle{}$>$\textquotesingle{}, \textquotesingle{}$>$=\textquotesingle{} and \textquotesingle{}=\textquotesingle{} as well. Instead of \textquotesingle{}a=const\textquotesingle{} the condition \textquotesingle{}a IS N\+U\+LL\textquotesingle{} can be used.
+
+If all selected fields are replaced then we will also remove all involved tables and return the answer without any join. Thus, the following query will be replaced with a row of two constants\+: \begin{DoxyVerb}SELECT MAX(b), MIN(d) FROM t1,t2 
+  WHERE a=const AND b<const AND d>const
+\end{DoxyVerb}
+ (assuming a index for column d of table t2 is defined) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{opt__sum_8cc_a89d353b7a877388083c43aed53124034}\label{opt__sum_8cc_a89d353b7a877388083c43aed53124034}} 
+\index{opt\+\_\+sum.\+cc@{opt\+\_\+sum.\+cc}!opt\+\_\+sum\+\_\+query@{opt\+\_\+sum\+\_\+query}}
+\index{opt\+\_\+sum\+\_\+query@{opt\+\_\+sum\+\_\+query}!opt\+\_\+sum.\+cc@{opt\+\_\+sum.\+cc}}
+\subsubsection{\texorpdfstring{opt\+\_\+sum\+\_\+query()}{opt\_sum\_query()}}
+{\footnotesize\ttfamily int opt\+\_\+sum\+\_\+query (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{all\+\_\+fields,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{conds }\end{DoxyParamCaption})}
+
+Substitutes constants for some C\+O\+U\+N\+T(), M\+I\+N() and M\+A\+X() functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em tables} & list of leaves of join table tree \\
+\hline
+{\em all\+\_\+fields} & All fields to be returned \\
+\hline
+{\em conds} & W\+H\+E\+RE clause\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is only called for queries with aggregate functions and no G\+R\+O\+UP BY part. This means that the result set shall contain a single row only
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & no errors \\
+\hline
+{\em 1} & if all items were resolved \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+\+K\+E\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND} & on impossible conditions \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+...} & if a deadlock or a lock wait timeout happens, for example \\
+\hline
+{\em E\+R\+\_\+...} & e.\+g. E\+R\+\_\+\+S\+U\+B\+Q\+U\+E\+R\+Y\+\_\+\+N\+O\+\_\+1\+\_\+\+R\+OW \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{opt__sum_8cc_acae7cc2d8de0971fd45df71329943de4}\label{opt__sum_8cc_acae7cc2d8de0971fd45df71329943de4}} 
+\index{opt\+\_\+sum.\+cc@{opt\+\_\+sum.\+cc}!simple\+\_\+pred@{simple\+\_\+pred}}
+\index{simple\+\_\+pred@{simple\+\_\+pred}!opt\+\_\+sum.\+cc@{opt\+\_\+sum.\+cc}}
+\subsubsection{\texorpdfstring{simple\+\_\+pred()}{simple\_pred()}}
+{\footnotesize\ttfamily bool simple\+\_\+pred (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__func}{Item\+\_\+func}} $\ast$}]{func\+\_\+item,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{bool $\ast$}]{inv\+\_\+order }\end{DoxyParamCaption})}
+
+Test if the predicate compares a field with constants.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em func\+\_\+item} & Predicate item \\
+\hline
+\mbox{\texttt{ out}}  & {\em args} & Here we store the field followed by constants \\
+\hline
+\mbox{\texttt{ out}}  & {\em inv\+\_\+order} & Is set to 1 if the predicate is of the form \textquotesingle{}const op field\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & func\+\_\+item is a simple predicate\+: a field is compared with constants \\
+\hline
+{\em 1} & Otherwise \\
+\hline
+\end{DoxyRetVals}

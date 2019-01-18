@@ -1,0 +1,94 @@
+\hypertarget{classView__change__log__event}{}\section{View\+\_\+change\+\_\+log\+\_\+event Class Reference}
+\label{classView__change__log__event}\index{View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for View\+\_\+change\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classView__change__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classView__change__log__event_a8c88f2a6a33998e72a6ad33f10c62275}\label{classView__change__log__event_a8c88f2a6a33998e72a6ad33f10c62275}} 
+{\bfseries View\+\_\+change\+\_\+log\+\_\+event} (char $\ast$view\+\_\+id)
+\item 
+\mbox{\Hypertarget{classView__change__log__event_a8a1865a420df3a3d93534aaf33ebc0bb}\label{classView__change__log__event_a8a1865a420df3a3d93534aaf33ebc0bb}} 
+{\bfseries View\+\_\+change\+\_\+log\+\_\+event} (const char $\ast$buffer, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$descr\+\_\+event)
+\item 
+\mbox{\Hypertarget{classView__change__log__event_a5b5166a39690c13583b9b4f9b4c96672}\label{classView__change__log__event_a5b5166a39690c13583b9b4f9b4c96672}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classView__change__log__event_a4ebb7594cffdda3d8a0ffcdc8f077b42}\label{classView__change__log__event_a4ebb7594cffdda3d8a0ffcdc8f077b42}} 
+int {\bfseries pack\+\_\+info} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$protocol)
+\item 
+char $\ast$ \mbox{\hyperlink{classView__change__log__event_a40d99cf5cfd5b2637d9a880eb38bfa7e}{get\+\_\+view\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{classView__change__log__event_aba70255c225eed1e9163042ae9621554}{set\+\_\+certification\+\_\+info}} (std\+::map$<$ std\+::string, std\+::string $>$ $\ast$info)
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ $\ast$ \mbox{\hyperlink{classView__change__log__event_a2f98b589495213f0d7bbcf21938a1f7a}{get\+\_\+certification\+\_\+info}} ()
+\item 
+void \mbox{\hyperlink{classView__change__log__event_a557f9b8287dfa7169f528af3330e3e37}{set\+\_\+seq\+\_\+number}} (rpl\+\_\+gno number)
+\item 
+rpl\+\_\+gno \mbox{\hyperlink{classView__change__log__event_ac20c18e4ed6439f1cc2c28631112de2f}{get\+\_\+seq\+\_\+number}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the subclass of \mbox{\hyperlink{classView__change__log__event}{View\+\_\+change\+\_\+log\+\_\+event}} and \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} This class created the view\+\_\+change\+\_\+log\+\_\+event which is used as a marker in case a new node joins or leaves the group. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classView__change__log__event_a2f98b589495213f0d7bbcf21938a1f7a}\label{classView__change__log__event_a2f98b589495213f0d7bbcf21938a1f7a}} 
+\index{View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}!get\+\_\+certification\+\_\+info@{get\+\_\+certification\+\_\+info}}
+\index{get\+\_\+certification\+\_\+info@{get\+\_\+certification\+\_\+info}!View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+certification\+\_\+info()}{get\_certification\_info()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$$\ast$ View\+\_\+change\+\_\+log\+\_\+event\+::get\+\_\+certification\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the certification info \mbox{\Hypertarget{classView__change__log__event_ac20c18e4ed6439f1cc2c28631112de2f}\label{classView__change__log__event_ac20c18e4ed6439f1cc2c28631112de2f}} 
+\index{View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}!get\+\_\+seq\+\_\+number@{get\+\_\+seq\+\_\+number}}
+\index{get\+\_\+seq\+\_\+number@{get\+\_\+seq\+\_\+number}!View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+seq\+\_\+number()}{get\_seq\_number()}}
+{\footnotesize\ttfamily rpl\+\_\+gno View\+\_\+change\+\_\+log\+\_\+event\+::get\+\_\+seq\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the certification sequence number \mbox{\Hypertarget{classView__change__log__event_a40d99cf5cfd5b2637d9a880eb38bfa7e}\label{classView__change__log__event_a40d99cf5cfd5b2637d9a880eb38bfa7e}} 
+\index{View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}!get\+\_\+view\+\_\+id@{get\+\_\+view\+\_\+id}}
+\index{get\+\_\+view\+\_\+id@{get\+\_\+view\+\_\+id}!View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+view\+\_\+id()}{get\_view\_id()}}
+{\footnotesize\ttfamily char$\ast$ View\+\_\+change\+\_\+log\+\_\+event\+::get\+\_\+view\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the view id. \mbox{\Hypertarget{classView__change__log__event_aba70255c225eed1e9163042ae9621554}\label{classView__change__log__event_aba70255c225eed1e9163042ae9621554}} 
+\index{View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}!set\+\_\+certification\+\_\+info@{set\+\_\+certification\+\_\+info}}
+\index{set\+\_\+certification\+\_\+info@{set\+\_\+certification\+\_\+info}!View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{set\+\_\+certification\+\_\+info()}{set\_certification\_info()}}
+{\footnotesize\ttfamily void View\+\_\+change\+\_\+log\+\_\+event\+::set\+\_\+certification\+\_\+info (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::string $>$ $\ast$}]{info }\end{DoxyParamCaption})}
+
+Sets the certification info
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & the database \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classView__change__log__event_a557f9b8287dfa7169f528af3330e3e37}\label{classView__change__log__event_a557f9b8287dfa7169f528af3330e3e37}} 
+\index{View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}!set\+\_\+seq\+\_\+number@{set\+\_\+seq\+\_\+number}}
+\index{set\+\_\+seq\+\_\+number@{set\+\_\+seq\+\_\+number}!View\+\_\+change\+\_\+log\+\_\+event@{View\+\_\+change\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{set\+\_\+seq\+\_\+number()}{set\_seq\_number()}}
+{\footnotesize\ttfamily void View\+\_\+change\+\_\+log\+\_\+event\+::set\+\_\+seq\+\_\+number (\begin{DoxyParamCaption}\item[{rpl\+\_\+gno}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the certification sequence number
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the sequence number \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,728 @@
+\hypertarget{item__create_8cc}{}\section{item\+\_\+create.\+cc File Reference}
+\label{item__create_8cc}\index{item\+\_\+create.\+cc@{item\+\_\+create.\+cc}}
+
+
+Functions to create an item. Used by sql\+\_\+yac.\+yy.  
+
+
+{\ttfamily \#include \char`\"{}item\+\_\+create.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+cmpfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+geofunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+inetfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+json\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+sum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+timefunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+xmlfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+keyring\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classCreate__native__func}{Create\+\_\+native\+\_\+func}}
+\item 
+class \mbox{\hyperlink{classCreate__func__arg0}{Create\+\_\+func\+\_\+arg0}}
+\item 
+class \mbox{\hyperlink{classCreate__func__arg1}{Create\+\_\+func\+\_\+arg1}}
+\item 
+class \mbox{\hyperlink{classCreate__func__arg2}{Create\+\_\+func\+\_\+arg2}}
+\item 
+class \mbox{\hyperlink{classCreate__func__arg3}{Create\+\_\+func\+\_\+arg3}}
+\item 
+class \mbox{\hyperlink{classCreate__sp__func}{Create\+\_\+sp\+\_\+func}}
+\item 
+class \mbox{\hyperlink{classCreate__func__abs}{Create\+\_\+func\+\_\+abs}}
+\item 
+class \mbox{\hyperlink{classCreate__func__acos}{Create\+\_\+func\+\_\+acos}}
+\item 
+class \mbox{\hyperlink{classCreate__func__addtime}{Create\+\_\+func\+\_\+addtime}}
+\item 
+class \mbox{\hyperlink{classCreate__func__aes__base}{Create\+\_\+func\+\_\+aes\+\_\+base}}
+\item 
+class \mbox{\hyperlink{classCreate__func__aes__encrypt}{Create\+\_\+func\+\_\+aes\+\_\+encrypt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__aes__decrypt}{Create\+\_\+func\+\_\+aes\+\_\+decrypt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__random__bytes}{Create\+\_\+func\+\_\+random\+\_\+bytes}}
+\item 
+class \mbox{\hyperlink{classCreate__func__any__value}{Create\+\_\+func\+\_\+any\+\_\+value}}
+\item 
+class \mbox{\hyperlink{classCreate__func__area}{Create\+\_\+func\+\_\+area}}
+\item 
+class \mbox{\hyperlink{classCreate__func__area__deprecated}{Create\+\_\+func\+\_\+area\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__geojson}{Create\+\_\+func\+\_\+as\+\_\+geojson}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__wkb}{Create\+\_\+func\+\_\+as\+\_\+wkb}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__binary__deprecated}{Create\+\_\+func\+\_\+as\+\_\+binary\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__wkb__deprecated}{Create\+\_\+func\+\_\+as\+\_\+wkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__wkt}{Create\+\_\+func\+\_\+as\+\_\+wkt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__text__deprecated}{Create\+\_\+func\+\_\+as\+\_\+text\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__as__wkt__deprecated}{Create\+\_\+func\+\_\+as\+\_\+wkt\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__asin}{Create\+\_\+func\+\_\+asin}}
+\item 
+class \mbox{\hyperlink{classCreate__func__atan}{Create\+\_\+func\+\_\+atan}}
+\item 
+class \mbox{\hyperlink{classCreate__func__benchmark}{Create\+\_\+func\+\_\+benchmark}}
+\item 
+class \mbox{\hyperlink{classCreate__func__bin}{Create\+\_\+func\+\_\+bin}}
+\item 
+class \mbox{\hyperlink{classCreate__func__bit__count}{Create\+\_\+func\+\_\+bit\+\_\+count}}
+\item 
+class \mbox{\hyperlink{classCreate__func__bit__length}{Create\+\_\+func\+\_\+bit\+\_\+length}}
+\item 
+class \mbox{\hyperlink{classCreate__func__buffer__strategy}{Create\+\_\+func\+\_\+buffer\+\_\+strategy}}
+\item 
+class \mbox{\hyperlink{classCreate__func__ceiling}{Create\+\_\+func\+\_\+ceiling}}
+\item 
+class \mbox{\hyperlink{classCreate__func__centroid}{Create\+\_\+func\+\_\+centroid}}
+\item 
+class \mbox{\hyperlink{classCreate__func__centroid__deprecated}{Create\+\_\+func\+\_\+centroid\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__char__length}{Create\+\_\+func\+\_\+char\+\_\+length}}
+\item 
+class \mbox{\hyperlink{classCreate__func__coercibility}{Create\+\_\+func\+\_\+coercibility}}
+\item 
+class \mbox{\hyperlink{classCreate__func__compress}{Create\+\_\+func\+\_\+compress}}
+\item 
+class \mbox{\hyperlink{classCreate__func__concat}{Create\+\_\+func\+\_\+concat}}
+\item 
+class \mbox{\hyperlink{classCreate__func__concat__ws}{Create\+\_\+func\+\_\+concat\+\_\+ws}}
+\item 
+class \mbox{\hyperlink{classCreate__func__connection__id}{Create\+\_\+func\+\_\+connection\+\_\+id}}
+\item 
+class \mbox{\hyperlink{classCreate__func__convex__hull}{Create\+\_\+func\+\_\+convex\+\_\+hull}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__covered__by}{Create\+\_\+func\+\_\+mbr\+\_\+covered\+\_\+by}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__covers}{Create\+\_\+func\+\_\+mbr\+\_\+covers}}
+\item 
+class \mbox{\hyperlink{classCreate__func__convex__hull__deprecated}{Create\+\_\+func\+\_\+convex\+\_\+hull\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__contains}{Create\+\_\+func\+\_\+mbr\+\_\+contains}}
+\item 
+class \mbox{\hyperlink{classCreate__func__contains}{Create\+\_\+func\+\_\+contains}}
+\item 
+class \mbox{\hyperlink{classCreate__func__conv}{Create\+\_\+func\+\_\+conv}}
+\item 
+class \mbox{\hyperlink{classCreate__func__convert__tz}{Create\+\_\+func\+\_\+convert\+\_\+tz}}
+\item 
+class \mbox{\hyperlink{classCreate__func__cos}{Create\+\_\+func\+\_\+cos}}
+\item 
+class \mbox{\hyperlink{classCreate__func__cot}{Create\+\_\+func\+\_\+cot}}
+\item 
+class \mbox{\hyperlink{classCreate__func__crc32}{Create\+\_\+func\+\_\+crc32}}
+\item 
+class \mbox{\hyperlink{classCreate__func__crosses}{Create\+\_\+func\+\_\+crosses}}
+\item 
+class \mbox{\hyperlink{classCreate__func__crosses__deprecated}{Create\+\_\+func\+\_\+crosses\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__date__format}{Create\+\_\+func\+\_\+date\+\_\+format}}
+\item 
+class \mbox{\hyperlink{classCreate__func__datediff}{Create\+\_\+func\+\_\+datediff}}
+\item 
+class \mbox{\hyperlink{classCreate__func__dayname}{Create\+\_\+func\+\_\+dayname}}
+\item 
+class \mbox{\hyperlink{classCreate__func__dayofmonth}{Create\+\_\+func\+\_\+dayofmonth}}
+\item 
+class \mbox{\hyperlink{classCreate__func__dayofweek}{Create\+\_\+func\+\_\+dayofweek}}
+\item 
+class \mbox{\hyperlink{classCreate__func__dayofyear}{Create\+\_\+func\+\_\+dayofyear}}
+\item 
+class \mbox{\hyperlink{classCreate__func__decode}{Create\+\_\+func\+\_\+decode}}
+\item 
+class \mbox{\hyperlink{classCreate__func__degrees}{Create\+\_\+func\+\_\+degrees}}
+\item 
+class \mbox{\hyperlink{classCreate__func__des__decrypt}{Create\+\_\+func\+\_\+des\+\_\+decrypt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__des__encrypt}{Create\+\_\+func\+\_\+des\+\_\+encrypt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__dimension}{Create\+\_\+func\+\_\+dimension}}
+\item 
+class \mbox{\hyperlink{classCreate__func__dimension__deprecated}{Create\+\_\+func\+\_\+dimension\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__disjoint}{Create\+\_\+func\+\_\+mbr\+\_\+disjoint}}
+\item 
+class \mbox{\hyperlink{classCreate__func__disjoint}{Create\+\_\+func\+\_\+disjoint}}
+\item 
+class \mbox{\hyperlink{classCreate__func__distance}{Create\+\_\+func\+\_\+distance}}
+\item 
+class \mbox{\hyperlink{classCreate__func__distance__sphere}{Create\+\_\+func\+\_\+distance\+\_\+sphere}}
+\item 
+class \mbox{\hyperlink{classCreate__func__distance__deprecated}{Create\+\_\+func\+\_\+distance\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__elt}{Create\+\_\+func\+\_\+elt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__encode}{Create\+\_\+func\+\_\+encode}}
+\item 
+class \mbox{\hyperlink{classCreate__func__encrypt}{Create\+\_\+func\+\_\+encrypt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__endpoint}{Create\+\_\+func\+\_\+endpoint}}
+\item 
+class \mbox{\hyperlink{classCreate__func__endpoint__deprecated}{Create\+\_\+func\+\_\+endpoint\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__envelope}{Create\+\_\+func\+\_\+envelope}}
+\item 
+class \mbox{\hyperlink{classCreate__func__envelope__deprecated}{Create\+\_\+func\+\_\+envelope\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__equals}{Create\+\_\+func\+\_\+mbr\+\_\+equals}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__equal__deprecated}{Create\+\_\+func\+\_\+mbr\+\_\+equal\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__equals__deprecated}{Create\+\_\+func\+\_\+equals\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__equals}{Create\+\_\+func\+\_\+equals}}
+\item 
+class \mbox{\hyperlink{classCreate__func__exp}{Create\+\_\+func\+\_\+exp}}
+\item 
+class \mbox{\hyperlink{classCreate__func__export__set}{Create\+\_\+func\+\_\+export\+\_\+set}}
+\item 
+class \mbox{\hyperlink{classCreate__func__exteriorring}{Create\+\_\+func\+\_\+exteriorring}}
+\item 
+class \mbox{\hyperlink{classCreate__func__exteriorring__deprecated}{Create\+\_\+func\+\_\+exteriorring\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__field}{Create\+\_\+func\+\_\+field}}
+\item 
+class \mbox{\hyperlink{classCreate__func__find__in__set}{Create\+\_\+func\+\_\+find\+\_\+in\+\_\+set}}
+\item 
+class \mbox{\hyperlink{classCreate__func__floor}{Create\+\_\+func\+\_\+floor}}
+\item 
+class \mbox{\hyperlink{classCreate__func__found__rows}{Create\+\_\+func\+\_\+found\+\_\+rows}}
+\item 
+class \mbox{\hyperlink{classCreate__func__from__base64}{Create\+\_\+func\+\_\+from\+\_\+base64}}
+\item 
+class \mbox{\hyperlink{classCreate__func__from__days}{Create\+\_\+func\+\_\+from\+\_\+days}}
+\item 
+class \mbox{\hyperlink{classCreate__func__from__unixtime}{Create\+\_\+func\+\_\+from\+\_\+unixtime}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geohash}{Create\+\_\+func\+\_\+geohash}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometry__from__text}{Create\+\_\+func\+\_\+geometry\+\_\+from\+\_\+text}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geomcollfromtext__deprecated}{Create\+\_\+func\+\_\+geomcollfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometrycollectionfromtext__deprecated}{Create\+\_\+func\+\_\+geometrycollectionfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometryfromtext__deprecated}{Create\+\_\+func\+\_\+geometryfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geomfromtext__deprecated}{Create\+\_\+func\+\_\+geomfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__linefromtext__deprecated}{Create\+\_\+func\+\_\+linefromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__linestringfromtext__deprecated}{Create\+\_\+func\+\_\+linestringfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mlinefromtext__deprecated}{Create\+\_\+func\+\_\+mlinefromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mpointfromtext__deprecated}{Create\+\_\+func\+\_\+mpointfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mpolyfromtext__deprecated}{Create\+\_\+func\+\_\+mpolyfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__multilinestringfromtext__deprecated}{Create\+\_\+func\+\_\+multilinestringfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__multipointfromtext__deprecated}{Create\+\_\+func\+\_\+multipointfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__multipolygonfromtext__deprecated}{Create\+\_\+func\+\_\+multipolygonfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pointfromtext__deprecated}{Create\+\_\+func\+\_\+pointfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__polyfromtext__deprecated}{Create\+\_\+func\+\_\+polyfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__polygonfromtext__deprecated}{Create\+\_\+func\+\_\+polygonfromtext\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometry__from__wkb}{Create\+\_\+func\+\_\+geometry\+\_\+from\+\_\+wkb}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geomcollfromwkb__deprecated}{Create\+\_\+func\+\_\+geomcollfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometrycollectionfromwkb__deprecated}{Create\+\_\+func\+\_\+geometrycollectionfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometryfromwkb__deprecated}{Create\+\_\+func\+\_\+geometryfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geomfromwkb__deprecated}{Create\+\_\+func\+\_\+geomfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__linefromwkb__deprecated}{Create\+\_\+func\+\_\+linefromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__linestringfromwkb__deprecated}{Create\+\_\+func\+\_\+linestringfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mlinefromwkb__deprecated}{Create\+\_\+func\+\_\+mlinefromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mpointfromwkb__deprecated}{Create\+\_\+func\+\_\+mpointfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mpolyfromwkb__deprecated}{Create\+\_\+func\+\_\+mpolyfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__multilinestringfromwkb__deprecated}{Create\+\_\+func\+\_\+multilinestringfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__multipointfromwkb__deprecated}{Create\+\_\+func\+\_\+multipointfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__multipolygonfromwkb__deprecated}{Create\+\_\+func\+\_\+multipolygonfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pointfromwkb__deprecated}{Create\+\_\+func\+\_\+pointfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__polyfromwkb__deprecated}{Create\+\_\+func\+\_\+polyfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__polygonfromwkb__deprecated}{Create\+\_\+func\+\_\+polygonfromwkb\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometry__type}{Create\+\_\+func\+\_\+geometry\+\_\+type}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometry__type__deprecated}{Create\+\_\+func\+\_\+geometry\+\_\+type\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometryn}{Create\+\_\+func\+\_\+geometryn}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geometryn__deprecated}{Create\+\_\+func\+\_\+geometryn\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__geomfromgeojson}{Create\+\_\+func\+\_\+geomfromgeojson}}
+\item 
+class \mbox{\hyperlink{classCreate__func__get__lock}{Create\+\_\+func\+\_\+get\+\_\+lock}}
+\item 
+class \mbox{\hyperlink{classCreate__func__glength}{Create\+\_\+func\+\_\+glength}}
+\item 
+class \mbox{\hyperlink{classCreate__func__glength__deprecated}{Create\+\_\+func\+\_\+glength\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__greatest}{Create\+\_\+func\+\_\+greatest}}
+\item 
+class \mbox{\hyperlink{classCreate__func__gtid__subtract}{Create\+\_\+func\+\_\+gtid\+\_\+subtract}}
+\item 
+class \mbox{\hyperlink{classCreate__func__gtid__subset}{Create\+\_\+func\+\_\+gtid\+\_\+subset}}
+\item 
+class \mbox{\hyperlink{classCreate__func__hex}{Create\+\_\+func\+\_\+hex}}
+\item 
+class \mbox{\hyperlink{classCreate__func__ifnull}{Create\+\_\+func\+\_\+ifnull}}
+\item 
+class \mbox{\hyperlink{classCreate__func__inet__ntoa}{Create\+\_\+func\+\_\+inet\+\_\+ntoa}}
+\item 
+class \mbox{\hyperlink{classCreate__func__inet__aton}{Create\+\_\+func\+\_\+inet\+\_\+aton}}
+\item 
+class \mbox{\hyperlink{classCreate__func__inet6__aton}{Create\+\_\+func\+\_\+inet6\+\_\+aton}}
+\item 
+class \mbox{\hyperlink{classCreate__func__inet6__ntoa}{Create\+\_\+func\+\_\+inet6\+\_\+ntoa}}
+\item 
+class \mbox{\hyperlink{classCreate__func__is__ipv4}{Create\+\_\+func\+\_\+is\+\_\+ipv4}}
+\item 
+class \mbox{\hyperlink{classCreate__func__is__ipv6}{Create\+\_\+func\+\_\+is\+\_\+ipv6}}
+\item 
+class \mbox{\hyperlink{classCreate__func__rotate__system__key}{Create\+\_\+func\+\_\+rotate\+\_\+system\+\_\+key}}
+\item 
+class \mbox{\hyperlink{classCreate__func__is__ipv4__compat}{Create\+\_\+func\+\_\+is\+\_\+ipv4\+\_\+compat}}
+\item 
+class \mbox{\hyperlink{classCreate__func__is__ipv4__mapped}{Create\+\_\+func\+\_\+is\+\_\+ipv4\+\_\+mapped}}
+\item 
+class \mbox{\hyperlink{classCreate__func__instr}{Create\+\_\+func\+\_\+instr}}
+\item 
+class \mbox{\hyperlink{classCreate__func__interiorringn}{Create\+\_\+func\+\_\+interiorringn}}
+\item 
+class \mbox{\hyperlink{classCreate__func__interiorringn__deprecated}{Create\+\_\+func\+\_\+interiorringn\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__intersects}{Create\+\_\+func\+\_\+mbr\+\_\+intersects}}
+\item 
+class \mbox{\hyperlink{classCreate__func__intersects__deprecated}{Create\+\_\+func\+\_\+intersects\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__intersects}{Create\+\_\+func\+\_\+intersects}}
+\item 
+class \mbox{\hyperlink{classCreate__func__intersection}{Create\+\_\+func\+\_\+intersection}}
+\item 
+class \mbox{\hyperlink{classCreate__func__difference}{Create\+\_\+func\+\_\+difference}}
+\item 
+class \mbox{\hyperlink{classCreate__func__union}{Create\+\_\+func\+\_\+union}}
+\item 
+class \mbox{\hyperlink{classCreate__func__symdifference}{Create\+\_\+func\+\_\+symdifference}}
+\item 
+class \mbox{\hyperlink{classCreate__func__buffer}{Create\+\_\+func\+\_\+buffer}}
+\item 
+class \mbox{\hyperlink{classCreate__func__buffer__deprecated}{Create\+\_\+func\+\_\+buffer\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__is__free__lock}{Create\+\_\+func\+\_\+is\+\_\+free\+\_\+lock}}
+\item 
+class \mbox{\hyperlink{classCreate__func__is__used__lock}{Create\+\_\+func\+\_\+is\+\_\+used\+\_\+lock}}
+\item 
+class \mbox{\hyperlink{classCreate__func__isclosed}{Create\+\_\+func\+\_\+isclosed}}
+\item 
+class \mbox{\hyperlink{classCreate__func__isclosed__deprecated}{Create\+\_\+func\+\_\+isclosed\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__isempty}{Create\+\_\+func\+\_\+isempty}}
+\item 
+class \mbox{\hyperlink{classCreate__func__isempty__deprecated}{Create\+\_\+func\+\_\+isempty\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__isnull}{Create\+\_\+func\+\_\+isnull}}
+\item 
+class \mbox{\hyperlink{classCreate__func__issimple}{Create\+\_\+func\+\_\+issimple}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__valid}{Create\+\_\+func\+\_\+json\+\_\+valid}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__contains}{Create\+\_\+func\+\_\+json\+\_\+contains}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__contains__path}{Create\+\_\+func\+\_\+json\+\_\+contains\+\_\+path}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__length}{Create\+\_\+func\+\_\+json\+\_\+length}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__depth}{Create\+\_\+func\+\_\+json\+\_\+depth}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__pretty}{Create\+\_\+func\+\_\+json\+\_\+pretty}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__type}{Create\+\_\+func\+\_\+json\+\_\+type}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__keys}{Create\+\_\+func\+\_\+json\+\_\+keys}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__extract}{Create\+\_\+func\+\_\+json\+\_\+extract}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__array__append}{Create\+\_\+func\+\_\+json\+\_\+array\+\_\+append}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__insert}{Create\+\_\+func\+\_\+json\+\_\+insert}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__array__insert}{Create\+\_\+func\+\_\+json\+\_\+array\+\_\+insert}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__row__object}{Create\+\_\+func\+\_\+json\+\_\+row\+\_\+object}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__search}{Create\+\_\+func\+\_\+json\+\_\+search}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__set}{Create\+\_\+func\+\_\+json\+\_\+set}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__replace}{Create\+\_\+func\+\_\+json\+\_\+replace}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__array}{Create\+\_\+func\+\_\+json\+\_\+array}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__remove}{Create\+\_\+func\+\_\+json\+\_\+remove}}
+\item 
+class \mbox{\hyperlink{classCreate__func__isvalid}{Create\+\_\+func\+\_\+isvalid}}
+\item 
+class \mbox{\hyperlink{classCreate__func__validate}{Create\+\_\+func\+\_\+validate}}
+\item 
+class \mbox{\hyperlink{classCreate__func__issimple__deprecated}{Create\+\_\+func\+\_\+issimple\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__merge__patch}{Create\+\_\+func\+\_\+json\+\_\+merge\+\_\+patch}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__merge__preserve}{Create\+\_\+func\+\_\+json\+\_\+merge\+\_\+preserve}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__merge}{Create\+\_\+func\+\_\+json\+\_\+merge}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__quote}{Create\+\_\+func\+\_\+json\+\_\+quote}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__storage__size}{Create\+\_\+func\+\_\+json\+\_\+storage\+\_\+size}}
+\item 
+class \mbox{\hyperlink{classCreate__func__json__unquote}{Create\+\_\+func\+\_\+json\+\_\+unquote}}
+\item 
+class \mbox{\hyperlink{classCreate__func__latfromgeohash}{Create\+\_\+func\+\_\+latfromgeohash}}
+\item 
+class \mbox{\hyperlink{classCreate__func__longfromgeohash}{Create\+\_\+func\+\_\+longfromgeohash}}
+\item 
+class \mbox{\hyperlink{classCreate__func__last__day}{Create\+\_\+func\+\_\+last\+\_\+day}}
+\item 
+class \mbox{\hyperlink{classCreate__func__last__insert__id}{Create\+\_\+func\+\_\+last\+\_\+insert\+\_\+id}}
+\item 
+class \mbox{\hyperlink{classCreate__func__lower}{Create\+\_\+func\+\_\+lower}}
+\item 
+class \mbox{\hyperlink{classCreate__func__least}{Create\+\_\+func\+\_\+least}}
+\item 
+class \mbox{\hyperlink{classCreate__func__length}{Create\+\_\+func\+\_\+length}}
+\item 
+class \mbox{\hyperlink{classCreate__func__like__range__min}{Create\+\_\+func\+\_\+like\+\_\+range\+\_\+min}}
+\item 
+class \mbox{\hyperlink{classCreate__func__like__range__max}{Create\+\_\+func\+\_\+like\+\_\+range\+\_\+max}}
+\item 
+class \mbox{\hyperlink{classCreate__func__ln}{Create\+\_\+func\+\_\+ln}}
+\item 
+class \mbox{\hyperlink{classCreate__func__load__file}{Create\+\_\+func\+\_\+load\+\_\+file}}
+\item 
+class \mbox{\hyperlink{classCreate__func__locate}{Create\+\_\+func\+\_\+locate}}
+\item 
+class \mbox{\hyperlink{classCreate__func__log}{Create\+\_\+func\+\_\+log}}
+\item 
+class \mbox{\hyperlink{classCreate__func__log10}{Create\+\_\+func\+\_\+log10}}
+\item 
+class \mbox{\hyperlink{classCreate__func__log2}{Create\+\_\+func\+\_\+log2}}
+\item 
+class \mbox{\hyperlink{classCreate__func__lpad}{Create\+\_\+func\+\_\+lpad}}
+\item 
+class \mbox{\hyperlink{classCreate__func__ltrim}{Create\+\_\+func\+\_\+ltrim}}
+\item 
+class \mbox{\hyperlink{classCreate__func__makedate}{Create\+\_\+func\+\_\+makedate}}
+\item 
+class \mbox{\hyperlink{classCreate__func__make__envelope}{Create\+\_\+func\+\_\+make\+\_\+envelope}}
+\item 
+class \mbox{\hyperlink{classCreate__func__maketime}{Create\+\_\+func\+\_\+maketime}}
+\item 
+class \mbox{\hyperlink{classCreate__func__make__set}{Create\+\_\+func\+\_\+make\+\_\+set}}
+\item 
+class \mbox{\hyperlink{classCreate__func__master__pos__wait}{Create\+\_\+func\+\_\+master\+\_\+pos\+\_\+wait}}
+\item 
+class \mbox{\hyperlink{classCreate__func__executed__gtid__set__wait}{Create\+\_\+func\+\_\+executed\+\_\+gtid\+\_\+set\+\_\+wait}}
+\item 
+class \mbox{\hyperlink{classCreate__func__master__gtid__set__wait}{Create\+\_\+func\+\_\+master\+\_\+gtid\+\_\+set\+\_\+wait}}
+\item 
+class \mbox{\hyperlink{classCreate__func__md5}{Create\+\_\+func\+\_\+md5}}
+\item 
+class \mbox{\hyperlink{classCreate__func__monthname}{Create\+\_\+func\+\_\+monthname}}
+\item 
+class \mbox{\hyperlink{classCreate__func__name__const}{Create\+\_\+func\+\_\+name\+\_\+const}}
+\item 
+class \mbox{\hyperlink{classCreate__func__nullif}{Create\+\_\+func\+\_\+nullif}}
+\item 
+class \mbox{\hyperlink{classCreate__func__numgeometries}{Create\+\_\+func\+\_\+numgeometries}}
+\item 
+class \mbox{\hyperlink{classCreate__func__numgeometries__deprecated}{Create\+\_\+func\+\_\+numgeometries\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__numinteriorring}{Create\+\_\+func\+\_\+numinteriorring}}
+\item 
+class \mbox{\hyperlink{classCreate__func__numinteriorring__deprecated}{Create\+\_\+func\+\_\+numinteriorring\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__numpoints}{Create\+\_\+func\+\_\+numpoints}}
+\item 
+class \mbox{\hyperlink{classCreate__func__numpoints__deprecated}{Create\+\_\+func\+\_\+numpoints\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__oct}{Create\+\_\+func\+\_\+oct}}
+\item 
+class \mbox{\hyperlink{classCreate__func__ord}{Create\+\_\+func\+\_\+ord}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__overlaps}{Create\+\_\+func\+\_\+mbr\+\_\+overlaps}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__overlaps__deprecated}{Create\+\_\+func\+\_\+mbr\+\_\+overlaps\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__overlaps}{Create\+\_\+func\+\_\+overlaps}}
+\item 
+class \mbox{\hyperlink{classCreate__func__period__add}{Create\+\_\+func\+\_\+period\+\_\+add}}
+\item 
+class \mbox{\hyperlink{classCreate__func__period__diff}{Create\+\_\+func\+\_\+period\+\_\+diff}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pi}{Create\+\_\+func\+\_\+pi}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pointfromgeohash}{Create\+\_\+func\+\_\+pointfromgeohash}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pointn}{Create\+\_\+func\+\_\+pointn}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pointn__deprecated}{Create\+\_\+func\+\_\+pointn\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__pow}{Create\+\_\+func\+\_\+pow}}
+\item 
+class \mbox{\hyperlink{classCreate__func__quote}{Create\+\_\+func\+\_\+quote}}
+\item 
+class \mbox{\hyperlink{classCreate__func__radians}{Create\+\_\+func\+\_\+radians}}
+\item 
+class \mbox{\hyperlink{classCreate__func__rand}{Create\+\_\+func\+\_\+rand}}
+\item 
+class \mbox{\hyperlink{classCreate__func__release__all__locks}{Create\+\_\+func\+\_\+release\+\_\+all\+\_\+locks}}
+\item 
+class \mbox{\hyperlink{classCreate__func__release__lock}{Create\+\_\+func\+\_\+release\+\_\+lock}}
+\item 
+class \mbox{\hyperlink{classCreate__func__reverse}{Create\+\_\+func\+\_\+reverse}}
+\item 
+class \mbox{\hyperlink{classCreate__func__round}{Create\+\_\+func\+\_\+round}}
+\item 
+class \mbox{\hyperlink{classCreate__func__rpad}{Create\+\_\+func\+\_\+rpad}}
+\item 
+class \mbox{\hyperlink{classCreate__func__rtrim}{Create\+\_\+func\+\_\+rtrim}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sec__to__time}{Create\+\_\+func\+\_\+sec\+\_\+to\+\_\+time}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sha}{Create\+\_\+func\+\_\+sha}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sha2}{Create\+\_\+func\+\_\+sha2}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sign}{Create\+\_\+func\+\_\+sign}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sin}{Create\+\_\+func\+\_\+sin}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sleep}{Create\+\_\+func\+\_\+sleep}}
+\item 
+class \mbox{\hyperlink{classCreate__func__soundex}{Create\+\_\+func\+\_\+soundex}}
+\item 
+class \mbox{\hyperlink{classCreate__func__space}{Create\+\_\+func\+\_\+space}}
+\item 
+class \mbox{\hyperlink{classCreate__func__sqrt}{Create\+\_\+func\+\_\+sqrt}}
+\item 
+class \mbox{\hyperlink{classCreate__func__simplify}{Create\+\_\+func\+\_\+simplify}}
+\item 
+class \mbox{\hyperlink{classCreate__func__srid}{Create\+\_\+func\+\_\+srid}}
+\item 
+class \mbox{\hyperlink{classCreate__func__srid__deprecated}{Create\+\_\+func\+\_\+srid\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__startpoint}{Create\+\_\+func\+\_\+startpoint}}
+\item 
+class \mbox{\hyperlink{classCreate__func__startpoint__deprecated}{Create\+\_\+func\+\_\+startpoint\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__str__to__date}{Create\+\_\+func\+\_\+str\+\_\+to\+\_\+date}}
+\item 
+class \mbox{\hyperlink{classCreate__func__strcmp}{Create\+\_\+func\+\_\+strcmp}}
+\item 
+class \mbox{\hyperlink{classCreate__func__substr__index}{Create\+\_\+func\+\_\+substr\+\_\+index}}
+\item 
+class \mbox{\hyperlink{classCreate__func__subtime}{Create\+\_\+func\+\_\+subtime}}
+\item 
+class \mbox{\hyperlink{classCreate__func__tan}{Create\+\_\+func\+\_\+tan}}
+\item 
+class \mbox{\hyperlink{classCreate__func__time__format}{Create\+\_\+func\+\_\+time\+\_\+format}}
+\item 
+class \mbox{\hyperlink{classCreate__func__time__to__sec}{Create\+\_\+func\+\_\+time\+\_\+to\+\_\+sec}}
+\item 
+class \mbox{\hyperlink{classCreate__func__timediff}{Create\+\_\+func\+\_\+timediff}}
+\item 
+class \mbox{\hyperlink{classCreate__func__to__base64}{Create\+\_\+func\+\_\+to\+\_\+base64}}
+\item 
+class \mbox{\hyperlink{classCreate__func__to__days}{Create\+\_\+func\+\_\+to\+\_\+days}}
+\item 
+class \mbox{\hyperlink{classCreate__func__to__seconds}{Create\+\_\+func\+\_\+to\+\_\+seconds}}
+\item 
+class \mbox{\hyperlink{classCreate__func__touches}{Create\+\_\+func\+\_\+touches}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__touches}{Create\+\_\+func\+\_\+mbr\+\_\+touches}}
+\item 
+class \mbox{\hyperlink{classCreate__func__touches__deprecated}{Create\+\_\+func\+\_\+touches\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__upper}{Create\+\_\+func\+\_\+upper}}
+\item 
+class \mbox{\hyperlink{classCreate__func__uncompress}{Create\+\_\+func\+\_\+uncompress}}
+\item 
+class \mbox{\hyperlink{classCreate__func__uncompressed__length}{Create\+\_\+func\+\_\+uncompressed\+\_\+length}}
+\item 
+class \mbox{\hyperlink{classCreate__func__unhex}{Create\+\_\+func\+\_\+unhex}}
+\item 
+class \mbox{\hyperlink{classCreate__func__unix__timestamp}{Create\+\_\+func\+\_\+unix\+\_\+timestamp}}
+\item 
+class \mbox{\hyperlink{classCreate__func__uuid}{Create\+\_\+func\+\_\+uuid}}
+\item 
+class \mbox{\hyperlink{classCreate__func__uuid__short}{Create\+\_\+func\+\_\+uuid\+\_\+short}}
+\item 
+class \mbox{\hyperlink{classCreate__func__validate__password__strength}{Create\+\_\+func\+\_\+validate\+\_\+password\+\_\+strength}}
+\item 
+class \mbox{\hyperlink{classCreate__func__version}{Create\+\_\+func\+\_\+version}}
+\item 
+class \mbox{\hyperlink{classCreate__func__weekday}{Create\+\_\+func\+\_\+weekday}}
+\item 
+class \mbox{\hyperlink{classCreate__func__weekofyear}{Create\+\_\+func\+\_\+weekofyear}}
+\item 
+class \mbox{\hyperlink{classCreate__func__mbr__within}{Create\+\_\+func\+\_\+mbr\+\_\+within}}
+\item 
+class \mbox{\hyperlink{classCreate__func__within__deprecated}{Create\+\_\+func\+\_\+within\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__within}{Create\+\_\+func\+\_\+within}}
+\item 
+class \mbox{\hyperlink{classCreate__func__x}{Create\+\_\+func\+\_\+x}}
+\item 
+class \mbox{\hyperlink{classCreate__func__x__deprecated}{Create\+\_\+func\+\_\+x\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__xml__extractvalue}{Create\+\_\+func\+\_\+xml\+\_\+extractvalue}}
+\item 
+class \mbox{\hyperlink{classCreate__func__xml__update}{Create\+\_\+func\+\_\+xml\+\_\+update}}
+\item 
+class \mbox{\hyperlink{classCreate__func__y}{Create\+\_\+func\+\_\+y}}
+\item 
+class \mbox{\hyperlink{classCreate__func__y__deprecated}{Create\+\_\+func\+\_\+y\+\_\+deprecated}}
+\item 
+class \mbox{\hyperlink{classCreate__func__year__week}{Create\+\_\+func\+\_\+year\+\_\+week}}
+\item 
+class \mbox{\hyperlink{classCreate__func__disjoint__deprecated}{Create\+\_\+func\+\_\+disjoint\+\_\+deprecated}}
+\item 
+struct \mbox{\hyperlink{structNative__func__registry}{Native\+\_\+func\+\_\+registry}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__create_8cc_a0af6892bcb02c1a6a0bd550fb78eaa93}\label{item__create_8cc_a0af6892bcb02c1a6a0bd550fb78eaa93}} 
+\#define {\bfseries B\+U\+I\+L\+D\+ER}(F)~\& F\+::s\+\_\+singleton
+\item 
+\mbox{\Hypertarget{item__create_8cc_a004cb74556da2c402b651bc4355bfe86}\label{item__create_8cc_a004cb74556da2c402b651bc4355bfe86}} 
+\#define {\bfseries G\+E\+O\+M\+\_\+\+B\+U\+I\+L\+D\+ER}(F)~\& F\+::s\+\_\+singleton
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__create_8cc_a483d4d1295112793513de5852c4c008c}\label{item__create_8cc_a483d4d1295112793513de5852c4c008c}} 
+uchar $\ast$ {\bfseries get\+\_\+native\+\_\+fct\+\_\+hash\+\_\+key} (const uchar $\ast$buff, size\+\_\+t $\ast$length, my\+\_\+bool)
+\item 
+\mbox{\Hypertarget{item__create_8cc_a31f0751817601aa7237290e0d515685a}\label{item__create_8cc_a31f0751817601aa7237290e0d515685a}} 
+int {\bfseries item\+\_\+create\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{item__create_8cc_ab5518aa1e5fd6d092f889999fcf27df8}\label{item__create_8cc_ab5518aa1e5fd6d092f889999fcf27df8}} 
+void {\bfseries item\+\_\+create\+\_\+cleanup} ()
+\item 
+\mbox{\hyperlink{classCreate__func}{Create\+\_\+func}} $\ast$ \mbox{\hyperlink{item__create_8cc_a23c7451318d692529b5ce98d2166b1dc}{find\+\_\+native\+\_\+function\+\_\+builder}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+\mbox{\hyperlink{classCreate__qfunc}{Create\+\_\+qfunc}} $\ast$ \mbox{\hyperlink{item__create_8cc_a23872f1edd639ad04528d876e22cc8e6}{find\+\_\+qualified\+\_\+function\+\_\+builder}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{item__create_8cc_a6ac9177644bcd5f9d8f101493a003a19}\label{item__create_8cc_a6ac9177644bcd5f9d8f101493a003a19}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries create\+\_\+func\+\_\+cast} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, Cast\+\_\+target cast\+\_\+target, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{item__create_8cc_a50bcab51fb7f7a0f93f7466eab4fcc1b}{create\+\_\+func\+\_\+cast}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, const Cast\+\_\+type $\ast$type)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{item__create_8cc_ab4f31f3ddcc2159d55945496aa986032}{create\+\_\+temporal\+\_\+literal}} (T\+HD $\ast$thd, const char $\ast$str, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, enum\+\_\+field\+\_\+types type, bool send\+\_\+error)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to create an item. Used by sql\+\_\+yac.\+yy. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__create_8cc_a50bcab51fb7f7a0f93f7466eab4fcc1b}\label{item__create_8cc_a50bcab51fb7f7a0f93f7466eab4fcc1b}} 
+\index{item\+\_\+create.\+cc@{item\+\_\+create.\+cc}!create\+\_\+func\+\_\+cast@{create\+\_\+func\+\_\+cast}}
+\index{create\+\_\+func\+\_\+cast@{create\+\_\+func\+\_\+cast}!item\+\_\+create.\+cc@{item\+\_\+create.\+cc}}
+\subsubsection{\texorpdfstring{create\+\_\+func\+\_\+cast()}{create\_func\_cast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ create\+\_\+func\+\_\+cast (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&}]{pos,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{a,  }\item[{const Cast\+\_\+type $\ast$}]{type }\end{DoxyParamCaption})}
+
+Builder for cast expressions. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em pos} & Location of casting expression \\
+\hline
+{\em a} & The item to cast \\
+\hline
+{\em type} & the type casted into \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item__create_8cc_ab4f31f3ddcc2159d55945496aa986032}\label{item__create_8cc_ab4f31f3ddcc2159d55945496aa986032}} 
+\index{item\+\_\+create.\+cc@{item\+\_\+create.\+cc}!create\+\_\+temporal\+\_\+literal@{create\+\_\+temporal\+\_\+literal}}
+\index{create\+\_\+temporal\+\_\+literal@{create\+\_\+temporal\+\_\+literal}!item\+\_\+create.\+cc@{item\+\_\+create.\+cc}}
+\subsubsection{\texorpdfstring{create\+\_\+temporal\+\_\+literal()}{create\_temporal\_literal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ create\+\_\+temporal\+\_\+literal (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs,  }\item[{enum\+\_\+field\+\_\+types}]{type,  }\item[{bool}]{send\+\_\+error }\end{DoxyParamCaption})}
+
+Builder for datetime literals\+: T\+I\+ME\textquotesingle{}00\+:00\+:00\textquotesingle{}, D\+A\+TE\textquotesingle{}2001-\/01-\/01\textquotesingle{}, T\+I\+M\+E\+S\+T\+A\+MP\textquotesingle{}2001-\/01-\/01 00\+:00\+:00\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em str} & Character literal \\
+\hline
+{\em length} & Length of str \\
+\hline
+{\em type} & Type of literal (T\+I\+ME, D\+A\+TE or D\+A\+T\+E\+T\+I\+ME) \\
+\hline
+{\em send\+\_\+error} & Whether to generate an error on failure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item__create_8cc_a23c7451318d692529b5ce98d2166b1dc}\label{item__create_8cc_a23c7451318d692529b5ce98d2166b1dc}} 
+\index{item\+\_\+create.\+cc@{item\+\_\+create.\+cc}!find\+\_\+native\+\_\+function\+\_\+builder@{find\+\_\+native\+\_\+function\+\_\+builder}}
+\index{find\+\_\+native\+\_\+function\+\_\+builder@{find\+\_\+native\+\_\+function\+\_\+builder}!item\+\_\+create.\+cc@{item\+\_\+create.\+cc}}
+\subsubsection{\texorpdfstring{find\+\_\+native\+\_\+function\+\_\+builder()}{find\_native\_function\_builder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCreate__func}{Create\+\_\+func}}$\ast$ find\+\_\+native\+\_\+function\+\_\+builder (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name }\end{DoxyParamCaption})}
+
+Find the native function builder associated with a given function name. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+{\em name} & The native function name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The native function builder associated with the name, or N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__create_8cc_a23872f1edd639ad04528d876e22cc8e6}\label{item__create_8cc_a23872f1edd639ad04528d876e22cc8e6}} 
+\index{item\+\_\+create.\+cc@{item\+\_\+create.\+cc}!find\+\_\+qualified\+\_\+function\+\_\+builder@{find\+\_\+qualified\+\_\+function\+\_\+builder}}
+\index{find\+\_\+qualified\+\_\+function\+\_\+builder@{find\+\_\+qualified\+\_\+function\+\_\+builder}!item\+\_\+create.\+cc@{item\+\_\+create.\+cc}}
+\subsubsection{\texorpdfstring{find\+\_\+qualified\+\_\+function\+\_\+builder()}{find\_qualified\_function\_builder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCreate__qfunc}{Create\+\_\+qfunc}}$\ast$ find\+\_\+qualified\+\_\+function\+\_\+builder (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Find the function builder for qualified functions. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A function builder for qualified functions 
+\end{DoxyReturn}

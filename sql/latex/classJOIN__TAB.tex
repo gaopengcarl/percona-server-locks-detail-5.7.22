@@ -1,0 +1,207 @@
+\hypertarget{classJOIN__TAB}{}\section{J\+O\+I\+N\+\_\+\+T\+AB Class Reference}
+\label{classJOIN__TAB}\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+
+
+{\ttfamily \#include $<$sql\+\_\+select.\+h$>$}
+
+Inheritance diagram for J\+O\+I\+N\+\_\+\+T\+AB\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJOIN__TAB}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_aa0a217df3532c76cee211d7e65dd86d0}\label{classJOIN__TAB_aa0a217df3532c76cee211d7e65dd86d0}} 
+void {\bfseries set\+\_\+table} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$t)
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a5ceb1154cde60c27cf304af914f6b5ba}\label{classJOIN__TAB_a5ceb1154cde60c27cf304af914f6b5ba}} 
+void \mbox{\hyperlink{classJOIN__TAB_a5ceb1154cde60c27cf304af914f6b5ba}{init\+\_\+join\+\_\+cond\+\_\+ref}} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tl)
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the join condition of \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classJOIN__TAB_a7134d17d1d7755261a38029d07d98579}{join\+\_\+cond}} () const
+\item 
+void \mbox{\hyperlink{classJOIN__TAB_a883f00d9645b34b6a19785d8833013ff}{set\+\_\+join\+\_\+cond}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond)
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a2438f83c84c9dbc9dcf7883c2939bca9}\label{classJOIN__TAB_a2438f83c84c9dbc9dcf7883c2939bca9}} 
+void \mbox{\hyperlink{classJOIN__TAB_a2438f83c84c9dbc9dcf7883c2939bca9}{set\+\_\+condition}} (\mbox{\hyperlink{classItem}{Item}} $\ast$to)
+\begin{DoxyCompactList}\small\item\em Set the combined condition for a table (may be performed several times) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJOIN__TAB_aef0b7fbf877c33e3d79c96c565d13bbf}\label{classJOIN__TAB_aef0b7fbf877c33e3d79c96c565d13bbf}} 
+uint {\bfseries use\+\_\+join\+\_\+cache} () const
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a5ed04ce038eaede290bdc0dca2d62996}\label{classJOIN__TAB_a5ed04ce038eaede290bdc0dca2d62996}} 
+void {\bfseries set\+\_\+use\+\_\+join\+\_\+cache} (uint u)
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a2fac391b8d9b551f2030417e45b3b180}\label{classJOIN__TAB_a2fac391b8d9b551f2030417e45b3b180}} 
+\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$ {\bfseries keyuse} () const
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a2978b618468877fe23be450cc6af0a02}\label{classJOIN__TAB_a2978b618468877fe23be450cc6af0a02}} 
+void {\bfseries set\+\_\+keyuse} (\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$k)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gae913870950feb0d927de9b53963f0a6a}{cleanup}} ()
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gabc77304fe7c751bce4fa59ef52d91fb0}{get\+\_\+sj\+\_\+strategy}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{classJOIN__TAB_a3e8ef1b88000cc073fa054a86c603e26}{table\+\_\+ref}}
+\item 
+C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$ \mbox{\hyperlink{classJOIN__TAB_ab3a64225bfe53a54750796f90f40d30d}{cond\+\_\+equal}}
+\item 
+double \mbox{\hyperlink{classJOIN__TAB_a9392ceffc2b5f5895015c55f66620172}{worst\+\_\+seeks}}
+\item 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} \mbox{\hyperlink{classJOIN__TAB_a338f4f13ed22b1d5bc4a1807f7e15705}{const\+\_\+keys}}
+\item 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} \mbox{\hyperlink{classJOIN__TAB_a31d607e637a6ef4a70b06c9e73be9247}{checked\+\_\+keys}}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a830655c6e97cfd2e815078f2a82a2c85}\label{classJOIN__TAB_a830655c6e97cfd2e815078f2a82a2c85}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries needed\+\_\+reg}
+\item 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} \mbox{\hyperlink{classJOIN__TAB_aef35cfd3c3e48c2c4e84204e6294dbc2}{quick\+\_\+order\+\_\+tested}}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_abb36d40670383037a1a85121a8cc27ba}\label{classJOIN__TAB_abb36d40670383037a1a85121a8cc27ba}} 
+ha\+\_\+rows {\bfseries found\+\_\+records}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a024e6bba42936e8ebdc1aa5c76fc2610}\label{classJOIN__TAB_a024e6bba42936e8ebdc1aa5c76fc2610}} 
+ha\+\_\+rows {\bfseries read\+\_\+time}
+\item 
+table\+\_\+map \mbox{\hyperlink{classJOIN__TAB_a4a7181c7fe524e9d026b688956f01b67}{dependent}}
+\item 
+table\+\_\+map \mbox{\hyperlink{classJOIN__TAB_a932a03cdc62d5dd51275448e1bdc6982}{key\+\_\+dependent}}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_af8dbfbc59d275d58210b1ce4fbf91ed3}\label{classJOIN__TAB_af8dbfbc59d275d58210b1ce4fbf91ed3}} 
+uint {\bfseries used\+\_\+fieldlength}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a121e4c130b62d350be02775341c12e27}\label{classJOIN__TAB_a121e4c130b62d350be02775341c12e27}} 
+enum \mbox{\hyperlink{sql__select_8h_a931d06905210c0f917b25d180eeb643f}{quick\+\_\+type}} {\bfseries use\+\_\+quick}
+\item 
+uint \mbox{\hyperlink{classJOIN__TAB_a1ecf65f96da453dc4c0015f603e4c0c4}{m\+\_\+use\+\_\+join\+\_\+cache}}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_a7b591962b90a8753b0f593b7f1839e20}\label{classJOIN__TAB_a7b591962b90a8753b0f593b7f1839e20}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries emb\+\_\+sj\+\_\+nest}
+\item 
+\mbox{\Hypertarget{classJOIN__TAB_ad853c1b0081fb34965a38e9ca5f03285}\label{classJOIN__TAB_ad853c1b0081fb34965a38e9ca5f03285}} 
+nested\+\_\+join\+\_\+map {\bfseries embedding\+\_\+map}
+\item 
+uint \mbox{\hyperlink{classJOIN__TAB_a959379915961c4b73e69d72cbd09e826}{join\+\_\+cache\+\_\+flags}}
+\item 
+bool \mbox{\hyperlink{classJOIN__TAB_a7a7e195850769137dccb04fa7b570e38}{reversed\+\_\+access}}
+\item 
+bool \mbox{\hyperlink{classJOIN__TAB_a9d2ab8a5c5a404cdf8a3a60816ed3ab5}{dodgy\+\_\+ref\+\_\+cost}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Query optimization plan node.
+
+Specifies\+:
+
+
+\begin{DoxyItemize}
+\item a table access operation on the table specified by this node, and
+\item a join between the result of the set of previous plan nodes and this plan node. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJOIN__TAB_a7134d17d1d7755261a38029d07d98579}\label{classJOIN__TAB_a7134d17d1d7755261a38029d07d98579}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!join\+\_\+cond@{join\+\_\+cond}}
+\index{join\+\_\+cond@{join\+\_\+cond}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{join\+\_\+cond()}{join\_cond()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ J\+O\+I\+N\+\_\+\+T\+A\+B\+::join\+\_\+cond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+join condition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJOIN__TAB_a883f00d9645b34b6a19785d8833013ff}\label{classJOIN__TAB_a883f00d9645b34b6a19785d8833013ff}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!set\+\_\+join\+\_\+cond@{set\+\_\+join\+\_\+cond}}
+\index{set\+\_\+join\+\_\+cond@{set\+\_\+join\+\_\+cond}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{set\+\_\+join\+\_\+cond()}{set\_join\_cond()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+T\+A\+B\+::set\+\_\+join\+\_\+cond (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets join condition \begin{DoxyNote}{Note}
+this also changes T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::m\+\_\+join\+\_\+cond. 
+\end{DoxyNote}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJOIN__TAB_a31d607e637a6ef4a70b06c9e73be9247}\label{classJOIN__TAB_a31d607e637a6ef4a70b06c9e73be9247}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!checked\+\_\+keys@{checked\+\_\+keys}}
+\index{checked\+\_\+keys@{checked\+\_\+keys}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{checked\+\_\+keys}{checked\_keys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} J\+O\+I\+N\+\_\+\+T\+A\+B\+::checked\+\_\+keys}
+
+Keys checked \mbox{\Hypertarget{classJOIN__TAB_ab3a64225bfe53a54750796f90f40d30d}\label{classJOIN__TAB_ab3a64225bfe53a54750796f90f40d30d}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!cond\+\_\+equal@{cond\+\_\+equal}}
+\index{cond\+\_\+equal@{cond\+\_\+equal}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{cond\+\_\+equal}{cond\_equal}}
+{\footnotesize\ttfamily C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL$\ast$ J\+O\+I\+N\+\_\+\+T\+A\+B\+::cond\+\_\+equal}
+
+multiple equalities for the on expression \mbox{\Hypertarget{classJOIN__TAB_a338f4f13ed22b1d5bc4a1807f7e15705}\label{classJOIN__TAB_a338f4f13ed22b1d5bc4a1807f7e15705}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!const\+\_\+keys@{const\+\_\+keys}}
+\index{const\+\_\+keys@{const\+\_\+keys}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{const\+\_\+keys}{const\_keys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} J\+O\+I\+N\+\_\+\+T\+A\+B\+::const\+\_\+keys}
+
+Keys with constant part. Subset of keys. \mbox{\Hypertarget{classJOIN__TAB_a4a7181c7fe524e9d026b688956f01b67}\label{classJOIN__TAB_a4a7181c7fe524e9d026b688956f01b67}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!dependent@{dependent}}
+\index{dependent@{dependent}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{dependent}{dependent}}
+{\footnotesize\ttfamily table\+\_\+map J\+O\+I\+N\+\_\+\+T\+A\+B\+::dependent}
+
+The set of tables that this table depends on. Used for outer join and straight join dependencies. \mbox{\Hypertarget{classJOIN__TAB_a9d2ab8a5c5a404cdf8a3a60816ed3ab5}\label{classJOIN__TAB_a9d2ab8a5c5a404cdf8a3a60816ed3ab5}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!dodgy\+\_\+ref\+\_\+cost@{dodgy\+\_\+ref\+\_\+cost}}
+\index{dodgy\+\_\+ref\+\_\+cost@{dodgy\+\_\+ref\+\_\+cost}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{dodgy\+\_\+ref\+\_\+cost}{dodgy\_ref\_cost}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+T\+A\+B\+::dodgy\+\_\+ref\+\_\+cost}
+
+Setting this flag means ref is using lesser number of key parts than range and it borrows range\textquotesingle{}s row estimate. \mbox{\Hypertarget{classJOIN__TAB_a959379915961c4b73e69d72cbd09e826}\label{classJOIN__TAB_a959379915961c4b73e69d72cbd09e826}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!join\+\_\+cache\+\_\+flags@{join\+\_\+cache\+\_\+flags}}
+\index{join\+\_\+cache\+\_\+flags@{join\+\_\+cache\+\_\+flags}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{join\+\_\+cache\+\_\+flags}{join\_cache\_flags}}
+{\footnotesize\ttfamily uint J\+O\+I\+N\+\_\+\+T\+A\+B\+::join\+\_\+cache\+\_\+flags}
+
+Flags from SE\textquotesingle{}s M\+RR implementation, to be used by \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} \mbox{\Hypertarget{classJOIN__TAB_a932a03cdc62d5dd51275448e1bdc6982}\label{classJOIN__TAB_a932a03cdc62d5dd51275448e1bdc6982}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!key\+\_\+dependent@{key\+\_\+dependent}}
+\index{key\+\_\+dependent@{key\+\_\+dependent}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{key\+\_\+dependent}{key\_dependent}}
+{\footnotesize\ttfamily table\+\_\+map J\+O\+I\+N\+\_\+\+T\+A\+B\+::key\+\_\+dependent}
+
+The set of tables that are referenced by key from this table. \mbox{\Hypertarget{classJOIN__TAB_a1ecf65f96da453dc4c0015f603e4c0c4}\label{classJOIN__TAB_a1ecf65f96da453dc4c0015f603e4c0c4}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!m\+\_\+use\+\_\+join\+\_\+cache@{m\+\_\+use\+\_\+join\+\_\+cache}}
+\index{m\+\_\+use\+\_\+join\+\_\+cache@{m\+\_\+use\+\_\+join\+\_\+cache}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{m\+\_\+use\+\_\+join\+\_\+cache}{m\_use\_join\_cache}}
+{\footnotesize\ttfamily uint J\+O\+I\+N\+\_\+\+T\+A\+B\+::m\+\_\+use\+\_\+join\+\_\+cache}
+
+Join buffering strategy. After optimization it contains chosen join buffering strategy (if any). \mbox{\Hypertarget{classJOIN__TAB_aef35cfd3c3e48c2c4e84204e6294dbc2}\label{classJOIN__TAB_aef35cfd3c3e48c2c4e84204e6294dbc2}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!quick\+\_\+order\+\_\+tested@{quick\+\_\+order\+\_\+tested}}
+\index{quick\+\_\+order\+\_\+tested@{quick\+\_\+order\+\_\+tested}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{quick\+\_\+order\+\_\+tested}{quick\_order\_tested}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} J\+O\+I\+N\+\_\+\+T\+A\+B\+::quick\+\_\+order\+\_\+tested}
+
+Used to avoid repeated range analysis for the same key in test\+\_\+if\+\_\+skip\+\_\+sort\+\_\+order(). This would otherwise happen if the best range access plan found for a key is turned down. quick\+\_\+order\+\_\+tested is cleared every time the select condition for this \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} changes since a new condition may give another plan and cost from range analysis. \mbox{\Hypertarget{classJOIN__TAB_a7a7e195850769137dccb04fa7b570e38}\label{classJOIN__TAB_a7a7e195850769137dccb04fa7b570e38}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!reversed\+\_\+access@{reversed\+\_\+access}}
+\index{reversed\+\_\+access@{reversed\+\_\+access}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{reversed\+\_\+access}{reversed\_access}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+T\+A\+B\+::reversed\+\_\+access}
+
+T\+R\+UE $<$=$>$ AM will scan backward \mbox{\Hypertarget{classJOIN__TAB_a3e8ef1b88000cc073fa054a86c603e26}\label{classJOIN__TAB_a3e8ef1b88000cc073fa054a86c603e26}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!table\+\_\+ref@{table\+\_\+ref}}
+\index{table\+\_\+ref@{table\+\_\+ref}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{table\+\_\+ref}{table\_ref}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ J\+O\+I\+N\+\_\+\+T\+A\+B\+::table\+\_\+ref}
+
+points to table reference \mbox{\Hypertarget{classJOIN__TAB_a9392ceffc2b5f5895015c55f66620172}\label{classJOIN__TAB_a9392ceffc2b5f5895015c55f66620172}} 
+\index{J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}!worst\+\_\+seeks@{worst\+\_\+seeks}}
+\index{worst\+\_\+seeks@{worst\+\_\+seeks}!J\+O\+I\+N\+\_\+\+T\+AB@{J\+O\+I\+N\+\_\+\+T\+AB}}
+\subsubsection{\texorpdfstring{worst\+\_\+seeks}{worst\_seeks}}
+{\footnotesize\ttfamily double J\+O\+I\+N\+\_\+\+T\+A\+B\+::worst\+\_\+seeks}
+
+The maximum value for the cost of seek operations for key lookup during ref access. The cost model for ref access assumes every key lookup will cause reading a block from disk. With many key lookups into the same table, most of the blocks will soon be in a memory buffer. As a consequence, there will in most cases be an upper limit on the number of actual disk accesses the ref access will cause. This variable is used for storing a maximum cost estimate for the disk accesses for ref access. It is used for limiting the cost estimate for ref access to a more realistic value than assuming every key lookup causes a random disk access. Without having this upper limit for the cost of ref access, table scan would be more likely to be chosen for cases where ref access performs better. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__select_8h}{sql\+\_\+select.\+h}}\item 
+\mbox{\hyperlink{sql__optimizer_8cc}{sql\+\_\+optimizer.\+cc}}\item 
+\mbox{\hyperlink{sql__select_8cc}{sql\+\_\+select.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{rpl__slave_8h}{}\section{rpl\+\_\+slave.\+h File Reference}
+\label{rpl__slave_8h}\index{rpl\+\_\+slave.\+h@{rpl\+\_\+slave.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+channel\+\_\+service\+\_\+interface.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rpl__slave_8h_a0f78358391ea5a107294262542941e5c}{M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX}}~(0x7\+F\+F\+F\+F\+F\+F\+F)
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga9576e3a9774232077c9cd79f015d9efd}{S\+L\+A\+V\+E\+\_\+\+M\+A\+X\+\_\+\+H\+E\+A\+R\+T\+B\+E\+A\+T\+\_\+\+P\+E\+R\+I\+OD}}~4294967
+\item 
+\#define {\bfseries S\+L\+A\+V\+E\+\_\+\+IO}~1
+\item 
+\#define {\bfseries S\+L\+A\+V\+E\+\_\+\+S\+QL}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_abc12cf2b8341c38d8c7421a9660ba815}\label{rpl__slave_8h_abc12cf2b8341c38d8c7421a9660ba815}} 
+typedef struct st\+\_\+bitmap {\bfseries M\+Y\+\_\+\+B\+I\+T\+M\+AP}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_a6f2a9bde9520d3a0436800b8487ba90d}\label{rpl__slave_8h_a6f2a9bde9520d3a0436800b8487ba90d}} 
+typedef struct st\+\_\+lex\+\_\+master\+\_\+info {\bfseries L\+E\+X\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+FO}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_a58786a1b93a1cc12ee809d420e1d83a0}\label{rpl__slave_8h_a58786a1b93a1cc12ee809d420e1d83a0}} 
+typedef struct st\+\_\+list {\bfseries L\+I\+ST}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_a82a6dc0dbc8c1a28b48de904614e0088}\label{rpl__slave_8h_a82a6dc0dbc8c1a28b48de904614e0088}} 
+typedef struct st\+\_\+mysql {\bfseries M\+Y\+S\+QL}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_ac623dec3869483fe5aaa5d510f71fd1b}\label{rpl__slave_8h_ac623dec3869483fe5aaa5d510f71fd1b}} 
+typedef struct st\+\_\+net {\bfseries N\+ET}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_a7f02df392ce511ffe92b65b2f5f27d6f}\label{rpl__slave_8h_a7f02df392ce511ffe92b65b2f5f27d6f}} 
+typedef struct struct\+\_\+slave\+\_\+connection {\bfseries L\+E\+X\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rpl__slave_8h_abdd65699c0ef8489fd352831ab89b2f1}\label{rpl__slave_8h_abdd65699c0ef8489fd352831ab89b2f1}} 
+enum {\bfseries S\+L\+A\+V\+E\+\_\+\+T\+H\+D\+\_\+\+T\+Y\+PE} \{ {\bfseries S\+L\+A\+V\+E\+\_\+\+T\+H\+D\+\_\+\+IO}, 
+{\bfseries S\+L\+A\+V\+E\+\_\+\+T\+H\+D\+\_\+\+S\+QL}, 
+{\bfseries S\+L\+A\+V\+E\+\_\+\+T\+H\+D\+\_\+\+W\+O\+R\+K\+ER}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rpl__slave_8h_a0f78358391ea5a107294262542941e5c}\label{rpl__slave_8h_a0f78358391ea5a107294262542941e5c}} 
+\index{rpl\+\_\+slave.\+h@{rpl\+\_\+slave.\+h}!M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX@{M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX}}
+\index{M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX@{M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX}!rpl\+\_\+slave.\+h@{rpl\+\_\+slave.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX}{MASTER\_DELAY\_MAX}}
+{\footnotesize\ttfamily \#define M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+AX~(0x7\+F\+F\+F\+F\+F\+F\+F)}
+
+M\+A\+S\+T\+E\+R\+\_\+\+D\+E\+L\+AY can be at most (1 $<$$<$ 31) -\/ 1. 

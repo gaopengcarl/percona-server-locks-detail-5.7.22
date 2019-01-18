@@ -1,0 +1,42 @@
+\hypertarget{classItem__tree__walker}{}\section{Item\+\_\+tree\+\_\+walker Class Reference}
+\label{classItem__tree__walker}\index{Item\+\_\+tree\+\_\+walker@{Item\+\_\+tree\+\_\+walker}}
+
+
+{\ttfamily \#include $<$aggregate\+\_\+check.\+h$>$}
+
+Inheritance diagram for Item\+\_\+tree\+\_\+walker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classItem__tree__walker}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__tree__walker_a14ea76f9d8a681d69e7daa98631ee76b}\label{classItem__tree__walker_a14ea76f9d8a681d69e7daa98631ee76b}} 
+void \mbox{\hyperlink{classItem__tree__walker_a14ea76f9d8a681d69e7daa98631ee76b}{stop\+\_\+at}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$i)
+\begin{DoxyCompactList}\small\item\em Stops walking children of this item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classItem__tree__walker_a0788f0594f8245041d292219696c4c4e}{is\+\_\+stopped}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility mixin class to be able to walk() only parts of item trees.
+
+Used with W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX+P\+O\+S\+T\+F\+IX walk\+: in the prefix call of the \mbox{\hyperlink{classItem}{Item}} processor, we process the item X, may decide that its children should not be processed (just like if they didn\textquotesingle{}t exist)\+: processor calls stop\+\_\+at(\+X) for that. Then walk() goes to a child Y; the processor tests is\+\_\+stopped(\+Y) which returns true, so processor sees that it must not do any processing and returns immediately. Finally, the postfix call to the processor on X tests is\+\_\+stopped(\+X) which returns \char`\"{}true\char`\"{} and understands that the not-\/to-\/be-\/processed children have been skipped so calls restart(). Thus, any sibling of X, any part of the \mbox{\hyperlink{classItem}{Item}} tree not under X, can then be processed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__tree__walker_a0788f0594f8245041d292219696c4c4e}\label{classItem__tree__walker_a0788f0594f8245041d292219696c4c4e}} 
+\index{Item\+\_\+tree\+\_\+walker@{Item\+\_\+tree\+\_\+walker}!is\+\_\+stopped@{is\+\_\+stopped}}
+\index{is\+\_\+stopped@{is\+\_\+stopped}!Item\+\_\+tree\+\_\+walker@{Item\+\_\+tree\+\_\+walker}}
+\subsubsection{\texorpdfstring{is\+\_\+stopped()}{is\_stopped()}}
+{\footnotesize\ttfamily bool Item\+\_\+tree\+\_\+walker\+::is\+\_\+stopped (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+if we are stopped. If item \textquotesingle{}i\textquotesingle{} is where we stopped, restarts the walk for next items. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{aggregate__check_8h}{aggregate\+\_\+check.\+h}}\end{DoxyCompactItemize}

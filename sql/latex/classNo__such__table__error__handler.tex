@@ -1,0 +1,37 @@
+\hypertarget{classNo__such__table__error__handler}{}\section{No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler Class Reference}
+\label{classNo__such__table__error__handler}\index{No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler@{No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler}}
+
+
+{\ttfamily \#include $<$sql\+\_\+base.\+h$>$}
+
+Inheritance diagram for No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNo__such__table__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNo__such__table__error__handler_a4c25a6b90c5badcd1095e453908c17b1}\label{classNo__such__table__error__handler_a4c25a6b90c5badcd1095e453908c17b1}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\item 
+bool \mbox{\hyperlink{classNo__such__table__error__handler_a3af685f8c1b13ac36e57de84651fad70}{safely\+\_\+trapped\+\_\+errors}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This internal handler is used to trap E\+R\+\_\+\+N\+O\+\_\+\+S\+U\+C\+H\+\_\+\+T\+A\+B\+LE. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNo__such__table__error__handler_a3af685f8c1b13ac36e57de84651fad70}\label{classNo__such__table__error__handler_a3af685f8c1b13ac36e57de84651fad70}} 
+\index{No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler@{No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler}!safely\+\_\+trapped\+\_\+errors@{safely\+\_\+trapped\+\_\+errors}}
+\index{safely\+\_\+trapped\+\_\+errors@{safely\+\_\+trapped\+\_\+errors}!No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler@{No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{safely\+\_\+trapped\+\_\+errors()}{safely\_trapped\_errors()}}
+{\footnotesize\ttfamily bool No\+\_\+such\+\_\+table\+\_\+error\+\_\+handler\+::safely\+\_\+trapped\+\_\+errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if one or more E\+R\+\_\+\+N\+O\+\_\+\+S\+U\+C\+H\+\_\+\+T\+A\+B\+LE errors have been trapped and no other errors have been seen. false otherwise. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+base.\+h\end{DoxyCompactItemize}

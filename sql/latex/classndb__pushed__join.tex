@@ -1,0 +1,107 @@
+\hypertarget{classndb__pushed__join}{}\section{ndb\+\_\+pushed\+\_\+join Class Reference}
+\label{classndb__pushed__join}\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+
+
+{\ttfamily \#include $<$ha\+\_\+ndbcluster\+\_\+push.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classndb__pushed__join_a93bd4ab3a4b6c633bf7aad9dbcda9cde}\label{classndb__pushed__join_a93bd4ab3a4b6c633bf7aad9dbcda9cde}} 
+{\bfseries ndb\+\_\+pushed\+\_\+join} (const \mbox{\hyperlink{classndb__pushed__builder__ctx}{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}} \&builder\+\_\+ctx, const Ndb\+Query\+Def $\ast$query\+\_\+def)
+\item 
+bool \mbox{\hyperlink{classndb__pushed__join_a3f7d75c3ba2a72c63b32f030a7a57ad5}{match\+\_\+definition}} (int type, const \mbox{\hyperlink{structndb__index__data}{N\+D\+B\+\_\+\+I\+N\+D\+E\+X\+\_\+\+D\+A\+TA}} $\ast$idx) const
+\item 
+Ndb\+Query $\ast$ \mbox{\hyperlink{classndb__pushed__join_ac304528e069d75bf6283d9630a346d4e}{make\+\_\+query\+\_\+instance}} (Ndb\+Transaction $\ast$trans, const Ndb\+Query\+Param\+Value $\ast$key\+Field\+Params, uint param\+Cnt) const
+\item 
+uint \mbox{\hyperlink{classndb__pushed__join_a96ff16fa8e23fd510f5f9a4fc52f3327}{get\+\_\+operation\+\_\+count}} () const
+\item 
+uint \mbox{\hyperlink{classndb__pushed__join_a22900c182d2a4368cd9c77bb16707b55}{get\+\_\+field\+\_\+referrences\+\_\+count}} () const
+\item 
+\mbox{\Hypertarget{classndb__pushed__join_a619a26a94cc84d32bd785e0d39cb6766}\label{classndb__pushed__join_a619a26a94cc84d32bd785e0d39cb6766}} 
+const Ndb\+Query\+Def \& {\bfseries get\+\_\+query\+\_\+def} () const
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classndb__pushed__join_a4963eabe39daf55f3a48612ad838f40e}{get\+\_\+table}} (uint i) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint \mbox{\hyperlink{classndb__pushed__join_a818793739d73a5a0fe90088b222089f9}{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT}} = M\+A\+X\+\_\+\+K\+EY
+\item 
+static const uint \mbox{\hyperlink{classndb__pushed__join_a5045579b5ff3551499b1c23350136079}{M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS}} = 16
+\item 
+static const uint \mbox{\hyperlink{classndb__pushed__join_a5e0037b0b366aa2a2eb205786365fac8}{M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS}} = M\+A\+X\+\_\+\+K\+EY
+\item 
+static const uint \mbox{\hyperlink{classndb__pushed__join_a8e7e7078e5d85fcc3b2b5cb349356797}{M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS}} = M\+A\+X\+\_\+\+T\+A\+B\+L\+ES
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a prepared pushed (N-\/way) join operation.
+
+It might be instantiated multiple times whenever the query, or this subpart of the query, is being (re-\/)executed by \+::create\+Query() or it\textquotesingle{}s wrapper method ha\+\_\+ndbcluster\+::create\+\_\+pushed\+\_\+join(). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classndb__pushed__join_a22900c182d2a4368cd9c77bb16707b55}\label{classndb__pushed__join_a22900c182d2a4368cd9c77bb16707b55}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!get\+\_\+field\+\_\+referrences\+\_\+count@{get\+\_\+field\+\_\+referrences\+\_\+count}}
+\index{get\+\_\+field\+\_\+referrences\+\_\+count@{get\+\_\+field\+\_\+referrences\+\_\+count}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{get\+\_\+field\+\_\+referrences\+\_\+count()}{get\_field\_referrences\_count()}}
+{\footnotesize\ttfamily uint ndb\+\_\+pushed\+\_\+join\+::get\+\_\+field\+\_\+referrences\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+In a pushed join, fields in lookup keys and scan bounds may refer to result fields of table access operation that execute prior to the pushed join. This method returns the number of such references. \mbox{\Hypertarget{classndb__pushed__join_a96ff16fa8e23fd510f5f9a4fc52f3327}\label{classndb__pushed__join_a96ff16fa8e23fd510f5f9a4fc52f3327}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!get\+\_\+operation\+\_\+count@{get\+\_\+operation\+\_\+count}}
+\index{get\+\_\+operation\+\_\+count@{get\+\_\+operation\+\_\+count}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{get\+\_\+operation\+\_\+count()}{get\_operation\_count()}}
+{\footnotesize\ttfamily uint ndb\+\_\+pushed\+\_\+join\+::get\+\_\+operation\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of pushed table access operations. \mbox{\Hypertarget{classndb__pushed__join_a4963eabe39daf55f3a48612ad838f40e}\label{classndb__pushed__join_a4963eabe39daf55f3a48612ad838f40e}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!get\+\_\+table@{get\+\_\+table}}
+\index{get\+\_\+table@{get\+\_\+table}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{get\+\_\+table()}{get\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ ndb\+\_\+pushed\+\_\+join\+::get\+\_\+table (\begin{DoxyParamCaption}\item[{uint}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the table that is accessed by the i\textquotesingle{}th table access operation. \mbox{\Hypertarget{classndb__pushed__join_ac304528e069d75bf6283d9630a346d4e}\label{classndb__pushed__join_ac304528e069d75bf6283d9630a346d4e}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!make\+\_\+query\+\_\+instance@{make\+\_\+query\+\_\+instance}}
+\index{make\+\_\+query\+\_\+instance@{make\+\_\+query\+\_\+instance}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{make\+\_\+query\+\_\+instance()}{make\_query\_instance()}}
+{\footnotesize\ttfamily Ndb\+Query $\ast$ ndb\+\_\+pushed\+\_\+join\+::make\+\_\+query\+\_\+instance (\begin{DoxyParamCaption}\item[{Ndb\+Transaction $\ast$}]{trans,  }\item[{const Ndb\+Query\+Param\+Value $\ast$}]{key\+Field\+Params,  }\item[{uint}]{param\+Cnt }\end{DoxyParamCaption}) const}
+
+Create an executable instance of this defined query. There may be referrences to \mbox{\hyperlink{classField}{Field}} values from tables outside the scope of our pushed join\+: These are expected to be supplied as param\+Values() after the key\+Field\+Params\mbox{[}\mbox{]}.\mbox{\Hypertarget{classndb__pushed__join_a3f7d75c3ba2a72c63b32f030a7a57ad5}\label{classndb__pushed__join_a3f7d75c3ba2a72c63b32f030a7a57ad5}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!match\+\_\+definition@{match\+\_\+definition}}
+\index{match\+\_\+definition@{match\+\_\+definition}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{match\+\_\+definition()}{match\_definition()}}
+{\footnotesize\ttfamily bool ndb\+\_\+pushed\+\_\+join\+::match\+\_\+definition (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{const \mbox{\hyperlink{structndb__index__data}{N\+D\+B\+\_\+\+I\+N\+D\+E\+X\+\_\+\+D\+A\+TA}} $\ast$}]{idx }\end{DoxyParamCaption}) const}
+
+Check that this prepared pushed query matches the type of operation specified by the arguments. There may be referrences to \mbox{\hyperlink{classField}{Field}} values from tables outside the scope of our pushed join which are supplied as param\+Values(). If any of these are N\+U\+LL values, join can\textquotesingle{}t be pushed.
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classndb__pushed__join_a818793739d73a5a0fe90088b222089f9}\label{classndb__pushed__join_a818793739d73a5a0fe90088b222089f9}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT@{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT}}
+\index{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT@{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT}{MAX\_KEY\_PART}}
+{\footnotesize\ttfamily const uint ndb\+\_\+pushed\+\_\+join\+::\+M\+A\+X\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+RT = M\+A\+X\+\_\+\+K\+EY\hspace{0.3cm}{\ttfamily [static]}}
+
+This is the maximal number of fields in the key of any pushed table access operation. \mbox{\Hypertarget{classndb__pushed__join_a5e0037b0b366aa2a2eb205786365fac8}\label{classndb__pushed__join_a5e0037b0b366aa2a2eb205786365fac8}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS@{M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS}}
+\index{M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS@{M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS}{MAX\_LINKED\_KEYS}}
+{\footnotesize\ttfamily const uint ndb\+\_\+pushed\+\_\+join\+::\+M\+A\+X\+\_\+\+L\+I\+N\+K\+E\+D\+\_\+\+K\+E\+YS = M\+A\+X\+\_\+\+K\+EY\hspace{0.3cm}{\ttfamily [static]}}
+
+For each table access operation in a pushed join, this is the maximal number of key fields that may refer to the fields of the parent operation. \mbox{\Hypertarget{classndb__pushed__join_a8e7e7078e5d85fcc3b2b5cb349356797}\label{classndb__pushed__join_a8e7e7078e5d85fcc3b2b5cb349356797}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS@{M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS}}
+\index{M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS@{M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS}{MAX\_PUSHED\_OPERATIONS}}
+{\footnotesize\ttfamily const uint ndb\+\_\+pushed\+\_\+join\+::\+M\+A\+X\+\_\+\+P\+U\+S\+H\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+NS = M\+A\+X\+\_\+\+T\+A\+B\+L\+ES\hspace{0.3cm}{\ttfamily [static]}}
+
+This is the maximal number of table access operations there can be in a single pushed join. \mbox{\Hypertarget{classndb__pushed__join_a5045579b5ff3551499b1c23350136079}\label{classndb__pushed__join_a5045579b5ff3551499b1c23350136079}} 
+\index{ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}!M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS@{M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS}}
+\index{M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS@{M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS}!ndb\+\_\+pushed\+\_\+join@{ndb\+\_\+pushed\+\_\+join}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS}{MAX\_REFERRED\_FIELDS}}
+{\footnotesize\ttfamily const uint ndb\+\_\+pushed\+\_\+join\+::\+M\+A\+X\+\_\+\+R\+E\+F\+E\+R\+R\+E\+D\+\_\+\+F\+I\+E\+L\+DS = 16\hspace{0.3cm}{\ttfamily [static]}}
+
+In a pushed join, fields in lookup keys and scan bounds may refer to result fields of table access operation that execute prior to the pushed join. This constant specifies the maximal number of such references for a query. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndbcluster\+\_\+push.\+h\item 
+\mbox{\hyperlink{ha__ndbcluster__push_8cc}{ha\+\_\+ndbcluster\+\_\+push.\+cc}}\end{DoxyCompactItemize}

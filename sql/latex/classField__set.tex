@@ -1,0 +1,127 @@
+\hypertarget{classField__set}{}\section{Field\+\_\+set Class Reference}
+\label{classField__set}\index{Field\+\_\+set@{Field\+\_\+set}}
+Inheritance diagram for Field\+\_\+set\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classField__set}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__set_a1edab03e2aac6e8a0b7f9f29ccb269e9}\label{classField__set_a1edab03e2aac6e8a0b7f9f29ccb269e9}} 
+{\bfseries Field\+\_\+set} (uchar $\ast$ptr\+\_\+arg, uint32 len\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint32 packlength\+\_\+arg, T\+Y\+P\+E\+L\+IB $\ast$typelib\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset\+\_\+arg)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__set_a2c74d155d4d11aac75bba6b93a08cbb3}{store}} (const char $\ast$to, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__set_a58b1852786b3bfe85a3cd2dd7edbfaf2}{store}} (double nr)
+\item 
+\mbox{\Hypertarget{classField__set_a800603fd8101ed5cf80d899f1690c26d}\label{classField__set_a800603fd8101ed5cf80d899f1690c26d}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (longlong nr, bool unsigned\+\_\+val)
+\item 
+\mbox{\Hypertarget{classField__set_a194653d3227b980f61af1220579228a6}\label{classField__set_a194653d3227b980f61af1220579228a6}} 
+virtual bool {\bfseries zero\+\_\+pack} () const
+\item 
+\mbox{\Hypertarget{classField__set_a97ea9663dcc0c28fc8c27500b4888c43}\label{classField__set_a97ea9663dcc0c28fc8c27500b4888c43}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$, String $\ast$)
+\item 
+\mbox{\Hypertarget{classField__set_af406cfb38882aafc90ccaa8843041771}\label{classField__set_af406cfb38882aafc90ccaa8843041771}} 
+void {\bfseries sql\+\_\+type} (String \&str) const
+\item 
+\mbox{\Hypertarget{classField__set_a0d43657ddc0f1212d8e558478cc07c38}\label{classField__set_a0d43657ddc0f1212d8e558478cc07c38}} 
+enum\+\_\+field\+\_\+types {\bfseries real\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField__set_a2facd089efe59d4dd0f69de165d4b86e}\label{classField__set_a2facd089efe59d4dd0f69de165d4b86e}} 
+bool {\bfseries has\+\_\+charset} (void) const
+\item 
+\mbox{\hyperlink{classField__set}{Field\+\_\+set}} $\ast$ \mbox{\hyperlink{classField__set_a6fa7de649f03776a9047b06bc404cee4}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\item 
+\mbox{\hyperlink{classField__set}{Field\+\_\+set}} $\ast$ \mbox{\hyperlink{classField__set_a06dc1b03bfa20901a62f344d66374f65}{clone}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__set_a6fa7de649f03776a9047b06bc404cee4}\label{classField__set_a6fa7de649f03776a9047b06bc404cee4}} 
+\index{Field\+\_\+set@{Field\+\_\+set}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+set@{Field\+\_\+set}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__set}{Field\+\_\+set}}$\ast$ Field\+\_\+set\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT to use for memory allocation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__enum_a47e937e56eb39c90f99f19379939d9a8}{Field\+\_\+enum}}.
+
+\mbox{\Hypertarget{classField__set_a06dc1b03bfa20901a62f344d66374f65}\label{classField__set_a06dc1b03bfa20901a62f344d66374f65}} 
+\index{Field\+\_\+set@{Field\+\_\+set}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+set@{Field\+\_\+set}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__set}{Field\+\_\+set}}$\ast$ Field\+\_\+set\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__enum_a70a7230248a5c8c40751fe0f99f6d551}{Field\+\_\+enum}}.
+
+\mbox{\Hypertarget{classField__set_a2c74d155d4d11aac75bba6b93a08cbb3}\label{classField__set_a2c74d155d4d11aac75bba6b93a08cbb3}} 
+\index{Field\+\_\+set@{Field\+\_\+set}!store@{store}}
+\index{store@{store}!Field\+\_\+set@{Field\+\_\+set}}
+\subsubsection{\texorpdfstring{store()}{store()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+set\+::store (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{length,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyNote}{Note}
+Storing a empty string in a enum field gives a warning (if there isn\textquotesingle{}t a empty value in the enum) 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classField__enum_a94360342df3a8e26e37d2e479d36cbb5}{Field\+\_\+enum}}.
+
+\mbox{\Hypertarget{classField__set_a58b1852786b3bfe85a3cd2dd7edbfaf2}\label{classField__set_a58b1852786b3bfe85a3cd2dd7edbfaf2}} 
+\index{Field\+\_\+set@{Field\+\_\+set}!store@{store}}
+\index{store@{store}!Field\+\_\+set@{Field\+\_\+set}}
+\subsubsection{\texorpdfstring{store()}{store()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+set\+::store (\begin{DoxyParamCaption}\item[{double}]{nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Store double value in \mbox{\hyperlink{classField__string}{Field\+\_\+string}} or \mbox{\hyperlink{classField__varstring}{Field\+\_\+varstring}}.
+
+Pretty prints double number into field\+\_\+length characters buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr} & number \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField__enum_a82c1cdf5b47cd0266d9974e834695523}{Field\+\_\+enum}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\hypertarget{classFile__parser}{}\section{File\+\_\+parser Class Reference}
+\label{classFile__parser}\index{File\+\_\+parser@{File\+\_\+parser}}
+Inheritance diagram for File\+\_\+parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFile__parser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFile__parser_a289741d32f46f48e4d17283792e8fadc}\label{classFile__parser_a289741d32f46f48e4d17283792e8fadc}} 
+my\+\_\+bool {\bfseries ok} ()
+\item 
+\mbox{\Hypertarget{classFile__parser_a2438a46c812d466e9f2baa57d5f85a81}\label{classFile__parser_a2438a46c812d466e9f2baa57d5f85a81}} 
+const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$ {\bfseries type} () const
+\item 
+my\+\_\+bool \mbox{\hyperlink{classFile__parser_a8b56162c3cbb58958dfca3853e8fd736}{parse}} (uchar $\ast$base, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, struct \mbox{\hyperlink{structFile__option}{File\+\_\+option}} $\ast$parameters, uint required, \mbox{\hyperlink{classUnknown__key__hook}{Unknown\+\_\+key\+\_\+hook}} $\ast$hook) const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFile__parser}{File\+\_\+parser}} $\ast$ \mbox{\hyperlink{classFile__parser_af0a1c80e1f5fd497fb530ded638bcdf3}{sql\+\_\+parse\+\_\+prepare}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$file\+\_\+name, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, bool bad\+\_\+format\+\_\+errors)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFile__parser_a8b56162c3cbb58958dfca3853e8fd736}\label{classFile__parser_a8b56162c3cbb58958dfca3853e8fd736}} 
+\index{File\+\_\+parser@{File\+\_\+parser}!parse@{parse}}
+\index{parse@{parse}!File\+\_\+parser@{File\+\_\+parser}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily my\+\_\+bool File\+\_\+parser\+::parse (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{base,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{struct \mbox{\hyperlink{structFile__option}{File\+\_\+option}} $\ast$}]{parameters,  }\item[{uint}]{required,  }\item[{\mbox{\hyperlink{classUnknown__key__hook}{Unknown\+\_\+key\+\_\+hook}} $\ast$}]{hook }\end{DoxyParamCaption}) const}
+
+parse parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & base address for parameter writing (structure like \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}) \\
+\hline
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT for parameters allocation \\
+\hline
+{\em parameters} & parameters description \\
+\hline
+{\em required} & number of required parameters in above list. If the file contains more parameters than \char`\"{}required\char`\"{}, they will be ignored. If the file contains less parameters then \char`\"{}required\char`\"{}, non-\/existing parameters will remain their values. \\
+\hline
+{\em hook} & hook called for unknown keys \\
+\hline
+{\em hook\+\_\+data} & some data specific for the hook\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classFile__parser_af0a1c80e1f5fd497fb530ded638bcdf3}\label{classFile__parser_af0a1c80e1f5fd497fb530ded638bcdf3}} 
+\index{File\+\_\+parser@{File\+\_\+parser}!sql\+\_\+parse\+\_\+prepare@{sql\+\_\+parse\+\_\+prepare}}
+\index{sql\+\_\+parse\+\_\+prepare@{sql\+\_\+parse\+\_\+prepare}!File\+\_\+parser@{File\+\_\+parser}}
+\subsubsection{\texorpdfstring{sql\+\_\+parse\+\_\+prepare}{sql\_parse\_prepare}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFile__parser}{File\+\_\+parser}}$\ast$ sql\+\_\+parse\+\_\+prepare (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{file\+\_\+name,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{bool}]{bad\+\_\+format\+\_\+errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Prepare frm to parse (read to memory).
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & path \& filename to .frm file \\
+\hline
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT for buffer allocation \\
+\hline
+{\em bad\+\_\+format\+\_\+errors} & send errors on bad content\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+returned pointer + 1 will be type of .frm
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 -\/ error 
+
+parser object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+file.\+h\item 
+\mbox{\hyperlink{parse__file_8cc}{parse\+\_\+file.\+cc}}\end{DoxyCompactItemize}

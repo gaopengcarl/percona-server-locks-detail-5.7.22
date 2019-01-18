@@ -1,0 +1,184 @@
+\hypertarget{classOpt__hints}{}\section{Opt\+\_\+hints Class Reference}
+\label{classOpt__hints}\index{Opt\+\_\+hints@{Opt\+\_\+hints}}
+
+
+{\ttfamily \#include $<$opt\+\_\+hints.\+h$>$}
+
+Inheritance diagram for Opt\+\_\+hints\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classOpt__hints}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOpt__hints_a539bf475d5a71e4de07ac3de97fc6c10}\label{classOpt__hints_a539bf475d5a71e4de07ac3de97fc6c10}} 
+{\bfseries Opt\+\_\+hints} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$name\+\_\+arg, \mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$parent\+\_\+arg, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classOpt__hints_ab2c704bbd058451d74cd59b41aed6493}\label{classOpt__hints_ab2c704bbd058451d74cd59b41aed6493}} 
+bool {\bfseries is\+\_\+specified} (opt\+\_\+hints\+\_\+enum type\+\_\+arg) const
+\item 
+bool \mbox{\hyperlink{classOpt__hints_a7c52f2fc6a14f6d7e1de516994d02f82}{set\+\_\+switch}} (bool switch\+\_\+state\+\_\+arg, opt\+\_\+hints\+\_\+enum type\+\_\+arg, bool check\+\_\+parent)
+\item 
+bool \mbox{\hyperlink{classOpt__hints_a0208b5809c213bd831cfb4f4bc8b6ade}{get\+\_\+switch}} (opt\+\_\+hints\+\_\+enum type\+\_\+arg) const
+\item 
+\mbox{\Hypertarget{classOpt__hints_a33d504fa18f810b6d43530943836c731}\label{classOpt__hints_a33d504fa18f810b6d43530943836c731}} 
+virtual const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$ {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classOpt__hints_ad2e29d286dc053c4e774c1f523a24fe9}\label{classOpt__hints_ad2e29d286dc053c4e774c1f523a24fe9}} 
+void {\bfseries set\+\_\+name} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$name\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classOpt__hints_a9e7753f68df31aa91b9b9aeca8ae5cf1}\label{classOpt__hints_a9e7753f68df31aa91b9b9aeca8ae5cf1}} 
+\mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$ {\bfseries get\+\_\+parent} () const
+\item 
+\mbox{\Hypertarget{classOpt__hints_aba52b9701cb6f27402751db9a815c171}\label{classOpt__hints_aba52b9701cb6f27402751db9a815c171}} 
+void {\bfseries set\+\_\+resolved} ()
+\item 
+\mbox{\Hypertarget{classOpt__hints_aca7704eeddc45adfede6d0967f672e13}\label{classOpt__hints_aca7704eeddc45adfede6d0967f672e13}} 
+bool {\bfseries is\+\_\+resolved} () const
+\item 
+\mbox{\Hypertarget{classOpt__hints_a6f56b14236ddfad6efdac25e932c5cd7}\label{classOpt__hints_a6f56b14236ddfad6efdac25e932c5cd7}} 
+void {\bfseries incr\+\_\+resolved\+\_\+children} ()
+\item 
+\mbox{\Hypertarget{classOpt__hints_af804e6f6d44aa881622d564b1e9028bd}\label{classOpt__hints_af804e6f6d44aa881622d564b1e9028bd}} 
+\mbox{\hyperlink{classMem__root__array}{Mem\+\_\+root\+\_\+array}}$<$ \mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$, true $>$ $\ast$ {\bfseries child\+\_\+array\+\_\+ptr} ()
+\item 
+\mbox{\Hypertarget{classOpt__hints_a2038b69f72475ff9dd2511b755eba38c}\label{classOpt__hints_a2038b69f72475ff9dd2511b755eba38c}} 
+bool {\bfseries is\+\_\+all\+\_\+resolved} () const
+\item 
+\mbox{\Hypertarget{classOpt__hints_a7ee34cdc3e966883222b185f665b62ea}\label{classOpt__hints_a7ee34cdc3e966883222b185f665b62ea}} 
+void {\bfseries register\+\_\+child} (\mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$hint\+\_\+arg)
+\item 
+virtual \mbox{\hyperlink{classPT__hint}{P\+T\+\_\+hint}} $\ast$ \mbox{\hyperlink{classOpt__hints_a3dd8eb290a7b81d9a6d849de18a61cba}{get\+\_\+complex\+\_\+hints}} (opt\+\_\+hints\+\_\+enum type)
+\item 
+\mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$ \mbox{\hyperlink{classOpt__hints_a87c03b089de34abc1e119297e1126f42}{find\+\_\+by\+\_\+name}} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$name\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs) const
+\item 
+void \mbox{\hyperlink{classOpt__hints_a76b7bcc9463fc5fb053d22a56ca488be}{print}} (T\+HD $\ast$thd, String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+void \mbox{\hyperlink{classOpt__hints_ab8841b8df145a91508a091c59046f162}{check\+\_\+unresolved}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classOpt__hints_a8cdecb76130a9a3ce77055cbf2bafb0a}\label{classOpt__hints_a8cdecb76130a9a3ce77055cbf2bafb0a}} 
+virtual void {\bfseries append\+\_\+name} (T\+HD $\ast$thd, String $\ast$str)=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} class is used as ancestor for \mbox{\hyperlink{classOpt__hints__global}{Opt\+\_\+hints\+\_\+global}}, \mbox{\hyperlink{classOpt__hints__qb}{Opt\+\_\+hints\+\_\+qb}}, \mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}}, \mbox{\hyperlink{classOpt__hints__key}{Opt\+\_\+hints\+\_\+key}} classes.
+
+\mbox{\hyperlink{classOpt__hints__global}{Opt\+\_\+hints\+\_\+global}} class is hierarchical structure. It contains information about global hints and also conains array of Q\+U\+E\+RY B\+L\+O\+CK level objects (\mbox{\hyperlink{classOpt__hints__qb}{Opt\+\_\+hints\+\_\+qb}} class). Each Q\+U\+E\+RY B\+L\+O\+CK level object contains array of \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} level hints (class \mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}}). Each \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} level hint contains array of K\+EY lelev hints (\mbox{\hyperlink{classOpt__hints__key}{Opt\+\_\+hints\+\_\+key}} class). Hint information(specified, on$\vert$off state) is stored in hints\+\_\+map object. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classOpt__hints_ab8841b8df145a91508a091c59046f162}\label{classOpt__hints_ab8841b8df145a91508a091c59046f162}} 
+\index{Opt\+\_\+hints@{Opt\+\_\+hints}!check\+\_\+unresolved@{check\+\_\+unresolved}}
+\index{check\+\_\+unresolved@{check\+\_\+unresolved}!Opt\+\_\+hints@{Opt\+\_\+hints}}
+\subsubsection{\texorpdfstring{check\+\_\+unresolved()}{check\_unresolved()}}
+{\footnotesize\ttfamily void Opt\+\_\+hints\+::check\+\_\+unresolved (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Check if there are any unresolved hint objects and print warnings for them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOpt__hints_a87c03b089de34abc1e119297e1126f42}\label{classOpt__hints_a87c03b089de34abc1e119297e1126f42}} 
+\index{Opt\+\_\+hints@{Opt\+\_\+hints}!find\+\_\+by\+\_\+name@{find\+\_\+by\+\_\+name}}
+\index{find\+\_\+by\+\_\+name@{find\+\_\+by\+\_\+name}!Opt\+\_\+hints@{Opt\+\_\+hints}}
+\subsubsection{\texorpdfstring{find\+\_\+by\+\_\+name()}{find\_by\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$ Opt\+\_\+hints\+::find\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$}]{name\+\_\+arg,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs }\end{DoxyParamCaption}) const}
+
+Find hint among lower-\/level hint objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+arg} & hint name \\
+\hline
+{\em cs} & Pointer to character set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hint if found, N\+U\+LL otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOpt__hints_a3dd8eb290a7b81d9a6d849de18a61cba}\label{classOpt__hints_a3dd8eb290a7b81d9a6d849de18a61cba}} 
+\index{Opt\+\_\+hints@{Opt\+\_\+hints}!get\+\_\+complex\+\_\+hints@{get\+\_\+complex\+\_\+hints}}
+\index{get\+\_\+complex\+\_\+hints@{get\+\_\+complex\+\_\+hints}!Opt\+\_\+hints@{Opt\+\_\+hints}}
+\subsubsection{\texorpdfstring{get\+\_\+complex\+\_\+hints()}{get\_complex\_hints()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classPT__hint}{P\+T\+\_\+hint}}$\ast$ Opt\+\_\+hints\+::get\+\_\+complex\+\_\+hints (\begin{DoxyParamCaption}\item[{opt\+\_\+hints\+\_\+enum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns pointer to complex hint for a given type.
+
+A complex hint is a hint that has arguments. (It is not just an on/off switch.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & hint type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to complex hint for a given type. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classOpt__hints__qb_a6312e36d56b68d1c8622482d39dc580b}{Opt\+\_\+hints\+\_\+qb}}, and \mbox{\hyperlink{classOpt__hints__global_a7750a4f66503e4b91a924ad269f52fd9}{Opt\+\_\+hints\+\_\+global}}.
+
+\mbox{\Hypertarget{classOpt__hints_a0208b5809c213bd831cfb4f4bc8b6ade}\label{classOpt__hints_a0208b5809c213bd831cfb4f4bc8b6ade}} 
+\index{Opt\+\_\+hints@{Opt\+\_\+hints}!get\+\_\+switch@{get\+\_\+switch}}
+\index{get\+\_\+switch@{get\+\_\+switch}!Opt\+\_\+hints@{Opt\+\_\+hints}}
+\subsubsection{\texorpdfstring{get\+\_\+switch()}{get\_switch()}}
+{\footnotesize\ttfamily bool Opt\+\_\+hints\+::get\+\_\+switch (\begin{DoxyParamCaption}\item[{opt\+\_\+hints\+\_\+enum}]{type\+\_\+arg }\end{DoxyParamCaption}) const}
+
+Function returns switch hint state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+arg} & hint type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hint value if hint is specified, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOpt__hints_a76b7bcc9463fc5fb053d22a56ca488be}\label{classOpt__hints_a76b7bcc9463fc5fb053d22a56ca488be}} 
+\index{Opt\+\_\+hints@{Opt\+\_\+hints}!print@{print}}
+\index{print@{print}!Opt\+\_\+hints@{Opt\+\_\+hints}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Opt\+\_\+hints\+::print (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})}
+
+Print all hints except of Q\+B\+\_\+\+N\+A\+ME hint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object \\
+\hline
+{\em str} & Pointer to String object \\
+\hline
+{\em query\+\_\+type} & If query type is Q\+T\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+E\+D\+\_\+\+F\+O\+R\+M\+AT, un-\/resolved hints will also be printed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOpt__hints_a7c52f2fc6a14f6d7e1de516994d02f82}\label{classOpt__hints_a7c52f2fc6a14f6d7e1de516994d02f82}} 
+\index{Opt\+\_\+hints@{Opt\+\_\+hints}!set\+\_\+switch@{set\+\_\+switch}}
+\index{set\+\_\+switch@{set\+\_\+switch}!Opt\+\_\+hints@{Opt\+\_\+hints}}
+\subsubsection{\texorpdfstring{set\+\_\+switch()}{set\_switch()}}
+{\footnotesize\ttfamily bool Opt\+\_\+hints\+::set\+\_\+switch (\begin{DoxyParamCaption}\item[{bool}]{switch\+\_\+state\+\_\+arg,  }\item[{opt\+\_\+hints\+\_\+enum}]{type\+\_\+arg,  }\item[{bool}]{check\+\_\+parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function sets switch hint state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em switch\+\_\+state\+\_\+arg} & switch hint state \\
+\hline
+{\em type\+\_\+arg} & hint type \\
+\hline
+{\em check\+\_\+parent} & true if hint can be on parent level\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if hint is already specified, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+hints.\+h\item 
+opt\+\_\+hints.\+cc\end{DoxyCompactItemize}

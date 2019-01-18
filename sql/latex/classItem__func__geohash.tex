@@ -1,0 +1,177 @@
+\hypertarget{classItem__func__geohash}{}\section{Item\+\_\+func\+\_\+geohash Class Reference}
+\label{classItem__func__geohash}\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+
+
+{\ttfamily \#include $<$item\+\_\+strfunc.\+h$>$}
+
+Inheritance diagram for Item\+\_\+func\+\_\+geohash\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__geohash}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__geohash_afec4b55fc30c255c3cbb1a78a69dea64}\label{classItem__func__geohash_afec4b55fc30c255c3cbb1a78a69dea64}} 
+{\bfseries Item\+\_\+func\+\_\+geohash} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$point, \mbox{\hyperlink{classItem}{Item}} $\ast$length)
+\item 
+\mbox{\Hypertarget{classItem__func__geohash_a270d5a3d94978782e0bc0d42b373ef1e}\label{classItem__func__geohash_a270d5a3d94978782e0bc0d42b373ef1e}} 
+{\bfseries Item\+\_\+func\+\_\+geohash} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$longitude, \mbox{\hyperlink{classItem}{Item}} $\ast$latitude, \mbox{\hyperlink{classItem}{Item}} $\ast$length)
+\item 
+String $\ast$ \mbox{\hyperlink{classItem__func__geohash_a460112e8fbbf5494c4a6cbf969f87013}{val\+\_\+str\+\_\+ascii}} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__func__geohash_ad5a28836196906c2b11b6c4d27ee4d8d}\label{classItem__func__geohash_ad5a28836196906c2b11b6c4d27ee4d8d}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+bool \mbox{\hyperlink{classItem__func__geohash_a55985b35b8f0607b19b7490e99704461}{fix\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref)
+\item 
+\mbox{\Hypertarget{classItem__func__geohash_aecb69fe1c4dbcbebe248d153d741fd75}\label{classItem__func__geohash_aecb69fe1c4dbcbebe248d153d741fd75}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+char \mbox{\hyperlink{classItem__func__geohash_a1fbadf1b1b984bba02477c0c25c39aea}{char\+\_\+to\+\_\+base32}} (char char\+\_\+input)
+\item 
+void \mbox{\hyperlink{classItem__func__geohash_a3f7bb8e49f769efc0a9a70d5b35bd13c}{encode\+\_\+bit}} (double $\ast$upper\+\_\+value, double $\ast$lower\+\_\+value, double target\+\_\+value, char $\ast$char\+\_\+value, int bit\+\_\+number)
+\item 
+bool \mbox{\hyperlink{classItem__func__geohash_a3b79d0bd1df6d3fdf5f92dd915bae2f6}{fill\+\_\+and\+\_\+check\+\_\+fields}} ()
+\item 
+bool \mbox{\hyperlink{classItem__func__geohash_a644fc7124d8c5332ed23a8519226f287}{check\+\_\+valid\+\_\+latlong\+\_\+type}} (\mbox{\hyperlink{classItem}{Item}} $\ast$ref)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classItem__func__geohash_af84e272abb84634d9ad7375602ce462f}{is\+\_\+item\+\_\+null}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class handles two forms of the same function\+:
+
+$<$string$>$ = S\+T\+\_\+\+G\+E\+O\+H\+A\+S\+H($<$point$>$, $<$maxlength$>$); $<$string$>$ = S\+T\+\_\+\+G\+E\+O\+H\+A\+S\+H($<$longitude$>$, $<$latitude$>$, $<$maxlength$>$)
+
+It returns an encoded geohash string, no longer than $<$maxlength$>$ characters long. Note that it might be shorter than $<$maxlength$>$. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__geohash_a1fbadf1b1b984bba02477c0c25c39aea}\label{classItem__func__geohash_a1fbadf1b1b984bba02477c0c25c39aea}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!char\+\_\+to\+\_\+base32@{char\+\_\+to\+\_\+base32}}
+\index{char\+\_\+to\+\_\+base32@{char\+\_\+to\+\_\+base32}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{char\+\_\+to\+\_\+base32()}{char\_to\_base32()}}
+{\footnotesize\ttfamily char Item\+\_\+func\+\_\+geohash\+::char\+\_\+to\+\_\+base32 (\begin{DoxyParamCaption}\item[{char}]{char\+\_\+input }\end{DoxyParamCaption})}
+
+Converts a char value to it\textquotesingle{}s base32 representation, where 0 = a, 1 = b, ... , 30 = y, 31 = z.
+
+The function expects that the input character is within allowed range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em char\+\_\+input} & The value to convert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the A\+S\+C\+II equivalent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__geohash_a644fc7124d8c5332ed23a8519226f287}\label{classItem__func__geohash_a644fc7124d8c5332ed23a8519226f287}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!check\+\_\+valid\+\_\+latlong\+\_\+type@{check\+\_\+valid\+\_\+latlong\+\_\+type}}
+\index{check\+\_\+valid\+\_\+latlong\+\_\+type@{check\+\_\+valid\+\_\+latlong\+\_\+type}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{check\+\_\+valid\+\_\+latlong\+\_\+type()}{check\_valid\_latlong\_type()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+geohash\+::check\+\_\+valid\+\_\+latlong\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Checks if supplied item is a valid latitude or longitude, based on which type it is. Implemented as a whitelist of allowed types, where binary data is not allowed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & \mbox{\hyperlink{classItem}{Item}} to check for valid latitude/longitude. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if item is not valid, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__geohash_a3f7bb8e49f769efc0a9a70d5b35bd13c}\label{classItem__func__geohash_a3f7bb8e49f769efc0a9a70d5b35bd13c}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!encode\+\_\+bit@{encode\+\_\+bit}}
+\index{encode\+\_\+bit@{encode\+\_\+bit}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{encode\+\_\+bit()}{encode\_bit()}}
+{\footnotesize\ttfamily void Item\+\_\+func\+\_\+geohash\+::encode\+\_\+bit (\begin{DoxyParamCaption}\item[{double $\ast$}]{upper\+\_\+value,  }\item[{double $\ast$}]{lower\+\_\+value,  }\item[{double}]{target\+\_\+value,  }\item[{char $\ast$}]{char\+\_\+value,  }\item[{int}]{bit\+\_\+number }\end{DoxyParamCaption})}
+
+Sets the bit number in char\+\_\+value, determined by following formula\+:
+
+IF target\+\_\+value $<$ (middle between lower\+\_\+value and upper\+\_\+value) set bit to 0 E\+L\+SE set bit to 1
+
+When the function returns, upper\+\_\+value OR lower\+\_\+value are adjusted to the middle value between lower and upper.
+
+
+\begin{DoxyParams}{Parameters}
+{\em upper\+\_\+value} & The upper error range for latitude or longitude. \\
+\hline
+{\em lower\+\_\+value} & The lower error range for latitude or longitude. \\
+\hline
+{\em target\+\_\+value} & Latitude or longitude value supplied as argument by the user. \\
+\hline
+{\em char\+\_\+value} & The character we want to set the bit on. \\
+\hline
+{\em bit\+\_\+number} & Wich bit number in char\+\_\+value to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classItem__func__geohash_a3b79d0bd1df6d3fdf5f92dd915bae2f6}\label{classItem__func__geohash_a3b79d0bd1df6d3fdf5f92dd915bae2f6}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!fill\+\_\+and\+\_\+check\+\_\+fields@{fill\+\_\+and\+\_\+check\+\_\+fields}}
+\index{fill\+\_\+and\+\_\+check\+\_\+fields@{fill\+\_\+and\+\_\+check\+\_\+fields}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{fill\+\_\+and\+\_\+check\+\_\+fields()}{fill\_and\_check\_fields()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+geohash\+::fill\+\_\+and\+\_\+check\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Populate member variables with values from arguments.
+
+In this function we populate the member variables \textquotesingle{}latitude\textquotesingle{}, \textquotesingle{}longitude\textquotesingle{} and \textquotesingle{}geohash\+\_\+length\textquotesingle{} with values from the arguments supplied by the user. We also do type checking on the geometry object, as well as out-\/of-\/range check for both longitude, latitude and geohash length.
+
+If an expection is raised, null\+\_\+value will not be set. If a null argument was detected, null\+\_\+value will be set to true.
+
+\begin{DoxyReturn}{Returns}
+false if class variables was populated, or true if the function failed to populate them. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__geohash_a55985b35b8f0607b19b7490e99704461}\label{classItem__func__geohash_a55985b35b8f0607b19b7490e99704461}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!fix\+\_\+fields@{fix\+\_\+fields}}
+\index{fix\+\_\+fields@{fix\+\_\+fields}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{fix\+\_\+fields()}{fix\_fields()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+geohash\+::fix\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here we check for valid types. We have to accept geometry of any type, and determine if it\textquotesingle{}s really a P\+O\+I\+NT in val\+\_\+str(). 
+
+Reimplemented from \mbox{\hyperlink{classItem__str__func}{Item\+\_\+str\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__geohash_af84e272abb84634d9ad7375602ce462f}\label{classItem__func__geohash_af84e272abb84634d9ad7375602ce462f}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!is\+\_\+item\+\_\+null@{is\+\_\+item\+\_\+null}}
+\index{is\+\_\+item\+\_\+null@{is\+\_\+item\+\_\+null}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{is\+\_\+item\+\_\+null()}{is\_item\_null()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+geohash\+::is\+\_\+item\+\_\+null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check if a \mbox{\hyperlink{classItem}{Item}} is N\+U\+LL. This includes N\+U\+LL in the form of literal N\+U\+LL, N\+U\+LL in a user-\/defined variable and N\+U\+LL in prepared statements.
+
+Note that it will return true for M\+E\+D\+I\+U\+M\+\_\+\+B\+L\+OB for F\+U\+N\+C\+\_\+\+I\+T\+EM as well, in order to allow N\+U\+LL in user-\/defined variables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item to check for N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the item is N\+U\+LL, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__func__geohash_a460112e8fbbf5494c4a6cbf969f87013}\label{classItem__func__geohash_a460112e8fbbf5494c4a6cbf969f87013}} 
+\index{Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}!val\+\_\+str\+\_\+ascii@{val\+\_\+str\+\_\+ascii}}
+\index{val\+\_\+str\+\_\+ascii@{val\+\_\+str\+\_\+ascii}!Item\+\_\+func\+\_\+geohash@{Item\+\_\+func\+\_\+geohash}}
+\subsubsection{\texorpdfstring{val\+\_\+str\+\_\+ascii()}{val\_str\_ascii()}}
+{\footnotesize\ttfamily String $\ast$ Item\+\_\+func\+\_\+geohash\+::val\+\_\+str\+\_\+ascii (\begin{DoxyParamCaption}\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Encodes a pair of longitude and latitude values into a geohash string. The length of the output string will be no longer than the value of geohash\+\_\+max\+\_\+output\+\_\+length member variable, but it might be shorter. The stop condition is the following\+:
+
+After appending a character to the output string, check if the encoded values of latitude and longitude matches the input arguments values. If so, return the result to the user.
+
+It does exist latitudes/longitude values which will cause the algorithm to loop until M\+A\+X(max\+\_\+geohash\+\_\+length, upper\+\_\+geohash\+\_\+limit), no matter how large these arguments are (eg. S\+E\+L\+E\+CT G\+E\+O\+H\+A\+SH(0.\+01, 1, 100); ). It is thus important to supply an reasonable max geohash length argument. 
+
+Implements \mbox{\hyperlink{classItem__str__ascii__func}{Item\+\_\+str\+\_\+ascii\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+strfunc.\+h\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

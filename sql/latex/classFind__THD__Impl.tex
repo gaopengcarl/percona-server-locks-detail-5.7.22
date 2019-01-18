@@ -1,0 +1,53 @@
+\hypertarget{classFind__THD__Impl}{}\section{Find\+\_\+\+T\+H\+D\+\_\+\+Impl Class Reference}
+\label{classFind__THD__Impl}\index{Find\+\_\+\+T\+H\+D\+\_\+\+Impl@{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}}
+
+
+{\ttfamily \#include $<$mysqld\+\_\+thd\+\_\+manager.\+h$>$}
+
+Inheritance diagram for Find\+\_\+\+T\+H\+D\+\_\+\+Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.200429cm]{classFind__THD__Impl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classFind__THD__Impl_a9241342847e36bfb0c4d8330df033b4b}{operator()}} (T\+HD $\ast$thd)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to find specific thd from the thd list. Users of find\+\_\+thd() need to subclass this and override operator() to provide implementation to find thd from thd list. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFind__THD__Impl_a9241342847e36bfb0c4d8330df033b4b}\label{classFind__THD__Impl_a9241342847e36bfb0c4d8330df033b4b}} 
+\index{Find\+\_\+\+T\+H\+D\+\_\+\+Impl@{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}!operator()@{operator()}}
+\index{operator()@{operator()}!Find\+\_\+\+T\+H\+D\+\_\+\+Impl@{Find\+\_\+\+T\+H\+D\+\_\+\+Impl}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual bool Find\+\_\+\+T\+H\+D\+\_\+\+Impl\+::operator() (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Override this operator to provide implementation to find specific thd.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD of one element in global thread list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & for matching thd false otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classFind__thd__query__lock_a966a09cb01db67bb82ff6b8446cc0fe6}{Find\+\_\+thd\+\_\+query\+\_\+lock}}, \mbox{\hyperlink{classFind__thd__by__id__with__callback__set_a3a8c6f9be71c9572a34fece05ef95add}{Find\+\_\+thd\+\_\+by\+\_\+id\+\_\+with\+\_\+callback\+\_\+set$<$ I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E $>$}}, and \mbox{\hyperlink{classFind__thd__with__id_a0a1d128b4bb4ca839a1814e0737c5d0d}{Find\+\_\+thd\+\_\+with\+\_\+id}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mysqld\+\_\+thd\+\_\+manager.\+h\end{DoxyCompactItemize}

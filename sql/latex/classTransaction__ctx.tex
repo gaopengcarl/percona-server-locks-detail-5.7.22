@@ -1,0 +1,165 @@
+\hypertarget{classTransaction__ctx}{}\section{Transaction\+\_\+ctx Class Reference}
+\label{classTransaction__ctx}\index{Transaction\+\_\+ctx@{Transaction\+\_\+ctx}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_afefc7b9787a131a5c91e53bfcedb1a79}\label{classTransaction__ctx_afefc7b9787a131a5c91e53bfcedb1a79}} 
+enum {\bfseries enum\+\_\+trx\+\_\+scope} \{ {\bfseries S\+T\+MT} = 0, 
+{\bfseries S\+E\+S\+S\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a731f6bd8c0a8a80de56c08de638bc28c}\label{classTransaction__ctx_a731f6bd8c0a8a80de56c08de638bc28c}} 
+void {\bfseries store\+\_\+commit\+\_\+parent} (int64 last\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ac6ebcd49772f10fc25f5d9b036760884}\label{classTransaction__ctx_ac6ebcd49772f10fc25f5d9b036760884}} 
+void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a1643a94dd4204c57fba4738336227512}\label{classTransaction__ctx_a1643a94dd4204c57fba4738336227512}} 
+bool {\bfseries is\+\_\+active} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a513a31570067b8765d18e1473577db09}\label{classTransaction__ctx_a513a31570067b8765d18e1473577db09}} 
+void {\bfseries push\+\_\+unsafe\+\_\+rollback\+\_\+warnings} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a0b01c0e7b58cc5a0aafeaf505ff6b178}\label{classTransaction__ctx_a0b01c0e7b58cc5a0aafeaf505ff6b178}} 
+void {\bfseries merge\+\_\+unsafe\+\_\+rollback\+\_\+flags} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_aeeb7f85ae13af58cbcdfd9bd6f8d0138}\label{classTransaction__ctx_aeeb7f85ae13af58cbcdfd9bd6f8d0138}} 
+void {\bfseries init\+\_\+mem\+\_\+root\+\_\+defaults} (ulong trans\+\_\+alloc\+\_\+block\+\_\+size, ulong trans\+\_\+prealloc\+\_\+size)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a5c3eb7dda13282efe5102305f3f576e9}\label{classTransaction__ctx_a5c3eb7dda13282efe5102305f3f576e9}} 
+M\+E\+M\+\_\+\+R\+O\+OT $\ast$ {\bfseries transaction\+\_\+memroot} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a6f416ff6d916f00e34d8175185005de1}\label{classTransaction__ctx_a6f416ff6d916f00e34d8175185005de1}} 
+void $\ast$ {\bfseries allocate\+\_\+memory} (unsigned int size)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a10981c2092436e73028ce3a597dbc5c7}\label{classTransaction__ctx_a10981c2092436e73028ce3a597dbc5c7}} 
+void {\bfseries claim\+\_\+memory\+\_\+ownership} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ab19b986eab6f36f0ccf552ba0bfd0cea}\label{classTransaction__ctx_ab19b986eab6f36f0ccf552ba0bfd0cea}} 
+void {\bfseries free\+\_\+memory} (myf root\+\_\+alloc\+\_\+flags)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_aff1765c775b81e0a0f2e222da536e275}\label{classTransaction__ctx_aff1765c775b81e0a0f2e222da536e275}} 
+char $\ast$ {\bfseries strmake} (const char $\ast$str, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a793e2f3ee3ca6eea1df99ce1a2cf9c1b}\label{classTransaction__ctx_a793e2f3ee3ca6eea1df99ce1a2cf9c1b}} 
+void {\bfseries invalidate\+\_\+changed\+\_\+tables\+\_\+in\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_add2ebf6b181014f61ad4b4daf1532b9c}\label{classTransaction__ctx_add2ebf6b181014f61ad4b4daf1532b9c}} 
+bool {\bfseries add\+\_\+changed\+\_\+table} (const char $\ast$key, long key\+\_\+length)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_aef6dad79135914a642d7d08c47e6a69b}\label{classTransaction__ctx_aef6dad79135914a642d7d08c47e6a69b}} 
+\mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$ {\bfseries ha\+\_\+trx\+\_\+info} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a6175b3fbe070bd2ad7b514399518f2f3}\label{classTransaction__ctx_a6175b3fbe070bd2ad7b514399518f2f3}} 
+const \mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$ {\bfseries ha\+\_\+trx\+\_\+info} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_af7779f2b6b1cd79ddda7a9a9eb49a06b}\label{classTransaction__ctx_af7779f2b6b1cd79ddda7a9a9eb49a06b}} 
+void {\bfseries set\+\_\+ha\+\_\+trx\+\_\+info} (enum\+\_\+trx\+\_\+scope scope, \mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$trx\+\_\+info)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a12d03b724c232b34fdab9f8e07a48108}\label{classTransaction__ctx_a12d03b724c232b34fdab9f8e07a48108}} 
+\mbox{\hyperlink{classXID__STATE}{X\+I\+D\+\_\+\+S\+T\+A\+TE}} $\ast$ {\bfseries xid\+\_\+state} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a4f8872139ca78935140054c315aed5e0}\label{classTransaction__ctx_a4f8872139ca78935140054c315aed5e0}} 
+const \mbox{\hyperlink{classXID__STATE}{X\+I\+D\+\_\+\+S\+T\+A\+TE}} $\ast$ {\bfseries xid\+\_\+state} () const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a1e9b5f7a45e9ea2ea86ba0e557b02046}\label{classTransaction__ctx_a1e9b5f7a45e9ea2ea86ba0e557b02046}} 
+bool {\bfseries cannot\+\_\+safely\+\_\+rollback} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_aaad51caa6d7baa45c52b7ebbd373bdca}\label{classTransaction__ctx_aaad51caa6d7baa45c52b7ebbd373bdca}} 
+unsigned int {\bfseries get\+\_\+unsafe\+\_\+rollback\+\_\+flags} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a8e6fd8b4bfaecee0326251813efbf99f}\label{classTransaction__ctx_a8e6fd8b4bfaecee0326251813efbf99f}} 
+void {\bfseries set\+\_\+unsafe\+\_\+rollback\+\_\+flags} (enum\+\_\+trx\+\_\+scope scope, unsigned int flags)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_abfdcadb2df0a6183f73dc72a2f72bbe0}\label{classTransaction__ctx_abfdcadb2df0a6183f73dc72a2f72bbe0}} 
+void {\bfseries add\+\_\+unsafe\+\_\+rollback\+\_\+flags} (enum\+\_\+trx\+\_\+scope scope, unsigned int flags)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a49e620eae77d6ec23a96c7387c18366e}\label{classTransaction__ctx_a49e620eae77d6ec23a96c7387c18366e}} 
+void {\bfseries reset\+\_\+unsafe\+\_\+rollback\+\_\+flags} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_aadcec37c4bfa987a35296ab2ca23bc79}\label{classTransaction__ctx_aadcec37c4bfa987a35296ab2ca23bc79}} 
+void {\bfseries mark\+\_\+modified\+\_\+non\+\_\+trans\+\_\+table} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ae27b9f33f9461cbdb9b86273fa49d209}\label{classTransaction__ctx_ae27b9f33f9461cbdb9b86273fa49d209}} 
+bool {\bfseries has\+\_\+modified\+\_\+non\+\_\+trans\+\_\+table} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_acbc5fbada378f6efd891f8b098c31820}\label{classTransaction__ctx_acbc5fbada378f6efd891f8b098c31820}} 
+void {\bfseries mark\+\_\+created\+\_\+temp\+\_\+table} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a0f968097576a7bc5e5322d15d44d5959}\label{classTransaction__ctx_a0f968097576a7bc5e5322d15d44d5959}} 
+bool {\bfseries has\+\_\+created\+\_\+temp\+\_\+table} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_aea4e08f7bcf5c692fd1ff96224eb10de}\label{classTransaction__ctx_aea4e08f7bcf5c692fd1ff96224eb10de}} 
+void {\bfseries mark\+\_\+dropped\+\_\+temp\+\_\+table} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ad8d99dfe933f82d8cab74578e6116664}\label{classTransaction__ctx_ad8d99dfe933f82d8cab74578e6116664}} 
+bool {\bfseries has\+\_\+dropped\+\_\+temp\+\_\+table} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a6dcc4e14c30441acb00bfe4e3ee8d58e}\label{classTransaction__ctx_a6dcc4e14c30441acb00bfe4e3ee8d58e}} 
+void {\bfseries reset} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_afa159d305acb12b115ec7c913e0c4211}\label{classTransaction__ctx_afa159d305acb12b115ec7c913e0c4211}} 
+bool {\bfseries is\+\_\+empty} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ad749bc2fe6f27acff04ec5912609898c}\label{classTransaction__ctx_ad749bc2fe6f27acff04ec5912609898c}} 
+void {\bfseries set\+\_\+no\+\_\+2pc} (enum\+\_\+trx\+\_\+scope scope, bool value)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a3aecf3a683f8290238181bbd18d8bf3d}\label{classTransaction__ctx_a3aecf3a683f8290238181bbd18d8bf3d}} 
+bool {\bfseries no\+\_\+2pc} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a7a644bf071672433e0e0b7ccd285ae2a}\label{classTransaction__ctx_a7a644bf071672433e0e0b7ccd285ae2a}} 
+int {\bfseries rw\+\_\+ha\+\_\+count} (enum\+\_\+trx\+\_\+scope scope) const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a09626899f05fc5fa6b3d4b8aec44f27f}\label{classTransaction__ctx_a09626899f05fc5fa6b3d4b8aec44f27f}} 
+void {\bfseries set\+\_\+rw\+\_\+ha\+\_\+count} (enum\+\_\+trx\+\_\+scope scope, int value)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ab15ed15fb4fdc9e5d09deb68c548d1fc}\label{classTransaction__ctx_ab15ed15fb4fdc9e5d09deb68c548d1fc}} 
+void {\bfseries reset\+\_\+scope} (enum\+\_\+trx\+\_\+scope scope)
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ad429c73b94803c43a1db097dfd0a7445}\label{classTransaction__ctx_ad429c73b94803c43a1db097dfd0a7445}} 
+\mbox{\hyperlink{classRpl__transaction__ctx}{Rpl\+\_\+transaction\+\_\+ctx}} $\ast$ {\bfseries get\+\_\+rpl\+\_\+transaction\+\_\+ctx} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_afdc6569161651a581f080c65d229bff0}\label{classTransaction__ctx_afdc6569161651a581f080c65d229bff0}} 
+const \mbox{\hyperlink{classRpl__transaction__ctx}{Rpl\+\_\+transaction\+\_\+ctx}} $\ast$ {\bfseries get\+\_\+rpl\+\_\+transaction\+\_\+ctx} () const
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a03113b1ce383b9543cc211388162a1b4}\label{classTransaction__ctx_a03113b1ce383b9543cc211388162a1b4}} 
+\mbox{\hyperlink{classRpl__transaction__write__set__ctx}{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}} $\ast$ {\bfseries get\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx} ()
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ac1fd3223f2bc99cd5eafb74b48342f86}\label{classTransaction__ctx_ac1fd3223f2bc99cd5eafb74b48342f86}} 
+const \mbox{\hyperlink{classRpl__transaction__write__set__ctx}{Rpl\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx}} $\ast$ {\bfseries get\+\_\+transaction\+\_\+write\+\_\+set\+\_\+ctx} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a460e25aa0feb325fe2b81be7fd19fc4b}\label{classTransaction__ctx_a460e25aa0feb325fe2b81be7fd19fc4b}} 
+\mbox{\hyperlink{structst__savepoint}{S\+A\+V\+E\+P\+O\+I\+NT}} $\ast$ {\bfseries m\+\_\+savepoints}
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_ac095f9abfc9af041bd6e00d7fcea54c7}\label{classTransaction__ctx_ac095f9abfc9af041bd6e00d7fcea54c7}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>bool {\bfseries enabled}\\
+\>bool {\bfseries pending}\\
+\>bool {\bfseries xid\_written}\\
+\>bool {\bfseries real\_commit}\\
+\>bool {\bfseries commit\_low}\\
+\>bool {\bfseries run\_hooks}\\
+\>bool {\bfseries ready\_preempt}\\
+\} {\bfseries m\_flags}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{classTransaction__ctx_a4690f8e351a31fac5d001cd8cf8141c9}\label{classTransaction__ctx_a4690f8e351a31fac5d001cd8cf8141c9}} 
+int64 {\bfseries last\+\_\+committed}
+\item 
+\mbox{\Hypertarget{classTransaction__ctx_a71d2819e168da62b96f2c5188b979fd0}\label{classTransaction__ctx_a71d2819e168da62b96f2c5188b979fd0}} 
+int64 {\bfseries sequence\+\_\+number}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+transaction\+\_\+info.\+h\item 
+transaction\+\_\+info.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\hypertarget{classItem__func__format}{}\section{Item\+\_\+func\+\_\+format Class Reference}
+\label{classItem__func__format}\index{Item\+\_\+func\+\_\+format@{Item\+\_\+func\+\_\+format}}
+Inheritance diagram for Item\+\_\+func\+\_\+format\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__format}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__format_aa08bbc59ab2524cad34a5506b5f88f01}\label{classItem__func__format_aa08bbc59ab2524cad34a5506b5f88f01}} 
+{\bfseries Item\+\_\+func\+\_\+format} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$org, \mbox{\hyperlink{classItem}{Item}} $\ast$dec)
+\item 
+\mbox{\Hypertarget{classItem__func__format_af691b003fab138859ea0fb5a89610965}\label{classItem__func__format_af691b003fab138859ea0fb5a89610965}} 
+{\bfseries Item\+\_\+func\+\_\+format} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$org, \mbox{\hyperlink{classItem}{Item}} $\ast$dec, \mbox{\hyperlink{classItem}{Item}} $\ast$lang)
+\item 
+\mbox{\Hypertarget{classItem__func__format_a9acaaeabbbe3a96df2b6173656d149db}\label{classItem__func__format_a9acaaeabbbe3a96df2b6173656d149db}} 
+\mbox{\hyperlink{classMY__LOCALE}{M\+Y\+\_\+\+L\+O\+C\+A\+LE}} $\ast$ {\bfseries get\+\_\+locale} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+String $\ast$ \mbox{\hyperlink{classItem__func__format_a9f01cf724eacb711a5874955671fdc67}{val\+\_\+str\+\_\+ascii}} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__func__format_a0129911da0465be0bf03042d2a161df8}\label{classItem__func__format_a0129911da0465be0bf03042d2a161df8}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+\mbox{\Hypertarget{classItem__func__format_a0db392a5dc82f712516cbad6b2e454ee}\label{classItem__func__format_a0db392a5dc82f712516cbad6b2e454ee}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+virtual void \mbox{\hyperlink{classItem__func__format_aaf19ba682a8f2acb947222addb55b0d2}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__format_aaf19ba682a8f2acb947222addb55b0d2}\label{classItem__func__format_aaf19ba682a8f2acb947222addb55b0d2}} 
+\index{Item\+\_\+func\+\_\+format@{Item\+\_\+func\+\_\+format}!print@{print}}
+\index{print@{print}!Item\+\_\+func\+\_\+format@{Item\+\_\+func\+\_\+format}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+func\+\_\+format\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__format_a9f01cf724eacb711a5874955671fdc67}\label{classItem__func__format_a9f01cf724eacb711a5874955671fdc67}} 
+\index{Item\+\_\+func\+\_\+format@{Item\+\_\+func\+\_\+format}!val\+\_\+str\+\_\+ascii@{val\+\_\+str\+\_\+ascii}}
+\index{val\+\_\+str\+\_\+ascii@{val\+\_\+str\+\_\+ascii}!Item\+\_\+func\+\_\+format@{Item\+\_\+func\+\_\+format}}
+\subsubsection{\texorpdfstring{val\+\_\+str\+\_\+ascii()}{val\_str\_ascii()}}
+{\footnotesize\ttfamily String $\ast$ Item\+\_\+func\+\_\+format\+::val\+\_\+str\+\_\+ascii (\begin{DoxyParamCaption}\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000035}{Todo}}]This needs to be fixed for multi-\/byte character set where numbers are stored in more than one byte \end{DoxyRefDesc}
+
+
+Implements \mbox{\hyperlink{classItem__str__ascii__func}{Item\+\_\+str\+\_\+ascii\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+strfunc.\+h\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,372 @@
+\hypertarget{classTable__trigger__dispatcher}{}\section{Table\+\_\+trigger\+\_\+dispatcher Class Reference}
+\label{classTable__trigger__dispatcher}\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+
+
+{\ttfamily \#include $<$table\+\_\+trigger\+\_\+dispatcher.\+h$>$}
+
+Inheritance diagram for Table\+\_\+trigger\+\_\+dispatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTable__trigger__dispatcher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_adf9d213f85728cde8d3844b4b68b6c4a}{check\+\_\+n\+\_\+load}} (T\+HD $\ast$thd, bool names\+\_\+only)
+\item 
+\mbox{\hyperlink{classTable__trigger__dispatcher_a2b614568870b03e1314d731bcb5b8272}{Table\+\_\+trigger\+\_\+dispatcher}} (const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_abecc5a3556156f2695160d9064ea211d}\label{classTable__trigger__dispatcher_abecc5a3556156f2695160d9064ea211d}} 
+\mbox{\hyperlink{classTable__trigger__field__support}{Table\+\_\+trigger\+\_\+field\+\_\+support}} $\ast$ {\bfseries get\+\_\+trigger\+\_\+field\+\_\+support} ()
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_ac10c8ae9d900330f551227257b6e8d60}\label{classTable__trigger__dispatcher_ac10c8ae9d900330f551227257b6e8d60}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ \& {\bfseries get\+\_\+trigger\+\_\+list} ()
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_a61013a61f7bee0179a3ed1eee860299d}{check\+\_\+for\+\_\+broken\+\_\+triggers}} ()
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_ae95758893205106c0bd68e655c40da90}{create\+\_\+trigger}} (T\+HD $\ast$thd, String $\ast$binlog\+\_\+create\+\_\+trigger\+\_\+stmt)
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_a4d0a4d3ee1d736c4c33080985d73b272}{drop\+\_\+trigger}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trigger\+\_\+name, bool $\ast$trigger\+\_\+found)
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_a3003eef9e85a0ca650bc330c721a23db}{process\+\_\+triggers}} (T\+HD $\ast$thd, \mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}} event, \mbox{\hyperlink{trigger__def_8h_ace20981b1217cca2d3a23e2338fd61b9}{enum\+\_\+trigger\+\_\+action\+\_\+time\+\_\+type}} action\+\_\+time, bool old\+\_\+row\+\_\+is\+\_\+record1)
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a8a2fc59f2f950c6894a2f56df7bf8ef2}\label{classTable__trigger__dispatcher_a8a2fc59f2f950c6894a2f56df7bf8ef2}} 
+\mbox{\hyperlink{classTrigger__chain}{Trigger\+\_\+chain}} $\ast$ {\bfseries get\+\_\+triggers} (int event, int action\+\_\+time)
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a6ee06725e3f36793038c2710a01abf97}\label{classTable__trigger__dispatcher_a6ee06725e3f36793038c2710a01abf97}} 
+const \mbox{\hyperlink{classTrigger__chain}{Trigger\+\_\+chain}} $\ast$ {\bfseries get\+\_\+triggers} (int event, int action\+\_\+time) const
+\item 
+\mbox{\hyperlink{classTrigger}{Trigger}} $\ast$ \mbox{\hyperlink{classTable__trigger__dispatcher_a4e5577ae97ad916d06595957f4624482}{find\+\_\+trigger}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trigger\+\_\+name)
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a248d5fb43a2ca9b54b9f28dd3e73e6f0}\label{classTable__trigger__dispatcher_a248d5fb43a2ca9b54b9f28dd3e73e6f0}} 
+bool {\bfseries has\+\_\+triggers} (\mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}} event, \mbox{\hyperlink{trigger__def_8h_ace20981b1217cca2d3a23e2338fd61b9}{enum\+\_\+trigger\+\_\+action\+\_\+time\+\_\+type}} action\+\_\+time) const
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a187795de5eecc9c1b6253a27fd4be51c}\label{classTable__trigger__dispatcher_a187795de5eecc9c1b6253a27fd4be51c}} 
+bool {\bfseries has\+\_\+update\+\_\+triggers} () const
+\item 
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a705772b186de3e35f089d07bb5ec4532}\label{classTable__trigger__dispatcher_a705772b186de3e35f089d07bb5ec4532}} 
+bool {\bfseries has\+\_\+delete\+\_\+triggers} () const
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_a644865f63c596311fc869e5b7c0d43e6}{mark\+\_\+fields}} (\mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}} event)
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_acd9e2a58e8728a599a2345f1b157f24c}{add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list)
+\item 
+void \mbox{\hyperlink{classTable__trigger__dispatcher_a6b3a1c6bfb3c05254e232abf2db166f0}{enable\+\_\+fields\+\_\+temporary\+\_\+nullability}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classTable__trigger__dispatcher_a1b452d2138ee5d21b0b53e594718def0}{disable\+\_\+fields\+\_\+temporary\+\_\+nullability}} ()
+\item 
+void \mbox{\hyperlink{classTable__trigger__dispatcher_a30896a7deaa5b4f2c8d638367ca5fac3}{print\+\_\+upgrade\+\_\+warnings}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classTable__trigger__dispatcher_ac020fa3def58921a4380348a6db46491}{rename\+\_\+subject\+\_\+table}} (T\+HD $\ast$thd, const char $\ast$old\+\_\+db\+\_\+name, const char $\ast$new\+\_\+db\+\_\+name, const char $\ast$old\+\_\+table\+\_\+name\+\_\+str, const char $\ast$new\+\_\+table\+\_\+name\+\_\+str, bool upgrading50to51)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} $\ast$ \mbox{\hyperlink{classTable__trigger__dispatcher_a892a3e44cf1ddfa4e6245cc0c4bb0c6d}{create}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$subject\+\_\+table)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds all information about triggers of a table. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a2b614568870b03e1314d731bcb5b8272}\label{classTable__trigger__dispatcher_a2b614568870b03e1314d731bcb5b8272}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{Table\+\_\+trigger\+\_\+dispatcher()}{Table\_trigger\_dispatcher()}}
+{\footnotesize\ttfamily Table\+\_\+trigger\+\_\+dispatcher\+::\+Table\+\_\+trigger\+\_\+dispatcher (\begin{DoxyParamCaption}\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} instance, which should serve the subject table specified by database / table name. This form should be used when \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} is created temporary and there is no initialized \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}-\/object for the subject table. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_acd9e2a58e8728a599a2345f1b157f24c}\label{classTable__trigger__dispatcher_acd9e2a58e8728a599a2345f1b157f24c}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers@{add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers}}
+\index{add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers@{add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers()}{add\_tables\_and\_routines\_for\_triggers()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::add\+\_\+tables\+\_\+and\+\_\+routines\+\_\+for\+\_\+triggers (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list }\end{DoxyParamCaption})}
+
+Add triggers for table to the set of routines used by statement. Add tables used by them to statement table list. Do the same for routines used by triggers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em prelocking\+\_\+ctx} & Prelocking context of the statement. \\
+\hline
+{\em table\+\_\+list} & Table list element for table with trigger.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a61013a61f7bee0179a3ed1eee860299d}\label{classTable__trigger__dispatcher_a61013a61f7bee0179a3ed1eee860299d}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!check\+\_\+for\+\_\+broken\+\_\+triggers@{check\+\_\+for\+\_\+broken\+\_\+triggers}}
+\index{check\+\_\+for\+\_\+broken\+\_\+triggers@{check\+\_\+for\+\_\+broken\+\_\+triggers}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{check\+\_\+for\+\_\+broken\+\_\+triggers()}{check\_for\_broken\_triggers()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::check\+\_\+for\+\_\+broken\+\_\+triggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks if there is a broken trigger for this table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if all triggers are Ok. \\
+\hline
+{\em true} & in case there is at least one broken trigger (a trigger which S\+QL-\/definition can not be parsed) for this table. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_adf9d213f85728cde8d3844b4b68b6c4a}\label{classTable__trigger__dispatcher_adf9d213f85728cde8d3844b4b68b6c4a}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!check\+\_\+n\+\_\+load@{check\+\_\+n\+\_\+load}}
+\index{check\+\_\+n\+\_\+load@{check\+\_\+n\+\_\+load}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{check\+\_\+n\+\_\+load()}{check\_n\_load()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::check\+\_\+n\+\_\+load (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{names\+\_\+only }\end{DoxyParamCaption})}
+
+Load triggers for the table specified by the db\+\_\+name and table\+\_\+name pair.
+
+\begin{DoxyNote}{Note}
+The table object passed to this function can be fake. This is usually happens when names\+\_\+only is set. This is the case when triggers should be loaded just to get their names (in order to get a trigger name, the trigger definition has to be parsed; trigger names are not stored in T\+RG files).
+
+If table object is fake, only its memory root can be used.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & current thread context \\
+\hline
+{\em db\+\_\+name} & table\textquotesingle{}s database name \\
+\hline
+{\em table\+\_\+name} & table\textquotesingle{}s name \\
+\hline
+{\em table} & pointer to table object \\
+\hline
+{\em names\+\_\+only} & stop after loading trigger names\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a892a3e44cf1ddfa4e6245cc0c4bb0c6d}\label{classTable__trigger__dispatcher_a892a3e44cf1ddfa4e6245cc0c4bb0c6d}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!create@{create}}
+\index{create@{create}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} $\ast$ Table\+\_\+trigger\+\_\+dispatcher\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{subject\+\_\+table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an instance of \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} for the given subject table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject\+\_\+table} & valid (not fake!) \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}-\/object representing the subject table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a new \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_ae95758893205106c0bd68e655c40da90}\label{classTable__trigger__dispatcher_ae95758893205106c0bd68e655c40da90}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!create\+\_\+trigger@{create\+\_\+trigger}}
+\index{create\+\_\+trigger@{create\+\_\+trigger}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{create\+\_\+trigger()}{create\_trigger()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::create\+\_\+trigger (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{binlog\+\_\+create\+\_\+trigger\+\_\+stmt }\end{DoxyParamCaption})}
+
+Create trigger for table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em binlog\+\_\+create\+\_\+trigger\+\_\+stmt} & well-\/formed C\+R\+E\+A\+TE T\+R\+I\+G\+G\+ER statement for putting into binlog (after successful execution)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Assumes that trigger name is fully qualified.
+\item N\+U\+LL-\/string means the following L\+E\+X\+\_\+\+S\+T\+R\+I\+NG instance\+: \{ str = 0; length = 0 \}.
+\item In other words, definer\+\_\+user and definer\+\_\+host should contain simultaneously N\+U\+LL-\/strings (non-\/S\+U\+I\+D/old trigger) or valid strings (S\+U\+I\+D/new trigger).
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a1b452d2138ee5d21b0b53e594718def0}\label{classTable__trigger__dispatcher_a1b452d2138ee5d21b0b53e594718def0}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!disable\+\_\+fields\+\_\+temporary\+\_\+nullability@{disable\+\_\+fields\+\_\+temporary\+\_\+nullability}}
+\index{disable\+\_\+fields\+\_\+temporary\+\_\+nullability@{disable\+\_\+fields\+\_\+temporary\+\_\+nullability}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{disable\+\_\+fields\+\_\+temporary\+\_\+nullability()}{disable\_fields\_temporary\_nullability()}}
+{\footnotesize\ttfamily void Table\+\_\+trigger\+\_\+dispatcher\+::disable\+\_\+fields\+\_\+temporary\+\_\+nullability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset \char`\"{}temporary nullable\char`\"{} flag from trigger fields. \mbox{\Hypertarget{classTable__trigger__dispatcher_a4d0a4d3ee1d736c4c33080985d73b272}\label{classTable__trigger__dispatcher_a4d0a4d3ee1d736c4c33080985d73b272}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!drop\+\_\+trigger@{drop\+\_\+trigger}}
+\index{drop\+\_\+trigger@{drop\+\_\+trigger}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{drop\+\_\+trigger()}{drop\_trigger()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::drop\+\_\+trigger (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trigger\+\_\+name,  }\item[{bool $\ast$}]{trigger\+\_\+found }\end{DoxyParamCaption})}
+
+Drop trigger for table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread context \\
+\hline
+ & {\em trigger\+\_\+name} & name of the trigger to drop \\
+\hline
+\mbox{\texttt{ out}}  & {\em trigger\+\_\+found} & out-\/flag to determine if the trigger found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a6b3a1c6bfb3c05254e232abf2db166f0}\label{classTable__trigger__dispatcher_a6b3a1c6bfb3c05254e232abf2db166f0}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!enable\+\_\+fields\+\_\+temporary\+\_\+nullability@{enable\+\_\+fields\+\_\+temporary\+\_\+nullability}}
+\index{enable\+\_\+fields\+\_\+temporary\+\_\+nullability@{enable\+\_\+fields\+\_\+temporary\+\_\+nullability}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{enable\+\_\+fields\+\_\+temporary\+\_\+nullability()}{enable\_fields\_temporary\_nullability()}}
+{\footnotesize\ttfamily void Table\+\_\+trigger\+\_\+dispatcher\+::enable\+\_\+fields\+\_\+temporary\+\_\+nullability (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Mark all trigger fields as \char`\"{}temporary nullable\char`\"{} and remember the current T\+H\+D\+::count\+\_\+cuted\+\_\+fields value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a4e5577ae97ad916d06595957f4624482}\label{classTable__trigger__dispatcher_a4e5577ae97ad916d06595957f4624482}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!find\+\_\+trigger@{find\+\_\+trigger}}
+\index{find\+\_\+trigger@{find\+\_\+trigger}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{find\+\_\+trigger()}{find\_trigger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTrigger}{Trigger}} $\ast$ Table\+\_\+trigger\+\_\+dispatcher\+::find\+\_\+trigger (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trigger\+\_\+name }\end{DoxyParamCaption})}
+
+Get trigger object by trigger name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trigger\+\_\+name} & trigger name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to \mbox{\hyperlink{classTrigger}{Trigger}} object, N\+U\+LL if the trigger not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a644865f63c596311fc869e5b7c0d43e6}\label{classTable__trigger__dispatcher_a644865f63c596311fc869e5b7c0d43e6}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!mark\+\_\+fields@{mark\+\_\+fields}}
+\index{mark\+\_\+fields@{mark\+\_\+fields}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{mark\+\_\+fields()}{mark\_fields()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::mark\+\_\+fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}}}]{event }\end{DoxyParamCaption})}
+
+Mark fields of subject table which we read/set in its triggers as such.
+
+This method marks fields of subject table which are read/set in its triggers as such (by properly updating T\+A\+B\+L\+E\+::read\+\_\+set/write\+\_\+set) and thus informs handler that values for these fields should be retrieved/stored during execution of statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Type of event triggers for which we are going to inspect\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a30896a7deaa5b4f2c8d638367ca5fac3}\label{classTable__trigger__dispatcher_a30896a7deaa5b4f2c8d638367ca5fac3}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!print\+\_\+upgrade\+\_\+warnings@{print\+\_\+upgrade\+\_\+warnings}}
+\index{print\+\_\+upgrade\+\_\+warnings@{print\+\_\+upgrade\+\_\+warnings}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{print\+\_\+upgrade\+\_\+warnings()}{print\_upgrade\_warnings()}}
+{\footnotesize\ttfamily void Table\+\_\+trigger\+\_\+dispatcher\+::print\+\_\+upgrade\+\_\+warnings (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Iterate along triggers and print necessary upgrade warnings.
+
+Now it prints the warning about missing \textquotesingle{}C\+R\+E\+A\+T\+ED\textquotesingle{} attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_a3003eef9e85a0ca650bc330c721a23db}\label{classTable__trigger__dispatcher_a3003eef9e85a0ca650bc330c721a23db}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!process\+\_\+triggers@{process\+\_\+triggers}}
+\index{process\+\_\+triggers@{process\+\_\+triggers}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{process\+\_\+triggers()}{process\_triggers()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::process\+\_\+triggers (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{trigger__def_8h_a25c92abc3a183d6950b0d9a4ee846e5e}{enum\+\_\+trigger\+\_\+event\+\_\+type}}}]{event,  }\item[{\mbox{\hyperlink{trigger__def_8h_ace20981b1217cca2d3a23e2338fd61b9}{enum\+\_\+trigger\+\_\+action\+\_\+time\+\_\+type}}}]{action\+\_\+time,  }\item[{bool}]{old\+\_\+row\+\_\+is\+\_\+record1 }\end{DoxyParamCaption})}
+
+Execute trigger for given (event, time) pair.
+
+The operation executes trigger for the specified event (insert, update, delete) and time (after, before) if it is set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & \\
+\hline
+{\em event} & \\
+\hline
+{\em action\+\_\+time} & \\
+\hline
+{\em old\+\_\+row\+\_\+is\+\_\+record1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTable__trigger__dispatcher_ac020fa3def58921a4380348a6db46491}\label{classTable__trigger__dispatcher_ac020fa3def58921a4380348a6db46491}} 
+\index{Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}!rename\+\_\+subject\+\_\+table@{rename\+\_\+subject\+\_\+table}}
+\index{rename\+\_\+subject\+\_\+table@{rename\+\_\+subject\+\_\+table}!Table\+\_\+trigger\+\_\+dispatcher@{Table\+\_\+trigger\+\_\+dispatcher}}
+\subsubsection{\texorpdfstring{rename\+\_\+subject\+\_\+table()}{rename\_subject\_table()}}
+{\footnotesize\ttfamily bool Table\+\_\+trigger\+\_\+dispatcher\+::rename\+\_\+subject\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{old\+\_\+db\+\_\+name,  }\item[{const char $\ast$}]{new\+\_\+db\+\_\+name,  }\item[{const char $\ast$}]{old\+\_\+table\+\_\+name\+\_\+str,  }\item[{const char $\ast$}]{new\+\_\+table\+\_\+name\+\_\+str,  }\item[{bool}]{upgrading50to51 }\end{DoxyParamCaption})}
+
+Update .T\+RG file after renaming triggers\textquotesingle{} subject table (change name of table in triggers\textquotesingle{} definitions).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+{\em old\+\_\+db\+\_\+name} & Old database of subject table \\
+\hline
+{\em new\+\_\+db\+\_\+name} & New database of subject table \\
+\hline
+{\em old\+\_\+table\+\_\+name\+\_\+str} & Old subject table\textquotesingle{}s name \\
+\hline
+{\em new\+\_\+table\+\_\+name\+\_\+str} & New subject table\textquotesingle{}s name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table\+\_\+trigger\+\_\+dispatcher.\+h\item 
+table\+\_\+trigger\+\_\+dispatcher.\+cc\end{DoxyCompactItemize}

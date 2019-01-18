@@ -1,0 +1,809 @@
+\hypertarget{classBG__wrap}{}\section{B\+G\+\_\+wrap$<$ Geom\+\_\+types $>$ Class Template Reference}
+\label{classBG__wrap}\index{B\+G\+\_\+wrap$<$ Geom\+\_\+types $>$@{B\+G\+\_\+wrap$<$ Geom\+\_\+types $>$}}
+
+
+{\ttfamily \#include $<$item\+\_\+geofunc\+\_\+relchecks\+\_\+bgwrap.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBG__wrap_aa85c4eb163f6a96d487566a45ecc05ab}\label{classBG__wrap_aa85c4eb163f6a96d487566a45ecc05ab}} 
+typedef Geom\+\_\+types\+::\+Point {\bfseries Point}
+\item 
+\mbox{\Hypertarget{classBG__wrap_a8ff885a8527af98d536bb01ba647ef8a}\label{classBG__wrap_a8ff885a8527af98d536bb01ba647ef8a}} 
+typedef Geom\+\_\+types\+::\+Linestring {\bfseries Linestring}
+\item 
+\mbox{\Hypertarget{classBG__wrap_a37c1b34d4622df770934453ca8742bb9}\label{classBG__wrap_a37c1b34d4622df770934453ca8742bb9}} 
+typedef Geom\+\_\+types\+::\+Polygon {\bfseries Polygon}
+\item 
+\mbox{\Hypertarget{classBG__wrap_afd7cbabddd7bc5aee11ab28d17087855}\label{classBG__wrap_afd7cbabddd7bc5aee11ab28d17087855}} 
+typedef Geom\+\_\+types\+::\+Multipoint {\bfseries Multipoint}
+\item 
+\mbox{\Hypertarget{classBG__wrap_acaf466d19aa7ee1850dda97b86432352}\label{classBG__wrap_acaf466d19aa7ee1850dda97b86432352}} 
+typedef Geom\+\_\+types\+::\+Multilinestring {\bfseries Multilinestring}
+\item 
+\mbox{\Hypertarget{classBG__wrap_a5b450e15b73286775b0fd122bd3c7e95}\label{classBG__wrap_a5b450e15b73286775b0fd122bd3c7e95}} 
+typedef Geom\+\_\+types\+::\+Multipolygon {\bfseries Multipolygon}
+\item 
+\mbox{\Hypertarget{classBG__wrap_a58389470599b0814a0a712b7d4d0de90}\label{classBG__wrap_a58389470599b0814a0a712b7d4d0de90}} 
+typedef Geom\+\_\+types\+::\+Coordinate\+\_\+type {\bfseries Coord\+\_\+type}
+\item 
+\mbox{\Hypertarget{classBG__wrap_ab8a698d8d58d43ca47a91ec5856492fb}\label{classBG__wrap_ab8a698d8d58d43ca47a91ec5856492fb}} 
+typedef Geom\+\_\+types\+::\+Coordinate\+\_\+system {\bfseries Coordsys}
+\item 
+\mbox{\Hypertarget{classBG__wrap_aee15b3b5a5f6ea79795624982ccb892f}\label{classBG__wrap_aee15b3b5a5f6ea79795624982ccb892f}} 
+typedef \mbox{\hyperlink{classItem__func__spatial__rel}{Item\+\_\+func\+\_\+spatial\+\_\+rel}} {\bfseries Ifsr}
+\item 
+\mbox{\Hypertarget{classBG__wrap_a6af45e09a93900096ae1edd92163c883}\label{classBG__wrap_a6af45e09a93900096ae1edd92163c883}} 
+typedef std\+::set$<$ Point, \mbox{\hyperlink{structbgpt__lt}{bgpt\+\_\+lt}} $>$ {\bfseries Point\+\_\+set}
+\item 
+\mbox{\Hypertarget{classBG__wrap_a55ed7f297d0352d38e51a85892fa2fae}\label{classBG__wrap_a55ed7f297d0352d38e51a85892fa2fae}} 
+typedef std\+::vector$<$ Point $>$ {\bfseries Point\+\_\+vector}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a58dc9aa949ea613f634d6078968c007c}{point\+\_\+within\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_ae4c4fd684893083dd4a3a1a549825bbf}{multipoint\+\_\+within\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+\mbox{\Hypertarget{classBG__wrap_abc1b92939ce92d33caf3141ce4cd65be}\label{classBG__wrap_abc1b92939ce92d33caf3141ce4cd65be}} 
+static int {\bfseries linestring\+\_\+within\+\_\+geometry} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+\mbox{\Hypertarget{classBG__wrap_aefc3fa5ef42c2ca98e0848db25674dec}\label{classBG__wrap_aefc3fa5ef42c2ca98e0848db25674dec}} 
+static int {\bfseries multilinestring\+\_\+within\+\_\+geometry} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+\mbox{\Hypertarget{classBG__wrap_ac17d3aca6eca54cdae007fe31c99e403}\label{classBG__wrap_ac17d3aca6eca54cdae007fe31c99e403}} 
+static int {\bfseries polygon\+\_\+within\+\_\+geometry} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+\mbox{\Hypertarget{classBG__wrap_a1d5ca222fca81be02252a926d9825fc8}\label{classBG__wrap_a1d5ca222fca81be02252a926d9825fc8}} 
+static int {\bfseries multipolygon\+\_\+within\+\_\+geometry} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_aa0cc7de2add1a74de006133f05305ecb}{multipoint\+\_\+equals\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_aabaab12902ac306d661cb2b74b5e8c87}{point\+\_\+disjoint\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a062c82955f9881f2005608aa1a0658b3}{multipoint\+\_\+disjoint\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_af2ca881b0d6aa742d344d8b16036bc64}{linestring\+\_\+disjoint\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_aa17a1a066abf044a7666ffb193b5fcfe}{multilinestring\+\_\+disjoint\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a91432f26f57f68f94485ca78b6436d9f}{polygon\+\_\+disjoint\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a72c0a35a50031670aa278798540f85e8}{multipolygon\+\_\+disjoint\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_accd52fcc8512eb736424835566bfad3e}{point\+\_\+intersects\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_aef5f5956a333345fb70351625edb7bf9}{multipoint\+\_\+intersects\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_ac733b7184a000958810f27c25549a7d2}{linestring\+\_\+intersects\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a58e14115bdda7b4568dcde7cfa8b32b0}{multilinestring\+\_\+intersects\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_ad56f493cbaec187951e63598b3e00eb1}{polygon\+\_\+intersects\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a6ba400043bd909b06ea9a8328a21c386}{multipolygon\+\_\+intersects\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_acc1d1579c412ef461472291065389797}{linestring\+\_\+crosses\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a51344d58a308c5e21e7690b601e0b0f9}{multipoint\+\_\+crosses\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a68bd3e86360d78cffcff0892d9e0fce6}{multilinestring\+\_\+crosses\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a6b8a94efbe0fc1fcd3d5c9236f5ada8a}{multipoint\+\_\+overlaps\+\_\+multipoint}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a5a3c7ff46202d545970bed6ddc72219a}{point\+\_\+touches\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a6e9e36fe7c7ce00a6b46ba243822b5c0}{multipoint\+\_\+touches\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_a81e594fda8d38efa28d8731c56414f39}{linestring\+\_\+touches\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_ab5996f53d73f7c6838e933cea55e7196}{multilinestring\+\_\+touches\+\_\+polygon}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_ad484f90db326173f4d947fe35cbc5d59}{multilinestring\+\_\+touches\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_afa2ed668b6b041b20b518c37ec9aa9d8}{polygon\+\_\+touches\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\item 
+static int \mbox{\hyperlink{classBG__wrap_ad1423a08aa8e17b5d873354cc79a2949}{multipolygon\+\_\+touches\+\_\+geometry}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g1, \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$g2, my\+\_\+bool $\ast$pnull\+\_\+value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Geom\+\_\+types$>$\newline
+class B\+G\+\_\+wrap$<$ Geom\+\_\+types $>$}
+
+Wraps and dispatches type specific BG function calls according to operation type and both operands\textquotesingle{} types.
+
+We want to isolate boost header file inclusion only inside this file, so we put this class declaration in an internal header file. And we want to make the methods static since no state is needed here.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBG__wrap_acc1d1579c412ef461472291065389797}\label{classBG__wrap_acc1d1579c412ef461472291065389797}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!linestring\+\_\+crosses\+\_\+geometry@{linestring\+\_\+crosses\+\_\+geometry}}
+\index{linestring\+\_\+crosses\+\_\+geometry@{linestring\+\_\+crosses\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{linestring\+\_\+crosses\+\_\+geometry()}{linestring\_crosses\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::linestring\+\_\+crosses\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}linestring crosses xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a linestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_af2ca881b0d6aa742d344d8b16036bc64}\label{classBG__wrap_af2ca881b0d6aa742d344d8b16036bc64}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!linestring\+\_\+disjoint\+\_\+geometry@{linestring\+\_\+disjoint\+\_\+geometry}}
+\index{linestring\+\_\+disjoint\+\_\+geometry@{linestring\+\_\+disjoint\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{linestring\+\_\+disjoint\+\_\+geometry()}{linestring\_disjoint\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::linestring\+\_\+disjoint\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}linestring disjoint xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a linestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_ac733b7184a000958810f27c25549a7d2}\label{classBG__wrap_ac733b7184a000958810f27c25549a7d2}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!linestring\+\_\+intersects\+\_\+geometry@{linestring\+\_\+intersects\+\_\+geometry}}
+\index{linestring\+\_\+intersects\+\_\+geometry@{linestring\+\_\+intersects\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{linestring\+\_\+intersects\+\_\+geometry()}{linestring\_intersects\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::linestring\+\_\+intersects\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}linestring intersects xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a linestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a81e594fda8d38efa28d8731c56414f39}\label{classBG__wrap_a81e594fda8d38efa28d8731c56414f39}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!linestring\+\_\+touches\+\_\+geometry@{linestring\+\_\+touches\+\_\+geometry}}
+\index{linestring\+\_\+touches\+\_\+geometry@{linestring\+\_\+touches\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{linestring\+\_\+touches\+\_\+geometry()}{linestring\_touches\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::linestring\+\_\+touches\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}linestring touches geometry\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a linestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a geometry other than geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a68bd3e86360d78cffcff0892d9e0fce6}\label{classBG__wrap_a68bd3e86360d78cffcff0892d9e0fce6}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multilinestring\+\_\+crosses\+\_\+geometry@{multilinestring\+\_\+crosses\+\_\+geometry}}
+\index{multilinestring\+\_\+crosses\+\_\+geometry@{multilinestring\+\_\+crosses\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multilinestring\+\_\+crosses\+\_\+geometry()}{multilinestring\_crosses\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multilinestring\+\_\+crosses\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multilinestring crosses xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multilinestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_aa17a1a066abf044a7666ffb193b5fcfe}\label{classBG__wrap_aa17a1a066abf044a7666ffb193b5fcfe}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multilinestring\+\_\+disjoint\+\_\+geometry@{multilinestring\+\_\+disjoint\+\_\+geometry}}
+\index{multilinestring\+\_\+disjoint\+\_\+geometry@{multilinestring\+\_\+disjoint\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multilinestring\+\_\+disjoint\+\_\+geometry()}{multilinestring\_disjoint\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multilinestring\+\_\+disjoint\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multilinestring disjoint xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multilinestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a58e14115bdda7b4568dcde7cfa8b32b0}\label{classBG__wrap_a58e14115bdda7b4568dcde7cfa8b32b0}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multilinestring\+\_\+intersects\+\_\+geometry@{multilinestring\+\_\+intersects\+\_\+geometry}}
+\index{multilinestring\+\_\+intersects\+\_\+geometry@{multilinestring\+\_\+intersects\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multilinestring\+\_\+intersects\+\_\+geometry()}{multilinestring\_intersects\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multilinestring\+\_\+intersects\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multilinestring intersects xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multilinestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_ad484f90db326173f4d947fe35cbc5d59}\label{classBG__wrap_ad484f90db326173f4d947fe35cbc5d59}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multilinestring\+\_\+touches\+\_\+geometry@{multilinestring\+\_\+touches\+\_\+geometry}}
+\index{multilinestring\+\_\+touches\+\_\+geometry@{multilinestring\+\_\+touches\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multilinestring\+\_\+touches\+\_\+geometry()}{multilinestring\_touches\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multilinestring\+\_\+touches\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multilinestring touches geometry\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multilinestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a geometry other than geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_ab5996f53d73f7c6838e933cea55e7196}\label{classBG__wrap_ab5996f53d73f7c6838e933cea55e7196}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multilinestring\+\_\+touches\+\_\+polygon@{multilinestring\+\_\+touches\+\_\+polygon}}
+\index{multilinestring\+\_\+touches\+\_\+polygon@{multilinestring\+\_\+touches\+\_\+polygon}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multilinestring\+\_\+touches\+\_\+polygon()}{multilinestring\_touches\_polygon()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multilinestring\+\_\+touches\+\_\+polygon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multilinestring touches polygon\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multilinestring. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a polygon. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a51344d58a308c5e21e7690b601e0b0f9}\label{classBG__wrap_a51344d58a308c5e21e7690b601e0b0f9}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+crosses\+\_\+geometry@{multipoint\+\_\+crosses\+\_\+geometry}}
+\index{multipoint\+\_\+crosses\+\_\+geometry@{multipoint\+\_\+crosses\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+crosses\+\_\+geometry()}{multipoint\_crosses\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+crosses\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint crosses xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a062c82955f9881f2005608aa1a0658b3}\label{classBG__wrap_a062c82955f9881f2005608aa1a0658b3}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+disjoint\+\_\+geometry@{multipoint\+\_\+disjoint\+\_\+geometry}}
+\index{multipoint\+\_\+disjoint\+\_\+geometry@{multipoint\+\_\+disjoint\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+disjoint\+\_\+geometry()}{multipoint\_disjoint\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+disjoint\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint disjoint xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_aa0cc7de2add1a74de006133f05305ecb}\label{classBG__wrap_aa0cc7de2add1a74de006133f05305ecb}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+equals\+\_\+geometry@{multipoint\+\_\+equals\+\_\+geometry}}
+\index{multipoint\+\_\+equals\+\_\+geometry@{multipoint\+\_\+equals\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+equals\+\_\+geometry()}{multipoint\_equals\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+equals\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint E\+Q\+U\+A\+LS xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_aef5f5956a333345fb70351625edb7bf9}\label{classBG__wrap_aef5f5956a333345fb70351625edb7bf9}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+intersects\+\_\+geometry@{multipoint\+\_\+intersects\+\_\+geometry}}
+\index{multipoint\+\_\+intersects\+\_\+geometry@{multipoint\+\_\+intersects\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+intersects\+\_\+geometry()}{multipoint\_intersects\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+intersects\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint intersects xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a6b8a94efbe0fc1fcd3d5c9236f5ada8a}\label{classBG__wrap_a6b8a94efbe0fc1fcd3d5c9236f5ada8a}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+overlaps\+\_\+multipoint@{multipoint\+\_\+overlaps\+\_\+multipoint}}
+\index{multipoint\+\_\+overlaps\+\_\+multipoint@{multipoint\+\_\+overlaps\+\_\+multipoint}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+overlaps\+\_\+multipoint()}{multipoint\_overlaps\_multipoint()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+overlaps\+\_\+multipoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint crosses xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a6e9e36fe7c7ce00a6b46ba243822b5c0}\label{classBG__wrap_a6e9e36fe7c7ce00a6b46ba243822b5c0}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+touches\+\_\+geometry@{multipoint\+\_\+touches\+\_\+geometry}}
+\index{multipoint\+\_\+touches\+\_\+geometry@{multipoint\+\_\+touches\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+touches\+\_\+geometry()}{multipoint\_touches\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+touches\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint touches geometry\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a geometry other than geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_ae4c4fd684893083dd4a3a1a549825bbf}\label{classBG__wrap_ae4c4fd684893083dd4a3a1a549825bbf}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipoint\+\_\+within\+\_\+geometry@{multipoint\+\_\+within\+\_\+geometry}}
+\index{multipoint\+\_\+within\+\_\+geometry@{multipoint\+\_\+within\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipoint\+\_\+within\+\_\+geometry()}{multipoint\_within\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipoint\+\_\+within\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipoint W\+I\+T\+H\+IN xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipoint. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a72c0a35a50031670aa278798540f85e8}\label{classBG__wrap_a72c0a35a50031670aa278798540f85e8}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipolygon\+\_\+disjoint\+\_\+geometry@{multipolygon\+\_\+disjoint\+\_\+geometry}}
+\index{multipolygon\+\_\+disjoint\+\_\+geometry@{multipolygon\+\_\+disjoint\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipolygon\+\_\+disjoint\+\_\+geometry()}{multipolygon\_disjoint\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipolygon\+\_\+disjoint\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipolygon disjoint xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipolygon. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a6ba400043bd909b06ea9a8328a21c386}\label{classBG__wrap_a6ba400043bd909b06ea9a8328a21c386}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipolygon\+\_\+intersects\+\_\+geometry@{multipolygon\+\_\+intersects\+\_\+geometry}}
+\index{multipolygon\+\_\+intersects\+\_\+geometry@{multipolygon\+\_\+intersects\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipolygon\+\_\+intersects\+\_\+geometry()}{multipolygon\_intersects\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipolygon\+\_\+intersects\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipolygon intersects xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipolygon. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_ad1423a08aa8e17b5d873354cc79a2949}\label{classBG__wrap_ad1423a08aa8e17b5d873354cc79a2949}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!multipolygon\+\_\+touches\+\_\+geometry@{multipolygon\+\_\+touches\+\_\+geometry}}
+\index{multipolygon\+\_\+touches\+\_\+geometry@{multipolygon\+\_\+touches\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{multipolygon\+\_\+touches\+\_\+geometry()}{multipolygon\_touches\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::multipolygon\+\_\+touches\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}multipolygon touches geometry\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a multipolygon. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a geometry other than geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_aabaab12902ac306d661cb2b74b5e8c87}\label{classBG__wrap_aabaab12902ac306d661cb2b74b5e8c87}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!point\+\_\+disjoint\+\_\+geometry@{point\+\_\+disjoint\+\_\+geometry}}
+\index{point\+\_\+disjoint\+\_\+geometry@{point\+\_\+disjoint\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{point\+\_\+disjoint\+\_\+geometry()}{point\_disjoint\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::point\+\_\+disjoint\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}point disjoint xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a point. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_accd52fcc8512eb736424835566bfad3e}\label{classBG__wrap_accd52fcc8512eb736424835566bfad3e}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!point\+\_\+intersects\+\_\+geometry@{point\+\_\+intersects\+\_\+geometry}}
+\index{point\+\_\+intersects\+\_\+geometry@{point\+\_\+intersects\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{point\+\_\+intersects\+\_\+geometry()}{point\_intersects\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::point\+\_\+intersects\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}point intersects xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a point. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a5a3c7ff46202d545970bed6ddc72219a}\label{classBG__wrap_a5a3c7ff46202d545970bed6ddc72219a}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!point\+\_\+touches\+\_\+geometry@{point\+\_\+touches\+\_\+geometry}}
+\index{point\+\_\+touches\+\_\+geometry@{point\+\_\+touches\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{point\+\_\+touches\+\_\+geometry()}{point\_touches\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::point\+\_\+touches\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}point touches geometry\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a point. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a geometry other than geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a58dc9aa949ea613f634d6078968c007c}\label{classBG__wrap_a58dc9aa949ea613f634d6078968c007c}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!point\+\_\+within\+\_\+geometry@{point\+\_\+within\+\_\+geometry}}
+\index{point\+\_\+within\+\_\+geometry@{point\+\_\+within\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{point\+\_\+within\+\_\+geometry()}{point\_within\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::point\+\_\+within\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}point W\+I\+T\+H\+IN xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a point. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_a91432f26f57f68f94485ca78b6436d9f}\label{classBG__wrap_a91432f26f57f68f94485ca78b6436d9f}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!polygon\+\_\+disjoint\+\_\+geometry@{polygon\+\_\+disjoint\+\_\+geometry}}
+\index{polygon\+\_\+disjoint\+\_\+geometry@{polygon\+\_\+disjoint\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{polygon\+\_\+disjoint\+\_\+geometry()}{polygon\_disjoint\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::polygon\+\_\+disjoint\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}polygon disjoint xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a polygon. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_ad56f493cbaec187951e63598b3e00eb1}\label{classBG__wrap_ad56f493cbaec187951e63598b3e00eb1}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!polygon\+\_\+intersects\+\_\+geometry@{polygon\+\_\+intersects\+\_\+geometry}}
+\index{polygon\+\_\+intersects\+\_\+geometry@{polygon\+\_\+intersects\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{polygon\+\_\+intersects\+\_\+geometry()}{polygon\_intersects\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::polygon\+\_\+intersects\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}polygon intersects xxx\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a polygon. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, not a geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__wrap_afa2ed668b6b041b20b518c37ec9aa9d8}\label{classBG__wrap_afa2ed668b6b041b20b518c37ec9aa9d8}} 
+\index{B\+G\+\_\+wrap@{B\+G\+\_\+wrap}!polygon\+\_\+touches\+\_\+geometry@{polygon\+\_\+touches\+\_\+geometry}}
+\index{polygon\+\_\+touches\+\_\+geometry@{polygon\+\_\+touches\+\_\+geometry}!B\+G\+\_\+wrap@{B\+G\+\_\+wrap}}
+\subsubsection{\texorpdfstring{polygon\+\_\+touches\+\_\+geometry()}{polygon\_touches\_geometry()}}
+{\footnotesize\ttfamily template$<$typename Geom\+\_\+types $>$ \\
+template int \mbox{\hyperlink{classBG__wrap}{B\+G\+\_\+wrap}}$<$ Geom\+\_\+types $>$\+::polygon\+\_\+touches\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g1,  }\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{g2,  }\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Dispatcher for \textquotesingle{}polygon touches geometry\textquotesingle{}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Geom\+\_\+types} & \mbox{\hyperlink{classGeometry}{Geometry}} types definitions. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em g1} & First \mbox{\hyperlink{classGeometry}{Geometry}} operand, a polygon. \\
+\hline
+ & {\em g2} & Second \mbox{\hyperlink{classGeometry}{Geometry}} operand, a geometry other than geometry collection. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & Returns whether error occured duirng the computation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if specified relation doesn\textquotesingle{}t hold for the given operands, otherwise returns none 0. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc\+\_\+relchecks\+\_\+bgwrap.\+h\item 
+item\+\_\+geofunc\+\_\+relchecks\+\_\+bgwrap.\+cc\end{DoxyCompactItemize}

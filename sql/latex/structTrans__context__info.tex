@@ -1,0 +1,64 @@
+\hypertarget{structTrans__context__info}{}\section{Trans\+\_\+context\+\_\+info Struct Reference}
+\label{structTrans__context__info}\index{Trans\+\_\+context\+\_\+info@{Trans\+\_\+context\+\_\+info}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_acb10e709b75c9322c551b360d3dd6496}\label{structTrans__context__info_acb10e709b75c9322c551b360d3dd6496}} 
+bool {\bfseries binlog\+\_\+enabled}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a110d813bb3eefec86910839fb88b86d2}\label{structTrans__context__info_a110d813bb3eefec86910839fb88b86d2}} 
+ulong {\bfseries gtid\+\_\+mode}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a6b8bc95ee10a11e816acf4020105bd04}\label{structTrans__context__info_a6b8bc95ee10a11e816acf4020105bd04}} 
+bool {\bfseries log\+\_\+slave\+\_\+updates}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_affa66e4cdb3b39eec853347284340a60}\label{structTrans__context__info_affa66e4cdb3b39eec853347284340a60}} 
+ulong {\bfseries binlog\+\_\+checksum\+\_\+options}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a396432a5aeffa7270433dbe5ca4c9806}\label{structTrans__context__info_a396432a5aeffa7270433dbe5ca4c9806}} 
+ulong {\bfseries binlog\+\_\+format}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a619cebcefede22512d6f37e3c31fb5a8}\label{structTrans__context__info_a619cebcefede22512d6f37e3c31fb5a8}} 
+ulong {\bfseries transaction\+\_\+write\+\_\+set\+\_\+extraction}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a2f4817575bd84501325f06b0691ae703}\label{structTrans__context__info_a2f4817575bd84501325f06b0691ae703}} 
+ulong {\bfseries mi\+\_\+repository\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a1193f79b68f11bda66bc5cafae79be83}\label{structTrans__context__info_a1193f79b68f11bda66bc5cafae79be83}} 
+ulong {\bfseries rli\+\_\+repository\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_ad4e2a216fc8a02633e8d001fa78f4353}\label{structTrans__context__info_ad4e2a216fc8a02633e8d001fa78f4353}} 
+ulong {\bfseries parallel\+\_\+applier\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a2d58518867c252122da9c25f829ef20c}\label{structTrans__context__info_a2d58518867c252122da9c25f829ef20c}} 
+ulong {\bfseries parallel\+\_\+applier\+\_\+workers}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a16114079a1a61f80c596c3fe6c45700e}\label{structTrans__context__info_a16114079a1a61f80c596c3fe6c45700e}} 
+bool {\bfseries parallel\+\_\+applier\+\_\+preserve\+\_\+commit\+\_\+order}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_a2ae2b5e734b311bee46aff0fe6bbe962}\label{structTrans__context__info_a2ae2b5e734b311bee46aff0fe6bbe962}} 
+enum\+\_\+tx\+\_\+isolation {\bfseries tx\+\_\+isolation}
+\item 
+\mbox{\Hypertarget{structTrans__context__info_af515aeb12bcf0d71dfd0d7b324247b4e}\label{structTrans__context__info_af515aeb12bcf0d71dfd0d7b324247b4e}} 
+uint {\bfseries lower\+\_\+case\+\_\+table\+\_\+names}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This represents some of the context in which a transaction is running It summarizes all necessary requirements for Group Replication to work.
+
+These requirements might be extracted in two different moments in time, and, as such, with different contexts\+:
+\begin{DoxyItemize}
+\item Startup verifications, that are extracted when Group Replication starts, and typically from global vars.
+\item Runtime verifications, that are extracted when a transaction is running. It it typically from session T\+HD vars or from mutable global vars.
+\end{DoxyItemize}
+
+Please refer to the place where information is extracted for more details about it. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

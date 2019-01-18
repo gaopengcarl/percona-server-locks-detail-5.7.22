@@ -1,0 +1,167 @@
+\hypertarget{classSession__consistency__gtids__ctx}{}\section{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx Class Reference}
+\label{classSession__consistency__gtids__ctx}\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+context.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSession__consistency__gtids__ctx_1_1Ctx__change__listener}{Ctx\+\_\+change\+\_\+listener}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSession__consistency__gtids__ctx_aec7db00cedbe30bf9b58cc725d3645a1}{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}} ()
+\item 
+virtual \mbox{\hyperlink{classSession__consistency__gtids__ctx_ab12040fdaf2c055e3a141881bedf0175}{$\sim$\+Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}} ()
+\item 
+void \mbox{\hyperlink{classSession__consistency__gtids__ctx_ae8438d9a17c106351e9e7f09f11d6840}{register\+\_\+ctx\+\_\+change\+\_\+listener}} (\mbox{\hyperlink{classSession__consistency__gtids__ctx_1_1Ctx__change__listener}{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::\+Ctx\+\_\+change\+\_\+listener}} $\ast$listener, T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classSession__consistency__gtids__ctx_a66c0b87081a934634af4a4055833cc51}{unregister\+\_\+ctx\+\_\+change\+\_\+listener}} (\mbox{\hyperlink{classSession__consistency__gtids__ctx_1_1Ctx__change__listener}{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::\+Ctx\+\_\+change\+\_\+listener}} $\ast$listener)
+\item 
+\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ \mbox{\hyperlink{classSession__consistency__gtids__ctx_a2eaa91e30628e35da510f820e64d3e06}{state}} ()
+\item 
+virtual bool \mbox{\hyperlink{classSession__consistency__gtids__ctx_a828ab638fa33aa0d43d1b162a3d34803}{notify\+\_\+after\+\_\+response\+\_\+packet}} (const T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSession__consistency__gtids__ctx_a2452726ebb0abc3e912d493013efc97c}{notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update}} (const T\+HD $\ast$thd)
+\item 
+virtual bool \mbox{\hyperlink{classSession__consistency__gtids__ctx_a13e57b8ec0b7eb1f24b690e82b35b89f}{notify\+\_\+after\+\_\+transaction\+\_\+commit}} (const T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a07084902ec8b14533191e495af2e54fe}\label{classSession__consistency__gtids__ctx_a07084902ec8b14533191e495af2e54fe}} 
+virtual bool {\bfseries notify\+\_\+after\+\_\+xa\+\_\+prepare} (const T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a1d570046fbfe58343bdbb1a3ff060410}\label{classSession__consistency__gtids__ctx_a1d570046fbfe58343bdbb1a3ff060410}} 
+bool {\bfseries shall\+\_\+collect} (const T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classSession__consistency__gtids__ctx_a8b315d4cb250e3ac1203e2498ecda698}{notify\+\_\+ctx\+\_\+change\+\_\+listener}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is an interface for session consistency instrumentation in the server. It holds the context information for a given session.
+
+It does not require locking since access to this content is mutually exclusive by design (only one thread reading or writing to this object at a time). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_aec7db00cedbe30bf9b58cc725d3645a1}\label{classSession__consistency__gtids__ctx_aec7db00cedbe30bf9b58cc725d3645a1}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx()}{Session\_consistency\_gtids\_ctx()}}
+{\footnotesize\ttfamily Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::\+Session\+\_\+consistency\+\_\+gtids\+\_\+ctx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Simple constructor. \mbox{\Hypertarget{classSession__consistency__gtids__ctx_ab12040fdaf2c055e3a141881bedf0175}\label{classSession__consistency__gtids__ctx_ab12040fdaf2c055e3a141881bedf0175}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!````~Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{$\sim$\+Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\index{````~Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{$\sim$\+Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{$\sim$\+Session\+\_\+consistency\+\_\+gtids\+\_\+ctx()}{~Session\_consistency\_gtids\_ctx()}}
+{\footnotesize\ttfamily Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::$\sim$\+Session\+\_\+consistency\+\_\+gtids\+\_\+ctx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The destructor. Deletes the m\+\_\+gtid\+\_\+set and the sid\+\_\+map. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a2452726ebb0abc3e912d493013efc97c}\label{classSession__consistency__gtids__ctx_a2452726ebb0abc3e912d493013efc97c}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update@{notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update}}
+\index{notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update@{notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update()}{notify\_after\_gtid\_executed\_update()}}
+{\footnotesize\ttfamily bool Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::notify\+\_\+after\+\_\+gtid\+\_\+executed\+\_\+update (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function S\+H\+A\+LL be called once the G\+T\+ID for the given transaction has has been added to G\+T\+I\+D\+\_\+\+E\+X\+E\+C\+U\+T\+ED.
+
+This function S\+H\+A\+LL store the data if the thd-\/$>$variables.\+session\+\_\+track\+\_\+gtids is set to a value other than N\+O\+NE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on error, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a828ab638fa33aa0d43d1b162a3d34803}\label{classSession__consistency__gtids__ctx_a828ab638fa33aa0d43d1b162a3d34803}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!notify\+\_\+after\+\_\+response\+\_\+packet@{notify\+\_\+after\+\_\+response\+\_\+packet}}
+\index{notify\+\_\+after\+\_\+response\+\_\+packet@{notify\+\_\+after\+\_\+response\+\_\+packet}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{notify\+\_\+after\+\_\+response\+\_\+packet()}{notify\_after\_response\_packet()}}
+{\footnotesize\ttfamily bool Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::notify\+\_\+after\+\_\+response\+\_\+packet (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function M\+U\+ST be called after the response packet is set to the client connected. The implementation may act on the collected state for instance to do garbage collection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on error, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a13e57b8ec0b7eb1f24b690e82b35b89f}\label{classSession__consistency__gtids__ctx_a13e57b8ec0b7eb1f24b690e82b35b89f}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!notify\+\_\+after\+\_\+transaction\+\_\+commit@{notify\+\_\+after\+\_\+transaction\+\_\+commit}}
+\index{notify\+\_\+after\+\_\+transaction\+\_\+commit@{notify\+\_\+after\+\_\+transaction\+\_\+commit}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{notify\+\_\+after\+\_\+transaction\+\_\+commit()}{notify\_after\_transaction\_commit()}}
+{\footnotesize\ttfamily bool Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::notify\+\_\+after\+\_\+transaction\+\_\+commit (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function M\+U\+ST be called after a transaction is committed in the server. It should be called regardless whether it is a RO or RW transaction. Also, D\+D\+Ls, D\+DS are considered transaction for what is worth.
+
+This function S\+H\+A\+LL store relevant data for the session consistency.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on error, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a8b315d4cb250e3ac1203e2498ecda698}\label{classSession__consistency__gtids__ctx_a8b315d4cb250e3ac1203e2498ecda698}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!notify\+\_\+ctx\+\_\+change\+\_\+listener@{notify\+\_\+ctx\+\_\+change\+\_\+listener}}
+\index{notify\+\_\+ctx\+\_\+change\+\_\+listener@{notify\+\_\+ctx\+\_\+change\+\_\+listener}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{notify\+\_\+ctx\+\_\+change\+\_\+listener()}{notify\_ctx\_change\_listener()}}
+{\footnotesize\ttfamily void Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::notify\+\_\+ctx\+\_\+change\+\_\+listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Auxiliary function that allows notification of ctx change listeners. \mbox{\Hypertarget{classSession__consistency__gtids__ctx_ae8438d9a17c106351e9e7f09f11d6840}\label{classSession__consistency__gtids__ctx_ae8438d9a17c106351e9e7f09f11d6840}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!register\+\_\+ctx\+\_\+change\+\_\+listener@{register\+\_\+ctx\+\_\+change\+\_\+listener}}
+\index{register\+\_\+ctx\+\_\+change\+\_\+listener@{register\+\_\+ctx\+\_\+change\+\_\+listener}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{register\+\_\+ctx\+\_\+change\+\_\+listener()}{register\_ctx\_change\_listener()}}
+{\footnotesize\ttfamily void Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::register\+\_\+ctx\+\_\+change\+\_\+listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession__consistency__gtids__ctx_1_1Ctx__change__listener}{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::\+Ctx\+\_\+change\+\_\+listener}} $\ast$}]{listener,  }\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Registers the listener. The pointer M\+U\+ST not be N\+U\+LL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & a pointer to the listener to register. \\
+\hline
+{\em thd} & T\+HD context associated to this listener. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a2eaa91e30628e35da510f820e64d3e06}\label{classSession__consistency__gtids__ctx_a2eaa91e30628e35da510f820e64d3e06}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!state@{state}}
+\index{state@{state}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}$\ast$ Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This member function M\+U\+ST return a reference to the set of collected G\+T\+I\+Ds so far.
+
+\begin{DoxyReturn}{Returns}
+the set of collected G\+T\+I\+Ds so far. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__consistency__gtids__ctx_a66c0b87081a934634af4a4055833cc51}\label{classSession__consistency__gtids__ctx_a66c0b87081a934634af4a4055833cc51}} 
+\index{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}!unregister\+\_\+ctx\+\_\+change\+\_\+listener@{unregister\+\_\+ctx\+\_\+change\+\_\+listener}}
+\index{unregister\+\_\+ctx\+\_\+change\+\_\+listener@{unregister\+\_\+ctx\+\_\+change\+\_\+listener}!Session\+\_\+consistency\+\_\+gtids\+\_\+ctx@{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx}}
+\subsubsection{\texorpdfstring{unregister\+\_\+ctx\+\_\+change\+\_\+listener()}{unregister\_ctx\_change\_listener()}}
+{\footnotesize\ttfamily void Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::unregister\+\_\+ctx\+\_\+change\+\_\+listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSession__consistency__gtids__ctx_1_1Ctx__change__listener}{Session\+\_\+consistency\+\_\+gtids\+\_\+ctx\+::\+Ctx\+\_\+change\+\_\+listener}} $\ast$}]{listener }\end{DoxyParamCaption})}
+
+Unregisters the listener. The listener M\+U\+ST have registered previously.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & a pointer to the listener to register. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+context.\+h\item 
+rpl\+\_\+context.\+cc\end{DoxyCompactItemize}

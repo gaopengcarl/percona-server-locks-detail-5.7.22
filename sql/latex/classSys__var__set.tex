@@ -1,0 +1,82 @@
+\hypertarget{classSys__var__set}{}\section{Sys\+\_\+var\+\_\+set Class Reference}
+\label{classSys__var__set}\index{Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}}
+
+
+{\ttfamily \#include $<$sys\+\_\+vars.\+h$>$}
+
+Inheritance diagram for Sys\+\_\+var\+\_\+set\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSys__var__set}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSys__var__set_a9d89ee12091b70ff4a708ca2ddd060c9}\label{classSys__var__set_a9d89ee12091b70ff4a708ca2ddd060c9}} 
+{\bfseries Sys\+\_\+var\+\_\+set} (const char $\ast$name\+\_\+arg, const char $\ast$comment, int flag\+\_\+args, ptrdiff\+\_\+t off, size\+\_\+t size, \mbox{\hyperlink{structCMD__LINE}{C\+M\+D\+\_\+\+L\+I\+NE}} getopt, const char $\ast$values\mbox{[}$\,$\mbox{]}, ulonglong def\+\_\+val, \mbox{\hyperlink{classPolyLock}{Poly\+Lock}} $\ast$lock=0, enum \mbox{\hyperlink{classsys__var_a664520ec82191888717c86085bfa83ce}{binlog\+\_\+status\+\_\+enum}} binlog\+\_\+status\+\_\+arg=V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+B\+I\+N\+L\+OG, on\+\_\+check\+\_\+function on\+\_\+check\+\_\+func=0, on\+\_\+update\+\_\+function on\+\_\+update\+\_\+func=0, const char $\ast$substitute=0)
+\item 
+\mbox{\Hypertarget{classSys__var__set_af3406a395511ef979fc8013cca33c19d}\label{classSys__var__set_af3406a395511ef979fc8013cca33c19d}} 
+bool {\bfseries do\+\_\+check} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+\mbox{\Hypertarget{classSys__var__set_a13f014484d073eda50b990b2355964c5}\label{classSys__var__set_a13f014484d073eda50b990b2355964c5}} 
+bool {\bfseries session\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+\mbox{\Hypertarget{classSys__var__set_a3069a6748ac6902e30f5519681437923}\label{classSys__var__set_a3069a6748ac6902e30f5519681437923}} 
+bool {\bfseries global\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+void \mbox{\hyperlink{classSys__var__set_a810f24aa8b5a4b114b1ad71fceaebbd1}{session\+\_\+save\+\_\+default}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+void \mbox{\hyperlink{classSys__var__set_a4992f46b91be120dd3a574950870d1fb}{global\+\_\+save\+\_\+default}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+uchar $\ast$ \mbox{\hyperlink{classSys__var__set_af0c3fc1d38b4e098896935aa29d35a3a}{session\+\_\+value\+\_\+ptr}} (T\+HD $\ast$running\+\_\+thd, T\+HD $\ast$target\+\_\+thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$base)
+\item 
+\mbox{\Hypertarget{classSys__var__set_aa8a684db1f5fd20d72492d0f6ace80fe}\label{classSys__var__set_aa8a684db1f5fd20d72492d0f6ace80fe}} 
+uchar $\ast$ {\bfseries global\+\_\+value\+\_\+ptr} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$base)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The class for S\+ET variables -\/ variables taking zero or more values from the given list. Example\+: @sql\+\_\+mode
+
+Class specific constructor arguments\+: char$\ast$ values\mbox{[}\mbox{]} -\/ 0-\/terminated list of strings of valid values
+
+Backing store\+: ulonglong 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSys__var__set_a4992f46b91be120dd3a574950870d1fb}\label{classSys__var__set_a4992f46b91be120dd3a574950870d1fb}} 
+\index{Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}!global\+\_\+save\+\_\+default@{global\+\_\+save\+\_\+default}}
+\index{global\+\_\+save\+\_\+default@{global\+\_\+save\+\_\+default}!Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}}
+\subsubsection{\texorpdfstring{global\+\_\+save\+\_\+default()}{global\_save\_default()}}
+{\footnotesize\ttfamily void Sys\+\_\+var\+\_\+set\+::global\+\_\+save\+\_\+default (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save the global default value of the variable in var 
+
+Implements \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}.
+
+\mbox{\Hypertarget{classSys__var__set_a810f24aa8b5a4b114b1ad71fceaebbd1}\label{classSys__var__set_a810f24aa8b5a4b114b1ad71fceaebbd1}} 
+\index{Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}!session\+\_\+save\+\_\+default@{session\+\_\+save\+\_\+default}}
+\index{session\+\_\+save\+\_\+default@{session\+\_\+save\+\_\+default}!Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}}
+\subsubsection{\texorpdfstring{session\+\_\+save\+\_\+default()}{session\_save\_default()}}
+{\footnotesize\ttfamily void Sys\+\_\+var\+\_\+set\+::session\+\_\+save\+\_\+default (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save the session default value of the variable in var 
+
+Implements \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}.
+
+\mbox{\Hypertarget{classSys__var__set_af0c3fc1d38b4e098896935aa29d35a3a}\label{classSys__var__set_af0c3fc1d38b4e098896935aa29d35a3a}} 
+\index{Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}!session\+\_\+value\+\_\+ptr@{session\+\_\+value\+\_\+ptr}}
+\index{session\+\_\+value\+\_\+ptr@{session\+\_\+value\+\_\+ptr}!Sys\+\_\+var\+\_\+set@{Sys\+\_\+var\+\_\+set}}
+\subsubsection{\texorpdfstring{session\+\_\+value\+\_\+ptr()}{session\_value\_ptr()}}
+{\footnotesize\ttfamily uchar$\ast$ Sys\+\_\+var\+\_\+set\+::session\+\_\+value\+\_\+ptr (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{running\+\_\+thd,  }\item[{T\+HD $\ast$}]{target\+\_\+thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A pointer to a value of the variable for S\+H\+OW. It must be of show\+\_\+val\+\_\+type type (bool for S\+H\+O\+W\+\_\+\+B\+O\+OL, int for S\+H\+O\+W\+\_\+\+I\+NT, longlong for S\+H\+O\+W\+\_\+\+L\+O\+N\+G\+L\+O\+NG, etc). 
+
+Reimplemented from \mbox{\hyperlink{classsys__var_a3e511591aaf555d2bc2ce40a80b7e899}{sys\+\_\+var}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sys__vars_8h}{sys\+\_\+vars.\+h}}\end{DoxyCompactItemize}

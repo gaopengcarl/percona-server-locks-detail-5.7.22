@@ -1,0 +1,59 @@
+\hypertarget{classPT__delete}{}\section{P\+T\+\_\+delete Class Reference}
+\label{classPT__delete}\index{P\+T\+\_\+delete@{P\+T\+\_\+delete}}
+Inheritance diagram for P\+T\+\_\+delete\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__delete}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__delete_a46b3b3d7b099d364e53ef83cf5d71103}\label{classPT__delete_a46b3b3d7b099d364e53ef83cf5d71103}} 
+{\bfseries P\+T\+\_\+delete} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, \mbox{\hyperlink{classPT__hint__list}{P\+T\+\_\+hint\+\_\+list}} $\ast$opt\+\_\+hints\+\_\+arg, int opt\+\_\+delete\+\_\+options\+\_\+arg, Table\+\_\+ident $\ast$table\+\_\+ident\+\_\+arg, \mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$opt\+\_\+use\+\_\+partition\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$opt\+\_\+where\+\_\+clause\+\_\+arg, \mbox{\hyperlink{classPT__order}{P\+T\+\_\+order}} $\ast$opt\+\_\+order\+\_\+clause\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$opt\+\_\+delete\+\_\+limit\+\_\+clause\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classPT__delete_a5d7d660b025a3982c36e1261116b4880}\label{classPT__delete_a5d7d660b025a3982c36e1261116b4880}} 
+{\bfseries P\+T\+\_\+delete} (\mbox{\hyperlink{classPT__hint__list}{P\+T\+\_\+hint\+\_\+list}} $\ast$opt\+\_\+hints\+\_\+arg, int opt\+\_\+delete\+\_\+options\+\_\+arg, const \mbox{\hyperlink{classMem__root__array__YY}{Mem\+\_\+root\+\_\+array\+\_\+\+YY}}$<$ Table\+\_\+ident $\ast$$>$ \&table\+\_\+list\+\_\+arg, \mbox{\hyperlink{classPT__join__table__list}{P\+T\+\_\+join\+\_\+table\+\_\+list}} $\ast$join\+\_\+table\+\_\+list\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$opt\+\_\+where\+\_\+clause\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPT__delete_af4282b73da9ec50c66c814422e7deb06}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+\mbox{\Hypertarget{classPT__delete_a49c0fb474e41c769aa552a3133445c16}\label{classPT__delete_a49c0fb474e41c769aa552a3133445c16}} 
+virtual \mbox{\hyperlink{classSql__cmd}{Sql\+\_\+cmd}} $\ast$ {\bfseries make\+\_\+cmd} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classPT__delete_a1f8f60bf2381e088a88b993441730997}\label{classPT__delete_a1f8f60bf2381e088a88b993441730997}} 
+bool {\bfseries is\+\_\+multitable} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__delete_af4282b73da9ec50c66c814422e7deb06}\label{classPT__delete_af4282b73da9ec50c66c814422e7deb06}} 
+\index{P\+T\+\_\+delete@{P\+T\+\_\+delete}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+delete@{P\+T\+\_\+delete}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily bool P\+T\+\_\+delete\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Do all context-\/sensitive things and mark the node as contextualized
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & current parse context\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+nodes.\+h\item 
+parse\+\_\+tree\+\_\+nodes.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classSys__var__tx__read__only}{}\section{Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only Class Reference}
+\label{classSys__var__tx__read__only}\index{Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only@{Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only}}
+
+
+{\ttfamily \#include $<$sys\+\_\+vars.\+h$>$}
+
+Inheritance diagram for Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSys__var__tx__read__only}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSys__var__tx__read__only_ac07d788fae03b0daec9457bb6e2c2b95}\label{classSys__var__tx__read__only_ac07d788fae03b0daec9457bb6e2c2b95}} 
+{\bfseries Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only} (const char $\ast$name\+\_\+arg, const char $\ast$comment, int flag\+\_\+args, ptrdiff\+\_\+t off, size\+\_\+t size, \mbox{\hyperlink{structCMD__LINE}{C\+M\+D\+\_\+\+L\+I\+NE}} getopt, my\+\_\+bool def\+\_\+val, \mbox{\hyperlink{classPolyLock}{Poly\+Lock}} $\ast$lock, enum \mbox{\hyperlink{classsys__var_a664520ec82191888717c86085bfa83ce}{binlog\+\_\+status\+\_\+enum}} binlog\+\_\+status\+\_\+arg, on\+\_\+check\+\_\+function on\+\_\+check\+\_\+func, on\+\_\+update\+\_\+function on\+\_\+update\+\_\+func=0, const char $\ast$substitute=0)
+\item 
+virtual bool \mbox{\hyperlink{classSys__var__tx__read__only_a449265a5bbe337c98f35529132f9482b}{session\+\_\+update}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing the tx\+\_\+read\+\_\+only system variable for setting default transaction access mode. This variable is deprecated and will be removed in future release. \textquotesingle{}transaction\+\_\+read\+\_\+only\textquotesingle{} is used as an alternative instead.
+
+Note that there is a special syntax -\/ S\+ET T\+R\+A\+N\+S\+A\+C\+T\+I\+ON R\+E\+AD O\+N\+LY (or R\+E\+AD W\+R\+I\+TE) that sets the access mode for the next transaction only. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSys__var__tx__read__only_a449265a5bbe337c98f35529132f9482b}\label{classSys__var__tx__read__only_a449265a5bbe337c98f35529132f9482b}} 
+\index{Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only@{Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only}!session\+\_\+update@{session\+\_\+update}}
+\index{session\+\_\+update@{session\+\_\+update}!Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only@{Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only}}
+\subsubsection{\texorpdfstring{session\+\_\+update()}{session\_update()}}
+{\footnotesize\ttfamily bool Sys\+\_\+var\+\_\+tx\+\_\+read\+\_\+only\+::session\+\_\+update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function sets the session variable thd-\/$>$variables.\+tx\+\_\+read\+\_\+only/ thd-\/$>$variables.\+transaction\+\_\+read\+\_\+only to reflect changes to @session.\+tx\+\_\+read\+\_\+only/@session.\+transaction\+\_\+read\+\_\+only. \textquotesingle{}tx\+\_\+read\+\_\+only\textquotesingle{} is deprecated and \textquotesingle{}transaction\+\_\+read\+\_\+only\textquotesingle{} is its alternative.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread handler. \\
+\hline
+\mbox{\texttt{ in}}  & {\em var} & A pointer to the \mbox{\hyperlink{classset__var}{set\+\_\+var}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classSys__var__mybool}{Sys\+\_\+var\+\_\+mybool}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sys__vars_8h}{sys\+\_\+vars.\+h}}\item 
+\mbox{\hyperlink{sys__vars_8cc}{sys\+\_\+vars.\+cc}}\end{DoxyCompactItemize}

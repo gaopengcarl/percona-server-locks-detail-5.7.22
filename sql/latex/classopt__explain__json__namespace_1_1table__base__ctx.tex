@@ -1,0 +1,99 @@
+\hypertarget{classopt__explain__json__namespace_1_1table__base__ctx}{}\section{opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:table\+\_\+base\+\_\+ctx Class Reference}
+\label{classopt__explain__json__namespace_1_1table__base__ctx}\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx}}
+Inheritance diagram for opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:table\+\_\+base\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.051771cm]{classopt__explain__json__namespace_1_1table__base__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_a7cbf4cdc58460cd3780ccf16c1640533}\label{classopt__explain__json__namespace_1_1table__base__ctx_a7cbf4cdc58460cd3780ccf16c1640533}} 
+{\bfseries table\+\_\+base\+\_\+ctx} (enum\+\_\+parsing\+\_\+context type\+\_\+arg, const char $\ast$name\+\_\+arg, \mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$parent\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_a88ebc0972f2d02d21ca39c1b5d62d8c6}\label{classopt__explain__json__namespace_1_1table__base__ctx_a88ebc0972f2d02d21ca39c1b5d62d8c6}} 
+virtual \mbox{\hyperlink{classqep__row}{qep\+\_\+row}} $\ast$ {\bfseries entry} ()
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classopt__explain__json__namespace_1_1table__base__ctx_afc1c98638ff3c4cc5b33ef99164cb144}{id}} (bool hide)
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_ac586c52dedb8e2907b73c06ad100a0a8}\label{classopt__explain__json__namespace_1_1table__base__ctx_ac586c52dedb8e2907b73c06ad100a0a8}} 
+virtual bool {\bfseries cacheable} ()
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_a39fb61dc9ea8a5e7bd30d784de020fc8}\label{classopt__explain__json__namespace_1_1table__base__ctx_a39fb61dc9ea8a5e7bd30d784de020fc8}} 
+virtual bool {\bfseries dependent} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1table__base__ctx_a3b2b6db7328abbca2a584faea135cb31}{format\+\_\+body}} (\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$json, \mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} $\ast$obj)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_a49a75e51ac1b93b24e892133008d2203}\label{classopt__explain__json__namespace_1_1table__base__ctx_a49a75e51ac1b93b24e892133008d2203}} 
+bool {\bfseries is\+\_\+hidden\+\_\+id}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_a3b2b6db7328abbca2a584faea135cb31}\label{classopt__explain__json__namespace_1_1table__base__ctx_a3b2b6db7328abbca2a584faea135cb31}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx}!format\+\_\+body@{format\+\_\+body}}
+\index{format\+\_\+body@{format\+\_\+body}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx}}
+\subsubsection{\texorpdfstring{format\+\_\+body()}{format\_body()}}
+{\footnotesize\ttfamily bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx\+::format\+\_\+body (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$}]{json,  }\item[{\mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Format J\+S\+ON object body
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Formatter \\
+\hline
+{\em obj} & Object of this body\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classopt__explain__json__namespace_1_1join__tab__ctx_a74c2ce48b173e41e0878b549ea44e4b0}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::join\+\_\+tab\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1message__ctx_aaad801a247c7103078a058661f4084ce}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::message\+\_\+ctx}}, and \mbox{\hyperlink{classopt__explain__json__namespace_1_1union__result__ctx_a530209b64dc40a9e682f78cd550b1047}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::union\+\_\+result\+\_\+ctx}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1table__base__ctx_afc1c98638ff3c4cc5b33ef99164cb144}\label{classopt__explain__json__namespace_1_1table__base__ctx_afc1c98638ff3c4cc5b33ef99164cb144}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx}!id@{id}}
+\index{id@{id}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual size\+\_\+t opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+base\+\_\+ctx\+::id (\begin{DoxyParamCaption}\item[{bool}]{hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Analogue of the \char`\"{}id\char`\"{} column in the traditional E\+X\+P\+L\+A\+IN output
+
+
+\begin{DoxyParams}{Parameters}
+{\em hide} & if true, ban the output of K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+ID J\+S\+ON property in the underlying table\+\_\+with\+\_\+where\+\_\+and\+\_\+derived\+\_\+ctx objects\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Select number\char`\"{} that is associated with this node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_a07c46bab31a35d88c13ccdca82755aaa}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classopt__explain__json__namespace_1_1materialize__ctx_ae1e9e31aa9072cf01733c417a1821773}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::materialize\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1join__tab__ctx_a294e12d9416adb645ab30841bddda4e0}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::join\+\_\+tab\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1message__ctx_a76f2d4b59c3707aa67afef272d4a00ca}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::message\+\_\+ctx}}, \mbox{\hyperlink{classopt__explain__json__namespace_1_1table__with__where__and__derived_ab71bf926210b34494e172ff100cc348b}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::table\+\_\+with\+\_\+where\+\_\+and\+\_\+derived}}, and \mbox{\hyperlink{classopt__explain__json__namespace_1_1union__result__ctx_af03161b8ce22f7a3e95489dd1be62118}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::union\+\_\+result\+\_\+ctx}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+json.\+cc\end{DoxyCompactItemize}

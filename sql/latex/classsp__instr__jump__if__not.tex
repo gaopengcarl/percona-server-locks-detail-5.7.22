@@ -1,0 +1,83 @@
+\hypertarget{classsp__instr__jump__if__not}{}\section{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not Class Reference}
+\label{classsp__instr__jump__if__not}\index{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not@{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classsp__instr__jump__if__not}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__jump__if__not_a8cc888d5337e97a0d999fc22cd781a8f}\label{classsp__instr__jump__if__not_a8cc888d5337e97a0d999fc22cd781a8f}} 
+{\bfseries sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not} (uint ip, L\+EX $\ast$lex, \mbox{\hyperlink{classItem}{Item}} $\ast$expr\+\_\+item, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG expr\+\_\+query)
+\item 
+\mbox{\Hypertarget{classsp__instr__jump__if__not_a0b91cc130db0c5de3a05a7ff7ca9fd78}\label{classsp__instr__jump__if__not_a0b91cc130db0c5de3a05a7ff7ca9fd78}} 
+{\bfseries sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not} (uint ip, L\+EX $\ast$lex, \mbox{\hyperlink{classItem}{Item}} $\ast$expr\+\_\+item, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG expr\+\_\+query, uint dest)
+\item 
+\mbox{\Hypertarget{classsp__instr__jump__if__not_a9f17dde0ba59ee59a4fc59529dc095ba}\label{classsp__instr__jump__if__not_a9f17dde0ba59ee59a4fc59529dc095ba}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__jump__if__not_a800bbb55787b6b07c78cf8d698d308bf}{exec\+\_\+core}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__jump__if__not_af755479ad936f1b382516679a9ed1dcb}{on\+\_\+after\+\_\+expr\+\_\+parsing}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__instr__jump__if__not}{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}} implements SP-\/instruction, which does the jump if its S\+QL-\/expression is false. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__jump__if__not_a800bbb55787b6b07c78cf8d698d308bf}\label{classsp__instr__jump__if__not_a800bbb55787b6b07c78cf8d698d308bf}} 
+\index{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not@{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}!exec\+\_\+core@{exec\+\_\+core}}
+\index{exec\+\_\+core@{exec\+\_\+core}!sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not@{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}}
+\subsubsection{\texorpdfstring{exec\+\_\+core()}{exec\_core()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not\+::exec\+\_\+core (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute core function of instruction after all preparations (e.\+g. setting of proper L\+EX, saving part of the thread context).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em nextp\mbox{[}out\mbox{]}} & next instruction pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__jump__if__not_af755479ad936f1b382516679a9ed1dcb}\label{classsp__instr__jump__if__not_af755479ad936f1b382516679a9ed1dcb}} 
+\index{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not@{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}!on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}}
+\index{on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}!sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not@{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}}
+\subsubsection{\texorpdfstring{on\+\_\+after\+\_\+expr\+\_\+parsing()}{on\_after\_expr\_parsing()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not\+::on\+\_\+after\+\_\+expr\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Callback function which is called after the statement query string is successfully parsed, and the thread context has not been switched to the outer context. The thread context contains new L\+EX-\/object corresponding to the parsed query string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}{sp\+\_\+lex\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

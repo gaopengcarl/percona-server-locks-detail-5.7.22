@@ -1,0 +1,59 @@
+\hypertarget{classServer__side__cursor}{}\section{Server\+\_\+side\+\_\+cursor Class Reference}
+\label{classServer__side__cursor}\index{Server\+\_\+side\+\_\+cursor@{Server\+\_\+side\+\_\+cursor}}
+
+
+{\ttfamily \#include $<$sql\+\_\+cursor.\+h$>$}
+
+Inheritance diagram for Server\+\_\+side\+\_\+cursor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classServer__side__cursor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer__side__cursor_a63fc1156809024d925c6e2b03791d9f2}\label{classServer__side__cursor_a63fc1156809024d925c6e2b03791d9f2}} 
+{\bfseries Server\+\_\+side\+\_\+cursor} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root\+\_\+arg, Query\+\_\+result $\ast$result\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classServer__side__cursor_a9b77af4457e366fffdbb0f54f9d0892c}\label{classServer__side__cursor_a9b77af4457e366fffdbb0f54f9d0892c}} 
+virtual bool {\bfseries is\+\_\+open} () const =0
+\item 
+\mbox{\Hypertarget{classServer__side__cursor_ac3b61969483a18c9b58f88831290b23d}\label{classServer__side__cursor_ac3b61969483a18c9b58f88831290b23d}} 
+virtual int {\bfseries open} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$top\+\_\+level\+\_\+join)=0
+\item 
+\mbox{\Hypertarget{classServer__side__cursor_a36cb8a2dd72132b5ebba82fe245d8856}\label{classServer__side__cursor_a36cb8a2dd72132b5ebba82fe245d8856}} 
+virtual bool {\bfseries fetch} (ulong num\+\_\+rows)=0
+\item 
+\mbox{\Hypertarget{classServer__side__cursor_a52b8489d5d4624896211e6370b0506ee}\label{classServer__side__cursor_a52b8489d5d4624896211e6370b0506ee}} 
+virtual void {\bfseries close} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer__side__cursor_a159d55dd11e6bf01de97e0f4c535ca58}\label{classServer__side__cursor_a159d55dd11e6bf01de97e0f4c535ca58}} 
+static void {\bfseries operator delete} (void $\ast$ptr, size\+\_\+t size)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Query\+\_\+result $\ast$ \mbox{\hyperlink{classServer__side__cursor_aabbf3cb174ae4f57cc7bfc35f9149c25}{result}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}} -- an interface for materialized implementation of cursors. All cursors are self-\/contained (created in their own memory root). For that reason they must be deleted only using a pointer to \mbox{\hyperlink{classServer__side__cursor}{Server\+\_\+side\+\_\+cursor}}, not to its base class. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classServer__side__cursor_aabbf3cb174ae4f57cc7bfc35f9149c25}\label{classServer__side__cursor_aabbf3cb174ae4f57cc7bfc35f9149c25}} 
+\index{Server\+\_\+side\+\_\+cursor@{Server\+\_\+side\+\_\+cursor}!result@{result}}
+\index{result@{result}!Server\+\_\+side\+\_\+cursor@{Server\+\_\+side\+\_\+cursor}}
+\subsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily Query\+\_\+result$\ast$ Server\+\_\+side\+\_\+cursor\+::result\hspace{0.3cm}{\ttfamily [protected]}}
+
+Row destination used for fetch 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__cursor_8h}{sql\+\_\+cursor.\+h}}\item 
+sql\+\_\+cursor.\+cc\end{DoxyCompactItemize}

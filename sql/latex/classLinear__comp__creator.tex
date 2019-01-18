@@ -1,0 +1,81 @@
+\hypertarget{classLinear__comp__creator}{}\section{Linear\+\_\+comp\+\_\+creator Class Reference}
+\label{classLinear__comp__creator}\index{Linear\+\_\+comp\+\_\+creator@{Linear\+\_\+comp\+\_\+creator}}
+
+
+Abstract base class for the comparison operators =, $<$$>$ and $<$=$>$.  
+
+
+
+
+{\ttfamily \#include $<$item\+\_\+cmpfunc.\+h$>$}
+
+Inheritance diagram for Linear\+\_\+comp\+\_\+creator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classLinear__comp__creator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classItem__bool__func}{Item\+\_\+bool\+\_\+func}} $\ast$ \mbox{\hyperlink{classLinear__comp__creator_abf8d17944a06f0f90a187f4d99e06319}{create}} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b) const
+\item 
+\mbox{\Hypertarget{classLinear__comp__creator_a633f7e5bf2bfda0fce0e6dc45d265346}\label{classLinear__comp__creator_a633f7e5bf2bfda0fce0e6dc45d265346}} 
+virtual bool {\bfseries eqne\+\_\+op} () const
+\item 
+\mbox{\Hypertarget{classLinear__comp__creator_a70ab8bf2c7aacf21e84cf54c008c6b0c}\label{classLinear__comp__creator_a70ab8bf2c7aacf21e84cf54c008c6b0c}} 
+virtual bool {\bfseries l\+\_\+op} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classItem__bool__func}{Item\+\_\+bool\+\_\+func}} $\ast$ \mbox{\hyperlink{classLinear__comp__creator_ad77c92f078a60d9026d394fa55d80a49}{create\+\_\+scalar\+\_\+predicate}} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b) const =0
+\item 
+\mbox{\Hypertarget{classLinear__comp__creator_a66edcc06bc8ae10b62769b0656a3adf4}\label{classLinear__comp__creator_a66edcc06bc8ae10b62769b0656a3adf4}} 
+virtual \mbox{\hyperlink{classItem__bool__func}{Item\+\_\+bool\+\_\+func}} $\ast$ \mbox{\hyperlink{classLinear__comp__creator_a66edcc06bc8ae10b62769b0656a3adf4}{combine}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ list) const =0
+\begin{DoxyCompactList}\small\item\em Combines a list of conditions {\ttfamily exp op exp}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for the comparison operators =, $<$$>$ and $<$=$>$. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLinear__comp__creator_abf8d17944a06f0f90a187f4d99e06319}\label{classLinear__comp__creator_abf8d17944a06f0f90a187f4d99e06319}} 
+\index{Linear\+\_\+comp\+\_\+creator@{Linear\+\_\+comp\+\_\+creator}!create@{create}}
+\index{create@{create}!Linear\+\_\+comp\+\_\+creator@{Linear\+\_\+comp\+\_\+creator}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem__bool__func}{Item\+\_\+bool\+\_\+func}} $\ast$ Linear\+\_\+comp\+\_\+creator\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This implementation of the factory method also implements flattening of row constructors. Examples of flattening are\+:
+
+
+\begin{DoxyItemize}
+\item R\+O\+W(a, b) op R\+O\+W(x, y) =$>$ a op x P b op y.
+\item R\+OW(a, R\+O\+W(b, c) op R\+O\+W(x, R\+O\+W(y, z))) =$>$ a op x P b op y P c op z.
+\end{DoxyItemize}
+
+P is either A\+ND or OR, depending on the comparison operation, and this detail is left for \mbox{\hyperlink{classLinear__comp__creator_a66edcc06bc8ae10b62769b0656a3adf4}{combine()}}.
+
+The actual operator  op is created by the concrete subclass in \mbox{\hyperlink{classLinear__comp__creator_ad77c92f078a60d9026d394fa55d80a49}{create\+\_\+scalar\+\_\+predicate()}}. 
+
+Implements \mbox{\hyperlink{classComp__creator}{Comp\+\_\+creator}}.
+
+\mbox{\Hypertarget{classLinear__comp__creator_ad77c92f078a60d9026d394fa55d80a49}\label{classLinear__comp__creator_ad77c92f078a60d9026d394fa55d80a49}} 
+\index{Linear\+\_\+comp\+\_\+creator@{Linear\+\_\+comp\+\_\+creator}!create\+\_\+scalar\+\_\+predicate@{create\+\_\+scalar\+\_\+predicate}}
+\index{create\+\_\+scalar\+\_\+predicate@{create\+\_\+scalar\+\_\+predicate}!Linear\+\_\+comp\+\_\+creator@{Linear\+\_\+comp\+\_\+creator}}
+\subsubsection{\texorpdfstring{create\+\_\+scalar\+\_\+predicate()}{create\_scalar\_predicate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classItem__bool__func}{Item\+\_\+bool\+\_\+func}}$\ast$ Linear\+\_\+comp\+\_\+creator\+::create\+\_\+scalar\+\_\+predicate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Creates only an item tree node, without attempting to rewrite row constructors. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classLinear__comp__creator_abf8d17944a06f0f90a187f4d99e06319}{create()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classNe__creator_a588788bd9c5388d4b11bd206690af928}{Ne\+\_\+creator}}, \mbox{\hyperlink{classEqual__creator_adce84c4bb7f90dd0aca3c2a0c4dd6f35}{Equal\+\_\+creator}}, and \mbox{\hyperlink{classEq__creator_ac63960f7bc029779aba59e9492663e2d}{Eq\+\_\+creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

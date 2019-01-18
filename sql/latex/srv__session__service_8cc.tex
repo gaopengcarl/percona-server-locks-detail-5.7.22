@@ -1,0 +1,105 @@
+\hypertarget{srv__session__service_8cc}{}\section{srv\+\_\+session\+\_\+service.\+cc File Reference}
+\label{srv__session__service_8cc}\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+{\ttfamily \#include \char`\"{}srv\+\_\+session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/service\+\_\+srv\+\_\+session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conn\+\_\+handler/connection\+\_\+handler\+\_\+manager.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{srv__session__service_8cc_a1ee17fc0e82d4c1e12b25872c2acdb00}{srv\+\_\+session\+\_\+init\+\_\+thread}} (const void $\ast$plugin)
+\item 
+void \mbox{\hyperlink{srv__session__service_8cc_ac2569b9f0ab6376ccd23d45af66158c8}{srv\+\_\+session\+\_\+deinit\+\_\+thread}} ()
+\item 
+\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$ \mbox{\hyperlink{srv__session__service_8cc_ae66a67fdb81679b4687b65f6ddf0dece}{srv\+\_\+session\+\_\+open}} (srv\+\_\+session\+\_\+error\+\_\+cb error\+\_\+cb, void $\ast$plugin\+\_\+ctx)
+\item 
+int \mbox{\hyperlink{srv__session__service_8cc_aa7e5ed4ebd1387a94430c79119386f0c}{srv\+\_\+session\+\_\+detach}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+int \mbox{\hyperlink{srv__session__service_8cc_a061e4713d9a20d54337c09b248b5239f}{srv\+\_\+session\+\_\+close}} (\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+int \mbox{\hyperlink{srv__session__service_8cc_ac2ba1c692910cc27e1b6d11ae4b0477c}{srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server session service implementation. For more information please check the function comments. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{srv__session__service_8cc_a061e4713d9a20d54337c09b248b5239f}\label{srv__session__service_8cc_a061e4713d9a20d54337c09b248b5239f}} 
+\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}!srv\+\_\+session\+\_\+close@{srv\+\_\+session\+\_\+close}}
+\index{srv\+\_\+session\+\_\+close@{srv\+\_\+session\+\_\+close}!srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+close()}{srv\_session\_close()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Closes a session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session handle to close\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 Session successfully closed 1 Session wasn\textquotesingle{}t found or key doesn\textquotesingle{}t match 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__service_8cc_ac2569b9f0ab6376ccd23d45af66158c8}\label{srv__session__service_8cc_ac2569b9f0ab6376ccd23d45af66158c8}} 
+\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}!srv\+\_\+session\+\_\+deinit\+\_\+thread@{srv\+\_\+session\+\_\+deinit\+\_\+thread}}
+\index{srv\+\_\+session\+\_\+deinit\+\_\+thread@{srv\+\_\+session\+\_\+deinit\+\_\+thread}!srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+deinit\+\_\+thread()}{srv\_session\_deinit\_thread()}}
+{\footnotesize\ttfamily void srv\+\_\+session\+\_\+deinit\+\_\+thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deinitializes physical thread to use with session service \mbox{\Hypertarget{srv__session__service_8cc_aa7e5ed4ebd1387a94430c79119386f0c}\label{srv__session__service_8cc_aa7e5ed4ebd1387a94430c79119386f0c}} 
+\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}!srv\+\_\+session\+\_\+detach@{srv\+\_\+session\+\_\+detach}}
+\index{srv\+\_\+session\+\_\+detach@{srv\+\_\+session\+\_\+detach}!srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+detach()}{srv\_session\_detach()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+Detaches a session from current physical thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session handle to detach\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 success 1 failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__service_8cc_a1ee17fc0e82d4c1e12b25872c2acdb00}\label{srv__session__service_8cc_a1ee17fc0e82d4c1e12b25872c2acdb00}} 
+\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}!srv\+\_\+session\+\_\+init\+\_\+thread@{srv\+\_\+session\+\_\+init\+\_\+thread}}
+\index{srv\+\_\+session\+\_\+init\+\_\+thread@{srv\+\_\+session\+\_\+init\+\_\+thread}!srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+init\+\_\+thread()}{srv\_session\_init\_thread()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+init\+\_\+thread (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})}
+
+Initializes physical thread to use with session service.
+
+\begin{DoxyReturn}{Returns}
+0 success 1 failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__service_8cc_ae66a67fdb81679b4687b65f6ddf0dece}\label{srv__session__service_8cc_ae66a67fdb81679b4687b65f6ddf0dece}} 
+\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}!srv\+\_\+session\+\_\+open@{srv\+\_\+session\+\_\+open}}
+\index{srv\+\_\+session\+\_\+open@{srv\+\_\+session\+\_\+open}!srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+open()}{srv\_session\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}}$\ast$ srv\+\_\+session\+\_\+open (\begin{DoxyParamCaption}\item[{srv\+\_\+session\+\_\+error\+\_\+cb}]{error\+\_\+cb,  }\item[{void $\ast$}]{plugin\+\_\+ctx }\end{DoxyParamCaption})}
+
+Opens server session
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+cb} & Default completion callback \\
+\hline
+{\em plugin\+\_\+ctx} & Plugin\textquotesingle{}s context, opaque pointer that would be provided to callbacks. Might be N\+U\+LL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+handler of session on success N\+U\+LL on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{srv__session__service_8cc_ac2ba1c692910cc27e1b6d11ae4b0477c}\label{srv__session__service_8cc_ac2ba1c692910cc27e1b6d11ae4b0477c}} 
+\index{srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}!srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available@{srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available}}
+\index{srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available@{srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available}!srv\+\_\+session\+\_\+service.\+cc@{srv\+\_\+session\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available()}{srv\_session\_server\_is\_available()}}
+{\footnotesize\ttfamily int srv\+\_\+session\+\_\+server\+\_\+is\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns if the server is available (not booting or shutting down)
+
+\begin{DoxyReturn}{Returns}
+0 not available 1 available 
+\end{DoxyReturn}

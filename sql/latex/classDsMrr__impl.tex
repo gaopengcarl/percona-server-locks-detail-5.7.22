@@ -1,0 +1,139 @@
+\hypertarget{classDsMrr__impl}{}\section{Ds\+Mrr\+\_\+impl Class Reference}
+\label{classDsMrr__impl}\index{Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_a13ef09ad1cf2ce9e5ec540fa97afafa8}\label{classDsMrr__impl_a13ef09ad1cf2ce9e5ec540fa97afafa8}} 
+typedef void(handler\+::$\ast$ {\bfseries range\+\_\+check\+\_\+toggle\+\_\+func\+\_\+t}) (bool on)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDsMrr__impl_a63da49f2511507a66241265e90897775}{init}} (\mbox{\hyperlink{classhandler}{handler}} $\ast$h\+\_\+arg, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table\+\_\+arg)
+\item 
+int \mbox{\hyperlink{classDsMrr__impl_ade7283d68a19de82fd19ad836ac10506}{dsmrr\+\_\+init}} (\mbox{\hyperlink{classhandler}{handler}} $\ast$h, \mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$seq\+\_\+funcs, void $\ast$seq\+\_\+init\+\_\+param, uint n\+\_\+ranges, uint mode, \mbox{\hyperlink{structst__handler__buffer}{H\+A\+N\+D\+L\+E\+R\+\_\+\+B\+U\+F\+F\+ER}} $\ast$buf)
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_a37d8684f4e71bf4b0b4f064546184417}\label{classDsMrr__impl_a37d8684f4e71bf4b0b4f064546184417}} 
+void {\bfseries dsmrr\+\_\+close} ()
+\item 
+void \mbox{\hyperlink{classDsMrr__impl_a186174fdee0ea701012e58c55a1e5618}{reset}} ()
+\item 
+int \mbox{\hyperlink{classDsMrr__impl_a444c0116a9c9b9eefb73195e8ad5c3e6}{dsmrr\+\_\+fill\+\_\+buffer}} ()
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_afcc0a1f4f99e95737581fae0161b2527}\label{classDsMrr__impl_afcc0a1f4f99e95737581fae0161b2527}} 
+int {\bfseries dsmrr\+\_\+next} (char $\ast$$\ast$range\+\_\+info)
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_a2b61662dc18bf171f35e679c4c87eb64}\label{classDsMrr__impl_a2b61662dc18bf171f35e679c4c87eb64}} 
+ha\+\_\+rows {\bfseries dsmrr\+\_\+info} (uint keyno, uint n\+\_\+ranges, uint keys, uint $\ast$bufsz, uint $\ast$flags, \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$cost)
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_a37a15cc5cafd27df60f13cc3b39c7476}\label{classDsMrr__impl_a37a15cc5cafd27df60f13cc3b39c7476}} 
+ha\+\_\+rows {\bfseries dsmrr\+\_\+info\+\_\+const} (uint keyno, \mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$seq, void $\ast$seq\+\_\+init\+\_\+param, uint n\+\_\+ranges, uint $\ast$bufsz, uint $\ast$flags, \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$cost)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_ab9e54b21d0894065fe5964c1f9cc88ab}\label{classDsMrr__impl_ab9e54b21d0894065fe5964c1f9cc88ab}} 
+\mbox{\hyperlink{classhandler}{handler}} $\ast$ {\bfseries h}
+\item 
+\mbox{\Hypertarget{classDsMrr__impl_aed8fc84364868b01cb0d19537d5fa5b3}\label{classDsMrr__impl_aed8fc84364868b01cb0d19537d5fa5b3}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDsMrr__impl_a444c0116a9c9b9eefb73195e8ad5c3e6}\label{classDsMrr__impl_a444c0116a9c9b9eefb73195e8ad5c3e6}} 
+\index{Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}!dsmrr\+\_\+fill\+\_\+buffer@{dsmrr\+\_\+fill\+\_\+buffer}}
+\index{dsmrr\+\_\+fill\+\_\+buffer@{dsmrr\+\_\+fill\+\_\+buffer}!Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}}
+\subsubsection{\texorpdfstring{dsmrr\+\_\+fill\+\_\+buffer()}{dsmrr\_fill\_buffer()}}
+{\footnotesize\ttfamily int Ds\+Mrr\+\_\+impl\+::dsmrr\+\_\+fill\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+DS-\/M\+RR\+: Fill the buffer with rowids and sort it by rowid
+
+\{This is an internal function of Disk\+Sweep M\+RR implementation\} Scan the M\+RR ranges and collect R\+O\+W\+I\+Ds (or \{R\+O\+W\+ID, range\+\_\+id\} pairs) into buffer. When the buffer is full or scan is completed, sort the buffer by rowid and return.
+
+The function assumes that rowids buffer is empty when it is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Table handler\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK, the next portion of rowids is in the buffer, properly ordered \\
+\hline
+{\em other} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classDsMrr__impl_ade7283d68a19de82fd19ad836ac10506}\label{classDsMrr__impl_ade7283d68a19de82fd19ad836ac10506}} 
+\index{Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}!dsmrr\+\_\+init@{dsmrr\+\_\+init}}
+\index{dsmrr\+\_\+init@{dsmrr\+\_\+init}!Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}}
+\subsubsection{\texorpdfstring{dsmrr\+\_\+init()}{dsmrr\_init()}}
+{\footnotesize\ttfamily int Ds\+Mrr\+\_\+impl\+::dsmrr\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandler}{handler}} $\ast$}]{h\+\_\+arg,  }\item[{\mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$}]{seq\+\_\+funcs,  }\item[{void $\ast$}]{seq\+\_\+init\+\_\+param,  }\item[{uint}]{n\+\_\+ranges,  }\item[{uint}]{mode,  }\item[{\mbox{\hyperlink{structst__handler__buffer}{H\+A\+N\+D\+L\+E\+R\+\_\+\+B\+U\+F\+F\+ER}} $\ast$}]{buf }\end{DoxyParamCaption})}
+
+DS-\/M\+RR\+: Initialize and start M\+RR scan
+
+Initialize and start the M\+RR scan. Depending on the mode parameter, this may use default or DS-\/M\+RR implementation.
+
+The DS-\/M\+RR implementation will use a second handler object (h2) for doing scan on the index\+:
+\begin{DoxyItemize}
+\item on the first call to this function the h2 handler will be created and h2 will be opened using the same index as the main handler is set to use. The index scan on the main index will be closed and it will be re-\/opened to read records from the table using either no key or the primary key. The h2 handler will be deleted when \mbox{\hyperlink{classDsMrr__impl_a186174fdee0ea701012e58c55a1e5618}{reset()}} is called (which should happen on the end of the statement).
+\item when dsmrr\+\_\+close() is called the index scan on h2 is closed.
+\item on following calls to this function one of the following must be valid\+: a. if dsmrr\+\_\+close has been called\+: the main handler (h) must be open on an index, h2 will be opened using this index, and the index on h will be closed and h will be re-\/opened to read reads from the table using either no key or the primary key. b. dsmrr\+\_\+close has not been called\+: h2 will already be open, the main handler h must be set up to read records from the table (handler-\/$>$inited is R\+ND) either using the primary index or using no index at all.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+arg} & Table handler to be used \\
+\hline
+{\em seq\+\_\+funcs} & \mbox{\hyperlink{structInterval}{Interval}} sequence enumeration functions \\
+\hline
+{\em seq\+\_\+init\+\_\+param} & \mbox{\hyperlink{structInterval}{Interval}} sequence enumeration parameter \\
+\hline
+{\em n\+\_\+ranges} & Number of ranges in the sequence. \\
+\hline
+{\em mode} & H\+A\+\_\+\+M\+R\+R\+\_\+$\ast$ modes to use \\
+\hline
+{\em buf} & I\+N\+O\+UT Buffer to use\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Ok, Scan started. \\
+\hline
+{\em other} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classDsMrr__impl_a63da49f2511507a66241265e90897775}\label{classDsMrr__impl_a63da49f2511507a66241265e90897775}} 
+\index{Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}!init@{init}}
+\index{init@{init}!Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Ds\+Mrr\+\_\+impl\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhandler}{handler}} $\ast$}]{h\+\_\+arg,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the \mbox{\hyperlink{classDsMrr__impl}{Ds\+Mrr\+\_\+impl}} object.
+
+This object is used for both doing default M\+RR scans and DS-\/M\+RR scans. This function just initializes the object. To do a DS-\/M\+RR scan, this must also be initialized by calling \mbox{\hyperlink{classDsMrr__impl_ade7283d68a19de82fd19ad836ac10506}{dsmrr\+\_\+init()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+arg} & pointer to the handler that owns this object \\
+\hline
+{\em table\+\_\+arg} & pointer to the \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} that owns the handler \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDsMrr__impl_a186174fdee0ea701012e58c55a1e5618}\label{classDsMrr__impl_a186174fdee0ea701012e58c55a1e5618}} 
+\index{Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}!reset@{reset}}
+\index{reset@{reset}!Ds\+Mrr\+\_\+impl@{Ds\+Mrr\+\_\+impl}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Ds\+Mrr\+\_\+impl\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Resets the DS-\/M\+RR object to the state it had after being intialized.
+
+If there is an open scan then this will be closed.
+
+This function should be called by \mbox{\hyperlink{classhandler_a53d38f167906d8aaa9e560c71e595a42}{handler\+::ha\+\_\+reset()}} which is called when a statement is completed in order to make the handler object ready for re-\/use by a different statement. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+handler.\+h\item 
+\mbox{\hyperlink{handler_8cc}{handler.\+cc}}\end{DoxyCompactItemize}

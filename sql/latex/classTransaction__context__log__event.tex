@@ -1,0 +1,126 @@
+\hypertarget{classTransaction__context__log__event}{}\section{Transaction\+\_\+context\+\_\+log\+\_\+event Class Reference}
+\label{classTransaction__context__log__event}\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Transaction\+\_\+context\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTransaction__context__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransaction__context__log__event_a9d09319a8f01964a08b093acbb17d8ef}\label{classTransaction__context__log__event_a9d09319a8f01964a08b093acbb17d8ef}} 
+{\bfseries Transaction\+\_\+context\+\_\+log\+\_\+event} (const char $\ast$server\+\_\+uuid\+\_\+arg, bool using\+\_\+trans, my\+\_\+thread\+\_\+id thread\+\_\+id\+\_\+arg, bool is\+\_\+gtid\+\_\+specified\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classTransaction__context__log__event_ae80152ea28103e730abea81ca5112fca}\label{classTransaction__context__log__event_ae80152ea28103e730abea81ca5112fca}} 
+{\bfseries Transaction\+\_\+context\+\_\+log\+\_\+event} (const char $\ast$buffer, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$descr\+\_\+event)
+\item 
+\mbox{\Hypertarget{classTransaction__context__log__event_aed1dccc4300d6d7c3704bbcc8a330637}\label{classTransaction__context__log__event_aed1dccc4300d6d7c3704bbcc8a330637}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classTransaction__context__log__event_ab1e98ad96c9cecb4c9dde15f6e152a14}\label{classTransaction__context__log__event_ab1e98ad96c9cecb4c9dde15f6e152a14}} 
+int {\bfseries pack\+\_\+info} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$protocol)
+\item 
+void \mbox{\hyperlink{classTransaction__context__log__event_a2f9e55762a33d63feb95604054c7d774}{add\+\_\+write\+\_\+set}} (const char $\ast$hash)
+\item 
+std\+::list$<$ const char $\ast$ $>$ $\ast$ \mbox{\hyperlink{classTransaction__context__log__event_ac32b9a6a93a80e8a5e286d4b4ee0cbb1}{get\+\_\+write\+\_\+set}} ()
+\item 
+void \mbox{\hyperlink{classTransaction__context__log__event_a436a05a16845aff723f8422ecacc39d2}{add\+\_\+read\+\_\+set}} (const char $\ast$hash)
+\item 
+std\+::list$<$ const char $\ast$ $>$ $\ast$ \mbox{\hyperlink{classTransaction__context__log__event_a50e7d23deff3a573ac9816d4e450b8a5}{get\+\_\+read\+\_\+set}} ()
+\item 
+bool \mbox{\hyperlink{classTransaction__context__log__event_a8f7b4b4b8d639ab385cf41f80ec3171f}{read\+\_\+snapshot\+\_\+version}} ()
+\item 
+\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ \mbox{\hyperlink{classTransaction__context__log__event_a0fa37d983b04a7ae00f9b0435b072622}{get\+\_\+snapshot\+\_\+version}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{classTransaction__context__log__event_a9db2b1c01d38580c8c41958b5fea1f8d}{get\+\_\+server\+\_\+uuid}} ()
+\item 
+my\+\_\+thread\+\_\+id \mbox{\hyperlink{classTransaction__context__log__event_ad0c9e0bf6493bc3d70b64a575c74a640}{get\+\_\+thread\+\_\+id}} ()
+\item 
+bool \mbox{\hyperlink{classTransaction__context__log__event_a01c8f6ee2811131330772326b9e1f7df}{is\+\_\+gtid\+\_\+specified}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the subclass of Transaction\+\_\+context\+\_\+event and \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} This class encodes the transaction\+\_\+context\+\_\+log\+\_\+event. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransaction__context__log__event_a436a05a16845aff723f8422ecacc39d2}\label{classTransaction__context__log__event_a436a05a16845aff723f8422ecacc39d2}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!add\+\_\+read\+\_\+set@{add\+\_\+read\+\_\+set}}
+\index{add\+\_\+read\+\_\+set@{add\+\_\+read\+\_\+set}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{add\+\_\+read\+\_\+set()}{add\_read\_set()}}
+{\footnotesize\ttfamily void Transaction\+\_\+context\+\_\+log\+\_\+event\+::add\+\_\+read\+\_\+set (\begin{DoxyParamCaption}\item[{const char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+Add a hash which identifies a read row on the ongoing transaction.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hash} & row identifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__context__log__event_a2f9e55762a33d63feb95604054c7d774}\label{classTransaction__context__log__event_a2f9e55762a33d63feb95604054c7d774}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!add\+\_\+write\+\_\+set@{add\+\_\+write\+\_\+set}}
+\index{add\+\_\+write\+\_\+set@{add\+\_\+write\+\_\+set}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{add\+\_\+write\+\_\+set()}{add\_write\_set()}}
+{\footnotesize\ttfamily void Transaction\+\_\+context\+\_\+log\+\_\+event\+::add\+\_\+write\+\_\+set (\begin{DoxyParamCaption}\item[{const char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+Add a hash which identifies a inserted/updated/deleted row on the ongoing transaction.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hash} & row identifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransaction__context__log__event_a50e7d23deff3a573ac9816d4e450b8a5}\label{classTransaction__context__log__event_a50e7d23deff3a573ac9816d4e450b8a5}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!get\+\_\+read\+\_\+set@{get\+\_\+read\+\_\+set}}
+\index{get\+\_\+read\+\_\+set@{get\+\_\+read\+\_\+set}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+read\+\_\+set()}{get\_read\_set()}}
+{\footnotesize\ttfamily std\+::list$<$const char$\ast$$>$$\ast$ Transaction\+\_\+context\+\_\+log\+\_\+event\+::get\+\_\+read\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a pointer to read-\/set list. \mbox{\Hypertarget{classTransaction__context__log__event_a9db2b1c01d38580c8c41958b5fea1f8d}\label{classTransaction__context__log__event_a9db2b1c01d38580c8c41958b5fea1f8d}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!get\+\_\+server\+\_\+uuid@{get\+\_\+server\+\_\+uuid}}
+\index{get\+\_\+server\+\_\+uuid@{get\+\_\+server\+\_\+uuid}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+server\+\_\+uuid()}{get\_server\_uuid()}}
+{\footnotesize\ttfamily const char$\ast$ Transaction\+\_\+context\+\_\+log\+\_\+event\+::get\+\_\+server\+\_\+uuid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the server uuid. \mbox{\Hypertarget{classTransaction__context__log__event_a0fa37d983b04a7ae00f9b0435b072622}\label{classTransaction__context__log__event_a0fa37d983b04a7ae00f9b0435b072622}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!get\+\_\+snapshot\+\_\+version@{get\+\_\+snapshot\+\_\+version}}
+\index{get\+\_\+snapshot\+\_\+version@{get\+\_\+snapshot\+\_\+version}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+snapshot\+\_\+version()}{get\_snapshot\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}$\ast$ Transaction\+\_\+context\+\_\+log\+\_\+event\+::get\+\_\+snapshot\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the transaction snapshot timestamp. \mbox{\Hypertarget{classTransaction__context__log__event_ad0c9e0bf6493bc3d70b64a575c74a640}\label{classTransaction__context__log__event_ad0c9e0bf6493bc3d70b64a575c74a640}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!get\+\_\+thread\+\_\+id@{get\+\_\+thread\+\_\+id}}
+\index{get\+\_\+thread\+\_\+id@{get\+\_\+thread\+\_\+id}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+thread\+\_\+id()}{get\_thread\_id()}}
+{\footnotesize\ttfamily my\+\_\+thread\+\_\+id Transaction\+\_\+context\+\_\+log\+\_\+event\+::get\+\_\+thread\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the id of the committing thread. \mbox{\Hypertarget{classTransaction__context__log__event_ac32b9a6a93a80e8a5e286d4b4ee0cbb1}\label{classTransaction__context__log__event_ac32b9a6a93a80e8a5e286d4b4ee0cbb1}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!get\+\_\+write\+\_\+set@{get\+\_\+write\+\_\+set}}
+\index{get\+\_\+write\+\_\+set@{get\+\_\+write\+\_\+set}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{get\+\_\+write\+\_\+set()}{get\_write\_set()}}
+{\footnotesize\ttfamily std\+::list$<$const char$\ast$$>$$\ast$ Transaction\+\_\+context\+\_\+log\+\_\+event\+::get\+\_\+write\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a pointer to write-\/set list. \mbox{\Hypertarget{classTransaction__context__log__event_a01c8f6ee2811131330772326b9e1f7df}\label{classTransaction__context__log__event_a01c8f6ee2811131330772326b9e1f7df}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!is\+\_\+gtid\+\_\+specified@{is\+\_\+gtid\+\_\+specified}}
+\index{is\+\_\+gtid\+\_\+specified@{is\+\_\+gtid\+\_\+specified}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+gtid\+\_\+specified()}{is\_gtid\_specified()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+context\+\_\+log\+\_\+event\+::is\+\_\+gtid\+\_\+specified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if transaction has G\+T\+I\+D\+\_\+\+N\+E\+XT specified, false otherwise. \mbox{\Hypertarget{classTransaction__context__log__event_a8f7b4b4b8d639ab385cf41f80ec3171f}\label{classTransaction__context__log__event_a8f7b4b4b8d639ab385cf41f80ec3171f}} 
+\index{Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}!read\+\_\+snapshot\+\_\+version@{read\+\_\+snapshot\+\_\+version}}
+\index{read\+\_\+snapshot\+\_\+version@{read\+\_\+snapshot\+\_\+version}!Transaction\+\_\+context\+\_\+log\+\_\+event@{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{read\+\_\+snapshot\+\_\+version()}{read\_snapshot\_version()}}
+{\footnotesize\ttfamily bool Transaction\+\_\+context\+\_\+log\+\_\+event\+::read\+\_\+snapshot\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read snapshot version from encoded buffers. Cannot be executed during data read from file (event constructor), since its required locks will collide with the server gtid state initialization procedure. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

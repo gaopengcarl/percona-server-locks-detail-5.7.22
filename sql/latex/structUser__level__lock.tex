@@ -1,0 +1,19 @@
+\hypertarget{structUser__level__lock}{}\section{User\+\_\+level\+\_\+lock Struct Reference}
+\label{structUser__level__lock}\index{User\+\_\+level\+\_\+lock@{User\+\_\+level\+\_\+lock}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structUser__level__lock_a33c1597c5a377feddbf2ea07ca40fed3}\label{structUser__level__lock_a33c1597c5a377feddbf2ea07ca40fed3}} 
+\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ {\bfseries ticket}
+\item 
+\mbox{\Hypertarget{structUser__level__lock_a56dbecf5d5d2523c03ace9910121332a}\label{structUser__level__lock_a56dbecf5d5d2523c03ace9910121332a}} 
+uint {\bfseries refs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+For locks with E\+X\+P\+L\+I\+C\+IT duration, M\+DL returns a new ticket every time a lock is granted. This allows to implement recursive locks without extra allocation or additional data structures, such as below. However, if there are too many tickets in the same \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}}, M\+D\+L\+\_\+context\+::find\+\_\+ticket() is getting too slow, since it\textquotesingle{}s using a linear search. This is why a separate structure is allocated for a user level lock held by connection, and before requesting a new lock from M\+DL, G\+E\+T\+\_\+\+L\+O\+C\+K() checks thd-\/$>$ull\+\_\+hash if such lock is already granted, and if so, simply increments a reference counter. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__func_8cc}{item\+\_\+func.\+cc}}\end{DoxyCompactItemize}

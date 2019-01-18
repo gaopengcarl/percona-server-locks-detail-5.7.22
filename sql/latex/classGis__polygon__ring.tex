@@ -1,0 +1,54 @@
+\hypertarget{classGis__polygon__ring}{}\section{Gis\+\_\+polygon\+\_\+ring Class Reference}
+\label{classGis__polygon__ring}\index{Gis\+\_\+polygon\+\_\+ring@{Gis\+\_\+polygon\+\_\+ring}}
+Inheritance diagram for Gis\+\_\+polygon\+\_\+ring\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGis__polygon__ring}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__polygon__ring_a5a867846c456bd64e34f027411a9dbbe}\label{classGis__polygon__ring_a5a867846c456bd64e34f027411a9dbbe}} 
+typedef \mbox{\hyperlink{classGis__wkb__vector}{Gis\+\_\+wkb\+\_\+vector}}$<$ \mbox{\hyperlink{classGis__point}{Gis\+\_\+point}} $>$ {\bfseries base}
+\item 
+\mbox{\Hypertarget{classGis__polygon__ring_ab33b24a28cc55d6a32de73fcdee44afd}\label{classGis__polygon__ring_ab33b24a28cc55d6a32de73fcdee44afd}} 
+typedef \mbox{\hyperlink{classGis__polygon__ring}{Gis\+\_\+polygon\+\_\+ring}} {\bfseries self}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGis__polygon__ring_ab2eeee31ae584004ee394e68f22e76e3}\label{classGis__polygon__ring_ab2eeee31ae584004ee394e68f22e76e3}} 
+{\bfseries Gis\+\_\+polygon\+\_\+ring} (const void $\ast$wkb, size\+\_\+t nbytes, const \mbox{\hyperlink{classGeometry_1_1Flags__t}{Flags\+\_\+t}} \&flags, srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classGis__polygon__ring_acbb357005ab332b7cada27f97a82f821}\label{classGis__polygon__ring_acbb357005ab332b7cada27f97a82f821}} 
+{\bfseries Gis\+\_\+polygon\+\_\+ring} (const \mbox{\hyperlink{classGis__polygon__ring}{self}} \&r)
+\item 
+bool \mbox{\hyperlink{classGis__polygon__ring_a2807ddb3d4e769048a73c115416f5bd8}{set\+\_\+ring\+\_\+order}} (bool want\+\_\+ccw)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGis__polygon__ring_a2807ddb3d4e769048a73c115416f5bd8}\label{classGis__polygon__ring_a2807ddb3d4e769048a73c115416f5bd8}} 
+\index{Gis\+\_\+polygon\+\_\+ring@{Gis\+\_\+polygon\+\_\+ring}!set\+\_\+ring\+\_\+order@{set\+\_\+ring\+\_\+order}}
+\index{set\+\_\+ring\+\_\+order@{set\+\_\+ring\+\_\+order}!Gis\+\_\+polygon\+\_\+ring@{Gis\+\_\+polygon\+\_\+ring}}
+\subsubsection{\texorpdfstring{set\+\_\+ring\+\_\+order()}{set\_ring\_order()}}
+{\footnotesize\ttfamily bool Gis\+\_\+polygon\+\_\+ring\+::set\+\_\+ring\+\_\+order (\begin{DoxyParamCaption}\item[{bool}]{want\+\_\+ccw }\end{DoxyParamCaption})}
+
+Set the specified ring to counter-\/clockwise(\+C\+C\+W) or clockwise(\+C\+W) if it\textquotesingle{}s not. Assuems the ring is closed, i.\+e. the 1st point is the same as the last one. Allow duplicate vertices at any position, even rings degraded to a point; Works for convex and concave rings; Can detect those with spikes and reject them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em want\+\_\+ccw} & whether want C\+CW ring(true) or CW ring(false). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true if got error -- invalid geometry data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

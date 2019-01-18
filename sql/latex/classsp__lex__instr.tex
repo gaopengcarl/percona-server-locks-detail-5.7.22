@@ -1,0 +1,243 @@
+\hypertarget{classsp__lex__instr}{}\section{sp\+\_\+lex\+\_\+instr Class Reference}
+\label{classsp__lex__instr}\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+lex\+\_\+instr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.380952cm]{classsp__lex__instr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__lex__instr_af19389f29a546a0eeab0a5d46990d38b}\label{classsp__lex__instr_af19389f29a546a0eeab0a5d46990d38b}} 
+{\bfseries sp\+\_\+lex\+\_\+instr} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, L\+EX $\ast$lex, bool is\+\_\+lex\+\_\+owner)
+\item 
+bool \mbox{\hyperlink{classsp__lex__instr_a9991350aa928258ec9b2c73c8167d87e}{validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core}} (T\+HD $\ast$thd, uint $\ast$nextp, bool \mbox{\hyperlink{group__Data__Dictionary_ga59e488af7a3f47be08fad22370de07c5}{open\+\_\+tables}})
+\item 
+\mbox{\Hypertarget{classsp__lex__instr_a7f79f395f560ec802969364a52f643d9}\label{classsp__lex__instr_a7f79f395f560ec802969364a52f643d9}} 
+virtual \mbox{\hyperlink{classSQL__I__List}{S\+Q\+L\+\_\+\+I\+\_\+\+List}}$<$ \mbox{\hyperlink{classItem__trigger__field}{Item\+\_\+trigger\+\_\+field}} $>$ $\ast$ {\bfseries get\+\_\+instr\+\_\+trig\+\_\+field\+\_\+list} ()
+\item 
+\mbox{\Hypertarget{classsp__lex__instr_adfabae5cbb6a5692e0b2c9dd4dbae4ba}\label{classsp__lex__instr_adfabae5cbb6a5692e0b2c9dd4dbae4ba}} 
+int {\bfseries get\+\_\+command} () const
+\item 
+\mbox{\Hypertarget{classsp__lex__instr_aa69da274297fef193fcaf688658a2997}\label{classsp__lex__instr_aa69da274297fef193fcaf688658a2997}} 
+const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$ {\bfseries get\+\_\+prepared\+\_\+stmt\+\_\+name} () const
+\item 
+virtual bool \mbox{\hyperlink{classsp__lex__instr_a1cb4c51d92402e942d15ea95e57785dd}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{exec\+\_\+core}} (T\+HD $\ast$thd, uint $\ast$nextp)=0
+\item 
+virtual bool \mbox{\hyperlink{classsp__lex__instr_a56788cb475ccf94f224816006d9c90e9}{is\+\_\+invalid}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__instr_ae9945d69ab5d91d6ce215f194beea882}{invalidate}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query}} (String $\ast$sql\+\_\+query) const
+\item 
+virtual L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classsp__lex__instr_ad355d3ed08ae1fef4811fe6838ed78e2}{get\+\_\+expr\+\_\+query}} () const
+\item 
+virtual bool \mbox{\hyperlink{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}{on\+\_\+after\+\_\+expr\+\_\+parsing}} (T\+HD $\ast$thd)
+\item 
+virtual void \mbox{\hyperlink{classsp__lex__instr_aea0d857d412f89095bde90fa083e8c24}{cleanup\+\_\+before\+\_\+parsing}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__lex__instr_a8a4ca70d2aa8695a5a056b840b7aae49}\label{classsp__lex__instr_a8a4ca70d2aa8695a5a056b840b7aae49}} 
+L\+EX $\ast$ \mbox{\hyperlink{classsp__lex__instr_a8a4ca70d2aa8695a5a056b840b7aae49}{m\+\_\+lex}}
+\begin{DoxyCompactList}\small\item\em L\+EX-\/object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__lex__instr}{sp\+\_\+lex\+\_\+instr}} is a class providing the interface and base implementation for SP-\/instructions, whose execution is based on expression evaluation.
+
+\mbox{\hyperlink{classsp__lex__instr}{sp\+\_\+lex\+\_\+instr}} keeps L\+EX-\/object to be able to evaluate the expression.
+
+\mbox{\hyperlink{classsp__lex__instr}{sp\+\_\+lex\+\_\+instr}} also provides possibility to re-\/parse the original query string if for some reason the L\+EX-\/object is not valid any longer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__lex__instr_aea0d857d412f89095bde90fa083e8c24}\label{classsp__lex__instr_aea0d857d412f89095bde90fa083e8c24}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!cleanup\+\_\+before\+\_\+parsing@{cleanup\+\_\+before\+\_\+parsing}}
+\index{cleanup\+\_\+before\+\_\+parsing@{cleanup\+\_\+before\+\_\+parsing}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+before\+\_\+parsing()}{cleanup\_before\_parsing()}}
+{\footnotesize\ttfamily void sp\+\_\+lex\+\_\+instr\+::cleanup\+\_\+before\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Destroy items in the free list before re-\/parsing the statement query string (and thus, creating new items).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__set__trigger__field_a7dfa25f3120b0f312d0606c3ea9f8074}{sp\+\_\+instr\+\_\+set\+\_\+trigger\+\_\+field}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}\label{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!exec\+\_\+core@{exec\+\_\+core}}
+\index{exec\+\_\+core@{exec\+\_\+core}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{exec\+\_\+core()}{exec\_core()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+lex\+\_\+instr\+::exec\+\_\+core (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Execute core function of instruction after all preparations (e.\+g. setting of proper L\+EX, saving part of the thread context).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em nextp\mbox{[}out\mbox{]}} & next instruction pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}{sp\+\_\+instr\+\_\+cpush}}, \mbox{\hyperlink{classsp__instr__jump__case__when_aaa1972f676e5c2bb3a55baf61220c5fb}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}, \mbox{\hyperlink{classsp__instr__set__case__expr_a986c16ff3c1be65fe0653dda3104b0d8}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}, \mbox{\hyperlink{classsp__instr__jump__if__not_a800bbb55787b6b07c78cf8d698d308bf}{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}}, \mbox{\hyperlink{classsp__instr__freturn_a80fe2f90bc144b28a1a97dbff8b35e0b}{sp\+\_\+instr\+\_\+freturn}}, \mbox{\hyperlink{classsp__instr__set__trigger__field_abec18ffff701e30c978cbece096e5c72}{sp\+\_\+instr\+\_\+set\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classsp__instr__set_adc6287f3c6cce44e717167cec46a0149}{sp\+\_\+instr\+\_\+set}}, and \mbox{\hyperlink{classsp__instr__stmt_a10255fd8768c13b35a715b78aac47b3f}{sp\+\_\+instr\+\_\+stmt}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_a1cb4c51d92402e942d15ea95e57785dd}\label{classsp__lex__instr_a1cb4c51d92402e942d15ea95e57785dd}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+lex\+\_\+instr\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__instr_a78add2ec1a98f8ba58d75c8eb40ed8cb}{sp\+\_\+instr}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__cpush_a7d372bf13da26255682db5ea8da893b0}{sp\+\_\+instr\+\_\+cpush}}, and \mbox{\hyperlink{classsp__instr__stmt_a81682f344607fafa2bdac0075b636d85}{sp\+\_\+instr\+\_\+stmt}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_ad355d3ed08ae1fef4811fe6838ed78e2}\label{classsp__lex__instr_ad355d3ed08ae1fef4811fe6838ed78e2}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!get\+\_\+expr\+\_\+query@{get\+\_\+expr\+\_\+query}}
+\index{get\+\_\+expr\+\_\+query@{get\+\_\+expr\+\_\+query}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{get\+\_\+expr\+\_\+query()}{get\_expr\_query()}}
+{\footnotesize\ttfamily virtual L\+E\+X\+\_\+\+S\+T\+R\+I\+NG sp\+\_\+lex\+\_\+instr\+::get\+\_\+expr\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the expression query string. This string can not be passed directly to the parser as it is most likely not a valid S\+QL-\/statement.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+as it can be seen in the \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query()}} implementation, \mbox{\hyperlink{classsp__lex__instr_ad355d3ed08ae1fef4811fe6838ed78e2}{get\+\_\+expr\+\_\+query()}} might return E\+M\+P\+T\+Y\+\_\+\+S\+TR. E\+M\+P\+T\+Y\+\_\+\+S\+TR means that no query-\/expression is available. That happens when class provides different implementation of \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{get\+\_\+query()}}. Strictly speaking, this is a drawback of the current class hierarchy. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classsp__lex__branch__instr_a3693c3f9cc8fdf15092dcb3d4183075b}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}, \mbox{\hyperlink{classsp__instr__freturn_adccc76ff6c7a1c0f72b58eda6e542e19}{sp\+\_\+instr\+\_\+freturn}}, \mbox{\hyperlink{classsp__instr__set__trigger__field_ae10dfb93c95ef7b04ae13d4d8cc9c5fc}{sp\+\_\+instr\+\_\+set\+\_\+trigger\+\_\+field}}, and \mbox{\hyperlink{classsp__instr__set_a13de9a0560941323d3cc7c9918e00036}{sp\+\_\+instr\+\_\+set}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}\label{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!get\+\_\+query@{get\+\_\+query}}
+\index{get\+\_\+query@{get\+\_\+query}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{get\+\_\+query()}{get\_query()}}
+{\footnotesize\ttfamily void sp\+\_\+lex\+\_\+instr\+::get\+\_\+query (\begin{DoxyParamCaption}\item[{String $\ast$}]{sql\+\_\+query }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Return the query string, which can be passed to the parser. I.\+e. the operation should return a valid S\+QL-\/statement query string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em sql\+\_\+query} & S\+QL-\/statement query string. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__cpush_acdfc630a526f268fa2b983fe55fc0982}{sp\+\_\+instr\+\_\+cpush}}, and \mbox{\hyperlink{classsp__instr__stmt_a271adfe3156abe2c56cb3b65f9265eb9}{sp\+\_\+instr\+\_\+stmt}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_ae9945d69ab5d91d6ce215f194beea882}\label{classsp__lex__instr_ae9945d69ab5d91d6ce215f194beea882}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+lex\+\_\+instr\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Invalidate the object. 
+
+Implemented in \mbox{\hyperlink{classsp__instr__cpush_a0bbf836e06e7be8c7f1fbcfba702d43c}{sp\+\_\+instr\+\_\+cpush}}, \mbox{\hyperlink{classsp__instr__jump__case__when_a35195c6200f0d6e87bde67b83f5fd767}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}, \mbox{\hyperlink{classsp__lex__branch__instr_a91d747da2e1068e2d6ac0fd7c06a4018}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}, \mbox{\hyperlink{classsp__instr__freturn_a02bf622965c9cdbe481ce87a3e1051cf}{sp\+\_\+instr\+\_\+freturn}}, \mbox{\hyperlink{classsp__instr__set__trigger__field_ab90045ba709dccc47878abc712db679f}{sp\+\_\+instr\+\_\+set\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classsp__instr__set_a4c871b1b9db55d27231d512a8eef9285}{sp\+\_\+instr\+\_\+set}}, and \mbox{\hyperlink{classsp__instr__stmt_a15924975452f322b5d8216b3b8279988}{sp\+\_\+instr\+\_\+stmt}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_a56788cb475ccf94f224816006d9c90e9}\label{classsp__lex__instr_a56788cb475ccf94f224816006d9c90e9}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!is\+\_\+invalid@{is\+\_\+invalid}}
+\index{is\+\_\+invalid@{is\+\_\+invalid}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid()}{is\_invalid()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+lex\+\_\+instr\+::is\+\_\+invalid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if the object (i.\+e. L\+EX-\/object) is valid and \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{exec\+\_\+core()}} can be just called.\\
+\hline
+{\em true} & if the object is not valid any longer, \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{exec\+\_\+core()}} can not be called. The original query string should be re-\/parsed and a new L\+EX-\/object should be used. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classsp__instr__cpush_a05c39644e6c5fd40fd72123b9d7d025d}{sp\+\_\+instr\+\_\+cpush}}, \mbox{\hyperlink{classsp__lex__branch__instr_a22c35f1cd8a840a61e4881903ad6ff03}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}, \mbox{\hyperlink{classsp__instr__freturn_aefb864f222cf52f923cf0ba0ce67943b}{sp\+\_\+instr\+\_\+freturn}}, \mbox{\hyperlink{classsp__instr__set__trigger__field_a8bb1d26a072313c690d91bc973d63276}{sp\+\_\+instr\+\_\+set\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classsp__instr__set_af9865816c222a82cb3bad59b428ddf77}{sp\+\_\+instr\+\_\+set}}, and \mbox{\hyperlink{classsp__instr__stmt_aeadeb9c91a52db353dceab5586ed511e}{sp\+\_\+instr\+\_\+stmt}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}\label{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}}
+\index{on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{on\+\_\+after\+\_\+expr\+\_\+parsing()}{on\_after\_expr\_parsing()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+lex\+\_\+instr\+::on\+\_\+after\+\_\+expr\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Callback function which is called after the statement query string is successfully parsed, and the thread context has not been switched to the outer context. The thread context contains new L\+EX-\/object corresponding to the parsed query string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classsp__instr__cpush_a5679b6d149a1941a84bc41ddc42848d6}{sp\+\_\+instr\+\_\+cpush}}, \mbox{\hyperlink{classsp__instr__jump__case__when_a590288e701b813831974c6f6f61884f7}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}, \mbox{\hyperlink{classsp__instr__set__case__expr_a041681a8ad6a4b3aeda887f5537ad624}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}}, \mbox{\hyperlink{classsp__instr__jump__if__not_af755479ad936f1b382516679a9ed1dcb}{sp\+\_\+instr\+\_\+jump\+\_\+if\+\_\+not}}, \mbox{\hyperlink{classsp__instr__freturn_aea65606ff061db0c9eb71b0aedecddfd}{sp\+\_\+instr\+\_\+freturn}}, \mbox{\hyperlink{classsp__instr__set__trigger__field_ac578c371c355a3fa089ecec4872e2a59}{sp\+\_\+instr\+\_\+set\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classsp__instr__set_aef30b17435828a33ac1f1e60081bc194}{sp\+\_\+instr\+\_\+set}}, and \mbox{\hyperlink{classsp__instr__stmt_a2918355010fb4072cd4eba8628fe931e}{sp\+\_\+instr\+\_\+stmt}}.
+
+\mbox{\Hypertarget{classsp__lex__instr_a9991350aa928258ec9b2c73c8167d87e}\label{classsp__lex__instr_a9991350aa928258ec9b2c73c8167d87e}} 
+\index{sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}!validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core@{validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core}}
+\index{validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core@{validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core}!sp\+\_\+lex\+\_\+instr@{sp\+\_\+lex\+\_\+instr}}
+\subsubsection{\texorpdfstring{validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core()}{validate\_lex\_and\_execute\_core()}}
+{\footnotesize\ttfamily bool sp\+\_\+lex\+\_\+instr\+::validate\+\_\+lex\+\_\+and\+\_\+execute\+\_\+core (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp,  }\item[{bool}]{open\+\_\+tables }\end{DoxyParamCaption})}
+
+Make a few attempts to execute the instruction.
+
+Basically, this operation does the following things\+:
+\begin{DoxyItemize}
+\item install \mbox{\hyperlink{classReprepare__observer}{Reprepare\+\_\+observer}} to catch metadata changes (if any);
+\item calls reset\+\_\+lex\+\_\+and\+\_\+exec\+\_\+core() to execute the instruction;
+\item if the execution fails due to a change in metadata, re-\/parse the instruction\textquotesingle{}s S\+QL-\/statement and repeat execution.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & Next instruction pointer \\
+\hline
+ & {\em open\+\_\+tables} & Flag to specify if the function should check read access to tables in L\+EX\textquotesingle{}s table list and open and lock them (used in instructions which need to calculate some expression and don\textquotesingle{}t execute complete statement).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

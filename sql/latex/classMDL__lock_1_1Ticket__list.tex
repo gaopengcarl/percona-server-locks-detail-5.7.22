@@ -1,0 +1,44 @@
+\hypertarget{classMDL__lock_1_1Ticket__list}{}\section{M\+D\+L\+\_\+lock\+:\+:Ticket\+\_\+list Class Reference}
+\label{classMDL__lock_1_1Ticket__list}\index{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list@{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__lock_1_1Ticket__list_a1934e2705b66d67f9b2ee8c5777c5d79}\label{classMDL__lock_1_1Ticket__list_a1934e2705b66d67f9b2ee8c5777c5d79}} 
+typedef \mbox{\hyperlink{classI__P__List}{I\+\_\+\+P\+\_\+\+List}}$<$ \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}, \mbox{\hyperlink{structI__P__List__adapter}{I\+\_\+\+P\+\_\+\+List\+\_\+adapter}}$<$ \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}, \&\mbox{\hyperlink{classMDL__ticket_ad9c009e5c097d2159dd142aa7f58e010}{M\+D\+L\+\_\+ticket\+::next\+\_\+in\+\_\+lock}}, \&M\+D\+L\+\_\+ticket\+::prev\+\_\+in\+\_\+lock $>$, \mbox{\hyperlink{classI__P__List__null__counter}{I\+\_\+\+P\+\_\+\+List\+\_\+null\+\_\+counter}}, \mbox{\hyperlink{classI__P__List__fast__push__back}{I\+\_\+\+P\+\_\+\+List\+\_\+fast\+\_\+push\+\_\+back}}$<$ \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $>$ $>$ {\bfseries List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__lock_1_1Ticket__list_ab57e8ad1140231472dc0769322eeab95}\label{classMDL__lock_1_1Ticket__list_ab57e8ad1140231472dc0769322eeab95}} 
+{\bfseries operator const List \&} () const
+\item 
+void \mbox{\hyperlink{classMDL__lock_1_1Ticket__list_ae1ec50de835e397d9c56b010fb894dfb}{add\+\_\+ticket}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+void \mbox{\hyperlink{classMDL__lock_1_1Ticket__list_ac6cdf2ddde468fcdf268b9d5a2a30200}{remove\+\_\+ticket}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+\mbox{\Hypertarget{classMDL__lock_1_1Ticket__list_aa193b29a4ade2bc38315840bcb9b3f78}\label{classMDL__lock_1_1Ticket__list_aa193b29a4ade2bc38315840bcb9b3f78}} 
+bool {\bfseries is\+\_\+empty} () const
+\item 
+\mbox{\Hypertarget{classMDL__lock_1_1Ticket__list_a41c93186d935ccac15123d474d48f315}\label{classMDL__lock_1_1Ticket__list_a41c93186d935ccac15123d474d48f315}} 
+bitmap\+\_\+t {\bfseries bitmap} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__lock_1_1Ticket__list_ae1ec50de835e397d9c56b010fb894dfb}\label{classMDL__lock_1_1Ticket__list_ae1ec50de835e397d9c56b010fb894dfb}} 
+\index{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list@{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list}!add\+\_\+ticket@{add\+\_\+ticket}}
+\index{add\+\_\+ticket@{add\+\_\+ticket}!M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list@{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list}}
+\subsubsection{\texorpdfstring{add\+\_\+ticket()}{add\_ticket()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list\+::add\+\_\+ticket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{ticket }\end{DoxyParamCaption})}
+
+Add ticket to \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}}\textquotesingle{}s list of waiting requests and update corresponding bitmap of lock types. \mbox{\Hypertarget{classMDL__lock_1_1Ticket__list_ac6cdf2ddde468fcdf268b9d5a2a30200}\label{classMDL__lock_1_1Ticket__list_ac6cdf2ddde468fcdf268b9d5a2a30200}} 
+\index{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list@{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list}!remove\+\_\+ticket@{remove\+\_\+ticket}}
+\index{remove\+\_\+ticket@{remove\+\_\+ticket}!M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list@{M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list}}
+\subsubsection{\texorpdfstring{remove\+\_\+ticket()}{remove\_ticket()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+lock\+::\+Ticket\+\_\+list\+::remove\+\_\+ticket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{ticket }\end{DoxyParamCaption})}
+
+Remove ticket from \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}}\textquotesingle{}s list of requests and update corresponding bitmap of lock types. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+cc\end{DoxyCompactItemize}

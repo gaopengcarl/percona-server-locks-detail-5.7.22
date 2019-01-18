@@ -1,0 +1,183 @@
+\hypertarget{classHash__slave__rows}{}\section{Hash\+\_\+slave\+\_\+rows Class Reference}
+\label{classHash__slave__rows}\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$ \mbox{\hyperlink{classHash__slave__rows_a5f6d6cf9561e924b1bb3585385a91d3a}{make\+\_\+entry}} ()
+\item 
+\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$ \mbox{\hyperlink{classHash__slave__rows_ae184c4d7ba20c3529c18362503d3cc81}{make\+\_\+entry}} (const uchar $\ast$bi\+\_\+start, const uchar $\ast$bi\+\_\+ends)
+\item 
+bool \mbox{\hyperlink{classHash__slave__rows_ad8b61674efb258c0a9cc22cc7add8090}{put}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$cols, \mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$entry)
+\item 
+\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$ \mbox{\hyperlink{classHash__slave__rows_a3f341c89bba321288653e82ea6bfe509}{get}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$cols)
+\item 
+bool \mbox{\hyperlink{classHash__slave__rows_a7194d9f4f783f2a0e95d7486f0a71a30}{next}} (\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$$\ast$entry)
+\item 
+bool \mbox{\hyperlink{classHash__slave__rows_a2b17b1ca10fc73c3d3865b8abca67219}{del}} (\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$entry)
+\item 
+bool \mbox{\hyperlink{classHash__slave__rows_aa18a23b2801ebbcad9c0acac264a9205}{init}} (void)
+\item 
+bool \mbox{\hyperlink{classHash__slave__rows_a7281d442d80a5cb30e62d79c08d023d9}{deinit}} (void)
+\item 
+bool \mbox{\hyperlink{classHash__slave__rows_adf1fd971e92cb1fa456daafdf46b172e}{is\+\_\+empty}} (void)
+\item 
+int \mbox{\hyperlink{classHash__slave__rows_a90b2911134d7d9aa60637383bd88cb39}{size}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHash__slave__rows_a7281d442d80a5cb30e62d79c08d023d9}\label{classHash__slave__rows_a7281d442d80a5cb30e62d79c08d023d9}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!deinit@{deinit}}
+\index{deinit@{deinit}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily bool Hash\+\_\+slave\+\_\+rows\+::deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+De-\/initializes the hash table.
+
+\begin{DoxyReturn}{Returns}
+true if something went wrong, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHash__slave__rows_a2b17b1ca10fc73c3d3865b8abca67219}\label{classHash__slave__rows_a2b17b1ca10fc73c3d3865b8abca67219}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!del@{del}}
+\index{del@{del}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily bool Hash\+\_\+slave\+\_\+rows\+::del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+Deletes the entry pointed by entry. It also frees memory used holding entry contents. This is the way to release memeory used for entry, freeing it explicitly with my\+\_\+free will cause undefined behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & Pointer to the entry to be deleted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if something went wrong, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHash__slave__rows_a3f341c89bba321288653e82ea6bfe509}\label{classHash__slave__rows_a3f341c89bba321288653e82ea6bfe509}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!get@{get}}
+\index{get@{get}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$ Hash\+\_\+slave\+\_\+rows\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{cols }\end{DoxyParamCaption})}
+
+Gets the entry, from the hash table, that matches the data in table-\/$>$record\mbox{[}0\mbox{]} and signaled using cols.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & The table holding the buffer containing data used to make the entry lookup. \\
+\hline
+{\em cols} & \mbox{\hyperlink{classBitmap}{Bitmap}} signaling which columns, from table-\/$>$record\mbox{[}0\mbox{]}, should be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer that will hold a reference to the entry found. If the entry is not found then N\+U\+LL shall be returned. 
+\end{DoxyReturn}
+Save the search state in case we need to go through entries for the given key.\mbox{\Hypertarget{classHash__slave__rows_aa18a23b2801ebbcad9c0acac264a9205}\label{classHash__slave__rows_aa18a23b2801ebbcad9c0acac264a9205}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!init@{init}}
+\index{init@{init}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Hash\+\_\+slave\+\_\+rows\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initializes the hash table.
+
+\begin{DoxyReturn}{Returns}
+true if something went wrong, false otherwise.
+\end{DoxyReturn}
+Hashing commodity structures and functions. \mbox{\Hypertarget{classHash__slave__rows_adf1fd971e92cb1fa456daafdf46b172e}\label{classHash__slave__rows_adf1fd971e92cb1fa456daafdf46b172e}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!is\+\_\+empty@{is\+\_\+empty}}
+\index{is\+\_\+empty@{is\+\_\+empty}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{is\+\_\+empty()}{is\_empty()}}
+{\footnotesize\ttfamily bool Hash\+\_\+slave\+\_\+rows\+::is\+\_\+empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Checks if the hash table is empty or not.
+
+\begin{DoxyReturn}{Returns}
+true if the hash table has zero entries, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHash__slave__rows_a5f6d6cf9561e924b1bb3585385a91d3a}\label{classHash__slave__rows_a5f6d6cf9561e924b1bb3585385a91d3a}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!make\+\_\+entry@{make\+\_\+entry}}
+\index{make\+\_\+entry@{make\+\_\+entry}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{make\+\_\+entry()}{make\_entry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$ Hash\+\_\+slave\+\_\+rows\+::make\+\_\+entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Allocates an empty entry to be added to the hash table. It should be called before calling member function {\ttfamily put}.
+
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if a problem occured, a valid pointer otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHash__slave__rows_ae184c4d7ba20c3529c18362503d3cc81}\label{classHash__slave__rows_ae184c4d7ba20c3529c18362503d3cc81}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!make\+\_\+entry@{make\+\_\+entry}}
+\index{make\+\_\+entry@{make\+\_\+entry}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{make\+\_\+entry()}{make\_entry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$ Hash\+\_\+slave\+\_\+rows\+::make\+\_\+entry (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{bi\+\_\+start,  }\item[{const uchar $\ast$}]{bi\+\_\+ends }\end{DoxyParamCaption})}
+
+Allocates an entry to be added to the hash table. It should be called before calling member function {\ttfamily put}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bi\+\_\+start} & the position to where in the rows buffer the before image begins. \\
+\hline
+{\em bi\+\_\+ends} & the position to where in the rows buffer the before image ends. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if a problem occured, a valid pointer otherwise. 
+\end{DoxyReturn}
+Filling in the preamble.
+
+Filling in the positions.
+
+Filling in the entry\mbox{\Hypertarget{classHash__slave__rows_a7194d9f4f783f2a0e95d7486f0a71a30}\label{classHash__slave__rows_a7194d9f4f783f2a0e95d7486f0a71a30}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!next@{next}}
+\index{next@{next}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily bool Hash\+\_\+slave\+\_\+rows\+::next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$$\ast$}]{entry }\end{DoxyParamCaption})}
+
+Gets the entry that stands next to the one pointed to by entry. Before calling this member function, the entry that one uses as parameter must have\+: 1. been obtained through \mbox{\hyperlink{classHash__slave__rows_a3f341c89bba321288653e82ea6bfe509}{get()}} or \mbox{\hyperlink{classHash__slave__rows_a7194d9f4f783f2a0e95d7486f0a71a30}{next()}} invocations; and 2. must have not been used before in a \mbox{\hyperlink{classHash__slave__rows_a7194d9f4f783f2a0e95d7486f0a71a30}{next()}} operation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em entry} & contains a pointer to an entry that we can use to search for another adjacent entry (ie, that shares the same key).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if something went wrong, false otherwise. In the case that this entry was already used in a \mbox{\hyperlink{classHash__slave__rows_a7194d9f4f783f2a0e95d7486f0a71a30}{next()}} operation this member function returns true and does not update the pointer. 
+\end{DoxyReturn}
+Do the actual search in the hash table.
+
+Save the search state for next iteration (if any).\mbox{\Hypertarget{classHash__slave__rows_ad8b61674efb258c0a9cc22cc7add8090}\label{classHash__slave__rows_ad8b61674efb258c0a9cc22cc7add8090}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!put@{put}}
+\index{put@{put}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily bool Hash\+\_\+slave\+\_\+rows\+::put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{cols,  }\item[{\mbox{\hyperlink{structhash__row__entry__st}{H\+A\+S\+H\+\_\+\+R\+O\+W\+\_\+\+E\+N\+T\+RY}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+Puts data into the hash table. It calculates the key taking the data on {\ttfamily T\+A\+B\+L\+E\+::record} as the input for hash computation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & The table holding the buffer used to calculate the key, ie, table-\/$>$record\mbox{[}0\mbox{]}. \\
+\hline
+{\em cols} & The read\+\_\+set bitmap signaling which columns are used. \\
+\hline
+{\em entry} & The entry with the values to store.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if something went wrong, false otherwise. 
+\end{DoxyReturn}
+Skip blobs and B\+IT fields from key calculation. Handle X bits. Handle nulled fields. Handled fields not signaled.\mbox{\Hypertarget{classHash__slave__rows_a90b2911134d7d9aa60637383bd88cb39}\label{classHash__slave__rows_a90b2911134d7d9aa60637383bd88cb39}} 
+\index{Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}!size@{size}}
+\index{size@{size}!Hash\+\_\+slave\+\_\+rows@{Hash\+\_\+slave\+\_\+rows}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Hash\+\_\+slave\+\_\+rows\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of entries in the hash table.
+
+\begin{DoxyReturn}{Returns}
+the number of entries in the hash table. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+utility.\+h\item 
+rpl\+\_\+utility.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{classCommand__iterator}{}\section{Command\+\_\+iterator Class Reference}
+\label{classCommand__iterator}\index{Command\+\_\+iterator@{Command\+\_\+iterator}}
+
+
+{\ttfamily \#include $<$bootstrap\+\_\+impl.\+h$>$}
+
+Inheritance diagram for Command\+\_\+iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.904762cm]{classCommand__iterator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classCommand__iterator_a4b17b4b7b81c4bb2a5109eb0d5ab1e3c}{begin}} (void)
+\item 
+virtual int \mbox{\hyperlink{classCommand__iterator_a582d0107e22598ec30aa7edcb8579f06}{next}} (std\+::string \&query, int $\ast$read\+\_\+error, int $\ast$query\+\_\+source)=0
+\item 
+virtual void \mbox{\hyperlink{classCommand__iterator_a564873043bc5c6e7f13916042ce320a3}{end}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classCommand__iterator}{Command\+\_\+iterator}} $\ast$ \mbox{\hyperlink{classCommand__iterator_adc037e2e49edfd3ab3b35639a0dfb3a9}{current\+\_\+iterator}} = N\+U\+LL
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCommand__iterator_a55b3b7b80a621e1c449aa659c70d6c71}{$\sim$\+Command\+\_\+iterator}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+abstract interface to reading bootstrap commands 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommand__iterator_a55b3b7b80a621e1c449aa659c70d6c71}\label{classCommand__iterator_a55b3b7b80a621e1c449aa659c70d6c71}} 
+\index{Command\+\_\+iterator@{Command\+\_\+iterator}!````~Command\+\_\+iterator@{$\sim$\+Command\+\_\+iterator}}
+\index{````~Command\+\_\+iterator@{$\sim$\+Command\+\_\+iterator}!Command\+\_\+iterator@{Command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{$\sim$\+Command\+\_\+iterator()}{~Command\_iterator()}}
+{\footnotesize\ttfamily virtual Command\+\_\+iterator\+::$\sim$\+Command\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+needed because of the virtual functions 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommand__iterator_a4b17b4b7b81c4bb2a5109eb0d5ab1e3c}\label{classCommand__iterator_a4b17b4b7b81c4bb2a5109eb0d5ab1e3c}} 
+\index{Command\+\_\+iterator@{Command\+\_\+iterator}!begin@{begin}}
+\index{begin@{begin}!Command\+\_\+iterator@{Command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily virtual void Command\+\_\+iterator\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+start processing the iterator 
+
+Reimplemented in \mbox{\hyperlink{classCompiled__in__command__iterator_ad68f7ccc260a9c316fb5f4970021ce04}{Compiled\+\_\+in\+\_\+command\+\_\+iterator}}.
+
+\mbox{\Hypertarget{classCommand__iterator_a564873043bc5c6e7f13916042ce320a3}\label{classCommand__iterator_a564873043bc5c6e7f13916042ce320a3}} 
+\index{Command\+\_\+iterator@{Command\+\_\+iterator}!end@{end}}
+\index{end@{end}!Command\+\_\+iterator@{Command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily virtual void Command\+\_\+iterator\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+end processing the iterator 
+
+Reimplemented in \mbox{\hyperlink{classFile__command__iterator_ad12ce1809b043f8966fcab2e70e1a1dd}{File\+\_\+command\+\_\+iterator}}, and \mbox{\hyperlink{classCompiled__in__command__iterator_a462b9632e92198deea287c08331a9137}{Compiled\+\_\+in\+\_\+command\+\_\+iterator}}.
+
+\mbox{\Hypertarget{classCommand__iterator_a582d0107e22598ec30aa7edcb8579f06}\label{classCommand__iterator_a582d0107e22598ec30aa7edcb8579f06}} 
+\index{Command\+\_\+iterator@{Command\+\_\+iterator}!next@{next}}
+\index{next@{next}!Command\+\_\+iterator@{Command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily virtual int Command\+\_\+iterator\+::next (\begin{DoxyParamCaption}\item[{std\+::string \&}]{query,  }\item[{int $\ast$}]{read\+\_\+error,  }\item[{int $\ast$}]{query\+\_\+source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the next query string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em query} & return the query \\
+\hline
+\mbox{\texttt{ out}}  & {\em read\+\_\+error} & return the read error code \\
+\hline
+\mbox{\texttt{ out}}  & {\em query\+\_\+source} & return the source of the query (if it is from a file or a compiled one). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+one of the R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+S\+T\+R\+AP 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classFile__command__iterator_a62064b6e416813b4f998a3ac654b6f5f}{File\+\_\+command\+\_\+iterator}}, \mbox{\hyperlink{classQuery__command__iterator_af435eec8fe683776fb10e5012b1987a3}{Query\+\_\+command\+\_\+iterator}}, and \mbox{\hyperlink{classCompiled__in__command__iterator_ab39e0e08ac52836b136a0ec82f53a084}{Compiled\+\_\+in\+\_\+command\+\_\+iterator}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCommand__iterator_adc037e2e49edfd3ab3b35639a0dfb3a9}\label{classCommand__iterator_adc037e2e49edfd3ab3b35639a0dfb3a9}} 
+\index{Command\+\_\+iterator@{Command\+\_\+iterator}!current\+\_\+iterator@{current\+\_\+iterator}}
+\index{current\+\_\+iterator@{current\+\_\+iterator}!Command\+\_\+iterator@{Command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{current\+\_\+iterator}{current\_iterator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCommand__iterator}{Command\+\_\+iterator}} $\ast$ Command\+\_\+iterator\+::current\+\_\+iterator = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+
+The current bootstrap command reader 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bootstrap\+\_\+impl.\+h\item 
+bootstrap.\+cc\end{DoxyCompactItemize}

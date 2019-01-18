@@ -1,0 +1,1950 @@
+\hypertarget{group__Query__Optimizer}{}\section{Query Optimizer}
+\label{group__Query__Optimizer}\index{Query Optimizer@{Query Optimizer}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__RefOptimizerModule}{Ref Optimizer}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlan__change__watchdog}{Plan\+\_\+change\+\_\+watchdog}}
+\item 
+class \mbox{\hyperlink{classCOND__CMP}{C\+O\+N\+D\+\_\+\+C\+MP}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga8976c581bb885405f6b19a1753e6e6dd}\label{group__Query__Optimizer_ga8976c581bb885405f6b19a1753e6e6dd}} 
+\#define {\bfseries I\+C\+P\+\_\+\+C\+O\+N\+D\+\_\+\+U\+S\+E\+S\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+N\+LY}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc}} (T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex, \mbox{\hyperlink{classItem}{Item}} $\ast$where\+\_\+cond, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group\+\_\+list, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga96dc524565684a4e258c98f5b7fd1541}{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint idx, uint $\ast$used\+\_\+key\+\_\+parts)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gafd0c3fdb07be77d705feaf3f8f51164f}{find\+\_\+shortest\+\_\+key}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} $\ast$usable\+\_\+keys)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga4a8d854a364ab749539a9363619acf99}{is\+\_\+subkey}} (\mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$key\+\_\+part, \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ref\+\_\+key\+\_\+part, \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ref\+\_\+key\+\_\+part\+\_\+end)
+\item 
+Item\+\_\+equal $\ast$ \mbox{\hyperlink{group__Query__Optimizer_gafe6fc3febf146805e30ce17267d4dd98}{find\+\_\+item\+\_\+equal}} (C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$cond\+\_\+equal, \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$item\+\_\+field, bool $\ast$inherited\+\_\+fl)
+\item 
+\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_ga67d1175177356bf1c9b05e9104d28c5b}{get\+\_\+best\+\_\+field}} (\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$item\+\_\+field, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$cond\+\_\+equal)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga51f49ad71fa53a75fa8ebae08cf775cc}{build\+\_\+equal\+\_\+items}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$retcond, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$inherited, bool do\+\_\+inherit, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$$\ast$cond\+\_\+equal\+\_\+ref)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_ga253393c0747cf378b9cefa109662bd17}{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$cond\+\_\+equal, void $\ast$table\+\_\+join\+\_\+idx)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gab18726347ecf92d8985617dda1d60ba3}{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, uint first\+\_\+unused)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga652bf7109dfbe0fdd7deb75c05c0a7a3}{uses\+\_\+index\+\_\+fields\+\_\+only}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$tbl, uint keyno, bool other\+\_\+tbls\+\_\+ok)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaa992e841315769954816105b951d3e17}{is\+\_\+indexed\+\_\+agg\+\_\+distinct}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $>$ $\ast$out\+\_\+args)
+\item 
+\mbox{\hyperlink{classMem__root__array}{Key\+\_\+use\+\_\+array}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_ga7a5efe6ddb0de3a2b43f36c3330354e7}{create\+\_\+keyuse\+\_\+for\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint keyparts, \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$$\ast$fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ outer\+\_\+exprs)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_gaedf2fb3248e5d013e6a74b29dd9e7429}{make\+\_\+cond\+\_\+for\+\_\+table}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond, table\+\_\+map tables, table\+\_\+map used\+\_\+table, bool exclude\+\_\+expensive\+\_\+cond)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga768e4d9b55252e39161f392f34cb5abc}{optimize\+\_\+cond}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$cond, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$$\ast$cond\+\_\+equal, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, Item\+::cond\+\_\+result $\ast$cond\+\_\+value)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaf8c7623dfe6301253414f9155999c43b}{remove\+\_\+eq\+\_\+conds}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$retcond, Item\+::cond\+\_\+result $\ast$cond\+\_\+value)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga0fc6278226cdb15849ecfd9c3af07b00}\label{group__Query__Optimizer_ga0fc6278226cdb15849ecfd9c3af07b00}} 
+bool {\bfseries const\+\_\+expression\+\_\+in\+\_\+where} (\mbox{\hyperlink{classItem}{Item}} $\ast$conds, \mbox{\hyperlink{classItem}{Item}} $\ast$item, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$comp\+\_\+item)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gae77d58d476f44178e469e2cbe16e9e01}{handle\+\_\+query}} (T\+HD $\ast$thd, L\+EX $\ast$lex, Query\+\_\+result $\ast$result, ulonglong added\+\_\+options, ulonglong removed\+\_\+options)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga410e1c85b186cd5520a7d21930ead6e5}{types\+\_\+allow\+\_\+materialization}} (\mbox{\hyperlink{classItem}{Item}} $\ast$outer, \mbox{\hyperlink{classItem}{Item}} $\ast$inner)
+\begin{DoxyCompactList}\small\item\em Check if two items are compatible wrt. materialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga4be82b593cb5e0548b3b3aa4b28bc3bf}{calc\+\_\+used\+\_\+field\+\_\+length}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool keep\+\_\+current\+\_\+rowid, uint $\ast$p\+\_\+used\+\_\+fields, uint $\ast$p\+\_\+used\+\_\+fieldlength, uint $\ast$p\+\_\+used\+\_\+blobs, bool $\ast$p\+\_\+used\+\_\+null\+\_\+fields, bool $\ast$p\+\_\+used\+\_\+uneven\+\_\+bit\+\_\+fields)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga5f8a3668a5d5771061e14f5d87c30794}{calc\+\_\+length\+\_\+and\+\_\+keyparts}} (\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$keyuse, \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab, const uint key, table\+\_\+map used\+\_\+tables, \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$$\ast$chosen\+\_\+keyuses, uint $\ast$length\+\_\+out, uint $\ast$keyparts\+\_\+out, table\+\_\+map $\ast$dep\+\_\+map, bool $\ast$maybe\+\_\+null)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga3b518fb7975676afc7395b412e803368}{create\+\_\+ref\+\_\+for\+\_\+key}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$j, \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$org\+\_\+keyuse, table\+\_\+map used\+\_\+tables)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gad3c0a5624f789fb0bf0c5fc5ec057de9}{and\+\_\+conditions}} (\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$e1, \mbox{\hyperlink{classItem}{Item}} $\ast$e2)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga27b74179b9a9207753aa3f93a9df4225}{make\+\_\+join\+\_\+readinfo}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, uint no\+\_\+jbuf\+\_\+after)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaf1351457ee30a4e67786117e50413541}{error\+\_\+if\+\_\+full\+\_\+join}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join)
+\item 
+\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_gadbc980a72c17c8442fab87af085697d4}{simple\+\_\+remove\+\_\+const}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{classItem}{Item}} $\ast$where)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga8478e8df214dcc332c84d24ebe3f0785}{const\+\_\+expression\+\_\+in\+\_\+where}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{classItem}{Item}} $\ast$comp\+\_\+item, \mbox{\hyperlink{classField}{Field}} $\ast$comp\+\_\+field, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$const\+\_\+item)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga37c57743c17000bba9bbbbd87b01d32f}{count\+\_\+field\+\_\+types}} (S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex, Temp\+\_\+table\+\_\+param $\ast$param, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, bool reset\+\_\+with\+\_\+sum\+\_\+func, bool save\+\_\+sum\+\_\+fields)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga4d5a2e1822e2131fcfbe6501a8a97525}{test\+\_\+if\+\_\+subpart}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$a, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$b)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaa978828bfe7be091fb76e1c5da80d644}{calc\+\_\+group\+\_\+buffer}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga59080a3acd829efcf18fc56d51df215c}{free\+\_\+underlaid\+\_\+joins}} (T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga3eec84bb823e8a5ea10710e1e4f066d1}{test\+\_\+if\+\_\+cheaper\+\_\+ordering}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} usable\+\_\+keys, int ref\+\_\+key, ha\+\_\+rows select\+\_\+limit, int $\ast$new\+\_\+key, int $\ast$new\+\_\+key\+\_\+direction, ha\+\_\+rows $\ast$new\+\_\+select\+\_\+limit, uint $\ast$new\+\_\+used\+\_\+key\+\_\+parts, uint $\ast$saved\+\_\+best\+\_\+key\+\_\+parts)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga92d8a0c25d038fddac9b92696f6845e3}{get\+\_\+index\+\_\+for\+\_\+order}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab, ha\+\_\+rows limit, bool $\ast$need\+\_\+sort, bool $\ast$reverse)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga6609ac0420a8a415d5a57cc6659f460d}{actual\+\_\+key\+\_\+parts}} (const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga174d79a5aef2a8abd1caec143b42837e}{actual\+\_\+key\+\_\+flags}} (\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$key\+\_\+info)
+\item 
+join\+\_\+type \mbox{\hyperlink{group__Query__Optimizer_gaaf336d1a31135fd93a5564c5e090b50a}{calc\+\_\+join\+\_\+type}} (int \mbox{\hyperlink{sql__select_8h_a931d06905210c0f917b25d180eeb643f}{quick\+\_\+type}})
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gaa52eaf58ec1438c6d387b55e4035e504}\label{group__Query__Optimizer_gaa52eaf58ec1438c6d387b55e4035e504}} 
+void {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::calc\+\_\+record\+\_\+fields} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gaa64e01213d7f5f755d1ff689d5e46fd8}\label{group__Query__Optimizer_gaa64e01213d7f5f755d1ff689d5e46fd8}} 
+int {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::alloc\+\_\+fields} (uint external\+\_\+fields)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga631f7419905d1b8199d14f5fd11926d4}\label{group__Query__Optimizer_ga631f7419905d1b8199d14f5fd11926d4}} 
+void {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::create\+\_\+flag\+\_\+fields} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gab3ab87ee19d6e92561f80933563bb147}\label{group__Query__Optimizer_gab3ab87ee19d6e92561f80933563bb147}} 
+void {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::create\+\_\+remaining\+\_\+fields} (bool all\+\_\+read\+\_\+fields)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga81e30ba1b4cfa2fd22aaf1c5bac90b7e}\label{group__Query__Optimizer_ga81e30ba1b4cfa2fd22aaf1c5bac90b7e}} 
+void {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::set\+\_\+constants} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga5932344e1185abf63788970856f45766}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::alloc\+\_\+buffer}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaae89dde6a1925032ade263c27a87529f}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gabfdf6220265d56c5dc44081d89abc73e}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}} ()
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_gab3dbb0f8b69dc30985e0d9a0ff94121f}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+N\+L\+::init}} ()
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga327376f63198bf31a770fb89242d49aa}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::init}} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga700b94ef76d1152d7ea4816ec7b46299}\label{group__Query__Optimizer_ga700b94ef76d1152d7ea4816ec7b46299}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::check\+\_\+emb\+\_\+key\+\_\+usage} ()
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_ga8661280e3da40b2c581ec758c50e1979}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::aux\+\_\+buffer\+\_\+incr}} ()
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gaef7343f0416360c14c6134867b347c83}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::aux\+\_\+buffer\+\_\+min\+\_\+size}} () const
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga552f68c5d61c00714ca823ff05cd7847}\label{group__Query__Optimizer_ga552f68c5d61c00714ca823ff05cd7847}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::skip\+\_\+index\+\_\+tuple} (range\+\_\+seq\+\_\+t rseq, char $\ast$range\+\_\+info)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga264fccad2a1ea9271e785cb8e38432ca}\label{group__Query__Optimizer_ga264fccad2a1ea9271e785cb8e38432ca}} 
+uint {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::write\+\_\+record\+\_\+data} (uchar $\ast$link, bool $\ast$is\+\_\+full)
+\item 
+virtual void \mbox{\hyperlink{group__Query__Optimizer_gad54e309ac7f0fd377d7a422ea54f59f8}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::reset\+\_\+cache}} (bool for\+\_\+writing)
+\begin{DoxyCompactList}\small\item\em Reset the join buffer for reading/writing\+: default implementation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga6d55336d67514ad78878149c80528e33}\label{group__Query__Optimizer_ga6d55336d67514ad78878149c80528e33}} 
+virtual bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::put\+\_\+record\+\_\+in\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga6f7ee01f20498b51114e1afb40806685}\label{group__Query__Optimizer_ga6f7ee01f20498b51114e1afb40806685}} 
+virtual bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::get\+\_\+record} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gaccb8c25ca124e9aeaddf1442c6167e87}\label{group__Query__Optimizer_gaccb8c25ca124e9aeaddf1442c6167e87}} 
+virtual void {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::get\+\_\+record\+\_\+by\+\_\+pos} (uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gab7955ae39f556d0141a6eb11e03a4b1e}\label{group__Query__Optimizer_gab7955ae39f556d0141a6eb11e03a4b1e}} 
+virtual bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::get\+\_\+match\+\_\+flag\+\_\+by\+\_\+pos} (uchar $\ast$rec\+\_\+ptr)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga20c8bd509fba4099611e8a7b01c115d8}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+some\+\_\+record\+\_\+fields}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gafa19cecc5eccee0ff1285c62769daf39}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+some\+\_\+flag\+\_\+fields}} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga6967798983487fe2f83ed405b5b2d1f4}\label{group__Query__Optimizer_ga6967798983487fe2f83ed405b5b2d1f4}} 
+uint {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+record\+\_\+field} (\mbox{\hyperlink{structst__cache__field}{C\+A\+C\+H\+E\+\_\+\+F\+I\+E\+LD}} $\ast$copy, bool last\+\_\+record)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga66b36ae5a54a63d5fb2fe863a036aa08}\label{group__Query__Optimizer_ga66b36ae5a54a63d5fb2fe863a036aa08}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+referenced\+\_\+field} (\mbox{\hyperlink{structst__cache__field}{C\+A\+C\+H\+E\+\_\+\+F\+I\+E\+LD}} $\ast$copy, uchar $\ast$rec\+\_\+ptr, uint $\ast$len)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gafbb269cde39ce62236de5b481296de21}\label{group__Query__Optimizer_gafbb269cde39ce62236de5b481296de21}} 
+virtual bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::skip\+\_\+record\+\_\+if\+\_\+match} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gae3feda29f01cc03251f55a0b00511d7a}\label{group__Query__Optimizer_gae3feda29f01cc03251f55a0b00511d7a}} 
+virtual void {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::restore\+\_\+last\+\_\+record} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga66879154541707521bc3d07829084c2e}\label{group__Query__Optimizer_ga66879154541707521bc3d07829084c2e}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::join\+\_\+records} (bool skip\+\_\+last)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga05271c0a916273b7f8b934fbaab623bd}\label{group__Query__Optimizer_ga05271c0a916273b7f8b934fbaab623bd}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+N\+L\+::join\+\_\+matching\+\_\+records} (bool skip\+\_\+last)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga680b1522161dd38adbc48197df3ea115}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match}} (const \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$t) const
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga90ada3645fd27523d6cfa7fc073ba4ad}\label{group__Query__Optimizer_ga90ada3645fd27523d6cfa7fc073ba4ad}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::set\+\_\+match\+\_\+flag\+\_\+if\+\_\+none} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$first\+\_\+inner, uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga774240988bd63b547442150fd459e6d2}\label{group__Query__Optimizer_ga774240988bd63b547442150fd459e6d2}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::generate\+\_\+full\+\_\+extensions} (uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gab160a0ff435a7a1da8bb065ba03f1573}\label{group__Query__Optimizer_gab160a0ff435a7a1da8bb065ba03f1573}} 
+virtual bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::check\+\_\+match} (uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga08fb808afb3705abba0f0bfaf5798d05}\label{group__Query__Optimizer_ga08fb808afb3705abba0f0bfaf5798d05}} 
+virtual enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::join\+\_\+null\+\_\+complements} (bool skip\+\_\+last)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga5ae42b1e09c108b419fb9eefac1312ef}\label{group__Query__Optimizer_ga5ae42b1e09c108b419fb9eefac1312ef}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::join\+\_\+matching\+\_\+records} (bool skip\+\_\+last)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga89ba1e9701fe4bab26bd70d79e91cd30}\label{group__Query__Optimizer_ga89ba1e9701fe4bab26bd70d79e91cd30}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::init\+\_\+join\+\_\+matching\+\_\+records} (\mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$seq\+\_\+funcs, uint ranges)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga812222f5f9eb4a9026c8ce89069ef8d7}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos}} (uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga31d40beb0d805bd84dd9c1547450de48}\label{group__Query__Optimizer_ga31d40beb0d805bd84dd9c1547450de48}} 
+virtual uint {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::get\+\_\+next\+\_\+key} (uchar $\ast$$\ast$key)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::init}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gafb1afc6322b69d01ea68b677b715ddc7}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::reset\+\_\+cache}} (bool for\+\_\+writing)
+\begin{DoxyCompactList}\small\item\em Reset the join buffer for reading/writing\+: default implementation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga45dfdf58092c485f346a66afd4e124ad}\label{group__Query__Optimizer_ga45dfdf58092c485f346a66afd4e124ad}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::put\+\_\+record\+\_\+in\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga15ffed7193009e4a49e1c66622217a0f}\label{group__Query__Optimizer_ga15ffed7193009e4a49e1c66622217a0f}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::get\+\_\+record} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga2fc649f4ce5bb5be551fab670511e8b8}\label{group__Query__Optimizer_ga2fc649f4ce5bb5be551fab670511e8b8}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::skip\+\_\+record\+\_\+if\+\_\+match} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gac4c98e95bbd633f5bd7df7c8bbbe4ed1}\label{group__Query__Optimizer_gac4c98e95bbd633f5bd7df7c8bbbe4ed1}} 
+bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::key\+\_\+search} (uchar $\ast$key, uint key\+\_\+len, uchar $\ast$$\ast$key\+\_\+ref\+\_\+ptr)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga6afa1e2231c8090ecae73554fca37c41}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::skip\+\_\+index\+\_\+tuple}} (range\+\_\+seq\+\_\+t rseq, char $\ast$range\+\_\+info)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga1c2a23d19df8e983c61ed2c25214c86d}\label{group__Query__Optimizer_ga1c2a23d19df8e983c61ed2c25214c86d}} 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::join\+\_\+matching\+\_\+records} (bool skip\+\_\+last)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga93a69af2bfc11dc07fce9cdb261cdcd3}\label{group__Query__Optimizer_ga93a69af2bfc11dc07fce9cdb261cdcd3}} 
+virtual bool {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::check\+\_\+all\+\_\+match\+\_\+flags\+\_\+for\+\_\+key} (uchar $\ast$key\+\_\+chain\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga2cacb8dfb5e5fad32b82fb0b8c572507}\label{group__Query__Optimizer_ga2cacb8dfb5e5fad32b82fb0b8c572507}} 
+uint {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::get\+\_\+next\+\_\+key} (uchar $\ast$$\ast$key)
+\item 
+virtual bool \mbox{\hyperlink{group__Query__Optimizer_gafd031be055cee296d6629313a333b56f}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::check\+\_\+match}} (uchar $\ast$rec\+\_\+ptr)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga7f722315c64ce97cff639d705107c660}{J\+O\+I\+N\+::optimize}} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga31a07bf891c57c62aad090896e118cd1}\label{group__Query__Optimizer_ga31a07bf891c57c62aad090896e118cd1}} 
+void \mbox{\hyperlink{group__Query__Optimizer_ga31a07bf891c57c62aad090896e118cd1}{Q\+E\+P\+\_\+\+T\+A\+B\+::init}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$jt)
+\begin{DoxyCompactList}\small\item\em Initializes the object from a \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gaee0363af5ecbde624f02fbc38a695a3b}{Q\+E\+P\+\_\+\+T\+A\+B\+::get\+\_\+sj\+\_\+strategy}} () const
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gada415e1d087c014e9b8a22b39980bfea}{Q\+E\+P\+\_\+\+T\+A\+B\+::effective\+\_\+index}} () const
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gabc77304fe7c751bce4fa59ef52d91fb0}{J\+O\+I\+N\+\_\+\+T\+A\+B\+::get\+\_\+sj\+\_\+strategy}} () const
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}{J\+O\+I\+N\+::get\+\_\+best\+\_\+combination}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaeaa6edcfa6c4d934dd42d505d9de2fef}{J\+O\+I\+N\+::update\+\_\+equalities\+\_\+for\+\_\+sjm}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga0db5dc577ffd7662b800cc6307183c2b}{J\+O\+I\+N\+::mark\+\_\+const\+\_\+table}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$table, \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$key)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaaea10268473cae92c3bdbcf0ea4f97cc}{J\+O\+I\+N\+::attach\+\_\+join\+\_\+conditions}} (plan\+\_\+idx last\+\_\+tab)
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga5a4b6860e6fc2137f71776590079de8a}\label{group__Query__Optimizer_ga5a4b6860e6fc2137f71776590079de8a}} 
+void {\bfseries J\+O\+I\+N\+::remove\+\_\+subq\+\_\+pushed\+\_\+predicates} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga92bf64a03ec666f565627fbb48ba4677}{J\+O\+I\+N\+::generate\+\_\+derived\+\_\+keys}} ()
+\begin{DoxyCompactList}\small\item\em Add keys to derived tables\textquotesingle{}/views\textquotesingle{} result tables in a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga54392f4f40ec2c57b8263f22fa3d4296}{J\+O\+I\+N\+::drop\+\_\+unused\+\_\+derived\+\_\+keys}} ()
+\begin{DoxyCompactList}\small\item\em Drop unused keys for each materialized derived table/view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga4408ac7e9a04a594110d2009cfcd54c9}{J\+O\+I\+N\+::cache\+\_\+const\+\_\+exprs}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga7c20a9b8d13f14275a4ee01f44f8cfa2}{J\+O\+I\+N\+::fts\+\_\+index\+\_\+access}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gab466b49a22220854ef8f11a2c4a2ae8a}{J\+O\+I\+N\+::decide\+\_\+subquery\+\_\+strategy}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaac99b2256ee62ddd1a435289c2acb8e2}{J\+O\+I\+N\+::optimize\+\_\+rollup}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaef4f64b9b280796d9abe945b2eda94ac}{J\+O\+I\+N\+::refine\+\_\+best\+\_\+rowcount}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gad4e09d71987062663db1836d651ec4d4}{J\+O\+I\+N\+::reset}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gabed62f6e6cc8f6d042c806a154ea7137}{J\+O\+I\+N\+::prepare\+\_\+result}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaf2d76654da99be4012095c016ea5d4d2}{J\+O\+I\+N\+::destroy}} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga53646d8b3951fac09c190096af77f586}\label{group__Query__Optimizer_ga53646d8b3951fac09c190096af77f586}} 
+enum store\+\_\+key\+\_\+result {\bfseries store\+\_\+key\+\_\+hash\+\_\+item\+::copy\+\_\+inner} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga5ededf725731bb0cfd5a3871181f496e}{Q\+E\+P\+\_\+\+T\+A\+B\+::push\+\_\+index\+\_\+cond}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$join\+\_\+tab, uint keyno, \mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} $\ast$trace\+\_\+obj)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga44c5164eb9405b18a16ca8a3ee339047}{Q\+E\+P\+\_\+\+T\+A\+B\+::init\+\_\+join\+\_\+cache}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$join\+\_\+tab)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gae913870950feb0d927de9b53963f0a6a}{J\+O\+I\+N\+\_\+\+T\+A\+B\+::cleanup}} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_gaaf5426869c15b3f454986507ede09bab}\label{group__Query__Optimizer_gaaf5426869c15b3f454986507ede09bab}} 
+void {\bfseries Q\+E\+P\+\_\+\+T\+A\+B\+::cleanup} ()
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga907897f1c70ca51d710d46da42645cfc}\label{group__Query__Optimizer_ga907897f1c70ca51d710d46da42645cfc}} 
+void {\bfseries Q\+E\+P\+\_\+shared\+\_\+owner\+::qs\+\_\+cleanup} ()
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gac2c4cb376fec34447cf5df2b3d4c238a}{Q\+E\+P\+\_\+\+T\+A\+B\+::sjm\+\_\+query\+\_\+block\+\_\+id}} () const
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga2d28b10dac195744ef3daaab70d84208}{Q\+E\+P\+\_\+shared\+\_\+owner\+::and\+\_\+with\+\_\+condition}} (\mbox{\hyperlink{classItem}{Item}} $\ast$tmp\+\_\+cond)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaa62d47da29f3853e87b1069ee5c1ff21}{J\+O\+I\+N\+::join\+\_\+free}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga633799af14ae0a6e3abbac98b428c46f}{J\+O\+I\+N\+::cleanup}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga140c4ff912190f1c0f6279897103a720}{J\+O\+I\+N\+::alloc\+\_\+func\+\_\+list}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gae713fbd3faf5b5aefad41408fd11685a}{J\+O\+I\+N\+::make\+\_\+sum\+\_\+func\+\_\+list}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&\mbox{\hyperlink{classJOIN_a6664196553f3202cfc4e740358d6bc0d}{all\+\_\+fields}}, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&send\+\_\+fields, bool before\+\_\+group\+\_\+by, bool recompute=F\+A\+L\+SE)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga076b7e6736c0bf0a9e9bf7542e4746c8}{J\+O\+I\+N\+::rollup\+\_\+process\+\_\+const\+\_\+fields}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga7e92b14b52e210ce225ad4c0312f9bca}{J\+O\+I\+N\+::rollup\+\_\+make\+\_\+fields}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&\mbox{\hyperlink{classJOIN_a6664196553f3202cfc4e740358d6bc0d}{all\+\_\+fields}}, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$$\ast$func)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gacff1c1a49375e2f52301214084924bf3}{J\+O\+I\+N\+::clear}} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga8c14b8b1b7b5f002b219140b565000db}{J\+O\+I\+N\+::add\+\_\+sorting\+\_\+to\+\_\+table}} (uint idx, \mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} $\ast$\mbox{\hyperlink{classJOIN_ac06839682aae707b0e1d4fafd53abaf5}{order}})
+\begin{DoxyCompactList}\small\item\em Add \mbox{\hyperlink{classFilesort}{Filesort}} object to the given table to sort if with filesort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Query__Optimizer_ga3c214b7ed8212280406d828d8354632d}\label{group__Query__Optimizer_ga3c214b7ed8212280406d828d8354632d}} 
+static const char \mbox{\hyperlink{group__Query__Optimizer_ga3c214b7ed8212280406d828d8354632d}{store\+\_\+key\+\_\+const\+\_\+item\+::static\+\_\+name}} \mbox{[}$\,$\mbox{]} = \char`\"{}const\char`\"{}
+\begin{DoxyCompactList}\small\item\em used out of this class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Query__Optimizer_ga174d79a5aef2a8abd1caec143b42837e}\label{group__Query__Optimizer_ga174d79a5aef2a8abd1caec143b42837e}} 
+\index{Query Optimizer@{Query Optimizer}!actual\+\_\+key\+\_\+flags@{actual\+\_\+key\+\_\+flags}}
+\index{actual\+\_\+key\+\_\+flags@{actual\+\_\+key\+\_\+flags}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{actual\+\_\+key\+\_\+flags()}{actual\_key\_flags()}}
+{\footnotesize\ttfamily uint actual\+\_\+key\+\_\+flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{key\+\_\+info }\end{DoxyParamCaption})}
+
+Returns key flags depending on O\+P\+T\+I\+M\+I\+Z\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+U\+S\+E\+\_\+\+I\+N\+D\+E\+X\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+info} & pointer to K\+EY structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+key flags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga6609ac0420a8a415d5a57cc6659f460d}\label{group__Query__Optimizer_ga6609ac0420a8a415d5a57cc6659f460d}} 
+\index{Query Optimizer@{Query Optimizer}!actual\+\_\+key\+\_\+parts@{actual\+\_\+key\+\_\+parts}}
+\index{actual\+\_\+key\+\_\+parts@{actual\+\_\+key\+\_\+parts}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{actual\+\_\+key\+\_\+parts()}{actual\_key\_parts()}}
+{\footnotesize\ttfamily uint actual\+\_\+key\+\_\+parts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structst__key}{K\+EY}} $\ast$}]{key\+\_\+info }\end{DoxyParamCaption})}
+
+Returns number of key parts depending on O\+P\+T\+I\+M\+I\+Z\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+U\+S\+E\+\_\+\+I\+N\+D\+E\+X\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+info} & pointer to K\+EY structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of key parts. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga8c14b8b1b7b5f002b219140b565000db}\label{group__Query__Optimizer_ga8c14b8b1b7b5f002b219140b565000db}} 
+\index{Query Optimizer@{Query Optimizer}!add\+\_\+sorting\+\_\+to\+\_\+table@{add\+\_\+sorting\+\_\+to\+\_\+table}}
+\index{add\+\_\+sorting\+\_\+to\+\_\+table@{add\+\_\+sorting\+\_\+to\+\_\+table}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{add\+\_\+sorting\+\_\+to\+\_\+table()}{add\_sorting\_to\_table()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::add\+\_\+sorting\+\_\+to\+\_\+table (\begin{DoxyParamCaption}\item[{uint}]{idx,  }\item[{\mbox{\hyperlink{classJOIN_1_1ORDER__with__src}{O\+R\+D\+E\+R\+\_\+with\+\_\+src}} $\ast$}]{sort\+\_\+order }\end{DoxyParamCaption})}
+
+
+
+Add \mbox{\hyperlink{classFilesort}{Filesort}} object to the given table to sort if with filesort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & the \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} object to attach created \mbox{\hyperlink{classFilesort}{Filesort}} object to \\
+\hline
+{\em sort\+\_\+order} & \mbox{\hyperlink{classList}{List}} of expressions to sort the table by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function moves tab-\/$>$select, if any, to filesort-\/$>$select
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+false on success, true on O\+OM 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga5932344e1185abf63788970856f45766}\label{group__Query__Optimizer_ga5932344e1185abf63788970856f45766}} 
+\index{Query Optimizer@{Query Optimizer}!alloc\+\_\+buffer@{alloc\+\_\+buffer}}
+\index{alloc\+\_\+buffer@{alloc\+\_\+buffer}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{alloc\+\_\+buffer()}{alloc\_buffer()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::alloc\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Allocate memory for a join buffer.
+
+The function allocates a lump of memory for the join buffer. The size of the allocated memory is \textquotesingle{}buff\+\_\+size\textquotesingle{} bytes.
+
+\begin{DoxyReturn}{Returns}
+false if success, otherwise true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga140c4ff912190f1c0f6279897103a720}\label{group__Query__Optimizer_ga140c4ff912190f1c0f6279897103a720}} 
+\index{Query Optimizer@{Query Optimizer}!alloc\+\_\+func\+\_\+list@{alloc\+\_\+func\+\_\+list}}
+\index{alloc\+\_\+func\+\_\+list@{alloc\+\_\+func\+\_\+list}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{alloc\+\_\+func\+\_\+list()}{alloc\_func\_list()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::alloc\+\_\+func\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Make an array of pointers to sum\+\_\+functions to speed up sum\+\_\+func calculation.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gad3c0a5624f789fb0bf0c5fc5ec057de9}\label{group__Query__Optimizer_gad3c0a5624f789fb0bf0c5fc5ec057de9}} 
+\index{Query Optimizer@{Query Optimizer}!and\+\_\+conditions@{and\+\_\+conditions}}
+\index{and\+\_\+conditions@{and\+\_\+conditions}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{and\+\_\+conditions()}{and\_conditions()}}
+{\footnotesize\ttfamily bool and\+\_\+conditions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{e1,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{e2 }\end{DoxyParamCaption})}
+
+Extend e1 by A\+ND\textquotesingle{}ing e2 to the condition e1 points to. The resulting condition is fixed. Requirement\+: the input Items must already have been fixed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em e1} & Pointer to condition that will be extended with e2 \\
+\hline
+ & {\em e2} & Condition that will extend e1\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if there was a memory allocation error, in which case e1 remains unchanged \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga2d28b10dac195744ef3daaab70d84208}\label{group__Query__Optimizer_ga2d28b10dac195744ef3daaab70d84208}} 
+\index{Query Optimizer@{Query Optimizer}!and\+\_\+with\+\_\+condition@{and\+\_\+with\+\_\+condition}}
+\index{and\+\_\+with\+\_\+condition@{and\+\_\+with\+\_\+condition}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{and\+\_\+with\+\_\+condition()}{and\_with\_condition()}}
+{\footnotesize\ttfamily bool Q\+E\+P\+\_\+shared\+\_\+owner\+::and\+\_\+with\+\_\+condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{add\+\_\+cond }\end{DoxyParamCaption})}
+
+Extend join\+\_\+tab-\/$>$cond by A\+ND\textquotesingle{}ing add\+\_\+cond to it
+
+
+\begin{DoxyParams}{Parameters}
+{\em add\+\_\+cond} & The condition to A\+ND with the existing cond for this \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if there was a memory allocation error \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gaaea10268473cae92c3bdbcf0ea4f97cc}\label{group__Query__Optimizer_gaaea10268473cae92c3bdbcf0ea4f97cc}} 
+\index{Query Optimizer@{Query Optimizer}!attach\+\_\+join\+\_\+conditions@{attach\+\_\+join\+\_\+conditions}}
+\index{attach\+\_\+join\+\_\+conditions@{attach\+\_\+join\+\_\+conditions}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{attach\+\_\+join\+\_\+conditions()}{attach\_join\_conditions()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::attach\+\_\+join\+\_\+conditions (\begin{DoxyParamCaption}\item[{plan\+\_\+idx}]{last\+\_\+tab }\end{DoxyParamCaption})}
+
+Attach outer join conditions to generated table conditions in an optimal way.
+
+
+\begin{DoxyParams}{Parameters}
+{\em last\+\_\+tab} & -\/ Last table that has been added to the current plan. Pre-\/condition\+: If this is the last inner table of an outer join operation, a join condition is attached to the first inner table of that outer join operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error.
+\end{DoxyReturn}
+Outer join conditions are attached to individual tables, but we can analyze those conditions only when reaching the last inner table of an outer join operation. Notice also that a table can be last within several outer join nests, hence the outer for() loop of this function.
+
+Example\+: S\+E\+L\+E\+CT $\ast$ F\+R\+OM t1 L\+E\+FT \mbox{\hyperlink{classJOIN}{J\+O\+IN}} (t2 L\+E\+FT \mbox{\hyperlink{classJOIN}{J\+O\+IN}} t3 ON t2.\+a=t3.\+a) ON t1.\+a=t2.\+a
+
+Table t3 is last both in the join nest (t2 -\/ t3) and in (t1 -\/ (t2 -\/ t3)) Thus, join conditions for both join nests will be evaluated when reaching this table.
+
+For each outer join operation processed, the join condition is split optimally over the inner tables of the outer join. The split-\/out conditions are later referred to as table conditions (but note that several table conditions stemming from different join operations may be combined into a composite table condition).
+
+Example\+: Consider the above query once more. The predicate t1.\+a=t2.\+a can be evaluated when rows from t1 and t2 are ready, ie at table t2. The predicate t2.\+a=t3.\+a can be evaluated at table t3.
+
+Each non-\/constant split-\/out table condition is guarded by a match variable that enables it only when a matching row is found for all the embedded outer join operations.
+
+Each split-\/out table condition is guarded by a variable that turns the condition off just before a null-\/complemented row for the outer join operation is formed. Thus, the join condition will not be checked for the null-\/complemented row. \mbox{\Hypertarget{group__Query__Optimizer_ga8661280e3da40b2c581ec758c50e1979}\label{group__Query__Optimizer_ga8661280e3da40b2c581ec758c50e1979}} 
+\index{Query Optimizer@{Query Optimizer}!aux\+\_\+buffer\+\_\+incr@{aux\+\_\+buffer\+\_\+incr}}
+\index{aux\+\_\+buffer\+\_\+incr@{aux\+\_\+buffer\+\_\+incr}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{aux\+\_\+buffer\+\_\+incr()}{aux\_buffer\_incr()}}
+{\footnotesize\ttfamily uint J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::aux\+\_\+buffer\+\_\+incr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Calculate the increment of the M\+RR buffer for a record write
+
+Calculate the increment of the M\+RR buffer for a record write ~\newline
+ This implementation of the virtual function aux\+\_\+buffer\+\_\+incr determines for how much the size of the M\+RR buffer should be increased when another record is added to the cache.
+
+\begin{DoxyReturn}{Returns}
+the increment of the size of the M\+RR buffer for the next record 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_gaef7343f0416360c14c6134867b347c83}\label{group__Query__Optimizer_gaef7343f0416360c14c6134867b347c83}} 
+\index{Query Optimizer@{Query Optimizer}!aux\+\_\+buffer\+\_\+min\+\_\+size@{aux\+\_\+buffer\+\_\+min\+\_\+size}}
+\index{aux\+\_\+buffer\+\_\+min\+\_\+size@{aux\+\_\+buffer\+\_\+min\+\_\+size}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{aux\+\_\+buffer\+\_\+min\+\_\+size()}{aux\_buffer\_min\_size()}}
+{\footnotesize\ttfamily uint J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::aux\+\_\+buffer\+\_\+min\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Calculate the minimume size for the M\+RR buffer
+
+Calculate the minimume size for the M\+RR buffer.
+
+\begin{DoxyReturn}{Returns}
+The minumum size that must be allocated for the M\+RR buffer 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classJOIN__CACHE_a22f1df0156fa6d176df6d6e6d4b84916}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_gab18726347ecf92d8985617dda1d60ba3}\label{group__Query__Optimizer_gab18726347ecf92d8985617dda1d60ba3}} 
+\index{Query Optimizer@{Query Optimizer}!build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins@{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}}
+\index{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins@{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins()}{build\_bitmap\_for\_nested\_joins()}}
+{\footnotesize\ttfamily uint build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$}]{join\+\_\+list,  }\item[{uint}]{first\+\_\+unused }\end{DoxyParamCaption})}
+
+Assign each nested join structure a bit in nested\+\_\+join\+\_\+map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em join\+\_\+list} & \mbox{\hyperlink{classList}{List}} of tables \\
+\hline
+{\em first\+\_\+unused} & Number of first unused bit in nested\+\_\+join\+\_\+map before the call\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is called after simplify\+\_\+joins(), when there are no redundant nested joins. We cannot have more nested joins in a query block than there are tables, so as long as the number of bits in nested\+\_\+join\+\_\+map is not less than the maximum number of tables in a query block, nested\+\_\+join\+\_\+map can never overflow.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+First unused bit in nested\+\_\+join\+\_\+map after the call. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga51f49ad71fa53a75fa8ebae08cf775cc}\label{group__Query__Optimizer_ga51f49ad71fa53a75fa8ebae08cf775cc}} 
+\index{Query Optimizer@{Query Optimizer}!build\+\_\+equal\+\_\+items@{build\+\_\+equal\+\_\+items}}
+\index{build\+\_\+equal\+\_\+items@{build\+\_\+equal\+\_\+items}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{build\+\_\+equal\+\_\+items()}{build\_equal\_items()}}
+{\footnotesize\ttfamily bool build\+\_\+equal\+\_\+items (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{retcond,  }\item[{C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$}]{inherited,  }\item[{bool}]{do\+\_\+inherit,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$}]{join\+\_\+list,  }\item[{C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$$\ast$}]{cond\+\_\+equal\+\_\+ref }\end{DoxyParamCaption})}
+
+Build multiple equalities for a W\+H\+E\+RE condition and all join conditions that inherit these multiple equalities.
+
+The function first applies the build\+\_\+equal\+\_\+items\+\_\+for\+\_\+cond function to build all multiple equalities for condition cond utilizing equalities referred through the parameter inherited. The extended set of equalities is returned in the structure referred by the cond\+\_\+equal\+\_\+ref parameter. After this the function calls itself recursively for all join conditions whose direct references can be found in join\+\_\+list and who inherit directly the multiple equalities just having built.
+
+\begin{DoxyNote}{Note}
+The join condition used in an outer join operation inherits all equalities from the join condition of the embedding join, if there is any, or otherwise -\/ from the where condition. This fact is not obvious, but presumably can be proved. Consider the following query\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM (t1,t2) LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t3,t4) ON t1.a=t3.a AND t2.a=t4.a}
+\DoxyCodeLine{  WHERE t1.a=t2.a;}
+\end{DoxyCode}
+ If the join condition in the query inherits =(t1.\+a,t2.\+a), then we can build the multiple equality =(t1.\+a,t2.\+a,t3.\+a,t4.\+a) that infers the equality t3.\+a=t4.\+a. Although the join condition t1.\+a=t3.\+a A\+ND t2.\+a=t4.\+a A\+ND t3.\+a=t4.\+a is not equivalent to the one in the query the latter can be replaced by the former\+: the new query will return the same result set as the original one.
+\end{DoxyNote}
+Interesting that multiple equality =(t1.\+a,t2.\+a,t3.\+a,t4.\+a) allows us to use t1.\+a=t3.\+a A\+ND t3.\+a=t4.\+a under the join condition\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM (t1,t2) LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t3,t4) ON t1.a=t3.a AND t3.a=t4.a}
+\DoxyCodeLine{  WHERE t1.a=t2.a}
+\end{DoxyCode}
+ This query equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM (t1 LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t3,t4) ON t1.a=t3.a AND t3.a=t4.a),t2}
+\DoxyCodeLine{  WHERE t1.a=t2.a}
+\end{DoxyCode}
+ Similarly the original query can be rewritten to the query\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM (t1,t2) LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t3,t4) ON t2.a=t4.a AND t3.a=t4.a}
+\DoxyCodeLine{  WHERE t1.a=t2.a}
+\end{DoxyCode}
+ that is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SELECT * FROM (t2 LEFT \mbox{\hyperlink{classJOIN}{JOIN}} (t3,t4)ON t2.a=t4.a AND t3.a=t4.a), t1}
+\DoxyCodeLine{  WHERE t1.a=t2.a}
+\end{DoxyCode}
+ Thus, applying equalities from the where condition we basically can get more freedom in performing join operations. Although we don\textquotesingle{}t use this property now, it probably makes sense to use it in the future.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread handler \\
+\hline
+ & {\em cond} & condition to build the multiple equalities for \\
+\hline
+\mbox{\texttt{ out}}  & {\em retcond} & Returned condition \\
+\hline
+ & {\em inherited} & path to all inherited multiple equality items \\
+\hline
+ & {\em do\+\_\+inherit} & whether or not to inherit equalities from other parts of the condition \\
+\hline
+ & {\em join\+\_\+list} & list of join tables that the condition refers to \\
+\hline
+\mbox{\texttt{ out}}  & {\em cond\+\_\+equal\+\_\+ref} & pointer to the structure to place built equalities in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga4408ac7e9a04a594110d2009cfcd54c9}\label{group__Query__Optimizer_ga4408ac7e9a04a594110d2009cfcd54c9}} 
+\index{Query Optimizer@{Query Optimizer}!cache\+\_\+const\+\_\+exprs@{cache\+\_\+const\+\_\+exprs}}
+\index{cache\+\_\+const\+\_\+exprs@{cache\+\_\+const\+\_\+exprs}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{cache\+\_\+const\+\_\+exprs()}{cache\_const\_exprs()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::cache\+\_\+const\+\_\+exprs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cache constant expressions in W\+H\+E\+RE, H\+A\+V\+I\+NG, ON conditions.
+
+\begin{DoxyReturn}{Returns}
+False if success, True if error
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is run after conditions have been pushed down to individual tables, so transformation is applied to J\+O\+I\+N\+\_\+\+T\+A\+B\+::condition and not to the W\+H\+E\+RE condition. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_ga680b1522161dd38adbc48197df3ea115}\label{group__Query__Optimizer_ga680b1522161dd38adbc48197df3ea115}} 
+\index{Query Optimizer@{Query Optimizer}!calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match@{calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match}}
+\index{calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match@{calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match()}{calc\_check\_only\_first\_match()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+whether we should check only the first match for this table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gaa978828bfe7be091fb76e1c5da80d644}\label{group__Query__Optimizer_gaa978828bfe7be091fb76e1c5da80d644}} 
+\index{Query Optimizer@{Query Optimizer}!calc\+\_\+group\+\_\+buffer@{calc\+\_\+group\+\_\+buffer}}
+\index{calc\+\_\+group\+\_\+buffer@{calc\+\_\+group\+\_\+buffer}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{calc\+\_\+group\+\_\+buffer()}{calc\_group\_buffer()}}
+{\footnotesize\ttfamily void calc\+\_\+group\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{group }\end{DoxyParamCaption})}
+
+calc how big buffer we need for comparing group entries. \mbox{\Hypertarget{group__Query__Optimizer_gaaf336d1a31135fd93a5564c5e090b50a}\label{group__Query__Optimizer_gaaf336d1a31135fd93a5564c5e090b50a}} 
+\index{Query Optimizer@{Query Optimizer}!calc\+\_\+join\+\_\+type@{calc\+\_\+join\+\_\+type}}
+\index{calc\+\_\+join\+\_\+type@{calc\+\_\+join\+\_\+type}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{calc\+\_\+join\+\_\+type()}{calc\_join\_type()}}
+{\footnotesize\ttfamily join\+\_\+type calc\+\_\+join\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{quick\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+join type according to quick select type used 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga5f8a3668a5d5771061e14f5d87c30794}\label{group__Query__Optimizer_ga5f8a3668a5d5771061e14f5d87c30794}} 
+\index{Query Optimizer@{Query Optimizer}!calc\+\_\+length\+\_\+and\+\_\+keyparts@{calc\+\_\+length\+\_\+and\+\_\+keyparts}}
+\index{calc\+\_\+length\+\_\+and\+\_\+keyparts@{calc\+\_\+length\+\_\+and\+\_\+keyparts}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{calc\+\_\+length\+\_\+and\+\_\+keyparts()}{calc\_length\_and\_keyparts()}}
+{\footnotesize\ttfamily void calc\+\_\+length\+\_\+and\+\_\+keyparts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$}]{keyuse,  }\item[{\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{tab,  }\item[{const uint}]{key,  }\item[{table\+\_\+map}]{used\+\_\+tables,  }\item[{\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$$\ast$}]{chosen\+\_\+keyuses,  }\item[{uint $\ast$}]{length\+\_\+out,  }\item[{uint $\ast$}]{keyparts\+\_\+out,  }\item[{table\+\_\+map $\ast$}]{dep\+\_\+map,  }\item[{bool $\ast$}]{maybe\+\_\+null }\end{DoxyParamCaption})}
+
+Calculate properties of ref key\+: key length, number of used key parts, dependency map, possibility of null.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em keyuse} & Array of keys to consider \\
+\hline
+ & {\em tab} & join\+\_\+tab to calculate ref parameters for \\
+\hline
+ & {\em key} & number of the key to use \\
+\hline
+ & {\em used\+\_\+tables} & tables read prior to this table \\
+\hline
+\mbox{\texttt{ out}}  & {\em chosen\+\_\+keyuses} & when given, this function will fill array with chosen keyuses \\
+\hline
+\mbox{\texttt{ out}}  & {\em length\+\_\+out} & calculated length of the ref \\
+\hline
+\mbox{\texttt{ out}}  & {\em keyparts\+\_\+out} & calculated number of used keyparts \\
+\hline
+\mbox{\texttt{ out}}  & {\em dep\+\_\+map} & when given, calculated dependency map \\
+\hline
+\mbox{\texttt{ out}}  & {\em maybe\+\_\+null} & when given, calculated maybe\+\_\+null property \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_ga4be82b593cb5e0548b3b3aa4b28bc3bf}\label{group__Query__Optimizer_ga4be82b593cb5e0548b3b3aa4b28bc3bf}} 
+\index{Query Optimizer@{Query Optimizer}!calc\+\_\+used\+\_\+field\+\_\+length@{calc\+\_\+used\+\_\+field\+\_\+length}}
+\index{calc\+\_\+used\+\_\+field\+\_\+length@{calc\+\_\+used\+\_\+field\+\_\+length}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{calc\+\_\+used\+\_\+field\+\_\+length()}{calc\_used\_field\_length()}}
+{\footnotesize\ttfamily void calc\+\_\+used\+\_\+field\+\_\+length (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{bool}]{keep\+\_\+current\+\_\+rowid,  }\item[{uint $\ast$}]{p\+\_\+used\+\_\+fields,  }\item[{uint $\ast$}]{p\+\_\+used\+\_\+fieldlength,  }\item[{uint $\ast$}]{p\+\_\+used\+\_\+blobs,  }\item[{bool $\ast$}]{p\+\_\+used\+\_\+null\+\_\+fields,  }\item[{bool $\ast$}]{p\+\_\+used\+\_\+uneven\+\_\+bit\+\_\+fields }\end{DoxyParamCaption})}
+
+Find how much space the prevous read not const tables takes in cache. \mbox{\Hypertarget{group__Query__Optimizer_gafd031be055cee296d6629313a333b56f}\label{group__Query__Optimizer_gafd031be055cee296d6629313a333b56f}} 
+\index{Query Optimizer@{Query Optimizer}!check\+\_\+match@{check\+\_\+match}}
+\index{check\+\_\+match@{check\+\_\+match}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{check\+\_\+match()}{check\_match()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::check\+\_\+match (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{rec\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Check matching to a partial join record from the join buffer, an implementation specialized for \mbox{\hyperlink{classJOIN__CACHE__BKA__UNIQUE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}. Only \mbox{\hyperlink{classJOIN__CACHE__BKA__UNIQUE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}} needs that, because it\textquotesingle{}s the only cache using distinct keys. \mbox{\hyperlink{classJOIN__CACHE__BKA}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}}, on the other hand, does one key lookup per cached record, so can take a per-\/record individualized decision for the pushed index condition as soon as it has the index tuple. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_ga6afa1e2231c8090ecae73554fca37c41}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::skip\+\_\+index\+\_\+tuple}} 
+
+J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::check\+\_\+match 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_ga633799af14ae0a6e3abbac98b428c46f}\label{group__Query__Optimizer_ga633799af14ae0a6e3abbac98b428c46f}} 
+\index{Query Optimizer@{Query Optimizer}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cleanup this \mbox{\hyperlink{classJOIN}{J\+O\+IN}}. Not a full cleanup. reusable?
+
+Free resources of given join.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fill} & true if we should free all resources, call with full==1 should be last, before it this function can be called with full==0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+With subquery this function definitely will be called several times, but even for simple query it can be called several times. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_gae913870950feb0d927de9b53963f0a6a}\label{group__Query__Optimizer_gae913870950feb0d927de9b53963f0a6a}} 
+\index{Query Optimizer@{Query Optimizer}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+T\+A\+B\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clean up associated table after query execution, including resources
+
+Cleanup table of join operation. \mbox{\Hypertarget{group__Query__Optimizer_gacff1c1a49375e2f52301214084924bf3}\label{group__Query__Optimizer_gacff1c1a49375e2f52301214084924bf3}} 
+\index{Query Optimizer@{Query Optimizer}!clear@{clear}}
+\index{clear@{clear}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+clear results if there are not rows found for group (end\+\_\+send\+\_\+group/end\+\_\+write\+\_\+group) 
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & if OK \\
+\hline
+{\em T\+R\+UE} & on error ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga8478e8df214dcc332c84d24ebe3f0785}\label{group__Query__Optimizer_ga8478e8df214dcc332c84d24ebe3f0785}} 
+\index{Query Optimizer@{Query Optimizer}!const\+\_\+expression\+\_\+in\+\_\+where@{const\+\_\+expression\+\_\+in\+\_\+where}}
+\index{const\+\_\+expression\+\_\+in\+\_\+where@{const\+\_\+expression\+\_\+in\+\_\+where}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{const\+\_\+expression\+\_\+in\+\_\+where()}{const\_expression\_in\_where()}}
+{\footnotesize\ttfamily bool const\+\_\+expression\+\_\+in\+\_\+where (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{comp\+\_\+item,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{comp\+\_\+field,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{const\+\_\+item }\end{DoxyParamCaption})}
+
+Test if a field or an item is equal to a constant value in W\+H\+E\+RE
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em cond} & W\+H\+E\+RE clause expression \\
+\hline
+ & {\em comp\+\_\+item} & \mbox{\hyperlink{classItem}{Item}} to find in W\+H\+E\+RE expression (if comp\+\_\+field != N\+U\+LL) \\
+\hline
+ & {\em comp\+\_\+field} & \mbox{\hyperlink{classField}{Field}} to find in W\+H\+E\+RE expression (if comp\+\_\+item != N\+U\+LL) \\
+\hline
+\mbox{\texttt{ out}}  & {\em const\+\_\+item} & intermediate arg, set to \mbox{\hyperlink{classItem}{Item}} pointer to N\+U\+LL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the field is a constant value in W\+H\+E\+RE
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+comp\+\_\+item and comp\+\_\+field parameters are mutually exclusive. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_ga37c57743c17000bba9bbbbd87b01d32f}\label{group__Query__Optimizer_ga37c57743c17000bba9bbbbd87b01d32f}} 
+\index{Query Optimizer@{Query Optimizer}!count\+\_\+field\+\_\+types@{count\+\_\+field\+\_\+types}}
+\index{count\+\_\+field\+\_\+types@{count\+\_\+field\+\_\+types}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{count\+\_\+field\+\_\+types()}{count\_field\_types()}}
+{\footnotesize\ttfamily void count\+\_\+field\+\_\+types (\begin{DoxyParamCaption}\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{select\+\_\+lex,  }\item[{Temp\+\_\+table\+\_\+param $\ast$}]{param,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{bool}]{reset\+\_\+with\+\_\+sum\+\_\+func,  }\item[{bool}]{save\+\_\+sum\+\_\+fields }\end{DoxyParamCaption})}
+
+Update T\+M\+P\+\_\+\+T\+A\+B\+L\+E\+\_\+\+P\+A\+R\+AM with count of the different type of fields.
+
+This function counts the number of fields, functions and sum functions (items with type S\+U\+M\+\_\+\+F\+U\+N\+C\+\_\+\+I\+T\+EM) for use by \mbox{\hyperlink{sql__tmp__table_8h_adfb8ccc236ce303095c9c108c4fbf37e}{create\+\_\+tmp\+\_\+table()}} and stores it in the Temp\+\_\+table\+\_\+param object. It also resets and calculates the quick\+\_\+group property, which may have to be reverted if this function is called after deciding to use R\+O\+L\+L\+UP (see \mbox{\hyperlink{group__Query__Optimizer_gaac99b2256ee62ddd1a435289c2acb8e2}{J\+O\+I\+N\+::optimize\+\_\+rollup()}}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em select\+\_\+lex} & S\+E\+L\+E\+C\+T\+\_\+\+L\+EX of query \\
+\hline
+{\em param} & Description of temp table \\
+\hline
+{\em fields} & \mbox{\hyperlink{classList}{List}} of fields to count \\
+\hline
+{\em reset\+\_\+with\+\_\+sum\+\_\+func} & Whether to reset with\+\_\+sum\+\_\+func of func items \\
+\hline
+{\em save\+\_\+sum\+\_\+fields} & Count in the way \mbox{\hyperlink{sql__tmp__table_8h_adfb8ccc236ce303095c9c108c4fbf37e}{create\+\_\+tmp\+\_\+table()}} expects when given the same parameter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_ga7a5efe6ddb0de3a2b43f36c3330354e7}\label{group__Query__Optimizer_ga7a5efe6ddb0de3a2b43f36c3330354e7}} 
+\index{Query Optimizer@{Query Optimizer}!create\+\_\+keyuse\+\_\+for\+\_\+table@{create\+\_\+keyuse\+\_\+for\+\_\+table}}
+\index{create\+\_\+keyuse\+\_\+for\+\_\+table@{create\+\_\+keyuse\+\_\+for\+\_\+table}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{create\+\_\+keyuse\+\_\+for\+\_\+table()}{create\_keyuse\_for\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMem__root__array}{Key\+\_\+use\+\_\+array}}$\ast$ create\+\_\+keyuse\+\_\+for\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint}]{keyparts,  }\item[{\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$$\ast$}]{fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$}]{outer\+\_\+exprs }\end{DoxyParamCaption})}
+
+Create a keyuse array for a table with a primary key. To be used when creating a materialized temporary table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer, for memory allocation \\
+\hline
+{\em table} & Table object representing table \\
+\hline
+{\em keyparts} & Number of key parts in the primary key \\
+\hline
+{\em outer\+\_\+exprs} & \mbox{\hyperlink{classList}{List}} of items used for key lookup\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to created keyuse array, or N\+U\+LL if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga3b518fb7975676afc7395b412e803368}\label{group__Query__Optimizer_ga3b518fb7975676afc7395b412e803368}} 
+\index{Query Optimizer@{Query Optimizer}!create\+\_\+ref\+\_\+for\+\_\+key@{create\+\_\+ref\+\_\+for\+\_\+key}}
+\index{create\+\_\+ref\+\_\+for\+\_\+key@{create\+\_\+ref\+\_\+for\+\_\+key}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{create\+\_\+ref\+\_\+for\+\_\+key()}{create\_ref\_for\_key()}}
+{\footnotesize\ttfamily bool create\+\_\+ref\+\_\+for\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{j,  }\item[{\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$}]{org\+\_\+keyuse,  }\item[{table\+\_\+map}]{used\+\_\+tables }\end{DoxyParamCaption})}
+
+Setup a ref access for looking up rows via an index (a key).
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & The join object being handled \\
+\hline
+{\em j} & The join\+\_\+tab which will have the ref access populated \\
+\hline
+{\em first\+\_\+keyuse} & First key part of (possibly multi-\/part) key \\
+\hline
+{\em used\+\_\+tables} & \mbox{\hyperlink{classBitmap}{Bitmap}} of available tables\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if success, True if error
+\end{DoxyReturn}
+Given a \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} structure that specifies the fields that can be used for index access, this function creates and set up the structure used for index look up via one of the access methods \{J\+T\+\_\+\+FT, J\+T\+\_\+\+C\+O\+N\+ST, J\+T\+\_\+\+R\+E\+F\+\_\+\+O\+R\+\_\+\+N\+U\+LL, J\+T\+\_\+\+R\+EF, J\+T\+\_\+\+E\+Q\+\_\+\+R\+EF\} for the plan operator \textquotesingle{}j\textquotesingle{}. Generally the function sets up the structure j-\/$>$ref (of type T\+A\+B\+L\+E\+\_\+\+R\+EF), and the access method j-\/$>$type.
+
+\begin{DoxyNote}{Note}
+We cannot setup fields used for ref access before we have sorted the items within multiple equalities according to the final order of the tables involved in the join operation. Currently, this occurs in 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_ga253393c0747cf378b9cefa109662bd17}{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field()}}. The exception is ref access for const tables, which are fixed before the greedy search planner is invoked. ~\newline
+ 
+\end{DoxySeeAlso}
+The outer reference is to a const table, so we copy the value straight from that table now (during optimization), instead of from the temporary table created during execution.
+
+T\+O\+DO\+: Synchronize with the temporary table creation code, so that there is no need to create a column for this value.\mbox{\Hypertarget{group__Query__Optimizer_gab466b49a22220854ef8f11a2c4a2ae8a}\label{group__Query__Optimizer_gab466b49a22220854ef8f11a2c4a2ae8a}} 
+\index{Query Optimizer@{Query Optimizer}!decide\+\_\+subquery\+\_\+strategy@{decide\+\_\+subquery\+\_\+strategy}}
+\index{decide\+\_\+subquery\+\_\+strategy@{decide\+\_\+subquery\+\_\+strategy}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{decide\+\_\+subquery\+\_\+strategy()}{decide\_subquery\_strategy()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::decide\+\_\+subquery\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Decides between E\+X\+I\+S\+TS and materialization; performs last steps to set up the chosen strategy. \begin{DoxyReturn}{Returns}
+\textquotesingle{}false\textquotesingle{} if no error
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If U\+N\+I\+ON this is called on each contained \mbox{\hyperlink{classJOIN}{J\+O\+IN}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_gaf2d76654da99be4012095c016ea5d4d2}\label{group__Query__Optimizer_gaf2d76654da99be4012095c016ea5d4d2}} 
+\index{Query Optimizer@{Query Optimizer}!destroy@{destroy}}
+\index{destroy@{destroy}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Clean up and destroy join object.
+
+\begin{DoxyReturn}{Returns}
+false if previous execution was successful, and true otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga54392f4f40ec2c57b8263f22fa3d4296}\label{group__Query__Optimizer_ga54392f4f40ec2c57b8263f22fa3d4296}} 
+\index{Query Optimizer@{Query Optimizer}!drop\+\_\+unused\+\_\+derived\+\_\+keys@{drop\+\_\+unused\+\_\+derived\+\_\+keys}}
+\index{drop\+\_\+unused\+\_\+derived\+\_\+keys@{drop\+\_\+unused\+\_\+derived\+\_\+keys}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{drop\+\_\+unused\+\_\+derived\+\_\+keys()}{drop\_unused\_derived\_keys()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::drop\+\_\+unused\+\_\+derived\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drop unused keys for each materialized derived table/view. 
+
+For each materialized derived table/view, call T\+A\+B\+L\+E\+::use\+\_\+index to save one index chosen by the optimizer and ignore others. If no key is chosen, then all keys will be ignored. \mbox{\Hypertarget{group__Query__Optimizer_gada415e1d087c014e9b8a22b39980bfea}\label{group__Query__Optimizer_gada415e1d087c014e9b8a22b39980bfea}} 
+\index{Query Optimizer@{Query Optimizer}!effective\+\_\+index@{effective\+\_\+index}}
+\index{effective\+\_\+index@{effective\+\_\+index}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{effective\+\_\+index()}{effective\_index()}}
+{\footnotesize\ttfamily uint Q\+E\+P\+\_\+\+T\+A\+B\+::effective\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the index used for a table in a Q\+EP
+\end{DoxyReturn}
+Return the index used for a table in a Q\+EP
+
+The various access methods have different places where the index/key number is stored, so this function is needed to return the correct value.
+
+\begin{DoxyReturn}{Returns}
+index number, or M\+A\+X\+\_\+\+K\+EY if not applicable.
+\end{DoxyReturn}
+J\+T\+\_\+\+S\+Y\+S\+T\+EM and J\+T\+\_\+\+A\+LL does not use an index, and will always return M\+A\+X\+\_\+\+K\+EY.
+
+J\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+R\+GE supports more than one index. Hence M\+A\+X\+\_\+\+K\+EY is returned and a further inspection is needed. \mbox{\Hypertarget{group__Query__Optimizer_gaf1351457ee30a4e67786117e50413541}\label{group__Query__Optimizer_gaf1351457ee30a4e67786117e50413541}} 
+\index{Query Optimizer@{Query Optimizer}!error\+\_\+if\+\_\+full\+\_\+join@{error\+\_\+if\+\_\+full\+\_\+join}}
+\index{error\+\_\+if\+\_\+full\+\_\+join@{error\+\_\+if\+\_\+full\+\_\+join}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{error\+\_\+if\+\_\+full\+\_\+join()}{error\_if\_full\_join()}}
+{\footnotesize\ttfamily bool error\+\_\+if\+\_\+full\+\_\+join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join }\end{DoxyParamCaption})}
+
+Give error if we some tables are done with a full join.
+
+This is used by multi\+\_\+table\+\_\+update and multi\+\_\+table\+\_\+delete when running in safe mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & Join condition\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & Error (full join used) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gaae89dde6a1925032ade263c27a87529f}\label{group__Query__Optimizer_gaae89dde6a1925032ade263c27a87529f}} 
+\index{Query Optimizer@{Query Optimizer}!filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols@{filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}}
+\index{filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols@{filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols()}{filter\_virtual\_gcol\_base\_cols()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Filter the base columns of virtual generated columns if using a covering index scan.
+
+When setting up the join buffer, adjust read\+\_\+set temporarily so that only contains the columns that are needed in the join operation and afterwards. Afterwards, the regular contents are restored (the columns to be read from input tables).
+
+For a virtual generated column, all base columns are added to the read\+\_\+set of the table. The storage engine will then copy all base column values so that the value of the GC can be calculated inside the executor. But when a virtual GC is fetched using a covering index, the actual GC value is fetched by the storage engine and the base column values are not needed. Join buffering code must not try to copy them (in create\+\_\+remaining\+\_\+fields()). So, we eliminate from read\+\_\+set those columns that are available from the covering index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em qep\+\_\+tab} & the table to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_gafe6fc3febf146805e30ce17267d4dd98}\label{group__Query__Optimizer_gafe6fc3febf146805e30ce17267d4dd98}} 
+\index{Query Optimizer@{Query Optimizer}!find\+\_\+item\+\_\+equal@{find\+\_\+item\+\_\+equal}}
+\index{find\+\_\+item\+\_\+equal@{find\+\_\+item\+\_\+equal}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{find\+\_\+item\+\_\+equal()}{find\_item\_equal()}}
+{\footnotesize\ttfamily Item\+\_\+equal$\ast$ find\+\_\+item\+\_\+equal (\begin{DoxyParamCaption}\item[{C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$}]{cond\+\_\+equal,  }\item[{\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$}]{item\+\_\+field,  }\item[{bool $\ast$}]{inherited\+\_\+fl }\end{DoxyParamCaption})}
+
+Find the multiple equality predicate containing a field.
+
+The function retrieves the multiple equalities accessed through the cond\+\_\+equal structure from current level and up looking for an equality containing a field. It stops retrieval as soon as the equality is found and set up inherited\+\_\+fl to T\+R\+UE if it\textquotesingle{}s found on upper levels.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em cond\+\_\+equal} & multiple equalities to search in \\
+\hline
+ & {\em item\+\_\+field} & field to look for \\
+\hline
+\mbox{\texttt{ out}}  & {\em inherited\+\_\+fl} & set up to T\+R\+UE if multiple equality is found on upper levels (not on current level of cond\+\_\+equal)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Item\+\_\+equal for the found multiple equality predicate if a success;
+\item N\+U\+LL otherwise. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gafd0c3fdb07be77d705feaf3f8f51164f}\label{group__Query__Optimizer_gafd0c3fdb07be77d705feaf3f8f51164f}} 
+\index{Query Optimizer@{Query Optimizer}!find\+\_\+shortest\+\_\+key@{find\+\_\+shortest\+\_\+key}}
+\index{find\+\_\+shortest\+\_\+key@{find\+\_\+shortest\+\_\+key}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{find\+\_\+shortest\+\_\+key()}{find\_shortest\_key()}}
+{\footnotesize\ttfamily uint find\+\_\+shortest\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{const \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} $\ast$}]{usable\+\_\+keys }\end{DoxyParamCaption})}
+
+Find shortest key suitable for full table scan.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Table to scan \\
+\hline
+{\em usable\+\_\+keys} & Allowed keys\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+As far as 1) clustered primary key entry data set is a set of all record fields (key fields and not key fields) and 2) secondary index entry data is a union of its key fields and primary key fields (at least Inno\+DB and its derivatives don\textquotesingle{}t duplicate primary key fields there, even if the primary and the secondary keys have a common subset of key fields), then secondary index entry data is always a subset of primary key entry. Unfortunately, key\+\_\+info\mbox{[}nr\mbox{]}.key\+\_\+length doesn\textquotesingle{}t show the length of key/pointer pair but a sum of key field lengths only, thus we can\textquotesingle{}t estimate index IO volume comparing only this key\+\_\+length value of secondary keys and clustered PK. So, try secondary keys first, and choose PK only if there are no usable secondary covering keys or found best secondary key include all table fields (i.\+e. same as PK)\+:
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+M\+A\+X\+\_\+\+K\+EY no suitable key found key index otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga59080a3acd829efcf18fc56d51df215c}\label{group__Query__Optimizer_ga59080a3acd829efcf18fc56d51df215c}} 
+\index{Query Optimizer@{Query Optimizer}!free\+\_\+underlaid\+\_\+joins@{free\+\_\+underlaid\+\_\+joins}}
+\index{free\+\_\+underlaid\+\_\+joins@{free\+\_\+underlaid\+\_\+joins}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{free\+\_\+underlaid\+\_\+joins()}{free\_underlaid\_joins()}}
+{\footnotesize\ttfamily void free\+\_\+underlaid\+\_\+joins (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{select }\end{DoxyParamCaption})}
+
+Free joins of subselect of this select.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer \\
+\hline
+{\em select} & pointer to st\+\_\+select\+\_\+lex which subselects joins we will free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_ga7c20a9b8d13f14275a4ee01f44f8cfa2}\label{group__Query__Optimizer_ga7c20a9b8d13f14275a4ee01f44f8cfa2}} 
+\index{Query Optimizer@{Query Optimizer}!fts\+\_\+index\+\_\+access@{fts\+\_\+index\+\_\+access}}
+\index{fts\+\_\+index\+\_\+access@{fts\+\_\+index\+\_\+access}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{fts\+\_\+index\+\_\+access()}{fts\_index\_access()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::fts\+\_\+index\+\_\+access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{tab }\end{DoxyParamCaption})}
+
+Check if F\+TS index only access is possible
+
+Check if F\+TS index only access is possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & pointer to \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} structure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if index only access is possible, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga92bf64a03ec666f565627fbb48ba4677}\label{group__Query__Optimizer_ga92bf64a03ec666f565627fbb48ba4677}} 
+\index{Query Optimizer@{Query Optimizer}!generate\+\_\+derived\+\_\+keys@{generate\+\_\+derived\+\_\+keys}}
+\index{generate\+\_\+derived\+\_\+keys@{generate\+\_\+derived\+\_\+keys}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{generate\+\_\+derived\+\_\+keys()}{generate\_derived\_keys()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::generate\+\_\+derived\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add keys to derived tables\textquotesingle{}/views\textquotesingle{} result tables in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em select\+\_\+lex} & generate derived keys for select\+\_\+lex\textquotesingle{}s derived tables\\
+\hline
+\end{DoxyParams}
+This function generates keys for all derived tables/views of the select\+\_\+lex to which this join corresponds to with help of the \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}\+:generate\+\_\+keys function.
+
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE all keys were successfully added. 
+
+T\+R\+UE O\+OM error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}\label{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}} 
+\index{Query Optimizer@{Query Optimizer}!get\+\_\+best\+\_\+combination@{get\+\_\+best\+\_\+combination}}
+\index{get\+\_\+best\+\_\+combination@{get\+\_\+best\+\_\+combination}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{get\+\_\+best\+\_\+combination()}{get\_best\_combination()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::get\+\_\+best\+\_\+combination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set up \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} structs according to the picked join order in best\+\_\+positions. This allocates execution structures so may be called only after we have the very final plan. It must be called after Optimize\+\_\+table\+\_\+order\+::fix\+\_\+semijoin\+\_\+strategies().
+
+\begin{DoxyReturn}{Returns}
+False if success, True if error
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item create join-\/$>$join\+\_\+tab array and copy from existing J\+O\+I\+N\+\_\+\+T\+A\+Bs in join order
+\item create helper structs for materialized semi-\/join handling
+\item finalize semi-\/join strategy choices
+\item Number of intermediate tables \char`\"{}tmp\+\_\+tables\char`\"{} is calculated.
+\item \char`\"{}tables\char`\"{} and \char`\"{}primary\+\_\+tables\char`\"{} are recalculated.
+\item for full and index scans info of estimated \# of records is updated.
+\item in a helper function\+:
+\begin{DoxyItemize}
+\item all heuristics are applied and the final access method type is picked for each join\+\_\+tab (only test\+\_\+if\+\_\+skip\+\_\+sortorder() could override it)
+\item AM consistency is ensured (e.\+g only range and index merge are allowed to have quick select set).
+\item if \char`\"{}\+Impossible W\+H\+E\+R\+E\char`\"{} is detected -\/ appropriate zero\+\_\+result\+\_\+cause is set.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Notice that intermediate tables will not have a P\+O\+S\+I\+T\+I\+ON reference; and they will not have a \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} reference before the final stages of code generation.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000095}{Todo}}]the block which sets tab-\/$>$type should move to adjust\+\_\+access\+\_\+methods for unification. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Query__Optimizer_ga67d1175177356bf1c9b05e9104d28c5b}\label{group__Query__Optimizer_ga67d1175177356bf1c9b05e9104d28c5b}} 
+\index{Query Optimizer@{Query Optimizer}!get\+\_\+best\+\_\+field@{get\+\_\+best\+\_\+field}}
+\index{get\+\_\+best\+\_\+field@{get\+\_\+best\+\_\+field}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{get\+\_\+best\+\_\+field()}{get\_best\_field()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}$\ast$ get\+\_\+best\+\_\+field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$}]{item\+\_\+field,  }\item[{C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$}]{cond\+\_\+equal }\end{DoxyParamCaption})}
+
+Get the best field substitution for a given field.
+
+If the field is member of a multiple equality, look up that equality and return the most appropriate field. Usually this is the equivalenced field belonging to the outer-\/most table in the join order, but \begin{DoxySeeAlso}{See also}
+Item\+\_\+field\+::get\+\_\+subst\+\_\+item() for details. Otherwise, return the same field.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em item\+\_\+field} & The field that we are seeking a substitution for. \\
+\hline
+{\em cond\+\_\+equal} & multiple equalities to search in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The substituted field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga92d8a0c25d038fddac9b92696f6845e3}\label{group__Query__Optimizer_ga92d8a0c25d038fddac9b92696f6845e3}} 
+\index{Query Optimizer@{Query Optimizer}!get\+\_\+index\+\_\+for\+\_\+order@{get\+\_\+index\+\_\+for\+\_\+order}}
+\index{get\+\_\+index\+\_\+for\+\_\+order@{get\+\_\+index\+\_\+for\+\_\+order}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{get\+\_\+index\+\_\+for\+\_\+order()}{get\_index\_for\_order()}}
+{\footnotesize\ttfamily uint get\+\_\+index\+\_\+for\+\_\+order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab,  }\item[{ha\+\_\+rows}]{limit,  }\item[{bool $\ast$}]{need\+\_\+sort,  }\item[{bool $\ast$}]{reverse }\end{DoxyParamCaption})}
+
+Find a key to apply single table U\+P\+D\+A\+T\+E/\+D\+E\+L\+E\+TE by a given O\+R\+D\+ER
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em order} & Linked list of O\+R\+D\+ER BY arguments \\
+\hline
+ & {\em table} & Table to find a key \\
+\hline
+ & {\em select} & Pointer to access/update select-\/$>$quick (if any) \\
+\hline
+ & {\em limit} & L\+I\+M\+IT clause parameter \\
+\hline
+\mbox{\texttt{ out}}  & {\em need\+\_\+sort} & T\+R\+UE if filesort needed \\
+\hline
+\mbox{\texttt{ out}}  & {\em reverse} & T\+R\+UE if the key is reversed again given O\+R\+D\+ER (undefined if key == M\+A\+X\+\_\+\+K\+EY)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item M\+A\+X\+\_\+\+K\+EY if no key found (need\+\_\+sort == T\+R\+UE)
+\item M\+A\+X\+\_\+\+K\+EY if quick select result order is OK (need\+\_\+sort == F\+A\+L\+SE)
+\item key number (either index scan or quick select) (need\+\_\+sort == F\+A\+L\+SE)
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Side effects\+:
+\begin{DoxyItemize}
+\item may deallocate or deallocate and replace select-\/$>$quick;
+\item may set table-\/$>$quick\+\_\+condition\+\_\+rows and table-\/$>$quick\+\_\+rows\mbox{[}...\mbox{]} to table-\/$>$file-\/$>$stats.\+records. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_gaee0363af5ecbde624f02fbc38a695a3b}\label{group__Query__Optimizer_gaee0363af5ecbde624f02fbc38a695a3b}} 
+\index{Query Optimizer@{Query Optimizer}!get\+\_\+sj\+\_\+strategy@{get\+\_\+sj\+\_\+strategy}}
+\index{get\+\_\+sj\+\_\+strategy@{get\+\_\+sj\+\_\+strategy}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{get\+\_\+sj\+\_\+strategy()}{get\_sj\_strategy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint Q\+E\+P\+\_\+\+T\+A\+B\+::get\+\_\+sj\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+semijoin strategy for this table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gabc77304fe7c751bce4fa59ef52d91fb0}\label{group__Query__Optimizer_gabc77304fe7c751bce4fa59ef52d91fb0}} 
+\index{Query Optimizer@{Query Optimizer}!get\+\_\+sj\+\_\+strategy@{get\+\_\+sj\+\_\+strategy}}
+\index{get\+\_\+sj\+\_\+strategy@{get\+\_\+sj\+\_\+strategy}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{get\+\_\+sj\+\_\+strategy()}{get\_sj\_strategy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint J\+O\+I\+N\+\_\+\+T\+A\+B\+::get\+\_\+sj\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+semijoin strategy for this table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gae77d58d476f44178e469e2cbe16e9e01}\label{group__Query__Optimizer_gae77d58d476f44178e469e2cbe16e9e01}} 
+\index{Query Optimizer@{Query Optimizer}!handle\+\_\+query@{handle\+\_\+query}}
+\index{handle\+\_\+query@{handle\+\_\+query}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{handle\+\_\+query()}{handle\_query()}}
+{\footnotesize\ttfamily bool handle\+\_\+query (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+EX $\ast$}]{lex,  }\item[{Query\+\_\+result $\ast$}]{result,  }\item[{ulonglong}]{added\+\_\+options,  }\item[{ulonglong}]{removed\+\_\+options }\end{DoxyParamCaption})}
+
+Handle a data manipulation query, from preparation through cleanup
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em lex} & query to be processed \\
+\hline
+{\em result} & sink of result of query execution. may be protocol object (for passing result to a client), insert object, update object, delete object, etc. \\
+\hline
+{\em added\+\_\+options} & additional options for detailed control over execution \\
+\hline
+{\em removed\+\_\+options} & options that are not applicable for this command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error
+\end{DoxyReturn}
+Processing a query goes through 5 phases (parsing is already done)
+\begin{DoxyItemize}
+\item Preparation
+\item Locking of tables
+\item Optimization
+\item Execution or explain
+\item Cleanup The queries handled by this function are\+:
+\end{DoxyItemize}
+
+S\+E\+L\+E\+CT I\+N\+S\+E\+RT ... S\+E\+L\+E\+CT R\+E\+P\+L\+A\+CE ... S\+E\+L\+E\+CT U\+P\+D\+A\+TE (multi-\/table) D\+E\+L\+E\+TE (multi-\/table)
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000118}{Todo}}]make this function also handle I\+N\+S\+E\+RT ... V\+A\+L\+U\+ES, single-\/table U\+P\+D\+A\+TE and D\+E\+L\+E\+TE, S\+ET and DO.\end{DoxyRefDesc}
+
+
+~\newline
+ The function processes simple query expressions without U\+N\+I\+ON and without multi-\/level O\+R\+D\+ER B\+Y/\+L\+I\+M\+IT separately. Such queries are executed with a more direct code path. \mbox{\Hypertarget{group__Query__Optimizer_gab3dbb0f8b69dc30985e0d9a0ff94121f}\label{group__Query__Optimizer_gab3dbb0f8b69dc30985e0d9a0ff94121f}} 
+\index{Query Optimizer@{Query Optimizer}!init@{init}}
+\index{init@{init}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+N\+L\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize operation\textquotesingle{}s internal state. Called once per query execution. 
+
+Implements \mbox{\hyperlink{classJOIN__CACHE_a1dcdce348bba725c675b327eb90aa924}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_ga327376f63198bf31a770fb89242d49aa}\label{group__Query__Optimizer_ga327376f63198bf31a770fb89242d49aa}} 
+\index{Query Optimizer@{Query Optimizer}!init@{init}}
+\index{init@{init}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize operation\textquotesingle{}s internal state. Called once per query execution. 
+
+Implements \mbox{\hyperlink{classJOIN__CACHE_a1dcdce348bba725c675b327eb90aa924}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}\label{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}} 
+\index{Query Optimizer@{Query Optimizer}!init@{init}}
+\index{init@{init}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize operation\textquotesingle{}s internal state. Called once per query execution. 
+
+Reimplemented from \mbox{\hyperlink{group__Query__Optimizer_ga327376f63198bf31a770fb89242d49aa}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_ga44c5164eb9405b18a16ca8a3ee339047}\label{group__Query__Optimizer_ga44c5164eb9405b18a16ca8a3ee339047}} 
+\index{Query Optimizer@{Query Optimizer}!init\+\_\+join\+\_\+cache@{init\+\_\+join\+\_\+cache}}
+\index{init\+\_\+join\+\_\+cache@{init\+\_\+join\+\_\+cache}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{init\+\_\+join\+\_\+cache()}{init\_join\_cache()}}
+{\footnotesize\ttfamily void Q\+E\+P\+\_\+\+T\+A\+B\+::init\+\_\+join\+\_\+cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{join\+\_\+tab }\end{DoxyParamCaption})}
+
+A helper function that allocates appropriate join cache object and sets next\+\_\+select function of previous tab. \mbox{\Hypertarget{group__Query__Optimizer_gaa992e841315769954816105b951d3e17}\label{group__Query__Optimizer_gaa992e841315769954816105b951d3e17}} 
+\index{Query Optimizer@{Query Optimizer}!is\+\_\+indexed\+\_\+agg\+\_\+distinct@{is\+\_\+indexed\+\_\+agg\+\_\+distinct}}
+\index{is\+\_\+indexed\+\_\+agg\+\_\+distinct@{is\+\_\+indexed\+\_\+agg\+\_\+distinct}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{is\+\_\+indexed\+\_\+agg\+\_\+distinct()}{is\_indexed\_agg\_distinct()}}
+{\footnotesize\ttfamily bool is\+\_\+indexed\+\_\+agg\+\_\+distinct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $>$ $\ast$}]{out\+\_\+args }\end{DoxyParamCaption})}
+
+Check for the presence of A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a) queries that may be subject to loose index scan.
+
+Check if the query is a subject to A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T) using loose index scan (\mbox{\hyperlink{classQUICK__GROUP__MIN__MAX__SELECT}{Q\+U\+I\+C\+K\+\_\+\+G\+R\+O\+U\+P\+\_\+\+M\+I\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+L\+E\+CT}}). Optionally (if out\+\_\+args is supplied) will push the arguments of A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T) to the list
+
+Check for every C\+O\+U\+N\+T(\+D\+I\+S\+T\+I\+N\+C\+T), A\+V\+G(\+D\+I\+S\+T\+I\+N\+C\+T) or S\+U\+M(\+D\+I\+S\+T\+I\+N\+C\+T). These can be resolved by Loose Index Scan as long as all the aggregate distinct functions refer to the same fields. Thus\+:
+
+S\+E\+L\+E\+CT A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a, b), A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T b, a)... =$>$ can use L\+IS S\+E\+L\+E\+CT A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a), A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a) ... =$>$ can use L\+IS S\+E\+L\+E\+CT A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a, b), A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a) ... =$>$ cannot use L\+IS S\+E\+L\+E\+CT A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T a), A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T b) ... =$>$ cannot use L\+IS etc.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em join} & the join to check \\
+\hline
+\mbox{\texttt{ out}}  & {\em out\+\_\+args} & Collect the arguments of the aggregate functions to a list. We don\textquotesingle{}t worry about duplicates as these will be sorted out later in get\+\_\+best\+\_\+group\+\_\+min\+\_\+max.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+does the query qualify for indexed A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T) 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & it does \\
+\hline
+{\em false} & A\+G\+G\+F\+N(\+D\+I\+S\+T\+I\+N\+C\+T) must apply distinct in it. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga4a8d854a364ab749539a9363619acf99}\label{group__Query__Optimizer_ga4a8d854a364ab749539a9363619acf99}} 
+\index{Query Optimizer@{Query Optimizer}!is\+\_\+subkey@{is\+\_\+subkey}}
+\index{is\+\_\+subkey@{is\+\_\+subkey}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{is\+\_\+subkey()}{is\_subkey()}}
+{\footnotesize\ttfamily bool is\+\_\+subkey (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$}]{key\+\_\+part,  }\item[{\mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$}]{ref\+\_\+key\+\_\+part,  }\item[{\mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$}]{ref\+\_\+key\+\_\+part\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test if a second key is the subkey of the first one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+part} & First key parts \\
+\hline
+{\em ref\+\_\+key\+\_\+part} & Second key parts \\
+\hline
+{\em ref\+\_\+key\+\_\+part\+\_\+end} & Last+1 part of the second key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Second key M\+U\+ST be shorter than the first one.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & is a subkey \\
+\hline
+{\em 0} & no sub key \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gaa62d47da29f3853e87b1069ee5c1ff21}\label{group__Query__Optimizer_gaa62d47da29f3853e87b1069ee5c1ff21}} 
+\index{Query Optimizer@{Query Optimizer}!join\+\_\+free@{join\+\_\+free}}
+\index{join\+\_\+free@{join\+\_\+free}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{join\+\_\+free()}{join\_free()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::join\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Release memory and, if possible, the open tables held by this execution plan (and nested plans). It\textquotesingle{}s used to release some tables before the end of execution in order to increase concurrency and reduce memory consumption.
+
+Partially cleanup \mbox{\hyperlink{classJOIN}{J\+O\+IN}} after it has executed\+: close index or rnd read (table cursors), free quick selects.
+
+This function is called in the end of execution of a \mbox{\hyperlink{classJOIN}{J\+O\+IN}}, before the used tables are unlocked and closed.
+
+For a join that is resolved using a temporary table, the first sweep is performed against actual tables and an intermediate result is inserted into the temprorary table. The last sweep is performed against the temporary table. Therefore, the base tables and associated buffers used to fill the temporary table are no longer needed, and this function is called to free them.
+
+For a join that is performed without a temporary table, this function is called after all rows are sent, but before E\+OF packet is sent.
+
+For a simple S\+E\+L\+E\+CT with no subqueries this function performs a full cleanup of the \mbox{\hyperlink{classJOIN}{J\+O\+IN}} and calls mysql\+\_\+unlock\+\_\+read\+\_\+tables to free used base tables.
+
+If a \mbox{\hyperlink{classJOIN}{J\+O\+IN}} is executed for a subquery or if it has a subquery, we can\textquotesingle{}t do the full cleanup and need to do a partial cleanup only.
+\begin{DoxyItemize}
+\item If a \mbox{\hyperlink{classJOIN}{J\+O\+IN}} is not the top level join, we must not unlock the tables because the outer select may not have been evaluated yet, and we can\textquotesingle{}t unlock only selected tables of a query.
+\item Additionally, if this \mbox{\hyperlink{classJOIN}{J\+O\+IN}} corresponds to a correlated subquery, we should not free quick selects and join buffers because they will be needed for the next execution of the correlated subquery.
+\item However, if this is a \mbox{\hyperlink{classJOIN}{J\+O\+IN}} for a \mbox{[}sub\mbox{]}select, which is not a correlated subquery itself, but has subqueries, we can free it fully and also free J\+O\+I\+Ns of all its subqueries. The exception is a subquery in S\+E\+L\+E\+CT list, e.\+g\+: ~\newline
+ S\+E\+L\+E\+CT a, (select max(b) from t1) group by c ~\newline
+ This subquery will not be evaluated at first sweep and its value will not be inserted into the temporary table. Instead, it\textquotesingle{}s evaluated when selecting from the temporary table. Therefore, it can\textquotesingle{}t be freed here even though it\textquotesingle{}s not correlated.
+\end{DoxyItemize}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000119}{Todo}}]Unlock tables even if the join isn\textquotesingle{}t top level select in the tree \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Query__Optimizer_gaedf2fb3248e5d013e6a74b29dd9e7429}\label{group__Query__Optimizer_gaedf2fb3248e5d013e6a74b29dd9e7429}} 
+\index{Query Optimizer@{Query Optimizer}!make\+\_\+cond\+\_\+for\+\_\+table@{make\+\_\+cond\+\_\+for\+\_\+table}}
+\index{make\+\_\+cond\+\_\+for\+\_\+table@{make\+\_\+cond\+\_\+for\+\_\+table}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{make\+\_\+cond\+\_\+for\+\_\+table()}{make\_cond\_for\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ make\+\_\+cond\+\_\+for\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond,  }\item[{table\+\_\+map}]{tables,  }\item[{table\+\_\+map}]{used\+\_\+table,  }\item[{bool}]{exclude\+\_\+expensive\+\_\+cond }\end{DoxyParamCaption})}
+
+Extract a condition that can be checked after reading given table
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & Condition to analyze \\
+\hline
+{\em tables} & Tables for which \char`\"{}current field values\char`\"{} are available \\
+\hline
+{\em used\+\_\+table} & Table(s) that we are extracting the condition for (may also include P\+S\+E\+U\+D\+O\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+I\+TS, and may be zero) \\
+\hline
+{\em exclude\+\_\+expensive\+\_\+cond} & Do not push expensive conditions\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $<$$>$\+N\+U\+LL} & Generated condition \\
+\hline
+{\em =} & N\+U\+LL Already checked, OR error\\
+\hline
+\end{DoxyRetVals}
+Extract the condition that can be checked after reading the table(s) specified in {\ttfamily used\+\_\+table}, given that current-\/field values for tables specified in {\ttfamily tables} bitmap are available. If {\ttfamily used\+\_\+table} is 0, extract conditions for all tables in {\ttfamily tables}.
+
+This function can be used to extract conditions relevant for a table in a join order. Together with its caller, it will ensure that all conditions are attached to the first table in the join order where all necessary fields are available, and it will also ensure that a given condition is attached to only one table. To accomplish this, first initialize {\ttfamily tables} to the empty set. Then, loop over all tables in the join order, set {\ttfamily used\+\_\+table} to the bit representing the current table, accumulate {\ttfamily used\+\_\+table} into the {\ttfamily tables} set, and call this function. To ensure correct handling of const expressions and outer references, add the const table map and O\+U\+T\+E\+R\+\_\+\+R\+E\+F\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+IT to {\ttfamily used\+\_\+table} for the first table. To ensure that random expressions are evaluated for the final table, add R\+A\+N\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+IT to {\ttfamily used\+\_\+table} for the final table.
+
+The function assumes that constant, inexpensive parts of the condition have already been checked. Constant, expensive parts will be attached to the first table in the join order, provided that the above call sequence is followed.
+
+The call order will ensure that conditions covering tables in {\ttfamily tables} minus those in {\ttfamily used\+\_\+table}, have already been checked.
+
+~\newline
+ The function takes into account that some parts of the condition are guaranteed to be true by employed \textquotesingle{}ref\textquotesingle{} access methods (the code that does this is located at the end, search down for \char`\"{}\+E\+Q\+\_\+\+F\+U\+N\+C\char`\"{}).
+
+\begin{DoxyNote}{Note}
+make\+\_\+cond\+\_\+for\+\_\+info\+\_\+schema() uses an algorithm similar to \mbox{\hyperlink{group__Query__Optimizer_gaedf2fb3248e5d013e6a74b29dd9e7429}{make\+\_\+cond\+\_\+for\+\_\+table()}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_ga27b74179b9a9207753aa3f93a9df4225}\label{group__Query__Optimizer_ga27b74179b9a9207753aa3f93a9df4225}} 
+\index{Query Optimizer@{Query Optimizer}!make\+\_\+join\+\_\+readinfo@{make\+\_\+join\+\_\+readinfo}}
+\index{make\+\_\+join\+\_\+readinfo@{make\+\_\+join\+\_\+readinfo}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{make\+\_\+join\+\_\+readinfo()}{make\_join\_readinfo()}}
+{\footnotesize\ttfamily bool make\+\_\+join\+\_\+readinfo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{join,  }\item[{uint}]{no\+\_\+jbuf\+\_\+after }\end{DoxyParamCaption})}
+
+Plan refinement stage\+: do various setup things for the executor
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & Join being processed \\
+\hline
+{\em no\+\_\+jbuf\+\_\+after} & Don\textquotesingle{}t use join buffering after table with this number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true if error (Out of memory)
+\end{DoxyReturn}
+Plan refinement stage\+: do various set ups for the executioner
+\begin{DoxyItemize}
+\item setup join buffering use
+\item push index conditions
+\item increment relevant counters
+\item etc 
+\end{DoxyItemize}\mbox{\Hypertarget{group__Query__Optimizer_gae713fbd3faf5b5aefad41408fd11685a}\label{group__Query__Optimizer_gae713fbd3faf5b5aefad41408fd11685a}} 
+\index{Query Optimizer@{Query Optimizer}!make\+\_\+sum\+\_\+func\+\_\+list@{make\+\_\+sum\+\_\+func\+\_\+list}}
+\index{make\+\_\+sum\+\_\+func\+\_\+list@{make\+\_\+sum\+\_\+func\+\_\+list}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{make\+\_\+sum\+\_\+func\+\_\+list()}{make\_sum\_func\_list()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::make\+\_\+sum\+\_\+func\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{field\+\_\+list,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{send\+\_\+result\+\_\+set\+\_\+metadata,  }\item[{bool}]{before\+\_\+group\+\_\+by,  }\item[{bool}]{recompute = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Initialize \textquotesingle{}sum\+\_\+funcs\textquotesingle{} array with all \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+\_\+list} & All items \\
+\hline
+{\em send\+\_\+result\+\_\+set\+\_\+metadata} & Items in select list \\
+\hline
+{\em before\+\_\+group\+\_\+by} & Set to 1 if this is called before G\+R\+O\+UP BY handling \\
+\hline
+{\em recompute} & Set to T\+R\+UE if sum\+\_\+funcs must be recomputed\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga0db5dc577ffd7662b800cc6307183c2b}\label{group__Query__Optimizer_ga0db5dc577ffd7662b800cc6307183c2b}} 
+\index{Query Optimizer@{Query Optimizer}!mark\+\_\+const\+\_\+table@{mark\+\_\+const\+\_\+table}}
+\index{mark\+\_\+const\+\_\+table@{mark\+\_\+const\+\_\+table}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{mark\+\_\+const\+\_\+table()}{mark\_const\_table()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::mark\+\_\+const\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{tab,  }\item[{\mbox{\hyperlink{classKey__use}{Key\+\_\+use}} $\ast$}]{key }\end{DoxyParamCaption})}
+
+Move const tables first in the position array.
+
+Increment the number of const tables and set same basic properties for the const table. A const table looked up by a key has type J\+T\+\_\+\+C\+O\+N\+ST. A const table with a single row has type J\+T\+\_\+\+S\+Y\+S\+T\+EM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Table that is designated as a const table \\
+\hline
+{\em key} & The key definition to use for this table (N\+U\+LL if table scan) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_ga7f722315c64ce97cff639d705107c660}\label{group__Query__Optimizer_ga7f722315c64ce97cff639d705107c660}} 
+\index{Query Optimizer@{Query Optimizer}!optimize@{optimize}}
+\index{optimize@{optimize}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+::optimize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Optimizes one query block into a query execution plan (Q\+EP.)
+
+This is the entry point to the query optimization phase. This phase applies both logical (equivalent) query rewrites, cost-\/based join optimization, and rule-\/based access path selection. Once an optimal plan is found, the member function creates/initializes all structures needed for query execution. The main optimization phases are outlined below\+:
+
+
+\begin{DoxyEnumerate}
+\item Logical transformations\+:
+\begin{DoxyItemize}
+\item Outer to inner joins transformation.
+\item Equality/constant propagation.
+\item Partition pruning.
+\item C\+O\+U\+N\+T($\ast$), M\+I\+N(), M\+A\+X() constant substitution in case of implicit grouping.
+\item O\+R\+D\+ER BY optimization.
+\end{DoxyItemize}
+\item Perform cost-\/based optimization of table order and access path selection. See J\+O\+I\+N\+::make\+\_\+join\+\_\+plan()
+\item Post-\/join order optimization\+:
+\begin{DoxyItemize}
+\item Create optimal table conditions from the where clause and the join conditions.
+\item Inject outer-\/join guarding conditions.
+\item Adjust data access methods after determining table condition (several times.)
+\item Optimize O\+R\+D\+ER B\+Y/\+D\+I\+S\+T\+I\+N\+CT.
+\end{DoxyItemize}
+\item Code generation
+\begin{DoxyItemize}
+\item Set data access functions.
+\item Try to optimize away sorting/distinct.
+\item Setup temporary table usage for grouping and/or sorting.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success. \\
+\hline
+{\em 1} & Error, error code saved in member \mbox{\hyperlink{classJOIN_a3af313be65a65eb809cb2f11e6e84b0b}{J\+O\+I\+N\+::error}}. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000091}{Todo}}]This query block didn\textquotesingle{}t transform itself in S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::prepare(), so belongs to a parent query block. That parent, or its parents, had to transform us -\/ it has not; maybe it is itself in prepare() and evaluating the present query block as an \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}}. Such evaluation in prepare() is expected to be a rare case to be eliminated in the future (\char`\"{}\+S\+E\+T x=(subq)\char`\"{} is one such case; because it locks tables before prepare()). \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Query__Optimizer_ga768e4d9b55252e39161f392f34cb5abc}\label{group__Query__Optimizer_ga768e4d9b55252e39161f392f34cb5abc}} 
+\index{Query Optimizer@{Query Optimizer}!optimize\+\_\+cond@{optimize\+\_\+cond}}
+\index{optimize\+\_\+cond@{optimize\+\_\+cond}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{optimize\+\_\+cond()}{optimize\_cond()}}
+{\footnotesize\ttfamily bool optimize\+\_\+cond (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{cond,  }\item[{C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$$\ast$}]{cond\+\_\+equal,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$}]{join\+\_\+list,  }\item[{Item\+::cond\+\_\+result $\ast$}]{cond\+\_\+value }\end{DoxyParamCaption})}
+
+Optimize conditions by
+
+a) applying transitivity to build multiple equality predicates (M\+EP)\+: if x=y and y=z the M\+EP x=y=z is built. b) apply constants where possible. If the value of x is known to be 42, x is replaced with a constant of value 42. By transitivity, this also applies to M\+E\+Ps, so the M\+EP in a) will become 42=x=y=z. c) remove conditions that are always false or always true
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread handler \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em cond} & W\+H\+E\+RE or H\+A\+V\+I\+NG condition to optimize \\
+\hline
+\mbox{\texttt{ out}}  & {\em cond\+\_\+equal} & The built multiple equalities \\
+\hline
+ & {\em join\+\_\+list} & list of join operations with join conditions = N\+U\+LL\+: Called for H\+A\+V\+I\+NG condition \\
+\hline
+\mbox{\texttt{ out}}  & {\em cond\+\_\+value} & Not changed if cond was empty C\+O\+N\+D\+\_\+\+T\+R\+UE if cond is always true C\+O\+N\+D\+\_\+\+F\+A\+L\+SE if cond is impossible C\+O\+N\+D\+\_\+\+OK otherwise\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gaac99b2256ee62ddd1a435289c2acb8e2}\label{group__Query__Optimizer_gaac99b2256ee62ddd1a435289c2acb8e2}} 
+\index{Query Optimizer@{Query Optimizer}!optimize\+\_\+rollup@{optimize\+\_\+rollup}}
+\index{optimize\+\_\+rollup@{optimize\+\_\+rollup}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{optimize\+\_\+rollup()}{optimize\_rollup()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::optimize\+\_\+rollup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Optimize rollup specification.
+
+Allocate objects needed for rollup processing.
+
+\begin{DoxyReturn}{Returns}
+false if success, true if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gabed62f6e6cc8f6d042c806a154ea7137}\label{group__Query__Optimizer_gabed62f6e6cc8f6d042c806a154ea7137}} 
+\index{Query Optimizer@{Query Optimizer}!prepare\+\_\+result@{prepare\+\_\+result}}
+\index{prepare\+\_\+result@{prepare\+\_\+result}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{prepare\+\_\+result()}{prepare\_result()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::prepare\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prepare join result.
+
+Prepare join result prior to join execution or describing. Instantiate derived tables and get schema tables result if necessary.
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE An error during derived or schema tables instantiation. F\+A\+L\+SE Ok 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga5ededf725731bb0cfd5a3871181f496e}\label{group__Query__Optimizer_ga5ededf725731bb0cfd5a3871181f496e}} 
+\index{Query Optimizer@{Query Optimizer}!push\+\_\+index\+\_\+cond@{push\+\_\+index\+\_\+cond}}
+\index{push\+\_\+index\+\_\+cond@{push\+\_\+index\+\_\+cond}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{push\+\_\+index\+\_\+cond()}{push\_index\_cond()}}
+{\footnotesize\ttfamily void Q\+E\+P\+\_\+\+T\+A\+B\+::push\+\_\+index\+\_\+cond (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{join\+\_\+tab,  }\item[{uint}]{keyno,  }\item[{\mbox{\hyperlink{classOpt__trace__object}{Opt\+\_\+trace\+\_\+object}} $\ast$}]{trace\+\_\+obj }\end{DoxyParamCaption})}
+
+Try to extract and push the index condition down to table handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em join\+\_\+tab} & join\+\_\+tab for table \\
+\hline
+{\em keyno} & Index for which extract and push the condition \\
+\hline
+{\em trace\+\_\+obj} & trace object where information is to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_ga812222f5f9eb4a9026c8ce89069ef8d7}\label{group__Query__Optimizer_ga812222f5f9eb4a9026c8ce89069ef8d7}} 
+\index{Query Optimizer@{Query Optimizer}!read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos@{read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos}}
+\index{read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos@{read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos()}{read\_all\_flag\_fields\_by\_pos()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{rec\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reads all flag fields of a positioned record from the join buffer. Including all flag fields (of this record) stored in the previous join buffers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rec\+\_\+ptr} & position of the first field of the record in the join buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Query__Optimizer_gafa19cecc5eccee0ff1285c62769daf39}\label{group__Query__Optimizer_gafa19cecc5eccee0ff1285c62769daf39}} 
+\index{Query Optimizer@{Query Optimizer}!read\+\_\+some\+\_\+flag\+\_\+fields@{read\+\_\+some\+\_\+flag\+\_\+fields}}
+\index{read\+\_\+some\+\_\+flag\+\_\+fields@{read\+\_\+some\+\_\+flag\+\_\+fields}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{read\+\_\+some\+\_\+flag\+\_\+fields()}{read\_some\_flag\_fields()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+some\+\_\+flag\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Read some flag fields of a record from the join buffer.
+
+Reads all flag fields stored in this join buffer, for the current record (at \textquotesingle{}pos\textquotesingle{}). If the buffer is incremental, flag fields of this record which are stored in previous join buffers are {\itshape not} read so remain unknown\+: caller must then make sure to call this function on previous buffers too.
+
+The flag fields are read starting from the position \textquotesingle{}pos\textquotesingle{}. The function increments the value of \textquotesingle{}pos\textquotesingle{} by the length of the read data.
+
+Flag fields are copied back to their source. \mbox{\Hypertarget{group__Query__Optimizer_ga20c8bd509fba4099611e8a7b01c115d8}\label{group__Query__Optimizer_ga20c8bd509fba4099611e8a7b01c115d8}} 
+\index{Query Optimizer@{Query Optimizer}!read\+\_\+some\+\_\+record\+\_\+fields@{read\+\_\+some\+\_\+record\+\_\+fields}}
+\index{read\+\_\+some\+\_\+record\+\_\+fields@{read\+\_\+some\+\_\+record\+\_\+fields}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{read\+\_\+some\+\_\+record\+\_\+fields()}{read\_some\_record\_fields()}}
+{\footnotesize\ttfamily int J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::read\+\_\+some\+\_\+record\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Read some flag and data fields of a record from the join buffer.
+
+Reads all fields (flag and data fields) stored in this join buffer, for the current record (at \textquotesingle{}pos\textquotesingle{}). If the buffer is incremental, fields of this record which are stored in previous join buffers are {\itshape not} read so remain unknown\+: caller must then make sure to call this function on previous buffers too.
+
+The fields are read starting from the position \textquotesingle{}pos\textquotesingle{} which is supposed to point to the beginning of the first record field. The function increments the value of \textquotesingle{}pos\textquotesingle{} by the length of the read data.
+
+Flag fields are copied back to their source; data fields are copied to the record\textquotesingle{}s buffer.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em (-\/1)} & if there are no more records in the join buffer \\
+\hline
+{\em $<$$>$(-\/1)} & length of the data read from the join buffer \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gaef4f64b9b280796d9abe945b2eda94ac}\label{group__Query__Optimizer_gaef4f64b9b280796d9abe945b2eda94ac}} 
+\index{Query Optimizer@{Query Optimizer}!refine\+\_\+best\+\_\+rowcount@{refine\+\_\+best\+\_\+rowcount}}
+\index{refine\+\_\+best\+\_\+rowcount@{refine\+\_\+best\+\_\+rowcount}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{refine\+\_\+best\+\_\+rowcount()}{refine\_best\_rowcount()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::refine\+\_\+best\+\_\+rowcount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Refine the best\+\_\+rowcount estimation based on what happens after tables have been joined\+: L\+I\+M\+IT and type of result sink. \mbox{\Hypertarget{group__Query__Optimizer_gaf8c7623dfe6301253414f9155999c43b}\label{group__Query__Optimizer_gaf8c7623dfe6301253414f9155999c43b}} 
+\index{Query Optimizer@{Query Optimizer}!remove\+\_\+eq\+\_\+conds@{remove\+\_\+eq\+\_\+conds}}
+\index{remove\+\_\+eq\+\_\+conds@{remove\+\_\+eq\+\_\+conds}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{remove\+\_\+eq\+\_\+conds()}{remove\_eq\_conds()}}
+{\footnotesize\ttfamily bool remove\+\_\+eq\+\_\+conds (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{retcond,  }\item[{Item\+::cond\+\_\+result $\ast$}]{cond\+\_\+value }\end{DoxyParamCaption})}
+
+Remove const and eq items. Return new item, or N\+U\+LL if no condition
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread handler \\
+\hline
+ & {\em cond} & the condition to handle \\
+\hline
+\mbox{\texttt{ out}}  & {\em retcond} & condition after const removal \\
+\hline
+\mbox{\texttt{ out}}  & {\em cond\+\_\+value} & resulting value of the condition =C\+O\+N\+D\+\_\+\+OK condition must be evaluated (e.\+g field = constant) =C\+O\+N\+D\+\_\+\+T\+R\+UE always true (e.\+g 1 = 1) =C\+O\+N\+D\+\_\+\+F\+A\+L\+SE always false (e.\+g 1 = 2)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+calls internal\+\_\+remove\+\_\+eq\+\_\+conds() to check the complete tree.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gad4e09d71987062663db1836d651ec4d4}\label{group__Query__Optimizer_gad4e09d71987062663db1836d651ec4d4}} 
+\index{Query Optimizer@{Query Optimizer}!reset@{reset}}
+\index{reset@{reset}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Reset the state of this join object so that it is ready for a new execution. \mbox{\Hypertarget{group__Query__Optimizer_gad54e309ac7f0fd377d7a422ea54f59f8}\label{group__Query__Optimizer_gad54e309ac7f0fd377d7a422ea54f59f8}} 
+\index{Query Optimizer@{Query Optimizer}!reset\+\_\+cache@{reset\+\_\+cache}}
+\index{reset\+\_\+cache@{reset\+\_\+cache}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{reset\+\_\+cache()}{reset\_cache()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::reset\+\_\+cache (\begin{DoxyParamCaption}\item[{bool}]{for\+\_\+writing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reset the join buffer for reading/writing\+: default implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em for\+\_\+writing} & if it\textquotesingle{}s T\+R\+UE the function reset the buffer for writing\\
+\hline
+\end{DoxyParams}
+This default implementation of the virtual function \mbox{\hyperlink{group__Query__Optimizer_gad54e309ac7f0fd377d7a422ea54f59f8}{reset\+\_\+cache()}} resets the join buffer for reading or writing. If the buffer is reset for reading only the \textquotesingle{}pos\textquotesingle{} value is reset to point to the very beginning of the join buffer. If the buffer is reset for writing additionally\+:
+\begin{DoxyItemize}
+\item the counter of the records in the buffer is set to 0,
+\item the the value of \textquotesingle{}last\+\_\+rec\+\_\+pos\textquotesingle{} gets pointing at the position just before the buffer,
+\item \textquotesingle{}end\+\_\+pos\textquotesingle{} is set to point to the beginning of the join buffer,
+\item the size of the auxiliary buffer is reset to 0,
+\item the flag \textquotesingle{}last\+\_\+rec\+\_\+blob\+\_\+data\+\_\+is\+\_\+in\+\_\+rec\+\_\+buff\textquotesingle{} is set to 0. 
+\end{DoxyItemize}
+
+Reimplemented in \mbox{\hyperlink{group__Query__Optimizer_gafb1afc6322b69d01ea68b677b715ddc7}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_gafb1afc6322b69d01ea68b677b715ddc7}\label{group__Query__Optimizer_gafb1afc6322b69d01ea68b677b715ddc7}} 
+\index{Query Optimizer@{Query Optimizer}!reset\+\_\+cache@{reset\+\_\+cache}}
+\index{reset\+\_\+cache@{reset\+\_\+cache}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{reset\+\_\+cache()}{reset\_cache()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::reset\+\_\+cache (\begin{DoxyParamCaption}\item[{bool}]{for\+\_\+writing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reset the join buffer for reading/writing\+: default implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em for\+\_\+writing} & if it\textquotesingle{}s T\+R\+UE the function reset the buffer for writing\\
+\hline
+\end{DoxyParams}
+This default implementation of the virtual function \mbox{\hyperlink{group__Query__Optimizer_gafb1afc6322b69d01ea68b677b715ddc7}{reset\+\_\+cache()}} resets the join buffer for reading or writing. If the buffer is reset for reading only the \textquotesingle{}pos\textquotesingle{} value is reset to point to the very beginning of the join buffer. If the buffer is reset for writing additionally\+:
+\begin{DoxyItemize}
+\item the counter of the records in the buffer is set to 0,
+\item the the value of \textquotesingle{}last\+\_\+rec\+\_\+pos\textquotesingle{} gets pointing at the position just before the buffer,
+\item \textquotesingle{}end\+\_\+pos\textquotesingle{} is set to point to the beginning of the join buffer,
+\item the size of the auxiliary buffer is reset to 0,
+\item the flag \textquotesingle{}last\+\_\+rec\+\_\+blob\+\_\+data\+\_\+is\+\_\+in\+\_\+rec\+\_\+buff\textquotesingle{} is set to 0. 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{group__Query__Optimizer_gad54e309ac7f0fd377d7a422ea54f59f8}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}.
+
+\mbox{\Hypertarget{group__Query__Optimizer_gabfdf6220265d56c5dc44081d89abc73e}\label{group__Query__Optimizer_gabfdf6220265d56c5dc44081d89abc73e}} 
+\index{Query Optimizer@{Query Optimizer}!restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols@{restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}}
+\index{restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols@{restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols()}{restore\_virtual\_gcol\_base\_cols()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+After \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} initialization, the table-\/$>$read\+\_\+set is restored so that the virtual generated column can be calculated during later time. \mbox{\Hypertarget{group__Query__Optimizer_ga7e92b14b52e210ce225ad4c0312f9bca}\label{group__Query__Optimizer_ga7e92b14b52e210ce225ad4c0312f9bca}} 
+\index{Query Optimizer@{Query Optimizer}!rollup\+\_\+make\+\_\+fields@{rollup\+\_\+make\+\_\+fields}}
+\index{rollup\+\_\+make\+\_\+fields@{rollup\+\_\+make\+\_\+fields}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{rollup\+\_\+make\+\_\+fields()}{rollup\_make\_fields()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::rollup\+\_\+make\+\_\+fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields\+\_\+arg,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{sel\+\_\+fields,  }\item[{\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$$\ast$}]{func }\end{DoxyParamCaption})}
+
+Fill up rollup structures with pointers to fields to use.
+
+Creates copies of item\+\_\+sum items for each sum level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fields\+\_\+arg} & \mbox{\hyperlink{classList}{List}} of all fields (hidden and real ones) \\
+\hline
+{\em sel\+\_\+fields} & Pointer to selected fields \\
+\hline
+{\em func} & Store here a pointer to all fields\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if ok; In this case func is pointing to next not used element. \\
+\hline
+{\em 1} & on error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga076b7e6736c0bf0a9e9bf7542e4746c8}\label{group__Query__Optimizer_ga076b7e6736c0bf0a9e9bf7542e4746c8}} 
+\index{Query Optimizer@{Query Optimizer}!rollup\+\_\+process\+\_\+const\+\_\+fields@{rollup\+\_\+process\+\_\+const\+\_\+fields}}
+\index{rollup\+\_\+process\+\_\+const\+\_\+fields@{rollup\+\_\+process\+\_\+const\+\_\+fields}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{rollup\+\_\+process\+\_\+const\+\_\+fields()}{rollup\_process\_const\_fields()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::rollup\+\_\+process\+\_\+const\+\_\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wrap all constant Items in G\+R\+O\+UP BY list.
+
+For R\+O\+L\+L\+UP queries each constant item referenced in G\+R\+O\+UP BY list is wrapped up into an \mbox{\hyperlink{classItem__func}{Item\+\_\+func}} object yielding the same value as the constant item. The objects of the wrapper class are never considered as constant items and besides they inherit all properties of the \mbox{\hyperlink{classItem__result__field}{Item\+\_\+result\+\_\+field}} class. This wrapping allows us to ensure writing constant items into temporary tables whenever the result of the R\+O\+L\+L\+UP operation has to be written into a temporary table, e.\+g. when R\+O\+L\+L\+UP is used together with D\+I\+S\+T\+I\+N\+CT in the S\+E\+L\+E\+CT list. Usually when creating temporary tables for a intermidiate result we do not include fields for constant expressions.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if ok \\
+\hline
+{\em 1} & on error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gadbc980a72c17c8442fab87af085697d4}\label{group__Query__Optimizer_gadbc980a72c17c8442fab87af085697d4}} 
+\index{Query Optimizer@{Query Optimizer}!simple\+\_\+remove\+\_\+const@{simple\+\_\+remove\+\_\+const}}
+\index{simple\+\_\+remove\+\_\+const@{simple\+\_\+remove\+\_\+const}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{simple\+\_\+remove\+\_\+const()}{simple\_remove\_const()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}}$\ast$ simple\+\_\+remove\+\_\+const (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{where }\end{DoxyParamCaption})}
+
+Filter out O\+R\+D\+ER items those are equal to constants in W\+H\+E\+RE
+
+This function is a limited version of remove\+\_\+const() for use with non-\/\mbox{\hyperlink{classJOIN}{J\+O\+IN}} statements (i.\+e. single-\/table U\+P\+D\+A\+TE and D\+E\+L\+E\+TE).
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Linked list of O\+R\+D\+ER BY arguments \\
+\hline
+{\em cond} & W\+H\+E\+RE expression\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to new filtered O\+R\+D\+ER list or N\+U\+LL if whole list eliminated
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function overwrites input order list. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_gac2c4cb376fec34447cf5df2b3d4c238a}\label{group__Query__Optimizer_gac2c4cb376fec34447cf5df2b3d4c238a}} 
+\index{Query Optimizer@{Query Optimizer}!sjm\+\_\+query\+\_\+block\+\_\+id@{sjm\+\_\+query\+\_\+block\+\_\+id}}
+\index{sjm\+\_\+query\+\_\+block\+\_\+id@{sjm\+\_\+query\+\_\+block\+\_\+id}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{sjm\+\_\+query\+\_\+block\+\_\+id()}{sjm\_query\_block\_id()}}
+{\footnotesize\ttfamily uint Q\+E\+P\+\_\+\+T\+A\+B\+::sjm\+\_\+query\+\_\+block\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+query block id for an inner table of materialized semi-\/join, and 0 for all other tables. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+implementation is not efficient (loops over all tables) -\/ use this function only in E\+X\+P\+L\+A\+IN. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Query__Optimizer_ga6afa1e2231c8090ecae73554fca37c41}\label{group__Query__Optimizer_ga6afa1e2231c8090ecae73554fca37c41}} 
+\index{Query Optimizer@{Query Optimizer}!skip\+\_\+index\+\_\+tuple@{skip\+\_\+index\+\_\+tuple}}
+\index{skip\+\_\+index\+\_\+tuple@{skip\+\_\+index\+\_\+tuple}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{skip\+\_\+index\+\_\+tuple()}{skip\_index\_tuple()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::skip\+\_\+index\+\_\+tuple (\begin{DoxyParamCaption}\item[{range\+\_\+seq\+\_\+t}]{rseq,  }\item[{char $\ast$}]{range\+\_\+info }\end{DoxyParamCaption})}
+
+Check if the record combination matches the index condition
+
+
+\begin{DoxyParams}{Parameters}
+{\em rseq} & Value returned by bka\+\_\+range\+\_\+seq\+\_\+init() \\
+\hline
+{\em range\+\_\+info} & M\+RR range association data\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+::skip\+\_\+index\+\_\+tuple(). This function is the variant for use with \mbox{\hyperlink{classJOIN__CACHE__BKA__UNIQUE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}. The difference from \mbox{\hyperlink{classJOIN__CACHE__BKA}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}} case is that there may be multiple previous table record combinations that share the same key, i.\+e. they map to the same M\+RR range. And for all of those records, we have just done one single key lookup in the current table, found an index tuple. If in this function we discard this index tuple, all those records will be eliminated from the result. Thus, in this function we can discard the index tuple only if {\itshape all} those cached records and the index tuple don\textquotesingle{}t match the pushed index condition. It\textquotesingle{}s a \char`\"{}group-\/wide
+decision\char`\"{}. Thus we must here loop through all previous table records combinations that match the given M\+RR range key range\+\_\+info, searching for a single one matching the index condition. If we find none, we can safely discard the index tuple here, which avoids retrieving the record from the current table. If we instead find one, we cannot discard the index tuple here; later in execution, in join\+\_\+matching\+\_\+records(), we can finally take one \char`\"{}case-\/by-\/case decision\char`\"{} per cached record, by checking again the index condition (
+
+\mbox{\hyperlink{group__Query__Optimizer_gafd031be055cee296d6629313a333b56f}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+U\+E\+::check\+\_\+match}}).
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Possible optimization\+: Before we unpack the record from a previous table check if this table is used in the condition. If so then unpack the record otherwise skip the unpacking. This should be done by a special virtual method get\+\_\+partial\+\_\+record\+\_\+by\+\_\+pos().
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & The record combination satisfies the index condition \\
+\hline
+{\em true} & Otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga253393c0747cf378b9cefa109662bd17}\label{group__Query__Optimizer_ga253393c0747cf378b9cefa109662bd17}} 
+\index{Query Optimizer@{Query Optimizer}!substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field@{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field}}
+\index{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field@{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field()}{substitute\_for\_best\_equal\_field()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond,  }\item[{C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$}]{cond\+\_\+equal,  }\item[{void $\ast$}]{table\+\_\+join\+\_\+idx }\end{DoxyParamCaption})}
+
+Substitute every field reference in a condition by the best equal field and eliminate all multiple equality predicates.
+
+The function retrieves the cond condition and for each encountered multiple equality predicate it sorts the field references in it according to the order of tables specified by the table\+\_\+join\+\_\+idx parameter. Then it eliminates the multiple equality predicate it replacing it by the conjunction of simple equality predicates equating every field from the multiple equality to the first field in it, or to the constant, if there is any. After this the function retrieves all other conjuncted predicates substitute every field reference by the field reference to the first equal field or equal constant if there are any.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & condition to process \\
+\hline
+{\em cond\+\_\+equal} & multiple equalities to take into consideration \\
+\hline
+{\em table\+\_\+join\+\_\+idx} & index to tables determining field preference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+At the first glance full sort of fields in multiple equality seems to be an overkill. Yet it\textquotesingle{}s not the case due to possible new fields in multiple equality item of lower levels. We want the order in them to comply with the order of upper levels.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The transformed condition, or N\+U\+LL in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}\label{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}} 
+\index{Query Optimizer@{Query Optimizer}!substitute\+\_\+gc@{substitute\+\_\+gc}}
+\index{substitute\+\_\+gc@{substitute\+\_\+gc}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{substitute\+\_\+gc()}{substitute\_gc()}}
+{\footnotesize\ttfamily bool substitute\+\_\+gc (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{select\+\_\+lex,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{where\+\_\+cond,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{group\+\_\+list,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order }\end{DoxyParamCaption})}
+
+Substitute all expressions in the W\+H\+E\+RE condition and O\+R\+D\+E\+R/\+G\+R\+O\+UP lists that match generated columns (GC) expressions with GC fields, if any.
+
+This function does 3 things\+: 1) Creates list of all GC fields that are a part of a key and the GC expression is a function. All query tables are scanned. If there\textquotesingle{}s no such fields, function exits. 2) By means of Item\+::compile() W\+H\+E\+RE clause is transformed. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem__func_acac46454222156dbb8336cc709c6cf41}{Item\+\_\+func\+::gc\+\_\+subst\+\_\+transformer()}} for details. 3) If there\textquotesingle{}s O\+R\+D\+E\+R/\+G\+R\+O\+UP BY clauses, this function tries to substitute expressions in these lists with GC too. It removes from the list of indexed GC all elements which index blocked by hints. This is done to reduce amount of further work. Next it goes through O\+R\+D\+E\+R/\+G\+R\+O\+UP BY list and matches the expression in it against GC expressions in indexed GC list. When a match is found, the expression is replaced with a new \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} for the matched GC field. Also, this new field is added to the hidden part of all\+\_\+fields list.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em select\+\_\+lex} & the current select \\
+\hline
+{\em where\+\_\+cond} & the W\+H\+E\+RE condition, possibly N\+U\+LL \\
+\hline
+{\em group\+\_\+list} & the G\+R\+O\+UP BY clause, possibly N\+U\+LL \\
+\hline
+{\em order} & the O\+R\+D\+ER BY clause, possibly N\+U\+LL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the G\+R\+O\+UP BY clause or the O\+R\+D\+ER BY clause was changed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga3eec84bb823e8a5ea10710e1e4f066d1}\label{group__Query__Optimizer_ga3eec84bb823e8a5ea10710e1e4f066d1}} 
+\index{Query Optimizer@{Query Optimizer}!test\+\_\+if\+\_\+cheaper\+\_\+ordering@{test\+\_\+if\+\_\+cheaper\+\_\+ordering}}
+\index{test\+\_\+if\+\_\+cheaper\+\_\+ordering@{test\+\_\+if\+\_\+cheaper\+\_\+ordering}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{test\+\_\+if\+\_\+cheaper\+\_\+ordering()}{test\_if\_cheaper\_ordering()}}
+{\footnotesize\ttfamily bool test\+\_\+if\+\_\+cheaper\+\_\+ordering (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$}]{tab,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}}}]{usable\+\_\+keys,  }\item[{int}]{ref\+\_\+key,  }\item[{ha\+\_\+rows}]{select\+\_\+limit,  }\item[{int $\ast$}]{new\+\_\+key,  }\item[{int $\ast$}]{new\+\_\+key\+\_\+direction,  }\item[{ha\+\_\+rows $\ast$}]{new\+\_\+select\+\_\+limit,  }\item[{uint $\ast$}]{new\+\_\+used\+\_\+key\+\_\+parts,  }\item[{uint $\ast$}]{saved\+\_\+best\+\_\+key\+\_\+parts }\end{DoxyParamCaption})}
+
+Find a cheaper access key than a given {\itshape key} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tab} & N\+U\+LL or \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} of the accessed table \\
+\hline
+ & {\em order} & Linked list of O\+R\+D\+ER BY arguments \\
+\hline
+ & {\em table} & Table if tab == N\+U\+LL or tab-\/$>$table() \\
+\hline
+ & {\em usable\+\_\+keys} & \mbox{\hyperlink{classKey}{Key}} map to find a cheaper key in \\
+\hline
+ & {\em ref\+\_\+key} & ~\newline
+ 0 $<$= key $<$ M\+A\+X\+\_\+\+K\+EY -\/ key number (hint) to start the search -\/1 -\/ no key number provided \\
+\hline
+ & {\em select\+\_\+limit} & L\+I\+M\+IT value, or H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR if no limit \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+\_\+key} & \mbox{\hyperlink{classKey}{Key}} number if success, otherwise undefined \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+\_\+key\+\_\+direction} & Return -\/1 (reverse) or +1 if success, otherwise undefined \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+\_\+select\+\_\+limit} & Return adjusted L\+I\+M\+IT \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+\_\+used\+\_\+key\+\_\+parts} & N\+U\+LL by default, otherwise return number of new\+\_\+key prefix columns if success or undefined if the function fails \\
+\hline
+\mbox{\texttt{ out}}  & {\em saved\+\_\+best\+\_\+key\+\_\+parts} & N\+U\+LL by default, otherwise preserve the value for further use in \mbox{\hyperlink{classQUICK__SELECT__DESC}{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+SC}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function takes into account table-\/$>$quick\+\_\+condition\+\_\+rows statistic (that is calculated by J\+O\+I\+N\+::make\+\_\+join\+\_\+plan()). However, single table procedures such as mysql\+\_\+update() and mysql\+\_\+delete() never call J\+O\+I\+N\+::make\+\_\+join\+\_\+plan(), so they have to update it manually (
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_ga92d8a0c25d038fddac9b92696f6845e3}{get\+\_\+index\+\_\+for\+\_\+order()}}). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Query__Optimizer_ga96dc524565684a4e258c98f5b7fd1541}\label{group__Query__Optimizer_ga96dc524565684a4e258c98f5b7fd1541}} 
+\index{Query Optimizer@{Query Optimizer}!test\+\_\+if\+\_\+order\+\_\+by\+\_\+key@{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key}}
+\index{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key@{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key()}{test\_if\_order\_by\_key()}}
+{\footnotesize\ttfamily int test\+\_\+if\+\_\+order\+\_\+by\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint}]{idx,  }\item[{uint $\ast$}]{used\+\_\+key\+\_\+parts }\end{DoxyParamCaption})}
+
+Test if one can use the key to resolve ordering.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em order} & Sort order \\
+\hline
+ & {\em table} & Table to sort \\
+\hline
+ & {\em idx} & Index to check \\
+\hline
+\mbox{\texttt{ out}}  & {\em used\+\_\+key\+\_\+parts} & N\+U\+LL by default, otherwise return value for used key parts.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+used\+\_\+key\+\_\+parts is set to correct key parts used if return value != 0 (On other cases, used\+\_\+key\+\_\+part may be changed) Note that the value may actually be greater than the number of index key parts. This can happen for storage engines that have the primary key parts as a suffix for every secondary key.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & key is ok. \\
+\hline
+{\em 0} & \mbox{\hyperlink{classKey}{Key}} can\textquotesingle{}t be used \\
+\hline
+{\em -\/1} & Reverse key can be used \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_ga4d5a2e1822e2131fcfbe6501a8a97525}\label{group__Query__Optimizer_ga4d5a2e1822e2131fcfbe6501a8a97525}} 
+\index{Query Optimizer@{Query Optimizer}!test\+\_\+if\+\_\+subpart@{test\+\_\+if\+\_\+subpart}}
+\index{test\+\_\+if\+\_\+subpart@{test\+\_\+if\+\_\+subpart}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{test\+\_\+if\+\_\+subpart()}{test\_if\_subpart()}}
+{\footnotesize\ttfamily bool test\+\_\+if\+\_\+subpart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+Return 1 if second is a subpart of first argument.
+
+If first parts has different direction, change it to second part (group is sorted like order) \mbox{\Hypertarget{group__Query__Optimizer_ga410e1c85b186cd5520a7d21930ead6e5}\label{group__Query__Optimizer_ga410e1c85b186cd5520a7d21930ead6e5}} 
+\index{Query Optimizer@{Query Optimizer}!types\+\_\+allow\+\_\+materialization@{types\+\_\+allow\+\_\+materialization}}
+\index{types\+\_\+allow\+\_\+materialization@{types\+\_\+allow\+\_\+materialization}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{types\+\_\+allow\+\_\+materialization()}{types\_allow\_materialization()}}
+{\footnotesize\ttfamily bool types\+\_\+allow\+\_\+materialization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{outer,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{inner }\end{DoxyParamCaption})}
+
+
+
+Check if two items are compatible wrt. materialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outer} & Expression from outer query \\
+\hline
+{\em inner} & Expression from inner query\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & If subquery types allow materialization. \\
+\hline
+{\em F\+A\+L\+SE} & Otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Query__Optimizer_gaeaa6edcfa6c4d934dd42d505d9de2fef}\label{group__Query__Optimizer_gaeaa6edcfa6c4d934dd42d505d9de2fef}} 
+\index{Query Optimizer@{Query Optimizer}!update\+\_\+equalities\+\_\+for\+\_\+sjm@{update\+\_\+equalities\+\_\+for\+\_\+sjm}}
+\index{update\+\_\+equalities\+\_\+for\+\_\+sjm@{update\+\_\+equalities\+\_\+for\+\_\+sjm}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{update\+\_\+equalities\+\_\+for\+\_\+sjm()}{update\_equalities\_for\_sjm()}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+::update\+\_\+equalities\+\_\+for\+\_\+sjm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update equalities and keyuse references after semi-\/join materialization strategy is chosen.
+
+For each multiple equality that contains a field that is selected from a subquery, and that subquery is executed using a semi-\/join materialization strategy, add the corresponding column in the materialized temporary table to the equality. For each injected semi-\/join equality that is not converted to multiple equality, replace the reference to the expression selected from the subquery with the corresponding column in the temporary table.
+
+This is needed to properly reflect the equalities that involve injected semi-\/join equalities when materialization strategy is chosen. \begin{DoxySeeAlso}{See also}
+eliminate\+\_\+item\+\_\+equal() for how these equalities are used to generate correct equality predicates.
+\end{DoxySeeAlso}
+The Materialize\+Scan semi-\/join strategy requires some additional processing\+: All primary tables after the materialized temporary table must be inspected for keyuse objects that point to expressions from the subquery tables. These references must be replaced with references to corresponding columns in the materialized temporary table instead. Those primary tables using ref access will thus be made to depend on the materialized temporary table instead of the subquery tables.
+
+Only the injected semi-\/join equalities need this treatment, other predicates will be handled correctly by the regular item substitution process.
+
+\begin{DoxyReturn}{Returns}
+False if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Optimizer_ga652bf7109dfbe0fdd7deb75c05c0a7a3}\label{group__Query__Optimizer_ga652bf7109dfbe0fdd7deb75c05c0a7a3}} 
+\index{Query Optimizer@{Query Optimizer}!uses\+\_\+index\+\_\+fields\+\_\+only@{uses\+\_\+index\+\_\+fields\+\_\+only}}
+\index{uses\+\_\+index\+\_\+fields\+\_\+only@{uses\+\_\+index\+\_\+fields\+\_\+only}!Query Optimizer@{Query Optimizer}}
+\subsubsection{\texorpdfstring{uses\+\_\+index\+\_\+fields\+\_\+only()}{uses\_index\_fields\_only()}}
+{\footnotesize\ttfamily bool uses\+\_\+index\+\_\+fields\+\_\+only (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{tbl,  }\item[{uint}]{keyno,  }\item[{bool}]{other\+\_\+tbls\+\_\+ok }\end{DoxyParamCaption})}
+
+Check if given expression only uses fields covered by index \#keyno in the table tbl. The expression can use any fields in any other tables.
+
+The expression is guaranteed not to be A\+ND or OR -\/ those constructs are handled outside of this function.
+
+Restrict some function types from being pushed down to storage engine\+: a) Don\textquotesingle{}t push down the triggered conditions. Nested outer joins execution code may need to evaluate a condition several times (both triggered and untriggered). b) Stored functions contain a statement that might start new operations (like D\+ML statements) from within the storage engine. This does not work against all S\+Es. c) Subqueries might contain nested subqueries and involve more tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Expression to check \\
+\hline
+{\em tbl} & The table having the index \\
+\hline
+{\em keyno} & The index number \\
+\hline
+{\em other\+\_\+tbls\+\_\+ok} & T\+R\+UE $<$=$>$ Fields of other non-\/const tables are allowed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if No, true if Yes 
+\end{DoxyReturn}

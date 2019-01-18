@@ -1,0 +1,282 @@
+\hypertarget{classsp__rcontext}{}\section{sp\+\_\+rcontext Class Reference}
+\label{classsp__rcontext}\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+Inheritance diagram for sp\+\_\+rcontext\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__rcontext}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame}{Handler\+\_\+call\+\_\+frame}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a260a527c167de6f2c94db5fcad8ac831}\label{classsp__rcontext_a260a527c167de6f2c94db5fcad8ac831}} 
+bool {\bfseries set\+\_\+variable} (T\+HD $\ast$thd, uint var\+\_\+idx, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$value)
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a55b9e5ed062d4c752ba9f206a0957853}\label{classsp__rcontext_a55b9e5ed062d4c752ba9f206a0957853}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries get\+\_\+item} (uint var\+\_\+idx) const
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a175818d47aaac8dd1b4839c81bc86d75}\label{classsp__rcontext_a175818d47aaac8dd1b4839c81bc86d75}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries get\+\_\+item\+\_\+addr} (uint var\+\_\+idx) const
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a4e0bab38afa524a4b59e35f8c0c37f09}\label{classsp__rcontext_a4e0bab38afa524a4b59e35f8c0c37f09}} 
+bool {\bfseries set\+\_\+return\+\_\+value} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$return\+\_\+value\+\_\+item)
+\item 
+\mbox{\Hypertarget{classsp__rcontext_ad4eae51f66782e114068e5ba6f360fac}\label{classsp__rcontext_ad4eae51f66782e114068e5ba6f360fac}} 
+bool {\bfseries is\+\_\+return\+\_\+value\+\_\+set} () const
+\item 
+bool \mbox{\hyperlink{classsp__rcontext_a59a9f37626871fa3325799c5c3cf07ed}{push\+\_\+handler}} (\mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$\mbox{\hyperlink{classhandler}{handler}}, uint first\+\_\+ip)
+\item 
+void \mbox{\hyperlink{classsp__rcontext_a26ec647bb1d2520182d8b5d1ea9f60ad}{pop\+\_\+handlers}} (\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$current\+\_\+scope)
+\item 
+\mbox{\Hypertarget{classsp__rcontext_ad3401043b3c0b22f51b6710692cfabeb}\label{classsp__rcontext_ad3401043b3c0b22f51b6710692cfabeb}} 
+\mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame}{Handler\+\_\+call\+\_\+frame}} $\ast$ \mbox{\hyperlink{classsp__rcontext_ad3401043b3c0b22f51b6710692cfabeb}{current\+\_\+handler\+\_\+frame}} () const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame}{Handler\+\_\+call\+\_\+frame}} representing the currently active handler. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsp__rcontext_a564fc66ae415afd64711d35d2c2c2009}{handle\+\_\+sql\+\_\+condition}} (T\+HD $\ast$thd, uint $\ast$ip, const \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$cur\+\_\+spi)
+\item 
+void \mbox{\hyperlink{classsp__rcontext_a607327ed766edf71947a47db318dde7a}{exit\+\_\+handler}} (T\+HD $\ast$thd, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$target\+\_\+scope)
+\item 
+uint \mbox{\hyperlink{classsp__rcontext_a068e44a2bf0cba4fdea5c139e6dc3d2a}{get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip}} () const
+\item 
+bool \mbox{\hyperlink{classsp__rcontext_ae8d09ba5618c7691077afef86da53de8}{push\+\_\+cursor}} (\mbox{\hyperlink{classsp__instr__cpush}{sp\+\_\+instr\+\_\+cpush}} $\ast$i)
+\item 
+void \mbox{\hyperlink{classsp__rcontext_aa98f42267d6988a304267b554f71a860}{pop\+\_\+cursors}} (uint count)
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a495018d910f3c7b609dada512f6702e8}\label{classsp__rcontext_a495018d910f3c7b609dada512f6702e8}} 
+void {\bfseries pop\+\_\+all\+\_\+cursors} ()
+\item 
+\mbox{\Hypertarget{classsp__rcontext_ae6174ef87a0da4aebb7380669e60896d}\label{classsp__rcontext_ae6174ef87a0da4aebb7380669e60896d}} 
+\mbox{\hyperlink{classsp__cursor}{sp\+\_\+cursor}} $\ast$ {\bfseries get\+\_\+cursor} (uint i) const
+\item 
+bool \mbox{\hyperlink{classsp__rcontext_af28978212fa9fc23c56966eab09079c5}{set\+\_\+case\+\_\+expr}} (T\+HD $\ast$thd, int case\+\_\+expr\+\_\+id, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$case\+\_\+expr\+\_\+item\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classsp__rcontext_adfab07c17bbb25e06af5dcc86cd898fe}\label{classsp__rcontext_adfab07c17bbb25e06af5dcc86cd898fe}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries get\+\_\+case\+\_\+expr} (int case\+\_\+expr\+\_\+id) const
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a00874ff02fd0c458d4400e37a2b321bb}\label{classsp__rcontext_a00874ff02fd0c458d4400e37a2b321bb}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries get\+\_\+case\+\_\+expr\+\_\+addr} (int case\+\_\+expr\+\_\+id) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} $\ast$ \mbox{\hyperlink{classsp__rcontext_afbac36121d1584e48b72f37dba00b172}{create}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$root\+\_\+parsing\+\_\+ctx, \mbox{\hyperlink{classField}{Field}} $\ast$return\+\_\+value\+\_\+fld)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Query\+\_\+arena $\ast$ \mbox{\hyperlink{classsp__rcontext_a01627fcdc799ecada127641cb3afe497}{callers\+\_\+arena}}
+\item 
+bool \mbox{\hyperlink{classsp__rcontext_ad25037c2c9c6e01ec67c2b19f9cdd7b8}{end\+\_\+partial\+\_\+result\+\_\+set}}
+\item 
+\mbox{\Hypertarget{classsp__rcontext_a5a4d92f70877beec9eb109adc9ba662a}\label{classsp__rcontext_a5a4d92f70877beec9eb109adc9ba662a}} 
+\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$ \mbox{\hyperlink{classsp__rcontext_a5a4d92f70877beec9eb109adc9ba662a}{sp}}
+\begin{DoxyCompactList}\small\item\em The stored program for which this runtime context is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__rcontext_afbac36121d1584e48b72f37dba00b172}\label{classsp__rcontext_afbac36121d1584e48b72f37dba00b172}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!create@{create}}
+\index{create@{create}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} $\ast$ sp\+\_\+rcontext\+::create (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$}]{root\+\_\+parsing\+\_\+ctx,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{return\+\_\+value\+\_\+fld }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Construct and properly initialize a new \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} instance. The static create-\/function is needed because we need a way to return an error from the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle. \\
+\hline
+{\em root\+\_\+parsing\+\_\+ctx} & Top-\/level parsing context for this stored program. \\
+\hline
+{\em return\+\_\+value\+\_\+fld} & \mbox{\hyperlink{classField}{Field}} object to store the return value (for stored functions only).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valid \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} object or N\+U\+LL in case of O\+OM-\/error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__rcontext_a607327ed766edf71947a47db318dde7a}\label{classsp__rcontext_a607327ed766edf71947a47db318dde7a}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!exit\+\_\+handler@{exit\+\_\+handler}}
+\index{exit\+\_\+handler@{exit\+\_\+handler}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{exit\+\_\+handler()}{exit\_handler()}}
+{\footnotesize\ttfamily void sp\+\_\+rcontext\+::exit\+\_\+handler (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$}]{target\+\_\+scope }\end{DoxyParamCaption})}
+
+Handle return from S\+QL-\/handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle. \\
+\hline
+{\em target\+\_\+scope} & The B\+E\+G\+IN..E\+ND block, containing the target (next) instruction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__rcontext_a068e44a2bf0cba4fdea5c139e6dc3d2a}\label{classsp__rcontext_a068e44a2bf0cba4fdea5c139e6dc3d2a}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip@{get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip}}
+\index{get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip@{get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip()}{get\_last\_handler\_continue\_ip()}}
+{\footnotesize\ttfamily uint sp\+\_\+rcontext\+::get\+\_\+last\+\_\+handler\+\_\+continue\+\_\+ip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the continue instruction pointer of the last activated C\+O\+N\+T\+I\+N\+UE handler. This function must not be called for the E\+X\+IT handlers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsp__rcontext_a564fc66ae415afd64711d35d2c2c2009}\label{classsp__rcontext_a564fc66ae415afd64711d35d2c2c2009}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!handle\+\_\+sql\+\_\+condition@{handle\+\_\+sql\+\_\+condition}}
+\index{handle\+\_\+sql\+\_\+condition@{handle\+\_\+sql\+\_\+condition}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{handle\+\_\+sql\+\_\+condition()}{handle\_sql\_condition()}}
+{\footnotesize\ttfamily bool sp\+\_\+rcontext\+::handle\+\_\+sql\+\_\+condition (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{ip,  }\item[{const \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $\ast$}]{cur\+\_\+spi }\end{DoxyParamCaption})}
+
+Handle current S\+QL condition (if any).
+
+This is the public-\/interface function to handle S\+QL conditions in stored routines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle. \\
+\hline
+{\em ip\mbox{[}out\mbox{]}} & Instruction pointer to the first handler instruction. \\
+\hline
+{\em cur\+\_\+spi} & Current SP instruction.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if an S\+QL-\/handler has been activated. That means, all of the following conditions are satisfied\+:
+\begin{DoxyItemize}
+\item the SP-\/instruction raised S\+QL-\/condition(s),
+\item and there is an S\+QL-\/handler to process at least one of those S\+QL-\/conditions,
+\item and that S\+QL-\/handler has been activated. Note, that the return value has nothing to do with \char`\"{}error flag\char`\"{} semantics.
+\end{DoxyItemize}\\
+\hline
+{\em false} & otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classsp__rcontext_aa98f42267d6988a304267b554f71a860}\label{classsp__rcontext_aa98f42267d6988a304267b554f71a860}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!pop\+\_\+cursors@{pop\+\_\+cursors}}
+\index{pop\+\_\+cursors@{pop\+\_\+cursors}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{pop\+\_\+cursors()}{pop\_cursors()}}
+{\footnotesize\ttfamily void sp\+\_\+rcontext\+::pop\+\_\+cursors (\begin{DoxyParamCaption}\item[{uint}]{count }\end{DoxyParamCaption})}
+
+Pop and delete given number of \mbox{\hyperlink{classsp__cursor}{sp\+\_\+cursor}} instance from the cursor stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Number of cursors to pop \& delete. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__rcontext_a26ec647bb1d2520182d8b5d1ea9f60ad}\label{classsp__rcontext_a26ec647bb1d2520182d8b5d1ea9f60ad}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!pop\+\_\+handlers@{pop\+\_\+handlers}}
+\index{pop\+\_\+handlers@{pop\+\_\+handlers}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{pop\+\_\+handlers()}{pop\_handlers()}}
+{\footnotesize\ttfamily void sp\+\_\+rcontext\+::pop\+\_\+handlers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$}]{current\+\_\+scope }\end{DoxyParamCaption})}
+
+Pop and delete given number of sp\+\_\+handler\+\_\+entry instances from the handler call stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+scope} & The current B\+E\+G\+IN..E\+ND block. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsp__rcontext_ae8d09ba5618c7691077afef86da53de8}\label{classsp__rcontext_ae8d09ba5618c7691077afef86da53de8}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!push\+\_\+cursor@{push\+\_\+cursor}}
+\index{push\+\_\+cursor@{push\+\_\+cursor}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{push\+\_\+cursor()}{push\_cursor()}}
+{\footnotesize\ttfamily bool sp\+\_\+rcontext\+::push\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__instr__cpush}{sp\+\_\+instr\+\_\+cpush}} $\ast$}]{i }\end{DoxyParamCaption})}
+
+Create a new \mbox{\hyperlink{classsp__cursor}{sp\+\_\+cursor}} instance and push it to the cursor stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Cursor-\/push instruction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error flag. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classsp__rcontext_a59a9f37626871fa3325799c5c3cf07ed}\label{classsp__rcontext_a59a9f37626871fa3325799c5c3cf07ed}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!push\+\_\+handler@{push\+\_\+handler}}
+\index{push\+\_\+handler@{push\+\_\+handler}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{push\+\_\+handler()}{push\_handler()}}
+{\footnotesize\ttfamily bool sp\+\_\+rcontext\+::push\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$}]{handler,  }\item[{uint}]{first\+\_\+ip }\end{DoxyParamCaption})}
+
+Create a new sp\+\_\+handler\+\_\+entry instance and push it to the handler call stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & S\+QL-\/handler object. \\
+\hline
+{\em first\+\_\+ip} & First instruction pointer of the handler.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error flag. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classsp__rcontext_af28978212fa9fc23c56966eab09079c5}\label{classsp__rcontext_af28978212fa9fc23c56966eab09079c5}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!set\+\_\+case\+\_\+expr@{set\+\_\+case\+\_\+expr}}
+\index{set\+\_\+case\+\_\+expr@{set\+\_\+case\+\_\+expr}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{set\+\_\+case\+\_\+expr()}{set\_case\_expr()}}
+{\footnotesize\ttfamily bool sp\+\_\+rcontext\+::set\+\_\+case\+\_\+expr (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{int}]{case\+\_\+expr\+\_\+id,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{case\+\_\+expr\+\_\+item\+\_\+ptr }\end{DoxyParamCaption})}
+
+Set C\+A\+SE expression to the specified value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler. \\
+\hline
+{\em case\+\_\+expr\+\_\+id} & The C\+A\+SE expression identifier. \\
+\hline
+{\em case\+\_\+expr\+\_\+item} & The C\+A\+SE expression value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error flag. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+The idea is to reuse \mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}} for the expression of the one C\+A\+SE statement. This optimization takes place when there is C\+A\+SE statement inside of a loop. So, in other words, we will use the same object on each iteration instead of creating a new one for each iteration.
+\end{DoxyNote}
+T\+O\+DO Hypothetically, a type of C\+A\+SE expression can be different for each iteration. For instance, this can happen if the expression contains a session variable (something like @V\+AR) and its type is changed from one iteration to another.
+
+In order to cope with this problem, we check type each time, when we use already created object. If the type does not match, we re-\/create \mbox{\hyperlink{classItem}{Item}}. This also can (should?) be optimized. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsp__rcontext_a01627fcdc799ecada127641cb3afe497}\label{classsp__rcontext_a01627fcdc799ecada127641cb3afe497}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!callers\+\_\+arena@{callers\+\_\+arena}}
+\index{callers\+\_\+arena@{callers\+\_\+arena}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{callers\+\_\+arena}{callers\_arena}}
+{\footnotesize\ttfamily Query\+\_\+arena$\ast$ sp\+\_\+rcontext\+::callers\+\_\+arena}
+
+Arena used to (re) allocate items on. E.\+g. reallocate I\+N\+O\+U\+T/\+O\+UT SP-\/variables when they don\textquotesingle{}t fit into prealloced items. This is common situation with String items. It is used mainly in sp\+\_\+eval\+\_\+func\+\_\+item(). \mbox{\Hypertarget{classsp__rcontext_ad25037c2c9c6e01ec67c2b19f9cdd7b8}\label{classsp__rcontext_ad25037c2c9c6e01ec67c2b19f9cdd7b8}} 
+\index{sp\+\_\+rcontext@{sp\+\_\+rcontext}!end\+\_\+partial\+\_\+result\+\_\+set@{end\+\_\+partial\+\_\+result\+\_\+set}}
+\index{end\+\_\+partial\+\_\+result\+\_\+set@{end\+\_\+partial\+\_\+result\+\_\+set}!sp\+\_\+rcontext@{sp\+\_\+rcontext}}
+\subsubsection{\texorpdfstring{end\+\_\+partial\+\_\+result\+\_\+set}{end\_partial\_result\_set}}
+{\footnotesize\ttfamily bool sp\+\_\+rcontext\+::end\+\_\+partial\+\_\+result\+\_\+set}
+
+Flag to end an open result set before start executing an S\+QL-\/handler (if one is found). Otherwise the client will hang due to a violation of the client/server protocol. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+rcontext.\+h\item 
+sp\+\_\+rcontext.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{structGtid}{}\section{Gtid Struct Reference}
+\label{structGtid}\index{Gtid@{Gtid}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGtid_a459c77dd4b1918fa7760fa5b0588ce79}\label{structGtid_a459c77dd4b1918fa7760fa5b0588ce79}} 
+void \mbox{\hyperlink{structGtid_a459c77dd4b1918fa7760fa5b0588ce79}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Set both components to 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGtid_a4468f835ae0004ae796314ee5cded0bd}\label{structGtid_a4468f835ae0004ae796314ee5cded0bd}} 
+void \mbox{\hyperlink{structGtid_a4468f835ae0004ae796314ee5cded0bd}{set}} (rpl\+\_\+sidno sidno\+\_\+arg, rpl\+\_\+gno gno\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em Set both components to the given, positive values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structGtid_a36b73175b879388152c746453ee2b87a}{is\+\_\+empty}} () const
+\item 
+int \mbox{\hyperlink{structGtid_afd7d2616cf9263cd09d25b6cd645ea4d}{to\+\_\+string}} (const rpl\+\_\+sid \&sid, char $\ast$buf) const
+\item 
+int \mbox{\hyperlink{structGtid_a21681faf43d58e6ef4e12323df2c0779}{to\+\_\+string}} (const \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, char $\ast$buf, bool need\+\_\+lock=false) const
+\item 
+\mbox{\Hypertarget{structGtid_ade3afc807d50c3c11d78a7bedb1e2b3e}\label{structGtid_ade3afc807d50c3c11d78a7bedb1e2b3e}} 
+bool \mbox{\hyperlink{structGtid_ade3afc807d50c3c11d78a7bedb1e2b3e}{equals}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&other) const
+\begin{DoxyCompactList}\small\item\em Returns true if this \mbox{\hyperlink{structGtid}{Gtid}} has the same sid and gno as \textquotesingle{}other\textquotesingle{}. \end{DoxyCompactList}\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{structGtid_aac7d6a154262abb97af871d7f31aad42}{parse}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structGtid_a19c1675f7c6ff9a21bdfdd0fd3a2f0f5}\label{structGtid_a19c1675f7c6ff9a21bdfdd0fd3a2f0f5}} 
+void \mbox{\hyperlink{structGtid_a19c1675f7c6ff9a21bdfdd0fd3a2f0f5}{print}} (const \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map) const
+\begin{DoxyCompactList}\small\item\em Debug only\+: print this \mbox{\hyperlink{structGtid}{Gtid}} to stdout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGtid_a3ab329d122f4a333d20ee097156b5787}\label{structGtid_a3ab329d122f4a333d20ee097156b5787}} 
+void \mbox{\hyperlink{structGtid_a3ab329d122f4a333d20ee097156b5787}{dbug\+\_\+print}} (const \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, const char $\ast$text=\char`\"{}\char`\"{}, bool need\+\_\+lock=false) const
+\begin{DoxyCompactList}\small\item\em Print this \mbox{\hyperlink{structGtid}{Gtid}} to the trace file if debug is enabled; no-\/op otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structGtid_afaec04645d158bc4ad9eaa2199cc6951}{is\+\_\+valid}} (const char $\ast$text)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGtid_aad81c0dd59ff02412e507d254c6843d2}\label{structGtid_aad81c0dd59ff02412e507d254c6843d2}} 
+rpl\+\_\+sidno \mbox{\hyperlink{structGtid_aad81c0dd59ff02412e507d254c6843d2}{sidno}}
+\begin{DoxyCompactList}\small\item\em S\+I\+D\+NO of this \mbox{\hyperlink{structGtid}{Gtid}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGtid_a5e35a770a25f71eb749be34477bab48a}\label{structGtid_a5e35a770a25f71eb749be34477bab48a}} 
+rpl\+\_\+gno \mbox{\hyperlink{structGtid_a5e35a770a25f71eb749be34477bab48a}{gno}}
+\begin{DoxyCompactList}\small\item\em G\+NO of this \mbox{\hyperlink{structGtid}{Gtid}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{structGtid_a16358c79f9923fb0a0aaab4d71e86fc0}{M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}} = binary\+\_\+log\+::\+Uuid\+::\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH + 1 + M\+A\+X\+\_\+\+G\+N\+O\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+O\+DO\+: Move this structure to libbinlogevents/include/control\+\_\+events.\+h when we start using C++11. Holds information about a G\+T\+ID\+: the sidno and the gno.
+
+This is a P\+OD. It has to be a P\+OD because it is part of \mbox{\hyperlink{structGtid__specification}{Gtid\+\_\+specification}}, which has to be a P\+OD because it is used in T\+H\+D\+::variables. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structGtid_a36b73175b879388152c746453ee2b87a}\label{structGtid_a36b73175b879388152c746453ee2b87a}} 
+\index{Gtid@{Gtid}!is\+\_\+empty@{is\+\_\+empty}}
+\index{is\+\_\+empty@{is\+\_\+empty}!Gtid@{Gtid}}
+\subsubsection{\texorpdfstring{is\+\_\+empty()}{is\_empty()}}
+{\footnotesize\ttfamily bool Gtid\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if sidno is zero (and assert that gno is zero too in this case). \mbox{\Hypertarget{structGtid_afaec04645d158bc4ad9eaa2199cc6951}\label{structGtid_afaec04645d158bc4ad9eaa2199cc6951}} 
+\index{Gtid@{Gtid}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!Gtid@{Gtid}}
+\subsubsection{\texorpdfstring{is\+\_\+valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool Gtid\+::is\+\_\+valid (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Return true if \mbox{\hyperlink{structGtid_aac7d6a154262abb97af871d7f31aad42}{parse()}} would succeed, but don\textquotesingle{}t store the result anywhere. \mbox{\Hypertarget{structGtid_aac7d6a154262abb97af871d7f31aad42}\label{structGtid_aac7d6a154262abb97af871d7f31aad42}} 
+\index{Gtid@{Gtid}!parse@{parse}}
+\index{parse@{parse}!Gtid@{Gtid}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{sid\+\_\+map,  }\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
+
+Parses the given string and stores in this \mbox{\hyperlink{structGtid}{Gtid}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structGtid_afd7d2616cf9263cd09d25b6cd645ea4d}\label{structGtid_afd7d2616cf9263cd09d25b6cd645ea4d}} 
+\index{Gtid@{Gtid}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Gtid@{Gtid}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Gtid\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{const rpl\+\_\+sid \&}]{sid,  }\item[{char $\ast$}]{buf }\end{DoxyParamCaption}) const}
+
+Convert a \mbox{\hyperlink{structGtid}{Gtid}} to a string. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em sid} & the sid to use. This overrides the sidno of this \mbox{\hyperlink{structGtid}{Gtid}}. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & Buffer to store the \mbox{\hyperlink{structGtid}{Gtid}} in (normally M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH+1 bytes long). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of the string, not counting \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structGtid_a21681faf43d58e6ef4e12323df2c0779}\label{structGtid_a21681faf43d58e6ef4e12323df2c0779}} 
+\index{Gtid@{Gtid}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Gtid@{Gtid}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Gtid\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{sid\+\_\+map,  }\item[{char $\ast$}]{buf,  }\item[{bool}]{need\+\_\+lock = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Convert this \mbox{\hyperlink{structGtid}{Gtid}} to a string. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em sid\+\_\+map} & sid\+\_\+map to use when converting sidno to a S\+ID. \\
+\hline
+\mbox{\texttt{ out}}  & {\em buf} & Buffer to store the \mbox{\hyperlink{structGtid}{Gtid}} in (normally M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH+1 bytes long). \\
+\hline
+ & {\em need\+\_\+lock} & If true, the function will acquire sid\+\_\+map-\/$>$sid\+\_\+lock; otherwise it will assert that the lock is held. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of the string, not counting \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structGtid_a16358c79f9923fb0a0aaab4d71e86fc0}\label{structGtid_a16358c79f9923fb0a0aaab4d71e86fc0}} 
+\index{Gtid@{Gtid}!M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}!Gtid@{Gtid}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH}{MAX\_TEXT\_LENGTH}}
+{\footnotesize\ttfamily const int Gtid\+::\+M\+A\+X\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH = binary\+\_\+log\+::\+Uuid\+::\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH + 1 + M\+A\+X\+\_\+\+G\+N\+O\+\_\+\+T\+E\+X\+T\+\_\+\+L\+E\+N\+G\+TH\hspace{0.3cm}{\ttfamily [static]}}
+
+The maximal length of the textual representation of a S\+ID, not including the terminating \textquotesingle{}\textbackslash{}0\textquotesingle{}. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\item 
+rpl\+\_\+gtid\+\_\+misc.\+cc\end{DoxyCompactItemize}

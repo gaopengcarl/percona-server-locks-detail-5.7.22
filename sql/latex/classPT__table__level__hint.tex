@@ -1,0 +1,53 @@
+\hypertarget{classPT__table__level__hint}{}\section{P\+T\+\_\+table\+\_\+level\+\_\+hint Class Reference}
+\label{classPT__table__level__hint}\index{P\+T\+\_\+table\+\_\+level\+\_\+hint@{P\+T\+\_\+table\+\_\+level\+\_\+hint}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+hints.\+h$>$}
+
+Inheritance diagram for P\+T\+\_\+table\+\_\+level\+\_\+hint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__table__level__hint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__table__level__hint_a19ba4566203b614faea5e87f5e1f760c}\label{classPT__table__level__hint_a19ba4566203b614faea5e87f5e1f760c}} 
+{\bfseries P\+T\+\_\+table\+\_\+level\+\_\+hint} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG qb\+\_\+name\+\_\+arg, const \mbox{\hyperlink{classMem__root__array__YY}{Hint\+\_\+param\+\_\+table\+\_\+list}} \&table\+\_\+list\+\_\+arg, bool switch\+\_\+state\+\_\+arg, opt\+\_\+hints\+\_\+enum hint\+\_\+type\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPT__table__level__hint_ab7601fb1f9159525f67e3dcf14c36e9a}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Parse tree hint object for table level hints. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__table__level__hint_ab7601fb1f9159525f67e3dcf14c36e9a}\label{classPT__table__level__hint_ab7601fb1f9159525f67e3dcf14c36e9a}} 
+\index{P\+T\+\_\+table\+\_\+level\+\_\+hint@{P\+T\+\_\+table\+\_\+level\+\_\+hint}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+table\+\_\+level\+\_\+hint@{P\+T\+\_\+table\+\_\+level\+\_\+hint}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily bool P\+T\+\_\+table\+\_\+level\+\_\+hint\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function handles table level hint. It also creates table hint object (\mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}}) if it does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Pointer to \mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of error, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+hints.\+h\item 
+parse\+\_\+tree\+\_\+hints.\+cc\end{DoxyCompactItemize}

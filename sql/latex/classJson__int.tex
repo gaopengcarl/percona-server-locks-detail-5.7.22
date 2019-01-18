@@ -1,0 +1,95 @@
+\hypertarget{classJson__int}{}\section{Json\+\_\+int Class Reference}
+\label{classJson__int}\index{Json\+\_\+int@{Json\+\_\+int}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+int\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classJson__int}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJson__int_a3bff2d56d397006c19bffbfab2a0354c}\label{classJson__int_a3bff2d56d397006c19bffbfab2a0354c}} 
+{\bfseries Json\+\_\+int} (longlong \mbox{\hyperlink{classJson__int_af5e8bf4dc1c2ba6846262e607333dbee}{value}})
+\item 
+\mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__int_a7990797f02dcd489c4fac63b0d16862e}{json\+\_\+type}} () const
+\item 
+longlong \mbox{\hyperlink{classJson__int_af5e8bf4dc1c2ba6846262e607333dbee}{value}} () const
+\item 
+bool \mbox{\hyperlink{classJson__int_a1a25d3b6bce0585b2c249d3b83fb6b85}{is\+\_\+16bit}} () const
+\item 
+bool \mbox{\hyperlink{classJson__int_aecb590d2898e44fcbc9c331028739abf}{is\+\_\+32bit}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__int_abfcff916299a0bd41dd18ed1596d0444}{clone}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a My\+S\+QL integer (64 bits signed) J\+S\+ON scalar (an extension of the E\+C\+MA number value), type J\+\_\+\+I\+NT. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__int_abfcff916299a0bd41dd18ed1596d0444}\label{classJson__int_abfcff916299a0bd41dd18ed1596d0444}} 
+\index{Json\+\_\+int@{Json\+\_\+int}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+int@{Json\+\_\+int}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ Json\+\_\+int\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__int_a1a25d3b6bce0585b2c249d3b83fb6b85}\label{classJson__int_a1a25d3b6bce0585b2c249d3b83fb6b85}} 
+\index{Json\+\_\+int@{Json\+\_\+int}!is\+\_\+16bit@{is\+\_\+16bit}}
+\index{is\+\_\+16bit@{is\+\_\+16bit}!Json\+\_\+int@{Json\+\_\+int}}
+\subsubsection{\texorpdfstring{is\+\_\+16bit()}{is\_16bit()}}
+{\footnotesize\ttfamily bool Json\+\_\+int\+::is\+\_\+16bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the number can be held by a 16 bit signed integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__int_aecb590d2898e44fcbc9c331028739abf}\label{classJson__int_aecb590d2898e44fcbc9c331028739abf}} 
+\index{Json\+\_\+int@{Json\+\_\+int}!is\+\_\+32bit@{is\+\_\+32bit}}
+\index{is\+\_\+32bit@{is\+\_\+32bit}!Json\+\_\+int@{Json\+\_\+int}}
+\subsubsection{\texorpdfstring{is\+\_\+32bit()}{is\_32bit()}}
+{\footnotesize\ttfamily bool Json\+\_\+int\+::is\+\_\+32bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the number can be held by a 32 bit signed integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__int_a7990797f02dcd489c4fac63b0d16862e}\label{classJson__int_a7990797f02dcd489c4fac63b0d16862e}} 
+\index{Json\+\_\+int@{Json\+\_\+int}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+int@{Json\+\_\+int}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} Json\+\_\+int\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__int_af5e8bf4dc1c2ba6846262e607333dbee}\label{classJson__int_af5e8bf4dc1c2ba6846262e607333dbee}} 
+\index{Json\+\_\+int@{Json\+\_\+int}!value@{value}}
+\index{value@{value}!Json\+\_\+int@{Json\+\_\+int}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily longlong Json\+\_\+int\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the signed int held by this object. \begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\end{DoxyCompactItemize}

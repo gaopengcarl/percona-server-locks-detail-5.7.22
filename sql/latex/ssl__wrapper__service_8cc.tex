@@ -1,0 +1,240 @@
+\hypertarget{ssl__wrapper__service_8cc}{}\section{ssl\+\_\+wrapper\+\_\+service.\+cc File Reference}
+\label{ssl__wrapper__service_8cc}\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+{\ttfamily \#include $<$my\+\_\+global.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mysql/service\+\_\+rules\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openssl/ssl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/service\+\_\+ssl\+\_\+wrapper.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a3d8044e4d56e28f745e9c3b63757047a}\label{ssl__wrapper__service_8cc_a3d8044e4d56e28f745e9c3b63757047a}} 
+int {\bfseries ssl\+\_\+wrappe\+\_\+service\+::\+M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE} ((visibility(\char`\"{}default\char`\"{}))) dummy\+\_\+function\+\_\+to\+\_\+ensure\+\_\+we\+\_\+are\+\_\+linked\+\_\+into\+\_\+the\+\_\+server()
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_a497af814a66ff6559c1974d2ee1d5619}{ssl\+\_\+wrapper\+\_\+version}} (Vio $\ast$vio, char $\ast$buffer, const size\+\_\+t buffer\+\_\+size)
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_a4370cb3b3f1503e2a13c7e7e91107d09}{ssl\+\_\+wrapper\+\_\+cipher}} (Vio $\ast$vio, char $\ast$buffer, const size\+\_\+t buffer\+\_\+size)
+\item 
+long \mbox{\hyperlink{ssl__wrapper__service_8cc_a8c9e0bfb9ad7a367696195112858c330}{ssl\+\_\+wrapper\+\_\+cipher\+\_\+list}} (Vio $\ast$vio, const char $\ast$$\ast$clipher\+\_\+list, const size\+\_\+t maximun\+\_\+num\+\_\+of\+\_\+elements)
+\item 
+long \mbox{\hyperlink{ssl__wrapper__service_8cc_a6212227dcdfb7ee0b221f902b2c04b9f}{ssl\+\_\+wrapper\+\_\+verify\+\_\+depth}} (Vio $\ast$vio)
+\item 
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a7af570f96326cdd13d1a8c36f4b7401e}\label{ssl__wrapper__service_8cc_a7af570f96326cdd13d1a8c36f4b7401e}} 
+long {\bfseries ssl\+\_\+wrapper\+\_\+verify\+\_\+mode} (Vio $\ast$vio)
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_ad89244992ee4e0b15027a6f076365b8f}{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer}} (Vio $\ast$vio, char $\ast$issuer, const size\+\_\+t issuer\+\_\+size)
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_afa77a5f1d228457d980643c2cbd49288}{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject}} (Vio $\ast$vio, char $\ast$subject, const size\+\_\+t subject\+\_\+size)
+\item 
+long \mbox{\hyperlink{ssl__wrapper__service_8cc_a995cc1098d3ae3e4093c2dcb83b0742c}{ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert}} (Vio $\ast$vio)
+\item 
+long \mbox{\hyperlink{ssl__wrapper__service_8cc_ac897b70e0120426ec1525f0c296140ec}{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth}} (struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$vio\+\_\+ssl)
+\item 
+long \mbox{\hyperlink{ssl__wrapper__service_8cc_ac26150598d182cc469980beb2622bf81}{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode}} (struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$vio\+\_\+ssl)
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_ad1e0b2c99e69c37de6b4d2f12ce04ff5}{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after}} (struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$vio\+\_\+ssl, char $\ast$no\+\_\+after, const size\+\_\+t no\+\_\+after\+\_\+size)
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_a450964950fe4100058dad8bf1470aa33}{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before}} (struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$vio\+\_\+ssl, char $\ast$no\+\_\+before, const size\+\_\+t no\+\_\+before\+\_\+size)
+\item 
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a5da1ac675de2400ca51657ebaddec6d5}\label{ssl__wrapper__service_8cc_a5da1ac675de2400ca51657ebaddec6d5}} 
+long {\bfseries ssl\+\_\+wrapper\+\_\+sess\+\_\+accept} (struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$vio\+\_\+ssl)
+\item 
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a8f99f736d0ca7b03945f8cd208159ed7}\label{ssl__wrapper__service_8cc_a8f99f736d0ca7b03945f8cd208159ed7}} 
+long {\bfseries ssl\+\_\+wrapper\+\_\+sess\+\_\+accept\+\_\+good} (struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$vio\+\_\+ssl)
+\item 
+void \mbox{\hyperlink{ssl__wrapper__service_8cc_a8d2ee31bc6d0b0bb7ddf8508c65d41e9}{ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ssl functions wrapper service implementation. For more information please check the function comments. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a4370cb3b3f1503e2a13c7e7e91107d09}\label{ssl__wrapper__service_8cc_a4370cb3b3f1503e2a13c7e7e91107d09}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+cipher@{ssl\+\_\+wrapper\+\_\+cipher}}
+\index{ssl\+\_\+wrapper\+\_\+cipher@{ssl\+\_\+wrapper\+\_\+cipher}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+cipher()}{ssl\_wrapper\_cipher()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+cipher (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio,  }\item[{char $\ast$}]{buffer,  }\item[{const size\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+Return cipher used in current connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor \\
+\hline
+{\em buffer} & Character buffer in which the cipher name is going to be placed \\
+\hline
+{\em buffer\+\_\+size} & Size of the character buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a8c9e0bfb9ad7a367696195112858c330}\label{ssl__wrapper__service_8cc_a8c9e0bfb9ad7a367696195112858c330}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+cipher\+\_\+list@{ssl\+\_\+wrapper\+\_\+cipher\+\_\+list}}
+\index{ssl\+\_\+wrapper\+\_\+cipher\+\_\+list@{ssl\+\_\+wrapper\+\_\+cipher\+\_\+list}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+cipher\+\_\+list()}{ssl\_wrapper\_cipher\_list()}}
+{\footnotesize\ttfamily long ssl\+\_\+wrapper\+\_\+cipher\+\_\+list (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio,  }\item[{const char $\ast$$\ast$}]{clipher\+\_\+list,  }\item[{const size\+\_\+t}]{maximun\+\_\+num\+\_\+of\+\_\+elements }\end{DoxyParamCaption})}
+
+Return cipher list that can be used for S\+SL
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor \\
+\hline
+{\em clipher\+\_\+list} & Pointer to an array of c-\/strings \\
+\hline
+{\em maximun\+\_\+num\+\_\+of\+\_\+elements} & Size of the pointer array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_ad1e0b2c99e69c37de6b4d2f12ce04ff5}\label{ssl__wrapper__service_8cc_ad1e0b2c99e69c37de6b4d2f12ce04ff5}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after}}
+\index{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after()}{ssl\_wrapper\_ctx\_server\_not\_after()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+after (\begin{DoxyParamCaption}\item[{struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$}]{vio\+\_\+ssl,  }\item[{char $\ast$}]{no\+\_\+after,  }\item[{const size\+\_\+t}]{no\+\_\+after\+\_\+size }\end{DoxyParamCaption})}
+
+Return the last day the server certificate is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio\+\_\+ssl} & V\+IO S\+SL contex descriptor \\
+\hline
+{\em no\+\_\+after} & Character buffer for to be filed with the date in human readble format \\
+\hline
+{\em no\+\_\+after\+\_\+size} & Size of the character buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a450964950fe4100058dad8bf1470aa33}\label{ssl__wrapper__service_8cc_a450964950fe4100058dad8bf1470aa33}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before}}
+\index{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before()}{ssl\_wrapper\_ctx\_server\_not\_before()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+ctx\+\_\+server\+\_\+not\+\_\+before (\begin{DoxyParamCaption}\item[{struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$}]{vio\+\_\+ssl,  }\item[{char $\ast$}]{no\+\_\+before,  }\item[{const size\+\_\+t}]{no\+\_\+before\+\_\+size }\end{DoxyParamCaption})}
+
+Return the first day the server certificate is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio\+\_\+ssl} & V\+IO S\+SL contex descriptor \\
+\hline
+{\em no\+\_\+before} & Character buffer for to be filed with the date in human readble format \\
+\hline
+{\em no\+\_\+before\+\_\+size} & Size of the character buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_ac897b70e0120426ec1525f0c296140ec}\label{ssl__wrapper__service_8cc_ac897b70e0120426ec1525f0c296140ec}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth}}
+\index{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth()}{ssl\_wrapper\_ctx\_verify\_depth()}}
+{\footnotesize\ttfamily long ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+depth (\begin{DoxyParamCaption}\item[{struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$}]{vio\+\_\+ssl }\end{DoxyParamCaption})}
+
+Return the verification depth limit set in S\+SL context
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio\+\_\+ssl} & V\+IO S\+SL contex descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 default values should be used $>$0 verification depth 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_ac26150598d182cc469980beb2622bf81}\label{ssl__wrapper__service_8cc_ac26150598d182cc469980beb2622bf81}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode}}
+\index{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode@{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode()}{ssl\_wrapper\_ctx\_verify\_mode()}}
+{\footnotesize\ttfamily long ssl\+\_\+wrapper\+\_\+ctx\+\_\+verify\+\_\+mode (\begin{DoxyParamCaption}\item[{struct st\+\_\+\+Vio\+S\+S\+L\+Fd $\ast$}]{vio\+\_\+ssl }\end{DoxyParamCaption})}
+
+Return the verification mode set in S\+SL context
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio\+\_\+ssl} & V\+IO S\+SL contex descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 default values should be used $>$0 verification mode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_ad89244992ee4e0b15027a6f076365b8f}\label{ssl__wrapper__service_8cc_ad89244992ee4e0b15027a6f076365b8f}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer@{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer}}
+\index{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer@{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer()}{ssl\_wrapper\_get\_peer\_certificate\_issuer()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+issuer (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio,  }\item[{char $\ast$}]{issuer,  }\item[{const size\+\_\+t}]{issuer\+\_\+size }\end{DoxyParamCaption})}
+
+Return issuer name form peers ssl certificate
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor \\
+\hline
+{\em issuer} & Character buffer in which the issuer name is going to be placed \\
+\hline
+{\em issuer\+\_\+size} & Size of character buffer for the issuer name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_afa77a5f1d228457d980643c2cbd49288}\label{ssl__wrapper__service_8cc_afa77a5f1d228457d980643c2cbd49288}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject@{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject}}
+\index{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject@{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject()}{ssl\_wrapper\_get\_peer\_certificate\_subject()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+get\+\_\+peer\+\_\+certificate\+\_\+subject (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio,  }\item[{char $\ast$}]{subject,  }\item[{const size\+\_\+t}]{subject\+\_\+size }\end{DoxyParamCaption})}
+
+Return subject field form peers ssl certificate
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor \\
+\hline
+{\em subject} & Character buffer in which the subject is going to be placed \\
+\hline
+{\em subject\+\_\+size} & Size of character buffer for the subject \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a995cc1098d3ae3e4093c2dcb83b0742c}\label{ssl__wrapper__service_8cc_a995cc1098d3ae3e4093c2dcb83b0742c}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert@{ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert}}
+\index{ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert@{ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert()}{ssl\_wrapper\_get\_verify\_result\_and\_cert()}}
+{\footnotesize\ttfamily long ssl\+\_\+wrapper\+\_\+get\+\_\+verify\+\_\+result\+\_\+and\+\_\+cert (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio }\end{DoxyParamCaption})}
+
+Check is peer certificate is present and try to verify it
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X509\+\_\+\+V\+\_\+\+OK verification of peer certificate succeeded -\/1 verification failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a8d2ee31bc6d0b0bb7ddf8508c65d41e9}\label{ssl__wrapper__service_8cc_a8d2ee31bc6d0b0bb7ddf8508c65d41e9}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup@{ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup}}
+\index{ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup@{ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup()}{ssl\_wrapper\_thread\_cleanup()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+thread\+\_\+cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cleanup data allocated by S\+SL on thread stack \mbox{\Hypertarget{ssl__wrapper__service_8cc_a6212227dcdfb7ee0b221f902b2c04b9f}\label{ssl__wrapper__service_8cc_a6212227dcdfb7ee0b221f902b2c04b9f}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+verify\+\_\+depth@{ssl\+\_\+wrapper\+\_\+verify\+\_\+depth}}
+\index{ssl\+\_\+wrapper\+\_\+verify\+\_\+depth@{ssl\+\_\+wrapper\+\_\+verify\+\_\+depth}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+verify\+\_\+depth()}{ssl\_wrapper\_verify\_depth()}}
+{\footnotesize\ttfamily long ssl\+\_\+wrapper\+\_\+verify\+\_\+depth (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio }\end{DoxyParamCaption})}
+
+Return the verification depth limit set in S\+SL
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 default values should be used $>$0 verification depth 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ssl__wrapper__service_8cc_a497af814a66ff6559c1974d2ee1d5619}\label{ssl__wrapper__service_8cc_a497af814a66ff6559c1974d2ee1d5619}} 
+\index{ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}!ssl\+\_\+wrapper\+\_\+version@{ssl\+\_\+wrapper\+\_\+version}}
+\index{ssl\+\_\+wrapper\+\_\+version@{ssl\+\_\+wrapper\+\_\+version}!ssl\+\_\+wrapper\+\_\+service.\+cc@{ssl\+\_\+wrapper\+\_\+service.\+cc}}
+\subsubsection{\texorpdfstring{ssl\+\_\+wrapper\+\_\+version()}{ssl\_wrapper\_version()}}
+{\footnotesize\ttfamily void ssl\+\_\+wrapper\+\_\+version (\begin{DoxyParamCaption}\item[{Vio $\ast$}]{vio,  }\item[{char $\ast$}]{buffer,  }\item[{const size\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+Return version of S\+SL used in current connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em vio} & V\+IO connection descriptor \\
+\hline
+{\em buffer} & Character buffer in which the version is going to be placed \\
+\hline
+{\em buffer\+\_\+size} & Size of the character buffer \\
+\hline
+\end{DoxyParams}

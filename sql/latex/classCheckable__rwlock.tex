@@ -1,0 +1,75 @@
+\hypertarget{classCheckable__rwlock}{}\section{Checkable\+\_\+rwlock Class Reference}
+\label{classCheckable__rwlock}\index{Checkable\+\_\+rwlock@{Checkable\+\_\+rwlock}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCheckable__rwlock_acd95df77c30e253460b37564dbc62438}\label{classCheckable__rwlock_acd95df77c30e253460b37564dbc62438}} 
+\mbox{\hyperlink{classCheckable__rwlock_acd95df77c30e253460b37564dbc62438}{Checkable\+\_\+rwlock}} ()
+\begin{DoxyCompactList}\small\item\em Initialize this \mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a723b97572b532987ba8e6a0b8c7a1ecf}\label{classCheckable__rwlock_a723b97572b532987ba8e6a0b8c7a1ecf}} 
+\mbox{\hyperlink{classCheckable__rwlock_a723b97572b532987ba8e6a0b8c7a1ecf}{$\sim$\+Checkable\+\_\+rwlock}} ()
+\begin{DoxyCompactList}\small\item\em Destroy this Checkable\+\_\+lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a4ad513078fb56a8124851230698302de}\label{classCheckable__rwlock_a4ad513078fb56a8124851230698302de}} 
+void \mbox{\hyperlink{classCheckable__rwlock_a4ad513078fb56a8124851230698302de}{rdlock}} ()
+\begin{DoxyCompactList}\small\item\em Acquire the read lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a4bd09795d0037c26253c97fdc9d7747b}\label{classCheckable__rwlock_a4bd09795d0037c26253c97fdc9d7747b}} 
+void \mbox{\hyperlink{classCheckable__rwlock_a4bd09795d0037c26253c97fdc9d7747b}{wrlock}} ()
+\begin{DoxyCompactList}\small\item\em Acquire the write lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_ad2eb6c44afcc5d29561c39312764235b}\label{classCheckable__rwlock_ad2eb6c44afcc5d29561c39312764235b}} 
+void \mbox{\hyperlink{classCheckable__rwlock_ad2eb6c44afcc5d29561c39312764235b}{unlock}} ()
+\begin{DoxyCompactList}\small\item\em Release the lock (whether it is a write or read lock). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckable__rwlock_ae0c50e01a86f053d4bc6f6a3d12fa8d6}{is\+\_\+wrlock}} ()
+\item 
+\mbox{\Hypertarget{classCheckable__rwlock_ab1aad868b6bf06731bd2b11cee4c93f8}\label{classCheckable__rwlock_ab1aad868b6bf06731bd2b11cee4c93f8}} 
+void \mbox{\hyperlink{classCheckable__rwlock_ab1aad868b6bf06731bd2b11cee4c93f8}{assert\+\_\+some\+\_\+lock}} () const
+\begin{DoxyCompactList}\small\item\em Assert that some thread holds either the read or the write lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_acb0373759eb686e4d19a23512db6b02b}\label{classCheckable__rwlock_acb0373759eb686e4d19a23512db6b02b}} 
+void \mbox{\hyperlink{classCheckable__rwlock_acb0373759eb686e4d19a23512db6b02b}{assert\+\_\+some\+\_\+rdlock}} () const
+\begin{DoxyCompactList}\small\item\em Assert that some thread holds the read lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_aeb9400863a78a87ea77b111f04f6958b}\label{classCheckable__rwlock_aeb9400863a78a87ea77b111f04f6958b}} 
+void \mbox{\hyperlink{classCheckable__rwlock_aeb9400863a78a87ea77b111f04f6958b}{assert\+\_\+some\+\_\+wrlock}} () const
+\begin{DoxyCompactList}\small\item\em Assert that some thread holds the write lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a80e2658d8efb9c9b5fb8543f19e17ad5}\label{classCheckable__rwlock_a80e2658d8efb9c9b5fb8543f19e17ad5}} 
+void \mbox{\hyperlink{classCheckable__rwlock_a80e2658d8efb9c9b5fb8543f19e17ad5}{assert\+\_\+no\+\_\+wrlock}} () const
+\begin{DoxyCompactList}\small\item\em Assert that no thread holds the write lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a1f85df65b8c2f47d9698b562d7ce19c9}\label{classCheckable__rwlock_a1f85df65b8c2f47d9698b562d7ce19c9}} 
+void \mbox{\hyperlink{classCheckable__rwlock_a1f85df65b8c2f47d9698b562d7ce19c9}{assert\+\_\+no\+\_\+rdlock}} () const
+\begin{DoxyCompactList}\small\item\em Assert that no thread holds the read lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a69b6341d9d2a8f6c60e453db494a7cc2}\label{classCheckable__rwlock_a69b6341d9d2a8f6c60e453db494a7cc2}} 
+void \mbox{\hyperlink{classCheckable__rwlock_a69b6341d9d2a8f6c60e453db494a7cc2}{assert\+\_\+no\+\_\+lock}} () const
+\begin{DoxyCompactList}\small\item\em Assert that no thread holds read or write lock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCheckable__rwlock_a733b3b873c878b8f52c94b9303218acb}\label{classCheckable__rwlock_a733b3b873c878b8f52c94b9303218acb}} 
+bool \mbox{\hyperlink{classCheckable__rwlock_a733b3b873c878b8f52c94b9303218acb}{dbug\+\_\+trace}}
+\begin{DoxyCompactList}\small\item\em If enabled, print any lock/unlock operations to the D\+B\+UG trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This has the functionality of mysql\+\_\+rwlock\+\_\+t, with two differences\+:
+\begin{DoxyEnumerate}
+\item It has additional operations to check if the read and/or write lock is held at the moment.
+\item It is wrapped in an object-\/oriented interface.
+\end{DoxyEnumerate}
+
+Note that the assertions do not check whether {\itshape this} thread has taken the lock (that would be more complicated as it would require a dynamic data structure). Luckily, it is still likely that the assertions find bugs where a thread forgot to take a lock, because most of the time most locks are only used by one thread at a time.
+
+The assertions are no-\/ops when D\+B\+UG is off. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCheckable__rwlock_ae0c50e01a86f053d4bc6f6a3d12fa8d6}\label{classCheckable__rwlock_ae0c50e01a86f053d4bc6f6a3d12fa8d6}} 
+\index{Checkable\+\_\+rwlock@{Checkable\+\_\+rwlock}!is\+\_\+wrlock@{is\+\_\+wrlock}}
+\index{is\+\_\+wrlock@{is\+\_\+wrlock}!Checkable\+\_\+rwlock@{Checkable\+\_\+rwlock}}
+\subsubsection{\texorpdfstring{is\+\_\+wrlock()}{is\_wrlock()}}
+{\footnotesize\ttfamily bool Checkable\+\_\+rwlock\+::is\+\_\+wrlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the write lock is held. Must only be called by threads that hold a lock. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{structst__order}{}\section{st\+\_\+order Struct Reference}
+\label{structst__order}\index{st\+\_\+order@{st\+\_\+order}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+Inheritance diagram for st\+\_\+order\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structst__order}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__order_a9d8ca5fd81a20156976fa798cec56739}\label{structst__order_a9d8ca5fd81a20156976fa798cec56739}} 
+enum {\bfseries enum\+\_\+order} \{ {\bfseries O\+R\+D\+E\+R\+\_\+\+N\+O\+T\+\_\+\+R\+E\+L\+E\+V\+A\+NT}, 
+{\bfseries O\+R\+D\+E\+R\+\_\+\+A\+SC}, 
+{\bfseries O\+R\+D\+E\+R\+\_\+\+D\+E\+SC}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__order_ad8b2e0109e653a9efb8f868b132f66bc}\label{structst__order_ad8b2e0109e653a9efb8f868b132f66bc}} 
+struct \mbox{\hyperlink{structst__order}{st\+\_\+order}} $\ast$ {\bfseries next}
+\item 
+\mbox{\Hypertarget{structst__order_ada9cc60b0c7b0a0cb8d965fdd2df0f93}\label{structst__order_ada9cc60b0c7b0a0cb8d965fdd2df0f93}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries item}
+\item 
+\mbox{\Hypertarget{structst__order_a00919542d51a86cde8a9499e9c254199}\label{structst__order_a00919542d51a86cde8a9499e9c254199}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries item\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{structst__order_a505d2aa1fdd5f67c4478a9143c45df43}\label{structst__order_a505d2aa1fdd5f67c4478a9143c45df43}} 
+enum\+\_\+order {\bfseries direction}
+\item 
+\mbox{\Hypertarget{structst__order_ae448510c84106da650e29bb5ac08b782}\label{structst__order_ae448510c84106da650e29bb5ac08b782}} 
+bool {\bfseries in\+\_\+field\+\_\+list}
+\item 
+bool \mbox{\hyperlink{structst__order_a450b9735d629184c9f33b86d7a42749c}{used\+\_\+alias}}
+\item 
+\mbox{\Hypertarget{structst__order_a8f4f82f3f40ce325454f4675e0d4a9fb}\label{structst__order_a8f4f82f3f40ce325454f4675e0d4a9fb}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries field}
+\item 
+\mbox{\Hypertarget{structst__order_afb01353bd1d81d1acec61294cda5b897}\label{structst__order_afb01353bd1d81d1acec61294cda5b897}} 
+char $\ast$ {\bfseries buff}
+\item 
+\mbox{\Hypertarget{structst__order_a8fc00ac37086b80b791ff8032a059f5b}\label{structst__order_a8fc00ac37086b80b791ff8032a059f5b}} 
+table\+\_\+map {\bfseries used}
+\item 
+\mbox{\Hypertarget{structst__order_ad6a25d377061cc6f0505ebe6267f8318}\label{structst__order_ad6a25d377061cc6f0505ebe6267f8318}} 
+table\+\_\+map {\bfseries depend\+\_\+map}
+\item 
+\mbox{\Hypertarget{structst__order_a670413aeb61de516a1aa952f35b7179c}\label{structst__order_a670413aeb61de516a1aa952f35b7179c}} 
+bool {\bfseries is\+\_\+position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Order clause list element 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__order_a450b9735d629184c9f33b86d7a42749c}\label{structst__order_a450b9735d629184c9f33b86d7a42749c}} 
+\index{st\+\_\+order@{st\+\_\+order}!used\+\_\+alias@{used\+\_\+alias}}
+\index{used\+\_\+alias@{used\+\_\+alias}!st\+\_\+order@{st\+\_\+order}}
+\subsubsection{\texorpdfstring{used\+\_\+alias}{used\_alias}}
+{\footnotesize\ttfamily bool st\+\_\+order\+::used\+\_\+alias}
+
+Tells whether this O\+R\+D\+ER element was referenced with an alias or with an expression, in the query\+: S\+E\+L\+E\+CT a AS foo G\+R\+O\+UP BY foo\+: true. S\+E\+L\+E\+CT a AS foo G\+R\+O\+UP BY a\+: false. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\end{DoxyCompactItemize}

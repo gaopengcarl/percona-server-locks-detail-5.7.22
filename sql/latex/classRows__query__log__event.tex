@@ -1,0 +1,40 @@
+\hypertarget{classRows__query__log__event}{}\section{Rows\+\_\+query\+\_\+log\+\_\+event Class Reference}
+\label{classRows__query__log__event}\index{Rows\+\_\+query\+\_\+log\+\_\+event@{Rows\+\_\+query\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Rows\+\_\+query\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classRows__query__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRows__query__log__event_af0388151504fe64fca73cde3a52f5d5e}\label{classRows__query__log__event_af0388151504fe64fca73cde3a52f5d5e}} 
+{\bfseries Rows\+\_\+query\+\_\+log\+\_\+event} (T\+HD $\ast$thd\+\_\+arg, const char $\ast$query, size\+\_\+t query\+\_\+len)
+\item 
+\mbox{\Hypertarget{classRows__query__log__event_a775cdc2b14ccbec5affa9622eb8befc4}\label{classRows__query__log__event_a775cdc2b14ccbec5affa9622eb8befc4}} 
+int {\bfseries pack\+\_\+info} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$)
+\item 
+\mbox{\Hypertarget{classRows__query__log__event_ab2582c682b2b98e741471c8948edfddd}\label{classRows__query__log__event_ab2582c682b2b98e741471c8948edfddd}} 
+{\bfseries Rows\+\_\+query\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$descr\+\_\+event)
+\item 
+\mbox{\Hypertarget{classRows__query__log__event_a9bf05b008f37df63ea29ccc3418668ef}\label{classRows__query__log__event_a9bf05b008f37df63ea29ccc3418668ef}} 
+virtual bool {\bfseries write\+\_\+data\+\_\+body} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file)
+\item 
+\mbox{\Hypertarget{classRows__query__log__event_a998433321881ae797f4116e15010f61c}\label{classRows__query__log__event_a998433321881ae797f4116e15010f61c}} 
+virtual size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+It is used to record the original query for the rows events in R\+BR. It is the subclass of \mbox{\hyperlink{classIgnorable__log__event}{Ignorable\+\_\+log\+\_\+event}} and Rows\+\_\+query\+\_\+event 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

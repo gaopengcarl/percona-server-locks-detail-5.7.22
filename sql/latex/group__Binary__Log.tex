@@ -1,0 +1,1698 @@
+\hypertarget{group__Binary__Log}{}\section{Binary Log}
+\label{group__Binary__Log}\index{Binary Log@{Binary Log}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMutex__sentry}{Mutex\+\_\+sentry}}
+\item 
+class \mbox{\hyperlink{classThd__backup__and__restore}{Thd\+\_\+backup\+\_\+and\+\_\+restore}}
+\item 
+class \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}}
+\item 
+class \mbox{\hyperlink{classbinlog__stmt__cache__data}{binlog\+\_\+stmt\+\_\+cache\+\_\+data}}
+\item 
+class \mbox{\hyperlink{classbinlog__trx__cache__data}{binlog\+\_\+trx\+\_\+cache\+\_\+data}}
+\item 
+class \mbox{\hyperlink{classbinlog__cache__mngr}{binlog\+\_\+cache\+\_\+mngr}}
+\item 
+class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga5aab2d267393c9edd4b54a7c51f214b5}\label{group__Binary__Log_ga5aab2d267393c9edd4b54a7c51f214b5}} 
+\#define {\bfseries M\+Y\+\_\+\+O\+F\+F\+\_\+\+T\+\_\+\+U\+N\+D\+EF}~($\sim$(my\+\_\+off\+\_\+t)0\+U\+L)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gac8c072f1c240a3925f70fe927aa4b303}\label{group__Binary__Log_gac8c072f1c240a3925f70fe927aa4b303}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT}~50
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga5eb15a4577c16ac29e9e49bbb91be40a}\label{group__Binary__Log_ga5eb15a4577c16ac29e9e49bbb91be40a}} 
+\#define {\bfseries L\+I\+M\+I\+T\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+C\+O\+U\+NT}~50
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga731816acd3e6040814a1383f6eb2fbe9}\label{group__Binary__Log_ga731816acd3e6040814a1383f6eb2fbe9}} 
+\#define {\bfseries M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+A\+T\+T\+A\+C\+H\+\_\+\+T\+R\+I\+ES}~10
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga1a60f647184471fabea338e908978317}\label{group__Binary__Log_ga1a60f647184471fabea338e908978317}} 
+\#define {\bfseries L\+O\+G\+\_\+\+W\+A\+R\+N\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+F\+N\+\_\+\+E\+X\+T\+\_\+\+L\+E\+FT}~1000
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__Binary__Log_ga1e24693cd278a03ccca7bc269375ad16}{enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status}} \{ \newline
+{\bfseries G\+O\+T\+\_\+\+G\+T\+I\+DS}, 
+{\bfseries G\+O\+T\+\_\+\+P\+R\+E\+V\+I\+O\+U\+S\+\_\+\+G\+T\+I\+DS}, 
+{\bfseries N\+O\+\_\+\+G\+T\+I\+DS}, 
+{\bfseries E\+R\+R\+OR}, 
+\newline
+{\bfseries T\+R\+U\+N\+C\+A\+T\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga63c6fcd1b8e84116f7bcec46e7b25caa}{check\+\_\+binlog\+\_\+cache\+\_\+size}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga7a0a12298d22d080b68e55f324cd59bd}{check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga46468c405fde69f126c1bcb343c85c90}{binlog\+\_\+enabled}} ()
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gab41aafa88852810046fb7bcdaa4522ea}\label{group__Binary__Log_gab41aafa88852810046fb7bcdaa4522ea}} 
+enum xa\+\_\+option\+\_\+words {\bfseries get\+\_\+xa\+\_\+opt} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga0f5702b2bc03f66bc0a37c05ff1c84e8}{is\+\_\+loggable\+\_\+xa\+\_\+prepare}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga92b6d633ef75cd075586ba82ef3f5c9e}{do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback}} (T\+HD $\ast$thd, \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid, bool commit)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gab499865e2616dac2a882d7937a62d2aa}{binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback}} (T\+HD $\ast$thd, \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid, bool commit)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga24b696534d053643574f8ccf2bf5815f}\label{group__Binary__Log_ga24b696534d053643574f8ccf2bf5815f}} 
+int {\bfseries check\+\_\+binlog\+\_\+magic} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$log, const char $\ast$$\ast$errmsg)
+\item 
+File \mbox{\hyperlink{group__Binary__Log_ga79ed24f2c1a0645530426f4346470781}{open\+\_\+binlog\+\_\+file}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$log, const char $\ast$log\+\_\+file\+\_\+name, const char $\ast$$\ast$errmsg)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga47165cf06d3f64979787a85b6b43f3ac}{is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache}} (const T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga25239dc38f22eeef6e1aea243af6fd9a}{trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table}} (const T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaf43af0e4821421ea58375e7d4943c6c0}{stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table}} (\mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$ha\+\_\+list)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaad02774240e19d361a32bd35c9db60cb}{ending\+\_\+trans}} (T\+HD $\ast$thd, const bool all)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga80a5419e22b84b8ca2f3595cbf75fa67}{ending\+\_\+single\+\_\+stmt\+\_\+trans}} (T\+HD $\ast$thd, const bool all)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga1d647f955254c565dc33abf8caabdbab}{trans\+\_\+cannot\+\_\+safely\+\_\+rollback}} (const T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga07a668f531f059316c8f17dfcecfd465}{stmt\+\_\+cannot\+\_\+safely\+\_\+rollback}} (const T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga1f15ff584adebd77fd1bf4ebc88a68b6}{purge\+\_\+master\+\_\+logs}} (T\+HD $\ast$thd, const char $\ast$to\+\_\+log)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga38f8e56905c5205bb8cf6268cd203cb2}{purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date}} (T\+HD $\ast$thd, time\+\_\+t purge\+\_\+time)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga30ae6bafee492a4342e739018cfb6701}\label{group__Binary__Log_ga30ae6bafee492a4342e739018cfb6701}} 
+int {\bfseries query\+\_\+error\+\_\+code} (T\+HD $\ast$thd, bool not\+\_\+killed)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gaa811388f8ef0ea459d4adc40b65ff68e}\label{group__Binary__Log_gaa811388f8ef0ea459d4adc40b65ff68e}} 
+bool {\bfseries generate\+\_\+new\+\_\+log\+\_\+name} (char $\ast$new\+\_\+name, ulong $\ast$new\+\_\+ext, const char $\ast$log\+\_\+name, bool is\+\_\+binlog)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga53bb73d56883af0d06d664f19407eac1}{register\+\_\+binlog\+\_\+handler}} (T\+HD $\ast$thd, bool trx)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga3295f355d2560a45872262e211b0d83c}\label{group__Binary__Log_ga3295f355d2560a45872262e211b0d83c}} 
+const char $\ast$ {\bfseries get\+\_\+locked\+\_\+tables\+\_\+mode\+\_\+name} (enum\+\_\+locked\+\_\+tables\+\_\+mode locked\+\_\+tables\+\_\+mode)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga9f038ff4067e3f5be2b4dacc1e50ac72}{handle\+\_\+gtid\+\_\+consistency\+\_\+violation}} (T\+HD $\ast$thd, int error\+\_\+code)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga5af09c853f5dcd42347e8343a0ccbc2b}\label{group__Binary__Log_ga5af09c853f5dcd42347e8343a0ccbc2b}} 
+int {\bfseries binlog\+\_\+stmt\+\_\+cache\+\_\+data\+::finalize} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gac3a0b36dc3c576520f72b80298791400}\label{group__Binary__Log_gac3a0b36dc3c576520f72b80298791400}} 
+int {\bfseries binlog\+\_\+cache\+\_\+data\+::write\+\_\+event} (T\+HD $\ast$thd, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$event)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gacface590afa692fc84446cde6f104231}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group}} (T\+HD $\ast$first\+\_\+seen)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gabc6da7d051531ecf891a1fe631697f38}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+gtid}} (T\+HD $\ast$thd, \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$cache\+\_\+data, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga4e7e658ba27b48710cf57e3f8a8253e4}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::gtid\+\_\+end\+\_\+transaction}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga3367fa8c1daced18065f6b9dea5385fe}{binlog\+\_\+cache\+\_\+data\+::finalize}} (T\+HD $\ast$thd, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$end\+\_\+event)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga16bd8b16b092443137c073f18c7e11e4}{binlog\+\_\+cache\+\_\+data\+::finalize}} (T\+HD $\ast$thd, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$end\+\_\+event, \mbox{\hyperlink{classXID__STATE}{X\+I\+D\+\_\+\+S\+T\+A\+TE}} $\ast$xs)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}{binlog\+\_\+cache\+\_\+data\+::flush}} (T\+HD $\ast$thd, my\+\_\+off\+\_\+t $\ast$bytes, bool $\ast$wrote\+\_\+xid)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gae0d03425fee2a702a9b4dfac7b9de4b1}{binlog\+\_\+trx\+\_\+cache\+\_\+data\+::truncate}} (T\+HD $\ast$thd, bool all)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga20a543666e684f08da1cc093d5fa70ec}{Stage\+\_\+manager\+::\+Mutex\+\_\+queue\+::append}} (T\+HD $\ast$first)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gac617a778e2de5141ba0d25ca33ccac78}\label{group__Binary__Log_gac617a778e2de5141ba0d25ca33ccac78}} 
+std\+::pair$<$ bool, T\+HD $\ast$ $>$ {\bfseries Stage\+\_\+manager\+::\+Mutex\+\_\+queue\+::pop\+\_\+front} ()
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga71a83004e5774879856189f84d00094f}{Stage\+\_\+manager\+::enroll\+\_\+for}} (\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} stage, T\+HD $\ast$first, mysql\+\_\+mutex\+\_\+t $\ast$stage\+\_\+mutex)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{group__Binary__Log_ga254675ae9d8f6f0a7b48d7520ab16eea}{Stage\+\_\+manager\+::\+Mutex\+\_\+queue\+::fetch\+\_\+and\+\_\+empty}} ()
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaa85432b55b5d1d84283e83c4399ad524}{Stage\+\_\+manager\+::wait\+\_\+count\+\_\+or\+\_\+timeout}} (ulong count, ulong usec, \mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}} stage)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga8ad5d70cddeb0156c9b3cea377466858}\label{group__Binary__Log_ga8ad5d70cddeb0156c9b3cea377466858}} 
+void {\bfseries Stage\+\_\+manager\+::signal\+\_\+done} (T\+HD $\ast$queue)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gad3389586ace2de50ee7606d7acc98849}{Stage\+\_\+manager\+::clear\+\_\+preempt\+\_\+status}} (T\+HD $\ast$head)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga9590d29210bd03fce1b8f9effc7c2d2a}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::rollback}} (T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga527779639a0c96124be599b029657813}\label{group__Binary__Log_ga527779639a0c96124be599b029657813}} 
+{\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::\+M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG} (uint $\ast$sync\+\_\+period, enum cache\+\_\+type io\+\_\+cache\+\_\+type\+\_\+arg)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga2d8c70fe2db7fc6a5ffba006997e9064}\label{group__Binary__Log_ga2d8c70fe2db7fc6a5ffba006997e9064}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::cleanup} ()
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga38e419bec25df519f933787e11e0050e}\label{group__Binary__Log_ga38e419bec25df519f933787e11e0050e}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::init\+\_\+pthread\+\_\+objects} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{group__Binary__Log_gabcd5b380680e537bdec0f093a8f2e3d6}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::generate\+\_\+name}} (const char $\ast$log\+\_\+name, const char $\ast$suffix, char $\ast$buff)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gacc6f71042007e6a8cf40b5b4a95d562b}\label{group__Binary__Log_gacc6f71042007e6a8cf40b5b4a95d562b}} 
+bool {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+index\+\_\+file} (const char $\ast$index\+\_\+file\+\_\+name\+\_\+arg, const char $\ast$log\+\_\+name, bool need\+\_\+lock\+\_\+index)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gab8925923df0bf9cd07f7fcaf45f8db16}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set}} (char $\ast$binlog\+\_\+file\+\_\+name, const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set, \mbox{\hyperlink{structGtid}{Gtid}} $\ast$first\+\_\+gtid, const char $\ast$$\ast$errmsg)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gab52138e0e18c6bca2812e4051164db4f}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::init\+\_\+gtid\+\_\+sets}} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$lost\+\_\+groups, bool verify\+\_\+checksum, bool need\+\_\+lock, \mbox{\hyperlink{classTransaction__boundary__parser}{Transaction\+\_\+boundary\+\_\+parser}} $\ast$trx\+\_\+parser, \mbox{\hyperlink{structGtid}{Gtid}} $\ast$gtid\+\_\+partial\+\_\+trx, bool is\+\_\+server\+\_\+starting=false)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga8614d8fb3c4c2c255145d6cfd992e8d8}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+binlog}} (const char $\ast$log\+\_\+name, const char $\ast$new\+\_\+name, ulong max\+\_\+size, bool null\+\_\+created, bool need\+\_\+lock\+\_\+index, bool need\+\_\+sid\+\_\+lock, \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$extra\+\_\+description\+\_\+event)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gab57cd148796a62181465bb25db0e236c}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file}} (bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gaddc5340a448c8179ab35b3f2e0891984}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::add\+\_\+log\+\_\+to\+\_\+index}} (uchar $\ast$log\+\_\+file\+\_\+name, size\+\_\+t name\+\_\+len, bool need\+\_\+lock\+\_\+index)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gaa05a10f5039b9a66e92e057c8c632dff}\label{group__Binary__Log_gaa05a10f5039b9a66e92e057c8c632dff}} 
+int {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::get\+\_\+current\+\_\+log} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, bool need\+\_\+lock\+\_\+log=true)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga826bbc38d9566f349fbf9e4cb6c682bc}\label{group__Binary__Log_ga826bbc38d9566f349fbf9e4cb6c682bc}} 
+int {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::raw\+\_\+get\+\_\+current\+\_\+log} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga55e22d76ff3054cc3f3b07882ff01fc4}\label{group__Binary__Log_ga55e22d76ff3054cc3f3b07882ff01fc4}} 
+bool {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::check\+\_\+write\+\_\+error} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gabc5fc9619717b2ab90bdbd5197ea774d}\label{group__Binary__Log_gabc5fc9619717b2ab90bdbd5197ea774d}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::set\+\_\+write\+\_\+error} (T\+HD $\ast$thd, bool is\+\_\+transactional)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga245bb1e482896f726e11719666f2394a}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+log\+\_\+pos}} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, const char $\ast$log\+\_\+name, bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga8ed66e95398bcafa143ca8ad16860711}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+next\+\_\+log}} (\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$linfo, bool need\+\_\+lock\+\_\+index)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga7a173d873dfe12dee3963402b0a2075e}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+next\+\_\+relay\+\_\+log}} (char log\+\_\+name\mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN+1\mbox{]})
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaa7f92132aa396f9d9aa44701800334be}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::reset\+\_\+logs}} (T\+HD $\ast$thd, bool delete\+\_\+only=false)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga5bbd66f9464d9a83f33fdcdba20d7d99}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name}} (const char $\ast$base\+\_\+file\+\_\+name)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gac6d69e1ee6b9099429bd919af752a0eb}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_gad5cf0683506dfdcc484155c676786860}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga94f694096c1ef28962d9d7936d2d9a1e}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::make\+\_\+log\+\_\+name}} (char $\ast$buf, const char $\ast$log\+\_\+ident)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaac641bdabee70ba4bd377e06e1853fcb}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::is\+\_\+active}} (const char $\ast$log\+\_\+file\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gae455eec3547a9c58913acad74c946c60}\label{group__Binary__Log_gae455eec3547a9c58913acad74c946c60}} 
+int {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::new\+\_\+file} (\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$extra\+\_\+description\+\_\+event)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gae40c4dc6b0b8986a50661b28df3a6fa3}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::flush\+\_\+and\+\_\+sync}} (const bool force=false)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gac7408e146d23b953fd8e41d58a73119f}\label{group__Binary__Log_gac7408e146d23b953fd8e41d58a73119f}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::start\+\_\+union\+\_\+events} (T\+HD $\ast$thd, query\+\_\+id\+\_\+t query\+\_\+id\+\_\+param)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gaec4819bc9642741f8775c71225234095}\label{group__Binary__Log_gaec4819bc9642741f8775c71225234095}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::stop\+\_\+union\+\_\+events} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gaa2b1915a748ef2b92e65ba67dd7b9371}\label{group__Binary__Log_gaa2b1915a748ef2b92e65ba67dd7b9371}} 
+bool {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::is\+\_\+query\+\_\+in\+\_\+union} (T\+HD $\ast$thd, query\+\_\+id\+\_\+t query\+\_\+id\+\_\+param)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga21e45fa3b5e152adacb9f9899f983b2a}\label{group__Binary__Log_ga21e45fa3b5e152adacb9f9899f983b2a}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::update\+\_\+thd\+\_\+next\+\_\+event\+\_\+pos} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga7d7c8c2cc805e99d685a0d99275d72d8}\label{group__Binary__Log_ga7d7c8c2cc805e99d685a0d99275d72d8}} 
+int {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::flush\+\_\+and\+\_\+set\+\_\+pending\+\_\+rows\+\_\+event} (T\+HD $\ast$thd, \mbox{\hyperlink{classRows__log__event}{Rows\+\_\+log\+\_\+event}} $\ast$event, bool is\+\_\+transactional)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga9c19cd666a1a517386dedd4078dd93e7}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+event}} (\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$event\+\_\+info)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga2053b0b53a46eb5702b44966497c333f}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::rotate}} (bool force\+\_\+rotate, bool $\ast$check\+\_\+purge)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaff1889360685bd90b1d3ffba10ba3dba}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::purge}} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga9f41b228c438fe7b4c710b8fdd780cfb}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::rotate\+\_\+and\+\_\+purge}} (T\+HD $\ast$thd, bool force\+\_\+rotate)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga2d77f5e99ad74fbd1122a9dbc3ae34e4}\label{group__Binary__Log_ga2d77f5e99ad74fbd1122a9dbc3ae34e4}} 
+uint {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::next\+\_\+file\+\_\+id} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga8d92fa178d27467ce506c759c5d82959}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::get\+\_\+gtid\+\_\+executed}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaf81ca29b12d9e21eb2d36eee2e7a51fe}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::do\+\_\+write\+\_\+cache}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$cache, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaed3d159f584e6c57aed2e5af51db49fb}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+incident}} (\mbox{\hyperlink{classIncident__log__event}{Incident\+\_\+log\+\_\+event}} $\ast$ev, T\+HD $\ast$thd, bool need\+\_\+lock\+\_\+log, const char $\ast$err\+\_\+msg, bool do\+\_\+flush\+\_\+and\+\_\+sync=true)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_ga32b5241d2e64863a3de611e7b5eb95fd}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+dml\+\_\+directly}} (T\+HD $\ast$thd, const char $\ast$stmt, size\+\_\+t stmt\+\_\+len)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gaceb6fa03fdf46ada9510567752878a53}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+incident}} (T\+HD $\ast$thd, bool need\+\_\+lock\+\_\+log, const char $\ast$err\+\_\+msg, bool do\+\_\+flush\+\_\+and\+\_\+sync=true)
+\item 
+bool \mbox{\hyperlink{group__Binary__Log_gab0d497917a9a65893753ff92be180172}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+cache}} (T\+HD $\ast$thd, class \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$\mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}}, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga10698ebc9afd7be839f7a69b7aaac141}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log}} (T\+HD $\ast$thd, const struct timespec $\ast$timeout)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga1b625b440aaf82241200b3980d94c6a9}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log}} (T\+HD $\ast$thd, const struct timespec $\ast$timeout)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaf6d6d79c98b0c8187b2761b959e67c3f}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::close}} (uint exiting, bool need\+\_\+lock\+\_\+log, bool need\+\_\+lock\+\_\+index)
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga1668661349520d23557e796db4a0b423}\label{group__Binary__Log_ga1668661349520d23557e796db4a0b423}} 
+void {\bfseries M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::set\+\_\+max\+\_\+size} (ulong max\+\_\+size\+\_\+arg)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga44de4e3109fc4d50d4968191ab0f3544}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+binlog}} (const char $\ast$opt\+\_\+name)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga22e829bf97dfac49c3b05a2cbdbaf7cb}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::close}} ()
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga4789039161947fff76fa8250b120b7e3}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::prepare}} (T\+HD $\ast$thd, bool all)
+\item 
+enum\+\_\+result \mbox{\hyperlink{group__Binary__Log_ga94fdcfcfb5d2c85ca2a114ad2115b20e}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::commit}} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{group__Binary__Log_ga0e843aafa062a4ab987d5ff75d450c41}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::recover}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$log, \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fdle, my\+\_\+off\+\_\+t $\ast$valid\+\_\+pos)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_ga5ebea3ac42b19b6e1c86ca33c3cb28e7}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::xlock}} (void)
+\item 
+void \mbox{\hyperlink{group__Binary__Log_gaee260f3856d7b1e557b91b7ecdc0b01c}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::xunlock}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Binary__Log_gac5449116d5d93490b34525853da65eac}\label{group__Binary__Log_gac5449116d5d93490b34525853da65eac}} 
+bool {\bfseries opt\+\_\+binlog\+\_\+order\+\_\+commits} = true
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga41d28cf3c8664bf92f1fbe1d8ba04ef0}\label{group__Binary__Log_ga41d28cf3c8664bf92f1fbe1d8ba04ef0}} 
+const char $\ast$ {\bfseries log\+\_\+bin\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga5dbf1a49cfaae776fd9052568c40a6ba}\label{group__Binary__Log_ga5dbf1a49cfaae776fd9052568c40a6ba}} 
+const char $\ast$ {\bfseries log\+\_\+bin\+\_\+basename} = 0
+\item 
+\mbox{\Hypertarget{group__Binary__Log_ga70e016d5a4032854dc75a4feeb3b7a91}\label{group__Binary__Log_ga70e016d5a4032854dc75a4feeb3b7a91}} 
+\mbox{\hyperlink{classMYSQL__BIN__LOG}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}} mysql\+\_\+bin\+\_\+log \& {\bfseries sync\+\_\+binlog\+\_\+period}
+\item 
+struct st\+\_\+mysql\+\_\+storage\+\_\+engine {\bfseries binlog\+\_\+storage\+\_\+engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__Binary__Log_ga1e24693cd278a03ccca7bc269375ad16}\label{group__Binary__Log_ga1e24693cd278a03ccca7bc269375ad16}} 
+\index{Binary Log@{Binary Log}!enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status@{enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status}}
+\index{enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status@{enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status}{enum\_read\_gtids\_from\_binlog\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__Binary__Log_ga1e24693cd278a03ccca7bc269375ad16}{enum\+\_\+read\+\_\+gtids\+\_\+from\+\_\+binlog\+\_\+status}}}
+
+Reads G\+T\+I\+Ds from the given binlog file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File to read from. \\
+\hline
+{\em all\+\_\+gtids} & If not N\+U\+LL, then the G\+T\+I\+Ds from the \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}} and from all Gtid\+\_\+log\+\_\+events are stored in this object. \\
+\hline
+{\em prev\+\_\+gtids} & If not N\+U\+LL, then the G\+T\+I\+Ds from the Previous\+\_\+gtids\+\_\+log\+\_\+events are stored in this object. \\
+\hline
+{\em first\+\_\+gtid} & If not N\+U\+LL, then the first G\+T\+ID information from the file will be stored in this object. \\
+\hline
+{\em sid\+\_\+map} & The sid\+\_\+map object to use in the rpl\+\_\+sidno generation of the \mbox{\hyperlink{classGtid__log__event}{Gtid\+\_\+log\+\_\+event}}. If lock is needed in the sid\+\_\+map, the caller must hold it. \\
+\hline
+{\em verify\+\_\+checksum} & Set to true to verify event checksums.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em G\+O\+T\+\_\+\+G\+T\+I\+DS} & The file was successfully read and it contains both Gtid\+\_\+log\+\_\+events and Previous\+\_\+gtids\+\_\+log\+\_\+events. This is only possible if either all\+\_\+gtids or first\+\_\+gtid are not null. \\
+\hline
+{\em G\+O\+T\+\_\+\+P\+R\+E\+V\+I\+O\+U\+S\+\_\+\+G\+T\+I\+DS} & The file was successfully read and it contains Previous\+\_\+gtids\+\_\+log\+\_\+events but no Gtid\+\_\+log\+\_\+events. For binary logs, if no all\+\_\+gtids and no first\+\_\+gtid are specified, this function will be done right after reading the P\+R\+E\+V\+I\+O\+U\+S\+\_\+\+G\+T\+I\+DS regardless of the rest of the content of the binary log file. \\
+\hline
+{\em N\+O\+\_\+\+G\+T\+I\+DS} & The file was successfully read and it does not contain G\+T\+ID events. \\
+\hline
+{\em E\+R\+R\+OR} & Out of memory, or IO error, or malformed event structure, or the file is malformed (e.\+g., contains Gtid\+\_\+log\+\_\+events but no \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}}). \\
+\hline
+{\em T\+R\+U\+N\+C\+A\+T\+ED} & The file was truncated before the end of the first \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}}. \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Binary__Log_gaddc5340a448c8179ab35b3f2e0891984}\label{group__Binary__Log_gaddc5340a448c8179ab35b3f2e0891984}} 
+\index{Binary Log@{Binary Log}!add\+\_\+log\+\_\+to\+\_\+index@{add\+\_\+log\+\_\+to\+\_\+index}}
+\index{add\+\_\+log\+\_\+to\+\_\+index@{add\+\_\+log\+\_\+to\+\_\+index}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{add\+\_\+log\+\_\+to\+\_\+index()}{add\_log\_to\_index()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::add\+\_\+log\+\_\+to\+\_\+index (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{log\+\_\+name,  }\item[{size\+\_\+t}]{log\+\_\+name\+\_\+len,  }\item[{bool}]{need\+\_\+lock\+\_\+index }\end{DoxyParamCaption})}
+
+Append log file name to index file.
+
+
+\begin{DoxyItemize}
+\item To make crash safe, we copy all the content of index file to crash safe index file firstly and then append the log file name to the crash safe index file. Finally move the crash safe index file to index file.
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em -\/1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga20a543666e684f08da1cc093d5fa70ec}\label{group__Binary__Log_ga20a543666e684f08da1cc093d5fa70ec}} 
+\index{Binary Log@{Binary Log}!append@{append}}
+\index{append@{append}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily bool Stage\+\_\+manager\+::\+Mutex\+\_\+queue\+::append (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{first }\end{DoxyParamCaption})}
+
+Append a linked list of threads to the queue. 
+\begin{DoxyRetVals}{Return values}
+{\em true} & The queue was empty before this operation. \\
+\hline
+{\em false} & The queue was non-\/empty before this operation. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_gacface590afa692fc84446cde6f104231}\label{group__Binary__Log_gacface590afa692fc84446cde6f104231}} 
+\index{Binary Log@{Binary Log}!assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group@{assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group}}
+\index{assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group@{assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group()}{assign\_automatic\_gtids\_to\_flush\_group()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::assign\+\_\+automatic\+\_\+gtids\+\_\+to\+\_\+flush\+\_\+group (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{first\+\_\+seen }\end{DoxyParamCaption})}
+
+Assign automatic generated G\+T\+I\+Ds for all commit group threads in the flush stage having gtid\+\_\+next.\+type == A\+U\+T\+O\+M\+A\+T\+I\+C\+\_\+\+G\+R\+O\+UP.
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+seen} & The first thread seen entering the flush stage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns false if succeeds, otherwise true is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga46468c405fde69f126c1bcb343c85c90}\label{group__Binary__Log_ga46468c405fde69f126c1bcb343c85c90}} 
+\index{Binary Log@{Binary Log}!binlog\+\_\+enabled@{binlog\+\_\+enabled}}
+\index{binlog\+\_\+enabled@{binlog\+\_\+enabled}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{binlog\+\_\+enabled()}{binlog\_enabled()}}
+{\footnotesize\ttfamily bool binlog\+\_\+enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check whether binlog\+\_\+hton has valid slot and enabled \mbox{\Hypertarget{group__Binary__Log_gab499865e2616dac2a882d7937a62d2aa}\label{group__Binary__Log_gab499865e2616dac2a882d7937a62d2aa}} 
+\index{Binary Log@{Binary Log}!binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback@{binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback}}
+\index{binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback@{binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback()}{binlog\_xa\_commit\_or\_rollback()}}
+{\footnotesize\ttfamily int binlog\+\_\+xa\+\_\+commit\+\_\+or\+\_\+rollback (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$}]{xid,  }\item[{bool}]{commit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Logging XA commit/rollback of a prepared transaction in the case it was disconnected and resumed (recovered), or executed by a slave applier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD handle \\
+\hline
+{\em xid} & a pointer to X\+ID object \\
+\hline
+{\em commit} & when {\ttfamily true} XA-\/C\+O\+M\+M\+IT is logged, otherwise XA-\/R\+O\+L\+L\+B\+A\+CK\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error code, 0 success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga63c6fcd1b8e84116f7bcec46e7b25caa}\label{group__Binary__Log_ga63c6fcd1b8e84116f7bcec46e7b25caa}} 
+\index{Binary Log@{Binary Log}!check\+\_\+binlog\+\_\+cache\+\_\+size@{check\+\_\+binlog\+\_\+cache\+\_\+size}}
+\index{check\+\_\+binlog\+\_\+cache\+\_\+size@{check\+\_\+binlog\+\_\+cache\+\_\+size}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{check\+\_\+binlog\+\_\+cache\+\_\+size()}{check\_binlog\_cache\_size()}}
+{\footnotesize\ttfamily void check\+\_\+binlog\+\_\+cache\+\_\+size (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Checks if the B\+I\+N\+L\+O\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE\textquotesingle{}s value is greater than M\+A\+X\+\_\+\+B\+I\+N\+L\+O\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE. If this happens, the B\+I\+N\+L\+O\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE is set to M\+A\+X\+\_\+\+B\+I\+N\+L\+O\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE. \mbox{\Hypertarget{group__Binary__Log_ga7a0a12298d22d080b68e55f324cd59bd}\label{group__Binary__Log_ga7a0a12298d22d080b68e55f324cd59bd}} 
+\index{Binary Log@{Binary Log}!check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size@{check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size}}
+\index{check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size@{check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size()}{check\_binlog\_stmt\_cache\_size()}}
+{\footnotesize\ttfamily void check\+\_\+binlog\+\_\+stmt\+\_\+cache\+\_\+size (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Checks if the B\+I\+N\+L\+O\+G\+\_\+\+S\+T\+M\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE\textquotesingle{}s value is greater than M\+A\+X\+\_\+\+B\+I\+N\+L\+O\+G\+\_\+\+S\+T\+M\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE. If this happens, the B\+I\+N\+L\+O\+G\+\_\+\+S\+T\+M\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE is set to M\+A\+X\+\_\+\+B\+I\+N\+L\+O\+G\+\_\+\+S\+T\+M\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE. \mbox{\Hypertarget{group__Binary__Log_gad3389586ace2de50ee7606d7acc98849}\label{group__Binary__Log_gad3389586ace2de50ee7606d7acc98849}} 
+\index{Binary Log@{Binary Log}!clear\+\_\+preempt\+\_\+status@{clear\+\_\+preempt\+\_\+status}}
+\index{clear\+\_\+preempt\+\_\+status@{clear\+\_\+preempt\+\_\+status}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{clear\+\_\+preempt\+\_\+status()}{clear\_preempt\_status()}}
+{\footnotesize\ttfamily void Stage\+\_\+manager\+::clear\+\_\+preempt\+\_\+status (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{head }\end{DoxyParamCaption})}
+
+The method ensures the follower\textquotesingle{}s execution path can be preempted by the leader\textquotesingle{}s thread. Preempt status of {\ttfamily head} follower is checked to engange the leader into waiting when set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & T\+H\+D$\ast$ of a follower thread \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Binary__Log_ga22e829bf97dfac49c3b05a2cbdbaf7cb}\label{group__Binary__Log_ga22e829bf97dfac49c3b05a2cbdbaf7cb}} 
+\index{Binary Log@{Binary Log}!close@{close}}
+\index{close@{close}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is called on shutdown, after ha\+\_\+panic. 
+
+Implements \mbox{\hyperlink{classTC__LOG_a645b5d1b49c4c4396d327eef07e2dd53}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{group__Binary__Log_gaf6d6d79c98b0c8187b2761b959e67c3f}\label{group__Binary__Log_gaf6d6d79c98b0c8187b2761b959e67c3f}} 
+\index{Binary Log@{Binary Log}!close@{close}}
+\index{close@{close}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::close (\begin{DoxyParamCaption}\item[{uint}]{exiting,  }\item[{bool}]{need\+\_\+lock\+\_\+log,  }\item[{bool}]{need\+\_\+lock\+\_\+index }\end{DoxyParamCaption})}
+
+Close the log file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em exiting} & Bitmask for one or more of the following bits\+:
+\begin{DoxyItemize}
+\item L\+O\+G\+\_\+\+C\+L\+O\+S\+E\+\_\+\+I\+N\+D\+EX \+: if we should close the index file
+\item L\+O\+G\+\_\+\+C\+L\+O\+S\+E\+\_\+\+T\+O\+\_\+\+B\+E\+\_\+\+O\+P\+E\+N\+ED \+: if we intend to call open at once after close.
+\item L\+O\+G\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+O\+P\+\_\+\+E\+V\+E\+NT \+: write a \textquotesingle{}stop\textquotesingle{} event to the log
+\end{DoxyItemize}\\
+\hline
+{\em need\+\_\+lock\+\_\+log} & If true, this function acquires L\+O\+C\+K\+\_\+log; otherwise the caller should already have acquired it.\\
+\hline
+{\em need\+\_\+lock\+\_\+index} & If true, this function acquires L\+O\+C\+K\+\_\+index; otherwise the caller should already have acquired it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+One can do an open on the object at once after doing a close. The internal structures are not freed until cleanup() is called 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Binary__Log_gad5cf0683506dfdcc484155c676786860}\label{group__Binary__Log_gad5cf0683506dfdcc484155c676786860}} 
+\index{Binary Log@{Binary Log}!close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file@{close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}}
+\index{close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file@{close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file()}{close\_crash\_safe\_index\_file()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::close\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the crash safe index file.
+
+\begin{DoxyNote}{Note}
+The crash safe file is just closed, is not deleted. Because it is moved to index file later on. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga94fdcfcfb5d2c85ca2a114ad2115b20e}\label{group__Binary__Log_ga94fdcfcfb5d2c85ca2a114ad2115b20e}} 
+\index{Binary Log@{Binary Log}!commit@{commit}}
+\index{commit@{commit}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily T\+C\+\_\+\+L\+O\+G\+::enum\+\_\+result M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::commit (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Commit the transaction in the transaction coordinator.
+
+This function will commit the sessions transaction in the binary log and in the storage engines (by calling {\ttfamily ha\+\_\+commit\+\_\+low}). If the transaction was successfully logged (or not successfully unlogged) but the commit in the engines did not succed, there is a risk of inconsistency between the engines and the binary log.
+
+For binary log group commit, the commit is separated into three parts\+:
+
+
+\begin{DoxyEnumerate}
+\item First part consists of filling the necessary caches and finalizing them (if they need to be finalized). After this, nothing is added to any of the caches.
+\item Second part execute an ordered flush and commit. This will be done using the group commit functionality in ordered\+\_\+commit.
+\item Third part checks any errors resulting from the ordered commit and handles them appropriately.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em R\+E\+S\+U\+L\+T\+\_\+\+S\+U\+C\+C\+E\+SS} & success \\
+\hline
+{\em R\+E\+S\+U\+L\+T\+\_\+\+A\+B\+O\+R\+T\+ED} & error, transaction was neither logged nor committed \\
+\hline
+{\em R\+E\+S\+U\+L\+T\+\_\+\+I\+N\+C\+O\+N\+S\+I\+S\+T\+E\+NT} & error, transaction was logged but not committed \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_a3f9ef43db745a798f8b361eb0b93ff22}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{group__Binary__Log_ga92b6d633ef75cd075586ba82ef3f5c9e}\label{group__Binary__Log_ga92b6d633ef75cd075586ba82ef3f5c9e}} 
+\index{Binary Log@{Binary Log}!do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback@{do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback}}
+\index{do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback@{do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback()}{do\_binlog\_xa\_commit\_rollback()}}
+{\footnotesize\ttfamily int do\+\_\+binlog\+\_\+xa\+\_\+commit\+\_\+rollback (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$}]{xid,  }\item[{bool}]{commit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Logging XA commit/rollback of a prepared transaction.
+
+The function is called at XA-\/commit or XA-\/rollback logging via two paths\+: the recovered-\/or-\/slave-\/applier or immediately through the XA-\/prepared transaction connection itself. It fills in appropiate event in the statement cache whenever xid state is marked with is\+\_\+binlogged() flag that indicates the prepared part of the transaction must\textquotesingle{}ve been logged.
+
+About early returns from the function. In the recovered-\/or-\/slave-\/applier case the function may be called for the 2nd time, which has\+\_\+logged\+\_\+xid monitors. O\+N\+E\+\_\+\+P\+H\+A\+SE option to XA-\/C\+O\+M\+M\+IT is handled to skip writing XA-\/commit event now. And the final early return check is for the read-\/only XA that is not to be logged.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD handle \\
+\hline
+{\em xid} & a pointer to X\+ID object that is serialized \\
+\hline
+{\em commit} & when {\ttfamily true} XA-\/C\+O\+M\+M\+IT is to be logged, and {\ttfamily false} when it\textquotesingle{}s XA-\/R\+O\+L\+L\+B\+A\+CK. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error code, 0 success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gaf81ca29b12d9e21eb2d36eee2e7a51fe}\label{group__Binary__Log_gaf81ca29b12d9e21eb2d36eee2e7a51fe}} 
+\index{Binary Log@{Binary Log}!do\+\_\+write\+\_\+cache@{do\+\_\+write\+\_\+cache}}
+\index{do\+\_\+write\+\_\+cache@{do\+\_\+write\+\_\+cache}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{do\+\_\+write\+\_\+cache()}{do\_write\_cache()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::do\+\_\+write\+\_\+cache (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{cache,  }\item[{class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$}]{writer }\end{DoxyParamCaption})}
+
+Write the contents of the given I\+O\+\_\+\+C\+A\+C\+HE to the binary log.
+
+The cache will be reset as a R\+E\+A\+D\+\_\+\+C\+A\+C\+HE to be able to read the contents from it.
+
+The data will be post-\/processed\+: see class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} for details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & \mbox{\hyperlink{classEvents}{Events}} will be read from this I\+O\+\_\+\+C\+A\+C\+HE. \\
+\hline
+{\em writer} & \mbox{\hyperlink{classEvents}{Events}} will be written to this \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & IO error. \\
+\hline
+{\em false} & Success.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Binary__Log_gab0d497917a9a65893753ff92be180172}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+cache}} 
+\end{DoxySeeAlso}
+Nothing in cache\+: try to refill, and if cache was ended here, return success. This code is needed even on the first iteration of the loop, because reinit\+\_\+io\+\_\+cache may or may not fill the first page.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]\+: this can happen in case of disk corruption in the I\+O\+\_\+\+C\+A\+C\+HE. We may have written a half transaction (even half event) to the binlog. We should rollback the transaction and truncate the binlog. /\+Sven \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]\+: this can happen in case of disk corruption in the I\+O\+\_\+\+C\+A\+C\+HE. We may have written a half transaction (even half event) to the binlog. We should rollback the transaction and truncate the binlog. /\+Sven \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Binary__Log_ga80a5419e22b84b8ca2f3595cbf75fa67}\label{group__Binary__Log_ga80a5419e22b84b8ca2f3595cbf75fa67}} 
+\index{Binary Log@{Binary Log}!ending\+\_\+single\+\_\+stmt\+\_\+trans@{ending\+\_\+single\+\_\+stmt\+\_\+trans}}
+\index{ending\+\_\+single\+\_\+stmt\+\_\+trans@{ending\+\_\+single\+\_\+stmt\+\_\+trans}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{ending\+\_\+single\+\_\+stmt\+\_\+trans()}{ending\_single\_stmt\_trans()}}
+{\footnotesize\ttfamily bool ending\+\_\+single\+\_\+stmt\+\_\+trans (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const bool}]{all }\end{DoxyParamCaption})}
+
+This function checks if a single statement transaction is about to commit or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executed the current statement. \\
+\hline
+{\em all} & Committing a transaction (i.\+e. T\+R\+UE) or a statement (i.\+e. F\+A\+L\+SE). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if committing a single statement transaction, otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gaad02774240e19d361a32bd35c9db60cb}\label{group__Binary__Log_gaad02774240e19d361a32bd35c9db60cb}} 
+\index{Binary Log@{Binary Log}!ending\+\_\+trans@{ending\+\_\+trans}}
+\index{ending\+\_\+trans@{ending\+\_\+trans}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{ending\+\_\+trans()}{ending\_trans()}}
+{\footnotesize\ttfamily bool ending\+\_\+trans (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const bool}]{all }\end{DoxyParamCaption})}
+
+This function checks if a transaction, either a multi-\/statement or a single statement transaction is about to commit or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executed the current statement. \\
+\hline
+{\em all} & Committing a transaction (i.\+e. T\+R\+UE) or a statement (i.\+e. F\+A\+L\+SE). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if committing a transaction, otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga71a83004e5774879856189f84d00094f}\label{group__Binary__Log_ga71a83004e5774879856189f84d00094f}} 
+\index{Binary Log@{Binary Log}!enroll\+\_\+for@{enroll\+\_\+for}}
+\index{enroll\+\_\+for@{enroll\+\_\+for}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{enroll\+\_\+for()}{enroll\_for()}}
+{\footnotesize\ttfamily bool Stage\+\_\+manager\+::enroll\+\_\+for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}}}]{stage,  }\item[{T\+HD $\ast$}]{first,  }\item[{mysql\+\_\+mutex\+\_\+t $\ast$}]{stage\+\_\+mutex }\end{DoxyParamCaption})}
+
+Enroll a set of sessions for a stage.
+
+This will queue the session thread for writing and flushing.
+
+If the thread being queued is assigned as stage leader, it will return immediately.
+
+If wait\+\_\+if\+\_\+follower is true the thread is not the stage leader, the thread will be wait for the queue to be processed by the leader before it returns. In D\+B\+UG-\/ON version the follower marks is preempt status as ready.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage} & Stage identifier for the queue to append to. \\
+\hline
+{\em first} & Queue to append. \\
+\hline
+{\em stage\+\_\+mutex} & Pointer to the currently held stage mutex, or N\+U\+LL if we\textquotesingle{}re not in a stage.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Thread is stage leader. \\
+\hline
+{\em false} & Thread was not stage leader and processing has been done. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga254675ae9d8f6f0a7b48d7520ab16eea}\label{group__Binary__Log_ga254675ae9d8f6f0a7b48d7520ab16eea}} 
+\index{Binary Log@{Binary Log}!fetch\+\_\+and\+\_\+empty@{fetch\+\_\+and\+\_\+empty}}
+\index{fetch\+\_\+and\+\_\+empty@{fetch\+\_\+and\+\_\+empty}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{fetch\+\_\+and\+\_\+empty()}{fetch\_and\_empty()}}
+{\footnotesize\ttfamily T\+HD $\ast$ Stage\+\_\+manager\+::\+Mutex\+\_\+queue\+::fetch\+\_\+and\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetch the entire queue for a stage.
+
+This will fetch the entire queue in one go. \mbox{\Hypertarget{group__Binary__Log_ga3367fa8c1daced18065f6b9dea5385fe}\label{group__Binary__Log_ga3367fa8c1daced18065f6b9dea5385fe}} 
+\index{Binary Log@{Binary Log}!finalize@{finalize}}
+\index{finalize@{finalize}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{finalize()}{finalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int binlog\+\_\+cache\+\_\+data\+::finalize (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{end\+\_\+event }\end{DoxyParamCaption})}
+
+This function finalizes the cache preparing for commit or rollback.
+
+The function just writes all the necessary events to the cache but does not flush the data to the binary log file. That is the role of the \mbox{\hyperlink{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}{binlog\+\_\+cache\+\_\+data\+::flush}} function.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}{binlog\+\_\+cache\+\_\+data\+::flush}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread whose transaction should be flushed \\
+\hline
+{\em cache\+\_\+data} & Pointer to the cache \\
+\hline
+{\em end\+\_\+ev} & The end event either commit/rollback\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nonzero if an error pops up when flushing the cache. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga16bd8b16b092443137c073f18c7e11e4}\label{group__Binary__Log_ga16bd8b16b092443137c073f18c7e11e4}} 
+\index{Binary Log@{Binary Log}!finalize@{finalize}}
+\index{finalize@{finalize}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{finalize()}{finalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int binlog\+\_\+cache\+\_\+data\+::finalize (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{end\+\_\+event,  }\item[{\mbox{\hyperlink{classXID__STATE}{X\+I\+D\+\_\+\+S\+T\+A\+TE}} $\ast$}]{xs }\end{DoxyParamCaption})}
+
+The method writes XA E\+ND query to XA-\/prepared transaction\textquotesingle{}s cache and calls the \char`\"{}basic\char`\"{} \mbox{\hyperlink{group__Binary__Log_ga3367fa8c1daced18065f6b9dea5385fe}{finalize()}}.
+
+\begin{DoxyReturn}{Returns}
+error code, 0 success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gab8925923df0bf9cd07f7fcaf45f8db16}\label{group__Binary__Log_gab8925923df0bf9cd07f7fcaf45f8db16}} 
+\index{Binary Log@{Binary Log}!find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set@{find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set}}
+\index{find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set@{find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set()}{find\_first\_log\_not\_in\_gtid\_set()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+first\+\_\+log\+\_\+not\+\_\+in\+\_\+gtid\+\_\+set (\begin{DoxyParamCaption}\item[{char $\ast$}]{binlog\+\_\+file\+\_\+name,  }\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set,  }\item[{\mbox{\hyperlink{structGtid}{Gtid}} $\ast$}]{first\+\_\+gtid,  }\item[{const char $\ast$$\ast$}]{errmsg }\end{DoxyParamCaption})}
+
+Find the oldest binary log that contains any G\+T\+ID that is not in the given gtid set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em binlog\+\_\+file\+\_\+name,the} & file name of oldest binary log found \\
+\hline
+\mbox{\texttt{ in}}  & {\em gtid\+\_\+set,the} & given gtid set \\
+\hline
+\mbox{\texttt{ out}}  & {\em first\+\_\+gtid,the} & first G\+T\+ID information from the binary log file returned at binlog\+\_\+file\+\_\+name \\
+\hline
+\mbox{\texttt{ out}}  & {\em errmsg,the} & error message outputted, which is left untouched if the function returns false \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga245bb1e482896f726e11719666f2394a}\label{group__Binary__Log_ga245bb1e482896f726e11719666f2394a}} 
+\index{Binary Log@{Binary Log}!find\+\_\+log\+\_\+pos@{find\+\_\+log\+\_\+pos}}
+\index{find\+\_\+log\+\_\+pos@{find\+\_\+log\+\_\+pos}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{find\+\_\+log\+\_\+pos()}{find\_log\_pos()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+log\+\_\+pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$}]{linfo,  }\item[{const char $\ast$}]{log\+\_\+name,  }\item[{bool}]{need\+\_\+lock\+\_\+index }\end{DoxyParamCaption})}
+
+Find the position in the log-\/index-\/file for the given log name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em linfo} & The found log file name will be stored here, along with the byte offset of the next log file name in the index file. \\
+\hline
+ & {\em log\+\_\+name} & Filename to find in the index file, or N\+U\+LL if we want to read the first entry. \\
+\hline
+ & {\em need\+\_\+lock\+\_\+index} & If false, this function acquires L\+O\+C\+K\+\_\+index; otherwise the lock should already be held by the caller.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+On systems without the truncate function the file will end with one or more empty lines. These will be ignored when reading the file.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+E\+OF} & End of log-\/index-\/file found \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+IO} & Got IO error while reading file \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga8ed66e95398bcafa143ca8ad16860711}\label{group__Binary__Log_ga8ed66e95398bcafa143ca8ad16860711}} 
+\index{Binary Log@{Binary Log}!find\+\_\+next\+\_\+log@{find\+\_\+next\+\_\+log}}
+\index{find\+\_\+next\+\_\+log@{find\+\_\+next\+\_\+log}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{find\+\_\+next\+\_\+log()}{find\_next\_log()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+next\+\_\+log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} $\ast$}]{linfo,  }\item[{bool}]{need\+\_\+lock\+\_\+index }\end{DoxyParamCaption})}
+
+Find the position in the log-\/index-\/file for the given log name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em linfo} & The filename will be stored here, along with the byte offset of the next filename in the index file.\\
+\hline
+ & {\em need\+\_\+lock\+\_\+index} & If true, L\+O\+C\+K\+\_\+index will be acquired; otherwise it should already be held by the caller.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item Before calling this function, one has to call \mbox{\hyperlink{group__Binary__Log_ga245bb1e482896f726e11719666f2394a}{find\+\_\+log\+\_\+pos()}} to set up \textquotesingle{}linfo\textquotesingle{}
+\item Mutex needed because we need to make sure the file pointer does not move from under our feet
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+E\+OF} & End of log-\/index-\/file found \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+IO} & Got IO error while reading file \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga7a173d873dfe12dee3963402b0a2075e}\label{group__Binary__Log_ga7a173d873dfe12dee3963402b0a2075e}} 
+\index{Binary Log@{Binary Log}!find\+\_\+next\+\_\+relay\+\_\+log@{find\+\_\+next\+\_\+relay\+\_\+log}}
+\index{find\+\_\+next\+\_\+relay\+\_\+log@{find\+\_\+next\+\_\+relay\+\_\+log}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{find\+\_\+next\+\_\+relay\+\_\+log()}{find\_next\_relay\_log()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::find\+\_\+next\+\_\+relay\+\_\+log (\begin{DoxyParamCaption}\item[{char}]{log\+\_\+name\mbox{[}\+F\+N\+\_\+\+R\+E\+F\+L\+E\+N+1\mbox{]} }\end{DoxyParamCaption})}
+
+Find the relay log name following the given name from relay log index file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}in$\vert$out\mbox{]}} & log\+\_\+name The name is full path name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return 0 if it finds next relay log. Otherwise return the error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}\label{group__Binary__Log_ga302d2ea7bfcbea015c329edacdac6c5a}} 
+\index{Binary Log@{Binary Log}!flush@{flush}}
+\index{flush@{flush}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily int binlog\+\_\+cache\+\_\+data\+::flush (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{my\+\_\+off\+\_\+t $\ast$}]{bytes\+\_\+written,  }\item[{bool $\ast$}]{wrote\+\_\+xid }\end{DoxyParamCaption})}
+
+Flush caches to the binary log.
+
+If the cache is finalized, the cache will be flushed to the binary log file. If the cache is not finalized, nothing will be done.
+
+If flushing fails for any reason, an error will be reported and the cache will be reset. Flushing can fail in two circumstances\+:
+
+
+\begin{DoxyItemize}
+\item It was not possible to write the cache to the file. In this case, it does not make sense to keep the cache.
+\item The cache was successfully written to disk but post-\/flush actions (such as binary log rotation) failed. In this case, the cache is already written to disk and there is no reason to keep it.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Binary__Log_ga3367fa8c1daced18065f6b9dea5385fe}{binlog\+\_\+cache\+\_\+data\+::finalize}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Binary__Log_gae40c4dc6b0b8986a50661b28df3a6fa3}\label{group__Binary__Log_gae40c4dc6b0b8986a50661b28df3a6fa3}} 
+\index{Binary Log@{Binary Log}!flush\+\_\+and\+\_\+sync@{flush\+\_\+and\+\_\+sync}}
+\index{flush\+\_\+and\+\_\+sync@{flush\+\_\+and\+\_\+sync}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{flush\+\_\+and\+\_\+sync()}{flush\_and\_sync()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::flush\+\_\+and\+\_\+sync (\begin{DoxyParamCaption}\item[{const bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Flush binlog cache and synchronize to disk.
+
+This function flushes events in binlog cache to binary log file, it will do synchronizing according to the setting of system variable \textquotesingle{}sync\+\_\+binlog\textquotesingle{}. If file is synchronized, {\ttfamily synced} will be set to 1, otherwise 0.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em synced} & if not N\+U\+LL, set to 1 if file is synchronized, otherwise 0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em force} & if T\+R\+UE, ignores the \textquotesingle{}sync\+\_\+binlog\textquotesingle{} and synchronizes the file.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em other} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_gabcd5b380680e537bdec0f093a8f2e3d6}\label{group__Binary__Log_gabcd5b380680e537bdec0f093a8f2e3d6}} 
+\index{Binary Log@{Binary Log}!generate\+\_\+name@{generate\+\_\+name}}
+\index{generate\+\_\+name@{generate\+\_\+name}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{generate\+\_\+name()}{generate\_name()}}
+{\footnotesize\ttfamily const char $\ast$ M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::generate\+\_\+name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{log\+\_\+name,  }\item[{const char $\ast$}]{suffix,  }\item[{char $\ast$}]{buff }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]The following should be using fn\+\_\+format(); We just need to first change fn\+\_\+format() to cut the file name if it\textquotesingle{}s too long. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Binary__Log_ga8d92fa178d27467ce506c759c5d82959}\label{group__Binary__Log_ga8d92fa178d27467ce506c759c5d82959}} 
+\index{Binary Log@{Binary Log}!get\+\_\+gtid\+\_\+executed@{get\+\_\+gtid\+\_\+executed}}
+\index{get\+\_\+gtid\+\_\+executed@{get\+\_\+gtid\+\_\+executed}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{get\+\_\+gtid\+\_\+executed()}{get\_gtid\_executed()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::get\+\_\+gtid\+\_\+executed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{sid\+\_\+map,  }\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set }\end{DoxyParamCaption})}
+
+Deep copy global\+\_\+sid\+\_\+map to
+\begin{DoxyParams}[1]{Parameters}
+ & {\em sid\+\_\+map} & and gtid\+\_\+state-\/$>$get\+\_\+executed\+\_\+gtids() to\\
+\hline
+ & {\em gtid\+\_\+set} & Both operations are done under L\+O\+C\+K\+\_\+commit and global\+\_\+sid\+\_\+lock protection.\\
+\hline
+\mbox{\texttt{ out}}  & {\em sid\+\_\+map} & The \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} to which global\+\_\+sid\+\_\+map will be copied. \\
+\hline
+\mbox{\texttt{ out}}  & {\em gtid\+\_\+set} & The \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to which gtid\+\_\+executed will be copied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em !=0} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga4e7e658ba27b48710cf57e3f8a8253e4}\label{group__Binary__Log_ga4e7e658ba27b48710cf57e3f8a8253e4}} 
+\index{Binary Log@{Binary Log}!gtid\+\_\+end\+\_\+transaction@{gtid\+\_\+end\+\_\+transaction}}
+\index{gtid\+\_\+end\+\_\+transaction@{gtid\+\_\+end\+\_\+transaction}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{gtid\+\_\+end\+\_\+transaction()}{gtid\_end\_transaction()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::gtid\+\_\+end\+\_\+transaction (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+If the thread owns a G\+T\+ID, this function generates an empty transaction and releases ownership of the G\+T\+ID.
+
+
+\begin{DoxyItemize}
+\item If the binary log is disabled for this thread, the G\+T\+ID is inserted directly into the mysql.\+gtid\+\_\+executed table and the G\+T\+ID is included in @global.\+gtid\+\_\+executed. (This only happens for D\+DL, since D\+ML will save the G\+T\+ID into table and release ownership inside ha\+\_\+commit\+\_\+trans.)
+\item If the binary log is enabled for this thread, an empty transaction consisting of G\+T\+ID, B\+E\+G\+IN, C\+O\+M\+M\+IT is written to the binary log, the G\+T\+ID is included in @global.\+gtid\+\_\+executed, and the G\+T\+ID is added to the mysql.\+gtid\+\_\+executed table on the next binlog rotation.
+\end{DoxyItemize}
+
+This function must be called by any committing statement (C\+O\+M\+M\+IT, implicitly committing statements, or \mbox{\hyperlink{classXid__log__event}{Xid\+\_\+log\+\_\+event}}), after the statement has completed execution, regardless of whether the statement updated the database.
+
+This logic ensures that an empty transaction is generated for the following cases\+:
+
+
+\begin{DoxyItemize}
+\item Explicit empty transaction\+: S\+ET G\+T\+I\+D\+\_\+\+N\+E\+XT = \textquotesingle{}U\+U\+ID\+:N\+U\+M\+B\+ER\textquotesingle{}; B\+E\+G\+IN; C\+O\+M\+M\+IT;
+\item Transaction or D\+DL that gets completely filtered out in the slave thread.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The committing thread\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em nonzero} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga9f038ff4067e3f5be2b4dacc1e50ac72}\label{group__Binary__Log_ga9f038ff4067e3f5be2b4dacc1e50ac72}} 
+\index{Binary Log@{Binary Log}!handle\+\_\+gtid\+\_\+consistency\+\_\+violation@{handle\+\_\+gtid\+\_\+consistency\+\_\+violation}}
+\index{handle\+\_\+gtid\+\_\+consistency\+\_\+violation@{handle\+\_\+gtid\+\_\+consistency\+\_\+violation}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{handle\+\_\+gtid\+\_\+consistency\+\_\+violation()}{handle\_gtid\_consistency\_violation()}}
+{\footnotesize\ttfamily bool handle\+\_\+gtid\+\_\+consistency\+\_\+violation (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{int}]{error\+\_\+code }\end{DoxyParamCaption})}
+
+Given that a possible violation of gtid consistency has happened, checks if gtid-\/inconsistencies are forbidden by the current value of E\+N\+F\+O\+R\+C\+E\+\_\+\+G\+T\+I\+D\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+CY and G\+T\+I\+D\+\_\+\+M\+O\+DE. If forbidden, generates error or warning accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread that has issued the G\+T\+ID-\/violating statement.\\
+\hline
+{\em error\+\_\+code} & The error code to use, if error or warning is to be generated.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Error was generated. \\
+\hline
+{\em true} & No error was generated (possibly a warning was generated). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_gab52138e0e18c6bca2812e4051164db4f}\label{group__Binary__Log_gab52138e0e18c6bca2812e4051164db4f}} 
+\index{Binary Log@{Binary Log}!init\+\_\+gtid\+\_\+sets@{init\+\_\+gtid\+\_\+sets}}
+\index{init\+\_\+gtid\+\_\+sets@{init\+\_\+gtid\+\_\+sets}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{init\+\_\+gtid\+\_\+sets()}{init\_gtid\_sets()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::init\+\_\+gtid\+\_\+sets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set,  }\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{lost\+\_\+groups,  }\item[{bool}]{verify\+\_\+checksum,  }\item[{bool}]{need\+\_\+lock,  }\item[{\mbox{\hyperlink{classTransaction__boundary__parser}{Transaction\+\_\+boundary\+\_\+parser}} $\ast$}]{trx\+\_\+parser,  }\item[{\mbox{\hyperlink{structGtid}{Gtid}} $\ast$}]{gtid\+\_\+partial\+\_\+trx,  }\item[{bool}]{is\+\_\+server\+\_\+starting = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Reads the set of all G\+T\+I\+Ds in the binary/relay log, and the set of all lost G\+T\+I\+Ds in the binary log, and stores each set in respective argument.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em gtid\+\_\+set} & Will be filled with all G\+T\+I\+Ds in this binary/relay log. \\
+\hline
+ & {\em lost\+\_\+groups} & Will be filled with all G\+T\+I\+Ds in the \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}} of the first binary log that has a \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}}. This is requested to binary logs but not to relay logs. \\
+\hline
+ & {\em verify\+\_\+checksum} & If true, checksums will be checked. \\
+\hline
+ & {\em need\+\_\+lock} & If true, L\+O\+C\+K\+\_\+log, L\+O\+C\+K\+\_\+index, and global\+\_\+sid\+\_\+lock-\/$>$wrlock are acquired; otherwise they are asserted to be taken already. \\
+\hline
+ & {\em trx\+\_\+parser} & \mbox{[}out\mbox{]} This will be used to return the actual relaylog transaction parser state because of the possibility of partial transactions. \\
+\hline
+\mbox{\texttt{ out}}  & {\em gtid\+\_\+partial\+\_\+trx} & If a transaction was left incomplete on the relaylog, it\textquotesingle{}s G\+T\+ID should be returned to be used in the case of the rest of the transaction be added to the relaylog. \\
+\hline
+ & {\em is\+\_\+server\+\_\+starting} & True if the server is starting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false on success, true on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gaac641bdabee70ba4bd377e06e1853fcb}\label{group__Binary__Log_gaac641bdabee70ba4bd377e06e1853fcb}} 
+\index{Binary Log@{Binary Log}!is\+\_\+active@{is\+\_\+active}}
+\index{is\+\_\+active@{is\+\_\+active}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{is\+\_\+active()}{is\_active()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::is\+\_\+active (\begin{DoxyParamCaption}\item[{const char $\ast$}]{log\+\_\+file\+\_\+name\+\_\+arg }\end{DoxyParamCaption})}
+
+Check if we are writing/reading to the given log file. \mbox{\Hypertarget{group__Binary__Log_ga47165cf06d3f64979787a85b6b43f3ac}\label{group__Binary__Log_ga47165cf06d3f64979787a85b6b43f3ac}} 
+\index{Binary Log@{Binary Log}!is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache@{is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache}}
+\index{is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache@{is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache()}{is\_empty\_transaction\_in\_binlog\_cache()}}
+{\footnotesize\ttfamily bool is\+\_\+empty\+\_\+transaction\+\_\+in\+\_\+binlog\+\_\+cache (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Check if at least one of transacaction and statement binlog caches contains an empty transaction, other one is empty or contains an empty transaction, which has two binlog events \char`\"{}\+B\+E\+G\+I\+N\char`\"{} and \char`\"{}\+C\+O\+M\+M\+I\+T\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executed the current statement.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & At least one of transacaction and statement binlog caches contains an empty transaction, other one is empty or contains an empty transaction. \\
+\hline
+{\em false} & Otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga0f5702b2bc03f66bc0a37c05ff1c84e8}\label{group__Binary__Log_ga0f5702b2bc03f66bc0a37c05ff1c84e8}} 
+\index{Binary Log@{Binary Log}!is\+\_\+loggable\+\_\+xa\+\_\+prepare@{is\+\_\+loggable\+\_\+xa\+\_\+prepare}}
+\index{is\+\_\+loggable\+\_\+xa\+\_\+prepare@{is\+\_\+loggable\+\_\+xa\+\_\+prepare}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{is\+\_\+loggable\+\_\+xa\+\_\+prepare()}{is\_loggable\_xa\_prepare()}}
+{\footnotesize\ttfamily bool is\+\_\+loggable\+\_\+xa\+\_\+prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Predicate function yields true when XA transaction is being logged having a proper state ready for prepare or commit in one phase.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer of running transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true When the being prepared transaction should be binlogged, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga94f694096c1ef28962d9d7936d2d9a1e}\label{group__Binary__Log_ga94f694096c1ef28962d9d7936d2d9a1e}} 
+\index{Binary Log@{Binary Log}!make\+\_\+log\+\_\+name@{make\+\_\+log\+\_\+name}}
+\index{make\+\_\+log\+\_\+name@{make\+\_\+log\+\_\+name}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{make\+\_\+log\+\_\+name()}{make\_log\_name()}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::make\+\_\+log\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const char $\ast$}]{log\+\_\+ident }\end{DoxyParamCaption})}
+
+Delete relay log files prior to rli-\/$>$group\+\_\+relay\+\_\+log\+\_\+name (i.\+e. all logs which are not involved in a non-\/finished group (transaction)), remove them from the index file and start on next relay log.
+
+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON
+
+
+\begin{DoxyItemize}
+\item You must hold rli-\/$>$data\+\_\+lock before calling this function, since it writes group\+\_\+relay\+\_\+log\+\_\+pos and similar fields of \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}.
+\item Protects index file with L\+O\+C\+K\+\_\+index
+\item Delete relevant relay log files
+\item Copy all file names after these ones to the front of the index file
+\item If the OS has truncate, truncate the file, else fill it with ~\newline
+\textquotesingle{}
+\item Read the next file name from the index file and store in rli-\/$>$linfo
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rli} & Relay log information \\
+\hline
+{\em included} & If false, all relay logs that are strictly before rli-\/$>$group\+\_\+relay\+\_\+log\+\_\+name are deleted ; if true, the latter is deleted too (i.\+e. all relay logs read by the S\+QL slave thread are deleted).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This is only called from the slave S\+QL thread when it has read all commands from a relay log and want to switch to a new relay log.
+\item When this happens, we can be in an active transaction as a transaction can span over two relay logs (although it is always written as a single block to the master\textquotesingle{}s binary log, hence cannot span over two master\textquotesingle{}s binary logs).
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+E\+OF} & End of log-\/index-\/file found \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+S\+E\+EK} & Could not allocate IO cache \\
+\hline
+{\em L\+O\+G\+\_\+\+I\+N\+F\+O\+\_\+\+IO} & Got IO error while reading file\+Create a new log file name.\\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buf of at least F\+N\+\_\+\+R\+E\+F\+L\+EN where new name is stored\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If file name will be longer then F\+N\+\_\+\+R\+E\+F\+L\+EN it will be truncated 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Binary__Log_gab57cd148796a62181465bb25db0e236c}\label{group__Binary__Log_gab57cd148796a62181465bb25db0e236c}} 
+\index{Binary Log@{Binary Log}!move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file@{move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file}}
+\index{move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file@{move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file()}{move\_crash\_safe\_index\_file\_to\_index\_file()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::move\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+to\+\_\+index\+\_\+file (\begin{DoxyParamCaption}\item[{bool}]{need\+\_\+lock\+\_\+index }\end{DoxyParamCaption})}
+
+Move crash safe index file to index file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em need\+\_\+lock\+\_\+index} & If true, L\+O\+C\+K\+\_\+index will be acquired; otherwise it should already be held.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em -\/1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga44de4e3109fc4d50d4968191ab0f3544}\label{group__Binary__Log_ga44de4e3109fc4d50d4968191ab0f3544}} 
+\index{Binary Log@{Binary Log}!open\+\_\+binlog@{open\+\_\+binlog}}
+\index{open\+\_\+binlog@{open\+\_\+binlog}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{open\+\_\+binlog()}{open\_binlog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+binlog (\begin{DoxyParamCaption}\item[{const char $\ast$}]{opt\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]keep in-\/memory list of prepared transactions (add to list in log(), remove on unlog()) and copy it to the new binlog if rotated but let\textquotesingle{}s check the behaviour of tc\+\_\+log\+\_\+page\+\_\+waits first! \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__Binary__Log_ga8614d8fb3c4c2c255145d6cfd992e8d8}\label{group__Binary__Log_ga8614d8fb3c4c2c255145d6cfd992e8d8}} 
+\index{Binary Log@{Binary Log}!open\+\_\+binlog@{open\+\_\+binlog}}
+\index{open\+\_\+binlog@{open\+\_\+binlog}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{open\+\_\+binlog()}{open\_binlog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+binlog (\begin{DoxyParamCaption}\item[{const char $\ast$}]{log\+\_\+name,  }\item[{const char $\ast$}]{new\+\_\+name,  }\item[{ulong}]{max\+\_\+size\+\_\+arg,  }\item[{bool}]{null\+\_\+created\+\_\+arg,  }\item[{bool}]{need\+\_\+lock\+\_\+index,  }\item[{bool}]{need\+\_\+sid\+\_\+lock,  }\item[{\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{extra\+\_\+description\+\_\+event }\end{DoxyParamCaption})}
+
+Create a new binary log. 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+name} & Name of binlog \\
+\hline
+{\em new\+\_\+name} & Name of binlog, too. todo\+: what\textquotesingle{}s the difference between new\+\_\+name and log\+\_\+name? \\
+\hline
+{\em max\+\_\+size} & The size at which this binlog will be rotated. \\
+\hline
+{\em null\+\_\+created} & If false, and a \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} is written, then the \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} will have the timestamp 0. Otherwise, it the timestamp will be the time when the event was written to the log. \\
+\hline
+{\em need\+\_\+lock\+\_\+index} & If true, L\+O\+C\+K\+\_\+index is acquired; otherwise L\+O\+C\+K\+\_\+index must be taken by the caller. \\
+\hline
+{\em need\+\_\+sid\+\_\+lock} & If true, the read lock on global\+\_\+sid\+\_\+lock will be acquired. Otherwise, the caller must hold the read lock on global\+\_\+sid\+\_\+lock.\\
+\hline
+\end{DoxyParams}
+Open a (new) binlog file.
+
+
+\begin{DoxyItemize}
+\item Open the log file and the index file. Register the new file name in it
+\item When calling this when the file is in use, you must have a locks on L\+O\+C\+K\+\_\+log and L\+O\+C\+K\+\_\+index.
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga79ed24f2c1a0645530426f4346470781}\label{group__Binary__Log_ga79ed24f2c1a0645530426f4346470781}} 
+\index{Binary Log@{Binary Log}!open\+\_\+binlog\+\_\+file@{open\+\_\+binlog\+\_\+file}}
+\index{open\+\_\+binlog\+\_\+file@{open\+\_\+binlog\+\_\+file}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{open\+\_\+binlog\+\_\+file()}{open\_binlog\_file()}}
+{\footnotesize\ttfamily File open\+\_\+binlog\+\_\+file (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{log,  }\item[{const char $\ast$}]{log\+\_\+file\+\_\+name,  }\item[{const char $\ast$$\ast$}]{errmsg }\end{DoxyParamCaption})}
+
+Open a single binary log file for reading. \mbox{\Hypertarget{group__Binary__Log_gac6d69e1ee6b9099429bd919af752a0eb}\label{group__Binary__Log_gac6d69e1ee6b9099429bd919af752a0eb}} 
+\index{Binary Log@{Binary Log}!open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file@{open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}}
+\index{open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file@{open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file()}{open\_crash\_safe\_index\_file()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::open\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Open a (new) crash safe index file.
+
+\begin{DoxyNote}{Note}
+The crash safe index file is a special file used for guaranteeing index file crash safe. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga4789039161947fff76fa8250b120b7e3}\label{group__Binary__Log_ga4789039161947fff76fa8250b120b7e3}} 
+\index{Binary Log@{Binary Log}!prepare@{prepare}}
+\index{prepare@{prepare}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Log a prepare record of the transaction to the storage engines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to log transaction record for.\\
+\hline
+{\em all} & {\ttfamily true} if an explicit commit or an implicit commit for a statement, {\ttfamily false} if an internal commit of the statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code on failure, zero on success. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_ab968f1e200f370127c3dcd0302d00968}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{group__Binary__Log_gaff1889360685bd90b1d3ffba10ba3dba}\label{group__Binary__Log_gaff1889360685bd90b1d3ffba10ba3dba}} 
+\index{Binary Log@{Binary Log}!purge@{purge}}
+\index{purge@{purge}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{purge()}{purge()}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::purge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The method executes logs purging routine.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em nonzero} & -\/ error in rotating routine. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga1f15ff584adebd77fd1bf4ebc88a68b6}\label{group__Binary__Log_ga1f15ff584adebd77fd1bf4ebc88a68b6}} 
+\index{Binary Log@{Binary Log}!purge\+\_\+master\+\_\+logs@{purge\+\_\+master\+\_\+logs}}
+\index{purge\+\_\+master\+\_\+logs@{purge\+\_\+master\+\_\+logs}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{purge\+\_\+master\+\_\+logs()}{purge\_master\_logs()}}
+{\footnotesize\ttfamily bool purge\+\_\+master\+\_\+logs (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{to\+\_\+log }\end{DoxyParamCaption})}
+
+Execute a P\+U\+R\+GE B\+I\+N\+A\+RY L\+O\+GS TO $<$log$>$ command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object for the client thread executing the statement.\\
+\hline
+{\em to\+\_\+log} & Name of the last log to purge.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga38f8e56905c5205bb8cf6268cd203cb2}\label{group__Binary__Log_ga38f8e56905c5205bb8cf6268cd203cb2}} 
+\index{Binary Log@{Binary Log}!purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date@{purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date}}
+\index{purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date@{purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date()}{purge\_master\_logs\_before\_date()}}
+{\footnotesize\ttfamily bool purge\+\_\+master\+\_\+logs\+\_\+before\+\_\+date (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{time\+\_\+t}]{purge\+\_\+time }\end{DoxyParamCaption})}
+
+Execute a P\+U\+R\+GE B\+I\+N\+A\+RY L\+O\+GS B\+E\+F\+O\+RE $<$date$>$ command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object for the client thread executing the statement.\\
+\hline
+{\em purge\+\_\+time} & Date before which logs should be purged.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga0e843aafa062a4ab987d5ff75d450c41}\label{group__Binary__Log_ga0e843aafa062a4ab987d5ff75d450c41}} 
+\index{Binary Log@{Binary Log}!recover@{recover}}
+\index{recover@{recover}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{recover()}{recover()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::recover (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{log,  }\item[{\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{fdle,  }\item[{my\+\_\+off\+\_\+t $\ast$}]{valid\+\_\+pos }\end{DoxyParamCaption})}
+
+M\+Y\+S\+Q\+LD server recovers from last crashed binlog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & I\+O\+\_\+\+C\+A\+C\+HE of the crashed binlog. \\
+\hline
+{\em fdle} & \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} of the crashed binlog. \\
+\hline
+{\em valid\+\_\+pos} & The position of the last valid transaction or event(non-\/transaction) of the crashed binlog.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga53bb73d56883af0d06d664f19407eac1}\label{group__Binary__Log_ga53bb73d56883af0d06d664f19407eac1}} 
+\index{Binary Log@{Binary Log}!register\+\_\+binlog\+\_\+handler@{register\+\_\+binlog\+\_\+handler}}
+\index{register\+\_\+binlog\+\_\+handler@{register\+\_\+binlog\+\_\+handler}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{register\+\_\+binlog\+\_\+handler()}{register\_binlog\_handler()}}
+{\footnotesize\ttfamily void register\+\_\+binlog\+\_\+handler (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{trx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__Binary__Log_gaa7f92132aa396f9d9aa44701800334be}\label{group__Binary__Log_gaa7f92132aa396f9d9aa44701800334be}} 
+\index{Binary Log@{Binary Log}!reset\+\_\+logs@{reset\+\_\+logs}}
+\index{reset\+\_\+logs@{reset\+\_\+logs}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{reset\+\_\+logs()}{reset\_logs()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::reset\+\_\+logs (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{delete\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Removes files, as part of a R\+E\+S\+ET M\+A\+S\+T\+ER or R\+E\+S\+ET S\+L\+A\+VE statement, by deleting all logs refered to in the index file. Then, it starts writing to a new log file.
+
+The new index file will only contain this file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If not called from slave thread, write start event to new log
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga9590d29210bd03fce1b8f9effc7c2d2a}\label{group__Binary__Log_ga9590d29210bd03fce1b8f9effc7c2d2a}} 
+\index{Binary Log@{Binary Log}!rollback@{rollback}}
+\index{rollback@{rollback}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::rollback (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write a rollback record of the transaction to the binary log.
+
+For binary log group commit, the rollback is separated into three parts\+:
+
+
+\begin{DoxyEnumerate}
+\item First part consists of filling the necessary caches and finalizing them (if they need to be finalized). After a cache is finalized, nothing can be added to the cache.
+\item Second part execute an ordered flush and commit. This will be done using the group commit functionality in {\ttfamily ordered\+\_\+commit}.
+
+Since we roll back the transaction early, we call {\ttfamily ordered\+\_\+commit} with the {\ttfamily skip\+\_\+commit} flag set. The {\ttfamily ha\+\_\+commit\+\_\+low} call inside {\ttfamily ordered\+\_\+commit} will then not be called.
+\item Third part checks any errors resulting from the flush and handles them appropriately.
+\end{DoxyEnumerate}
+
+\begin{DoxySeeAlso}{See also}
+M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::ordered\+\_\+commit 
+
+\mbox{\hyperlink{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}{ha\+\_\+commit\+\_\+low}} 
+
+ha\+\_\+rollback\+\_\+low
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to commit \\
+\hline
+{\em all} & This is {\ttfamily true} if this is a real transaction rollback, and  otherwise.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code, or zero if there were no error. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_abf637f1bbf02c6f8e4f69aa2f5e2d362}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{group__Binary__Log_ga2053b0b53a46eb5702b44966497c333f}\label{group__Binary__Log_ga2053b0b53a46eb5702b44966497c333f}} 
+\index{Binary Log@{Binary Log}!rotate@{rotate}}
+\index{rotate@{rotate}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::rotate (\begin{DoxyParamCaption}\item[{bool}]{force\+\_\+rotate,  }\item[{bool $\ast$}]{check\+\_\+purge }\end{DoxyParamCaption})}
+
+The method executes rotation when L\+O\+C\+K\+\_\+log is already acquired by the caller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+\_\+rotate} & caller can request the log rotation \\
+\hline
+{\em check\+\_\+purge} & is set to true if rotation took place\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If rotation fails, for instance the server was unable to create a new log file, we still try to write an incident event to the current log.
+
+The caller must hold L\+O\+C\+K\+\_\+log when invoking this function.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em nonzero} & -\/ error in rotating routine. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga9f41b228c438fe7b4c710b8fdd780cfb}\label{group__Binary__Log_ga9f41b228c438fe7b4c710b8fdd780cfb}} 
+\index{Binary Log@{Binary Log}!rotate\+\_\+and\+\_\+purge@{rotate\+\_\+and\+\_\+purge}}
+\index{rotate\+\_\+and\+\_\+purge@{rotate\+\_\+and\+\_\+purge}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{rotate\+\_\+and\+\_\+purge()}{rotate\_and\_purge()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::rotate\+\_\+and\+\_\+purge (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{force\+\_\+rotate }\end{DoxyParamCaption})}
+
+Execute a F\+L\+U\+SH L\+O\+GS statement.
+
+The method is a shortcut of {\ttfamily \mbox{\hyperlink{group__Binary__Log_ga2053b0b53a46eb5702b44966497c333f}{rotate()}}} and {\ttfamily \mbox{\hyperlink{group__Binary__Log_gaff1889360685bd90b1d3ffba10ba3dba}{purge()}}}. L\+O\+C\+K\+\_\+log is acquired prior to rotate and is released after it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em force\+\_\+rotate} & caller can request the log rotation\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em nonzero} & -\/ error in rotating routine. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga5bbd66f9464d9a83f33fdcdba20d7d99}\label{group__Binary__Log_ga5bbd66f9464d9a83f33fdcdba20d7d99}} 
+\index{Binary Log@{Binary Log}!set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name@{set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name}}
+\index{set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name@{set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name()}{set\_crash\_safe\_index\_file\_name()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::set\+\_\+crash\+\_\+safe\+\_\+index\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{base\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+Set the name of crash safe index file.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em 1} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga07a668f531f059316c8f17dfcecfd465}\label{group__Binary__Log_ga07a668f531f059316c8f17dfcecfd465}} 
+\index{Binary Log@{Binary Log}!stmt\+\_\+cannot\+\_\+safely\+\_\+rollback@{stmt\+\_\+cannot\+\_\+safely\+\_\+rollback}}
+\index{stmt\+\_\+cannot\+\_\+safely\+\_\+rollback@{stmt\+\_\+cannot\+\_\+safely\+\_\+rollback}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{stmt\+\_\+cannot\+\_\+safely\+\_\+rollback()}{stmt\_cannot\_safely\_rollback()}}
+{\footnotesize\ttfamily bool stmt\+\_\+cannot\+\_\+safely\+\_\+rollback (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This function checks if current statement cannot be rollded back safely.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executed the current statement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if cannot be safely rolled back, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gaf43af0e4821421ea58375e7d4943c6c0}\label{group__Binary__Log_gaf43af0e4821421ea58375e7d4943c6c0}} 
+\index{Binary Log@{Binary Log}!stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table@{stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table}}
+\index{stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table@{stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table()}{stmt\_has\_updated\_trans\_table()}}
+{\footnotesize\ttfamily bool stmt\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$}]{ha\+\_\+list }\end{DoxyParamCaption})}
+
+This function checks if a transactional table was updated by the current statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ha\+\_\+list} & Registered storage engine handler list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a transactional table was updated, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga1d647f955254c565dc33abf8caabdbab}\label{group__Binary__Log_ga1d647f955254c565dc33abf8caabdbab}} 
+\index{Binary Log@{Binary Log}!trans\+\_\+cannot\+\_\+safely\+\_\+rollback@{trans\+\_\+cannot\+\_\+safely\+\_\+rollback}}
+\index{trans\+\_\+cannot\+\_\+safely\+\_\+rollback@{trans\+\_\+cannot\+\_\+safely\+\_\+rollback}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{trans\+\_\+cannot\+\_\+safely\+\_\+rollback()}{trans\_cannot\_safely\_rollback()}}
+{\footnotesize\ttfamily bool trans\+\_\+cannot\+\_\+safely\+\_\+rollback (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This function checks if a transaction cannot be rolled back safely.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executed the current statement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if cannot be safely rolled back, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga25239dc38f22eeef6e1aea243af6fd9a}\label{group__Binary__Log_ga25239dc38f22eeef6e1aea243af6fd9a}} 
+\index{Binary Log@{Binary Log}!trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table@{trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table}}
+\index{trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table@{trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table()}{trans\_has\_updated\_trans\_table()}}
+{\footnotesize\ttfamily bool trans\+\_\+has\+\_\+updated\+\_\+trans\+\_\+table (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+This function checks if a transactional table was updated by the current transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The client thread that executed the current statement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a transactional table was updated, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gae0d03425fee2a702a9b4dfac7b9de4b1}\label{group__Binary__Log_gae0d03425fee2a702a9b4dfac7b9de4b1}} 
+\index{Binary Log@{Binary Log}!truncate@{truncate}}
+\index{truncate@{truncate}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{truncate()}{truncate()}}
+{\footnotesize\ttfamily int binlog\+\_\+trx\+\_\+cache\+\_\+data\+::truncate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})}
+
+This function truncates the transactional cache upon committing or rolling back either a transaction or a statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread whose transaction should be flushed \\
+\hline
+{\em cache\+\_\+mngr} & Pointer to the cache data to be flushed \\
+\hline
+{\em all} & {\ttfamily true} means truncate the transaction, otherwise the statement must be truncated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nonzero if an error pops up when truncating the transactional cache. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_gaa85432b55b5d1d84283e83c4399ad524}\label{group__Binary__Log_gaa85432b55b5d1d84283e83c4399ad524}} 
+\index{Binary Log@{Binary Log}!wait\+\_\+count\+\_\+or\+\_\+timeout@{wait\+\_\+count\+\_\+or\+\_\+timeout}}
+\index{wait\+\_\+count\+\_\+or\+\_\+timeout@{wait\+\_\+count\+\_\+or\+\_\+timeout}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{wait\+\_\+count\+\_\+or\+\_\+timeout()}{wait\_count\_or\_timeout()}}
+{\footnotesize\ttfamily void Stage\+\_\+manager\+::wait\+\_\+count\+\_\+or\+\_\+timeout (\begin{DoxyParamCaption}\item[{ulong}]{count,  }\item[{ulong}]{usec,  }\item[{\mbox{\hyperlink{classStage__manager_a28879837525f3786d4bcb6f330f4ac69}{Stage\+ID}}}]{stage }\end{DoxyParamCaption})}
+
+Introduces a wait operation on the executing thread. The waiting is done until the timeout elapses or count is reached (whichever comes first).
+
+If count == 0, then the session will wait until the timeout elapses. If timeout == 0, then there is no waiting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em usec} & the number of microseconds to wait. \\
+\hline
+{\em count} & wait for as many as count to join the queue the session is waiting on \\
+\hline
+{\em stage} & which stage queue size to compare count against. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Binary__Log_ga1b625b440aaf82241200b3980d94c6a9}\label{group__Binary__Log_ga1b625b440aaf82241200b3980d94c6a9}} 
+\index{Binary Log@{Binary Log}!wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log@{wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log}}
+\index{wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log@{wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log()}{wait\_for\_update\_bin\_log()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::wait\+\_\+for\+\_\+update\+\_\+bin\+\_\+log (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const struct timespec $\ast$}]{timeout }\end{DoxyParamCaption})}
+
+Wait until we get a signal that the binary log has been updated. Applies to master only.
+
+~\newline
+N\+O\+T\+ES 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & a T\+HD struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout} & a pointer to a timespec; N\+U\+LL means to wait w/o timeout. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if got signalled on update \\
+\hline
+{\em non-\/0} & if wait timeout elapsed \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+L\+O\+C\+K\+\_\+log must be taken before calling this function. L\+O\+C\+K\+\_\+log is being released while the thread is waiting. L\+O\+C\+K\+\_\+log is released by the caller. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Binary__Log_ga10698ebc9afd7be839f7a69b7aaac141}\label{group__Binary__Log_ga10698ebc9afd7be839f7a69b7aaac141}} 
+\index{Binary Log@{Binary Log}!wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log@{wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log}}
+\index{wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log@{wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log()}{wait\_for\_update\_relay\_log()}}
+{\footnotesize\ttfamily int M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::wait\+\_\+for\+\_\+update\+\_\+relay\+\_\+log (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const struct timespec $\ast$}]{timeout }\end{DoxyParamCaption})}
+
+Wait until we get a signal that the relay log has been updated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread variable \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout} & a pointer to a timespec; N\+U\+LL means to wait w/o timeout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if got signalled on update \\
+\hline
+{\em non-\/0} & if wait timeout elapsed\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+One must have a lock on L\+O\+C\+K\+\_\+log before calling this function. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Binary__Log_gab0d497917a9a65893753ff92be180172}\label{group__Binary__Log_gab0d497917a9a65893753ff92be180172}} 
+\index{Binary Log@{Binary Log}!write\+\_\+cache@{write\+\_\+cache}}
+\index{write\+\_\+cache@{write\+\_\+cache}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{write\+\_\+cache()}{write\_cache()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+cache (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{class \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$}]{binlog\+\_\+cache\+\_\+data,  }\item[{class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$}]{writer }\end{DoxyParamCaption})}
+
+Write the contents of the statement or transaction cache to the binary log.
+
+Comparison with do\+\_\+write\+\_\+cache\+:
+
+
+\begin{DoxyItemize}
+\item do\+\_\+write\+\_\+cache is a lower-\/level function that only performs the actual write.
+\item write\+\_\+cache is a higher-\/level function that calls do\+\_\+write\+\_\+cache and additionally performs some maintenance tasks, including\+:
+\begin{DoxyItemize}
+\item report any errors that occurred
+\item write incident event if needed
+\item update gtid\+\_\+state
+\item update thd.\+binlog\+\_\+next\+\_\+event\+\_\+pos
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread variable\\
+\hline
+{\em cache\+\_\+data} & \mbox{\hyperlink{classEvents}{Events}} will be read from the I\+O\+\_\+\+C\+A\+C\+HE of this cache\+\_\+data object.\\
+\hline
+{\em writer} & \mbox{\hyperlink{classEvents}{Events}} will be written to this \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & IO error. \\
+\hline
+{\em false} & Success.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+We only come here if there is something in the cache. 
+
+Whatever is in the cache is always a complete transaction. 
+
+\textquotesingle{}cache\textquotesingle{} needs to be reinitialized after this functions returns. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__Binary__Log_ga32b5241d2e64863a3de611e7b5eb95fd}\label{group__Binary__Log_ga32b5241d2e64863a3de611e7b5eb95fd}} 
+\index{Binary Log@{Binary Log}!write\+\_\+dml\+\_\+directly@{write\+\_\+dml\+\_\+directly}}
+\index{write\+\_\+dml\+\_\+directly@{write\+\_\+dml\+\_\+directly}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{write\+\_\+dml\+\_\+directly()}{write\_dml\_directly()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+dml\+\_\+directly (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{stmt,  }\item[{size\+\_\+t}]{stmt\+\_\+len }\end{DoxyParamCaption})}
+
+Write a dml into statement cache and then flush it into binlog. It writes \mbox{\hyperlink{classGtid__log__event}{Gtid\+\_\+log\+\_\+event}} and B\+E\+G\+IN, C\+O\+M\+M\+IT automatically.
+
+It is aimed to handle cases of \char`\"{}background\char`\"{} logging where a statement is logged indirectly, like \char`\"{}\+D\+E\+L\+E\+T\+E F\+R\+O\+M a\+\_\+memory\+\_\+table\char`\"{}. So don\textquotesingle{}t use it on any normal statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}\+I\+N\mbox{]}} & thd the T\+HD object of current thread. \\
+\hline
+{\em \mbox{[}\+I\+N\mbox{]}} & stmt the D\+E\+L\+E\+TE statement. \\
+\hline
+{\em \mbox{[}\+I\+N\mbox{]}} & stmt\+\_\+len the length of D\+E\+L\+E\+TE statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns false if succeeds, otherwise true is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Binary__Log_ga9c19cd666a1a517386dedd4078dd93e7}\label{group__Binary__Log_ga9c19cd666a1a517386dedd4078dd93e7}} 
+\index{Binary Log@{Binary Log}!write\+\_\+event@{write\+\_\+event}}
+\index{write\+\_\+event@{write\+\_\+event}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{write\+\_\+event()}{write\_event()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{event\+\_\+info }\end{DoxyParamCaption})}
+
+Write an event to the binary log. \mbox{\Hypertarget{group__Binary__Log_gabc6da7d051531ecf891a1fe631697f38}\label{group__Binary__Log_gabc6da7d051531ecf891a1fe631697f38}} 
+\index{Binary Log@{Binary Log}!write\+\_\+gtid@{write\+\_\+gtid}}
+\index{write\+\_\+gtid@{write\+\_\+gtid}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{write\+\_\+gtid()}{write\_gtid()}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+gtid (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} $\ast$}]{cache\+\_\+data,  }\item[{class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$}]{writer }\end{DoxyParamCaption})}
+
+Write the \mbox{\hyperlink{classGtid__log__event}{Gtid\+\_\+log\+\_\+event}} to the binary log (prior to writing the statement or transaction cache).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread that is committing. \\
+\hline
+{\em cache\+\_\+data} & The cache that is flushing. \\
+\hline
+{\em writer} & The event will be written to this \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} object.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_gaceb6fa03fdf46ada9510567752878a53}\label{group__Binary__Log_gaceb6fa03fdf46ada9510567752878a53}} 
+\index{Binary Log@{Binary Log}!write\+\_\+incident@{write\+\_\+incident}}
+\index{write\+\_\+incident@{write\+\_\+incident}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{write\+\_\+incident()}{write\_incident()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+incident (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{need\+\_\+lock\+\_\+log,  }\item[{const char $\ast$}]{err\+\_\+msg,  }\item[{bool}]{do\+\_\+flush\+\_\+and\+\_\+sync = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Creates an incident event and writes it to the binary log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread variable \\
+\hline
+{\em ev} & Incident event to be written \\
+\hline
+{\em err\+\_\+msg} & Error message written to log file for the incident. \\
+\hline
+{\em lock} & If the binary lock should be locked or not\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & error \\
+\hline
+{\em 1} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_gaed3d159f584e6c57aed2e5af51db49fb}\label{group__Binary__Log_gaed3d159f584e6c57aed2e5af51db49fb}} 
+\index{Binary Log@{Binary Log}!write\+\_\+incident@{write\+\_\+incident}}
+\index{write\+\_\+incident@{write\+\_\+incident}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{write\+\_\+incident()}{write\_incident()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::write\+\_\+incident (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIncident__log__event}{Incident\+\_\+log\+\_\+event}} $\ast$}]{ev,  }\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{need\+\_\+lock\+\_\+log,  }\item[{const char $\ast$}]{err\+\_\+msg,  }\item[{bool}]{do\+\_\+flush\+\_\+and\+\_\+sync = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Writes an incident event to stmt\+\_\+cache.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev} & Incident event to be written \\
+\hline
+{\em thd} & Thread variable \\
+\hline
+{\em need\+\_\+lock\+\_\+log} & If true, will acquire L\+O\+C\+K\+\_\+log; otherwise the caller should already have acquired L\+O\+C\+K\+\_\+log. \\
+\hline
+{\em err\+\_\+msg} & Error message written to log file for the incident.  If true, will call \mbox{\hyperlink{group__Binary__Log_gae40c4dc6b0b8986a50661b28df3a6fa3}{flush\+\_\+and\+\_\+sync()}}, \mbox{\hyperlink{group__Binary__Log_ga2053b0b53a46eb5702b44966497c333f}{rotate()}} and \mbox{\hyperlink{group__Binary__Log_gaff1889360685bd90b1d3ffba10ba3dba}{purge()}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & error \\
+\hline
+{\em true} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Binary__Log_ga5ebea3ac42b19b6e1c86ca33c3cb28e7}\label{group__Binary__Log_ga5ebea3ac42b19b6e1c86ca33c3cb28e7}} 
+\index{Binary Log@{Binary Log}!xlock@{xlock}}
+\index{xlock@{xlock}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{xlock()}{xlock()}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::xlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Acquire an exclusive lock to block binary log updates and commits. This is used by S\+T\+A\+RT T\+R\+A\+N\+S\+A\+C\+T\+I\+ON W\+I\+TH C\+O\+N\+S\+I\+S\+T\+E\+NT S\+N\+A\+P\+S\+H\+OT to create an atomic snapshot. 
+
+Implements \mbox{\hyperlink{classTC__LOG_aac75dc061e9aae27449e675b23c27ae3}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{group__Binary__Log_gaee260f3856d7b1e557b91b7ecdc0b01c}\label{group__Binary__Log_gaee260f3856d7b1e557b91b7ecdc0b01c}} 
+\index{Binary Log@{Binary Log}!xunlock@{xunlock}}
+\index{xunlock@{xunlock}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{xunlock()}{xunlock()}}
+{\footnotesize\ttfamily void M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+O\+G\+::xunlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Release lock acquired with \mbox{\hyperlink{group__Binary__Log_ga5ebea3ac42b19b6e1c86ca33c3cb28e7}{xlock()}}. 
+
+Implements \mbox{\hyperlink{classTC__LOG_a60ee380273adc9e23c56ff114cd2636a}{T\+C\+\_\+\+L\+OG}}.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__Binary__Log_gaf6ecc9c0253b423bc48289c779e9c010}\label{group__Binary__Log_gaf6ecc9c0253b423bc48289c779e9c010}} 
+\index{Binary Log@{Binary Log}!binlog\+\_\+storage\+\_\+engine@{binlog\+\_\+storage\+\_\+engine}}
+\index{binlog\+\_\+storage\+\_\+engine@{binlog\+\_\+storage\+\_\+engine}!Binary Log@{Binary Log}}
+\subsubsection{\texorpdfstring{binlog\+\_\+storage\+\_\+engine}{binlog\_storage\_engine}}
+{\footnotesize\ttfamily struct st\+\_\+mysql\+\_\+storage\+\_\+engine binlog\+\_\+storage\+\_\+engine}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{ MYSQL\_HANDLERTON\_INTERFACE\_VERSION \}}
+\end{DoxyCode}

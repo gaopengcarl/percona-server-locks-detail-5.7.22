@@ -1,0 +1,97 @@
+\hypertarget{structGRANT__INFO}{}\section{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO Struct Reference}
+\label{structGRANT__INFO}\index{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}}
+
+
+The current state of the privilege checking process for the current user, S\+QL statement and S\+QL object.  
+
+
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+R\+A\+N\+T\+\_\+\+T\+A\+B\+LE $\ast$ \mbox{\hyperlink{structGRANT__INFO_a25c6b4e6dd4a135f40d834c233655487}{grant\+\_\+table}}
+\begin{DoxyCompactList}\small\item\em A copy of the privilege information regarding the current host, database, object and user. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{structGRANT__INFO_a9fa219d89f9bbeca61f033a1d75c0ba2}{version}}
+\begin{DoxyCompactList}\small\item\em Used for cache invalidation when caching privilege information. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{structGRANT__INFO_a5fcbd105724d2b8bc497a3d149795f5e}{privilege}}
+\begin{DoxyCompactList}\small\item\em The set of privileges that the current user has fulfilled for a certain host, database, and object. \end{DoxyCompactList}\item 
+ulong \mbox{\hyperlink{structGRANT__INFO_afb32946497f7754ba60914d9fca5d616}{want\+\_\+privilege}}
+\begin{DoxyCompactList}\small\item\em the set of privileges that the current user needs to fulfil in order to carry out the requested operation. Used in debug build to ensure individual column privileges are assigned consistently. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structst__grant__internal__info}{G\+R\+A\+N\+T\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+FO}} \mbox{\hyperlink{structGRANT__INFO_a03c3e3236b3f922a87836a625628a19f}{m\+\_\+internal}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The current state of the privilege checking process for the current user, S\+QL statement and S\+QL object. 
+
+The privilege checking process is divided into phases depending on the level of the privilege to be checked and the type of object to be accessed. Due to the mentioned scattering of privilege checking functionality, it is necessary to keep track of the state of the process. This information is stored in privilege and want\+\_\+privilege.
+
+A \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} also serves as a cache of the privilege hash tables. Relevant members are grant\+\_\+table and version. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structGRANT__INFO_a25c6b4e6dd4a135f40d834c233655487}\label{structGRANT__INFO_a25c6b4e6dd4a135f40d834c233655487}} 
+\index{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}!grant\+\_\+table@{grant\+\_\+table}}
+\index{grant\+\_\+table@{grant\+\_\+table}!G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{grant\+\_\+table}{grant\_table}}
+{\footnotesize\ttfamily G\+R\+A\+N\+T\+\_\+\+T\+A\+B\+LE$\ast$ G\+R\+A\+N\+T\+\_\+\+I\+N\+F\+O\+::grant\+\_\+table}
+
+
+
+A copy of the privilege information regarding the current host, database, object and user. 
+
+The version of this copy is found in \mbox{\hyperlink{structGRANT__INFO_a9fa219d89f9bbeca61f033a1d75c0ba2}{G\+R\+A\+N\+T\+\_\+\+I\+N\+F\+O\+::version}}. \mbox{\Hypertarget{structGRANT__INFO_a03c3e3236b3f922a87836a625628a19f}\label{structGRANT__INFO_a03c3e3236b3f922a87836a625628a19f}} 
+\index{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}!m\+\_\+internal@{m\+\_\+internal}}
+\index{m\+\_\+internal@{m\+\_\+internal}!G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{m\+\_\+internal}{m\_internal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__grant__internal__info}{G\+R\+A\+N\+T\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+I\+N\+FO}} G\+R\+A\+N\+T\+\_\+\+I\+N\+F\+O\+::m\+\_\+internal}
+
+The grant state for internal tables. \mbox{\Hypertarget{structGRANT__INFO_a5fcbd105724d2b8bc497a3d149795f5e}\label{structGRANT__INFO_a5fcbd105724d2b8bc497a3d149795f5e}} 
+\index{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}!privilege@{privilege}}
+\index{privilege@{privilege}!G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{privilege}{privilege}}
+{\footnotesize\ttfamily ulong G\+R\+A\+N\+T\+\_\+\+I\+N\+F\+O\+::privilege}
+
+
+
+The set of privileges that the current user has fulfilled for a certain host, database, and object. 
+
+This field is continually updated throughout the access checking process. In each step the \char`\"{}wanted privilege\char`\"{} is checked against the fulfilled privileges. When/if the intersection of these sets is empty, access is granted.
+
+The set is implemented as a bitmap, with the bits defined in sql\+\_\+acl.\+h. \mbox{\Hypertarget{structGRANT__INFO_a9fa219d89f9bbeca61f033a1d75c0ba2}\label{structGRANT__INFO_a9fa219d89f9bbeca61f033a1d75c0ba2}} 
+\index{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}!version@{version}}
+\index{version@{version}!G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily uint G\+R\+A\+N\+T\+\_\+\+I\+N\+F\+O\+::version}
+
+
+
+Used for cache invalidation when caching privilege information. 
+
+The privilege information is stored on disk, with dedicated caches residing in memory\+: table-\/level and column-\/level privileges, respectively, have their own dedicated caches.
+
+The \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} works as a level 1 cache with this member updated to the current value of the global variable {\ttfamily grant\+\_\+version} ({\ttfamily static} variable in sql\+\_\+acl.\+cc). It is updated Whenever the \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} is refreshed from the level 2 cache. The level 2 cache is the {\ttfamily column\+\_\+priv\+\_\+hash} structure ({\ttfamily static} variable in sql\+\_\+acl.\+cc)
+
+\begin{DoxySeeAlso}{See also}
+grant\+\_\+version 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structGRANT__INFO_afb32946497f7754ba60914d9fca5d616}\label{structGRANT__INFO_afb32946497f7754ba60914d9fca5d616}} 
+\index{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}!want\+\_\+privilege@{want\+\_\+privilege}}
+\index{want\+\_\+privilege@{want\+\_\+privilege}!G\+R\+A\+N\+T\+\_\+\+I\+N\+FO@{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{want\+\_\+privilege}{want\_privilege}}
+{\footnotesize\ttfamily ulong G\+R\+A\+N\+T\+\_\+\+I\+N\+F\+O\+::want\+\_\+privilege}
+
+
+
+the set of privileges that the current user needs to fulfil in order to carry out the requested operation. Used in debug build to ensure individual column privileges are assigned consistently. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000130}{Todo}}]remove this member in 5.\+8. \end{DoxyRefDesc}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+table.\+cc\end{DoxyCompactItemize}

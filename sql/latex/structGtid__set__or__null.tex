@@ -1,0 +1,56 @@
+\hypertarget{structGtid__set__or__null}{}\section{Gtid\+\_\+set\+\_\+or\+\_\+null Struct Reference}
+\label{structGtid__set__or__null}\index{Gtid\+\_\+set\+\_\+or\+\_\+null@{Gtid\+\_\+set\+\_\+or\+\_\+null}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGtid__set__or__null_af7b6ce07b4c3ed0a49af673fc8340172}\label{structGtid__set__or__null_af7b6ce07b4c3ed0a49af673fc8340172}} 
+\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ \mbox{\hyperlink{structGtid__set__or__null_af7b6ce07b4c3ed0a49af673fc8340172}{get\+\_\+gtid\+\_\+set}} () const
+\begin{DoxyCompactList}\small\item\em Return N\+U\+LL if this is N\+U\+LL, otherwise return the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ \mbox{\hyperlink{structGtid__set__or__null_a3a7015e462a30aad90c33e58c99a68c4}{set\+\_\+non\+\_\+null}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sm)
+\item 
+\mbox{\Hypertarget{structGtid__set__or__null_ac47966d9a50008b0d6cf067f48d224ab}\label{structGtid__set__or__null_ac47966d9a50008b0d6cf067f48d224ab}} 
+void \mbox{\hyperlink{structGtid__set__or__null_ac47966d9a50008b0d6cf067f48d224ab}{set\+\_\+null}} ()
+\begin{DoxyCompactList}\small\item\em Set this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to N\+U\+LL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGtid__set__or__null_a3fd61ef2c21ef9f8ae1b0b3f47b9be01}\label{structGtid__set__or__null_a3fd61ef2c21ef9f8ae1b0b3f47b9be01}} 
+\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ \mbox{\hyperlink{structGtid__set__or__null_a3fd61ef2c21ef9f8ae1b0b3f47b9be01}{gtid\+\_\+set}}
+\begin{DoxyCompactList}\small\item\em Pointer to the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGtid__set__or__null_afa7c80306b461171a9d594df055592a0}\label{structGtid__set__or__null_afa7c80306b461171a9d594df055592a0}} 
+bool \mbox{\hyperlink{structGtid__set__or__null_afa7c80306b461171a9d594df055592a0}{is\+\_\+non\+\_\+null}}
+\begin{DoxyCompactList}\small\item\em True if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is N\+U\+LL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds information about a \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. Can also be N\+U\+LL.
+
+This is used as backend storage for @session.\+gtid\+\_\+next\+\_\+list. The idea is that we allow the user to set this to N\+U\+LL, but we keep the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} object so that we can re-\/use the allocated memory and avoid costly allocations later.
+
+This is stored in struct \mbox{\hyperlink{structsystem__variables}{system\+\_\+variables}} (defined in \mbox{\hyperlink{sql__class_8h_source}{sql\+\_\+class.\+h}}), which is cleared using memset(0); hence the negated form of is\+\_\+non\+\_\+null.
+
+The convention is\+: if is\+\_\+non\+\_\+null is false, then the value of the session variable is N\+U\+LL, and the field gtid\+\_\+set may be N\+U\+LL or non-\/N\+U\+LL. If is\+\_\+non\+\_\+null is true, then the value of the session variable is not N\+U\+LL, and the field gtid\+\_\+set has to be non-\/N\+U\+LL.
+
+This is a P\+OD. It has to be a P\+OD because it is stored in T\+H\+D\+::variables. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structGtid__set__or__null_a3a7015e462a30aad90c33e58c99a68c4}\label{structGtid__set__or__null_a3a7015e462a30aad90c33e58c99a68c4}} 
+\index{Gtid\+\_\+set\+\_\+or\+\_\+null@{Gtid\+\_\+set\+\_\+or\+\_\+null}!set\+\_\+non\+\_\+null@{set\+\_\+non\+\_\+null}}
+\index{set\+\_\+non\+\_\+null@{set\+\_\+non\+\_\+null}!Gtid\+\_\+set\+\_\+or\+\_\+null@{Gtid\+\_\+set\+\_\+or\+\_\+null}}
+\subsubsection{\texorpdfstring{set\+\_\+non\+\_\+null()}{set\_non\_null()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}$\ast$ Gtid\+\_\+set\+\_\+or\+\_\+null\+::set\+\_\+non\+\_\+null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{sm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do nothing if this object is non-\/null; set to empty set otherwise.
+
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if out of memory; \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\end{DoxyCompactItemize}

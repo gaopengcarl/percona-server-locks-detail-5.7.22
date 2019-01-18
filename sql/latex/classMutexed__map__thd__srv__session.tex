@@ -1,0 +1,148 @@
+\hypertarget{classMutexed__map__thd__srv__session}{}\section{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session Class Reference}
+\label{classMutexed__map__thd__srv__session}\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMutexed__map__thd__srv__session_1_1Do__Impl}{Do\+\_\+\+Impl}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classMutexed__map__thd__srv__session_a6f50806bddeeb218cd03c27cba2f58a4}{init}} ()
+\item 
+bool \mbox{\hyperlink{classMutexed__map__thd__srv__session_a4b06c343737e4ef2e46f2eeecdeeb187}{deinit}} ()
+\item 
+\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$ \mbox{\hyperlink{classMutexed__map__thd__srv__session_afbc580641d60bb9ac333db5a826e098f}{find}} (const T\+HD $\ast$key)
+\item 
+bool \mbox{\hyperlink{classMutexed__map__thd__srv__session_ac2cb871bfc4a7a903784db38b8587d2d}{add}} (const T\+HD $\ast$key, const void $\ast$plugin, \mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+bool \mbox{\hyperlink{classMutexed__map__thd__srv__session_aeb691ab25dc82da3a4a778ac202ae21b}{remove}} (const T\+HD $\ast$key)
+\item 
+void \mbox{\hyperlink{classMutexed__map__thd__srv__session_a0645d00fbc8ef1d71612e0391c9029f9}{remove\+\_\+all\+\_\+of\+\_\+plugin}} (const void $\ast$plugin, unsigned int \&removed)
+\item 
+bool \mbox{\hyperlink{classMutexed__map__thd__srv__session_a747fdb30bf6388acdfebc23b8919944a}{clear}} ()
+\item 
+unsigned int \mbox{\hyperlink{classMutexed__map__thd__srv__session_a377c0a20e7dff0d814d39e904ff5d41b}{size}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+std\+::map of T\+H\+D$\ast$ as key and Srv\+\_\+session$\ast$ as value guarded by a read-\/write lock. RW lock is used instead of a mutex, as \mbox{\hyperlink{classMutexed__map__thd__srv__session_afbc580641d60bb9ac333db5a826e098f}{find()}} is a hot spot due to the sanity checks it is used for -\/ when a pointer to a closed session is passed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_ac2cb871bfc4a7a903784db38b8587d2d}\label{classMutexed__map__thd__srv__session_ac2cb871bfc4a7a903784db38b8587d2d}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!add@{add}}
+\index{add@{add}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily bool Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::add (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{key,  }\item[{const void $\ast$}]{plugin,  }\item[{\mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an element to the map
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key \\
+\hline
+{\em plugin} & secondary key \\
+\hline
+{\em value} & value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_a747fdb30bf6388acdfebc23b8919944a}\label{classMutexed__map__thd__srv__session_a747fdb30bf6388acdfebc23b8919944a}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!clear@{clear}}
+\index{clear@{clear}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily bool Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Empties the map
+
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_a4b06c343737e4ef2e46f2eeecdeeb187}\label{classMutexed__map__thd__srv__session_a4b06c343737e4ef2e46f2eeecdeeb187}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!deinit@{deinit}}
+\index{deinit@{deinit}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily bool Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deinitializes the map
+
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_afbc580641d60bb9ac333db5a826e098f}\label{classMutexed__map__thd__srv__session_afbc580641d60bb9ac333db5a826e098f}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!find@{find}}
+\index{find@{find}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}}$\ast$ Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::find (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Searches for an element with in the map
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \mbox{\hyperlink{classKey}{Key}} of the element\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the element N\+U\+LL if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_a6f50806bddeeb218cd03c27cba2f58a4}\label{classMutexed__map__thd__srv__session_a6f50806bddeeb218cd03c27cba2f58a4}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!init@{init}}
+\index{init@{init}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes the map
+
+
+\begin{DoxyParams}{Parameters}
+{\em null\+\_\+val} & null value to be returned when element not found in the map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_aeb691ab25dc82da3a4a778ac202ae21b}\label{classMutexed__map__thd__srv__session_aeb691ab25dc82da3a4a778ac202ae21b}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!remove@{remove}}
+\index{remove@{remove}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::remove (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes an element from the map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_a0645d00fbc8ef1d71612e0391c9029f9}\label{classMutexed__map__thd__srv__session_a0645d00fbc8ef1d71612e0391c9029f9}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!remove\+\_\+all\+\_\+of\+\_\+plugin@{remove\+\_\+all\+\_\+of\+\_\+plugin}}
+\index{remove\+\_\+all\+\_\+of\+\_\+plugin@{remove\+\_\+all\+\_\+of\+\_\+plugin}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{remove\+\_\+all\+\_\+of\+\_\+plugin()}{remove\_all\_of\_plugin()}}
+{\footnotesize\ttfamily void Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::remove\+\_\+all\+\_\+of\+\_\+plugin (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin,  }\item[{unsigned int \&}]{removed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes all elements which have been added with plugin as plugin name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & key \\
+\hline
+{\em removed} & O\+UT Number of removed elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMutexed__map__thd__srv__session_a377c0a20e7dff0d814d39e904ff5d41b}\label{classMutexed__map__thd__srv__session_a377c0a20e7dff0d814d39e904ff5d41b}} 
+\index{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}!size@{size}}
+\index{size@{size}!Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session@{Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily unsigned int Mutexed\+\_\+map\+\_\+thd\+\_\+srv\+\_\+session\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of elements in the maps 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{srv__session_8cc}{srv\+\_\+session.\+cc}}\end{DoxyCompactItemize}

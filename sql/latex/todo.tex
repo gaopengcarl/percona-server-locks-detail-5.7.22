@@ -1,0 +1,269 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000024}%
+\Hypertarget{todo__todo000024}%
+Member \mbox{\hyperlink{classAlter__inplace__info_a1774915f106804ab1aeb6629d58bcae4}{Alter\+\_\+inplace\+\_\+info\+:\+:key\+\_\+info\+\_\+buffer}} ]This is mainly due to the fact that we need to keep compatibility with removed handler\+::add\+\_\+index() call. We plan to switch to T\+A\+B\+L\+E\+::key\+\_\+info numbering later. 
+\item[\label{todo__todo000021}%
+\Hypertarget{todo__todo000021}%
+Member \mbox{\hyperlink{handler_8cc_a24d44ee426ff4454b3e832c4470d6cc7}{A\+U\+T\+O\+\_\+\+I\+N\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+B\+\_\+\+R\+O\+WS}} ]Replace all references to \char`\"{}next number\char`\"{} or N\+E\+X\+T\+\_\+\+N\+U\+M\+B\+ER to \char`\"{}auto\+\_\+increment\char`\"{}, everywhere (see below\+: there is table-\/$>$auto\+\_\+increment\+\_\+field\+\_\+not\+\_\+null, and there also exists table-\/$>$next\+\_\+number\+\_\+field, it\textquotesingle{}s not consistent). 
+\item[\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+Class \mbox{\hyperlink{classbinlog__cache__data}{binlog\+\_\+cache\+\_\+data}} ]All the access functions for the flags suggest that the encapsuling is not done correctly, so try to move any logic that requires access to the flags into the cache.  
+\item[\label{todo__todo000078}%
+\Hypertarget{todo__todo000078}%
+Class \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} ]Rename this class. 
+\item[\label{todo__todo000077}%
+\Hypertarget{todo__todo000077}%
+Member \mbox{\hyperlink{classCOPY__INFO_a7ce8622f7a089c3b7ad02858539899ba}{C\+O\+P\+Y\+\_\+\+I\+N\+FO\+:\+:set\+\_\+function\+\_\+defaults}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)]combine this call to update\+\_\+generated\+\_\+write\+\_\+fields() with the one in fill\+\_\+record() to avoid updating virtual generated fields twice. blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value() is called to unset the m\+\_\+keep\+\_\+old\+\_\+value flag. Allowing this flag to remain might interfere with the way the old B\+L\+OB value is handled. When update\+\_\+generated\+\_\+write\+\_\+fields() is removed, blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value() can also be removed.  
+\item[\label{todo__todo000100}%
+\Hypertarget{todo__todo000100}%
+Member \mbox{\hyperlink{group__Runtime__Environment_gabf07206792036bfb47e5bb8eb0f20bc4}{dispatch\+\_\+command}} (T\+HD $\ast$thd, const C\+O\+M\+\_\+\+D\+A\+TA $\ast$com\+\_\+data, enum enum\+\_\+server\+\_\+command command)]set thd-\/$>$lex-\/$>$sql\+\_\+command to S\+Q\+L\+C\+O\+M\+\_\+\+E\+ND here. 
+
+The following has to be changed to an 8 byte integer 
+\item[\label{todo__todo000111}%
+\Hypertarget{todo__todo000111}%
+Member \mbox{\hyperlink{classEd__connection_ad80317ac21aa245c7a0d1162ac98b264}{Ed\+\_\+connection\+:\+:store\+\_\+result\+\_\+set}} ()]Use double-\/linked list, when this is really used. 
+\item[\label{todo__todo000113}%
+\Hypertarget{todo__todo000113}%
+Class \mbox{\hyperlink{classEd__result__set}{Ed\+\_\+result\+\_\+set}} ]Implement support for result set metadata and automatic type conversion.  
+\item[\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+Class \mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}} ]The inheritance relationship is backwards since \mbox{\hyperlink{classField__bit}{Field\+\_\+bit}} is an extended version of \mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}} and not the other way around. Hence, we should refactor it to fix the hierarchy order.  
+\item[\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+Member \mbox{\hyperlink{classField__new__decimal_a05d9f15a2a8a5148871c947dfe7a9dbe}{Field\+\_\+new\+\_\+decimal\+:\+:store}} (double nr)]Fix following when double2my\+\_\+decimal when double2decimal will return E\+\_\+\+D\+E\+C\+\_\+\+T\+R\+U\+N\+C\+A\+T\+ED always correctly  
+\item[\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+Member \mbox{\hyperlink{classField__num_a6497614b428534475736dc71902096fd}{Field\+\_\+num\+:\+:check\+\_\+int}} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, const char $\ast$str, size\+\_\+t length, const char $\ast$int\+\_\+end, int error)]Make this multi-\/byte-\/character safe 
+\item[\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Member \mbox{\hyperlink{classField__str_ae0a260a3e657aa6778dcf651ff3e9b95}{Field\+\_\+str\+:\+:store\+\_\+decimal}} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)]use decimal2string? 
+\item[\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+Member \mbox{\hyperlink{classField__temporal__with__date__and__time_ac497834ddc1ef395a387790d97cfb63d}{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time\+:\+:init\+\_\+timestamp\+\_\+flags}} ()]get rid of T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+F\+L\+AG and O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+N\+O\+W\+\_\+\+F\+L\+AG.  
+\item[\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+Member \mbox{\hyperlink{classField__time__common_ab30cf710ffb3f033da46e5e43430490d}{Field\+\_\+time\+\_\+common\+:\+:convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}} (longlong nr, bool unsigned\+\_\+val, int nanoseconds, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, int $\ast$warning)]\+: convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME returns conversion status through two different interfaces\+: return value and warning. It should be refactored to only use return value.  
+\item[\label{todo__todo000122}%
+\Hypertarget{todo__todo000122}%
+Member \mbox{\hyperlink{sys__vars_8cc_a995ff555f60375cf17a4408c516c43a2}{fix\+\_\+delay\+\_\+key\+\_\+write}} (\mbox{\hyperlink{classsys__var}{sys\+\_\+var}} $\ast$self, T\+HD $\ast$thd, enum\+\_\+var\+\_\+type type)]When updating myisam\+\_\+delay\+\_\+key\+\_\+write, we should do a \textquotesingle{}flush tables\textquotesingle{} of all My\+I\+S\+AM tables to ensure that they are reopen with the new attribute.  
+\item[\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+File \mbox{\hyperlink{gen__lex__hash_8cc}{gen\+\_\+lex\+\_\+hash.cc}} ]use instead to\+\_\+upper\+\_\+lex, special array (substitute chars) without skip codes.. 
+
+try use reverse order of comparing.. 
+\item[\label{todo__todo000020}%
+\Hypertarget{todo__todo000020}%
+Member \mbox{\hyperlink{handler_8cc_ad012444cc24f2178ff92e9e7ecbfbc85}{get\+\_\+canonical\+\_\+filename}} (handler $\ast$file, const char $\ast$path, char $\ast$tmp\+\_\+path)]This may be done more efficiently when table path gets built. Convert this function to something like A\+S\+S\+E\+R\+T\+\_\+\+C\+A\+N\+O\+N\+I\+C\+A\+L\+\_\+\+F\+I\+L\+E\+N\+A\+ME.  
+\item[\label{todo__todo000130}%
+\Hypertarget{todo__todo000130}%
+Member \mbox{\hyperlink{structGRANT__INFO_afb32946497f7754ba60914d9fca5d616}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO\+:\+:want\+\_\+privilege}} ]remove this member in 5.\+8.  
+\item[\label{todo__todo000060}%
+\Hypertarget{todo__todo000060}%
+Member \mbox{\hyperlink{classGtid__set_a9a384be7c735d018d5fc0c8c0c64344e}{Gtid\+\_\+set\+:\+:intersection}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$result)]\+: This algorithm is simple, a little bit slower than necessary. It would be more efficient to iterate over intervals of \textquotesingle{}this\textquotesingle{} and \textquotesingle{}other\textquotesingle{} similar to add\+\_\+gno\+\_\+interval(). At the moment the performance of this is not super-\/important. /\+Sven  
+\item[\label{todo__todo000059}%
+\Hypertarget{todo__todo000059}%
+Member \mbox{\hyperlink{classGtid__table__persistor_aeea3284db6daf718fa412a70e4afb889}{Gtid\+\_\+table\+\_\+persistor\+:\+:fetch\+\_\+gtids}} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)]\+:
+\begin{DoxyItemize}
+\item take only global\+\_\+sid\+\_\+lock-\/$>$rdlock(), and take gtid\+\_\+state-\/$>$sid\+\_\+lock for each iteration.
+\item Add wrapper around Gtid\+\_\+set\+::add\+\_\+gno\+\_\+interval and call that instead.  
+\end{DoxyItemize}
+\item[\label{todo__todo000022}%
+\Hypertarget{todo__todo000022}%
+Member \mbox{\hyperlink{handler_8cc_a4b52399a74d9db4f3421851b46ff6dc9}{ha\+\_\+check\+\_\+if\+\_\+supported\+\_\+system\+\_\+table}} (handlerton $\ast$hton, const char $\ast$db, const char $\ast$table\+\_\+name)]There is another function called is\+\_\+system\+\_\+table\+\_\+name() used by get\+\_\+table\+\_\+category(), which is used to set \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} table\+\_\+category. It checks only a subset of table name like proc, event and time$\ast$. We cannot use below function in get\+\_\+table\+\_\+category(), as that affects locking mechanism. If we need to unify these functions, we need to fix locking issues generated. 
+\item[\label{todo__todo000019}%
+\Hypertarget{todo__todo000019}%
+Member \mbox{\hyperlink{handler_8cc_a9a81ce45b63a150449fb897a34572bb1}{ha\+\_\+commit\+\_\+trans}} (T\+HD $\ast$thd, bool all, bool ignore\+\_\+global\+\_\+read\+\_\+lock)]Since we don\textquotesingle{}t support nested statement transactions in 5.\+0, we can\textquotesingle{}t commit or rollback stmt transactions while we are inside stored functions or triggers. So we simply do nothing now. T\+O\+DO\+: This should be fixed in later ( $>$= 5.\+1) releases.  
+\item[\label{todo__todo000118}%
+\Hypertarget{todo__todo000118}%
+Member \mbox{\hyperlink{group__Query__Optimizer_gae77d58d476f44178e469e2cbe16e9e01}{handle\+\_\+query}} (T\+HD $\ast$thd, L\+EX $\ast$lex, Query\+\_\+result $\ast$result, ulonglong added\+\_\+options, ulonglong removed\+\_\+options)]make this function also handle I\+N\+S\+E\+RT ... V\+A\+L\+U\+ES, single-\/table U\+P\+D\+A\+TE and D\+E\+L\+E\+TE, S\+ET and DO. 
+\item[\label{todo__todo000025}%
+\Hypertarget{todo__todo000025}%
+Member \mbox{\hyperlink{structHybrid__type__traits__decimal_abacf79142edb4cc12105279b750ac73d}{Hybrid\+\_\+type\+\_\+traits\+\_\+decimal\+:\+:div}} (\mbox{\hyperlink{structHybrid__type}{Hybrid\+\_\+type}} $\ast$val, ulonglong u) const]what is \textquotesingle{}4\textquotesingle{} for scale?  
+\item[\label{todo__todo000030}%
+\Hypertarget{todo__todo000030}%
+Member \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{Item\+:\+:enum\+\_\+walk}} ]
+\begin{DoxyEnumerate}
+\item Move this away from the \mbox{\hyperlink{classItem}{Item}} class. It is a property of the visitor in what direction the traversal is done, not of the visitee. 
+\end{DoxyEnumerate}
+\item[\label{todo__todo000026}%
+\Hypertarget{todo__todo000026}%
+Member \mbox{\hyperlink{classItem_a875594d2b9d99ccff3863bfd435828f0}{Item\+:\+:val\+\_\+bool}} ()]Make this functions class dependent  
+\item[\label{todo__todo000035}%
+\Hypertarget{todo__todo000035}%
+Member \mbox{\hyperlink{classItem__func__format_a9f01cf724eacb711a5874955671fdc67}{Item\+\_\+func\+\_\+format\+:\+:val\+\_\+str\+\_\+ascii}} (String $\ast$)]This needs to be fixed for multi-\/byte character set where numbers are stored in more than one byte  
+\item[\label{todo__todo000034}%
+\Hypertarget{todo__todo000034}%
+Member \mbox{\hyperlink{classItem__func__replace_a339fa98601454ef99451c1c2daf5d1a4}{Item\+\_\+func\+\_\+replace\+:\+:val\+\_\+str}} (String $\ast$)]Fix that this works with binary strings  
+\item[\label{todo__todo000032}%
+\Hypertarget{todo__todo000032}%
+Member \mbox{\hyperlink{classItem__func__xor_abf20b3f1b71cb4c4b588c5a04d77ba05}{Item\+\_\+func\+\_\+xor\+:\+:val\+\_\+int}} ()](low priority) Change this to be optimized as\+: ~\newline
+ A X\+OR B -\/$>$ (A) == 1 A\+ND (B) $<$$>$ 1) OR (A $<$$>$ 1 A\+ND (B) == 1) ~\newline
+ To be able to do this, we would however first have to extend the My\+S\+QL range optimizer to handle OR better. 
+\item[\label{todo__todo000037}%
+\Hypertarget{todo__todo000037}%
+Member \mbox{\hyperlink{classItem__in__subselect_a6f5b5e6374b290d5efd086002d91ff92}{Item\+\_\+in\+\_\+subselect\+:\+:row\+\_\+value\+\_\+in\+\_\+to\+\_\+exists\+\_\+transformer}} (st\+\_\+select\+\_\+lex $\ast$select)]The IF-\/E\+L\+SE below can be refactored so that there is no duplication of the statements that create the new conditions. For this we have to invert the IF and the F\+OR statements as this\+: for (each left operand) create the equi-\/join condition if (is\+\_\+having\+\_\+used $\vert$$\vert$ !abort\+\_\+on\+\_\+null) create the \char`\"{}is null\char`\"{} and is\+\_\+not\+\_\+null\+\_\+test items if (is\+\_\+having\+\_\+used) add the equi-\/join and the null tests to H\+A\+V\+I\+NG else add the equi-\/join and the \char`\"{}is null\char`\"{} to W\+H\+E\+RE add the is\+\_\+not\+\_\+null\+\_\+test to H\+A\+V\+I\+NG  
+\item[\label{todo__todo000028}%
+\Hypertarget{todo__todo000028}%
+Member \mbox{\hyperlink{classItem__param_aa9b9af6fd0ae3281fc3bbcd2ce6cf741}{Item\+\_\+param\+:\+:query\+\_\+val\+\_\+str}} (T\+HD $\ast$thd, String $\ast$str) const]
+\begin{DoxyItemize}
+\item Change interface and implementation to fill log data in place and avoid one more memcpy/alloc between str and log string.
+\item In case of error we need to notify replication that binary log contains wrong statement  
+\end{DoxyItemize}
+\item[\label{todo__todo000029}%
+\Hypertarget{todo__todo000029}%
+Member \mbox{\hyperlink{classItem__ref_a6a78e05b0db89e799f61808c621b808f}{Item\+\_\+ref\+:\+:fix\+\_\+fields}} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)]Here we could first find the field anyway, and then test this condition, so that we can give a better error message -\/ E\+R\+\_\+\+W\+R\+O\+N\+G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+T\+H\+\_\+\+G\+R\+O\+UP, instead of the less informative E\+R\+\_\+\+B\+A\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+R\+R\+OR which we produce now. 
+\item[\label{todo__todo000033}%
+\Hypertarget{todo__todo000033}%
+Member \mbox{\hyperlink{classItem__row_a8f0ccfbe35ebded8e8a9b3ba13ff9db3}{Item\+\_\+row\+:\+:Item\+\_\+row}} (const P\+OS \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$head, \mbox{\hyperlink{classList}{List$<$ Item $>$}} \&tail)]think placing 2-\/3 component items in item (as it done for function  
+\item[\label{todo__todo000036}%
+\Hypertarget{todo__todo000036}%
+Member \mbox{\hyperlink{classItem__singlerow__subselect_ad94e0b9d5a9d2d386405ef76c2bd0c69}{Item\+\_\+singlerow\+\_\+subselect\+:\+:select\+\_\+transformer}} (st\+\_\+select\+\_\+lex $\ast$select)]
+\begin{DoxyItemize}
+\item We cant change name of \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} or \mbox{\hyperlink{classItem__ref}{Item\+\_\+ref}}, because it will prevent it\textquotesingle{}s correct resolving, but we should save name of removed item =$>$ we do not make optimization if top item of list is field or reference.
+\item switch off this optimization for prepare statement, because we do not rollback this changes. Make rollback for it, or special name resolving mode in 5.\+0.  
+\end{DoxyItemize}
+\item[\label{todo__todo000027}%
+\Hypertarget{todo__todo000027}%
+Member \mbox{\hyperlink{classItem__string_a4226f4dfd6a0c9eb1b97c33da0b3db78}{Item\+\_\+string\+:\+:val\+\_\+int}} ()]Give error if we wanted a signed integer and we got an unsigned one  
+\item[\label{todo__todo000040}%
+\Hypertarget{todo__todo000040}%
+Member \mbox{\hyperlink{classItem__sum_ae446ff1dc1d0a43af8a3b57861512d58}{Item\+\_\+sum\+:\+:get\+\_\+arg\+\_\+ptr}} (uint i)]delete this when we no longer support temporary transformations  
+\item[\label{todo__todo000039}%
+\Hypertarget{todo__todo000039}%
+Member \mbox{\hyperlink{classItem__sum__hybrid_ad7d563ebdca9c58beec529763623c3fb}{Item\+\_\+sum\+\_\+hybrid\+:\+:min\+\_\+max\+\_\+update\+\_\+decimal\+\_\+field}} ()]optimize\+: do not get result\+\_\+field in case of args\mbox{[}0\mbox{]} is N\+U\+LL  
+\item[\label{todo__todo000038}%
+\Hypertarget{todo__todo000038}%
+Member \mbox{\hyperlink{classItem__sum__sum_af259b3fb68c269dba5d29d7f1e2323eb}{Item\+\_\+sum\+\_\+sum\+:\+:Item\+\_\+sum\+\_\+sum}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__sum__sum}{Item\+\_\+sum\+\_\+sum}} $\ast$item)]check if the following assignments are really needed  
+\item[\label{todo__todo000041}%
+\Hypertarget{todo__todo000041}%
+File \mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.cc}} ]Move month and days to language files  
+\item[\label{todo__todo000080}%
+\Hypertarget{todo__todo000080}%
+Member \mbox{\hyperlink{group__Query__Executor_ga31581f58624b85919d7c6cd632157929}{J\+O\+IN\+:\+:exec}} ()]When can we have here thd-\/$>$net.\+report\+\_\+error not zero? 
+\item[\label{todo__todo000095}%
+\Hypertarget{todo__todo000095}%
+Member \mbox{\hyperlink{group__Query__Optimizer_gae9c1cf0874f4bda777557d012148e059}{J\+O\+IN\+:\+:get\+\_\+best\+\_\+combination}} ()]the block which sets tab-\/$>$type should move to adjust\+\_\+access\+\_\+methods for unification.  
+\item[\label{todo__todo000119}%
+\Hypertarget{todo__todo000119}%
+Member \mbox{\hyperlink{group__Query__Optimizer_gaa62d47da29f3853e87b1069ee5c1ff21}{J\+O\+IN\+:\+:join\+\_\+free}} ()]Unlock tables even if the join isn\textquotesingle{}t top level select in the tree  
+\item[\label{todo__todo000091}%
+\Hypertarget{todo__todo000091}%
+Member \mbox{\hyperlink{group__Query__Optimizer_ga7f722315c64ce97cff639d705107c660}{J\+O\+IN\+:\+:optimize}} ()]This query block didn\textquotesingle{}t transform itself in S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::prepare(), so belongs to a parent query block. That parent, or its parents, had to transform us -\/ it has not; maybe it is itself in prepare() and evaluating the present query block as an \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}}. Such evaluation in prepare() is expected to be a rare case to be eliminated in the future (\char`\"{}\+S\+E\+T x=(subq)\char`\"{} is one such case; because it locks tables before prepare()).  
+\item[\label{todo__todo000023}%
+\Hypertarget{todo__todo000023}%
+Member \mbox{\hyperlink{handler_8cc_a136dfdf479102e63c8ddf02af552c445}{key\+\_\+uses\+\_\+partial\+\_\+cols}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint keyno)]Allow use of DS-\/M\+RR in cases where the index has partially-\/covered components but they are not used for scanning. 
+\item[\label{todo__todo000043}%
+\Hypertarget{todo__todo000043}%
+File \mbox{\hyperlink{lock_8cc}{lock.cc}} ]Change to use my\+\_\+malloc() O\+N\+LY when using L\+O\+CK T\+A\+B\+L\+ES command or when we are forced to use mysql\+\_\+lock\+\_\+merge.  
+\item[\label{todo__todo000044}%
+\Hypertarget{todo__todo000044}%
+File \mbox{\hyperlink{log_8cc}{log.cc}} ]Abort logging when we get an error in reading or writing log files  
+\item[\label{todo__todo000045}%
+\Hypertarget{todo__todo000045}%
+Member \mbox{\hyperlink{classLog__event__handler_aa9f98b8c0b48eb846877fe9d2496560e}{Log\+\_\+event\+\_\+handler\+:\+:log\+\_\+general}} (T\+HD $\ast$thd, ulonglong event\+\_\+utime, const char $\ast$user\+\_\+host, size\+\_\+t user\+\_\+host\+\_\+len, my\+\_\+thread\+\_\+id thread\+\_\+id, const char $\ast$command\+\_\+type, size\+\_\+t command\+\_\+type\+\_\+len, const char $\ast$sql\+\_\+text, size\+\_\+t sql\+\_\+text\+\_\+len, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$client\+\_\+cs)=0]\+: how?). If a write to the table has failed, the function attempts to write to a short error message to the file. The failure is also indicated in the return value. 
+\item[\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+Member \mbox{\hyperlink{group__Binary__Log_gaf81ca29b12d9e21eb2d36eee2e7a51fe}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG\+:\+:do\+\_\+write\+\_\+cache}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$cache, class \mbox{\hyperlink{classBinlog__event__writer}{Binlog\+\_\+event\+\_\+writer}} $\ast$writer)]\+: this can happen in case of disk corruption in the I\+O\+\_\+\+C\+A\+C\+HE. We may have written a half transaction (even half event) to the binlog. We should rollback the transaction and truncate the binlog. /\+Sven 
+
+\+: this can happen in case of disk corruption in the I\+O\+\_\+\+C\+A\+C\+HE. We may have written a half transaction (even half event) to the binlog. We should rollback the transaction and truncate the binlog. /\+Sven  
+\item[\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+Member \mbox{\hyperlink{group__Binary__Log_gabcd5b380680e537bdec0f093a8f2e3d6}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG\+:\+:generate\+\_\+name}} (const char $\ast$log\+\_\+name, const char $\ast$suffix, char $\ast$buff)]The following should be using fn\+\_\+format(); We just need to first change fn\+\_\+format() to cut the file name if it\textquotesingle{}s too long.  
+\item[\label{todo__todo000008}%
+\Hypertarget{todo__todo000008}%
+Member \mbox{\hyperlink{group__Binary__Log_ga44de4e3109fc4d50d4968191ab0f3544}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG\+:\+:open\+\_\+binlog}} (const char $\ast$opt\+\_\+name)]keep in-\/memory list of prepared transactions (add to list in log(), remove on unlog()) and copy it to the new binlog if rotated but let\textquotesingle{}s check the behaviour of tc\+\_\+log\+\_\+page\+\_\+waits first!  
+\item[\label{todo__todo000121}%
+\Hypertarget{todo__todo000121}%
+Member \mbox{\hyperlink{sql__trigger_8h_a1e3f2ad15ed49c6bd2a89fd4562ee8e5}{mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, bool create)]T\+O\+DO\+: We should check if user has T\+R\+I\+G\+G\+ER privilege for table here. Now we just require S\+U\+P\+ER privilege for creating/dropping because we don\textquotesingle{}t have proper privilege checking for triggers in place yet. 
+\item[\label{todo__todo000101}%
+\Hypertarget{todo__todo000101}%
+Member \mbox{\hyperlink{group__Runtime__Environment_gac7751d9816645a7a68e879596ee7e558}{mysql\+\_\+execute\+\_\+command}} (T\+HD $\ast$thd, bool first\+\_\+level)]
+\begin{DoxyItemize}
+\item Invalidate the table in the query cache if something changed after unlocking when changes become visible. 
+\end{DoxyItemize}
+
+\+: this is workaround. right way will be move invalidating in the unlock procedure.
+\begin{DoxyItemize}
+\item T\+O\+DO\+: use check\+\_\+change\+\_\+password() 
+\end{DoxyItemize}
+\item[\label{todo__todo000102}%
+\Hypertarget{todo__todo000102}%
+Member \mbox{\hyperlink{group__Runtime__Environment_gab37db6950d3b6bc16bbbb2ae0484ae55}{mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command}} (T\+HD $\ast$thd)]Remove mysql\+\_\+reset\+\_\+thd\+\_\+for\+\_\+next\+\_\+command and only use the member function.
+
+Call it after we use T\+HD for queries, not before.  
+\item[\label{todo__todo000058}%
+\Hypertarget{todo__todo000058}%
+Member \mbox{\hyperlink{classProtocol__text_a66166244c73b0d710d2896c411514890}{Protocol\+\_\+text\+:\+:store}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$time, uint precision)]Second\+\_\+part format (\char`\"{}\%06\char`\"{}) needs to change when we support 0-\/6 decimals for time.  
+\item[\label{todo__todo000081}%
+\Hypertarget{todo__todo000081}%
+Member \mbox{\hyperlink{group__Query__Executor_gaf6ecbbe7a1950c60e06170bce55ff70e}{Q\+E\+P\+\_\+\+T\+AB\+:\+:pick\+\_\+table\+\_\+access\+\_\+method}} (const \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$join\+\_\+tab)]join\+\_\+init\+\_\+read\+\_\+record/join\+\_\+read\+\_\+(last$\vert$first) set tab-\/$>$read\+\_\+record.\+read\+\_\+record internally. Do the same in other first record reading functions.  
+\item[\label{todo__todo000085}%
+\Hypertarget{todo__todo000085}%
+Member \mbox{\hyperlink{classQEP__TAB_a8d6de370a4036642fa57cd2554f8758b}{Q\+E\+P\+\_\+\+T\+AB\+:\+:Q\+E\+P\+\_\+\+T\+AB}} ()]Add constructor to \mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}}. All users do init\+\_\+read\+\_\+record(), which does memset(), rather than invoking a constructor.  
+\item[\label{todo__todo000079}%
+\Hypertarget{todo__todo000079}%
+Member \mbox{\hyperlink{classQuery__result__delete_a7e1b51ad966a65afa34e0fc07c5b7a63}{Query\+\_\+result\+\_\+delete\+:\+:do\+\_\+deletes}} ()]Is there any reason not use the normal nested-\/loops join? If not, and there is no documentation supporting it, this method and callee should be removed and there should be hooks within normal execution.  
+\item[\label{todo__todo000109}%
+\Hypertarget{todo__todo000109}%
+Member \mbox{\hyperlink{sql__prepare_8cc_a230ccb139578f6e2099fcd40a6ca57ad}{reinit\+\_\+stmt\+\_\+before\+\_\+use}} (T\+HD $\ast$thd, L\+EX $\ast$lex)]When the new table structure is ready, then have a status bit to indicate the table is altered, and re-\/do the setup\+\_\+$\ast$ and open the tables back. 
+\item[\label{todo__todo000064}%
+\Hypertarget{todo__todo000064}%
+Member \mbox{\hyperlink{classRelay__log__info_ab4299015e0504c30685b2e3b3e093d27}{Relay\+\_\+log\+\_\+info\+:\+:flush\+\_\+info}} (bool force=F\+A\+L\+SE)]Change the log file information to a binary format to avoid calling longlong2str. 
+\item[\label{todo__todo000063}%
+\Hypertarget{todo__todo000063}%
+Member \mbox{\hyperlink{classRelay__log__info_aec9eae2f70577d73ee930cd8223f5233}{Relay\+\_\+log\+\_\+info\+:\+:init\+\_\+relay\+\_\+log\+\_\+pos}} (const char $\ast$log, ulonglong pos, bool need\+\_\+data\+\_\+lock, const char $\ast$$\ast$errmsg, bool keep\+\_\+looking\+\_\+for\+\_\+fd)]check proper initialization of group\+\_\+master\+\_\+log\+\_\+name/group\+\_\+master\+\_\+log\+\_\+pos. /alfranio 
+\item[\label{todo__todo000061}%
+\Hypertarget{todo__todo000061}%
+Member \mbox{\hyperlink{classRpl__info_a409b8a0921617ffd71e40977be694eef}{Rpl\+\_\+info\+:\+:internal\+\_\+id}} ], This is not anymore required for Master\+\_\+info and \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}, since Channel can be used to uniquely identify this. To preserve backward compatibility, we keep this for Master\+\_\+info and \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}. However, \{id, channel\} is still required for a worker info.  
+\item[\label{todo__todo000056}%
+\Hypertarget{todo__todo000056}%
+Member \mbox{\hyperlink{classSEL__ARG_a35b87fe0aad5b3832782d51cf9e6d79a}{S\+E\+L\+\_\+\+A\+RG\+:\+:increment\+\_\+use\+\_\+count}} (long count)]consider refactoring this function to also increase use\+\_\+count of \textquotesingle{}this\textquotesingle{} instead of incrementing use\+\_\+count only on later keyparts.  
+\item[\label{todo__todo000082}%
+\Hypertarget{todo__todo000082}%
+Member \mbox{\hyperlink{group__Query__Executor_gaea6e7f59b9cca648046cf55fe5a95732}{setup\+\_\+copy\+\_\+fields}} (T\+HD $\ast$thd, Temp\+\_\+table\+\_\+param $\ast$param, Ref\+\_\+ptr\+\_\+array ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List$<$ Item $>$}} \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List$<$ Item $>$}} \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List$<$ Item $>$}} \&all\+\_\+fields)]In most cases this result will be sent to the user. This should be changed to use copy\+\_\+int or copy\+\_\+real depending on how the value is to be used\+: In some cases this may be an argument in a group function, like\+: IF(I\+S\+N\+U\+L\+L(col),0,C\+O\+U\+N\+T($\ast$)) 
+\item[\label{todo__todo000069}%
+\Hypertarget{todo__todo000069}%
+Member \mbox{\hyperlink{classsp__head_a1c125eeeef415da5d45fdf16de43ecb7}{sp\+\_\+head\+:\+:execute\+\_\+function}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, uint argcount, \mbox{\hyperlink{classField}{Field}} $\ast$return\+\_\+fld)]We should create \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} once per command and reuse it on subsequent executions of a function/trigger.
+
+In future we should associate call arena/mem\+\_\+root with \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} and allocate all these objects (and \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} itself) on it directly rather than juggle with arenas. 
+\item[\label{todo__todo000068}%
+\Hypertarget{todo__todo000068}%
+Member \mbox{\hyperlink{classsp__head_abd450e9d13f6a39c7b7477ba4b12092f}{sp\+\_\+head\+:\+:execute\+\_\+trigger}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&db\+\_\+name, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&table\+\_\+name, \mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} $\ast$grant\+\_\+info)]
+\begin{DoxyItemize}
+\item T\+O\+DO\+: we should create \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} once per command and reuse it on subsequent executions of a trigger. 
+\end{DoxyItemize}
+\item[\label{todo__todo000071}%
+\Hypertarget{todo__todo000071}%
+Member \mbox{\hyperlink{classsp__head_afe7c4aad6b9627d1f38b569b39f66419}{sp\+\_\+head\+:\+:set\+\_\+security\+\_\+ctx}} (T\+HD $\ast$thd, Security\+\_\+context $\ast$$\ast$save\+\_\+ctx)]Cache if the definer has the rights to use the object on the first usage and reset the cache only if someone does a G\+R\+A\+NT statement that \textquotesingle{}may\textquotesingle{} affect this. 
+\item[\label{todo__todo000073}%
+\Hypertarget{todo__todo000073}%
+Class \mbox{\hyperlink{classsp__instr__jump}{sp\+\_\+instr\+\_\+jump}} ]later we will consider introducing a new class, which will be the base for \mbox{\hyperlink{classsp__instr__jump}{sp\+\_\+instr\+\_\+jump}}, \mbox{\hyperlink{classsp__instr__set__case__expr}{sp\+\_\+instr\+\_\+set\+\_\+case\+\_\+expr}} and \mbox{\hyperlink{classsp__instr__jump__case__when}{sp\+\_\+instr\+\_\+jump\+\_\+case\+\_\+when}}. Something like sp\+\_\+regular\+\_\+branch\+\_\+instr (similar to \mbox{\hyperlink{classsp__lex__branch__instr}{sp\+\_\+lex\+\_\+branch\+\_\+instr}}).  
+\item[\label{todo__todo000067}%
+\Hypertarget{todo__todo000067}%
+Member \mbox{\hyperlink{classsp__parser__data_af658fd5aa0ce26b21268b34be0fd2c29}{sp\+\_\+parser\+\_\+data\+:\+:new\+\_\+cont\+\_\+backpatch}} ()]These functions should probably be declared in a separate interface class, but currently we try to minimize the \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} hierarchy. 
+\item[\label{todo__todo000075}%
+\Hypertarget{todo__todo000075}%
+Class \mbox{\hyperlink{classSql__cmd__alter__table}{Sql\+\_\+cmd\+\_\+alter\+\_\+table}} ]move \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} and other A\+L\+T\+ER specific structures from Lex here.  
+\item[\label{todo__todo000074}%
+\Hypertarget{todo__todo000074}%
+Class \mbox{\hyperlink{classSql__cmd__common__alter__table}{Sql\+\_\+cmd\+\_\+common\+\_\+alter\+\_\+table}} ]move \mbox{\hyperlink{classAlter__info}{Alter\+\_\+info}} and other A\+L\+T\+ER generic structures from Lex here.  
+\item[\label{todo__todo000047}%
+\Hypertarget{todo__todo000047}%
+Member \mbox{\hyperlink{structsql__ex__info_a90e3b19d97cb512779dd0bf6112d4fd0}{sql\+\_\+ex\+\_\+info\+:\+:write\+\_\+data}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$file)]This is sensitive to field padding. We should write a char\mbox{[}7\mbox{]}, not an old\+\_\+sql\+\_\+ex. /sven  
+\item[\label{todo__todo000127}%
+\Hypertarget{todo__todo000127}%
+Member \mbox{\hyperlink{classSys__var__keycache_a7775f6e9ee55bb58461d6556f053075f}{Sys\+\_\+var\+\_\+keycache\+:\+:global\+\_\+update}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)]This should be changed so that we wait until the previous assignment is done and then do the new assign  
+\item[\label{todo__todo000132}%
+\Hypertarget{todo__todo000132}%
+Member \mbox{\hyperlink{structTABLE_aa76fd5e13a8b5101a247413701978730}{T\+A\+B\+LE\+:\+:mem\+\_\+root}} ]This member should not be declared in-\/line. That makes it impossible for any function that does memory allocation to take a const reference to a \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object.  
+\item[\label{todo__todo000133}%
+\Hypertarget{todo__todo000133}%
+Member \mbox{\hyperlink{structTABLE__LIST_aa8fa2ce873ee6792e4b00bef231936be}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST\+:\+:any\+\_\+outer\+\_\+leaf\+\_\+table}} ()]when WL\#6570 is implemented, replace with \mbox{\hyperlink{structTABLE__LIST_a18d48866823fb1e5a562c342bb93c085}{first\+\_\+leaf\+\_\+table()}}  
+\item[\label{todo__todo000131}%
+\Hypertarget{todo__todo000131}%
+Member \mbox{\hyperlink{structTABLE__SHARE_ad3a3e3e4c725c1814866341fd65002bf}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE\+:\+:get\+\_\+table\+\_\+ref\+\_\+type}} () const]perhaps we need to have a member instead of a function.  
+\item[\label{todo__todo000076}%
+\Hypertarget{todo__todo000076}%
+Member \mbox{\hyperlink{group__Data__Dictionary_ga917237a2e99cef2eb34e64095d79fb1a}{tdc\+\_\+open\+\_\+view}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, const char $\ast$alias, const char $\ast$cache\+\_\+key, size\+\_\+t cache\+\_\+key\+\_\+length, uint flags)]This function is needed for special handling of views under L\+O\+CK T\+A\+B\+L\+ES. We probably should get rid of it in long term.
+\end{DoxyRefList}

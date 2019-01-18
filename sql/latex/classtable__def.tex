@@ -1,0 +1,146 @@
+\hypertarget{classtable__def}{}\section{table\+\_\+def Class Reference}
+\label{classtable__def}\index{table\+\_\+def@{table\+\_\+def}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+utility.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtable__def_a659c3d889db3ab3c2cc3f3cb591587e5}{table\+\_\+def}} (unsigned char $\ast$types, ulong \mbox{\hyperlink{classtable__def_a793dcd937355e094a90d55e2e1bca1c4}{size}}, uchar $\ast$field\+\_\+metadata, int metadata\+\_\+size, uchar $\ast$null\+\_\+bitmap, uint16 flags)
+\item 
+ulong \mbox{\hyperlink{classtable__def_a793dcd937355e094a90d55e2e1bca1c4}{size}} () const
+\item 
+\mbox{\Hypertarget{classtable__def_aa9c2710f4c4bc50ef6307226eb276cb4}\label{classtable__def_aa9c2710f4c4bc50ef6307226eb276cb4}} 
+enum\+\_\+field\+\_\+types {\bfseries binlog\+\_\+type} (ulong index) const
+\item 
+\mbox{\Hypertarget{classtable__def_a3ea2417ae94fbad9428f7fe96a385953}\label{classtable__def_a3ea2417ae94fbad9428f7fe96a385953}} 
+enum\+\_\+field\+\_\+types {\bfseries type} (ulong index) const
+\item 
+\mbox{\Hypertarget{classtable__def_ac21e2a53311720f21828abdd20978223}\label{classtable__def_ac21e2a53311720f21828abdd20978223}} 
+uint16 {\bfseries field\+\_\+metadata} (uint index) const
+\item 
+\mbox{\Hypertarget{classtable__def_a261962eba5092696b8a29cff0c8874f1}\label{classtable__def_a261962eba5092696b8a29cff0c8874f1}} 
+my\+\_\+bool {\bfseries maybe\+\_\+null} (uint index) const
+\item 
+\mbox{\Hypertarget{classtable__def_ab06efb289dfb4b090bb9d25986577191}\label{classtable__def_ab06efb289dfb4b090bb9d25986577191}} 
+uint32 {\bfseries calc\+\_\+field\+\_\+size} (uint col, uchar $\ast$master\+\_\+data) const
+\item 
+bool \mbox{\hyperlink{classtable__def_aedd263d15199083d64b5ba5beaf1eb5a}{compatible\+\_\+with}} (T\+HD $\ast$thd, \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$conv\+\_\+table\+\_\+var) const
+\item 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classtable__def_af38e9a5ab04ee617226b5473b612857b}{create\+\_\+conversion\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$rli, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$target\+\_\+table) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A table definition from the master.
+
+The responsibilities of this class is\+:
+\begin{DoxyItemize}
+\item Extract and decode table definition data from the table map event
+\item Check if table definition in table map is compatible with table definition on slave 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtable__def_a659c3d889db3ab3c2cc3f3cb591587e5}\label{classtable__def_a659c3d889db3ab3c2cc3f3cb591587e5}} 
+\index{table\+\_\+def@{table\+\_\+def}!table\+\_\+def@{table\+\_\+def}}
+\index{table\+\_\+def@{table\+\_\+def}!table\+\_\+def@{table\+\_\+def}}
+\subsubsection{\texorpdfstring{table\+\_\+def()}{table\_def()}}
+{\footnotesize\ttfamily table\+\_\+def\+::table\+\_\+def (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{types,  }\item[{ulong}]{size,  }\item[{uchar $\ast$}]{field\+\_\+metadata,  }\item[{int}]{metadata\+\_\+size,  }\item[{uchar $\ast$}]{null\+\_\+bitmap,  }\item[{uint16}]{flags }\end{DoxyParamCaption})}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & Array of types, each stored as a byte \\
+\hline
+{\em size} & Number of elements in array \textquotesingle{}types\textquotesingle{} \\
+\hline
+{\em field\+\_\+metadata} & Array of extra information about fields \\
+\hline
+{\em metadata\+\_\+size} & Size of the field\+\_\+metadata array \\
+\hline
+{\em null\+\_\+bitmap} & The bitmap of fields that can be null \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtable__def_aedd263d15199083d64b5ba5beaf1eb5a}\label{classtable__def_aedd263d15199083d64b5ba5beaf1eb5a}} 
+\index{table\+\_\+def@{table\+\_\+def}!compatible\+\_\+with@{compatible\+\_\+with}}
+\index{compatible\+\_\+with@{compatible\+\_\+with}!table\+\_\+def@{table\+\_\+def}}
+\subsubsection{\texorpdfstring{compatible\+\_\+with()}{compatible\_with()}}
+{\footnotesize\ttfamily bool table\+\_\+def\+::compatible\+\_\+with (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$}]{conv\+\_\+table\+\_\+var }\end{DoxyParamCaption}) const}
+
+Decide if the table definition is compatible with a table.
+
+Compare the definition with a table to see if it is compatible with it.
+
+A table definition is compatible with a table if\+:
+\begin{DoxyItemize}
+\item The columns types of the table definition is a (not necessarily proper) prefix of the column type of the table.
+\item The other way around.
+\item Each column on the master that also exists on the slave can be converted according to the current settings of {\ttfamily S\+L\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+NS}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & \\
+\hline
+ & {\em rli} & Pointer to relay log info \\
+\hline
+ & {\em table} & Pointer to table to compare with.\\
+\hline
+\mbox{\texttt{ out}}  & {\em tmp\+\_\+table\+\_\+var} & Pointer to temporary table for holding conversion table.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & if the table definition is not compatible with {\ttfamily table} \\
+\hline
+{\em 0} & if the table definition is compatible with {\ttfamily table} \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classtable__def_af38e9a5ab04ee617226b5473b612857b}\label{classtable__def_af38e9a5ab04ee617226b5473b612857b}} 
+\index{table\+\_\+def@{table\+\_\+def}!create\+\_\+conversion\+\_\+table@{create\+\_\+conversion\+\_\+table}}
+\index{create\+\_\+conversion\+\_\+table@{create\+\_\+conversion\+\_\+table}!table\+\_\+def@{table\+\_\+def}}
+\subsubsection{\texorpdfstring{create\+\_\+conversion\+\_\+table()}{create\_conversion\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}$\ast$ table\+\_\+def\+::create\+\_\+conversion\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$}]{rli,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{target\+\_\+table }\end{DoxyParamCaption}) const}
+
+Create a virtual in-\/memory temporary table structure.
+
+The table structure has records and field array so that a row can be unpacked into the record for further processing.
+
+In the virtual table, each field that requires conversion will have a non-\/N\+U\+LL value, while fields that do not require conversion will have a N\+U\+LL value.
+
+Some information that is missing in the events, such as the character set for string types, are taken from the table that the field is going to be pushed into, so the target table that the data eventually need to be pushed into need to be supplied.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread to allocate memory from. \\
+\hline
+{\em rli} & Relay log info structure, for error reporting. \\
+\hline
+{\em target\+\_\+table} & Target table for fields.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a temporary table with memory allocated in the thread\textquotesingle{}s memroot, N\+U\+LL if the table could not be created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtable__def_a793dcd937355e094a90d55e2e1bca1c4}\label{classtable__def_a793dcd937355e094a90d55e2e1bca1c4}} 
+\index{table\+\_\+def@{table\+\_\+def}!size@{size}}
+\index{size@{size}!table\+\_\+def@{table\+\_\+def}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily ulong table\+\_\+def\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of fields there is type data for.
+
+\begin{DoxyReturn}{Returns}
+The number of fields that there is type data for. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+utility.\+h\item 
+rpl\+\_\+utility.\+cc\end{DoxyCompactItemize}

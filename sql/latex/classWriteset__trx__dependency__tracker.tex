@@ -1,0 +1,63 @@
+\hypertarget{classWriteset__trx__dependency__tracker}{}\section{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker Class Reference}
+\label{classWriteset__trx__dependency__tracker}\index{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker@{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+trx\+\_\+tracking.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWriteset__trx__dependency__tracker_ac98836a5ea3d1214eb206ddc0c059412}\label{classWriteset__trx__dependency__tracker_ac98836a5ea3d1214eb206ddc0c059412}} 
+{\bfseries Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker} (uint64 max\+\_\+history\+\_\+size)
+\item 
+void \mbox{\hyperlink{classWriteset__trx__dependency__tracker_a514b542a87479033fb55b0d7534a4dda}{get\+\_\+dependency}} (T\+HD $\ast$thd, int64 \&sequence\+\_\+number, int64 \&commit\+\_\+parent)
+\item 
+\mbox{\Hypertarget{classWriteset__trx__dependency__tracker_a4a5a9266adfdaae474f879fc06732022}\label{classWriteset__trx__dependency__tracker_a4a5a9266adfdaae474f879fc06732022}} 
+void {\bfseries rotate} (int64 start)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWriteset__trx__dependency__tracker_a95b1acad032cdf93861a76df0d3e8a2a}\label{classWriteset__trx__dependency__tracker_a95b1acad032cdf93861a76df0d3e8a2a}} 
+ulong {\bfseries m\+\_\+opt\+\_\+max\+\_\+history\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generate logical timestamps for M\+TS using W\+R\+I\+T\+E\+S\+ET in the binlog-\/transaction-\/dependency-\/tracking option. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWriteset__trx__dependency__tracker_a514b542a87479033fb55b0d7534a4dda}\label{classWriteset__trx__dependency__tracker_a514b542a87479033fb55b0d7534a4dda}} 
+\index{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker@{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker}!get\+\_\+dependency@{get\+\_\+dependency}}
+\index{get\+\_\+dependency@{get\+\_\+dependency}!Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker@{Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker}}
+\subsubsection{\texorpdfstring{get\+\_\+dependency()}{get\_dependency()}}
+{\footnotesize\ttfamily void Writeset\+\_\+trx\+\_\+dependency\+\_\+tracker\+::get\+\_\+dependency (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{int64 \&}]{sequence\+\_\+number,  }\item[{int64 \&}]{commit\+\_\+parent }\end{DoxyParamCaption})}
+
+Main function that gets the dependencies using the W\+R\+I\+T\+E\+S\+ET tracker.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & T\+HD of the caller. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sequence\+\_\+number} & sequence\+\_\+number initialized and returned. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em commit\+\_\+parent} & commit\+\_\+parent to be returned.\\
+\hline
+\end{DoxyParams}
+Get the writeset dependencies of a transaction. This takes the commit\+\_\+parent that must be previously set using \mbox{\hyperlink{classCommit__order__trx__dependency__tracker}{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker}} and tries to make the commit\+\_\+parent as low as possible, using the writesets of each transaction. The commit\+\_\+parent returned depends on how many row hashes are stored in the writeset\+\_\+history, which is cleared once it reaches the user-\/defined maximum.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Current T\+HD from which to extract trx context. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sequence\+\_\+number} & Sequence number of current transaction. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em commit\+\_\+parent} & Commit\+\_\+parent of current transaction, pre-\/filled with the commit\+\_\+parent calculated by \mbox{\hyperlink{classCommit__order__trx__dependency__tracker}{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker}} to use when the writeset commit\+\_\+parent is not valid. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+trx\+\_\+tracking.\+h\item 
+rpl\+\_\+trx\+\_\+tracking.\+cc\end{DoxyCompactItemize}

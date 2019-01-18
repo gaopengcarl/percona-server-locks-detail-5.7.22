@@ -1,0 +1,93 @@
+\hypertarget{classForeign__key}{}\section{Foreign\+\_\+key Class Reference}
+\label{classForeign__key}\index{Foreign\+\_\+key@{Foreign\+\_\+key}}
+Inheritance diagram for Foreign\+\_\+key\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classForeign__key}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classForeign__key_a97133887b601057d82301e7fa510763b}\label{classForeign__key_a97133887b601057d82301e7fa510763b}} 
+{\bfseries Foreign\+\_\+key} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&name\+\_\+arg, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ \&cols, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&ref\+\_\+db\+\_\+arg, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&ref\+\_\+table\+\_\+arg, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ \&ref\+\_\+cols, uint delete\+\_\+opt\+\_\+arg, uint update\+\_\+opt\+\_\+arg, uint match\+\_\+opt\+\_\+arg)
+\item 
+\mbox{\hyperlink{classForeign__key_acf9cdeeea91492a4d40dbd34082391e8}{Foreign\+\_\+key}} (const \mbox{\hyperlink{classForeign__key}{Foreign\+\_\+key}} \&rhs, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+virtual \mbox{\hyperlink{classKey}{Key}} $\ast$ \mbox{\hyperlink{classForeign__key_a6b95a958ac60355c961a0a173a439678}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\item 
+bool \mbox{\hyperlink{classForeign__key_ab89c4b2272ed78736ac27b60d6dcbb19}{validate}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ \&table\+\_\+fields)
+\begin{DoxyCompactList}\small\item\em validate Check if the foreign key options are compatible with columns on which the FK is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classForeign__key_a487f44364147bc8c33a2d69fb43b0332}\label{classForeign__key_a487f44364147bc8c33a2d69fb43b0332}} 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG {\bfseries ref\+\_\+db}
+\item 
+\mbox{\Hypertarget{classForeign__key_a9433d72dd2e283a4445f06446fde3fde}\label{classForeign__key_a9433d72dd2e283a4445f06446fde3fde}} 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG {\bfseries ref\+\_\+table}
+\item 
+\mbox{\Hypertarget{classForeign__key_a5b74193e7ccb8bac4d5ff02e632bfebb}\label{classForeign__key_a5b74193e7ccb8bac4d5ff02e632bfebb}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ {\bfseries ref\+\_\+columns}
+\item 
+\mbox{\Hypertarget{classForeign__key_a64db5dcf8783f1114d7c9ee5b6c7dc7a}\label{classForeign__key_a64db5dcf8783f1114d7c9ee5b6c7dc7a}} 
+uint {\bfseries delete\+\_\+opt}
+\item 
+\mbox{\Hypertarget{classForeign__key_a95efa38e1bb38a1a4d1c6f4fea564734}\label{classForeign__key_a95efa38e1bb38a1a4d1c6f4fea564734}} 
+uint {\bfseries update\+\_\+opt}
+\item 
+\mbox{\Hypertarget{classForeign__key_a4fd5f5fea18496c0e13bc1d2fee7c3a6}\label{classForeign__key_a4fd5f5fea18496c0e13bc1d2fee7c3a6}} 
+uint {\bfseries match\+\_\+opt}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classForeign__key_acf9cdeeea91492a4d40dbd34082391e8}\label{classForeign__key_acf9cdeeea91492a4d40dbd34082391e8}} 
+\index{Foreign\+\_\+key@{Foreign\+\_\+key}!Foreign\+\_\+key@{Foreign\+\_\+key}}
+\index{Foreign\+\_\+key@{Foreign\+\_\+key}!Foreign\+\_\+key@{Foreign\+\_\+key}}
+\subsubsection{\texorpdfstring{Foreign\+\_\+key()}{Foreign\_key()}}
+{\footnotesize\ttfamily Foreign\+\_\+key\+::\+Foreign\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classForeign__key}{Foreign\+\_\+key}} \&}]{rhs,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption})}
+
+Construct an (almost) deep copy of this foreign key. Only those elements that are known to never change are not copied. If out of memory, a partial copy is returned and an error is set in T\+HD. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classForeign__key_a6b95a958ac60355c961a0a173a439678}\label{classForeign__key_a6b95a958ac60355c961a0a173a439678}} 
+\index{Foreign\+\_\+key@{Foreign\+\_\+key}!clone@{clone}}
+\index{clone@{clone}!Foreign\+\_\+key@{Foreign\+\_\+key}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classKey}{Key}}$\ast$ Foreign\+\_\+key\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Used to make a clone of this object for A\+L\+T\+E\+R/\+C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} \begin{DoxySeeAlso}{See also}
+comment for \mbox{\hyperlink{classKey__part__spec_adf40542629144b3dc70f9ae4b4b27c78}{Key\+\_\+part\+\_\+spec\+::clone}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classKey_ac6f8cb767fc9dcee06fd80ca2350f43f}{Key}}.
+
+\mbox{\Hypertarget{classForeign__key_ab89c4b2272ed78736ac27b60d6dcbb19}\label{classForeign__key_ab89c4b2272ed78736ac27b60d6dcbb19}} 
+\index{Foreign\+\_\+key@{Foreign\+\_\+key}!validate@{validate}}
+\index{validate@{validate}!Foreign\+\_\+key@{Foreign\+\_\+key}}
+\subsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily bool Foreign\+\_\+key\+::validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $>$ \&}]{table\+\_\+fields }\end{DoxyParamCaption})}
+
+
+
+validate Check if the foreign key options are compatible with columns on which the FK is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+fields} & \mbox{\hyperlink{classList}{List}} of columns\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false \mbox{\hyperlink{classKey}{Key}} valid 
+
+true \mbox{\hyperlink{classKey}{Key}} invalid 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+class.\+h\item 
+sql\+\_\+class.\+cc\end{DoxyCompactItemize}

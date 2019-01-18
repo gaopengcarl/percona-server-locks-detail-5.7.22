@@ -1,0 +1,170 @@
+\hypertarget{classsp__instr__cpush}{}\section{sp\+\_\+instr\+\_\+cpush Class Reference}
+\label{classsp__instr__cpush}\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+cpush\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsp__instr__cpush}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__cpush_a52646784258a620777fb19bd6aea4504}\label{classsp__instr__cpush_a52646784258a620777fb19bd6aea4504}} 
+{\bfseries sp\+\_\+instr\+\_\+cpush} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, L\+EX $\ast$cursor\+\_\+lex, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG cursor\+\_\+query, int cursor\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classsp__instr__cpush_ab4b7510434cf4bc6006ea2862d370be9}\label{classsp__instr__cpush_ab4b7510434cf4bc6006ea2862d370be9}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__cpush_aaf0ea89ac73cfcaff29ac4e3b9c97f7e}{cleanup\+\_\+stmt}} ()
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__cpush_a7d372bf13da26255682db5ea8da893b0}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}{exec\+\_\+core}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__cpush_a05c39644e6c5fd40fd72123b9d7d025d}{is\+\_\+invalid}} () const
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__cpush_a0bbf836e06e7be8c7f1fbcfba702d43c}{invalidate}} ()
+\item 
+virtual void \mbox{\hyperlink{classsp__instr__cpush_acdfc630a526f268fa2b983fe55fc0982}{get\+\_\+query}} (String $\ast$sql\+\_\+query) const
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__cpush_a5679b6d149a1941a84bc41ddc42848d6}{on\+\_\+after\+\_\+expr\+\_\+parsing}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__instr__cpush}{sp\+\_\+instr\+\_\+cpush}} corresponds to D\+E\+C\+L\+A\+RE C\+U\+R\+S\+OR, implements D\+E\+C\+L\+A\+RE C\+U\+R\+S\+OR and O\+P\+EN.
+
+This is the most important instruction in cursor implementation. It is created and added to \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} when D\+E\+C\+L\+A\+RE C\+U\+R\+S\+OR is being parsed. The arena of this instruction contains L\+EX-\/object for the cursor\textquotesingle{}s S\+E\+L\+E\+CT-\/statement.
+
+This instruction is actually used to open the cursor.
+
+\mbox{\hyperlink{classsp__instr__cpush_a7d372bf13da26255682db5ea8da893b0}{execute()}} operation \char`\"{}implements\char`\"{} D\+E\+C\+L\+A\+RE C\+U\+R\+S\+OR statement -- it merely pushes a new cursor object into the stack in \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}} object.
+
+\mbox{\hyperlink{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}{exec\+\_\+core()}} operation implements O\+P\+EN statement. It is important to implement O\+P\+EN statement in this instruction, because O\+P\+EN may lead to re-\/parsing of the S\+E\+L\+E\+CT-\/statement. So, the original Arena and parsing context must be used. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__cpush_aaf0ea89ac73cfcaff29ac4e3b9c97f7e}\label{classsp__instr__cpush_aaf0ea89ac73cfcaff29ac4e3b9c97f7e}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!cleanup\+\_\+stmt@{cleanup\+\_\+stmt}}
+\index{cleanup\+\_\+stmt@{cleanup\+\_\+stmt}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+stmt()}{cleanup\_stmt()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+cpush\+::cleanup\+\_\+stmt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This call is used to cleanup the instruction when a sensitive cursor is closed. For now stored procedures always use materialized cursors and the call is not used. \mbox{\Hypertarget{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}\label{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!exec\+\_\+core@{exec\+\_\+core}}
+\index{exec\+\_\+core@{exec\+\_\+core}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{exec\+\_\+core()}{exec\_core()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+cpush\+::exec\+\_\+core (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute core function of instruction after all preparations (e.\+g. setting of proper L\+EX, saving part of the thread context).
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em nextp\mbox{[}out\mbox{]}} & next instruction pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_acab4e56f638f43101c11f838e1f9d395}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__cpush_a7d372bf13da26255682db5ea8da893b0}\label{classsp__instr__cpush_a7d372bf13da26255682db5ea8da893b0}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+cpush\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_a1cb4c51d92402e942d15ea95e57785dd}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__cpush_acdfc630a526f268fa2b983fe55fc0982}\label{classsp__instr__cpush_acdfc630a526f268fa2b983fe55fc0982}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!get\+\_\+query@{get\+\_\+query}}
+\index{get\+\_\+query@{get\+\_\+query}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{get\+\_\+query()}{get\_query()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+cpush\+::get\+\_\+query (\begin{DoxyParamCaption}\item[{String $\ast$}]{sql\+\_\+query }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return the query string, which can be passed to the parser. I.\+e. the operation should return a valid S\+QL-\/statement query string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em sql\+\_\+query} & S\+QL-\/statement query string. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_a8bbcccae8739634565f8be2134171b03}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__cpush_a0bbf836e06e7be8c7f1fbcfba702d43c}\label{classsp__instr__cpush_a0bbf836e06e7be8c7f1fbcfba702d43c}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily virtual void sp\+\_\+instr\+\_\+cpush\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Invalidate the object. 
+
+Implements \mbox{\hyperlink{classsp__lex__instr_ae9945d69ab5d91d6ce215f194beea882}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__cpush_a05c39644e6c5fd40fd72123b9d7d025d}\label{classsp__instr__cpush_a05c39644e6c5fd40fd72123b9d7d025d}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!is\+\_\+invalid@{is\+\_\+invalid}}
+\index{is\+\_\+invalid@{is\+\_\+invalid}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid()}{is\_invalid()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+cpush\+::is\+\_\+invalid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if the object (i.\+e. L\+EX-\/object) is valid and \mbox{\hyperlink{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}{exec\+\_\+core()}} can be just called.\\
+\hline
+{\em true} & if the object is not valid any longer, \mbox{\hyperlink{classsp__instr__cpush_a29936e62ed32e5db6d5a3fdd624fe969}{exec\+\_\+core()}} can not be called. The original query string should be re-\/parsed and a new L\+EX-\/object should be used. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classsp__lex__instr_a56788cb475ccf94f224816006d9c90e9}{sp\+\_\+lex\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__cpush_a5679b6d149a1941a84bc41ddc42848d6}\label{classsp__instr__cpush_a5679b6d149a1941a84bc41ddc42848d6}} 
+\index{sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}!on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}}
+\index{on\+\_\+after\+\_\+expr\+\_\+parsing@{on\+\_\+after\+\_\+expr\+\_\+parsing}!sp\+\_\+instr\+\_\+cpush@{sp\+\_\+instr\+\_\+cpush}}
+\subsubsection{\texorpdfstring{on\+\_\+after\+\_\+expr\+\_\+parsing()}{on\_after\_expr\_parsing()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+cpush\+::on\+\_\+after\+\_\+expr\+\_\+parsing (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Callback function which is called after the statement query string is successfully parsed, and the thread context has not been switched to the outer context. The thread context contains new L\+EX-\/object corresponding to the parsed query string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error flag. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classsp__lex__instr_adcace7d5b7daeb393d0592592a2d9d6c}{sp\+\_\+lex\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

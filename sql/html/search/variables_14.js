@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['ulonglong_5fvalue',['ulonglong_value',['../classset__var.html#a17e98a0d6265ac6fb52bfa48f656947e',1,'set_var']]],
+  ['unique',['unique',['../classsubselect__indexsubquery__engine.html#a75965ec0649b8c70a4a6fd7bdea42754',1,'subselect_indexsubquery_engine']]],
+  ['unit',['unit',['../classJOIN.html#a80e1b946c275f9fdcdd48cf420db2d97',1,'JOIN']]],
+  ['unpack_5fcounter',['unpack_counter',['../structREAD__RECORD.html#adf94307ee11b85bcb31694522cd99b5d',1,'READ_RECORD']]],
+  ['unsupported_5freason',['unsupported_reason',['../classAlter__inplace__info.html#a13eca57ab999f94ec5bf6b3c242cbb17',1,'Alter_inplace_info']]],
+  ['until_5fsql_5fgtids',['until_sql_gtids',['../classRelay__log__info.html#a2f838f8d82a97c44226b63f35862616a',1,'Relay_log_info']]],
+  ['unused_5fkey_5fparts',['unused_key_parts',['../structst__key.html#a752659925a2775974f1e6c7c558c1cbc',1,'st_key']]],
+  ['updatable_5fview',['updatable_view',['../structTABLE__LIST.html#a77ea91b166348f6ff6711585f1a4fa5d',1,'TABLE_LIST']]],
+  ['update_5fvalues',['update_values',['../classCOPY__INFO.html#a451057d07720b1c973ac2881c8939406',1,'COPY_INFO']]],
+  ['updated',['updated',['../classCOPY__INFO_1_1Statistics.html#aff87e80b064736d9fa489403a5416e85',1,'COPY_INFO::Statistics']]],
+  ['usable_5fkey_5fparts',['usable_key_parts',['../structst__key.html#ac733c94b20da4e1547c0845b482d4a7a',1,'st_key']]],
+  ['use_5fcount',['use_count',['../classSEL__ARG.html#a3b4bd5d5c82cb443d58ccfc25e1b59e7',1,'SEL_ARG']]],
+  ['use_5findex_5fstatistics',['use_index_statistics',['../classRANGE__OPT__PARAM.html#a4849251021b18cc47419b75aa454eda9',1,'RANGE_OPT_PARAM']]],
+  ['used_5falias',['used_alias',['../structst__order.html#a450b9735d629184c9f33b86d7a42749c',1,'st_order']]],
+  ['used_5fkey_5fis_5fmodified',['used_key_is_modified',['../classModification__plan.html#ad3d9c4984dcc953b70eeb73db4fd2293',1,'Modification_plan']]],
+  ['used_5ftables',['used_tables',['../classUsed__tables.html#a85bcf6d10f2ce67c6870aedf1a21640d',1,'Used_tables::used_tables()'],['../classKey__use.html#ae721ddf71a4c36bc05cc9110b4bb8165',1,'Key_use::used_tables()']]],
+  ['used_5ftables_5fcache',['used_tables_cache',['../classItem__func.html#a663d83299b42a9afbc090dc9286d2603',1,'Item_func']]],
+  ['user_5fdefined_5fkey_5fparts',['user_defined_key_parts',['../structst__key.html#abd3126670f8060d4d3c29a1637836ac3',1,'st_key']]],
+  ['using_5fpq',['using_pq',['../classFilesort.html#a4a5d09c1f56508024a7182dd84fd258d',1,'Filesort']]]
+];

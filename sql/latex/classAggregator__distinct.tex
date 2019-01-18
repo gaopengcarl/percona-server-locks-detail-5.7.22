@@ -1,0 +1,230 @@
+\hypertarget{classAggregator__distinct}{}\section{Aggregator\+\_\+distinct Class Reference}
+\label{classAggregator__distinct}\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+
+
+{\ttfamily \#include $<$item\+\_\+sum.\+h$>$}
+
+Inheritance diagram for Aggregator\+\_\+distinct\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAggregator__distinct}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAggregator__distinct_afbd34da51092275ff762e357fcbb8468}\label{classAggregator__distinct_afbd34da51092275ff762e357fcbb8468}} 
+{\bfseries Aggregator\+\_\+distinct} (\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$sum)
+\item 
+\mbox{\Hypertarget{classAggregator__distinct_a9e2d407eac6d9e1996c302a4861d9f0c}\label{classAggregator__distinct_a9e2d407eac6d9e1996c302a4861d9f0c}} 
+Aggregator\+\_\+type {\bfseries Aggrtype} ()
+\item 
+bool \mbox{\hyperlink{classAggregator__distinct_ac01d658918e5e160779ccfaf1134943b}{setup}} (T\+HD $\ast$)
+\item 
+void \mbox{\hyperlink{classAggregator__distinct_acb3c9529bc839900fc63eb890a5e2aee}{clear}} ()
+\item 
+bool \mbox{\hyperlink{classAggregator__distinct_af72d7cc1082245015c41e99893992a4f}{add}} ()
+\item 
+void \mbox{\hyperlink{classAggregator__distinct_a474d5f42f784572ea3b7d28be0fc3b2e}{endup}} ()
+\item 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classAggregator__distinct_a60e5fc048746277c661ce97e9fc92905}{arg\+\_\+val\+\_\+decimal}} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$value)
+\item 
+virtual double \mbox{\hyperlink{classAggregator__distinct_a3485cfa42d584711c4c95a3405f4a2ad}{arg\+\_\+val\+\_\+real}} ()
+\item 
+virtual bool \mbox{\hyperlink{classAggregator__distinct_a213b0657e2fcd03305629d78c68b31ad}{arg\+\_\+is\+\_\+null}} (bool use\+\_\+null\+\_\+value)
+\item 
+bool \mbox{\hyperlink{classAggregator__distinct_abc8b41d0e322a1d475f69e7008818dfc}{unique\+\_\+walk\+\_\+function}} (void $\ast$element)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classAggregator__distinct_ab74b7361e005d7c492dde7650774279b}{composite\+\_\+key\+\_\+cmp}} (void $\ast$arg, uchar $\ast$key1, uchar $\ast$key2)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAggregator__distinct_a2afeb7cbcc97ddd2c3c74cf87352e0ab}\label{classAggregator__distinct_a2afeb7cbcc97ddd2c3c74cf87352e0ab}} 
+class {\bfseries Item\+\_\+sum\+\_\+sum}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The distinct aggregator. Implements A\+G\+G\+FN (D\+I\+S\+T\+I\+N\+CT ..) Collects all the data into an \mbox{\hyperlink{classUnique}{Unique}} (similarly to what Item\+\_\+sum\+\_\+distinct does currently) and then (if applicable) iterates over the list of unique values and pumps them back into its object 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAggregator__distinct_af72d7cc1082245015c41e99893992a4f}\label{classAggregator__distinct_af72d7cc1082245015c41e99893992a4f}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!add@{add}}
+\index{add@{add}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily bool Aggregator\+\_\+distinct\+::add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Process incoming row.
+
+Add it to Unique/temp hash table if it\textquotesingle{}s unique. Skip the row if not unique. Prepare \mbox{\hyperlink{classAggregator__distinct}{Aggregator\+\_\+distinct}} to process the incoming stream. Create the temporary table and the \mbox{\hyperlink{classUnique}{Unique}} class if needed. Called by \mbox{\hyperlink{classItem__sum_ab090330ed58167234556e1f906976c0c}{Item\+\_\+sum\+::aggregator\+\_\+add()}}. To actually get the result value in item\+\_\+sum\textquotesingle{}s buffers \mbox{\hyperlink{classAggregator__distinct_a474d5f42f784572ea3b7d28be0fc3b2e}{Aggregator\+\_\+distinct\+::endup()}} must be called.
+
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classAggregator_a70e0d53834f2672f3ec57c96e35a9a60}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_a213b0657e2fcd03305629d78c68b31ad}\label{classAggregator__distinct_a213b0657e2fcd03305629d78c68b31ad}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!arg\+\_\+is\+\_\+null@{arg\+\_\+is\+\_\+null}}
+\index{arg\+\_\+is\+\_\+null@{arg\+\_\+is\+\_\+null}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{arg\+\_\+is\+\_\+null()}{arg\_is\_null()}}
+{\footnotesize\ttfamily bool Aggregator\+\_\+distinct\+::arg\+\_\+is\+\_\+null (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+null\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+N\+U\+L\+Lness of being-\/aggregated argument.
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+\_\+null\+\_\+value} & Optimization\+: to determine if the argument is N\+U\+LL we must, in the general case, call is\+\_\+null() on it, which itself might call val\+\_\+$\ast$() on it, which might be costly. If you just have called arg\+\_\+val$\ast$(), you can pass use\+\_\+null\+\_\+value=true; this way, \mbox{\hyperlink{classAggregator__distinct_a213b0657e2fcd03305629d78c68b31ad}{arg\+\_\+is\+\_\+null()}} might avoid is\+\_\+null() and instead do a cheap read of the \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s null\+\_\+value (updated by arg\+\_\+val$\ast$()). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classAggregator_a2581c04dee61cf1a4d72519da64baf53}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_a60e5fc048746277c661ce97e9fc92905}\label{classAggregator__distinct_a60e5fc048746277c661ce97e9fc92905}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!arg\+\_\+val\+\_\+decimal@{arg\+\_\+val\+\_\+decimal}}
+\index{arg\+\_\+val\+\_\+decimal@{arg\+\_\+val\+\_\+decimal}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{arg\+\_\+val\+\_\+decimal()}{arg\_val\_decimal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ Aggregator\+\_\+distinct\+::arg\+\_\+val\+\_\+decimal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decimal value of being-\/aggregated argument 
+
+Implements \mbox{\hyperlink{classAggregator_a0965a66058cd00c581b015b9c571cb07}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_a3485cfa42d584711c4c95a3405f4a2ad}\label{classAggregator__distinct_a3485cfa42d584711c4c95a3405f4a2ad}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!arg\+\_\+val\+\_\+real@{arg\+\_\+val\+\_\+real}}
+\index{arg\+\_\+val\+\_\+real@{arg\+\_\+val\+\_\+real}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{arg\+\_\+val\+\_\+real()}{arg\_val\_real()}}
+{\footnotesize\ttfamily double Aggregator\+\_\+distinct\+::arg\+\_\+val\+\_\+real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Floating point value of being-\/aggregated argument 
+
+Implements \mbox{\hyperlink{classAggregator_addca16d20f7cc2640f3843c2c5e7596d}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_acb3c9529bc839900fc63eb890a5e2aee}\label{classAggregator__distinct_acb3c9529bc839900fc63eb890a5e2aee}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!clear@{clear}}
+\index{clear@{clear}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Aggregator\+\_\+distinct\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Invalidate calculated value and clear the distinct rows.
+
+Frees space used by the internal data structures. Removes the accumulated distinct rows. Invalidates the calculated result. 
+
+Implements \mbox{\hyperlink{classAggregator_ad416a800e9cdec7908dd3e9bdffa70e5}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_ab74b7361e005d7c492dde7650774279b}\label{classAggregator__distinct_ab74b7361e005d7c492dde7650774279b}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!composite\+\_\+key\+\_\+cmp@{composite\+\_\+key\+\_\+cmp}}
+\index{composite\+\_\+key\+\_\+cmp@{composite\+\_\+key\+\_\+cmp}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{composite\+\_\+key\+\_\+cmp()}{composite\_key\_cmp()}}
+{\footnotesize\ttfamily int Aggregator\+\_\+distinct\+::composite\+\_\+key\+\_\+cmp (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{uchar $\ast$}]{key1,  }\item[{uchar $\ast$}]{key2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Correctly compare composite keys.
+
+Used by the \mbox{\hyperlink{classUnique}{Unique}} class to compare keys. Will do correct comparisons for composite keys with various field types.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the relevant \mbox{\hyperlink{classAggregator__distinct}{Aggregator\+\_\+distinct}} instance \\
+\hline
+{\em key1} & left key image \\
+\hline
+{\em key2} & right key image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+comparison result 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $<$0} & if key1 $<$ key2 \\
+\hline
+{\em =0} & if key1 = key2 \\
+\hline
+{\em $>$0} & if key1 $>$ key2 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classAggregator__distinct_a474d5f42f784572ea3b7d28be0fc3b2e}\label{classAggregator__distinct_a474d5f42f784572ea3b7d28be0fc3b2e}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!endup@{endup}}
+\index{endup@{endup}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{endup()}{endup()}}
+{\footnotesize\ttfamily void Aggregator\+\_\+distinct\+::endup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calculate the aggregate function value.
+
+Since Distinct\+\_\+aggregator\+::add() just collects the distinct rows, we must go over the distinct rows and feed them to the aggregation function before returning its value. This is what endup () does. It also sets the result validity flag endup\+\_\+done to T\+R\+UE so it will not recalculate the aggregate value again if the \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} hasn\textquotesingle{}t been reset. 
+
+Implements \mbox{\hyperlink{classAggregator_a726ef59a61b219b87c0a6041f8162037}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_ac01d658918e5e160779ccfaf1134943b}\label{classAggregator__distinct_ac01d658918e5e160779ccfaf1134943b}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!setup@{setup}}
+\index{setup@{setup}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily C\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND bool Aggregator\+\_\+distinct\+::setup (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Called before feeding the first row. Used to allocate/setup the internal structures used for aggregation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread descriptor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & faliure ~\newline
+ Prepares \mbox{\hyperlink{classAggregator__distinct}{Aggregator\+\_\+distinct}} to process the incoming stream. Creates the temporary table and the \mbox{\hyperlink{classUnique}{Unique}} class if needed. Called by \mbox{\hyperlink{classItem__sum_ac84fa680a8b3690c6735474c9476f312}{Item\+\_\+sum\+::aggregator\+\_\+setup()}} \\
+\hline
+\end{DoxyRetVals}
+Create a table with an unique key over all parameters. If the list contains only const values, const\+\_\+distinct is set to C\+O\+N\+S\+T\+\_\+\+N\+O\+T\+\_\+\+N\+U\+LL to avoid creation of temp table and thereby counting as count(distinct of const values) will always be 1. If any of these const values is null, const\+\_\+distinct is set to C\+O\+N\+S\+T\+\_\+\+N\+U\+LL to ensure aggregation does not happen.
+
+Implements \mbox{\hyperlink{classAggregator_afcde359558a43054f7812a72498a263f}{Aggregator}}.
+
+\mbox{\Hypertarget{classAggregator__distinct_abc8b41d0e322a1d475f69e7008818dfc}\label{classAggregator__distinct_abc8b41d0e322a1d475f69e7008818dfc}} 
+\index{Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}!unique\+\_\+walk\+\_\+function@{unique\+\_\+walk\+\_\+function}}
+\index{unique\+\_\+walk\+\_\+function@{unique\+\_\+walk\+\_\+function}!Aggregator\+\_\+distinct@{Aggregator\+\_\+distinct}}
+\subsubsection{\texorpdfstring{unique\+\_\+walk\+\_\+function()}{unique\_walk\_function()}}
+{\footnotesize\ttfamily bool Aggregator\+\_\+distinct\+::unique\+\_\+walk\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+Aggregate a distinct row from the distinct hash table.
+
+Called for each row into the hash table \textquotesingle{}Aggregator\+\_\+distinct\+::table\textquotesingle{}. Includes the current distinct row into the calculation of the aggregate value. Uses the \mbox{\hyperlink{classField}{Field}} classes to get the value from the row. This function is used for A\+V\+G/\+S\+UM(D\+I\+S\+T\+I\+N\+CT). For C\+O\+U\+N\+T(\+D\+I\+S\+T\+I\+N\+C\+T) it\textquotesingle{}s called only when there are no blob arguments and the data don\textquotesingle{}t fit into memory (so \mbox{\hyperlink{classUnique}{Unique}} makes persisted trees on disk).
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & pointer to the row data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+sum.\+h\item 
+\mbox{\hyperlink{item__sum_8cc}{item\+\_\+sum.\+cc}}\end{DoxyCompactItemize}

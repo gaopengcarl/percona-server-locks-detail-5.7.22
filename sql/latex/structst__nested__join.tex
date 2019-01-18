@@ -1,0 +1,109 @@
+\hypertarget{structst__nested__join}{}\section{st\+\_\+nested\+\_\+join Struct Reference}
+\label{structst__nested__join}\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__nested__join_ab903d011d1523e33123b455b836ec49f}\label{structst__nested__join_ab903d011d1523e33123b455b836ec49f}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ {\bfseries join\+\_\+list}
+\item 
+\mbox{\Hypertarget{structst__nested__join_ac165423f70f4e0fbe820b16f0f7adb1b}\label{structst__nested__join_ac165423f70f4e0fbe820b16f0f7adb1b}} 
+table\+\_\+map {\bfseries used\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structst__nested__join_a0bcdcd894533b9fd4b09b0edc2cc0fe4}\label{structst__nested__join_a0bcdcd894533b9fd4b09b0edc2cc0fe4}} 
+table\+\_\+map {\bfseries not\+\_\+null\+\_\+tables}
+\item 
+plan\+\_\+idx \mbox{\hyperlink{structst__nested__join_a7f32cd3a7b327aac61864a68095ed66f}{first\+\_\+nested}}
+\item 
+bool \mbox{\hyperlink{structst__nested__join_a5af07228b6a1ebf3b5bd2d7111783fab}{natural\+\_\+join\+\_\+processed}}
+\item 
+uint \mbox{\hyperlink{structst__nested__join_a9c35fa9ceadc335b3a9c06e498d4f8e5}{nj\+\_\+total}}
+\item 
+uint \mbox{\hyperlink{structst__nested__join_a361b5386d86e7de51ef7241de0de3fd3}{nj\+\_\+counter}}
+\item 
+nested\+\_\+join\+\_\+map \mbox{\hyperlink{structst__nested__join_a46f1da529bd60920ec39ab4082cade2e}{nj\+\_\+map}}
+\item 
+table\+\_\+map \mbox{\hyperlink{structst__nested__join_a9076f50ec461d7ff2340d77f89fac1e9}{sj\+\_\+depends\+\_\+on}}
+\item 
+table\+\_\+map \mbox{\hyperlink{structst__nested__join_ab4542c325c02396712de1f629fd621a9}{sj\+\_\+corr\+\_\+tables}}
+\item 
+uint \mbox{\hyperlink{structst__nested__join_ae77e1736a81f0c6de9df6d9953106f12}{query\+\_\+block\+\_\+id}}
+\item 
+\mbox{\Hypertarget{structst__nested__join_ad90ac321deefbafff8e6ed847975d690}\label{structst__nested__join_ad90ac321deefbafff8e6ed847975d690}} 
+uint \mbox{\hyperlink{structst__nested__join_ad90ac321deefbafff8e6ed847975d690}{sj\+\_\+enabled\+\_\+strategies}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classBitmap}{Bitmap}} of which strategies are enabled for this semi-\/join nest. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structst__nested__join_a29afbf516448530d35a99d3009ed650e}\label{structst__nested__join_a29afbf516448530d35a99d3009ed650e}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries sj\+\_\+outer\+\_\+exprs}
+\item 
+\mbox{\Hypertarget{structst__nested__join_a8bdbad374e87dcde40538aad25b39b46}\label{structst__nested__join_a8bdbad374e87dcde40538aad25b39b46}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ {\bfseries sj\+\_\+inner\+\_\+exprs}
+\item 
+\mbox{\Hypertarget{structst__nested__join_a2919685e2cdcd0948f927354d3554698}\label{structst__nested__join_a2919685e2cdcd0948f927354d3554698}} 
+\mbox{\hyperlink{structSemijoin__mat__optimize}{Semijoin\+\_\+mat\+\_\+optimize}} {\bfseries sjm}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct \mbox{\hyperlink{structst__nested__join}{st\+\_\+nested\+\_\+join}} is used to represent how tables are connected through outer join operations and semi-\/join operations to form a query block. Out of the parser, inner joins are also represented by \mbox{\hyperlink{structst__nested__join}{st\+\_\+nested\+\_\+join}} structs, but these are later flattened out by simplify\+\_\+joins(). Some outer join nests are also flattened, when it can be determined that they can be processed as inner joins instead of outer joins. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__nested__join_a7f32cd3a7b327aac61864a68095ed66f}\label{structst__nested__join_a7f32cd3a7b327aac61864a68095ed66f}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!first\+\_\+nested@{first\+\_\+nested}}
+\index{first\+\_\+nested@{first\+\_\+nested}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{first\+\_\+nested}{first\_nested}}
+{\footnotesize\ttfamily plan\+\_\+idx st\+\_\+nested\+\_\+join\+::first\+\_\+nested}
+
+Used for pointing out the first table in the plan being covered by this join nest. It is used exclusively within make\+\_\+outerjoin\+\_\+info(). \mbox{\Hypertarget{structst__nested__join_a5af07228b6a1ebf3b5bd2d7111783fab}\label{structst__nested__join_a5af07228b6a1ebf3b5bd2d7111783fab}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!natural\+\_\+join\+\_\+processed@{natural\+\_\+join\+\_\+processed}}
+\index{natural\+\_\+join\+\_\+processed@{natural\+\_\+join\+\_\+processed}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{natural\+\_\+join\+\_\+processed}{natural\_join\_processed}}
+{\footnotesize\ttfamily bool st\+\_\+nested\+\_\+join\+::natural\+\_\+join\+\_\+processed}
+
+Set to true when natural join or using information has been processed. \mbox{\Hypertarget{structst__nested__join_a361b5386d86e7de51ef7241de0de3fd3}\label{structst__nested__join_a361b5386d86e7de51ef7241de0de3fd3}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!nj\+\_\+counter@{nj\+\_\+counter}}
+\index{nj\+\_\+counter@{nj\+\_\+counter}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{nj\+\_\+counter}{nj\_counter}}
+{\footnotesize\ttfamily uint st\+\_\+nested\+\_\+join\+::nj\+\_\+counter}
+
+Used to count tables in the nested join in 2 isolated places\+:
+\begin{DoxyEnumerate}
+\item In make\+\_\+outerjoin\+\_\+info().
+\item check\+\_\+interleaving\+\_\+with\+\_\+nj/backout\+\_\+nj\+\_\+state (these are called by the join optimizer. Before each use the counters are zeroed by S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+::reset\+\_\+nj\+\_\+counters. 
+\end{DoxyEnumerate}\mbox{\Hypertarget{structst__nested__join_a46f1da529bd60920ec39ab4082cade2e}\label{structst__nested__join_a46f1da529bd60920ec39ab4082cade2e}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!nj\+\_\+map@{nj\+\_\+map}}
+\index{nj\+\_\+map@{nj\+\_\+map}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{nj\+\_\+map}{nj\_map}}
+{\footnotesize\ttfamily nested\+\_\+join\+\_\+map st\+\_\+nested\+\_\+join\+::nj\+\_\+map}
+
+Bit identifying this nested join. Only nested joins representing the outer join structure need this, other nests have bit set to zero. \mbox{\Hypertarget{structst__nested__join_a9c35fa9ceadc335b3a9c06e498d4f8e5}\label{structst__nested__join_a9c35fa9ceadc335b3a9c06e498d4f8e5}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!nj\+\_\+total@{nj\+\_\+total}}
+\index{nj\+\_\+total@{nj\+\_\+total}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{nj\+\_\+total}{nj\_total}}
+{\footnotesize\ttfamily uint st\+\_\+nested\+\_\+join\+::nj\+\_\+total}
+
+Number of tables and outer join nests administered by this nested join object for the sake of cost analysis. Includes direct member tables as well as tables included through semi-\/join nests, but notice that semi-\/join nests themselves are not counted. \mbox{\Hypertarget{structst__nested__join_ae77e1736a81f0c6de9df6d9953106f12}\label{structst__nested__join_ae77e1736a81f0c6de9df6d9953106f12}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!query\+\_\+block\+\_\+id@{query\+\_\+block\+\_\+id}}
+\index{query\+\_\+block\+\_\+id@{query\+\_\+block\+\_\+id}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{query\+\_\+block\+\_\+id}{query\_block\_id}}
+{\footnotesize\ttfamily uint st\+\_\+nested\+\_\+join\+::query\+\_\+block\+\_\+id}
+
+Query block id if this struct is generated from a subquery transform. \mbox{\Hypertarget{structst__nested__join_ab4542c325c02396712de1f629fd621a9}\label{structst__nested__join_ab4542c325c02396712de1f629fd621a9}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!sj\+\_\+corr\+\_\+tables@{sj\+\_\+corr\+\_\+tables}}
+\index{sj\+\_\+corr\+\_\+tables@{sj\+\_\+corr\+\_\+tables}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{sj\+\_\+corr\+\_\+tables}{sj\_corr\_tables}}
+{\footnotesize\ttfamily table\+\_\+map st\+\_\+nested\+\_\+join\+::sj\+\_\+corr\+\_\+tables}
+
+Outer non-\/trivially correlated tables, a true subset of sj\+\_\+depends\+\_\+on \mbox{\Hypertarget{structst__nested__join_a9076f50ec461d7ff2340d77f89fac1e9}\label{structst__nested__join_a9076f50ec461d7ff2340d77f89fac1e9}} 
+\index{st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}!sj\+\_\+depends\+\_\+on@{sj\+\_\+depends\+\_\+on}}
+\index{sj\+\_\+depends\+\_\+on@{sj\+\_\+depends\+\_\+on}!st\+\_\+nested\+\_\+join@{st\+\_\+nested\+\_\+join}}
+\subsubsection{\texorpdfstring{sj\+\_\+depends\+\_\+on}{sj\_depends\_on}}
+{\footnotesize\ttfamily table\+\_\+map st\+\_\+nested\+\_\+join\+::sj\+\_\+depends\+\_\+on}
+
+Tables outside the semi-\/join that are used within the semi-\/join\textquotesingle{}s ON condition (ie. the subquery W\+H\+E\+RE clause and optional IN equalities). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\end{DoxyCompactItemize}

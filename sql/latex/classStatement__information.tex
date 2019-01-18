@@ -1,0 +1,81 @@
+\hypertarget{classStatement__information}{}\section{Statement\+\_\+information Class Reference}
+\label{classStatement__information}\index{Statement\+\_\+information@{Statement\+\_\+information}}
+
+
+{\ttfamily \#include $<$sql\+\_\+get\+\_\+diagnostics.\+h$>$}
+
+Inheritance diagram for Statement\+\_\+information\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classStatement__information}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStatement__information_a1bc5bf81891a58793dcdbe084dd2ea7c}{Statement\+\_\+information}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classStatement__information__item}{Statement\+\_\+information\+\_\+item}} $>$ $\ast$items)
+\item 
+bool \mbox{\hyperlink{classStatement__information_ab059a9e174ffce90b78d541ec4f93455}{aggregate}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$da)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Statement information.
+
+\begin{DoxyRemark}{Remarks}
+Provides information about the execution of a statement. 
+\end{DoxyRemark}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStatement__information_a1bc5bf81891a58793dcdbe084dd2ea7c}\label{classStatement__information_a1bc5bf81891a58793dcdbe084dd2ea7c}} 
+\index{Statement\+\_\+information@{Statement\+\_\+information}!Statement\+\_\+information@{Statement\+\_\+information}}
+\index{Statement\+\_\+information@{Statement\+\_\+information}!Statement\+\_\+information@{Statement\+\_\+information}}
+\subsubsection{\texorpdfstring{Statement\+\_\+information()}{Statement\_information()}}
+{\footnotesize\ttfamily Statement\+\_\+information\+::\+Statement\+\_\+information (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classStatement__information__item}{Statement\+\_\+information\+\_\+item}} $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor, used to represent the statement information of a G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em items} & \mbox{\hyperlink{classList}{List}} of requested statement information items. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStatement__information_ab059a9e174ffce90b78d541ec4f93455}\label{classStatement__information_ab059a9e174ffce90b78d541ec4f93455}} 
+\index{Statement\+\_\+information@{Statement\+\_\+information}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!Statement\+\_\+information@{Statement\+\_\+information}}
+\subsubsection{\texorpdfstring{aggregate()}{aggregate()}}
+{\footnotesize\ttfamily bool Statement\+\_\+information\+::aggregate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{da }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtain statement information in the context of a Diagnostics Area.
+
+Obtain statement information in the context of a given Diagnostics Area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em da} & The Diagnostics Area.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classDiagnostics__information_a5181f11d3ef8554e1989a882bc2504dc}{Diagnostics\+\_\+information}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+get\+\_\+diagnostics.\+h\item 
+sql\+\_\+get\+\_\+diagnostics.\+cc\end{DoxyCompactItemize}

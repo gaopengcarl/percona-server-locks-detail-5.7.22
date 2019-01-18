@@ -1,0 +1,62 @@
+\hypertarget{classStepper__base}{}\section{Stepper\+\_\+base Class Reference}
+\label{classStepper__base}\index{Stepper\+\_\+base@{Stepper\+\_\+base}}
+Inheritance diagram for Stepper\+\_\+base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStepper__base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStepper__base_ab6edd059bec858fb19310e767f6ed681}{Stepper\+\_\+base}} (char dim, Geometry\+::wkb\+Byte\+Order bo, bool has\+\_\+wkb\+\_\+hdr, Geometry\+::wkb\+Type geotype)
+\item 
+\mbox{\Hypertarget{classStepper__base_a01a91966baa0a5286940f74652f4f654}\label{classStepper__base_a01a91966baa0a5286940f74652f4f654}} 
+Geometry\+::wkb\+Byte\+Order {\bfseries get\+\_\+current\+\_\+byte\+\_\+order} () const
+\item 
+\mbox{\Hypertarget{classStepper__base_afd628e831a105c086887d79caa76fb12}\label{classStepper__base_afd628e831a105c086887d79caa76fb12}} 
+Geometry\+::wkb\+Type {\bfseries get\+\_\+current\+\_\+geotype} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStepper__base_ab2168c1848a011b256a967c7c6f9cdde}\label{classStepper__base_ab2168c1848a011b256a967c7c6f9cdde}} 
+char \mbox{\hyperlink{classStepper__base_ab2168c1848a011b256a967c7c6f9cdde}{m\+\_\+dim}}
+\begin{DoxyCompactList}\small\item\em Current geometry dimension. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStepper__base_abacdebcb218430bf21dad9332dfb694e}\label{classStepper__base_abacdebcb218430bf21dad9332dfb694e}} 
+bool \mbox{\hyperlink{classStepper__base_abacdebcb218430bf21dad9332dfb694e}{m\+\_\+has\+\_\+wkb\+\_\+hdr}}
+\begin{DoxyCompactList}\small\item\em Current geometry has a W\+KB header or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStepper__base_a1040fc996a886599ab5c7d49f3cae0ff}\label{classStepper__base_a1040fc996a886599ab5c7d49f3cae0ff}} 
+Geometry\+::wkb\+Byte\+Order \mbox{\hyperlink{classStepper__base_a1040fc996a886599ab5c7d49f3cae0ff}{m\+\_\+bo}}
+\begin{DoxyCompactList}\small\item\em Current geometry\textquotesingle{}s byte order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStepper__base_aa466a72b2d01bff8b48ca8bdcf6525f0}\label{classStepper__base_aa466a72b2d01bff8b48ca8bdcf6525f0}} 
+Geometry\+::wkb\+Type \mbox{\hyperlink{classStepper__base_aa466a72b2d01bff8b48ca8bdcf6525f0}{m\+\_\+geotype}}
+\begin{DoxyCompactList}\small\item\em Current geometry\textquotesingle{}s type, e.\+g. polygon, linestring, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class of all W\+KB parsers, which parse different types of geometries properly. All these classes assume the W\+KB input is valid and complete. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStepper__base_ab6edd059bec858fb19310e767f6ed681}\label{classStepper__base_ab6edd059bec858fb19310e767f6ed681}} 
+\index{Stepper\+\_\+base@{Stepper\+\_\+base}!Stepper\+\_\+base@{Stepper\+\_\+base}}
+\index{Stepper\+\_\+base@{Stepper\+\_\+base}!Stepper\+\_\+base@{Stepper\+\_\+base}}
+\subsubsection{\texorpdfstring{Stepper\+\_\+base()}{Stepper\_base()}}
+{\footnotesize\ttfamily Stepper\+\_\+base\+::\+Stepper\+\_\+base (\begin{DoxyParamCaption}\item[{char}]{dim,  }\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{bool}]{has\+\_\+wkb\+\_\+hdr,  }\item[{Geometry\+::wkb\+Type}]{geotype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em dim} & dimension of points in the geometry to be stepped over(i.\+e. current geometry). \\
+\hline
+{\em bo} & current geometry\textquotesingle{}s byte order \\
+\hline
+{\em has\+\_\+wkb\+\_\+hdr} & true for stepping through geometries within multi\+X\+XX and geometrycollection, false for other geometries. \\
+\hline
+{\em geotype} & current geometry\textquotesingle{}s type \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+cc\end{DoxyCompactItemize}

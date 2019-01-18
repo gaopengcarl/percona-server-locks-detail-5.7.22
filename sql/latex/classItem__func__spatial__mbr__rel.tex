@@ -1,0 +1,69 @@
+\hypertarget{classItem__func__spatial__mbr__rel}{}\section{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel Class Reference}
+\label{classItem__func__spatial__mbr__rel}\index{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel@{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel}}
+Inheritance diagram for Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{classItem__func__spatial__mbr__rel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_a77ccc4783dce20d5df9103789c6c06d9}\label{classItem__func__spatial__mbr__rel_a77ccc4783dce20d5df9103789c6c06d9}} 
+{\bfseries Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b, enum Functype sp\+\_\+rel)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_a8000a2ce9f01800400cd8b2eff16a881}\label{classItem__func__spatial__mbr__rel_a8000a2ce9f01800400cd8b2eff16a881}} 
+{\bfseries Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b, enum Functype sp\+\_\+rel)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_af5ccb800e8dbfeb4957aa4f037a1ede4}\label{classItem__func__spatial__mbr__rel_af5ccb800e8dbfeb4957aa4f037a1ede4}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_ac601dcc87dc82d0c9cffdbff6662abbe}\label{classItem__func__spatial__mbr__rel_ac601dcc87dc82d0c9cffdbff6662abbe}} 
+enum Functype {\bfseries functype} () const
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_a6e5eccd62e4bc3a10bdca2d1769c97e2}\label{classItem__func__spatial__mbr__rel_a6e5eccd62e4bc3a10bdca2d1769c97e2}} 
+enum Functype {\bfseries rev\+\_\+functype} () const
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_ac3cf5a56152d343cdb2b95da42d05ec6}\label{classItem__func__spatial__mbr__rel_ac3cf5a56152d343cdb2b95da42d05ec6}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+virtual void \mbox{\hyperlink{classItem__func__spatial__mbr__rel_a0f37964f2e40c8cf415dd81f03795c35}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_a9ade0dde0d2d302bd3cf8c40f3f56f5b}\label{classItem__func__spatial__mbr__rel_a9ade0dde0d2d302bd3cf8c40f3f56f5b}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_a472bb3fe89a2e6bbb838aeb1046f9039}\label{classItem__func__spatial__mbr__rel_a472bb3fe89a2e6bbb838aeb1046f9039}} 
+bool {\bfseries is\+\_\+null} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__spatial__mbr__rel_a0f37964f2e40c8cf415dd81f03795c35}\label{classItem__func__spatial__mbr__rel_a0f37964f2e40c8cf415dd81f03795c35}} 
+\index{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel@{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel}!print@{print}}
+\index{print@{print}!Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel@{Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Item\+\_\+func\+\_\+spatial\+\_\+mbr\+\_\+rel\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__bool__func2_a12469a240720c26bef325a4ee5b02f50}{Item\+\_\+bool\+\_\+func2}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc.\+h\item 
+\mbox{\hyperlink{item__geofunc__relchecks_8cc}{item\+\_\+geofunc\+\_\+relchecks.\+cc}}\end{DoxyCompactItemize}

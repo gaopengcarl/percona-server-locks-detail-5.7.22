@@ -1,0 +1,85 @@
+\hypertarget{classItem__json}{}\section{Item\+\_\+json Class Reference}
+\label{classItem__json}\index{Item\+\_\+json@{Item\+\_\+json}}
+
+
+A class that represents a constant J\+S\+ON value.  
+
+
+Inheritance diagram for Item\+\_\+json\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classItem__json}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__json_a753a264fb2579cbf13a70636e1e5184c}\label{classItem__json_a753a264fb2579cbf13a70636e1e5184c}} 
+{\bfseries Item\+\_\+json} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$value, const \mbox{\hyperlink{classItem__name__string}{Item\+\_\+name\+\_\+string}} \&name, const \mbox{\hyperlink{classDTCollation}{D\+T\+Collation}} \&coll)
+\item 
+\mbox{\Hypertarget{classItem__json_afffb55dbece21392eb96ee649bc35496}\label{classItem__json_afffb55dbece21392eb96ee649bc35496}} 
+enum Type {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classItem__json_a82aef74b0f842f38a4af925bace42e14}\label{classItem__json_a82aef74b0f842f38a4af925bace42e14}} 
+enum\+\_\+field\+\_\+types {\bfseries field\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classItem__json_a3d95f2484006e350e735568bc76690e5}\label{classItem__json_a3d95f2484006e350e735568bc76690e5}} 
+enum Item\+\_\+result {\bfseries result\+\_\+type} () const
+\item 
+bool \mbox{\hyperlink{classItem__json_a002a9253bafc524798d5bc2e5ee1a3d9}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$result)
+\item 
+\mbox{\Hypertarget{classItem__json_ab06aa6a16185a4d16479a8c31802c4de}\label{classItem__json_ab06aa6a16185a4d16479a8c31802c4de}} 
+double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__json_a117745e465495bca08fac5c4036a2683}\label{classItem__json_a117745e465495bca08fac5c4036a2683}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__json_a35b1226eed42963b0794bd611555dcae}\label{classItem__json_a35b1226eed42963b0794bd611555dcae}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem__json_aedd21edf141d198f5af2dc41b181607e}\label{classItem__json_aedd21edf141d198f5af2dc41b181607e}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$buf)
+\item 
+\mbox{\Hypertarget{classItem__json_aa83fd9be4da9fbd3d3538b92c8d029bb}\label{classItem__json_aa83fd9be4da9fbd3d3538b92c8d029bb}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem__json_aed5f1daf3594b9c476d41859ebeb9011}\label{classItem__json_aed5f1daf3594b9c476d41859ebeb9011}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+\mbox{\Hypertarget{classItem__json_adb5eda4017a050108a73b81726568c5a}\label{classItem__json_adb5eda4017a050108a73b81726568c5a}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries clone\+\_\+item} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A class that represents a constant J\+S\+ON value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__json_a002a9253bafc524798d5bc2e5ee1a3d9}\label{classItem__json_a002a9253bafc524798d5bc2e5ee1a3d9}} 
+\index{Item\+\_\+json@{Item\+\_\+json}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+json@{Item\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+json\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get a J\+S\+ON value from an \mbox{\hyperlink{classItem}{Item}}.
+
+All subclasses that can return a J\+S\+ON value, should override this function. The function in the base class is not expected to be called. If it is called, it most likely means that some subclass is missing an override of \mbox{\hyperlink{classItem__json_a002a9253bafc524798d5bc2e5ee1a3d9}{val\+\_\+json()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em result} & The resulting \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item.\+cc\end{DoxyCompactItemize}

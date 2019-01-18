@@ -1,0 +1,92 @@
+\hypertarget{classItem__xml__str__func}{}\section{Item\+\_\+xml\+\_\+str\+\_\+func Class Reference}
+\label{classItem__xml__str__func}\index{Item\+\_\+xml\+\_\+str\+\_\+func@{Item\+\_\+xml\+\_\+str\+\_\+func}}
+Inheritance diagram for Item\+\_\+xml\+\_\+str\+\_\+func\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__xml__str__func}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_ab4e919a3ba8144279429c42d66b87215}\label{classItem__xml__str__func_ab4e919a3ba8144279429c42d66b87215}} 
+{\bfseries Item\+\_\+xml\+\_\+str\+\_\+func} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_aa0b77a8cb90b2718fa97db39c4388bfe}\label{classItem__xml__str__func_aa0b77a8cb90b2718fa97db39c4388bfe}} 
+{\bfseries Item\+\_\+xml\+\_\+str\+\_\+func} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b, \mbox{\hyperlink{classItem}{Item}} $\ast$c)
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_a6ecf05c495ed487735a08fc1aa9b643b}\label{classItem__xml__str__func_a6ecf05c495ed487735a08fc1aa9b643b}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_a549305c1189331238ae1313d57478c69}\label{classItem__xml__str__func_a549305c1189331238ae1313d57478c69}} 
+String $\ast$ {\bfseries parse\+\_\+xml} (String $\ast$raw\+\_\+xml, String $\ast$parsed\+\_\+xml\+\_\+buf)
+\item 
+bool \mbox{\hyperlink{classItem__xml__str__func_aad586261f128e8819704b29bdf0c0470}{check\+\_\+gcol\+\_\+func\+\_\+processor}} (uchar $\ast$int\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classItem__xml__str__func_a7c2efc73a06fa01687872597b15fdff4}{parse\+\_\+xpath}} (\mbox{\hyperlink{classItem}{Item}} $\ast$xpath\+\_\+expr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_a9c7d871b7f0351f1f6c0764c502a19b7}\label{classItem__xml__str__func_a9c7d871b7f0351f1f6c0764c502a19b7}} 
+String {\bfseries tmp\+\_\+value}
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_a08045079b952e998abe8f95915d56158}\label{classItem__xml__str__func_a08045079b952e998abe8f95915d56158}} 
+String {\bfseries pxml}
+\item 
+\mbox{\Hypertarget{classItem__xml__str__func_a2c2bf1507c32a06e671a82fe11ac1d27}\label{classItem__xml__str__func_a2c2bf1507c32a06e671a82fe11ac1d27}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries nodeset\+\_\+func}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__xml__str__func_aad586261f128e8819704b29bdf0c0470}\label{classItem__xml__str__func_aad586261f128e8819704b29bdf0c0470}} 
+\index{Item\+\_\+xml\+\_\+str\+\_\+func@{Item\+\_\+xml\+\_\+str\+\_\+func}!check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}}
+\index{check\+\_\+gcol\+\_\+func\+\_\+processor@{check\+\_\+gcol\+\_\+func\+\_\+processor}!Item\+\_\+xml\+\_\+str\+\_\+func@{Item\+\_\+xml\+\_\+str\+\_\+func}}
+\subsubsection{\texorpdfstring{check\+\_\+gcol\+\_\+func\+\_\+processor()}{check\_gcol\_func\_processor()}}
+{\footnotesize\ttfamily bool Item\+\_\+xml\+\_\+str\+\_\+func\+::check\+\_\+gcol\+\_\+func\+\_\+processor (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{int\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if an expression/function is allowed for a virtual column
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em int\+\_\+arg} & An array of two integers. Used only for \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}. The first cell passes the field\textquotesingle{}s number in the table. The second cell is an out parameter containing the error code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if function is not accepted 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__result__field_a12324702e7f419b47de45e3505730441}{Item\+\_\+result\+\_\+field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__func__xml__update_aef4d74587e25de0b32a863ecc3b27214}{Item\+\_\+func\+\_\+xml\+\_\+update}}.
+
+\mbox{\Hypertarget{classItem__xml__str__func_a7c2efc73a06fa01687872597b15fdff4}\label{classItem__xml__str__func_a7c2efc73a06fa01687872597b15fdff4}} 
+\index{Item\+\_\+xml\+\_\+str\+\_\+func@{Item\+\_\+xml\+\_\+str\+\_\+func}!parse\+\_\+xpath@{parse\+\_\+xpath}}
+\index{parse\+\_\+xpath@{parse\+\_\+xpath}!Item\+\_\+xml\+\_\+str\+\_\+func@{Item\+\_\+xml\+\_\+str\+\_\+func}}
+\subsubsection{\texorpdfstring{parse\+\_\+xpath()}{parse\_xpath()}}
+{\footnotesize\ttfamily void Item\+\_\+xml\+\_\+str\+\_\+func\+::parse\+\_\+xpath (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{xpath\+\_\+expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse the specified X\+P\+A\+TH expression and initialize {\ttfamily nodeset\+\_\+func}.
+
+\begin{DoxyNote}{Note}
+This is normally called in resolve phase since we only support constant X\+P\+A\+TH expressions, but it may be called upon execution when const value is not yet known at resolve time.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em xpath\+\_\+expr} & X\+P\+A\+TH expression to be parsed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+xmlfunc.\+h\item 
+item\+\_\+xmlfunc.\+cc\end{DoxyCompactItemize}

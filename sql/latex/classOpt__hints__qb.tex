@@ -1,0 +1,179 @@
+\hypertarget{classOpt__hints__qb}{}\section{Opt\+\_\+hints\+\_\+qb Class Reference}
+\label{classOpt__hints__qb}\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+
+
+{\ttfamily \#include $<$opt\+\_\+hints.\+h$>$}
+
+Inheritance diagram for Opt\+\_\+hints\+\_\+qb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classOpt__hints__qb}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOpt__hints__qb_a4b3dab91f797de06312a1e502c4f0317}\label{classOpt__hints__qb_a4b3dab91f797de06312a1e502c4f0317}} 
+{\bfseries Opt\+\_\+hints\+\_\+qb} (\mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}} $\ast$opt\+\_\+hints\+\_\+arg, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root\+\_\+arg, uint select\+\_\+number\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classOpt__hints__qb_adc8b4150bf4fe519313ba6e491ab9015}\label{classOpt__hints__qb_adc8b4150bf4fe519313ba6e491ab9015}} 
+const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$ {\bfseries get\+\_\+print\+\_\+name} ()
+\item 
+void \mbox{\hyperlink{classOpt__hints__qb_a8399caf3fc8957c96122049e1343dfa2}{append\+\_\+qb\+\_\+hint}} (T\+HD $\ast$thd, String $\ast$str)
+\item 
+virtual void \mbox{\hyperlink{classOpt__hints__qb_af4f0b581f86642fce87816546656efb7}{append\+\_\+name}} (T\+HD $\ast$thd, String $\ast$str)
+\item 
+virtual \mbox{\hyperlink{classPT__hint}{P\+T\+\_\+hint}} $\ast$ \mbox{\hyperlink{classOpt__hints__qb_a6312e36d56b68d1c8622482d39dc580b}{get\+\_\+complex\+\_\+hints}} (opt\+\_\+hints\+\_\+enum type)
+\item 
+\mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}} $\ast$ \mbox{\hyperlink{classOpt__hints__qb_a393fe013d9b0ddea680a3321bc139851}{adjust\+\_\+table\+\_\+hints}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const char $\ast$alias)
+\item 
+bool \mbox{\hyperlink{classOpt__hints__qb_a4412c93a6800caf9848c00aca470ffc0}{semijoin\+\_\+enabled}} (T\+HD $\ast$thd) const
+\item 
+uint \mbox{\hyperlink{classOpt__hints__qb_a566ed5ba6a0666c607639f27d0d04cce}{sj\+\_\+enabled\+\_\+strategies}} (uint opt\+\_\+switches) const
+\item 
+\mbox{\hyperlink{classItem__exists__subselect_aa110ca13dba0d9c620f5f72e6bad798e}{Item\+\_\+exists\+\_\+subselect\+::enum\+\_\+exec\+\_\+method}} \mbox{\hyperlink{classOpt__hints__qb_a32ec634d8d4f0bc5fe08b46fd28e1772}{subquery\+\_\+strategy}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOpt__hints__qb_a7976d18a535a68e3109dd6b9618d9c7c}\label{classOpt__hints__qb_a7976d18a535a68e3109dd6b9618d9c7c}} 
+class {\bfseries P\+T\+\_\+qb\+\_\+level\+\_\+hint}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Query block level hints. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classOpt__hints__qb_a393fe013d9b0ddea680a3321bc139851}\label{classOpt__hints__qb_a393fe013d9b0ddea680a3321bc139851}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!adjust\+\_\+table\+\_\+hints@{adjust\+\_\+table\+\_\+hints}}
+\index{adjust\+\_\+table\+\_\+hints@{adjust\+\_\+table\+\_\+hints}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{adjust\+\_\+table\+\_\+hints()}{adjust\_table\_hints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}} $\ast$ Opt\+\_\+hints\+\_\+qb\+::adjust\+\_\+table\+\_\+hints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{const char $\ast$}]{alias }\end{DoxyParamCaption})}
+
+Function finds \mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}} object corresponding to table alias in the query block and attaches corresponding key hint objects to appropriate K\+EY structures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Pointer to \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object \\
+\hline
+{\em alias} & Table alias\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer \mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}} object if this object is found, N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOpt__hints__qb_af4f0b581f86642fce87816546656efb7}\label{classOpt__hints__qb_af4f0b581f86642fce87816546656efb7}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!append\+\_\+name@{append\+\_\+name}}
+\index{append\+\_\+name@{append\+\_\+name}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{append\+\_\+name()}{append\_name()}}
+{\footnotesize\ttfamily virtual void Opt\+\_\+hints\+\_\+qb\+::append\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Append query block name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & pointer to T\+HD object \\
+\hline
+{\em str} & pointer to String object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOpt__hints}{Opt\+\_\+hints}}.
+
+\mbox{\Hypertarget{classOpt__hints__qb_a8399caf3fc8957c96122049e1343dfa2}\label{classOpt__hints__qb_a8399caf3fc8957c96122049e1343dfa2}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!append\+\_\+qb\+\_\+hint@{append\+\_\+qb\+\_\+hint}}
+\index{append\+\_\+qb\+\_\+hint@{append\+\_\+qb\+\_\+hint}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{append\+\_\+qb\+\_\+hint()}{append\_qb\_hint()}}
+{\footnotesize\ttfamily void Opt\+\_\+hints\+\_\+qb\+::append\+\_\+qb\+\_\+hint (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append query block hint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & pointer to T\+HD object \\
+\hline
+{\em str} & pointer to String object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOpt__hints__qb_a6312e36d56b68d1c8622482d39dc580b}\label{classOpt__hints__qb_a6312e36d56b68d1c8622482d39dc580b}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!get\+\_\+complex\+\_\+hints@{get\+\_\+complex\+\_\+hints}}
+\index{get\+\_\+complex\+\_\+hints@{get\+\_\+complex\+\_\+hints}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{get\+\_\+complex\+\_\+hints()}{get\_complex\_hints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPT__hint}{P\+T\+\_\+hint}} $\ast$ Opt\+\_\+hints\+\_\+qb\+::get\+\_\+complex\+\_\+hints (\begin{DoxyParamCaption}\item[{opt\+\_\+hints\+\_\+enum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns pointer to complex hint for a given type.
+
+A complex hint is a hint that has arguments. (It is not just an on/off switch.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & hint type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to complex hint for a given type. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classOpt__hints_a3dd8eb290a7b81d9a6d849de18a61cba}{Opt\+\_\+hints}}.
+
+\mbox{\Hypertarget{classOpt__hints__qb_a4412c93a6800caf9848c00aca470ffc0}\label{classOpt__hints__qb_a4412c93a6800caf9848c00aca470ffc0}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!semijoin\+\_\+enabled@{semijoin\+\_\+enabled}}
+\index{semijoin\+\_\+enabled@{semijoin\+\_\+enabled}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{semijoin\+\_\+enabled()}{semijoin\_enabled()}}
+{\footnotesize\ttfamily bool Opt\+\_\+hints\+\_\+qb\+::semijoin\+\_\+enabled (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption}) const}
+
+Returns whether semi-\/join is enabled for this query block
+
+A S\+E\+M\+I\+J\+O\+IN hint will force semi-\/join regardless of optimizer\+\_\+switch settings. A N\+O\+\_\+\+S\+E\+M\+I\+J\+O\+IN hint will only turn off semi-\/join if the variant with no strategies is used. A S\+U\+B\+Q\+U\+E\+RY hint will turn off semi-\/join. If there is no S\+E\+M\+I\+J\+O\+I\+N/\+S\+U\+B\+Q\+U\+E\+RY hint, optimizer\+\_\+switch setting determines whether S\+E\+M\+I\+J\+O\+IN is used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object for session. Used to access optimizer\+\_\+switch\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if semijoin is enabled 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOpt__hints__qb_a566ed5ba6a0666c607639f27d0d04cce}\label{classOpt__hints__qb_a566ed5ba6a0666c607639f27d0d04cce}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!sj\+\_\+enabled\+\_\+strategies@{sj\+\_\+enabled\+\_\+strategies}}
+\index{sj\+\_\+enabled\+\_\+strategies@{sj\+\_\+enabled\+\_\+strategies}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{sj\+\_\+enabled\+\_\+strategies()}{sj\_enabled\_strategies()}}
+{\footnotesize\ttfamily uint Opt\+\_\+hints\+\_\+qb\+::sj\+\_\+enabled\+\_\+strategies (\begin{DoxyParamCaption}\item[{uint}]{opt\+\_\+switches }\end{DoxyParamCaption}) const}
+
+Returns bit mask of which semi-\/join strategies are enabled for this query block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+switches} & Bit map of strategies enabled by optimizer\+\_\+switch\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bit mask of strategies that are enabled 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOpt__hints__qb_a32ec634d8d4f0bc5fe08b46fd28e1772}\label{classOpt__hints__qb_a32ec634d8d4f0bc5fe08b46fd28e1772}} 
+\index{Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}!subquery\+\_\+strategy@{subquery\+\_\+strategy}}
+\index{subquery\+\_\+strategy@{subquery\+\_\+strategy}!Opt\+\_\+hints\+\_\+qb@{Opt\+\_\+hints\+\_\+qb}}
+\subsubsection{\texorpdfstring{subquery\+\_\+strategy()}{subquery\_strategy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem__exists__subselect_aa110ca13dba0d9c620f5f72e6bad798e}{Item\+\_\+exists\+\_\+subselect\+::enum\+\_\+exec\+\_\+method}} Opt\+\_\+hints\+\_\+qb\+::subquery\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns which subquery execution strategy has been specified by hints for this query block.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em E\+X\+E\+C\+\_\+\+M\+A\+T\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+ON} & Subquery Materialization should be used \\
+\hline
+{\em E\+X\+E\+C\+\_\+\+E\+X\+I\+S\+TS} & In-\/to-\/exists execution should be used \\
+\hline
+{\em E\+X\+E\+C\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+ED} & No S\+U\+B\+Q\+U\+E\+RY hint for this query block \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+hints.\+h\item 
+opt\+\_\+hints.\+cc\end{DoxyCompactItemize}

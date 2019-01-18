@@ -1,0 +1,63 @@
+\hypertarget{classCommit__order__trx__dependency__tracker}{}\section{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker Class Reference}
+\label{classCommit__order__trx__dependency__tracker}\index{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker@{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+trx\+\_\+tracking.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCommit__order__trx__dependency__tracker_aca0d993a2356d3ec86ed7f07af787a70}{get\+\_\+dependency}} (T\+HD $\ast$thd, int64 \&sequence\+\_\+number, int64 \&commit\+\_\+parent)
+\item 
+\mbox{\Hypertarget{classCommit__order__trx__dependency__tracker_a87866a9fea5bc2578eeddb938269fc15}\label{classCommit__order__trx__dependency__tracker_a87866a9fea5bc2578eeddb938269fc15}} 
+void {\bfseries update\+\_\+max\+\_\+committed} (int64 sequence\+\_\+number)
+\item 
+\mbox{\Hypertarget{classCommit__order__trx__dependency__tracker_a133f7b8c78f5c4af333ef33bc7db7d7f}\label{classCommit__order__trx__dependency__tracker_a133f7b8c78f5c4af333ef33bc7db7d7f}} 
+\mbox{\hyperlink{classLogical__clock}{Logical\+\_\+clock}} {\bfseries get\+\_\+max\+\_\+committed\+\_\+transaction} ()
+\item 
+\mbox{\Hypertarget{classCommit__order__trx__dependency__tracker_a300d2c4f585f147b49b26815690dbf00}\label{classCommit__order__trx__dependency__tracker_a300d2c4f585f147b49b26815690dbf00}} 
+int64 {\bfseries step} ()
+\item 
+\mbox{\Hypertarget{classCommit__order__trx__dependency__tracker_a1c90b66967422a5243148c503f99ed8d}\label{classCommit__order__trx__dependency__tracker_a1c90b66967422a5243148c503f99ed8d}} 
+void {\bfseries rotate} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generate logical timestamps for M\+TS using C\+O\+M\+M\+I\+T\+\_\+\+O\+R\+D\+ER in the binlog-\/transaction-\/dependency-\/tracking option. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommit__order__trx__dependency__tracker_aca0d993a2356d3ec86ed7f07af787a70}\label{classCommit__order__trx__dependency__tracker_aca0d993a2356d3ec86ed7f07af787a70}} 
+\index{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker@{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker}!get\+\_\+dependency@{get\+\_\+dependency}}
+\index{get\+\_\+dependency@{get\+\_\+dependency}!Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker@{Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker}}
+\subsubsection{\texorpdfstring{get\+\_\+dependency()}{get\_dependency()}}
+{\footnotesize\ttfamily void Commit\+\_\+order\+\_\+trx\+\_\+dependency\+\_\+tracker\+::get\+\_\+dependency (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{int64 \&}]{sequence\+\_\+number,  }\item[{int64 \&}]{commit\+\_\+parent }\end{DoxyParamCaption})}
+
+Main function that gets the dependencies using the C\+O\+M\+M\+I\+T\+\_\+\+O\+R\+D\+ER tracker.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & T\+HD of the caller. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sequence\+\_\+number} & sequence\+\_\+number initialized and returned. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em commit\+\_\+parent} & commit\+\_\+parent to be returned.\\
+\hline
+\end{DoxyParams}
+Get the sequence\+\_\+number for a transaction, and get the last\+\_\+commit based on parallel committing transactions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Current T\+HD from which to extract trx context. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sequence\+\_\+number} & Sequence number of current transaction. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em commit\+\_\+parent} & Commit\+\_\+parent of current transaction, pre-\/filled with the commit\+\_\+parent calculated by the logical clock logic. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+trx\+\_\+tracking.\+h\item 
+rpl\+\_\+trx\+\_\+tracking.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\hypertarget{classItem__func__eq}{}\section{Item\+\_\+func\+\_\+eq Class Reference}
+\label{classItem__func__eq}\index{Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}}
+Inheritance diagram for Item\+\_\+func\+\_\+eq\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classItem__func__eq}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a6bbce0aae87d738da833b5a1bc830dec}\label{classItem__func__eq_a6bbce0aae87d738da833b5a1bc830dec}} 
+{\bfseries Item\+\_\+func\+\_\+eq} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a9de46532666943bcf4e3351a5959d391}\label{classItem__func__eq_a9de46532666943bcf4e3351a5959d391}} 
+{\bfseries Item\+\_\+func\+\_\+eq} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a6d7327ea9ad7cbaca754e4dc5a843702}\label{classItem__func__eq_a6d7327ea9ad7cbaca754e4dc5a843702}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a61941eae1f1ab18c3c98461e0f0a833f}\label{classItem__func__eq_a61941eae1f1ab18c3c98461e0f0a833f}} 
+enum Functype {\bfseries functype} () const
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a4d6e7526b5266e2adaeba3d5dc9df439}\label{classItem__func__eq_a4d6e7526b5266e2adaeba3d5dc9df439}} 
+enum Functype {\bfseries rev\+\_\+functype} () const
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a048463d60c25cf3568b4255b9d0eea41}\label{classItem__func__eq_a048463d60c25cf3568b4255b9d0eea41}} 
+cond\+\_\+result {\bfseries eq\+\_\+cmp\+\_\+result} () const
+\item 
+\mbox{\Hypertarget{classItem__func__eq_a641ba33c832bf1211971b7d1b85e3e0b}\label{classItem__func__eq_a641ba33c832bf1211971b7d1b85e3e0b}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__func__eq_a5e6489bc7481658c4f878ad99846f323}{negated\+\_\+item}} ()
+\item 
+\mbox{\Hypertarget{classItem__func__eq_ac9ebfc6fa87c3bc4d618346b600ba2bc}\label{classItem__func__eq_ac9ebfc6fa87c3bc4d618346b600ba2bc}} 
+virtual bool {\bfseries equality\+\_\+substitution\+\_\+analyzer} (uchar $\ast$$\ast$arg)
+\item 
+virtual \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__func__eq_ac77ed08d8277717b04bf0878069cb25a}{equality\+\_\+substitution\+\_\+transformer}} (uchar $\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem__func__eq_a085a3e6f03cf5e3915949e4f6bc9f53c}{gc\+\_\+subst\+\_\+analyzer}} (uchar $\ast$$\ast$arg)
+\item 
+float \mbox{\hyperlink{classItem__func__eq_a2fcef97ba353457bb567011be900a680}{get\+\_\+filtering\+\_\+effect}} (table\+\_\+map filter\+\_\+for\+\_\+table, table\+\_\+map read\+\_\+tables, const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$fields\+\_\+to\+\_\+ignore, double rows\+\_\+in\+\_\+table)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__eq_ac77ed08d8277717b04bf0878069cb25a}\label{classItem__func__eq_ac77ed08d8277717b04bf0878069cb25a}} 
+\index{Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}!equality\+\_\+substitution\+\_\+transformer@{equality\+\_\+substitution\+\_\+transformer}}
+\index{equality\+\_\+substitution\+\_\+transformer@{equality\+\_\+substitution\+\_\+transformer}!Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}}
+\subsubsection{\texorpdfstring{equality\+\_\+substitution\+\_\+transformer()}{equality\_substitution\_transformer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+func\+\_\+eq\+::equality\+\_\+substitution\+\_\+transformer (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Replace arg of \mbox{\hyperlink{classItem__func__eq}{Item\+\_\+func\+\_\+eq}} object after having added a table that represents a materialized semi-\/join.
+
+The right argument of an injected semi-\/join equality (which comes from the select list of the subquery) is replaced with the corresponding column from the materialized temporary table, if the left and right arguments are not from the same semi-\/join nest. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_gaeaa6edcfa6c4d934dd42d505d9de2fef}{J\+O\+I\+N\+::update\+\_\+equalities\+\_\+for\+\_\+sjm()}} for why this is needed. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+\mbox{\Hypertarget{classItem__func__eq_a085a3e6f03cf5e3915949e4f6bc9f53c}\label{classItem__func__eq_a085a3e6f03cf5e3915949e4f6bc9f53c}} 
+\index{Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}!gc\+\_\+subst\+\_\+analyzer@{gc\+\_\+subst\+\_\+analyzer}}
+\index{gc\+\_\+subst\+\_\+analyzer@{gc\+\_\+subst\+\_\+analyzer}!Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}}
+\subsubsection{\texorpdfstring{gc\+\_\+subst\+\_\+analyzer()}{gc\_subst\_analyzer()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+eq\+::gc\+\_\+subst\+\_\+analyzer (\begin{DoxyParamCaption}\item[{uchar $\ast$$\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Analyzer function for GC substitution. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_aea5d6f41e9cd5d17d8e6e8d44bee9c3e}{Item}}.
+
+\mbox{\Hypertarget{classItem__func__eq_a2fcef97ba353457bb567011be900a680}\label{classItem__func__eq_a2fcef97ba353457bb567011be900a680}} 
+\index{Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}!get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}}
+\index{get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}!Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}}
+\subsubsection{\texorpdfstring{get\+\_\+filtering\+\_\+effect()}{get\_filtering\_effect()}}
+{\footnotesize\ttfamily float Item\+\_\+func\+\_\+eq\+::get\+\_\+filtering\+\_\+effect (\begin{DoxyParamCaption}\item[{table\+\_\+map}]{filter\+\_\+for\+\_\+table,  }\item[{table\+\_\+map}]{read\+\_\+tables,  }\item[{const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{fields\+\_\+to\+\_\+ignore,  }\item[{double}]{rows\+\_\+in\+\_\+table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calculate the filter contribution that is relevant for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} for this item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+\_\+for\+\_\+table} & The table we are calculating filter effect for \\
+\hline
+{\em read\+\_\+tables} & Tables earlier in the join sequence. Predicates for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that rely on values from these tables can be part of the filter effect. \\
+\hline
+{\em fields\+\_\+to\+\_\+ignore} & Fields in \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that should not be part of the filter calculation. The filtering effect of these fields is already part of the calculation somehow (e.\+g. because there is a predicate \char`\"{}col = $<$const$>$\char`\"{}, and the optimizer has decided to do ref access on \textquotesingle{}col\textquotesingle{}). \\
+\hline
+{\em rows\+\_\+in\+\_\+table} & The number of rows in table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the filtering effect (between 0 and 1) this \mbox{\hyperlink{classItem}{Item}} contributes with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a83f65da25aae04ad1aecebc1d43832c0}{Item}}.
+
+\mbox{\Hypertarget{classItem__func__eq_a5e6489bc7481658c4f878ad99846f323}\label{classItem__func__eq_a5e6489bc7481658c4f878ad99846f323}} 
+\index{Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}!negated\+\_\+item@{negated\+\_\+item}}
+\index{negated\+\_\+item@{negated\+\_\+item}!Item\+\_\+func\+\_\+eq@{Item\+\_\+func\+\_\+eq}}
+\subsubsection{\texorpdfstring{negated\+\_\+item()}{negated\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+func\+\_\+eq\+::negated\+\_\+item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+just fake method, should never be called. 
+
+Reimplemented from \mbox{\hyperlink{classItem__bool__rowready__func2_a93c59c6f9aa848020c85975f792ba85a}{Item\+\_\+bool\+\_\+rowready\+\_\+func2}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,1204 @@
+\hypertarget{structTABLE__LIST}{}\section{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST Struct Reference}
+\label{structTABLE__LIST}\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+Inheritance diagram for T\+A\+B\+L\+E\+\_\+\+L\+I\+ST\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structTABLE__LIST}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries O\+P\+E\+N\+\_\+\+N\+O\+R\+M\+AL} = 0, 
+{\bfseries O\+P\+E\+N\+\_\+\+I\+F\+\_\+\+E\+X\+I\+S\+TS}, 
+{\bfseries O\+P\+E\+N\+\_\+\+F\+O\+R\+\_\+\+C\+R\+E\+A\+TE}, 
+{\bfseries O\+P\+E\+N\+\_\+\+S\+T\+UB}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structTABLE__LIST_a2570739fd11fcfb3bcd5050253b3c7fc}{init\+\_\+one\+\_\+table}} (const char $\ast$db\+\_\+name\+\_\+arg, size\+\_\+t db\+\_\+length\+\_\+arg, const char $\ast$table\+\_\+name\+\_\+arg, size\+\_\+t table\+\_\+name\+\_\+length\+\_\+arg, const char $\ast$alias\+\_\+arg, enum thr\+\_\+lock\+\_\+type lock\+\_\+type\+\_\+arg, enum enum\+\_\+mdl\+\_\+type mdl\+\_\+type\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a240fcf827fe504bebbbb4caa0f76b6ab}\label{structTABLE__LIST_a240fcf827fe504bebbbb4caa0f76b6ab}} 
+void {\bfseries init\+\_\+one\+\_\+table} (const char $\ast$db\+\_\+name\+\_\+arg, size\+\_\+t db\+\_\+length\+\_\+arg, const char $\ast$table\+\_\+name\+\_\+arg, size\+\_\+t table\+\_\+name\+\_\+length\+\_\+arg, const char $\ast$alias\+\_\+arg, enum thr\+\_\+lock\+\_\+type lock\+\_\+type\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a9da2c3ad1d7a0f06112095b5052be192}\label{structTABLE__LIST_a9da2c3ad1d7a0f06112095b5052be192}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries join\+\_\+cond\+\_\+ref} ()
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af0d311128da6065c6d141b434d2dce00}\label{structTABLE__LIST_af0d311128da6065c6d141b434d2dce00}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries join\+\_\+cond} () const
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_afc6f2f983b193f703dfeaff27391fba0}\label{structTABLE__LIST_afc6f2f983b193f703dfeaff27391fba0}} 
+void {\bfseries set\+\_\+join\+\_\+cond} (\mbox{\hyperlink{classItem}{Item}} $\ast$val)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af2df869aabdf99a0035be35bca4d3bad}\label{structTABLE__LIST_af2df869aabdf99a0035be35bca4d3bad}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries join\+\_\+cond\+\_\+optim} () const
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a7cb85184c6fef597d707c5274b82ee1e}\label{structTABLE__LIST_a7cb85184c6fef597d707c5274b82ee1e}} 
+void {\bfseries set\+\_\+join\+\_\+cond\+\_\+optim} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a48e71af0460413687aa84e1db3469068}\label{structTABLE__LIST_a48e71af0460413687aa84e1db3469068}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ {\bfseries join\+\_\+cond\+\_\+optim\+\_\+ref} ()
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ab9bb26b36feb9db4583c49bc8b3420f9}\label{structTABLE__LIST_ab9bb26b36feb9db4583c49bc8b3420f9}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_ab9bb26b36feb9db4583c49bc8b3420f9}{sj\+\_\+cond}} () const
+\begin{DoxyCompactList}\small\item\em Get the semi-\/join condition for a semi-\/join nest, N\+U\+LL otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a2010f7a7020069999fe7e1cc3913c184}\label{structTABLE__LIST_a2010f7a7020069999fe7e1cc3913c184}} 
+void \mbox{\hyperlink{structTABLE__LIST_a2010f7a7020069999fe7e1cc3913c184}{set\+\_\+sj\+\_\+cond}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond)
+\begin{DoxyCompactList}\small\item\em Set the semi-\/join condition for a semi-\/join nest. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a4d72f5a66dc629da7d156fc1afd564c6}{merge\+\_\+underlying\+\_\+tables}} (class st\+\_\+select\+\_\+lex $\ast$select)
+\begin{DoxyCompactList}\small\item\em Merge tables from a query block into a nested join structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTABLE__LIST_a42d66db36c7b7244497c177597e5f9ef}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae18ad1747d1fabe98b79505ff89c28c7}\label{structTABLE__LIST_ae18ad1747d1fabe98b79505ff89c28c7}} 
+void {\bfseries calc\+\_\+md5} (char $\ast$buffer)
+\item 
+int \mbox{\hyperlink{structTABLE__LIST_a62fb01b6313a7b31f787ef305bb2d3b8}{view\+\_\+check\+\_\+option}} (T\+HD $\ast$thd) const
+\begin{DoxyCompactList}\small\item\em Evaluate the check option of a view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTABLE__LIST_a62d0e797cda12a471f03b5692ca94ac6}{cleanup\+\_\+items}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup field translations for a view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_aa8a3e28262bcccaea50da6e2a71d37a8}{is\+\_\+placeholder}} () const
+\item 
+void \mbox{\hyperlink{structTABLE__LIST_a150941693e3ab1b041c7fb3dd98eb8db}{print}} (T\+HD $\ast$thd, String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type) const
+\begin{DoxyCompactList}\small\item\em Produce a textual identification of this object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_ae5f93d5c8045cba433322ca340bad8b7}{check\+\_\+single\+\_\+table}} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$table\+\_\+ref, table\+\_\+map \mbox{\hyperlink{structTABLE__LIST_a24a1eac5a4be4ed7407792e12795191b}{map}})
+\begin{DoxyCompactList}\small\item\em Check which single table inside a view that matches a table map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a6927ca9c8af85e8c97148794e08cc641}{set\+\_\+insert\+\_\+values}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\begin{DoxyCompactList}\small\item\em Allocate a buffer for inserted column values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ada3270a217de571fdbc54c4c352df2b1}\label{structTABLE__LIST_ada3270a217de571fdbc54c4c352df2b1}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries first\+\_\+leaf\+\_\+for\+\_\+name\+\_\+resolution} ()
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af213961a61b88c8ee467fa17e2cb19ae}\label{structTABLE__LIST_af213961a61b88c8ee467fa17e2cb19ae}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries last\+\_\+leaf\+\_\+for\+\_\+name\+\_\+resolution} ()
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ac1b98c673e2d16542365915431333c3c}\label{structTABLE__LIST_ac1b98c673e2d16542365915431333c3c}} 
+bool {\bfseries is\+\_\+leaf\+\_\+for\+\_\+name\+\_\+resolution} () const
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af17905f4d91714e5ba8b1cf55e501e30}\label{structTABLE__LIST_af17905f4d91714e5ba8b1cf55e501e30}} 
+const \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_af17905f4d91714e5ba8b1cf55e501e30}{top\+\_\+table}} () const
+\begin{DoxyCompactList}\small\item\em Return the outermost view this table belongs to, or itself. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8f8e9ba8937d575e06f2471283fad119}\label{structTABLE__LIST_a8f8e9ba8937d575e06f2471283fad119}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries top\+\_\+table} ()
+\item 
+bool \mbox{\hyperlink{structTABLE__LIST_ae517b6ba4f6be7fac92ad2914e154e05}{prepare\+\_\+check\+\_\+option}} (T\+HD $\ast$thd, bool is\+\_\+cascaded=false)
+\begin{DoxyCompactList}\small\item\em Prepare check option for a view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_aef94fa3856c0c8023095727e07915cb9}{merge\+\_\+where}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Merge W\+H\+E\+RE condition of view or derived table into outer query. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_ac7e6f3073efcb58bd1fff1a81c3d15c8}{prepare\+\_\+replace\+\_\+filter}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Prepare replace filter for a view (used for R\+E\+P\+L\+A\+CE command) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1970be2668d406a8fb255183518d4ea0}\label{structTABLE__LIST_a1970be2668d406a8fb255183518d4ea0}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a1970be2668d406a8fb255183518d4ea0}{is\+\_\+view}} () const
+\begin{DoxyCompactList}\small\item\em Return true if this represents a named view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a405821eacc8eaeb16824a2dcbd1b2f3e}\label{structTABLE__LIST_a405821eacc8eaeb16824a2dcbd1b2f3e}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a405821eacc8eaeb16824a2dcbd1b2f3e}{is\+\_\+derived}} () const
+\begin{DoxyCompactList}\small\item\em Return true if this represents a derived table (an unnamed view) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a4abf129e475248ee004bf7b1c920ee59}\label{structTABLE__LIST_a4abf129e475248ee004bf7b1c920ee59}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a4abf129e475248ee004bf7b1c920ee59}{is\+\_\+view\+\_\+or\+\_\+derived}} () const
+\begin{DoxyCompactList}\small\item\em Return true if this represents a named view or a derived table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a4a2f63ec241cf7b97113d1fbcf4dc18b}{is\+\_\+mergeable}} () const
+\begin{DoxyCompactList}\small\item\em Return true if view or derived table and can be merged. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a6e892515eb76fb15ac52f66ba51cc8fb}{materializable\+\_\+is\+\_\+const}} () const
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a27c71de0ca84cf48f20109b2c3344e61}\label{structTABLE__LIST_a27c71de0ca84cf48f20109b2c3344e61}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a27c71de0ca84cf48f20109b2c3344e61}{is\+\_\+merged}} () const
+\begin{DoxyCompactList}\small\item\em Return true if this is a derived table or view that is merged. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a65e7772c50dc88ac0be9f75e86d74416}\label{structTABLE__LIST_a65e7772c50dc88ac0be9f75e86d74416}} 
+void \mbox{\hyperlink{structTABLE__LIST_a65e7772c50dc88ac0be9f75e86d74416}{set\+\_\+merged}} ()
+\begin{DoxyCompactList}\small\item\em Set table to be merged. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae854612b7e86fedfb87ec0d49dbb8b3d}\label{structTABLE__LIST_ae854612b7e86fedfb87ec0d49dbb8b3d}} 
+bool \mbox{\hyperlink{structTABLE__LIST_ae854612b7e86fedfb87ec0d49dbb8b3d}{uses\+\_\+materialization}} () const
+\begin{DoxyCompactList}\small\item\em Return true if this is a materializable derived table/view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a0bb7035aa2b156078c67053428458193}\label{structTABLE__LIST_a0bb7035aa2b156078c67053428458193}} 
+void \mbox{\hyperlink{structTABLE__LIST_a0bb7035aa2b156078c67053428458193}{set\+\_\+uses\+\_\+materialization}} ()
+\begin{DoxyCompactList}\small\item\em Set table to be materialized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ab245bbe722912873c8e5ed62d7b083b0}\label{structTABLE__LIST_ab245bbe722912873c8e5ed62d7b083b0}} 
+bool \mbox{\hyperlink{structTABLE__LIST_ab245bbe722912873c8e5ed62d7b083b0}{is\+\_\+updatable}} () const
+\begin{DoxyCompactList}\small\item\em Return true if table is updatable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_aff457001774cafb6a9e346471ab6a057}\label{structTABLE__LIST_aff457001774cafb6a9e346471ab6a057}} 
+void \mbox{\hyperlink{structTABLE__LIST_aff457001774cafb6a9e346471ab6a057}{set\+\_\+updatable}} ()
+\begin{DoxyCompactList}\small\item\em Set table as updatable. (per default, a table is non-\/updatable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a17aea4ea076c8b55f01b7fa70855731d}\label{structTABLE__LIST_a17aea4ea076c8b55f01b7fa70855731d}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a17aea4ea076c8b55f01b7fa70855731d}{is\+\_\+insertable}} () const
+\begin{DoxyCompactList}\small\item\em Return true if table is insertable-\/into. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a9a31d699e5d368c3a7b77c7e7d48d03f}\label{structTABLE__LIST_a9a31d699e5d368c3a7b77c7e7d48d03f}} 
+void \mbox{\hyperlink{structTABLE__LIST_a9a31d699e5d368c3a7b77c7e7d48d03f}{set\+\_\+insertable}} ()
+\begin{DoxyCompactList}\small\item\em Set table as insertable-\/into. (per default, a table is not insertable) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a12166730e324a1371da84b8442931586}{is\+\_\+multiple\+\_\+tables}} () const
+\item 
+uint \mbox{\hyperlink{structTABLE__LIST_a2f699410f2d5693c48cb5d525038f572}{leaf\+\_\+tables\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Return no. of base tables a merged view or derived table is defined over. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a18d48866823fb1e5a562c342bb93c085}\label{structTABLE__LIST_a18d48866823fb1e5a562c342bb93c085}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a18d48866823fb1e5a562c342bb93c085}{first\+\_\+leaf\+\_\+table}} ()
+\begin{DoxyCompactList}\small\item\em Return first leaf table of a base table or a view/derived table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_aa8fa2ce873ee6792e4b00bef231936be}{any\+\_\+outer\+\_\+leaf\+\_\+table}} ()
+\item 
+void \mbox{\hyperlink{structTABLE__LIST_a6878f08fcc39c50e04482b6e0856745f}{set\+\_\+view\+\_\+query}} (L\+EX $\ast$lex)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a0101f30f61437b798ec37ac46cae1cbd}\label{structTABLE__LIST_a0101f30f61437b798ec37ac46cae1cbd}} 
+L\+EX $\ast$ \mbox{\hyperlink{structTABLE__LIST_a0101f30f61437b798ec37ac46cae1cbd}{view\+\_\+query}} () const
+\begin{DoxyCompactList}\small\item\em Return the valid L\+EX object for a view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTABLE__LIST_aac72f56177ececd8ad3cc4254face1b1}{set\+\_\+derived\+\_\+unit}} (st\+\_\+select\+\_\+lex\+\_\+unit $\ast$query\+\_\+expr)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a75910190eb741d4f68da37386181277c}\label{structTABLE__LIST_a75910190eb741d4f68da37386181277c}} 
+st\+\_\+select\+\_\+lex\+\_\+unit $\ast$ \mbox{\hyperlink{structTABLE__LIST_a75910190eb741d4f68da37386181277c}{derived\+\_\+unit}} () const
+\begin{DoxyCompactList}\small\item\em Return the query expression of a derived table or view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a49dfcb9f4c2e8b6ada1cd4fef882fc45}\label{structTABLE__LIST_a49dfcb9f4c2e8b6ada1cd4fef882fc45}} 
+void \mbox{\hyperlink{structTABLE__LIST_a49dfcb9f4c2e8b6ada1cd4fef882fc45}{set\+\_\+name\+\_\+temporary}} ()
+\begin{DoxyCompactList}\small\item\em Set temporary name from underlying temporary table\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_afd95d0bc4bdc90de4090104425abcb9b}\label{structTABLE__LIST_afd95d0bc4bdc90de4090104425abcb9b}} 
+void \mbox{\hyperlink{structTABLE__LIST_afd95d0bc4bdc90de4090104425abcb9b}{reset\+\_\+name\+\_\+temporary}} ()
+\begin{DoxyCompactList}\small\item\em Reset original name for temporary table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a9e0d3b6d173c9e31b84a6b4165f078ab}{resolve\+\_\+derived}} (T\+HD $\ast$thd, bool apply\+\_\+semijoin)
+\begin{DoxyCompactList}\small\item\em Resolve a derived table or view reference. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a3875f31dc977efa2788492b169e18720}{optimize\+\_\+derived}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Optimize the query expression representing a derived table/view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a0a5671d9a3ddbbcf1aeda9159f8e1704}{create\+\_\+derived}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Create result table for a materialized derived table/view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_af74c8acef2390fbe4337b75755991839}{materialize\+\_\+derived}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Materialize derived table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_ae5497aefdade6117117ff987e309d400}{cleanup\+\_\+derived}} ()
+\begin{DoxyCompactList}\small\item\em Clean up the query expression for a materialized derived table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structTABLE__LIST_af0d0bba1cc8b85fbbbe7bd1ea54e8e7e}{set\+\_\+want\+\_\+privilege}} (ulong want\+\_\+privilege)
+\begin{DoxyCompactList}\small\item\em Set wanted privilege for subsequent column privilege checking. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a41ffc789c8a9e07c3235713c4ff44d58}\label{structTABLE__LIST_a41ffc789c8a9e07c3235713c4ff44d58}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a41ffc789c8a9e07c3235713c4ff44d58}{prepare\+\_\+security}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Prepare security context for a view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ad8410e8733db6157e65739006b870aa6}\label{structTABLE__LIST_ad8410e8733db6157e65739006b870aa6}} 
+Security\+\_\+context $\ast$ {\bfseries find\+\_\+view\+\_\+security\+\_\+context} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aad54dbb8be15ca4fe66a99b58be53997}\label{structTABLE__LIST_aad54dbb8be15ca4fe66a99b58be53997}} 
+bool {\bfseries prepare\+\_\+view\+\_\+securety\+\_\+context} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a2e5ded27106a82b687a0ec4e626327de}\label{structTABLE__LIST_a2e5ded27106a82b687a0ec4e626327de}} 
+void \mbox{\hyperlink{structTABLE__LIST_a2e5ded27106a82b687a0ec4e626327de}{reinit\+\_\+before\+\_\+use}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Cleanup for re-\/execution in a prepared statement or a stored procedure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a088e2115774d6bc3dbc2d11d5db45a93}{process\+\_\+index\+\_\+hints}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a187525004d9f242ed0b6291d333ebea0}{is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal}} (\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$s) const
+\item 
+void \mbox{\hyperlink{structTABLE__LIST_a2bd270d99bc469b6fc0315f7fac39e04}{set\+\_\+table\+\_\+ref\+\_\+id}} (\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$s)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ac58ade9b0d358e7f800a37280566325f}\label{structTABLE__LIST_ac58ade9b0d358e7f800a37280566325f}} 
+void {\bfseries set\+\_\+table\+\_\+ref\+\_\+id} (enum\+\_\+table\+\_\+ref\+\_\+type table\+\_\+ref\+\_\+type\+\_\+arg, ulonglong table\+\_\+ref\+\_\+version\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a3a38c67f1f692215df5cbdc2535ed2a1}\label{structTABLE__LIST_a3a38c67f1f692215df5cbdc2535ed2a1}} 
+uint \mbox{\hyperlink{structTABLE__LIST_a3a38c67f1f692215df5cbdc2535ed2a1}{query\+\_\+block\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em returns query block id for derived table, and zero if not derived. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a28d45d91c392f47ff3626fbbaed564af}\label{structTABLE__LIST_a28d45d91c392f47ff3626fbbaed564af}} 
+const char $\ast$ \mbox{\hyperlink{structTABLE__LIST_a28d45d91c392f47ff3626fbbaed564af}{get\+\_\+db\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the database that the referenced table belongs to. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{structTABLE__LIST_aa568c48d88f1aa6bfec97f3d3244b895}{get\+\_\+table\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the table that this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} represents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structTABLE__LIST_a8ff5480f49562c213faf73c3a7f0dc15}{fetch\+\_\+number\+\_\+of\+\_\+rows}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve number of rows in the table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_af3ff0364057e99c6cb8364808b46a2ed}\label{structTABLE__LIST_af3ff0364057e99c6cb8364808b46a2ed}} 
+bool {\bfseries update\+\_\+derived\+\_\+keys} (\mbox{\hyperlink{classField}{Field}} $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$, uint)
+\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a6997748d74d5802c625d2db9f423ba58}{generate\+\_\+keys}} ()
+\begin{DoxyCompactList}\small\item\em Generate keys for a materialized derived table/view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a4ff020da993f79b875da85e2e68a3f81}{setup\+\_\+materialized\+\_\+derived}} (T\+HD $\ast$thd)
+\begin{DoxyCompactList}\small\item\em Setup a derived table to use materialization. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a906a0b504dfa959bbed67ed05c40f51b}{create\+\_\+field\+\_\+translation}} (T\+HD $\ast$thd)
+\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a085cc51038dc667dd6a711be20d3ff2b}{outer\+\_\+join\+\_\+nest}} () const
+\begin{DoxyCompactList}\small\item\em Returns the outer join nest that this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} belongs to, if any. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a644a278cc3ca2f3d85f5ca1ce8187878}{is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join}} () const
+\item 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a3368e5b0a9c43522662435379e71acc7}{updatable\+\_\+base\+\_\+table}} ()
+\item 
+void \mbox{\hyperlink{structTABLE__LIST_a0c04ee29c14e9bab9408150cc6539fce}{set\+\_\+privileges}} (ulong privilege)
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae93ef5cdd9299bf9fa2b1197b9f0e495}\label{structTABLE__LIST_ae93ef5cdd9299bf9fa2b1197b9f0e495}} 
+void \mbox{\hyperlink{structTABLE__LIST_ae93ef5cdd9299bf9fa2b1197b9f0e495}{set\+\_\+tableno}} (uint \mbox{\hyperlink{structTABLE__LIST_a9250ae0db9e0788ce6af28dba3bc631f}{tableno}})
+\begin{DoxyCompactList}\small\item\em Set table number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a9250ae0db9e0788ce6af28dba3bc631f}\label{structTABLE__LIST_a9250ae0db9e0788ce6af28dba3bc631f}} 
+uint \mbox{\hyperlink{structTABLE__LIST_a9250ae0db9e0788ce6af28dba3bc631f}{tableno}} () const
+\begin{DoxyCompactList}\small\item\em Return table number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a24a1eac5a4be4ed7407792e12795191b}\label{structTABLE__LIST_a24a1eac5a4be4ed7407792e12795191b}} 
+table\+\_\+map \mbox{\hyperlink{structTABLE__LIST_a24a1eac5a4be4ed7407792e12795191b}{map}} () const
+\begin{DoxyCompactList}\small\item\em Return table map derived from table number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a0410916850db388be734dad75e4dcb8a}{new\+\_\+nested\+\_\+join}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$allocator, const char $\ast$alias, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$embedding, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$belongs\+\_\+to, class st\+\_\+select\+\_\+lex $\ast$select)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object representing a nested join. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ab428c76ef04d7b1eb43b0399f72d2bde}\label{structTABLE__LIST_ab428c76ef04d7b1eb43b0399f72d2bde}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries next\+\_\+local}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8e3206715feef5e95f8d2c3c3f324fa6}\label{structTABLE__LIST_a8e3206715feef5e95f8d2c3c3f324fa6}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries next\+\_\+global}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8cce1667b48e62672e10bfd0b6a516c6}\label{structTABLE__LIST_a8cce1667b48e62672e10bfd0b6a516c6}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$ {\bfseries prev\+\_\+global}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1f36f086b86fb962a43578f2d9223d02}\label{structTABLE__LIST_a1f36f086b86fb962a43578f2d9223d02}} 
+const char $\ast$ {\bfseries db}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a0dab142947a27a3ef53874156fb6c41c}\label{structTABLE__LIST_a0dab142947a27a3ef53874156fb6c41c}} 
+const char $\ast$ {\bfseries table\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a3e8d0818e2224b21fcf2d72a88ca4b23}\label{structTABLE__LIST_a3e8d0818e2224b21fcf2d72a88ca4b23}} 
+const char $\ast$ {\bfseries alias}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af8a3e97c34022c482b3c6b59564c073c}\label{structTABLE__LIST_af8a3e97c34022c482b3c6b59564c073c}} 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG {\bfseries target\+\_\+tablespace\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_acbce009a04509660a39b2a8b28e2a268}\label{structTABLE__LIST_acbce009a04509660a39b2a8b28e2a268}} 
+char $\ast$ {\bfseries schema\+\_\+table\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae25c97be1433061ec31f59a6db7b5076}\label{structTABLE__LIST_ae25c97be1433061ec31f59a6db7b5076}} 
+char $\ast$ {\bfseries option}
+\item 
+\mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a08dcf89471efcaa22bdb31c38fa13fea}{opt\+\_\+hints\+\_\+table}}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ad533535e7a496041e061962d0a00d349}\label{structTABLE__LIST_ad533535e7a496041e061962d0a00d349}} 
+\mbox{\hyperlink{classOpt__hints__qb}{Opt\+\_\+hints\+\_\+qb}} $\ast$ {\bfseries opt\+\_\+hints\+\_\+qb}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a47884b15ce5bb2b1f562c9957e9dc140}\label{structTABLE__LIST_a47884b15ce5bb2b1f562c9957e9dc140}} 
+table\+\_\+map {\bfseries sj\+\_\+inner\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a45af5a6514739f2d5e57519572d5df49}\label{structTABLE__LIST_a45af5a6514739f2d5e57519572d5df49}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries natural\+\_\+join}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a073c432548b4e745cf3e6588dd98e6d9}\label{structTABLE__LIST_a073c432548b4e745cf3e6588dd98e6d9}} 
+bool {\bfseries is\+\_\+natural\+\_\+join}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8c2c08c5ce50c18dc9a1b3482fbb7ff2}\label{structTABLE__LIST_a8c2c08c5ce50c18dc9a1b3482fbb7ff2}} 
+\mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$ {\bfseries join\+\_\+using\+\_\+fields}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af6ec23225974ac61cad42a956dac6507}\label{structTABLE__LIST_af6ec23225974ac61cad42a956dac6507}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classNatural__join__column}{Natural\+\_\+join\+\_\+column}} $>$ $\ast$ {\bfseries join\+\_\+columns}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aed1f874aa019ecbb55fa30cda79a90d0}\label{structTABLE__LIST_aed1f874aa019ecbb55fa30cda79a90d0}} 
+bool {\bfseries is\+\_\+join\+\_\+columns\+\_\+complete}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a465e6362785c3b6abf4caccfdc3dc159}\label{structTABLE__LIST_a465e6362785c3b6abf4caccfdc3dc159}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries next\+\_\+name\+\_\+resolution\+\_\+table}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8fedf0e5c5d18e5c6ca5027f84fc7ffb}\label{structTABLE__LIST_a8fedf0e5c5d18e5c6ca5027f84fc7ffb}} 
+\mbox{\hyperlink{classList}{List}}$<$ Index\+\_\+hint $>$ $\ast$ {\bfseries index\+\_\+hints}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aba0ef08810e4db6fca37057a2027d76c}\label{structTABLE__LIST_aba0ef08810e4db6fca37057a2027d76c}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries table}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1197952dd0f2a88eae0edd147ba9cdc3}\label{structTABLE__LIST_a1197952dd0f2a88eae0edd147ba9cdc3}} 
+Table\+\_\+id {\bfseries table\+\_\+id}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_adaeadb3cb724eda4bca89d168326883f}\label{structTABLE__LIST_adaeadb3cb724eda4bca89d168326883f}} 
+\mbox{\hyperlink{classQuery__result__union}{Query\+\_\+result\+\_\+union}} $\ast$ {\bfseries derived\+\_\+result}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae055f019c0a082d807e550950dd9a5ab}\label{structTABLE__LIST_ae055f019c0a082d807e550950dd9a5ab}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries correspondent\+\_\+table}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae1cedda2453727d7de890da716f9bfa2}\label{structTABLE__LIST_ae1cedda2453727d7de890da716f9bfa2}} 
+\mbox{\hyperlink{structst__schema__table}{S\+T\+\_\+\+S\+C\+H\+E\+M\+A\+\_\+\+T\+A\+B\+LE}} $\ast$ {\bfseries schema\+\_\+table}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aec372484e99b0119f646d745f50ddaf2}\label{structTABLE__LIST_aec372484e99b0119f646d745f50ddaf2}} 
+st\+\_\+select\+\_\+lex $\ast$ {\bfseries schema\+\_\+select\+\_\+lex}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_acc0cd8f3f01ce5ccfc28a5e92de463c9}\label{structTABLE__LIST_acc0cd8f3f01ce5ccfc28a5e92de463c9}} 
+bool {\bfseries schema\+\_\+table\+\_\+reformed}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a500f05a7e9b6a7a18ff5c5e5065c6b60}\label{structTABLE__LIST_a500f05a7e9b6a7a18ff5c5e5065c6b60}} 
+Temp\+\_\+table\+\_\+param $\ast$ {\bfseries schema\+\_\+table\+\_\+param}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aa598aff89fee0b53121beb6f9d045f7c}\label{structTABLE__LIST_aa598aff89fee0b53121beb6f9d045f7c}} 
+st\+\_\+select\+\_\+lex $\ast$ {\bfseries select\+\_\+lex}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a4a292c92eaab7d8a45bec0117e3ef7fc}\label{structTABLE__LIST_a4a292c92eaab7d8a45bec0117e3ef7fc}} 
+\mbox{\hyperlink{structField__translator}{Field\+\_\+translator}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a4a292c92eaab7d8a45bec0117e3ef7fc}{field\+\_\+translation}}
+\begin{DoxyCompactList}\small\item\em Array of selected expressions from a derived table or view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a877c90c355ee4b9fd1d14aae2c356313}\label{structTABLE__LIST_a877c90c355ee4b9fd1d14aae2c356313}} 
+\mbox{\hyperlink{structField__translator}{Field\+\_\+translator}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a877c90c355ee4b9fd1d14aae2c356313}{field\+\_\+translation\+\_\+end}}
+\begin{DoxyCompactList}\small\item\em pointer to element after last one in translation table above \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a20a0dcb32526439c73a959940b56cb1a}\label{structTABLE__LIST_a20a0dcb32526439c73a959940b56cb1a}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries merge\+\_\+underlying\+\_\+list}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ab08886519cc2111e847a142df7277848}\label{structTABLE__LIST_ab08886519cc2111e847a142df7277848}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$ {\bfseries view\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8e2f4dc0c551dbf095b8819f7a704fb1}\label{structTABLE__LIST_a8e2f4dc0c551dbf095b8819f7a704fb1}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries belong\+\_\+to\+\_\+view}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae074f8078a2ba8b46f82713f442aa19e}\label{structTABLE__LIST_ae074f8078a2ba8b46f82713f442aa19e}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries referencing\+\_\+view}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aa09da4addb1eb921835db193afd8e98d}\label{structTABLE__LIST_aa09da4addb1eb921835db193afd8e98d}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries parent\+\_\+l}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a612a71ae8b53383540a5ca368b49eb2c}\label{structTABLE__LIST_a612a71ae8b53383540a5ca368b49eb2c}} 
+Security\+\_\+context $\ast$ {\bfseries security\+\_\+ctx}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aa457b6715eca478c2359596d20d838a7}\label{structTABLE__LIST_aa457b6715eca478c2359596d20d838a7}} 
+Security\+\_\+context $\ast$ {\bfseries view\+\_\+sctx}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aaec4aa418a6214a8179752b4364d3536}\label{structTABLE__LIST_aaec4aa418a6214a8179752b4364d3536}} 
+bool {\bfseries allowed\+\_\+show}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a6fb8148c6acae2723de053fdb49d8a60}\label{structTABLE__LIST_a6fb8148c6acae2723de053fdb49d8a60}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries next\+\_\+leaf}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a2a2fc8678193cb80e1e05cea4e2a5618}\label{structTABLE__LIST_a2a2fc8678193cb80e1e05cea4e2a5618}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a2a2fc8678193cb80e1e05cea4e2a5618}{derived\+\_\+where\+\_\+cond}}
+\begin{DoxyCompactList}\small\item\em W\+H\+E\+RE condition from derived table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a2d06ea35fef1a83105ca403c0f170ba3}\label{structTABLE__LIST_a2d06ea35fef1a83105ca403c0f170ba3}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a2d06ea35fef1a83105ca403c0f170ba3}{check\+\_\+option}}
+\begin{DoxyCompactList}\small\item\em W\+I\+TH C\+H\+E\+CK O\+P\+T\+I\+ON condition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a39fadd8d1aa9dba31501cf1c133457b9}\label{structTABLE__LIST_a39fadd8d1aa9dba31501cf1c133457b9}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{structTABLE__LIST_a39fadd8d1aa9dba31501cf1c133457b9}{replace\+\_\+filter}}
+\begin{DoxyCompactList}\small\item\em Filter for R\+E\+P\+L\+A\+CE command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ab03f719ff48b6f9a3b774c26b2113f08}\label{structTABLE__LIST_ab03f719ff48b6f9a3b774c26b2113f08}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{structTABLE__LIST_ab03f719ff48b6f9a3b774c26b2113f08}{select\+\_\+stmt}}
+\begin{DoxyCompactList}\small\item\em text of (C\+R\+E\+A\+T\+E/\+S\+E\+L\+E\+CT) statement \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ac7dfad27c44f06eb19b4164a13db0008}\label{structTABLE__LIST_ac7dfad27c44f06eb19b4164a13db0008}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{structTABLE__LIST_ac7dfad27c44f06eb19b4164a13db0008}{md5}}
+\begin{DoxyCompactList}\small\item\em md5 of query text \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_ad59a62110ba5a4c576e013f3254d1077}\label{structTABLE__LIST_ad59a62110ba5a4c576e013f3254d1077}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{structTABLE__LIST_ad59a62110ba5a4c576e013f3254d1077}{source}}
+\begin{DoxyCompactList}\small\item\em source of C\+R\+E\+A\+TE V\+I\+EW \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1f23e5a68bde4bcc7b2056dbe777e23d}\label{structTABLE__LIST_a1f23e5a68bde4bcc7b2056dbe777e23d}} 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \mbox{\hyperlink{structTABLE__LIST_a1f23e5a68bde4bcc7b2056dbe777e23d}{view\+\_\+db}}
+\begin{DoxyCompactList}\small\item\em saved view database \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a02a29a88bc8270374f9b218717df8250}\label{structTABLE__LIST_a02a29a88bc8270374f9b218717df8250}} 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \mbox{\hyperlink{structTABLE__LIST_a02a29a88bc8270374f9b218717df8250}{view\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em saved view name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1adbfed042197fbc3130adaef1870e6a}\label{structTABLE__LIST_a1adbfed042197fbc3130adaef1870e6a}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{structTABLE__LIST_a1adbfed042197fbc3130adaef1870e6a}{timestamp}}
+\begin{DoxyCompactList}\small\item\em G\+MT time stamp of last operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a6ec8523818a85217f238cdcc12450e65}\label{structTABLE__LIST_a6ec8523818a85217f238cdcc12450e65}} 
+\mbox{\hyperlink{structst__lex__user}{st\+\_\+lex\+\_\+user}} \mbox{\hyperlink{structTABLE__LIST_a6ec8523818a85217f238cdcc12450e65}{definer}}
+\begin{DoxyCompactList}\small\item\em definer of view \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a4b6b44c534debca18ef067346c5230ab}\label{structTABLE__LIST_a4b6b44c534debca18ef067346c5230ab}} 
+ulonglong \mbox{\hyperlink{structTABLE__LIST_a4b6b44c534debca18ef067346c5230ab}{file\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em version of file\textquotesingle{}s field set \end{DoxyCompactList}\item 
+ulonglong \mbox{\hyperlink{structTABLE__LIST_a77ea91b166348f6ff6711585f1a4fa5d}{updatable\+\_\+view}}
+\begin{DoxyCompactList}\small\item\em V\+I\+EW can be updated. \end{DoxyCompactList}\item 
+ulonglong \mbox{\hyperlink{structTABLE__LIST_a633281c70738815a782e14dad746f98d}{algorithm}}
+\begin{DoxyCompactList}\small\item\em The declared algorithm, if this is a view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a2da3739ae54e182eee3645a1dc925867}\label{structTABLE__LIST_a2da3739ae54e182eee3645a1dc925867}} 
+ulonglong \mbox{\hyperlink{structTABLE__LIST_a2da3739ae54e182eee3645a1dc925867}{view\+\_\+suid}}
+\begin{DoxyCompactList}\small\item\em view is suid (T\+R\+UE by default) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1ed384c150cca4def7c6ef20a22d87d7}\label{structTABLE__LIST_a1ed384c150cca4def7c6ef20a22d87d7}} 
+ulonglong \mbox{\hyperlink{structTABLE__LIST_a1ed384c150cca4def7c6ef20a22d87d7}{with\+\_\+check}}
+\begin{DoxyCompactList}\small\item\em W\+I\+TH C\+H\+E\+CK O\+P\+T\+I\+ON. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_abd266790371e417cf00ec54c15500a22}\label{structTABLE__LIST_abd266790371e417cf00ec54c15500a22}} 
+\mbox{\hyperlink{structGRANT__INFO}{G\+R\+A\+N\+T\+\_\+\+I\+N\+FO}} {\bfseries grant}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a4f26c59d1fe260434dc4dcc551d5ccaf}\label{structTABLE__LIST_a4f26c59d1fe260434dc4dcc551d5ccaf}} 
+ulonglong {\bfseries engine\+\_\+data}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a14b8c0ae48aa324801ecde58868d6330}\label{structTABLE__LIST_a14b8c0ae48aa324801ecde58868d6330}} 
+qc\+\_\+engine\+\_\+callback {\bfseries callback\+\_\+func}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ad0786a5ba20512b3393783d23673cda7}\label{structTABLE__LIST_ad0786a5ba20512b3393783d23673cda7}} 
+thr\+\_\+lock\+\_\+type {\bfseries lock\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae263ab4685fcfc3f4ccf0ca031a98ead}\label{structTABLE__LIST_ae263ab4685fcfc3f4ccf0ca031a98ead}} 
+uint {\bfseries outer\+\_\+join}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a8fd6943e18bfa1ae2e2e2bbf34f9a241}\label{structTABLE__LIST_a8fd6943e18bfa1ae2e2e2bbf34f9a241}} 
+uint {\bfseries shared}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ac90c7efc015485abadb53a6ebe9d624e}\label{structTABLE__LIST_ac90c7efc015485abadb53a6ebe9d624e}} 
+size\+\_\+t {\bfseries db\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_af5e8affb8a7b084e950d9b33fd158ed3}\label{structTABLE__LIST_af5e8affb8a7b084e950d9b33fd158ed3}} 
+size\+\_\+t {\bfseries table\+\_\+name\+\_\+length}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a5f10636e59b323458262ead71afa07d7}\label{structTABLE__LIST_a5f10636e59b323458262ead71afa07d7}} 
+bool {\bfseries straight}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a10c9405f9c4b74a4cb78641d14a5a26c}\label{structTABLE__LIST_a10c9405f9c4b74a4cb78641d14a5a26c}} 
+bool {\bfseries updating}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a116f15ced3dab3cc198dcaebd9a002ab}\label{structTABLE__LIST_a116f15ced3dab3cc198dcaebd9a002ab}} 
+bool {\bfseries force\+\_\+index}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a965ec5a24e980f9dceb091b1e9a06119}\label{structTABLE__LIST_a965ec5a24e980f9dceb091b1e9a06119}} 
+bool {\bfseries ignore\+\_\+leaves}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a5da67bf42af2e4d18121486f305352f2}\label{structTABLE__LIST_a5da67bf42af2e4d18121486f305352f2}} 
+table\+\_\+map {\bfseries dep\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a12e77e6b4251118990e2234c9b6a7044}\label{structTABLE__LIST_a12e77e6b4251118990e2234c9b6a7044}} 
+table\+\_\+map {\bfseries on\+\_\+expr\+\_\+dep\+\_\+tables}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ad6f2d412b843cbbddc3c8bb44d20c15b}\label{structTABLE__LIST_ad6f2d412b843cbbddc3c8bb44d20c15b}} 
+struct \mbox{\hyperlink{structst__nested__join}{st\+\_\+nested\+\_\+join}} $\ast$ {\bfseries nested\+\_\+join}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ac16bd8accd6ee1dc22667e34ba4146c0}\label{structTABLE__LIST_ac16bd8accd6ee1dc22667e34ba4146c0}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries embedding}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a7fbf68bdf8761f932f71512232702d0d}\label{structTABLE__LIST_a7fbf68bdf8761f932f71512232702d0d}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$ {\bfseries join\+\_\+list}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a9269181dfd6697c12fd3f36121f75811}\label{structTABLE__LIST_a9269181dfd6697c12fd3f36121f75811}} 
+bool {\bfseries cacheable\+\_\+table}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aa9d0ce13b47b66eaf68166a030ba2fa1}\label{structTABLE__LIST_aa9d0ce13b47b66eaf68166a030ba2fa1}} 
+bool {\bfseries table\+\_\+in\+\_\+first\+\_\+from\+\_\+clause}
+\item 
+enum enum\+\_\+open\+\_\+type \mbox{\hyperlink{structTABLE__LIST_a258a1d3e3c052cd563fb5690b70e86e8}{open\+\_\+type}}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1375785cb2ca420f7aa1018c9d4ac7e7}\label{structTABLE__LIST_a1375785cb2ca420f7aa1018c9d4ac7e7}} 
+bool {\bfseries contain\+\_\+auto\+\_\+increment}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a25d8f60c3c76f08efd497d8dac7c218d}\label{structTABLE__LIST_a25d8f60c3c76f08efd497d8dac7c218d}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a25d8f60c3c76f08efd497d8dac7c218d}{check\+\_\+option\+\_\+processed}}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE $<$=$>$ V\+I\+EW C\+H\+E\+CK O\+P\+T\+I\+ON condition is processed (also for prep. stmts) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a78a9abc8b644a95dbfe8eb62c0708bee}\label{structTABLE__LIST_a78a9abc8b644a95dbfe8eb62c0708bee}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a78a9abc8b644a95dbfe8eb62c0708bee}{replace\+\_\+filter\+\_\+processed}}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE $<$=$>$ Filter condition is processed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a6713023c9d5ad905db544ae69603e95f}\label{structTABLE__LIST_a6713023c9d5ad905db544ae69603e95f}} 
+enum frm\+\_\+type\+\_\+enum {\bfseries required\+\_\+type}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aa2d6ab368ca4d0fccebcbf35ae59387f}\label{structTABLE__LIST_aa2d6ab368ca4d0fccebcbf35ae59387f}} 
+char {\bfseries timestamp\+\_\+buffer} \mbox{[}20\mbox{]}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ad7a2c44d3aa8a9cff7e5e702d74d3ee7}\label{structTABLE__LIST_ad7a2c44d3aa8a9cff7e5e702d74d3ee7}} 
+bool {\bfseries prelocking\+\_\+placeholder}
+\item 
+enum T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+:: \{ ... \}  \mbox{\hyperlink{structTABLE__LIST_aa5584240bf59a147fff802fb18e1704e}{open\+\_\+strategy}}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a11b2866506e3505e5322fa49f775af62}\label{structTABLE__LIST_a11b2866506e3505e5322fa49f775af62}} 
+bool {\bfseries internal\+\_\+tmp\+\_\+table}
+\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a43e85dbcb5379f852cf9ec23c069aa7a}{is\+\_\+alias}}
+\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a497fa25f3f142c883057ad2f37eae87c}{is\+\_\+fqtn}}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ae80419f856289dd7db8ba479555fff86}\label{structTABLE__LIST_ae80419f856289dd7db8ba479555fff86}} 
+\mbox{\hyperlink{classView__creation__ctx}{View\+\_\+creation\+\_\+ctx}} $\ast$ {\bfseries view\+\_\+creation\+\_\+ctx}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aa86f867723c5083de3115ce58a03ceae}\label{structTABLE__LIST_aa86f867723c5083de3115ce58a03ceae}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries view\+\_\+client\+\_\+cs\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a28c3a36df1cc8c3746c08fd352c94c76}\label{structTABLE__LIST_a28c3a36df1cc8c3746c08fd352c94c76}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries view\+\_\+connection\+\_\+cl\+\_\+name}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_accb433d99b2463d586df417c6f18214c}\label{structTABLE__LIST_accb433d99b2463d586df417c6f18214c}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries view\+\_\+body\+\_\+utf8}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a6bf60aa9ce81e7632fe03705b43a1b95}\label{structTABLE__LIST_a6bf60aa9ce81e7632fe03705b43a1b95}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classDerived__key}{Derived\+\_\+key}} $>$ {\bfseries derived\+\_\+key\+\_\+list}
+\item 
+uint8 \mbox{\hyperlink{structTABLE__LIST_afe86284f138571126421c238a7abb863}{trg\+\_\+event\+\_\+map}}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1b7d410ba92f9c89cb15779790879e32}\label{structTABLE__LIST_a1b7d410ba92f9c89cb15779790879e32}} 
+uint {\bfseries i\+\_\+s\+\_\+requested\+\_\+object}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a17dfaa3b48eb048a6d7f83b9ef185999}\label{structTABLE__LIST_a17dfaa3b48eb048a6d7f83b9ef185999}} 
+bool {\bfseries has\+\_\+db\+\_\+lookup\+\_\+value}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_ac7cf695aeeeccab7ca5dd86d86a642ba}\label{structTABLE__LIST_ac7cf695aeeeccab7ca5dd86d86a642ba}} 
+bool {\bfseries has\+\_\+table\+\_\+lookup\+\_\+value}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a719cb31c01749d0230b99ef7f37e4dd3}\label{structTABLE__LIST_a719cb31c01749d0230b99ef7f37e4dd3}} 
+uint {\bfseries table\+\_\+open\+\_\+method}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a51effcb627304f9f57bf27d2710925af}\label{structTABLE__LIST_a51effcb627304f9f57bf27d2710925af}} 
+enum enum\+\_\+schema\+\_\+table\+\_\+state {\bfseries schema\+\_\+table\+\_\+state}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_aeea5f448d1d1e372b522a3033e318459}\label{structTABLE__LIST_aeea5f448d1d1e372b522a3033e318459}} 
+\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} {\bfseries mdl\+\_\+request}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a7a71011f8241331acd56d1cdc9acce84}\label{structTABLE__LIST_a7a71011f8241331acd56d1cdc9acce84}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a7a71011f8241331acd56d1cdc9acce84}{view\+\_\+no\+\_\+explain}}
+\begin{DoxyCompactList}\small\item\em if true, E\+X\+P\+L\+A\+IN can\textquotesingle{}t explain view due to insufficient rights. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structTABLE__LIST_a2a109f8fd3f1e1133e053bcd2086f0ae}\label{structTABLE__LIST_a2a109f8fd3f1e1133e053bcd2086f0ae}} 
+\mbox{\hyperlink{classList}{List}}$<$ String $>$ $\ast$ {\bfseries partition\+\_\+names}
+\item 
+C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$ \mbox{\hyperlink{structTABLE__LIST_a7063738e8ab210548273cddcf604253a}{cond\+\_\+equal}}
+\item 
+\mbox{\Hypertarget{structTABLE__LIST_a1e0bb4071c72ceea2feb2aaac81f00c8}\label{structTABLE__LIST_a1e0bb4071c72ceea2feb2aaac81f00c8}} 
+bool \mbox{\hyperlink{structTABLE__LIST_a1e0bb4071c72ceea2feb2aaac81f00c8}{optimized\+\_\+away}}
+\begin{DoxyCompactList}\small\item\em true $<$=$>$ this table is a const one and was optimized away. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structTABLE__LIST_a92b6d611752e2cfabffa946902d31a1b}{derived\+\_\+keys\+\_\+ready}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structTABLE__LIST_a589d5db9ee78b632f0aa93523873dd7a}\label{structTABLE__LIST_a589d5db9ee78b632f0aa93523873dd7a}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Indicates that if \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object corresponds to the table/view which requires special handling. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structTABLE__LIST_aa8fa2ce873ee6792e4b00bef231936be}\label{structTABLE__LIST_aa8fa2ce873ee6792e4b00bef231936be}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!any\+\_\+outer\+\_\+leaf\+\_\+table@{any\+\_\+outer\+\_\+leaf\+\_\+table}}
+\index{any\+\_\+outer\+\_\+leaf\+\_\+table@{any\+\_\+outer\+\_\+leaf\+\_\+table}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{any\+\_\+outer\+\_\+leaf\+\_\+table()}{any\_outer\_leaf\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::any\+\_\+outer\+\_\+leaf\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return any leaf table that is not an inner table of an outer join \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000133}{Todo}}]when WL\#6570 is implemented, replace with \mbox{\hyperlink{structTABLE__LIST_a18d48866823fb1e5a562c342bb93c085}{first\+\_\+leaf\+\_\+table()}} \end{DoxyRefDesc}
+\mbox{\Hypertarget{structTABLE__LIST_ae5f93d5c8045cba433322ca340bad8b7}\label{structTABLE__LIST_ae5f93d5c8045cba433322ca340bad8b7}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!check\+\_\+single\+\_\+table@{check\+\_\+single\+\_\+table}}
+\index{check\+\_\+single\+\_\+table@{check\+\_\+single\+\_\+table}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{check\+\_\+single\+\_\+table()}{check\_single\_table()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::check\+\_\+single\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$}]{table\+\_\+ref,  }\item[{table\+\_\+map}]{map }\end{DoxyParamCaption})}
+
+
+
+Check which single table inside a view that matches a table map. 
+
+Find table in underlying tables by map and check that only this table belong to given map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em table\+\_\+ref} & reference to found table (must be set to N\+U\+LL by caller) \\
+\hline
+ & {\em map} & bit mask of tables\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & table not found or found only one (table\+\_\+ref is non-\/N\+U\+LL) \\
+\hline
+{\em true} & found several tables \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structTABLE__LIST_ae5497aefdade6117117ff987e309d400}\label{structTABLE__LIST_ae5497aefdade6117117ff987e309d400}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!cleanup\+\_\+derived@{cleanup\+\_\+derived}}
+\index{cleanup\+\_\+derived@{cleanup\+\_\+derived}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+derived()}{cleanup\_derived()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::cleanup\+\_\+derived (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clean up the query expression for a materialized derived table. 
+
+Clean up the query expression for a materialized derived table \mbox{\Hypertarget{structTABLE__LIST_a62d0e797cda12a471f03b5692ca94ac6}\label{structTABLE__LIST_a62d0e797cda12a471f03b5692ca94ac6}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!cleanup\+\_\+items@{cleanup\+\_\+items}}
+\index{cleanup\+\_\+items@{cleanup\+\_\+items}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+items()}{cleanup\_items()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::cleanup\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleanup field translations for a view. 
+
+Cleanup items belonged to view fields translation table \mbox{\Hypertarget{structTABLE__LIST_a0a5671d9a3ddbbcf1aeda9159f8e1704}\label{structTABLE__LIST_a0a5671d9a3ddbbcf1aeda9159f8e1704}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!create\+\_\+derived@{create\+\_\+derived}}
+\index{create\+\_\+derived@{create\+\_\+derived}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{create\+\_\+derived()}{create\_derived()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::create\+\_\+derived (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Create result table for a materialized derived table/view. 
+
+Create result table for a materialized derived table/view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle\\
+\hline
+\end{DoxyParams}
+This function actually creates the result table for given \textquotesingle{}derived\textquotesingle{} table/view, but it doesn\textquotesingle{}t fill it.
+
+\begin{DoxyReturn}{Returns}
+false if success, true if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a906a0b504dfa959bbed67ed05c40f51b}\label{structTABLE__LIST_a906a0b504dfa959bbed67ed05c40f51b}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!create\+\_\+field\+\_\+translation@{create\+\_\+field\+\_\+translation}}
+\index{create\+\_\+field\+\_\+translation@{create\+\_\+field\+\_\+translation}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{create\+\_\+field\+\_\+translation()}{create\_field\_translation()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::create\+\_\+field\+\_\+translation (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Create field translation for merged derived table/view.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a8ff5480f49562c213faf73c3a7f0dc15}\label{structTABLE__LIST_a8ff5480f49562c213faf73c3a7f0dc15}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!fetch\+\_\+number\+\_\+of\+\_\+rows@{fetch\+\_\+number\+\_\+of\+\_\+rows}}
+\index{fetch\+\_\+number\+\_\+of\+\_\+rows@{fetch\+\_\+number\+\_\+of\+\_\+rows}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{fetch\+\_\+number\+\_\+of\+\_\+rows()}{fetch\_number\_of\_rows()}}
+{\footnotesize\ttfamily int T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::fetch\+\_\+number\+\_\+of\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve number of rows in the table. 
+
+Retrieve number of rows in the table referred by this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} and store it in the table\textquotesingle{}s stats.\+records variable. If this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} refers to a materialized derived table/view, then the estimated number of rows of the derived table/view is used instead.
+
+\begin{DoxyReturn}{Returns}
+0 ok 
+
+non zero error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a6997748d74d5802c625d2db9f423ba58}\label{structTABLE__LIST_a6997748d74d5802c625d2db9f423ba58}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!generate\+\_\+keys@{generate\+\_\+keys}}
+\index{generate\+\_\+keys@{generate\+\_\+keys}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{generate\+\_\+keys()}{generate\_keys()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::generate\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generate keys for a materialized derived table/view. 
+
+This function adds keys to the result table by walking over the list of possible keys for this derived table/view and calling the \mbox{\hyperlink{structTABLE_ad78429d129e0432b21bfdb41c05f928a}{T\+A\+B\+L\+E\+::add\+\_\+tmp\+\_\+key}} to actually add keys. A name $<$auto\+\_\+key\+N$>$, where N is a sequential number, is given to each key to ease debugging. \begin{DoxySeeAlso}{See also}
+add\+\_\+derived\+\_\+key
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE an error occur. 
+
+F\+A\+L\+SE all keys were successfully added. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_aa568c48d88f1aa6bfec97f3d3244b895}\label{structTABLE__LIST_aa568c48d88f1aa6bfec97f3d3244b895}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}}
+\index{get\+\_\+table\+\_\+name@{get\+\_\+table\+\_\+name}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{get\+\_\+table\+\_\+name()}{get\_table\_name()}}
+{\footnotesize\ttfamily const char$\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::get\+\_\+table\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the name of the table that this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} represents. 
+
+The unqualified table name or view name for a table or view, respectively. \mbox{\Hypertarget{structTABLE__LIST_a2570739fd11fcfb3bcd5050253b3c7fc}\label{structTABLE__LIST_a2570739fd11fcfb3bcd5050253b3c7fc}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!init\+\_\+one\+\_\+table@{init\+\_\+one\+\_\+table}}
+\index{init\+\_\+one\+\_\+table@{init\+\_\+one\+\_\+table}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{init\+\_\+one\+\_\+table()}{init\_one\_table()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::init\+\_\+one\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{db\+\_\+name\+\_\+arg,  }\item[{size\+\_\+t}]{db\+\_\+length\+\_\+arg,  }\item[{const char $\ast$}]{table\+\_\+name\+\_\+arg,  }\item[{size\+\_\+t}]{table\+\_\+name\+\_\+length\+\_\+arg,  }\item[{const char $\ast$}]{alias\+\_\+arg,  }\item[{enum thr\+\_\+lock\+\_\+type}]{lock\+\_\+type\+\_\+arg,  }\item[{enum enum\+\_\+mdl\+\_\+type}]{mdl\+\_\+type\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepare \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} that consists of one table instance to use in simple\+\_\+open\+\_\+and\+\_\+lock\+\_\+tables \mbox{\Hypertarget{structTABLE__LIST_a644a278cc3ca2f3d85f5ca1ce8187878}\label{structTABLE__LIST_a644a278cc3ca2f3d85f5ca1ce8187878}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join@{is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join}}
+\index{is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join@{is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join()}{is\_inner\_table\_of\_outer\_join()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+inner\+\_\+table\+\_\+of\+\_\+outer\+\_\+join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if this table is an inner table of some outer join.
+
+Examine all the embedding join nests of the table. \begin{DoxyNote}{Note}
+This function works also before redundant join nests have been eliminated.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true if table is an inner table of some outer join, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a4a2f63ec241cf7b97113d1fbcf4dc18b}\label{structTABLE__LIST_a4a2f63ec241cf7b97113d1fbcf4dc18b}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+mergeable@{is\+\_\+mergeable}}
+\index{is\+\_\+mergeable@{is\+\_\+mergeable}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+mergeable()}{is\_mergeable()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+mergeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return true if view or derived table and can be merged. 
+
+\begin{DoxyReturn}{Returns}
+true if view or derived table and
+\begin{DoxyItemize}
+\item algorithm (for view) does not force materialization
+\item the derived table definition is mergeable
+\item this is a view, or, if unnamed derived table, the enclosing query block allows merging of derived tables. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a12166730e324a1371da84b8442931586}\label{structTABLE__LIST_a12166730e324a1371da84b8442931586}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+multiple\+\_\+tables@{is\+\_\+multiple\+\_\+tables}}
+\index{is\+\_\+multiple\+\_\+tables@{is\+\_\+multiple\+\_\+tables}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+multiple\+\_\+tables()}{is\_multiple\_tables()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+multiple\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if this is a view or derived table that is defined over more than one base table, and false otherwise. \mbox{\Hypertarget{structTABLE__LIST_aa8a3e28262bcccaea50da6e2a71d37a8}\label{structTABLE__LIST_aa8a3e28262bcccaea50da6e2a71d37a8}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+placeholder@{is\+\_\+placeholder}}
+\index{is\+\_\+placeholder@{is\+\_\+placeholder}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+placeholder()}{is\_placeholder()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+placeholder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check whether the table is a placeholder, ie a derived table, a view or a schema table. A table is also considered to be a placeholder if it does not have a \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for some other reason. \mbox{\Hypertarget{structTABLE__LIST_a187525004d9f242ed0b6291d333ebea0}\label{structTABLE__LIST_a187525004d9f242ed0b6291d333ebea0}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal@{is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal}}
+\index{is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal@{is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal()}{is\_table\_ref\_id\_equal()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+table\+\_\+ref\+\_\+id\+\_\+equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compare the version of metadata from the previous execution (if any) with values obtained from the current table definition cache element.
+
+\begin{DoxySeeAlso}{See also}
+check\+\_\+and\+\_\+update\+\_\+table\+\_\+version() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structTABLE__LIST_a2f699410f2d5693c48cb5d525038f572}\label{structTABLE__LIST_a2f699410f2d5693c48cb5d525038f572}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!leaf\+\_\+tables\+\_\+count@{leaf\+\_\+tables\+\_\+count}}
+\index{leaf\+\_\+tables\+\_\+count@{leaf\+\_\+tables\+\_\+count}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{leaf\+\_\+tables\+\_\+count()}{leaf\_tables\_count()}}
+{\footnotesize\ttfamily uint T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::leaf\+\_\+tables\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return no. of base tables a merged view or derived table is defined over. 
+
+Return the number of leaf tables for a merged view. \mbox{\Hypertarget{structTABLE__LIST_a6e892515eb76fb15ac52f66ba51cc8fb}\label{structTABLE__LIST_a6e892515eb76fb15ac52f66ba51cc8fb}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!materializable\+\_\+is\+\_\+const@{materializable\+\_\+is\+\_\+const}}
+\index{materializable\+\_\+is\+\_\+const@{materializable\+\_\+is\+\_\+const}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{materializable\+\_\+is\+\_\+const()}{materializable\_is\_const()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::materializable\+\_\+is\+\_\+const (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if materializable table contains one or zero rows.
+\end{DoxyReturn}
+Returning true implies that the table is materialized during optimization, so it need not be optimized during execution.
+
+\begin{DoxyReturn}{Returns}
+true if materializable table contains one or zero rows 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_af74c8acef2390fbe4337b75755991839}\label{structTABLE__LIST_af74c8acef2390fbe4337b75755991839}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!materialize\+\_\+derived@{materialize\+\_\+derived}}
+\index{materialize\+\_\+derived@{materialize\+\_\+derived}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{materialize\+\_\+derived()}{materialize\_derived()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::materialize\+\_\+derived (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Materialize derived table. 
+
+Materialize derived table
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle\\
+\hline
+\end{DoxyParams}
+Derived table is resolved with temporary table. It is created based on the queries defined. After temporary table is materialized, if this is not E\+X\+P\+L\+A\+IN, then the entire unit / node is deleted. unit is deleted if U\+N\+I\+ON is used for derived table and node is deleted is it is a simple S\+E\+L\+E\+CT. If you use this function, make sure it\textquotesingle{}s not called at prepare. Due to evaluation of L\+I\+M\+IT clause it can not be used at prepared stage.
+
+\begin{DoxyReturn}{Returns}
+false if success, true if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a4d72f5a66dc629da7d156fc1afd564c6}\label{structTABLE__LIST_a4d72f5a66dc629da7d156fc1afd564c6}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!merge\+\_\+underlying\+\_\+tables@{merge\+\_\+underlying\+\_\+tables}}
+\index{merge\+\_\+underlying\+\_\+tables@{merge\+\_\+underlying\+\_\+tables}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{merge\+\_\+underlying\+\_\+tables()}{merge\_underlying\_tables()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::merge\+\_\+underlying\+\_\+tables (\begin{DoxyParamCaption}\item[{class st\+\_\+select\+\_\+lex $\ast$}]{select }\end{DoxyParamCaption})}
+
+
+
+Merge tables from a query block into a nested join structure. 
+
+Merge tables from a query block into a nested join structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em select} & Query block containing tables to be merged into nested join\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_aef94fa3856c0c8023095727e07915cb9}\label{structTABLE__LIST_aef94fa3856c0c8023095727e07915cb9}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!merge\+\_\+where@{merge\+\_\+where}}
+\index{merge\+\_\+where@{merge\+\_\+where}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{merge\+\_\+where()}{merge\_where()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::merge\+\_\+where (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Merge W\+H\+E\+RE condition of view or derived table into outer query. 
+
+Merge W\+H\+E\+RE condition of view or derived table into outer query.
+
+If the derived table is on the inner side of an outer join, its W\+H\+E\+RE condition is merged into the respective join operation\textquotesingle{}s join condition, otherwise the W\+H\+E\+RE condition is merged with the derived table\textquotesingle{}s join condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a0410916850db388be734dad75e4dcb8a}\label{structTABLE__LIST_a0410916850db388be734dad75e4dcb8a}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!new\+\_\+nested\+\_\+join@{new\+\_\+nested\+\_\+join}}
+\index{new\+\_\+nested\+\_\+join@{new\+\_\+nested\+\_\+join}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{new\+\_\+nested\+\_\+join()}{new\_nested\_join()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::new\+\_\+nested\+\_\+join (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{allocator,  }\item[{const char $\ast$}]{alias,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{embedding,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$}]{belongs\+\_\+to,  }\item[{class st\+\_\+select\+\_\+lex $\ast$}]{select }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object representing a nested join. 
+
+Create a \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object representing a nested join
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & Mem root allocator that object is created from. \\
+\hline
+{\em alias} & Name of nested join object \\
+\hline
+{\em embedding} & Pointer to embedding join nest (or N\+U\+LL if top-\/most) \\
+\hline
+{\em belongs\+\_\+to} & \mbox{\hyperlink{classList}{List}} of tables this nest belongs to (never N\+U\+LL). \\
+\hline
+{\em select} & The query block that this join nest belongs within.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to created join nest object, or N\+U\+LL if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a3875f31dc977efa2788492b169e18720}\label{structTABLE__LIST_a3875f31dc977efa2788492b169e18720}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!optimize\+\_\+derived@{optimize\+\_\+derived}}
+\index{optimize\+\_\+derived@{optimize\+\_\+derived}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{optimize\+\_\+derived()}{optimize\_derived()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::optimize\+\_\+derived (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Optimize the query expression representing a derived table/view. 
+
+Optimize the query expression representing a derived table/view.
+
+\begin{DoxyNote}{Note}
+If optimizer finds out that the derived table/view is of the type \char`\"{}\+S\+E\+L\+E\+C\+T a\+\_\+constant\char`\"{} this functions also materializes it.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a085cc51038dc667dd6a711be20d3ff2b}\label{structTABLE__LIST_a085cc51038dc667dd6a711be20d3ff2b}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!outer\+\_\+join\+\_\+nest@{outer\+\_\+join\+\_\+nest}}
+\index{outer\+\_\+join\+\_\+nest@{outer\+\_\+join\+\_\+nest}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{outer\+\_\+join\+\_\+nest()}{outer\_join\_nest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::outer\+\_\+join\+\_\+nest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the outer join nest that this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} belongs to, if any. 
+
+There are two kinds of join nests, outer-\/join nests and semi-\/join nests. This function returns non-\/N\+U\+LL in the following cases\+: \begin{DoxyItemize}
+\item 1. If this table/nest is embedded in a nest and this nest IS N\+OT a semi-\/join nest. (In other words, it is an outer-\/join nest.) \item 2. If this table/nest is embedded in a nest and this nest IS a semi-\/join nest, but this semi-\/join nest is embedded in another nest. (This other nest will be an outer-\/join nest, since all inner joined nested semi-\/join nests have been merged in {\ttfamily simplify\+\_\+joins()} ). Note\+: This function assumes that {\ttfamily simplify\+\_\+joins()} has been performed. Before that, join nests will be present for all types of join.\end{DoxyItemize}
+\begin{DoxyReturn}{Returns}
+outer join nest, or N\+U\+LL if none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_ae517b6ba4f6be7fac92ad2914e154e05}\label{structTABLE__LIST_ae517b6ba4f6be7fac92ad2914e154e05}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!prepare\+\_\+check\+\_\+option@{prepare\+\_\+check\+\_\+option}}
+\index{prepare\+\_\+check\+\_\+option@{prepare\+\_\+check\+\_\+option}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{prepare\+\_\+check\+\_\+option()}{prepare\_check\_option()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::prepare\+\_\+check\+\_\+option (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{is\+\_\+cascaded = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Prepare check option for a view. 
+
+Prepare check option expression of table
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em is\+\_\+cascaded} & True if parent view requests that this view\textquotesingle{}s filtering condition be treated as W\+I\+TH C\+A\+S\+C\+A\+D\+ED C\+H\+E\+CK O\+P\+T\+I\+ON; this is for recursive calls; user code should omit this argument.\\
+\hline
+\end{DoxyParams}
+This function builds check option condition for use in regular execution or subsequent S\+P/\+PS executions.
+
+This function must be called after the W\+H\+E\+RE clause and join condition of this and all underlying derived tables/views have been resolved.
+
+The function will always call itself recursively for all underlying views and base tables.
+
+On first invocation, the check option condition is built bottom-\/up in statement mem\+\_\+root, and check\+\_\+option\+\_\+processed is set true.
+
+On subsequent executions, check\+\_\+option\+\_\+processed is true and no expression building is necessary. However, the function needs to assure that the expression is resolved by calling fix\+\_\+fields() on it.
+
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_ac7e6f3073efcb58bd1fff1a81c3d15c8}\label{structTABLE__LIST_ac7e6f3073efcb58bd1fff1a81c3d15c8}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!prepare\+\_\+replace\+\_\+filter@{prepare\+\_\+replace\+\_\+filter}}
+\index{prepare\+\_\+replace\+\_\+filter@{prepare\+\_\+replace\+\_\+filter}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{prepare\+\_\+replace\+\_\+filter()}{prepare\_replace\_filter()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::prepare\+\_\+replace\+\_\+filter (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Prepare replace filter for a view (used for R\+E\+P\+L\+A\+CE command) 
+
+Prepare replace filter for a table that is inserted into via a view.
+
+Used with R\+E\+P\+L\+A\+CE command to filter out rows that should not be deleted. Concatenate W\+H\+E\+RE clauses from multiple views into one permanent field\+: T\+A\+B\+L\+E\+::replace\+\_\+filter.
+
+Since R\+E\+P\+L\+A\+CE is not possible against a join view, there is no need to process join conditions, only W\+H\+E\+RE clause is needed. But we still call merge\+\_\+join\+\_\+conditions() since this is a general function that handles both join conditions (if any) and the original W\+H\+E\+RE clause.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a150941693e3ab1b041c7fb3dd98eb8db}\label{structTABLE__LIST_a150941693e3ab1b041c7fb3dd98eb8db}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!print@{print}}
+\index{print@{print}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::print (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption}) const}
+
+
+
+Produce a textual identification of this object. 
+
+Fix for printing empty string when internal\+\_\+table\+\_\+name is used. Actual length of internal\+\_\+table\+\_\+name cannot be reduced as server expects a valid string of length atleast 1 for any table. So while printing we use the correct length of the table\+\_\+name i.\+e 0 when internal\+\_\+table\+\_\+name is used.\mbox{\Hypertarget{structTABLE__LIST_a088e2115774d6bc3dbc2d11d5db45a93}\label{structTABLE__LIST_a088e2115774d6bc3dbc2d11d5db45a93}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!process\+\_\+index\+\_\+hints@{process\+\_\+index\+\_\+hints}}
+\index{process\+\_\+index\+\_\+hints@{process\+\_\+index\+\_\+hints}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{process\+\_\+index\+\_\+hints()}{process\_index\_hints()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::process\+\_\+index\+\_\+hints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Compiles the tagged hints list and fills up T\+A\+B\+L\+E\+::keys\+\_\+in\+\_\+use\+\_\+for\+\_\+query, T\+A\+B\+L\+E\+::keys\+\_\+in\+\_\+use\+\_\+for\+\_\+group\+\_\+by, T\+A\+B\+L\+E\+::keys\+\_\+in\+\_\+use\+\_\+for\+\_\+order\+\_\+by, T\+A\+B\+L\+E\+::force\+\_\+index and T\+A\+B\+L\+E\+::covering\+\_\+keys. \mbox{\Hypertarget{structTABLE__LIST_a42d66db36c7b7244497c177597e5f9ef}\label{structTABLE__LIST_a42d66db36c7b7244497c177597e5f9ef}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!reset@{reset}}
+\index{reset@{reset}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reset table. 
+
+Reset a table before starting optimization \mbox{\Hypertarget{structTABLE__LIST_a9e0d3b6d173c9e31b84a6b4165f078ab}\label{structTABLE__LIST_a9e0d3b6d173c9e31b84a6b4165f078ab}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!resolve\+\_\+derived@{resolve\+\_\+derived}}
+\index{resolve\+\_\+derived@{resolve\+\_\+derived}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{resolve\+\_\+derived()}{resolve\_derived()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::resolve\+\_\+derived (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{apply\+\_\+semijoin }\end{DoxyParamCaption})}
+
+
+
+Resolve a derived table or view reference. 
+
+Resolve a derived table or view reference, including recursively resolving contained subqueries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+{\em apply\+\_\+semijoin} & Apply possible semi-\/join transforms if this is true\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_aac72f56177ececd8ad3cc4254face1b1}\label{structTABLE__LIST_aac72f56177ececd8ad3cc4254face1b1}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!set\+\_\+derived\+\_\+unit@{set\+\_\+derived\+\_\+unit}}
+\index{set\+\_\+derived\+\_\+unit@{set\+\_\+derived\+\_\+unit}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{set\+\_\+derived\+\_\+unit()}{set\_derived\_unit()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::set\+\_\+derived\+\_\+unit (\begin{DoxyParamCaption}\item[{st\+\_\+select\+\_\+lex\+\_\+unit $\ast$}]{query\+\_\+expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the query expression of a derived table or view. (Will also define this as a derived table, unless it is a named view.) \mbox{\Hypertarget{structTABLE__LIST_a6927ca9c8af85e8c97148794e08cc641}\label{structTABLE__LIST_a6927ca9c8af85e8c97148794e08cc641}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!set\+\_\+insert\+\_\+values@{set\+\_\+insert\+\_\+values}}
+\index{set\+\_\+insert\+\_\+values@{set\+\_\+insert\+\_\+values}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{set\+\_\+insert\+\_\+values()}{set\_insert\_values()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::set\+\_\+insert\+\_\+values (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption})}
+
+
+
+Allocate a buffer for inserted column values. 
+
+Set insert\+\_\+values buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & memory pool for allocating\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error (out of memory) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a0c04ee29c14e9bab9408150cc6539fce}\label{structTABLE__LIST_a0c04ee29c14e9bab9408150cc6539fce}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!set\+\_\+privileges@{set\+\_\+privileges}}
+\index{set\+\_\+privileges@{set\+\_\+privileges}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{set\+\_\+privileges()}{set\_privileges()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::set\+\_\+privileges (\begin{DoxyParamCaption}\item[{ulong}]{privilege }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set granted privileges for a table.
+
+Can be used when generating temporary tables that are also used in resolver process, such as when generating a U\+N\+I\+ON table
+
+
+\begin{DoxyParams}{Parameters}
+{\em privilege} & Privileges granted for this table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structTABLE__LIST_a2bd270d99bc469b6fc0315f7fac39e04}\label{structTABLE__LIST_a2bd270d99bc469b6fc0315f7fac39e04}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!set\+\_\+table\+\_\+ref\+\_\+id@{set\+\_\+table\+\_\+ref\+\_\+id}}
+\index{set\+\_\+table\+\_\+ref\+\_\+id@{set\+\_\+table\+\_\+ref\+\_\+id}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{set\+\_\+table\+\_\+ref\+\_\+id()}{set\_table\_ref\_id()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::set\+\_\+table\+\_\+ref\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Record the value of metadata version of the corresponding table definition cache element in this parse tree node.
+
+\begin{DoxySeeAlso}{See also}
+check\+\_\+and\+\_\+update\+\_\+table\+\_\+version() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structTABLE__LIST_a6878f08fcc39c50e04482b6e0856745f}\label{structTABLE__LIST_a6878f08fcc39c50e04482b6e0856745f}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!set\+\_\+view\+\_\+query@{set\+\_\+view\+\_\+query}}
+\index{set\+\_\+view\+\_\+query@{set\+\_\+view\+\_\+query}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{set\+\_\+view\+\_\+query()}{set\_view\_query()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::set\+\_\+view\+\_\+query (\begin{DoxyParamCaption}\item[{L\+EX $\ast$}]{lex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the L\+EX object of a view (will also define this as a view). \begin{DoxyNote}{Note}
+\+: The value 1 is used to indicate a view but without a valid query object. Use only if the L\+EX object is not going to be used in later processing. 
+\end{DoxyNote}
+\mbox{\Hypertarget{structTABLE__LIST_af0d0bba1cc8b85fbbbe7bd1ea54e8e7e}\label{structTABLE__LIST_af0d0bba1cc8b85fbbbe7bd1ea54e8e7e}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!set\+\_\+want\+\_\+privilege@{set\+\_\+want\+\_\+privilege}}
+\index{set\+\_\+want\+\_\+privilege@{set\+\_\+want\+\_\+privilege}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{set\+\_\+want\+\_\+privilege()}{set\_want\_privilege()}}
+{\footnotesize\ttfamily void T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::set\+\_\+want\+\_\+privilege (\begin{DoxyParamCaption}\item[{ulong}]{want\+\_\+privilege }\end{DoxyParamCaption})}
+
+
+
+Set wanted privilege for subsequent column privilege checking. 
+
+Set privileges needed for columns of underlying tables
+
+
+\begin{DoxyParams}{Parameters}
+{\em want\+\_\+privilege} & Required privileges \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structTABLE__LIST_a4ff020da993f79b875da85e2e68a3f81}\label{structTABLE__LIST_a4ff020da993f79b875da85e2e68a3f81}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!setup\+\_\+materialized\+\_\+derived@{setup\+\_\+materialized\+\_\+derived}}
+\index{setup\+\_\+materialized\+\_\+derived@{setup\+\_\+materialized\+\_\+derived}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{setup\+\_\+materialized\+\_\+derived()}{setup\_materialized\_derived()}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::setup\+\_\+materialized\+\_\+derived (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+
+
+Setup a derived table to use materialization. 
+
+Prepare a derived table or view for materialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structTABLE__LIST_a3368e5b0a9c43522662435379e71acc7}\label{structTABLE__LIST_a3368e5b0a9c43522662435379e71acc7}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!updatable\+\_\+base\+\_\+table@{updatable\+\_\+base\+\_\+table}}
+\index{updatable\+\_\+base\+\_\+table@{updatable\+\_\+base\+\_\+table}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{updatable\+\_\+base\+\_\+table()}{updatable\_base\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}$\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::updatable\+\_\+base\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the base table entry of an updatable table. In D\+E\+L\+E\+TE and U\+P\+D\+A\+TE, a view used as a target table must be mergeable, updatable and defined over a single table. \mbox{\Hypertarget{structTABLE__LIST_a62fb01b6313a7b31f787ef305bb2d3b8}\label{structTABLE__LIST_a62fb01b6313a7b31f787ef305bb2d3b8}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!view\+\_\+check\+\_\+option@{view\+\_\+check\+\_\+option}}
+\index{view\+\_\+check\+\_\+option@{view\+\_\+check\+\_\+option}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{view\+\_\+check\+\_\+option()}{view\_check\_option()}}
+{\footnotesize\ttfamily int T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::view\+\_\+check\+\_\+option (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption}) const}
+
+
+
+Evaluate the check option of a view. 
+
+Check C\+H\+E\+CK O\+P\+T\+I\+ON condition
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em V\+I\+E\+W\+\_\+\+C\+H\+E\+C\+K\+\_\+\+OK} & OK \\
+\hline
+{\em V\+I\+E\+W\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR} & F\+A\+I\+L\+ED \\
+\hline
+{\em V\+I\+E\+W\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+K\+IP} & F\+A\+I\+L\+ED, but continue \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structTABLE__LIST_a633281c70738815a782e14dad746f98d}\label{structTABLE__LIST_a633281c70738815a782e14dad746f98d}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{algorithm}{algorithm}}
+{\footnotesize\ttfamily ulonglong T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::algorithm}
+
+
+
+The declared algorithm, if this is a view. 
+
+One of
+\begin{DoxyItemize}
+\item V\+I\+E\+W\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED
+\item V\+I\+E\+W\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+T\+E\+M\+P\+T\+A\+B\+LE
+\item V\+I\+E\+W\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+M\+E\+R\+GE  do Replace with an enum 
+\end{DoxyItemize}\mbox{\Hypertarget{structTABLE__LIST_a7063738e8ab210548273cddcf604253a}\label{structTABLE__LIST_a7063738e8ab210548273cddcf604253a}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!cond\+\_\+equal@{cond\+\_\+equal}}
+\index{cond\+\_\+equal@{cond\+\_\+equal}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{cond\+\_\+equal}{cond\_equal}}
+{\footnotesize\ttfamily C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL$\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::cond\+\_\+equal}
+
+Used with outer join \mbox{\Hypertarget{structTABLE__LIST_a92b6d611752e2cfabffa946902d31a1b}\label{structTABLE__LIST_a92b6d611752e2cfabffa946902d31a1b}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!derived\+\_\+keys\+\_\+ready@{derived\+\_\+keys\+\_\+ready}}
+\index{derived\+\_\+keys\+\_\+ready@{derived\+\_\+keys\+\_\+ready}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{derived\+\_\+keys\+\_\+ready}{derived\_keys\_ready}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::derived\+\_\+keys\+\_\+ready}
+
+true $<$=$>$ all possible keys for a derived table were collected and could be re-\/used while statement re-\/execution. \mbox{\Hypertarget{structTABLE__LIST_a43e85dbcb5379f852cf9ec23c069aa7a}\label{structTABLE__LIST_a43e85dbcb5379f852cf9ec23c069aa7a}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+alias@{is\+\_\+alias}}
+\index{is\+\_\+alias@{is\+\_\+alias}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+alias}{is\_alias}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+alias}
+
+T\+R\+UE if an alias for this table was specified in the S\+QL. \mbox{\Hypertarget{structTABLE__LIST_a497fa25f3f142c883057ad2f37eae87c}\label{structTABLE__LIST_a497fa25f3f142c883057ad2f37eae87c}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!is\+\_\+fqtn@{is\+\_\+fqtn}}
+\index{is\+\_\+fqtn@{is\+\_\+fqtn}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{is\+\_\+fqtn}{is\_fqtn}}
+{\footnotesize\ttfamily bool T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::is\+\_\+fqtn}
+
+T\+R\+UE if the table is referred to in the statement using a fully qualified name ($<$db\+\_\+name$>$.$<$table\+\_\+name$>$). \mbox{\Hypertarget{structTABLE__LIST_aa5584240bf59a147fff802fb18e1704e}\label{structTABLE__LIST_aa5584240bf59a147fff802fb18e1704e}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!open\+\_\+strategy@{open\+\_\+strategy}}
+\index{open\+\_\+strategy@{open\+\_\+strategy}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{open\+\_\+strategy}{open\_strategy}}
+{\footnotesize\ttfamily enum \{ ... \}   T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::open\+\_\+strategy}
+
+Indicates that if \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object corresponds to the table/view which requires special handling. \mbox{\Hypertarget{structTABLE__LIST_a258a1d3e3c052cd563fb5690b70e86e8}\label{structTABLE__LIST_a258a1d3e3c052cd563fb5690b70e86e8}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!open\+\_\+type@{open\+\_\+type}}
+\index{open\+\_\+type@{open\+\_\+type}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{open\+\_\+type}{open\_type}}
+{\footnotesize\ttfamily enum enum\+\_\+open\+\_\+type T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::open\+\_\+type}
+
+Specifies which kind of table should be open for this element of table list. \mbox{\Hypertarget{structTABLE__LIST_a08dcf89471efcaa22bdb31c38fa13fea}\label{structTABLE__LIST_a08dcf89471efcaa22bdb31c38fa13fea}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!opt\+\_\+hints\+\_\+table@{opt\+\_\+hints\+\_\+table}}
+\index{opt\+\_\+hints\+\_\+table@{opt\+\_\+hints\+\_\+table}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{opt\+\_\+hints\+\_\+table}{opt\_hints\_table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOpt__hints__table}{Opt\+\_\+hints\+\_\+table}}$\ast$ T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::opt\+\_\+hints\+\_\+table}
+
+Table level optimizer hints for this table. \mbox{\Hypertarget{structTABLE__LIST_afe86284f138571126421c238a7abb863}\label{structTABLE__LIST_afe86284f138571126421c238a7abb863}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!trg\+\_\+event\+\_\+map@{trg\+\_\+event\+\_\+map}}
+\index{trg\+\_\+event\+\_\+map@{trg\+\_\+event\+\_\+map}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{trg\+\_\+event\+\_\+map}{trg\_event\_map}}
+{\footnotesize\ttfamily uint8 T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::trg\+\_\+event\+\_\+map}
+
+Indicates what triggers we need to pre-\/load for this \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} when opening an associated \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. This is filled after the parsed tree is created. \mbox{\Hypertarget{structTABLE__LIST_a77ea91b166348f6ff6711585f1a4fa5d}\label{structTABLE__LIST_a77ea91b166348f6ff6711585f1a4fa5d}} 
+\index{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}!updatable\+\_\+view@{updatable\+\_\+view}}
+\index{updatable\+\_\+view@{updatable\+\_\+view}!T\+A\+B\+L\+E\+\_\+\+L\+I\+ST@{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}}
+\subsubsection{\texorpdfstring{updatable\+\_\+view}{updatable\_view}}
+{\footnotesize\ttfamily ulonglong T\+A\+B\+L\+E\+\_\+\+L\+I\+S\+T\+::updatable\+\_\+view}
+
+
+
+V\+I\+EW can be updated. 
+
+\begin{DoxyNote}{Note}
+\+: This field is currently not reliable when read from dictionary\+: If an underlying view is changed, updatable\+\_\+view is not changed, due to lack of dependency checking in dictionary implementation. Prefer to use \mbox{\hyperlink{structTABLE__LIST_ab245bbe722912873c8e5ed62d7b083b0}{is\+\_\+updatable()}} during preparation and optimization. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\item 
+sql\+\_\+derived.\+cc\item 
+sql\+\_\+lex.\+cc\item 
+table.\+cc\end{DoxyCompactItemize}

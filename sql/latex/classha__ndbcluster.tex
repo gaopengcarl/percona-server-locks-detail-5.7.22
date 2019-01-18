@@ -1,0 +1,1480 @@
+\hypertarget{classha__ndbcluster}{}\section{ha\+\_\+ndbcluster Class Reference}
+\label{classha__ndbcluster}\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+Inheritance diagram for ha\+\_\+ndbcluster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classha__ndbcluster}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classha__ndbcluster_a743f4c09bc748bd6d1fce84520472614}{ha\+\_\+ndbcluster}} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$table)
+\item 
+\mbox{\hyperlink{classha__ndbcluster_a2a0e969376e3f2d0677cd4094ae04b7e}{$\sim$ha\+\_\+ndbcluster}} ()
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a5e1e0e1c8aa3764c955f46b8845b7a1a}{open}} (const char $\ast$name, int mode, uint test\+\_\+if\+\_\+locked)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_ac65e17ed6b647f78ca2a933546a5c353}\label{classha__ndbcluster_ac65e17ed6b647f78ca2a933546a5c353}} 
+int {\bfseries close} (void)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_ac5921b0992ea58b7698d649fcc7d50c1}{local\+\_\+close}} (T\+HD $\ast$thd, bool release\+\_\+metadata)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_aadffcd5f17a0b869bea7260425573df6}\label{classha__ndbcluster_aadffcd5f17a0b869bea7260425573df6}} 
+int {\bfseries optimize} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__ha__check__opt}{H\+A\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+PT}} $\ast$check\+\_\+opt)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a1499ebf91623f1a275a7c205cd1fa90f}\label{classha__ndbcluster_a1499ebf91623f1a275a7c205cd1fa90f}} 
+int {\bfseries analyze} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__ha__check__opt}{H\+A\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+PT}} $\ast$check\+\_\+opt)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a0417e2c67e5734e072ea5f2f015d3dc7}\label{classha__ndbcluster_a0417e2c67e5734e072ea5f2f015d3dc7}} 
+int {\bfseries analyze\+\_\+index} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a5407251181eef104fdf5e2014f040ce2}\label{classha__ndbcluster_a5407251181eef104fdf5e2014f040ce2}} 
+int {\bfseries write\+\_\+row} (uchar $\ast$buf)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a7569a9e0da9ec2f5863b15185f401ed0}\label{classha__ndbcluster_a7569a9e0da9ec2f5863b15185f401ed0}} 
+int {\bfseries update\+\_\+row} (const uchar $\ast$old\+\_\+data, uchar $\ast$new\+\_\+data)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a47cd9427fba75e9340dc3572b1798901}\label{classha__ndbcluster_a47cd9427fba75e9340dc3572b1798901}} 
+int {\bfseries delete\+\_\+row} (const uchar $\ast$buf)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_ae705539c642116cf2fb1f4e325d74892}\label{classha__ndbcluster_ae705539c642116cf2fb1f4e325d74892}} 
+int {\bfseries index\+\_\+init} (uint index, bool sorted)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_aaa2a69f18014dc4e424beefb06bd4155}\label{classha__ndbcluster_aaa2a69f18014dc4e424beefb06bd4155}} 
+int {\bfseries index\+\_\+end} ()
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a0fc1fdfefdf8315fca2ebac5ad296e08}{index\+\_\+read}} (uchar $\ast$buf, const uchar $\ast$key, uint key\+\_\+len, enum ha\+\_\+rkey\+\_\+function find\+\_\+flag)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a865afdc25ee4ca42fafde872e476e0ff}{index\+\_\+next}} (uchar $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a824559f84d7f256052f0394e9276774f}{index\+\_\+prev}} (uchar $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a1d3598345c3543f684c566f79a61cedc}{index\+\_\+first}} (uchar $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a6f6e9347ec700ee952a998fa88ae68b2}{index\+\_\+last}} (uchar $\ast$buf)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a95ff7d09fb74bbdde730f809d3f14021}\label{classha__ndbcluster_a95ff7d09fb74bbdde730f809d3f14021}} 
+int {\bfseries index\+\_\+read\+\_\+last} (uchar $\ast$buf, const uchar $\ast$key, uint key\+\_\+len)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_acb923144766720049d59f97cd70286fd}{rnd\+\_\+init}} (bool scan)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a1248b6b7c4b6515a2dafd930d57bcd4b}\label{classha__ndbcluster_a1248b6b7c4b6515a2dafd930d57bcd4b}} 
+int {\bfseries rnd\+\_\+end} ()
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_adc93bae43a800cc5ba5057b306136de1}{rnd\+\_\+next}} (uchar $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a8980053ce56e386ced321a1ad88d1cc2}{rnd\+\_\+pos}} (uchar $\ast$buf, uchar $\ast$pos)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_ae47b8413b29048108a6ee92af729ea46}{position}} (const uchar $\ast$record)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a8fe58d670113d290892c21acb52f9aa5}\label{classha__ndbcluster_a8fe58d670113d290892c21acb52f9aa5}} 
+virtual int {\bfseries cmp\+\_\+ref} (const uchar $\ast$ref1, const uchar $\ast$ref2)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a4ebf9b2b84870f08b62e5e3f5465aae8}{read\+\_\+range\+\_\+first}} (const key\+\_\+range $\ast$start\+\_\+key, const key\+\_\+range $\ast$end\+\_\+key, bool eq\+\_\+range, bool sorted)
+\begin{DoxyCompactList}\small\item\em Read first row between two ranges. Store ranges for future calls to read\+\_\+range\+\_\+next. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classha__ndbcluster_a99cfd1df9bc17dc77186affe8fdd0718}\label{classha__ndbcluster_a99cfd1df9bc17dc77186affe8fdd0718}} 
+int {\bfseries read\+\_\+range\+\_\+first\+\_\+to\+\_\+buf} (const key\+\_\+range $\ast$start\+\_\+key, const key\+\_\+range $\ast$end\+\_\+key, bool eq\+\_\+range, bool sorted, uchar $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_ac4ca12e4aa287eaf6a50c43219a1c776}{read\+\_\+range\+\_\+next}} ()
+\begin{DoxyCompactList}\small\item\em Read next row between two endpoints. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classha__ndbcluster_aba9c67b0e6bdfc66f40e30b0bccecabf}{multi\+\_\+range\+\_\+read\+\_\+init}} (\mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$seq, void $\ast$seq\+\_\+init\+\_\+param, uint n\+\_\+ranges, uint mode, \mbox{\hyperlink{structst__handler__buffer}{H\+A\+N\+D\+L\+E\+R\+\_\+\+B\+U\+F\+F\+ER}} $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a63ab7aa4c5bedaae4a2edb452da67fc8}{multi\+\_\+range\+\_\+read\+\_\+next}} (char $\ast$$\ast$range\+\_\+info)
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classha__ndbcluster_abc8e0c56a5a9150ece910a132a05e826}{multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const}} (uint keyno, \mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$seq, void $\ast$seq\+\_\+init\+\_\+param, uint n\+\_\+ranges, uint $\ast$bufsz, uint $\ast$flags, \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$cost)
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classha__ndbcluster_af561f07d996700a18cd0eb636a14f32e}{multi\+\_\+range\+\_\+read\+\_\+info}} (uint keyno, uint n\+\_\+ranges, uint keys, uint $\ast$bufsz, uint $\ast$flags, \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$cost)
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_a31a5f675ffb30d67ba91bb1cb9ec9dc8}{get\+\_\+error\+\_\+message}} (int error, String $\ast$buf)
+\item 
+virtual int \mbox{\hyperlink{classha__ndbcluster_a31757e2658abd318909a0d190a3795c0}{records}} (ha\+\_\+rows $\ast$num\+\_\+rows)
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classha__ndbcluster_a59555b02c52fc703e99a41d3ee3a04c3}{estimate\+\_\+rows\+\_\+upper\+\_\+bound}} ()
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a28bab52bf2367f3b04d5d71b355d9930}\label{classha__ndbcluster_a28bab52bf2367f3b04d5d71b355d9930}} 
+int {\bfseries info} (uint)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a760735b18201562efec1aa930e70bc07}\label{classha__ndbcluster_a760735b18201562efec1aa930e70bc07}} 
+uint32 {\bfseries calculate\+\_\+key\+\_\+hash\+\_\+value} (\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$field\+\_\+array)
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_a55b76e2e6595d838981a54951aa3f002}{start\+\_\+read\+\_\+removal}} (void)
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classha__ndbcluster_a81e58b0a19c7cc7d857a3f00e039ae37}{end\+\_\+read\+\_\+removal}} (void)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a9c393d6b4b1359047c5cf21298ab562f}\label{classha__ndbcluster_a9c393d6b4b1359047c5cf21298ab562f}} 
+int {\bfseries extra} (enum ha\+\_\+extra\+\_\+function operation)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a2ce8f87aba5f88e2a7b586b0f392870b}\label{classha__ndbcluster_a2ce8f87aba5f88e2a7b586b0f392870b}} 
+int {\bfseries extra\+\_\+opt} (enum ha\+\_\+extra\+\_\+function operation, ulong cache\+\_\+size)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a72ae34dfc88079bca1c85bfcd718b118}{reset}} ()
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_aabe3a7ba06ff1e775e3715c7aff104bb}\label{classha__ndbcluster_aabe3a7ba06ff1e775e3715c7aff104bb}} 
+int {\bfseries external\+\_\+lock} (T\+HD $\ast$thd, int lock\+\_\+type)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_aecef434c45b2c6c35a584274c5079e4b}{unlock\+\_\+row}} ()
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_aa8f1c0c15ca6a002403699eec20f24e6}{start\+\_\+stmt}} (T\+HD $\ast$thd, thr\+\_\+lock\+\_\+type lock\+\_\+type)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_aa1da5294f30d3fd5b8d06fa3177b78a3}\label{classha__ndbcluster_aa1da5294f30d3fd5b8d06fa3177b78a3}} 
+void {\bfseries update\+\_\+create\+\_\+info} (\mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$create\+\_\+info)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_ab4b4b9ed3726be8a4a0887785a5ed530}{print\+\_\+error}} (int error, myf errflag)
+\item 
+const char $\ast$ \mbox{\hyperlink{classha__ndbcluster_a96d160419836ac20e131570a32e1c4a8}{table\+\_\+type}} () const
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{classha__ndbcluster_ade5341ce688c24b5885145f821cdf249}{bas\+\_\+ext}} () const
+\item 
+ulonglong \mbox{\hyperlink{classha__ndbcluster_a99dc30c67efa4a7d6d6f3ded9a67b40b}{table\+\_\+flags}} (void) const
+\item 
+ulong \mbox{\hyperlink{classha__ndbcluster_a129ea7ed14c99a3437beff5fece3e832}{index\+\_\+flags}} (uint idx, uint part, bool all\+\_\+parts) const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_adfe1c99749c9718d4e5b5869b6cf281b}\label{classha__ndbcluster_adfe1c99749c9718d4e5b5869b6cf281b}} 
+virtual const \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} $\ast$ {\bfseries keys\+\_\+to\+\_\+use\+\_\+for\+\_\+scanning} ()
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_abf1a2f928fcc952bbe31d8c496ef0dce}{primary\+\_\+key\+\_\+is\+\_\+clustered}} () const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a52e5a379a50e92037eff906a993a8755}\label{classha__ndbcluster_a52e5a379a50e92037eff906a993a8755}} 
+uint {\bfseries max\+\_\+supported\+\_\+record\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a8cfa4181a4c99accd9d90ac9318cbb81}\label{classha__ndbcluster_a8cfa4181a4c99accd9d90ac9318cbb81}} 
+uint {\bfseries max\+\_\+supported\+\_\+keys} () const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_aeaa7b1e989313d552722d03ffb39691a}\label{classha__ndbcluster_aeaa7b1e989313d552722d03ffb39691a}} 
+uint {\bfseries max\+\_\+supported\+\_\+key\+\_\+parts} () const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_ad8fa888c6e852148bf8cd65ce2d4212f}\label{classha__ndbcluster_ad8fa888c6e852148bf8cd65ce2d4212f}} 
+uint {\bfseries max\+\_\+supported\+\_\+key\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a657e1db46ad7d987ec0af310925841c4}\label{classha__ndbcluster_a657e1db46ad7d987ec0af310925841c4}} 
+uint {\bfseries max\+\_\+supported\+\_\+key\+\_\+part\+\_\+length} () const
+\item 
+virtual bool \mbox{\hyperlink{classha__ndbcluster_a6adf9b7e7b7357f464a01f9a7ed2a1ee}{is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index}} (uint index)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a0e95888bddd2ac2eb6d44d83a7e3335e}\label{classha__ndbcluster_a0e95888bddd2ac2eb6d44d83a7e3335e}} 
+int {\bfseries get\+\_\+child\+\_\+or\+\_\+parent\+\_\+fk\+\_\+list} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$f\+\_\+key\+\_\+list, bool is\+\_\+child, bool is\+\_\+parent)
+\item 
+virtual int \mbox{\hyperlink{classha__ndbcluster_a3b97152a2ce0d7e7622de70daae4171b}{get\+\_\+foreign\+\_\+key\+\_\+list}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$f\+\_\+key\+\_\+list)
+\item 
+virtual int \mbox{\hyperlink{classha__ndbcluster_a8ef2926a38b2b39387ad40c55708faa2}{get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$f\+\_\+key\+\_\+list)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_aa7caf6187be6a0273e998a263bea2157}\label{classha__ndbcluster_aa7caf6187be6a0273e998a263bea2157}} 
+virtual uint {\bfseries referenced\+\_\+by\+\_\+foreign\+\_\+key} ()
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a853f476afbc916b4fb563465db0ca0da}\label{classha__ndbcluster_a853f476afbc916b4fb563465db0ca0da}} 
+uint {\bfseries is\+\_\+child\+\_\+or\+\_\+parent\+\_\+of\+\_\+fk} ()
+\item 
+virtual bool \mbox{\hyperlink{classha__ndbcluster_a3fe3719d8dd1d5f41467250d632abd3c}{can\+\_\+switch\+\_\+engines}} ()
+\item 
+virtual char $\ast$ \mbox{\hyperlink{classha__ndbcluster_a8abae855bbb818c6827294eb17549365}{get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info}} ()
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_ab4c897e358e6b37f7d948286163749dd}\label{classha__ndbcluster_ab4c897e358e6b37f7d948286163749dd}} 
+virtual void {\bfseries free\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info} (char $\ast$str)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a5609bf8b91966dacc3610fc7ceffc314}{rename\+\_\+table}} (const char $\ast$from, const char $\ast$to)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a4d32721908372dc62c490e14a005e03c}{delete\+\_\+table}} (const char $\ast$name)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_ac74383fcb359c0f2d06acf101bb4d4b0}{create}} (const char $\ast$name, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$form, \mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$info)
+\item 
+virtual bool \mbox{\hyperlink{classha__ndbcluster_a95efd97175c4d0f4e5548473b6759e31}{is\+\_\+ignorable\+\_\+error}} (int error)
+\begin{DoxyCompactList}\small\item\em Determine whether an error can be ignored or not. \end{DoxyCompactList}\item 
+T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$ \mbox{\hyperlink{classha__ndbcluster_a5bc14d2819ddbc2d616e11db49d669de}{store\+\_\+lock}} (T\+HD $\ast$thd, T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$to, enum thr\+\_\+lock\+\_\+type lock\+\_\+type)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a8da805f38ddb97fed20dfe0dcdad3844}\label{classha__ndbcluster_a8da805f38ddb97fed20dfe0dcdad3844}} 
+bool {\bfseries low\+\_\+byte\+\_\+first} () const
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a9b986024102ca38a90c49145c252cc0e}\label{classha__ndbcluster_a9b986024102ca38a90c49145c252cc0e}} 
+const char $\ast$ {\bfseries index\+\_\+type} (uint key\+\_\+number)
+\item 
+double \mbox{\hyperlink{classha__ndbcluster_a21574780af8b6cdc0bbcf8dc5ccb5164}{scan\+\_\+time}} ()
+\item 
+ha\+\_\+rows \mbox{\hyperlink{classha__ndbcluster_acba30a6612e51eb9b5bd9a205d90a505}{records\+\_\+in\+\_\+range}} (uint inx, key\+\_\+range $\ast$min\+\_\+key, key\+\_\+range $\ast$max\+\_\+key)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a0e0f10c9eef4ca971b4af597c4b93c56}\label{classha__ndbcluster_a0e0f10c9eef4ca971b4af597c4b93c56}} 
+void {\bfseries start\+\_\+bulk\+\_\+insert} (ha\+\_\+rows rows)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a38b1458caf3677f93276073e22669aeb}{end\+\_\+bulk\+\_\+insert}} ()
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_aa852a48bce2fe6fbbe70b83022d74ed2}{start\+\_\+bulk\+\_\+update}} ()
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a89cbc7ca67dcd89d07693186f5de7ca5}{bulk\+\_\+update\+\_\+row}} (const uchar $\ast$old\+\_\+data, uchar $\ast$new\+\_\+data, uint $\ast$dup\+\_\+key\+\_\+found)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a5c9f552924c7168373ab0d1c2ba0e049}{exec\+\_\+bulk\+\_\+update}} (uint $\ast$dup\+\_\+key\+\_\+found)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_a3c3b80b72e921059f62aed3eda1db911}{end\+\_\+bulk\+\_\+update}} ()
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a46052fa7fa300d669f28e0302494c532}\label{classha__ndbcluster_a46052fa7fa300d669f28e0302494c532}} 
+int {\bfseries ndb\+\_\+update\+\_\+row} (const uchar $\ast$old\+\_\+data, uchar $\ast$new\+\_\+data, int is\+\_\+bulk\+\_\+update)
+\item 
+const \mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classha__ndbcluster_a2285b3af9153f052ef6ba0cfc3bacea1}{cond\+\_\+push}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$cond)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_a0de805435e8251f27ba3394052f6b1c7}{cond\+\_\+pop}} ()
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_a90a74f871433b2534301b2b9ac6aecbf}{maybe\+\_\+pushable\+\_\+join}} (const char $\ast$\&reason) const
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a8392198f6ff1b83f32ee480b257566a9}{assign\+\_\+pushed\+\_\+join}} (const \mbox{\hyperlink{classndb__pushed__join}{ndb\+\_\+pushed\+\_\+join}} $\ast$pushed\+\_\+join)
+\item 
+uint \mbox{\hyperlink{classha__ndbcluster_a6aaba12f45b013e5dc180f40463e802a}{number\+\_\+of\+\_\+pushed\+\_\+joins}} () const
+\item 
+const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classha__ndbcluster_abf2a5948eca40262f5d533d7c57ca414}{root\+\_\+of\+\_\+pushed\+\_\+join}} () const
+\item 
+const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classha__ndbcluster_a9faa32fde75fed4ebafffd11b6c5638e}{parent\+\_\+of\+\_\+pushed\+\_\+join}} () const
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_aa7c34f1ba38d98ac501de119c7933dce}{index\+\_\+read\+\_\+pushed}} (uchar $\ast$buf, const uchar $\ast$key, key\+\_\+part\+\_\+map keypart\+\_\+map)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a8c12adc1c87097562760e06689e7ec38}{index\+\_\+next\+\_\+pushed}} (uchar $\ast$buf)
+\item 
+uint8 \mbox{\hyperlink{classha__ndbcluster_ac3a23eb89230938663a59fcf8fbe908b}{table\+\_\+cache\+\_\+type}} ()
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a6e6bfdb3d1fe1c2914c6a661fec8159f}\label{classha__ndbcluster_a6e6bfdb3d1fe1c2914c6a661fec8159f}} 
+int {\bfseries ndb\+\_\+err} (Ndb\+Transaction $\ast$)
+\item 
+my\+\_\+bool \mbox{\hyperlink{classha__ndbcluster_abef3e8ffe1d4b952fc59b356d3d5f142}{register\+\_\+query\+\_\+cache\+\_\+table}} (T\+HD $\ast$thd, char $\ast$table\+\_\+key, size\+\_\+t key\+\_\+length, qc\+\_\+engine\+\_\+callback $\ast$engine\+\_\+callback, ulonglong $\ast$engine\+\_\+data)
+\item 
+enum\+\_\+alter\+\_\+inplace\+\_\+result \mbox{\hyperlink{classha__ndbcluster_a178fe8e973508932db3d3d6ca3a625a9}{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$altered\+\_\+table, \mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$ha\+\_\+alter\+\_\+info)
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}{prepare\+\_\+inplace\+\_\+alter\+\_\+table}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$altered\+\_\+table, \mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$ha\+\_\+alter\+\_\+info)
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_a5ff1e368997d6822e3285080fade11fe}{inplace\+\_\+alter\+\_\+table}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$altered\+\_\+table, \mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$ha\+\_\+alter\+\_\+info)
+\item 
+bool \mbox{\hyperlink{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}{commit\+\_\+inplace\+\_\+alter\+\_\+table}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$altered\+\_\+table, \mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$ha\+\_\+alter\+\_\+info, bool commit)
+\item 
+void \mbox{\hyperlink{classha__ndbcluster_a2e656837653854c38ee70a7cb46515c6}{notify\+\_\+table\+\_\+changed}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classha__ndbcluster_a1a9f8c543b010643808df803f7db9e1b}{set\+\_\+dbname}} (const char $\ast$pathname, char $\ast$dbname)
+\item 
+static void \mbox{\hyperlink{classha__ndbcluster_a3432f398baec4d4ebc0b02af534bd860}{set\+\_\+tabname}} (const char $\ast$pathname, char $\ast$tabname)
+\item 
+static void \mbox{\hyperlink{classha__ndbcluster_a58176e049237d75781412ad1e75e4d0f}{release\+\_\+completed\+\_\+operations}} (Ndb\+Transaction $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a83f7116a2471d8f8ea1c29ef9f66d01f}\label{classha__ndbcluster_a83f7116a2471d8f8ea1c29ef9f66d01f}} 
+class {\bfseries ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_a81d2867500d8a5c574e4e22d1b407d80}{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}} (T\+HD $\ast$thd, const char $\ast$path)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_abacd62dc79483d9590e2250286e714e4}\label{classha__ndbcluster_abacd62dc79483d9590e2250286e714e4}} 
+int {\bfseries g\+\_\+get\+\_\+ndb\+\_\+blobs\+\_\+value} (Ndb\+Blob $\ast$ndb\+\_\+blob, void $\ast$arg)
+\item 
+\mbox{\Hypertarget{classha__ndbcluster_a98eb7dd1da4f4878ea3f774df43fcb20}\label{classha__ndbcluster_a98eb7dd1da4f4878ea3f774df43fcb20}} 
+int {\bfseries check\+\_\+completed\+\_\+operations\+\_\+pre\+\_\+commit} (\mbox{\hyperlink{classThd__ndb}{Thd\+\_\+ndb}} $\ast$, Ndb\+Transaction $\ast$, const Ndb\+Operation $\ast$, uint $\ast$ignore\+\_\+count)
+\item 
+int \mbox{\hyperlink{classha__ndbcluster_ae2bd9470fe7beb5dc3481654718f39b7}{ndbcluster\+\_\+commit}} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, bool all)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classha__ndbcluster_a743f4c09bc748bd6d1fce84520472614}\label{classha__ndbcluster_a743f4c09bc748bd6d1fce84520472614}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{ha\+\_\+ndbcluster()}{ha\_ndbcluster()}}
+{\footnotesize\ttfamily ha\+\_\+ndbcluster\+::ha\+\_\+ndbcluster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{hton,  }\item[{\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$}]{table\+\_\+arg }\end{DoxyParamCaption})}
+
+Constructor for the N\+DB Cluster table handler . \mbox{\Hypertarget{classha__ndbcluster_a2a0e969376e3f2d0677cd4094ae04b7e}\label{classha__ndbcluster_a2a0e969376e3f2d0677cd4094ae04b7e}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!````~ha\+\_\+ndbcluster@{$\sim$ha\+\_\+ndbcluster}}
+\index{````~ha\+\_\+ndbcluster@{$\sim$ha\+\_\+ndbcluster}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{$\sim$ha\+\_\+ndbcluster()}{~ha\_ndbcluster()}}
+{\footnotesize\ttfamily ha\+\_\+ndbcluster\+::$\sim$ha\+\_\+ndbcluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for N\+DB Cluster table handler. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classha__ndbcluster_a8392198f6ff1b83f32ee480b257566a9}\label{classha__ndbcluster_a8392198f6ff1b83f32ee480b257566a9}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!assign\+\_\+pushed\+\_\+join@{assign\+\_\+pushed\+\_\+join}}
+\index{assign\+\_\+pushed\+\_\+join@{assign\+\_\+pushed\+\_\+join}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{assign\+\_\+pushed\+\_\+join()}{assign\_pushed\_join()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::assign\+\_\+pushed\+\_\+join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classndb__pushed__join}{ndb\+\_\+pushed\+\_\+join}} $\ast$}]{pushed\+\_\+join }\end{DoxyParamCaption})}
+
+In case a pushed join having the table for this handler as its root has been produced. \+::assign\+\_\+pushed\+\_\+join() is responsible for setting up this \mbox{\hyperlink{classha__ndbcluster}{ha\+\_\+ndbcluster}} instance such that the prepared Ndb\+Query might be instantiated at execution time. \mbox{\Hypertarget{classha__ndbcluster_ade5341ce688c24b5885145f821cdf249}\label{classha__ndbcluster_ade5341ce688c24b5885145f821cdf249}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!bas\+\_\+ext@{bas\+\_\+ext}}
+\index{bas\+\_\+ext@{bas\+\_\+ext}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{bas\+\_\+ext()}{bas\_ext()}}
+{\footnotesize\ttfamily const char $\ast$$\ast$ ha\+\_\+ndbcluster\+::bas\+\_\+ext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+If frm\+\_\+error() is called then we will use this to find out what file extentions exist for the storage engine. This is also used by the default rename\+\_\+table and delete\+\_\+table method in \mbox{\hyperlink{handler_8cc}{handler.\+cc}}.
+
+For engines that have two file name extentions (separate meta/index file and data file), the order of elements is relevant. First element of engine file name extentions array should be meta/index file extention. Second element -\/ data file extention. This order is assumed by prepare\+\_\+for\+\_\+repair() when R\+E\+P\+A\+IR \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... U\+S\+E\+\_\+\+F\+RM is issued. 
+
+Implements \mbox{\hyperlink{classhandler_a748d5e5b6dbbb0681cbac2ad881505c9}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a89cbc7ca67dcd89d07693186f5de7ca5}\label{classha__ndbcluster_a89cbc7ca67dcd89d07693186f5de7ca5}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!bulk\+\_\+update\+\_\+row@{bulk\+\_\+update\+\_\+row}}
+\index{bulk\+\_\+update\+\_\+row@{bulk\+\_\+update\+\_\+row}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{bulk\+\_\+update\+\_\+row()}{bulk\_update\_row()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::bulk\+\_\+update\+\_\+row (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{old\+\_\+data,  }\item[{uchar $\ast$}]{new\+\_\+data,  }\item[{uint $\ast$}]{dup\+\_\+key\+\_\+found }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is similar to update\+\_\+row, however the handler doesn\textquotesingle{}t need to execute the updates at this point in time. The handler can be certain that another call to bulk\+\_\+update\+\_\+row will occur OR a call to exec\+\_\+bulk\+\_\+update before the set of updates in this query is concluded.
+
+Note\+: If H\+A\+\_\+\+E\+R\+R\+\_\+\+F\+O\+U\+N\+D\+\_\+\+D\+U\+P\+P\+\_\+\+K\+EY is returned, the handler must read all columns of the row so My\+S\+QL can create an error message. If the columns required for the error message are not read, the error message will contain garbage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+\_\+data} & Old record \\
+\hline
+{\em new\+\_\+data} & New record \\
+\hline
+{\em dup\+\_\+key\+\_\+found} & Number of duplicate keys found \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_ac8dd7e44bc71120ace1e467ccb02ad06}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a3fe3719d8dd1d5f41467250d632abd3c}\label{classha__ndbcluster_a3fe3719d8dd1d5f41467250d632abd3c}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!can\+\_\+switch\+\_\+engines@{can\+\_\+switch\+\_\+engines}}
+\index{can\+\_\+switch\+\_\+engines@{can\+\_\+switch\+\_\+engines}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{can\+\_\+switch\+\_\+engines()}{can\_switch\_engines()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::can\+\_\+switch\+\_\+engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Used in A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} to check if changing storage engine is allowed.
+
+\begin{DoxyNote}{Note}
+Called without holding thr\+\_\+lock.\+c lock.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Changing storage engine is allowed. \\
+\hline
+{\em false} & Changing storage engine not allowed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a6baab93a22543b707e6e59b9d59810d2}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a178fe8e973508932db3d3d6ca3a625a9}\label{classha__ndbcluster_a178fe8e973508932db3d3d6ca3a625a9}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter@{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter}}
+\index{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter@{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter()}{check\_if\_supported\_inplace\_alter()}}
+{\footnotesize\ttfamily enum\+\_\+alter\+\_\+inplace\+\_\+result ha\+\_\+ndbcluster\+::check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{altered\+\_\+table,  }\item[{\mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$}]{ha\+\_\+alter\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if a storage engine supports a particular alter table in-\/place
+
+
+\begin{DoxyParams}{Parameters}
+{\em altered\+\_\+table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for new version of table. \\
+\hline
+{\em ha\+\_\+alter\+\_\+info} & Structure describing changes to be done by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and holding data used during in-\/place alter.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+E\+R\+R\+OR} & Unexpected error. \\
+\hline
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED} & Not supported, must use copy. \\
+\hline
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+E\+X\+C\+L\+U\+S\+I\+V\+E\+\_\+\+L\+O\+CK} & Supported, but requires X lock. \\
+\hline
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+O\+C\+K\+\_\+\+A\+F\+T\+E\+R\+\_\+\+P\+R\+E\+P\+A\+RE} & Supported, but requires S\+NW lock during main phase. Prepare phase requires X lock. \\
+\hline
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+O\+CK} & Supported, but requires S\+NW lock. \\
+\hline
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+\_\+\+L\+O\+C\+K\+\_\+\+A\+F\+T\+E\+R\+\_\+\+P\+R\+E\+P\+A\+RE} & Supported, concurrent reads/writes allowed. However, prepare phase requires X lock. \\
+\hline
+{\em H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+\_\+\+L\+O\+CK} & Supported, concurrent reads/writes allowed.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+The default implementation uses the old in-\/place A\+L\+T\+ER A\+PI to determine if the storage engine supports in-\/place A\+L\+T\+ER or not.
+
+Called without holding thr\+\_\+lock.\+c lock. 
+\end{DoxyNote}
+Check all indexes to determine if column has index instead of checking field-\/$>$flags (P\+R\+I\+\_\+\+K\+E\+Y\+\_\+\+F\+L\+AG $\vert$ U\+N\+I\+Q\+U\+E\+\_\+\+K\+E\+Y\+\_\+\+F\+L\+AG $\vert$ M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+F\+L\+AG since field-\/$>$flags appears to only be set on first column in multi-\/part index
+
+This is a \char`\"{}copy\char`\"{} of code in \+::create() that \char`\"{}auto-\/converts\char`\"{} columns with keys into memory (unless storage disk is explicitly added) This is needed to check if get\+Storage\+Type() == get\+Storage\+Type() further down
+
+If user didn\textquotesingle{}t specify any column format, keep old to make as many alter\textquotesingle{}s as possible online
+
+Reimplemented from \mbox{\hyperlink{classhandler_a67890a9deb89b9ef0128601e7687fcba}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}\label{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!commit\+\_\+inplace\+\_\+alter\+\_\+table@{commit\+\_\+inplace\+\_\+alter\+\_\+table}}
+\index{commit\+\_\+inplace\+\_\+alter\+\_\+table@{commit\+\_\+inplace\+\_\+alter\+\_\+table}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{commit\+\_\+inplace\+\_\+alter\+\_\+table()}{commit\_inplace\_alter\_table()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::commit\+\_\+inplace\+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{altered\+\_\+table,  }\item[{\mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$}]{ha\+\_\+alter\+\_\+info,  }\item[{bool}]{commit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Commit or rollback the changes made during \mbox{\hyperlink{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}{prepare\+\_\+inplace\+\_\+alter\+\_\+table()}} and \mbox{\hyperlink{classha__ndbcluster_a5ff1e368997d6822e3285080fade11fe}{inplace\+\_\+alter\+\_\+table()}} inside the storage engine. Note that in case of rollback the allowed level of concurrency during this operation will be the same as for \mbox{\hyperlink{classha__ndbcluster_a5ff1e368997d6822e3285080fade11fe}{inplace\+\_\+alter\+\_\+table()}} and thus might be higher than during \mbox{\hyperlink{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}{prepare\+\_\+inplace\+\_\+alter\+\_\+table()}}. (For example, concurrent writes were blocked during prepare, but might not be during rollback).
+
+\begin{DoxyNote}{Note}
+Storage engines are responsible for reporting any errors by calling my\+\_\+error()/print\+\_\+error()
+
+If this function with commit= true reports error, it will be called again with commit= false.
+
+In case of partitioning, this function might be called for rollback without \mbox{\hyperlink{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}{prepare\+\_\+inplace\+\_\+alter\+\_\+table()}} having been called first. Also partitioned tables sets ha\+\_\+alter\+\_\+info-\/$>$group\+\_\+commit\+\_\+ctx to a N\+U\+LL terminated array of the partitions handlers and if all of them are committed as one, then group\+\_\+commit\+\_\+ctx should be set to N\+U\+LL to indicate to the partitioning handler that all partitions handlers are committed. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}{prepare\+\_\+inplace\+\_\+alter\+\_\+table()}}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em altered\+\_\+table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for new version of table. \\
+\hline
+{\em ha\+\_\+alter\+\_\+info} & Structure describing changes to be done by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and holding data used during in-\/place alter. \\
+\hline
+{\em commit} & True =$>$ Commit, False =$>$ Rollback.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Error \\
+\hline
+{\em false} & Success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a0786a5f57ccd3c97bff07b1afeae9c06}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a0de805435e8251f27ba3394052f6b1c7}\label{classha__ndbcluster_a0de805435e8251f27ba3394052f6b1c7}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!cond\+\_\+pop@{cond\+\_\+pop}}
+\index{cond\+\_\+pop@{cond\+\_\+pop}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{cond\+\_\+pop()}{cond\_pop()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::cond\+\_\+pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Pop the top condition from the condition stack of the handler instance. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_ac3eb8d2966b848ec4beea5a25cba9dea}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a2285b3af9153f052ef6ba0cfc3bacea1}\label{classha__ndbcluster_a2285b3af9153f052ef6ba0cfc3bacea1}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!cond\+\_\+push@{cond\+\_\+push}}
+\index{cond\+\_\+push@{cond\+\_\+push}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{cond\+\_\+push()}{cond\_push()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classItem}{Item}} $\ast$ ha\+\_\+ndbcluster\+::cond\+\_\+push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Push a condition to ndbcluster storage engine for evaluation during table and index scans. The conditions will be stored on a stack for possibly storing several conditions. The stack can be popped by calling cond\+\_\+pop, handler\+::extra(\+H\+A\+\_\+\+E\+X\+T\+R\+A\+\_\+\+R\+E\+S\+E\+T) (handler\+::reset()) will clear the stack. The current implementation supports arbitrary A\+N\+D/\+OR nested conditions with comparisons between columns and constants (including constant expressions and function calls) and the following comparison operators\+: =, !=, $>$, $>$=, $<$, $<$=, \char`\"{}is null\char`\"{}, and \char`\"{}is not null\char`\"{}.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & The condition was supported and will be evaluated for each row found during the scan \\
+\hline
+{\em cond} & The condition was not supported and all rows will be returned from the scan for evaluation (and thus not saved on stack) \\
+\hline
+\end{DoxyRetVals}
+\textquotesingle{}cond\textquotesingle{} refers fields from other tables, or other instances of this table, -\/$>$ reject it. (Optimizer need to have a better understanding of what is pushable by each handler.)
+
+Reimplemented from \mbox{\hyperlink{classhandler_a5e765264bd31e0519e03e1bd53d8c6d2}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_ac74383fcb359c0f2d06acf101bb4d4b0}\label{classha__ndbcluster_ac74383fcb359c0f2d06acf101bb4d4b0}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!create@{create}}
+\index{create@{create}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{form,  }\item[{\mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$}]{create\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a table in N\+DB Cluster The extra +7 concists 2 -\/ words from pk in blob table 5 -\/ from extra words added by tup/dict??
+
+If size $>$ N\+D\+B\+\_\+\+M\+AX and pk\+\_\+length+7 $>$= N\+D\+B\+\_\+\+M\+AX then the table can\textquotesingle{}t be created anyway, so skip changing part size, and have error later
+
+mysql doesnt know/care about FK (buhhh) so we need to copy the old ones ourselves
+
+create\+Table/index schema transaction OK
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a4d32721908372dc62c490e14a005e03c}\label{classha__ndbcluster_a4d32721908372dc62c490e14a005e03c}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!delete\+\_\+table@{delete\+\_\+table}}
+\index{delete\+\_\+table@{delete\+\_\+table}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{delete\+\_\+table()}{delete\_table()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::delete\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Delete a table in the engine. Called for base as well as temporary tables.
+
+Delete all files with extension from \mbox{\hyperlink{classha__ndbcluster_ade5341ce688c24b5885145f821cdf249}{bas\+\_\+ext()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Base name of table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+We assume that the handler may return more extensions than was actually used for the file.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & If we successfully deleted at least one file from base\+\_\+ext and didn\textquotesingle{}t get any other errors than E\+N\+O\+E\+NT \\
+\hline
+{\em !0} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_ae53ec34116b901cc08e5a87f5ec681a6}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a38b1458caf3677f93276073e22669aeb}\label{classha__ndbcluster_a38b1458caf3677f93276073e22669aeb}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!end\+\_\+bulk\+\_\+insert@{end\+\_\+bulk\+\_\+insert}}
+\index{end\+\_\+bulk\+\_\+insert@{end\+\_\+bulk\+\_\+insert}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{end\+\_\+bulk\+\_\+insert()}{end\_bulk\_insert()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::end\+\_\+bulk\+\_\+insert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+End of an insert. 
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a3c3b80b72e921059f62aed3eda1db911}\label{classha__ndbcluster_a3c3b80b72e921059f62aed3eda1db911}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!end\+\_\+bulk\+\_\+update@{end\+\_\+bulk\+\_\+update}}
+\index{end\+\_\+bulk\+\_\+update@{end\+\_\+bulk\+\_\+update}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{end\+\_\+bulk\+\_\+update()}{end\_bulk\_update()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::end\+\_\+bulk\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Perform any needed clean-\/up, no outstanding updates are there at the moment. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a2bf6c46d66ca282a4cbd6118e4c99e03}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a81e58b0a19c7cc7d857a3f00e039ae37}\label{classha__ndbcluster_a81e58b0a19c7cc7d857a3f00e039ae37}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!end\+\_\+read\+\_\+removal@{end\+\_\+read\+\_\+removal}}
+\index{end\+\_\+read\+\_\+removal@{end\+\_\+read\+\_\+removal}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{end\+\_\+read\+\_\+removal()}{end\_read\_removal()}}
+{\footnotesize\ttfamily ha\+\_\+rows ha\+\_\+ndbcluster\+::end\+\_\+read\+\_\+removal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+End read (before write) removal and return the number of rows really written \begin{DoxySeeAlso}{See also}
+H\+A\+\_\+\+R\+E\+A\+D\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+M\+O\+V\+AL 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a517d99c283e85e8d97460f07a781dabf}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a59555b02c52fc703e99a41d3ee3a04c3}\label{classha__ndbcluster_a59555b02c52fc703e99a41d3ee3a04c3}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!estimate\+\_\+rows\+\_\+upper\+\_\+bound@{estimate\+\_\+rows\+\_\+upper\+\_\+bound}}
+\index{estimate\+\_\+rows\+\_\+upper\+\_\+bound@{estimate\+\_\+rows\+\_\+upper\+\_\+bound}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{estimate\+\_\+rows\+\_\+upper\+\_\+bound()}{estimate\_rows\_upper\_bound()}}
+{\footnotesize\ttfamily ha\+\_\+rows ha\+\_\+ndbcluster\+::estimate\+\_\+rows\+\_\+upper\+\_\+bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return upper bound of current number of records in the table (max. of how many records one will retrieve when doing a full table scan) If upper bound is not known, H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR should be returned as a max possible upper bound. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_ae59e9a1d36d852f4dd5dd00bff5f1ae4}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a5c9f552924c7168373ab0d1c2ba0e049}\label{classha__ndbcluster_a5c9f552924c7168373ab0d1c2ba0e049}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!exec\+\_\+bulk\+\_\+update@{exec\+\_\+bulk\+\_\+update}}
+\index{exec\+\_\+bulk\+\_\+update@{exec\+\_\+bulk\+\_\+update}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{exec\+\_\+bulk\+\_\+update()}{exec\_bulk\_update()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::exec\+\_\+bulk\+\_\+update (\begin{DoxyParamCaption}\item[{uint $\ast$}]{dup\+\_\+key\+\_\+found }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+After this call all outstanding updates must be performed. The number of duplicate key errors are reported in the duplicate key parameter. It is allowed to continue to the batched update after this call, the handler has to wait until end\+\_\+bulk\+\_\+update with changing state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dup\+\_\+key\+\_\+found} & Number of duplicate keys found\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em $>$0} & Error code \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a886bf2fbf16de7e200e3ebc0765fb6e4}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a31a5f675ffb30d67ba91bb1cb9ec9dc8}\label{classha__ndbcluster_a31a5f675ffb30d67ba91bb1cb9ec9dc8}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!get\+\_\+error\+\_\+message@{get\+\_\+error\+\_\+message}}
+\index{get\+\_\+error\+\_\+message@{get\+\_\+error\+\_\+message}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{get\+\_\+error\+\_\+message()}{get\_error\_message()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::get\+\_\+error\+\_\+message (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{String $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Override the default get\+\_\+error\+\_\+message in order to add the error message of N\+DB . 
+
+Reimplemented from \mbox{\hyperlink{classhandler_afce8ffd064ce683481494c7503ef820c}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a8abae855bbb818c6827294eb17549365}\label{classha__ndbcluster_a8abae855bbb818c6827294eb17549365}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info@{get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info}}
+\index{get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info@{get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info()}{get\_foreign\_key\_create\_info()}}
+{\footnotesize\ttfamily char $\ast$ ha\+\_\+ndbcluster\+::get\+\_\+foreign\+\_\+key\+\_\+create\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classList}{List}} foreigns for this table
+
+list\+Dependent\+Objects will return FK\textquotesingle{}s in order that they are stored in hash-\/table in Dbdict (i.\+e random)
+
+sort them to make M\+TR and similar happy
+
+this was on parent table (fk are shown on child table in S\+QL)
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a3b97152a2ce0d7e7622de70daae4171b}\label{classha__ndbcluster_a3b97152a2ce0d7e7622de70daae4171b}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!get\+\_\+foreign\+\_\+key\+\_\+list@{get\+\_\+foreign\+\_\+key\+\_\+list}}
+\index{get\+\_\+foreign\+\_\+key\+\_\+list@{get\+\_\+foreign\+\_\+key\+\_\+list}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{get\+\_\+foreign\+\_\+key\+\_\+list()}{get\_foreign\_key\_list()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::get\+\_\+foreign\+\_\+key\+\_\+list (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$}]{f\+\_\+key\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the list of foreign keys in this table.
+
+\begin{DoxyRemark}{Remarks}
+Returns the set of foreign keys where this table is the dependent or child table.
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread handle. \\
+\hline
+{\em f\+\_\+key\+\_\+list\mbox{[}out\mbox{]}} & The list of foreign keys.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler error code or zero for success. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a81064e61d4c08261af409fb6ee34e3ca}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a8ef2926a38b2b39387ad40c55708faa2}\label{classha__ndbcluster_a8ef2926a38b2b39387ad40c55708faa2}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list@{get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list}}
+\index{get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list@{get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list()}{get\_parent\_foreign\_key\_list()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::get\+\_\+parent\+\_\+foreign\+\_\+key\+\_\+list (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$}]{f\+\_\+key\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the list of foreign keys referencing this table.
+
+\begin{DoxyRemark}{Remarks}
+Returns the set of foreign keys where this table is the referenced or parent table.
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread handle. \\
+\hline
+{\em f\+\_\+key\+\_\+list\mbox{[}out\mbox{]}} & The list of foreign keys.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler error code or zero for success. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a9187eea9999eba802ee4ae01f91dda3b}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a1d3598345c3543f684c566f79a61cedc}\label{classha__ndbcluster_a1d3598345c3543f684c566f79a61cedc}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+first@{index\+\_\+first}}
+\index{index\+\_\+first@{index\+\_\+first}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+first()}{index\_first()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+first (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_af37bd518c53c966459632584c34855d0}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a129ea7ed14c99a3437beff5fece3e832}\label{classha__ndbcluster_a129ea7ed14c99a3437beff5fece3e832}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+flags@{index\+\_\+flags}}
+\index{index\+\_\+flags@{index\+\_\+flags}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+flags()}{index\_flags()}}
+{\footnotesize\ttfamily ulong ha\+\_\+ndbcluster\+::index\+\_\+flags (\begin{DoxyParamCaption}\item[{uint}]{idx\+\_\+no,  }\item[{uint}]{part,  }\item[{bool}]{all\+\_\+parts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get the flags for an index.
+
+\begin{DoxyReturn}{Returns}
+flags depending on the type of the index. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a6f6e9347ec700ee952a998fa88ae68b2}\label{classha__ndbcluster_a6f6e9347ec700ee952a998fa88ae68b2}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+last@{index\+\_\+last}}
+\index{index\+\_\+last@{index\+\_\+last}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+last()}{index\_last()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+last (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_aa1d62ffab7408a031b13e547eb58be09}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a865afdc25ee4ca42fafde872e476e0ff}\label{classha__ndbcluster_a865afdc25ee4ca42fafde872e476e0ff}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+next@{index\+\_\+next}}
+\index{index\+\_\+next@{index\+\_\+next}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+next()}{index\_next()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+next (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_aca48f687872e10a4fdc35b418d98b761}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a8c12adc1c87097562760e06689e7ec38}\label{classha__ndbcluster_a8c12adc1c87097562760e06689e7ec38}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+next\+\_\+pushed@{index\+\_\+next\+\_\+pushed}}
+\index{index\+\_\+next\+\_\+pushed@{index\+\_\+next\+\_\+pushed}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+next\+\_\+pushed()}{index\_next\_pushed()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+next\+\_\+pushed (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the next record from an indexes table access being a child operation in a pushed join. Fetch will be from prefetched cached records which are materialized into the bound buffer areas as result of this call. 
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a824559f84d7f256052f0394e9276774f}\label{classha__ndbcluster_a824559f84d7f256052f0394e9276774f}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+prev@{index\+\_\+prev}}
+\index{index\+\_\+prev@{index\+\_\+prev}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+prev()}{index\_prev()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+prev (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a1ab892ae78db6437119d2d25621118b7}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a0fc1fdfefdf8315fca2ebac5ad296e08}\label{classha__ndbcluster_a0fc1fdfefdf8315fca2ebac5ad296e08}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+read@{index\+\_\+read}}
+\index{index\+\_\+read@{index\+\_\+read}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+read()}{index\_read()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+read (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf,  }\item[{const uchar $\ast$}]{key,  }\item[{uint}]{key\+\_\+len,  }\item[{enum ha\+\_\+rkey\+\_\+function}]{find\+\_\+flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Specify as a closed E\+Q\+\_\+\+R\+A\+N\+GE. Setting H\+A\+\_\+\+R\+E\+A\+D\+\_\+\+A\+F\+T\+E\+R\+\_\+\+K\+EY seems odd, but this is according to My\+S\+QL convention, see opt\+\_\+range.\+cc.
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_aa7c34f1ba38d98ac501de119c7933dce}\label{classha__ndbcluster_aa7c34f1ba38d98ac501de119c7933dce}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!index\+\_\+read\+\_\+pushed@{index\+\_\+read\+\_\+pushed}}
+\index{index\+\_\+read\+\_\+pushed@{index\+\_\+read\+\_\+pushed}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{index\+\_\+read\+\_\+pushed()}{index\_read\_pushed()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::index\+\_\+read\+\_\+pushed (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf,  }\item[{const uchar $\ast$}]{key,  }\item[{key\+\_\+part\+\_\+map}]{keypart\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the first record from an indexed table access being a child operation in a pushed join. Fetch will be from prefetched cached records which are materialized into the bound buffer areas as result of this call. 
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a5ff1e368997d6822e3285080fade11fe}\label{classha__ndbcluster_a5ff1e368997d6822e3285080fade11fe}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!inplace\+\_\+alter\+\_\+table@{inplace\+\_\+alter\+\_\+table}}
+\index{inplace\+\_\+alter\+\_\+table@{inplace\+\_\+alter\+\_\+table}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{inplace\+\_\+alter\+\_\+table()}{inplace\_alter\_table()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::inplace\+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{altered\+\_\+table,  }\item[{\mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$}]{ha\+\_\+alter\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Alter the table structure in-\/place with operations specified using H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+F\+L\+A\+GS and \mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}}. The level of concurrency allowed during this operation depends on the return value from \mbox{\hyperlink{classha__ndbcluster_a178fe8e973508932db3d3d6ca3a625a9}{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter()}}.
+
+\begin{DoxyNote}{Note}
+Storage engines are responsible for reporting any errors by calling my\+\_\+error()/print\+\_\+error()
+
+If this function reports error, \mbox{\hyperlink{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}{commit\+\_\+inplace\+\_\+alter\+\_\+table()}} will be called with commit= false.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em altered\+\_\+table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for new version of table. \\
+\hline
+{\em ha\+\_\+alter\+\_\+info} & Structure describing changes to be done by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and holding data used during in-\/place alter.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Error \\
+\hline
+{\em false} & Success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a90b4c3a8fe1c89c6ccfec1f4b144754a}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a6adf9b7e7b7357f464a01f9a7ed2a1ee}\label{classha__ndbcluster_a6adf9b7e7b7357f464a01f9a7ed2a1ee}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index@{is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index}}
+\index{is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index@{is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index()}{is\_fk\_defined\_on\_table\_or\_index()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::is\+\_\+fk\+\_\+defined\+\_\+on\+\_\+table\+\_\+or\+\_\+index (\begin{DoxyParamCaption}\item[{uint}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+If index == M\+A\+X\+\_\+\+K\+EY then a check for table is made and if index $<$ M\+A\+X\+\_\+\+K\+EY then a check is made if the table has foreign keys and if a foreign key uses this index (and thus the index cannot be dropped).
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to check if foreign key uses it\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Foreign key defined on table or index \\
+\hline
+{\em F\+A\+L\+SE} & No foreign key defined \\
+\hline
+\end{DoxyRetVals}
+This doesnt seem implemented in Innodb either...
+
+Reimplemented from \mbox{\hyperlink{classhandler_adda33331aacc500b1b974033cb64a869}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a95efd97175c4d0f4e5548473b6759e31}\label{classha__ndbcluster_a95efd97175c4d0f4e5548473b6759e31}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!is\+\_\+ignorable\+\_\+error@{is\+\_\+ignorable\+\_\+error}}
+\index{is\+\_\+ignorable\+\_\+error@{is\+\_\+ignorable\+\_\+error}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{is\+\_\+ignorable\+\_\+error()}{is\_ignorable\_error()}}
+{\footnotesize\ttfamily virtual bool ha\+\_\+ndbcluster\+::is\+\_\+ignorable\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determine whether an error can be ignored or not. 
+
+This method is used to analyze the error to see whether the error is ignorable or not. Such errors will be reported as warnings instead of errors for I\+G\+N\+O\+RE statements. This means that the statement will not abort, but instead continue to the next row.
+
+H\+A\+\_\+\+E\+R\+R\+\_\+\+F\+O\+U\+N\+D\+\_\+\+D\+U\+P\+\_\+\+U\+N\+I\+Q\+UE is a special case in My\+I\+S\+AM that means the same thing as H\+A\+\_\+\+E\+R\+R\+\_\+\+F\+O\+U\+N\+D\+\_\+\+D\+U\+P\+\_\+\+K\+EY, but can in some cases lead to a slightly different error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & error code received from the handler interface (H\+A\+\_\+\+E\+R\+R\+\_\+...)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the error is ignorablel or not 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & the error is ignorable \\
+\hline
+{\em false} & the error is not ignorable\\
+\hline
+\end{DoxyRetVals}
+This method is used to analyse the error to see whether the error is ignorable or not. Further comments in header file. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a39c5919d6a3f3098353f4517e2c81037}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_ac5921b0992ea58b7698d649fcc7d50c1}\label{classha__ndbcluster_ac5921b0992ea58b7698d649fcc7d50c1}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!local\+\_\+close@{local\+\_\+close}}
+\index{local\+\_\+close@{local\+\_\+close}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{local\+\_\+close()}{local\_close()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::local\+\_\+close (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{release\+\_\+metadata\+\_\+flag }\end{DoxyParamCaption})}
+
+Close the table
+\begin{DoxyItemize}
+\item release resources setup by \mbox{\hyperlink{classha__ndbcluster_a5e1e0e1c8aa3764c955f46b8845b7a1a}{open()}} 
+\end{DoxyItemize}\mbox{\Hypertarget{classha__ndbcluster_a90a74f871433b2534301b2b9ac6aecbf}\label{classha__ndbcluster_a90a74f871433b2534301b2b9ac6aecbf}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!maybe\+\_\+pushable\+\_\+join@{maybe\+\_\+pushable\+\_\+join}}
+\index{maybe\+\_\+pushable\+\_\+join@{maybe\+\_\+pushable\+\_\+join}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{maybe\+\_\+pushable\+\_\+join()}{maybe\_pushable\_join()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::maybe\+\_\+pushable\+\_\+join (\begin{DoxyParamCaption}\item[{const char $\ast$\&}]{reason }\end{DoxyParamCaption}) const}
+
+First level of filtering tables which {\itshape maybe} may be part of a pushed query\+: Returning \textquotesingle{}false\textquotesingle{} will eliminate this table from being a part of a pushed join. A \textquotesingle{}reason\textquotesingle{} for rejecting this table is required if \textquotesingle{}false\textquotesingle{} is returned. \mbox{\Hypertarget{classha__ndbcluster_af561f07d996700a18cd0eb636a14f32e}\label{classha__ndbcluster_af561f07d996700a18cd0eb636a14f32e}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!multi\+\_\+range\+\_\+read\+\_\+info@{multi\+\_\+range\+\_\+read\+\_\+info}}
+\index{multi\+\_\+range\+\_\+read\+\_\+info@{multi\+\_\+range\+\_\+read\+\_\+info}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{multi\+\_\+range\+\_\+read\+\_\+info()}{multi\_range\_read\_info()}}
+{\footnotesize\ttfamily ha\+\_\+rows ha\+\_\+ndbcluster\+::multi\+\_\+range\+\_\+read\+\_\+info (\begin{DoxyParamCaption}\item[{uint}]{keyno,  }\item[{uint}]{n\+\_\+ranges,  }\item[{uint}]{n\+\_\+rows,  }\item[{uint $\ast$}]{bufsz,  }\item[{uint $\ast$}]{flags,  }\item[{\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get cost and other information about M\+RR scan over some sequence of ranges
+
+Calculate estimated cost and other information about an M\+RR scan for some sequence of ranges.
+
+The ranges themselves will be known only at execution phase. When this function is called we only know number of ranges and a (rough) E(\mbox{\hyperlink{classha__ndbcluster_a31757e2658abd318909a0d190a3795c0}{records}}) within those ranges.
+
+Currently this function is only called for \char`\"{}n-\/keypart singlepoint\char`\"{} ranges, i.\+e. each range is \char`\"{}keypart1=someconst1 A\+N\+D ... A\+N\+D keypart\+N=someconst\+N\char`\"{}
+
+The flags parameter is a combination of those flags\+: H\+A\+\_\+\+M\+R\+R\+\_\+\+S\+O\+R\+T\+ED, H\+A\+\_\+\+M\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+N\+LY, H\+A\+\_\+\+M\+R\+R\+\_\+\+N\+O\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+ON, H\+A\+\_\+\+M\+R\+R\+\_\+\+L\+I\+M\+I\+TS.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyno} & Index number \\
+\hline
+{\em n\+\_\+ranges} & Estimated number of ranges (i.\+e. intervals) in the range sequence. \\
+\hline
+{\em n\+\_\+rows} & Estimated total number of records contained within all of the ranges \\
+\hline
+{\em bufsz\mbox{[}in,out\mbox{]}} & IN\+: Size of the buffer available for use O\+UT\+: Size of the buffer that will be actually used, or 0 if buffer is not needed. \\
+\hline
+{\em flags\mbox{[}in,out\mbox{]}} & A combination of H\+A\+\_\+\+M\+R\+R\+\_\+$\ast$ flags \\
+\hline
+{\em cost\mbox{[}out\mbox{]}} & Estimated cost of M\+RR access\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK, $\ast$cost contains cost of the scan, $\ast$bufsz and $\ast$flags contain scan parameters. \\
+\hline
+{\em other} & Error or can\textquotesingle{}t perform the requested scan \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a5add40a6cd7088ffef25a3816294b624}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_abc8e0c56a5a9150ece910a132a05e826}\label{classha__ndbcluster_abc8e0c56a5a9150ece910a132a05e826}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const@{multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const}}
+\index{multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const@{multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const()}{multi\_range\_read\_info\_const()}}
+{\footnotesize\ttfamily ha\+\_\+rows ha\+\_\+ndbcluster\+::multi\+\_\+range\+\_\+read\+\_\+info\+\_\+const (\begin{DoxyParamCaption}\item[{uint}]{keyno,  }\item[{\mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$}]{seq,  }\item[{void $\ast$}]{seq\+\_\+init\+\_\+param,  }\item[{uint}]{n\+\_\+ranges\+\_\+arg,  }\item[{uint $\ast$}]{bufsz,  }\item[{uint $\ast$}]{flags,  }\item[{\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} $\ast$}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get cost and other information about M\+RR scan over a known list of ranges
+
+Calculate estimated cost and other information about an M\+RR scan for given sequence of ranges.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyno} & Index number \\
+\hline
+{\em seq} & Range sequence to be traversed \\
+\hline
+{\em seq\+\_\+init\+\_\+param} & First parameter for seq-\/$>$\mbox{\hyperlink{classhandler_ab1ad6edb66592b200a7c7ac0f947dc66}{init()}} \\
+\hline
+{\em n\+\_\+ranges\+\_\+arg} & Number of ranges in the sequence, or 0 if the caller can\textquotesingle{}t efficiently determine it \\
+\hline
+{\em bufsz\mbox{[}in,out\mbox{]}} & IN\+: Size of the buffer available for use O\+UT\+: Size of the buffer that is expected to be actually used, or 0 if buffer is not needed. \\
+\hline
+{\em flags\mbox{[}in,out\mbox{]}} & A combination of H\+A\+\_\+\+M\+R\+R\+\_\+$\ast$ flags \\
+\hline
+{\em cost\mbox{[}out\mbox{]}} & Estimated cost of M\+RR access\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method (or an overriding one in a derived class) must check for thd-\/$>$killed and return H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR if it is not zero. This is required for a user to be able to interrupt the calculation by killing the connection/query.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR} & Error or the engine is unable to perform the requested scan. Values of O\+UT parameters are undefined. \\
+\hline
+{\em other} & OK, $\ast$cost contains cost of the scan, $\ast$bufsz and $\ast$flags contain scan parameters. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a5ee356d2340552eb121d423fc01597f8}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_aba9c67b0e6bdfc66f40e30b0bccecabf}\label{classha__ndbcluster_aba9c67b0e6bdfc66f40e30b0bccecabf}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!multi\+\_\+range\+\_\+read\+\_\+init@{multi\+\_\+range\+\_\+read\+\_\+init}}
+\index{multi\+\_\+range\+\_\+read\+\_\+init@{multi\+\_\+range\+\_\+read\+\_\+init}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{multi\+\_\+range\+\_\+read\+\_\+init()}{multi\_range\_read\_init()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::multi\+\_\+range\+\_\+read\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structst__range__seq__if}{R\+A\+N\+G\+E\+\_\+\+S\+E\+Q\+\_\+\+IF}} $\ast$}]{seq,  }\item[{void $\ast$}]{seq\+\_\+init\+\_\+param,  }\item[{uint}]{n\+\_\+ranges,  }\item[{uint}]{mode,  }\item[{\mbox{\hyperlink{structst__handler__buffer}{H\+A\+N\+D\+L\+E\+R\+\_\+\+B\+U\+F\+F\+ER}} $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Multi Range Read interface There may still be an open m\+\_\+multi\+\_\+cursor from the previous mrr access on this handler. Close it now to free up resources for this Ndb\+Scan\+Operation.
+
+Reimplemented from \mbox{\hyperlink{classhandler_a33e8899f4bae262b6b91c7284f1d946e}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a63ab7aa4c5bedaae4a2edb452da67fc8}\label{classha__ndbcluster_a63ab7aa4c5bedaae4a2edb452da67fc8}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!multi\+\_\+range\+\_\+read\+\_\+next@{multi\+\_\+range\+\_\+read\+\_\+next}}
+\index{multi\+\_\+range\+\_\+read\+\_\+next@{multi\+\_\+range\+\_\+read\+\_\+next}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{multi\+\_\+range\+\_\+read\+\_\+next()}{multi\_range\_read\_next()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::multi\+\_\+range\+\_\+read\+\_\+next (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{range\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get next record in M\+RR scan
+
+Default M\+RR implementation\+: read the next record
+
+
+\begin{DoxyParams}{Parameters}
+{\em range\+\_\+info} & O\+UT Undefined if H\+A\+\_\+\+M\+R\+R\+\_\+\+N\+O\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+ON flag is in effect Otherwise, the opaque value associated with the range that contains the returned record.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em other} & Error code \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a3419071f3d4abf183dac95ef565adfff}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a2e656837653854c38ee70a7cb46515c6}\label{classha__ndbcluster_a2e656837653854c38ee70a7cb46515c6}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!notify\+\_\+table\+\_\+changed@{notify\+\_\+table\+\_\+changed}}
+\index{notify\+\_\+table\+\_\+changed@{notify\+\_\+table\+\_\+changed}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{notify\+\_\+table\+\_\+changed()}{notify\_table\_changed()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::notify\+\_\+table\+\_\+changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Notify the storage engine that the table structure (.F\+RM) has been updated.
+
+\begin{DoxyNote}{Note}
+No errors are allowed during \mbox{\hyperlink{classha__ndbcluster_a2e656837653854c38ee70a7cb46515c6}{notify\+\_\+table\+\_\+changed()}}. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a26aaaf2105e60ca590b79fae82e48960}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a6aaba12f45b013e5dc180f40463e802a}\label{classha__ndbcluster_a6aaba12f45b013e5dc180f40463e802a}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!number\+\_\+of\+\_\+pushed\+\_\+joins@{number\+\_\+of\+\_\+pushed\+\_\+joins}}
+\index{number\+\_\+of\+\_\+pushed\+\_\+joins@{number\+\_\+of\+\_\+pushed\+\_\+joins}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+pushed\+\_\+joins()}{number\_of\_pushed\_joins()}}
+{\footnotesize\ttfamily uint ha\+\_\+ndbcluster\+::number\+\_\+of\+\_\+pushed\+\_\+joins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reports \#tables included in pushed join which this handler instance is part of. ==0 -\/$>$ Not pushed 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a86930bf10b20ad19b3df07e07d28116e}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a5e1e0e1c8aa3764c955f46b8845b7a1a}\label{classha__ndbcluster_a5e1e0e1c8aa3764c955f46b8845b7a1a}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!open@{open}}
+\index{open@{open}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{int}]{mode,  }\item[{uint}]{test\+\_\+if\+\_\+locked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Open a table for further use
+\begin{DoxyItemize}
+\item fetch metadata for this table from N\+DB
+\item check that table exists
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok \\
+\hline
+{\em $<$} & 0 Table has changed \\
+\hline
+\end{DoxyRetVals}
+No share present...we must create one
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a9faa32fde75fed4ebafffd11b6c5638e}\label{classha__ndbcluster_a9faa32fde75fed4ebafffd11b6c5638e}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!parent\+\_\+of\+\_\+pushed\+\_\+join@{parent\+\_\+of\+\_\+pushed\+\_\+join}}
+\index{parent\+\_\+of\+\_\+pushed\+\_\+join@{parent\+\_\+of\+\_\+pushed\+\_\+join}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{parent\+\_\+of\+\_\+pushed\+\_\+join()}{parent\_of\_pushed\_join()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ ha\+\_\+ndbcluster\+::parent\+\_\+of\+\_\+pushed\+\_\+join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+If this handler instance is a child in a pushed join sequence returned \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance being my parent? 
+
+Reimplemented from \mbox{\hyperlink{classhandler_aaef865015edc575d0a50d1a6f5b13e4a}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_ae47b8413b29048108a6ee92af729ea46}\label{classha__ndbcluster_ae47b8413b29048108a6ee92af729ea46}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!position@{position}}
+\index{position@{position}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::position (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Store the primary key of this record in ref variable, so that the row can be retrieved again later using \char`\"{}reference\char`\"{} in rnd\+\_\+pos. Keys always use 2 bytes length
+
+We have to zero-\/pad any unused V\+A\+R\+C\+H\+AR buffer so that My\+S\+QL is able to use simple memcmp to compare two instances of the same unique key value to determine if they are equal. My\+S\+QL does this to compare contents of two \textquotesingle{}ref\textquotesingle{} values. (Duplicate weedout algorithm is one such case.)
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}\label{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!prepare\+\_\+inplace\+\_\+alter\+\_\+table@{prepare\+\_\+inplace\+\_\+alter\+\_\+table}}
+\index{prepare\+\_\+inplace\+\_\+alter\+\_\+table@{prepare\+\_\+inplace\+\_\+alter\+\_\+table}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{prepare\+\_\+inplace\+\_\+alter\+\_\+table()}{prepare\_inplace\_alter\_table()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::prepare\+\_\+inplace\+\_\+alter\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{altered\+\_\+table,  }\item[{\mbox{\hyperlink{classAlter__inplace__info}{Alter\+\_\+inplace\+\_\+info}} $\ast$}]{ha\+\_\+alter\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allows the storage engine to update internal structures with concurrent writes blocked. If \mbox{\hyperlink{classha__ndbcluster_a178fe8e973508932db3d3d6ca3a625a9}{check\+\_\+if\+\_\+supported\+\_\+inplace\+\_\+alter()}} returns H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+N\+O\+\_\+\+L\+O\+C\+K\+\_\+\+A\+F\+T\+E\+R\+\_\+\+P\+R\+E\+P\+A\+RE or H\+A\+\_\+\+A\+L\+T\+E\+R\+\_\+\+I\+N\+P\+L\+A\+C\+E\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+A\+F\+T\+E\+R\+\_\+\+P\+R\+E\+P\+A\+RE, this function is called with exclusive lock otherwise the same level of locking as for \mbox{\hyperlink{classha__ndbcluster_a5ff1e368997d6822e3285080fade11fe}{inplace\+\_\+alter\+\_\+table()}} will be used.
+
+\begin{DoxyNote}{Note}
+Storage engines are responsible for reporting any errors by calling my\+\_\+error()/print\+\_\+error()
+
+If this function reports error, \mbox{\hyperlink{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}{commit\+\_\+inplace\+\_\+alter\+\_\+table()}} will be called with commit= false.
+
+For partitioning, failing to prepare one partition, means that \mbox{\hyperlink{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}{commit\+\_\+inplace\+\_\+alter\+\_\+table()}} will be called to roll back changes for all partitions. This means that \mbox{\hyperlink{classha__ndbcluster_af55db4a0efc9c99947b72b4bfc83b8ad}{commit\+\_\+inplace\+\_\+alter\+\_\+table()}} might be called without \mbox{\hyperlink{classha__ndbcluster_a3d7235ae7ee13ad3a572af0fd5c15291}{prepare\+\_\+inplace\+\_\+alter\+\_\+table()}} having been called first for a given partition.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em altered\+\_\+table} & \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} object for new version of table. \\
+\hline
+{\em ha\+\_\+alter\+\_\+info} & Structure describing changes to be done by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and holding data used during in-\/place alter.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Error \\
+\hline
+{\em false} & Success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_ab25b3931a457f1821ba55ae9cce79d98}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_abf1a2f928fcc952bbe31d8c496ef0dce}\label{classha__ndbcluster_abf1a2f928fcc952bbe31d8c496ef0dce}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!primary\+\_\+key\+\_\+is\+\_\+clustered@{primary\+\_\+key\+\_\+is\+\_\+clustered}}
+\index{primary\+\_\+key\+\_\+is\+\_\+clustered@{primary\+\_\+key\+\_\+is\+\_\+clustered}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{primary\+\_\+key\+\_\+is\+\_\+clustered()}{primary\_key\_is\_clustered()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::primary\+\_\+key\+\_\+is\+\_\+clustered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if the primary key is clustered or not.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Primary key (if there is one) is a clustered key covering all fields \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a1c885f4b3b5bf6d2878225a188b5599f}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_ab4b4b9ed3726be8a4a0887785a5ed530}\label{classha__ndbcluster_ab4b4b9ed3726be8a4a0887785a5ed530}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!print\+\_\+error@{print\+\_\+error}}
+\index{print\+\_\+error@{print\+\_\+error}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{print\+\_\+error()}{print\_error()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::print\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{myf}]{errflag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Print error that we got from handler function.
+
+\begin{DoxyNote}{Note}
+In case of delete table it\textquotesingle{}s only safe to use the following parts of the \textquotesingle{}table\textquotesingle{} structure\+:
+\begin{DoxyItemize}
+\item table-\/$>$s-\/$>$path
+\item table-\/$>$alias 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_afda4f1390385a4dc0bfd2981fee23e6c}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a4ebf9b2b84870f08b62e5e3f5465aae8}\label{classha__ndbcluster_a4ebf9b2b84870f08b62e5e3f5465aae8}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!read\+\_\+range\+\_\+first@{read\+\_\+range\+\_\+first}}
+\index{read\+\_\+range\+\_\+first@{read\+\_\+range\+\_\+first}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{read\+\_\+range\+\_\+first()}{read\_range\_first()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::read\+\_\+range\+\_\+first (\begin{DoxyParamCaption}\item[{const key\+\_\+range $\ast$}]{start\+\_\+key,  }\item[{const key\+\_\+range $\ast$}]{end\+\_\+key,  }\item[{bool}]{eq\+\_\+range\+\_\+arg,  }\item[{bool}]{sorted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read first row between two ranges. Store ranges for future calls to read\+\_\+range\+\_\+next. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+\_\+key} & Start key. Is 0 if no min range \\
+\hline
+{\em end\+\_\+key} & End key. Is 0 if no max range \\
+\hline
+{\em eq\+\_\+range\+\_\+arg} & Set to 1 if start\+\_\+key == end\+\_\+key \\
+\hline
+{\em sorted} & Set to 1 if result should be sorted per key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Record is read into table-\/$>$record\mbox{[}0\mbox{]}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Found row \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE} & No rows in range \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a3a0d596ff3ddc77b4f0ad990c4c4cb4b}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_ac4ca12e4aa287eaf6a50c43219a1c776}\label{classha__ndbcluster_ac4ca12e4aa287eaf6a50c43219a1c776}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!read\+\_\+range\+\_\+next@{read\+\_\+range\+\_\+next}}
+\index{read\+\_\+range\+\_\+next@{read\+\_\+range\+\_\+next}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{read\+\_\+range\+\_\+next()}{read\_range\_next()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::read\+\_\+range\+\_\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Read next row between two endpoints. 
+
+\begin{DoxyNote}{Note}
+Record is read into table-\/$>$record\mbox{[}0\mbox{]}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Found row \\
+\hline
+{\em H\+A\+\_\+\+E\+R\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE} & No rows in range \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_ae4632aa56c9c66a57558f849f8e01271}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a31757e2658abd318909a0d190a3795c0}\label{classha__ndbcluster_a31757e2658abd318909a0d190a3795c0}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!records@{records}}
+\index{records@{records}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{records()}{records()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::records (\begin{DoxyParamCaption}\item[{ha\+\_\+rows $\ast$}]{num\+\_\+rows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Number of rows in table. It will only be called if (\mbox{\hyperlink{classha__ndbcluster_a99dc30c67efa4a7d6d6f3ded9a67b40b}{table\+\_\+flags()}} \& (H\+A\+\_\+\+H\+A\+S\+\_\+\+R\+E\+C\+O\+R\+DS $\vert$ H\+A\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+C\+O\+R\+D\+S\+\_\+\+I\+S\+\_\+\+E\+X\+A\+CT)) != 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em num\+\_\+rows} & number of rows in table. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & for OK, one of the H\+A\+\_\+xxx values in case of error. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_ae5b7b96354fd25da35a940e656d91940}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_acba30a6612e51eb9b5bd9a205d90a505}\label{classha__ndbcluster_acba30a6612e51eb9b5bd9a205d90a505}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!records\+\_\+in\+\_\+range@{records\+\_\+in\+\_\+range}}
+\index{records\+\_\+in\+\_\+range@{records\+\_\+in\+\_\+range}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{records\+\_\+in\+\_\+range()}{records\_in\_range()}}
+{\footnotesize\ttfamily ha\+\_\+rows ha\+\_\+ndbcluster\+::records\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{uint}]{inx,  }\item[{key\+\_\+range $\ast$}]{min\+\_\+key,  }\item[{key\+\_\+range $\ast$}]{max\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+optmizer thinks that all values $<$ 2 are exact...but but we don\textquotesingle{}t provide exact statistics
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_abef3e8ffe1d4b952fc59b356d3d5f142}\label{classha__ndbcluster_abef3e8ffe1d4b952fc59b356d3d5f142}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!register\+\_\+query\+\_\+cache\+\_\+table@{register\+\_\+query\+\_\+cache\+\_\+table}}
+\index{register\+\_\+query\+\_\+cache\+\_\+table@{register\+\_\+query\+\_\+cache\+\_\+table}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{register\+\_\+query\+\_\+cache\+\_\+table()}{register\_query\_cache\_table()}}
+{\footnotesize\ttfamily my\+\_\+bool ha\+\_\+ndbcluster\+::register\+\_\+query\+\_\+cache\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{char $\ast$}]{full\+\_\+name,  }\item[{size\+\_\+t}]{full\+\_\+name\+\_\+len,  }\item[{qc\+\_\+engine\+\_\+callback $\ast$}]{engine\+\_\+callback,  }\item[{ulonglong $\ast$}]{engine\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Register a table for use in the query cache.
+
+Fetch the commit\+\_\+count for the table and return it in engine\+\_\+data, this will later be used to check if the table has changed, before the cached query is reused.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & thread handle \\
+\hline
+ & {\em full\+\_\+name} & normalized path to the table in the canonical format. \\
+\hline
+ & {\em full\+\_\+name\+\_\+len} & length of the normalized path to the table. \\
+\hline
+ & {\em engine\+\_\+callback} & function to be called before using cache on this table \\
+\hline
+\mbox{\texttt{ out}}  & {\em engine\+\_\+data} & commit\+\_\+count for this table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Yes, it\textquotesingle{}s ok to cahce this query \\
+\hline
+{\em F\+A\+L\+SE} & No, don\textquotesingle{}t cach the query \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_af42324038f030519d7476bf915780341}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a58176e049237d75781412ad1e75e4d0f}\label{classha__ndbcluster_a58176e049237d75781412ad1e75e4d0f}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!release\+\_\+completed\+\_\+operations@{release\+\_\+completed\+\_\+operations}}
+\index{release\+\_\+completed\+\_\+operations@{release\+\_\+completed\+\_\+operations}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{release\+\_\+completed\+\_\+operations()}{release\_completed\_operations()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::release\+\_\+completed\+\_\+operations (\begin{DoxyParamCaption}\item[{Ndb\+Transaction $\ast$}]{trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+mysqld reads/write blobs fully, which means that it does not keep blobs open/active over execute, which means that it should be safe to release anything completed here
+
+i.\+e don\textquotesingle{}t check for blobs, but just go ahead and release\mbox{\Hypertarget{classha__ndbcluster_a5609bf8b91966dacc3610fc7ceffc314}\label{classha__ndbcluster_a5609bf8b91966dacc3610fc7ceffc314}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!rename\+\_\+table@{rename\+\_\+table}}
+\index{rename\+\_\+table@{rename\+\_\+table}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{rename\+\_\+table()}{rename\_table()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::rename\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{const char $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Rename a table in N\+DB and on the participating mysqld(s) 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a58bf8fa32d87654794e6b1c3b3fb8d32}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a72ae34dfc88079bca1c85bfcd718b118}\label{classha__ndbcluster_a72ae34dfc88079bca1c85bfcd718b118}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!reset@{reset}}
+\index{reset@{reset}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reset state of file to after \textquotesingle{}open\textquotesingle{}. This function is called after every statement for all tables used by that statement. 
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_acb923144766720049d59f97cd70286fd}\label{classha__ndbcluster_acb923144766720049d59f97cd70286fd}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!rnd\+\_\+init@{rnd\+\_\+init}}
+\index{rnd\+\_\+init@{rnd\+\_\+init}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{rnd\+\_\+init()}{rnd\_init()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::rnd\+\_\+init (\begin{DoxyParamCaption}\item[{bool}]{scan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classha__ndbcluster_acb923144766720049d59f97cd70286fd}{rnd\+\_\+init()}} can be called two times without rnd\+\_\+end() in between (it only makes sense if scan=1). then the second call should prepare for the new table scan (e.\+g if rnd\+\_\+init allocates the cursor, second call should position it to the start of the table, no need to deallocate and allocate it again 
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_adc93bae43a800cc5ba5057b306136de1}\label{classha__ndbcluster_adc93bae43a800cc5ba5057b306136de1}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!rnd\+\_\+next@{rnd\+\_\+next}}
+\index{rnd\+\_\+next@{rnd\+\_\+next}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{rnd\+\_\+next()}{rnd\_next()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::rnd\+\_\+next (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classhandler_a48cb9c94ca93dbfbb7e92822caba82a1}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a8980053ce56e386ced321a1ad88d1cc2}\label{classha__ndbcluster_a8980053ce56e386ced321a1ad88d1cc2}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!rnd\+\_\+pos@{rnd\+\_\+pos}}
+\index{rnd\+\_\+pos@{rnd\+\_\+pos}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{rnd\+\_\+pos()}{rnd\_pos()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::rnd\+\_\+pos (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf,  }\item[{uchar $\ast$}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+An \char`\"{}interesting\char`\"{} record has been found and it\textquotesingle{}s pk retrieved by calling position. Now it\textquotesingle{}s time to read the record from db once again. When using rnd\+\_\+pos server first retrives a set of records (typically scans them) and store a unique identifier (for ndb this is the primary key) and later retreives the record again using rnd\+\_\+pos and the saved primary key. For ndb, since we only support committed read the record could have been deleted in between the \char`\"{}save\char`\"{} and the rnd\+\_\+pos. Therefor we return H\+A\+\_\+\+E\+R\+R\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+D\+E\+L\+E\+T\+ED in this case rather than H\+A\+\_\+\+E\+R\+R\+\_\+\+K\+E\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND (which will cause statment to be aborted)
+
+~\newline
+ 
+
+Implements \mbox{\hyperlink{classhandler_adf659edd9d870e90c8974ae0eba7a082}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_abf2a5948eca40262f5d533d7c57ca414}\label{classha__ndbcluster_abf2a5948eca40262f5d533d7c57ca414}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!root\+\_\+of\+\_\+pushed\+\_\+join@{root\+\_\+of\+\_\+pushed\+\_\+join}}
+\index{root\+\_\+of\+\_\+pushed\+\_\+join@{root\+\_\+of\+\_\+pushed\+\_\+join}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{root\+\_\+of\+\_\+pushed\+\_\+join()}{root\_of\_pushed\_join()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ ha\+\_\+ndbcluster\+::root\+\_\+of\+\_\+pushed\+\_\+join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+If this handler instance is part of a pushed join sequence returned \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} instance being root of the pushed query? 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a624f6946109f48559e92a9e7c1b86517}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a21574780af8b6cdc0bbcf8dc5ccb5164}\label{classha__ndbcluster_a21574780af8b6cdc0bbcf8dc5ccb5164}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!scan\+\_\+time@{scan\+\_\+time}}
+\index{scan\+\_\+time@{scan\+\_\+time}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{scan\+\_\+time()}{scan\_time()}}
+{\footnotesize\ttfamily double ha\+\_\+ndbcluster\+::scan\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+How many seeks it will take to read through the table.
+
+This is to be comparable to the number returned by records\+\_\+in\+\_\+range so that we can decide if we should scan the table or use keys. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a65f8e5188e2bd9636a564bbc0c3fef86}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a1a9f8c543b010643808df803f7db9e1b}\label{classha__ndbcluster_a1a9f8c543b010643808df803f7db9e1b}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!set\+\_\+dbname@{set\+\_\+dbname}}
+\index{set\+\_\+dbname@{set\+\_\+dbname}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{set\+\_\+dbname()}{set\_dbname()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::set\+\_\+dbname (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path\+\_\+name,  }\item[{char $\ast$}]{dbname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set a given location from full pathname to database name. \mbox{\Hypertarget{classha__ndbcluster_a3432f398baec4d4ebc0b02af534bd860}\label{classha__ndbcluster_a3432f398baec4d4ebc0b02af534bd860}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!set\+\_\+tabname@{set\+\_\+tabname}}
+\index{set\+\_\+tabname@{set\+\_\+tabname}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{set\+\_\+tabname()}{set\_tabname()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::set\+\_\+tabname (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path\+\_\+name,  }\item[{char $\ast$}]{tabname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set a given location from full pathname to table file. \mbox{\Hypertarget{classha__ndbcluster_aa852a48bce2fe6fbbe70b83022d74ed2}\label{classha__ndbcluster_aa852a48bce2fe6fbbe70b83022d74ed2}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!start\+\_\+bulk\+\_\+update@{start\+\_\+bulk\+\_\+update}}
+\index{start\+\_\+bulk\+\_\+update@{start\+\_\+bulk\+\_\+update}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{start\+\_\+bulk\+\_\+update()}{start\_bulk\_update()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::start\+\_\+bulk\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update one record in N\+DB using primary key. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_a7488245f51aa4676c872bb0564dbe71f}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a55b76e2e6595d838981a54951aa3f002}\label{classha__ndbcluster_a55b76e2e6595d838981a54951aa3f002}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!start\+\_\+read\+\_\+removal@{start\+\_\+read\+\_\+removal}}
+\index{start\+\_\+read\+\_\+removal@{start\+\_\+read\+\_\+removal}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{start\+\_\+read\+\_\+removal()}{start\_read\_removal()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbcluster\+::start\+\_\+read\+\_\+removal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Start read (before write) removal on the current table. \begin{DoxySeeAlso}{See also}
+H\+A\+\_\+\+R\+E\+A\+D\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+M\+O\+V\+AL 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_a3e2428788c2437e4e33c4b390cc697f7}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_aa8f1c0c15ca6a002403699eec20f24e6}\label{classha__ndbcluster_aa8f1c0c15ca6a002403699eec20f24e6}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!start\+\_\+stmt@{start\+\_\+stmt}}
+\index{start\+\_\+stmt@{start\+\_\+stmt}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{start\+\_\+stmt()}{start\_stmt()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbcluster\+::start\+\_\+stmt (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{thr\+\_\+lock\+\_\+type}]{lock\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Start statement, used when one of the tables are locked and also when a stored function is executed.
+
+\mbox{\hyperlink{classha__ndbcluster_aa8f1c0c15ca6a002403699eec20f24e6}{start\+\_\+stmt()}} thd Thd object lock\+\_\+type Lock type on table
+
+R\+E\+T\+U\+RN V\+A\+L\+UE 0 Success $>$0 Error code
+
+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON This call indicates the start of a statement when one of the tables in the statement are locked. In this case we cannot call external\+\_\+lock. It also implies that external\+\_\+lock is not called at end of statement. Rather the handlerton call commit (ndbcluster\+\_\+commit) is called to indicate end of transaction. There are cases thus when the commit call actually doesn\textquotesingle{}t refer to a commit but only to and end of statement.
+
+In the case of stored functions, one stored function is treated as one statement and the call to commit comes at the end of the stored function. 
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a5bc14d2819ddbc2d616e11db49d669de}\label{classha__ndbcluster_a5bc14d2819ddbc2d616e11db49d669de}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!store\+\_\+lock@{store\+\_\+lock}}
+\index{store\+\_\+lock@{store\+\_\+lock}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{store\+\_\+lock()}{store\_lock()}}
+{\footnotesize\ttfamily T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$ ha\+\_\+ndbcluster\+::store\+\_\+lock (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$}]{to,  }\item[{enum thr\+\_\+lock\+\_\+type}]{lock\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Is not invoked for non-\/transactional temporary tables.
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classha__ndbcluster_a5bc14d2819ddbc2d616e11db49d669de}{store\+\_\+lock()}} can return more than one lock if the table is M\+E\+R\+GE or partitioned.
+
+that one can N\+OT rely on table-\/$>$in\+\_\+use in \mbox{\hyperlink{classha__ndbcluster_a5bc14d2819ddbc2d616e11db49d669de}{store\+\_\+lock()}}. It may refer to a different thread if called from \mbox{\hyperlink{group__Locking_gad2320fa808c9d6523790e796d57e2331}{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread()}}.
+
+If the table is M\+E\+R\+GE, \mbox{\hyperlink{classha__ndbcluster_a5bc14d2819ddbc2d616e11db49d669de}{store\+\_\+lock()}} can return less locks than \mbox{\hyperlink{classhandler_a2447668275a831bcf73b5c00818254a6}{lock\+\_\+count()}} claimed. This can happen when the M\+E\+R\+GE children are not attached when this is called from another thread. 
+\end{DoxyNote}
+We need locks on source table when doing offline alter... In 5.\+1 this worked due to T\+L\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+E\+AD... but that has been removed in 5.\+5 I simply add this to get it...
+
+Implements \mbox{\hyperlink{classhandler_a2502e460566f2c4b506cc1b30eb79e0a}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_ac3a23eb89230938663a59fcf8fbe908b}\label{classha__ndbcluster_ac3a23eb89230938663a59fcf8fbe908b}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!table\+\_\+cache\+\_\+type@{table\+\_\+cache\+\_\+type}}
+\index{table\+\_\+cache\+\_\+type@{table\+\_\+cache\+\_\+type}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{table\+\_\+cache\+\_\+type()}{table\_cache\_type()}}
+{\footnotesize\ttfamily uint8 ha\+\_\+ndbcluster\+::table\+\_\+cache\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Type of table for caching query 
+
+Reimplemented from \mbox{\hyperlink{classhandler_ab4d7cf309121ec10e4150860c8caa12a}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a99dc30c67efa4a7d6d6f3ded9a67b40b}\label{classha__ndbcluster_a99dc30c67efa4a7d6d6f3ded9a67b40b}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!table\+\_\+flags@{table\+\_\+flags}}
+\index{table\+\_\+flags@{table\+\_\+flags}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{table\+\_\+flags()}{table\_flags()}}
+{\footnotesize\ttfamily ulonglong ha\+\_\+ndbcluster\+::table\+\_\+flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+To maximize join pushability we want const-\/table optimization blocked if \textquotesingle{}ndb\+\_\+join\+\_\+pushdown= on\textquotesingle{}
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_a96d160419836ac20e131570a32e1c4a8}\label{classha__ndbcluster_a96d160419836ac20e131570a32e1c4a8}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!table\+\_\+type@{table\+\_\+type}}
+\index{table\+\_\+type@{table\+\_\+type}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{table\+\_\+type()}{table\_type()}}
+{\footnotesize\ttfamily const char $\ast$ ha\+\_\+ndbcluster\+::table\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The following can be called without an open handler 
+
+Implements \mbox{\hyperlink{classhandler_ad38f5d3f1e026a0af32b5542aa5ac2f9}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbcluster_aecef434c45b2c6c35a584274c5079e4b}\label{classha__ndbcluster_aecef434c45b2c6c35a584274c5079e4b}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!unlock\+\_\+row@{unlock\+\_\+row}}
+\index{unlock\+\_\+row@{unlock\+\_\+row}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{unlock\+\_\+row()}{unlock\_row()}}
+{\footnotesize\ttfamily void ha\+\_\+ndbcluster\+::unlock\+\_\+row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Unlock the last row read in an open scan. Rows are unlocked by default in ndb, but for S\+E\+L\+E\+CT F\+OR U\+P\+D\+A\+TE and S\+E\+L\+E\+CT L\+O\+CK W\+IT S\+H\+A\+RE M\+O\+DE locks are kept if \mbox{\hyperlink{classha__ndbcluster_aecef434c45b2c6c35a584274c5079e4b}{unlock\+\_\+row()}} is not called. 
+
+Reimplemented from \mbox{\hyperlink{classhandler}{handler}}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classha__ndbcluster_ae2bd9470fe7beb5dc3481654718f39b7}\label{classha__ndbcluster_ae2bd9470fe7beb5dc3481654718f39b7}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!ndbcluster\+\_\+commit@{ndbcluster\+\_\+commit}}
+\index{ndbcluster\+\_\+commit@{ndbcluster\+\_\+commit}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+commit}{ndbcluster\_commit}}
+{\footnotesize\ttfamily int ndbcluster\+\_\+commit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{hton,  }\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Commit a transaction started in N\+DB. \mbox{\Hypertarget{classha__ndbcluster_a81d2867500d8a5c574e4e22d1b407d80}\label{classha__ndbcluster_a81d2867500d8a5c574e4e22d1b407d80}} 
+\index{ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}!ndbcluster\+\_\+drop\+\_\+database\+\_\+impl@{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}}
+\index{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl@{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}!ha\+\_\+ndbcluster@{ha\+\_\+ndbcluster}}
+\subsubsection{\texorpdfstring{ndbcluster\+\_\+drop\+\_\+database\+\_\+impl}{ndbcluster\_drop\_database\_impl}}
+{\footnotesize\ttfamily int ndbcluster\+\_\+drop\+\_\+database\+\_\+impl (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Drop a database in N\+DB Cluster
+
+\begin{DoxyNote}{Note}
+add a dummy void function, since stupid handlerton is returning void instead of int... 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndbcluster.\+h\item 
+ha\+\_\+ndb\+\_\+ddl\+\_\+fk.\+cc\item 
+ha\+\_\+ndb\+\_\+index\+\_\+stat.\+cc\item 
+\mbox{\hyperlink{ha__ndbcluster_8cc}{ha\+\_\+ndbcluster.\+cc}}\end{DoxyCompactItemize}

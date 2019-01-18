@@ -1,0 +1,60 @@
+\hypertarget{classPTI__function__call__generic__2d}{}\section{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d Class Reference}
+\label{classPTI__function__call__generic__2d}\index{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d@{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+items.\+h$>$}
+
+Inheritance diagram for P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPTI__function__call__generic__2d}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPTI__function__call__generic__2d_a67ea81a0535dcc9097c1399038f8d010}\label{classPTI__function__call__generic__2d_a67ea81a0535dcc9097c1399038f8d010}} 
+{\bfseries P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&db\+\_\+arg, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&func\+\_\+arg, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$opt\+\_\+expr\+\_\+list\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classPTI__function__call__generic__2d_a8389488372c0fcd602892f942a9b73ed}{itemize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Parse tree \mbox{\hyperlink{classItem}{Item}} wrapper for 2-\/dimentional functional names (ex.\+: db.\+func\+\_\+name) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPTI__function__call__generic__2d_a8389488372c0fcd602892f942a9b73ed}\label{classPTI__function__call__generic__2d_a8389488372c0fcd602892f942a9b73ed}} 
+\index{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d@{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d}!itemize@{itemize}}
+\index{itemize@{itemize}!P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d@{P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d}}
+\subsubsection{\texorpdfstring{itemize()}{itemize()}}
+{\footnotesize\ttfamily virtual bool P\+T\+I\+\_\+function\+\_\+call\+\_\+generic\+\_\+2d\+::itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+The same as contextualize()/contextualize\+\_\+() but with additional parameter
+
+This function finalize the construction of \mbox{\hyperlink{classItem}{Item}} objects (see the \mbox{\hyperlink{classItem}{Item(\+P\+O\+S)}} constructor)\+: we can access/change parser contexts from the \mbox{\hyperlink{classPTI__function__call__generic__2d_a8389488372c0fcd602892f942a9b73ed}{itemize()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em pc} & current parse context \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{} or to a newly allocated replacement object to use in the \mbox{\hyperlink{classItem}{Item}} tree instead\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+items.\+h\end{DoxyCompactItemize}

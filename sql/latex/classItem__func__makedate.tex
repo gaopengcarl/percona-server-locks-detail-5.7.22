@@ -1,0 +1,41 @@
+\hypertarget{classItem__func__makedate}{}\section{Item\+\_\+func\+\_\+makedate Class Reference}
+\label{classItem__func__makedate}\index{Item\+\_\+func\+\_\+makedate@{Item\+\_\+func\+\_\+makedate}}
+Inheritance diagram for Item\+\_\+func\+\_\+makedate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__makedate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__makedate_a9af73eec78c84b85fcb765659de39868}\label{classItem__func__makedate_a9af73eec78c84b85fcb765659de39868}} 
+{\bfseries Item\+\_\+func\+\_\+makedate} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classItem__func__makedate_a4c49545818cf4453a8fe5e01e840d3df}\label{classItem__func__makedate_a4c49545818cf4453a8fe5e01e840d3df}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+bool \mbox{\hyperlink{classItem__func__makedate_a5cf64b7ab373a5ae48f1338e6fffd00f}{get\+\_\+date}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzy\+\_\+date)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__makedate_a5cf64b7ab373a5ae48f1338e6fffd00f}\label{classItem__func__makedate_a5cf64b7ab373a5ae48f1338e6fffd00f}} 
+\index{Item\+\_\+func\+\_\+makedate@{Item\+\_\+func\+\_\+makedate}!get\+\_\+date@{get\+\_\+date}}
+\index{get\+\_\+date@{get\+\_\+date}!Item\+\_\+func\+\_\+makedate@{Item\+\_\+func\+\_\+makedate}}
+\subsubsection{\texorpdfstring{get\+\_\+date()}{get\_date()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+makedate\+::get\+\_\+date (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{fuzzy\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+M\+A\+K\+E\+D\+A\+T\+E(a,b) is a date function that creates a date value from a year and day value.
+
+N\+O\+T\+ES\+: As arguments are integers, we can\textquotesingle{}t know if the year is a 2 digit or 4 digit year. In this case we treat all years $<$ 100 as 2 digit years. Ie, this is not safe for dates between 0000-\/01-\/01 and 0099-\/12-\/31 
+
+Implements \mbox{\hyperlink{classItem__date__func}{Item\+\_\+date\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

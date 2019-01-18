@@ -1,0 +1,115 @@
+\hypertarget{structNdb__index__stat}{}\section{Ndb\+\_\+index\+\_\+stat Struct Reference}
+\label{structNdb__index__stat}\index{Ndb\+\_\+index\+\_\+stat@{Ndb\+\_\+index\+\_\+stat}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_aa55c4f78a1f0df9a43308437527aa2c7}\label{structNdb__index__stat_aa55c4f78a1f0df9a43308437527aa2c7}} 
+enum \{ \newline
+{\bfseries L\+T\+\_\+\+Undef} = 0, 
+{\bfseries L\+T\+\_\+\+New} = 1, 
+{\bfseries L\+T\+\_\+\+Update} = 2, 
+{\bfseries L\+T\+\_\+\+Read} = 3, 
+\newline
+{\bfseries L\+T\+\_\+\+Idle} = 4, 
+{\bfseries L\+T\+\_\+\+Check} = 5, 
+{\bfseries L\+T\+\_\+\+Delete} = 6, 
+{\bfseries L\+T\+\_\+\+Error} = 7, 
+\newline
+{\bfseries L\+T\+\_\+\+Count} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_ab85a485e780d54f9cec26f7fdda881d4}\label{structNdb__index__stat_ab85a485e780d54f9cec26f7fdda881d4}} 
+Ndb\+Index\+Stat $\ast$ {\bfseries is}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a175469703f9a4c76420c41a678fa4040}\label{structNdb__index__stat_a175469703f9a4c76420c41a678fa4040}} 
+int {\bfseries index\+\_\+id}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_adc9f4b3f17cf571197a550b86a9bd044}\label{structNdb__index__stat_adc9f4b3f17cf571197a550b86a9bd044}} 
+int {\bfseries index\+\_\+version}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a7354b542fc3d1690111dfbbe5dfb1c1c}\label{structNdb__index__stat_a7354b542fc3d1690111dfbbe5dfb1c1c}} 
+char {\bfseries id} \mbox{[}32\mbox{]}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_ae638cf2a6004d1d8b539a6d9956bcb2f}\label{structNdb__index__stat_ae638cf2a6004d1d8b539a6d9956bcb2f}} 
+time\+\_\+t {\bfseries access\+\_\+time}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a7cc35d3dbb77b09801ec0586887b10aa}\label{structNdb__index__stat_a7cc35d3dbb77b09801ec0586887b10aa}} 
+time\+\_\+t {\bfseries update\+\_\+time}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_aee9e5d385e1efc8568d91f27e36a5392}\label{structNdb__index__stat_aee9e5d385e1efc8568d91f27e36a5392}} 
+time\+\_\+t {\bfseries load\+\_\+time}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a0854c20db56a62b9ef92a836bca93ab6}\label{structNdb__index__stat_a0854c20db56a62b9ef92a836bca93ab6}} 
+time\+\_\+t {\bfseries read\+\_\+time}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a66f39afc9b91cbb4c3022e678d170fd0}\label{structNdb__index__stat_a66f39afc9b91cbb4c3022e678d170fd0}} 
+uint {\bfseries sample\+\_\+version}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_afcc10cab1a5cf6d91b647f9acb41649c}\label{structNdb__index__stat_afcc10cab1a5cf6d91b647f9acb41649c}} 
+time\+\_\+t {\bfseries check\+\_\+time}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_aa384ef43d5cf7b59cdcc9dfc125d1f49}\label{structNdb__index__stat_aa384ef43d5cf7b59cdcc9dfc125d1f49}} 
+uint {\bfseries query\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_ac3683786d19d835b9ff2bba8fa9cc9be}\label{structNdb__index__stat_ac3683786d19d835b9ff2bba8fa9cc9be}} 
+uint {\bfseries clean\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a7c6b0e5ed26e61a210b9c7ab6f651a77}\label{structNdb__index__stat_a7c6b0e5ed26e61a210b9c7ab6f651a77}} 
+uint {\bfseries drop\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a8194bb6ca4c5a76caed54b4acf8e6946}\label{structNdb__index__stat_a8194bb6ca4c5a76caed54b4acf8e6946}} 
+uint {\bfseries evict\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_ad0e2f69383bfc03f79c0b48cbe2e3e8c}\label{structNdb__index__stat_ad0e2f69383bfc03f79c0b48cbe2e3e8c}} 
+bool {\bfseries force\+\_\+update}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a0df626d1c79e8eef18e8cab3f1d637cf}\label{structNdb__index__stat_a0df626d1c79e8eef18e8cab3f1d637cf}} 
+bool {\bfseries no\+\_\+stats}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a6d1767a9c8689cd5a1394c1578f7bcfd}\label{structNdb__index__stat_a6d1767a9c8689cd5a1394c1578f7bcfd}} 
+Ndb\+Index\+Stat\+::\+Error {\bfseries error}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_aa3fd3e01e47d32bf4564180112eb6510}\label{structNdb__index__stat_aa3fd3e01e47d32bf4564180112eb6510}} 
+Ndb\+Index\+Stat\+::\+Error {\bfseries client\+\_\+error}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_aeba986dbce303565ecad0994d3c59904}\label{structNdb__index__stat_aeba986dbce303565ecad0994d3c59904}} 
+time\+\_\+t {\bfseries error\+\_\+time}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a64c8bfe28b255a10c06b84812a213f55}\label{structNdb__index__stat_a64c8bfe28b255a10c06b84812a213f55}} 
+uint {\bfseries error\+\_\+count}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a5b19398316a1fc5669546adb561ad7b1}\label{structNdb__index__stat_a5b19398316a1fc5669546adb561ad7b1}} 
+struct \mbox{\hyperlink{structNdb__index__stat}{Ndb\+\_\+index\+\_\+stat}} $\ast$ {\bfseries share\+\_\+next}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a4629403265ef7e917399e085592f8ebe}\label{structNdb__index__stat_a4629403265ef7e917399e085592f8ebe}} 
+int {\bfseries lt}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a62cfd0d514796d50de7acbf2c0cae60b}\label{structNdb__index__stat_a62cfd0d514796d50de7acbf2c0cae60b}} 
+int {\bfseries lt\+\_\+old}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a4337468917dfe05b70c0c3875a3e89e9}\label{structNdb__index__stat_a4337468917dfe05b70c0c3875a3e89e9}} 
+struct \mbox{\hyperlink{structNdb__index__stat}{Ndb\+\_\+index\+\_\+stat}} $\ast$ {\bfseries list\+\_\+next}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a0fa977df3e8891ffd7a1ee37b8dd874f}\label{structNdb__index__stat_a0fa977df3e8891ffd7a1ee37b8dd874f}} 
+struct \mbox{\hyperlink{structNdb__index__stat}{Ndb\+\_\+index\+\_\+stat}} $\ast$ {\bfseries list\+\_\+prev}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a2a2c9c20b5e65ee5409aaa251e2a80f4}\label{structNdb__index__stat_a2a2c9c20b5e65ee5409aaa251e2a80f4}} 
+struct \mbox{\hyperlink{structNDB__SHARE}{N\+D\+B\+\_\+\+S\+H\+A\+RE}} $\ast$ {\bfseries share}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_af68242d243abf6f9a5bef7383856474c}\label{structNdb__index__stat_af68242d243abf6f9a5bef7383856474c}} 
+uint {\bfseries ref\+\_\+count}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a7569f961167a412f7ced50ba2a4321eb}\label{structNdb__index__stat_a7569f961167a412f7ced50ba2a4321eb}} 
+bool {\bfseries to\+\_\+delete}
+\item 
+\mbox{\Hypertarget{structNdb__index__stat_a74968c9b19b091a70f1fd975b5c4b4fa}\label{structNdb__index__stat_a74968c9b19b091a70f1fd975b5c4b4fa}} 
+bool {\bfseries abort\+\_\+request}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndb\+\_\+index\+\_\+stat.\+cc\end{DoxyCompactItemize}

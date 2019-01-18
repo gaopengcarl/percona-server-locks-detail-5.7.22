@@ -1,0 +1,213 @@
+\hypertarget{classCost__model__table}{}\section{Cost\+\_\+model\+\_\+table Class Reference}
+\label{classCost__model__table}\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+
+
+{\ttfamily \#include $<$opt\+\_\+costmodel.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCost__model__table_aa7d9b80473b08cb55eb5b87c788f0274}{init}} (const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$cost\+\_\+model\+\_\+server, const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+double \mbox{\hyperlink{classCost__model__table_a9c4bdc53d6fe77c76fa2c3e7acbb9b0c}{row\+\_\+evaluate\+\_\+cost}} (double rows) const
+\item 
+double \mbox{\hyperlink{classCost__model__table_af442546c88953a32e25f05a36dfa4e76}{key\+\_\+compare\+\_\+cost}} (double keys) const
+\item 
+double \mbox{\hyperlink{classCost__model__table_a334815cfa999a4d55461aec523630a6a}{io\+\_\+block\+\_\+read\+\_\+cost}} (double blocks) const
+\item 
+double \mbox{\hyperlink{classCost__model__table_a3d409ece408a16a38f8ebdb6f713c59a}{buffer\+\_\+block\+\_\+read\+\_\+cost}} (double blocks) const
+\item 
+double \mbox{\hyperlink{classCost__model__table_a4105484634b87ab3736f5bfa41d8fb4d}{page\+\_\+read\+\_\+cost}} (double pages) const
+\item 
+double \mbox{\hyperlink{classCost__model__table_a4732927c2aaa990219b7abeeb98f55aa}{page\+\_\+read\+\_\+cost\+\_\+index}} (uint index, double pages) const
+\item 
+double \mbox{\hyperlink{classCost__model__table_a5a45ab14ac40b5560c22acb0d25f7f01}{disk\+\_\+seek\+\_\+base\+\_\+cost}} () const
+\item 
+double \mbox{\hyperlink{classCost__model__table_ad36900f273faa51228c6bf1f7fb3c3d6}{disk\+\_\+seek\+\_\+cost}} (double seek\+\_\+blocks) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$ \mbox{\hyperlink{classCost__model__table_a36e50fb6e4c0eb9944f08bb1cd14b24a}{m\+\_\+cost\+\_\+model\+\_\+server}}
+\item 
+const \mbox{\hyperlink{classSE__cost__constants}{S\+E\+\_\+cost\+\_\+constants}} $\ast$ \mbox{\hyperlink{classCost__model__table_a4afd938f845748bc0ba0e1dead1f2221}{m\+\_\+se\+\_\+cost\+\_\+constants}}
+\item 
+bool \mbox{\hyperlink{classCost__model__table_ac97e7bdd7006a4d6f6e2353866b3317d}{m\+\_\+initialized}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for getting cost estimates for operations on table data.
+
+\begin{DoxyNote}{Note}
+The initial implementation mostly has functions for accessing cost constants for basic operations. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCost__model__table_a3d409ece408a16a38f8ebdb6f713c59a}\label{classCost__model__table_a3d409ece408a16a38f8ebdb6f713c59a}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!buffer\+\_\+block\+\_\+read\+\_\+cost@{buffer\+\_\+block\+\_\+read\+\_\+cost}}
+\index{buffer\+\_\+block\+\_\+read\+\_\+cost@{buffer\+\_\+block\+\_\+read\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{buffer\+\_\+block\+\_\+read\+\_\+cost()}{buffer\_block\_read\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::buffer\+\_\+block\+\_\+read\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{blocks }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of reading a number of blocks from the storage engine when the block is already in a memory buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & number of blocks to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__table_a5a45ab14ac40b5560c22acb0d25f7f01}\label{classCost__model__table_a5a45ab14ac40b5560c22acb0d25f7f01}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!disk\+\_\+seek\+\_\+base\+\_\+cost@{disk\+\_\+seek\+\_\+base\+\_\+cost}}
+\index{disk\+\_\+seek\+\_\+base\+\_\+cost@{disk\+\_\+seek\+\_\+base\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{disk\+\_\+seek\+\_\+base\+\_\+cost()}{disk\_seek\_base\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::disk\+\_\+seek\+\_\+base\+\_\+cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The fixed part of the cost for doing a sequential seek on disk.
+
+For a harddisk, this corresponds to half a rotation (see comment for \mbox{\hyperlink{handler_8cc_a7d121a7b14ef956c0df32895a7a9a08b}{get\+\_\+sweep\+\_\+read\+\_\+cost()}} in \mbox{\hyperlink{handler_8cc}{handler.\+cc}}). \mbox{\Hypertarget{classCost__model__table_ad36900f273faa51228c6bf1f7fb3c3d6}\label{classCost__model__table_ad36900f273faa51228c6bf1f7fb3c3d6}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!disk\+\_\+seek\+\_\+cost@{disk\+\_\+seek\+\_\+cost}}
+\index{disk\+\_\+seek\+\_\+cost@{disk\+\_\+seek\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{disk\+\_\+seek\+\_\+cost()}{disk\_seek\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::disk\+\_\+seek\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{seek\+\_\+blocks }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost estimate for a sequential disk seek where a given number of blocks are skipped.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seek\+\_\+blocks} & number of blocks to seek past\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost estimate for the seek operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__table_aa7d9b80473b08cb55eb5b87c788f0274}\label{classCost__model__table_aa7d9b80473b08cb55eb5b87c788f0274}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!init@{init}}
+\index{init@{init}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Cost\+\_\+model\+\_\+table\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} $\ast$}]{cost\+\_\+model\+\_\+server,  }\item[{const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Initializes the cost model object.
+
+This function must be called before calling any cost estimation functions for a query. It should also be called when starting optimization of a new query in case any cost estimate constants have changed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cost\+\_\+model\+\_\+server} & the main cost model object for this query \\
+\hline
+{\em table} & the table the cost model should be used for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCost__model__table_a334815cfa999a4d55461aec523630a6a}\label{classCost__model__table_a334815cfa999a4d55461aec523630a6a}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!io\+\_\+block\+\_\+read\+\_\+cost@{io\+\_\+block\+\_\+read\+\_\+cost}}
+\index{io\+\_\+block\+\_\+read\+\_\+cost@{io\+\_\+block\+\_\+read\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{io\+\_\+block\+\_\+read\+\_\+cost()}{io\_block\_read\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::io\+\_\+block\+\_\+read\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{blocks }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of reading a number of random blocks from a table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & number of blocks to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__table_af442546c88953a32e25f05a36dfa4e76}\label{classCost__model__table_af442546c88953a32e25f05a36dfa4e76}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!key\+\_\+compare\+\_\+cost@{key\+\_\+compare\+\_\+cost}}
+\index{key\+\_\+compare\+\_\+cost@{key\+\_\+compare\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{key\+\_\+compare\+\_\+cost()}{key\_compare\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::key\+\_\+compare\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{keys }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of doing a number of key compare operations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & number of key compare operations\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of comparing the keys 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__table_a4105484634b87ab3736f5bfa41d8fb4d}\label{classCost__model__table_a4105484634b87ab3736f5bfa41d8fb4d}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!page\+\_\+read\+\_\+cost@{page\+\_\+read\+\_\+cost}}
+\index{page\+\_\+read\+\_\+cost@{page\+\_\+read\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{page\+\_\+read\+\_\+cost()}{page\_read\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::page\+\_\+read\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{pages }\end{DoxyParamCaption}) const}
+
+Cost of reading a number of random pages from a table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pages} & number of pages to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__table_a4732927c2aaa990219b7abeeb98f55aa}\label{classCost__model__table_a4732927c2aaa990219b7abeeb98f55aa}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!page\+\_\+read\+\_\+cost\+\_\+index@{page\+\_\+read\+\_\+cost\+\_\+index}}
+\index{page\+\_\+read\+\_\+cost\+\_\+index@{page\+\_\+read\+\_\+cost\+\_\+index}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{page\+\_\+read\+\_\+cost\+\_\+index()}{page\_read\_cost\_index()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::page\+\_\+read\+\_\+cost\+\_\+index (\begin{DoxyParamCaption}\item[{uint}]{index,  }\item[{double}]{pages }\end{DoxyParamCaption}) const}
+
+Cost of reading a number of random pages from an index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index number \\
+\hline
+{\em pages} & number of pages to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__table_a9c4bdc53d6fe77c76fa2c3e7acbb9b0c}\label{classCost__model__table_a9c4bdc53d6fe77c76fa2c3e7acbb9b0c}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!row\+\_\+evaluate\+\_\+cost@{row\+\_\+evaluate\+\_\+cost}}
+\index{row\+\_\+evaluate\+\_\+cost@{row\+\_\+evaluate\+\_\+cost}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{row\+\_\+evaluate\+\_\+cost()}{row\_evaluate\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+table\+::row\+\_\+evaluate\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{rows }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of processing a number of records and evaluating the query condition on the records.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & number of rows to evaluate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of evaluating the records 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCost__model__table_a36e50fb6e4c0eb9944f08bb1cd14b24a}\label{classCost__model__table_a36e50fb6e4c0eb9944f08bb1cd14b24a}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!m\+\_\+cost\+\_\+model\+\_\+server@{m\+\_\+cost\+\_\+model\+\_\+server}}
+\index{m\+\_\+cost\+\_\+model\+\_\+server@{m\+\_\+cost\+\_\+model\+\_\+server}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{m\+\_\+cost\+\_\+model\+\_\+server}{m\_cost\_model\_server}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}}$\ast$ Cost\+\_\+model\+\_\+table\+::m\+\_\+cost\+\_\+model\+\_\+server\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the cost model for the query. This is used for getting cost estimates for server operations. \mbox{\Hypertarget{classCost__model__table_ac97e7bdd7006a4d6f6e2353866b3317d}\label{classCost__model__table_ac97e7bdd7006a4d6f6e2353866b3317d}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!m\+\_\+initialized@{m\+\_\+initialized}}
+\index{m\+\_\+initialized@{m\+\_\+initialized}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{m\+\_\+initialized}{m\_initialized}}
+{\footnotesize\ttfamily bool Cost\+\_\+model\+\_\+table\+::m\+\_\+initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+Used for detecting if this object is used without having been initialized. \mbox{\Hypertarget{classCost__model__table_a4afd938f845748bc0ba0e1dead1f2221}\label{classCost__model__table_a4afd938f845748bc0ba0e1dead1f2221}} 
+\index{Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}!m\+\_\+se\+\_\+cost\+\_\+constants@{m\+\_\+se\+\_\+cost\+\_\+constants}}
+\index{m\+\_\+se\+\_\+cost\+\_\+constants@{m\+\_\+se\+\_\+cost\+\_\+constants}!Cost\+\_\+model\+\_\+table@{Cost\+\_\+model\+\_\+table}}
+\subsubsection{\texorpdfstring{m\+\_\+se\+\_\+cost\+\_\+constants}{m\_se\_cost\_constants}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classSE__cost__constants}{S\+E\+\_\+cost\+\_\+constants}}$\ast$ Cost\+\_\+model\+\_\+table\+::m\+\_\+se\+\_\+cost\+\_\+constants\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cost constants for the storage engine that stores the table. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+costmodel.\+h\item 
+opt\+\_\+costmodel.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,138 @@
+\hypertarget{classAlter__table__ctx}{}\section{Alter\+\_\+table\+\_\+ctx Class Reference}
+\label{classAlter__table__ctx}\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$sql\+\_\+alter.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a348e1b3a0464e26525eac30cd964d71d}\label{classAlter__table__ctx_a348e1b3a0464e26525eac30cd964d71d}} 
+typedef uint {\bfseries error\+\_\+if\+\_\+not\+\_\+empty\+\_\+mask}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a2592025a107ce3290f523cbe6679e4cf}\label{classAlter__table__ctx_a2592025a107ce3290f523cbe6679e4cf}} 
+{\bfseries Alter\+\_\+table\+\_\+ctx} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, uint tables\+\_\+opened\+\_\+arg, const char $\ast$new\+\_\+db\+\_\+arg, const char $\ast$new\+\_\+name\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{classAlter__table__ctx_a0afbe188b4e7c462c95cc9b61431b92a}{is\+\_\+database\+\_\+changed}} () const
+\item 
+bool \mbox{\hyperlink{classAlter__table__ctx_a3a3b9df562431de6681bd430b9ad556e}{is\+\_\+table\+\_\+renamed}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classAlter__table__ctx_a2e6f3603d771c3b94d416f77fc0bf720}{get\+\_\+new\+\_\+filename}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classAlter__table__ctx_acd2655d17b12e8f08c483cf013f51e21}{get\+\_\+path}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classAlter__table__ctx_a7158fc49d633764c5b49befcc76c6ba9}{get\+\_\+new\+\_\+path}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classAlter__table__ctx_a016d66cd2dff6af09c6f8fd0e33979e6}{get\+\_\+tmp\+\_\+path}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_ae067139c4cbd99eaf2bf13fc25cc5164}\label{classAlter__table__ctx_ae067139c4cbd99eaf2bf13fc25cc5164}} 
+\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $\ast$ {\bfseries datetime\+\_\+field}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_ad9d301dd726a019057e5727efb6aecc7}\label{classAlter__table__ctx_ad9d301dd726a019057e5727efb6aecc7}} 
+error\+\_\+if\+\_\+not\+\_\+empty\+\_\+mask {\bfseries error\+\_\+if\+\_\+not\+\_\+empty}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_af6b533dfd72e46fb45acdcbb21f612c9}\label{classAlter__table__ctx_af6b533dfd72e46fb45acdcbb21f612c9}} 
+uint {\bfseries tables\+\_\+opened}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_abc5e82c86c34cfe18fee44cfb0b7b677}\label{classAlter__table__ctx_abc5e82c86c34cfe18fee44cfb0b7b677}} 
+const char $\ast$ {\bfseries db}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a253d9d734fd826e3443d2c4a3dbc0980}\label{classAlter__table__ctx_a253d9d734fd826e3443d2c4a3dbc0980}} 
+const char $\ast$ {\bfseries table\+\_\+name}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_af9f3474ecca33eb88d168ed7d5591f29}\label{classAlter__table__ctx_af9f3474ecca33eb88d168ed7d5591f29}} 
+const char $\ast$ {\bfseries alias}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_ab0b8e46a3797795ba3fdaa0aa14c42c1}\label{classAlter__table__ctx_ab0b8e46a3797795ba3fdaa0aa14c42c1}} 
+const char $\ast$ {\bfseries new\+\_\+db}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a56b33c5282d7936d8cf85c7278d8ac38}\label{classAlter__table__ctx_a56b33c5282d7936d8cf85c7278d8ac38}} 
+const char $\ast$ {\bfseries new\+\_\+name}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_ada294bf1a6945f2a01b0e095ab119032}\label{classAlter__table__ctx_ada294bf1a6945f2a01b0e095ab119032}} 
+const char $\ast$ {\bfseries new\+\_\+alias}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a7672810839a522a759b933834756d3a0}\label{classAlter__table__ctx_a7672810839a522a759b933834756d3a0}} 
+char {\bfseries tmp\+\_\+name} \mbox{[}80\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a697893ac650b3dd290d1020632c98256}\label{classAlter__table__ctx_a697893ac650b3dd290d1020632c98256}} 
+static const error\+\_\+if\+\_\+not\+\_\+empty\+\_\+mask {\bfseries D\+A\+T\+E\+T\+I\+M\+E\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+D\+E\+F\+A\+U\+LT} = 1 $<$$<$ 0
+\item 
+\mbox{\Hypertarget{classAlter__table__ctx_a8e1122be5ef252aca2a99c252ad39014}\label{classAlter__table__ctx_a8e1122be5ef252aca2a99c252ad39014}} 
+static const error\+\_\+if\+\_\+not\+\_\+empty\+\_\+mask {\bfseries G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+D\+E\+F\+A\+U\+LT} = 1 $<$$<$ 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Runtime context for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlter__table__ctx_a2e6f3603d771c3b94d416f77fc0bf720}\label{classAlter__table__ctx_a2e6f3603d771c3b94d416f77fc0bf720}} 
+\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}!get\+\_\+new\+\_\+filename@{get\+\_\+new\+\_\+filename}}
+\index{get\+\_\+new\+\_\+filename@{get\+\_\+new\+\_\+filename}!Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+\subsubsection{\texorpdfstring{get\+\_\+new\+\_\+filename()}{get\_new\_filename()}}
+{\footnotesize\ttfamily const char$\ast$ Alter\+\_\+table\+\_\+ctx\+::get\+\_\+new\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+filename (including .frm) for the new table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlter__table__ctx_a7158fc49d633764c5b49befcc76c6ba9}\label{classAlter__table__ctx_a7158fc49d633764c5b49befcc76c6ba9}} 
+\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}!get\+\_\+new\+\_\+path@{get\+\_\+new\+\_\+path}}
+\index{get\+\_\+new\+\_\+path@{get\+\_\+new\+\_\+path}!Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+\subsubsection{\texorpdfstring{get\+\_\+new\+\_\+path()}{get\_new\_path()}}
+{\footnotesize\ttfamily const char$\ast$ Alter\+\_\+table\+\_\+ctx\+::get\+\_\+new\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+path to the new table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlter__table__ctx_acd2655d17b12e8f08c483cf013f51e21}\label{classAlter__table__ctx_acd2655d17b12e8f08c483cf013f51e21}} 
+\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}!get\+\_\+path@{get\+\_\+path}}
+\index{get\+\_\+path@{get\+\_\+path}!Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+\subsubsection{\texorpdfstring{get\+\_\+path()}{get\_path()}}
+{\footnotesize\ttfamily const char$\ast$ Alter\+\_\+table\+\_\+ctx\+::get\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+path to the original table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlter__table__ctx_a016d66cd2dff6af09c6f8fd0e33979e6}\label{classAlter__table__ctx_a016d66cd2dff6af09c6f8fd0e33979e6}} 
+\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}!get\+\_\+tmp\+\_\+path@{get\+\_\+tmp\+\_\+path}}
+\index{get\+\_\+tmp\+\_\+path@{get\+\_\+tmp\+\_\+path}!Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+\subsubsection{\texorpdfstring{get\+\_\+tmp\+\_\+path()}{get\_tmp\_path()}}
+{\footnotesize\ttfamily const char$\ast$ Alter\+\_\+table\+\_\+ctx\+::get\+\_\+tmp\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+path to the temporary table created during A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlter__table__ctx_a0afbe188b4e7c462c95cc9b61431b92a}\label{classAlter__table__ctx_a0afbe188b4e7c462c95cc9b61431b92a}} 
+\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}!is\+\_\+database\+\_\+changed@{is\+\_\+database\+\_\+changed}}
+\index{is\+\_\+database\+\_\+changed@{is\+\_\+database\+\_\+changed}!Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+\subsubsection{\texorpdfstring{is\+\_\+database\+\_\+changed()}{is\_database\_changed()}}
+{\footnotesize\ttfamily bool Alter\+\_\+table\+\_\+ctx\+::is\+\_\+database\+\_\+changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the table is moved to another database, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAlter__table__ctx_a3a3b9df562431de6681bd430b9ad556e}\label{classAlter__table__ctx_a3a3b9df562431de6681bd430b9ad556e}} 
+\index{Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}!is\+\_\+table\+\_\+renamed@{is\+\_\+table\+\_\+renamed}}
+\index{is\+\_\+table\+\_\+renamed@{is\+\_\+table\+\_\+renamed}!Alter\+\_\+table\+\_\+ctx@{Alter\+\_\+table\+\_\+ctx}}
+\subsubsection{\texorpdfstring{is\+\_\+table\+\_\+renamed()}{is\_table\_renamed()}}
+{\footnotesize\ttfamily bool Alter\+\_\+table\+\_\+ctx\+::is\+\_\+table\+\_\+renamed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the table is renamed, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+alter.\+h\item 
+sql\+\_\+alter.\+cc\end{DoxyCompactItemize}

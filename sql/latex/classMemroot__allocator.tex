@@ -1,0 +1,99 @@
+\hypertarget{classMemroot__allocator}{}\section{Memroot\+\_\+allocator$<$ T $>$ Class Template Reference}
+\label{classMemroot__allocator}\index{Memroot\+\_\+allocator$<$ T $>$@{Memroot\+\_\+allocator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$memroot\+\_\+allocator.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMemroot__allocator_1_1rebind}{rebind}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a2b1fac76f7bca5287cf2266edb5a05fd}\label{classMemroot__allocator_a2b1fac76f7bca5287cf2266edb5a05fd}} 
+typedef T {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a52126f6b85b3528724612b9134c522dc}\label{classMemroot__allocator_a52126f6b85b3528724612b9134c522dc}} 
+typedef size\+\_\+t {\bfseries size\+\_\+type}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a982371c84d7962a2fb2067846f2c8ef6}\label{classMemroot__allocator_a982371c84d7962a2fb2067846f2c8ef6}} 
+typedef ptrdiff\+\_\+t {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a0edb908fe8edec31eaf42ec89095f1a4}\label{classMemroot__allocator_a0edb908fe8edec31eaf42ec89095f1a4}} 
+typedef T $\ast$ {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a3052c982c483a79470df7c1f1e3eb3b9}\label{classMemroot__allocator_a3052c982c483a79470df7c1f1e3eb3b9}} 
+typedef const T $\ast$ {\bfseries const\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_adb39a398a72605169bf8d9eb1fcd96d2}\label{classMemroot__allocator_adb39a398a72605169bf8d9eb1fcd96d2}} 
+typedef T \& {\bfseries reference}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_af69968eb8d7e5fdeb0d737a946b5b38a}\label{classMemroot__allocator_af69968eb8d7e5fdeb0d737a946b5b38a}} 
+typedef const T \& {\bfseries const\+\_\+reference}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a60638ab69908b589fc0faff391c26330}\label{classMemroot__allocator_a60638ab69908b589fc0faff391c26330}} 
+pointer {\bfseries address} (reference r) const
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a7c8f4cba39536462f9cf0cb2db2ca45d}\label{classMemroot__allocator_a7c8f4cba39536462f9cf0cb2db2ca45d}} 
+const\+\_\+pointer {\bfseries address} (const\+\_\+reference r) const
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a987fee394011a0e8c30b63f5b83a5a58}\label{classMemroot__allocator_a987fee394011a0e8c30b63f5b83a5a58}} 
+{\bfseries Memroot\+\_\+allocator} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$memroot)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a514cbd92f6252180b2dad1ef5fecafba}\label{classMemroot__allocator_a514cbd92f6252180b2dad1ef5fecafba}} 
+{\footnotesize template$<$class U $>$ }\\{\bfseries Memroot\+\_\+allocator} (const \mbox{\hyperlink{classMemroot__allocator}{Memroot\+\_\+allocator}}$<$ U $>$ \&other)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a8d95debb2a3b48f6b4df93ad1d450825}\label{classMemroot__allocator_a8d95debb2a3b48f6b4df93ad1d450825}} 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{classMemroot__allocator}{Memroot\+\_\+allocator}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMemroot__allocator}{Memroot\+\_\+allocator}}$<$ U $>$ \&other)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_ac18777cac3334b1bc43db3ff9b158d4b}\label{classMemroot__allocator_ac18777cac3334b1bc43db3ff9b158d4b}} 
+pointer {\bfseries allocate} (size\+\_\+type n, const\+\_\+pointer hint=0)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_aaa344de7f922ee5ce4a1ea839931f362}\label{classMemroot__allocator_aaa344de7f922ee5ce4a1ea839931f362}} 
+void {\bfseries deallocate} (pointer p, size\+\_\+type n)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a708600eff11e8d38b3386e12abdc5ba0}\label{classMemroot__allocator_a708600eff11e8d38b3386e12abdc5ba0}} 
+void {\bfseries construct} (pointer p, const T \&val)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a5da35317665bf9a9afecd64ded8cb21e}\label{classMemroot__allocator_a5da35317665bf9a9afecd64ded8cb21e}} 
+void {\bfseries destroy} (pointer p)
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_afb7e55464577fd90b422581e6718f99d}\label{classMemroot__allocator_afb7e55464577fd90b422581e6718f99d}} 
+size\+\_\+type {\bfseries max\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classMemroot__allocator_a424b2fe0a85967b87d4b3b6dff62a03f}\label{classMemroot__allocator_a424b2fe0a85967b87d4b3b6dff62a03f}} 
+M\+E\+M\+\_\+\+R\+O\+OT $\ast$ {\bfseries memroot} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Memroot\+\_\+allocator$<$ T $>$}
+
+\mbox{\hyperlink{classMemroot__allocator}{Memroot\+\_\+allocator}} is a C++ S\+TL memory allocator based on M\+E\+M\+\_\+\+R\+O\+OT.
+
+No deallocation is done by this allocator. Calling init\+\_\+sql\+\_\+alloc() and free\+\_\+root() on the supplied M\+E\+M\+\_\+\+R\+O\+OT is the responsibility of the caller. Do {\itshape not} call free\+\_\+root() until the destructor of any objects using this allocator has completed. This includes iterators.
+
+Example of use\+: vector$<$int, Memroot\+\_\+allocator$<$int$>$ $>$ v((Memroot\+\_\+allocator$<$int$>$(\&mem\+\_\+root)));
+
+\begin{DoxyNote}{Note}
+allocate() throws std\+::bad\+\_\+alloc() similarly to the default S\+TL memory allocator. This is necessary -\/ S\+TL functions which allocates memory expects it. Otherwise these functions will try to use the memory, leading to seg faults if memory allocation was not successful.
+
+This allocator cannot be used for std\+::basic\+\_\+string because of this libstd++ bug\+: \href{http://gcc.gnu.org/bugzilla/show_bug.cgi?id=56437}\texttt{ http\+://gcc.\+gnu.\+org/bugzilla/show\+\_\+bug.\+cgi?id=56437} \char`\"{}basic\+\_\+string assumes that allocators are default-\/constructible\char`\"{}
+
+C++98 says that S\+TL implementors can assume that allocator objects of the same type always compare equal. This will only be the case for two Memroot\+\_\+allocators that use the same M\+E\+M\+\_\+\+R\+O\+OT. Care should be taken when this is not the case. Especially\+:
+\begin{DoxyItemize}
+\item Using list\+::splice() on two lists with allocators using two different M\+E\+M\+\_\+\+R\+O\+O\+Ts causes undefined behavior. Most implementations seem to give runtime errors in such cases.
+\item swap() on two collections with allocators using two different M\+E\+M\+\_\+\+R\+O\+O\+Ts is not well defined. At least some implementations also swap allocators, but this should not be depended on. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+memroot\+\_\+allocator.\+h\end{DoxyCompactItemize}

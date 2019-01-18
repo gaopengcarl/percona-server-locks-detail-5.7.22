@@ -1,0 +1,78 @@
+\hypertarget{sql__optimizer_8cc}{}\section{sql\+\_\+optimizer.\+cc File Reference}
+\label{sql__optimizer_8cc}\index{sql\+\_\+optimizer.\+cc@{sql\+\_\+optimizer.\+cc}}
+
+
+Optimize query expressions\+: Make optimal table join order, select optimal access methods per table, apply grouping, sorting and limit processing.  
+
+
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+bit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}abstract\+\_\+query\+\_\+plan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+sum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+explain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+join\+\_\+buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+planner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+resolver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+tmp\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+hints.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPlan__change__watchdog}{Plan\+\_\+change\+\_\+watchdog}}
+\item 
+class \mbox{\hyperlink{classCOND__CMP}{C\+O\+N\+D\+\_\+\+C\+MP}}
+\item 
+struct \mbox{\hyperlink{structKey__field}{Key\+\_\+field}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+E\+X\+I\+S\+TS}~1
+\item 
+\#define {\bfseries K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+R\+E\+F\+\_\+\+O\+R\+\_\+\+N\+U\+LL}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc}} (T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex, \mbox{\hyperlink{classItem}{Item}} $\ast$where\+\_\+cond, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group\+\_\+list, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga96dc524565684a4e258c98f5b7fd1541}{test\+\_\+if\+\_\+order\+\_\+by\+\_\+key}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint idx, uint $\ast$used\+\_\+key\+\_\+parts)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gafd0c3fdb07be77d705feaf3f8f51164f}{find\+\_\+shortest\+\_\+key}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, const \mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} $\ast$usable\+\_\+keys)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga4a8d854a364ab749539a9363619acf99}{is\+\_\+subkey}} (\mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$key\+\_\+part, \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ref\+\_\+key\+\_\+part, \mbox{\hyperlink{classKEY__PART__INFO}{K\+E\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+I\+N\+FO}} $\ast$ref\+\_\+key\+\_\+part\+\_\+end)
+\item 
+Item\+\_\+equal $\ast$ \mbox{\hyperlink{group__Query__Optimizer_gafe6fc3febf146805e30ce17267d4dd98}{find\+\_\+item\+\_\+equal}} (C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$cond\+\_\+equal, \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$item\+\_\+field, bool $\ast$inherited\+\_\+fl)
+\item 
+\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_ga67d1175177356bf1c9b05e9104d28c5b}{get\+\_\+best\+\_\+field}} (\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$item\+\_\+field, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$cond\+\_\+equal)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga51f49ad71fa53a75fa8ebae08cf775cc}{build\+\_\+equal\+\_\+items}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$retcond, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$inherited, bool do\+\_\+inherit, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$$\ast$cond\+\_\+equal\+\_\+ref)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_ga253393c0747cf378b9cefa109662bd17}{substitute\+\_\+for\+\_\+best\+\_\+equal\+\_\+field}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$cond\+\_\+equal, void $\ast$table\+\_\+join\+\_\+idx)
+\item 
+uint \mbox{\hyperlink{group__Query__Optimizer_gab18726347ecf92d8985617dda1d60ba3}{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, uint first\+\_\+unused)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga652bf7109dfbe0fdd7deb75c05c0a7a3}{uses\+\_\+index\+\_\+fields\+\_\+only}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$tbl, uint keyno, bool other\+\_\+tbls\+\_\+ok)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaa992e841315769954816105b951d3e17}{is\+\_\+indexed\+\_\+agg\+\_\+distinct}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $>$ $\ast$out\+\_\+args)
+\item 
+\mbox{\hyperlink{classMem__root__array}{Key\+\_\+use\+\_\+array}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_ga7a5efe6ddb0de3a2b43f36c3330354e7}{create\+\_\+keyuse\+\_\+for\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint keyparts, \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$$\ast$fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ outer\+\_\+exprs)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{group__Query__Optimizer_gaedf2fb3248e5d013e6a74b29dd9e7429}{make\+\_\+cond\+\_\+for\+\_\+table}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond, table\+\_\+map tables, table\+\_\+map used\+\_\+table, bool exclude\+\_\+expensive\+\_\+cond)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga768e4d9b55252e39161f392f34cb5abc}{optimize\+\_\+cond}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$cond, C\+O\+N\+D\+\_\+\+E\+Q\+U\+AL $\ast$$\ast$cond\+\_\+equal, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, Item\+::cond\+\_\+result $\ast$cond\+\_\+value)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_gaf8c7623dfe6301253414f9155999c43b}{remove\+\_\+eq\+\_\+conds}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$retcond, Item\+::cond\+\_\+result $\ast$cond\+\_\+value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Optimize query expressions\+: Make optimal table join order, select optimal access methods per table, apply grouping, sorting and limit processing. 
+

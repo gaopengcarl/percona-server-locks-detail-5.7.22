@@ -1,0 +1,80 @@
+\hypertarget{classSql__cmd__get__diagnostics}{}\section{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics Class Reference}
+\label{classSql__cmd__get__diagnostics}\index{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}}
+
+
+{\ttfamily \#include $<$sql\+\_\+get\+\_\+diagnostics.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__get__diagnostics}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSql__cmd__get__diagnostics_abf6608b7d7c5a38eee06486520176b7c}{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}} (\mbox{\hyperlink{classDiagnostics__information}{Diagnostics\+\_\+information}} $\ast$info)
+\item 
+\mbox{\Hypertarget{classSql__cmd__get__diagnostics_aaa1892a89930ce67346076f321e5b823}\label{classSql__cmd__get__diagnostics_aaa1892a89930ce67346076f321e5b823}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__get__diagnostics_aaa1892a89930ce67346076f321e5b823}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__get__diagnostics_aecafd1b2d00aace5a5b238b764aadbab}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSql__cmd__get__diagnostics}{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}} represents a G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement.
+
+The G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement retrieves exception or completion condition information from a Diagnostics Area, usually pertaining to the last non-\/diagnostic S\+QL statement that was executed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSql__cmd__get__diagnostics_abf6608b7d7c5a38eee06486520176b7c}\label{classSql__cmd__get__diagnostics_abf6608b7d7c5a38eee06486520176b7c}} 
+\index{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}!Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}}
+\index{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}!Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}}
+\subsubsection{\texorpdfstring{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics()}{Sql\_cmd\_get\_diagnostics()}}
+{\footnotesize\ttfamily Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics\+::\+Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiagnostics__information}{Diagnostics\+\_\+information}} $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor, used to represent a G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Diagnostics information to be obtained. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__get__diagnostics_aecafd1b2d00aace5a5b238b764aadbab}\label{classSql__cmd__get__diagnostics_aecafd1b2d00aace5a5b238b764aadbab}} 
+\index{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics@{Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+get\+\_\+diagnostics\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Errors or warnings occurring during the execution of the G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement should not affect the Diagnostics Area of a previous statement as the diagnostics information there would be wiped out. Thus, in order to preserve the contents of the Diagnostics Area from which information is being retrieved, the G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement is executed under a separate Diagnostics Area. If any errors or warnings occur during the execution of the G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement, these error or warnings (conditions) are appended to the list of the original Diagnostics Area. The only exception to this is fatal errors, which must always cause the statement to fail.
+\end{DoxyRemark}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+get\+\_\+diagnostics.\+h\item 
+sql\+\_\+get\+\_\+diagnostics.\+cc\end{DoxyCompactItemize}

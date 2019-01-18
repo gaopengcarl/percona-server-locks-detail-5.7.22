@@ -1,0 +1,393 @@
+\hypertarget{classSrv__session}{}\section{Srv\+\_\+session Class Reference}
+\label{classSrv__session}\index{Srv\+\_\+session@{Srv\+\_\+session}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSrv__session_1_1st__err__protocol__ctx}{st\+\_\+err\+\_\+protocol\+\_\+ctx}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classSrv__session_a18b6e470e6fec5df767041054775e0e8}{srv\+\_\+session\+\_\+state}} \{ {\bfseries S\+R\+V\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+C\+R\+E\+A\+T\+ED}, 
+{\bfseries S\+R\+V\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+A\+T\+T\+A\+C\+H\+ED}, 
+{\bfseries S\+R\+V\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+D\+E\+T\+A\+C\+H\+ED}, 
+{\bfseries S\+R\+V\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+C\+L\+O\+S\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSrv__session_a3f79b456c9e365806f12ee5aa67bfbcb}{Srv\+\_\+session}} (srv\+\_\+session\+\_\+error\+\_\+cb err\+\_\+cb, void $\ast$err\+\_\+cb\+\_\+ctx)
+\item 
+bool \mbox{\hyperlink{classSrv__session_a99347e58c5498ce76891ace87456562f}{open}} ()
+\item 
+bool \mbox{\hyperlink{classSrv__session_a73df8d1a4af78c58ffaacb6097ccf74d}{attach}} ()
+\item 
+bool \mbox{\hyperlink{classSrv__session_a3ab2665c1d523681147c5f502847a126}{detach}} ()
+\item 
+bool \mbox{\hyperlink{classSrv__session_a4254885df510bcca1d1cdc88c9366028}{close}} ()
+\item 
+bool \mbox{\hyperlink{classSrv__session_a53e0d134096447b8f368499bb840201c}{is\+\_\+attached}} () const
+\item 
+int \mbox{\hyperlink{classSrv__session_a30f0a176fbc3ce50c5f596ab394ab42f}{execute\+\_\+command}} (enum enum\+\_\+server\+\_\+command command, const union C\+O\+M\+\_\+\+D\+A\+TA $\ast$data, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$client\+\_\+cs, const struct st\+\_\+command\+\_\+service\+\_\+cbs $\ast$command\+\_\+callbacks, enum cs\+\_\+text\+\_\+or\+\_\+binary text\+\_\+or\+\_\+binary, void $\ast$callbacks\+\_\+context)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classSrv__session_afeee05328ba7f7be16a12c5cb853945c}{get\+\_\+thd}} ()
+\item 
+my\+\_\+thread\+\_\+id \mbox{\hyperlink{classSrv__session_a9acafc348256db7c721c5a6f9d41dee2}{get\+\_\+session\+\_\+id}} () const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classSrv__session_a878dc80c2ab07372ba9ae8cbafb0caa1}{get\+\_\+client\+\_\+port}} () const
+\item 
+void \mbox{\hyperlink{classSrv__session_a3d4af0d7cf8b34661a3ec6f839f39f7f}{set\+\_\+client\+\_\+port}} (uint16\+\_\+t port)
+\item 
+L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \mbox{\hyperlink{classSrv__session_a7da787fab7bb8d045441efa8e2c2aa3c}{get\+\_\+current\+\_\+database}} () const
+\item 
+bool \mbox{\hyperlink{classSrv__session_a93957a74e9e34a490425cd03de471650}{set\+\_\+connection\+\_\+type}} (enum\+\_\+vio\+\_\+type type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classSrv__session_aa0dbb3e216c720bb38d81b172d6118de}{module\+\_\+init}} ()
+\item 
+static bool \mbox{\hyperlink{classSrv__session_a1c54d3bf9fc6ae6236b8b18b5354b714}{module\+\_\+deinit}} ()
+\item 
+static bool \mbox{\hyperlink{classSrv__session_a94790b19dd27e8bd99c58ac74ff33280}{init\+\_\+thread}} (const void $\ast$plugin)
+\item 
+static void \mbox{\hyperlink{classSrv__session_af092a96167d9b06d812a17ee67db3780}{deinit\+\_\+thread}} ()
+\item 
+static void \mbox{\hyperlink{classSrv__session_a76d8a77081d966de8d6a662a3cefa605}{check\+\_\+for\+\_\+stale\+\_\+threads}} (const \mbox{\hyperlink{structst__plugin__int}{st\+\_\+plugin\+\_\+int}} $\ast$plugin)
+\item 
+static bool \mbox{\hyperlink{classSrv__session_aae4c0d99ea138cf218f142f322362157}{is\+\_\+valid}} (const \mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$session)
+\item 
+static unsigned int \mbox{\hyperlink{classSrv__session_acb3905ccf83195292e56b1ae1f4723f2}{session\+\_\+count}} ()
+\item 
+static unsigned int \mbox{\hyperlink{classSrv__session_a7a2ece559dacfdff32131e36e45eecd1}{thread\+\_\+count}} (const void $\ast$plugin\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classSrv__session_a18b6e470e6fec5df767041054775e0e8}\label{classSrv__session_a18b6e470e6fec5df767041054775e0e8}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!srv\+\_\+session\+\_\+state@{srv\+\_\+session\+\_\+state}}
+\index{srv\+\_\+session\+\_\+state@{srv\+\_\+session\+\_\+state}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{srv\+\_\+session\+\_\+state}{srv\_session\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classSrv__session_a18b6e470e6fec5df767041054775e0e8}{Srv\+\_\+session\+::srv\+\_\+session\+\_\+state}}}
+
+Enum for the state of the session 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSrv__session_a3f79b456c9e365806f12ee5aa67bfbcb}\label{classSrv__session_a3f79b456c9e365806f12ee5aa67bfbcb}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!Srv\+\_\+session@{Srv\+\_\+session}}
+\index{Srv\+\_\+session@{Srv\+\_\+session}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{Srv\+\_\+session()}{Srv\_session()}}
+{\footnotesize\ttfamily Srv\+\_\+session\+::\+Srv\+\_\+session (\begin{DoxyParamCaption}\item[{srv\+\_\+session\+\_\+error\+\_\+cb}]{err\+\_\+cb,  }\item[{void $\ast$}]{err\+\_\+cb\+\_\+ctx }\end{DoxyParamCaption})}
+
+Constructs a server session
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+cb} & Default completion callback \\
+\hline
+{\em err\+\_\+cb\+\_\+ctx} & Plugin\textquotesingle{}s context, opaque pointer that would be provided to callbacks. Might be N\+U\+LL. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSrv__session_a73df8d1a4af78c58ffaacb6097ccf74d}\label{classSrv__session_a73df8d1a4af78c58ffaacb6097ccf74d}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!attach@{attach}}
+\index{attach@{attach}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::attach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Attaches the session to the current physical thread
+
+\begin{DoxyReturn}{Returns}
+false success true failure
+\end{DoxyReturn}
+Attaches the session to the current physical thread
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & Session handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a76d8a77081d966de8d6a662a3cefa605}\label{classSrv__session_a76d8a77081d966de8d6a662a3cefa605}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!check\+\_\+for\+\_\+stale\+\_\+threads@{check\+\_\+for\+\_\+stale\+\_\+threads}}
+\index{check\+\_\+for\+\_\+stale\+\_\+threads@{check\+\_\+for\+\_\+stale\+\_\+threads}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{check\+\_\+for\+\_\+stale\+\_\+threads()}{check\_for\_stale\_threads()}}
+{\footnotesize\ttfamily void Srv\+\_\+session\+::check\+\_\+for\+\_\+stale\+\_\+threads (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structst__plugin__int}{st\+\_\+plugin\+\_\+int}} $\ast$}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if a plugin has left threads and sessions
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & The plugin to be checked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSrv__session_a4254885df510bcca1d1cdc88c9366028}\label{classSrv__session_a4254885df510bcca1d1cdc88c9366028}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!close@{close}}
+\index{close@{close}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Closes the session
+
+\begin{DoxyReturn}{Returns}
+false Session successfully closed true Session wasn\textquotesingle{}t found or key doesn\textquotesingle{}t match
+\end{DoxyReturn}
+Closes the session
+
+\begin{DoxyReturn}{Returns}
+false Session successfully closed true No such session exists / Session is attached to a different thread 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_af092a96167d9b06d812a17ee67db3780}\label{classSrv__session_af092a96167d9b06d812a17ee67db3780}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!deinit\+\_\+thread@{deinit\+\_\+thread}}
+\index{deinit\+\_\+thread@{deinit\+\_\+thread}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{deinit\+\_\+thread()}{deinit\_thread()}}
+{\footnotesize\ttfamily void Srv\+\_\+session\+::deinit\+\_\+thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Deinitializes the current physical thread for use with session service
+
+Deinitializes physical thread to use with session service \mbox{\Hypertarget{classSrv__session_a3ab2665c1d523681147c5f502847a126}\label{classSrv__session_a3ab2665c1d523681147c5f502847a126}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!detach@{detach}}
+\index{detach@{detach}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Detaches the session from current physical thread.
+
+\begin{DoxyReturn}{Returns}
+false success true failure
+\end{DoxyReturn}
+Detaches the session from the current physical thread.
+
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a30f0a176fbc3ce50c5f596ab394ab42f}\label{classSrv__session_a30f0a176fbc3ce50c5f596ab394ab42f}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!execute\+\_\+command@{execute\+\_\+command}}
+\index{execute\+\_\+command@{execute\+\_\+command}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{execute\+\_\+command()}{execute\_command()}}
+{\footnotesize\ttfamily int Srv\+\_\+session\+::execute\+\_\+command (\begin{DoxyParamCaption}\item[{enum enum\+\_\+server\+\_\+command}]{command,  }\item[{const union C\+O\+M\+\_\+\+D\+A\+TA $\ast$}]{data,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{client\+\_\+cs,  }\item[{const struct st\+\_\+command\+\_\+service\+\_\+cbs $\ast$}]{command\+\_\+callbacks,  }\item[{enum cs\+\_\+text\+\_\+or\+\_\+binary}]{text\+\_\+or\+\_\+binary,  }\item[{void $\ast$}]{callbacks\+\_\+context }\end{DoxyParamCaption})}
+
+Executes a server command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to be executed \\
+\hline
+{\em data} & Command\textquotesingle{}s arguments \\
+\hline
+{\em client\+\_\+cs} & The charset for the string data input (C\+O\+M\+\_\+\+Q\+U\+E\+RY for example) \\
+\hline
+{\em command\+\_\+callbacks} & Callbacks to be used by the server to encode data and to communicate with the client (plugin) side. \\
+\hline
+{\em text\+\_\+or\+\_\+binary} & See enum cs\+\_\+text\+\_\+or\+\_\+binary \\
+\hline
+{\em callbacks\+\_\+context} & Context passed to the callbacks\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 error 0 success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a878dc80c2ab07372ba9ae8cbafb0caa1}\label{classSrv__session_a878dc80c2ab07372ba9ae8cbafb0caa1}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!get\+\_\+client\+\_\+port@{get\+\_\+client\+\_\+port}}
+\index{get\+\_\+client\+\_\+port@{get\+\_\+client\+\_\+port}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{get\+\_\+client\+\_\+port()}{get\_client\_port()}}
+{\footnotesize\ttfamily uint16\+\_\+t Srv\+\_\+session\+::get\+\_\+client\+\_\+port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the client port.
+
+\begin{DoxyNote}{Note}
+The client port in S\+H\+OW P\+R\+O\+C\+E\+S\+S\+L\+I\+ST, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+P\+R\+O\+C\+E\+S\+S\+L\+I\+ST. This port is N\+OT shown in P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+S\+C\+H\+E\+M\+A.\+T\+H\+R\+E\+A\+DS. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classSrv__session_a7da787fab7bb8d045441efa8e2c2aa3c}\label{classSrv__session_a7da787fab7bb8d045441efa8e2c2aa3c}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!get\+\_\+current\+\_\+database@{get\+\_\+current\+\_\+database}}
+\index{get\+\_\+current\+\_\+database@{get\+\_\+current\+\_\+database}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+database()}{get\_current\_database()}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG Srv\+\_\+session\+::get\+\_\+current\+\_\+database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the current database of a session.
+
+\begin{DoxyNote}{Note}
+This call is not thread-\/safe. Don\textquotesingle{}t invoke the method from a thread different than the one in which the invocation happens. This means that the call should N\+OT happen during run\+\_\+command(). The value returned is valid until the next run\+\_\+command() call, which may change it. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classSrv__session_a9acafc348256db7c721c5a6f9d41dee2}\label{classSrv__session_a9acafc348256db7c721c5a6f9d41dee2}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!get\+\_\+session\+\_\+id@{get\+\_\+session\+\_\+id}}
+\index{get\+\_\+session\+\_\+id@{get\+\_\+session\+\_\+id}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{get\+\_\+session\+\_\+id()}{get\_session\_id()}}
+{\footnotesize\ttfamily my\+\_\+thread\+\_\+id Srv\+\_\+session\+::get\+\_\+session\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the ID of a session.
+
+The value returned from T\+H\+D\+::thread\+\_\+id() \mbox{\Hypertarget{classSrv__session_afeee05328ba7f7be16a12c5cb853945c}\label{classSrv__session_afeee05328ba7f7be16a12c5cb853945c}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!get\+\_\+thd@{get\+\_\+thd}}
+\index{get\+\_\+thd@{get\+\_\+thd}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{get\+\_\+thd()}{get\_thd()}}
+{\footnotesize\ttfamily T\+HD$\ast$ Srv\+\_\+session\+::get\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the internal T\+HD object \mbox{\Hypertarget{classSrv__session_a94790b19dd27e8bd99c58ac74ff33280}\label{classSrv__session_a94790b19dd27e8bd99c58ac74ff33280}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!init\+\_\+thread@{init\+\_\+thread}}
+\index{init\+\_\+thread@{init\+\_\+thread}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{init\+\_\+thread()}{init\_thread()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::init\+\_\+thread (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes the current physical thread for use with this class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & Pointer to the plugin structure, passed to the plugin over the plugin init function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure
+\end{DoxyReturn}
+Initializes physical thread to use with session service.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin} & Pointer to the plugin structure, passed to the plugin over the plugin init function.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a53e0d134096447b8f368499bb840201c}\label{classSrv__session_a53e0d134096447b8f368499bb840201c}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!is\+\_\+attached@{is\+\_\+attached}}
+\index{is\+\_\+attached@{is\+\_\+attached}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{is\+\_\+attached()}{is\_attached()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::is\+\_\+attached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns if the session is in attached state
+
+\begin{DoxyReturn}{Returns}
+false Not attached true Attached 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_aae4c0d99ea138cf218f142f322362157}\label{classSrv__session_aae4c0d99ea138cf218f142f322362157}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{is\+\_\+valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::is\+\_\+valid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSrv__session}{Srv\+\_\+session}} $\ast$}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if the session is valid.
+
+Checked is if session is N\+U\+LL, or in the list of opened sessions. If the session is not in this list it was either closed or the address is invalid.
+
+\begin{DoxyReturn}{Returns}
+true valid false not valid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a1c54d3bf9fc6ae6236b8b18b5354b714}\label{classSrv__session_a1c54d3bf9fc6ae6236b8b18b5354b714}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!module\+\_\+deinit@{module\+\_\+deinit}}
+\index{module\+\_\+deinit@{module\+\_\+deinit}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{module\+\_\+deinit()}{module\_deinit()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::module\+\_\+deinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Deinitializes the module
+
+This method has to be called at server shutdown.
+
+\begin{DoxyReturn}{Returns}
+false success true failure
+\end{DoxyReturn}
+Deinits the module.
+
+Never fails
+
+\begin{DoxyReturn}{Returns}
+false success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_aa0dbb3e216c720bb38d81b172d6118de}\label{classSrv__session_aa0dbb3e216c720bb38d81b172d6118de}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!module\+\_\+init@{module\+\_\+init}}
+\index{module\+\_\+init@{module\+\_\+init}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{module\+\_\+init()}{module\_init()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::module\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes the module.
+
+This method has to be called at server startup.
+
+\begin{DoxyReturn}{Returns}
+false success true failure
+\end{DoxyReturn}
+Inits the module
+
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a99347e58c5498ce76891ace87456562f}\label{classSrv__session_a99347e58c5498ce76891ace87456562f}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!open@{open}}
+\index{open@{open}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Opens a server session
+
+\begin{DoxyReturn}{Returns}
+session on success N\+U\+LL on failure
+\end{DoxyReturn}
+Opens a server session
+
+\begin{DoxyReturn}{Returns}
+false on success true on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_acb3905ccf83195292e56b1ae1f4723f2}\label{classSrv__session_acb3905ccf83195292e56b1ae1f4723f2}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!session\+\_\+count@{session\+\_\+count}}
+\index{session\+\_\+count@{session\+\_\+count}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{session\+\_\+count()}{session\_count()}}
+{\footnotesize\ttfamily unsigned int Srv\+\_\+session\+::session\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the number opened sessions in thread initialized by this class. \mbox{\Hypertarget{classSrv__session_a3d4af0d7cf8b34661a3ec6f839f39f7f}\label{classSrv__session_a3d4af0d7cf8b34661a3ec6f839f39f7f}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!set\+\_\+client\+\_\+port@{set\+\_\+client\+\_\+port}}
+\index{set\+\_\+client\+\_\+port@{set\+\_\+client\+\_\+port}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{set\+\_\+client\+\_\+port()}{set\_client\_port()}}
+{\footnotesize\ttfamily void Srv\+\_\+session\+::set\+\_\+client\+\_\+port (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+Sets the client port.
+
+\begin{DoxyNote}{Note}
+The client port in S\+H\+OW P\+R\+O\+C\+E\+S\+S\+L\+I\+ST, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+P\+R\+O\+C\+E\+S\+S\+L\+I\+ST. This port is N\+OT shown in P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+S\+C\+H\+E\+M\+A.\+T\+H\+R\+E\+A\+DS.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSrv__session_a93957a74e9e34a490425cd03de471650}\label{classSrv__session_a93957a74e9e34a490425cd03de471650}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!set\+\_\+connection\+\_\+type@{set\+\_\+connection\+\_\+type}}
+\index{set\+\_\+connection\+\_\+type@{set\+\_\+connection\+\_\+type}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{set\+\_\+connection\+\_\+type()}{set\_connection\_type()}}
+{\footnotesize\ttfamily bool Srv\+\_\+session\+::set\+\_\+connection\+\_\+type (\begin{DoxyParamCaption}\item[{enum\+\_\+vio\+\_\+type}]{v\+\_\+type }\end{DoxyParamCaption})}
+
+Sets the connection type.
+
+\begin{DoxySeeAlso}{See also}
+enum\+\_\+vio\+\_\+type
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+If N\+O\+\_\+\+V\+I\+O\+\_\+\+T\+Y\+PE passed as type the call will fail.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+false success true failure
+\end{DoxyReturn}
+Sets the connection type.
+
+\begin{DoxySeeAlso}{See also}
+enum\+\_\+vio\+\_\+type
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+false success true failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSrv__session_a7a2ece559dacfdff32131e36e45eecd1}\label{classSrv__session_a7a2ece559dacfdff32131e36e45eecd1}} 
+\index{Srv\+\_\+session@{Srv\+\_\+session}!thread\+\_\+count@{thread\+\_\+count}}
+\index{thread\+\_\+count@{thread\+\_\+count}!Srv\+\_\+session@{Srv\+\_\+session}}
+\subsubsection{\texorpdfstring{thread\+\_\+count()}{thread\_count()}}
+{\footnotesize\ttfamily unsigned int Srv\+\_\+session\+::thread\+\_\+count (\begin{DoxyParamCaption}\item[{const void $\ast$}]{plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the number currently running threads initialized by this class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{srv__session_8h}{srv\+\_\+session.\+h}}\item 
+\mbox{\hyperlink{srv__session_8cc}{srv\+\_\+session.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{classExecute__load__query__log__event}{}\section{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event Class Reference}
+\label{classExecute__load__query__log__event}\index{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event@{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.842640cm]{classExecute__load__query__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExecute__load__query__log__event_a0712eeb774c9bdcaace5b276a5fb1ea8}\label{classExecute__load__query__log__event_a0712eeb774c9bdcaace5b276a5fb1ea8}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classExecute__load__query__log__event_ab97f809fc7f6d33622c5270947caa166}\label{classExecute__load__query__log__event_ab97f809fc7f6d33622c5270947caa166}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info, const char $\ast$local\+\_\+fname)
+\item 
+\mbox{\Hypertarget{classExecute__load__query__log__event_ad337a7209e0888a0572fbc94a5dbda51}\label{classExecute__load__query__log__event_ad337a7209e0888a0572fbc94a5dbda51}} 
+{\bfseries Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classExecute__load__query__log__event_a3e578fcc9abcea7351cb989d441f56ef}\label{classExecute__load__query__log__event_a3e578fcc9abcea7351cb989d441f56ef}} 
+ulong {\bfseries get\+\_\+post\+\_\+header\+\_\+size\+\_\+for\+\_\+derived} ()
+\item 
+bool \mbox{\hyperlink{classExecute__load__query__log__event_a8980ecbe8b7f0431a201498aa245c88d}{is\+\_\+sbr\+\_\+logging\+\_\+format}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Event responsible for L\+O\+AD D\+A\+TA execution, it similar to \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}} but before executing the query it substitutes original filename in L\+O\+AD D\+A\+TA query with name of temporary file.\hypertarget{classExecute__load__query__log__event_Execute_load_query_log_event_binary_format}{}\subsection{Binary Format}\label{classExecute__load__query__log__event_Execute_load_query_log_event_binary_format}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExecute__load__query__log__event_a8980ecbe8b7f0431a201498aa245c88d}\label{classExecute__load__query__log__event_a8980ecbe8b7f0431a201498aa245c88d}} 
+\index{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event@{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}!is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}!Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event@{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+sbr\+\_\+logging\+\_\+format()}{is\_sbr\_logging\_format()}}
+{\footnotesize\ttfamily bool Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event\+::is\+\_\+sbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+When a query log event contains a non-\/transaction control statement, we assume that it is changing database content (D\+ML) and was logged using binlog\+\_\+format=statement.
+
+\begin{DoxyReturn}{Returns}
+True the event represents a statement that was logged using S\+BR that can change database content. False for transaction control statements. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classQuery__log__event_a2a3e67710fa962765847ed1df1552864}{Query\+\_\+log\+\_\+event}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

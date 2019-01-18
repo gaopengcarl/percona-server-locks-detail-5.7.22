@@ -1,0 +1,34 @@
+\hypertarget{classExecute__load__log__event}{}\section{Execute\+\_\+load\+\_\+log\+\_\+event Class Reference}
+\label{classExecute__load__log__event}\index{Execute\+\_\+load\+\_\+log\+\_\+event@{Execute\+\_\+load\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Execute\+\_\+load\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExecute__load__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExecute__load__log__event_a23350cdd6d9a54dfef80c261bd0fe804}\label{classExecute__load__log__event_a23350cdd6d9a54dfef80c261bd0fe804}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classExecute__load__log__event_a7f43367756815bde30932c4f0e8540b1}\label{classExecute__load__log__event_a7f43367756815bde30932c4f0e8540b1}} 
+{\bfseries Execute\+\_\+load\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classExecute__load__log__event_a19600ec17f1d34f77876f79de2778817}\label{classExecute__load__log__event_a19600ec17f1d34f77876f79de2778817}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classExecute__load__log__event}{Execute\+\_\+load\+\_\+log\+\_\+event}} is created when the L\+O\+A\+D\+\_\+\+D\+A\+TA query succeeds on the master, The slave should be notified to load the temporary file into the table. For server versions $>$ 5.\+0.\+3, the temporary files that stores the parameters to L\+O\+AD D\+A\+TA I\+N\+F\+I\+LE is not needed anymore, since they are stored in this event. There is still a temp file containing all the data to be loaded. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

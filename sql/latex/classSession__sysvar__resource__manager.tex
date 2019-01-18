@@ -1,0 +1,98 @@
+\hypertarget{classSession__sysvar__resource__manager}{}\section{Session\+\_\+sysvar\+\_\+resource\+\_\+manager Class Reference}
+\label{classSession__sysvar__resource__manager}\index{Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}}
+
+
+{\ttfamily \#include $<$sys\+\_\+vars\+\_\+resource\+\_\+mgr.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classSession__sysvar__resource__manager_ab8b24f45b62c94db75fc79ef34b5b309}{init}} (char $\ast$$\ast$var, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)
+\item 
+bool \mbox{\hyperlink{classSession__sysvar__resource__manager_a543b75dc636128ad9938298da3119adf}{update}} (char $\ast$$\ast$var, char $\ast$val, size\+\_\+t val\+\_\+len)
+\item 
+\mbox{\Hypertarget{classSession__sysvar__resource__manager_ae99311da0b61b200064e4c3ecb09efd5}\label{classSession__sysvar__resource__manager_ae99311da0b61b200064e4c3ecb09efd5}} 
+void {\bfseries claim\+\_\+memory\+\_\+ownership} ()
+\item 
+void \mbox{\hyperlink{classSession__sysvar__resource__manager_a099e7961a4d1c193fac564efc0e3ecd4}{deinit}} ()
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated for \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} session variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSession__sysvar__resource__manager_a6d947ade10d0100ac4727b5537fb433c}\label{classSession__sysvar__resource__manager_a6d947ade10d0100ac4727b5537fb433c}} 
+static uchar $\ast$ {\bfseries sysvars\+\_\+mgr\+\_\+get\+\_\+key} (const char $\ast$entry, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{\mbox{\hyperlink{classSession__sysvar__resource__manager}{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}} }
+
+When a session (T\+HD) gets initialized, it receives a shallow copy of all global system variables. thd-\/$>$variables= global\+\_\+system\+\_\+variables; (see plugin\+\_\+thdvar\+\_\+init())
+
+In case of \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} variables, we need to maintain a separate copy for each session though so that global and session variables can be altered independently.
+
+This class is responsible for alloc$\vert$dealloc-\/ating memory for \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} variables for every session. It works in three steps \+:
+
+(1) init \+: Creates a copy (memdup()) of global \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} system variable for the respective session variable (passed as a parameter) \& inserts it into sysvar\+\_\+string\+\_\+alloc\+\_\+hash (containing the alloced address) to infer that memory has been allocated for the session. \mbox{\hyperlink{classSession__sysvar__resource__manager_ab8b24f45b62c94db75fc79ef34b5b309}{init()}} is called during the initialization of session system variables. (plugin\+\_\+thdvar\+\_\+init()) (2) update \+: When the session variable is updated, the old memory is freed and new memory is allocated to hold the new value. The corresponding member in sysvar\+\_\+string\+\_\+alloc\+\_\+hash is also updated to hold the new alloced memory address. (Sys\+\_\+var\+\_\+charptr\+::session\+\_\+update()) (3) deinit \+: Its a one-\/shot operation to free all the session \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} system variables. It basically traverses down the sysvar\+\_\+string\+\_\+alloc\+\_\+hash hash and calls free() for all the addresses that it holds.
+
+Note, there should always be at most one node per \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} session system variable. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSession__sysvar__resource__manager_a099e7961a4d1c193fac564efc0e3ecd4}\label{classSession__sysvar__resource__manager_a099e7961a4d1c193fac564efc0e3ecd4}} 
+\index{Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}!deinit@{deinit}}
+\index{deinit@{deinit}!Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}}
+\subsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily void Session\+\_\+sysvar\+\_\+resource\+\_\+manager\+::deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Frees the memory allocated for \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} session variables. 
+
+Frees the memory allocated for \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} session variables. \mbox{\Hypertarget{classSession__sysvar__resource__manager_ab8b24f45b62c94db75fc79ef34b5b309}\label{classSession__sysvar__resource__manager_ab8b24f45b62c94db75fc79ef34b5b309}} 
+\index{Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}!init@{init}}
+\index{init@{init}!Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Session\+\_\+sysvar\+\_\+resource\+\_\+manager\+::init (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{var,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{charset }\end{DoxyParamCaption})}
+
+Allocates memory for \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} session variable during session initialization.
+
+Allocates memory for \mbox{\hyperlink{classSys__var__charptr}{Sys\+\_\+var\+\_\+charptr}} session variable during session initialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & \mbox{[}IN\mbox{]} The variable. \\
+\hline
+{\em charset} & \mbox{[}IN\mbox{]} Character set information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success -\/ false Failure -\/ true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSession__sysvar__resource__manager_a543b75dc636128ad9938298da3119adf}\label{classSession__sysvar__resource__manager_a543b75dc636128ad9938298da3119adf}} 
+\index{Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}!update@{update}}
+\index{update@{update}!Session\+\_\+sysvar\+\_\+resource\+\_\+manager@{Session\+\_\+sysvar\+\_\+resource\+\_\+manager}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Session\+\_\+sysvar\+\_\+resource\+\_\+manager\+::update (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{var,  }\item[{char $\ast$}]{val,  }\item[{size\+\_\+t}]{val\+\_\+len }\end{DoxyParamCaption})}
+
+Frees the old alloced memory, memdup()\textquotesingle{}s the given val to a new memory address \& updated the session variable pointer.
+
+Frees the old alloced memory, memdup()\textquotesingle{}s the given val to a new memory address \& updated the session variable pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & \mbox{[}IN\mbox{]} The variable. \\
+\hline
+{\em val} & \mbox{[}IN\mbox{]} The new value. \\
+\hline
+{\em val\+\_\+len} & \mbox{[}IN\mbox{]} Length of the new value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success -\/ false Failure -\/ true 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sys\+\_\+vars\+\_\+resource\+\_\+mgr.\+h\item 
+sys\+\_\+vars\+\_\+resource\+\_\+mgr.\+cc\end{DoxyCompactItemize}

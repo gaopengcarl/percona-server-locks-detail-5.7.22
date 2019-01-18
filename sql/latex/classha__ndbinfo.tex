@@ -1,0 +1,194 @@
+\hypertarget{classha__ndbinfo}{}\section{ha\+\_\+ndbinfo Class Reference}
+\label{classha__ndbinfo}\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+Inheritance diagram for ha\+\_\+ndbinfo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classha__ndbinfo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_a775853f9437f8637cb33d1c989ab1c08}\label{classha__ndbinfo_a775853f9437f8637cb33d1c989ab1c08}} 
+{\bfseries ha\+\_\+ndbinfo} (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$table\+\_\+arg)
+\item 
+const char $\ast$ \mbox{\hyperlink{classha__ndbinfo_a4f8caa0e516e62ccce4a5f2a52590548}{table\+\_\+type}} () const
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{classha__ndbinfo_ae7153997d64cb4e94ce23ecfb92714fb}{bas\+\_\+ext}} () const
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_a9290b4ae5594d9d58d4a66b84561764e}\label{classha__ndbinfo_a9290b4ae5594d9d58d4a66b84561764e}} 
+ulonglong {\bfseries table\+\_\+flags} () const
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_ab7a43994546827a77729bc50be4a1570}\label{classha__ndbinfo_ab7a43994546827a77729bc50be4a1570}} 
+ulong {\bfseries index\+\_\+flags} (uint inx, uint part, bool all\+\_\+parts) const
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_aa7aaa6f7dbdb5873e9c9bf95d0c06a01}\label{classha__ndbinfo_aa7aaa6f7dbdb5873e9c9bf95d0c06a01}} 
+int {\bfseries create} (const char $\ast$name, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$form, \mbox{\hyperlink{structst__ha__create__information}{H\+A\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+FO}} $\ast$create\+\_\+info)
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_af1f092257e1ff9e3113d751e98039a3a}\label{classha__ndbinfo_af1f092257e1ff9e3113d751e98039a3a}} 
+int {\bfseries open} (const char $\ast$name, int mode, uint test\+\_\+if\+\_\+locked)
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_ad2c8c0df6ec148099b4749d7fca2fb09}\label{classha__ndbinfo_ad2c8c0df6ec148099b4749d7fca2fb09}} 
+int {\bfseries close} (void)
+\item 
+int \mbox{\hyperlink{classha__ndbinfo_a0157ed0545e9748cccbd9b58a7178529}{rnd\+\_\+init}} (bool scan)
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_aaa955fbfc88fdf4434a70dc528be3e80}\label{classha__ndbinfo_aaa955fbfc88fdf4434a70dc528be3e80}} 
+int {\bfseries rnd\+\_\+end} ()
+\item 
+int \mbox{\hyperlink{classha__ndbinfo_aafb71ce870019170b8949672a26387c3}{rnd\+\_\+next}} (uchar $\ast$buf)
+\item 
+int \mbox{\hyperlink{classha__ndbinfo_a3c82928e6d10f1e83b118cc6fa7ce088}{rnd\+\_\+pos}} (uchar $\ast$buf, uchar $\ast$pos)
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_a77dc869f87d3deb90f81564d6ff92ccb}\label{classha__ndbinfo_a77dc869f87d3deb90f81564d6ff92ccb}} 
+void {\bfseries position} (const uchar $\ast$record)
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_a6e00d5ed91ce96c446f269fc7b190511}\label{classha__ndbinfo_a6e00d5ed91ce96c446f269fc7b190511}} 
+int {\bfseries info} (uint)
+\item 
+T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$ \mbox{\hyperlink{classha__ndbinfo_a7169a09db353528ca14a979b01e56eb6}{store\+\_\+lock}} (T\+HD $\ast$thd, T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$to, enum thr\+\_\+lock\+\_\+type lock\+\_\+type)
+\item 
+\mbox{\Hypertarget{classha__ndbinfo_a302a920c73d2ddbd2c7e14cf77d2d37d}\label{classha__ndbinfo_a302a920c73d2ddbd2c7e14cf77d2d37d}} 
+bool {\bfseries low\+\_\+byte\+\_\+first} () const
+\item 
+bool \mbox{\hyperlink{classha__ndbinfo_ab3693b75133ce5d4e4861ef5627ebbdc}{get\+\_\+error\+\_\+message}} (int error, String $\ast$buf)
+\item 
+uint8 \mbox{\hyperlink{classha__ndbinfo_ab23949e133485226e2c90e78eb914b60}{table\+\_\+cache\+\_\+type}} ()
+\item 
+virtual ha\+\_\+rows \mbox{\hyperlink{classha__ndbinfo_a343b6837bb14a74236095276dec644dd}{estimate\+\_\+rows\+\_\+upper\+\_\+bound}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classha__ndbinfo_ae7153997d64cb4e94ce23ecfb92714fb}\label{classha__ndbinfo_ae7153997d64cb4e94ce23ecfb92714fb}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!bas\+\_\+ext@{bas\+\_\+ext}}
+\index{bas\+\_\+ext@{bas\+\_\+ext}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{bas\+\_\+ext()}{bas\_ext()}}
+{\footnotesize\ttfamily const char$\ast$$\ast$ ha\+\_\+ndbinfo\+::bas\+\_\+ext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+If frm\+\_\+error() is called then we will use this to find out what file extentions exist for the storage engine. This is also used by the default rename\+\_\+table and delete\+\_\+table method in \mbox{\hyperlink{handler_8cc}{handler.\+cc}}.
+
+For engines that have two file name extentions (separate meta/index file and data file), the order of elements is relevant. First element of engine file name extentions array should be meta/index file extention. Second element -\/ data file extention. This order is assumed by prepare\+\_\+for\+\_\+repair() when R\+E\+P\+A\+IR \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... U\+S\+E\+\_\+\+F\+RM is issued. 
+
+Implements \mbox{\hyperlink{classhandler_a748d5e5b6dbbb0681cbac2ad881505c9}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_a343b6837bb14a74236095276dec644dd}\label{classha__ndbinfo_a343b6837bb14a74236095276dec644dd}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!estimate\+\_\+rows\+\_\+upper\+\_\+bound@{estimate\+\_\+rows\+\_\+upper\+\_\+bound}}
+\index{estimate\+\_\+rows\+\_\+upper\+\_\+bound@{estimate\+\_\+rows\+\_\+upper\+\_\+bound}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{estimate\+\_\+rows\+\_\+upper\+\_\+bound()}{estimate\_rows\_upper\_bound()}}
+{\footnotesize\ttfamily virtual ha\+\_\+rows ha\+\_\+ndbinfo\+::estimate\+\_\+rows\+\_\+upper\+\_\+bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return upper bound of current number of records in the table (max. of how many records one will retrieve when doing a full table scan) If upper bound is not known, H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR should be returned as a max possible upper bound. 
+
+Reimplemented from \mbox{\hyperlink{classhandler_ae59e9a1d36d852f4dd5dd00bff5f1ae4}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_ab3693b75133ce5d4e4861ef5627ebbdc}\label{classha__ndbinfo_ab3693b75133ce5d4e4861ef5627ebbdc}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!get\+\_\+error\+\_\+message@{get\+\_\+error\+\_\+message}}
+\index{get\+\_\+error\+\_\+message@{get\+\_\+error\+\_\+message}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{get\+\_\+error\+\_\+message()}{get\_error\_message()}}
+{\footnotesize\ttfamily bool ha\+\_\+ndbinfo\+::get\+\_\+error\+\_\+message (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{String $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return an error message specific to this handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & error code previously returned by handler \\
+\hline
+{\em buf} & pointer to String where to add error message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if this is a temporary error 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classhandler_afce8ffd064ce683481494c7503ef820c}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_a0157ed0545e9748cccbd9b58a7178529}\label{classha__ndbinfo_a0157ed0545e9748cccbd9b58a7178529}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!rnd\+\_\+init@{rnd\+\_\+init}}
+\index{rnd\+\_\+init@{rnd\+\_\+init}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{rnd\+\_\+init()}{rnd\_init()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbinfo\+::rnd\+\_\+init (\begin{DoxyParamCaption}\item[{bool}]{scan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classha__ndbinfo_a0157ed0545e9748cccbd9b58a7178529}{rnd\+\_\+init()}} can be called two times without rnd\+\_\+end() in between (it only makes sense if scan=1). then the second call should prepare for the new table scan (e.\+g if rnd\+\_\+init allocates the cursor, second call should position it to the start of the table, no need to deallocate and allocate it again 
+
+Implements \mbox{\hyperlink{classhandler}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_aafb71ce870019170b8949672a26387c3}\label{classha__ndbinfo_aafb71ce870019170b8949672a26387c3}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!rnd\+\_\+next@{rnd\+\_\+next}}
+\index{rnd\+\_\+next@{rnd\+\_\+next}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{rnd\+\_\+next()}{rnd\_next()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbinfo\+::rnd\+\_\+next (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classhandler_a48cb9c94ca93dbfbb7e92822caba82a1}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_a3c82928e6d10f1e83b118cc6fa7ce088}\label{classha__ndbinfo_a3c82928e6d10f1e83b118cc6fa7ce088}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!rnd\+\_\+pos@{rnd\+\_\+pos}}
+\index{rnd\+\_\+pos@{rnd\+\_\+pos}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{rnd\+\_\+pos()}{rnd\_pos()}}
+{\footnotesize\ttfamily int ha\+\_\+ndbinfo\+::rnd\+\_\+pos (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf,  }\item[{uchar $\ast$}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classhandler_af8c2b258691e5baac8dd22d19c084b37}{index\+\_\+read\+\_\+map()}}. 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classhandler_adf659edd9d870e90c8974ae0eba7a082}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_a7169a09db353528ca14a979b01e56eb6}\label{classha__ndbinfo_a7169a09db353528ca14a979b01e56eb6}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!store\+\_\+lock@{store\+\_\+lock}}
+\index{store\+\_\+lock@{store\+\_\+lock}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{store\+\_\+lock()}{store\_lock()}}
+{\footnotesize\ttfamily T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA$\ast$$\ast$ ha\+\_\+ndbinfo\+::store\+\_\+lock (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{T\+H\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+A\+TA $\ast$$\ast$}]{to,  }\item[{enum thr\+\_\+lock\+\_\+type}]{lock\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Is not invoked for non-\/transactional temporary tables.
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classha__ndbinfo_a7169a09db353528ca14a979b01e56eb6}{store\+\_\+lock()}} can return more than one lock if the table is M\+E\+R\+GE or partitioned.
+
+that one can N\+OT rely on table-\/$>$in\+\_\+use in \mbox{\hyperlink{classha__ndbinfo_a7169a09db353528ca14a979b01e56eb6}{store\+\_\+lock()}}. It may refer to a different thread if called from \mbox{\hyperlink{group__Locking_gad2320fa808c9d6523790e796d57e2331}{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread()}}.
+
+If the table is M\+E\+R\+GE, \mbox{\hyperlink{classha__ndbinfo_a7169a09db353528ca14a979b01e56eb6}{store\+\_\+lock()}} can return less locks than \mbox{\hyperlink{classhandler_a2447668275a831bcf73b5c00818254a6}{lock\+\_\+count()}} claimed. This can happen when the M\+E\+R\+GE children are not attached when this is called from another thread. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classhandler_a2502e460566f2c4b506cc1b30eb79e0a}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_ab23949e133485226e2c90e78eb914b60}\label{classha__ndbinfo_ab23949e133485226e2c90e78eb914b60}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!table\+\_\+cache\+\_\+type@{table\+\_\+cache\+\_\+type}}
+\index{table\+\_\+cache\+\_\+type@{table\+\_\+cache\+\_\+type}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{table\+\_\+cache\+\_\+type()}{table\_cache\_type()}}
+{\footnotesize\ttfamily uint8 ha\+\_\+ndbinfo\+::table\+\_\+cache\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Type of table for caching query 
+
+Reimplemented from \mbox{\hyperlink{classhandler_ab4d7cf309121ec10e4150860c8caa12a}{handler}}.
+
+\mbox{\Hypertarget{classha__ndbinfo_a4f8caa0e516e62ccce4a5f2a52590548}\label{classha__ndbinfo_a4f8caa0e516e62ccce4a5f2a52590548}} 
+\index{ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}!table\+\_\+type@{table\+\_\+type}}
+\index{table\+\_\+type@{table\+\_\+type}!ha\+\_\+ndbinfo@{ha\+\_\+ndbinfo}}
+\subsubsection{\texorpdfstring{table\+\_\+type()}{table\_type()}}
+{\footnotesize\ttfamily const char$\ast$ ha\+\_\+ndbinfo\+::table\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+The following can be called without an open handler 
+
+Implements \mbox{\hyperlink{classhandler_ad38f5d3f1e026a0af32b5542aa5ac2f9}{handler}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndbinfo.\+h\item 
+ha\+\_\+ndbinfo.\+cc\end{DoxyCompactItemize}

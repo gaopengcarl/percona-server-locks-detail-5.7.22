@@ -1,0 +1,69 @@
+\hypertarget{classItem__maxmin__subselect}{}\section{Item\+\_\+maxmin\+\_\+subselect Class Reference}
+\label{classItem__maxmin__subselect}\index{Item\+\_\+maxmin\+\_\+subselect@{Item\+\_\+maxmin\+\_\+subselect}}
+Inheritance diagram for Item\+\_\+maxmin\+\_\+subselect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__maxmin__subselect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_a0d74e27d8a2a08d3ad80c87267aba43c}\label{classItem__maxmin__subselect_a0d74e27d8a2a08d3ad80c87267aba43c}} 
+{\bfseries Item\+\_\+maxmin\+\_\+subselect} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} $\ast$parent, st\+\_\+select\+\_\+lex $\ast$select\+\_\+lex, bool max, bool ignore\+\_\+nulls)
+\item 
+virtual void \mbox{\hyperlink{classItem__maxmin__subselect_ad03a1c165ac9ec019b5c7e80f108cddd}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_ac372a6ca5365e2c85a89915a9fe570c4}\label{classItem__maxmin__subselect_ac372a6ca5365e2c85a89915a9fe570c4}} 
+virtual void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_a5abc0232a881ddfcb644cd0ebf835a07}\label{classItem__maxmin__subselect_a5abc0232a881ddfcb644cd0ebf835a07}} 
+bool {\bfseries any\+\_\+value} ()
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_ab3e584694b7363b4583941f30163bf99}\label{classItem__maxmin__subselect_ab3e584694b7363b4583941f30163bf99}} 
+void {\bfseries register\+\_\+value} ()
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_a258f261b239b3cc1c90a3df3ce509e07}\label{classItem__maxmin__subselect_a258f261b239b3cc1c90a3df3ce509e07}} 
+void {\bfseries reset\+\_\+value\+\_\+registration} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_a4cf43454eeb7810a11ab2011e79cbe3b}\label{classItem__maxmin__subselect_a4cf43454eeb7810a11ab2011e79cbe3b}} 
+bool {\bfseries max}
+\item 
+\mbox{\Hypertarget{classItem__maxmin__subselect_ae5f3b77efab0ec19e24a682a34c3865c}\label{classItem__maxmin__subselect_ae5f3b77efab0ec19e24a682a34c3865c}} 
+bool {\bfseries was\+\_\+values}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__maxmin__subselect_ad03a1c165ac9ec019b5c7e80f108cddd}\label{classItem__maxmin__subselect_ad03a1c165ac9ec019b5c7e80f108cddd}} 
+\index{Item\+\_\+maxmin\+\_\+subselect@{Item\+\_\+maxmin\+\_\+subselect}!print@{print}}
+\index{print@{print}!Item\+\_\+maxmin\+\_\+subselect@{Item\+\_\+maxmin\+\_\+subselect}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+maxmin\+\_\+subselect\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__subselect_a61f70e7dc36e3aad77919971995cccb9}{Item\+\_\+subselect}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+subselect.\+h\item 
+\mbox{\hyperlink{item__subselect_8cc}{item\+\_\+subselect.\+cc}}\end{DoxyCompactItemize}

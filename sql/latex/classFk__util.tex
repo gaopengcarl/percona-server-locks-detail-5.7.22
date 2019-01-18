@@ -1,0 +1,52 @@
+\hypertarget{classFk__util}{}\section{Fk\+\_\+util Class Reference}
+\label{classFk__util}\index{Fk\+\_\+util@{Fk\+\_\+util}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFk__util_a11d60aeb5d3665b5dedce6a8e17d0bce}\label{classFk__util_a11d60aeb5d3665b5dedce6a8e17d0bce}} 
+{\bfseries Fk\+\_\+util} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classFk__util_ab02a75767888241901b03d9370fa265b}\label{classFk__util_ab02a75767888241901b03d9370fa265b}} 
+bool {\bfseries create} (N\+D\+B\+D\+I\+CT $\ast$dict, const char $\ast$mock\+\_\+name, const char $\ast$child\+\_\+name, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classKey__part__spec}{Key\+\_\+part\+\_\+spec}} $>$ key\+\_\+part\+\_\+list, const N\+D\+B\+C\+OL $\ast$col\+\_\+types\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{classFk__util_a300ee65050a3aafd5929f5f65d0c17c9}\label{classFk__util_a300ee65050a3aafd5929f5f65d0c17c9}} 
+bool {\bfseries create} (N\+D\+B\+D\+I\+CT $\ast$dict, const char $\ast$mock\+\_\+name, const char $\ast$child\+\_\+name, const char $\ast$col\+\_\+names\mbox{[}$\,$\mbox{]}, const N\+D\+B\+C\+OL $\ast$col\+\_\+types\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{classFk__util_a173b6503450342abe2608b50cb6b88bd}\label{classFk__util_a173b6503450342abe2608b50cb6b88bd}} 
+bool {\bfseries build\+\_\+mock\+\_\+list} (Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const Ndb\+Dictionary\+::\+Table $\ast$table, \mbox{\hyperlink{classList}{List}}$<$ char $>$ \&mock\+\_\+list)
+\item 
+\mbox{\Hypertarget{classFk__util_aefb2061619fbe488e4e5c9ac990668a7}\label{classFk__util_aefb2061619fbe488e4e5c9ac990668a7}} 
+void {\bfseries drop\+\_\+mock\+\_\+list} (Ndb $\ast$ndb, Ndb\+Dictionary\+::\+Dictionary $\ast$dict, \mbox{\hyperlink{classList}{List}}$<$ char $>$ \&drop\+\_\+list)
+\item 
+\mbox{\Hypertarget{classFk__util_acb46d13152d749fff9386def1cb8ac8c}\label{classFk__util_acb46d13152d749fff9386def1cb8ac8c}} 
+bool {\bfseries drop} (Ndb $\ast$ndb, Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const Ndb\+Dictionary\+::\+Table $\ast$table)
+\item 
+\mbox{\Hypertarget{classFk__util_a6a661b626763285b4023a90783cfa3bc}\label{classFk__util_a6a661b626763285b4023a90783cfa3bc}} 
+bool {\bfseries count\+\_\+fks} (Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const Ndb\+Dictionary\+::\+Table $\ast$table, uint \&count) const
+\item 
+\mbox{\Hypertarget{classFk__util_a4c3cd31383ace95100c500e5a69bd607}\label{classFk__util_a4c3cd31383ace95100c500e5a69bd607}} 
+bool {\bfseries drop\+\_\+fk} (Ndb $\ast$ndb, Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const char $\ast$fk\+\_\+name)
+\item 
+\mbox{\Hypertarget{classFk__util_a5766d465414412c8cfbcff66a299eea7}\label{classFk__util_a5766d465414412c8cfbcff66a299eea7}} 
+void {\bfseries resolve\+\_\+mock\+\_\+tables} (Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const char $\ast$new\+\_\+parent\+\_\+db, const char $\ast$new\+\_\+parent\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classFk__util_a3b8bd0f5db19c739f1a8a216c6c062d9}\label{classFk__util_a3b8bd0f5db19c739f1a8a216c6c062d9}} 
+bool {\bfseries truncate\+\_\+allowed} (Ndb\+Dictionary\+::\+Dictionary $\ast$dict, const char $\ast$db, const Ndb\+Dictionary\+::\+Table $\ast$table, bool \&allow) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFk__util_a1135c1e23c1cd176fc54af87079d641d}\label{classFk__util_a1135c1e23c1cd176fc54af87079d641d}} 
+static bool {\bfseries split\+\_\+mock\+\_\+name} (const char $\ast$name, unsigned $\ast$child\+\_\+id\+\_\+ptr=N\+U\+LL, unsigned $\ast$child\+\_\+index\+\_\+ptr=N\+U\+LL, const char $\ast$$\ast$parent\+\_\+name=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classFk__util_a1a59b0d4c17161e4809d657543254d23}\label{classFk__util_a1a59b0d4c17161e4809d657543254d23}} 
+static bool {\bfseries is\+\_\+mock\+\_\+name} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classFk__util_aa0a459a2bb944eb1260acc88bd795ad1}\label{classFk__util_aa0a459a2bb944eb1260acc88bd795ad1}} 
+static const char $\ast$ {\bfseries format\+\_\+name} (char buf\mbox{[}$\,$\mbox{]}, size\+\_\+t buf\+\_\+size, int child\+\_\+id, uint fk\+\_\+index, const char $\ast$parent\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndb\+\_\+ddl\+\_\+fk.\+cc\end{DoxyCompactItemize}

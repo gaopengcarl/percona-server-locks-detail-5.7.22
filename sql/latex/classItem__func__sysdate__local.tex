@@ -1,0 +1,64 @@
+\hypertarget{classItem__func__sysdate__local}{}\section{Item\+\_\+func\+\_\+sysdate\+\_\+local Class Reference}
+\label{classItem__func__sysdate__local}\index{Item\+\_\+func\+\_\+sysdate\+\_\+local@{Item\+\_\+func\+\_\+sysdate\+\_\+local}}
+Inheritance diagram for Item\+\_\+func\+\_\+sysdate\+\_\+local\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__sysdate__local}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__sysdate__local_a4990e1b3eaa2fd48557dc57e7497e022}\label{classItem__func__sysdate__local_a4990e1b3eaa2fd48557dc57e7497e022}} 
+{\bfseries Item\+\_\+func\+\_\+sysdate\+\_\+local} (uint8 dec\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__func__sysdate__local_a26412373ed0f5e2f9ed47ed030a74c23}\label{classItem__func__sysdate__local_a26412373ed0f5e2f9ed47ed030a74c23}} 
+bool {\bfseries const\+\_\+item} () const
+\item 
+\mbox{\Hypertarget{classItem__func__sysdate__local_a6f0696535b7f79b6a040470054187c89}\label{classItem__func__sysdate__local_a6f0696535b7f79b6a040470054187c89}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__func__sysdate__local_ae76a6981d0d68c6cbb3cbcebb519c66a}\label{classItem__func__sysdate__local_ae76a6981d0d68c6cbb3cbcebb519c66a}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+bool \mbox{\hyperlink{classItem__func__sysdate__local_a255101d1f8859223b3467024d66d6f0a}{get\+\_\+date}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$res, my\+\_\+time\+\_\+flags\+\_\+t fuzzy\+\_\+date)
+\item 
+table\+\_\+map \mbox{\hyperlink{classItem__func__sysdate__local_a89c15806cffaf36b3b37d19e97a829e3}{get\+\_\+initial\+\_\+pseudo\+\_\+tables}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__sysdate__local_a255101d1f8859223b3467024d66d6f0a}\label{classItem__func__sysdate__local_a255101d1f8859223b3467024d66d6f0a}} 
+\index{Item\+\_\+func\+\_\+sysdate\+\_\+local@{Item\+\_\+func\+\_\+sysdate\+\_\+local}!get\+\_\+date@{get\+\_\+date}}
+\index{get\+\_\+date@{get\+\_\+date}!Item\+\_\+func\+\_\+sysdate\+\_\+local@{Item\+\_\+func\+\_\+sysdate\+\_\+local}}
+\subsubsection{\texorpdfstring{get\+\_\+date()}{get\_date()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+sysdate\+\_\+local\+::get\+\_\+date (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{res,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{fuzzy\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Converts current time in my\+\_\+time\+\_\+t to M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME represenatation for local time zone. Defines time zone (local) used for whole S\+Y\+S\+D\+A\+TE function. 
+
+Implements \mbox{\hyperlink{classItem__datetime__func}{Item\+\_\+datetime\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__func__sysdate__local_a89c15806cffaf36b3b37d19e97a829e3}\label{classItem__func__sysdate__local_a89c15806cffaf36b3b37d19e97a829e3}} 
+\index{Item\+\_\+func\+\_\+sysdate\+\_\+local@{Item\+\_\+func\+\_\+sysdate\+\_\+local}!get\+\_\+initial\+\_\+pseudo\+\_\+tables@{get\+\_\+initial\+\_\+pseudo\+\_\+tables}}
+\index{get\+\_\+initial\+\_\+pseudo\+\_\+tables@{get\+\_\+initial\+\_\+pseudo\+\_\+tables}!Item\+\_\+func\+\_\+sysdate\+\_\+local@{Item\+\_\+func\+\_\+sysdate\+\_\+local}}
+\subsubsection{\texorpdfstring{get\+\_\+initial\+\_\+pseudo\+\_\+tables()}{get\_initial\_pseudo\_tables()}}
+{\footnotesize\ttfamily table\+\_\+map Item\+\_\+func\+\_\+sysdate\+\_\+local\+::get\+\_\+initial\+\_\+pseudo\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This function is non-\/deterministic and hence depends on the \textquotesingle{}R\+A\+ND\textquotesingle{} pseudo-\/table.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Always} & R\+A\+N\+D\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+IT \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_a379f54a79ca65beebc1e2571f3bf0d35}{Item\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{classItem__func__quote}{}\section{Item\+\_\+func\+\_\+quote Class Reference}
+\label{classItem__func__quote}\index{Item\+\_\+func\+\_\+quote@{Item\+\_\+func\+\_\+quote}}
+Inheritance diagram for Item\+\_\+func\+\_\+quote\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__func__quote}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__quote_a9f19a04fe47b4179db0c966374d3db68}\label{classItem__func__quote_a9f19a04fe47b4179db0c966374d3db68}} 
+{\bfseries Item\+\_\+func\+\_\+quote} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__func__quote_af2817fd1733d7f2a2e007aa4972d0641}\label{classItem__func__quote_af2817fd1733d7f2a2e007aa4972d0641}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+String $\ast$ \mbox{\hyperlink{classItem__func__quote_a44ccde4f58317a8d7bd29e22a6ef3985}{val\+\_\+str}} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__func__quote_ace182c52a46f27c2c2c76e226e314c18}\label{classItem__func__quote_ace182c52a46f27c2c2c76e226e314c18}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__quote_a44ccde4f58317a8d7bd29e22a6ef3985}\label{classItem__func__quote_a44ccde4f58317a8d7bd29e22a6ef3985}} 
+\index{Item\+\_\+func\+\_\+quote@{Item\+\_\+func\+\_\+quote}!val\+\_\+str@{val\+\_\+str}}
+\index{val\+\_\+str@{val\+\_\+str}!Item\+\_\+func\+\_\+quote@{Item\+\_\+func\+\_\+quote}}
+\subsubsection{\texorpdfstring{val\+\_\+str()}{val\_str()}}
+{\footnotesize\ttfamily String $\ast$ Item\+\_\+func\+\_\+quote\+::val\+\_\+str (\begin{DoxyParamCaption}\item[{String $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Q\+U\+O\+T\+E() function returns argument string in single quotes suitable for using in a S\+QL statement.
+
+Adds a \textbackslash{} before all characters that needs to be escaped in a S\+QL string. We also escape \textquotesingle{}$^\wedge$Z\textquotesingle{} (E\+ND-\/OF-\/F\+I\+LE in windows) to avoid probelms when running commands from a file in windows.
+
+This function is very useful when you want to generate S\+QL statements.
+
+\begin{DoxyNote}{Note}
+Q\+U\+O\+T\+E(\+N\+U\+L\+L) returns the string \textquotesingle{}N\+U\+LL\textquotesingle{} (4 letters, without quotes).
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em str} & Quoted string \\
+\hline
+{\em N\+U\+LL} & Out of memory. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classItem}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+strfunc.\+h\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

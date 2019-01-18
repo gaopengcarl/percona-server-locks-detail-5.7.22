@@ -1,0 +1,53 @@
+\hypertarget{sql__exception__handler_8h}{}\section{sql\+\_\+exception\+\_\+handler.\+h File Reference}
+\label{sql__exception__handler_8h}\index{sql\+\_\+exception\+\_\+handler.\+h@{sql\+\_\+exception\+\_\+handler.\+h}}
+
+
+This file declares functions to convert exceptions to My\+S\+QL error messages.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sql__exception__handler_8h_ad338b53ae387f3c083d92248b6277ddc}{handle\+\_\+std\+\_\+exception}} (const char $\ast$funcname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file declares functions to convert exceptions to My\+S\+QL error messages. 
+
+The pattern for use in other functions is\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  something\_that\_throws();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{catch} (...)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  handle\_foo\_exception(\textcolor{stringliteral}{"function\_name"});}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+There are different handlers for different use cases. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__exception__handler_8h_ad338b53ae387f3c083d92248b6277ddc}\label{sql__exception__handler_8h_ad338b53ae387f3c083d92248b6277ddc}} 
+\index{sql\+\_\+exception\+\_\+handler.\+h@{sql\+\_\+exception\+\_\+handler.\+h}!handle\+\_\+std\+\_\+exception@{handle\+\_\+std\+\_\+exception}}
+\index{handle\+\_\+std\+\_\+exception@{handle\+\_\+std\+\_\+exception}!sql\+\_\+exception\+\_\+handler.\+h@{sql\+\_\+exception\+\_\+handler.\+h}}
+\subsubsection{\texorpdfstring{handle\+\_\+std\+\_\+exception()}{handle\_std\_exception()}}
+{\footnotesize\ttfamily void handle\+\_\+std\+\_\+exception (\begin{DoxyParamCaption}\item[{const char $\ast$}]{funcname }\end{DoxyParamCaption})}
+
+Handle an exception of any type.
+
+Code that could throw exceptions should be wrapped in try/catch, and the catch block should raise a corresponding My\+S\+QL error. If this function is called from the catch block, it will raise a specialized error message for many of the std\+::exception subclasses, or a more generic error message if it is not a std\+::exception.
+
+
+\begin{DoxyParams}{Parameters}
+{\em funcname} & the name of the function that caught an exception\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{item__geofunc__internal_8h_a7dc12de3e4aa20476cbc32c6657e612f}{handle\+\_\+gis\+\_\+exception}} 
+\end{DoxySeeAlso}

@@ -1,0 +1,42 @@
+\hypertarget{classPolygon__stepper}{}\section{Polygon\+\_\+stepper Class Reference}
+\label{classPolygon__stepper}\index{Polygon\+\_\+stepper@{Polygon\+\_\+stepper}}
+Inheritance diagram for Polygon\+\_\+stepper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPolygon__stepper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPolygon__stepper_a21df0ac16c8cbfab636fcc8bcdab601b}\label{classPolygon__stepper_a21df0ac16c8cbfab636fcc8bcdab601b}} 
+{\bfseries Polygon\+\_\+stepper} (char dim, Geometry\+::wkb\+Byte\+Order bo, bool has\+\_\+wkb\+\_\+hdr)
+\item 
+const char $\ast$ \mbox{\hyperlink{classPolygon__stepper_a73b1c201b53a9bb5586e468501ca5337}{operator()}} (const char $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+For iterating polygons inside multipolygon or geometry collection. Expected multipolygon format\+: N\+UM-\/plgns$\vert$\+W\+KB-\/H\+D\+R1 plgn1$\vert$\+W\+KB-\/H\+D\+R2 plgn2$\vert$... This is also expected format for geometry collection. In both cases inside polygonX there is no more W\+KB headers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPolygon__stepper_a73b1c201b53a9bb5586e468501ca5337}\label{classPolygon__stepper_a73b1c201b53a9bb5586e468501ca5337}} 
+\index{Polygon\+\_\+stepper@{Polygon\+\_\+stepper}!operator()@{operator()}}
+\index{operator()@{operator()}!Polygon\+\_\+stepper@{Polygon\+\_\+stepper}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily const char $\ast$ Polygon\+\_\+stepper\+::operator() (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p }\end{DoxyParamCaption})}
+
+Parsing operator. 
+\begin{DoxyParams}{Parameters}
+{\em p} & points to the 1st byte of a polygon\textquotesingle{}s wkb data, right after its wkb header if any; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next polygon\textquotesingle{}s wkb data\textquotesingle{}s 1st byte pointer, skipping its wkb header if any. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+cc\end{DoxyCompactItemize}

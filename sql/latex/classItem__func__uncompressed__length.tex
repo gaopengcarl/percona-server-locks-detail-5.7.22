@@ -1,0 +1,48 @@
+\hypertarget{classItem__func__uncompressed__length}{}\section{Item\+\_\+func\+\_\+uncompressed\+\_\+length Class Reference}
+\label{classItem__func__uncompressed__length}\index{Item\+\_\+func\+\_\+uncompressed\+\_\+length@{Item\+\_\+func\+\_\+uncompressed\+\_\+length}}
+Inheritance diagram for Item\+\_\+func\+\_\+uncompressed\+\_\+length\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__func__uncompressed__length}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__uncompressed__length_aaefa1126fd5cff2b8506dc18ebb2a2a2}\label{classItem__func__uncompressed__length_aaefa1126fd5cff2b8506dc18ebb2a2a2}} 
+{\bfseries Item\+\_\+func\+\_\+uncompressed\+\_\+length} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__func__uncompressed__length_a9266a09efc49021441916ad3fad89680}\label{classItem__func__uncompressed__length_a9266a09efc49021441916ad3fad89680}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__func__uncompressed__length_a15049cb42b1b295c407e20dfd13b0503}\label{classItem__func__uncompressed__length_a15049cb42b1b295c407e20dfd13b0503}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+longlong \mbox{\hyperlink{classItem__func__uncompressed__length_aa0c950556a4e054e59f46eb86694f347}{val\+\_\+int}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__uncompressed__length_aa0c950556a4e054e59f46eb86694f347}\label{classItem__func__uncompressed__length_aa0c950556a4e054e59f46eb86694f347}} 
+\index{Item\+\_\+func\+\_\+uncompressed\+\_\+length@{Item\+\_\+func\+\_\+uncompressed\+\_\+length}!val\+\_\+int@{val\+\_\+int}}
+\index{val\+\_\+int@{val\+\_\+int}!Item\+\_\+func\+\_\+uncompressed\+\_\+length@{Item\+\_\+func\+\_\+uncompressed\+\_\+length}}
+\subsubsection{\texorpdfstring{val\+\_\+int()}{val\_int()}}
+{\footnotesize\ttfamily longlong Item\+\_\+func\+\_\+uncompressed\+\_\+length\+::val\+\_\+int (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The length that the compressed string args\mbox{[}0\mbox{]} had before being compressed.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is supposed to handle this case\+: S\+E\+L\+E\+CT U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+\_\+\+L\+E\+N\+G\+T\+H(\+C\+O\+M\+P\+R\+E\+S\+S($<$some string$>$)) However, in mysql tradition, the input argument can be {\itshape anything}.
+\end{DoxyNote}
+We return N\+U\+LL if evaluation of the input argument returns N\+U\+LL. If the input string does not look like something produced by Item\+\_\+func\+\_\+compress\+::val\+\_\+str, we issue a warning and return 0. 
+
+Implements \mbox{\hyperlink{classItem}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+strfunc.\+h\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{classItem__timeval__func}{}\section{Item\+\_\+timeval\+\_\+func Class Reference}
+\label{classItem__timeval__func}\index{Item\+\_\+timeval\+\_\+func@{Item\+\_\+timeval\+\_\+func}}
+Inheritance diagram for Item\+\_\+timeval\+\_\+func\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__timeval__func}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a9cd356c7be0da7bf8294c0c7feaf9b7f}\label{classItem__timeval__func_a9cd356c7be0da7bf8294c0c7feaf9b7f}} 
+{\bfseries Item\+\_\+timeval\+\_\+func} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos)
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a836f1edabc3e98743fad3d7974e88651}\label{classItem__timeval__func_a836f1edabc3e98743fad3d7974e88651}} 
+{\bfseries Item\+\_\+timeval\+\_\+func} (\mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a3676c12ba08a7d85735a1dc053722ee3}\label{classItem__timeval__func_a3676c12ba08a7d85735a1dc053722ee3}} 
+{\bfseries Item\+\_\+timeval\+\_\+func} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+virtual bool \mbox{\hyperlink{classItem__timeval__func_a529c82bce0479faa4b598d3a801645ca}{val\+\_\+timeval}} (struct timeval $\ast$tm)=0
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a37414242673d7711c1a62b00b081e809}\label{classItem__timeval__func_a37414242673d7711c1a62b00b081e809}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_ae12d73f9ad0d7b9c0d54e2effcd45dc9}\label{classItem__timeval__func_ae12d73f9ad0d7b9c0d54e2effcd45dc9}} 
+double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a0a6911d901c5e73ebcded2a49b0294f1}\label{classItem__timeval__func_a0a6911d901c5e73ebcded2a49b0294f1}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_afa273993d182bfb7586796046c4436c1}\label{classItem__timeval__func_afa273993d182bfb7586796046c4436c1}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$decimal\+\_\+value)
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a63f6da40042c0d79884e3b9ee3492f1b}\label{classItem__timeval__func_a63f6da40042c0d79884e3b9ee3492f1b}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a4d8d45d1e8596c8c8bd61fdb57899662}\label{classItem__timeval__func_a4d8d45d1e8596c8c8bd61fdb57899662}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+\mbox{\Hypertarget{classItem__timeval__func_a0f83a81e061f4d359ac6f4b260ea40d2}\label{classItem__timeval__func_a0f83a81e061f4d359ac6f4b260ea40d2}} 
+enum Item\+\_\+result {\bfseries result\+\_\+type} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__timeval__func_a529c82bce0479faa4b598d3a801645ca}\label{classItem__timeval__func_a529c82bce0479faa4b598d3a801645ca}} 
+\index{Item\+\_\+timeval\+\_\+func@{Item\+\_\+timeval\+\_\+func}!val\+\_\+timeval@{val\+\_\+timeval}}
+\index{val\+\_\+timeval@{val\+\_\+timeval}!Item\+\_\+timeval\+\_\+func@{Item\+\_\+timeval\+\_\+func}}
+\subsubsection{\texorpdfstring{val\+\_\+timeval()}{val\_timeval()}}
+{\footnotesize\ttfamily virtual bool Item\+\_\+timeval\+\_\+func\+::val\+\_\+timeval (\begin{DoxyParamCaption}\item[{struct timeval $\ast$}]{tm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Return timestamp in \char`\"{}struct timeval\char`\"{} format. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tm} & The value is store here. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & On success \\
+\hline
+{\em true} & On error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classItem__func__unix__timestamp_ac21ec2e7b716887f359bffd70f937187}{Item\+\_\+func\+\_\+unix\+\_\+timestamp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+timefunc.\+h\item 
+\mbox{\hyperlink{item__timefunc_8cc}{item\+\_\+timefunc.\+cc}}\end{DoxyCompactItemize}

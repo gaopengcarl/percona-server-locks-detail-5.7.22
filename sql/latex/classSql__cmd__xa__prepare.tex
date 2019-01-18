@@ -1,0 +1,58 @@
+\hypertarget{classSql__cmd__xa__prepare}{}\section{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare Class Reference}
+\label{classSql__cmd__xa__prepare}\index{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare@{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare}}
+
+
+{\ttfamily \#include $<$xa.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+xa\+\_\+prepare\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__xa__prepare}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__prepare_a85a87b70fd2bd340b66d04b4ff3f7c1d}\label{classSql__cmd__xa__prepare_a85a87b70fd2bd340b66d04b4ff3f7c1d}} 
+{\bfseries Sql\+\_\+cmd\+\_\+xa\+\_\+prepare} (\mbox{\hyperlink{structxid__t}{xid\+\_\+t}} $\ast$xid\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classSql__cmd__xa__prepare_aa142dfc5575a471ed2ae975e5fcc6883}\label{classSql__cmd__xa__prepare_aa142dfc5575a471ed2ae975e5fcc6883}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__xa__prepare_aa142dfc5575a471ed2ae975e5fcc6883}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__xa__prepare_a238c596649cac951d4c839ae253b1624}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents S\+QL statement which puts in the P\+R\+E\+P\+A\+R\+ED state an XA transaction with the given xid value. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__xa__prepare_a238c596649cac951d4c839ae253b1624}\label{classSql__cmd__xa__prepare_a238c596649cac951d4c839ae253b1624}} 
+\index{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare@{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+xa\+\_\+prepare@{Sql\+\_\+cmd\+\_\+xa\+\_\+prepare}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+xa\+\_\+prepare\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this S\+QL statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+xa.\+h\item 
+xa.\+cc\end{DoxyCompactItemize}

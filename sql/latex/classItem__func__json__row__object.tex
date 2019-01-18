@@ -1,0 +1,58 @@
+\hypertarget{classItem__func__json__row__object}{}\section{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object Class Reference}
+\label{classItem__func__json__row__object}\index{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object@{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object}}
+
+
+{\ttfamily \#include $<$item\+\_\+json\+\_\+func.\+h$>$}
+
+Inheritance diagram for Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__func__json__row__object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__json__row__object_ad74b0af880b223a641682b71fd87de63}\label{classItem__func__json__row__object_ad74b0af880b223a641682b71fd87de63}} 
+{\bfseries Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object} (T\+HD $\ast$thd, const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$a)
+\item 
+\mbox{\Hypertarget{classItem__func__json__row__object_a6f1f6ed33a33a6f361a3fefedf7e600e}\label{classItem__func__json__row__object_a6f1f6ed33a33a6f361a3fefedf7e600e}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+bool \mbox{\hyperlink{classItem__func__json__row__object_ac325e6707cbb0d96b06b8695ca05f228}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents the J\+S\+ON function J\+S\+O\+N\+\_\+\+O\+B\+J\+E\+C\+T() 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__json__row__object_ac325e6707cbb0d96b06b8695ca05f228}\label{classItem__func__json__row__object_ac325e6707cbb0d96b06b8695ca05f228}} 
+\index{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object@{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object@{Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+json\+\_\+row\+\_\+object\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get a J\+S\+ON value from an \mbox{\hyperlink{classItem}{Item}}.
+
+All subclasses that can return a J\+S\+ON value, should override this function. The function in the base class is not expected to be called. If it is called, it most likely means that some subclass is missing an override of \mbox{\hyperlink{classItem__func__json__row__object_ac325e6707cbb0d96b06b8695ca05f228}{val\+\_\+json()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em result} & The resulting \mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if successful, true on failure 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+json\+\_\+func.\+h\item 
+item\+\_\+json\+\_\+func.\+cc\end{DoxyCompactItemize}

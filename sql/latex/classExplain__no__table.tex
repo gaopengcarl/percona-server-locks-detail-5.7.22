@@ -1,0 +1,66 @@
+\hypertarget{classExplain__no__table}{}\section{Explain\+\_\+no\+\_\+table Class Reference}
+\label{classExplain__no__table}\index{Explain\+\_\+no\+\_\+table@{Explain\+\_\+no\+\_\+table}}
+Inheritance diagram for Explain\+\_\+no\+\_\+table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExplain__no__table}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__no__table_a3f8df8ac4ef3f5c6bbba8624b6356133}\label{classExplain__no__table_a3f8df8ac4ef3f5c6bbba8624b6356133}} 
+{\bfseries Explain\+\_\+no\+\_\+table} (T\+HD $\ast$thd\+\_\+arg, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex\+\_\+arg, const char $\ast$message\+\_\+arg, enum\+\_\+parsing\+\_\+context context\+\_\+type\+\_\+arg=C\+T\+X\+\_\+\+J\+O\+IN, ha\+\_\+rows rows\+\_\+arg=H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classExplain__no__table_abb0311250686fc0cb30d9632150312eb}{shallow\+\_\+explain}} ()
+\item 
+virtual bool \mbox{\hyperlink{classExplain__no__table_a6713209630b904160dfc00bac9841370}{explain\+\_\+rows\+\_\+and\+\_\+filtered}} ()
+\item 
+\mbox{\Hypertarget{classExplain__no__table_a030d6708b091fbd00a17ed1d8e703593}\label{classExplain__no__table_a030d6708b091fbd00a17ed1d8e703593}} 
+virtual bool {\bfseries explain\+\_\+extra} ()
+\item 
+\mbox{\Hypertarget{classExplain__no__table_a1c2f71a7fee101c0a0e417327958a987}\label{classExplain__no__table_a1c2f71a7fee101c0a0e417327958a987}} 
+virtual bool {\bfseries explain\+\_\+modify\+\_\+flags} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classExplain__no__table}{Explain\+\_\+no\+\_\+table}} class outputs a trivial E\+X\+P\+L\+A\+IN row with \char`\"{}extra\char`\"{} column
+
+This class is intended for simple cases to produce E\+X\+P\+L\+A\+IN output with \char`\"{}\+No tables used\char`\"{}, \char`\"{}\+No matching records\char`\"{} etc. Optionally it can output number of estimated rows in the \char`\"{}row\char`\"{} column.
+
+\begin{DoxyNote}{Note}
+This class also produces E\+X\+P\+L\+A\+IN rows for inner units (if any). 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExplain__no__table_a6713209630b904160dfc00bac9841370}\label{classExplain__no__table_a6713209630b904160dfc00bac9841370}} 
+\index{Explain\+\_\+no\+\_\+table@{Explain\+\_\+no\+\_\+table}!explain\+\_\+rows\+\_\+and\+\_\+filtered@{explain\+\_\+rows\+\_\+and\+\_\+filtered}}
+\index{explain\+\_\+rows\+\_\+and\+\_\+filtered@{explain\+\_\+rows\+\_\+and\+\_\+filtered}!Explain\+\_\+no\+\_\+table@{Explain\+\_\+no\+\_\+table}}
+\subsubsection{\texorpdfstring{explain\+\_\+rows\+\_\+and\+\_\+filtered()}{explain\_rows\_and\_filtered()}}
+{\footnotesize\ttfamily bool Explain\+\_\+no\+\_\+table\+::explain\+\_\+rows\+\_\+and\+\_\+filtered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+fill col\+\_\+rows and col\+\_\+filtered fields together 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a1c2766929ff005124f8f14ce33e15f34}{Explain}}.
+
+\mbox{\Hypertarget{classExplain__no__table_abb0311250686fc0cb30d9632150312eb}\label{classExplain__no__table_abb0311250686fc0cb30d9632150312eb}} 
+\index{Explain\+\_\+no\+\_\+table@{Explain\+\_\+no\+\_\+table}!shallow\+\_\+explain@{shallow\+\_\+explain}}
+\index{shallow\+\_\+explain@{shallow\+\_\+explain}!Explain\+\_\+no\+\_\+table@{Explain\+\_\+no\+\_\+table}}
+\subsubsection{\texorpdfstring{shallow\+\_\+explain()}{shallow\_explain()}}
+{\footnotesize\ttfamily bool Explain\+\_\+no\+\_\+table\+::shallow\+\_\+explain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classExplain}{Explain}} everything but subqueries 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a2b5b074864b25d4bb669047dbcae8abb}{Explain}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+cc\end{DoxyCompactItemize}

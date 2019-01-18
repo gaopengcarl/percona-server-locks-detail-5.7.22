@@ -1,0 +1,243 @@
+\hypertarget{item__func_8cc}{}\section{item\+\_\+func.\+cc File Reference}
+\label{item__func_8cc}\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+
+
+This file defines all numerical functions.  
+
+
+{\ttfamily \#include \char`\"{}item\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+bit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+cmpfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mysql/service\+\_\+thd\+\_\+wait.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}parse\+\_\+tree\+\_\+helpers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+mi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+msr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+rli.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+head.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+audit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+show.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+json\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cfloat$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classInterruptible__wait}{Interruptible\+\_\+wait}}
+\item 
+struct \mbox{\hyperlink{structUser__level__lock}{User\+\_\+level\+\_\+lock}}
+\item 
+class \mbox{\hyperlink{classUser__level__lock__wait__error__handler}{User\+\_\+level\+\_\+lock\+\_\+wait\+\_\+error\+\_\+handler}}
+\item 
+class \mbox{\hyperlink{classMDL__lock__get__owner__thread__id__visitor}{M\+D\+L\+\_\+lock\+\_\+get\+\_\+owner\+\_\+thread\+\_\+id\+\_\+visitor}}
+\item 
+class \mbox{\hyperlink{classSilence__deprecation__warnings}{Silence\+\_\+deprecation\+\_\+warnings}}
+\begin{DoxyCompactList}\small\item\em Disable deprecation warnings handler class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries get\+\_\+sys\+\_\+var\+\_\+safe}(type)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__func_8cc_af6bff259389b2118e4dee09a201b5f00}\label{item__func_8cc_af6bff259389b2118e4dee09a201b5f00}} 
+bool {\bfseries check\+\_\+reserved\+\_\+words} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$name)
+\item 
+bool \mbox{\hyperlink{item__func_8cc_a5f42517eb623a2da23a45f1ad5be3571}{eval\+\_\+const\+\_\+cond}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$cond, bool $\ast$value)
+\item 
+\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$ \mbox{\hyperlink{item__func_8cc_a9e3ccf4c4aabcc42a062c68ca8e7cc75}{get\+\_\+gc\+\_\+for\+\_\+expr}} (\mbox{\hyperlink{classItem__func}{Item\+\_\+func}} $\ast$$\ast$func, \mbox{\hyperlink{classField}{Field}} $\ast$fld, Item\+\_\+result type)
+\item 
+\mbox{\Hypertarget{item__func_8cc_a7de90e6f272df141cf66b94865bdc434}\label{item__func_8cc_a7de90e6f272df141cf66b94865bdc434}} 
+void {\bfseries reject\+\_\+geometry\+\_\+args} (uint arg\+\_\+count, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, \mbox{\hyperlink{classItem__result__field}{Item\+\_\+result\+\_\+field}} $\ast$me)
+\item 
+void \mbox{\hyperlink{item__func_8cc_a5de0e2de9f2cca04f0609fcc6cf13e95}{unsupported\+\_\+json\+\_\+comparison}} (size\+\_\+t arg\+\_\+count, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, const char $\ast$msg)
+\item 
+\mbox{\Hypertarget{item__func_8cc_a8c897f6dd05495ac718305d05a6d6416}\label{item__func_8cc_a8c897f6dd05495ac718305d05a6d6416}} 
+double {\bfseries my\+\_\+double\+\_\+round} (double value, longlong dec, bool dec\+\_\+unsigned, bool truncate)
+\item 
+uchar $\ast$ \mbox{\hyperlink{item__func_8cc_a4e0ff37e46f048bfd52c3f8207af68f0}{ull\+\_\+get\+\_\+key}} (const uchar $\ast$ptr, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+void \mbox{\hyperlink{item__func_8cc_ab7212c0f127018367f849992debb1c34}{mysql\+\_\+ull\+\_\+cleanup}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{item__func_8cc_a84f961a6f8b475aed61dcb3840edee74}{mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{item__func_8cc_ab5e1b7df5a2226782a6b676faf93fe9d}\label{item__func_8cc_ab5e1b7df5a2226782a6b676faf93fe9d}} 
+void {\bfseries item\+\_\+func\+\_\+sleep\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{item__func_8cc_a63b96e150a9161610e2256fdf41749a6}\label{item__func_8cc_a63b96e150a9161610e2256fdf41749a6}} 
+void {\bfseries item\+\_\+func\+\_\+sleep\+\_\+free} ()
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{item__func_8cc_a89ad321f762721c8c8c34b8638496ebe}{get\+\_\+system\+\_\+var}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, enum\+\_\+var\+\_\+type var\+\_\+type, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG component)
+\item 
+\mbox{\Hypertarget{item__func_8cc_a0fb2515bb4ede7cd3cc598108168a0d7}\label{item__func_8cc_a0fb2515bb4ede7cd3cc598108168a0d7}} 
+void {\bfseries my\+\_\+missing\+\_\+function\+\_\+error} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&token, const char $\ast$func\+\_\+name)
+\item 
+\mbox{\Hypertarget{item__func_8cc_ae1a46ae6bd70600636275926a6fb119d}\label{item__func_8cc_ae1a46ae6bd70600636275926a6fb119d}} 
+void {\bfseries uuid\+\_\+short\+\_\+init} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mysql\+\_\+mutex\+\_\+t \mbox{\hyperlink{item__func_8cc_a6f0d407fb0f0fed78439dc5592b24b3f}{L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep}}
+\item 
+\mbox{\Hypertarget{item__func_8cc_ac1c963c434f0eed82f793ca37d68435b}\label{item__func_8cc_ac1c963c434f0eed82f793ca37d68435b}} 
+ulonglong {\bfseries uuid\+\_\+value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines all numerical functions. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{item__func_8cc_a9d18f40449f7265b42c118b8256ffb1f}\label{item__func_8cc_a9d18f40449f7265b42c118b8256ffb1f}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!get\+\_\+sys\+\_\+var\+\_\+safe@{get\+\_\+sys\+\_\+var\+\_\+safe}}
+\index{get\+\_\+sys\+\_\+var\+\_\+safe@{get\+\_\+sys\+\_\+var\+\_\+safe}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+sys\+\_\+var\+\_\+safe}{get\_sys\_var\_safe}}
+{\footnotesize\ttfamily \#define get\+\_\+sys\+\_\+var\+\_\+safe(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{  type value; \(\backslash\)}
+\DoxyCodeLine{  mysql\_mutex\_lock(\&LOCK\_global\_system\_variables); \(\backslash\)}
+\DoxyCodeLine{  value= *(type*) var->value\_ptr(thd, var\_type, \&component); \(\backslash\)}
+\DoxyCodeLine{  mysql\_mutex\_unlock(\&LOCK\_global\_system\_variables); \(\backslash\)}
+\DoxyCodeLine{  cache\_present |= GET\_SYS\_VAR\_CACHE\_LONG; \(\backslash\)}
+\DoxyCodeLine{  used\_query\_id= thd->query\_id; \(\backslash\)}
+\DoxyCodeLine{  cached\_llval= null\_value ? 0 : (longlong) value; \(\backslash\)}
+\DoxyCodeLine{  cached\_null\_value= null\_value; \(\backslash\)}
+\DoxyCodeLine{  return cached\_llval; \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while} (0)}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{item__func_8cc_a5f42517eb623a2da23a45f1ad5be3571}\label{item__func_8cc_a5f42517eb623a2da23a45f1ad5be3571}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!eval\+\_\+const\+\_\+cond@{eval\+\_\+const\+\_\+cond}}
+\index{eval\+\_\+const\+\_\+cond@{eval\+\_\+const\+\_\+cond}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{eval\+\_\+const\+\_\+cond()}{eval\_const\_cond()}}
+{\footnotesize\ttfamily bool eval\+\_\+const\+\_\+cond (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond,  }\item[{bool $\ast$}]{value }\end{DoxyParamCaption})}
+
+Evaluate a constant condition, represented by an \mbox{\hyperlink{classItem}{Item}} tree
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread handler \\
+\hline
+ & {\em cond} & The constant condition to evaluate \\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & Returned value, either true or false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if evaluation is successful, true otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__func_8cc_a9e3ccf4c4aabcc42a062c68ca8e7cc75}\label{item__func_8cc_a9e3ccf4c4aabcc42a062c68ca8e7cc75}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!get\+\_\+gc\+\_\+for\+\_\+expr@{get\+\_\+gc\+\_\+for\+\_\+expr}}
+\index{get\+\_\+gc\+\_\+for\+\_\+expr@{get\+\_\+gc\+\_\+for\+\_\+expr}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+gc\+\_\+for\+\_\+expr()}{get\_gc\_for\_expr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem__field}{Item\+\_\+field}}$\ast$ get\+\_\+gc\+\_\+for\+\_\+expr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__func}{Item\+\_\+func}} $\ast$$\ast$}]{func,  }\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{fld,  }\item[{Item\+\_\+result}]{type }\end{DoxyParamCaption})}
+
+Return new \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} if given expression matches GC
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Query__Optimizer_gaa95a062cdd785687a638e01d7ad85d11}{substitute\+\_\+gc()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Expression to be replaced \\
+\hline
+{\em fld} & G\+Cs field \\
+\hline
+{\em type} & Result type to match with \mbox{\hyperlink{classField}{Field}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+item new \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} for matched GC N\+U\+LL otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__func_8cc_a89ad321f762721c8c8c34b8638496ebe}\label{item__func_8cc_a89ad321f762721c8c8c34b8638496ebe}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!get\+\_\+system\+\_\+var@{get\+\_\+system\+\_\+var}}
+\index{get\+\_\+system\+\_\+var@{get\+\_\+system\+\_\+var}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+system\+\_\+var()}{get\_system\_var()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}}$\ast$ get\+\_\+system\+\_\+var (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{enum\+\_\+var\+\_\+type}]{var\+\_\+type,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{component }\end{DoxyParamCaption})}
+
+Return value of an system variable base\mbox{[}.name\mbox{]} as a constant item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Current parse context \\
+\hline
+{\em var\+\_\+type} & global / session \\
+\hline
+{\em name} & Name of base or system variable \\
+\hline
+{\em component} & Component.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If component.\+str = 0 then the variable name is in \textquotesingle{}name\textquotesingle{}
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item 0 \+: error
+\item \# \+: constant item 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{item__func_8cc_ab7212c0f127018367f849992debb1c34}\label{item__func_8cc_ab7212c0f127018367f849992debb1c34}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!mysql\+\_\+ull\+\_\+cleanup@{mysql\+\_\+ull\+\_\+cleanup}}
+\index{mysql\+\_\+ull\+\_\+cleanup@{mysql\+\_\+ull\+\_\+cleanup}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{mysql\+\_\+ull\+\_\+cleanup()}{mysql\_ull\_cleanup()}}
+{\footnotesize\ttfamily void mysql\+\_\+ull\+\_\+cleanup (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Release all user level locks for this T\+HD. \mbox{\Hypertarget{item__func_8cc_a84f961a6f8b475aed61dcb3840edee74}\label{item__func_8cc_a84f961a6f8b475aed61dcb3840edee74}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration@{mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration}}
+\index{mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration@{mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration()}{mysql\_ull\_set\_explicit\_lock\_duration()}}
+{\footnotesize\ttfamily void mysql\+\_\+ull\+\_\+set\+\_\+explicit\+\_\+lock\+\_\+duration (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Set explicit duration for metadata locks corresponding to user level locks to protect them from being released at the end of transaction. \mbox{\Hypertarget{item__func_8cc_a4e0ff37e46f048bfd52c3f8207af68f0}\label{item__func_8cc_a4e0ff37e46f048bfd52c3f8207af68f0}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!ull\+\_\+get\+\_\+key@{ull\+\_\+get\+\_\+key}}
+\index{ull\+\_\+get\+\_\+key@{ull\+\_\+get\+\_\+key}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{ull\+\_\+get\+\_\+key()}{ull\_get\_key()}}
+{\footnotesize\ttfamily uchar$\ast$ ull\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{ptr,  }\item[{size\+\_\+t $\ast$}]{length,  }\item[{my\+\_\+bool not\+\_\+used }]{M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE(unused) }\end{DoxyParamCaption})}
+
+Extract a hash key from \mbox{\hyperlink{structUser__level__lock}{User\+\_\+level\+\_\+lock}}. \mbox{\Hypertarget{item__func_8cc_a5de0e2de9f2cca04f0609fcc6cf13e95}\label{item__func_8cc_a5de0e2de9f2cca04f0609fcc6cf13e95}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!unsupported\+\_\+json\+\_\+comparison@{unsupported\+\_\+json\+\_\+comparison}}
+\index{unsupported\+\_\+json\+\_\+comparison@{unsupported\+\_\+json\+\_\+comparison}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{unsupported\+\_\+json\+\_\+comparison()}{unsupported\_json\_comparison()}}
+{\footnotesize\ttfamily void unsupported\+\_\+json\+\_\+comparison (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{arg\+\_\+count,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Go through the arguments of a function and check if any of them are J\+S\+ON. If a J\+S\+ON argument is found, raise a warning saying that this operation is not supported yet. This function is used to notify users that they are comparing J\+S\+ON values using a mechanism that has not yet been updated to use the J\+S\+ON comparator. J\+S\+ON values are typically handled as strings in that case.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+count} & the number of arguments \\
+\hline
+{\em args} & the arguments to go through looking for J\+S\+ON values \\
+\hline
+{\em msg} & the message that explains what is not supported \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{item__func_8cc_a6f0d407fb0f0fed78439dc5592b24b3f}\label{item__func_8cc_a6f0d407fb0f0fed78439dc5592b24b3f}} 
+\index{item\+\_\+func.\+cc@{item\+\_\+func.\+cc}!L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep@{L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep}}
+\index{L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep@{L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep}!item\+\_\+func.\+cc@{item\+\_\+func.\+cc}}
+\subsubsection{\texorpdfstring{L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep}{LOCK\_item\_func\_sleep}}
+{\footnotesize\ttfamily mysql\+\_\+mutex\+\_\+t L\+O\+C\+K\+\_\+item\+\_\+func\+\_\+sleep}
+
+Lock which is used to implement interruptible wait for S\+L\+E\+E\+P() function. 

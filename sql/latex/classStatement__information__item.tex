@@ -1,0 +1,90 @@
+\hypertarget{classStatement__information__item}{}\section{Statement\+\_\+information\+\_\+item Class Reference}
+\label{classStatement__information__item}\index{Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}}
+
+
+{\ttfamily \#include $<$sql\+\_\+get\+\_\+diagnostics.\+h$>$}
+
+Inheritance diagram for Statement\+\_\+information\+\_\+item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classStatement__information__item}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classStatement__information__item_ae867c415a95de0d9e6ce1e87a0227031}{Name}} \{ {\bfseries N\+U\+M\+B\+ER}, 
+{\bfseries R\+O\+W\+\_\+\+C\+O\+U\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStatement__information__item_a23c389e0893d1f0e26552b1f6cc45c69}{Statement\+\_\+information\+\_\+item}} (\mbox{\hyperlink{classStatement__information__item_ae867c415a95de0d9e6ce1e87a0227031}{Name}} name, \mbox{\hyperlink{classItem}{Item}} $\ast$target)
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classStatement__information__item_addf142e0f87ba39018e964286a89367c}{get\+\_\+value}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$da)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A statement information item. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classStatement__information__item_ae867c415a95de0d9e6ce1e87a0227031}\label{classStatement__information__item_ae867c415a95de0d9e6ce1e87a0227031}} 
+\index{Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}!Name@{Name}}
+\index{Name@{Name}!Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classStatement__information__item_ae867c415a95de0d9e6ce1e87a0227031}{Statement\+\_\+information\+\_\+item\+::\+Name}}}
+
+The name of a statement information item. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStatement__information__item_a23c389e0893d1f0e26552b1f6cc45c69}\label{classStatement__information__item_a23c389e0893d1f0e26552b1f6cc45c69}} 
+\index{Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}!Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}}
+\index{Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}!Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}}
+\subsubsection{\texorpdfstring{Statement\+\_\+information\+\_\+item()}{Statement\_information\_item()}}
+{\footnotesize\ttfamily Statement\+\_\+information\+\_\+item\+::\+Statement\+\_\+information\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStatement__information__item_ae867c415a95de0d9e6ce1e87a0227031}{Name}}}]{name,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor, used to represent a statement information item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of this item. \\
+\hline
+{\em target} & A target that gets the value of this item. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStatement__information__item_addf142e0f87ba39018e964286a89367c}\label{classStatement__information__item_addf142e0f87ba39018e964286a89367c}} 
+\index{Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Statement\+\_\+information\+\_\+item@{Statement\+\_\+information\+\_\+item}}
+\subsubsection{\texorpdfstring{get\+\_\+value()}{get\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Statement\+\_\+information\+\_\+item\+::get\+\_\+value (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{da }\end{DoxyParamCaption})}
+
+Obtain value of this statement information item.
+
+Obtain the value of this statement information item in the context of a given Diagnostics Area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em da} & The Diagnostics Area.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classItem}{Item}}} & representing the value. \\
+\hline
+{\em N\+U\+LL} & on error. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+get\+\_\+diagnostics.\+h\item 
+sql\+\_\+get\+\_\+diagnostics.\+cc\end{DoxyCompactItemize}

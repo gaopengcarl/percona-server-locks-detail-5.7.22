@@ -1,0 +1,301 @@
+\hypertarget{classCOPY__INFO}{}\section{C\+O\+P\+Y\+\_\+\+I\+N\+FO Class Reference}
+\label{classCOPY__INFO}\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+
+
+{\ttfamily \#include $<$sql\+\_\+data\+\_\+change.\+h$>$}
+
+Inheritance diagram for C\+O\+P\+Y\+\_\+\+I\+N\+FO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCOPY__INFO}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classCOPY__INFO_1_1Statistics}{Statistics}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_a2c75f8423ff1891b6cdb99ea6cd6d316}\label{classCOPY__INFO_a2c75f8423ff1891b6cdb99ea6cd6d316}} 
+enum {\bfseries operation\+\_\+type} \{ {\bfseries I\+N\+S\+E\+R\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}, 
+{\bfseries U\+P\+D\+A\+T\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCOPY__INFO_a59ba05cd9704541946914de72db0c818}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} (operation\+\_\+type optype, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$inserted\+\_\+columns, bool manage\+\_\+defaults, enum\+\_\+duplicates duplicate\+\_\+handling)
+\item 
+\mbox{\hyperlink{classCOPY__INFO_a6b955bc13055dcedc347a75fbb4cbdee}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} (operation\+\_\+type optype, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$inserted\+\_\+columns, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$inserted\+\_\+columns2, bool manage\+\_\+defaults, enum\+\_\+duplicates duplicates\+\_\+handling, int escape\+\_\+character)
+\item 
+\mbox{\hyperlink{classCOPY__INFO_a6f301b4e25739036b3acd99a24c54257}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} (operation\+\_\+type optype, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$values)
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_a63278b7b2d2cfb691c76659207eb0148}\label{classCOPY__INFO_a63278b7b2d2cfb691c76659207eb0148}} 
+operation\+\_\+type {\bfseries get\+\_\+operation\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_aa24704cdb5ed0c2271c1f83a3990be68}\label{classCOPY__INFO_aa24704cdb5ed0c2271c1f83a3990be68}} 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$ {\bfseries get\+\_\+changed\+\_\+columns} () const
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_ad51d7c5440c5f1625dbc925e6ea865ec}\label{classCOPY__INFO_ad51d7c5440c5f1625dbc925e6ea865ec}} 
+const \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$ {\bfseries get\+\_\+changed\+\_\+columns2} () const
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_afd74b742568d31e9d93b3d7812916294}\label{classCOPY__INFO_afd74b742568d31e9d93b3d7812916294}} 
+bool {\bfseries get\+\_\+manage\+\_\+defaults} () const
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_a74c1de9324e8774de5dcbedace0ed357}\label{classCOPY__INFO_a74c1de9324e8774de5dcbedace0ed357}} 
+enum\+\_\+duplicates {\bfseries get\+\_\+duplicate\+\_\+handling} () const
+\item 
+virtual void \mbox{\hyperlink{classCOPY__INFO_a7ce8622f7a089c3b7ad02858539899ba}{set\+\_\+function\+\_\+defaults}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{classCOPY__INFO_ae3d8192214b05dc110801ec8dd999edc}{add\+\_\+function\+\_\+default\+\_\+columns}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$columns)
+\item 
+bool \mbox{\hyperlink{classCOPY__INFO_ac7e53a23c1bafc7c6e32d32091c957eb}{function\+\_\+defaults\+\_\+apply}} (const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table) const
+\item 
+bool \mbox{\hyperlink{classCOPY__INFO_af9bd54cdb4f21814f6575129550313aa}{function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns}} (M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$map)
+\item 
+bool \mbox{\hyperlink{classCOPY__INFO_a76b958b97160409b58f5ca669014e732}{ignore\+\_\+last\+\_\+columns}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, uint count)
+\item 
+virtual \mbox{\hyperlink{classCOPY__INFO_a0489e263f2e297822a61946ea98a9dc4}{$\sim$\+C\+O\+P\+Y\+\_\+\+I\+N\+FO}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_a2a8ecb111b8337d5fa22c18767568fc1}\label{classCOPY__INFO_a2a8ecb111b8337d5fa22c18767568fc1}} 
+\mbox{\hyperlink{classCOPY__INFO_1_1Statistics}{Statistics}} {\bfseries stats}
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_a75823e55a0adcff9b6ea4b1e25f14ec9}\label{classCOPY__INFO_a75823e55a0adcff9b6ea4b1e25f14ec9}} 
+int {\bfseries escape\+\_\+char}
+\item 
+\mbox{\Hypertarget{classCOPY__INFO_ad7ef0c76f46e39ab43aecc6d3898ea44}\label{classCOPY__INFO_ad7ef0c76f46e39ab43aecc6d3898ea44}} 
+int {\bfseries last\+\_\+errno}
+\item 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$ \mbox{\hyperlink{classCOPY__INFO_a451057d07720b1c973ac2881c8939406}{update\+\_\+values}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCOPY__INFO_a4b096071d98443d6f9a59aafc6da78a0}{get\+\_\+function\+\_\+default\+\_\+columns}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$ \mbox{\hyperlink{classCOPY__INFO_a514b233a8aca96ba77cb73459a112b77}{get\+\_\+cached\+\_\+bitmap}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class encapsulates a data change operation. There are three such operations.
+
+
+\begin{DoxyEnumerate}
+\item Insert statements, i.\+e. I\+N\+S\+E\+RT I\+N\+TO .. V\+A\+L\+U\+ES
+\item Update statements. U\+P\+D\+A\+TE \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{0}{|X[-1]}|}
+\hline
+\end{longtabu}
+...
+\item Delete statements. Currently this class is not used for delete statements and thus has not yet been adapted to handle it.
+\end{DoxyEnumerate}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000078}{Todo}}]Rename this class.\end{DoxyRefDesc}
+
+
+The \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} structure is used by I\+N\+S\+E\+R\+T/\+R\+E\+P\+L\+A\+CE code. The schema of the row counting by the I\+N\+S\+E\+R\+T/\+I\+N\+S\+E\+RT ... ON D\+U\+P\+L\+I\+C\+A\+TE K\+EY U\+P\+D\+A\+TE code\+: If a row is inserted then the copied variable is incremented. If a row is updated by the I\+N\+S\+E\+RT ... ON D\+U\+P\+L\+I\+C\+A\+TE K\+EY U\+P\+D\+A\+TE and the new data differs from the old one then the copied and the updated variables are incremented. The touched variable is incremented if a row was touched by the update part of the I\+N\+S\+E\+RT ... ON D\+U\+P\+L\+I\+C\+A\+TE K\+EY U\+P\+D\+A\+TE no matter whether the row was actually changed or not. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCOPY__INFO_a59ba05cd9704541946914de72db0c818}\label{classCOPY__INFO_a59ba05cd9704541946914de72db0c818}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O()}{COPY\_INFO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::\+C\+O\+P\+Y\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{operation\+\_\+type}]{optype,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{inserted\+\_\+columns,  }\item[{bool}]{manage\+\_\+defaults,  }\item[{enum\+\_\+duplicates}]{duplicate\+\_\+handling }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes this data change operation as an S\+QL {\ttfamily I\+N\+S\+E\+RT} (with all possible syntaxes and variants).
+
+
+\begin{DoxyParams}{Parameters}
+{\em optype} & The data change operation type. \\
+\hline
+{\em inserted\+\_\+columns} & \mbox{\hyperlink{classList}{List}} of columns of the target table which the statement will explicitely fill; \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} must not set a function default for them. N\+U\+LL means \char`\"{}empty list\char`\"{}. \\
+\hline
+{\em manage\+\_\+defaults} & Whether this object should manage function defaults. \\
+\hline
+{\em duplicate\+\_\+handling} & The policy for handling duplicates. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCOPY__INFO_a6b955bc13055dcedc347a75fbb4cbdee}\label{classCOPY__INFO_a6b955bc13055dcedc347a75fbb4cbdee}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O()}{COPY\_INFO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::\+C\+O\+P\+Y\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{operation\+\_\+type}]{optype,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{inserted\+\_\+columns,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{inserted\+\_\+columns2,  }\item[{bool}]{manage\+\_\+defaults,  }\item[{enum\+\_\+duplicates}]{duplicates\+\_\+handling,  }\item[{int}]{escape\+\_\+character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb} Initializes this data change operation as an SQL @c LOAD @c DATA @c
+ INFILE.
+ Note that this statement has its inserted columns spread over two
+ lists:
+\end{DoxyVerb}
+ \begin{DoxyVerb}     LOAD DATA INFILE a_file
+     INTO TABLE a_table (col1, col2)   < first list (col1, col2)
+     SET col3=val;                     < second list (col3)
+\end{DoxyVerb}
+ \begin{DoxyVerb} @param optype            The data change operation type.
+ @param inserted_columns List of columns of the target table which
+                         the statement will explicitely fill; COPY_INFO
+                         must not set a function default for them. NULL
+                         means "empty list".
+ @param inserted_columns2 A second list like inserted_columns
+ @param manage_defaults   Whether this object should manage function
+                          defaults.
+ @param ignore_duplicates   Whether duplicate rows are ignored.
+ @param duplicates_handling How to handle duplicates.
+ @param escape_character    The escape character.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classCOPY__INFO_a6f301b4e25739036b3acd99a24c54257}\label{classCOPY__INFO_a6f301b4e25739036b3acd99a24c54257}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O()}{COPY\_INFO()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::\+C\+O\+P\+Y\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{operation\+\_\+type}]{optype,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes this data change operation as an S\+QL {\ttfamily U\+P\+D\+A\+TE} (multi-\/ or not).
+
+
+\begin{DoxyParams}{Parameters}
+{\em fields} & The column objects that are to be updated. \\
+\hline
+{\em values} & The values to be assigned to the fields. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+that U\+P\+D\+A\+TE always lists columns, so non-\/listed columns may need a default thus m\+\_\+manage\+\_\+defaults is always true. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCOPY__INFO_a0489e263f2e297822a61946ea98a9dc4}\label{classCOPY__INFO_a0489e263f2e297822a61946ea98a9dc4}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!````~C\+O\+P\+Y\+\_\+\+I\+N\+FO@{$\sim$\+C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\index{````~C\+O\+P\+Y\+\_\+\+I\+N\+FO@{$\sim$\+C\+O\+P\+Y\+\_\+\+I\+N\+FO}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+O\+P\+Y\+\_\+\+I\+N\+F\+O()}{~COPY\_INFO()}}
+{\footnotesize\ttfamily virtual C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::$\sim$\+C\+O\+P\+Y\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This class allocates its memory in a M\+E\+M\+\_\+\+R\+O\+OT, so there\textquotesingle{}s nothing to delete. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCOPY__INFO_ae3d8192214b05dc110801ec8dd999edc}\label{classCOPY__INFO_ae3d8192214b05dc110801ec8dd999edc}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!add\+\_\+function\+\_\+default\+\_\+columns@{add\+\_\+function\+\_\+default\+\_\+columns}}
+\index{add\+\_\+function\+\_\+default\+\_\+columns@{add\+\_\+function\+\_\+default\+\_\+columns}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{add\+\_\+function\+\_\+default\+\_\+columns()}{add\_function\_default\_columns()}}
+{\footnotesize\ttfamily bool C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::add\+\_\+function\+\_\+default\+\_\+columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the columns that are bound to receive default values from a function (e.\+g. C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP) to the set columns. Uses lazy instantiation of the set of function default columns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em table} & The table on which the operation is performed. \\
+\hline
+\mbox{\texttt{ out}}  & {\em columns} & The function default columns are added to this set.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Memory allocation error during lazy instantiation. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCOPY__INFO_ac7e53a23c1bafc7c6e32d32091c957eb}\label{classCOPY__INFO_ac7e53a23c1bafc7c6e32d32091c957eb}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!function\+\_\+defaults\+\_\+apply@{function\+\_\+defaults\+\_\+apply}}
+\index{function\+\_\+defaults\+\_\+apply@{function\+\_\+defaults\+\_\+apply}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{function\+\_\+defaults\+\_\+apply()}{function\_defaults\_apply()}}
+{\footnotesize\ttfamily bool C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::function\+\_\+defaults\+\_\+apply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+True if this operation will set some fields to function default result values when invoked on the table.
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classCOPY__INFO_ae3d8192214b05dc110801ec8dd999edc}{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::add\+\_\+function\+\_\+default\+\_\+columns()}} must be called prior to invoking this function. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCOPY__INFO_af9bd54cdb4f21814f6575129550313aa}\label{classCOPY__INFO_af9bd54cdb4f21814f6575129550313aa}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns@{function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns}}
+\index{function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns@{function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns()}{function\_defaults\_apply\_on\_columns()}}
+{\footnotesize\ttfamily bool C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::function\+\_\+defaults\+\_\+apply\+\_\+on\+\_\+columns (\begin{DoxyParamCaption}\item[{M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+True if any of the columns set in the bitmap have default functions that may set the column. \mbox{\Hypertarget{classCOPY__INFO_a514b233a8aca96ba77cb73459a112b77}\label{classCOPY__INFO_a514b233a8aca96ba77cb73459a112b77}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!get\+\_\+cached\+\_\+bitmap@{get\+\_\+cached\+\_\+bitmap}}
+\index{get\+\_\+cached\+\_\+bitmap@{get\+\_\+cached\+\_\+bitmap}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{get\+\_\+cached\+\_\+bitmap()}{get\_cached\_bitmap()}}
+{\footnotesize\ttfamily M\+Y\+\_\+\+B\+I\+T\+M\+AP$\ast$ C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::get\+\_\+cached\+\_\+bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+The column bitmap which has been cached for this data change operation. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classCOPY__INFO_a4b096071d98443d6f9a59aafc6da78a0}{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::get\+\_\+function\+\_\+default\+\_\+columns()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The cached bitmap, or N\+U\+LL if no bitmap was cached. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCOPY__INFO_a4b096071d98443d6f9a59aafc6da78a0}\label{classCOPY__INFO_a4b096071d98443d6f9a59aafc6da78a0}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!get\+\_\+function\+\_\+default\+\_\+columns@{get\+\_\+function\+\_\+default\+\_\+columns}}
+\index{get\+\_\+function\+\_\+default\+\_\+columns@{get\+\_\+function\+\_\+default\+\_\+columns}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{get\+\_\+function\+\_\+default\+\_\+columns()}{get\_function\_default\_columns()}}
+{\footnotesize\ttfamily bool C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::get\+\_\+function\+\_\+default\+\_\+columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+This function will, unless done already, calculate and keep the set of function default columns.
+
+Function default columns are those columns declared D\+E\+F\+A\+U\+LT $<$function$>$ and/or ON U\+P\+D\+A\+TE $<$function$>$. These will store the return value of $<$function$>$ when the relevant operation is applied on the table.
+
+Calling this function, without error, is a prerequisite for calling \mbox{\hyperlink{classCOPY__INFO_a7ce8622f7a089c3b7ad02858539899ba}{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::set\+\_\+function\+\_\+defaults()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & The table to be used for instantiating the column set.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Memory allocation error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCOPY__INFO_a76b958b97160409b58f5ca669014e732}\label{classCOPY__INFO_a76b958b97160409b58f5ca669014e732}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!ignore\+\_\+last\+\_\+columns@{ignore\+\_\+last\+\_\+columns}}
+\index{ignore\+\_\+last\+\_\+columns@{ignore\+\_\+last\+\_\+columns}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{ignore\+\_\+last\+\_\+columns()}{ignore\_last\_columns()}}
+{\footnotesize\ttfamily bool C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::ignore\+\_\+last\+\_\+columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{uint}]{count }\end{DoxyParamCaption})}
+
+Tells the object to not manage function defaults for the last \textquotesingle{}count\textquotesingle{} columns of \textquotesingle{}table\textquotesingle{}. 
+\begin{DoxyRetVals}{Return values}
+{\em false} & if success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classCOPY__INFO_a7ce8622f7a089c3b7ad02858539899ba}\label{classCOPY__INFO_a7ce8622f7a089c3b7ad02858539899ba}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!set\+\_\+function\+\_\+defaults@{set\+\_\+function\+\_\+defaults}}
+\index{set\+\_\+function\+\_\+defaults@{set\+\_\+function\+\_\+defaults}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{set\+\_\+function\+\_\+defaults()}{set\_function\_defaults()}}
+{\footnotesize\ttfamily void C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::set\+\_\+function\+\_\+defaults (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Assigns function default values to columns of the supplied table. This function cannot fail, but \mbox{\hyperlink{classCOPY__INFO_a4b096071d98443d6f9a59aafc6da78a0}{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::get\+\_\+function\+\_\+default\+\_\+columns()}} must be called beforehand.
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classCOPY__INFO_ae3d8192214b05dc110801ec8dd999edc}{C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::add\+\_\+function\+\_\+default\+\_\+columns()}} must be called prior to invoking this function.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em table} & The table to which columns belong.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is assumed that all columns in this \mbox{\hyperlink{classCOPY__INFO}{C\+O\+P\+Y\+\_\+\+I\+N\+FO}} are resolved to the table. 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000077}{Todo}}]combine this call to update\+\_\+generated\+\_\+write\+\_\+fields() with the one in fill\+\_\+record() to avoid updating virtual generated fields twice. blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value() is called to unset the m\+\_\+keep\+\_\+old\+\_\+value flag. Allowing this flag to remain might interfere with the way the old B\+L\+OB value is handled. When update\+\_\+generated\+\_\+write\+\_\+fields() is removed, blobs\+\_\+need\+\_\+not\+\_\+keep\+\_\+old\+\_\+value() can also be removed. \end{DoxyRefDesc}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCOPY__INFO_a451057d07720b1c973ac2881c8939406}\label{classCOPY__INFO_a451057d07720b1c973ac2881c8939406}} 
+\index{C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}!update\+\_\+values@{update\+\_\+values}}
+\index{update\+\_\+values@{update\+\_\+values}!C\+O\+P\+Y\+\_\+\+I\+N\+FO@{C\+O\+P\+Y\+\_\+\+I\+N\+FO}}
+\subsubsection{\texorpdfstring{update\+\_\+values}{update\_values}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}}$<$\mbox{\hyperlink{classItem}{Item}}$>$$\ast$ C\+O\+P\+Y\+\_\+\+I\+N\+F\+O\+::update\+\_\+values}
+
+Values for U\+P\+D\+A\+TE; needed by write\+\_\+record() if I\+N\+S\+E\+RT with D\+U\+P\+\_\+\+U\+P\+D\+A\+TE 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__data__change_8h}{sql\+\_\+data\+\_\+change.\+h}}\item 
+\mbox{\hyperlink{sql__data__change_8cc}{sql\+\_\+data\+\_\+change.\+cc}}\end{DoxyCompactItemize}

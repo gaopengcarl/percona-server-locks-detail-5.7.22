@@ -1,0 +1,177 @@
+\hypertarget{classHint__scanner}{}\section{Hint\+\_\+scanner Class Reference}
+\label{classHint__scanner}\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+
+
+{\ttfamily \#include $<$sql\+\_\+lex\+\_\+hints.\+h$>$}
+
+Inheritance diagram for Hint\+\_\+scanner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHint__scanner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHint__scanner_a0fc7dc3dff1f3e65d8c744cbb39134af}{Hint\+\_\+scanner}} (T\+HD $\ast$thd, size\+\_\+t lineno\+\_\+arg, const char $\ast$buf, size\+\_\+t len, \mbox{\hyperlink{structsql__digest__state}{sql\+\_\+digest\+\_\+state}} $\ast$digest\+\_\+state\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classHint__scanner_a65c1aa79ed2d14d4ab385af21842a696}\label{classHint__scanner_a65c1aa79ed2d14d4ab385af21842a696}} 
+size\+\_\+t {\bfseries get\+\_\+lineno} () const
+\item 
+\mbox{\Hypertarget{classHint__scanner_a14d9a76b7766e671100c4474296e00a8}\label{classHint__scanner_a14d9a76b7766e671100c4474296e00a8}} 
+const char $\ast$ {\bfseries get\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classHint__scanner_add8cf1b2a6c2dd0f414a3fe29aa316ee}\label{classHint__scanner_add8cf1b2a6c2dd0f414a3fe29aa316ee}} 
+\mbox{\hyperlink{structsql__digest__state}{sql\+\_\+digest\+\_\+state}} $\ast$ {\bfseries get\+\_\+digest} ()
+\item 
+void \mbox{\hyperlink{classHint__scanner_adb3502bdcfb4f709c6fd089bdb171590}{syntax\+\_\+warning}} (const char $\ast$msg) const
+\begin{DoxyCompactList}\small\item\em Push a warning message into My\+S\+QL error stack with line and position information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHint__scanner_af7c0d8224e9d3fd76dbd174584a9fc4f}\label{classHint__scanner_af7c0d8224e9d3fd76dbd174584a9fc4f}} 
+int {\bfseries get\+\_\+next\+\_\+token} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{classHint__scanner_a20ecccc8d99baaf45ce8b40e436b2c46}{raw\+\_\+yytext}}
+\item 
+const char $\ast$ \mbox{\hyperlink{classHint__scanner_a859fc3f9da20043fc962f81a75b25587}{yytext}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classHint__scanner_a621416d10cdbca82e6f5a7d67b2795dd}{yyleng}}
+\item 
+\mbox{\Hypertarget{classHint__scanner_a85153bc8ec27dfbfa351451d17d72083}\label{classHint__scanner_a85153bc8ec27dfbfa351451d17d72083}} 
+bool \mbox{\hyperlink{classHint__scanner_a85153bc8ec27dfbfa351451d17d72083}{has\+\_\+hints}}
+\begin{DoxyCompactList}\small\item\em True if a hint comment is not empty (has any hints). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHint__scanner_a311d16f719c42acb8229e9efe44dfa61}\label{classHint__scanner_a311d16f719c42acb8229e9efe44dfa61}} 
+int {\bfseries scan} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a1a654400df1cbf002b544df930ce2f10}\label{classHint__scanner_a1a654400df1cbf002b544df930ce2f10}} 
+{\footnotesize template$<$hint\+\_\+lex\+\_\+char\+\_\+classes Quote$>$ }\\int {\bfseries scan\+\_\+quoted\+\_\+ident} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a1d7ee4324a8b078149d21406e365f201}\label{classHint__scanner_a1d7ee4324a8b078149d21406e365f201}} 
+int {\bfseries scan\+\_\+ident} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a45e6781d3d4243967310ae8d22724ddc}\label{classHint__scanner_a45e6781d3d4243967310ae8d22724ddc}} 
+int {\bfseries scan\+\_\+query\+\_\+block\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_adaba79488a89db0af5a6911ae6b2da7a}\label{classHint__scanner_adaba79488a89db0af5a6911ae6b2da7a}} 
+int {\bfseries scan\+\_\+ident\+\_\+or\+\_\+keyword} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_ab796ad4f94a523c5bae57975682931d5}\label{classHint__scanner_ab796ad4f94a523c5bae57975682931d5}} 
+int {\bfseries scan\+\_\+number\+\_\+or\+\_\+ident} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a35bd11f96efe6043e771444b8faaab5f}\label{classHint__scanner_a35bd11f96efe6043e771444b8faaab5f}} 
+bool {\bfseries eof} () const
+\item 
+\mbox{\Hypertarget{classHint__scanner_ac20fe88210a157fd39434ead78291669}\label{classHint__scanner_ac20fe88210a157fd39434ead78291669}} 
+char {\bfseries peek\+\_\+byte} () const
+\item 
+\mbox{\Hypertarget{classHint__scanner_a58fe74cd0ac49e6f78fc2bff85a88882}\label{classHint__scanner_a58fe74cd0ac49e6f78fc2bff85a88882}} 
+hint\+\_\+lex\+\_\+char\+\_\+classes {\bfseries peek\+\_\+class} () const
+\item 
+\mbox{\Hypertarget{classHint__scanner_aae38d4208aafc0b8f67c120eb2771773}\label{classHint__scanner_aae38d4208aafc0b8f67c120eb2771773}} 
+hint\+\_\+lex\+\_\+char\+\_\+classes {\bfseries peek\+\_\+class2} () const
+\item 
+\mbox{\Hypertarget{classHint__scanner_a9d2f0703b54113d866651b93837bb10c}\label{classHint__scanner_a9d2f0703b54113d866651b93837bb10c}} 
+void {\bfseries skip\+\_\+newline} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a6af9de2c5e708704687e66eac99ae8d4}\label{classHint__scanner_a6af9de2c5e708704687e66eac99ae8d4}} 
+uchar {\bfseries get\+\_\+byte} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a5a33e817c80d080cd055174e5307db1c}\label{classHint__scanner_a5a33e817c80d080cd055174e5307db1c}} 
+void {\bfseries skip\+\_\+byte} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_aa46be8b9d4f6e30f6cb1b1b9ae32476e}\label{classHint__scanner_aa46be8b9d4f6e30f6cb1b1b9ae32476e}} 
+bool {\bfseries skip\+\_\+mb} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_adcf347240d2461bbbc5a781c881c9e5a}\label{classHint__scanner_adcf347240d2461bbbc5a781c881c9e5a}} 
+void {\bfseries start\+\_\+token} ()
+\item 
+\mbox{\Hypertarget{classHint__scanner_a3c9142ad70ffede3595ccba3cc6c2dc9}\label{classHint__scanner_a3c9142ad70ffede3595ccba3cc6c2dc9}} 
+{\footnotesize template$<$hint\+\_\+lex\+\_\+char\+\_\+classes Separator$>$ }\\void {\bfseries compact} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$to, const char $\ast$from, size\+\_\+t len, size\+\_\+t doubles)
+\item 
+void \mbox{\hyperlink{classHint__scanner_ae152151a300af4a824c01ef38f271382}{add\+\_\+hint\+\_\+token\+\_\+digest}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Lexical scanner for hint comments.
+
+When the main lexical scanner recognizes the \char`\"{}/$\ast$+\char`\"{} delimiter, it calls the hint parser (H\+I\+N\+T\+\_\+\+P\+A\+R\+S\+E\+R\+\_\+parse) to consume the rest of hint tokens including the 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHint__scanner_a0fc7dc3dff1f3e65d8c744cbb39134af}\label{classHint__scanner_a0fc7dc3dff1f3e65d8c744cbb39134af}} 
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\subsubsection{\texorpdfstring{Hint\+\_\+scanner()}{Hint\_scanner()}}
+{\footnotesize\ttfamily Hint\+\_\+scanner\+::\+Hint\+\_\+scanner (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd\+\_\+arg,  }\item[{size\+\_\+t}]{lineno\+\_\+arg,  }\item[{const char $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{\mbox{\hyperlink{structsql__digest__state}{sql\+\_\+digest\+\_\+state}} $\ast$}]{digest\+\_\+state\+\_\+arg }\end{DoxyParamCaption})}
+
+Consrtuctor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd\+\_\+arg} & The thread handler. \\
+\hline
+{\em lineno\+\_\+arg} & The starting line number of a hint string in a query. \\
+\hline
+{\em buf} & The rest of a query buffer with hints at the start. \\
+\hline
+{\em len} & The length of the buf. \\
+\hline
+{\em digest\+\_\+state\+\_\+arg} & The digest buffer to output scanned token data. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHint__scanner_ae152151a300af4a824c01ef38f271382}\label{classHint__scanner_ae152151a300af4a824c01ef38f271382}} 
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!add\+\_\+hint\+\_\+token\+\_\+digest@{add\+\_\+hint\+\_\+token\+\_\+digest}}
+\index{add\+\_\+hint\+\_\+token\+\_\+digest@{add\+\_\+hint\+\_\+token\+\_\+digest}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\subsubsection{\texorpdfstring{add\+\_\+hint\+\_\+token\+\_\+digest()}{add\_hint\_token\_digest()}}
+{\footnotesize\ttfamily void Hint\+\_\+scanner\+::add\+\_\+hint\+\_\+token\+\_\+digest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Add hint tokens to main lexer\textquotesingle{}s digest calculation buffer.
+
+\begin{DoxyNote}{Note}
+This function adds transformed hint keyword token values with the help of the T\+O\+K\+\_\+\+H\+I\+N\+T\+\_\+\+A\+D\+J\+U\+S\+T() adjustment macro. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classHint__scanner_adb3502bdcfb4f709c6fd089bdb171590}\label{classHint__scanner_adb3502bdcfb4f709c6fd089bdb171590}} 
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!syntax\+\_\+warning@{syntax\+\_\+warning}}
+\index{syntax\+\_\+warning@{syntax\+\_\+warning}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\subsubsection{\texorpdfstring{syntax\+\_\+warning()}{syntax\_warning()}}
+{\footnotesize\ttfamily void Hint\+\_\+scanner\+::syntax\+\_\+warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption}) const}
+
+
+
+Push a warning message into My\+S\+QL error stack with line and position information. 
+
+This function provides semantic action implementers with a way to push the famous \char`\"{}\+You have a syntax error near...\char`\"{} error message into the error stack, which is normally produced only if a parse error is discovered internally by the Bison generated parser. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classHint__scanner_a20ecccc8d99baaf45ce8b40e436b2c46}\label{classHint__scanner_a20ecccc8d99baaf45ce8b40e436b2c46}} 
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!raw\+\_\+yytext@{raw\+\_\+yytext}}
+\index{raw\+\_\+yytext@{raw\+\_\+yytext}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\subsubsection{\texorpdfstring{raw\+\_\+yytext}{raw\_yytext}}
+{\footnotesize\ttfamily const char$\ast$ Hint\+\_\+scanner\+::raw\+\_\+yytext}
+
+Current token (yytext) origin in the input\+\_\+buf \mbox{\Hypertarget{classHint__scanner_a621416d10cdbca82e6f5a7d67b2795dd}\label{classHint__scanner_a621416d10cdbca82e6f5a7d67b2795dd}} 
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\subsubsection{\texorpdfstring{yyleng}{yyleng}}
+{\footnotesize\ttfamily size\+\_\+t Hint\+\_\+scanner\+::yyleng}
+
+Length of the current token (see yytext) \mbox{\Hypertarget{classHint__scanner_a859fc3f9da20043fc962f81a75b25587}\label{classHint__scanner_a859fc3f9da20043fc962f81a75b25587}} 
+\index{Hint\+\_\+scanner@{Hint\+\_\+scanner}!yytext@{yytext}}
+\index{yytext@{yytext}!Hint\+\_\+scanner@{Hint\+\_\+scanner}}
+\subsubsection{\texorpdfstring{yytext}{yytext}}
+{\footnotesize\ttfamily const char$\ast$ Hint\+\_\+scanner\+::yytext}
+
+Current token pointer (may be converted allocated string outside input\+\_\+buf 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+lex\+\_\+hints.\+h\item 
+sql\+\_\+lex\+\_\+hints.\+cc\end{DoxyCompactItemize}

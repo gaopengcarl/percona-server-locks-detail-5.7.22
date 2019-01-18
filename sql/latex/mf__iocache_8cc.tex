@@ -1,0 +1,7 @@
+\hypertarget{mf__iocache_8cc}{}\section{mf\+\_\+iocache.\+cc File Reference}
+\label{mf__iocache_8cc}\index{mf\+\_\+iocache.\+cc@{mf\+\_\+iocache.\+cc}}
+
+
+\subsection{Detailed Description}
+Caching of files with only does (sequential) read or writes of fixed-\/ length records. A read isn\textquotesingle{}t allowed to go over file-\/length. A read is ok if it ends at file-\/length and next read can try to read after file-\/length (and get a E\+OF-\/error). Possibly use of asyncronic io. macros for read and writes for faster io. Used instead of F\+I\+LE when reading or writing whole files. This will make mf\+\_\+rec\+\_\+cache obsolete. One can change info-\/$>$pos\+\_\+in\+\_\+file to a higher value to skip bytes in file if also info-\/$>$rc\+\_\+pos is set to info-\/$>$rc\+\_\+end. If called through open\+\_\+cached\+\_\+file(), then the temporary file will only be created if a write exeeds the file buffer or if one calls flush\+\_\+io\+\_\+cache(). ~\newline
+ 

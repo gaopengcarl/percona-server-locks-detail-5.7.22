@@ -1,0 +1,51 @@
+\hypertarget{classRand__log__event}{}\section{Rand\+\_\+log\+\_\+event Class Reference}
+\label{classRand__log__event}\index{Rand\+\_\+log\+\_\+event@{Rand\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Rand\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRand__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRand__log__event_a931ddc464998a860f57fd56521e04c36}\label{classRand__log__event_a931ddc464998a860f57fd56521e04c36}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classRand__log__event_a6508e0206a97300fe3edce1e3b690603}\label{classRand__log__event_a6508e0206a97300fe3edce1e3b690603}} 
+{\bfseries Rand\+\_\+log\+\_\+event} (const char $\ast$buf, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classRand__log__event_a57f372903697b28c1519887c9e25ac8c}\label{classRand__log__event_a57f372903697b28c1519887c9e25ac8c}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+bool \mbox{\hyperlink{classRand__log__event_a3b5f698453eb2deee160e5ab771e94b2}{is\+\_\+sbr\+\_\+logging\+\_\+format}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Logs random seed used by the next R\+A\+N\+D(), and by P\+A\+S\+S\+W\+O\+R\+D() in 4.\+1.\+0. 4.\+1.\+1 does not need it (it\textquotesingle{}s repeatable again) so this event needn\textquotesingle{}t be written in 4.\+1.\+1 for P\+A\+S\+S\+W\+O\+R\+D() (but the fact that it is written is just a waste, it does not cause bugs).
+
+The state of the random number generation consists of 128 bits, which are stored internally as two 64-\/bit numbers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRand__log__event_a3b5f698453eb2deee160e5ab771e94b2}\label{classRand__log__event_a3b5f698453eb2deee160e5ab771e94b2}} 
+\index{Rand\+\_\+log\+\_\+event@{Rand\+\_\+log\+\_\+event}!is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}!Rand\+\_\+log\+\_\+event@{Rand\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+sbr\+\_\+logging\+\_\+format()}{is\_sbr\_logging\_format()}}
+{\footnotesize\ttfamily bool Rand\+\_\+log\+\_\+event\+::is\+\_\+sbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return true if the event has to be logged using S\+BR for D\+M\+Ls. 
+
+Reimplemented from \mbox{\hyperlink{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}{Log\+\_\+event}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

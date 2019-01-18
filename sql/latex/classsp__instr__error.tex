@@ -1,0 +1,70 @@
+\hypertarget{classsp__instr__error}{}\section{sp\+\_\+instr\+\_\+error Class Reference}
+\label{classsp__instr__error}\index{sp\+\_\+instr\+\_\+error@{sp\+\_\+instr\+\_\+error}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsp__instr__error}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__error_a64fdcf7e0b0d5cba6df86b7e7b5593c0}\label{classsp__instr__error_a64fdcf7e0b0d5cba6df86b7e7b5593c0}} 
+{\bfseries sp\+\_\+instr\+\_\+error} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, int errcode)
+\item 
+\mbox{\Hypertarget{classsp__instr__error_a1bd1c4ad6b803599501cf19c1ea679a7}\label{classsp__instr__error_a1bd1c4ad6b803599501cf19c1ea679a7}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__error_a62783095595470174aa88d3499d58bea}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+virtual uint \mbox{\hyperlink{classsp__instr__error_ac36f346ce3637910ebab73e2e9fa9cf4}{opt\+\_\+mark}} (\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$sp, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$leads)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classsp__instr__error}{sp\+\_\+instr\+\_\+error}} just throws an S\+QL-\/condition if the execution flow comes to it. It\textquotesingle{}s used in the C\+A\+SE implementation to perform runtime-\/check that the C\+A\+SE-\/expression is handled by some W\+H\+E\+N/\+E\+L\+SE clause. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__error_a62783095595470174aa88d3499d58bea}\label{classsp__instr__error_a62783095595470174aa88d3499d58bea}} 
+\index{sp\+\_\+instr\+\_\+error@{sp\+\_\+instr\+\_\+error}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+instr\+\_\+error@{sp\+\_\+instr\+\_\+error}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual bool sp\+\_\+instr\+\_\+error\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__instr_a78add2ec1a98f8ba58d75c8eb40ed8cb}{sp\+\_\+instr}}.
+
+\mbox{\Hypertarget{classsp__instr__error_ac36f346ce3637910ebab73e2e9fa9cf4}\label{classsp__instr__error_ac36f346ce3637910ebab73e2e9fa9cf4}} 
+\index{sp\+\_\+instr\+\_\+error@{sp\+\_\+instr\+\_\+error}!opt\+\_\+mark@{opt\+\_\+mark}}
+\index{opt\+\_\+mark@{opt\+\_\+mark}!sp\+\_\+instr\+\_\+error@{sp\+\_\+instr\+\_\+error}}
+\subsubsection{\texorpdfstring{opt\+\_\+mark()}{opt\_mark()}}
+{\footnotesize\ttfamily virtual uint sp\+\_\+instr\+\_\+error\+::opt\+\_\+mark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsp__head}{sp\+\_\+head}} $\ast$}]{sp,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classsp__instr}{sp\+\_\+instr}} $>$ $\ast$}]{leads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Mark this instruction as reachable during optimization and return the index to the next instruction. Jump instruction will add their destination to the leads list. 
+
+Reimplemented from \mbox{\hyperlink{classsp__instr_a10b7b33a30316fca4cff5adfe98e282c}{sp\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

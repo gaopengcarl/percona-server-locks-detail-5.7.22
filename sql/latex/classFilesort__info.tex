@@ -1,0 +1,156 @@
+\hypertarget{classFilesort__info}{}\section{Filesort\+\_\+info Class Reference}
+\label{classFilesort__info}\index{Filesort\+\_\+info@{Filesort\+\_\+info}}
+
+
+{\ttfamily \#include $<$sql\+\_\+sort.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFilesort__info_ac6f74037f7331a62554984b89bb248aa}\label{classFilesort__info_ac6f74037f7331a62554984b89bb248aa}} 
+bool {\bfseries has\+\_\+filesort\+\_\+result\+\_\+in\+\_\+memory} () const
+\item 
+\mbox{\Hypertarget{classFilesort__info_a8c33a4f81840c88a3faa66f3a7f944c0}\label{classFilesort__info_a8c33a4f81840c88a3faa66f3a7f944c0}} 
+bool {\bfseries has\+\_\+filesort\+\_\+result} () const
+\item 
+void \mbox{\hyperlink{classFilesort__info_a1112e3f4717a0cc05c50c94ef3b21c1a}{sort\+\_\+buffer}} (\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$param, uint count)
+\item 
+{\footnotesize template$<$bool Packed\+\_\+addon\+\_\+fields$>$ }\\void \mbox{\hyperlink{classFilesort__info_a972ae7583ff223e13df5b6d6cf4d0de8}{unpack\+\_\+addon\+\_\+fields}} (uchar $\ast$buff)
+\item 
+void \mbox{\hyperlink{classFilesort__info_a709c489a4586b82aabd8020bff21a64a}{read\+\_\+chunk\+\_\+descriptors}} (I\+O\+\_\+\+C\+A\+C\+HE $\ast$chunk\+\_\+file, uint count)
+\item 
+\mbox{\Hypertarget{classFilesort__info_a6d3ff1e4085144d8bbace6a8f4f506e2}\label{classFilesort__info_a6d3ff1e4085144d8bbace6a8f4f506e2}} 
+bool \mbox{\hyperlink{classFilesort__info_a6d3ff1e4085144d8bbace6a8f4f506e2}{using\+\_\+addon\+\_\+fields}} () const
+\begin{DoxyCompactList}\small\item\em Are we using \char`\"{}addon fields\char`\"{}? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort__info_a4c21080320673a7577be06d71e37d24f}\label{classFilesort__info_a4c21080320673a7577be06d71e37d24f}} 
+bool \mbox{\hyperlink{classFilesort__info_a4c21080320673a7577be06d71e37d24f}{using\+\_\+packed\+\_\+addons}} () const
+\begin{DoxyCompactList}\small\item\em Are we using \char`\"{}packed addon fields\char`\"{}? \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classFilesort__info_a67f9f112962f35197841045fd24d9f85}{space\+\_\+used\+\_\+for\+\_\+data}} () const
+\item 
+\mbox{\Hypertarget{classFilesort__info_a030382b513d47af9179870f67540d9b6}\label{classFilesort__info_a030382b513d47af9179870f67540d9b6}} 
+bool {\bfseries isfull} () const
+\item 
+\mbox{\Hypertarget{classFilesort__info_a1a409fbbef889fa68f9e1e6a4912523a}\label{classFilesort__info_a1a409fbbef889fa68f9e1e6a4912523a}} 
+void {\bfseries init\+\_\+next\+\_\+record\+\_\+pointer} ()
+\item 
+\mbox{\Hypertarget{classFilesort__info_aa75dc07c503166a32acadb0a802fb76a}\label{classFilesort__info_aa75dc07c503166a32acadb0a802fb76a}} 
+uchar $\ast$ {\bfseries get\+\_\+next\+\_\+record\+\_\+pointer} ()
+\item 
+\mbox{\Hypertarget{classFilesort__info_a4644f9bd2a6ba4ff045bb2af0c757ad1}\label{classFilesort__info_a4644f9bd2a6ba4ff045bb2af0c757ad1}} 
+void {\bfseries adjust\+\_\+next\+\_\+record\+\_\+pointer} (uint32 val)
+\item 
+\mbox{\Hypertarget{classFilesort__info_af0a69739dbcea1c2763cc34b8d485c15}\label{classFilesort__info_af0a69739dbcea1c2763cc34b8d485c15}} 
+uchar $\ast$ {\bfseries get\+\_\+sorted\+\_\+record} (uint idx)
+\item 
+\mbox{\Hypertarget{classFilesort__info_a25711bb2856bdc3eca31b7122336e15d}\label{classFilesort__info_a25711bb2856bdc3eca31b7122336e15d}} 
+uchar $\ast$$\ast$ {\bfseries get\+\_\+sort\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classFilesort__info_a2310ee0e9ed4badb1d712d66a835458f}\label{classFilesort__info_a2310ee0e9ed4badb1d712d66a835458f}} 
+\mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$ uchar $>$ {\bfseries get\+\_\+raw\+\_\+buf} ()
+\item 
+\mbox{\Hypertarget{classFilesort__info_a8f6ac5102866bd89dee2856e71a5e28e}\label{classFilesort__info_a8f6ac5102866bd89dee2856e71a5e28e}} 
+uchar $\ast$ {\bfseries alloc\+\_\+sort\+\_\+buffer} (uint num\+\_\+records, uint record\+\_\+length)
+\item 
+\mbox{\Hypertarget{classFilesort__info_a0097d97d7eecf31f4f4292e7f67dab9e}\label{classFilesort__info_a0097d97d7eecf31f4f4292e7f67dab9e}} 
+void {\bfseries free\+\_\+sort\+\_\+buffer} ()
+\item 
+\mbox{\Hypertarget{classFilesort__info_a517d5e9a2a00d51a6fab77f0c3bf5589}\label{classFilesort__info_a517d5e9a2a00d51a6fab77f0c3bf5589}} 
+void {\bfseries init\+\_\+record\+\_\+pointers} ()
+\item 
+\mbox{\Hypertarget{classFilesort__info_add823ee836ee70621f9d39ab0aaa76bf}\label{classFilesort__info_add823ee836ee70621f9d39ab0aaa76bf}} 
+size\+\_\+t {\bfseries sort\+\_\+buffer\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classFilesort__info_a5d24c5a050f5e73a8eb00fc4df0f6d6f}\label{classFilesort__info_a5d24c5a050f5e73a8eb00fc4df0f6d6f}} 
+uint {\bfseries get\+\_\+sort\+\_\+length} () const
+\item 
+\mbox{\Hypertarget{classFilesort__info_a1417f8ca757d60207b3173e77aa7f643}\label{classFilesort__info_a1417f8ca757d60207b3173e77aa7f643}} 
+void {\bfseries set\+\_\+sort\+\_\+length} (uint val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFilesort__info_a960fa2e906d86e5c69c77b6d6db54671}\label{classFilesort__info_a960fa2e906d86e5c69c77b6d6db54671}} 
+I\+O\+\_\+\+C\+A\+C\+HE $\ast$ \mbox{\hyperlink{classFilesort__info_a960fa2e906d86e5c69c77b6d6db54671}{io\+\_\+cache}}
+\begin{DoxyCompactList}\small\item\em If sorted through filesort. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort__info_a95e8e2ab01ac8f488644c3df0f999355}\label{classFilesort__info_a95e8e2ab01ac8f488644c3df0f999355}} 
+\mbox{\hyperlink{classBounds__checked__array}{Merge\+\_\+chunk\+\_\+array}} \mbox{\hyperlink{classFilesort__info_a95e8e2ab01ac8f488644c3df0f999355}{merge\+\_\+chunks}}
+\begin{DoxyCompactList}\small\item\em Array of chunk descriptors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilesort__info_a111c59551bb8984a294a73ace40fa89a}\label{classFilesort__info_a111c59551bb8984a294a73ace40fa89a}} 
+\mbox{\hyperlink{classAddon__fields}{Addon\+\_\+fields}} $\ast$ \mbox{\hyperlink{classFilesort__info_a111c59551bb8984a294a73ace40fa89a}{addon\+\_\+fields}}
+\begin{DoxyCompactList}\small\item\em Addon field descriptors. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFilesort__info_a8d5e64f11beecff6917933a6aed9f475}{sorted\+\_\+result\+\_\+in\+\_\+fsbuf}}
+\item 
+\mbox{\Hypertarget{classFilesort__info_afaa98babb42799a30a7141f25cf4d14f}\label{classFilesort__info_afaa98babb42799a30a7141f25cf4d14f}} 
+uchar $\ast$ {\bfseries sorted\+\_\+result}
+\item 
+\mbox{\Hypertarget{classFilesort__info_a69dffc1d745fa9f9d66f9774bd6a7f80}\label{classFilesort__info_a69dffc1d745fa9f9d66f9774bd6a7f80}} 
+uchar $\ast$ {\bfseries sorted\+\_\+result\+\_\+end}
+\item 
+\mbox{\Hypertarget{classFilesort__info_a04e1c3f73cc1c4eb87f0bbce16757081}\label{classFilesort__info_a04e1c3f73cc1c4eb87f0bbce16757081}} 
+ha\+\_\+rows \mbox{\hyperlink{classFilesort__info_a04e1c3f73cc1c4eb87f0bbce16757081}{found\+\_\+records}}
+\begin{DoxyCompactList}\small\item\em How many records in sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class wrapping misc buffers used for sorting. It is part of \textquotesingle{}struct \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}\textquotesingle{} which is still initialized using memset(), so do not add any virtual functions to this class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilesort__info_a709c489a4586b82aabd8020bff21a64a}\label{classFilesort__info_a709c489a4586b82aabd8020bff21a64a}} 
+\index{Filesort\+\_\+info@{Filesort\+\_\+info}!read\+\_\+chunk\+\_\+descriptors@{read\+\_\+chunk\+\_\+descriptors}}
+\index{read\+\_\+chunk\+\_\+descriptors@{read\+\_\+chunk\+\_\+descriptors}!Filesort\+\_\+info@{Filesort\+\_\+info}}
+\subsubsection{\texorpdfstring{read\+\_\+chunk\+\_\+descriptors()}{read\_chunk\_descriptors()}}
+{\footnotesize\ttfamily void Filesort\+\_\+info\+::read\+\_\+chunk\+\_\+descriptors (\begin{DoxyParamCaption}\item[{I\+O\+\_\+\+C\+A\+C\+HE $\ast$}]{chunk\+\_\+file,  }\item[{uint}]{count }\end{DoxyParamCaption})}
+
+Reads \textquotesingle{}count\textquotesingle{} number of chunk descriptors into the merge\+\_\+chunks array. In case of error, the merge\+\_\+chunks array will be empty. 
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+file} & File containing the descriptors. \\
+\hline
+{\em count} & Number of chunks to read. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilesort__info_a1112e3f4717a0cc05c50c94ef3b21c1a}\label{classFilesort__info_a1112e3f4717a0cc05c50c94ef3b21c1a}} 
+\index{Filesort\+\_\+info@{Filesort\+\_\+info}!sort\+\_\+buffer@{sort\+\_\+buffer}}
+\index{sort\+\_\+buffer@{sort\+\_\+buffer}!Filesort\+\_\+info@{Filesort\+\_\+info}}
+\subsubsection{\texorpdfstring{sort\+\_\+buffer()}{sort\_buffer()}}
+{\footnotesize\ttfamily void Filesort\+\_\+info\+::sort\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSort__param}{Sort\+\_\+param}} $\ast$}]{param,  }\item[{uint}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sort filesort\+\_\+buffer \mbox{\Hypertarget{classFilesort__info_a67f9f112962f35197841045fd24d9f85}\label{classFilesort__info_a67f9f112962f35197841045fd24d9f85}} 
+\index{Filesort\+\_\+info@{Filesort\+\_\+info}!space\+\_\+used\+\_\+for\+\_\+data@{space\+\_\+used\+\_\+for\+\_\+data}}
+\index{space\+\_\+used\+\_\+for\+\_\+data@{space\+\_\+used\+\_\+for\+\_\+data}!Filesort\+\_\+info@{Filesort\+\_\+info}}
+\subsubsection{\texorpdfstring{space\+\_\+used\+\_\+for\+\_\+data()}{space\_used\_for\_data()}}
+{\footnotesize\ttfamily size\+\_\+t Filesort\+\_\+info\+::space\+\_\+used\+\_\+for\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Accessors for filesort\+\_\+buffer (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classFilesort__buffer}{Filesort\+\_\+buffer}} for documentation). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classFilesort__info_a972ae7583ff223e13df5b6d6cf4d0de8}\label{classFilesort__info_a972ae7583ff223e13df5b6d6cf4d0de8}} 
+\index{Filesort\+\_\+info@{Filesort\+\_\+info}!unpack\+\_\+addon\+\_\+fields@{unpack\+\_\+addon\+\_\+fields}}
+\index{unpack\+\_\+addon\+\_\+fields@{unpack\+\_\+addon\+\_\+fields}!Filesort\+\_\+info@{Filesort\+\_\+info}}
+\subsubsection{\texorpdfstring{unpack\+\_\+addon\+\_\+fields()}{unpack\_addon\_fields()}}
+{\footnotesize\ttfamily template$<$bool Packed\+\_\+addon\+\_\+fields$>$ \\
+void Filesort\+\_\+info\+::unpack\+\_\+addon\+\_\+fields (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copies (unpacks) values appended to sorted fields from a buffer back to their regular positions specified by the Field\+::ptr pointers. 
+\begin{DoxyParams}{Parameters}
+{\em buff} & Buffer which to unpack the value from \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classFilesort__info_a8d5e64f11beecff6917933a6aed9f475}\label{classFilesort__info_a8d5e64f11beecff6917933a6aed9f475}} 
+\index{Filesort\+\_\+info@{Filesort\+\_\+info}!sorted\+\_\+result\+\_\+in\+\_\+fsbuf@{sorted\+\_\+result\+\_\+in\+\_\+fsbuf}}
+\index{sorted\+\_\+result\+\_\+in\+\_\+fsbuf@{sorted\+\_\+result\+\_\+in\+\_\+fsbuf}!Filesort\+\_\+info@{Filesort\+\_\+info}}
+\subsubsection{\texorpdfstring{sorted\+\_\+result\+\_\+in\+\_\+fsbuf}{sorted\_result\_in\_fsbuf}}
+{\footnotesize\ttfamily bool Filesort\+\_\+info\+::sorted\+\_\+result\+\_\+in\+\_\+fsbuf}
+
+If the entire result of filesort fits in memory, we skip the merge phase. We may leave the result in filesort\+\_\+buffer (indicated by sorted\+\_\+result\+\_\+in\+\_\+fsbuf), or we may strip away the sort keys, and copy the sorted result into a new buffer. This new buffer is \mbox{[}sorted\+\_\+result ... sorted\+\_\+result\+\_\+end\mbox{]} \begin{DoxySeeAlso}{See also}
+save\+\_\+index() 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+sort.\+h\item 
+\mbox{\hyperlink{filesort_8cc}{filesort.\+cc}}\item 
+\mbox{\hyperlink{records_8cc}{records.\+cc}}\end{DoxyCompactItemize}

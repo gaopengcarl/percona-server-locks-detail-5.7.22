@@ -1,0 +1,374 @@
+\hypertarget{classItem__ident}{}\section{Item\+\_\+ident Class Reference}
+\label{classItem__ident}\index{Item\+\_\+ident@{Item\+\_\+ident}}
+Inheritance diagram for Item\+\_\+ident\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.087591cm]{classItem__ident}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__ident_a14b34952ff4496ee73782f9d67773f1d}\label{classItem__ident_a14b34952ff4496ee73782f9d67773f1d}} 
+{\bfseries Item\+\_\+ident} (\mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context\+\_\+arg, const char $\ast$db\+\_\+name\+\_\+arg, const char $\ast$table\+\_\+name\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__ident_a564baec33c27c06fc0957059b04ead5a}\label{classItem__ident_a564baec33c27c06fc0957059b04ead5a}} 
+{\bfseries Item\+\_\+ident} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, const char $\ast$db\+\_\+name\+\_\+arg, const char $\ast$table\+\_\+name\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg)
+\item 
+\mbox{\hyperlink{classItem__ident_a1ad10c05cb6971dd58d4b3082bc31f06}{Item\+\_\+ident}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__ident}{Item\+\_\+ident}} $\ast$item)
+\item 
+virtual bool \mbox{\hyperlink{classItem__ident_a05720124bb45a772f712d514650e745e}{itemize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$res)
+\item 
+\mbox{\Hypertarget{classItem__ident_a67b1c0cc22b3c6e9742e5d4fd0b9d3e0}\label{classItem__ident_a67b1c0cc22b3c6e9742e5d4fd0b9d3e0}} 
+const char $\ast$ {\bfseries full\+\_\+name} () const
+\item 
+virtual void \mbox{\hyperlink{classItem__ident_aef2c77c01832da121180c1a74d3873b5}{fix\+\_\+after\+\_\+pullout}} (st\+\_\+select\+\_\+lex $\ast$parent\+\_\+select, st\+\_\+select\+\_\+lex $\ast$removed\+\_\+select)
+\item 
+\mbox{\Hypertarget{classItem__ident_a748fe43d5afc9fa010059d4c62298879}\label{classItem__ident_a748fe43d5afc9fa010059d4c62298879}} 
+void {\bfseries cleanup} ()
+\item 
+virtual bool \mbox{\hyperlink{classItem__ident_a00ab5f763e017d4892db3d07fc8b13f3}{aggregate\+\_\+check\+\_\+distinct}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem__ident_ae79407fb0ebd076c5a45f16f36512724}{aggregate\+\_\+check\+\_\+group}} (uchar $\ast$arg)
+\item 
+\mbox{\hyperlink{classBool3}{Bool3}} \mbox{\hyperlink{classItem__ident_aeea35bdf2d88645437b4415824e4b0a8}{local\+\_\+column}} (const st\+\_\+select\+\_\+lex $\ast$sl) const
+\item 
+virtual void \mbox{\hyperlink{classItem__ident_abbedbcfff5de0cc721c9be3657fcb3ad}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__ident_ae75c6667540a71e838968e0c004a0871}\label{classItem__ident_ae75c6667540a71e838968e0c004a0871}} 
+virtual bool {\bfseries change\+\_\+context\+\_\+processor} (uchar $\ast$cntx)
+\item 
+bool \mbox{\hyperlink{classItem__ident_a194dc68fa277272d155ac9cb893384b8}{is\+\_\+alias\+\_\+of\+\_\+expr}} () const
+\item 
+\mbox{\Hypertarget{classItem__ident_a0fb0490509aec3e9864ab3aa561bf418}\label{classItem__ident_a0fb0490509aec3e9864ab3aa561bf418}} 
+void \mbox{\hyperlink{classItem__ident_a0fb0490509aec3e9864ab3aa561bf418}{set\+\_\+alias\+\_\+of\+\_\+expr}} ()
+\begin{DoxyCompactList}\small\item\em Marks that this \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s name is alias of S\+E\+L\+E\+CT expression. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classItem__ident_ab74fffc591821c7bc35929085ad82cf9}{walk}} (Item\+\_\+processor processor, \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}} walk, uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem__ident_a0df960611ccdb8822900a5749b61d889}{alias\+\_\+name\+\_\+used}} () const
+\item 
+bool \mbox{\hyperlink{classItem__ident_a3270cc5d558904bbad4c9df6d1c28c70}{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}} (uchar $\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem__ident_ab09d952b5bb33d175d548662fcdc89ef}{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}} (uchar $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__ident_a7ce283486db51db26f5e933bdcf8cab1}\label{classItem__ident_a7ce283486db51db26f5e933bdcf8cab1}} 
+\mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$ {\bfseries context}
+\item 
+\mbox{\Hypertarget{classItem__ident_a905a4da964ec1fcf3e6d9e0f26b00a09}\label{classItem__ident_a905a4da964ec1fcf3e6d9e0f26b00a09}} 
+const char $\ast$ {\bfseries db\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem__ident_a7958cfc400350589916c2e9e704c3608}\label{classItem__ident_a7958cfc400350589916c2e9e704c3608}} 
+const char $\ast$ {\bfseries table\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem__ident_aaeb85ca43a89537e679b1a0d3345ec16}\label{classItem__ident_aaeb85ca43a89537e679b1a0d3345ec16}} 
+const char $\ast$ {\bfseries field\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem__ident_a9d553ff52b463f89ecccaa105005051a}\label{classItem__ident_a9d553ff52b463f89ecccaa105005051a}} 
+uint {\bfseries cached\+\_\+field\+\_\+index}
+\item 
+\mbox{\Hypertarget{classItem__ident_a223629a9ccffd1183c7ad278b9d3383a}\label{classItem__ident_a223629a9ccffd1183c7ad278b9d3383a}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries cached\+\_\+table}
+\item 
+\mbox{\Hypertarget{classItem__ident_a976d3213b92d110c3735bde1f3685a8e}\label{classItem__ident_a976d3213b92d110c3735bde1f3685a8e}} 
+st\+\_\+select\+\_\+lex $\ast$ {\bfseries depended\+\_\+from}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classItem__ident_a4ab5d9635a58d5ab39aefc45bb70a09d}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type, const char $\ast$db\+\_\+name\+\_\+arg, const char $\ast$table\+\_\+name\+\_\+arg) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__ident_a157964367ac5e545fca2353c01b64cef}\label{classItem__ident_a157964367ac5e545fca2353c01b64cef}} 
+const char $\ast$ {\bfseries orig\+\_\+db\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem__ident_a801d22e12aaeafd6e59dc2a2f1b3befd}\label{classItem__ident_a801d22e12aaeafd6e59dc2a2f1b3befd}} 
+const char $\ast$ {\bfseries orig\+\_\+table\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem__ident_aebf728237ec8974b0bdbd88d574fdb8e}\label{classItem__ident_aebf728237ec8974b0bdbd88d574fdb8e}} 
+const char $\ast$ {\bfseries orig\+\_\+field\+\_\+name}
+\item 
+\mbox{\Hypertarget{classItem__ident_a00ed9da939d9060884ff54b2e14437c1}\label{classItem__ident_a00ed9da939d9060884ff54b2e14437c1}} 
+bool \mbox{\hyperlink{classItem__ident_a00ed9da939d9060884ff54b2e14437c1}{m\+\_\+alias\+\_\+of\+\_\+expr}}
+\begin{DoxyCompactList}\small\item\em if this \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s name is alias of S\+E\+L\+E\+CT expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__ident_a3ed6f7a411697a21f8e57aee4e40dcc9}\label{classItem__ident_a3ed6f7a411697a21f8e57aee4e40dcc9}} 
+bool {\bfseries insert\+\_\+fields} (T\+HD $\ast$thd, \mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name, \mbox{\hyperlink{classList__iterator}{List\+\_\+iterator}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$it, bool any\+\_\+privileges)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classItem__ident_a1ad10c05cb6971dd58d4b3082bc31f06}\label{classItem__ident_a1ad10c05cb6971dd58d4b3082bc31f06}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!Item\+\_\+ident@{Item\+\_\+ident}}
+\index{Item\+\_\+ident@{Item\+\_\+ident}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{Item\+\_\+ident()}{Item\_ident()}}
+{\footnotesize\ttfamily Item\+\_\+ident\+::\+Item\+\_\+ident (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem__ident}{Item\+\_\+ident}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Constructor used by \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} \& Item\+\_\+$\ast$\+\_\+ref (see \mbox{\hyperlink{classItem}{Item}} comment) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__ident_a00ab5f763e017d4892db3d07fc8b13f3}\label{classItem__ident_a00ab5f763e017d4892db3d07fc8b13f3}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!aggregate\+\_\+check\+\_\+distinct@{aggregate\+\_\+check\+\_\+distinct}}
+\index{aggregate\+\_\+check\+\_\+distinct@{aggregate\+\_\+check\+\_\+distinct}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{aggregate\+\_\+check\+\_\+distinct()}{aggregate\_check\_distinct()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+distinct (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__AGGREGATE__CHECKS_ga83e75b415b78e10ade375ad320ea446c}{Distinct\+\_\+check\+::check\+\_\+query()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a7291ce9a64c0201c71463033b4346df4}{Item}}.
+
+\mbox{\Hypertarget{classItem__ident_ae79407fb0ebd076c5a45f16f36512724}\label{classItem__ident_ae79407fb0ebd076c5a45f16f36512724}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!aggregate\+\_\+check\+\_\+group@{aggregate\+\_\+check\+\_\+group}}
+\index{aggregate\+\_\+check\+\_\+group@{aggregate\+\_\+check\+\_\+group}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{aggregate\+\_\+check\+\_\+group()}{aggregate\_check\_group()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::aggregate\+\_\+check\+\_\+group (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__AGGREGATE__CHECKS_ga85f98a122e6f9accf528534acb5db686}{Group\+\_\+check\+::check\+\_\+query()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_ab828d3602e63ad15f5cfd8ff54339189}{Item}}.
+
+\mbox{\Hypertarget{classItem__ident_a0df960611ccdb8822900a5749b61d889}\label{classItem__ident_a0df960611ccdb8822900a5749b61d889}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!alias\+\_\+name\+\_\+used@{alias\+\_\+name\+\_\+used}}
+\index{alias\+\_\+name\+\_\+used@{alias\+\_\+name\+\_\+used}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{alias\+\_\+name\+\_\+used()}{alias\_name\_used()}}
+{\footnotesize\ttfamily virtual bool Item\+\_\+ident\+::alias\+\_\+name\+\_\+used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true if a part of this \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s full name (name or table name) is an alias. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classItem__field_aff70313ac49d91b6b51e522b8ac4cb30}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem__ident_aef2c77c01832da121180c1a74d3873b5}\label{classItem__ident_aef2c77c01832da121180c1a74d3873b5}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}}
+\index{fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{fix\+\_\+after\+\_\+pullout()}{fix\_after\_pullout()}}
+{\footnotesize\ttfamily void Item\+\_\+ident\+::fix\+\_\+after\+\_\+pullout (\begin{DoxyParamCaption}\item[{st\+\_\+select\+\_\+lex $\ast$}]{parent\+\_\+select,  }\item[{st\+\_\+select\+\_\+lex $\ast$}]{removed\+\_\+select }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Fix after tables have been moved from one select\+\_\+lex level to the parent level, e.\+g by semijoin conversion. Basically re-\/calculate all attributes dependent on the tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+\_\+select} & select\+\_\+lex that tables are moved to. \\
+\hline
+{\em removed\+\_\+select} & select\+\_\+lex that tables are moved away from, child of parent\+\_\+select. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a6e3c38497d210357a4f80a755fb7b61e}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__outer__ref_a30ff5c4083f8d4d7c6ab5c7b2b4fac0c}{Item\+\_\+outer\+\_\+ref}}, and \mbox{\hyperlink{classItem__ref_a54fdde8c2418171d5f529e24d733f357}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__ident_a194dc68fa277272d155ac9cb893384b8}\label{classItem__ident_a194dc68fa277272d155ac9cb893384b8}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!is\+\_\+alias\+\_\+of\+\_\+expr@{is\+\_\+alias\+\_\+of\+\_\+expr}}
+\index{is\+\_\+alias\+\_\+of\+\_\+expr@{is\+\_\+alias\+\_\+of\+\_\+expr}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{is\+\_\+alias\+\_\+of\+\_\+expr()}{is\_alias\_of\_expr()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::is\+\_\+alias\+\_\+of\+\_\+expr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if this \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s name is alias of S\+E\+L\+E\+CT expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem__ident_ab09d952b5bb33d175d548662fcdc89ef}\label{classItem__ident_ab09d952b5bb33d175d548662fcdc89ef}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}}
+\index{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd()}{is\_column\_not\_in\_fd()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::is\+\_\+column\+\_\+not\+\_\+in\+\_\+fd (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+Group\+\_\+check\+::is\+\_\+in\+\_\+fd\+\_\+of\+\_\+underlying() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a24e82d279a8907ad502faebb3abe1ab1}{Item}}.
+
+\mbox{\Hypertarget{classItem__ident_a3270cc5d558904bbad4c9df6d1c28c70}\label{classItem__ident_a3270cc5d558904bbad4c9df6d1c28c70}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}}
+\index{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd@{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd()}{is\_strong\_side\_column\_not\_in\_fd()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::is\+\_\+strong\+\_\+side\+\_\+column\+\_\+not\+\_\+in\+\_\+fd (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+Group\+\_\+check\+::analyze\+\_\+conjunct() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a6f6cf3b5317dce7e27b04c4eaaa37f89}{Item}}.
+
+\mbox{\Hypertarget{classItem__ident_a05720124bb45a772f712d514650e745e}\label{classItem__ident_a05720124bb45a772f712d514650e745e}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!itemize@{itemize}}
+\index{itemize@{itemize}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{itemize()}{itemize()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::itemize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The same as contextualize()/contextualize\+\_\+() but with additional parameter
+
+This function finalize the construction of \mbox{\hyperlink{classItem}{Item}} objects (see the \mbox{\hyperlink{classItem}{Item(\+P\+O\+S)}} constructor)\+: we can access/change parser contexts from the \mbox{\hyperlink{classItem__ident_a05720124bb45a772f712d514650e745e}{itemize()}} function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em pc} & current parse context \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & pointer to \char`\"{}this\char`\"{} or to a newly allocated replacement object to use in the \mbox{\hyperlink{classItem}{Item}} tree instead\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & success \\
+\hline
+{\em true} & syntax/\+O\+O\+M/etc error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__insert__value_a113d00e28d63795bfd89d65dad61e769}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_afb6673a2601e5f5b3f1a80243ce73c67}{Item\+\_\+default\+\_\+value}}, and \mbox{\hyperlink{classItem__field_a6220537b7094a20e4dfb15e229e1a33c}{Item\+\_\+field}}.
+
+\mbox{\Hypertarget{classItem__ident_aeea35bdf2d88645437b4415824e4b0a8}\label{classItem__ident_aeea35bdf2d88645437b4415824e4b0a8}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!local\+\_\+column@{local\+\_\+column}}
+\index{local\+\_\+column@{local\+\_\+column}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{local\+\_\+column()}{local\_column()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBool3}{Bool3}} Item\+\_\+ident\+::local\+\_\+column (\begin{DoxyParamCaption}\item[{const st\+\_\+select\+\_\+lex $\ast$}]{sl }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells if this is a column of a table whose qualifying query block is \textquotesingle{}sl\textquotesingle{}. I.\+e. \mbox{\hyperlink{classItem__field}{Item\+\_\+field}} or \mbox{\hyperlink{classItem__direct__view__ref}{Item\+\_\+direct\+\_\+view\+\_\+ref}} resolved in \textquotesingle{}sl\textquotesingle{}. Used for aggregate checks.
+
+that this returns false for an alias to a S\+E\+L\+E\+CT list expression, even though the S\+E\+L\+E\+CT list expression might itself be a column of the \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{0}{|X[-1]}|}
+\hline
+\end{longtabu}
+i.\+e. when the function runs on \char`\"{}foo\char`\"{} in H\+A\+V\+I\+NG of \char`\"{}select t1.\+a as foo from t1 having foo$>$1\char`\"{}, it returns false. First, it pedantically makes sense\+: \char`\"{}foo\char`\"{} in H\+A\+V\+I\+NG is a reference to a column of the $<$query expression$>$=\char`\"{}\char`\"{}$>$, not of the \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{0}{|X[-1]}|}
+\hline
+\end{longtabu}
+Second, this behaviour makes sense for our purpose\+:
+\begin{DoxyItemize}
+\item This is an alias to a S\+E\+L\+E\+CT list expression.
+\item If doing D\+I\+S\+T\+I\+N\+CT-\/related checks, this alias can be ignored.
+\item If doing G\+R\+O\+UP-\/BY-\/related checks, the aliased expression was already checked when we checked the S\+E\+L\+E\+CT list, so can be ignored.
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+U\+E3} & yes \\
+\hline
+{\em F\+A\+L\+S\+E3} & no \\
+\hline
+{\em U\+N\+K\+N\+O\+W\+N3} & it\textquotesingle{}s a non-\/direct-\/view \mbox{\hyperlink{classItem__ref}{Item\+\_\+ref}}, we don\textquotesingle{}t know if it contains a column =$>$ caller please analyze \char`\"{}$\ast$ref\char`\"{} \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+\mbox{\Hypertarget{classItem__ident_abbedbcfff5de0cc721c9be3657fcb3ad}\label{classItem__ident_abbedbcfff5de0cc721c9be3657fcb3ad}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!print@{print}}
+\index{print@{print}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Item\+\_\+ident\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_aa7ba4bde739d83adec8edf3bf1596d94}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__trigger__field_a68115abf242013d5b319a0c3c58c5384}{Item\+\_\+trigger\+\_\+field}}, \mbox{\hyperlink{classItem__insert__value_abbba2f565d5a63803b693a03f7184d14}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_adc863c4577d7c10a0cbf1c006c8087a6}{Item\+\_\+default\+\_\+value}}, \mbox{\hyperlink{classItem__ref__null__helper_a89293e68530fb3b07572c5005c3220c8}{Item\+\_\+ref\+\_\+null\+\_\+helper}}, \mbox{\hyperlink{classItem__ref_a90c0289e8983ca73c75eaa92bc762cf6}{Item\+\_\+ref}}, \mbox{\hyperlink{classItem__field_a40b28e2bc9886f81e8ad19c64efb1408}{Item\+\_\+field}}, and \mbox{\hyperlink{classItem__aggregate__ref_ae6a411b0088c79b64443138fcc3625ba}{Item\+\_\+aggregate\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__ident_a4ab5d9635a58d5ab39aefc45bb70a09d}\label{classItem__ident_a4ab5d9635a58d5ab39aefc45bb70a09d}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!print@{print}}
+\index{print@{print}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Item\+\_\+ident\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type,  }\item[{const char $\ast$}]{db\+\_\+name\+\_\+arg,  }\item[{const char $\ast$}]{table\+\_\+name\+\_\+arg }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function to print column name for a table
+
+To print a column for a permanent table (picks up database and table from \mbox{\hyperlink{classItem__ident}{Item\+\_\+ident}} object)\+:
+
+item-\/$>$print(str, qt)
+
+To print a column for a temporary table\+:
+
+item-\/$>$print(str, qt, specific\+\_\+db, specific\+\_\+table)
+
+Items of temporary table fields have empty/\+N\+U\+LL values of table\+\_\+name and db\+\_\+name. To print column names in a 3D form ({\ttfamily database}.{\ttfamily table}.{\ttfamily column}), this function prints db\+\_\+name\+\_\+arg and table\+\_\+name\+\_\+arg parameters instead of this-\/$>$db\+\_\+name and this-\/$>$table\+\_\+name respectively.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em str} & Output string buffer. \\
+\hline
+ & {\em query\+\_\+type} & \mbox{\hyperlink{classBitmap}{Bitmap}} to control printing details. \\
+\hline
+ & {\em db\+\_\+name\+\_\+arg} & String to output as a column database name. \\
+\hline
+ & {\em table\+\_\+name\+\_\+arg} & String to output as a column table name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classItem__ident_ab74fffc591821c7bc35929085ad82cf9}\label{classItem__ident_ab74fffc591821c7bc35929085ad82cf9}} 
+\index{Item\+\_\+ident@{Item\+\_\+ident}!walk@{walk}}
+\index{walk@{walk}!Item\+\_\+ident@{Item\+\_\+ident}}
+\subsubsection{\texorpdfstring{walk()}{walk()}}
+{\footnotesize\ttfamily bool Item\+\_\+ident\+::walk (\begin{DoxyParamCaption}\item[{Item\+\_\+processor}]{processor,  }\item[{\mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}}}]{walk,  }\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Traverses a tree of Items in prefix and/or postfix order. Optionally walks into subqueries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & processor function to be invoked per item returns true to abort traversal, false to continue \\
+\hline
+{\em walk} & controls how to traverse the item tree W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX\+: call processor before invoking children W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX\+: call processor after invoking children W\+A\+L\+K\+\_\+\+S\+U\+B\+Q\+U\+E\+RY go down into subqueries walk values are bit-\/coded and may be combined. Omitting both W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX and W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX is undefined behaviour. \\
+\hline
+{\em arg} & Optional pointer to a walk-\/specific object\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & walk succeeded \\
+\hline
+{\em true} & walk aborted by agreement, an error may have been reported \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__insert__value_a7023df48fccb11a014d348cbde3b35c6}{Item\+\_\+insert\+\_\+value}}, \mbox{\hyperlink{classItem__default__value_aa26d7118262053541ab095b9f9c7d53f}{Item\+\_\+default\+\_\+value}}, and \mbox{\hyperlink{classItem__ref_a19c98abd79dbdb19a4af10a7c41f1449}{Item\+\_\+ref}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

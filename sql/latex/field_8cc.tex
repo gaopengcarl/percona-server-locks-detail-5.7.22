@@ -1,0 +1,142 @@
+\hypertarget{field_8cc}{}\section{field.\+cc File Reference}
+\label{field_8cc}\index{field.\+cc@{field.\+cc}}
+
+
+This file implements classes defined in \mbox{\hyperlink{field_8h_source}{field.\+h}}.  
+
+
+{\ttfamily \#include \char`\"{}field.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}filesort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+timefunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json\+\_\+binary.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json\+\_\+dom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+json\+\_\+func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log\+\_\+event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+rli.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+slave.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+join\+\_\+buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}template\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tztime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spatial.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCheck__field__param}{Check\+\_\+field\+\_\+param}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{field_8cc_afe9b54e26ff9f19c88cfc8b0c270af56}\label{field_8cc_afe9b54e26ff9f19c88cfc8b0c270af56}} 
+\#define {\bfseries F\+L\+A\+G\+S\+TR}(V,  F)~((V)\&(F)?\#F\char`\"{} \char`\"{}\+:\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{field_8cc_a2a2bc38e6af0cc9824a4c50dd0716eda}\label{field_8cc_a2a2bc38e6af0cc9824a4c50dd0716eda}} 
+\#define {\bfseries M\+A\+X\+\_\+\+E\+X\+P\+O\+N\+E\+NT}~1024
+\item 
+\mbox{\Hypertarget{field_8cc_a586afe8d02d8e2984adc9e83537c2241}\label{field_8cc_a586afe8d02d8e2984adc9e83537c2241}} 
+\#define {\bfseries D\+O\+U\+B\+L\+E\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~F\+L\+O\+A\+T\+I\+N\+G\+\_\+\+P\+O\+I\+N\+T\+\_\+\+B\+U\+F\+F\+ER
+\item 
+\mbox{\Hypertarget{field_8cc_adb6876e2de799e8a7a4ceb0c4e62f2fe}\label{field_8cc_adb6876e2de799e8a7a4ceb0c4e62f2fe}} 
+\#define {\bfseries L\+O\+N\+G\+L\+O\+N\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~128
+\item 
+\mbox{\Hypertarget{field_8cc_a4a41b5febe35a3f2bbd45006e81e1d45}\label{field_8cc_a4a41b5febe35a3f2bbd45006e81e1d45}} 
+\#define {\bfseries D\+E\+C\+I\+M\+A\+L\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~128
+\item 
+\mbox{\Hypertarget{field_8cc_abf16125e1390238ba745c13d362a162c}\label{field_8cc_abf16125e1390238ba745c13d362a162c}} 
+\#define {\bfseries B\+L\+O\+B\+\_\+\+P\+A\+C\+K\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+T\+O\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+GH}(arg)~((ulong) ((1\+L\+L $<$$<$ M\+Y\+\_\+\+M\+I\+N(arg, 4) $\ast$ 8) -\/ 1\+L\+L))
+\item 
+\mbox{\Hypertarget{field_8cc_a3f6224305feaf1e3f3f8ade87a032741}\label{field_8cc_a3f6224305feaf1e3f3f8ade87a032741}} 
+\#define {\bfseries F\+I\+E\+L\+D\+T\+Y\+P\+E\+\_\+\+T\+E\+A\+R\+\_\+\+F\+R\+OM}~(M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+IT + 1)
+\item 
+\mbox{\Hypertarget{field_8cc_af299bc566623a1f8245907e1ce263dd5}\label{field_8cc_af299bc566623a1f8245907e1ce263dd5}} 
+\#define {\bfseries F\+I\+E\+L\+D\+T\+Y\+P\+E\+\_\+\+T\+E\+A\+R\+\_\+\+TO}~(M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+J\+S\+ON -\/ 1)
+\item 
+\mbox{\Hypertarget{field_8cc_a3a0ccca7449a942a5326ff8e39bf96b5}\label{field_8cc_a3a0ccca7449a942a5326ff8e39bf96b5}} 
+\#define {\bfseries F\+I\+E\+L\+D\+T\+Y\+P\+E\+\_\+\+N\+UM}~(F\+I\+E\+L\+D\+T\+Y\+P\+E\+\_\+\+T\+E\+A\+R\+\_\+\+F\+R\+OM + (255 -\/ F\+I\+E\+L\+D\+T\+Y\+P\+E\+\_\+\+T\+E\+A\+R\+\_\+\+TO))
+\item 
+\mbox{\Hypertarget{field_8cc_a7dd55f2774c93f2b995cc18a4c50f56a}\label{field_8cc_a7dd55f2774c93f2b995cc18a4c50f56a}} 
+\#define {\bfseries F\+L\+T\+\_\+\+E\+X\+P\+\_\+\+D\+IG}~(sizeof(float)$\ast$8-\/F\+L\+T\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG)
+\item 
+\mbox{\Hypertarget{field_8cc_a33b28daf02d239e17b4db5fe528e7623}\label{field_8cc_a33b28daf02d239e17b4db5fe528e7623}} 
+\#define {\bfseries D\+B\+L\+\_\+\+E\+X\+P\+\_\+\+D\+IG}~(sizeof(double)$\ast$8-\/D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{field_8cc_a5f8d71090e86f59d3b68313ef62b7301}\label{field_8cc_a5f8d71090e86f59d3b68313ef62b7301}} 
+int {\bfseries field\+\_\+type2index} (enum\+\_\+field\+\_\+types field\+\_\+type)
+\item 
+size\+\_\+t \mbox{\hyperlink{field_8cc_af54b779d4568fbedccfcc790ae6d3ad7}{field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars}} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$to\+\_\+cs, char $\ast$to, size\+\_\+t to\+\_\+length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$from\+\_\+cs, const char $\ast$from, size\+\_\+t from\+\_\+length, size\+\_\+t nchars, const char $\ast$$\ast$well\+\_\+formed\+\_\+error\+\_\+pos, const char $\ast$$\ast$cannot\+\_\+convert\+\_\+error\+\_\+pos, const char $\ast$$\ast$from\+\_\+end\+\_\+pos)
+\item 
+\mbox{\Hypertarget{field_8cc_aa277a09c856f874c914d857f73eda1ad}\label{field_8cc_aa277a09c856f874c914d857f73eda1ad}} 
+type\+\_\+conversion\+\_\+status {\bfseries store\+\_\+internal\+\_\+with\+\_\+error\+\_\+check} (\mbox{\hyperlink{classField__new__decimal}{Field\+\_\+new\+\_\+decimal}} $\ast$field, int err, \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$value)
+\item 
+\mbox{\Hypertarget{field_8cc_abb5720d369218916f23817cbb00a8830}\label{field_8cc_abb5720d369218916f23817cbb00a8830}} 
+enum\+\_\+field\+\_\+types {\bfseries get\+\_\+blob\+\_\+type\+\_\+from\+\_\+length} (ulong length)
+\item 
+\mbox{\Hypertarget{field_8cc_ab7cf6bf1dfeb4526e5bb446d2025f5ce}\label{field_8cc_ab7cf6bf1dfeb4526e5bb446d2025f5ce}} 
+size\+\_\+t {\bfseries calc\+\_\+pack\+\_\+length} (enum\+\_\+field\+\_\+types type, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{field_8cc_aa9df40d4b07b1dfba0d96b1895fc4ebd}\label{field_8cc_aa9df40d4b07b1dfba0d96b1895fc4ebd}} 
+uint {\bfseries pack\+\_\+length\+\_\+to\+\_\+packflag} (uint type)
+\item 
+\mbox{\Hypertarget{field_8cc_a24756023869a338e81f9e03cf2e9b325}\label{field_8cc_a24756023869a338e81f9e03cf2e9b325}} 
+\mbox{\hyperlink{classField}{Field}} $\ast$ {\bfseries make\+\_\+field} (\mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share, uchar $\ast$ptr, size\+\_\+t field\+\_\+length, uchar $\ast$null\+\_\+pos, uchar null\+\_\+bit, uint pack\+\_\+flag, enum\+\_\+field\+\_\+types field\+\_\+type, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$field\+\_\+charset, Field\+::geometry\+\_\+type geom\+\_\+type, Field\+::utype unireg\+\_\+check, T\+Y\+P\+E\+L\+IB $\ast$interval, const char $\ast$field\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{field_8cc_a3880bcbcdf0d6e82ba054b2b6334740e}\label{field_8cc_a3880bcbcdf0d6e82ba054b2b6334740e}} 
+const char {\bfseries field\+\_\+separator} =\textquotesingle{},\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements classes defined in \mbox{\hyperlink{field_8h_source}{field.\+h}}. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{field_8cc_af54b779d4568fbedccfcc790ae6d3ad7}\label{field_8cc_af54b779d4568fbedccfcc790ae6d3ad7}} 
+\index{field.\+cc@{field.\+cc}!field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars@{field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars}}
+\index{field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars@{field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars}!field.\+cc@{field.\+cc}}
+\subsubsection{\texorpdfstring{field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars()}{field\_well\_formed\_copy\_nchars()}}
+{\footnotesize\ttfamily size\+\_\+t field\+\_\+well\+\_\+formed\+\_\+copy\+\_\+nchars (\begin{DoxyParamCaption}\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{to\+\_\+cs,  }\item[{char $\ast$}]{to,  }\item[{size\+\_\+t}]{to\+\_\+length,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{from\+\_\+cs,  }\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{from\+\_\+length,  }\item[{size\+\_\+t}]{nchars,  }\item[{const char $\ast$$\ast$}]{well\+\_\+formed\+\_\+error\+\_\+pos,  }\item[{const char $\ast$$\ast$}]{cannot\+\_\+convert\+\_\+error\+\_\+pos,  }\item[{const char $\ast$$\ast$}]{from\+\_\+end\+\_\+pos }\end{DoxyParamCaption})}
+
+Copy string with optional character set conversion.
+
+This calls helper function well\+\_\+formed\+\_\+copy\+\_\+nchars to copy string with optional character set convertion. Specially, it checks if the A\+S\+C\+II code point exceeds code range. If Y\+ES, it allows the input but raises a warning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+cs} & Character set of \char`\"{}to\char`\"{} string \\
+\hline
+{\em to} & Store result here \\
+\hline
+{\em to\+\_\+length} & Maxinum length of \char`\"{}to\char`\"{} string \\
+\hline
+{\em from\+\_\+cs} & From character set \\
+\hline
+{\em from} & Copy from here \\
+\hline
+{\em from\+\_\+length} & Length of from string \\
+\hline
+{\em nchars} & Copy not more that nchars characters \\
+\hline
+{\em well\+\_\+formed\+\_\+error\+\_\+pos} & Return position when \char`\"{}from\char`\"{} is not well formed or N\+U\+LL otherwise. \\
+\hline
+{\em cannot\+\_\+convert\+\_\+error\+\_\+pos} & Return position where a not convertable character met, or N\+U\+LL otherwise. \\
+\hline
+{\em from\+\_\+end\+\_\+pos} & Return position where scanning of \char`\"{}from\char`\"{} string stopped.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em length} & of bytes copied to \textquotesingle{}to\textquotesingle{} \\
+\hline
+\end{DoxyRetVals}

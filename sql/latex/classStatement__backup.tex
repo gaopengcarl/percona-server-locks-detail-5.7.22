@@ -1,0 +1,32 @@
+\hypertarget{classStatement__backup}{}\section{Statement\+\_\+backup Class Reference}
+\label{classStatement__backup}\index{Statement\+\_\+backup@{Statement\+\_\+backup}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStatement__backup_add4905aef47081b6b66c14187f8c7b8f}\label{classStatement__backup_add4905aef47081b6b66c14187f8c7b8f}} 
+L\+EX $\ast$ {\bfseries lex} () const
+\item 
+void \mbox{\hyperlink{classStatement__backup_ab441c001d75a8692d54fcbd80255c462}{set\+\_\+thd\+\_\+to\+\_\+ps}} (T\+HD $\ast$thd, \mbox{\hyperlink{classPrepared__statement}{Prepared\+\_\+statement}} $\ast$stmt)
+\item 
+void \mbox{\hyperlink{classStatement__backup_a9ac84f373086cd9c5ce4636e1ab60235}{restore\+\_\+thd}} (T\+HD $\ast$thd, \mbox{\hyperlink{classPrepared__statement}{Prepared\+\_\+statement}} $\ast$stmt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStatement__backup_a9ac84f373086cd9c5ce4636e1ab60235}\label{classStatement__backup_a9ac84f373086cd9c5ce4636e1ab60235}} 
+\index{Statement\+\_\+backup@{Statement\+\_\+backup}!restore\+\_\+thd@{restore\+\_\+thd}}
+\index{restore\+\_\+thd@{restore\+\_\+thd}!Statement\+\_\+backup@{Statement\+\_\+backup}}
+\subsubsection{\texorpdfstring{restore\+\_\+thd()}{restore\_thd()}}
+{\footnotesize\ttfamily void Statement\+\_\+backup\+::restore\+\_\+thd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classPrepared__statement}{Prepared\+\_\+statement}} $\ast$}]{stmt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Restore the T\+HD statement state after the prepared statement has finished executing. \mbox{\Hypertarget{classStatement__backup_ab441c001d75a8692d54fcbd80255c462}\label{classStatement__backup_ab441c001d75a8692d54fcbd80255c462}} 
+\index{Statement\+\_\+backup@{Statement\+\_\+backup}!set\+\_\+thd\+\_\+to\+\_\+ps@{set\+\_\+thd\+\_\+to\+\_\+ps}}
+\index{set\+\_\+thd\+\_\+to\+\_\+ps@{set\+\_\+thd\+\_\+to\+\_\+ps}!Statement\+\_\+backup@{Statement\+\_\+backup}}
+\subsubsection{\texorpdfstring{set\+\_\+thd\+\_\+to\+\_\+ps()}{set\_thd\_to\_ps()}}
+{\footnotesize\ttfamily void Statement\+\_\+backup\+::set\+\_\+thd\+\_\+to\+\_\+ps (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classPrepared__statement}{Prepared\+\_\+statement}} $\ast$}]{stmt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepared the T\+HD to execute the prepared statement. Save the current T\+HD statement state. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__prepare_8cc}{sql\+\_\+prepare.\+cc}}\end{DoxyCompactItemize}

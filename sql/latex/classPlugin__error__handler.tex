@@ -1,0 +1,33 @@
+\hypertarget{classPlugin__error__handler}{}\section{Plugin\+\_\+error\+\_\+handler Class Reference}
+\label{classPlugin__error__handler}\index{Plugin\+\_\+error\+\_\+handler@{Plugin\+\_\+error\+\_\+handler}}
+Inheritance diagram for Plugin\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlugin__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlugin__error__handler_a90f0ad2c2b992d38911368f049b21522}\label{classPlugin__error__handler_a90f0ad2c2b992d38911368f049b21522}} 
+{\bfseries Plugin\+\_\+error\+\_\+handler} (T\+HD $\ast$thd, sql\+\_\+condition\+\_\+handler\+\_\+function handle\+\_\+error, void $\ast$state)
+\item 
+\mbox{\Hypertarget{classPlugin__error__handler_ad508e8248ec17b6a5aaf1627e38b05c6}\label{classPlugin__error__handler_ad508e8248ec17b6a5aaf1627e38b05c6}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno\+\_\+u, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$, const char $\ast$msg)
+\item 
+\mbox{\Hypertarget{classPlugin__error__handler_a6f16e74b80f384f9d0475243b3a5c4d1}\label{classPlugin__error__handler_a6f16e74b80f384f9d0475243b3a5c4d1}} 
+const char $\ast$ {\bfseries get\+\_\+message} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements the framework needed for the callback function that handles conditions that may arise during parsing via the parser service.
+
+\begin{DoxySeeAlso}{See also}
+mysql\+\_\+parser\+\_\+visit\+\_\+tree 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parser\+\_\+service.\+cc\end{DoxyCompactItemize}

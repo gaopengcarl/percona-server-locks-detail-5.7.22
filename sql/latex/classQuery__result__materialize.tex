@@ -1,0 +1,31 @@
+\hypertarget{classQuery__result__materialize}{}\section{Query\+\_\+result\+\_\+materialize Class Reference}
+\label{classQuery__result__materialize}\index{Query\+\_\+result\+\_\+materialize@{Query\+\_\+result\+\_\+materialize}}
+Inheritance diagram for Query\+\_\+result\+\_\+materialize\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQuery__result__materialize}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__materialize_a8895b2f72a724d70a0e7c7bbb008f627}\label{classQuery__result__materialize_a8895b2f72a724d70a0e7c7bbb008f627}} 
+{\bfseries Query\+\_\+result\+\_\+materialize} (Query\+\_\+result $\ast$result\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classQuery__result__materialize_a026e8154f70e96cb493a9b75460edd6d}\label{classQuery__result__materialize_a026e8154f70e96cb493a9b75460edd6d}} 
+virtual bool {\bfseries send\+\_\+result\+\_\+set\+\_\+metadata} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&list, uint flags)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuery__result__materialize_a7823dd95ef97c8c19568dec1259a9de5}\label{classQuery__result__materialize_a7823dd95ef97c8c19568dec1259a9de5}} 
+\mbox{\hyperlink{classMaterialized__cursor}{Materialized\+\_\+cursor}} $\ast$ {\bfseries materialized\+\_\+cursor}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classQuery__result__materialize}{Query\+\_\+result\+\_\+materialize}} -- a mediator between a cursor query and the protocol. In case we were not able to open a non-\/materialzed cursor, it creates an internal temporary H\+E\+AP table, and insert all rows into it. When the table reaches max\+\_\+heap\+\_\+table\+\_\+size, it\textquotesingle{}s converted to a My\+I\+S\+AM table. Later this table is used to create a \mbox{\hyperlink{classMaterialized__cursor}{Materialized\+\_\+cursor}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+cursor.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+\hypertarget{classTablespace__name__error__handler}{}\section{Tablespace\+\_\+name\+\_\+error\+\_\+handler Class Reference}
+\label{classTablespace__name__error__handler}\index{Tablespace\+\_\+name\+\_\+error\+\_\+handler@{Tablespace\+\_\+name\+\_\+error\+\_\+handler}}
+Inheritance diagram for Tablespace\+\_\+name\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTablespace__name__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTablespace__name__error__handler_a57cd0a88a6e8f8c6faa9943ea5b611f9}\label{classTablespace__name__error__handler_a57cd0a88a6e8f8c6faa9943ea5b611f9}} 
+bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+After retrieving the tablespace name, the tablespace name is validated. If the name is invalid, it is ignored. The function used to validate the name, \textquotesingle{}check\+\_\+tablespace\+\_\+name()\textquotesingle{}, emits errors. In the context of reading .F\+RM files, the errors must be ignored. This error handler makes sure this is done. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table.\+cc\end{DoxyCompactItemize}

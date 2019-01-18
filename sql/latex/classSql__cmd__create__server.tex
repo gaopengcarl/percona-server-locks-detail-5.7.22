@@ -1,0 +1,56 @@
+\hypertarget{classSql__cmd__create__server}{}\section{Sql\+\_\+cmd\+\_\+create\+\_\+server Class Reference}
+\label{classSql__cmd__create__server}\index{Sql\+\_\+cmd\+\_\+create\+\_\+server@{Sql\+\_\+cmd\+\_\+create\+\_\+server}}
+
+
+{\ttfamily \#include $<$sql\+\_\+servers.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+create\+\_\+server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__create__server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__create__server_a6c6e11b8f1f8b8b8e5d16c8129f32d1e}\label{classSql__cmd__create__server_a6c6e11b8f1f8b8b8e5d16c8129f32d1e}} 
+{\bfseries Sql\+\_\+cmd\+\_\+create\+\_\+server} (\mbox{\hyperlink{classServer__options}{Server\+\_\+options}} $\ast$server\+\_\+options)
+\item 
+\mbox{\Hypertarget{classSql__cmd__create__server_ac9521d757ac0b4f180a0671053dcbf55}\label{classSql__cmd__create__server_ac9521d757ac0b4f180a0671053dcbf55}} 
+enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__create__server_ac9521d757ac0b4f180a0671053dcbf55}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSql__cmd__create__server_a8e7f8717451abfb04ef6ddbacfe76428}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class implements the C\+R\+E\+A\+TE S\+E\+R\+V\+ER statement. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__create__server_a8e7f8717451abfb04ef6ddbacfe76428}\label{classSql__cmd__create__server_a8e7f8717451abfb04ef6ddbacfe76428}} 
+\index{Sql\+\_\+cmd\+\_\+create\+\_\+server@{Sql\+\_\+cmd\+\_\+create\+\_\+server}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+create\+\_\+server@{Sql\+\_\+cmd\+\_\+create\+\_\+server}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+create\+\_\+server\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a new server by inserting a row into the mysql.\+server table and creating a cache entry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+servers.\+h\item 
+sql\+\_\+servers.\+cc\end{DoxyCompactItemize}

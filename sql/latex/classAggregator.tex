@@ -1,0 +1,155 @@
+\hypertarget{classAggregator}{}\section{Aggregator Class Reference}
+\label{classAggregator}\index{Aggregator@{Aggregator}}
+
+
+{\ttfamily \#include $<$item\+\_\+sum.\+h$>$}
+
+Inheritance diagram for Aggregator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAggregator}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAggregator_a61b988705710055ea031d1c227b43d05}\label{classAggregator_a61b988705710055ea031d1c227b43d05}} 
+enum {\bfseries Aggregator\+\_\+type} \{ {\bfseries S\+I\+M\+P\+L\+E\+\_\+\+A\+G\+G\+R\+E\+G\+A\+T\+OR}, 
+{\bfseries D\+I\+S\+T\+I\+N\+C\+T\+\_\+\+A\+G\+G\+R\+E\+G\+A\+T\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAggregator_ad9419dfc50b0b7e5e977a81b3bd8ddda}\label{classAggregator_ad9419dfc50b0b7e5e977a81b3bd8ddda}} 
+{\bfseries Aggregator} (\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$arg)
+\item 
+\mbox{\Hypertarget{classAggregator_aa839d991497a8872e05da159b5ae7970}\label{classAggregator_aa839d991497a8872e05da159b5ae7970}} 
+virtual Aggregator\+\_\+type {\bfseries Aggrtype} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classAggregator_afcde359558a43054f7812a72498a263f}{setup}} (T\+HD $\ast$)=0
+\item 
+virtual void \mbox{\hyperlink{classAggregator_ad416a800e9cdec7908dd3e9bdffa70e5}{clear}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classAggregator_a70e0d53834f2672f3ec57c96e35a9a60}{add}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classAggregator_a726ef59a61b219b87c0a6041f8162037}{endup}} ()=0
+\item 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ \mbox{\hyperlink{classAggregator_a0965a66058cd00c581b015b9c571cb07}{arg\+\_\+val\+\_\+decimal}} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$value)=0
+\item 
+virtual double \mbox{\hyperlink{classAggregator_addca16d20f7cc2640f3843c2c5e7596d}{arg\+\_\+val\+\_\+real}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classAggregator_a2581c04dee61cf1a4d72519da64baf53}{arg\+\_\+is\+\_\+null}} (bool use\+\_\+null\+\_\+value)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAggregator_a0c8f75d3d70dff740412d52b63ea3e40}\label{classAggregator_a0c8f75d3d70dff740412d52b63ea3e40}} 
+\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$ {\bfseries item\+\_\+sum}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAggregator_afdaf2fcbe4bca3f9cf9e54d9302c0d69}\label{classAggregator_afdaf2fcbe4bca3f9cf9e54d9302c0d69}} 
+class {\bfseries Item\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classAggregator_a2afeb7cbcc97ddd2c3c74cf87352e0ab}\label{classAggregator_a2afeb7cbcc97ddd2c3c74cf87352e0ab}} 
+class {\bfseries Item\+\_\+sum\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classAggregator_acfaf1c17289ab0e71cb92e85c6e40ee5}\label{classAggregator_acfaf1c17289ab0e71cb92e85c6e40ee5}} 
+class {\bfseries Item\+\_\+sum\+\_\+count}
+\item 
+\mbox{\Hypertarget{classAggregator_a43563950efa7ae2387d3389fae2c0d09}\label{classAggregator_a43563950efa7ae2387d3389fae2c0d09}} 
+class {\bfseries Item\+\_\+sum\+\_\+avg}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The abstract base class for the Aggregator\+\_\+$\ast$ classes. It implements the data collection functions (setup/add/clear) as either pass-\/through to the real functionality or as collectors into an \mbox{\hyperlink{classUnique}{Unique}} (for distinct) structure.
+
+Note that update\+\_\+field/reset\+\_\+field are not in that class, because they\textquotesingle{}re simply not called when G\+R\+O\+UP B\+Y/\+D\+I\+S\+T\+I\+N\+CT can be handled with help of index on grouped fields (quick\+\_\+group = 0); 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAggregator_a70e0d53834f2672f3ec57c96e35a9a60}\label{classAggregator_a70e0d53834f2672f3ec57c96e35a9a60}} 
+\index{Aggregator@{Aggregator}!add@{add}}
+\index{add@{add}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily virtual bool Aggregator\+::add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called when there\textquotesingle{}s a new value to be aggregated. Updates the internal state of the aggregator to reflect the new value. 
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_aa3b0160d86a60634bd390596bd524c7a}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_af72d7cc1082245015c41e99893992a4f}{Aggregator\+\_\+distinct}}.
+
+\mbox{\Hypertarget{classAggregator_a2581c04dee61cf1a4d72519da64baf53}\label{classAggregator_a2581c04dee61cf1a4d72519da64baf53}} 
+\index{Aggregator@{Aggregator}!arg\+\_\+is\+\_\+null@{arg\+\_\+is\+\_\+null}}
+\index{arg\+\_\+is\+\_\+null@{arg\+\_\+is\+\_\+null}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{arg\+\_\+is\+\_\+null()}{arg\_is\_null()}}
+{\footnotesize\ttfamily virtual bool Aggregator\+::arg\+\_\+is\+\_\+null (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+null\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+N\+U\+L\+Lness of being-\/aggregated argument.
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+\_\+null\+\_\+value} & Optimization\+: to determine if the argument is N\+U\+LL we must, in the general case, call is\+\_\+null() on it, which itself might call val\+\_\+$\ast$() on it, which might be costly. If you just have called arg\+\_\+val$\ast$(), you can pass use\+\_\+null\+\_\+value=true; this way, \mbox{\hyperlink{classAggregator_a2581c04dee61cf1a4d72519da64baf53}{arg\+\_\+is\+\_\+null()}} might avoid is\+\_\+null() and instead do a cheap read of the \mbox{\hyperlink{classItem}{Item}}\textquotesingle{}s null\+\_\+value (updated by arg\+\_\+val$\ast$()). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_a89edab7b2334ef55dd1848094cdb4331}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_a213b0657e2fcd03305629d78c68b31ad}{Aggregator\+\_\+distinct}}.
+
+\mbox{\Hypertarget{classAggregator_a0965a66058cd00c581b015b9c571cb07}\label{classAggregator_a0965a66058cd00c581b015b9c571cb07}} 
+\index{Aggregator@{Aggregator}!arg\+\_\+val\+\_\+decimal@{arg\+\_\+val\+\_\+decimal}}
+\index{arg\+\_\+val\+\_\+decimal@{arg\+\_\+val\+\_\+decimal}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{arg\+\_\+val\+\_\+decimal()}{arg\_val\_decimal()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}}$\ast$ Aggregator\+::arg\+\_\+val\+\_\+decimal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Decimal value of being-\/aggregated argument 
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_aeaf3d769df20c4c91476dd661da758f7}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_a60e5fc048746277c661ce97e9fc92905}{Aggregator\+\_\+distinct}}.
+
+\mbox{\Hypertarget{classAggregator_addca16d20f7cc2640f3843c2c5e7596d}\label{classAggregator_addca16d20f7cc2640f3843c2c5e7596d}} 
+\index{Aggregator@{Aggregator}!arg\+\_\+val\+\_\+real@{arg\+\_\+val\+\_\+real}}
+\index{arg\+\_\+val\+\_\+real@{arg\+\_\+val\+\_\+real}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{arg\+\_\+val\+\_\+real()}{arg\_val\_real()}}
+{\footnotesize\ttfamily virtual double Aggregator\+::arg\+\_\+val\+\_\+real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Floating point value of being-\/aggregated argument 
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_adaa482bd0ba91275f559a4eae95686c0}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_a3485cfa42d584711c4c95a3405f4a2ad}{Aggregator\+\_\+distinct}}.
+
+\mbox{\Hypertarget{classAggregator_ad416a800e9cdec7908dd3e9bdffa70e5}\label{classAggregator_ad416a800e9cdec7908dd3e9bdffa70e5}} 
+\index{Aggregator@{Aggregator}!clear@{clear}}
+\index{clear@{clear}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void Aggregator\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called when we need to wipe out all the data from the aggregator \+: all the values acumulated and all the state. Cleans up the internal structures and resets them to their initial state. 
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_a1bc4a3b483c68b07ac0c2472e868d1a2}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_acb3c9529bc839900fc63eb890a5e2aee}{Aggregator\+\_\+distinct}}.
+
+\mbox{\Hypertarget{classAggregator_a726ef59a61b219b87c0a6041f8162037}\label{classAggregator_a726ef59a61b219b87c0a6041f8162037}} 
+\index{Aggregator@{Aggregator}!endup@{endup}}
+\index{endup@{endup}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{endup()}{endup()}}
+{\footnotesize\ttfamily virtual void Aggregator\+::endup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called when there are no more data and the final value is to be retrieved. Finalises the state of the aggregator, so the final result can be retrieved. 
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_a57c8435c2131160c58f8c1e6cce37542}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_a474d5f42f784572ea3b7d28be0fc3b2e}{Aggregator\+\_\+distinct}}.
+
+\mbox{\Hypertarget{classAggregator_afcde359558a43054f7812a72498a263f}\label{classAggregator_afcde359558a43054f7812a72498a263f}} 
+\index{Aggregator@{Aggregator}!setup@{setup}}
+\index{setup@{setup}!Aggregator@{Aggregator}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily virtual bool Aggregator\+::setup (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called before adding the first row. Allocates and sets up the internal aggregation structures used, e.\+g. the \mbox{\hyperlink{classUnique}{Unique}} instance used to calculate distinct. 
+
+Implemented in \mbox{\hyperlink{classAggregator__simple_a5ba27dcd45b797485c888a36a5cc4bd3}{Aggregator\+\_\+simple}}, and \mbox{\hyperlink{classAggregator__distinct_ac01d658918e5e160779ccfaf1134943b}{Aggregator\+\_\+distinct}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+sum.\+h\end{DoxyCompactItemize}

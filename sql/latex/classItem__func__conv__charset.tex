@@ -1,0 +1,69 @@
+\hypertarget{classItem__func__conv__charset}{}\section{Item\+\_\+func\+\_\+conv\+\_\+charset Class Reference}
+\label{classItem__func__conv__charset}\index{Item\+\_\+func\+\_\+conv\+\_\+charset@{Item\+\_\+func\+\_\+conv\+\_\+charset}}
+Inheritance diagram for Item\+\_\+func\+\_\+conv\+\_\+charset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__func__conv__charset}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_a6ae02a928ba593635a756248dd523046}\label{classItem__func__conv__charset_a6ae02a928ba593635a756248dd523046}} 
+{\bfseries Item\+\_\+func\+\_\+conv\+\_\+charset} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_a60be056676d46b70044fadce9e26277a}\label{classItem__func__conv__charset_a60be056676d46b70044fadce9e26277a}} 
+{\bfseries Item\+\_\+func\+\_\+conv\+\_\+charset} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, bool cache\+\_\+if\+\_\+const)
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_a656f43fea4631a5875e7949d5136a509}\label{classItem__func__conv__charset_a656f43fea4631a5875e7949d5136a509}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_a8f701877fbebe16a08936d690ee75d6c}\label{classItem__func__conv__charset_a8f701877fbebe16a08936d690ee75d6c}} 
+void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_a6f2aca60f3c00fe8b5fe569af1b76552}\label{classItem__func__conv__charset_a6f2aca60f3c00fe8b5fe569af1b76552}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+virtual void \mbox{\hyperlink{classItem__func__conv__charset_ac8281c66d90d6a9b818dde781f63d28f}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_ac608d5d7e7be8073eae2895e1ef4cd66}\label{classItem__func__conv__charset_ac608d5d7e7be8073eae2895e1ef4cd66}} 
+bool {\bfseries safe}
+\item 
+\mbox{\Hypertarget{classItem__func__conv__charset_a600dc5b9128769619fadd58c0804e0eb}\label{classItem__func__conv__charset_a600dc5b9128769619fadd58c0804e0eb}} 
+const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$ {\bfseries conv\+\_\+charset}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__conv__charset_ac8281c66d90d6a9b818dde781f63d28f}\label{classItem__func__conv__charset_ac8281c66d90d6a9b818dde781f63d28f}} 
+\index{Item\+\_\+func\+\_\+conv\+\_\+charset@{Item\+\_\+func\+\_\+conv\+\_\+charset}!print@{print}}
+\index{print@{print}!Item\+\_\+func\+\_\+conv\+\_\+charset@{Item\+\_\+func\+\_\+conv\+\_\+charset}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+func\+\_\+conv\+\_\+charset\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_afb302ee25d4721ace27d3f5053d4ee41}{Item\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+strfunc.\+h\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{classBlob__mem__storage}{}\section{Blob\+\_\+mem\+\_\+storage Class Reference}
+\label{classBlob__mem__storage}\index{Blob\+\_\+mem\+\_\+storage@{Blob\+\_\+mem\+\_\+storage}}
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+Inheritance diagram for Blob\+\_\+mem\+\_\+storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBlob__mem__storage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlob__mem__storage_a4d4e85f7dffec98b2f33c42d2862ff59}\label{classBlob__mem__storage_a4d4e85f7dffec98b2f33c42d2862ff59}} 
+void {\bfseries reset} ()
+\item 
+char $\ast$ \mbox{\hyperlink{classBlob__mem__storage_a0226d57def9b7f4565b6a2fa00093137}{store}} (const char $\ast$from, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classBlob__mem__storage_a5073479606f5f4f6b063238415d2ff71}\label{classBlob__mem__storage_a5073479606f5f4f6b063238415d2ff71}} 
+void {\bfseries set\+\_\+truncated\+\_\+value} (bool is\+\_\+truncated\+\_\+value)
+\item 
+\mbox{\Hypertarget{classBlob__mem__storage_a833203ec681086d5f4c412931b92b8c0}\label{classBlob__mem__storage_a833203ec681086d5f4c412931b92b8c0}} 
+bool {\bfseries is\+\_\+truncated\+\_\+value} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class is used as a B\+L\+OB field value storage for intermediate G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+AT results. Used only for G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+C\+AT with D\+I\+S\+T\+I\+N\+CT or O\+R\+D\+ER BY options. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBlob__mem__storage_a0226d57def9b7f4565b6a2fa00093137}\label{classBlob__mem__storage_a0226d57def9b7f4565b6a2fa00093137}} 
+\index{Blob\+\_\+mem\+\_\+storage@{Blob\+\_\+mem\+\_\+storage}!store@{store}}
+\index{store@{store}!Blob\+\_\+mem\+\_\+storage@{Blob\+\_\+mem\+\_\+storage}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily char$\ast$ Blob\+\_\+mem\+\_\+storage\+::store (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fuction creates duplicate of \textquotesingle{}from\textquotesingle{} string in \textquotesingle{}storage\textquotesingle{} M\+E\+M\+\_\+\+R\+O\+OT.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & string to copy \\
+\hline
+{\em length} & string length\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Pointer} & to the copied string. \\
+\hline
+{\em 0} & if an error occured. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+table.\+h\end{DoxyCompactItemize}

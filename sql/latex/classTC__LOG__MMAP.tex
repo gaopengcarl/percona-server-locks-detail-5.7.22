@@ -1,0 +1,205 @@
+\hypertarget{classTC__LOG__MMAP}{}\section{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP Class Reference}
+\label{classTC__LOG__MMAP}\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+Inheritance diagram for T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTC__LOG__MMAP}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTC__LOG__MMAP_aa4fe72752e9a7b0d22ba52f85162751a}\label{classTC__LOG__MMAP_aa4fe72752e9a7b0d22ba52f85162751a}} 
+enum {\bfseries P\+A\+G\+E\+\_\+\+S\+T\+A\+TE} \{ {\bfseries P\+S\+\_\+\+P\+O\+OL}, 
+{\bfseries P\+S\+\_\+\+E\+R\+R\+OR}, 
+{\bfseries P\+S\+\_\+\+D\+I\+R\+TY}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classTC__LOG__MMAP_a2a7bf09548c80ed522a20ad9b9cff295}{open}} (const char $\ast$opt\+\_\+name)
+\item 
+void \mbox{\hyperlink{classTC__LOG__MMAP_aefc50f2b1eeb68743a1ab72219f85db4}{close}} ()
+\item 
+enum\+\_\+result \mbox{\hyperlink{classTC__LOG__MMAP_ac8696930a9546b39057462eca51b3648}{commit}} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{classTC__LOG__MMAP_a5a050951b50e08417abbec375ab30614}{rollback}} (T\+HD $\ast$thd, bool all)
+\item 
+int \mbox{\hyperlink{classTC__LOG__MMAP_a334d9853acc2f7b12ae2a3014806f6c4}{prepare}} (T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{classTC__LOG__MMAP_acb6584c06c2ebd6b721cba31bd36967b}\label{classTC__LOG__MMAP_acb6584c06c2ebd6b721cba31bd36967b}} 
+int {\bfseries recover} ()
+\item 
+uint \mbox{\hyperlink{classTC__LOG__MMAP_a242ceec9296d75dcfc09a9109ffa6a80}{size}} () const
+\item 
+void \mbox{\hyperlink{classTC__LOG__MMAP_ab6e8fad0d9b8167b22d22f4372739202}{xlock}} (void)
+\item 
+void \mbox{\hyperlink{classTC__LOG__MMAP_a728d9b1b03c73850ba116b93677a42a8}{xunlock}} (void)
+\item 
+void \mbox{\hyperlink{classTC__LOG__MMAP_a8c90387699139f5e9d244e60c5a126a1}{slock}} (void)
+\item 
+void \mbox{\hyperlink{classTC__LOG__MMAP_a8f2d68fb0873cc813dcfc65d4d922261}{sunlock}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTC__LOG__MMAP_a73e8c82f6fbafc767ed9dacc31729d94}\label{classTC__LOG__MMAP_a73e8c82f6fbafc767ed9dacc31729d94}} 
+virtual int {\bfseries do\+\_\+msync\+\_\+and\+\_\+fsync} (int fd\+\_\+arg, void $\ast$addr, size\+\_\+t len, int flags)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTC__LOG__MMAP_ac8b1fd754b4e698a97f42b56221bb190}\label{classTC__LOG__MMAP_ac8b1fd754b4e698a97f42b56221bb190}} 
+class {\bfseries T\+C\+Log\+M\+Map\+Test}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTC__LOG__MMAP_aefc50f2b1eeb68743a1ab72219f85db4}\label{classTC__LOG__MMAP_aefc50f2b1eeb68743a1ab72219f85db4}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!close@{close}}
+\index{close@{close}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Close the transaction coordinator log and free any resources. Called during server shutdown. 
+
+Implements \mbox{\hyperlink{classTC__LOG_a645b5d1b49c4c4396d327eef07e2dd53}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_ac8696930a9546b39057462eca51b3648}\label{classTC__LOG__MMAP_ac8696930a9546b39057462eca51b3648}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!commit@{commit}}
+\index{commit@{commit}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily T\+C\+\_\+\+L\+O\+G\+::enum\+\_\+result T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::commit (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Commit the transaction.
+
+\begin{DoxyNote}{Note}
+When the \mbox{\hyperlink{classTC__LOG}{T\+C\+\_\+\+L\+OG}} inteface was changed, this function was added and uses the functions that were there with the old interface to implement the logic. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_a3f9ef43db745a798f8b361eb0b93ff22}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_a2a7bf09548c80ed522a20ad9b9cff295}\label{classTC__LOG__MMAP_a2a7bf09548c80ed522a20ad9b9cff295}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!open@{open}}
+\index{open@{open}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily int T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{opt\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize and open the coordinator log. Do recovery if necessary. Called during server startup.
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+name} & Name of logfile.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & sucess \\
+\hline
+{\em 1} & failed \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_a34eb4c35fe8d29b0febbd700a61b282d}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_a334d9853acc2f7b12ae2a3014806f6c4}\label{classTC__LOG__MMAP_a334d9853acc2f7b12ae2a3014806f6c4}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!prepare@{prepare}}
+\index{prepare@{prepare}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily int T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::prepare (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Log a prepare record of the transaction to the storage engines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to log transaction record for.\\
+\hline
+{\em all} & {\ttfamily true} if an explicit commit or an implicit commit for a statement, {\ttfamily false} if an internal commit of the statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code on failure, zero on success. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_ab968f1e200f370127c3dcd0302d00968}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_a5a050951b50e08417abbec375ab30614}\label{classTC__LOG__MMAP_a5a050951b50e08417abbec375ab30614}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!rollback@{rollback}}
+\index{rollback@{rollback}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily int T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::rollback (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{all }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Log a rollback record of the transaction to the transaction coordinator log.
+
+When the function returns, the transaction have been aborted in the transaction coordinator log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Session to log transaction record for.\\
+\hline
+{\em all} & {\ttfamily true} if an explicit commit or an implicit commit for a statement, {\ttfamily false} if an internal commit of the statement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code on failure, zero on success. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classTC__LOG_abf637f1bbf02c6f8e4f69aa2f5e2d362}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_a242ceec9296d75dcfc09a9109ffa6a80}\label{classTC__LOG__MMAP_a242ceec9296d75dcfc09a9109ffa6a80}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!size@{size}}
+\index{size@{size}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the total amount of potentially usable slots for X\+I\+Ds in TC log. \mbox{\Hypertarget{classTC__LOG__MMAP_a8c90387699139f5e9d244e60c5a126a1}\label{classTC__LOG__MMAP_a8c90387699139f5e9d244e60c5a126a1}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!slock@{slock}}
+\index{slock@{slock}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{slock()}{slock()}}
+{\footnotesize\ttfamily void T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::slock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Acquire a shared lock to block commits. This is used when calling \mbox{\hyperlink{handler_8cc_a4a77fdd0e1d6bee79e29e7495c7d752a}{ha\+\_\+commit\+\_\+low()}} to block commits if there\textquotesingle{}s an exclusive lock acquired by S\+T\+A\+RT T\+R\+A\+N\+S\+A\+C\+T\+I\+ON W\+I\+TH C\+O\+N\+S\+I\+S\+T\+E\+NT S\+N\+A\+P\+S\+H\+OT. 
+
+Implements \mbox{\hyperlink{classTC__LOG_a5b73af1ad12c691b3417c565f7e58a1c}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_a8f2d68fb0873cc813dcfc65d4d922261}\label{classTC__LOG__MMAP_a8f2d68fb0873cc813dcfc65d4d922261}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!sunlock@{sunlock}}
+\index{sunlock@{sunlock}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{sunlock()}{sunlock()}}
+{\footnotesize\ttfamily void T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::sunlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Release lock acquired with \mbox{\hyperlink{classTC__LOG__MMAP_a8c90387699139f5e9d244e60c5a126a1}{slock()}}. 
+
+Implements \mbox{\hyperlink{classTC__LOG_ab383cdb4b722c9b11d284ac8b970b087}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_ab6e8fad0d9b8167b22d22f4372739202}\label{classTC__LOG__MMAP_ab6e8fad0d9b8167b22d22f4372739202}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!xlock@{xlock}}
+\index{xlock@{xlock}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{xlock()}{xlock()}}
+{\footnotesize\ttfamily void T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::xlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Acquire an exclusive lock to block binary log updates and commits. This is used by S\+T\+A\+RT T\+R\+A\+N\+S\+A\+C\+T\+I\+ON W\+I\+TH C\+O\+N\+S\+I\+S\+T\+E\+NT S\+N\+A\+P\+S\+H\+OT to create an atomic snapshot. 
+
+Implements \mbox{\hyperlink{classTC__LOG_aac75dc061e9aae27449e675b23c27ae3}{T\+C\+\_\+\+L\+OG}}.
+
+\mbox{\Hypertarget{classTC__LOG__MMAP_a728d9b1b03c73850ba116b93677a42a8}\label{classTC__LOG__MMAP_a728d9b1b03c73850ba116b93677a42a8}} 
+\index{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}!xunlock@{xunlock}}
+\index{xunlock@{xunlock}!T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP@{T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+AP}}
+\subsubsection{\texorpdfstring{xunlock()}{xunlock()}}
+{\footnotesize\ttfamily void T\+C\+\_\+\+L\+O\+G\+\_\+\+M\+M\+A\+P\+::xunlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Release lock acquired with \mbox{\hyperlink{classTC__LOG__MMAP_ab6e8fad0d9b8167b22d22f4372739202}{xlock()}}. 
+
+Implements \mbox{\hyperlink{classTC__LOG_a60ee380273adc9e23c56ff114cd2636a}{T\+C\+\_\+\+L\+OG}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tc\+\_\+log.\+h\item 
+tc\+\_\+log.\+cc\end{DoxyCompactItemize}

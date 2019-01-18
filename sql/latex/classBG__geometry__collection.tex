@@ -1,0 +1,92 @@
+\hypertarget{classBG__geometry__collection}{}\section{B\+G\+\_\+geometry\+\_\+collection Class Reference}
+\label{classBG__geometry__collection}\index{B\+G\+\_\+geometry\+\_\+collection@{B\+G\+\_\+geometry\+\_\+collection}}
+
+
+{\ttfamily \#include $<$item\+\_\+geofunc.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_a38170b1445cbeac05c141e37b5d68651}\label{classBG__geometry__collection_a38170b1445cbeac05c141e37b5d68651}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$ $>$ {\bfseries Geometry\+\_\+list}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_ab8dca5aefde780d0410bdcca93f70b82}\label{classBG__geometry__collection_ab8dca5aefde780d0410bdcca93f70b82}} 
+bool {\bfseries is\+\_\+comp\+\_\+no\+\_\+overlapped} () const
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_a1082cce97bb8411af16940999885ad6d}\label{classBG__geometry__collection_a1082cce97bb8411af16940999885ad6d}} 
+void {\bfseries set\+\_\+comp\+\_\+no\+\_\+overlapped} (bool b)
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_ab15273d17d8eaa7417b9155e4da46a64}\label{classBG__geometry__collection_ab15273d17d8eaa7417b9155e4da46a64}} 
+Geometry\+::srid\+\_\+t {\bfseries get\+\_\+srid} () const
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_a3c57f4e88b073d0e8a7844ca317bdccc}\label{classBG__geometry__collection_a3c57f4e88b073d0e8a7844ca317bdccc}} 
+void {\bfseries set\+\_\+srid} (Geometry\+::srid\+\_\+t srid)
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_a7a266dfad527e800335b0b0be56e7823}\label{classBG__geometry__collection_a7a266dfad527e800335b0b0be56e7823}} 
+bool {\bfseries fill} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$geo, bool break\+\_\+multi\+\_\+geom=false)
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_a30c3aa79adddd0a6f4384c461afb608f}\label{classBG__geometry__collection_a30c3aa79adddd0a6f4384c461afb608f}} 
+const Geometry\+\_\+list \& {\bfseries get\+\_\+geometries} () const
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_ae40e361bd16c6d74bfcdcc2d41f5d4fe}\label{classBG__geometry__collection_ae40e361bd16c6d74bfcdcc2d41f5d4fe}} 
+Geometry\+\_\+list \& {\bfseries get\+\_\+geometries} ()
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_afe549db09e534fa5b4cd0326f4a65a99}\label{classBG__geometry__collection_afe549db09e534fa5b4cd0326f4a65a99}} 
+bool {\bfseries all\+\_\+isolated} () const
+\item 
+\mbox{\Hypertarget{classBG__geometry__collection_aa30d8c730c494f691ad54ae18002bf57}\label{classBG__geometry__collection_aa30d8c730c494f691ad54ae18002bf57}} 
+size\+\_\+t {\bfseries num\+\_\+isolated} () const
+\item 
+\mbox{\hyperlink{classGis__geometry__collection}{Gis\+\_\+geometry\+\_\+collection}} $\ast$ \mbox{\hyperlink{classBG__geometry__collection_aef572d61cb0bd24a4680c7450ac9723a}{as\+\_\+geometry\+\_\+collection}} (String $\ast$geodata) const
+\item 
+{\footnotesize template$<$typename Coordsys $>$ }\\void \mbox{\hyperlink{classBG__geometry__collection_ad927b9c81246e31a33db8451e8460427}{merge\+\_\+components}} (my\+\_\+bool $\ast$pnull\+\_\+value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A utility class to flatten any hierarchy of geometry collection into one with no nested geometry collections. All components are stored separately and all their data stored in this class, in order to easily manipulate them. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBG__geometry__collection_aef572d61cb0bd24a4680c7450ac9723a}\label{classBG__geometry__collection_aef572d61cb0bd24a4680c7450ac9723a}} 
+\index{B\+G\+\_\+geometry\+\_\+collection@{B\+G\+\_\+geometry\+\_\+collection}!as\+\_\+geometry\+\_\+collection@{as\+\_\+geometry\+\_\+collection}}
+\index{as\+\_\+geometry\+\_\+collection@{as\+\_\+geometry\+\_\+collection}!B\+G\+\_\+geometry\+\_\+collection@{B\+G\+\_\+geometry\+\_\+collection}}
+\subsubsection{\texorpdfstring{as\+\_\+geometry\+\_\+collection()}{as\_geometry\_collection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGis__geometry__collection}{Gis\+\_\+geometry\+\_\+collection}} $\ast$ B\+G\+\_\+geometry\+\_\+collection\+::as\+\_\+geometry\+\_\+collection (\begin{DoxyParamCaption}\item[{String $\ast$}]{geodata }\end{DoxyParamCaption}) const}
+
+Convert this into a \mbox{\hyperlink{classGis__geometry__collection}{Gis\+\_\+geometry\+\_\+collection}} object. 
+\begin{DoxyParams}{Parameters}
+{\em geodata} & Stores the result object\textquotesingle{}s W\+KB data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classGis__geometry__collection}{Gis\+\_\+geometry\+\_\+collection}} object created from this object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBG__geometry__collection_ad927b9c81246e31a33db8451e8460427}\label{classBG__geometry__collection_ad927b9c81246e31a33db8451e8460427}} 
+\index{B\+G\+\_\+geometry\+\_\+collection@{B\+G\+\_\+geometry\+\_\+collection}!merge\+\_\+components@{merge\+\_\+components}}
+\index{merge\+\_\+components@{merge\+\_\+components}!B\+G\+\_\+geometry\+\_\+collection@{B\+G\+\_\+geometry\+\_\+collection}}
+\subsubsection{\texorpdfstring{merge\+\_\+components()}{merge\_components()}}
+{\footnotesize\ttfamily template$<$typename Coordsys $>$ \\
+void B\+G\+\_\+geometry\+\_\+collection\+::merge\+\_\+components (\begin{DoxyParamCaption}\item[{my\+\_\+bool $\ast$}]{pnull\+\_\+value }\end{DoxyParamCaption})}
+
+Merge all components as appropriate so that the object contains only components that don\textquotesingle{}t overlap.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Coordsys} & Coordinate system type, specified using those defined in boost\+::geometry\+::cs. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em pnull\+\_\+value} & takes back null\+\_\+value set during the operation. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+geofunc.\+h\item 
+\mbox{\hyperlink{item__geofunc_8cc}{item\+\_\+geofunc.\+cc}}\item 
+item\+\_\+geofunc\+\_\+internal.\+cc\end{DoxyCompactItemize}

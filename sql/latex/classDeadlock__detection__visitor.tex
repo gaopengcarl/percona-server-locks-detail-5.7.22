@@ -1,0 +1,83 @@
+\hypertarget{classDeadlock__detection__visitor}{}\section{Deadlock\+\_\+detection\+\_\+visitor Class Reference}
+\label{classDeadlock__detection__visitor}\index{Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}}
+Inheritance diagram for Deadlock\+\_\+detection\+\_\+visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDeadlock__detection__visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDeadlock__detection__visitor_a3a360b0a6c464f92b31e35e200e5d54e}\label{classDeadlock__detection__visitor_a3a360b0a6c464f92b31e35e200e5d54e}} 
+{\bfseries Deadlock\+\_\+detection\+\_\+visitor} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$start\+\_\+node\+\_\+arg)
+\item 
+virtual bool \mbox{\hyperlink{classDeadlock__detection__visitor_a770352475b3110f6fed5d7cd621ca113}{enter\+\_\+node}} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$node)
+\item 
+virtual void \mbox{\hyperlink{classDeadlock__detection__visitor_aa56aca6948788aeb22c760d783884d7b}{leave\+\_\+node}} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$node)
+\item 
+virtual bool \mbox{\hyperlink{classDeadlock__detection__visitor_a5026f36978b470869539c8171ad26875}{inspect\+\_\+edge}} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$dest)
+\item 
+\mbox{\Hypertarget{classDeadlock__detection__visitor_a5fe0b32f5357074148ee2f7fed4a8066}\label{classDeadlock__detection__visitor_a5fe0b32f5357074148ee2f7fed4a8066}} 
+\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ {\bfseries get\+\_\+victim} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A context of the recursive traversal through all contexts in all sessions in search for deadlock. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDeadlock__detection__visitor_a770352475b3110f6fed5d7cd621ca113}\label{classDeadlock__detection__visitor_a770352475b3110f6fed5d7cd621ca113}} 
+\index{Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}!enter\+\_\+node@{enter\+\_\+node}}
+\index{enter\+\_\+node@{enter\+\_\+node}!Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}}
+\subsubsection{\texorpdfstring{enter\+\_\+node()}{enter\_node()}}
+{\footnotesize\ttfamily bool Deadlock\+\_\+detection\+\_\+visitor\+::enter\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Enter a node of a wait-\/for graph. After a node is entered, \mbox{\hyperlink{classDeadlock__detection__visitor_a5026f36978b470869539c8171ad26875}{inspect\+\_\+edge()}} will be called for all wait-\/for destinations of this node. Then \mbox{\hyperlink{classDeadlock__detection__visitor_aa56aca6948788aeb22c760d783884d7b}{leave\+\_\+node()}} will be called. We call \char`\"{}enter\+\_\+node()\char`\"{} for all nodes we inspect, including the starting node.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Maximum search depth exceeded. \\
+\hline
+{\em F\+A\+L\+SE} & OK. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}}.
+
+\mbox{\Hypertarget{classDeadlock__detection__visitor_a5026f36978b470869539c8171ad26875}\label{classDeadlock__detection__visitor_a5026f36978b470869539c8171ad26875}} 
+\index{Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}!inspect\+\_\+edge@{inspect\+\_\+edge}}
+\index{inspect\+\_\+edge@{inspect\+\_\+edge}!Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}}
+\subsubsection{\texorpdfstring{inspect\+\_\+edge()}{inspect\_edge()}}
+{\footnotesize\ttfamily bool Deadlock\+\_\+detection\+\_\+visitor\+::inspect\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Inspect a wait-\/for graph edge from one M\+DL context to another.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & A loop is found. \\
+\hline
+{\em F\+A\+L\+SE} & No loop is found. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}}.
+
+\mbox{\Hypertarget{classDeadlock__detection__visitor_aa56aca6948788aeb22c760d783884d7b}\label{classDeadlock__detection__visitor_aa56aca6948788aeb22c760d783884d7b}} 
+\index{Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}!leave\+\_\+node@{leave\+\_\+node}}
+\index{leave\+\_\+node@{leave\+\_\+node}!Deadlock\+\_\+detection\+\_\+visitor@{Deadlock\+\_\+detection\+\_\+visitor}}
+\subsubsection{\texorpdfstring{leave\+\_\+node()}{leave\_node()}}
+{\footnotesize\ttfamily void Deadlock\+\_\+detection\+\_\+visitor\+::leave\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Done inspecting this node. Decrease the search depth. If a deadlock is found, and we are backtracking to the start node, optionally change the deadlock victim to one with lower deadlock weight. 
+
+Implements \mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,230 @@
+\hypertarget{classInplace__vector}{}\section{Inplace\+\_\+vector$<$ objtype, array\+\_\+size $>$ Class Template Reference}
+\label{classInplace__vector}\index{Inplace\+\_\+vector$<$ objtype, array\+\_\+size $>$@{Inplace\+\_\+vector$<$ objtype, array\+\_\+size $>$}}
+
+
+{\ttfamily \#include $<$inplace\+\_\+vector.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInplace__vector_a6b7fedc5f8da2eca1e16ba8b22a2edae}\label{classInplace__vector_a6b7fedc5f8da2eca1e16ba8b22a2edae}} 
+{\bfseries Inplace\+\_\+vector} (P\+S\+I\+\_\+memory\+\_\+key psi\+\_\+key)
+\item 
+\mbox{\hyperlink{classInplace__vector_a82912dffa04001608197c02d330e7cd1}{$\sim$\+Inplace\+\_\+vector}} ()
+\item 
+objtype $\ast$ \mbox{\hyperlink{classInplace__vector_a798bedb62927bc1f6817fe32ad12c990}{get\+\_\+object}} (size\+\_\+t index)
+\item 
+objtype $\ast$ \mbox{\hyperlink{classInplace__vector_af9b6fa9a44962ce82429772108446eb7}{append\+\_\+object}} ()
+\item 
+objtype $\ast$ \mbox{\hyperlink{classInplace__vector_a4f5dd81d586f94279698ee31c496bcc2}{push\+\_\+back}} (const objtype \&obj)
+\item 
+bool \mbox{\hyperlink{classInplace__vector_a2785143f15f621c9d9ddf53e2b5e136c}{resize}} (size\+\_\+t new\+\_\+size, const objtype \&val=objtype())
+\item 
+size\+\_\+t \mbox{\hyperlink{classInplace__vector_aa24e13ea5106489e799fe97512227da0}{size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classInplace__vector_a7413b782c30385c34355aa8845c2d00f}{capacity}} () const
+\item 
+bool \mbox{\hyperlink{classInplace__vector_a611ca3f3274eab27b302cb0e0b06e83c}{empty}} () const
+\item 
+void \mbox{\hyperlink{classInplace__vector_a64cc6a796c6d07205f2436c357bc1a0d}{clear}} ()
+\item 
+const objtype \& \mbox{\hyperlink{classInplace__vector_acf8cb3ab1ea491f3466c90be7db6cd25}{back}} () const
+\item 
+objtype \& \mbox{\hyperlink{classInplace__vector_a1181edc4a42cd2200af2c30c8295a200}{back}} ()
+\item 
+const objtype \& \mbox{\hyperlink{classInplace__vector_a00ba1102132980fa0ddbf93a08c7ba03}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i) const
+\item 
+objtype \& \mbox{\hyperlink{classInplace__vector_a8a67f2bea4e841845b5fbea271ecf03d}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i)
+\item 
+void \mbox{\hyperlink{classInplace__vector_a27b8bdc0d5103bda8b03c5e9062be118}{delete\+\_\+all\+\_\+objects}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$\newline
+class Inplace\+\_\+vector$<$ objtype, array\+\_\+size $>$}
+
+Utility container class to store elements stably and scalably. The address of an element stored in the container is stable as long as the object is alive, no object is copy-\/constructed/reassigned by push\+\_\+back operations once it\textquotesingle{}s stored into this container. And users of such containers can$\ast$ assign to elements stored in the container just like using std\+::vector.
+
+It is similar to S\+TL vector but it is uniquely suitable in below situation\+: whenever stable element address, or element copy construction/assignement behaviors are forbidden. It only has a limited subset of the std\+::vector interface, and especially it doesn\textquotesingle{}t have an iterator interface or element elimination interface, we don\textquotesingle{}t need them for now. And this container is not multi-\/threading safe. It uses my\+\_\+malloc/my\+\_\+free to allocate/free memory arrays and caller can pass P\+SI key.
+
+The container keeps a collection of arrays, each of which has a fixed NO. of slots to store elements. When one array is full, another is appended. When the vector shrinks at tail, useless arrays are removed and its memory space released.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em objtype} & The type of the elements to store. \\
+\hline
+{\em array\+\_\+size} & The NO. of element slots in each array. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInplace__vector_a82912dffa04001608197c02d330e7cd1}\label{classInplace__vector_a82912dffa04001608197c02d330e7cd1}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!````~Inplace\+\_\+vector@{$\sim$\+Inplace\+\_\+vector}}
+\index{````~Inplace\+\_\+vector@{$\sim$\+Inplace\+\_\+vector}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{$\sim$\+Inplace\+\_\+vector()}{~Inplace\_vector()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+\mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::$\sim$\mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release memory space and destroy all contained objects. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInplace__vector_af9b6fa9a44962ce82429772108446eb7}\label{classInplace__vector_af9b6fa9a44962ce82429772108446eb7}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!append\+\_\+object@{append\+\_\+object}}
+\index{append\+\_\+object@{append\+\_\+object}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{append\+\_\+object()}{append\_object()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+objtype$\ast$ \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::append\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate space for an object, and construct it using its default constructor, and return its address. \begin{DoxyReturn}{Returns}
+the appended object\textquotesingle{}s address; N\+U\+LL if out of memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_acf8cb3ab1ea491f3466c90be7db6cd25}\label{classInplace__vector_acf8cb3ab1ea491f3466c90be7db6cd25}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!back@{back}}
+\index{back@{back}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+const objtype\& \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::back interface. \begin{DoxyReturn}{Returns}
+the reference of the last object stored in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a1181edc4a42cd2200af2c30c8295a200}\label{classInplace__vector_a1181edc4a42cd2200af2c30c8295a200}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!back@{back}}
+\index{back@{back}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+objtype\& \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::back interface. \begin{DoxyReturn}{Returns}
+the reference of the last object stored in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a7413b782c30385c34355aa8845c2d00f}\label{classInplace__vector_a7413b782c30385c34355aa8845c2d00f}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!capacity@{capacity}}
+\index{capacity@{capacity}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+size\+\_\+t \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::capacity interface. \begin{DoxyReturn}{Returns}
+the max number of element that can be stored into this vector without growing its size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a64cc6a796c6d07205f2436c357bc1a0d}\label{classInplace__vector_a64cc6a796c6d07205f2436c357bc1a0d}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!clear@{clear}}
+\index{clear@{clear}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+void \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::clear interface. Destroy all elements (by calling each element\textquotesingle{}s destructor) stored in the vector, and then release all memory held by it. \mbox{\Hypertarget{classInplace__vector_a27b8bdc0d5103bda8b03c5e9062be118}\label{classInplace__vector_a27b8bdc0d5103bda8b03c5e9062be118}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!delete\+\_\+all\+\_\+objects@{delete\+\_\+all\+\_\+objects}}
+\index{delete\+\_\+all\+\_\+objects@{delete\+\_\+all\+\_\+objects}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{delete\+\_\+all\+\_\+objects()}{delete\_all\_objects()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+void \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::delete\+\_\+all\+\_\+objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destroy all elements (by calling each element\textquotesingle{}s destructor) stored in the vector, and then release all memory held by it. \mbox{\Hypertarget{classInplace__vector_a611ca3f3274eab27b302cb0e0b06e83c}\label{classInplace__vector_a611ca3f3274eab27b302cb0e0b06e83c}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!empty@{empty}}
+\index{empty@{empty}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+bool \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::empty interface. \begin{DoxyReturn}{Returns}
+whether \mbox{\hyperlink{classInplace__vector_aa24e13ea5106489e799fe97512227da0}{size()}} == 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a798bedb62927bc1f6817fe32ad12c990}\label{classInplace__vector_a798bedb62927bc1f6817fe32ad12c990}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!get\+\_\+object@{get\+\_\+object}}
+\index{get\+\_\+object@{get\+\_\+object}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{get\+\_\+object()}{get\_object()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+objtype$\ast$ \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::get\+\_\+object (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get an existing element\textquotesingle{}s pointer, index must be in \mbox{[}0, m\+\_\+obj\+\_\+count). 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the element to return. It must be within valid in-\/use range of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element address specified by index; N\+U\+LL if out of memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a00ba1102132980fa0ddbf93a08c7ba03}\label{classInplace__vector_a00ba1102132980fa0ddbf93a08c7ba03}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+const objtype\& \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::operator\mbox{[}\mbox{]} interface. 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the element to return. It must be within valid in-\/use range of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element reference specified by index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a8a67f2bea4e841845b5fbea271ecf03d}\label{classInplace__vector_a8a67f2bea4e841845b5fbea271ecf03d}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+objtype\& \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::operator\mbox{[}\mbox{]} interface. 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the element to return. It must be within valid in-\/use range of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element reference specified by index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a4f5dd81d586f94279698ee31c496bcc2}\label{classInplace__vector_a4f5dd81d586f94279698ee31c496bcc2}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+objtype$\ast$ \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const objtype \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::push\+\_\+back interface. It\textquotesingle{}s guaranteed that existing elements stored in the vector is never copy constructed/reassigned by this operation. When the last element array is full, a new one is allocated and tracked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The element to store into the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The appended object stored in the container; N\+U\+LL if out of memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_a2785143f15f621c9d9ddf53e2b5e136c}\label{classInplace__vector_a2785143f15f621c9d9ddf53e2b5e136c}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!resize@{resize}}
+\index{resize@{resize}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+bool \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+\_\+size,  }\item[{const objtype \&}]{val = {\ttfamily objtype()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::resize interface. Has identical behavior as S\+TL std\+::vector\+::resize except that no element copy construction or reassignment is ever caused by this operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & default value assigned to extended slots in the vector. Unused if the vector is shrinked. We have to define a const reference instead of passing by value because M\+S\+VC on 32bit Windows doesn\textquotesingle{}t allow formal parameter to have alignment specification (error C2719) as defined in my\+\_\+aligned\+\_\+storage but in \mbox{\hyperlink{structGeometry__buffer}{Geometry\+\_\+buffer}} and potentially more classes in future, we do use alignement specification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if out of memory; false if successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInplace__vector_aa24e13ea5106489e799fe97512227da0}\label{classInplace__vector_aa24e13ea5106489e799fe97512227da0}} 
+\index{Inplace\+\_\+vector@{Inplace\+\_\+vector}!size@{size}}
+\index{size@{size}!Inplace\+\_\+vector@{Inplace\+\_\+vector}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename objtype, size\+\_\+t array\+\_\+size = 16$>$ \\
+size\+\_\+t \mbox{\hyperlink{classInplace__vector}{Inplace\+\_\+vector}}$<$ objtype, array\+\_\+size $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+TL std\+::vector\+::size interface. \begin{DoxyReturn}{Returns}
+the number of elements effectively stored in the vector. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inplace\+\_\+vector.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{records_8cc}{}\section{records.\+cc File Reference}
+\label{records_8cc}\index{records.\+cc@{records.\+cc}}
+
+
+Functions for easy reading of records, possible through a cache.  
+
+
+{\ttfamily \#include \char`\"{}records.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}filesort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+select.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{records_8cc_ace7e6d22951254017eb783187bcb4f34}\label{records_8cc_ace7e6d22951254017eb783187bcb4f34}} 
+int {\bfseries rr\+\_\+sequential} (\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$info)
+\item 
+bool \mbox{\hyperlink{records_8cc_a3a62c04393492d8388a88ca06c0b38ad}{init\+\_\+read\+\_\+record\+\_\+idx}} (\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$info, T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool print\+\_\+error, uint idx, bool reverse)
+\item 
+\mbox{\Hypertarget{records_8cc_a3e2dd617d77d80a788fa03f054c9b41c}\label{records_8cc_a3e2dd617d77d80a788fa03f054c9b41c}} 
+bool {\bfseries init\+\_\+read\+\_\+record} (\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$info, T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab, int use\+\_\+record\+\_\+cache, bool print\+\_\+error, bool disable\+\_\+rr\+\_\+cache)
+\item 
+\mbox{\Hypertarget{records_8cc_a143ba3dfe949c59e54624f4ab5a481d7}\label{records_8cc_a143ba3dfe949c59e54624f4ab5a481d7}} 
+void {\bfseries end\+\_\+read\+\_\+record} (\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$info)
+\item 
+void \mbox{\hyperlink{records_8cc_a890d67fda848e283796e943639649e50}{rr\+\_\+unlock\+\_\+row}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for easy reading of records, possible through a cache. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{records_8cc_a3a62c04393492d8388a88ca06c0b38ad}\label{records_8cc_a3a62c04393492d8388a88ca06c0b38ad}} 
+\index{records.\+cc@{records.\+cc}!init\+\_\+read\+\_\+record\+\_\+idx@{init\+\_\+read\+\_\+record\+\_\+idx}}
+\index{init\+\_\+read\+\_\+record\+\_\+idx@{init\+\_\+read\+\_\+record\+\_\+idx}!records.\+cc@{records.\+cc}}
+\subsubsection{\texorpdfstring{init\+\_\+read\+\_\+record\+\_\+idx()}{init\_read\_record\_idx()}}
+{\footnotesize\ttfamily bool init\+\_\+read\+\_\+record\+\_\+idx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$}]{info,  }\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{bool}]{print\+\_\+error,  }\item[{uint}]{idx,  }\item[{bool}]{reverse }\end{DoxyParamCaption})}
+
+Initialize \mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} structure to perform full index scan in desired direction using read\+\_\+record.\+read\+\_\+record() interface
+
+This function has been added at late stage and is used only by U\+P\+D\+A\+T\+E/\+D\+E\+L\+E\+TE. Other statements perform index scans using join\+\_\+read\+\_\+first/next functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & \mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} structure to initialize. \\
+\hline
+{\em thd} & Thread handle \\
+\hline
+{\em table} & Table to be accessed \\
+\hline
+{\em print\+\_\+error} & If true, call table-\/$>$file-\/$>$print\+\_\+error() if an error occurs (except for end-\/of-\/records error) \\
+\hline
+{\em idx} & index to scan \\
+\hline
+{\em reverse} & Scan in the reverse direction\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & error \\
+\hline
+{\em false} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{records_8cc_a890d67fda848e283796e943639649e50}\label{records_8cc_a890d67fda848e283796e943639649e50}} 
+\index{records.\+cc@{records.\+cc}!rr\+\_\+unlock\+\_\+row@{rr\+\_\+unlock\+\_\+row}}
+\index{rr\+\_\+unlock\+\_\+row@{rr\+\_\+unlock\+\_\+row}!records.\+cc@{records.\+cc}}
+\subsubsection{\texorpdfstring{rr\+\_\+unlock\+\_\+row()}{rr\_unlock\_row()}}
+{\footnotesize\ttfamily void rr\+\_\+unlock\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{tab }\end{DoxyParamCaption})}
+
+The default implementation of unlock-\/row method of \mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}}, used in all access methods. 

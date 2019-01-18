@@ -1,0 +1,92 @@
+\hypertarget{item__strfunc_8cc}{}\section{item\+\_\+strfunc.\+cc File Reference}
+\label{item__strfunc_8cc}\index{item\+\_\+strfunc.\+cc@{item\+\_\+strfunc.\+cc}}
+
+
+This file defines all string functions.  
+
+
+{\ttfamily \#include \char`\"{}sha2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}base64.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+aes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+md5.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+rnd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sha1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auth\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}des\+\_\+key\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+geofunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}password.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}strfunc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mysys/my\+\_\+static.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}template\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pfs\+\_\+file\+\_\+provider.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$my\+\_\+dir.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classiv__argument}{iv\+\_\+argument}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__strfunc_8cc_ad885c38cbb805a00a9c9b87d5c30800f}\label{item__strfunc_8cc_ad885c38cbb805a00a9c9b87d5c30800f}} 
+\#define {\bfseries bin\+\_\+to\+\_\+ascii}(c)~((c)$>$=38?((c)-\/38+\textquotesingle{}a\textquotesingle{})\+:(c)$>$=12?((c)-\/12+\textquotesingle{}A\textquotesingle{})\+:(c)+\textquotesingle{}.\textquotesingle{})
+\item 
+\mbox{\Hypertarget{item__strfunc_8cc_a27ba90ef914045bd185390efc249a9c0}\label{item__strfunc_8cc_a27ba90ef914045bd185390efc249a9c0}} 
+\#define {\bfseries get\+\_\+esc\+\_\+bit}(mask,  num)~(1 \& ($\ast$((mask) + ((num) $>$$>$ 3))) $>$$>$ ((num) \& 7))
+\item 
+\#define \mbox{\hyperlink{item__strfunc_8cc_aa43492b99304919673af9d4ea6a7df93}{U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET}}
+\item 
+\mbox{\Hypertarget{item__strfunc_8cc_adc0bebd4de3e1b6bd1304c8968f9370f}\label{item__strfunc_8cc_adc0bebd4de3e1b6bd1304c8968f9370f}} 
+\#define {\bfseries U\+U\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON}~0x1000
+\item 
+\mbox{\Hypertarget{item__strfunc_8cc_acc6937ccd957b8f83a9a007feef54415}\label{item__strfunc_8cc_acc6937ccd957b8f83a9a007feef54415}} 
+\#define {\bfseries U\+U\+I\+D\+\_\+\+V\+A\+R\+I\+A\+NT}~0x8000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item__strfunc_8cc_ad354a0cf5326155e6233ae0e09593d27}\label{item__strfunc_8cc_ad354a0cf5326155e6233ae0e09593d27}} 
+String $\ast$ {\bfseries alloc\+\_\+buffer} (String $\ast$res, String $\ast$str, String $\ast$tmp\+\_\+value, size\+\_\+t length)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{item__strfunc_8cc_a20f10f85c7e30bc6102f42d43553c615}{F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS}} = 30
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines all string functions. 
+
+\begin{DoxyWarning}{Warning}
+Some string functions don\textquotesingle{}t always put and end-\/null on a String. (This shouldn\textquotesingle{}t be needed) 
+\end{DoxyWarning}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{item__strfunc_8cc_aa43492b99304919673af9d4ea6a7df93}\label{item__strfunc_8cc_aa43492b99304919673af9d4ea6a7df93}} 
+\index{item\+\_\+strfunc.\+cc@{item\+\_\+strfunc.\+cc}!U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET@{U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET}}
+\index{U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET@{U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET}!item\+\_\+strfunc.\+cc@{item\+\_\+strfunc.\+cc}}
+\subsubsection{\texorpdfstring{U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET}{UUID\_TIME\_OFFSET}}
+{\footnotesize\ttfamily \#define U\+U\+I\+D\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+F\+S\+ET}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((ulonglong) 141427 * 24 * 60 * 60 * \(\backslash\)}
+\DoxyCodeLine{                          1000 * 1000 * 10)}
+\end{DoxyCode}
+number of 100-\/nanosecond intervals between 1582-\/10-\/15 00\+:00\+:00.\+00 and 1970-\/01-\/01 00\+:00\+:00.\+00. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{item__strfunc_8cc_a20f10f85c7e30bc6102f42d43553c615}\label{item__strfunc_8cc_a20f10f85c7e30bc6102f42d43553c615}} 
+\index{item\+\_\+strfunc.\+cc@{item\+\_\+strfunc.\+cc}!F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS@{F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS}}
+\index{F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS@{F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS}!item\+\_\+strfunc.\+cc@{item\+\_\+strfunc.\+cc}}
+\subsubsection{\texorpdfstring{F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS}{FORMAT\_MAX\_DECIMALS}}
+{\footnotesize\ttfamily const int F\+O\+R\+M\+A\+T\+\_\+\+M\+A\+X\+\_\+\+D\+E\+C\+I\+M\+A\+LS = 30}
+
+Change a number to format \textquotesingle{}3,333,333,333.\+000\textquotesingle{}.
+
+This should be \textquotesingle{}internationalized\textquotesingle{} sometimes. 

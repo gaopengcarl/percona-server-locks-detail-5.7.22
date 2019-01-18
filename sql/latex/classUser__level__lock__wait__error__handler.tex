@@ -1,0 +1,25 @@
+\hypertarget{classUser__level__lock__wait__error__handler}{}\section{User\+\_\+level\+\_\+lock\+\_\+wait\+\_\+error\+\_\+handler Class Reference}
+\label{classUser__level__lock__wait__error__handler}\index{User\+\_\+level\+\_\+lock\+\_\+wait\+\_\+error\+\_\+handler@{User\+\_\+level\+\_\+lock\+\_\+wait\+\_\+error\+\_\+handler}}
+Inheritance diagram for User\+\_\+level\+\_\+lock\+\_\+wait\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUser__level__lock__wait__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUser__level__lock__wait__error__handler_a791279e2711325db4f0dc79a541aacb6}\label{classUser__level__lock__wait__error__handler_a791279e2711325db4f0dc79a541aacb6}} 
+bool {\bfseries got\+\_\+timeout} () const
+\item 
+\mbox{\Hypertarget{classUser__level__lock__wait__error__handler_a12e41d5a6b87f6eb47f689c76e2f5052}\label{classUser__level__lock__wait__error__handler_a12e41d5a6b87f6eb47f689c76e2f5052}} 
+virtual bool {\bfseries handle\+\_\+condition} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When M\+DL detects a lock wait timeout, it pushes an error into the statement diagnostics area. For G\+E\+T\+\_\+\+L\+O\+C\+K(), lock wait timeout is not an error, but a special return value (0). N\+U\+LL is returned in case of error. Capture and suppress lock wait timeout. We also convert E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+A\+D\+L\+O\+CK error to E\+R\+\_\+\+U\+S\+E\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+A\+D\+L\+O\+CK error. The former means that implicit rollback of transaction has occurred which doesn\textquotesingle{}t (and should not) happen when we get deadlock while waiting for user-\/level lock. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__func_8cc}{item\+\_\+func.\+cc}}\end{DoxyCompactItemize}

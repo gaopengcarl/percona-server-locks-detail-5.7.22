@@ -1,0 +1,82 @@
+\hypertarget{classSingleton__extractor}{}\section{Singleton\+\_\+extractor Class Reference}
+\label{classSingleton__extractor}\index{Singleton\+\_\+extractor@{Singleton\+\_\+extractor}}
+Inheritance diagram for Singleton\+\_\+extractor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSingleton__extractor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSingleton__extractor_aed453d9c87542f4f20480d2cb539e636}\label{classSingleton__extractor_aed453d9c87542f4f20480d2cb539e636}} 
+bool {\bfseries has\+\_\+single\+\_\+component} () const
+\item 
+\mbox{\Hypertarget{classSingleton__extractor_aff8df0db4b73a4add0812f73a237c981}\label{classSingleton__extractor_aff8df0db4b73a4add0812f73a237c981}} 
+const char $\ast$ {\bfseries get\+\_\+start} () const
+\item 
+\mbox{\Hypertarget{classSingleton__extractor_ad3b2a19765542fe0c8745f5db6e9634d}\label{classSingleton__extractor_ad3b2a19765542fe0c8745f5db6e9634d}} 
+const char $\ast$ {\bfseries get\+\_\+end} () const
+\item 
+\mbox{\Hypertarget{classSingleton__extractor_a2ba1245313eb8488ddfb13156d6bd266}\label{classSingleton__extractor_a2ba1245313eb8488ddfb13156d6bd266}} 
+Geometry\+::wkb\+Type {\bfseries get\+\_\+type} () const
+\item 
+virtual void \mbox{\hyperlink{classSingleton__extractor_a9a071750643d115773d3375e98a9c8c2}{on\+\_\+wkb\+\_\+start}} (Geometry\+::wkb\+Byte\+Order bo, Geometry\+::wkb\+Type geotype, const void $\ast$wkb, uint32 len, bool has\+\_\+hdr)
+\item 
+virtual void \mbox{\hyperlink{classSingleton__extractor_af504a10c6a45262fb75907677fce3b56}{on\+\_\+wkb\+\_\+end}} (const void $\ast$wkb)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSingleton__extractor_a46068c59e6879fb41fe4cec0e8117e84}\label{classSingleton__extractor_a46068c59e6879fb41fe4cec0e8117e84}} 
+static bool {\bfseries is\+\_\+basic\+\_\+type} (const Geometry\+::wkb\+Type t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Extract a basic geometry component from a multi geometry or a geometry collection, if it\textquotesingle{}s the only one in it. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSingleton__extractor_af504a10c6a45262fb75907677fce3b56}\label{classSingleton__extractor_af504a10c6a45262fb75907677fce3b56}} 
+\index{Singleton\+\_\+extractor@{Singleton\+\_\+extractor}!on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}}
+\index{on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}!Singleton\+\_\+extractor@{Singleton\+\_\+extractor}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+end()}{on\_wkb\_end()}}
+{\footnotesize\ttfamily virtual void Singleton\+\_\+extractor\+::on\+\_\+wkb\+\_\+end (\begin{DoxyParamCaption}\item[{const void $\ast$}]{wkb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the end of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em wkb} & the position of the first byte after the W\+KB byte string which the scanner just scanned. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+\mbox{\Hypertarget{classSingleton__extractor_a9a071750643d115773d3375e98a9c8c2}\label{classSingleton__extractor_a9a071750643d115773d3375e98a9c8c2}} 
+\index{Singleton\+\_\+extractor@{Singleton\+\_\+extractor}!on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}}
+\index{on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}!Singleton\+\_\+extractor@{Singleton\+\_\+extractor}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+start()}{on\_wkb\_start()}}
+{\footnotesize\ttfamily virtual void Singleton\+\_\+extractor\+::on\+\_\+wkb\+\_\+start (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{Geometry\+::wkb\+Type}]{geotype,  }\item[{const void $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{bool}]{has\+\_\+hdr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the start of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em bo} & byte order of the W\+KB. \\
+\hline
+{\em geotype} & geometry type of the W\+KB; \\
+\hline
+{\em wkb} & W\+KB byte string, the first byte after the W\+KB header if any. \\
+\hline
+{\em len} & NO. of bytes of the W\+KB byte string starting from wkb. There can be many geometries in the \mbox{[}wkb, wkb+len) buffer. \\
+\hline
+{\em has\+\_\+hdr} & whether there is a W\+KB header right before \textquotesingle{}wkb\textquotesingle{} in the byte string. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__geofunc__setops_8cc}{item\+\_\+geofunc\+\_\+setops.\+cc}}\end{DoxyCompactItemize}

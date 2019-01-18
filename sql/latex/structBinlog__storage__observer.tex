@@ -1,0 +1,54 @@
+\hypertarget{structBinlog__storage__observer}{}\section{Binlog\+\_\+storage\+\_\+observer Struct Reference}
+\label{structBinlog__storage__observer}\index{Binlog\+\_\+storage\+\_\+observer@{Binlog\+\_\+storage\+\_\+observer}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structBinlog__storage__observer_a75f972538596a72550fa4c05aac3c082}\label{structBinlog__storage__observer_a75f972538596a72550fa4c05aac3c082}} 
+uint32 {\bfseries len}
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__storage__observer_a5814cdea84ad0dc9785075aaa9dd4950}{after\+\_\+flush}} )(\mbox{\hyperlink{structBinlog__storage__param}{Binlog\+\_\+storage\+\_\+param}} $\ast$param, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)
+\item 
+\mbox{\Hypertarget{structBinlog__storage__observer_ae7a07dc578b5a47aec28dab465dfe005}\label{structBinlog__storage__observer_ae7a07dc578b5a47aec28dab465dfe005}} 
+int($\ast$ {\bfseries after\+\_\+sync} )(\mbox{\hyperlink{structBinlog__storage__param}{Binlog\+\_\+storage\+\_\+param}} $\ast$param, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Observe binlog logging storage 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structBinlog__storage__observer_a5814cdea84ad0dc9785075aaa9dd4950}\label{structBinlog__storage__observer_a5814cdea84ad0dc9785075aaa9dd4950}} 
+\index{Binlog\+\_\+storage\+\_\+observer@{Binlog\+\_\+storage\+\_\+observer}!after\+\_\+flush@{after\+\_\+flush}}
+\index{after\+\_\+flush@{after\+\_\+flush}!Binlog\+\_\+storage\+\_\+observer@{Binlog\+\_\+storage\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+flush}{after\_flush}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+storage\+\_\+observer\+::after\+\_\+flush) (\mbox{\hyperlink{structBinlog__storage__param}{Binlog\+\_\+storage\+\_\+param}} $\ast$param, const char $\ast$log\+\_\+file, my\+\_\+off\+\_\+t log\+\_\+pos)}
+
+This callback is called after binlog has been flushed
+
+This callback is called after cached events have been flushed to binary log file but not yet synced.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em log\+\_\+file} & Binlog file name been updated \\
+\hline
+{\em log\+\_\+pos} & Binlog position after update\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

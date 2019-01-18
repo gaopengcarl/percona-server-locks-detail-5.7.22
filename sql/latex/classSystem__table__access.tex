@@ -1,0 +1,164 @@
+\hypertarget{classSystem__table__access}{}\section{System\+\_\+table\+\_\+access Class Reference}
+\label{classSystem__table__access}\index{System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+table\+\_\+access.\+h$>$}
+
+Inheritance diagram for System\+\_\+table\+\_\+access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSystem__table__access}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classSystem__table__access_a8bf7d377c3f2a5e96af95fef28f689c7}{open\+\_\+table}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbstr, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG tbstr, uint max\+\_\+num\+\_\+field, enum thr\+\_\+lock\+\_\+type lock\+\_\+type, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$table, Open\+\_\+tables\+\_\+backup $\ast$backup)
+\item 
+virtual void \mbox{\hyperlink{classSystem__table__access_a7357c29323649f270cf35b08cd8fe826}{before\+\_\+open}} (T\+HD $\ast$thd)=0
+\item 
+bool \mbox{\hyperlink{classSystem__table__access_a4c0fc8878c168fcac8a7671c3e536fdc}{close\+\_\+table}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, Open\+\_\+tables\+\_\+backup $\ast$backup, bool error, bool need\+\_\+commit)
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classSystem__table__access_acefc48e24e7e4f522bafae15493d3a30}{create\+\_\+thd}} ()
+\item 
+void \mbox{\hyperlink{classSystem__table__access_a392fdc79727da6841d45a6c1f415ae53}{drop\+\_\+thd}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSystem__table__access_ad974ef5ecf6cfdd230afef9d02414070}\label{classSystem__table__access_ad974ef5ecf6cfdd230afef9d02414070}} 
+uint {\bfseries m\+\_\+flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A base class for accessing a system table. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSystem__table__access_a7357c29323649f270cf35b08cd8fe826}\label{classSystem__table__access_a7357c29323649f270cf35b08cd8fe826}} 
+\index{System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}!before\+\_\+open@{before\+\_\+open}}
+\index{before\+\_\+open@{before\+\_\+open}!System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{before\+\_\+open()}{before\_open()}}
+{\footnotesize\ttfamily virtual void System\+\_\+table\+\_\+access\+::before\+\_\+open (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Prepares before opening table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to open the table \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classGtid__table__access__context_a2073456f19b6b9aa81cb7d874c4f2358}{Gtid\+\_\+table\+\_\+access\+\_\+context}}, and \mbox{\hyperlink{classRpl__info__table__access_a6d1ae1c8dce3fd9e3f8906acef95e9e3}{Rpl\+\_\+info\+\_\+table\+\_\+access}}.
+
+\mbox{\Hypertarget{classSystem__table__access_a4c0fc8878c168fcac8a7671c3e536fdc}\label{classSystem__table__access_a4c0fc8878c168fcac8a7671c3e536fdc}} 
+\index{System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}!close\+\_\+table@{close\+\_\+table}}
+\index{close\+\_\+table@{close\+\_\+table}!System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{close\+\_\+table()}{close\_table()}}
+{\footnotesize\ttfamily bool System\+\_\+table\+\_\+access\+::close\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup,  }\item[{bool}]{error,  }\item[{bool}]{need\+\_\+commit }\end{DoxyParamCaption})}
+
+Commits the changes, unlocks the table and closes it. This method needs to be called even if the open\+\_\+table fails, in order to ensure the lock info is properly restored.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to close the table \\
+\hline
+\mbox{\texttt{ in}}  & {\em table} & Table to be closed \\
+\hline
+\mbox{\texttt{ in}}  & {\em backup} & Restore the lock info from here \\
+\hline
+\mbox{\texttt{ in}}  & {\em error} & If there was an error while updating the table \\
+\hline
+\mbox{\texttt{ in}}  & {\em need\+\_\+commit} & Need to commit current transaction if it is true.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & failed \\
+\hline
+{\em false} & success If there is an error, rolls back the current statement. Otherwise, commits it. However, if a new thread was created and there is an error, the transaction must be rolled back. Otherwise, it must be committed. In this case, the changes were not done on behalf of any user transaction and if not finished, there would be pending changes. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classSystem__table__access_acefc48e24e7e4f522bafae15493d3a30}\label{classSystem__table__access_acefc48e24e7e4f522bafae15493d3a30}} 
+\index{System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}!create\+\_\+thd@{create\+\_\+thd}}
+\index{create\+\_\+thd@{create\+\_\+thd}!System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{create\+\_\+thd()}{create\_thd()}}
+{\footnotesize\ttfamily T\+HD $\ast$ System\+\_\+table\+\_\+access\+::create\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a new thread in the bootstrap process or in the mysqld startup, a thread is created in order to be able to access a table.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+H\+D$\ast$} & Pointer to thread structure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classSystem__table__access_a392fdc79727da6841d45a6c1f415ae53}\label{classSystem__table__access_a392fdc79727da6841d45a6c1f415ae53}} 
+\index{System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}!drop\+\_\+thd@{drop\+\_\+thd}}
+\index{drop\+\_\+thd@{drop\+\_\+thd}!System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{drop\+\_\+thd()}{drop\_thd()}}
+{\footnotesize\ttfamily void System\+\_\+table\+\_\+access\+::drop\+\_\+thd (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Destroys the created thread and restores the system\+\_\+thread information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem__table__access_a8bf7d377c3f2a5e96af95fef28f689c7}\label{classSystem__table__access_a8bf7d377c3f2a5e96af95fef28f689c7}} 
+\index{System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}!open\+\_\+table@{open\+\_\+table}}
+\index{open\+\_\+table@{open\+\_\+table}!System\+\_\+table\+\_\+access@{System\+\_\+table\+\_\+access}}
+\subsubsection{\texorpdfstring{open\+\_\+table()}{open\_table()}}
+{\footnotesize\ttfamily bool System\+\_\+table\+\_\+access\+::open\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{dbstr,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{tbstr,  }\item[{uint}]{max\+\_\+num\+\_\+field,  }\item[{enum thr\+\_\+lock\+\_\+type}]{lock\+\_\+type,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$}]{table,  }\item[{Open\+\_\+tables\+\_\+backup $\ast$}]{backup }\end{DoxyParamCaption})}
+
+Opens and locks a system table.
+
+It\textquotesingle{}s assumed that the caller knows what they are doing\+:
+\begin{DoxyItemize}
+\item whether it was necessary to reset-\/and-\/backup the open tables state
+\item whether the requested lock does not lead to a deadlock
+\item whether this open mode would work under L\+O\+CK T\+A\+B\+L\+ES, or inside a stored function or trigger.
+\end{DoxyItemize}
+
+Note that if the table can\textquotesingle{}t be locked successfully this operation will close it. Therefore it provides guarantee that it either opens and locks table or fails without leaving any tables open.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread requesting to open the table \\
+\hline
+\mbox{\texttt{ in}}  & {\em dbstr} & Database where the table resides \\
+\hline
+\mbox{\texttt{ in}}  & {\em tbstr} & Table to be openned \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+num\+\_\+field} & Maximum number of fields \\
+\hline
+\mbox{\texttt{ in}}  & {\em lock\+\_\+type} & How to lock the table \\
+\hline
+\mbox{\texttt{ out}}  & {\em table} & We will store the open table here \\
+\hline
+\mbox{\texttt{ out}}  & {\em backup} & Save the lock info. here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & open and lock failed -\/ an error message is pushed into the stack \\
+\hline
+{\em F\+A\+L\+SE} & success \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+table\+\_\+access.\+h\item 
+rpl\+\_\+table\+\_\+access.\+cc\end{DoxyCompactItemize}

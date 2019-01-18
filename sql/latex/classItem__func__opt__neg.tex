@@ -1,0 +1,68 @@
+\hypertarget{classItem__func__opt__neg}{}\section{Item\+\_\+func\+\_\+opt\+\_\+neg Class Reference}
+\label{classItem__func__opt__neg}\index{Item\+\_\+func\+\_\+opt\+\_\+neg@{Item\+\_\+func\+\_\+opt\+\_\+neg}}
+Inheritance diagram for Item\+\_\+func\+\_\+opt\+\_\+neg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__func__opt__neg}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_aa28c45878d133fa451514114997bab2c}\label{classItem__func__opt__neg_aa28c45878d133fa451514114997bab2c}} 
+{\bfseries Item\+\_\+func\+\_\+opt\+\_\+neg} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem}{Item}} $\ast$b, \mbox{\hyperlink{classItem}{Item}} $\ast$c, bool is\+\_\+negation)
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_ae706a68f886751bc092d069cb6b70cd3}\label{classItem__func__opt__neg_ae706a68f886751bc092d069cb6b70cd3}} 
+{\bfseries Item\+\_\+func\+\_\+opt\+\_\+neg} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classPT__item__list}{P\+T\+\_\+item\+\_\+list}} $\ast$list, bool is\+\_\+negation)
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_a25923bd10fa6c3c02e35b4a761bd63ee}\label{classItem__func__opt__neg_a25923bd10fa6c3c02e35b4a761bd63ee}} 
+void {\bfseries negate} ()
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_aeeeead8705a8596f7f2fdc0e4577976b}\label{classItem__func__opt__neg_aeeeead8705a8596f7f2fdc0e4577976b}} 
+void {\bfseries top\+\_\+level\+\_\+item} ()
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_a549f13a38f4451d6382e1614b46d6e8f}\label{classItem__func__opt__neg_a549f13a38f4451d6382e1614b46d6e8f}} 
+bool {\bfseries is\+\_\+top\+\_\+level\+\_\+item} () const
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_aa1ae75e2723ce12ec7e153d1c9d736c7}\label{classItem__func__opt__neg_aa1ae75e2723ce12ec7e153d1c9d736c7}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries neg\+\_\+transformer} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classItem__func__opt__neg_a7a637b1a83c5f2737350e3630318fa76}{eq}} (const \mbox{\hyperlink{classItem}{Item}} $\ast$item, bool binary\+\_\+cmp) const
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_a18ca6fcd998f592556a99ecbfaa178d0}\label{classItem__func__opt__neg_a18ca6fcd998f592556a99ecbfaa178d0}} 
+bool {\bfseries subst\+\_\+argument\+\_\+checker} (uchar $\ast$$\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_afcae7821880931601b6a267dee599949}\label{classItem__func__opt__neg_afcae7821880931601b6a267dee599949}} 
+bool {\bfseries negated}
+\item 
+\mbox{\Hypertarget{classItem__func__opt__neg_a969430a12203ead51625ef75043df15c}\label{classItem__func__opt__neg_a969430a12203ead51625ef75043df15c}} 
+bool {\bfseries pred\+\_\+level}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__opt__neg_a7a637b1a83c5f2737350e3630318fa76}\label{classItem__func__opt__neg_a7a637b1a83c5f2737350e3630318fa76}} 
+\index{Item\+\_\+func\+\_\+opt\+\_\+neg@{Item\+\_\+func\+\_\+opt\+\_\+neg}!eq@{eq}}
+\index{eq@{eq}!Item\+\_\+func\+\_\+opt\+\_\+neg@{Item\+\_\+func\+\_\+opt\+\_\+neg}}
+\subsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily bool Item\+\_\+func\+\_\+opt\+\_\+neg\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{bool}]{binary\+\_\+cmp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function is called when\+:
+\begin{DoxyItemize}
+\item Comparing items in the W\+H\+E\+RE clause (when doing where optimization)
+\item When trying to find an O\+R\+D\+ER B\+Y/\+G\+R\+O\+UP BY item in the S\+E\+L\+E\+CT part
+\item When matching fields in multiple equality objects (Item\+\_\+equal) 
+\end{DoxyItemize}
+
+Reimplemented from \mbox{\hyperlink{classItem_af0957bbdb9a256de0cd29f1adcae28be}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

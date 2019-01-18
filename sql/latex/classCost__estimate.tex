@@ -1,0 +1,99 @@
+\hypertarget{classCost__estimate}{}\section{Cost\+\_\+estimate Class Reference}
+\label{classCost__estimate}\index{Cost\+\_\+estimate@{Cost\+\_\+estimate}}
+
+
+{\ttfamily \#include $<$handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCost__estimate_aaee36d8ce052d3e5abd0b0f2af8c00ae}\label{classCost__estimate_aaee36d8ce052d3e5abd0b0f2af8c00ae}} 
+double \mbox{\hyperlink{classCost__estimate_aaee36d8ce052d3e5abd0b0f2af8c00ae}{total\+\_\+cost}} () const
+\begin{DoxyCompactList}\small\item\em Returns sum of time-\/consuming costs, i.\+e., not counting memory cost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_ab04d14da84c3b509c258aca179447088}\label{classCost__estimate_ab04d14da84c3b509c258aca179447088}} 
+double {\bfseries get\+\_\+io\+\_\+cost} () const
+\item 
+\mbox{\Hypertarget{classCost__estimate_a9337f158e42397b1bc397b8505cd475c}\label{classCost__estimate_a9337f158e42397b1bc397b8505cd475c}} 
+double {\bfseries get\+\_\+cpu\+\_\+cost} () const
+\item 
+\mbox{\Hypertarget{classCost__estimate_abb8b3a595443e9f46cc252e21a993fc9}\label{classCost__estimate_abb8b3a595443e9f46cc252e21a993fc9}} 
+double {\bfseries get\+\_\+import\+\_\+cost} () const
+\item 
+\mbox{\Hypertarget{classCost__estimate_aac6177056f79adaafc4b3d5630ae11c6}\label{classCost__estimate_aac6177056f79adaafc4b3d5630ae11c6}} 
+double {\bfseries get\+\_\+mem\+\_\+cost} () const
+\item 
+bool \mbox{\hyperlink{classCost__estimate_ad833785551022bb3aa4efe72a463d4ec}{is\+\_\+zero}} () const
+\item 
+bool \mbox{\hyperlink{classCost__estimate_a7fd206eab066d970cc3ebc8e17753a4f}{is\+\_\+max\+\_\+cost}} () const
+\item 
+\mbox{\Hypertarget{classCost__estimate_a39433a1e8b2745bf3df76b08f5ffff65}\label{classCost__estimate_a39433a1e8b2745bf3df76b08f5ffff65}} 
+void \mbox{\hyperlink{classCost__estimate_a39433a1e8b2745bf3df76b08f5ffff65}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset all costs to zero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_a508d413ecfe2680a0b1c45d857ac840b}\label{classCost__estimate_a508d413ecfe2680a0b1c45d857ac840b}} 
+void \mbox{\hyperlink{classCost__estimate_a508d413ecfe2680a0b1c45d857ac840b}{set\+\_\+max\+\_\+cost}} ()
+\begin{DoxyCompactList}\small\item\em Set current cost to the maximal double. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_ace2183a6e8a050764f19208a5bd16181}\label{classCost__estimate_ace2183a6e8a050764f19208a5bd16181}} 
+void \mbox{\hyperlink{classCost__estimate_ace2183a6e8a050764f19208a5bd16181}{multiply}} (double m)
+\begin{DoxyCompactList}\small\item\em Multiply io, cpu and import costs by parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_add5c3fefc739d4de2e9de1f339324114}\label{classCost__estimate_add5c3fefc739d4de2e9de1f339324114}} 
+\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \&other)
+\item 
+\mbox{\Hypertarget{classCost__estimate_afb07097f65ede89e02405956bdb4082d}\label{classCost__estimate_afb07097f65ede89e02405956bdb4082d}} 
+\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} {\bfseries operator+} (const \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \&other)
+\item 
+\mbox{\Hypertarget{classCost__estimate_a2bb04b7c2ba92b554f4a2fd311923c83}\label{classCost__estimate_a2bb04b7c2ba92b554f4a2fd311923c83}} 
+\mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} {\bfseries operator-\/} (const \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \&other)
+\item 
+\mbox{\Hypertarget{classCost__estimate_af8595c106ea8cd4bc90afdbdfe051bd1}\label{classCost__estimate_af8595c106ea8cd4bc90afdbdfe051bd1}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \&other) const
+\item 
+\mbox{\Hypertarget{classCost__estimate_a8df93dd564aca096004eaf09daa65dac}\label{classCost__estimate_a8df93dd564aca096004eaf09daa65dac}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classCost__estimate}{Cost\+\_\+estimate}} \&other) const
+\item 
+\mbox{\Hypertarget{classCost__estimate_ab06e302ab71f760dd0a106131cfab848}\label{classCost__estimate_ab06e302ab71f760dd0a106131cfab848}} 
+void \mbox{\hyperlink{classCost__estimate_ab06e302ab71f760dd0a106131cfab848}{add\+\_\+io}} (double add\+\_\+io\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Add to IO cost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_a75d7fd717bdad58c064ee49a0ea03e57}\label{classCost__estimate_a75d7fd717bdad58c064ee49a0ea03e57}} 
+void \mbox{\hyperlink{classCost__estimate_a75d7fd717bdad58c064ee49a0ea03e57}{add\+\_\+cpu}} (double add\+\_\+cpu\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Add to C\+PU cost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_a32474036e55eefc877555d22f15e01bd}\label{classCost__estimate_a32474036e55eefc877555d22f15e01bd}} 
+void \mbox{\hyperlink{classCost__estimate_a32474036e55eefc877555d22f15e01bd}{add\+\_\+import}} (double add\+\_\+import\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Add to import cost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCost__estimate_a87a6d90a85ae340685811f794e10dfe4}\label{classCost__estimate_a87a6d90a85ae340685811f794e10dfe4}} 
+void \mbox{\hyperlink{classCost__estimate_a87a6d90a85ae340685811f794e10dfe4}{add\+\_\+mem}} (double add\+\_\+mem\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Add to memory cost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to store optimizer cost estimates.
+
+The class consists of P\+O\+Ds only\+: default operator=, copy constructor and destructor are used. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCost__estimate_a7fd206eab066d970cc3ebc8e17753a4f}\label{classCost__estimate_a7fd206eab066d970cc3ebc8e17753a4f}} 
+\index{Cost\+\_\+estimate@{Cost\+\_\+estimate}!is\+\_\+max\+\_\+cost@{is\+\_\+max\+\_\+cost}}
+\index{is\+\_\+max\+\_\+cost@{is\+\_\+max\+\_\+cost}!Cost\+\_\+estimate@{Cost\+\_\+estimate}}
+\subsubsection{\texorpdfstring{is\+\_\+max\+\_\+cost()}{is\_max\_cost()}}
+{\footnotesize\ttfamily bool Cost\+\_\+estimate\+::is\+\_\+max\+\_\+cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Whether or not the total cost is the maximal double
+
+\begin{DoxyReturn}{Returns}
+true if total cost is the maximal double, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__estimate_ad833785551022bb3aa4efe72a463d4ec}\label{classCost__estimate_ad833785551022bb3aa4efe72a463d4ec}} 
+\index{Cost\+\_\+estimate@{Cost\+\_\+estimate}!is\+\_\+zero@{is\+\_\+zero}}
+\index{is\+\_\+zero@{is\+\_\+zero}!Cost\+\_\+estimate@{Cost\+\_\+estimate}}
+\subsubsection{\texorpdfstring{is\+\_\+zero()}{is\_zero()}}
+{\footnotesize\ttfamily bool Cost\+\_\+estimate\+::is\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Whether or not all costs in the object are zero
+
+\begin{DoxyReturn}{Returns}
+true if all costs are zero, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+handler.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,101 @@
+\hypertarget{classItem__copy__decimal}{}\section{Item\+\_\+copy\+\_\+decimal Class Reference}
+\label{classItem__copy__decimal}\index{Item\+\_\+copy\+\_\+decimal@{Item\+\_\+copy\+\_\+decimal}}
+Inheritance diagram for Item\+\_\+copy\+\_\+decimal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classItem__copy__decimal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_a23c3c52d766682395b1afd4c1458fb04}\label{classItem__copy__decimal_a23c3c52d766682395b1afd4c1458fb04}} 
+{\bfseries Item\+\_\+copy\+\_\+decimal} (\mbox{\hyperlink{classItem}{Item}} $\ast$i)
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_ad7d26d63407d64671e6eef3c36b218bb}\label{classItem__copy__decimal_ad7d26d63407d64671e6eef3c36b218bb}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_a5ce91a37c8477f30813b9188f6d6590b}\label{classItem__copy__decimal_a5ce91a37c8477f30813b9188f6d6590b}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_a7d37cb74dbcad39db040d5fc0f29cf24}\label{classItem__copy__decimal_a7d37cb74dbcad39db040d5fc0f29cf24}} 
+double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_a0cdddc999fae96efdaa0cdd4cbbce337}\label{classItem__copy__decimal_a0cdddc999fae96efdaa0cdd4cbbce337}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_a536dbdcb378e5543e1fa0a8cc8d41cb8}\label{classItem__copy__decimal_a536dbdcb378e5543e1fa0a8cc8d41cb8}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_a69a08c173e71a877ab7ac7bde4026e6e}\label{classItem__copy__decimal_a69a08c173e71a877ab7ac7bde4026e6e}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+virtual bool \mbox{\hyperlink{classItem__copy__decimal_a22459a6e13d4ab30f14818c9b0c65730}{copy}} (const T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classItem__copy__decimal_a8e57c99667202306a06a0c46d8f4597a}{save\+\_\+in\+\_\+field\+\_\+inner}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, bool no\+\_\+conversions)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__copy__decimal_ae0204751066b432f2bd046a6ea93fe6b}\label{classItem__copy__decimal_ae0204751066b432f2bd046a6ea93fe6b}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} {\bfseries cached\+\_\+value}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__copy__decimal_a22459a6e13d4ab30f14818c9b0c65730}\label{classItem__copy__decimal_a22459a6e13d4ab30f14818c9b0c65730}} 
+\index{Item\+\_\+copy\+\_\+decimal@{Item\+\_\+copy\+\_\+decimal}!copy@{copy}}
+\index{copy@{copy}!Item\+\_\+copy\+\_\+decimal@{Item\+\_\+copy\+\_\+decimal}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily bool Item\+\_\+copy\+\_\+decimal\+::copy (\begin{DoxyParamCaption}\item[{const T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update the cache with the value of the original item
+
+This is the method that updates the cached value. It must be explicitly called by the user of this class to store the value of the orginal item in the cache. \begin{DoxyReturn}{Returns}
+false if OK, true on error. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classItem__copy_a575caec22eeb27fb76d5aa74b1a8d492}{Item\+\_\+copy}}.
+
+\mbox{\Hypertarget{classItem__copy__decimal_a8e57c99667202306a06a0c46d8f4597a}\label{classItem__copy__decimal_a8e57c99667202306a06a0c46d8f4597a}} 
+\index{Item\+\_\+copy\+\_\+decimal@{Item\+\_\+copy\+\_\+decimal}!save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}}
+\index{save\+\_\+in\+\_\+field\+\_\+inner@{save\+\_\+in\+\_\+field\+\_\+inner}!Item\+\_\+copy\+\_\+decimal@{Item\+\_\+copy\+\_\+decimal}}
+\subsubsection{\texorpdfstring{save\+\_\+in\+\_\+field\+\_\+inner()}{save\_in\_field\_inner()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Item\+\_\+copy\+\_\+decimal\+::save\+\_\+in\+\_\+field\+\_\+inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classField}{Field}} $\ast$}]{field,  }\item[{bool}]{no\+\_\+conversions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Helper function which does all of the work for \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field(\+Field$\ast$, bool)}}, except some error checking common to all subclasses, which is performed by \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}} itself.
+
+Subclasses that need to specialize the behaviour of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}, should override this function instead of \mbox{\hyperlink{classItem_acf4c1888a07e9e0dd5787283c6569545}{save\+\_\+in\+\_\+field()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em field} & the field to save the item into \\
+\hline
+ & {\em no\+\_\+conversions} & whether or not to allow conversions of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the status from saving into the field 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+Y\+P\+E\+\_\+\+OK} & item saved without any errors or warnings \\
+\hline
+{\em !=} & T\+Y\+P\+E\+\_\+\+OK there were errors or warnings when saving the item \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classItem__copy_af4b55bf8c530188fa2110728a512811b}{Item\+\_\+copy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

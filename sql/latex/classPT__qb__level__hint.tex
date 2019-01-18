@@ -1,0 +1,77 @@
+\hypertarget{classPT__qb__level__hint}{}\section{P\+T\+\_\+qb\+\_\+level\+\_\+hint Class Reference}
+\label{classPT__qb__level__hint}\index{P\+T\+\_\+qb\+\_\+level\+\_\+hint@{P\+T\+\_\+qb\+\_\+level\+\_\+hint}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+hints.\+h$>$}
+
+Inheritance diagram for P\+T\+\_\+qb\+\_\+level\+\_\+hint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPT__qb__level__hint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPT__qb__level__hint_a050739c82fe046eab6127fc2a434b0ec}\label{classPT__qb__level__hint_a050739c82fe046eab6127fc2a434b0ec}} 
+{\bfseries P\+T\+\_\+qb\+\_\+level\+\_\+hint} (const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG qb\+\_\+name\+\_\+arg, bool switch\+\_\+state\+\_\+arg, enum opt\+\_\+hints\+\_\+enum hint\+\_\+type\+\_\+arg, uint arg)
+\item 
+\mbox{\Hypertarget{classPT__qb__level__hint_a83623aae0d3e338f4640a9a704e23c39}\label{classPT__qb__level__hint_a83623aae0d3e338f4640a9a704e23c39}} 
+uint {\bfseries get\+\_\+args} () const
+\item 
+virtual bool \mbox{\hyperlink{classPT__qb__level__hint_afb73e765fbf59fa0d2ffbe72d33975be}{contextualize}} (\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$pc)
+\item 
+virtual void \mbox{\hyperlink{classPT__qb__level__hint_a7eb50bc395daa14498c03d9753bbf4a4}{append\+\_\+args}} (T\+HD $\ast$thd, String $\ast$str) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Parse tree hint object for query block level hints. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPT__qb__level__hint_a7eb50bc395daa14498c03d9753bbf4a4}\label{classPT__qb__level__hint_a7eb50bc395daa14498c03d9753bbf4a4}} 
+\index{P\+T\+\_\+qb\+\_\+level\+\_\+hint@{P\+T\+\_\+qb\+\_\+level\+\_\+hint}!append\+\_\+args@{append\+\_\+args}}
+\index{append\+\_\+args@{append\+\_\+args}!P\+T\+\_\+qb\+\_\+level\+\_\+hint@{P\+T\+\_\+qb\+\_\+level\+\_\+hint}}
+\subsubsection{\texorpdfstring{append\+\_\+args()}{append\_args()}}
+{\footnotesize\ttfamily void P\+T\+\_\+qb\+\_\+level\+\_\+hint\+::append\+\_\+args (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Append hint arguments to given string
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Pointer to T\+HD object \\
+\hline
+{\em str} & Pointer to String object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classPT__hint_afd39b4eeed47d9b1790f12c144aece7d}{P\+T\+\_\+hint}}.
+
+\mbox{\Hypertarget{classPT__qb__level__hint_afb73e765fbf59fa0d2ffbe72d33975be}\label{classPT__qb__level__hint_afb73e765fbf59fa0d2ffbe72d33975be}} 
+\index{P\+T\+\_\+qb\+\_\+level\+\_\+hint@{P\+T\+\_\+qb\+\_\+level\+\_\+hint}!contextualize@{contextualize}}
+\index{contextualize@{contextualize}!P\+T\+\_\+qb\+\_\+level\+\_\+hint@{P\+T\+\_\+qb\+\_\+level\+\_\+hint}}
+\subsubsection{\texorpdfstring{contextualize()}{contextualize()}}
+{\footnotesize\ttfamily bool P\+T\+\_\+qb\+\_\+level\+\_\+hint\+::contextualize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} $\ast$}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function handles query block level hint. It also creates query block hint object (\mbox{\hyperlink{classOpt__hints__qb}{Opt\+\_\+hints\+\_\+qb}}) if it does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc} & Pointer to \mbox{\hyperlink{structParse__context}{Parse\+\_\+context}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of error, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classParse__tree__node_a22d93524a537d0df652d7efa144f23da}{Parse\+\_\+tree\+\_\+node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+hints.\+h\item 
+parse\+\_\+tree\+\_\+hints.\+cc\end{DoxyCompactItemize}

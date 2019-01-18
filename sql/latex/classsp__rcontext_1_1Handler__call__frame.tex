@@ -1,0 +1,63 @@
+\hypertarget{classsp__rcontext_1_1Handler__call__frame}{}\section{sp\+\_\+rcontext\+:\+:Handler\+\_\+call\+\_\+frame Class Reference}
+\label{classsp__rcontext_1_1Handler__call__frame}\index{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}}
+
+
+{\ttfamily \#include $<$sp\+\_\+rcontext.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame_a1094f48f9d25990d569a254bfcdf4850}{Handler\+\_\+call\+\_\+frame}} (const \mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$\+\_\+handler, \mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$\+\_\+sql\+\_\+condition, uint \+\_\+continue\+\_\+ip)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__rcontext_1_1Handler__call__frame_ab018d0da7e35087e52c9994f5a6ad156}\label{classsp__rcontext_1_1Handler__call__frame_ab018d0da7e35087e52c9994f5a6ad156}} 
+const \mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$ \mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame_ab018d0da7e35087e52c9994f5a6ad156}{handler}}
+\begin{DoxyCompactList}\small\item\em Handler definition (from parsing context). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__rcontext_1_1Handler__call__frame_a48d64526c53acbe670e97da339b226a4}\label{classsp__rcontext_1_1Handler__call__frame_a48d64526c53acbe670e97da339b226a4}} 
+\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$ \mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame_a48d64526c53acbe670e97da339b226a4}{sql\+\_\+condition}}
+\begin{DoxyCompactList}\small\item\em S\+QL-\/condition, triggered handler activation. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame_a47ee7281431a1f92e77bf95156ad38ec}{continue\+\_\+ip}}
+\item 
+\mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} \mbox{\hyperlink{classsp__rcontext_1_1Handler__call__frame_a394955960efe263b6199adbc7d3309aa}{handler\+\_\+da}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a call frame of S\+QL-\/handler (one invocation of a handler). Basically, it\textquotesingle{}s needed to store continue instruction pointer for C\+O\+N\+T\+I\+N\+UE S\+QL-\/handlers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsp__rcontext_1_1Handler__call__frame_a1094f48f9d25990d569a254bfcdf4850}\label{classsp__rcontext_1_1Handler__call__frame_a1094f48f9d25990d569a254bfcdf4850}} 
+\index{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}!Handler\+\_\+call\+\_\+frame@{Handler\+\_\+call\+\_\+frame}}
+\index{Handler\+\_\+call\+\_\+frame@{Handler\+\_\+call\+\_\+frame}!sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}}
+\subsubsection{\texorpdfstring{Handler\+\_\+call\+\_\+frame()}{Handler\_call\_frame()}}
+{\footnotesize\ttfamily sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame\+::\+Handler\+\_\+call\+\_\+frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__handler}{sp\+\_\+handler}} $\ast$}]{\+\_\+handler,  }\item[{\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$}]{\+\_\+sql\+\_\+condition,  }\item[{uint}]{\+\_\+continue\+\_\+ip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsp__rcontext_1_1Handler__call__frame_a47ee7281431a1f92e77bf95156ad38ec}\label{classsp__rcontext_1_1Handler__call__frame_a47ee7281431a1f92e77bf95156ad38ec}} 
+\index{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}!continue\+\_\+ip@{continue\+\_\+ip}}
+\index{continue\+\_\+ip@{continue\+\_\+ip}!sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}}
+\subsubsection{\texorpdfstring{continue\+\_\+ip}{continue\_ip}}
+{\footnotesize\ttfamily uint sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame\+::continue\+\_\+ip}
+
+Continue-\/instruction-\/pointer for C\+O\+N\+T\+I\+N\+UE-\/handlers. The attribute contains 0 for E\+X\+IT-\/handlers. \mbox{\Hypertarget{classsp__rcontext_1_1Handler__call__frame_a394955960efe263b6199adbc7d3309aa}\label{classsp__rcontext_1_1Handler__call__frame_a394955960efe263b6199adbc7d3309aa}} 
+\index{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}!handler\+\_\+da@{handler\+\_\+da}}
+\index{handler\+\_\+da@{handler\+\_\+da}!sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame@{sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame}}
+\subsubsection{\texorpdfstring{handler\+\_\+da}{handler\_da}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} sp\+\_\+rcontext\+::\+Handler\+\_\+call\+\_\+frame\+::handler\+\_\+da}
+
+The Diagnostics Area which will be pushed when the handler activates and popped when the handler completes. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+rcontext.\+h\end{DoxyCompactItemize}

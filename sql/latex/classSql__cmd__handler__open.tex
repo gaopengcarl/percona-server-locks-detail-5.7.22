@@ -1,0 +1,62 @@
+\hypertarget{classSql__cmd__handler__open}{}\section{Sql\+\_\+cmd\+\_\+handler\+\_\+open Class Reference}
+\label{classSql__cmd__handler__open}\index{Sql\+\_\+cmd\+\_\+handler\+\_\+open@{Sql\+\_\+cmd\+\_\+handler\+\_\+open}}
+
+
+{\ttfamily \#include $<$sql\+\_\+handler.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+handler\+\_\+open\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSql__cmd__handler__open}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__cmd__handler__open_a73f96cce2684a0578ebbf11bda58fc7e}\label{classSql__cmd__handler__open_a73f96cce2684a0578ebbf11bda58fc7e}} 
+virtual enum\+\_\+sql\+\_\+command \mbox{\hyperlink{classSql__cmd__handler__open_a73f96cce2684a0578ebbf11bda58fc7e}{sql\+\_\+command\+\_\+code}} () const
+\begin{DoxyCompactList}\small\item\em Return the command code for this statement. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classSql__cmd__handler__open_a79b3b42813bdf3d60fd796e149674d55}{execute}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSql__cmd__handler__open}{Sql\+\_\+cmd\+\_\+handler\+\_\+open}} represents H\+A\+N\+D\+L\+ER O\+P\+EN statement.
+
+\begin{DoxyNote}{Note}
+Some information about this statement, for example, table to be opened is still kept in L\+EX class. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__handler__open_a79b3b42813bdf3d60fd796e149674d55}\label{classSql__cmd__handler__open_a79b3b42813bdf3d60fd796e149674d55}} 
+\index{Sql\+\_\+cmd\+\_\+handler\+\_\+open@{Sql\+\_\+cmd\+\_\+handler\+\_\+open}!execute@{execute}}
+\index{execute@{execute}!Sql\+\_\+cmd\+\_\+handler\+\_\+open@{Sql\+\_\+cmd\+\_\+handler\+\_\+open}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Sql\+\_\+cmd\+\_\+handler\+\_\+open\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute a H\+A\+N\+D\+L\+ER O\+P\+EN statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & on success. \\
+\hline
+{\em T\+R\+UE} & on failure. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classSql__cmd_a213367b79b551296fbb7790f2a3732fb}{Sql\+\_\+cmd}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+handler.\+h\item 
+sql\+\_\+handler.\+cc\end{DoxyCompactItemize}

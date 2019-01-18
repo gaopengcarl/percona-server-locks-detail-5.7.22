@@ -1,0 +1,74 @@
+\hypertarget{structKey__field}{}\section{Key\+\_\+field Struct Reference}
+\label{structKey__field}\index{Key\+\_\+field@{Key\+\_\+field}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structKey__field_a41bf18efe090d6263288336eb8d46782}\label{structKey__field_a41bf18efe090d6263288336eb8d46782}} 
+{\bfseries Key\+\_\+field} (\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$\mbox{\hyperlink{structKey__field_a39e101c4060217fef72441bd79965d72}{item\+\_\+field}}, \mbox{\hyperlink{classItem}{Item}} $\ast$\mbox{\hyperlink{structKey__field_ab487719698cf68eea0283f1b0eac01e7}{val}}, uint level, uint \mbox{\hyperlink{structKey__field_a8020afcf7b7a870d86586052442e347f}{optimize}}, bool eq\+\_\+func, bool \mbox{\hyperlink{structKey__field_ad15eb695b878f6436d97bcc8f37fad20}{null\+\_\+rejecting}}, bool $\ast$\mbox{\hyperlink{structKey__field_a16b72e1543518a93bca63b15f6274598}{cond\+\_\+guard}}, uint \mbox{\hyperlink{structKey__field_a3875eb5a8e4115e34a319bd770b251c8}{sj\+\_\+pred\+\_\+no}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structKey__field_a39e101c4060217fef72441bd79965d72}\label{structKey__field_a39e101c4060217fef72441bd79965d72}} 
+\mbox{\hyperlink{classItem__field}{Item\+\_\+field}} $\ast$ \mbox{\hyperlink{structKey__field_a39e101c4060217fef72441bd79965d72}{item\+\_\+field}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classItem}{Item}} representing the column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structKey__field_ab487719698cf68eea0283f1b0eac01e7}\label{structKey__field_ab487719698cf68eea0283f1b0eac01e7}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{structKey__field_ab487719698cf68eea0283f1b0eac01e7}{val}}
+\begin{DoxyCompactList}\small\item\em May be empty if diff constant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structKey__field_ab5afc4f48a538d6ce9337fe2a2d9aa78}\label{structKey__field_ab5afc4f48a538d6ce9337fe2a2d9aa78}} 
+uint {\bfseries level}
+\item 
+\mbox{\Hypertarget{structKey__field_a8020afcf7b7a870d86586052442e347f}\label{structKey__field_a8020afcf7b7a870d86586052442e347f}} 
+uint \mbox{\hyperlink{structKey__field_a8020afcf7b7a870d86586052442e347f}{optimize}}
+\begin{DoxyCompactList}\small\item\em K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+$\ast$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structKey__field_ac0bd9ff1c9287d8cd8970eb4f71af9fa}\label{structKey__field_ac0bd9ff1c9287d8cd8970eb4f71af9fa}} 
+bool {\bfseries eq\+\_\+func}
+\item 
+bool \mbox{\hyperlink{structKey__field_ad15eb695b878f6436d97bcc8f37fad20}{null\+\_\+rejecting}}
+\item 
+bool $\ast$ \mbox{\hyperlink{structKey__field_a16b72e1543518a93bca63b15f6274598}{cond\+\_\+guard}}
+\item 
+uint \mbox{\hyperlink{structKey__field_a3875eb5a8e4115e34a319bd770b251c8}{sj\+\_\+pred\+\_\+no}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \mbox{\hyperlink{structKey__field}{Key\+\_\+field}} is a descriptor of a predicate of the form (column $<$op$>$ val). Currently \textquotesingle{}op\textquotesingle{} is one of \{\textquotesingle{}=\textquotesingle{}, \textquotesingle{}$<$=$>$\textquotesingle{}, \textquotesingle{}IS \mbox{[}N\+OT\mbox{]} N\+U\+LL\textquotesingle{}, \textquotesingle{}arg1 IN arg2\textquotesingle{}\}, and \textquotesingle{}val\textquotesingle{} can be either another column or an expression (including constants).
+
+\mbox{\hyperlink{structKey__field}{Key\+\_\+field}}\textquotesingle{}s are used to analyze columns that may potentially serve as parts of keys for index lookup. If \textquotesingle{}field\textquotesingle{} is part of an index, then add\+\_\+key\+\_\+part() creates a corresponding \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} object and inserts it into the J\+O\+I\+N\+::keyuse\+\_\+array which is passed by update\+\_\+ref\+\_\+and\+\_\+keys().
+
+The structure is used only during analysis of the candidate columns for index \textquotesingle{}ref\textquotesingle{} access. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structKey__field_a16b72e1543518a93bca63b15f6274598}\label{structKey__field_a16b72e1543518a93bca63b15f6274598}} 
+\index{Key\+\_\+field@{Key\+\_\+field}!cond\+\_\+guard@{cond\+\_\+guard}}
+\index{cond\+\_\+guard@{cond\+\_\+guard}!Key\+\_\+field@{Key\+\_\+field}}
+\subsubsection{\texorpdfstring{cond\+\_\+guard}{cond\_guard}}
+{\footnotesize\ttfamily bool$\ast$ Key\+\_\+field\+::cond\+\_\+guard}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classKey__use_ae462d9f6aefe49c1907600a9921b02a6}{Key\+\_\+use\+::cond\+\_\+guard}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structKey__field_ad15eb695b878f6436d97bcc8f37fad20}\label{structKey__field_ad15eb695b878f6436d97bcc8f37fad20}} 
+\index{Key\+\_\+field@{Key\+\_\+field}!null\+\_\+rejecting@{null\+\_\+rejecting}}
+\index{null\+\_\+rejecting@{null\+\_\+rejecting}!Key\+\_\+field@{Key\+\_\+field}}
+\subsubsection{\texorpdfstring{null\+\_\+rejecting}{null\_rejecting}}
+{\footnotesize\ttfamily bool Key\+\_\+field\+::null\+\_\+rejecting}
+
+If true, the condition this struct represents will not be satisfied when val IS N\+U\+LL. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classKey__use_acba461fa75819da0303af030700a8d5b}{Key\+\_\+use\+::null\+\_\+rejecting}} . 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structKey__field_a3875eb5a8e4115e34a319bd770b251c8}\label{structKey__field_a3875eb5a8e4115e34a319bd770b251c8}} 
+\index{Key\+\_\+field@{Key\+\_\+field}!sj\+\_\+pred\+\_\+no@{sj\+\_\+pred\+\_\+no}}
+\index{sj\+\_\+pred\+\_\+no@{sj\+\_\+pred\+\_\+no}!Key\+\_\+field@{Key\+\_\+field}}
+\subsubsection{\texorpdfstring{sj\+\_\+pred\+\_\+no}{sj\_pred\_no}}
+{\footnotesize\ttfamily uint Key\+\_\+field\+::sj\+\_\+pred\+\_\+no}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classKey__use_a72971098712c22d6ab436e02a66837d4}{Key\+\_\+use\+::sj\+\_\+pred\+\_\+no}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sql__optimizer_8cc}{sql\+\_\+optimizer.\+cc}}\end{DoxyCompactItemize}

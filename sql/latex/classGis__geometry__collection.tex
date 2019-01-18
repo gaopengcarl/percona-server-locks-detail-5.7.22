@@ -1,0 +1,130 @@
+\hypertarget{classGis__geometry__collection}{}\section{Gis\+\_\+geometry\+\_\+collection Class Reference}
+\label{classGis__geometry__collection}\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+Inheritance diagram for Gis\+\_\+geometry\+\_\+collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGis__geometry__collection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGis__geometry__collection_a744bd0c768fb2b195a9917483071c2a0}{Gis\+\_\+geometry\+\_\+collection}} (\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$geo, String $\ast$gcbuf)
+\item 
+\mbox{\hyperlink{classGis__geometry__collection_adfa2c5172a88f12e6e01767e6ca30eb5}{Gis\+\_\+geometry\+\_\+collection}} (srid\+\_\+t srid, wkb\+Type gtype, const String $\ast$gbuf, String $\ast$gcbuf)
+\item 
+bool \mbox{\hyperlink{classGis__geometry__collection_aa3fb89e6bc5f0650de26623dff708062}{append\+\_\+geometry}} (const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$geo, String $\ast$gcbuf)
+\item 
+bool \mbox{\hyperlink{classGis__geometry__collection_a1d5004c2016dfb12bd2e810538f35569}{append\+\_\+geometry}} (srid\+\_\+t srid, wkb\+Type gtype, const String $\ast$gbuf, String $\ast$gcbuf)
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_afcc6e3a64c2063f81084e282aa40f684}\label{classGis__geometry__collection_afcc6e3a64c2063f81084e282aa40f684}} 
+uint32 {\bfseries get\+\_\+data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a954252286ee397c2facca903c3f32f04}\label{classGis__geometry__collection_a954252286ee397c2facca903c3f32f04}} 
+bool {\bfseries init\+\_\+from\+\_\+wkt} (\mbox{\hyperlink{classGis__read__stream}{Gis\+\_\+read\+\_\+stream}} $\ast$trs, String $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a6ef031a45d65ca3234c779e1116035ad}\label{classGis__geometry__collection_a6ef031a45d65ca3234c779e1116035ad}} 
+uint {\bfseries init\+\_\+from\+\_\+wkb} (const char $\ast$wkb, uint len, wkb\+Byte\+Order bo, String $\ast$res)
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_aa964f71f4ec2b24562486750ad5fc731}\label{classGis__geometry__collection_aa964f71f4ec2b24562486750ad5fc731}} 
+bool {\bfseries get\+\_\+data\+\_\+as\+\_\+wkt} (String $\ast$txt, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_aabfb15eb5b90ac63c060926935381b7c}\label{classGis__geometry__collection_aabfb15eb5b90ac63c060926935381b7c}} 
+bool {\bfseries get\+\_\+mbr} (\mbox{\hyperlink{structMBR}{M\+BR}} $\ast$mbr, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a8152285f684b8b39284436d169085b12}\label{classGis__geometry__collection_a8152285f684b8b39284436d169085b12}} 
+int {\bfseries num\+\_\+geometries} (uint32 $\ast$num) const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a945dbf2d12de7eaf3c5fc3196597deac}\label{classGis__geometry__collection_a945dbf2d12de7eaf3c5fc3196597deac}} 
+int {\bfseries geometry\+\_\+n} (uint32 num, String $\ast$result) const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a5434030dca8a20210323fdaf1af9d0c5}\label{classGis__geometry__collection_a5434030dca8a20210323fdaf1af9d0c5}} 
+bool {\bfseries dimension} (uint32 $\ast$dim, \mbox{\hyperlink{classGeometry_1_1wkb__parser}{wkb\+\_\+parser}} $\ast$wkb) const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a803c8e5a7313891ffbe09114846e1178}\label{classGis__geometry__collection_a803c8e5a7313891ffbe09114846e1178}} 
+uint32 {\bfseries feature\+\_\+dimension} () const
+\item 
+\mbox{\Hypertarget{classGis__geometry__collection_a8ac0ae8aa398822b7470394d3707c1ec}\label{classGis__geometry__collection_a8ac0ae8aa398822b7470394d3707c1ec}} 
+const \mbox{\hyperlink{classGeometry_1_1Class__info}{Class\+\_\+info}} $\ast$ {\bfseries get\+\_\+class\+\_\+info} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGis__geometry__collection_a744bd0c768fb2b195a9917483071c2a0}\label{classGis__geometry__collection_a744bd0c768fb2b195a9917483071c2a0}} 
+\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}!Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}!Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+\subsubsection{\texorpdfstring{Gis\+\_\+geometry\+\_\+collection()}{Gis\_geometry\_collection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gis\+\_\+geometry\+\_\+collection\+::\+Gis\+\_\+geometry\+\_\+collection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{geo,  }\item[{String $\ast$}]{gcbuf }\end{DoxyParamCaption})}
+
+Create a geometry collection from a single geometry, and this object refer to position right after the W\+KB header inside the \textquotesingle{}gcbuf\textquotesingle{} buffer. 
+\begin{DoxyParams}{Parameters}
+{\em geo} & the first valid geometry to put into this geometry collection. Its S\+R\+ID is used as the S\+R\+ID of this geometry collection. It must be a valid geometry. \\
+\hline
+{\em gcbuf} & this geometry collection\textquotesingle{}s data buffer in G\+E\+O\+M\+E\+T\+RY format. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGis__geometry__collection_adfa2c5172a88f12e6e01767e6ca30eb5}\label{classGis__geometry__collection_adfa2c5172a88f12e6e01767e6ca30eb5}} 
+\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}!Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}!Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+\subsubsection{\texorpdfstring{Gis\+\_\+geometry\+\_\+collection()}{Gis\_geometry\_collection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gis\+\_\+geometry\+\_\+collection\+::\+Gis\+\_\+geometry\+\_\+collection (\begin{DoxyParamCaption}\item[{srid\+\_\+t}]{srid,  }\item[{wkb\+Type}]{gtype,  }\item[{const String $\ast$}]{gbuf,  }\item[{String $\ast$}]{gcbuf }\end{DoxyParamCaption})}
+
+Create a geometry collection from a single geometry, and the created object refers to position right after the W\+KB header inside the \textquotesingle{}gcbuf\textquotesingle{} buffer. 
+\begin{DoxyParams}{Parameters}
+{\em srid} & the S\+R\+ID of the first geometry to put into this geometry collection. Its S\+R\+ID is used as the S\+R\+ID of this geometry collection. \\
+\hline
+{\em gtype} & the type of the first geometry to put into this object. \\
+\hline
+{\em gbuf} & stores the W\+KB data of the first geometry to put into this object, not including its W\+KB header. if gbuf is N\+U\+LL or gbuf-\/$>$ptr is N\+U\+LL, the created geometry collection is empty. \\
+\hline
+{\em gcbuf} & this geometry collection\textquotesingle{}s data buffer in G\+E\+O\+M\+E\+T\+RY format. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGis__geometry__collection_aa3fb89e6bc5f0650de26623dff708062}\label{classGis__geometry__collection_aa3fb89e6bc5f0650de26623dff708062}} 
+\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}!append\+\_\+geometry@{append\+\_\+geometry}}
+\index{append\+\_\+geometry@{append\+\_\+geometry}!Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+\subsubsection{\texorpdfstring{append\+\_\+geometry()}{append\_geometry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Gis\+\_\+geometry\+\_\+collection\+::append\+\_\+geometry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGeometry}{Geometry}} $\ast$}]{geo,  }\item[{String $\ast$}]{gcbuf }\end{DoxyParamCaption})}
+
+Append geometry into geometry collection which can be empty. 
+\begin{DoxyParams}{Parameters}
+{\em geo} & geometry to be appended, it can\textquotesingle{}t be empty. \\
+\hline
+{\em gcbuf} & this geometry collection\textquotesingle{}s data buffer, it\textquotesingle{}s of G\+E\+O\+M\+E\+T\+RY format and is a separate String buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if no error, otherwise true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGis__geometry__collection_a1d5004c2016dfb12bd2e810538f35569}\label{classGis__geometry__collection_a1d5004c2016dfb12bd2e810538f35569}} 
+\index{Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}!append\+\_\+geometry@{append\+\_\+geometry}}
+\index{append\+\_\+geometry@{append\+\_\+geometry}!Gis\+\_\+geometry\+\_\+collection@{Gis\+\_\+geometry\+\_\+collection}}
+\subsubsection{\texorpdfstring{append\+\_\+geometry()}{append\_geometry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Gis\+\_\+geometry\+\_\+collection\+::append\+\_\+geometry (\begin{DoxyParamCaption}\item[{srid\+\_\+t}]{srid,  }\item[{wkb\+Type}]{gtype,  }\item[{const String $\ast$}]{gbuf,  }\item[{String $\ast$}]{gcbuf }\end{DoxyParamCaption})}
+
+Append geometry into geometry collection, which can be empty. This object must be created from default constructor or below one\+: \mbox{\hyperlink{classGis__geometry__collection}{Gis\+\_\+geometry\+\_\+collection}}(srid\+\_\+t srid, wkb\+Type gtype, const String $\ast$gbuf, String $\ast$gcbuf);
+
+
+\begin{DoxyParams}{Parameters}
+{\em srid} & srid of geometry to be appended. \\
+\hline
+{\em gtype} & type of geometry to be appended. \\
+\hline
+{\em gbuf} & W\+KB data of geometry to be appended, gbuf-\/$>$ptr isn\textquotesingle{}t N\+U\+LL and points right after the W\+KB header, this buffer can\textquotesingle{}t be empty. \\
+\hline
+{\em gcbuf} & this geometry collection\textquotesingle{}s data buffer, it\textquotesingle{}s of G\+E\+O\+M\+E\+T\+RY format and is a separate String buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if no error, otherwise true. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+spatial.\+h\item 
+spatial.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{classList}{}\section{List$<$ T $>$ Class Template Reference}
+\label{classList}\index{List$<$ T $>$@{List$<$ T $>$}}
+Inheritance diagram for List$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classList}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classList_aad55dc56e33a7b86bbd56baf7abcc47b}\label{classList_aad55dc56e33a7b86bbd56baf7abcc47b}} 
+{\bfseries List} (const \mbox{\hyperlink{classList}{List}}$<$ T $>$ \&tmp)
+\item 
+\mbox{\Hypertarget{classList_a00f83b62a2833fc8069601aad892f14b}\label{classList_a00f83b62a2833fc8069601aad892f14b}} 
+\mbox{\hyperlink{classList}{List}} \& {\bfseries operator=} (const \mbox{\hyperlink{classList}{List}} \&tmp)
+\item 
+\mbox{\Hypertarget{classList_a5cef6537833c759b675584c313c141ee}\label{classList_a5cef6537833c759b675584c313c141ee}} 
+{\bfseries List} (const \mbox{\hyperlink{classList}{List}}$<$ T $>$ \&tmp, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+\mbox{\Hypertarget{classList_a9b3ae275f5b9a8fcc1a90cf4bf6ea803}\label{classList_a9b3ae275f5b9a8fcc1a90cf4bf6ea803}} 
+bool {\bfseries push\+\_\+back} (T $\ast$a)
+\item 
+\mbox{\Hypertarget{classList_a0fa834ea6f979754e3c09a5589b00cfd}\label{classList_a0fa834ea6f979754e3c09a5589b00cfd}} 
+bool {\bfseries push\+\_\+back} (T $\ast$a, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+\mbox{\Hypertarget{classList_adb8c764db1f56b0d55f8efb9c4aad691}\label{classList_adb8c764db1f56b0d55f8efb9c4aad691}} 
+bool {\bfseries push\+\_\+front} (T $\ast$a)
+\item 
+\mbox{\Hypertarget{classList_aa2bab2e024d38898b7405a4ca1a4e698}\label{classList_aa2bab2e024d38898b7405a4ca1a4e698}} 
+bool {\bfseries push\+\_\+front} (T $\ast$a, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+\mbox{\Hypertarget{classList_ad694deac34b59ad21185ccde7aee2e3e}\label{classList_ad694deac34b59ad21185ccde7aee2e3e}} 
+T $\ast$ {\bfseries head} ()
+\item 
+\mbox{\Hypertarget{classList_aac225559db5ec6875e6ce35bd1cd5bff}\label{classList_aac225559db5ec6875e6ce35bd1cd5bff}} 
+T $\ast$$\ast$ {\bfseries head\+\_\+ref} ()
+\item 
+\mbox{\Hypertarget{classList_a77b185ddeb61cec71223a7de91b5e6ce}\label{classList_a77b185ddeb61cec71223a7de91b5e6ce}} 
+T $\ast$ {\bfseries pop} ()
+\item 
+\mbox{\Hypertarget{classList_aea7cd488d185e486b10a440be30bf278}\label{classList_aea7cd488d185e486b10a440be30bf278}} 
+void {\bfseries concat} (\mbox{\hyperlink{classList}{List}}$<$ T $>$ $\ast$list)
+\item 
+\mbox{\Hypertarget{classList_a95b2a722e7bdd8ca9d393ad07a9ce825}\label{classList_a95b2a722e7bdd8ca9d393ad07a9ce825}} 
+void {\bfseries disjoin} (\mbox{\hyperlink{classList}{List}}$<$ T $>$ $\ast$list)
+\item 
+\mbox{\Hypertarget{classList_a12ab0acedd761d347ac758f3d52f1ddf}\label{classList_a12ab0acedd761d347ac758f3d52f1ddf}} 
+void {\bfseries prepand} (\mbox{\hyperlink{classList}{List}}$<$ T $>$ $\ast$list)
+\item 
+\mbox{\Hypertarget{classList_a4043f7afb883160d7f008a3298d66028}\label{classList_a4043f7afb883160d7f008a3298d66028}} 
+void {\bfseries delete\+\_\+elements} (void)
+\item 
+void \mbox{\hyperlink{classList_a6248247a8f1560022bfae0327076dc1b}{sort}} (Node\+\_\+cmp\+\_\+func cmp, void $\ast$arg)
+\begin{DoxyCompactList}\small\item\em Sort the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classList_a6248247a8f1560022bfae0327076dc1b}\label{classList_a6248247a8f1560022bfae0327076dc1b}} 
+\index{List@{List}!sort@{sort}}
+\index{sort@{sort}!List@{List}}
+\subsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void base\+\_\+list\+::sort\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sort the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmp} & node comparison function \\
+\hline
+{\em arg} & additional info to be passed to comparison function\\
+\hline
+\end{DoxyParams}
+The function sorts list nodes by an exchange sort algorithm. The order of list nodes isn\textquotesingle{}t changed, values of info fields are swapped instead. Due to this, list iterators that are initialized before sort could be safely used after sort, i.\+e they wouldn\textquotesingle{}t cause a crash. As this isn\textquotesingle{}t an effective algorithm the list to be sorted is supposed to be short. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{set__var_8h}{set\+\_\+var.\+h}}\item 
+sql\+\_\+list.\+h\end{DoxyCompactItemize}

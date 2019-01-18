@@ -1,0 +1,61 @@
+\hypertarget{classsp__instr__cfetch}{}\section{sp\+\_\+instr\+\_\+cfetch Class Reference}
+\label{classsp__instr__cfetch}\index{sp\+\_\+instr\+\_\+cfetch@{sp\+\_\+instr\+\_\+cfetch}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+cfetch\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsp__instr__cfetch}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__cfetch_a7c58ea72308a5e4f02bd8ac5a7ad1bd7}\label{classsp__instr__cfetch_a7c58ea72308a5e4f02bd8ac5a7ad1bd7}} 
+{\bfseries sp\+\_\+instr\+\_\+cfetch} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, int cursor\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classsp__instr__cfetch_ab11fbd41e1d040d756afbf8c085a817f}\label{classsp__instr__cfetch_ab11fbd41e1d040d756afbf8c085a817f}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__cfetch_a10a1b6c9bbf720a85ccce90f7163aed1}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\item 
+\mbox{\Hypertarget{classsp__instr__cfetch_aeb6ebbcde4f790b7827da67fbb1cdf9b}\label{classsp__instr__cfetch_aeb6ebbcde4f790b7827da67fbb1cdf9b}} 
+void {\bfseries add\+\_\+to\+\_\+varlist} (\mbox{\hyperlink{classsp__variable}{sp\+\_\+variable}} $\ast$var)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The instruction corresponds to the F\+E\+T\+CH statement. It just forwards the close-\/call to the appropriate \mbox{\hyperlink{classsp__cursor}{sp\+\_\+cursor}} object in the \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__cfetch_a10a1b6c9bbf720a85ccce90f7163aed1}\label{classsp__instr__cfetch_a10a1b6c9bbf720a85ccce90f7163aed1}} 
+\index{sp\+\_\+instr\+\_\+cfetch@{sp\+\_\+instr\+\_\+cfetch}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+instr\+\_\+cfetch@{sp\+\_\+instr\+\_\+cfetch}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+cfetch\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__instr_a78add2ec1a98f8ba58d75c8eb40ed8cb}{sp\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

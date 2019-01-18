@@ -1,0 +1,182 @@
+\hypertarget{classTrigger__chain}{}\section{Trigger\+\_\+chain Class Reference}
+\label{classTrigger__chain}\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+Inheritance diagram for Trigger\+\_\+chain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTrigger__chain}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ \& \mbox{\hyperlink{classTrigger__chain_a742711c61ef94fb62f01ddb3d9a59678}{get\+\_\+trigger\+\_\+list}} ()
+\item 
+bool \mbox{\hyperlink{classTrigger__chain_a86094bc6705c9066a62ca71cb3b41df2}{add\+\_\+trigger}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, \mbox{\hyperlink{classTrigger}{Trigger}} $\ast$new\+\_\+trigger, \mbox{\hyperlink{trigger__def_8h_a7bd30a5993310e0d23d906d26275bd08}{enum\+\_\+trigger\+\_\+order\+\_\+type}} ordering\+\_\+clause, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&referenced\+\_\+trigger\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classTrigger__chain_ad4892d6b679218bfab53ed8c40528e1d}{add\+\_\+trigger}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, \mbox{\hyperlink{classTrigger}{Trigger}} $\ast$new\+\_\+trigger)
+\item 
+bool \mbox{\hyperlink{classTrigger__chain_aad870e1111c5318613bea0fcc36b1f27}{execute\+\_\+triggers}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{classTrigger__chain_a49a317229cecbcab5d4ea5b24c47e8f2}{add\+\_\+tables\+\_\+and\+\_\+routines}} (T\+HD $\ast$thd, Query\+\_\+tables\+\_\+list $\ast$prelocking\+\_\+ctx, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list)
+\item 
+void \mbox{\hyperlink{classTrigger__chain_ad54d622b2bff22f44fbeda41a79dccb8}{mark\+\_\+fields}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$subject\+\_\+table)
+\item 
+bool \mbox{\hyperlink{classTrigger__chain_a3164d154777f1449b64f0460030163f8}{has\+\_\+updated\+\_\+trigger\+\_\+fields}} (const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$used\+\_\+fields)
+\item 
+void \mbox{\hyperlink{classTrigger__chain_aca447515b99afd1414d05bb7e83b249e}{renumerate\+\_\+triggers}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTrigger__chain_a49a317229cecbcab5d4ea5b24c47e8f2}\label{classTrigger__chain_a49a317229cecbcab5d4ea5b24c47e8f2}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!add\+\_\+tables\+\_\+and\+\_\+routines@{add\+\_\+tables\+\_\+and\+\_\+routines}}
+\index{add\+\_\+tables\+\_\+and\+\_\+routines@{add\+\_\+tables\+\_\+and\+\_\+routines}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{add\+\_\+tables\+\_\+and\+\_\+routines()}{add\_tables\_and\_routines()}}
+{\footnotesize\ttfamily void Trigger\+\_\+chain\+::add\+\_\+tables\+\_\+and\+\_\+routines (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{Query\+\_\+tables\+\_\+list $\ast$}]{prelocking\+\_\+ctx,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list }\end{DoxyParamCaption})}
+
+Iterate over the list of triggers and add tables and routines used by trigger to the set of elements used by statement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread context \\
+\hline
+ & {\em \mbox{[}in} & out\mbox{]} prelocking\+\_\+ctx prelocking context of the statement \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+list} & \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} for the table \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTrigger__chain_a86094bc6705c9066a62ca71cb3b41df2}\label{classTrigger__chain_a86094bc6705c9066a62ca71cb3b41df2}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!add\+\_\+trigger@{add\+\_\+trigger}}
+\index{add\+\_\+trigger@{add\+\_\+trigger}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{add\+\_\+trigger()}{add\_trigger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Trigger\+\_\+chain\+::add\+\_\+trigger (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{\mbox{\hyperlink{classTrigger}{Trigger}} $\ast$}]{new\+\_\+trigger,  }\item[{\mbox{\hyperlink{trigger__def_8h_a7bd30a5993310e0d23d906d26275bd08}{enum\+\_\+trigger\+\_\+order\+\_\+type}}}]{ordering\+\_\+clause,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{referenced\+\_\+trigger\+\_\+name }\end{DoxyParamCaption})}
+
+Add a new trigger into the list of triggers with the same A\+C\+T\+I\+O\+N/\+T\+I\+M\+I\+NG value combination. This method is called during handling of statement C\+R\+E\+A\+TE T\+R\+I\+G\+G\+ER.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & memory root for allocations \\
+\hline
+{\em new\+\_\+trigger} & pointer to the \mbox{\hyperlink{classTrigger}{Trigger}} to add into the list \\
+\hline
+{\em ordering\+\_\+clause} & trigger ordering clause (F\+O\+L\+L\+O\+W\+S/\+P\+R\+E\+C\+E\+D\+ES) \\
+\hline
+{\em referenced\+\_\+trigger\+\_\+name} & trigger name referenced by clause F\+O\+L\+L\+O\+W\+S/\+P\+R\+E\+C\+E\+D\+ES in the C\+R\+E\+A\+TE T\+R\+I\+G\+G\+ER statement\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure\+: either trigger not found or O\+OM. Set error in Diagnostic\+\_\+area in case when trigger not found. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__chain_ad4892d6b679218bfab53ed8c40528e1d}\label{classTrigger__chain_ad4892d6b679218bfab53ed8c40528e1d}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!add\+\_\+trigger@{add\+\_\+trigger}}
+\index{add\+\_\+trigger@{add\+\_\+trigger}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{add\+\_\+trigger()}{add\_trigger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Trigger\+\_\+chain\+::add\+\_\+trigger (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{\mbox{\hyperlink{classTrigger}{Trigger}} $\ast$}]{new\+\_\+trigger }\end{DoxyParamCaption})}
+
+Add a new trigger into the list of triggers with the same A\+C\+T\+I\+O\+N/\+T\+I\+M\+I\+NG value combination. This method is called when a trigger is loaded from Data Dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & memory root for allocations \\
+\hline
+{\em new\+\_\+trigger} & pointer to the \mbox{\hyperlink{classTrigger}{Trigger}} to add into the list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__chain_aad870e1111c5318613bea0fcc36b1f27}\label{classTrigger__chain_aad870e1111c5318613bea0fcc36b1f27}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!execute\+\_\+triggers@{execute\+\_\+triggers}}
+\index{execute\+\_\+triggers@{execute\+\_\+triggers}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{execute\+\_\+triggers()}{execute\_triggers()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+chain\+::execute\+\_\+triggers (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Run every trigger in the list of triggers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of trigger execution 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & all triggers in the list were executed successfully. \\
+\hline
+{\em true} & some trigger was failed. We stop triggers execution on the first failed trigger and don\textquotesingle{}t attempt to finish the rest of triggers located after the failed one. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__chain_a742711c61ef94fb62f01ddb3d9a59678}\label{classTrigger__chain_a742711c61ef94fb62f01ddb3d9a59678}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!get\+\_\+trigger\+\_\+list@{get\+\_\+trigger\+\_\+list}}
+\index{get\+\_\+trigger\+\_\+list@{get\+\_\+trigger\+\_\+list}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{get\+\_\+trigger\+\_\+list()}{get\_trigger\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}}$<$\mbox{\hyperlink{classTrigger}{Trigger}}$>$\& Trigger\+\_\+chain\+::get\+\_\+trigger\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a reference to the list of triggers with the same E\+V\+E\+N\+T/\+A\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME assigned to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTrigger__chain_a3164d154777f1449b64f0460030163f8}\label{classTrigger__chain_a3164d154777f1449b64f0460030163f8}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!has\+\_\+updated\+\_\+trigger\+\_\+fields@{has\+\_\+updated\+\_\+trigger\+\_\+fields}}
+\index{has\+\_\+updated\+\_\+trigger\+\_\+fields@{has\+\_\+updated\+\_\+trigger\+\_\+fields}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{has\+\_\+updated\+\_\+trigger\+\_\+fields()}{has\_updated\_trigger\_fields()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+chain\+::has\+\_\+updated\+\_\+trigger\+\_\+fields (\begin{DoxyParamCaption}\item[{const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{used\+\_\+fields }\end{DoxyParamCaption})}
+
+Iterate over the list of triggers and check whether some table\textquotesingle{}s fields are used in any trigger.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em used\+\_\+fields} & bitmap of fields to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Check result 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Some table fields are used in trigger \\
+\hline
+{\em false} & None of table fields are used in trigger \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__chain_ad54d622b2bff22f44fbeda41a79dccb8}\label{classTrigger__chain_ad54d622b2bff22f44fbeda41a79dccb8}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!mark\+\_\+fields@{mark\+\_\+fields}}
+\index{mark\+\_\+fields@{mark\+\_\+fields}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{mark\+\_\+fields()}{mark\_fields()}}
+{\footnotesize\ttfamily void Trigger\+\_\+chain\+::mark\+\_\+fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{subject\+\_\+table }\end{DoxyParamCaption})}
+
+Iterate over the list of triggers and mark fields of subject table which we read/set in every trigger.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em subject\+\_\+table} & trigger subject table \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTrigger__chain_aca447515b99afd1414d05bb7e83b249e}\label{classTrigger__chain_aca447515b99afd1414d05bb7e83b249e}} 
+\index{Trigger\+\_\+chain@{Trigger\+\_\+chain}!renumerate\+\_\+triggers@{renumerate\+\_\+triggers}}
+\index{renumerate\+\_\+triggers@{renumerate\+\_\+triggers}!Trigger\+\_\+chain@{Trigger\+\_\+chain}}
+\subsubsection{\texorpdfstring{renumerate\+\_\+triggers()}{renumerate\_triggers()}}
+{\footnotesize\ttfamily void Trigger\+\_\+chain\+::renumerate\+\_\+triggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Recalculate action\+\_\+order value for every trigger in the list. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+trigger\+\_\+chain.\+h\item 
+trigger\+\_\+chain.\+cc\end{DoxyCompactItemize}

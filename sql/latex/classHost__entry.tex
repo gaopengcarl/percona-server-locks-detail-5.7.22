@@ -1,0 +1,99 @@
+\hypertarget{classHost__entry}{}\section{Host\+\_\+entry Class Reference}
+\label{classHost__entry}\index{Host\+\_\+entry@{Host\+\_\+entry}}
+
+
+{\ttfamily \#include $<$hostname.\+h$>$}
+
+Inheritance diagram for Host\+\_\+entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHost__entry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHost__entry_a4165b35a8482bc66fe56778ce1eecdb4}\label{classHost__entry_a4165b35a8482bc66fe56778ce1eecdb4}} 
+\mbox{\hyperlink{classHost__entry}{Host\+\_\+entry}} $\ast$ {\bfseries next} ()
+\item 
+\mbox{\Hypertarget{classHost__entry_aefda5dad57d3d0901a65f8a02ec044ab}\label{classHost__entry_aefda5dad57d3d0901a65f8a02ec044ab}} 
+void {\bfseries set\+\_\+error\+\_\+timestamps} (ulonglong now)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classHost__entry_aabff53a5d06c755d5407c1c26491e03c}{ip\+\_\+key}} \mbox{[}H\+O\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+char \mbox{\hyperlink{classHost__entry_ab82ff9a2730608ba8693968ab942a101}{m\+\_\+hostname}} \mbox{[}H\+O\+S\+T\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}
+\item 
+uint \mbox{\hyperlink{classHost__entry_a225b190f07932c379e37ca1b39ada799}{m\+\_\+hostname\+\_\+length}}
+\item 
+bool \mbox{\hyperlink{classHost__entry_a1f04a6fdbcfb6676e8f4af5247ea74a7}{m\+\_\+host\+\_\+validated}}
+\item 
+\mbox{\Hypertarget{classHost__entry_ab5ad25f46ca9439a07aea1fff885120d}\label{classHost__entry_ab5ad25f46ca9439a07aea1fff885120d}} 
+ulonglong {\bfseries m\+\_\+first\+\_\+seen}
+\item 
+\mbox{\Hypertarget{classHost__entry_ae8be913a5367a73e94354cffe0550c93}\label{classHost__entry_ae8be913a5367a73e94354cffe0550c93}} 
+ulonglong {\bfseries m\+\_\+last\+\_\+seen}
+\item 
+\mbox{\Hypertarget{classHost__entry_a728354952144f0a548d334ec582def77}\label{classHost__entry_a728354952144f0a548d334ec582def77}} 
+ulonglong {\bfseries m\+\_\+first\+\_\+error\+\_\+seen}
+\item 
+\mbox{\Hypertarget{classHost__entry_a514aaff1e2c005989a5caba2ba51c0db}\label{classHost__entry_a514aaff1e2c005989a5caba2ba51c0db}} 
+ulonglong {\bfseries m\+\_\+last\+\_\+error\+\_\+seen}
+\item 
+\mbox{\hyperlink{structHost__errors}{Host\+\_\+errors}} \mbox{\hyperlink{classHost__entry_a51ff36508f22615dc5a6d1884beec68e}{m\+\_\+errors}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An entry in the hostname hash table cache.
+
+Host name cache does two things\+:
+\begin{DoxyItemize}
+\item caches host names to save D\+NS look ups;
+\item counts errors from IP.
+\end{DoxyItemize}
+
+Host name can be empty (that means D\+NS look up failed), but errors still are counted. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classHost__entry_aabff53a5d06c755d5407c1c26491e03c}\label{classHost__entry_aabff53a5d06c755d5407c1c26491e03c}} 
+\index{Host\+\_\+entry@{Host\+\_\+entry}!ip\+\_\+key@{ip\+\_\+key}}
+\index{ip\+\_\+key@{ip\+\_\+key}!Host\+\_\+entry@{Host\+\_\+entry}}
+\subsubsection{\texorpdfstring{ip\+\_\+key}{ip\_key}}
+{\footnotesize\ttfamily char Host\+\_\+entry\+::ip\+\_\+key\mbox{[}H\+O\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE\mbox{]}}
+
+Client IP address. This is the key used with the hash table.
+
+The client IP address is always expressed in I\+Pv6, even when the network I\+Pv6 stack is not present.
+
+This IP address is never used to connect to a socket. \mbox{\Hypertarget{classHost__entry_a51ff36508f22615dc5a6d1884beec68e}\label{classHost__entry_a51ff36508f22615dc5a6d1884beec68e}} 
+\index{Host\+\_\+entry@{Host\+\_\+entry}!m\+\_\+errors@{m\+\_\+errors}}
+\index{m\+\_\+errors@{m\+\_\+errors}!Host\+\_\+entry@{Host\+\_\+entry}}
+\subsubsection{\texorpdfstring{m\+\_\+errors}{m\_errors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHost__errors}{Host\+\_\+errors}} Host\+\_\+entry\+::m\+\_\+errors}
+
+Error statistics. \mbox{\Hypertarget{classHost__entry_a1f04a6fdbcfb6676e8f4af5247ea74a7}\label{classHost__entry_a1f04a6fdbcfb6676e8f4af5247ea74a7}} 
+\index{Host\+\_\+entry@{Host\+\_\+entry}!m\+\_\+host\+\_\+validated@{m\+\_\+host\+\_\+validated}}
+\index{m\+\_\+host\+\_\+validated@{m\+\_\+host\+\_\+validated}!Host\+\_\+entry@{Host\+\_\+entry}}
+\subsubsection{\texorpdfstring{m\+\_\+host\+\_\+validated}{m\_host\_validated}}
+{\footnotesize\ttfamily bool Host\+\_\+entry\+::m\+\_\+host\+\_\+validated}
+
+The hostname is validated and used for authorization. \mbox{\Hypertarget{classHost__entry_ab82ff9a2730608ba8693968ab942a101}\label{classHost__entry_ab82ff9a2730608ba8693968ab942a101}} 
+\index{Host\+\_\+entry@{Host\+\_\+entry}!m\+\_\+hostname@{m\+\_\+hostname}}
+\index{m\+\_\+hostname@{m\+\_\+hostname}!Host\+\_\+entry@{Host\+\_\+entry}}
+\subsubsection{\texorpdfstring{m\+\_\+hostname}{m\_hostname}}
+{\footnotesize\ttfamily char Host\+\_\+entry\+::m\+\_\+hostname\mbox{[}H\+O\+S\+T\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}}
+
+One of the host names for the IP address. May be a zero length string. \mbox{\Hypertarget{classHost__entry_a225b190f07932c379e37ca1b39ada799}\label{classHost__entry_a225b190f07932c379e37ca1b39ada799}} 
+\index{Host\+\_\+entry@{Host\+\_\+entry}!m\+\_\+hostname\+\_\+length@{m\+\_\+hostname\+\_\+length}}
+\index{m\+\_\+hostname\+\_\+length@{m\+\_\+hostname\+\_\+length}!Host\+\_\+entry@{Host\+\_\+entry}}
+\subsubsection{\texorpdfstring{m\+\_\+hostname\+\_\+length}{m\_hostname\_length}}
+{\footnotesize\ttfamily uint Host\+\_\+entry\+::m\+\_\+hostname\+\_\+length}
+
+Length in bytes of {\ttfamily m\+\_\+hostname}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+hostname.\+h\end{DoxyCompactItemize}

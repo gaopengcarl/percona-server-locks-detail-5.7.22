@@ -1,0 +1,99 @@
+\hypertarget{classField__bit__as__char}{}\section{Field\+\_\+bit\+\_\+as\+\_\+char Class Reference}
+\label{classField__bit__as__char}\index{Field\+\_\+bit\+\_\+as\+\_\+char@{Field\+\_\+bit\+\_\+as\+\_\+char}}
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for Field\+\_\+bit\+\_\+as\+\_\+char\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classField__bit__as__char}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__bit__as__char_a15e0f78df37bb83bc544000dcfb8a038}\label{classField__bit__as__char_a15e0f78df37bb83bc544000dcfb8a038}} 
+{\bfseries Field\+\_\+bit\+\_\+as\+\_\+char} (uchar $\ast$ptr\+\_\+arg, uint32 len\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__bit__as__char_a3c6d0133a943af816e4cee0f19300481}\label{classField__bit__as__char_a3c6d0133a943af816e4cee0f19300481}} 
+enum ha\+\_\+base\+\_\+keytype {\bfseries key\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField__bit__as__char_a28d18e5be5999cc02d6b39d899825c3a}\label{classField__bit__as__char_a28d18e5be5999cc02d6b39d899825c3a}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (const char $\ast$to, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)
+\item 
+\mbox{\Hypertarget{classField__bit__as__char_af7072e8c816cbdb87449ba66421a1bf6}\label{classField__bit__as__char_af7072e8c816cbdb87449ba66421a1bf6}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (double nr)
+\item 
+\mbox{\Hypertarget{classField__bit__as__char_a0874a0ea85b7d077bd203bcbd920b7e6}\label{classField__bit__as__char_a0874a0ea85b7d077bd203bcbd920b7e6}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (longlong nr, bool unsigned\+\_\+val)
+\item 
+\mbox{\Hypertarget{classField__bit__as__char_a08898aae417eb7e092b75b24009cdfb0}\label{classField__bit__as__char_a08898aae417eb7e092b75b24009cdfb0}} 
+void {\bfseries sql\+\_\+type} (String \&str) const
+\item 
+\mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}} $\ast$ \mbox{\hyperlink{classField__bit__as__char_ad4db0c25fbc5074baf6793daabfe5447}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\item 
+\mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}} $\ast$ \mbox{\hyperlink{classField__bit__as__char_a03166b5ed4492fcb071fd377c4c5e1b8}{clone}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+B\+IT field represented as chars for non-\/My\+I\+S\+AM tables.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000013}{Todo}}]The inheritance relationship is backwards since \mbox{\hyperlink{classField__bit}{Field\+\_\+bit}} is an extended version of \mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}} and not the other way around. Hence, we should refactor it to fix the hierarchy order. \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__bit__as__char_ad4db0c25fbc5074baf6793daabfe5447}\label{classField__bit__as__char_ad4db0c25fbc5074baf6793daabfe5447}} 
+\index{Field\+\_\+bit\+\_\+as\+\_\+char@{Field\+\_\+bit\+\_\+as\+\_\+char}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+bit\+\_\+as\+\_\+char@{Field\+\_\+bit\+\_\+as\+\_\+char}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}}$\ast$ Field\+\_\+bit\+\_\+as\+\_\+char\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT to use for memory allocation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__bit_aeb78600782993f9f9b6eb5b24de2e527}{Field\+\_\+bit}}.
+
+\mbox{\Hypertarget{classField__bit__as__char_a03166b5ed4492fcb071fd377c4c5e1b8}\label{classField__bit__as__char_a03166b5ed4492fcb071fd377c4c5e1b8}} 
+\index{Field\+\_\+bit\+\_\+as\+\_\+char@{Field\+\_\+bit\+\_\+as\+\_\+char}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+bit\+\_\+as\+\_\+char@{Field\+\_\+bit\+\_\+as\+\_\+char}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__bit__as__char}{Field\+\_\+bit\+\_\+as\+\_\+char}}$\ast$ Field\+\_\+bit\+\_\+as\+\_\+char\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__bit_a666845df221e87fbc65c725c232e4afd}{Field\+\_\+bit}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

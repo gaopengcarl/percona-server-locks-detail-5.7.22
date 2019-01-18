@@ -1,0 +1,91 @@
+\hypertarget{classFormat__description__log__event}{}\section{Format\+\_\+description\+\_\+log\+\_\+event Class Reference}
+\label{classFormat__description__log__event}\index{Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Format\+\_\+description\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.947368cm]{classFormat__description__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFormat__description__log__event_a16479166b988fa107634b4626bc38c29}{Format\+\_\+description\+\_\+log\+\_\+event}} (uint8\+\_\+t binlog\+\_\+ver, const char $\ast$server\+\_\+ver=0)
+\item 
+\mbox{\hyperlink{classFormat__description__log__event_a0f616fc36bc7f1f9574195799b1a9db7}{Format\+\_\+description\+\_\+log\+\_\+event}} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_add35992074f191ad40c4a967a898d714}\label{classFormat__description__log__event_add35992074f191ad40c4a967a898d714}} 
+bool {\bfseries header\+\_\+is\+\_\+valid} () const
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_a88b8245fe5ad3deb1307aadb98c242ce}\label{classFormat__description__log__event_a88b8245fe5ad3deb1307aadb98c242ce}} 
+bool {\bfseries version\+\_\+is\+\_\+valid} () const
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_afab29fcff746d8ce8f48dc6e8f301074}\label{classFormat__description__log__event_afab29fcff746d8ce8f48dc6e8f301074}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_a259f9a11c16551453647d9b3c37bc7b7}\label{classFormat__description__log__event_a259f9a11c16551453647d9b3c37bc7b7}} 
+bool {\bfseries start\+\_\+decryption} (\mbox{\hyperlink{classStart__encryption__log__event}{Start\+\_\+encryption\+\_\+log\+\_\+event}} $\ast$sele)
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_ab0c064b50da09ffd9cabbbc3cfaa390a}\label{classFormat__description__log__event_ab0c064b50da09ffd9cabbbc3cfaa390a}} 
+void {\bfseries copy\+\_\+crypto\+\_\+data} (const \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} \&o)
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_a78fef3c9619d3904b8137f95798fc969}\label{classFormat__description__log__event_a78fef3c9619d3904b8137f95798fc969}} 
+void {\bfseries reset\+\_\+crypto} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_a7362dcc6970913d85f379523b2417f18}\label{classFormat__description__log__event_a7362dcc6970913d85f379523b2417f18}} 
+Atomic\+\_\+int32 {\bfseries usage\+\_\+counter}
+\item 
+\mbox{\Hypertarget{classFormat__description__log__event_aae97ddbe81ce0dc0512431735aa84fa6}\label{classFormat__description__log__event_aae97ddbe81ce0dc0512431735aa84fa6}} 
+\mbox{\hyperlink{classBinlog__crypt__data}{Binlog\+\_\+crypt\+\_\+data}} {\bfseries crypto\+\_\+data}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+For binlog version 4. This event is saved by threads which read it, as they need it for future use (to decode the ordinary events). This is the subclass of Format\+\_\+description\+\_\+event\hypertarget{classFormat__description__log__event_Format_description_log_event_binary_format}{}\subsection{Binary Format}\label{classFormat__description__log__event_Format_description_log_event_binary_format}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFormat__description__log__event_a16479166b988fa107634b4626bc38c29}\label{classFormat__description__log__event_a16479166b988fa107634b4626bc38c29}} 
+\index{Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}!Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}}
+\index{Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}!Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{Format\+\_\+description\+\_\+log\+\_\+event()}{Format\_description\_log\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Format\+\_\+description\+\_\+log\+\_\+event\+::\+Format\+\_\+description\+\_\+log\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{binlog\+\_\+ver,  }\item[{const char $\ast$}]{server\+\_\+ver = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} 1st ctor.
+
+Ctor. Can be used to create the event to write to the binary log (when the server starts or when F\+L\+U\+SH L\+O\+GS), or to create artificial events to parse binlogs from My\+S\+QL 3.\+23 or 4.\+x. When in a client, only the 2nd use is possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em binlog\+\_\+version} & the binlog version for which we want to build an event. Can be 1 (=My\+S\+QL 3.\+23), 3 (=4.\+0.\+x x$>$=2 and 4.\+1) or 4 (My\+S\+QL 5.\+0). Note that the old 4.\+0 (binlog version 2) is not supported; it should not be used for replication with 5.\+0. \\
+\hline
+{\em server\+\_\+ver} & a string containing the server version. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFormat__description__log__event_a0f616fc36bc7f1f9574195799b1a9db7}\label{classFormat__description__log__event_a0f616fc36bc7f1f9574195799b1a9db7}} 
+\index{Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}!Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}}
+\index{Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}!Format\+\_\+description\+\_\+log\+\_\+event@{Format\+\_\+description\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{Format\+\_\+description\+\_\+log\+\_\+event()}{Format\_description\_log\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Format\+\_\+description\+\_\+log\+\_\+event\+::\+Format\+\_\+description\+\_\+log\+\_\+event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{uint}]{event\+\_\+len,  }\item[{const Format\+\_\+description\+\_\+event $\ast$}]{description\+\_\+event }\end{DoxyParamCaption})}
+
+The problem with this constructor is that the fixed header may have a length different from this version, but we don\textquotesingle{}t know this length as we have not read the \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} which says it, yet. This length is in the post-\/header of the event, but we don\textquotesingle{}t know where the post-\/header starts.
+
+So this type of event H\+AS to\+:
+\begin{DoxyItemize}
+\item either have the header\textquotesingle{}s length at the beginning (in the header, at a fixed position which will never be changed), not in the post-\/header. That would make the header be \char`\"{}shifted\char`\"{} compared to other events.
+\item or have a header of size L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN (19), in all future versions, so that we know for sure.
+\end{DoxyItemize}
+
+I (Guilhem) chose the 2nd solution. Rotate has the same constraint (because it is sent before \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

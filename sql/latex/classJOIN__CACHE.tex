@@ -1,0 +1,353 @@
+\hypertarget{classJOIN__CACHE}{}\section{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE Class Reference}
+\label{classJOIN__CACHE}\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+Inheritance diagram for J\+O\+I\+N\+\_\+\+C\+A\+C\+HE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classJOIN__CACHE}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classJOIN__CACHE_a74b45254b4573b9531f1b8b536b18e46}{enum\+\_\+join\+\_\+cache\+\_\+type}} \{ {\bfseries A\+L\+G\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries A\+L\+G\+\_\+\+B\+NL} = 1, 
+{\bfseries A\+L\+G\+\_\+\+B\+KA} = 2, 
+{\bfseries A\+L\+G\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE} = 4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classJOIN__CACHE_a1dcdce348bba725c675b327eb90aa924}{init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{group__Query__Optimizer_gad54e309ac7f0fd377d7a422ea54f59f8}{reset\+\_\+cache}} (bool for\+\_\+writing)
+\begin{DoxyCompactList}\small\item\em Reset the join buffer for reading/writing\+: default implementation. \end{DoxyCompactList}\item 
+virtual enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{classJOIN__CACHE_a28c138049387c559d0ea74d7a6fbcfc0}{put\+\_\+record}} ()
+\item 
+virtual bool {\bfseries get\+\_\+record} ()
+\item 
+virtual void {\bfseries get\+\_\+record\+\_\+by\+\_\+pos} (uchar $\ast$rec\+\_\+ptr)
+\item 
+virtual bool {\bfseries get\+\_\+match\+\_\+flag\+\_\+by\+\_\+pos} (uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a5c5a1f4ae6134f06ed6ee9ee922118c1}\label{classJOIN__CACHE_a5c5a1f4ae6134f06ed6ee9ee922118c1}} 
+virtual uchar $\ast$ {\bfseries get\+\_\+curr\+\_\+rec} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a3fe84e0beb101c5168a0d3423782f7e3}\label{classJOIN__CACHE_a3fe84e0beb101c5168a0d3423782f7e3}} 
+virtual void {\bfseries set\+\_\+curr\+\_\+rec\+\_\+link} (uchar $\ast$link)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_af7a91c82224827b7207ac1a991d93814}\label{classJOIN__CACHE_af7a91c82224827b7207ac1a991d93814}} 
+virtual uchar $\ast$ {\bfseries get\+\_\+curr\+\_\+rec\+\_\+link} ()
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{classJOIN__CACHE_a1c3046624063d752fe21c895e13a00c9}{end\+\_\+send}} ()
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries join\+\_\+records} (bool skip\+\_\+last)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_acfa83799aab763263f9d11acb4078a1b}\label{classJOIN__CACHE_acfa83799aab763263f9d11acb4078a1b}} 
+enum\+\_\+op\+\_\+type {\bfseries type} ()
+\item 
+\mbox{\hyperlink{classJOIN__CACHE_aa744a4af8aa982a64f2334b141e63026}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$j, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab\+\_\+arg, \mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} $\ast$prev)
+\item 
+void \mbox{\hyperlink{classJOIN__CACHE_a1607e84802fbf32ca66112ebdd0860b7}{mem\+\_\+free}} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_abaefecd907d3a9cf51fee69144c706f4}\label{classJOIN__CACHE_abaefecd907d3a9cf51fee69144c706f4}} 
+virtual \mbox{\hyperlink{classJOIN__CACHE_a74b45254b4573b9531f1b8b536b18e46}{enum\+\_\+join\+\_\+cache\+\_\+type}} {\bfseries cache\+\_\+type} () const =0
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a1c866097443d5fd6ed5577a656542fa6}\label{classJOIN__CACHE_a1c866097443d5fd6ed5577a656542fa6}} 
+bool {\bfseries is\+\_\+key\+\_\+access} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a5015b4f5a14c83b8515bc64c6f083c1a}\label{classJOIN__CACHE_a5015b4f5a14c83b8515bc64c6f083c1a}} 
+\mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} $\ast$ {\bfseries prev\+\_\+cache}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a44a7a09a84183455665ab6428018dfb6}\label{classJOIN__CACHE_a44a7a09a84183455665ab6428018dfb6}} 
+\mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} $\ast$ {\bfseries next\+\_\+cache}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a5d66a160fcb173db3e0b24a2677e6e3b}\label{classJOIN__CACHE_a5d66a160fcb173db3e0b24a2677e6e3b}} 
+uint {\bfseries offset\+\_\+size} (ulong len)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a9ce4409ededfdada4ad55a713bd39d47}\label{classJOIN__CACHE_a9ce4409ededfdada4ad55a713bd39d47}} 
+ulong {\bfseries get\+\_\+offset} (uint ofs\+\_\+sz, uchar $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a8ea7507e9c4972cd118b4f0691353a92}\label{classJOIN__CACHE_a8ea7507e9c4972cd118b4f0691353a92}} 
+void {\bfseries store\+\_\+offset} (uint ofs\+\_\+sz, uchar $\ast$ptr, ulong ofs)
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gaae89dde6a1925032ade263c27a87529f}{filter\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gabfdf6220265d56c5dc44081d89abc73e}{restore\+\_\+virtual\+\_\+gcol\+\_\+base\+\_\+cols}} ()
+\item 
+void {\bfseries calc\+\_\+record\+\_\+fields} ()
+\item 
+int {\bfseries alloc\+\_\+fields} (uint external\+\_\+fields)
+\item 
+void {\bfseries create\+\_\+flag\+\_\+fields} ()
+\item 
+void {\bfseries create\+\_\+remaining\+\_\+fields} (bool all\+\_\+read\+\_\+fields)
+\item 
+void {\bfseries set\+\_\+constants} ()
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga5932344e1185abf63788970856f45766}{alloc\+\_\+buffer}} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_af4c8a0b375f7859893ce2e0127c238c8}\label{classJOIN__CACHE_af4c8a0b375f7859893ce2e0127c238c8}} 
+uint {\bfseries get\+\_\+size\+\_\+of\+\_\+rec\+\_\+offset} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a93f05d0fb6a15215ced10352faedcd32}\label{classJOIN__CACHE_a93f05d0fb6a15215ced10352faedcd32}} 
+uint {\bfseries get\+\_\+size\+\_\+of\+\_\+rec\+\_\+length} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a9ce576ba02ae80ee38a4b69c04ea8c96}\label{classJOIN__CACHE_a9ce576ba02ae80ee38a4b69c04ea8c96}} 
+uint {\bfseries get\+\_\+size\+\_\+of\+\_\+fld\+\_\+offset} ()
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_aef7d5ccc0f04c2c3e3107bfb5029d83b}\label{classJOIN__CACHE_aef7d5ccc0f04c2c3e3107bfb5029d83b}} 
+uchar $\ast$ {\bfseries get\+\_\+rec\+\_\+ref} (uchar $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_affaaf4cead12696ab71541f92c101549}\label{classJOIN__CACHE_affaaf4cead12696ab71541f92c101549}} 
+ulong {\bfseries get\+\_\+rec\+\_\+length} (uchar $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_ad9ec3f29f7d7a1d965713f7ee6ad433b}\label{classJOIN__CACHE_ad9ec3f29f7d7a1d965713f7ee6ad433b}} 
+ulong {\bfseries get\+\_\+fld\+\_\+offset} (uchar $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_aae06643b31aeae3edf8dd1d995aa210d}\label{classJOIN__CACHE_aae06643b31aeae3edf8dd1d995aa210d}} 
+void {\bfseries store\+\_\+rec\+\_\+ref} (uchar $\ast$ptr, uchar $\ast$ref)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a4fd245ce093975c3958e1171eb504315}\label{classJOIN__CACHE_a4fd245ce093975c3958e1171eb504315}} 
+void {\bfseries store\+\_\+rec\+\_\+length} (uchar $\ast$ptr, ulong len)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_aedd006ee992d43fb217780aaf0a14bcf}\label{classJOIN__CACHE_aedd006ee992d43fb217780aaf0a14bcf}} 
+void {\bfseries store\+\_\+fld\+\_\+offset} (uchar $\ast$ptr, ulong ofs)
+\item 
+uint {\bfseries write\+\_\+record\+\_\+data} (uchar $\ast$link, bool $\ast$is\+\_\+full)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a5ab6de3276d2d9b53e1cac722460a542}\label{classJOIN__CACHE_a5ab6de3276d2d9b53e1cac722460a542}} 
+virtual uint {\bfseries aux\+\_\+buffer\+\_\+incr} ()
+\item 
+virtual uint \mbox{\hyperlink{classJOIN__CACHE_a22f1df0156fa6d176df6d6e6d4b84916}{aux\+\_\+buffer\+\_\+min\+\_\+size}} () const
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a4793b67844966b1aa59a04fea7cdd645}\label{classJOIN__CACHE_a4793b67844966b1aa59a04fea7cdd645}} 
+virtual ulong {\bfseries rem\+\_\+space} ()
+\item 
+virtual bool {\bfseries skip\+\_\+record\+\_\+if\+\_\+match} ()
+\item 
+int \mbox{\hyperlink{group__Query__Optimizer_ga20c8bd509fba4099611e8a7b01c115d8}{read\+\_\+some\+\_\+record\+\_\+fields}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_gafa19cecc5eccee0ff1285c62769daf39}{read\+\_\+some\+\_\+flag\+\_\+fields}} ()
+\item 
+void \mbox{\hyperlink{group__Query__Optimizer_ga812222f5f9eb4a9026c8ce89069ef8d7}{read\+\_\+all\+\_\+flag\+\_\+fields\+\_\+by\+\_\+pos}} (uchar $\ast$rec\+\_\+ptr)
+\item 
+uint {\bfseries read\+\_\+record\+\_\+field} (\mbox{\hyperlink{structst__cache__field}{C\+A\+C\+H\+E\+\_\+\+F\+I\+E\+LD}} $\ast$copy, bool last\+\_\+record)
+\item 
+bool {\bfseries read\+\_\+referenced\+\_\+field} (\mbox{\hyperlink{structst__cache__field}{C\+A\+C\+H\+E\+\_\+\+F\+I\+E\+LD}} $\ast$copy, uchar $\ast$rec\+\_\+ptr, uint $\ast$len)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a25358a8afe91adf6aceb43f246d82b36}\label{classJOIN__CACHE_a25358a8afe91adf6aceb43f246d82b36}} 
+bool {\bfseries blob\+\_\+data\+\_\+is\+\_\+in\+\_\+rec\+\_\+buff} (uchar $\ast$rec\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a85d4345aed8f6ab7651f8cc0e228b307}\label{classJOIN__CACHE_a85d4345aed8f6ab7651f8cc0e228b307}} 
+virtual enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries join\+\_\+matching\+\_\+records} (bool skip\+\_\+last)=0
+\item 
+virtual enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries join\+\_\+null\+\_\+complements} (bool skip\+\_\+last)
+\item 
+virtual void {\bfseries restore\+\_\+last\+\_\+record} ()
+\item 
+bool {\bfseries set\+\_\+match\+\_\+flag\+\_\+if\+\_\+none} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$first\+\_\+inner, uchar $\ast$rec\+\_\+ptr)
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries generate\+\_\+full\+\_\+extensions} (uchar $\ast$rec\+\_\+ptr)
+\item 
+virtual bool {\bfseries check\+\_\+match} (uchar $\ast$rec\+\_\+ptr)
+\item 
+bool \mbox{\hyperlink{group__Query__Optimizer_ga680b1522161dd38adbc48197df3ea115}{calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match}} (const \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$t) const
+\item 
+virtual bool {\bfseries put\+\_\+record\+\_\+in\+\_\+cache} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a2a36bc6e71cf8818bb481636cb513936}\label{classJOIN__CACHE_a2a36bc6e71cf8818bb481636cb513936}} 
+uint {\bfseries length}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a4add8d9301a2a38937ed5c504653cdc3}\label{classJOIN__CACHE_a4add8d9301a2a38937ed5c504653cdc3}} 
+\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$ {\bfseries join}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a9a14543074345ff8ce020be2ba5c49da}\label{classJOIN__CACHE_a9a14543074345ff8ce020be2ba5c49da}} 
+uint {\bfseries tables}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a97ce7d85dcfa94735e9ec8c6c484c4d7}\label{classJOIN__CACHE_a97ce7d85dcfa94735e9ec8c6c484c4d7}} 
+uint {\bfseries fields}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_afa585ddbf24d12cd81fd30cec912952a}\label{classJOIN__CACHE_afa585ddbf24d12cd81fd30cec912952a}} 
+uint {\bfseries flag\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_afb41ab18d29ca439a1b2d49bf7df8235}\label{classJOIN__CACHE_afb41ab18d29ca439a1b2d49bf7df8235}} 
+uint {\bfseries blobs}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a49e5ebb6b8709478b624affac6803f86}\label{classJOIN__CACHE_a49e5ebb6b8709478b624affac6803f86}} 
+uint {\bfseries referenced\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_afb8054322fc1566f0e2d49d003e466a5}\label{classJOIN__CACHE_afb8054322fc1566f0e2d49d003e466a5}} 
+uint {\bfseries data\+\_\+field\+\_\+count}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a782dd7e779cdd30e3cc4f8f4b3a7b8de}\label{classJOIN__CACHE_a782dd7e779cdd30e3cc4f8f4b3a7b8de}} 
+uint {\bfseries data\+\_\+field\+\_\+ptr\+\_\+count}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a88471641a38cac5bc74a28317913a3da}\label{classJOIN__CACHE_a88471641a38cac5bc74a28317913a3da}} 
+\mbox{\hyperlink{structst__cache__field}{C\+A\+C\+H\+E\+\_\+\+F\+I\+E\+LD}} $\ast$ {\bfseries field\+\_\+descr}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_ab08965afeef196c651fb8a2695fbd6cc}\label{classJOIN__CACHE_ab08965afeef196c651fb8a2695fbd6cc}} 
+\mbox{\hyperlink{structst__cache__field}{C\+A\+C\+H\+E\+\_\+\+F\+I\+E\+LD}} $\ast$$\ast$ {\bfseries blob\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_ab228f8d118ea32bd167cc92c116796c3}\label{classJOIN__CACHE_ab228f8d118ea32bd167cc92c116796c3}} 
+bool {\bfseries with\+\_\+match\+\_\+flag}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a619b64d802cb98507ce7dcadf69b4b39}\label{classJOIN__CACHE_a619b64d802cb98507ce7dcadf69b4b39}} 
+bool {\bfseries with\+\_\+length}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_aabb20dfc5c823491753c2bf42edab99b}\label{classJOIN__CACHE_aabb20dfc5c823491753c2bf42edab99b}} 
+uint {\bfseries pack\+\_\+length}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_ac9cbbea9951d0cfbb5c58d5320cdf11e}\label{classJOIN__CACHE_ac9cbbea9951d0cfbb5c58d5320cdf11e}} 
+uint {\bfseries pack\+\_\+length\+\_\+with\+\_\+blob\+\_\+ptrs}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_abe63ca2c1b8d13537ce99c6ade8462c2}\label{classJOIN__CACHE_abe63ca2c1b8d13537ce99c6ade8462c2}} 
+uchar $\ast$ {\bfseries buff}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a562dcbe2b1338bd7c717ee4ad069c5b3}\label{classJOIN__CACHE_a562dcbe2b1338bd7c717ee4ad069c5b3}} 
+ulong {\bfseries buff\+\_\+size}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_ab967e760ff901e84b101e42ec592780b}\label{classJOIN__CACHE_ab967e760ff901e84b101e42ec592780b}} 
+ulong {\bfseries aux\+\_\+buff\+\_\+size}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_ac58b89be952436db36e10ecec8f228ce}\label{classJOIN__CACHE_ac58b89be952436db36e10ecec8f228ce}} 
+uint {\bfseries records}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_aa60d2625f93538098b706b653b9bbc77}\label{classJOIN__CACHE_aa60d2625f93538098b706b653b9bbc77}} 
+uchar $\ast$ {\bfseries pos}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a91106760bd45782ff001d53376342c98}\label{classJOIN__CACHE_a91106760bd45782ff001d53376342c98}} 
+uchar $\ast$ {\bfseries end\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a09897e9c52653094268047511afef739}\label{classJOIN__CACHE_a09897e9c52653094268047511afef739}} 
+uchar $\ast$ {\bfseries curr\+\_\+rec\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a3f3c2b4f8874c4adab87d7cf097b3d69}\label{classJOIN__CACHE_a3f3c2b4f8874c4adab87d7cf097b3d69}} 
+uchar $\ast$ {\bfseries last\+\_\+rec\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a256d41ff25b644e671e8bb9ebdad15fd}\label{classJOIN__CACHE_a256d41ff25b644e671e8bb9ebdad15fd}} 
+bool {\bfseries last\+\_\+rec\+\_\+blob\+\_\+data\+\_\+is\+\_\+in\+\_\+rec\+\_\+buff}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a1e1b2725e13e6b1216bef806225ac698}\label{classJOIN__CACHE_a1e1b2725e13e6b1216bef806225ac698}} 
+uchar $\ast$ {\bfseries curr\+\_\+rec\+\_\+link}
+\item 
+bool \mbox{\hyperlink{classJOIN__CACHE_a552c01e2652d83a8ef05a712e0f6b96c}{check\+\_\+only\+\_\+first\+\_\+match}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a358dca69984f0f9ed3c2343b237cd5c7}\label{classJOIN__CACHE_a358dca69984f0f9ed3c2343b237cd5c7}} 
+class {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+NL}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a00e050ac5d105d8f81e34d64a7859682}\label{classJOIN__CACHE_a00e050ac5d105d8f81e34d64a7859682}} 
+class {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}
+\item 
+\mbox{\Hypertarget{classJOIN__CACHE_a563ef1ff8b5e3d3638cae28f7d3c0a6e}\label{classJOIN__CACHE_a563ef1ff8b5e3d3638cae28f7d3c0a6e}} 
+class {\bfseries J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classJOIN__CACHE_a74b45254b4573b9531f1b8b536b18e46}\label{classJOIN__CACHE_a74b45254b4573b9531f1b8b536b18e46}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!enum\+\_\+join\+\_\+cache\+\_\+type@{enum\+\_\+join\+\_\+cache\+\_\+type}}
+\index{enum\+\_\+join\+\_\+cache\+\_\+type@{enum\+\_\+join\+\_\+cache\+\_\+type}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{enum\+\_\+join\+\_\+cache\+\_\+type}{enum\_join\_cache\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classJOIN__CACHE_a74b45254b4573b9531f1b8b536b18e46}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::enum\+\_\+join\+\_\+cache\+\_\+type}}}
+
+Bits describing cache\textquotesingle{}s type \begin{DoxySeeAlso}{See also}
+setup\+\_\+join\+\_\+buffering() 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJOIN__CACHE_aa744a4af8aa982a64f2334b141e63026}\label{classJOIN__CACHE_aa744a4af8aa982a64f2334b141e63026}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E()}{JOIN\_CACHE()}}
+{\footnotesize\ttfamily J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::\+J\+O\+I\+N\+\_\+\+C\+A\+C\+HE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$}]{j,  }\item[{\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$}]{qep\+\_\+tab\+\_\+arg,  }\item[{\mbox{\hyperlink{classJOIN__CACHE}{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}} $\ast$}]{prev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor creates a join cache, linked or not. The cache is to be used to join table \textquotesingle{}tab\textquotesingle{} to the result of joining the previous tables specified by the \textquotesingle{}j\textquotesingle{} parameter. The parameter \textquotesingle{}prev\textquotesingle{} specifies the previous cache object to which this cache is linked, or N\+U\+LL if this cache is not linked. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJOIN__CACHE_a22f1df0156fa6d176df6d6e6d4b84916}\label{classJOIN__CACHE_a22f1df0156fa6d176df6d6e6d4b84916}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!aux\+\_\+buffer\+\_\+min\+\_\+size@{aux\+\_\+buffer\+\_\+min\+\_\+size}}
+\index{aux\+\_\+buffer\+\_\+min\+\_\+size@{aux\+\_\+buffer\+\_\+min\+\_\+size}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{aux\+\_\+buffer\+\_\+min\+\_\+size()}{aux\_buffer\_min\_size()}}
+{\footnotesize\ttfamily virtual uint J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::aux\+\_\+buffer\+\_\+min\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+This method must determine the minimum size for the auxiliary buffer. If no auxiliary buffer is needed the function should return 0. 
+
+Reimplemented in \mbox{\hyperlink{group__Query__Optimizer_gaef7343f0416360c14c6134867b347c83}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}}.
+
+\mbox{\Hypertarget{classJOIN__CACHE_a1c3046624063d752fe21c895e13a00c9}\label{classJOIN__CACHE_a1c3046624063d752fe21c895e13a00c9}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!end\+\_\+send@{end\+\_\+send}}
+\index{end\+\_\+send@{end\+\_\+send}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{end\+\_\+send()}{end\_send()}}
+{\footnotesize\ttfamily enum\+\_\+nested\+\_\+loop\+\_\+state J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::end\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Finalize records sending. 
+
+Implements \mbox{\hyperlink{classQEP__operation_a4faf706cddaf3ae613fe92434776df5e}{Q\+E\+P\+\_\+operation}}.
+
+\mbox{\Hypertarget{classJOIN__CACHE_a1dcdce348bba725c675b327eb90aa924}\label{classJOIN__CACHE_a1dcdce348bba725c675b327eb90aa924}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!init@{init}}
+\index{init@{init}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual int J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initialize operation\textquotesingle{}s internal state. Called once per query execution. 
+
+Reimplemented from \mbox{\hyperlink{classQEP__operation_a27930ae9c3ab63a046135704707190fa}{Q\+E\+P\+\_\+operation}}.
+
+
+
+Implemented in \mbox{\hyperlink{group__Query__Optimizer_gaa7ca6a85294c32bac8c69bea0c4e5fe1}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+K\+A\+\_\+\+U\+N\+I\+Q\+UE}}, \mbox{\hyperlink{group__Query__Optimizer_ga327376f63198bf31a770fb89242d49aa}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+KA}}, and \mbox{\hyperlink{group__Query__Optimizer_gab3dbb0f8b69dc30985e0d9a0ff94121f}{J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+\_\+\+B\+NL}}.
+
+\mbox{\Hypertarget{classJOIN__CACHE_a1607e84802fbf32ca66112ebdd0860b7}\label{classJOIN__CACHE_a1607e84802fbf32ca66112ebdd0860b7}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!mem\+\_\+free@{mem\+\_\+free}}
+\index{mem\+\_\+free@{mem\+\_\+free}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{mem\+\_\+free()}{mem\_free()}}
+{\footnotesize\ttfamily void J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::mem\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Internal state cleanup. 
+
+Reimplemented from \mbox{\hyperlink{classQEP__operation_a5a3acf4022e1369ca5eadef33f61ac80}{Q\+E\+P\+\_\+operation}}.
+
+\mbox{\Hypertarget{classJOIN__CACHE_a28c138049387c559d0ea74d7a6fbcfc0}\label{classJOIN__CACHE_a28c138049387c559d0ea74d7a6fbcfc0}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!put\+\_\+record@{put\+\_\+record}}
+\index{put\+\_\+record@{put\+\_\+record}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{put\+\_\+record()}{put\_record()}}
+{\footnotesize\ttfamily virtual enum\+\_\+nested\+\_\+loop\+\_\+state J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::put\+\_\+record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Put a new record into the operation\textquotesingle{}s buffer \begin{DoxyReturn}{Returns}
+return one of enum\+\_\+nested\+\_\+loop\+\_\+state values. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classQEP__operation_af7cac289b2b1a38349cc27e8a4ff7597}{Q\+E\+P\+\_\+operation}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJOIN__CACHE_a552c01e2652d83a8ef05a712e0f6b96c}\label{classJOIN__CACHE_a552c01e2652d83a8ef05a712e0f6b96c}} 
+\index{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}!check\+\_\+only\+\_\+first\+\_\+match@{check\+\_\+only\+\_\+first\+\_\+match}}
+\index{check\+\_\+only\+\_\+first\+\_\+match@{check\+\_\+only\+\_\+first\+\_\+match}!J\+O\+I\+N\+\_\+\+C\+A\+C\+HE@{J\+O\+I\+N\+\_\+\+C\+A\+C\+HE}}
+\subsubsection{\texorpdfstring{check\+\_\+only\+\_\+first\+\_\+match}{check\_only\_first\_match}}
+{\footnotesize\ttfamily bool J\+O\+I\+N\+\_\+\+C\+A\+C\+H\+E\+::check\+\_\+only\+\_\+first\+\_\+match\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cached value of calc\+\_\+check\+\_\+only\+\_\+first\+\_\+match(join\+\_\+tab) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+join\+\_\+buffer.\+h\item 
+\mbox{\hyperlink{sql__join__buffer_8cc}{sql\+\_\+join\+\_\+buffer.\+cc}}\end{DoxyCompactItemize}

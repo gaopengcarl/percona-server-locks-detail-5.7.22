@@ -1,0 +1,87 @@
+\hypertarget{classFile__command__iterator}{}\section{File\+\_\+command\+\_\+iterator Class Reference}
+\label{classFile__command__iterator}\index{File\+\_\+command\+\_\+iterator@{File\+\_\+command\+\_\+iterator}}
+
+
+{\ttfamily \#include $<$bootstrap\+\_\+impl.\+h$>$}
+
+Inheritance diagram for File\+\_\+command\+\_\+iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFile__command__iterator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFile__command__iterator_a1438f925113adef2c2d1f5855f0a6869}\label{classFile__command__iterator_a1438f925113adef2c2d1f5855f0a6869}} 
+{\bfseries File\+\_\+command\+\_\+iterator} (fgets\+\_\+input\+\_\+t input, fgets\+\_\+fn\+\_\+t fgets\+\_\+fn)
+\item 
+\mbox{\Hypertarget{classFile__command__iterator_a58373a843a9019cd442a9f3a8e3e4af0}\label{classFile__command__iterator_a58373a843a9019cd442a9f3a8e3e4af0}} 
+{\bfseries File\+\_\+command\+\_\+iterator} (const char $\ast$file\+\_\+name)
+\item 
+int \mbox{\hyperlink{classFile__command__iterator_a62064b6e416813b4f998a3ac654b6f5f}{next}} (std\+::string \&query, int $\ast$read\+\_\+error, int $\ast$query\+\_\+source)
+\item 
+void \mbox{\hyperlink{classFile__command__iterator_ad12ce1809b043f8966fcab2e70e1a1dd}{end}} (void)
+\item 
+\mbox{\Hypertarget{classFile__command__iterator_a302d0158f8f50096d67fa2a5b206a2c3}\label{classFile__command__iterator_a302d0158f8f50096d67fa2a5b206a2c3}} 
+bool {\bfseries has\+\_\+file} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFile__command__iterator_a1a8b95dfcf0cebe2d373582be0071184}\label{classFile__command__iterator_a1a8b95dfcf0cebe2d373582be0071184}} 
+fgets\+\_\+input\+\_\+t {\bfseries m\+\_\+input}
+\item 
+\mbox{\Hypertarget{classFile__command__iterator_ab56af1872b6b6ddea2728d5ed5c3b3f4}\label{classFile__command__iterator_ab56af1872b6b6ddea2728d5ed5c3b3f4}} 
+fgets\+\_\+fn\+\_\+t {\bfseries m\+\_\+fgets\+\_\+fn}
+\item 
+\mbox{\Hypertarget{classFile__command__iterator_af5bd70cc6f28f04cc3efcd4fceed4f58}\label{classFile__command__iterator_af5bd70cc6f28f04cc3efcd4fceed4f58}} 
+bool {\bfseries is\+\_\+allocated}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+File bootstrap command reader 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFile__command__iterator_ad12ce1809b043f8966fcab2e70e1a1dd}\label{classFile__command__iterator_ad12ce1809b043f8966fcab2e70e1a1dd}} 
+\index{File\+\_\+command\+\_\+iterator@{File\+\_\+command\+\_\+iterator}!end@{end}}
+\index{end@{end}!File\+\_\+command\+\_\+iterator@{File\+\_\+command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void File\+\_\+command\+\_\+iterator\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+end processing the iterator 
+
+Reimplemented from \mbox{\hyperlink{classCommand__iterator_a564873043bc5c6e7f13916042ce320a3}{Command\+\_\+iterator}}.
+
+\mbox{\Hypertarget{classFile__command__iterator_a62064b6e416813b4f998a3ac654b6f5f}\label{classFile__command__iterator_a62064b6e416813b4f998a3ac654b6f5f}} 
+\index{File\+\_\+command\+\_\+iterator@{File\+\_\+command\+\_\+iterator}!next@{next}}
+\index{next@{next}!File\+\_\+command\+\_\+iterator@{File\+\_\+command\+\_\+iterator}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily int File\+\_\+command\+\_\+iterator\+::next (\begin{DoxyParamCaption}\item[{std\+::string \&}]{query,  }\item[{int $\ast$}]{read\+\_\+error,  }\item[{int $\ast$}]{query\+\_\+source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the next query string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em query} & return the query \\
+\hline
+\mbox{\texttt{ out}}  & {\em read\+\_\+error} & return the read error code \\
+\hline
+\mbox{\texttt{ out}}  & {\em query\+\_\+source} & return the source of the query (if it is from a file or a compiled one). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+one of the R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+S\+T\+R\+AP 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCommand__iterator_a582d0107e22598ec30aa7edcb8579f06}{Command\+\_\+iterator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bootstrap\+\_\+impl.\+h\item 
+bootstrap.\+cc\end{DoxyCompactItemize}

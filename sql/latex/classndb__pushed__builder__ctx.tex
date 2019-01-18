@@ -1,0 +1,62 @@
+\hypertarget{classndb__pushed__builder__ctx}{}\section{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx Class Reference}
+\label{classndb__pushed__builder__ctx}\index{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}}
+
+
+{\ttfamily \#include $<$ha\+\_\+ndbcluster\+\_\+push.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classndb__pushed__builder__ctx_aeaeb480eb16ba0f713d151e0140b284d}{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}} (const \mbox{\hyperlink{classAQP_1_1Join__plan}{A\+Q\+P\+::\+Join\+\_\+plan}} \&plan)
+\item 
+int \mbox{\hyperlink{classndb__pushed__builder__ctx_a9472b36f6733ba8df3f8fd2563025cb1}{make\+\_\+pushed\+\_\+join}} (const \mbox{\hyperlink{classAQP_1_1Table__access}{A\+Q\+P\+::\+Table\+\_\+access}} $\ast$join\+\_\+root, const \mbox{\hyperlink{classndb__pushed__join}{ndb\+\_\+pushed\+\_\+join}} $\ast$\&pushed\+\_\+join)
+\item 
+\mbox{\Hypertarget{classndb__pushed__builder__ctx_a944f64d4d67eb15ce7ad46b03a478b44}\label{classndb__pushed__builder__ctx_a944f64d4d67eb15ce7ad46b03a478b44}} 
+const Ndb\+Error \& {\bfseries get\+Ndb\+Error} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the context and helper methods used during \+::make\+\_\+pushed\+\_\+join().
+
+Interacts with the \mbox{\hyperlink{namespaceAQP}{A\+QP}} which provides interface to the query prepared by the mysqld optimizer.
+
+Execution plans built for pushed joins are stored inside this builder context. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classndb__pushed__builder__ctx_aeaeb480eb16ba0f713d151e0140b284d}\label{classndb__pushed__builder__ctx_aeaeb480eb16ba0f713d151e0140b284d}} 
+\index{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}!ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}}
+\index{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}!ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}}
+\subsubsection{\texorpdfstring{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx()}{ndb\_pushed\_builder\_ctx()}}
+{\footnotesize\ttfamily ndb\+\_\+pushed\+\_\+builder\+\_\+ctx\+::ndb\+\_\+pushed\+\_\+builder\+\_\+ctx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAQP_1_1Join__plan}{A\+Q\+P\+::\+Join\+\_\+plan}} \&}]{plan }\end{DoxyParamCaption})}
+
+First\+Match algorithm may skip further nested-\/loop evaluation if this, and possible a number of previous tables. Aggregate into the bitmap \textquotesingle{}m\+\_\+firstmatch\+\_\+skipped\textquotesingle{} those tables which \textquotesingle{}First\+Match\textquotesingle{} usage may possible skip.
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classndb__pushed__builder__ctx_a9472b36f6733ba8df3f8fd2563025cb1}\label{classndb__pushed__builder__ctx_a9472b36f6733ba8df3f8fd2563025cb1}} 
+\index{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}!make\+\_\+pushed\+\_\+join@{make\+\_\+pushed\+\_\+join}}
+\index{make\+\_\+pushed\+\_\+join@{make\+\_\+pushed\+\_\+join}!ndb\+\_\+pushed\+\_\+builder\+\_\+ctx@{ndb\+\_\+pushed\+\_\+builder\+\_\+ctx}}
+\subsubsection{\texorpdfstring{make\+\_\+pushed\+\_\+join()}{make\_pushed\_join()}}
+{\footnotesize\ttfamily int ndb\+\_\+pushed\+\_\+builder\+\_\+ctx\+::make\+\_\+pushed\+\_\+join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAQP_1_1Table__access}{A\+Q\+P\+::\+Table\+\_\+access}} $\ast$}]{join\+\_\+root,  }\item[{const \mbox{\hyperlink{classndb__pushed__join}{ndb\+\_\+pushed\+\_\+join}} $\ast$\&}]{pushed\+\_\+join }\end{DoxyParamCaption})}
+
+Build the pushed query identified with \textquotesingle{}is\+\_\+pushable\+\_\+with\+\_\+root()\textquotesingle{}. Returns\+: = 0\+: A Ndb\+Query\+Def has successfully been prepared for execution. \begin{quote}
+0\+: Returned value is the error code. \end{quote}
+$<$ 0\+: There is a pending Ndb\+Error to be retrieved with get\+Ndb\+Error()
+
+Main entry point to build a pushed join having \textquotesingle{}join\+\_\+root\textquotesingle{} as it first operation.
+
+If the root operation is pushable, we append as many \textquotesingle{}child\textquotesingle{} operations as possible to the pushed join.
+
+This currently is implemented as a 3 pass algorithm\+:
+
+1) Analyze each child and add it to \textquotesingle{}m\+\_\+join\+\_\+scope\textquotesingle{} as \textquotesingle{}pushable\textquotesingle{} if it qualifies as such. Part of this phase is also calculations of possible parents for each table.
+
+2) Determine the parent to be used among the set of possible parents. This is decided based on simple heuristic where the goal is to employ filters as soon as possible, ~\newline
+ reduce the fanout of intermediate results, and utilize the parallelism of the S\+PJ block whenever considdered optimal.
+
+3) Build the pushed query. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ha\+\_\+ndbcluster\+\_\+push.\+h\item 
+\mbox{\hyperlink{ha__ndbcluster__push_8cc}{ha\+\_\+ndbcluster\+\_\+push.\+cc}}\end{DoxyCompactItemize}

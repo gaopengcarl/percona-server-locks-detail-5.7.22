@@ -1,0 +1,52 @@
+\hypertarget{classParse__tree__item}{}\section{Parse\+\_\+tree\+\_\+item Class Reference}
+\label{classParse__tree__item}\index{Parse\+\_\+tree\+\_\+item@{Parse\+\_\+tree\+\_\+item}}
+
+
+{\ttfamily \#include $<$parse\+\_\+tree\+\_\+helpers.\+h$>$}
+
+Inheritance diagram for Parse\+\_\+tree\+\_\+item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classParse__tree__item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classParse__tree__item_a0af43b6c94d651e909b56aad92467202}\label{classParse__tree__item_a0af43b6c94d651e909b56aad92467202}} 
+{\bfseries Parse\+\_\+tree\+\_\+item} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos)
+\item 
+\mbox{\Hypertarget{classParse__tree__item_a63f3bc004c75d6dc220730cd8219c268}\label{classParse__tree__item_a63f3bc004c75d6dc220730cd8219c268}} 
+virtual enum Type {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classParse__tree__item_aaf38f93d9f4c1472f60afa39eaba17b2}\label{classParse__tree__item_aaf38f93d9f4c1472f60afa39eaba17b2}} 
+virtual double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classParse__tree__item_acc428d847f7f390b966d167544ced742}\label{classParse__tree__item_acc428d847f7f390b966d167544ced742}} 
+virtual longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classParse__tree__item_ac3990d56081709844706a18d53058c18}\label{classParse__tree__item_ac3990d56081709844706a18d53058c18}} 
+virtual String $\ast$ {\bfseries val\+\_\+str} (String $\ast$)
+\item 
+\mbox{\Hypertarget{classParse__tree__item_ad3978b085e6cb8b35cc8d682f752d080}\label{classParse__tree__item_ad3978b085e6cb8b35cc8d682f752d080}} 
+virtual \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classParse__tree__item_a5f2167862dd9786d519494fa4d57bf1d}\label{classParse__tree__item_a5f2167862dd9786d519494fa4d57bf1d}} 
+virtual bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$, uint)
+\item 
+\mbox{\Hypertarget{classParse__tree__item_a2480caf958e38250638dacef485a8cf3}\label{classParse__tree__item_a2480caf958e38250638dacef485a8cf3}} 
+virtual bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for parse-\/time \mbox{\hyperlink{classItem}{Item}} objects
+
+Parse-\/time \mbox{\hyperlink{classItem}{Item}} objects are placeholders for real \mbox{\hyperlink{classItem}{Item}} objects\+: in some cases it is not easy or even possible to decide what exact \mbox{\hyperlink{classItem}{Item}} class object we need to allocate in the parser. Parse-\/time \mbox{\hyperlink{classItem}{Item}} objects are intended to defer real \mbox{\hyperlink{classItem}{Item}} object allocation to the contextualization phase (see the \mbox{\hyperlink{classItem_a0757839d09aa77bfd92bfe071f257ae9}{Item\+::itemize()}} function).
+
+This wrapper class overrides abstract virtual functions of the parent class with dummy wrappers to make C++ compiler happy. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+parse\+\_\+tree\+\_\+helpers.\+h\end{DoxyCompactItemize}

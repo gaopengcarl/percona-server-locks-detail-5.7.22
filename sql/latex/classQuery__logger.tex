@@ -1,0 +1,235 @@
+\hypertarget{classQuery__logger}{}\section{Query\+\_\+logger Class Reference}
+\label{classQuery__logger}\index{Query\+\_\+logger@{Query\+\_\+logger}}
+
+
+{\ttfamily \#include $<$log.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classQuery__logger_aeb50a144282abf8f9e7e5a52c11652bb}{is\+\_\+log\+\_\+table\+\_\+enabled}} (enum\+\_\+log\+\_\+table\+\_\+type log\+\_\+type) const
+\item 
+bool \mbox{\hyperlink{classQuery__logger_a020a7d8f94622d7bb588417892d6a1be}{is\+\_\+log\+\_\+file\+\_\+enabled}} (enum\+\_\+log\+\_\+table\+\_\+type log\+\_\+type) const
+\item 
+void \mbox{\hyperlink{classQuery__logger_aeedec814a8f8ccdef7f269707013b50e}{init}} ()
+\item 
+void \mbox{\hyperlink{classQuery__logger_a83604951e8caedf803872ce838305369}{cleanup}} ()
+\item 
+bool \mbox{\hyperlink{classQuery__logger_a52e6c9bf61b1518100757d14df97e500}{slow\+\_\+log\+\_\+write}} (T\+HD $\ast$thd, const char $\ast$query, size\+\_\+t query\+\_\+length)
+\item 
+bool \mbox{\hyperlink{classQuery__logger_a82f8c617a555e6263eea00b84149f8c9}{general\+\_\+log\+\_\+print}} (T\+HD $\ast$thd, enum\+\_\+server\+\_\+command command, const char $\ast$format,...)
+\item 
+bool \mbox{\hyperlink{classQuery__logger_a4d0e99459ac6b1b51b96a028c87f560b}{general\+\_\+log\+\_\+write}} (T\+HD $\ast$thd, enum\+\_\+server\+\_\+command command, const char $\ast$query, size\+\_\+t query\+\_\+length)
+\item 
+void \mbox{\hyperlink{classQuery__logger_abdae239f31748b1d940e44caadff77d7}{set\+\_\+handlers}} (ulonglong log\+\_\+printer)
+\item 
+bool \mbox{\hyperlink{classQuery__logger_a5dcb287949aabb21bd0b0f4b6caab8c5}{activate\+\_\+log\+\_\+handler}} (T\+HD $\ast$thd, enum\+\_\+log\+\_\+table\+\_\+type log\+\_\+type)
+\item 
+void \mbox{\hyperlink{classQuery__logger_a8a25076c9d7c8141776fc952ba126f9d}{deactivate\+\_\+log\+\_\+handler}} (enum\+\_\+log\+\_\+table\+\_\+type log\+\_\+type)
+\item 
+bool \mbox{\hyperlink{classQuery__logger_a7c11871e7aed4b78ed6201132d68f86e}{reopen\+\_\+log\+\_\+file}} (enum\+\_\+log\+\_\+table\+\_\+type log\+\_\+type)
+\item 
+enum\+\_\+log\+\_\+table\+\_\+type \mbox{\hyperlink{classQuery__logger_a08eb38503047a4778a376c38c8a227e3}{check\+\_\+if\+\_\+log\+\_\+table}} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table\+\_\+list, bool check\+\_\+if\+\_\+opened) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which manages slow and general log event handlers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuery__logger_a5dcb287949aabb21bd0b0f4b6caab8c5}\label{classQuery__logger_a5dcb287949aabb21bd0b0f4b6caab8c5}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!activate\+\_\+log\+\_\+handler@{activate\+\_\+log\+\_\+handler}}
+\index{activate\+\_\+log\+\_\+handler@{activate\+\_\+log\+\_\+handler}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{activate\+\_\+log\+\_\+handler()}{activate\_log\_handler()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::activate\+\_\+log\+\_\+handler (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+log\+\_\+table\+\_\+type}]{log\+\_\+type }\end{DoxyParamCaption})}
+
+Activate log handlers for the given log type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+{\em log\+\_\+type} & Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if error, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__logger_a08eb38503047a4778a376c38c8a227e3}\label{classQuery__logger_a08eb38503047a4778a376c38c8a227e3}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!check\+\_\+if\+\_\+log\+\_\+table@{check\+\_\+if\+\_\+log\+\_\+table}}
+\index{check\+\_\+if\+\_\+log\+\_\+table@{check\+\_\+if\+\_\+log\+\_\+table}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{check\+\_\+if\+\_\+log\+\_\+table()}{check\_if\_log\_table()}}
+{\footnotesize\ttfamily enum\+\_\+log\+\_\+table\+\_\+type Query\+\_\+logger\+::check\+\_\+if\+\_\+log\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table\+\_\+list,  }\item[{bool}]{check\+\_\+if\+\_\+opened }\end{DoxyParamCaption}) const}
+
+Check if given \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} has a query log table name and optionally check if the query log is currently enabled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+list} & \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} representing the table to check \\
+\hline
+{\em check\+\_\+if\+\_\+opened} & Always return Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+N\+O\+NE unless the query log table is enabled.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+N\+O\+NE,Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW} & or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classQuery__logger_a83604951e8caedf803872ce838305369}\label{classQuery__logger_a83604951e8caedf803872ce838305369}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Query\+\_\+logger\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free memory. Nothing could be logged after this function is called. \mbox{\Hypertarget{classQuery__logger_a8a25076c9d7c8141776fc952ba126f9d}\label{classQuery__logger_a8a25076c9d7c8141776fc952ba126f9d}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!deactivate\+\_\+log\+\_\+handler@{deactivate\+\_\+log\+\_\+handler}}
+\index{deactivate\+\_\+log\+\_\+handler@{deactivate\+\_\+log\+\_\+handler}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{deactivate\+\_\+log\+\_\+handler()}{deactivate\_log\_handler()}}
+{\footnotesize\ttfamily void Query\+\_\+logger\+::deactivate\+\_\+log\+\_\+handler (\begin{DoxyParamCaption}\item[{enum\+\_\+log\+\_\+table\+\_\+type}]{log\+\_\+type }\end{DoxyParamCaption})}
+
+Close file log for the given log type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+type} & Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuery__logger_a82f8c617a555e6263eea00b84149f8c9}\label{classQuery__logger_a82f8c617a555e6263eea00b84149f8c9}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!general\+\_\+log\+\_\+print@{general\+\_\+log\+\_\+print}}
+\index{general\+\_\+log\+\_\+print@{general\+\_\+log\+\_\+print}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{general\+\_\+log\+\_\+print()}{general\_log\_print()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::general\+\_\+log\+\_\+print (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+server\+\_\+command}]{command,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Write printf style message to general query log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD of the statement being logged. \\
+\hline
+{\em command} & C\+OM of statement being logged. \\
+\hline
+{\em format} & Printf style format of message. \\
+\hline
+{\em ...} & Printf parameters to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if error, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__logger_a4d0e99459ac6b1b51b96a028c87f560b}\label{classQuery__logger_a4d0e99459ac6b1b51b96a028c87f560b}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!general\+\_\+log\+\_\+write@{general\+\_\+log\+\_\+write}}
+\index{general\+\_\+log\+\_\+write@{general\+\_\+log\+\_\+write}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{general\+\_\+log\+\_\+write()}{general\_log\_write()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::general\+\_\+log\+\_\+write (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+server\+\_\+command}]{command,  }\item[{const char $\ast$}]{query,  }\item[{size\+\_\+t}]{query\+\_\+length }\end{DoxyParamCaption})}
+
+Write query to general query log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD of the statement being logged. \\
+\hline
+{\em command} & C\+OM of statement being logged. \\
+\hline
+{\em query} & The query string being logged. \\
+\hline
+{\em query\+\_\+length} & The length of the query string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if error, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__logger_aeedec814a8f8ccdef7f269707013b50e}\label{classQuery__logger_aeedec814a8f8ccdef7f269707013b50e}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!init@{init}}
+\index{init@{init}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Query\+\_\+logger\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Perform basic log initialization\+: create file-\/based log handler.
+
+We want to initialize all log mutexes as soon as possible, but we cannot do it in constructor, as safe\+\_\+mutex relies on initialization, performed by M\+Y\+\_\+\+I\+N\+I\+T(). This why this is done in this function. \mbox{\Hypertarget{classQuery__logger_a020a7d8f94622d7bb588417892d6a1be}\label{classQuery__logger_a020a7d8f94622d7bb588417892d6a1be}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!is\+\_\+log\+\_\+file\+\_\+enabled@{is\+\_\+log\+\_\+file\+\_\+enabled}}
+\index{is\+\_\+log\+\_\+file\+\_\+enabled@{is\+\_\+log\+\_\+file\+\_\+enabled}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{is\+\_\+log\+\_\+file\+\_\+enabled()}{is\_log\_file\_enabled()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::is\+\_\+log\+\_\+file\+\_\+enabled (\begin{DoxyParamCaption}\item[{enum\+\_\+log\+\_\+table\+\_\+type}]{log\+\_\+type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if file logging is turned on for the given log type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+type} & Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file logging is on, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__logger_aeb50a144282abf8f9e7e5a52c11652bb}\label{classQuery__logger_aeb50a144282abf8f9e7e5a52c11652bb}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!is\+\_\+log\+\_\+table\+\_\+enabled@{is\+\_\+log\+\_\+table\+\_\+enabled}}
+\index{is\+\_\+log\+\_\+table\+\_\+enabled@{is\+\_\+log\+\_\+table\+\_\+enabled}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{is\+\_\+log\+\_\+table\+\_\+enabled()}{is\_log\_table\_enabled()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::is\+\_\+log\+\_\+table\+\_\+enabled (\begin{DoxyParamCaption}\item[{enum\+\_\+log\+\_\+table\+\_\+type}]{log\+\_\+type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if table logging is turned on for the given log\+\_\+type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+type} & Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if table logging is on, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuery__logger_a7c11871e7aed4b78ed6201132d68f86e}\label{classQuery__logger_a7c11871e7aed4b78ed6201132d68f86e}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!reopen\+\_\+log\+\_\+file@{reopen\+\_\+log\+\_\+file}}
+\index{reopen\+\_\+log\+\_\+file@{reopen\+\_\+log\+\_\+file}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{reopen\+\_\+log\+\_\+file()}{reopen\_log\_file()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::reopen\+\_\+log\+\_\+file (\begin{DoxyParamCaption}\item[{enum\+\_\+log\+\_\+table\+\_\+type}]{log\+\_\+type }\end{DoxyParamCaption})}
+
+Close file log for the given log type and the reopen it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+type} & Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuery__logger_abdae239f31748b1d940e44caadff77d7}\label{classQuery__logger_abdae239f31748b1d940e44caadff77d7}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!set\+\_\+handlers@{set\+\_\+handlers}}
+\index{set\+\_\+handlers@{set\+\_\+handlers}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{set\+\_\+handlers()}{set\_handlers()}}
+{\footnotesize\ttfamily void Query\+\_\+logger\+::set\+\_\+handlers (\begin{DoxyParamCaption}\item[{ulonglong}]{log\+\_\+printer }\end{DoxyParamCaption})}
+
+Enable log event handlers for slow/general log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+printer} & Bitmask of log event handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Acceptable values are L\+O\+G\+\_\+\+N\+O\+NE, L\+O\+G\+\_\+\+F\+I\+LE, L\+O\+G\+\_\+\+T\+A\+B\+LE 
+\end{DoxyNote}
+\mbox{\Hypertarget{classQuery__logger_a52e6c9bf61b1518100757d14df97e500}\label{classQuery__logger_a52e6c9bf61b1518100757d14df97e500}} 
+\index{Query\+\_\+logger@{Query\+\_\+logger}!slow\+\_\+log\+\_\+write@{slow\+\_\+log\+\_\+write}}
+\index{slow\+\_\+log\+\_\+write@{slow\+\_\+log\+\_\+write}!Query\+\_\+logger@{Query\+\_\+logger}}
+\subsubsection{\texorpdfstring{slow\+\_\+log\+\_\+write()}{slow\_log\_write()}}
+{\footnotesize\ttfamily bool Query\+\_\+logger\+::slow\+\_\+log\+\_\+write (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{query,  }\item[{size\+\_\+t}]{query\+\_\+length }\end{DoxyParamCaption})}
+
+Log slow query with all enabled log event handlers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & T\+HD of the statement being logged. \\
+\hline
+{\em query} & The query string being logged. \\
+\hline
+{\em query\+\_\+length} & The length of the query string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if error, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+log.\+h\item 
+\mbox{\hyperlink{log_8cc}{log.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{classTime__zone__utc}{}\section{Time\+\_\+zone\+\_\+utc Class Reference}
+\label{classTime__zone__utc}\index{Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}}
+Inheritance diagram for Time\+\_\+zone\+\_\+utc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTime__zone__utc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual my\+\_\+time\+\_\+t \mbox{\hyperlink{classTime__zone__utc_afe855f8afb56db1da43edd51b2340ad6}{T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec}} (const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$t, my\+\_\+bool $\ast$in\+\_\+dst\+\_\+time\+\_\+gap) const
+\item 
+virtual void \mbox{\hyperlink{classTime__zone__utc_a7232c037e186e31d60dc46fda88541a9}{gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+ME}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$tmp, my\+\_\+time\+\_\+t t) const
+\item 
+virtual const String $\ast$ \mbox{\hyperlink{classTime__zone__utc_ae9e3ff6abe408adbb9005540ffee605c}{get\+\_\+name}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTime__zone__utc_ae9e3ff6abe408adbb9005540ffee605c}\label{classTime__zone__utc_ae9e3ff6abe408adbb9005540ffee605c}} 
+\index{Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily const String $\ast$ Time\+\_\+zone\+\_\+utc\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Because of constness of String returned by \mbox{\hyperlink{classTime__zone__utc_ae9e3ff6abe408adbb9005540ffee605c}{get\+\_\+name()}} time zone name have to be already zeroended to be able to use String\+::ptr() instead of c\+\_\+ptr(). 
+
+Implements \mbox{\hyperlink{classTime__zone_a8116436f7b8e19dc4b99cd78a786e47f}{Time\+\_\+zone}}.
+
+\mbox{\Hypertarget{classTime__zone__utc_a7232c037e186e31d60dc46fda88541a9}\label{classTime__zone__utc_a7232c037e186e31d60dc46fda88541a9}} 
+\index{Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}!gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+ME@{gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+ME}}
+\index{gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+ME@{gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+ME}!Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}}
+\subsubsection{\texorpdfstring{gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+M\+E()}{gmt\_sec\_to\_TIME()}}
+{\footnotesize\ttfamily void Time\+\_\+zone\+\_\+utc\+::gmt\+\_\+sec\+\_\+to\+\_\+\+T\+I\+ME (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{tmp,  }\item[{my\+\_\+time\+\_\+t}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Converts time in my\+\_\+time\+\_\+t representation to local time in broken down M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME representation. 
+
+Implements \mbox{\hyperlink{classTime__zone_a7a15d4406de10928f8e39eb3549770a4}{Time\+\_\+zone}}.
+
+\mbox{\Hypertarget{classTime__zone__utc_afe855f8afb56db1da43edd51b2340ad6}\label{classTime__zone__utc_afe855f8afb56db1da43edd51b2340ad6}} 
+\index{Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}!T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec@{T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec}}
+\index{T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec@{T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec}!Time\+\_\+zone\+\_\+utc@{Time\+\_\+zone\+\_\+utc}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec()}{TIME\_to\_gmt\_sec()}}
+{\footnotesize\ttfamily my\+\_\+time\+\_\+t Time\+\_\+zone\+\_\+utc\+::\+T\+I\+M\+E\+\_\+to\+\_\+gmt\+\_\+sec (\begin{DoxyParamCaption}\item[{const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{t,  }\item[{my\+\_\+bool $\ast$}]{in\+\_\+dst\+\_\+time\+\_\+gap }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Converts local time in broken down M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME representation to my\+\_\+time\+\_\+t (U\+TC seconds since Epoch) represenation. Returns 0 in case of error. Sets in\+\_\+dst\+\_\+time\+\_\+gap to true if date provided falls into spring time-\/gap (or lefts it untouched otherwise). 
+
+Implements \mbox{\hyperlink{classTime__zone_a980bb1d59fe04e899b116169f1b3166d}{Time\+\_\+zone}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tztime.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,125 @@
+\hypertarget{classSql__condition}{}\section{Sql\+\_\+condition Class Reference}
+\label{classSql__condition}\index{Sql\+\_\+condition@{Sql\+\_\+condition}}
+
+
+{\ttfamily \#include $<$sql\+\_\+error.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+condition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSql__condition}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{enum\+\_\+severity\+\_\+level}} \{ {\bfseries S\+L\+\_\+\+N\+O\+TE}, 
+{\bfseries S\+L\+\_\+\+W\+A\+R\+N\+I\+NG}, 
+{\bfseries S\+L\+\_\+\+E\+R\+R\+OR}, 
+{\bfseries S\+E\+V\+E\+R\+I\+T\+Y\+\_\+\+E\+ND}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{classSql__condition_a5c53594f4d2c304328386ddcff4a3e8c}{message\+\_\+text}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classSql__condition_a3bcb85e06992f8c792723698b14068aa}{message\+\_\+octet\+\_\+length}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classSql__condition_a10c33b3c6889d6da51c7f10f95d8bf58}{returned\+\_\+sqlstate}} () const
+\item 
+uint \mbox{\hyperlink{classSql__condition_aa66ad8bfdcabeaa941d3d5089e371525}{mysql\+\_\+errno}} () const
+\item 
+\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} \mbox{\hyperlink{classSql__condition_ae5f2d0189912eb65a1b043f8b4db88b7}{severity}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSql__condition_a786121acb870730886bdd44c874c0c57}\label{classSql__condition_a786121acb870730886bdd44c874c0c57}} 
+class {\bfseries T\+HD}
+\item 
+\mbox{\Hypertarget{classSql__condition_ad0f14597816e36ea55ac31481d7caa8d}\label{classSql__condition_ad0f14597816e36ea55ac31481d7caa8d}} 
+class {\bfseries Diagnostics\+\_\+area}
+\item 
+\mbox{\Hypertarget{classSql__condition_a66b5162e2257930135f0a27713d5b39d}\label{classSql__condition_a66b5162e2257930135f0a27713d5b39d}} 
+class {\bfseries Sql\+\_\+cmd\+\_\+common\+\_\+signal}
+\item 
+\mbox{\Hypertarget{classSql__condition_adc30903f21322b4b855010a1cbe8cff5}\label{classSql__condition_adc30903f21322b4b855010a1cbe8cff5}} 
+class {\bfseries Sql\+\_\+cmd\+\_\+signal}
+\item 
+\mbox{\Hypertarget{classSql__condition_a8f16ac7fb80e5f7429f188c30d7cacc5}\label{classSql__condition_a8f16ac7fb80e5f7429f188c30d7cacc5}} 
+class {\bfseries Sql\+\_\+cmd\+\_\+resignal}
+\item 
+\mbox{\Hypertarget{classSql__condition_a89161be45522adabc60dffcac1ffe61c}\label{classSql__condition_a89161be45522adabc60dffcac1ffe61c}} 
+class {\bfseries sp\+\_\+rcontext}
+\item 
+\mbox{\Hypertarget{classSql__condition_abbea605f968f533b0caf50c050ac455a}\label{classSql__condition_abbea605f968f533b0caf50c050ac455a}} 
+class {\bfseries Condition\+\_\+information\+\_\+item}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Representation of a S\+QL condition. A S\+QL condition can be a completion condition (note, warning), or an exception condition (error, not found). 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}\label{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}} 
+\index{Sql\+\_\+condition@{Sql\+\_\+condition}!enum\+\_\+severity\+\_\+level@{enum\+\_\+severity\+\_\+level}}
+\index{enum\+\_\+severity\+\_\+level@{enum\+\_\+severity\+\_\+level}!Sql\+\_\+condition@{Sql\+\_\+condition}}
+\subsubsection{\texorpdfstring{enum\+\_\+severity\+\_\+level}{enum\_severity\_level}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}}}
+
+Enumeration value describing the severity of the condition. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__condition_a3bcb85e06992f8c792723698b14068aa}\label{classSql__condition_a3bcb85e06992f8c792723698b14068aa}} 
+\index{Sql\+\_\+condition@{Sql\+\_\+condition}!message\+\_\+octet\+\_\+length@{message\+\_\+octet\+\_\+length}}
+\index{message\+\_\+octet\+\_\+length@{message\+\_\+octet\+\_\+length}!Sql\+\_\+condition@{Sql\+\_\+condition}}
+\subsubsection{\texorpdfstring{message\+\_\+octet\+\_\+length()}{message\_octet\_length()}}
+{\footnotesize\ttfamily size\+\_\+t Sql\+\_\+condition\+::message\+\_\+octet\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the M\+E\+S\+S\+A\+G\+E\+\_\+\+O\+C\+T\+E\+T\+\_\+\+L\+E\+N\+G\+TH of this condition. \begin{DoxyReturn}{Returns}
+the length in bytes of the message text. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSql__condition_a5c53594f4d2c304328386ddcff4a3e8c}\label{classSql__condition_a5c53594f4d2c304328386ddcff4a3e8c}} 
+\index{Sql\+\_\+condition@{Sql\+\_\+condition}!message\+\_\+text@{message\+\_\+text}}
+\index{message\+\_\+text@{message\+\_\+text}!Sql\+\_\+condition@{Sql\+\_\+condition}}
+\subsubsection{\texorpdfstring{message\+\_\+text()}{message\_text()}}
+{\footnotesize\ttfamily const char$\ast$ Sql\+\_\+condition\+::message\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+E\+XT of this condition. \begin{DoxyReturn}{Returns}
+the message text. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSql__condition_aa66ad8bfdcabeaa941d3d5089e371525}\label{classSql__condition_aa66ad8bfdcabeaa941d3d5089e371525}} 
+\index{Sql\+\_\+condition@{Sql\+\_\+condition}!mysql\+\_\+errno@{mysql\+\_\+errno}}
+\index{mysql\+\_\+errno@{mysql\+\_\+errno}!Sql\+\_\+condition@{Sql\+\_\+condition}}
+\subsubsection{\texorpdfstring{mysql\+\_\+errno()}{mysql\_errno()}}
+{\footnotesize\ttfamily uint Sql\+\_\+condition\+::mysql\+\_\+errno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+NO of this condition. \begin{DoxyReturn}{Returns}
+the sql error number condition item. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSql__condition_a10c33b3c6889d6da51c7f10f95d8bf58}\label{classSql__condition_a10c33b3c6889d6da51c7f10f95d8bf58}} 
+\index{Sql\+\_\+condition@{Sql\+\_\+condition}!returned\+\_\+sqlstate@{returned\+\_\+sqlstate}}
+\index{returned\+\_\+sqlstate@{returned\+\_\+sqlstate}!Sql\+\_\+condition@{Sql\+\_\+condition}}
+\subsubsection{\texorpdfstring{returned\+\_\+sqlstate()}{returned\_sqlstate()}}
+{\footnotesize\ttfamily const char$\ast$ Sql\+\_\+condition\+::returned\+\_\+sqlstate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the R\+E\+T\+U\+R\+N\+E\+D\+\_\+\+S\+Q\+L\+S\+T\+A\+TE of this condition. \begin{DoxyReturn}{Returns}
+the sql state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSql__condition_ae5f2d0189912eb65a1b043f8b4db88b7}\label{classSql__condition_ae5f2d0189912eb65a1b043f8b4db88b7}} 
+\index{Sql\+\_\+condition@{Sql\+\_\+condition}!severity@{severity}}
+\index{severity@{severity}!Sql\+\_\+condition@{Sql\+\_\+condition}}
+\subsubsection{\texorpdfstring{severity()}{severity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} Sql\+\_\+condition\+::severity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the severity level of this condition. \begin{DoxyReturn}{Returns}
+the severity level condition item. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+error.\+h\item 
+sql\+\_\+error.\+cc\end{DoxyCompactItemize}

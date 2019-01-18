@@ -1,0 +1,100 @@
+\hypertarget{classExplain__join}{}\section{Explain\+\_\+join Class Reference}
+\label{classExplain__join}\index{Explain\+\_\+join@{Explain\+\_\+join}}
+Inheritance diagram for Explain\+\_\+join\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classExplain__join}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__join_ac81dc2369b4ee475cdd6d08459f63f90}\label{classExplain__join_ac81dc2369b4ee475cdd6d08459f63f90}} 
+{\bfseries Explain\+\_\+join} (T\+HD $\ast$thd\+\_\+arg, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex\+\_\+arg, bool need\+\_\+tmp\+\_\+table\+\_\+arg, bool need\+\_\+order\+\_\+arg, bool distinct\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classExplain__join_aa8ce397a394026c9065ffbfb0d624d75}{shallow\+\_\+explain}} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_aafb4747a76abccb3142d02f48f44b080}\label{classExplain__join_aafb4747a76abccb3142d02f48f44b080}} 
+virtual bool {\bfseries explain\+\_\+table\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_aa093ae6a3172e8a462b65398a7020e69}\label{classExplain__join_aa093ae6a3172e8a462b65398a7020e69}} 
+virtual bool {\bfseries explain\+\_\+join\+\_\+type} ()
+\item 
+virtual bool \mbox{\hyperlink{classExplain__join_a1f6b913e82a260fe431e3faa4dbfa68a}{explain\+\_\+key\+\_\+and\+\_\+len}} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_a2055f74c28c776c15a9d829f324eb022}\label{classExplain__join_a2055f74c28c776c15a9d829f324eb022}} 
+virtual bool {\bfseries explain\+\_\+ref} ()
+\item 
+virtual bool \mbox{\hyperlink{classExplain__join_a407564ac2ce390da3f0edd30eb3b4a06}{explain\+\_\+rows\+\_\+and\+\_\+filtered}} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_a6df925462cd3e56aa0d489b17956bb9a}\label{classExplain__join_a6df925462cd3e56aa0d489b17956bb9a}} 
+virtual bool {\bfseries explain\+\_\+extra} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_a69c3858ccca814fcd263cd1fe345f1e3}\label{classExplain__join_a69c3858ccca814fcd263cd1fe345f1e3}} 
+virtual bool {\bfseries explain\+\_\+select\+\_\+type} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_ade64e3bc5d2f8728cd1988e1bc27b743}\label{classExplain__join_ade64e3bc5d2f8728cd1988e1bc27b743}} 
+virtual bool {\bfseries explain\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{classExplain__join_aeb741da394dbbb0f4f53e14ab89c9598}\label{classExplain__join_aeb741da394dbbb0f4f53e14ab89c9598}} 
+virtual bool {\bfseries explain\+\_\+modify\+\_\+flags} ()
+\item 
+virtual bool \mbox{\hyperlink{classExplain__join_a1efc6984153eb72810c7e960f9855dac}{can\+\_\+walk\+\_\+clauses}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classExplain__join}{Explain\+\_\+join}} class produces E\+X\+P\+L\+A\+IN output for J\+O\+I\+Ns 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExplain__join_a1efc6984153eb72810c7e960f9855dac}\label{classExplain__join_a1efc6984153eb72810c7e960f9855dac}} 
+\index{Explain\+\_\+join@{Explain\+\_\+join}!can\+\_\+walk\+\_\+clauses@{can\+\_\+walk\+\_\+clauses}}
+\index{can\+\_\+walk\+\_\+clauses@{can\+\_\+walk\+\_\+clauses}!Explain\+\_\+join@{Explain\+\_\+join}}
+\subsubsection{\texorpdfstring{can\+\_\+walk\+\_\+clauses()}{can\_walk\_clauses()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+join\+::can\+\_\+walk\+\_\+clauses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Returns true if the W\+H\+E\+RE, O\+R\+D\+ER BY, G\+R\+O\+UP BY, etc clauses can safely be traversed\+: it means that we can iterate through them (no element is added/removed/replaced); the internal details of an element can change though (in particular if that element is an \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}}).
+
+By default, if we are explaining another connection, this is not safe. 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a82fdfa033238cfb356903c475ef4a177}{Explain}}.
+
+\mbox{\Hypertarget{classExplain__join_a1f6b913e82a260fe431e3faa4dbfa68a}\label{classExplain__join_a1f6b913e82a260fe431e3faa4dbfa68a}} 
+\index{Explain\+\_\+join@{Explain\+\_\+join}!explain\+\_\+key\+\_\+and\+\_\+len@{explain\+\_\+key\+\_\+and\+\_\+len}}
+\index{explain\+\_\+key\+\_\+and\+\_\+len@{explain\+\_\+key\+\_\+and\+\_\+len}!Explain\+\_\+join@{Explain\+\_\+join}}
+\subsubsection{\texorpdfstring{explain\+\_\+key\+\_\+and\+\_\+len()}{explain\_key\_and\_len()}}
+{\footnotesize\ttfamily bool Explain\+\_\+join\+::explain\+\_\+key\+\_\+and\+\_\+len (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+fill col\+\_\+key and and col\+\_\+key\+\_\+len fields together 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a2a0e775012360ec5f276373e535e2059}{Explain}}.
+
+\mbox{\Hypertarget{classExplain__join_a407564ac2ce390da3f0edd30eb3b4a06}\label{classExplain__join_a407564ac2ce390da3f0edd30eb3b4a06}} 
+\index{Explain\+\_\+join@{Explain\+\_\+join}!explain\+\_\+rows\+\_\+and\+\_\+filtered@{explain\+\_\+rows\+\_\+and\+\_\+filtered}}
+\index{explain\+\_\+rows\+\_\+and\+\_\+filtered@{explain\+\_\+rows\+\_\+and\+\_\+filtered}!Explain\+\_\+join@{Explain\+\_\+join}}
+\subsubsection{\texorpdfstring{explain\+\_\+rows\+\_\+and\+\_\+filtered()}{explain\_rows\_and\_filtered()}}
+{\footnotesize\ttfamily bool Explain\+\_\+join\+::explain\+\_\+rows\+\_\+and\+\_\+filtered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+fill col\+\_\+rows and col\+\_\+filtered fields together 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a1c2766929ff005124f8f14ce33e15f34}{Explain}}.
+
+\mbox{\Hypertarget{classExplain__join_aa8ce397a394026c9065ffbfb0d624d75}\label{classExplain__join_aa8ce397a394026c9065ffbfb0d624d75}} 
+\index{Explain\+\_\+join@{Explain\+\_\+join}!shallow\+\_\+explain@{shallow\+\_\+explain}}
+\index{shallow\+\_\+explain@{shallow\+\_\+explain}!Explain\+\_\+join@{Explain\+\_\+join}}
+\subsubsection{\texorpdfstring{shallow\+\_\+explain()}{shallow\_explain()}}
+{\footnotesize\ttfamily bool Explain\+\_\+join\+::shallow\+\_\+explain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classExplain}{Explain}} everything but subqueries 
+
+Reimplemented from \mbox{\hyperlink{classExplain_a2b5b074864b25d4bb669047dbcae8abb}{Explain}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+cc\end{DoxyCompactItemize}

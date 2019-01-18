@@ -1,0 +1,143 @@
+\hypertarget{classField__longstr}{}\section{Field\+\_\+longstr Class Reference}
+\label{classField__longstr}\index{Field\+\_\+longstr@{Field\+\_\+longstr}}
+Inheritance diagram for Field\+\_\+longstr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classField__longstr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__longstr_addcc1bc44635723f4885c80b6513898f}\label{classField__longstr_addcc1bc44635723f4885c80b6513898f}} 
+{\bfseries Field\+\_\+longstr} (uchar $\ast$ptr\+\_\+arg, uint32 len\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset\+\_\+arg)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__longstr_accc080bab51e57cdcefc594a17cb13f5}{store\+\_\+decimal}} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$d)
+\item 
+uint32 \mbox{\hyperlink{classField__longstr_a5af463c25b00c34e0d14e3780771fee0}{max\+\_\+data\+\_\+length}} () const
+\item 
+bool \mbox{\hyperlink{classField__longstr_af0f474a87a0c2c382e117a0d707c142a}{is\+\_\+updatable}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__longstr_af5afb63fcdf0442275a5a741768cf81a}{check\+\_\+string\+\_\+copy\+\_\+error}} (const char $\ast$original\+\_\+string, const char $\ast$well\+\_\+formed\+\_\+error\+\_\+pos, const char $\ast$cannot\+\_\+convert\+\_\+error\+\_\+pos, const char $\ast$from\+\_\+end\+\_\+pos, const char $\ast$end, bool count\+\_\+spaces, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__longstr_af5afb63fcdf0442275a5a741768cf81a}\label{classField__longstr_af5afb63fcdf0442275a5a741768cf81a}} 
+\index{Field\+\_\+longstr@{Field\+\_\+longstr}!check\+\_\+string\+\_\+copy\+\_\+error@{check\+\_\+string\+\_\+copy\+\_\+error}}
+\index{check\+\_\+string\+\_\+copy\+\_\+error@{check\+\_\+string\+\_\+copy\+\_\+error}!Field\+\_\+longstr@{Field\+\_\+longstr}}
+\subsubsection{\texorpdfstring{check\+\_\+string\+\_\+copy\+\_\+error()}{check\_string\_copy\_error()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+longstr\+::check\+\_\+string\+\_\+copy\+\_\+error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{original\+\_\+string,  }\item[{const char $\ast$}]{well\+\_\+formed\+\_\+error\+\_\+pos,  }\item[{const char $\ast$}]{cannot\+\_\+convert\+\_\+error\+\_\+pos,  }\item[{const char $\ast$}]{from\+\_\+end\+\_\+pos,  }\item[{const char $\ast$}]{end,  }\item[{bool}]{count\+\_\+spaces,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Report \char`\"{}not well formed\char`\"{} or \char`\"{}cannot convert\char`\"{} error after storing a character string info a field.
+
+As of version 5.\+0 both cases return the same error\+: \begin{DoxyVerb}"Invalid string value: 'xxx' for column 't' at row 1"
+\end{DoxyVerb}
+
+
+Future versions will possibly introduce a new error message\+: \begin{DoxyVerb}"Cannot convert character string: 'xxx' for column 't' at row 1"
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+\_\+string} & this is is the original string that was supposed to be copied. Helps in keeping track of whether a value has been completely truncated. \\
+\hline
+{\em well\+\_\+formed\+\_\+error\+\_\+pos} & position of the first non-\/wellformed character in the source string \\
+\hline
+{\em cannot\+\_\+convert\+\_\+error\+\_\+pos} & position of the first non-\/convertable character in the source string \\
+\hline
+{\em from\+\_\+end\+\_\+pos} & position where conversion stopped in the source string \\
+\hline
+{\em end} & end of the source string \\
+\hline
+{\em count\+\_\+spaces} & treat trailing spaces as important data \\
+\hline
+{\em cs} & character set of the string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+Y\+P\+E\+\_\+\+OK, T\+Y\+P\+E\+\_\+\+N\+O\+T\+E\+\_\+\+T\+R\+U\+N\+C\+A\+T\+ED, T\+Y\+P\+E\+\_\+\+W\+A\+R\+N\+\_\+\+T\+R\+U\+N\+C\+A\+T\+ED, T\+Y\+P\+E\+\_\+\+W\+A\+R\+N\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+R\+I\+NG 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classField__longstr_af0f474a87a0c2c382e117a0d707c142a}\label{classField__longstr_af0f474a87a0c2c382e117a0d707c142a}} 
+\index{Field\+\_\+longstr@{Field\+\_\+longstr}!is\+\_\+updatable@{is\+\_\+updatable}}
+\index{is\+\_\+updatable@{is\+\_\+updatable}!Field\+\_\+longstr@{Field\+\_\+longstr}}
+\subsubsection{\texorpdfstring{is\+\_\+updatable()}{is\_updatable()}}
+{\footnotesize\ttfamily bool Field\+\_\+longstr\+::is\+\_\+updatable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Checks whether a string field is part of write\+\_\+set.
+
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE -\/ If field is not char/varchar/....
+\begin{DoxyItemize}
+\item If field is char/varchar/.. and is not part of write set. T\+R\+UE -\/ If field is char/varchar/.. and is part of write set. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a8b2061753bd4314da3955b7500119907}{Field}}.
+
+\mbox{\Hypertarget{classField__longstr_a5af463c25b00c34e0d14e3780771fee0}\label{classField__longstr_a5af463c25b00c34e0d14e3780771fee0}} 
+\index{Field\+\_\+longstr@{Field\+\_\+longstr}!max\+\_\+data\+\_\+length@{max\+\_\+data\+\_\+length}}
+\index{max\+\_\+data\+\_\+length@{max\+\_\+data\+\_\+length}!Field\+\_\+longstr@{Field\+\_\+longstr}}
+\subsubsection{\texorpdfstring{max\+\_\+data\+\_\+length()}{max\_data\_length()}}
+{\footnotesize\ttfamily uint32 Field\+\_\+longstr\+::max\+\_\+data\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the maximum size of the data in packed format.
+
+\begin{DoxyReturn}{Returns}
+Maximum data length of the field when packed using the \mbox{\hyperlink{classField_a9eaff8d3425ef0e1da69b32cbd8f2879}{Field\+::pack()}} function. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classField_ab628f9b9a6253a5b675c97095bf01aac}{Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__blob_ae15f550d9b0f82acf200c45dc34caf07}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__longstr_accc080bab51e57cdcefc594a17cb13f5}\label{classField__longstr_accc080bab51e57cdcefc594a17cb13f5}} 
+\index{Field\+\_\+longstr@{Field\+\_\+longstr}!store\+\_\+decimal@{store\+\_\+decimal}}
+\index{store\+\_\+decimal@{store\+\_\+decimal}!Field\+\_\+longstr@{Field\+\_\+longstr}}
+\subsubsection{\texorpdfstring{store\+\_\+decimal()}{store\_decimal()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+longstr\+::store\+\_\+decimal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decimal representation of \mbox{\hyperlink{classField__str}{Field\+\_\+str}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & value for storing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classField__str}{Field\+\_\+str}} is the base class for fields implemeting \mbox{[}V\+AR\mbox{]}C\+H\+AR, V\+AR\mbox{[}B\+I\+N\+A\+RY\mbox{]}, B\+L\+O\+B/\+T\+E\+XT, G\+E\+O\+M\+E\+T\+RY, J\+S\+ON. String value should be converted to floating point value according our rules, so we use double to store value of decimal in string.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]use decimal2string?\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em !=0} & error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__str_ae0a260a3e657aa6778dcf651ff3e9b95}{Field\+\_\+str}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__json_a979954944f1ee5334945f83135acdb8e}{Field\+\_\+json}}, and \mbox{\hyperlink{classField__geom_a898e7030c139559c40683399075788a5}{Field\+\_\+geom}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

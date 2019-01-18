@@ -1,0 +1,59 @@
+\hypertarget{classSys__var__tx__isolation}{}\section{Sys\+\_\+var\+\_\+tx\+\_\+isolation Class Reference}
+\label{classSys__var__tx__isolation}\index{Sys\+\_\+var\+\_\+tx\+\_\+isolation@{Sys\+\_\+var\+\_\+tx\+\_\+isolation}}
+
+
+{\ttfamily \#include $<$sys\+\_\+vars.\+h$>$}
+
+Inheritance diagram for Sys\+\_\+var\+\_\+tx\+\_\+isolation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSys__var__tx__isolation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSys__var__tx__isolation_aaec3510d2a0c1938825c87ded51627b5}\label{classSys__var__tx__isolation_aaec3510d2a0c1938825c87ded51627b5}} 
+{\bfseries Sys\+\_\+var\+\_\+tx\+\_\+isolation} (const char $\ast$name\+\_\+arg, const char $\ast$comment, int flag\+\_\+args, ptrdiff\+\_\+t off, size\+\_\+t size, \mbox{\hyperlink{structCMD__LINE}{C\+M\+D\+\_\+\+L\+I\+NE}} getopt, const char $\ast$values\mbox{[}$\,$\mbox{]}, uint def\+\_\+val, \mbox{\hyperlink{classPolyLock}{Poly\+Lock}} $\ast$lock, enum \mbox{\hyperlink{classsys__var_a664520ec82191888717c86085bfa83ce}{binlog\+\_\+status\+\_\+enum}} binlog\+\_\+status\+\_\+arg, on\+\_\+check\+\_\+function on\+\_\+check\+\_\+func, on\+\_\+update\+\_\+function on\+\_\+update\+\_\+func=0, const char $\ast$substitute=0)
+\item 
+virtual bool \mbox{\hyperlink{classSys__var__tx__isolation_a7c95e5b9a2dd36a02a9ff05d6ada8d42}{session\+\_\+update}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class representing the \textquotesingle{}tx\+\_\+isolation\textquotesingle{} system variable. This variable can also be indirectly set using \textquotesingle{}S\+ET T\+R\+A\+N\+S\+A\+C\+T\+I\+ON I\+S\+O\+L\+A\+T\+I\+ON L\+E\+V\+EL\textquotesingle{}. This variable is deprecated and will be removed in a future release. \textquotesingle{}transaction\+\_\+isolation\textquotesingle{} is used an alternative instead. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSys__var__tx__isolation_a7c95e5b9a2dd36a02a9ff05d6ada8d42}\label{classSys__var__tx__isolation_a7c95e5b9a2dd36a02a9ff05d6ada8d42}} 
+\index{Sys\+\_\+var\+\_\+tx\+\_\+isolation@{Sys\+\_\+var\+\_\+tx\+\_\+isolation}!session\+\_\+update@{session\+\_\+update}}
+\index{session\+\_\+update@{session\+\_\+update}!Sys\+\_\+var\+\_\+tx\+\_\+isolation@{Sys\+\_\+var\+\_\+tx\+\_\+isolation}}
+\subsubsection{\texorpdfstring{session\+\_\+update()}{session\_update()}}
+{\footnotesize\ttfamily bool Sys\+\_\+var\+\_\+tx\+\_\+isolation\+::session\+\_\+update (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function sets the session variable thd-\/$>$variables.\+tx\+\_\+isolation/ thd-\/$>$variables.\+transaction\+\_\+isolation to reflect changes to @session.\+tx\+\_\+isolation/@session.\+transaction\+\_\+isolation. \textquotesingle{}tx\+\_\+isolation\textquotesingle{} is deprecated and \textquotesingle{}transaction\+\_\+isolation\textquotesingle{} is its alternative.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread handler. \\
+\hline
+\mbox{\texttt{ in}}  & {\em var} & A pointer to the \mbox{\hyperlink{classset__var}{set\+\_\+var}}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Error. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classSys__var__enum}{Sys\+\_\+var\+\_\+enum}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sys__vars_8h}{sys\+\_\+vars.\+h}}\item 
+\mbox{\hyperlink{sys__vars_8cc}{sys\+\_\+vars.\+cc}}\end{DoxyCompactItemize}

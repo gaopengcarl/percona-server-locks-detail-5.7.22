@@ -1,0 +1,106 @@
+\hypertarget{classIgnore__command__start__error__handler}{}\section{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler Class Reference}
+\label{classIgnore__command__start__error__handler}\index{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}
+Inheritance diagram for Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classIgnore__command__start__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIgnore__command__start__error__handler_a1a819f9bc574bb3d9e4f61c28af67582}{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}} (T\+HD $\ast$thd, enum\+\_\+server\+\_\+command command, const char $\ast$command\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIgnore__command__start__error__handler_a237add9c946d5b5f76c40483bde4a4b7}{handle}} ()
+\begin{DoxyCompactList}\small\item\em Error for specified command handling routine. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIgnore__command__start__error__handler_a182e2ebd517169e1138bbbf3999896ac}{print\+\_\+warning}} (const char $\ast$warn\+\_\+msg, uint sql\+\_\+errno, const char $\ast$sqlstate, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Custom warning print routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classIgnore__command__start__error__handler_afa03128280356fc46b16d9bb7c0a0aad}{ignore\+\_\+command}} (enum\+\_\+server\+\_\+command command)
+\begin{DoxyCompactList}\small\item\em Check whether the command is to be ignored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ignore error for specified commands. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIgnore__command__start__error__handler_a1a819f9bc574bb3d9e4f61c28af67582}\label{classIgnore__command__start__error__handler_a1a819f9bc574bb3d9e4f61c28af67582}} 
+\index{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}!Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}
+\index{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}!Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler()}{Ignore\_command\_start\_error\_handler()}}
+{\footnotesize\ttfamily Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler\+::\+Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum\+\_\+server\+\_\+command}]{command,  }\item[{const char $\ast$}]{command\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd\mbox{[}in\mbox{]}} & Current thread data. \\
+\hline
+{\em command\mbox{[}in\mbox{]}} & Current command that the handler will be active against. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIgnore__command__start__error__handler_a237add9c946d5b5f76c40483bde4a4b7}\label{classIgnore__command__start__error__handler_a237add9c946d5b5f76c40483bde4a4b7}} 
+\index{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}!handle@{handle}}
+\index{handle@{handle}!Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily virtual bool Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Error for specified command handling routine. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & on error rejection, otherwise false. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classAudit__error__handler_aa674ae49782d768001e7bd1d11f16c68}{Audit\+\_\+error\+\_\+handler}}.
+
+\mbox{\Hypertarget{classIgnore__command__start__error__handler_afa03128280356fc46b16d9bb7c0a0aad}\label{classIgnore__command__start__error__handler_afa03128280356fc46b16d9bb7c0a0aad}} 
+\index{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}!ignore\+\_\+command@{ignore\+\_\+command}}
+\index{ignore\+\_\+command@{ignore\+\_\+command}!Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{ignore\+\_\+command()}{ignore\_command()}}
+{\footnotesize\ttfamily static bool Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler\+::ignore\+\_\+command (\begin{DoxyParamCaption}\item[{enum\+\_\+server\+\_\+command}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check whether the command is to be ignored. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & whether the command is to be ignored. Otherwise false. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classIgnore__command__start__error__handler_a182e2ebd517169e1138bbbf3999896ac}\label{classIgnore__command__start__error__handler_a182e2ebd517169e1138bbbf3999896ac}} 
+\index{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}!print\+\_\+warning@{print\+\_\+warning}}
+\index{print\+\_\+warning@{print\+\_\+warning}!Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler@{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{print\+\_\+warning()}{print\_warning()}}
+{\footnotesize\ttfamily virtual void Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler\+::print\+\_\+warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warn\+\_\+msg,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{sqlstate,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Custom warning print routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em warn\+\_\+msg\mbox{[}in\mbox{]}} & Placeholding warning message text. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAudit__error__handler_ac3b06f010e4c72aee47ae6123e49ecc4}{Audit\+\_\+error\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+audit.\+cc\end{DoxyCompactItemize}

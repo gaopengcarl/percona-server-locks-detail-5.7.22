@@ -1,0 +1,112 @@
+\hypertarget{group__Query__Resolver}{}\section{Query Resolver}
+\label{group__Query__Resolver}\index{Query Resolver@{Query Resolver}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{group__Query__Resolver_gab18726347ecf92d8985617dda1d60ba3}{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$join\+\_\+list, uint first\+\_\+unused)
+\item 
+bool \mbox{\hyperlink{group__Query__Resolver_ga67ba0f5092d8f16edd545f8685a5f104}{subquery\+\_\+allows\+\_\+materialization}} (\mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} $\ast$predicate, T\+HD $\ast$thd, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex, const S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$outer)
+\item 
+bool \mbox{\hyperlink{group__Query__Resolver_ga180a0a53f32a387f8af2c3b9db83d09e}{setup\+\_\+order}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$order)
+\item 
+bool \mbox{\hyperlink{group__Query__Resolver_ga32c1578d1ffb07ec12c09b0cce88695a}{validate\+\_\+gc\+\_\+assignment}} (T\+HD $\ast$thd, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$values, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em validate\+\_\+gc\+\_\+assignment Check whether the other values except D\+E\+F\+A\+U\+LT are assigned for generated columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Query__Resolver_gab18726347ecf92d8985617dda1d60ba3}\label{group__Query__Resolver_gab18726347ecf92d8985617dda1d60ba3}} 
+\index{Query Resolver@{Query Resolver}!build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins@{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}}
+\index{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins@{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins}!Query Resolver@{Query Resolver}}
+\subsubsection{\texorpdfstring{build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins()}{build\_bitmap\_for\_nested\_joins()}}
+{\footnotesize\ttfamily uint build\+\_\+bitmap\+\_\+for\+\_\+nested\+\_\+joins (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $>$ $\ast$}]{join\+\_\+list,  }\item[{uint}]{first\+\_\+unused }\end{DoxyParamCaption})}
+
+Assign each nested join structure a bit in nested\+\_\+join\+\_\+map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em join\+\_\+list} & \mbox{\hyperlink{classList}{List}} of tables \\
+\hline
+{\em first\+\_\+unused} & Number of first unused bit in nested\+\_\+join\+\_\+map before the call\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is called after simplify\+\_\+joins(), when there are no redundant nested joins. We cannot have more nested joins in a query block than there are tables, so as long as the number of bits in nested\+\_\+join\+\_\+map is not less than the maximum number of tables in a query block, nested\+\_\+join\+\_\+map can never overflow.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+First unused bit in nested\+\_\+join\+\_\+map after the call. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Resolver_ga180a0a53f32a387f8af2c3b9db83d09e}\label{group__Query__Resolver_ga180a0a53f32a387f8af2c3b9db83d09e}} 
+\index{Query Resolver@{Query Resolver}!setup\+\_\+order@{setup\+\_\+order}}
+\index{setup\+\_\+order@{setup\+\_\+order}!Query Resolver@{Query Resolver}}
+\subsubsection{\texorpdfstring{setup\+\_\+order()}{setup\_order()}}
+{\footnotesize\ttfamily bool setup\+\_\+order (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}}}]{ref\+\_\+pointer\+\_\+array,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&}]{all\+\_\+fields,  }\item[{\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$}]{order }\end{DoxyParamCaption})}
+
+Resolve and setup list of expressions in O\+R\+D\+ER BY clause.
+
+Change order to point at item in select list. If item isn\textquotesingle{}t a number and doesn\textquotesingle{}t exists in the select list, add it to the the field list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Resolver_ga67ba0f5092d8f16edd545f8685a5f104}\label{group__Query__Resolver_ga67ba0f5092d8f16edd545f8685a5f104}} 
+\index{Query Resolver@{Query Resolver}!subquery\+\_\+allows\+\_\+materialization@{subquery\+\_\+allows\+\_\+materialization}}
+\index{subquery\+\_\+allows\+\_\+materialization@{subquery\+\_\+allows\+\_\+materialization}!Query Resolver@{Query Resolver}}
+\subsubsection{\texorpdfstring{subquery\+\_\+allows\+\_\+materialization()}{subquery\_allows\_materialization()}}
+{\footnotesize\ttfamily bool subquery\+\_\+allows\+\_\+materialization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} $\ast$}]{predicate,  }\item[{T\+HD $\ast$}]{thd,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{select\+\_\+lex,  }\item[{const S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$}]{outer }\end{DoxyParamCaption})}
+
+Check if the subquery predicate can be executed via materialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & IN subquery predicate \\
+\hline
+{\em thd} & T\+HD \\
+\hline
+{\em select\+\_\+lex} & S\+E\+L\+E\+C\+T\+\_\+\+L\+EX of the subquery \\
+\hline
+{\em outer} & Parent S\+E\+L\+E\+C\+T\+\_\+\+L\+EX (outer to subquery)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if subquery allows materialization, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Query__Resolver_ga32c1578d1ffb07ec12c09b0cce88695a}\label{group__Query__Resolver_ga32c1578d1ffb07ec12c09b0cce88695a}} 
+\index{Query Resolver@{Query Resolver}!validate\+\_\+gc\+\_\+assignment@{validate\+\_\+gc\+\_\+assignment}}
+\index{validate\+\_\+gc\+\_\+assignment@{validate\+\_\+gc\+\_\+assignment}!Query Resolver@{Query Resolver}}
+\subsubsection{\texorpdfstring{validate\+\_\+gc\+\_\+assignment()}{validate\_gc\_assignment()}}
+{\footnotesize\ttfamily bool validate\+\_\+gc\+\_\+assignment (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{fields,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ $\ast$}]{values,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+validate\+\_\+gc\+\_\+assignment Check whether the other values except D\+E\+F\+A\+U\+LT are assigned for generated columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler \\
+\hline
+{\em fields} & Item\+\_\+fields list to be filled \\
+\hline
+{\em values} & values to fill with \\
+\hline
+{\em table} & table to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK \\
+\hline
+{\em true} & Error occured\\
+\hline
+\end{DoxyRetVals}
+\+: This function must be called after table-\/$>$write\+\_\+set has been filled. 

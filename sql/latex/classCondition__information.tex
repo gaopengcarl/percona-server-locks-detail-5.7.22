@@ -1,0 +1,83 @@
+\hypertarget{classCondition__information}{}\section{Condition\+\_\+information Class Reference}
+\label{classCondition__information}\index{Condition\+\_\+information@{Condition\+\_\+information}}
+
+
+{\ttfamily \#include $<$sql\+\_\+get\+\_\+diagnostics.\+h$>$}
+
+Inheritance diagram for Condition\+\_\+information\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCondition__information}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCondition__information_a5e3aea823731ffd6403d6279c45b6d04}{Condition\+\_\+information}} (\mbox{\hyperlink{classItem}{Item}} $\ast$cond\+\_\+number\+\_\+expr, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCondition__information__item}{Condition\+\_\+information\+\_\+item}} $>$ $\ast$items)
+\item 
+bool \mbox{\hyperlink{classCondition__information_acb021776f86470bf0ca0da8a3f60c44a}{aggregate}} (T\+HD $\ast$thd, const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$da)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Condition information.
+
+\begin{DoxyRemark}{Remarks}
+Provides information about conditions raised during the execution of a statement. 
+\end{DoxyRemark}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCondition__information_a5e3aea823731ffd6403d6279c45b6d04}\label{classCondition__information_a5e3aea823731ffd6403d6279c45b6d04}} 
+\index{Condition\+\_\+information@{Condition\+\_\+information}!Condition\+\_\+information@{Condition\+\_\+information}}
+\index{Condition\+\_\+information@{Condition\+\_\+information}!Condition\+\_\+information@{Condition\+\_\+information}}
+\subsubsection{\texorpdfstring{Condition\+\_\+information()}{Condition\_information()}}
+{\footnotesize\ttfamily Condition\+\_\+information\+::\+Condition\+\_\+information (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{cond\+\_\+number\+\_\+expr,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCondition__information__item}{Condition\+\_\+information\+\_\+item}} $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor, used to represent the condition information of a G\+ET D\+I\+A\+G\+N\+O\+S\+T\+I\+CS statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond\+\_\+number\+\_\+expr} & Number that identifies the diagnostic condition. \\
+\hline
+{\em items} & \mbox{\hyperlink{classList}{List}} of requested condition information items. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCondition__information_acb021776f86470bf0ca0da8a3f60c44a}\label{classCondition__information_acb021776f86470bf0ca0da8a3f60c44a}} 
+\index{Condition\+\_\+information@{Condition\+\_\+information}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!Condition\+\_\+information@{Condition\+\_\+information}}
+\subsubsection{\texorpdfstring{aggregate()}{aggregate()}}
+{\footnotesize\ttfamily bool Condition\+\_\+information\+::aggregate (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{classDiagnostics__area}{Diagnostics\+\_\+area}} $\ast$}]{da }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtain condition information in the context of a Diagnostics Area.
+
+Obtain condition information in the context of a given Diagnostics Area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em da} & The Diagnostics Area.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success. \\
+\hline
+{\em true} & on error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classDiagnostics__information_a5181f11d3ef8554e1989a882bc2504dc}{Diagnostics\+\_\+information}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+get\+\_\+diagnostics.\+h\item 
+sql\+\_\+get\+\_\+diagnostics.\+cc\end{DoxyCompactItemize}

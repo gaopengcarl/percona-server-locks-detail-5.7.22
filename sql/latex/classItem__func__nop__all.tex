@@ -1,0 +1,82 @@
+\hypertarget{classItem__func__nop__all}{}\section{Item\+\_\+func\+\_\+nop\+\_\+all Class Reference}
+\label{classItem__func__nop__all}\index{Item\+\_\+func\+\_\+nop\+\_\+all@{Item\+\_\+func\+\_\+nop\+\_\+all}}
+Inheritance diagram for Item\+\_\+func\+\_\+nop\+\_\+all\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classItem__func__nop__all}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__nop__all_a63b15ef7d87c82fcc2fa9a016f9c4201}\label{classItem__func__nop__all_a63b15ef7d87c82fcc2fa9a016f9c4201}} 
+{\bfseries Item\+\_\+func\+\_\+nop\+\_\+all} (\mbox{\hyperlink{classItem}{Item}} $\ast$a)
+\item 
+longlong \mbox{\hyperlink{classItem__func__nop__all_a83df49e5ddb63299f2eea0960d6d80f1}{val\+\_\+int}} ()
+\item 
+\mbox{\Hypertarget{classItem__func__nop__all_a8d1f71dc92462a3452cf2815b479a461}\label{classItem__func__nop__all_a8d1f71dc92462a3452cf2815b479a461}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__func__nop__all_add3809cd8d9723c9f5ce77587f7503c5}\label{classItem__func__nop__all_add3809cd8d9723c9f5ce77587f7503c5}} 
+table\+\_\+map {\bfseries not\+\_\+null\+\_\+tables} () const
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__func__nop__all_a6584dde63d69111ad332417b07883229}{neg\+\_\+transformer}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__nop__all_a6584dde63d69111ad332417b07883229}\label{classItem__func__nop__all_a6584dde63d69111ad332417b07883229}} 
+\index{Item\+\_\+func\+\_\+nop\+\_\+all@{Item\+\_\+func\+\_\+nop\+\_\+all}!neg\+\_\+transformer@{neg\+\_\+transformer}}
+\index{neg\+\_\+transformer@{neg\+\_\+transformer}!Item\+\_\+func\+\_\+nop\+\_\+all@{Item\+\_\+func\+\_\+nop\+\_\+all}}
+\subsubsection{\texorpdfstring{neg\+\_\+transformer()}{neg\_transformer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+func\+\_\+nop\+\_\+all\+::neg\+\_\+transformer (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply N\+OT transformation to the item and return a new one.
+
+Transform the item using next rules\+: \begin{DoxyVerb}     a AND b AND ...    -> NOT(a) OR NOT(b) OR ...
+     a OR b OR ...      -> NOT(a) AND NOT(b) AND ...
+     NOT(a)             -> a
+     a = b              -> a != b
+     a != b             -> a = b
+     a < b              -> a >= b
+     a >= b             -> a < b
+     a > b              -> a <= b
+     a <= b             -> a > b
+     IS NULL(a)         -> IS NOT NULL(a)
+     IS NOT NULL(a)     -> IS NULL(a)\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handler\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New item or N\+U\+LL if we cannot apply N\+OT transformation (see Item\+::neg\+\_\+transformer()). 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func__not__all_a5efa58fa1c7361846ec917da2e416c8d}{Item\+\_\+func\+\_\+not\+\_\+all}}.
+
+\mbox{\Hypertarget{classItem__func__nop__all_a83df49e5ddb63299f2eea0960d6d80f1}\label{classItem__func__nop__all_a83df49e5ddb63299f2eea0960d6d80f1}} 
+\index{Item\+\_\+func\+\_\+nop\+\_\+all@{Item\+\_\+func\+\_\+nop\+\_\+all}!val\+\_\+int@{val\+\_\+int}}
+\index{val\+\_\+int@{val\+\_\+int}!Item\+\_\+func\+\_\+nop\+\_\+all@{Item\+\_\+func\+\_\+nop\+\_\+all}}
+\subsubsection{\texorpdfstring{val\+\_\+int()}{val\_int()}}
+{\footnotesize\ttfamily longlong Item\+\_\+func\+\_\+nop\+\_\+all\+::val\+\_\+int (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Special N\+OP (No O\+Peration) for A\+LL subquery. It is like \mbox{\hyperlink{classItem__func__not__all}{Item\+\_\+func\+\_\+not\+\_\+all}}.
+
+\begin{DoxyReturn}{Returns}
+(return T\+R\+UE if underlying subquery do not return rows) but if subquery returns some rows it return same value as argument (T\+R\+U\+E/\+F\+A\+L\+SE). 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func__not__all_a8c295f113fceeb1d2f97cf12b0414a40}{Item\+\_\+func\+\_\+not\+\_\+all}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

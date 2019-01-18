@@ -1,0 +1,171 @@
+\hypertarget{classItem__in__optimizer}{}\section{Item\+\_\+in\+\_\+optimizer Class Reference}
+\label{classItem__in__optimizer}\index{Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}}
+Inheritance diagram for Item\+\_\+in\+\_\+optimizer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__in__optimizer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_ab1121b9bd7660aa517c6e1a23389841c}\label{classItem__in__optimizer_ab1121b9bd7660aa517c6e1a23389841c}} 
+{\bfseries Item\+\_\+in\+\_\+optimizer} (\mbox{\hyperlink{classItem}{Item}} $\ast$a, \mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_ae3b3c07b41aef12ddba3b37d15e3b2cd}\label{classItem__in__optimizer_ae3b3c07b41aef12ddba3b37d15e3b2cd}} 
+bool {\bfseries fix\+\_\+fields} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_abaf7a4fa49ad9c50e229050cfa2d18d9}\label{classItem__in__optimizer_abaf7a4fa49ad9c50e229050cfa2d18d9}} 
+bool {\bfseries fix\+\_\+left} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref)
+\item 
+void \mbox{\hyperlink{classItem__in__optimizer_aeac1cb56fd617d7cebee1d792b02ba1a}{fix\+\_\+after\+\_\+pullout}} (st\+\_\+select\+\_\+lex $\ast$parent\+\_\+select, st\+\_\+select\+\_\+lex $\ast$removed\+\_\+select)
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_ab8681df87072f6792eeb23056a8b4b28}\label{classItem__in__optimizer_ab8681df87072f6792eeb23056a8b4b28}} 
+bool {\bfseries is\+\_\+null} ()
+\item 
+longlong \mbox{\hyperlink{classItem__in__optimizer_a24ae21b54394fd097a1b9ec9fd812bd9}{val\+\_\+int}} ()
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_a6b5861d9a68a5b6aeb160e32befa3952}\label{classItem__in__optimizer_a6b5861d9a68a5b6aeb160e32befa3952}} 
+void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_af85c297c24fcea04b05fecbad5d94cd1}\label{classItem__in__optimizer_af85c297c24fcea04b05fecbad5d94cd1}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_aee053a2da640c0368afe28e33f06ebbb}\label{classItem__in__optimizer_aee053a2da640c0368afe28e33f06ebbb}} 
+\mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}} $\ast$$\ast$ {\bfseries get\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classItem__in__optimizer_a275f462b11430e49fd99eeb6cc5411c2}\label{classItem__in__optimizer_a275f462b11430e49fd99eeb6cc5411c2}} 
+void {\bfseries keep\+\_\+top\+\_\+level\+\_\+cache} ()
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__in__optimizer_abf3e3561b7ff2f5e6d58a343cc93fcc5}{transform}} (Item\+\_\+transformer transformer, uchar $\ast$arg)
+\item 
+void \mbox{\hyperlink{classItem__in__optimizer_a84811ad5fbb554956debfc5acf07faa7}{replace\+\_\+argument}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$oldpp, \mbox{\hyperlink{classItem}{Item}} $\ast$newp)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__in__optimizer_aeac1cb56fd617d7cebee1d792b02ba1a}\label{classItem__in__optimizer_aeac1cb56fd617d7cebee1d792b02ba1a}} 
+\index{Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}!fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}}
+\index{fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}!Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}}
+\subsubsection{\texorpdfstring{fix\+\_\+after\+\_\+pullout()}{fix\_after\_pullout()}}
+{\footnotesize\ttfamily void Item\+\_\+in\+\_\+optimizer\+::fix\+\_\+after\+\_\+pullout (\begin{DoxyParamCaption}\item[{st\+\_\+select\+\_\+lex $\ast$}]{parent\+\_\+select,  }\item[{st\+\_\+select\+\_\+lex $\ast$}]{removed\+\_\+select }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Fix after tables have been moved from one select\+\_\+lex level to the parent level, e.\+g by semijoin conversion. Basically re-\/calculate all attributes dependent on the tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+\_\+select} & select\+\_\+lex that tables are moved to. \\
+\hline
+{\em removed\+\_\+select} & select\+\_\+lex that tables are moved away from, child of parent\+\_\+select. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__func_ab2b8cc7a3bf580679718da7e99e3e8d9}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__in__optimizer_a84811ad5fbb554956debfc5acf07faa7}\label{classItem__in__optimizer_a84811ad5fbb554956debfc5acf07faa7}} 
+\index{Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}!replace\+\_\+argument@{replace\+\_\+argument}}
+\index{replace\+\_\+argument@{replace\+\_\+argument}!Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}}
+\subsubsection{\texorpdfstring{replace\+\_\+argument()}{replace\_argument()}}
+{\footnotesize\ttfamily void Item\+\_\+in\+\_\+optimizer\+::replace\+\_\+argument (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{oldpp,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{newp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Does essentially the same as T\+H\+D\+::change\+\_\+item\+\_\+tree, plus maintains any necessary any invariants. 
+
+Reimplemented from \mbox{\hyperlink{classItem__func_a057cee4e4645ad681094796d24236b62}{Item\+\_\+func}}.
+
+\mbox{\Hypertarget{classItem__in__optimizer_abf3e3561b7ff2f5e6d58a343cc93fcc5}\label{classItem__in__optimizer_abf3e3561b7ff2f5e6d58a343cc93fcc5}} 
+\index{Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}!transform@{transform}}
+\index{transform@{transform}!Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}}
+\subsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+in\+\_\+optimizer\+::transform (\begin{DoxyParamCaption}\item[{Item\+\_\+transformer}]{transformer,  }\item[{uchar $\ast$}]{argument }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Transform an \mbox{\hyperlink{classItem__in__optimizer}{Item\+\_\+in\+\_\+optimizer}} and its arguments with a callback function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transformer} & the transformer callback function to be applied to the nodes of the tree of the object \\
+\hline
+{\em parameter} & to be passed to the transformer\\
+\hline
+\end{DoxyParams}
+Recursively transform the left and the right operand of this \mbox{\hyperlink{classItem}{Item}}. The Right operand is an \mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} or its subclass. To avoid the creation of new Items, we use the fact the the left operand of the \mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} is the same as the one of \textquotesingle{}this\textquotesingle{}, so instead of transforming its operand, we just assign the left operand of the \mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} to be equal to the left operand of \textquotesingle{}this\textquotesingle{}. The transformation is not applied further to the subquery operand if the IN predicate.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em pointer} & to the transformed item \\
+\hline
+{\em N\+U\+LL} & if an error occurred \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_ae4459c9d19c2c656c63da3bbd32760e5}{Item}}.
+
+\mbox{\Hypertarget{classItem__in__optimizer_a24ae21b54394fd097a1b9ec9fd812bd9}\label{classItem__in__optimizer_a24ae21b54394fd097a1b9ec9fd812bd9}} 
+\index{Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}!val\+\_\+int@{val\+\_\+int}}
+\index{val\+\_\+int@{val\+\_\+int}!Item\+\_\+in\+\_\+optimizer@{Item\+\_\+in\+\_\+optimizer}}
+\subsubsection{\texorpdfstring{val\+\_\+int()}{val\_int()}}
+{\footnotesize\ttfamily longlong Item\+\_\+in\+\_\+optimizer\+::val\+\_\+int (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The implementation of optimized $<$outer expression$>$ \mbox{[}N\+OT\mbox{]} IN $<$subquery$>$ predicates. It applies to predicates which have gone through the IN-\/$>$E\+X\+I\+S\+TS transformation in in\+\_\+to\+\_\+exists\+\_\+transformer functions; not to subquery materialization (which has no triggered conditions).
+
+The implementation works as follows. For the current value of the outer expression
+
+
+\begin{DoxyItemize}
+\item If it contains only N\+U\+LL values, the original (before rewrite by the \mbox{\hyperlink{classItem__in__subselect}{Item\+\_\+in\+\_\+subselect}} rewrite methods) inner subquery is non-\/correlated and was previously executed, there is no need to re-\/execute it, and the previous return value is returned.
+\item If it contains N\+U\+LL values, check if there is a partial match for the inner query block by evaluating it. For clarity we repeat here the transformation previously performed on the sub-\/query. The expression
+
+{\ttfamily  ( oc\+\_\+1, ..., oc\+\_\+n ) $<$in predicate$>$ ( S\+E\+L\+E\+CT ic\+\_\+1, ..., ic\+\_\+n F\+R\+OM $<$table$>$ W\+H\+E\+RE $<$inner where$>$ ) }
+
+was transformed into
+\end{DoxyItemize}
+
+~\newline
+ {\ttfamily  ( oc\+\_\+1, ..., oc\+\_\+n ) $<$in predicate$>$ ( S\+E\+L\+E\+CT ic\+\_\+1, ..., ic\+\_\+n F\+R\+OM $<$table$>$ W\+H\+E\+RE $<$inner where$>$ A\+ND ... ( ic\+\_\+k = oc\+\_\+k OR ic\+\_\+k IS N\+U\+LL ) H\+A\+V\+I\+NG ... N\+OT ic\+\_\+k IS N\+U\+LL ) }
+
+The evaluation will now proceed according to special rules set up elsewhere. These rules include\+:
+
+
+\begin{DoxyItemize}
+\item The H\+A\+V\+I\+NG N\+OT $<$inner column$>$ IS N\+U\+LL conditions added by the aforementioned rewrite methods will detect whether they evaluated (and rejected) a N\+U\+LL value and if so, will cause the subquery to evaluate to N\+U\+LL.
+\item The added W\+H\+E\+RE and H\+A\+V\+I\+NG conditions are present only for those inner columns that correspond to outer column that are not N\+U\+LL at the moment.
+\end{DoxyItemize}
+
+~\newline
+ -\/ If there is an eligible index for executing the subquery, the special access method \char`\"{}\+Full scan on N\+U\+L\+L key\char`\"{} is employed which ensures that the inner query will detect if there are N\+U\+LL values resulting from the inner query. This access method will quietly resort to table scan if it needs to find N\+U\+LL values as well.
+
+
+\begin{DoxyItemize}
+\item Under these conditions, the sub-\/query need only be evaluated in order to find out whether it produced any rows.
+\end{DoxyItemize}
+
+~\newline
+ -\/ If it did, we know that there was a partial match since there are N\+U\+LL values in the outer row expression.
+
+
+\begin{DoxyItemize}
+\item If it did not, the result is F\+A\+L\+SE or U\+N\+K\+N\+O\+WN. If at least one of the H\+A\+V\+I\+NG sub-\/predicates rejected a N\+U\+LL value corresponding to an outer non-\/N\+U\+LL, and hence the inner query block returns U\+N\+K\+N\+O\+WN upon evaluation, there was a partial match and the result is U\+N\+K\+N\+O\+WN.
+\end{DoxyItemize}
+
+If it contains no N\+U\+LL values, the call is forwarded to the inner query block.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classItem__in__subselect_a137eef270a78238c1bafde29071cbbcb}{Item\+\_\+in\+\_\+subselect\+::val\+\_\+bool()}} 
+
+Item\+\_\+is\+\_\+not\+\_\+null\+\_\+test\+::val\+\_\+int() 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classItem}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

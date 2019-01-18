@@ -1,0 +1,87 @@
+\hypertarget{classField__temporal__with__date__and__time}{}\section{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time Class Reference}
+\label{classField__temporal__with__date__and__time}\index{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}}
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.833333cm]{classField__temporal__with__date__and__time}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classField__temporal__with__date__and__time_a60d02d91b14a2b46453e749156f42486}{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}} (uchar $\ast$ptr\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint8 dec\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__temporal__with__date__and__time_ad2f6c6b5db8898a26803988822f18549}\label{classField__temporal__with__date__and__time_ad2f6c6b5db8898a26803988822f18549}} 
+void {\bfseries store\+\_\+timestamp} (const struct timeval $\ast$tm)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classField__temporal__with__date__and__time_ac497834ddc1ef395a387790d97cfb63d}{init\+\_\+timestamp\+\_\+flags}} ()
+\item 
+virtual void \mbox{\hyperlink{classField__temporal__with__date__and__time_a3cfd6dc59b102362d592341dbf40a19e}{store\+\_\+timestamp\+\_\+internal}} (const struct timeval $\ast$tm)=0
+\item 
+\mbox{\Hypertarget{classField__temporal__with__date__and__time_aba7bd4dad14caa217e20ac8a9d6e62a8}\label{classField__temporal__with__date__and__time_aba7bd4dad14caa217e20ac8a9d6e62a8}} 
+bool {\bfseries convert\+\_\+\+T\+I\+M\+E\+\_\+to\+\_\+timestamp} (T\+HD $\ast$thd, const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, struct timeval $\ast$tm, int $\ast$error)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract class for types with date and time, with or without fractional part\+: D\+A\+T\+E\+T\+I\+ME, D\+A\+T\+E\+T\+I\+M\+E(\+N), T\+I\+M\+E\+S\+T\+A\+MP, T\+I\+M\+E\+S\+T\+A\+M\+P(\+N). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classField__temporal__with__date__and__time_a60d02d91b14a2b46453e749156f42486}\label{classField__temporal__with__date__and__time_a60d02d91b14a2b46453e749156f42486}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}!Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}}
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}!Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}}
+\subsubsection{\texorpdfstring{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time()}{Field\_temporal\_with\_date\_and\_time()}}
+{\footnotesize\ttfamily Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time\+::\+Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{ptr\+\_\+arg,  }\item[{uchar $\ast$}]{null\+\_\+ptr\+\_\+arg,  }\item[{uchar}]{null\+\_\+bit\+\_\+arg,  }\item[{enum utype}]{unireg\+\_\+check\+\_\+arg,  }\item[{const char $\ast$}]{field\+\_\+name\+\_\+arg,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \mbox{\hyperlink{classField__temporal__with__date__and__time}{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}} 
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em null\+\_\+ptr\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em null\+\_\+bit\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em unireg\+\_\+check\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em field\+\_\+name\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em dec\+\_\+arg} & Number of second fraction digits, 0..6. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__temporal__with__date__and__time_ac497834ddc1ef395a387790d97cfb63d}\label{classField__temporal__with__date__and__time_ac497834ddc1ef395a387790d97cfb63d}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}!init\+\_\+timestamp\+\_\+flags@{init\+\_\+timestamp\+\_\+flags}}
+\index{init\+\_\+timestamp\+\_\+flags@{init\+\_\+timestamp\+\_\+flags}!Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}}
+\subsubsection{\texorpdfstring{init\+\_\+timestamp\+\_\+flags()}{init\_timestamp\_flags()}}
+{\footnotesize\ttfamily void Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time\+::init\+\_\+timestamp\+\_\+flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initialize flags for T\+I\+M\+E\+S\+T\+A\+MP D\+E\+F\+A\+U\+LT C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP / ON U\+P\+D\+A\+TE C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP columns.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]get rid of T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+F\+L\+AG and O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+N\+O\+W\+\_\+\+F\+L\+AG. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classField__temporal__with__date__and__time_a3cfd6dc59b102362d592341dbf40a19e}\label{classField__temporal__with__date__and__time_a3cfd6dc59b102362d592341dbf40a19e}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}!store\+\_\+timestamp\+\_\+internal@{store\+\_\+timestamp\+\_\+internal}}
+\index{store\+\_\+timestamp\+\_\+internal@{store\+\_\+timestamp\+\_\+internal}!Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time@{Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time}}
+\subsubsection{\texorpdfstring{store\+\_\+timestamp\+\_\+internal()}{store\_timestamp\_internal()}}
+{\footnotesize\ttfamily virtual void Field\+\_\+temporal\+\_\+with\+\_\+date\+\_\+and\+\_\+time\+::store\+\_\+timestamp\+\_\+internal (\begin{DoxyParamCaption}\item[{const struct timeval $\ast$}]{tm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Store \char`\"{}struct timeval\char`\"{} value into field. The value must be properly rounded or truncated according to the number of fractional second digits. 
+
+Implemented in \mbox{\hyperlink{classField__datetimef_adb90beeaafa4b792067cd838084e230f}{Field\+\_\+datetimef}}, \mbox{\hyperlink{classField__datetime_ae05689a45e7e14f5061f75202a6e9280}{Field\+\_\+datetime}}, \mbox{\hyperlink{classField__timestampf_a93e60b040799d30057489d11e3c65676}{Field\+\_\+timestampf}}, and \mbox{\hyperlink{classField__timestamp_a3dfb1ebf99c1e7da4296ddb6751deb91}{Field\+\_\+timestamp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

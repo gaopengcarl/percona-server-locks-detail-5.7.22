@@ -1,0 +1,67 @@
+\hypertarget{classPoint__coordinate__checker}{}\section{Point\+\_\+coordinate\+\_\+checker Class Reference}
+\label{classPoint__coordinate__checker}\index{Point\+\_\+coordinate\+\_\+checker@{Point\+\_\+coordinate\+\_\+checker}}
+Inheritance diagram for Point\+\_\+coordinate\+\_\+checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPoint__coordinate__checker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPoint__coordinate__checker_a138d1f642b461297fe1aa1c211d8ae32}\label{classPoint__coordinate__checker_a138d1f642b461297fe1aa1c211d8ae32}} 
+{\bfseries Point\+\_\+coordinate\+\_\+checker} (\mbox{\hyperlink{classNumeric__interval}{Numeric\+\_\+interval}}$<$ double $>$ x\+\_\+range, \mbox{\hyperlink{classNumeric__interval}{Numeric\+\_\+interval}}$<$ double $>$ y\+\_\+range)
+\item 
+virtual void \mbox{\hyperlink{classPoint__coordinate__checker_a69fe70028bc0356ba1e10d47a7a76e8e}{on\+\_\+wkb\+\_\+start}} (Geometry\+::wkb\+Byte\+Order bo, Geometry\+::wkb\+Type geotype, const void $\ast$wkb, uint32 len, bool has\+\_\+hdr)
+\item 
+virtual void \mbox{\hyperlink{classPoint__coordinate__checker_a860f54df705a7452ee4f1c5ca825f0e6}{on\+\_\+wkb\+\_\+end}} (const void $\ast$wkb)
+\item 
+\mbox{\Hypertarget{classPoint__coordinate__checker_ae2509e3fedfce55a1ff2a6e60d8d5660}\label{classPoint__coordinate__checker_ae2509e3fedfce55a1ff2a6e60d8d5660}} 
+bool {\bfseries has\+\_\+invalid\+\_\+point} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPoint__coordinate__checker_a860f54df705a7452ee4f1c5ca825f0e6}\label{classPoint__coordinate__checker_a860f54df705a7452ee4f1c5ca825f0e6}} 
+\index{Point\+\_\+coordinate\+\_\+checker@{Point\+\_\+coordinate\+\_\+checker}!on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}}
+\index{on\+\_\+wkb\+\_\+end@{on\+\_\+wkb\+\_\+end}!Point\+\_\+coordinate\+\_\+checker@{Point\+\_\+coordinate\+\_\+checker}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+end()}{on\_wkb\_end()}}
+{\footnotesize\ttfamily virtual void Point\+\_\+coordinate\+\_\+checker\+::on\+\_\+wkb\+\_\+end (\begin{DoxyParamCaption}\item[{const void $\ast$}]{wkb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the end of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em wkb} & the position of the first byte after the W\+KB byte string which the scanner just scanned. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a07c27cceefdd31f25f1d0b3754786b78}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+\mbox{\Hypertarget{classPoint__coordinate__checker_a69fe70028bc0356ba1e10d47a7a76e8e}\label{classPoint__coordinate__checker_a69fe70028bc0356ba1e10d47a7a76e8e}} 
+\index{Point\+\_\+coordinate\+\_\+checker@{Point\+\_\+coordinate\+\_\+checker}!on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}}
+\index{on\+\_\+wkb\+\_\+start@{on\+\_\+wkb\+\_\+start}!Point\+\_\+coordinate\+\_\+checker@{Point\+\_\+coordinate\+\_\+checker}}
+\subsubsection{\texorpdfstring{on\+\_\+wkb\+\_\+start()}{on\_wkb\_start()}}
+{\footnotesize\ttfamily virtual void Point\+\_\+coordinate\+\_\+checker\+::on\+\_\+wkb\+\_\+start (\begin{DoxyParamCaption}\item[{Geometry\+::wkb\+Byte\+Order}]{bo,  }\item[{Geometry\+::wkb\+Type}]{geotype,  }\item[{const void $\ast$}]{wkb,  }\item[{uint32}]{len,  }\item[{bool}]{has\+\_\+hdr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Notified when scanner sees the start of a geometry W\+KB. 
+\begin{DoxyParams}{Parameters}
+{\em bo} & byte order of the W\+KB. \\
+\hline
+{\em geotype} & geometry type of the W\+KB; \\
+\hline
+{\em wkb} & W\+KB byte string, the first byte after the W\+KB header if any. \\
+\hline
+{\em len} & NO. of bytes of the W\+KB byte string starting from wkb. There can be many geometries in the \mbox{[}wkb, wkb+len) buffer. \\
+\hline
+{\em has\+\_\+hdr} & whether there is a W\+KB header right before \textquotesingle{}wkb\textquotesingle{} in the byte string. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classWKB__scanner__event__handler_a2669ccaafbff44cfc06382dd289f0aaf}{W\+K\+B\+\_\+scanner\+\_\+event\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__geofunc_8cc}{item\+\_\+geofunc.\+cc}}\end{DoxyCompactItemize}

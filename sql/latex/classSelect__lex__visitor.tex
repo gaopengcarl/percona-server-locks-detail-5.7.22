@@ -1,0 +1,51 @@
+\hypertarget{classSelect__lex__visitor}{}\section{Select\+\_\+lex\+\_\+visitor Class Reference}
+\label{classSelect__lex__visitor}\index{Select\+\_\+lex\+\_\+visitor@{Select\+\_\+lex\+\_\+visitor}}
+
+
+{\ttfamily \#include $<$select\+\_\+lex\+\_\+visitor.\+h$>$}
+
+Inheritance diagram for Select\+\_\+lex\+\_\+visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSelect__lex__visitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_ad4806e9af04f07b8267eb225f468a5f4}\label{classSelect__lex__visitor_ad4806e9af04f07b8267eb225f468a5f4}} 
+virtual bool {\bfseries visits\+\_\+in\+\_\+prefix\+\_\+order} () const
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a57f7ece7125717780052c1bc6710325a}\label{classSelect__lex__visitor_a57f7ece7125717780052c1bc6710325a}} 
+bool {\bfseries visit} (S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$unit)
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a28dfc6edb2aec752f0b36f4cd37b0239}\label{classSelect__lex__visitor_a28dfc6edb2aec752f0b36f4cd37b0239}} 
+bool {\bfseries visit} (S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$select\+\_\+lex)
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a91000e2be447a02b2576593343617dd0}\label{classSelect__lex__visitor_a91000e2be447a02b2576593343617dd0}} 
+bool \mbox{\hyperlink{classSelect__lex__visitor_a91000e2be447a02b2576593343617dd0}{visit}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Called for all nodes of all expression trees (i.\+e. \mbox{\hyperlink{classItem}{Item}} trees). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a9b42e36cf20611d0ac39e2356d2d74d7}\label{classSelect__lex__visitor_a9b42e36cf20611d0ac39e2356d2d74d7}} 
+virtual \mbox{\hyperlink{classSelect__lex__visitor_a9b42e36cf20611d0ac39e2356d2d74d7}{$\sim$\+Select\+\_\+lex\+\_\+visitor}} ()=0
+\begin{DoxyCompactList}\small\item\em Gcc demands an implementation for a virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a3daf48ca2a592eeb2002ebdad547be68}\label{classSelect__lex__visitor_a3daf48ca2a592eeb2002ebdad547be68}} 
+virtual bool {\bfseries visit\+\_\+union} (S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$)
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a29c3c8f1fb89974f0362617b168fb93b}\label{classSelect__lex__visitor_a29c3c8f1fb89974f0362617b168fb93b}} 
+virtual bool {\bfseries visit\+\_\+query\+\_\+block} (S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$)
+\item 
+\mbox{\Hypertarget{classSelect__lex__visitor_a5556379fa02c37f3842025b2096b34ba}\label{classSelect__lex__visitor_a5556379fa02c37f3842025b2096b34ba}} 
+virtual bool {\bfseries visit\+\_\+item} (\mbox{\hyperlink{classItem}{Item}} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for traversing the S\+E\+L\+E\+C\+T\+\_\+\+L\+EX tree. In order to use it, a client defines a subclass, overriding the member functions that visit the objects of interest. If a function returns true, traversal is aborted. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{select__lex__visitor_8h}{select\+\_\+lex\+\_\+visitor.\+h}}\item 
+\mbox{\hyperlink{select__lex__visitor_8cc}{select\+\_\+lex\+\_\+visitor.\+cc}}\end{DoxyCompactItemize}

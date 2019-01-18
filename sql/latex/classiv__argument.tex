@@ -1,0 +1,46 @@
+\hypertarget{classiv__argument}{}\section{iv\+\_\+argument Class Reference}
+\label{classiv__argument}\index{iv\+\_\+argument@{iv\+\_\+argument}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char $\ast$ \mbox{\hyperlink{classiv__argument_a702ce75039fecd27a60e92cc174cfdac}{retrieve\+\_\+iv\+\_\+ptr}} (enum my\+\_\+aes\+\_\+opmode aes\+\_\+opmode, uint arg\+\_\+count, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$args, const char $\ast$func\+\_\+name, T\+HD $\ast$thd, my\+\_\+bool $\ast$error\+\_\+generated)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+helper class to process an IV argument to aes\+\_\+encrypt/aes\+\_\+decrypt 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classiv__argument_a702ce75039fecd27a60e92cc174cfdac}\label{classiv__argument_a702ce75039fecd27a60e92cc174cfdac}} 
+\index{iv\+\_\+argument@{iv\+\_\+argument}!retrieve\+\_\+iv\+\_\+ptr@{retrieve\+\_\+iv\+\_\+ptr}}
+\index{retrieve\+\_\+iv\+\_\+ptr@{retrieve\+\_\+iv\+\_\+ptr}!iv\+\_\+argument@{iv\+\_\+argument}}
+\subsubsection{\texorpdfstring{retrieve\+\_\+iv\+\_\+ptr()}{retrieve\_iv\_ptr()}}
+{\footnotesize\ttfamily const unsigned char$\ast$ iv\+\_\+argument\+::retrieve\+\_\+iv\+\_\+ptr (\begin{DoxyParamCaption}\item[{enum my\+\_\+aes\+\_\+opmode}]{aes\+\_\+opmode,  }\item[{uint}]{arg\+\_\+count,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{args,  }\item[{const char $\ast$}]{func\+\_\+name,  }\item[{T\+HD $\ast$}]{thd,  }\item[{my\+\_\+bool $\ast$}]{error\+\_\+generated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Validate the arguments and retrieve the IV value.
+
+Processes a 3d optional IV argument to an \mbox{\hyperlink{classItem__func}{Item\+\_\+func}} function. Contains all the necessary stack buffers etc.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em aes\+\_\+opmode} & the encryption mode \\
+\hline
+ & {\em arg\+\_\+count} & number of parameters passed to the function \\
+\hline
+ & {\em args} & array of arguments passed to the function \\
+\hline
+ & {\em func\+\_\+name} & the name of the function (for errors) \\
+\hline
+ & {\em thd} & the current thread (for errors) \\
+\hline
+\mbox{\texttt{ out}}  & {\em error\+\_\+generated} & set to true if error was generated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the retrived validated IV or N\+U\+LL 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__strfunc_8cc}{item\+\_\+strfunc.\+cc}}\end{DoxyCompactItemize}

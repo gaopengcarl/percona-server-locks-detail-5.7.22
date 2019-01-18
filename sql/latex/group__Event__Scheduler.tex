@@ -1,0 +1,938 @@
+\hypertarget{group__Event__Scheduler}{}\section{Event Scheduler}
+\label{group__Event__Scheduler}\index{Event Scheduler@{Event Scheduler}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{event__data__objects_8h}{event\+\_\+data\+\_\+objects.\+h}}
+\item 
+file \mbox{\hyperlink{event__db__repository_8h}{event\+\_\+db\+\_\+repository.\+h}}
+\item 
+file \mbox{\hyperlink{event__queue_8h}{event\+\_\+queue.\+h}}
+\item 
+file \mbox{\hyperlink{event__scheduler_8h}{event\+\_\+scheduler.\+h}}
+\item 
+file \mbox{\hyperlink{events_8h}{events.\+h}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEvent__creation__ctx}{Event\+\_\+creation\+\_\+ctx}}
+\item 
+class \mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}}
+\item 
+class \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}}
+\item 
+class \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}}
+\item 
+class \mbox{\hyperlink{classEvent__timed}{Event\+\_\+timed}}
+\item 
+class \mbox{\hyperlink{classEvent__job__data}{Event\+\_\+job\+\_\+data}}
+\item 
+class \mbox{\hyperlink{classEvent__db__intact}{Event\+\_\+db\+\_\+intact}}
+\item 
+class \mbox{\hyperlink{classEvent__db__repository}{Event\+\_\+db\+\_\+repository}}
+\item 
+struct \mbox{\hyperlink{structEvent__queue__less}{Event\+\_\+queue\+\_\+less}}
+\item 
+class \mbox{\hyperlink{classEvent__queue}{Event\+\_\+queue}}
+\item 
+struct \mbox{\hyperlink{structscheduler__param}{scheduler\+\_\+param}}
+\item 
+class \mbox{\hyperlink{classIs__worker}{Is\+\_\+worker}}
+\item 
+class \mbox{\hyperlink{classEvent__worker__thread}{Event\+\_\+worker\+\_\+thread}}
+\item 
+class \mbox{\hyperlink{classEvent__scheduler}{Event\+\_\+scheduler}}
+\item 
+class \mbox{\hyperlink{classEvents}{Events}}
+\begin{DoxyCompactList}\small\item\em A facade to the functionality of the Event Scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga42559d4cef1fc0f4efab81b69e903539}\label{group__Event__Scheduler_ga42559d4cef1fc0f4efab81b69e903539}} 
+\#define {\bfseries E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE}~30
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaf37e6d23252f405250e2868cb78a1deb}\label{group__Event__Scheduler_gaf37e6d23252f405250e2868cb78a1deb}} 
+\#define {\bfseries L\+O\+C\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+D\+A\+TA}()~lock\+\_\+data(\+\_\+\+\_\+func\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga847290ca395fac2cbe151e1fa5927bc7}\label{group__Event__Scheduler_ga847290ca395fac2cbe151e1fa5927bc7}} 
+\#define {\bfseries U\+N\+L\+O\+C\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+D\+A\+TA}()~unlock\+\_\+data(\+\_\+\+\_\+func\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaa0cd32193b17c7700b416b397f4942b8}\label{group__Event__Scheduler_gaa0cd32193b17c7700b416b397f4942b8}} 
+\#define {\bfseries L\+O\+C\+K\+\_\+\+D\+A\+TA}()~lock\+\_\+data(\+\_\+\+\_\+func\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gac45ef89b373af89f83369208fb1cddb3}\label{group__Event__Scheduler_gac45ef89b373af89f83369208fb1cddb3}} 
+\#define {\bfseries U\+N\+L\+O\+C\+K\+\_\+\+D\+A\+TA}()~unlock\+\_\+data(\+\_\+\+\_\+func\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gad54a3f31376d084d7b3d70ff31fe9463}\label{group__Event__Scheduler_gad54a3f31376d084d7b3d70ff31fe9463}} 
+\#define {\bfseries C\+O\+N\+D\+\_\+\+S\+T\+A\+T\+E\+\_\+\+W\+A\+IT}(mythd,  abstime,  stage)~cond\+\_\+wait(mythd, abstime, stage, \+\_\+\+\_\+func\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga1dba8b6567061f45e6b9df70480b5239}\label{group__Event__Scheduler_ga1dba8b6567061f45e6b9df70480b5239}} 
+typedef ulonglong {\bfseries sql\+\_\+mode\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaae4159c1d82a5e7462befa8e1e047968}\label{group__Event__Scheduler_gaae4159c1d82a5e7462befa8e1e047968}} 
+typedef struct st\+\_\+mysql\+\_\+lex\+\_\+string {\bfseries L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga6b9dc255527f6e48e938b5ef349d967c}\label{group__Event__Scheduler_ga6b9dc255527f6e48e938b5ef349d967c}} 
+typedef struct charset\+\_\+info\+\_\+st {\bfseries C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaae4159c1d82a5e7462befa8e1e047968}\label{group__Event__Scheduler_gaae4159c1d82a5e7462befa8e1e047968}} 
+typedef struct st\+\_\+mysql\+\_\+lex\+\_\+string {\bfseries L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga0c86e1e2e740030ff97685e49de3063c}\label{group__Event__Scheduler_ga0c86e1e2e740030ff97685e49de3063c}} 
+enum {\bfseries enum\+\_\+events\+\_\+table\+\_\+field} \{ \newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+DB} = 0, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+N\+A\+ME}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+B\+O\+DY}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+E\+F\+I\+N\+ER}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+AT}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+E\+X\+PR}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+R\+E\+A\+T\+ED}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+O\+D\+I\+F\+I\+ED}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L\+A\+S\+T\+\_\+\+E\+X\+E\+C\+U\+T\+ED}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+T\+A\+R\+TS}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+N\+DS}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+T\+A\+T\+US}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+ON}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+Q\+L\+\_\+\+M\+O\+DE}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+M\+M\+E\+NT}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+R\+I\+G\+I\+N\+A\+T\+OR}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+I\+M\+E\+\_\+\+Z\+O\+NE}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+NT}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+L\+L\+A\+T\+I\+O\+N\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}, 
+\newline
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+B\+\_\+\+C\+O\+L\+L\+A\+T\+I\+ON}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+B\+O\+D\+Y\+\_\+\+U\+T\+F8}, 
+{\bfseries E\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+U\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga952e506d8f76739d416da0fb7169fac3}{construct\+\_\+drop\+\_\+event\+\_\+sql}} (T\+HD $\ast$thd, String $\ast$sp\+\_\+sql, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&schema\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&event\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gacad056b8544f7ea1e3ee0186bad1723a}\label{group__Event__Scheduler_gacad056b8544f7ea1e3ee0186bad1723a}} 
+bool {\bfseries event\+\_\+basic\+\_\+db\+\_\+equal} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG db, \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}} $\ast$et)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga00f6ae4f5b433f002595b969c843203d}\label{group__Event__Scheduler_ga00f6ae4f5b433f002595b969c843203d}} 
+bool {\bfseries event\+\_\+basic\+\_\+identifier\+\_\+equal} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG db, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}} $\ast$b)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga1c809f091f9bd7c50b49ee5fbaa02c79}\label{group__Event__Scheduler_ga1c809f091f9bd7c50b49ee5fbaa02c79}} 
+void {\bfseries init\+\_\+scheduler\+\_\+psi\+\_\+keys} (void)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gac6a9708fc4344111abc8f8f2e7d13b36}\label{group__Event__Scheduler_gac6a9708fc4344111abc8f8f2e7d13b36}} 
+int {\bfseries events\+\_\+table\+\_\+index\+\_\+read\+\_\+for\+\_\+db} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$schema\+\_\+table, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$event\+\_\+table)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gad47d26a9ee0a49c6a91a13b6678c696e}\label{group__Event__Scheduler_gad47d26a9ee0a49c6a91a13b6678c696e}} 
+int {\bfseries events\+\_\+table\+\_\+scan\+\_\+all} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$schema\+\_\+table, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$event\+\_\+table)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaed4039fa124c55c7af5633c333596418}\label{group__Event__Scheduler_gaed4039fa124c55c7af5633c333596418}} 
+bool {\bfseries post\+\_\+init\+\_\+event\+\_\+thread} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga738650dbc693133acd4d54e8d2dd6b66}\label{group__Event__Scheduler_ga738650dbc693133acd4d54e8d2dd6b66}} 
+void {\bfseries deinit\+\_\+event\+\_\+thread} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga2d8183f6091ab9e0e22e41ee1171e190}\label{group__Event__Scheduler_ga2d8183f6091ab9e0e22e41ee1171e190}} 
+void {\bfseries pre\+\_\+init\+\_\+event\+\_\+thread} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaf8df39e0d57c186a1a33c8bd3494153d}\label{group__Event__Scheduler_gaf8df39e0d57c186a1a33c8bd3494153d}} 
+void $\ast$ {\bfseries event\+\_\+scheduler\+\_\+thread} (void $\ast$arg)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Event__Scheduler_ga01bf4e084293a37ca93a4ab383f72a19}{event\+\_\+worker\+\_\+thread}} (void $\ast$arg)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga66efa97f69d8019c9e3c98372eb41915}\label{group__Event__Scheduler_ga66efa97f69d8019c9e3c98372eb41915}} 
+int {\bfseries sortcmp\+\_\+lex\+\_\+string} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG s, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG t, C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga7f67980c5d3c4bfb8f19e7dc94c0a69c}\label{group__Event__Scheduler_ga7f67980c5d3c4bfb8f19e7dc94c0a69c}} 
+static bool {\bfseries Event\+\_\+creation\+\_\+ctx\+::load\+\_\+from\+\_\+db} (T\+HD $\ast$thd, M\+E\+M\+\_\+\+R\+O\+OT $\ast$event\+\_\+mem\+\_\+root, const char $\ast$db\+\_\+name, const char $\ast$event\+\_\+name, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$event\+\_\+tbl, \mbox{\hyperlink{classStored__program__creation__ctx}{Stored\+\_\+program\+\_\+creation\+\_\+ctx}} $\ast$$\ast$ctx)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga3a2c150540e35ed8c7c0e9ba2eb97e75}\label{group__Event__Scheduler_ga3a2c150540e35ed8c7c0e9ba2eb97e75}} 
+bool {\bfseries Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec\+::init} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga2e257b7ab3bb6533cfde08f59fd6a063}\label{group__Event__Scheduler_ga2e257b7ab3bb6533cfde08f59fd6a063}} 
+void {\bfseries Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec\+::claim\+\_\+memory\+\_\+ownership} ()
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga64bb2957476ac440d121a5b19901f1aa}\label{group__Event__Scheduler_ga64bb2957476ac440d121a5b19901f1aa}} 
+bool {\bfseries Event\+\_\+basic\+::load\+\_\+string\+\_\+fields} (\mbox{\hyperlink{classField}{Field}} $\ast$$\ast$fields,...)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga9c891d056d8d8db91786dd01a7ce7542}\label{group__Event__Scheduler_ga9c891d056d8d8db91786dd01a7ce7542}} 
+bool {\bfseries Event\+\_\+basic\+::load\+\_\+time\+\_\+zone} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG tz\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga1cd598ebaf2d4e0967e3ad8757730bc3}\label{group__Event__Scheduler_ga1cd598ebaf2d4e0967e3ad8757730bc3}} 
+void {\bfseries Event\+\_\+timed\+::init} ()
+\item 
+virtual bool \mbox{\hyperlink{group__Event__Scheduler_gab1ac4ae01202ed7bd65cf20736a95ebd}{Event\+\_\+job\+\_\+data\+::load\+\_\+from\+\_\+row}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+virtual bool \mbox{\hyperlink{group__Event__Scheduler_ga2ac60939979bc9d825bbf5d77b3c3025}{Event\+\_\+queue\+\_\+element\+::load\+\_\+from\+\_\+row}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+virtual bool \mbox{\hyperlink{group__Event__Scheduler_gaf182a3b09598193b22ee09f0661b4dc3}{Event\+\_\+timed\+::load\+\_\+from\+\_\+row}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga91cb3b792d61320fee18b2d63c5dfbd5}\label{group__Event__Scheduler_ga91cb3b792d61320fee18b2d63c5dfbd5}} 
+bool {\bfseries Event\+\_\+queue\+\_\+element\+::compute\+\_\+next\+\_\+execution\+\_\+time} ()
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gacf5bb67c35ecc1f660914fad5dfca42a}\label{group__Event__Scheduler_gacf5bb67c35ecc1f660914fad5dfca42a}} 
+void {\bfseries Event\+\_\+queue\+\_\+element\+::mark\+\_\+last\+\_\+executed} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gace3d997ae274d92e7e484a4eec727864}\label{group__Event__Scheduler_gace3d997ae274d92e7e484a4eec727864}} 
+int {\bfseries Event\+\_\+timed\+::get\+\_\+create\+\_\+event} (T\+HD $\ast$thd, String $\ast$buf)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_gaeb3f7011c6b8ec77e148d46e691011a5}{Event\+\_\+job\+\_\+data\+::execute}} (T\+HD $\ast$thd, bool drop)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga898458147e12c4def32734c4f82504df}\label{group__Event__Scheduler_ga898458147e12c4def32734c4f82504df}} 
+my\+\_\+bool {\bfseries Event\+\_\+db\+\_\+intact\+::check\+\_\+event\+\_\+table} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga6fa6828fbb74522072631b6d462b6772}{Event\+\_\+db\+\_\+repository\+::fill\+\_\+schema\+\_\+events}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, const char $\ast$db)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga019f518dd8c841d910161407064682c1}{Event\+\_\+db\+\_\+repository\+::open\+\_\+event\+\_\+table}} (T\+HD $\ast$thd, enum thr\+\_\+lock\+\_\+type lock\+\_\+type, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$table)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_gab5e75d43c08714c55b64116ab3e9eaed}{Event\+\_\+db\+\_\+repository\+::create\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$parse\+\_\+data, bool create\+\_\+if\+\_\+not, bool $\ast$event\+\_\+already\+\_\+exists)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga2febaed952a7cc8253508b8ea0bc4516}{Event\+\_\+db\+\_\+repository\+::update\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$parse\+\_\+data, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+name)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga70b022bf1055eb3251b9ff13c621e5c9}{Event\+\_\+db\+\_\+repository\+::drop\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG db, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, bool drop\+\_\+if\+\_\+exists)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga5ceeecadecac16417612be9384296bfd}{Event\+\_\+db\+\_\+repository\+::find\+\_\+named\+\_\+event}} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG db, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga22ccb5b4879da8bb6dd6aa5907295cc0}\label{group__Event__Scheduler_ga22ccb5b4879da8bb6dd6aa5907295cc0}} 
+void {\bfseries Event\+\_\+db\+\_\+repository\+::drop\+\_\+schema\+\_\+events} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG schema)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga12847ce2627dee3ddb5d0b28d3bc4ba7}{Event\+\_\+db\+\_\+repository\+::load\+\_\+named\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}} $\ast$et)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_gaa06f66d76c295601f91ce2b9dc119909}{Event\+\_\+db\+\_\+repository\+::update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG event\+\_\+db\+\_\+name, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG event\+\_\+name, my\+\_\+time\+\_\+t last\+\_\+executed, ulonglong status)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_gacea1505a895adc5f905dc86bc046b29f}{Event\+\_\+db\+\_\+repository\+::check\+\_\+system\+\_\+tables}} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga37304ce986a03fe630b43c0c4b3fc5de}\label{group__Event__Scheduler_ga37304ce986a03fe630b43c0c4b3fc5de}} 
+bool {\bfseries Event\+\_\+queue\+::init\+\_\+queue} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_gad864f1ee71bf785ce02a4f6cc3273fc4}{Event\+\_\+queue\+::create\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$new\+\_\+element, bool $\ast$created)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gad6d511c33cd4d5feda9141c5698ec027}\label{group__Event__Scheduler_gad6d511c33cd4d5feda9141c5698ec027}} 
+void {\bfseries Event\+\_\+queue\+::update\+\_\+event} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$new\+\_\+element)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga31b5b7ab57798af1a00661555f55a988}\label{group__Event__Scheduler_ga31b5b7ab57798af1a00661555f55a988}} 
+void {\bfseries Event\+\_\+queue\+::drop\+\_\+event} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga4b2c6f2cbbeae84464c2a445bc6553e3}\label{group__Event__Scheduler_ga4b2c6f2cbbeae84464c2a445bc6553e3}} 
+void {\bfseries Event\+\_\+queue\+::drop\+\_\+schema\+\_\+events} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG schema)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga292d697c0c3cccb4d7ff26da4025e609}\label{group__Event__Scheduler_ga292d697c0c3cccb4d7ff26da4025e609}} 
+void {\bfseries Event\+\_\+queue\+::recalculate\+\_\+activation\+\_\+times} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga030cb95128492b442a0fba28df77f523}\label{group__Event__Scheduler_ga030cb95128492b442a0fba28df77f523}} 
+bool {\bfseries Event\+\_\+queue\+::get\+\_\+top\+\_\+for\+\_\+execution\+\_\+if\+\_\+time} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}} $\ast$$\ast$event\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gade307516c2797123f569173c32c8597e}\label{group__Event__Scheduler_gade307516c2797123f569173c32c8597e}} 
+void {\bfseries Event\+\_\+queue\+::dump\+\_\+internal\+\_\+status} ()
+\item 
+void \mbox{\hyperlink{group__Event__Scheduler_ga3226ac4e79d64e27ce9eebed2234d2c1}{Event\+\_\+worker\+\_\+thread\+::run}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}} $\ast$event)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaa3324d7c35e44e71696035520855f90b}\label{group__Event__Scheduler_gaa3324d7c35e44e71696035520855f90b}} 
+{\bfseries Event\+\_\+scheduler\+::\+Event\+\_\+scheduler} (\mbox{\hyperlink{classEvent__queue}{Event\+\_\+queue}} $\ast$event\+\_\+queue\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_gaf9de87da28f91daf6bbeb577dc029548}{Event\+\_\+scheduler\+::start}} (int $\ast$err\+\_\+no)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga696f639f60d25091948e74bf4d2fa813}\label{group__Event__Scheduler_ga696f639f60d25091948e74bf4d2fa813}} 
+bool {\bfseries Event\+\_\+scheduler\+::run} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga2642c1b82a84e3577a1c84610c2c8f71}\label{group__Event__Scheduler_ga2642c1b82a84e3577a1c84610c2c8f71}} 
+bool {\bfseries Event\+\_\+scheduler\+::is\+\_\+running} ()
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_ga2efd565f1cc88f96232725ab8a1e36ae}{Event\+\_\+scheduler\+::stop}} ()
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga2272da9ffbce9706f647f989f6b4af27}\label{group__Event__Scheduler_ga2272da9ffbce9706f647f989f6b4af27}} 
+void {\bfseries Event\+\_\+scheduler\+::dump\+\_\+internal\+\_\+status} ()
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga97efaefcec61d1bb9b7e0c518c1319ce}{Events\+::check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error}} ()
+\item 
+static int \mbox{\hyperlink{group__Event__Scheduler_gafb6d2b26338cb92f01504ba32e0ecdf7}{Events\+::reconstruct\+\_\+interval\+\_\+expression}} (String $\ast$buf, interval\+\_\+type interval, longlong expression)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga8fbb9616149b046c5cc59eb889d6f809}{Events\+::create\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$parse\+\_\+data, bool if\+\_\+exists)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga7577ede664831ea99e27f45a0d91d946}{Events\+::update\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$parse\+\_\+data, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+name)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}{Events\+::drop\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, bool if\+\_\+exists)
+\item 
+static void \mbox{\hyperlink{group__Event__Scheduler_ga3a0f2bbcd465f2afe81b3f88fb2bf62e}{Events\+::drop\+\_\+schema\+\_\+events}} (T\+HD $\ast$thd, const char $\ast$db)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_ga99ad9b87a2e1ce1b69c8f9c31e4ee5d1}{Events\+::show\+\_\+create\+\_\+event}} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+static int \mbox{\hyperlink{group__Event__Scheduler_gae80cc405efbd8816c70a163818854645}{Events\+::fill\+\_\+schema\+\_\+events}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, \mbox{\hyperlink{classItem}{Item}} $\ast$)
+\item 
+static bool \mbox{\hyperlink{group__Event__Scheduler_gaa1df78d5847482dc1712c780dfd44b9a}{Events\+::init}} (my\+\_\+bool opt\+\_\+noacl)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga72f109679a0c7de4b033e3dee13437bf}\label{group__Event__Scheduler_ga72f109679a0c7de4b033e3dee13437bf}} 
+static void {\bfseries Events\+::deinit} ()
+\item 
+static void \mbox{\hyperlink{group__Event__Scheduler_gaa26988f7ec7f5d0053af28a5d8586236}{Events\+::init\+\_\+mutexes}} ()
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga8ab6bb97c082a9540cb375349db4178f}\label{group__Event__Scheduler_ga8ab6bb97c082a9540cb375349db4178f}} 
+static void {\bfseries Events\+::dump\+\_\+internal\+\_\+status} ()
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga3856f26945354900123795b01d501465}\label{group__Event__Scheduler_ga3856f26945354900123795b01d501465}} 
+static bool {\bfseries Events\+::start} (int $\ast$err\+\_\+no)
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaca23f0c484748291386775e33a4764e3}\label{group__Event__Scheduler_gaca23f0c484748291386775e33a4764e3}} 
+static bool {\bfseries Events\+::stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_ga0e474aa86af49c32b8e5d9fae2fc676d}\label{group__Event__Scheduler_ga0e474aa86af49c32b8e5d9fae2fc676d}} 
+my\+\_\+thread\+\_\+attr\+\_\+t {\bfseries connection\+\_\+attrib}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaac6ce480a3d0201037599f8fb6f05862}\label{group__Event__Scheduler_gaac6ce480a3d0201037599f8fb6f05862}} 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+on\+\_\+empty\+\_\+queue} = \{ 0, \char`\"{}Waiting on empty queue\char`\"{}, 0\}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gae2ee0f02026b33aaf16a3e0b0cb5c1d8}\label{group__Event__Scheduler_gae2ee0f02026b33aaf16a3e0b0cb5c1d8}} 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+for\+\_\+next\+\_\+activation} = \{ 0, \char`\"{}Waiting for next activation\char`\"{}, 0\}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaf3efe154579389be46af2cd9aaba9f54}\label{group__Event__Scheduler_gaf3efe154579389be46af2cd9aaba9f54}} 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+for\+\_\+scheduler\+\_\+to\+\_\+stop} = \{ 0, \char`\"{}Waiting for the scheduler to stop\char`\"{}, 0\}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gafbf61ca89e4ba2534b4fb7ec4be09e32}\label{group__Event__Scheduler_gafbf61ca89e4ba2534b4fb7ec4be09e32}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+event\+\_\+basic\+\_\+root}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gafbf61ca89e4ba2534b4fb7ec4be09e32}\label{group__Event__Scheduler_gafbf61ca89e4ba2534b4fb7ec4be09e32}} 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+event\+\_\+basic\+\_\+root}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaac6ce480a3d0201037599f8fb6f05862}\label{group__Event__Scheduler_gaac6ce480a3d0201037599f8fb6f05862}} 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+on\+\_\+empty\+\_\+queue}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gae2ee0f02026b33aaf16a3e0b0cb5c1d8}\label{group__Event__Scheduler_gae2ee0f02026b33aaf16a3e0b0cb5c1d8}} 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+for\+\_\+next\+\_\+activation}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gaf3efe154579389be46af2cd9aaba9f54}\label{group__Event__Scheduler_gaf3efe154579389be46af2cd9aaba9f54}} 
+P\+S\+I\+\_\+stage\+\_\+info {\bfseries stage\+\_\+waiting\+\_\+for\+\_\+scheduler\+\_\+to\+\_\+stop}
+\item 
+\mbox{\Hypertarget{group__Event__Scheduler_gabb9e1881c4dcbdecbab77a6e6b77f02b}\label{group__Event__Scheduler_gabb9e1881c4dcbdecbab77a6e6b77f02b}} 
+static ulong {\bfseries Events\+::opt\+\_\+event\+\_\+scheduler} = Events\+::\+E\+V\+E\+N\+T\+S\+\_\+\+O\+FF
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Event__Scheduler_ga97efaefcec61d1bb9b7e0c518c1319ce}\label{group__Event__Scheduler_ga97efaefcec61d1bb9b7e0c518c1319ce}} 
+\index{Event Scheduler@{Event Scheduler}!check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error@{check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error}}
+\index{check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error@{check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error()}{check\_if\_system\_tables\_error()}}
+{\footnotesize\ttfamily bool Events\+::check\+\_\+if\+\_\+system\+\_\+tables\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Push an error into the error stack if the system tables are not up to date. \mbox{\Hypertarget{group__Event__Scheduler_gacea1505a895adc5f905dc86bc046b29f}\label{group__Event__Scheduler_gacea1505a895adc5f905dc86bc046b29f}} 
+\index{Event Scheduler@{Event Scheduler}!check\+\_\+system\+\_\+tables@{check\+\_\+system\+\_\+tables}}
+\index{check\+\_\+system\+\_\+tables@{check\+\_\+system\+\_\+tables}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{check\+\_\+system\+\_\+tables()}{check\_system\_tables()}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::check\+\_\+system\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Open mysql.\+db, mysql.\+user and mysql.\+event and check whether\+:
+\begin{DoxyItemize}
+\item mysql.\+db exists and is up to date (or from a newer version of My\+S\+QL),
+\item mysql.\+user has column Event\+\_\+priv at an expected position,
+\item mysql.\+event exists and is up to date (or from a newer version of My\+S\+QL)
+\end{DoxyItemize}
+
+This function is called only when the server is started. \begin{DoxyPrecond}{Precondition}
+The passed in thread handle has no open tables.
+\end{DoxyPrecond}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error, an error message is output to the error log. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga952e506d8f76739d416da0fb7169fac3}\label{group__Event__Scheduler_ga952e506d8f76739d416da0fb7169fac3}} 
+\index{Event Scheduler@{Event Scheduler}!construct\+\_\+drop\+\_\+event\+\_\+sql@{construct\+\_\+drop\+\_\+event\+\_\+sql}}
+\index{construct\+\_\+drop\+\_\+event\+\_\+sql@{construct\+\_\+drop\+\_\+event\+\_\+sql}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{construct\+\_\+drop\+\_\+event\+\_\+sql()}{construct\_drop\_event\_sql()}}
+{\footnotesize\ttfamily bool construct\+\_\+drop\+\_\+event\+\_\+sql (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{sp\+\_\+sql,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{schema\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{event\+\_\+name }\end{DoxyParamCaption})}
+
+Get D\+R\+OP E\+V\+E\+NT statement to binlog the drop of ON C\+O\+M\+P\+L\+E\+T\+I\+ON N\+OT P\+R\+E\+S\+E\+R\+VE event.
+
+Build an S\+QL drop event string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread handle \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sp\+\_\+sql} & Pointer to String object where the S\+QL query will be stored \\
+\hline
+\mbox{\texttt{ in}}  & {\em db\+\_\+name} & The schema name \\
+\hline
+\mbox{\texttt{ in}}  & {\em event\+\_\+name} & The event name\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & The drop event S\+QL query is built \\
+\hline
+{\em true} & Otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gab5e75d43c08714c55b64116ab3e9eaed}\label{group__Event__Scheduler_gab5e75d43c08714c55b64116ab3e9eaed}} 
+\index{Event Scheduler@{Event Scheduler}!create\+\_\+event@{create\+\_\+event}}
+\index{create\+\_\+event@{create\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{create\+\_\+event()}{create\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::create\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$}]{parse\+\_\+data,  }\item[{bool}]{create\+\_\+if\+\_\+not,  }\item[{bool $\ast$}]{event\+\_\+already\+\_\+exists }\end{DoxyParamCaption})}
+
+Creates an event record in mysql.\+event table.
+
+Creates an event. Relies on mysql\+\_\+event\+\_\+fill\+\_\+row which is shared with \+::update\+\_\+event.
+
+\begin{DoxyPrecond}{Precondition}
+All semantic checks must be performed outside. This function only creates a record on disk. 
+
+The thread handle has no open tables.
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & T\+HD \\
+\hline
+\mbox{\texttt{ in}}  & {\em parse\+\_\+data} & Parsed event definition \\
+\hline
+\mbox{\texttt{ in}}  & {\em create\+\_\+if\+\_\+not} & T\+R\+UE if IF N\+OT E\+X\+I\+S\+TS clause was provided to C\+R\+E\+A\+TE E\+V\+E\+NT statement \\
+\hline
+\mbox{\texttt{ out}}  & {\em event\+\_\+already\+\_\+exists} & When method is completed successfully set to true if event already exists else set to false \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gad864f1ee71bf785ce02a4f6cc3273fc4}\label{group__Event__Scheduler_gad864f1ee71bf785ce02a4f6cc3273fc4}} 
+\index{Event Scheduler@{Event Scheduler}!create\+\_\+event@{create\+\_\+event}}
+\index{create\+\_\+event@{create\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{create\+\_\+event()}{create\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Event\+\_\+queue\+::create\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$}]{new\+\_\+element,  }\item[{bool $\ast$}]{created }\end{DoxyParamCaption})}
+
+Adds an event to the queue.
+
+Compute the next execution time for an event, and if it is still active, add it to the queue. Otherwise delete it. The object is left intact in case of an error. Otherwise the queue container assumes ownership of it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+element} & a new element to add to the queue \\
+\hline
+\mbox{\texttt{ out}}  & {\em created} & set to T\+R\+UE if no error and the element is added to the queue, F\+A\+L\+SE otherwise\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & an error occured. The value of created is undefined, the element was not deleted. \\
+\hline
+{\em F\+A\+L\+SE} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga8fbb9616149b046c5cc59eb889d6f809}\label{group__Event__Scheduler_ga8fbb9616149b046c5cc59eb889d6f809}} 
+\index{Event Scheduler@{Event Scheduler}!create\+\_\+event@{create\+\_\+event}}
+\index{create\+\_\+event@{create\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{create\+\_\+event()}{create\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Events\+::create\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$}]{parse\+\_\+data,  }\item[{bool}]{if\+\_\+not\+\_\+exists }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a new event.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & T\+HD \\
+\hline
+\mbox{\texttt{ in}}  & {\em parse\+\_\+data} & Event\textquotesingle{}s data from parsing stage \\
+\hline
+\mbox{\texttt{ in}}  & {\em if\+\_\+not\+\_\+exists} & Whether IF N\+OT E\+X\+I\+S\+TS was specified In case there is an event with the same name (db) and IF N\+OT E\+X\+I\+S\+TS is specified, an warning is put into the stack. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}{Events\+::drop\+\_\+event}} for the notes about locking, pre-\/locking and \mbox{\hyperlink{classEvents}{Events}} D\+DL.
+\end{DoxySeeAlso}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error (reported) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga70b022bf1055eb3251b9ff13c621e5c9}\label{group__Event__Scheduler_ga70b022bf1055eb3251b9ff13c621e5c9}} 
+\index{Event Scheduler@{Event Scheduler}!drop\+\_\+event@{drop\+\_\+event}}
+\index{drop\+\_\+event@{drop\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{drop\+\_\+event()}{drop\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::drop\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{db,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{bool}]{drop\+\_\+if\+\_\+exists }\end{DoxyParamCaption})}
+
+Delete event record from mysql.\+event table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em db} & Database name \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Event name \\
+\hline
+\mbox{\texttt{ in}}  & {\em drop\+\_\+if\+\_\+exists} & D\+R\+OP IF E\+X\+I\+S\+TS clause was specified. If set, and the event does not exist, the error is downgraded to a warning.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error (reported) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}\label{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}} 
+\index{Event Scheduler@{Event Scheduler}!drop\+\_\+event@{drop\+\_\+event}}
+\index{drop\+\_\+event@{drop\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{drop\+\_\+event()}{drop\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Events\+::drop\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{dbname,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{bool}]{if\+\_\+exists }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Drops an event
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & T\+HD \\
+\hline
+\mbox{\texttt{ in}}  & {\em dbname} & Event\textquotesingle{}s schema \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Event\textquotesingle{}s name \\
+\hline
+\mbox{\texttt{ in}}  & {\em if\+\_\+exists} & When this is set and the event does not exist a warning is pushed into the warning stack. Otherwise the operation produces an error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Similarly to D\+R\+OP P\+R\+O\+C\+E\+D\+U\+RE, we do not allow D\+R\+OP E\+V\+E\+NT under L\+O\+CK T\+A\+B\+L\+ES mode, unless table mysql.\+event is locked. To ensure that, we do not reset \& backup the open tables state in this function -\/ if in L\+O\+CK T\+A\+B\+L\+ES or pre-\/locking mode, this will lead to an error \textquotesingle{}Table mysql.\+event is not locked with L\+O\+CK T\+A\+B\+L\+ES\textquotesingle{} unless it {\itshape is} locked. In pre-\/locked mode there is another barrier -\/ D\+R\+OP E\+V\+E\+NT commits the current transaction, and C\+O\+M\+M\+I\+T/\+R\+O\+L\+L\+B\+A\+CK is not allowed in stored functions and triggers.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error (reported) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga3a0f2bbcd465f2afe81b3f88fb2bf62e}\label{group__Event__Scheduler_ga3a0f2bbcd465f2afe81b3f88fb2bf62e}} 
+\index{Event Scheduler@{Event Scheduler}!drop\+\_\+schema\+\_\+events@{drop\+\_\+schema\+\_\+events}}
+\index{drop\+\_\+schema\+\_\+events@{drop\+\_\+schema\+\_\+events}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{drop\+\_\+schema\+\_\+events()}{drop\_schema\_events()}}
+{\footnotesize\ttfamily void Events\+::drop\+\_\+schema\+\_\+events (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Drops all events from a schema
+
+\begin{DoxyNote}{Note}
+We allow to drop all events in a schema even if the scheduler is disabled. This is to not produce any warnings in case of D\+R\+OP D\+A\+T\+A\+B\+A\+SE and a disabled scheduler.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & Thread \\
+\hline
+\mbox{\texttt{ in}}  & {\em db} & A\+S\+C\+I\+IZ schema name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Event__Scheduler_ga01bf4e084293a37ca93a4ab383f72a19}\label{group__Event__Scheduler_ga01bf4e084293a37ca93a4ab383f72a19}} 
+\index{Event Scheduler@{Event Scheduler}!event\+\_\+worker\+\_\+thread@{event\+\_\+worker\+\_\+thread}}
+\index{event\+\_\+worker\+\_\+thread@{event\+\_\+worker\+\_\+thread}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{event\+\_\+worker\+\_\+thread()}{event\_worker\_thread()}}
+{\footnotesize\ttfamily void$\ast$ event\+\_\+worker\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Function that executes an event in a child thread. Setups the environment for the event execution and cleans after that.
+
+S\+Y\+N\+O\+P\+S\+IS \mbox{\hyperlink{group__Event__Scheduler_ga01bf4e084293a37ca93a4ab383f72a19}{event\+\_\+worker\+\_\+thread()}} arg The \mbox{\hyperlink{classEvent__job__data}{Event\+\_\+job\+\_\+data}} object to be processed
+
+R\+E\+T\+U\+RN V\+A\+L\+UE 0 OK \mbox{\Hypertarget{group__Event__Scheduler_gaeb3f7011c6b8ec77e148d46e691011a5}\label{group__Event__Scheduler_gaeb3f7011c6b8ec77e148d46e691011a5}} 
+\index{Event Scheduler@{Event Scheduler}!execute@{execute}}
+\index{execute@{execute}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool Event\+\_\+job\+\_\+data\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{drop }\end{DoxyParamCaption})}
+
+Compiles and executes the event (the underlying \mbox{\hyperlink{classsp__head}{sp\+\_\+head}} object)
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & error (reported to the error log) \\
+\hline
+{\em F\+A\+L\+SE} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga6fa6828fbb74522072631b6d462b6772}\label{group__Event__Scheduler_ga6fa6828fbb74522072631b6d462b6772}} 
+\index{Event Scheduler@{Event Scheduler}!fill\+\_\+schema\+\_\+events@{fill\+\_\+schema\+\_\+events}}
+\index{fill\+\_\+schema\+\_\+events@{fill\+\_\+schema\+\_\+events}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{fill\+\_\+schema\+\_\+events()}{fill\_schema\_events()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::fill\+\_\+schema\+\_\+events (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{i\+\_\+s\+\_\+table,  }\item[{const char $\ast$}]{db }\end{DoxyParamCaption})}
+
+Fills I\+\_\+\+S.\+E\+V\+E\+N\+TS with data loaded from mysql.\+event. Also used by S\+H\+OW E\+V\+E\+N\+TS
+
+The reason we reset and backup open tables here is that this function may be called from any query that accesses I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA -\/ including a query that is issued from a pre-\/locked statement, one that already has open and locked tables.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gae80cc405efbd8816c70a163818854645}\label{group__Event__Scheduler_gae80cc405efbd8816c70a163818854645}} 
+\index{Event Scheduler@{Event Scheduler}!fill\+\_\+schema\+\_\+events@{fill\+\_\+schema\+\_\+events}}
+\index{fill\+\_\+schema\+\_\+events@{fill\+\_\+schema\+\_\+events}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{fill\+\_\+schema\+\_\+events()}{fill\_schema\_events()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Events\+::fill\+\_\+schema\+\_\+events (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check access rights and fill I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+events table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ in}}  & {\em tables} & The temporary table to fill.\\
+\hline
+\end{DoxyParams}
+In My\+S\+QL I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA tables are temporary tables that are created and filled on demand. In this function, we fill I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+M\+A.\+events. It is a callback for I\+\_\+S module, invoked from sql\+\_\+show.\+cc
+
+\begin{DoxyReturn}{Returns}
+Has to be integer, as such is the requirement of the I\+\_\+S A\+PI 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em 1} & an error, pushed into the error stack \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga5ceeecadecac16417612be9384296bfd}\label{group__Event__Scheduler_ga5ceeecadecac16417612be9384296bfd}} 
+\index{Event Scheduler@{Event Scheduler}!find\+\_\+named\+\_\+event@{find\+\_\+named\+\_\+event}}
+\index{find\+\_\+named\+\_\+event@{find\+\_\+named\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{find\+\_\+named\+\_\+event()}{find\_named\_event()}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::find\+\_\+named\+\_\+event (\begin{DoxyParamCaption}\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{db,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Positions the internal pointer of {\ttfamily table} to the place where (db, name) is stored.
+
+In case search succeeded, the table cursor points at the found row.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em db} & database name \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & event name \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em table} & mysql.\+event table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & an event with such db/name key exists \\
+\hline
+{\em T\+R\+UE} & no record found or an error occured. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gaa1df78d5847482dc1712c780dfd44b9a}\label{group__Event__Scheduler_gaa1df78d5847482dc1712c780dfd44b9a}} 
+\index{Event Scheduler@{Event Scheduler}!init@{init}}
+\index{init@{init}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Events\+::init (\begin{DoxyParamCaption}\item[{my\+\_\+bool}]{opt\+\_\+noacl\+\_\+or\+\_\+bootstrap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes the scheduler\textquotesingle{}s structures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt\+\_\+noacl\+\_\+or\+\_\+bootstrap} & T\+R\+UE if there is --skip-\/grant-\/tables or --bootstrap option. In that case we disable the event scheduler.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is not synchronized.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Perhaps there was an error, and the event scheduler is disabled. But the error is not fatal and the server start up can continue. \\
+\hline
+{\em T\+R\+UE} & Fatal error. Startup must terminate (call unireg\+\_\+abort()). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gaa26988f7ec7f5d0053af28a5d8586236}\label{group__Event__Scheduler_gaa26988f7ec7f5d0053af28a5d8586236}} 
+\index{Event Scheduler@{Event Scheduler}!init\+\_\+mutexes@{init\+\_\+mutexes}}
+\index{init\+\_\+mutexes@{init\+\_\+mutexes}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{init\+\_\+mutexes()}{init\_mutexes()}}
+{\footnotesize\ttfamily void Events\+::init\+\_\+mutexes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Inits \mbox{\hyperlink{classEvents}{Events}} mutexes
+
+S\+Y\+N\+O\+P\+S\+IS \mbox{\hyperlink{group__Event__Scheduler_gaa26988f7ec7f5d0053af28a5d8586236}{Events\+::init\+\_\+mutexes()}} thd Thread \mbox{\Hypertarget{group__Event__Scheduler_ga2ac60939979bc9d825bbf5d77b3c3025}\label{group__Event__Scheduler_ga2ac60939979bc9d825bbf5d77b3c3025}} 
+\index{Event Scheduler@{Event Scheduler}!load\+\_\+from\+\_\+row@{load\+\_\+from\+\_\+row}}
+\index{load\+\_\+from\+\_\+row@{load\+\_\+from\+\_\+row}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+row()}{load\_from\_row()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Event\+\_\+queue\+\_\+element\+::load\+\_\+from\+\_\+row (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Load an event\textquotesingle{}s body from a row from mysql.\+event.
+
+This method is silent on errors and should behave like that. Callers should handle throwing of error messages. The reason is that the class should not know about how to deal with communication.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{group__Event__Scheduler_gaf182a3b09598193b22ee09f0661b4dc3}{Event\+\_\+timed}}.
+
+\mbox{\Hypertarget{group__Event__Scheduler_gaf182a3b09598193b22ee09f0661b4dc3}\label{group__Event__Scheduler_gaf182a3b09598193b22ee09f0661b4dc3}} 
+\index{Event Scheduler@{Event Scheduler}!load\+\_\+from\+\_\+row@{load\+\_\+from\+\_\+row}}
+\index{load\+\_\+from\+\_\+row@{load\+\_\+from\+\_\+row}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+row()}{load\_from\_row()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Event\+\_\+timed\+::load\+\_\+from\+\_\+row (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Load an event\textquotesingle{}s body from a row from mysql.\+event.
+
+This method is silent on errors and should behave like that. Callers should handle throwing of error messages. The reason is that the class should not know about how to deal with communication.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{group__Event__Scheduler_ga2ac60939979bc9d825bbf5d77b3c3025}{Event\+\_\+queue\+\_\+element}}.
+
+\mbox{\Hypertarget{group__Event__Scheduler_gab1ac4ae01202ed7bd65cf20736a95ebd}\label{group__Event__Scheduler_gab1ac4ae01202ed7bd65cf20736a95ebd}} 
+\index{Event Scheduler@{Event Scheduler}!load\+\_\+from\+\_\+row@{load\+\_\+from\+\_\+row}}
+\index{load\+\_\+from\+\_\+row@{load\+\_\+from\+\_\+row}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+row()}{load\_from\_row()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Event\+\_\+job\+\_\+data\+::load\+\_\+from\+\_\+row (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Load an event\textquotesingle{}s body from a row from mysql.\+event.
+
+This method is silent on errors and should behave like that. Callers should handle throwing of error messages. The reason is that the class should not know about how to deal with communication.
+
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}}.
+
+\mbox{\Hypertarget{group__Event__Scheduler_ga12847ce2627dee3ddb5d0b28d3bc4ba7}\label{group__Event__Scheduler_ga12847ce2627dee3ddb5d0b28d3bc4ba7}} 
+\index{Event Scheduler@{Event Scheduler}!load\+\_\+named\+\_\+event@{load\+\_\+named\+\_\+event}}
+\index{load\+\_\+named\+\_\+event@{load\+\_\+named\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{load\+\_\+named\+\_\+event()}{load\_named\_event()}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::load\+\_\+named\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{dbname,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name,  }\item[{\mbox{\hyperlink{classEvent__basic}{Event\+\_\+basic}} $\ast$}]{etn }\end{DoxyParamCaption})}
+
+Looks for a named event in mysql.\+event and then loads it from the table.
+
+\begin{DoxyPrecond}{Precondition}
+The given thread does not have open tables.
+\end{DoxyPrecond}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga019f518dd8c841d910161407064682c1}\label{group__Event__Scheduler_ga019f518dd8c841d910161407064682c1}} 
+\index{Event Scheduler@{Event Scheduler}!open\+\_\+event\+\_\+table@{open\+\_\+event\+\_\+table}}
+\index{open\+\_\+event\+\_\+table@{open\+\_\+event\+\_\+table}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{open\+\_\+event\+\_\+table()}{open\_event\_table()}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::open\+\_\+event\+\_\+table (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{enum thr\+\_\+lock\+\_\+type}]{lock\+\_\+type,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Open mysql.\+event table for read.
+
+It\textquotesingle{}s assumed that the caller knows what they are doing\+:
+\begin{DoxyItemize}
+\item whether it was necessary to reset-\/and-\/backup the open tables state
+\item whether the requested lock does not lead to a deadlock
+\item whether this open mode would work under L\+O\+CK T\+A\+B\+L\+ES, or inside a stored function or trigger.
+\end{DoxyItemize}
+
+Note that if the table can\textquotesingle{}t be locked successfully this operation will close it. Therefore it provides guarantee that it either opens and locks table or fails without leaving any tables open.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ in}}  & {\em lock\+\_\+type} & How to lock the table \\
+\hline
+\mbox{\texttt{ out}}  & {\em table} & We will store the open table here\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & open and lock failed -\/ an error message is pushed into the stack \\
+\hline
+{\em F\+A\+L\+SE} & success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gafb6d2b26338cb92f01504ba32e0ecdf7}\label{group__Event__Scheduler_gafb6d2b26338cb92f01504ba32e0ecdf7}} 
+\index{Event Scheduler@{Event Scheduler}!reconstruct\+\_\+interval\+\_\+expression@{reconstruct\+\_\+interval\+\_\+expression}}
+\index{reconstruct\+\_\+interval\+\_\+expression@{reconstruct\+\_\+interval\+\_\+expression}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{reconstruct\+\_\+interval\+\_\+expression()}{reconstruct\_interval\_expression()}}
+{\footnotesize\ttfamily int Events\+::reconstruct\+\_\+interval\+\_\+expression (\begin{DoxyParamCaption}\item[{String $\ast$}]{buf,  }\item[{interval\+\_\+type}]{interval,  }\item[{longlong}]{expression }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reconstructs interval expression from interval type and expression value that is in form of a value of the smalles entity\+: For Y\+E\+A\+R\+\_\+\+M\+O\+N\+TH -\/ expression is in months D\+A\+Y\+\_\+\+M\+I\+N\+U\+TE -\/ expression is in minutes
+
+S\+Y\+N\+O\+P\+S\+IS \mbox{\hyperlink{group__Event__Scheduler_gafb6d2b26338cb92f01504ba32e0ecdf7}{Events\+::reconstruct\+\_\+interval\+\_\+expression()}} buf Preallocated String buffer to add the value to interval The interval type (for instance Y\+E\+A\+R\+\_\+\+M\+O\+N\+TH) expression The value in the lowest entity
+
+R\+E\+T\+U\+RN V\+A\+L\+UE 0 OK 1 Error \mbox{\Hypertarget{group__Event__Scheduler_ga3226ac4e79d64e27ce9eebed2234d2c1}\label{group__Event__Scheduler_ga3226ac4e79d64e27ce9eebed2234d2c1}} 
+\index{Event Scheduler@{Event Scheduler}!run@{run}}
+\index{run@{run}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Event\+\_\+worker\+\_\+thread\+::run (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}} $\ast$}]{event }\end{DoxyParamCaption})}
+
+Function that executes an event in a child thread. Setups the environment for the event execution and cleans after that.
+
+S\+Y\+N\+O\+P\+S\+IS \mbox{\hyperlink{group__Event__Scheduler_ga3226ac4e79d64e27ce9eebed2234d2c1}{Event\+\_\+worker\+\_\+thread\+::run()}} thd Thread context event The \mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}} object to be processed \mbox{\Hypertarget{group__Event__Scheduler_ga99ad9b87a2e1ce1b69c8f9c31e4ee5d1}\label{group__Event__Scheduler_ga99ad9b87a2e1ce1b69c8f9c31e4ee5d1}} 
+\index{Event Scheduler@{Event Scheduler}!show\+\_\+create\+\_\+event@{show\+\_\+create\+\_\+event}}
+\index{show\+\_\+create\+\_\+event@{show\+\_\+create\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{show\+\_\+create\+\_\+event()}{show\_create\_event()}}
+{\footnotesize\ttfamily bool Events\+::show\+\_\+create\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{dbname,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Implement S\+H\+OW C\+R\+E\+A\+TE E\+V\+E\+NT statement \begin{DoxyVerb}thd   Thread context
+spn   The name of the event (db, name)
+\end{DoxyVerb}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & error (reported) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gaf9de87da28f91daf6bbeb577dc029548}\label{group__Event__Scheduler_gaf9de87da28f91daf6bbeb577dc029548}} 
+\index{Event Scheduler@{Event Scheduler}!start@{start}}
+\index{start@{start}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool Event\+\_\+scheduler\+::start (\begin{DoxyParamCaption}\item[{int $\ast$}]{err\+\_\+no }\end{DoxyParamCaption})}
+
+Starts the scheduler (again). Creates a new T\+HD and passes it to a forked thread. Does not wait for acknowledgement from the new thread that it has started. Asynchronous starting. Most of the needed initializations are done in the current thread to minimize the chance of failure in the spawned thread.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em err\+\_\+no} & -\/ errno indicating type of error which caused failure to start scheduler thread.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga2efd565f1cc88f96232725ab8a1e36ae}\label{group__Event__Scheduler_ga2efd565f1cc88f96232725ab8a1e36ae}} 
+\index{Event Scheduler@{Event Scheduler}!stop@{stop}}
+\index{stop@{stop}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily bool Event\+\_\+scheduler\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops the scheduler (again). Waits for acknowledgement from the scheduler that it has stopped -\/ synchronous stopping.
+
+Already running events will not be stopped. If the user needs them stopped manual intervention is needed.
+
+S\+Y\+N\+O\+P\+S\+IS \mbox{\hyperlink{group__Event__Scheduler_ga2efd565f1cc88f96232725ab8a1e36ae}{Event\+\_\+scheduler\+::stop()}}
+
+R\+E\+T\+U\+RN V\+A\+L\+UE F\+A\+L\+SE OK T\+R\+UE Error (not reported) \mbox{\Hypertarget{group__Event__Scheduler_ga2febaed952a7cc8253508b8ea0bc4516}\label{group__Event__Scheduler_ga2febaed952a7cc8253508b8ea0bc4516}} 
+\index{Event Scheduler@{Event Scheduler}!update\+\_\+event@{update\+\_\+event}}
+\index{update\+\_\+event@{update\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{update\+\_\+event()}{update\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::update\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$}]{parse\+\_\+data,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{new\+\_\+dbname,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{new\+\_\+name }\end{DoxyParamCaption})}
+
+Used to execute A\+L\+T\+ER E\+V\+E\+NT. Pendant to \mbox{\hyperlink{group__Event__Scheduler_ga7577ede664831ea99e27f45a0d91d946}{Events\+::update\+\_\+event()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em parse\+\_\+data} & parsed event definition \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+dbname} & not N\+U\+LL if A\+L\+T\+ER E\+V\+E\+NT R\+E\+N\+A\+ME points at a new database name \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+name} & not N\+U\+LL if A\+L\+T\+ER E\+V\+E\+NT R\+E\+N\+A\+ME points at a new event name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+All semantic checks are performed outside this function, it only updates the event definition on disk. 
+
+We don\textquotesingle{}t have any tables open in the given thread.
+\end{DoxyPrecond}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & success \\
+\hline
+{\em T\+R\+UE} & error (reported) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_ga7577ede664831ea99e27f45a0d91d946}\label{group__Event__Scheduler_ga7577ede664831ea99e27f45a0d91d946}} 
+\index{Event Scheduler@{Event Scheduler}!update\+\_\+event@{update\+\_\+event}}
+\index{update\+\_\+event@{update\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{update\+\_\+event()}{update\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Events\+::update\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classEvent__parse__data}{Event\+\_\+parse\+\_\+data}} $\ast$}]{parse\+\_\+data,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{new\+\_\+dbname,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{new\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Alter an event.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & T\+HD \\
+\hline
+\mbox{\texttt{ in}}  & {\em parse\+\_\+data} & Event\textquotesingle{}s data from parsing stage \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+dbname} & A new schema name for the event. Set in the case of A\+L\+T\+ER E\+V\+E\+NT R\+E\+N\+A\+ME, otherwise is N\+U\+LL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+name} & A new name for the event. Set in the case of A\+L\+T\+ER E\+V\+E\+NT R\+E\+N\+A\+ME\\
+\hline
+\end{DoxyParams}
+Parameter \textquotesingle{}et\textquotesingle{} contains data about dbname and event name. Parameter \textquotesingle{}new\+\_\+name\textquotesingle{} is the new name of the event, if not null this means that R\+E\+N\+A\+ME TO was specified in the query \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Event__Scheduler_gac4837ceab76a62f91e99c63a718e7da9}{Events\+::drop\+\_\+event}} for the locking notes.
+\end{DoxySeeAlso}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & error (reported) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Event__Scheduler_gaa06f66d76c295601f91ce2b9dc119909}\label{group__Event__Scheduler_gaa06f66d76c295601f91ce2b9dc119909}} 
+\index{Event Scheduler@{Event Scheduler}!update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event@{update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event}}
+\index{update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event@{update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event}!Event Scheduler@{Event Scheduler}}
+\subsubsection{\texorpdfstring{update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event()}{update\_timing\_fields\_for\_event()}}
+{\footnotesize\ttfamily bool Event\+\_\+db\+\_\+repository\+::update\+\_\+timing\+\_\+fields\+\_\+for\+\_\+event (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{event\+\_\+db\+\_\+name,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG}]{event\+\_\+name,  }\item[{my\+\_\+time\+\_\+t}]{last\+\_\+executed,  }\item[{ulonglong}]{status }\end{DoxyParamCaption})}
+
+Update the event record in mysql.\+event table with a changed status and/or last execution time.
+
+\begin{DoxyPrecond}{Precondition}
+The thread handle does not have open tables. 
+\end{DoxyPrecond}

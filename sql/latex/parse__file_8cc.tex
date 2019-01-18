@@ -1,0 +1,197 @@
+\hypertarget{parse__file_8cc}{}\section{parse\+\_\+file.\+cc File Reference}
+\label{parse__file_8cc}\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+
+
+Text .frm files management routines.  
+
+
+{\ttfamily \#include \char`\"{}parse\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$m\+\_\+ctype.\+h$>$}\newline
+{\ttfamily \#include $<$my\+\_\+sys.\+h$>$}\newline
+{\ttfamily \#include $<$my\+\_\+dir.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mysqld.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysqld\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pfs\+\_\+file\+\_\+provider.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+file.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{parse__file_8cc_a64edab7d099ea353fb922013a46ad43c}\label{parse__file_8cc_a64edab7d099ea353fb922013a46ad43c}} 
+long {\bfseries mysql\+\_\+rm\+\_\+arc\+\_\+files} (T\+HD $\ast$thd, M\+Y\+\_\+\+D\+IR $\ast$dirp, const char $\ast$org\+\_\+path)
+\item 
+my\+\_\+bool \mbox{\hyperlink{parse__file_8cc_a0b2112ed9833b67ca9ae45e9297edc7d}{sql\+\_\+create\+\_\+definition\+\_\+file}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$dir, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$file\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$type, uchar $\ast$base, \mbox{\hyperlink{structFile__option}{File\+\_\+option}} $\ast$parameters)
+\item 
+my\+\_\+bool \mbox{\hyperlink{parse__file_8cc_a3c48bdbed3e4c6ce575892b23a6c2a4f}{rename\+\_\+in\+\_\+schema\+\_\+file}} (T\+HD $\ast$thd, const char $\ast$schema, const char $\ast$old\+\_\+name, const char $\ast$new\+\_\+db, const char $\ast$new\+\_\+name)
+\item 
+\mbox{\hyperlink{classFile__parser}{File\+\_\+parser}} $\ast$ \mbox{\hyperlink{parse__file_8cc_af0a1c80e1f5fd497fb530ded638bcdf3}{sql\+\_\+parse\+\_\+prepare}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$file\+\_\+name, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, bool bad\+\_\+format\+\_\+errors)
+\item 
+my\+\_\+bool \mbox{\hyperlink{parse__file_8cc_a5497843013403d3e03fba6de544b8464}{read\+\_\+escaped\+\_\+string}} (const char $\ast$ptr, const char $\ast$eol, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$str)
+\item 
+const char $\ast$ \mbox{\hyperlink{parse__file_8cc_a1349c30f0b4bf6da69b468c3c1ee5d21}{parse\+\_\+escaped\+\_\+string}} (const char $\ast$ptr, const char $\ast$end, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$str)
+\item 
+bool \mbox{\hyperlink{parse__file_8cc_a319e720be0357de945465b15e175b93c}{get\+\_\+file\+\_\+options\+\_\+ulllist}} (const char $\ast$\&ptr, const char $\ast$end, const char $\ast$line, uchar $\ast$base, \mbox{\hyperlink{structFile__option}{File\+\_\+option}} $\ast$parameter, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Text .frm files management routines. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{parse__file_8cc_a319e720be0357de945465b15e175b93c}\label{parse__file_8cc_a319e720be0357de945465b15e175b93c}} 
+\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}!get\+\_\+file\+\_\+options\+\_\+ulllist@{get\+\_\+file\+\_\+options\+\_\+ulllist}}
+\index{get\+\_\+file\+\_\+options\+\_\+ulllist@{get\+\_\+file\+\_\+options\+\_\+ulllist}!parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+\subsubsection{\texorpdfstring{get\+\_\+file\+\_\+options\+\_\+ulllist()}{get\_file\_options\_ulllist()}}
+{\footnotesize\ttfamily bool get\+\_\+file\+\_\+options\+\_\+ulllist (\begin{DoxyParamCaption}\item[{const char $\ast$\&}]{ptr,  }\item[{const char $\ast$}]{end,  }\item[{const char $\ast$}]{line,  }\item[{uchar $\ast$}]{base,  }\item[{\mbox{\hyperlink{structFile__option}{File\+\_\+option}} $\ast$}]{parameter,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption})}
+
+Parser for F\+I\+L\+E\+\_\+\+O\+P\+T\+I\+O\+N\+S\+\_\+\+U\+L\+L\+L\+I\+ST type value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em ptr} & pointer to parameter \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & end of the configuration \\
+\hline
+\mbox{\texttt{ in}}  & {\em line} & pointer to the line begining \\
+\hline
+\mbox{\texttt{ in}}  & {\em base} & base address for parameter writing (structure like \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}) \\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & description \\
+\hline
+\mbox{\texttt{ in}}  & {\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT for parameters allocation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{parse__file_8cc_a1349c30f0b4bf6da69b468c3c1ee5d21}\label{parse__file_8cc_a1349c30f0b4bf6da69b468c3c1ee5d21}} 
+\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}!parse\+\_\+escaped\+\_\+string@{parse\+\_\+escaped\+\_\+string}}
+\index{parse\+\_\+escaped\+\_\+string@{parse\+\_\+escaped\+\_\+string}!parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+\subsubsection{\texorpdfstring{parse\+\_\+escaped\+\_\+string()}{parse\_escaped\_string()}}
+{\footnotesize\ttfamily const char$\ast$ parse\+\_\+escaped\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ptr,  }\item[{const char $\ast$}]{end,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{str }\end{DoxyParamCaption})}
+
+parse \textbackslash{}n delimited escaped string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer on string beginning \\
+\hline
+{\em end} & pointer on symbol after parsed string end (still owned by buffer and can be accessed \\
+\hline
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT for parameter allocation \\
+\hline
+{\em str} & pointer on string, where results should be stored\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & error \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{parse__file_8cc_a5497843013403d3e03fba6de544b8464}\label{parse__file_8cc_a5497843013403d3e03fba6de544b8464}} 
+\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}!read\+\_\+escaped\+\_\+string@{read\+\_\+escaped\+\_\+string}}
+\index{read\+\_\+escaped\+\_\+string@{read\+\_\+escaped\+\_\+string}!parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+\subsubsection{\texorpdfstring{read\+\_\+escaped\+\_\+string()}{read\_escaped\_string()}}
+{\footnotesize\ttfamily my\+\_\+bool read\+\_\+escaped\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ptr,  }\item[{const char $\ast$}]{eol,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{str }\end{DoxyParamCaption})}
+
+read escaped string from ptr to eol in already allocated str.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & pointer on string beginning \\
+\hline
+{\em eol} & pointer on character after end of string \\
+\hline
+{\em str} & target string\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{parse__file_8cc_a3c48bdbed3e4c6ce575892b23a6c2a4f}\label{parse__file_8cc_a3c48bdbed3e4c6ce575892b23a6c2a4f}} 
+\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}!rename\+\_\+in\+\_\+schema\+\_\+file@{rename\+\_\+in\+\_\+schema\+\_\+file}}
+\index{rename\+\_\+in\+\_\+schema\+\_\+file@{rename\+\_\+in\+\_\+schema\+\_\+file}!parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+\subsubsection{\texorpdfstring{rename\+\_\+in\+\_\+schema\+\_\+file()}{rename\_in\_schema\_file()}}
+{\footnotesize\ttfamily my\+\_\+bool rename\+\_\+in\+\_\+schema\+\_\+file (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{schema,  }\item[{const char $\ast$}]{old\+\_\+name,  }\item[{const char $\ast$}]{new\+\_\+db,  }\item[{const char $\ast$}]{new\+\_\+name }\end{DoxyParamCaption})}
+
+Renames a frm file (including backups) in same schema.
+
+thread handler 
+\begin{DoxyParams}{Parameters}
+{\em schema} & name of given schema \\
+\hline
+{\em old\+\_\+name} & original file name \\
+\hline
+{\em new\+\_\+db} & new schema \\
+\hline
+{\em new\+\_\+name} & new file name\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & Error (only if renaming of frm failed) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{parse__file_8cc_a0b2112ed9833b67ca9ae45e9297edc7d}\label{parse__file_8cc_a0b2112ed9833b67ca9ae45e9297edc7d}} 
+\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}!sql\+\_\+create\+\_\+definition\+\_\+file@{sql\+\_\+create\+\_\+definition\+\_\+file}}
+\index{sql\+\_\+create\+\_\+definition\+\_\+file@{sql\+\_\+create\+\_\+definition\+\_\+file}!parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+\subsubsection{\texorpdfstring{sql\+\_\+create\+\_\+definition\+\_\+file()}{sql\_create\_definition\_file()}}
+{\footnotesize\ttfamily my\+\_\+bool sql\+\_\+create\+\_\+definition\+\_\+file (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{dir,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{file\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{type,  }\item[{uchar $\ast$}]{base,  }\item[{\mbox{\hyperlink{structFile__option}{File\+\_\+option}} $\ast$}]{parameters }\end{DoxyParamCaption})}
+
+Write new .frm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & directory where put .frm \\
+\hline
+{\em file\+\_\+name} & .frm file name \\
+\hline
+{\em type} & .frm type string (V\+I\+EW, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}) \\
+\hline
+{\em base} & base address for parameter reading (structure like \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}) \\
+\hline
+{\em parameters} & parameters description\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & OK \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{parse__file_8cc_af0a1c80e1f5fd497fb530ded638bcdf3}\label{parse__file_8cc_af0a1c80e1f5fd497fb530ded638bcdf3}} 
+\index{parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}!sql\+\_\+parse\+\_\+prepare@{sql\+\_\+parse\+\_\+prepare}}
+\index{sql\+\_\+parse\+\_\+prepare@{sql\+\_\+parse\+\_\+prepare}!parse\+\_\+file.\+cc@{parse\+\_\+file.\+cc}}
+\subsubsection{\texorpdfstring{sql\+\_\+parse\+\_\+prepare()}{sql\_parse\_prepare()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFile__parser}{File\+\_\+parser}}$\ast$ sql\+\_\+parse\+\_\+prepare (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{file\+\_\+name,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{bool}]{bad\+\_\+format\+\_\+errors }\end{DoxyParamCaption})}
+
+Prepare frm to parse (read to memory).
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & path \& filename to .frm file \\
+\hline
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT for buffer allocation \\
+\hline
+{\em bad\+\_\+format\+\_\+errors} & send errors on bad content\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+returned pointer + 1 will be type of .frm
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 -\/ error 
+
+parser object 
+\end{DoxyReturn}

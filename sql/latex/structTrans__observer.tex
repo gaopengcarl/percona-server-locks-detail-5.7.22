@@ -1,0 +1,132 @@
+\hypertarget{structTrans__observer}{}\section{Trans\+\_\+observer Struct Reference}
+\label{structTrans__observer}\index{Trans\+\_\+observer@{Trans\+\_\+observer}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structTrans__observer_abbbdcd4305524ef6ffc2a0514572a667}\label{structTrans__observer_abbbdcd4305524ef6ffc2a0514572a667}} 
+uint32 {\bfseries len}
+\item 
+\mbox{\Hypertarget{structTrans__observer_aa72e0e7ecf684817fbade7cabb322f7e}\label{structTrans__observer_aa72e0e7ecf684817fbade7cabb322f7e}} 
+int($\ast$ {\bfseries before\+\_\+dml} )(\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param, int \&out\+\_\+val)
+\item 
+int($\ast$ \mbox{\hyperlink{structTrans__observer_a9c5b093bbc5a164c12af395e92307a99}{before\+\_\+commit}} )(\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structTrans__observer_a474b3fcc2624e19bb1718b8733fe1834}{before\+\_\+rollback}} )(\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structTrans__observer_a770f4b7f2f70422a98fb53d87946028e}{after\+\_\+commit}} )(\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structTrans__observer_aab173ceafec6271f6fcde43c32522306}{after\+\_\+rollback}} )(\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Observes and extends transaction execution 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structTrans__observer_a770f4b7f2f70422a98fb53d87946028e}\label{structTrans__observer_a770f4b7f2f70422a98fb53d87946028e}} 
+\index{Trans\+\_\+observer@{Trans\+\_\+observer}!after\+\_\+commit@{after\+\_\+commit}}
+\index{after\+\_\+commit@{after\+\_\+commit}!Trans\+\_\+observer@{Trans\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+commit}{after\_commit}}
+{\footnotesize\ttfamily int($\ast$ Trans\+\_\+observer\+::after\+\_\+commit) (\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)}
+
+This callback is called after transaction commit
+
+This callback is called right after commit to storage engines for transactional tables.
+
+For non-\/transactional tables, this is called at the end of the statement, before sending statement status, if the statement succeeded.
+
+\begin{DoxyNote}{Note}
+The return value is currently ignored by the server.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & The parameter for transaction observers\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structTrans__observer_aab173ceafec6271f6fcde43c32522306}\label{structTrans__observer_aab173ceafec6271f6fcde43c32522306}} 
+\index{Trans\+\_\+observer@{Trans\+\_\+observer}!after\+\_\+rollback@{after\+\_\+rollback}}
+\index{after\+\_\+rollback@{after\+\_\+rollback}!Trans\+\_\+observer@{Trans\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+rollback}{after\_rollback}}
+{\footnotesize\ttfamily int($\ast$ Trans\+\_\+observer\+::after\+\_\+rollback) (\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)}
+
+This callback is called after transaction rollback
+
+This callback is called right after rollback to storage engines for transactional tables.
+
+For non-\/transactional tables, this is called at the end of the statement, before sending statement status, if the statement failed.
+
+\begin{DoxyNote}{Note}
+The return value is currently ignored by the server.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & The parameter for transaction observers\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structTrans__observer_a9c5b093bbc5a164c12af395e92307a99}\label{structTrans__observer_a9c5b093bbc5a164c12af395e92307a99}} 
+\index{Trans\+\_\+observer@{Trans\+\_\+observer}!before\+\_\+commit@{before\+\_\+commit}}
+\index{before\+\_\+commit@{before\+\_\+commit}!Trans\+\_\+observer@{Trans\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+commit}{before\_commit}}
+{\footnotesize\ttfamily int($\ast$ Trans\+\_\+observer\+::before\+\_\+commit) (\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)}
+
+This callback is called before transaction commit
+
+This callback is called right before write binlog cache to binary log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & The parameter for transaction observers\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structTrans__observer_a474b3fcc2624e19bb1718b8733fe1834}\label{structTrans__observer_a474b3fcc2624e19bb1718b8733fe1834}} 
+\index{Trans\+\_\+observer@{Trans\+\_\+observer}!before\+\_\+rollback@{before\+\_\+rollback}}
+\index{before\+\_\+rollback@{before\+\_\+rollback}!Trans\+\_\+observer@{Trans\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+rollback}{before\_rollback}}
+{\footnotesize\ttfamily int($\ast$ Trans\+\_\+observer\+::before\+\_\+rollback) (\mbox{\hyperlink{structTrans__param}{Trans\+\_\+param}} $\ast$param)}
+
+This callback is called before transaction rollback
+
+This callback is called before rollback to storage engines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & The parameter for transaction observers\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

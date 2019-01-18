@@ -1,0 +1,86 @@
+\hypertarget{classItem__cache__json}{}\section{Item\+\_\+cache\+\_\+json Class Reference}
+\label{classItem__cache__json}\index{Item\+\_\+cache\+\_\+json@{Item\+\_\+cache\+\_\+json}}
+
+
+An item cache for values of type J\+S\+ON.  
+
+
+
+
+{\ttfamily \#include $<$item.\+h$>$}
+
+Inheritance diagram for Item\+\_\+cache\+\_\+json\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classItem__cache__json}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classItem__cache__json_ac43c5568d1d4b5cf928fe9b5445575fe}{cache\+\_\+value}} ()
+\item 
+bool \mbox{\hyperlink{classItem__cache__json_a6ca554ad2b7f1652594382f98698f4ba}{val\+\_\+json}} (\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$wr)
+\item 
+\mbox{\Hypertarget{classItem__cache__json_a246619d220b9a2e854b772caf735dad8}\label{classItem__cache__json_a246619d220b9a2e854b772caf735dad8}} 
+longlong {\bfseries val\+\_\+int} ()
+\item 
+\mbox{\Hypertarget{classItem__cache__json_a42422de01925656c50a57f313d09b7c1}\label{classItem__cache__json_a42422de01925656c50a57f313d09b7c1}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$str)
+\item 
+\mbox{\Hypertarget{classItem__cache__json_adde71b3d2a7fac7508b9fda3bc821673}\label{classItem__cache__json_adde71b3d2a7fac7508b9fda3bc821673}} 
+Item\+\_\+result {\bfseries result\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classItem__cache__json_a8af8d9e9205afb1b31f2b6b79db8cbee}\label{classItem__cache__json_a8af8d9e9205afb1b31f2b6b79db8cbee}} 
+double {\bfseries val\+\_\+real} ()
+\item 
+\mbox{\Hypertarget{classItem__cache__json_af6150d9b27bc9901a40b0c7b4b15b833}\label{classItem__cache__json_af6150d9b27bc9901a40b0c7b4b15b833}} 
+\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$ {\bfseries val\+\_\+decimal} (\mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$val)
+\item 
+\mbox{\Hypertarget{classItem__cache__json_a30075da5300d995ad8b867402a373f74}\label{classItem__cache__json_a30075da5300d995ad8b867402a373f74}} 
+bool {\bfseries get\+\_\+date} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+\mbox{\Hypertarget{classItem__cache__json_a70c59a6aeaba48f9a6e67d6c1e2b906c}\label{classItem__cache__json_a70c59a6aeaba48f9a6e67d6c1e2b906c}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An item cache for values of type J\+S\+ON. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__cache__json_ac43c5568d1d4b5cf928fe9b5445575fe}\label{classItem__cache__json_ac43c5568d1d4b5cf928fe9b5445575fe}} 
+\index{Item\+\_\+cache\+\_\+json@{Item\+\_\+cache\+\_\+json}!cache\+\_\+value@{cache\+\_\+value}}
+\index{cache\+\_\+value@{cache\+\_\+value}!Item\+\_\+cache\+\_\+json@{Item\+\_\+cache\+\_\+json}}
+\subsubsection{\texorpdfstring{cache\+\_\+value()}{cache\_value()}}
+{\footnotesize\ttfamily bool Item\+\_\+cache\+\_\+json\+::cache\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Read the J\+S\+ON value and cache it. \begin{DoxyReturn}{Returns}
+true if the value was successfully cached, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}}.
+
+\mbox{\Hypertarget{classItem__cache__json_a6ca554ad2b7f1652594382f98698f4ba}\label{classItem__cache__json_a6ca554ad2b7f1652594382f98698f4ba}} 
+\index{Item\+\_\+cache\+\_\+json@{Item\+\_\+cache\+\_\+json}!val\+\_\+json@{val\+\_\+json}}
+\index{val\+\_\+json@{val\+\_\+json}!Item\+\_\+cache\+\_\+json@{Item\+\_\+cache\+\_\+json}}
+\subsubsection{\texorpdfstring{val\+\_\+json()}{val\_json()}}
+{\footnotesize\ttfamily bool Item\+\_\+cache\+\_\+json\+::val\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__wrapper}{Json\+\_\+wrapper}} $\ast$}]{wr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy the cached J\+S\+ON value into a wrapper. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em wr} & the wrapper that receives the J\+S\+ON value \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a57e763fcde2d0a819d21e31c59611290}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

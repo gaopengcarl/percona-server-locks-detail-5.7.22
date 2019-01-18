@@ -1,0 +1,191 @@
+\hypertarget{log__event_8h}{}\section{log\+\_\+event.\+h File Reference}
+\label{log__event_8h}\index{log\+\_\+event.\+h@{log\+\_\+event.\+h}}
+
+
+Binary log event definitions. This includes generic code common to all types of log events, as well as specific code for each type of log event.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+\_\+bitmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binary\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpl\+\_\+utility.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}event\+\_\+crypt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log\+\_\+event\+\_\+old.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsql__ex__info}{sql\+\_\+ex\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structst__mts__db__names}{st\+\_\+mts\+\_\+db\+\_\+names}}
+\item 
+class \mbox{\hyperlink{classLog__event}{Log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classLoad__log__event}{Load\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classStart__log__event__v3}{Start\+\_\+log\+\_\+event\+\_\+v3}}
+\item 
+class \mbox{\hyperlink{classStart__encryption__log__event}{Start\+\_\+encryption\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classIntvar__log__event}{Intvar\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRand__log__event}{Rand\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classXid__apply__log__event}{Xid\+\_\+apply\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classXid__log__event}{Xid\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classXA__prepare__log__event}{X\+A\+\_\+prepare\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classUser__var__log__event}{User\+\_\+var\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classStop__log__event}{Stop\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRotate__log__event}{Rotate\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classCreate__file__log__event}{Create\+\_\+file\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classAppend__block__log__event}{Append\+\_\+block\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classDelete__file__log__event}{Delete\+\_\+file\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classExecute__load__log__event}{Execute\+\_\+load\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classBegin__load__query__log__event}{Begin\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classExecute__load__query__log__event}{Execute\+\_\+load\+\_\+query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classTable__map__log__event}{Table\+\_\+map\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRows__log__event}{Rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classWrite__rows__log__event}{Write\+\_\+rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classUpdate__rows__log__event}{Update\+\_\+rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classDelete__rows__log__event}{Delete\+\_\+rows\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classIncident__log__event}{Incident\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classIgnorable__log__event}{Ignorable\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classRows__query__log__event}{Rows\+\_\+query\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classGtid__log__event}{Gtid\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classPrevious__gtids__log__event}{Previous\+\_\+gtids\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classTransaction__context__log__event}{Transaction\+\_\+context\+\_\+log\+\_\+event}}
+\item 
+class \mbox{\hyperlink{classView__change__log__event}{View\+\_\+change\+\_\+log\+\_\+event}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+R\+E\+F\+I\+X\+\_\+\+S\+Q\+L\+\_\+\+L\+O\+AD}~\char`\"{}S\+Q\+L\+\_\+\+L\+O\+AD-\/\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__Replication_gaa195d0860b5c2a3a40362544ec720e70}{T\+E\+M\+P\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}~U\+U\+I\+D\+\_\+\+L\+E\+N\+G\+TH+38
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga4ebc2b131b4e1bdb6c0be57e4589851a}{A\+S\+S\+E\+R\+T\+\_\+\+O\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+R\+R\+OR}}(C\+O\+ND,  E\+R\+R\+NO)~D\+B\+U\+G\+\_\+\+A\+S\+S\+E\+RT(C\+O\+ND)
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF}~-\/1
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+G\+US}~-\/2
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+IO}~-\/3
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+M\+EM}~-\/5
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+T\+R\+U\+NC}~-\/6
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+GE}~-\/7
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+F\+A\+I\+L\+U\+RE}~-\/8
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+C\+R\+Y\+PT}~-\/9
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET}~4
+\item 
+\#define {\bfseries N\+U\+M\+\_\+\+L\+O\+A\+D\+\_\+\+D\+E\+L\+I\+M\+\_\+\+S\+T\+RS}~5
+\item 
+\#define {\bfseries M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+E\+A\+D\+ER}
+\item 
+\#define {\bfseries M\+A\+X\+\_\+\+M\+A\+X\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+P\+A\+C\+K\+ET}~1024$\ast$1024$\ast$1024
+\item 
+\#define {\bfseries S\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+P\+O\+R\+T\+\_\+\+O\+F\+F\+S\+ET}~8
+\item 
+\#define {\bfseries S\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+O\+F\+F\+S\+ET}~0
+\item 
+\#define {\bfseries S\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+H\+O\+S\+T\+\_\+\+O\+F\+F\+S\+ET}~10
+\item 
+\#define {\bfseries I\+\_\+\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+ET}~0
+\item 
+\#define {\bfseries I\+\_\+\+V\+A\+L\+\_\+\+O\+F\+F\+S\+ET}~1
+\item 
+\#define {\bfseries B\+I\+N\+L\+O\+G\+\_\+\+M\+A\+G\+IC}~\char`\"{}\textbackslash{}xfe\textbackslash{}x62\textbackslash{}x69\textbackslash{}x6e\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga1006353b6090b4af079bd4c9d1728eab}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+F}}~0x4
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga395595981d15e9493cf2d506ed814f0f}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+U\+S\+E\+\_\+F}}~0x8
+\item 
+\#define \mbox{\hyperlink{group__Replication_gae868eb0ba9f8e48fe19b405498d89444}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+F}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga1155b875ade0c3f1437f6cc557cbabf8}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+L\+O\+G\+\_\+F}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__Replication_gaa08db1b3439cffa93029dd40e1ddb2d4}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+G\+N\+O\+R\+A\+B\+L\+E\+\_\+F}}~0x80
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga952d3046c7945be04d6e8a7dfabc3f91}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+F}}~0x100
+\item 
+\#define \mbox{\hyperlink{group__Replication_gaff6f295f5279245c4c78060da0d8ada5}{L\+O\+G\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+T\+S\+\_\+\+I\+S\+O\+L\+A\+T\+E\+\_\+F}}~0x200
+\item 
+\#define \mbox{\hyperlink{group__Replication_ga2dbea1bf90352a83855ef2a91dea9d04}{O\+P\+T\+I\+O\+N\+S\+\_\+\+W\+R\+I\+T\+T\+E\+N\+\_\+\+T\+O\+\_\+\+B\+I\+N\+\_\+\+L\+OG}}
+\item 
+\#define {\bfseries E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+O\+P\+T\+I\+O\+NS}~((1\+U\+L\+L $<$$<$ 14) $\vert$ (1\+U\+L\+L $<$$<$ 26) $\vert$ (1\+U\+L\+L $<$$<$ 27) $\vert$ (1\+U\+L\+L $<$$<$ 19))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef ulonglong {\bfseries sql\+\_\+mode\+\_\+t}
+\item 
+typedef struct st\+\_\+db\+\_\+worker\+\_\+hash\+\_\+entry {\bfseries db\+\_\+worker\+\_\+hash\+\_\+entry}
+\item 
+typedef struct \mbox{\hyperlink{structst__mts__db__names}{st\+\_\+mts\+\_\+db\+\_\+names}} {\bfseries Mts\+\_\+db\+\_\+names}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{group__Replication_gabd3a9658816041b32f7da3a121650668}{str\+\_\+to\+\_\+hex}} (char $\ast$to, const char $\ast$from, size\+\_\+t len)
+\item 
+int \mbox{\hyperlink{group__Replication_ga634d01455adb6c184a8832558d9af0c2}{append\+\_\+query\+\_\+string}} (T\+HD $\ast$thd, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$csinfo, String const $\ast$from, String $\ast$to)
+\item 
+bool {\bfseries is\+\_\+gtid\+\_\+event} (\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$evt)
+\item 
+size\+\_\+t {\bfseries my\+\_\+strmov\+\_\+quoted\+\_\+identifier} (char $\ast$buffer, const char $\ast$identifier)
+\item 
+size\+\_\+t {\bfseries my\+\_\+strmov\+\_\+quoted\+\_\+identifier\+\_\+helper} (int q, char $\ast$buffer, const char $\ast$identifier, size\+\_\+t length)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+\+Incident\+\_\+log\+\_\+event\+\_\+message}
+\item 
+P\+S\+I\+\_\+memory\+\_\+key {\bfseries key\+\_\+memory\+\_\+\+Rows\+\_\+query\+\_\+log\+\_\+event\+\_\+rows\+\_\+query}
+\item 
+M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+O\+RT char {\bfseries server\+\_\+version} \mbox{[}S\+E\+R\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+L\+E\+N\+G\+TH\mbox{]}
+\item 
+const int64 \mbox{\hyperlink{group__Replication_gab1c0400a80a08c44cfbe884bbe3948a3}{S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}} = L\+L\+O\+N\+G\+\_\+\+M\+AX
+\item 
+T\+Y\+P\+E\+L\+IB {\bfseries binlog\+\_\+checksum\+\_\+typelib}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Binary log event definitions. This includes generic code common to all types of log events, as well as specific code for each type of log event. 
+

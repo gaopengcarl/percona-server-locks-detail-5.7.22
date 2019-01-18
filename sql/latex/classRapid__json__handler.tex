@@ -1,0 +1,96 @@
+\hypertarget{classRapid__json__handler}{}\section{Rapid\+\_\+json\+\_\+handler Class Reference}
+\label{classRapid__json__handler}\index{Rapid\+\_\+json\+\_\+handler@{Rapid\+\_\+json\+\_\+handler}}
+Inheritance diagram for Rapid\+\_\+json\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRapid__json__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a88ecf846c3faa8240896fd935758b9bf}\label{classRapid__json__handler_a88ecf846c3faa8240896fd935758b9bf}} 
+{\bfseries Rapid\+\_\+json\+\_\+handler} (bool preserve\+\_\+neg\+\_\+zero\+\_\+int=false)
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classRapid__json__handler_a8c1594ccddf96f8f8188a37d3e603ef9}{get\+\_\+built\+\_\+doc}} ()
+\item 
+bool \mbox{\hyperlink{classRapid__json__handler_a6d2c68192aa1482a3094baef19df9229}{seeing\+\_\+scalar}} (\mbox{\hyperlink{classJson__scalar}{Json\+\_\+scalar}} $\ast$scalar)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a89fbfbcc8a82af741ba85bdca153058e}\label{classRapid__json__handler_a89fbfbcc8a82af741ba85bdca153058e}} 
+bool {\bfseries Null} ()
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_acd7c612917ee905313e85a24c6c3db47}\label{classRapid__json__handler_acd7c612917ee905313e85a24c6c3db47}} 
+bool {\bfseries Bool} (bool b)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a5e8c39afa773c09993fd76d5190cf512}\label{classRapid__json__handler_a5e8c39afa773c09993fd76d5190cf512}} 
+bool {\bfseries Int} (int i)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_abf393cf8c9d1af1f343d3814aeffa570}\label{classRapid__json__handler_abf393cf8c9d1af1f343d3814aeffa570}} 
+bool {\bfseries Uint} (unsigned u)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_ac6c109d5bc384f4c860b7ee62fcc5ca3}\label{classRapid__json__handler_ac6c109d5bc384f4c860b7ee62fcc5ca3}} 
+bool {\bfseries Int64} (int64\+\_\+t i)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_adc98a8d6ea253de9cfb710c69f9909a0}\label{classRapid__json__handler_adc98a8d6ea253de9cfb710c69f9909a0}} 
+bool {\bfseries Uint64} (uint64\+\_\+t ui64)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a0deec2dfadcb6943daac2fa825135582}\label{classRapid__json__handler_a0deec2dfadcb6943daac2fa825135582}} 
+bool {\bfseries Double} (double d, bool is\+\_\+int=false)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a272fbb43cf9be77b869dbf8e20ec326a}\label{classRapid__json__handler_a272fbb43cf9be77b869dbf8e20ec326a}} 
+bool {\bfseries String} (const char $\ast$str, Size\+Type length, bool copy)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_adf71fe29689c58851a35e56b7990c383}\label{classRapid__json__handler_adf71fe29689c58851a35e56b7990c383}} 
+bool {\bfseries Start\+Object} ()
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a7c2ab0848c2b78b1f619f6a5ed1a6ef0}\label{classRapid__json__handler_a7c2ab0848c2b78b1f619f6a5ed1a6ef0}} 
+bool {\bfseries End\+Object} (Size\+Type)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a10590c0909d752acc7dc551871183641}\label{classRapid__json__handler_a10590c0909d752acc7dc551871183641}} 
+bool {\bfseries Start\+Array} ()
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_ab2c907f8247c55664ec70e3385c127da}\label{classRapid__json__handler_ab2c907f8247c55664ec70e3385c127da}} 
+bool {\bfseries End\+Array} (Size\+Type)
+\item 
+\mbox{\Hypertarget{classRapid__json__handler_a46fc455783b061e5282c142c3ae5f200}\label{classRapid__json__handler_a46fc455783b061e5282c142c3ae5f200}} 
+bool {\bfseries Key} (const Ch $\ast$str, Size\+Type len, bool copy)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class overrides the methods on Base\+Reader\+Handler to make out own handler which will construct our D\+OM from the parsing of the J\+S\+ON text. {\ttfamily  bool Null() \{ \} bool Bool(bool) \{ \} bool Int(int) \{ \} bool Uint(unsigned) \{ \} bool Int64(int64\+\_\+t) \{ \} bool Uint64(uint64\+\_\+t) \{ \} bool Double(double) \{ \} bool String(const Ch$\ast$, Size\+Type, bool) \{ \} bool Start\+Object() \{ \} bool \mbox{\hyperlink{classKey}{Key()}} \{ \} bool End\+Object(\+Size\+Type) \{ \} bool Start\+Array() \{ \} bool End\+Array(\+Size\+Type) \{ \} } \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classJson__dom_a9615aa0ae1427d5f5986a2d85d506716}{Json\+\_\+dom\+::parse}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRapid__json__handler_a8c1594ccddf96f8f8188a37d3e603ef9}\label{classRapid__json__handler_a8c1594ccddf96f8f8188a37d3e603ef9}} 
+\index{Rapid\+\_\+json\+\_\+handler@{Rapid\+\_\+json\+\_\+handler}!get\+\_\+built\+\_\+doc@{get\+\_\+built\+\_\+doc}}
+\index{get\+\_\+built\+\_\+doc@{get\+\_\+built\+\_\+doc}!Rapid\+\_\+json\+\_\+handler@{Rapid\+\_\+json\+\_\+handler}}
+\subsubsection{\texorpdfstring{get\+\_\+built\+\_\+doc()}{get\_built\_doc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}}$\ast$ Rapid\+\_\+json\+\_\+handler\+::get\+\_\+built\+\_\+doc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The built J\+S\+ON D\+OM object. Deallocation is the returned value responsibility of the caller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRapid__json__handler_a6d2c68192aa1482a3094baef19df9229}\label{classRapid__json__handler_a6d2c68192aa1482a3094baef19df9229}} 
+\index{Rapid\+\_\+json\+\_\+handler@{Rapid\+\_\+json\+\_\+handler}!seeing\+\_\+scalar@{seeing\+\_\+scalar}}
+\index{seeing\+\_\+scalar@{seeing\+\_\+scalar}!Rapid\+\_\+json\+\_\+handler@{Rapid\+\_\+json\+\_\+handler}}
+\subsubsection{\texorpdfstring{seeing\+\_\+scalar()}{seeing\_scalar()}}
+{\footnotesize\ttfamily bool Rapid\+\_\+json\+\_\+handler\+::seeing\+\_\+scalar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJson__scalar}{Json\+\_\+scalar}} $\ast$}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function which is called on each scalar value found in the J\+S\+ON document being parsed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em scalar} & the scalar that was seen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if parsing should continue, false if an error was found and parsing should stop 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

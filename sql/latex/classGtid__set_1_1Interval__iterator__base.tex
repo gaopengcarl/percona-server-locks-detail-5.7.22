@@ -1,0 +1,72 @@
+\hypertarget{classGtid__set_1_1Interval__iterator__base}{}\section{Gtid\+\_\+set\+:\+:Interval\+\_\+iterator\+\_\+base$<$ Gtid\+\_\+set\+\_\+p, Interval\+\_\+p $>$ Class Template Reference}
+\label{classGtid__set_1_1Interval__iterator__base}\index{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base$<$ Gtid\+\_\+set\+\_\+p, Interval\+\_\+p $>$@{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base$<$ Gtid\+\_\+set\+\_\+p, Interval\+\_\+p $>$}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base_a679998deae5692929946999547b888fc}{Interval\+\_\+iterator\+\_\+base}} (Gtid\+\_\+set\+\_\+p gtid\+\_\+set, rpl\+\_\+sidno sidno)
+\item 
+\mbox{\Hypertarget{classGtid__set_1_1Interval__iterator__base_ab899a786a5ad507a69d0e33ea8866bc9}\label{classGtid__set_1_1Interval__iterator__base_ab899a786a5ad507a69d0e33ea8866bc9}} 
+\mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base_ab899a786a5ad507a69d0e33ea8866bc9}{Interval\+\_\+iterator\+\_\+base}} (Gtid\+\_\+set\+\_\+p gtid\+\_\+set)
+\begin{DoxyCompactList}\small\item\em Construct a new iterator over the free intervals of a \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__set_1_1Interval__iterator__base_a08de43d5f9a6fcd8b02a9e0267b62c25}\label{classGtid__set_1_1Interval__iterator__base_a08de43d5f9a6fcd8b02a9e0267b62c25}} 
+void \mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base_a08de43d5f9a6fcd8b02a9e0267b62c25}{init}} (Gtid\+\_\+set\+\_\+p gtid\+\_\+set, rpl\+\_\+sidno sidno)
+\begin{DoxyCompactList}\small\item\em Reset this iterator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__set_1_1Interval__iterator__base_abd5cb3d9c3d4612a6cc8b72c97bec510}\label{classGtid__set_1_1Interval__iterator__base_abd5cb3d9c3d4612a6cc8b72c97bec510}} 
+void \mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base_abd5cb3d9c3d4612a6cc8b72c97bec510}{next}} ()
+\begin{DoxyCompactList}\small\item\em Advance current\+\_\+elem one step. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__set_1_1Interval__iterator__base_a047f4d745b941f3cb44d9fb18cd1def2}\label{classGtid__set_1_1Interval__iterator__base_a047f4d745b941f3cb44d9fb18cd1def2}} 
+Interval\+\_\+p \mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base_a047f4d745b941f3cb44d9fb18cd1def2}{get}} () const
+\begin{DoxyCompactList}\small\item\em Return current\+\_\+elem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Interval\+\_\+p $\ast$ \mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base_ab8609fb05e3782e8a73e496d35cbc217}{p}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Gtid\+\_\+set\+\_\+p, typename Interval\+\_\+p$>$\newline
+class Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base$<$ Gtid\+\_\+set\+\_\+p, Interval\+\_\+p $>$}
+
+Iterator over intervals for a given S\+I\+D\+NO.
+
+This is an abstract template class, used as a common base class for \mbox{\hyperlink{classGtid__set_1_1Const__interval__iterator}{Const\+\_\+interval\+\_\+iterator}} and \mbox{\hyperlink{classGtid__set_1_1Interval__iterator}{Interval\+\_\+iterator}}.
+
+The iterator always points to an interval pointer. The interval pointer is either the initial pointer into the list, or the next pointer of one of the intervals in the list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGtid__set_1_1Interval__iterator__base_a679998deae5692929946999547b888fc}\label{classGtid__set_1_1Interval__iterator__base_a679998deae5692929946999547b888fc}} 
+\index{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base@{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base}!Interval\+\_\+iterator\+\_\+base@{Interval\+\_\+iterator\+\_\+base}}
+\index{Interval\+\_\+iterator\+\_\+base@{Interval\+\_\+iterator\+\_\+base}!Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base@{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{Interval\+\_\+iterator\+\_\+base()}{Interval\_iterator\_base()}}
+{\footnotesize\ttfamily template$<$typename Gtid\+\_\+set\+\_\+p, typename Interval\+\_\+p$>$ \\
+\mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base}{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base}}$<$ Gtid\+\_\+set\+\_\+p, Interval\+\_\+p $>$\+::\mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base}{Interval\+\_\+iterator\+\_\+base}} (\begin{DoxyParamCaption}\item[{Gtid\+\_\+set\+\_\+p}]{gtid\+\_\+set,  }\item[{rpl\+\_\+sidno}]{sidno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new iterator over the G\+NO intervals for a given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid\+\_\+set} & The \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \\
+\hline
+{\em sidno} & The S\+I\+D\+NO. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classGtid__set_1_1Interval__iterator__base_ab8609fb05e3782e8a73e496d35cbc217}\label{classGtid__set_1_1Interval__iterator__base_ab8609fb05e3782e8a73e496d35cbc217}} 
+\index{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base@{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base}!p@{p}}
+\index{p@{p}!Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base@{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily template$<$typename Gtid\+\_\+set\+\_\+p, typename Interval\+\_\+p$>$ \\
+Interval\+\_\+p$\ast$ \mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base}{Gtid\+\_\+set\+::\+Interval\+\_\+iterator\+\_\+base}}$<$ Gtid\+\_\+set\+\_\+p, Interval\+\_\+p $>$\+::p\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the address of the \textquotesingle{}next\textquotesingle{} pointer of the previous element, or the address of the initial pointer into the list, if the current element is the first element. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\hypertarget{classThd__backup__and__restore}{}\section{Thd\+\_\+backup\+\_\+and\+\_\+restore Class Reference}
+\label{classThd__backup__and__restore}\index{Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classThd__backup__and__restore_a398ca9bf7844708a75e02db539710cdc}{Thd\+\_\+backup\+\_\+and\+\_\+restore}} (T\+HD $\ast$backup\+\_\+thd, T\+HD $\ast$new\+\_\+thd)
+\item 
+\mbox{\hyperlink{classThd__backup__and__restore_ae3573c10978d86ec0510bee8217b5e82}{$\sim$\+Thd\+\_\+backup\+\_\+and\+\_\+restore}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class to switch to a new thread and then go back to the previous one, when the object is destroyed using R\+A\+II.
+
+This class is used to temporarily switch to another session (T\+HD structure). It will set up thread specific \char`\"{}globals\char`\"{} correctly so that the P\+O\+S\+IX thread looks exactly like the session attached to. However, P\+S\+I\+\_\+thread info is not touched as it is required to show the actual physial view in P\+FS instrumentation i.\+e., it should depict as the real thread doing the work instead of thread it switched to.
+
+On destruction, the original session (which is supplied to the constructor) will be re-\/attached automatically. For example, with this code, the value of {\ttfamily current\+\_\+thd} will be the same before and after execution of the code.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0 ; i < count ; ++i)}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \textcolor{comment}{// here we are attached to current\_thd}}
+\DoxyCodeLine{    \textcolor{comment}{// [...]}}
+\DoxyCodeLine{    \mbox{\hyperlink{classThd__backup__and__restore}{Thd\_backup\_and\_restore}} switch\_thd(current\_thd, other\_thd[i]);}
+\DoxyCodeLine{    \textcolor{comment}{// [...]}}
+\DoxyCodeLine{    \textcolor{comment}{// here we are attached to other\_thd[i]}}
+\DoxyCodeLine{    \textcolor{comment}{// [...]}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{comment}{// here we are attached to current\_thd}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+\begin{DoxyWarning}{Warning}
+The class is not designed to be inherited from. 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classThd__backup__and__restore_a398ca9bf7844708a75e02db539710cdc}\label{classThd__backup__and__restore_a398ca9bf7844708a75e02db539710cdc}} 
+\index{Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}!Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}}
+\index{Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}!Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}}
+\subsubsection{\texorpdfstring{Thd\+\_\+backup\+\_\+and\+\_\+restore()}{Thd\_backup\_and\_restore()}}
+{\footnotesize\ttfamily Thd\+\_\+backup\+\_\+and\+\_\+restore\+::\+Thd\+\_\+backup\+\_\+and\+\_\+restore (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{backup\+\_\+thd,  }\item[{T\+HD $\ast$}]{new\+\_\+thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Try to attach the P\+O\+S\+IX thread to a session.
+\begin{DoxyItemize}
+\item This function attaches the P\+O\+S\+IX thread to a session in M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+A\+T\+T\+A\+C\+H\+\_\+\+T\+R\+I\+ES tries when encountering \textquotesingle{}out of memory\textquotesingle{} error, and terminates the server after failed in M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+A\+T\+T\+A\+C\+H\+\_\+\+T\+R\+I\+ES tries.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em backup\+\_\+thd} & The thd to restore to when object is destructed. \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+thd} & The thd to attach to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classThd__backup__and__restore_ae3573c10978d86ec0510bee8217b5e82}\label{classThd__backup__and__restore_ae3573c10978d86ec0510bee8217b5e82}} 
+\index{Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}!````~Thd\+\_\+backup\+\_\+and\+\_\+restore@{$\sim$\+Thd\+\_\+backup\+\_\+and\+\_\+restore}}
+\index{````~Thd\+\_\+backup\+\_\+and\+\_\+restore@{$\sim$\+Thd\+\_\+backup\+\_\+and\+\_\+restore}!Thd\+\_\+backup\+\_\+and\+\_\+restore@{Thd\+\_\+backup\+\_\+and\+\_\+restore}}
+\subsubsection{\texorpdfstring{$\sim$\+Thd\+\_\+backup\+\_\+and\+\_\+restore()}{~Thd\_backup\_and\_restore()}}
+{\footnotesize\ttfamily Thd\+\_\+backup\+\_\+and\+\_\+restore\+::$\sim$\+Thd\+\_\+backup\+\_\+and\+\_\+restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Restores to previous thd. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binlog.\+cc\end{DoxyCompactItemize}

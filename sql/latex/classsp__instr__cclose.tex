@@ -1,0 +1,58 @@
+\hypertarget{classsp__instr__cclose}{}\section{sp\+\_\+instr\+\_\+cclose Class Reference}
+\label{classsp__instr__cclose}\index{sp\+\_\+instr\+\_\+cclose@{sp\+\_\+instr\+\_\+cclose}}
+
+
+{\ttfamily \#include $<$sp\+\_\+instr.\+h$>$}
+
+Inheritance diagram for sp\+\_\+instr\+\_\+cclose\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsp__instr__cclose}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__instr__cclose_a73a30be69bea07ea87834d095786e22e}\label{classsp__instr__cclose_a73a30be69bea07ea87834d095786e22e}} 
+{\bfseries sp\+\_\+instr\+\_\+cclose} (uint ip, \mbox{\hyperlink{classsp__pcontext}{sp\+\_\+pcontext}} $\ast$ctx, int cursor\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classsp__instr__cclose_ac0a27fc7473240d98628071a1e7033bb}\label{classsp__instr__cclose_ac0a27fc7473240d98628071a1e7033bb}} 
+virtual void {\bfseries print} (String $\ast$str)
+\item 
+virtual bool \mbox{\hyperlink{classsp__instr__cclose_abe0cc169c3f0e26238946c52eb686745}{execute}} (T\+HD $\ast$thd, uint $\ast$nextp)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The instruction corresponds to the C\+L\+O\+SE statement. It just forwards the close-\/call to the appropriate \mbox{\hyperlink{classsp__cursor}{sp\+\_\+cursor}} object in the \mbox{\hyperlink{classsp__rcontext}{sp\+\_\+rcontext}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsp__instr__cclose_abe0cc169c3f0e26238946c52eb686745}\label{classsp__instr__cclose_abe0cc169c3f0e26238946c52eb686745}} 
+\index{sp\+\_\+instr\+\_\+cclose@{sp\+\_\+instr\+\_\+cclose}!execute@{execute}}
+\index{execute@{execute}!sp\+\_\+instr\+\_\+cclose@{sp\+\_\+instr\+\_\+cclose}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily bool sp\+\_\+instr\+\_\+cclose\+::execute (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint $\ast$}]{nextp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Execute this instruction
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context \\
+\hline
+\mbox{\texttt{ out}}  & {\em nextp} & index of the next instruction to execute. (For most instructions this will be the instruction following this one). Note that this parameter is undefined in case of errors, use \mbox{\hyperlink{classsp__instr_a3430a1d05e78933479736c452d555b1e}{get\+\_\+cont\+\_\+dest()}} to find the continuation instruction for C\+O\+N\+T\+I\+N\+UE error handlers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsp__instr_a78add2ec1a98f8ba58d75c8eb40ed8cb}{sp\+\_\+instr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+instr.\+h\item 
+sp\+\_\+instr.\+cc\end{DoxyCompactItemize}

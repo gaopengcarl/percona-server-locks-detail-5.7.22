@@ -1,0 +1,105 @@
+\hypertarget{structqep__row_1_1mem__root__str}{}\section{qep\+\_\+row\+:\+:mem\+\_\+root\+\_\+str Struct Reference}
+\label{structqep__row_1_1mem__root__str}\index{qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}}
+
+
+{\ttfamily \#include $<$opt\+\_\+explain\+\_\+format.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a39f66d16632286130faba84fdeb65f0c}\label{structqep__row_1_1mem__root__str_a39f66d16632286130faba84fdeb65f0c}} 
+void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_aba0957b55a230674ed70bd3117e9d069}\label{structqep__row_1_1mem__root__str_aba0957b55a230674ed70bd3117e9d069}} 
+bool {\bfseries is\+\_\+empty} ()
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a602c7bdb62dec85dbb9c37abc44f0081}\label{structqep__row_1_1mem__root__str_a602c7bdb62dec85dbb9c37abc44f0081}} 
+bool {\bfseries set} (const char $\ast$str\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_afc3f164b7b4cfbf6b206dc8cf348d341}\label{structqep__row_1_1mem__root__str_afc3f164b7b4cfbf6b206dc8cf348d341}} 
+bool {\bfseries set} (const String \&s)
+\item 
+bool \mbox{\hyperlink{structqep__row_1_1mem__root__str_a0c9b58c93472e9ff67d781a6d740e5ee}{set}} (const char $\ast$str\+\_\+arg, size\+\_\+t length\+\_\+arg)
+\item 
+void \mbox{\hyperlink{structqep__row_1_1mem__root__str_a71ec1ad030a00be963f8a83e317a05b2}{set}} (\mbox{\hyperlink{classLazy}{Lazy}} $\ast$x)
+\item 
+void \mbox{\hyperlink{structqep__row_1_1mem__root__str_a6352c7d8d3e2e5e79104d05258511035}{set\+\_\+const}} (const char $\ast$str\+\_\+arg)
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a5e62a7334780ef28de065d78aeac5acf}\label{structqep__row_1_1mem__root__str_a5e62a7334780ef28de065d78aeac5acf}} 
+void {\bfseries set\+\_\+const} (const char $\ast$str\+\_\+arg, size\+\_\+t length\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_ace967272a6eb8a4fda1376ab1f4393b2}\label{structqep__row_1_1mem__root__str_ace967272a6eb8a4fda1376ab1f4393b2}} 
+static char $\ast$ {\bfseries strndup\+\_\+root} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$root, const char $\ast$str, size\+\_\+t len)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_ad05696effed1f972048fa04aa225b5ee}\label{structqep__row_1_1mem__root__str_ad05696effed1f972048fa04aa225b5ee}} 
+const char $\ast$ {\bfseries str}
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a1efdc5217d42198eb47575f99ce01b2a}\label{structqep__row_1_1mem__root__str_a1efdc5217d42198eb47575f99ce01b2a}} 
+size\+\_\+t {\bfseries length}
+\item 
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_aa1be5ef3f725aa64734125ad77049021}\label{structqep__row_1_1mem__root__str_aa1be5ef3f725aa64734125ad77049021}} 
+\mbox{\hyperlink{classLazy}{Lazy}} $\ast$ {\bfseries deferred}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class to keep string data in M\+E\+M\+\_\+\+R\+O\+OT before passing to \mbox{\hyperlink{classItem__string}{Item\+\_\+string}}
+
+Since \mbox{\hyperlink{classItem__string}{Item\+\_\+string}} constructors doesn\textquotesingle{}t copy input string parameter data in the most cases, those input strings must have the same lifetime as \mbox{\hyperlink{classItem__string}{Item\+\_\+string}} objects, i.\+e. lifetime of M\+E\+M\+\_\+\+R\+O\+OT. This class allocates input parameters for \mbox{\hyperlink{classItem__string}{Item\+\_\+string}} objects in M\+E\+M\+\_\+\+R\+O\+OT.
+
+\begin{DoxyNote}{Note}
+Call to is\+\_\+empty() is necessary before the access to \char`\"{}str\char`\"{} and \char`\"{}length\char`\"{} fields, since is\+\_\+empty() may trigger an evaluation of an associated expression that updates these fields. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a0c9b58c93472e9ff67d781a6d740e5ee}\label{structqep__row_1_1mem__root__str_a0c9b58c93472e9ff67d781a6d740e5ee}} 
+\index{qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}!set@{set}}
+\index{set@{set}!qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}}
+\subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool qep\+\_\+row\+::mem\+\_\+root\+\_\+str\+::set (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str\+\_\+arg,  }\item[{size\+\_\+t}]{length\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make a copy of the string in M\+E\+M\+\_\+\+R\+O\+OT
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+\_\+arg} & string to copy \\
+\hline
+{\em length\+\_\+arg} & input string length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if success, true if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a71ec1ad030a00be963f8a83e317a05b2}\label{structqep__row_1_1mem__root__str_a71ec1ad030a00be963f8a83e317a05b2}} 
+\index{qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}!set@{set}}
+\index{set@{set}!qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}}
+\subsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void qep\+\_\+row\+::mem\+\_\+root\+\_\+str\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLazy}{Lazy}} $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Save expression for further evaluation
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Expression \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structqep__row_1_1mem__root__str_a6352c7d8d3e2e5e79104d05258511035}\label{structqep__row_1_1mem__root__str_a6352c7d8d3e2e5e79104d05258511035}} 
+\index{qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}!set\+\_\+const@{set\+\_\+const}}
+\index{set\+\_\+const@{set\+\_\+const}!qep\+\_\+row\+::mem\+\_\+root\+\_\+str@{qep\+\_\+row\+::mem\+\_\+root\+\_\+str}}
+\subsubsection{\texorpdfstring{set\+\_\+const()}{set\_const()}}
+{\footnotesize\ttfamily void qep\+\_\+row\+::mem\+\_\+root\+\_\+str\+::set\+\_\+const (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make a copy of string constant
+
+Variant of set() usable when the str\+\_\+arg argument lives longer than the \mbox{\hyperlink{structqep__row_1_1mem__root__str}{mem\+\_\+root\+\_\+str}} instance. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+format.\+h\end{DoxyCompactItemize}

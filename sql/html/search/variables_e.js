@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['offset',['offset',['../structFile__option.html#a738962dc8891f3834bfb3e885a808e68',1,'File_option::offset()'],['../classsys__var.html#a78e5103c51e7bc209b9811e2c785ff99',1,'sys_var::offset()'],['../classsp__variable.html#ab053166f9aaf72e5bfb2eb5df27672df',1,'sp_variable::offset()'],['../structst__cache__field.html#a7195e3606c4f7bbf1edc3616600d8b29',1,'st_cache_field::offset()']]],
+  ['old_5fkey',['old_key',['../structKEY__PAIR.html#a877ecf9a313678a20cb24c1dde207245',1,'KEY_PAIR']]],
+  ['online',['online',['../classAlter__inplace__info.html#acb2fbc0369799ac74f9cc74cb14d1bdf',1,'Alter_inplace_info']]],
+  ['open_5fmethod',['open_method',['../structst__field__info.html#a7e8e6e6d5634ec75f81a0540dc3ed7dd',1,'st_field_info']]],
+  ['open_5fstrategy',['open_strategy',['../structTABLE__LIST.html#aa5584240bf59a147fff802fb18e1704e',1,'TABLE_LIST']]],
+  ['open_5ftype',['open_type',['../structTABLE__LIST.html#a258a1d3e3c052cd563fb5690b70e86e8',1,'TABLE_LIST']]],
+  ['opt_5fhints_5ftable',['opt_hints_table',['../structTABLE__LIST.html#a08dcf89471efcaa22bdb31c38fa13fea',1,'TABLE_LIST']]],
+  ['optimize',['optimize',['../structKey__field.html#a8020afcf7b7a870d86586052442e347f',1,'Key_field::optimize()'],['../classKey__use.html#a4c236d532e162f606545342df717e7df',1,'Key_use::optimize()']]],
+  ['optimized_5faway',['optimized_away',['../structTABLE__LIST.html#a1e0bb4071c72ceea2feb2aaac81f00c8',1,'TABLE_LIST']]],
+  ['optimizer_5ftrace',['optimizer_trace',['../structsystem__variables.html#a885b8367335d72fa20b96c15299e84fe',1,'system_variables']]],
+  ['optimizer_5ftrace_5ffeatures',['optimizer_trace_features',['../structsystem__variables.html#afb344b6d5243a551afd58289f94dfdc5',1,'system_variables']]],
+  ['optimizer_5ftrace_5finfo',['optimizer_trace_info',['../opt__trace2server_8cc.html#aed86b495d0a5ae246f2398274b1170f0',1,'opt_trace2server.cc']]],
+  ['option',['option',['../classsys__var.html#a0b1ff282ca0e7b88a2827d8afd363119',1,'sys_var']]],
+  ['option_5fbits',['option_bits',['../structsystem__variables.html#a4eb214ff2c0b9d4cccf21394095d28dc',1,'system_variables']]],
+  ['order',['order',['../classFilesort.html#ac811beea21279e6cccf453241fe51e51',1,'Filesort::order()'],['../classJOIN.html#ac06839682aae707b0e1d4fafd53abaf5',1,'JOIN::order()']]],
+  ['order_5flist',['order_list',['../classExplain.html#a82528ca908546d506b6b50dcc5aae6ac',1,'Explain']]],
+  ['orig_5fpluginvar_5fname',['orig_pluginvar_name',['../classsys__var__pluginvar.html#ab89f1595bd3b5dadd5ea766e622469d2',1,'sys_var_pluginvar']]],
+  ['output',['output',['../classExplain__format.html#a10101f444ad32534d35e58c088543a5e',1,'Explain_format']]]
+];

@@ -1,0 +1,515 @@
+\hypertarget{classMDL__context}{}\section{M\+D\+L\+\_\+context Class Reference}
+\label{classMDL__context}\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+
+
+{\ttfamily \#include $<$mdl.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMDL__context_ab0e1989a324f4a2918656245963f23fa}\label{classMDL__context_ab0e1989a324f4a2918656245963f23fa}} 
+typedef \mbox{\hyperlink{classI__P__List}{I\+\_\+\+P\+\_\+\+List}}$<$ \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}, \mbox{\hyperlink{structI__P__List__adapter}{I\+\_\+\+P\+\_\+\+List\+\_\+adapter}}$<$ \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}}, \&\mbox{\hyperlink{classMDL__ticket_a74155707577dfd12cc7f47229e4f0d17}{M\+D\+L\+\_\+ticket\+::next\+\_\+in\+\_\+context}}, \&M\+D\+L\+\_\+ticket\+::prev\+\_\+in\+\_\+context $>$ $>$ {\bfseries Ticket\+\_\+list}
+\item 
+\mbox{\Hypertarget{classMDL__context_a0c46960d79806f52abbf0ba43af6ad04}\label{classMDL__context_a0c46960d79806f52abbf0ba43af6ad04}} 
+typedef \mbox{\hyperlink{classI__P__List__iterator}{Ticket\+\_\+list\+::\+Iterator}} {\bfseries Ticket\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDL__context_a21b35ef90597dcd411bf091acd1f4a38}{M\+D\+L\+\_\+context}} ()
+\item 
+void \mbox{\hyperlink{classMDL__context_af01a1f42bd9ed050556c434fb6d007ac}{destroy}} ()
+\item 
+bool \mbox{\hyperlink{classMDL__context_ab6d07a861aaf9db6fda46da196a8b0d0}{try\+\_\+acquire\+\_\+lock}} (\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$mdl\+\_\+request)
+\item 
+bool \mbox{\hyperlink{classMDL__context_a3702152de7ebdf6e2c54e5ba5cbecfda}{acquire\+\_\+lock}} (\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$mdl\+\_\+request, ulong lock\+\_\+wait\+\_\+timeout)
+\item 
+bool \mbox{\hyperlink{classMDL__context_a4583e611d097158c5f08b8d1133fbd7e}{acquire\+\_\+locks}} (\mbox{\hyperlink{classI__P__List}{M\+D\+L\+\_\+request\+\_\+list}} $\ast$requests, ulong lock\+\_\+wait\+\_\+timeout)
+\item 
+bool \mbox{\hyperlink{classMDL__context_a2a7108b456e7c5ee715ee6511c03d542}{upgrade\+\_\+shared\+\_\+lock}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$mdl\+\_\+ticket, enum\+\_\+mdl\+\_\+type new\+\_\+type, ulong lock\+\_\+wait\+\_\+timeout)
+\item 
+bool \mbox{\hyperlink{classMDL__context_a74ed5299b1da65397a7e6972425b5f2d}{clone\+\_\+ticket}} (\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$mdl\+\_\+request)
+\item 
+void \mbox{\hyperlink{classMDL__context_a73bd65389a74778433291eb2d426c71f}{release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+void \mbox{\hyperlink{classMDL__context_a71874a5e485217650429849ab29ed43b}{release\+\_\+locks}} (\mbox{\hyperlink{classMDL__release__locks__visitor}{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor}} $\ast$visitor)
+\item 
+void \mbox{\hyperlink{classMDL__context_a58d0df5eb422cbfa9a4225218c76141f}{release\+\_\+lock}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$ticket)
+\item 
+bool \mbox{\hyperlink{classMDL__context_adffac048f9ce71eb3a5e3b1a38178fdc}{owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock}} (\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}} mdl\+\_\+namespace, const char $\ast$db, const char $\ast$name, enum\+\_\+mdl\+\_\+type mdl\+\_\+type)
+\item 
+bool \mbox{\hyperlink{classMDL__context_a7cf6eddf26617c84f0c2c21af8ec4a94}{find\+\_\+lock\+\_\+owner}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, \mbox{\hyperlink{classMDL__context__visitor}{M\+D\+L\+\_\+context\+\_\+visitor}} $\ast$visitor)
+\item 
+bool \mbox{\hyperlink{classMDL__context_adfc9db02d0a60b144fd35770424ba1ae}{has\+\_\+lock}} (const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \&mdl\+\_\+savepoint, \mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$mdl\+\_\+ticket)
+\item 
+\mbox{\Hypertarget{classMDL__context_ae36680261ff26d6eb9ea19e2a290294d}\label{classMDL__context_ae36680261ff26d6eb9ea19e2a290294d}} 
+bool {\bfseries has\+\_\+locks} () const
+\item 
+bool \mbox{\hyperlink{classMDL__context_a3ff2d2559c4ef5075b63978ae516df6e}{has\+\_\+locks}} (\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}} mdl\+\_\+namespace) const
+\item 
+bool \mbox{\hyperlink{classMDL__context_ab77b38a67ffb56d071a98efc8879bac6}{has\+\_\+locks\+\_\+waited\+\_\+for}} () const
+\item 
+\mbox{\Hypertarget{classMDL__context_a213edf20be43313e0346a489c2f47dd6}\label{classMDL__context_a213edf20be43313e0346a489c2f47dd6}} 
+\mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} {\bfseries mdl\+\_\+savepoint} ()
+\item 
+void \mbox{\hyperlink{classMDL__context_a357599f5af7c6ec7587ecb7b349f0313}{set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks}} ()
+\item 
+void \mbox{\hyperlink{classMDL__context_ad1b07243d69f1354e3bb5936dd6ded15}{set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks}} ()
+\item 
+void \mbox{\hyperlink{classMDL__context_a5836b7c79f957c575c90ad4f1d8296de}{set\+\_\+lock\+\_\+duration}} (\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$mdl\+\_\+ticket, enum\+\_\+mdl\+\_\+duration duration)
+\item 
+\mbox{\Hypertarget{classMDL__context_a55150d0bbe77cf0cd38e7005a4330e44}\label{classMDL__context_a55150d0bbe77cf0cd38e7005a4330e44}} 
+void {\bfseries release\+\_\+statement\+\_\+locks} ()
+\item 
+void \mbox{\hyperlink{classMDL__context_afce65a72bedc0c4384b2b4c231c070ed}{release\+\_\+transactional\+\_\+locks}} ()
+\item 
+void \mbox{\hyperlink{classMDL__context_a863ff94d0928e9720df30643835e4ef0}{rollback\+\_\+to\+\_\+savepoint}} (const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \&mdl\+\_\+savepoint)
+\item 
+\mbox{\Hypertarget{classMDL__context_aa476fbd9d7d0352352d551279e853314}\label{classMDL__context_aa476fbd9d7d0352352d551279e853314}} 
+\mbox{\hyperlink{classMDL__context__owner}{M\+D\+L\+\_\+context\+\_\+owner}} $\ast$ {\bfseries get\+\_\+owner} () const
+\item 
+uint \mbox{\hyperlink{classMDL__context_a3563d6d05aeb758f495f44c123c5306b}{get\+\_\+deadlock\+\_\+weight}} () const
+\item 
+\mbox{\Hypertarget{classMDL__context_a4c29aa7919001edcdfaa82bc360c65df}\label{classMDL__context_a4c29aa7919001edcdfaa82bc360c65df}} 
+void {\bfseries init} (\mbox{\hyperlink{classMDL__context__owner}{M\+D\+L\+\_\+context\+\_\+owner}} $\ast$arg)
+\item 
+\mbox{\Hypertarget{classMDL__context_a74608d443dfc4754ce1b14c672a914f1}\label{classMDL__context_a74608d443dfc4754ce1b14c672a914f1}} 
+void {\bfseries set\+\_\+needs\+\_\+thr\+\_\+lock\+\_\+abort} (bool needs\+\_\+thr\+\_\+lock\+\_\+abort)
+\item 
+\mbox{\Hypertarget{classMDL__context_adbc1ba94d5bbd550b7e1d0ab88882060}\label{classMDL__context_adbc1ba94d5bbd550b7e1d0ab88882060}} 
+bool {\bfseries get\+\_\+needs\+\_\+thr\+\_\+lock\+\_\+abort} () const
+\item 
+\mbox{\Hypertarget{classMDL__context_a39728ceab1f092a3bf1e8a4ec168f9bb}\label{classMDL__context_a39728ceab1f092a3bf1e8a4ec168f9bb}} 
+void {\bfseries set\+\_\+force\+\_\+dml\+\_\+deadlock\+\_\+weight} (bool force\+\_\+dml\+\_\+deadlock\+\_\+weight)
+\item 
+uint \mbox{\hyperlink{classMDL__context_a6023ebdf937cfcbf9991b10945ad952f}{get\+\_\+random}} ()
+\item 
+T\+HD $\ast$ \mbox{\hyperlink{classMDL__context_a2260019c16977e8ed6aba3081f16348f}{get\+\_\+thd}} () const
+\item 
+void \mbox{\hyperlink{classMDL__context_aa0e75a7f44e5bc687620aff289a00f52}{find\+\_\+deadlock}} ()
+\item 
+bool \mbox{\hyperlink{classMDL__context_ab778763f11b187ab171213c9fa08846e}{visit\+\_\+subgraph}} (\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$dvisitor)
+\item 
+void \mbox{\hyperlink{classMDL__context_afd74a4227cf8ddea993d96ee3be25331}{will\+\_\+wait\+\_\+for}} (\mbox{\hyperlink{classMDL__wait__for__subgraph}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}} $\ast$waiting\+\_\+for\+\_\+arg)
+\item 
+void \mbox{\hyperlink{classMDL__context_ad5d3fb033110d449d894c95f33f6d9b1}{done\+\_\+waiting\+\_\+for}} ()
+\item 
+\mbox{\Hypertarget{classMDL__context_aaca0ec235888a94af4dd25107a8af389}\label{classMDL__context_aaca0ec235888a94af4dd25107a8af389}} 
+void {\bfseries lock\+\_\+deadlock\+\_\+victim} ()
+\item 
+\mbox{\Hypertarget{classMDL__context_af3a0ef8ba360e3d48885f711723aa3ea}\label{classMDL__context_af3a0ef8ba360e3d48885f711723aa3ea}} 
+void {\bfseries unlock\+\_\+deadlock\+\_\+victim} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDL__wait}{M\+D\+L\+\_\+wait}} \mbox{\hyperlink{classMDL__context_aeaf51be6c5480bb1e718aea933f55d9d}{m\+\_\+wait}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Context of the owner of metadata locks. I.\+e. each server connection has such a context. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMDL__context_a21b35ef90597dcd411bf091acd1f4a38}\label{classMDL__context_a21b35ef90597dcd411bf091acd1f4a38}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{M\+D\+L\+\_\+context()}{MDL\_context()}}
+{\footnotesize\ttfamily M\+D\+L\+\_\+context\+::\+M\+D\+L\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize a metadata locking context.
+
+This is to be called when a new server connection is created. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__context_a3702152de7ebdf6e2c54e5ba5cbecfda}\label{classMDL__context_a3702152de7ebdf6e2c54e5ba5cbecfda}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!acquire\+\_\+lock@{acquire\+\_\+lock}}
+\index{acquire\+\_\+lock@{acquire\+\_\+lock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{acquire\+\_\+lock()}{acquire\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::acquire\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$}]{mdl\+\_\+request,  }\item[{ulong}]{lock\+\_\+wait\+\_\+timeout }\end{DoxyParamCaption})}
+
+Acquire one lock with waiting for conflicting locks to go away if needed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+request} & \mbox{[}in/out\mbox{]} Lock request object for lock to be acquired\\
+\hline
+{\em lock\+\_\+wait\+\_\+timeout} & \mbox{[}in\mbox{]} Seconds to wait before timeout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \mbox{\hyperlink{classMDL__request_a99421002fe2ea1580766846c0ef339ae}{M\+D\+L\+\_\+request\+::ticket}} points to the ticket for the lock. \\
+\hline
+{\em T\+R\+UE} & Failure (Out of resources or waiting is aborted), \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_a4583e611d097158c5f08b8d1133fbd7e}\label{classMDL__context_a4583e611d097158c5f08b8d1133fbd7e}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!acquire\+\_\+locks@{acquire\+\_\+locks}}
+\index{acquire\+\_\+locks@{acquire\+\_\+locks}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{acquire\+\_\+locks()}{acquire\_locks()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::acquire\+\_\+locks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classI__P__List}{M\+D\+L\+\_\+request\+\_\+list}} $\ast$}]{mdl\+\_\+requests,  }\item[{ulong}]{lock\+\_\+wait\+\_\+timeout }\end{DoxyParamCaption})}
+
+Acquire exclusive locks. There must be no granted locks in the context.
+
+This is a replacement of \mbox{\hyperlink{group__Data__Dictionary_gae06de7ce22001b035ca61edf2a3dea09}{lock\+\_\+table\+\_\+names()}}. It is used in R\+E\+N\+A\+ME, D\+R\+OP and other D\+DL S\+QL statements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+requests} & \mbox{\hyperlink{classList}{List}} of requests for locks to be acquired.\\
+\hline
+{\em lock\+\_\+wait\+\_\+timeout} & Seconds to wait before timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The list of requests should not contain non-\/exclusive lock requests. There should not be any acquired locks in the context.
+
+Assumes that one already owns scoped intention exclusive lock.
+
+If acquisition fails any locks with M\+D\+L\+\_\+\+E\+X\+P\+L\+I\+C\+IT duration that had already been taken, are released. Not just locks with M\+D\+L\+\_\+\+S\+T\+A\+T\+E\+M\+E\+NT and M\+D\+L\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON duration. This makes acquition of M\+D\+L\+\_\+\+E\+X\+P\+L\+I\+C\+IT locks atomic (all or nothing). This is needed for the locking service plugin A\+PI.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success \\
+\hline
+{\em T\+R\+UE} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_a74ed5299b1da65397a7e6972425b5f2d}\label{classMDL__context_a74ed5299b1da65397a7e6972425b5f2d}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!clone\+\_\+ticket@{clone\+\_\+ticket}}
+\index{clone\+\_\+ticket@{clone\+\_\+ticket}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{clone\+\_\+ticket()}{clone\_ticket()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::clone\+\_\+ticket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$}]{mdl\+\_\+request }\end{DoxyParamCaption})}
+
+Create a copy of a granted ticket. This is used to make sure that H\+A\+N\+D\+L\+ER ticket is never shared with a ticket that belongs to a transaction, so that when we H\+A\+N\+D\+L\+ER C\+L\+O\+SE, we don\textquotesingle{}t release a transactional ticket, and vice versa -- when we C\+O\+M\+M\+IT, we don\textquotesingle{}t mistakenly release a ticket for an open H\+A\+N\+D\+L\+ER.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Out of memory. \\
+\hline
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_af01a1f42bd9ed050556c434fb6d007ac}\label{classMDL__context_af01a1f42bd9ed050556c434fb6d007ac}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!destroy@{destroy}}
+\index{destroy@{destroy}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destroy metadata locking context.
+
+Assumes and asserts that there are no active or pending locks associated with this context at the time of the destruction.
+
+Currently does nothing. Asserts that there are no pending or satisfied lock requests. The pending locks must be released prior to destruction. This is a new way to express the assertion that all tables are closed before a connection is destroyed. \mbox{\Hypertarget{classMDL__context_ad5d3fb033110d449d894c95f33f6d9b1}\label{classMDL__context_ad5d3fb033110d449d894c95f33f6d9b1}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!done\+\_\+waiting\+\_\+for@{done\+\_\+waiting\+\_\+for}}
+\index{done\+\_\+waiting\+\_\+for@{done\+\_\+waiting\+\_\+for}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{done\+\_\+waiting\+\_\+for()}{done\_waiting\_for()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::done\+\_\+waiting\+\_\+for (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove the wait-\/for edge from the graph after we\textquotesingle{}re done waiting. \mbox{\Hypertarget{classMDL__context_aa0e75a7f44e5bc687620aff289a00f52}\label{classMDL__context_aa0e75a7f44e5bc687620aff289a00f52}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!find\+\_\+deadlock@{find\+\_\+deadlock}}
+\index{find\+\_\+deadlock@{find\+\_\+deadlock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{find\+\_\+deadlock()}{find\_deadlock()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::find\+\_\+deadlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Try to find a deadlock. This function produces no errors.
+
+\begin{DoxyNote}{Note}
+If during deadlock resolution context which performs deadlock detection is chosen as a victim it will be informed about the fact by setting V\+I\+C\+T\+IM status to its wait slot. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__context_a7cf6eddf26617c84f0c2c21af8ec4a94}\label{classMDL__context_a7cf6eddf26617c84f0c2c21af8ec4a94}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!find\+\_\+lock\+\_\+owner@{find\+\_\+lock\+\_\+owner}}
+\index{find\+\_\+lock\+\_\+owner@{find\+\_\+lock\+\_\+owner}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{find\+\_\+lock\+\_\+owner()}{find\_lock\_owner()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::find\+\_\+lock\+\_\+owner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key,  }\item[{\mbox{\hyperlink{classMDL__context__visitor}{M\+D\+L\+\_\+context\+\_\+visitor}} $\ast$}]{visitor }\end{DoxyParamCaption})}
+
+Find the first context which owns the lock and inspect it by calling M\+D\+L\+\_\+context\+\_\+visitor\+::visit\+\_\+context() method.
+
+\begin{DoxyReturn}{Returns}
+True in case error (e.\+g. O\+OM). False otherwise. There is no guarantee that owner was found in either case. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method only works properly for locks which were acquired using \char`\"{}slow\char`\"{} path. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__context_a3563d6d05aeb758f495f44c123c5306b}\label{classMDL__context_a3563d6d05aeb758f495f44c123c5306b}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!get\+\_\+deadlock\+\_\+weight@{get\+\_\+deadlock\+\_\+weight}}
+\index{get\+\_\+deadlock\+\_\+weight@{get\+\_\+deadlock\+\_\+weight}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{get\+\_\+deadlock\+\_\+weight()}{get\_deadlock\_weight()}}
+{\footnotesize\ttfamily uint M\+D\+L\+\_\+context\+::get\+\_\+deadlock\+\_\+weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyPrecond}{Precondition}
+Only valid if we started waiting for lock. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classMDL__context_a6023ebdf937cfcbf9991b10945ad952f}\label{classMDL__context_a6023ebdf937cfcbf9991b10945ad952f}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!get\+\_\+random@{get\+\_\+random}}
+\index{get\+\_\+random@{get\+\_\+random}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{get\+\_\+random()}{get\_random()}}
+{\footnotesize\ttfamily uint M\+D\+L\+\_\+context\+::get\+\_\+random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get pseudo random value in \mbox{[}0 .. 2$^\wedge$31-\/1\mbox{]} range.
+
+\begin{DoxyNote}{Note}
+We use Linear Congruential Generator with venerable constant parameters for this. It is known to have problems with its lower bits are not being very random so probably is not good enough for generic use. However, we only use it to do random dives into \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} objects hash when searching for unused objects to be freed, and for this purposes it is sufficient. We rely on values of \char`\"{}get\+\_\+random() \% 2$^\wedge$k\char`\"{} expression having \char`\"{}2$^\wedge$k\char`\"{} as a period to ensure that random dives eventually cover all hash (the former can be proven to be true). This also means that there is no bias towards any specific objects to be expelled (as hash values don\textquotesingle{}t repeat), which is nice for performance. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__context_a2260019c16977e8ed6aba3081f16348f}\label{classMDL__context_a2260019c16977e8ed6aba3081f16348f}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!get\+\_\+thd@{get\+\_\+thd}}
+\index{get\+\_\+thd@{get\+\_\+thd}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{get\+\_\+thd()}{get\_thd()}}
+{\footnotesize\ttfamily T\+HD$\ast$ M\+D\+L\+\_\+context\+::get\+\_\+thd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Within M\+DL subsystem this one is only used for D\+E\+B\+U\+G\+\_\+\+S\+Y\+NC. Do not use it to peek/poke into other parts of T\+HD from M\+DL. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMDL__context__owner_a6e93b957e332a9811d4a2d4195bd3e21}{M\+D\+L\+\_\+context\+\_\+owner\+::get\+\_\+thd()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__context_adfc9db02d0a60b144fd35770424ba1ae}\label{classMDL__context_adfc9db02d0a60b144fd35770424ba1ae}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!has\+\_\+lock@{has\+\_\+lock}}
+\index{has\+\_\+lock@{has\+\_\+lock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{has\+\_\+lock()}{has\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::has\+\_\+lock (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \&}]{mdl\+\_\+savepoint,  }\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{mdl\+\_\+ticket }\end{DoxyParamCaption})}
+
+Does this savepoint have this lock?
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & The ticket is older than the savepoint or is an LT, HA or G\+LR ticket. Thus it belongs to the savepoint or has explicit duration. \\
+\hline
+{\em F\+A\+L\+SE} & The ticket is newer than the savepoint. and is not an LT, HA or G\+LR ticket. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_a3ff2d2559c4ef5075b63978ae516df6e}\label{classMDL__context_a3ff2d2559c4ef5075b63978ae516df6e}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!has\+\_\+locks@{has\+\_\+locks}}
+\index{has\+\_\+locks@{has\+\_\+locks}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{has\+\_\+locks()}{has\_locks()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::has\+\_\+locks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}}}]{mdl\+\_\+namespace }\end{DoxyParamCaption}) const}
+
+Does this context have an lock of the given namespace?
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & At least one lock of given namespace held \\
+\hline
+{\em false} & No locks of the given namespace held \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_ab77b38a67ffb56d071a98efc8879bac6}\label{classMDL__context_ab77b38a67ffb56d071a98efc8879bac6}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!has\+\_\+locks\+\_\+waited\+\_\+for@{has\+\_\+locks\+\_\+waited\+\_\+for}}
+\index{has\+\_\+locks\+\_\+waited\+\_\+for@{has\+\_\+locks\+\_\+waited\+\_\+for}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{has\+\_\+locks\+\_\+waited\+\_\+for()}{has\_locks\_waited\_for()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::has\+\_\+locks\+\_\+waited\+\_\+for (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Do we hold any locks which are possibly being waited for by another \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}}?
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & A lock being \textquotesingle{}waited\+\_\+for\textquotesingle{} was found. \\
+\hline
+{\em F\+A\+L\+SE} & No one waits for the lock(s) we hold.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+Should only be called from the thread which owns the \mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__context_adffac048f9ce71eb3a5e3b1a38178fdc}\label{classMDL__context_adffac048f9ce71eb3a5e3b1a38178fdc}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock@{owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock}}
+\index{owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock@{owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock()}{owns\_equal\_or\_stronger\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::owns\+\_\+equal\+\_\+or\+\_\+stronger\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}}}]{mdl\+\_\+namespace,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{name,  }\item[{enum\+\_\+mdl\+\_\+type}]{mdl\+\_\+type }\end{DoxyParamCaption})}
+
+Auxiliary function which allows to check if we have some kind of lock on a object. Returns T\+R\+UE if we have a lock of an equal to given or stronger type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+namespace} & Id of object namespace \\
+\hline
+{\em db} & Name of the database \\
+\hline
+{\em name} & Name of the object \\
+\hline
+{\em mdl\+\_\+type} & Lock type. Pass in the weakest type to find out if there is at least some lock.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if current context contains satisfied lock for the object, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMDL__context_a73bd65389a74778433291eb2d426c71f}\label{classMDL__context_a73bd65389a74778433291eb2d426c71f}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name@{release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name}}
+\index{release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name@{release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name()}{release\_all\_locks\_for\_name()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::release\+\_\+all\+\_\+locks\+\_\+for\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{name }\end{DoxyParamCaption})}
+
+Release all explicit locks in the context which correspond to the same name/object as this lock request.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & One of the locks for the name/object for which all locks should be released. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__context_a58d0df5eb422cbfa9a4225218c76141f}\label{classMDL__context_a58d0df5eb422cbfa9a4225218c76141f}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!release\+\_\+lock@{release\+\_\+lock}}
+\index{release\+\_\+lock@{release\+\_\+lock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{release\+\_\+lock()}{release\_lock()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::release\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{ticket }\end{DoxyParamCaption})}
+
+Release lock with explicit duration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticket} & Ticket for lock to be released. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__context_a71874a5e485217650429849ab29ed43b}\label{classMDL__context_a71874a5e485217650429849ab29ed43b}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!release\+\_\+locks@{release\+\_\+locks}}
+\index{release\+\_\+locks@{release\+\_\+locks}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{release\+\_\+locks()}{release\_locks()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::release\+\_\+locks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__release__locks__visitor}{M\+D\+L\+\_\+release\+\_\+locks\+\_\+visitor}} $\ast$}]{visitor }\end{DoxyParamCaption})}
+
+Release all explicit locks in the context for which the release() method of the provided visitor evalates to true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & Object to ask if the lock should be released. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMDL__context_afce65a72bedc0c4384b2b4c231c070ed}\label{classMDL__context_afce65a72bedc0c4384b2b4c231c070ed}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!release\+\_\+transactional\+\_\+locks@{release\+\_\+transactional\+\_\+locks}}
+\index{release\+\_\+transactional\+\_\+locks@{release\+\_\+transactional\+\_\+locks}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{release\+\_\+transactional\+\_\+locks()}{release\_transactional\_locks()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::release\+\_\+transactional\+\_\+locks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Release locks acquired by normal statements (S\+E\+L\+E\+CT, U\+P\+D\+A\+TE, D\+E\+L\+E\+TE, etc) in the course of a transaction. Do not release H\+A\+N\+D\+L\+ER locks, if there are any.
+
+This method is used at the end of a transaction, in implementation of C\+O\+M\+M\+IT (implicit or explicit) and R\+O\+L\+L\+B\+A\+CK. \mbox{\Hypertarget{classMDL__context_a863ff94d0928e9720df30643835e4ef0}\label{classMDL__context_a863ff94d0928e9720df30643835e4ef0}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!rollback\+\_\+to\+\_\+savepoint@{rollback\+\_\+to\+\_\+savepoint}}
+\index{rollback\+\_\+to\+\_\+savepoint@{rollback\+\_\+to\+\_\+savepoint}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{rollback\+\_\+to\+\_\+savepoint()}{rollback\_to\_savepoint()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::rollback\+\_\+to\+\_\+savepoint (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMDL__savepoint}{M\+D\+L\+\_\+savepoint}} \&}]{mdl\+\_\+savepoint }\end{DoxyParamCaption})}
+
+Releases metadata locks that were acquired after a specific savepoint.
+
+\begin{DoxyNote}{Note}
+Used to release tickets acquired during a savepoint unit. 
+
+It\textquotesingle{}s safe to iterate and unlock any locks after taken after this savepoint because other statements that take other special locks cause a implicit commit (ie L\+O\+CK T\+A\+B\+L\+ES). 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__context_a357599f5af7c6ec7587ecb7b349f0313}\label{classMDL__context_a357599f5af7c6ec7587ecb7b349f0313}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks@{set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks}}
+\index{set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks@{set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks()}{set\_explicit\_duration\_for\_all\_locks()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::set\+\_\+explicit\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set explicit duration for all locks in the context. \mbox{\Hypertarget{classMDL__context_a5836b7c79f957c575c90ad4f1d8296de}\label{classMDL__context_a5836b7c79f957c575c90ad4f1d8296de}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!set\+\_\+lock\+\_\+duration@{set\+\_\+lock\+\_\+duration}}
+\index{set\+\_\+lock\+\_\+duration@{set\+\_\+lock\+\_\+duration}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{set\+\_\+lock\+\_\+duration()}{set\_lock\_duration()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::set\+\_\+lock\+\_\+duration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{mdl\+\_\+ticket,  }\item[{enum\+\_\+mdl\+\_\+duration}]{duration }\end{DoxyParamCaption})}
+
+Change lock duration for transactional lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticket} & Ticket representing lock. \\
+\hline
+{\em duration} & Lock duration to be set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method only supports changing duration of transactional lock to some other duration. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classMDL__context_ad1b07243d69f1354e3bb5936dd6ded15}\label{classMDL__context_ad1b07243d69f1354e3bb5936dd6ded15}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks@{set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks}}
+\index{set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks@{set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks()}{set\_transaction\_duration\_for\_all\_locks()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::set\+\_\+transaction\+\_\+duration\+\_\+for\+\_\+all\+\_\+locks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set transactional duration for all locks in the context. \mbox{\Hypertarget{classMDL__context_ab6d07a861aaf9db6fda46da196a8b0d0}\label{classMDL__context_ab6d07a861aaf9db6fda46da196a8b0d0}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!try\+\_\+acquire\+\_\+lock@{try\+\_\+acquire\+\_\+lock}}
+\index{try\+\_\+acquire\+\_\+lock@{try\+\_\+acquire\+\_\+lock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{try\+\_\+acquire\+\_\+lock()}{try\_acquire\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::try\+\_\+acquire\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__request}{M\+D\+L\+\_\+request}} $\ast$}]{mdl\+\_\+request }\end{DoxyParamCaption})}
+
+Try to acquire one lock.
+
+Unlike exclusive locks, shared locks are acquired one by one. This is interface is chosen to simplify introduction of the new locking A\+PI to the system. \mbox{\hyperlink{classMDL__context_ab6d07a861aaf9db6fda46da196a8b0d0}{M\+D\+L\+\_\+context\+::try\+\_\+acquire\+\_\+lock()}} is currently used from \mbox{\hyperlink{group__Data__Dictionary_ga43cb5a9ba1064a36db89ad5c4d645528}{open\+\_\+table()}}, and there we have only one table to work with.
+
+This function may also be used to try to acquire an exclusive lock on a destination table, by A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} ... R\+E\+N\+A\+ME.
+
+Returns immediately without any side effect if encounters a lock conflict. Otherwise takes the lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+request} & \mbox{[}in/out\mbox{]} Lock request object for lock to be acquired\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. The lock may have not been acquired. Check the ticket, if it\textquotesingle{}s N\+U\+LL, a conflicting lock exists. \\
+\hline
+{\em T\+R\+UE} & Out of resources, an error has been reported. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_a2a7108b456e7c5ee715ee6511c03d542}\label{classMDL__context_a2a7108b456e7c5ee715ee6511c03d542}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!upgrade\+\_\+shared\+\_\+lock@{upgrade\+\_\+shared\+\_\+lock}}
+\index{upgrade\+\_\+shared\+\_\+lock@{upgrade\+\_\+shared\+\_\+lock}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{upgrade\+\_\+shared\+\_\+lock()}{upgrade\_shared\_lock()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::upgrade\+\_\+shared\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__ticket}{M\+D\+L\+\_\+ticket}} $\ast$}]{mdl\+\_\+ticket,  }\item[{enum\+\_\+mdl\+\_\+type}]{new\+\_\+type,  }\item[{ulong}]{lock\+\_\+wait\+\_\+timeout }\end{DoxyParamCaption})}
+
+Upgrade a shared metadata lock.
+
+Used in A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} and C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mdl\+\_\+ticket} & Lock to upgrade. \\
+\hline
+{\em new\+\_\+type} & Lock type to upgrade to. \\
+\hline
+{\em lock\+\_\+wait\+\_\+timeout} & Seconds to wait before timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+In case of failure to upgrade lock (e.\+g. because upgrader was killed) leaves lock in its original state (locked in shared mode).
+
+There can be only one upgrader for a lock or we will have deadlock. This invariant is ensured by the fact that upgradeable locks SU, S\+NW and S\+N\+RW are not compatible with each other and themselves in case of A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} operation. In case of C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} operation there is chance of deadlock as \textquotesingle{}S\textquotesingle{} is compatible with \textquotesingle{}S\textquotesingle{}. But the deadlock is recovered by backoff and retry mechanism.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success \\
+\hline
+{\em T\+R\+UE} & Failure (thread was killed) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_ab778763f11b187ab171213c9fa08846e}\label{classMDL__context_ab778763f11b187ab171213c9fa08846e}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!visit\+\_\+subgraph@{visit\+\_\+subgraph}}
+\index{visit\+\_\+subgraph@{visit\+\_\+subgraph}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{visit\+\_\+subgraph()}{visit\_subgraph()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+context\+::visit\+\_\+subgraph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__wait__for__graph__visitor}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+graph\+\_\+visitor}} $\ast$}]{gvisitor }\end{DoxyParamCaption})}
+
+A fragment of recursive traversal of the wait-\/for graph of M\+DL contexts in the server in search for deadlocks. Assume this M\+DL context is a node in the wait-\/for graph, and direct the visitor to all adjacent nodes. As long as the starting node is remembered in the visitor, a deadlock is found when the same node is visited twice. One M\+DL context is connected to another in the wait-\/for graph if it waits on a resource that is held by the other context.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & A deadlock is found. A pointer to deadlock victim is saved in the visitor. \\
+\hline
+{\em F\+A\+L\+SE} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__context_afd74a4227cf8ddea993d96ee3be25331}\label{classMDL__context_afd74a4227cf8ddea993d96ee3be25331}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!will\+\_\+wait\+\_\+for@{will\+\_\+wait\+\_\+for}}
+\index{will\+\_\+wait\+\_\+for@{will\+\_\+wait\+\_\+for}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{will\+\_\+wait\+\_\+for()}{will\_wait\_for()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+context\+::will\+\_\+wait\+\_\+for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__wait__for__subgraph}{M\+D\+L\+\_\+wait\+\_\+for\+\_\+subgraph}} $\ast$}]{waiting\+\_\+for\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inform the deadlock detector there is an edge in the wait-\/for graph. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMDL__context_aeaf51be6c5480bb1e718aea933f55d9d}\label{classMDL__context_aeaf51be6c5480bb1e718aea933f55d9d}} 
+\index{M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}!m\+\_\+wait@{m\+\_\+wait}}
+\index{m\+\_\+wait@{m\+\_\+wait}!M\+D\+L\+\_\+context@{M\+D\+L\+\_\+context}}
+\subsubsection{\texorpdfstring{m\+\_\+wait}{m\_wait}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__wait}{M\+D\+L\+\_\+wait}} M\+D\+L\+\_\+context\+::m\+\_\+wait}
+
+If our request for a lock is scheduled, or aborted by the deadlock detector, the result is recorded in this class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+h\item 
+mdl.\+cc\end{DoxyCompactItemize}

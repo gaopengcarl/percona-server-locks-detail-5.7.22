@@ -1,0 +1,172 @@
+\hypertarget{classGtid__table__persistor}{}\section{Gtid\+\_\+table\+\_\+persistor Class Reference}
+\label{classGtid__table__persistor}\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classGtid__table__persistor_a08e26d72ec9a37222b9aa3f73e90c22e}{save}} (T\+HD $\ast$thd, const \mbox{\hyperlink{structGtid}{Gtid}} $\ast$gtid)
+\item 
+int \mbox{\hyperlink{classGtid__table__persistor_adc93f28a3661201e896d7102a57a01ca}{save}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+int \mbox{\hyperlink{classGtid__table__persistor_a97d9a48c80bb5b50640439be409aea62}{reset}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classGtid__table__persistor_aeea3284db6daf718fa412a70e4afb889}{fetch\+\_\+gtids}} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+int \mbox{\hyperlink{classGtid__table__persistor_a6707d588aba706f2d7560ff811072410}{compress}} (T\+HD $\ast$thd)
+\item 
+int \mbox{\hyperlink{classGtid__table__persistor_a422095100e846e98c02436f152f0a6df}{warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$table)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGtid__table__persistor_a616c2907892f706a95455f74e752e781}\label{classGtid__table__persistor_a616c2907892f706a95455f74e752e781}} 
+static const uint {\bfseries number\+\_\+fields} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGtid__table__persistor_a6707d588aba706f2d7560ff811072410}\label{classGtid__table__persistor_a6707d588aba706f2d7560ff811072410}} 
+\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}!compress@{compress}}
+\index{compress@{compress}!Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily int Gtid\+\_\+table\+\_\+persistor\+::compress (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Compress the gtid\+\_\+executed table completely by employing one or more transactions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to compress the table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & The table was not found. \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__table__persistor_aeea3284db6daf718fa412a70e4afb889}\label{classGtid__table__persistor_aeea3284db6daf718fa412a70e4afb889}} 
+\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}!fetch\+\_\+gtids@{fetch\+\_\+gtids}}
+\index{fetch\+\_\+gtids@{fetch\+\_\+gtids}!Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsubsection{\texorpdfstring{fetch\+\_\+gtids()}{fetch\_gtids()}}
+{\footnotesize\ttfamily int Gtid\+\_\+table\+\_\+persistor\+::fetch\+\_\+gtids (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set }\end{DoxyParamCaption})}
+
+Fetch gtids from gtid\+\_\+executed table and store them into gtid\+\_\+executed set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gtid\+\_\+set} & store gtids fetched from the gtid\+\_\+executed table.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & The table was not found. \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000059}{Todo}}]\+:
+\begin{DoxyItemize}
+\item take only global\+\_\+sid\+\_\+lock-\/$>$rdlock(), and take gtid\+\_\+state-\/$>$sid\+\_\+lock for each iteration.
+\item Add wrapper around Gtid\+\_\+set\+::add\+\_\+gno\+\_\+interval and call that instead. 
+\end{DoxyItemize}\end{DoxyRefDesc}
+\mbox{\Hypertarget{classGtid__table__persistor_a97d9a48c80bb5b50640439be409aea62}\label{classGtid__table__persistor_a97d9a48c80bb5b50640439be409aea62}} 
+\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}!reset@{reset}}
+\index{reset@{reset}!Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily int Gtid\+\_\+table\+\_\+persistor\+::reset (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Delete all rows from the table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to reset the table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & The table was not found. \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__table__persistor_a08e26d72ec9a37222b9aa3f73e90c22e}\label{classGtid__table__persistor_a08e26d72ec9a37222b9aa3f73e90c22e}} 
+\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}!save@{save}}
+\index{save@{save}!Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Gtid\+\_\+table\+\_\+persistor\+::save (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const \mbox{\hyperlink{structGtid}{Gtid}} $\ast$}]{gtid }\end{DoxyParamCaption})}
+
+Insert the gtid into table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to save gtid into the table \\
+\hline
+{\em gtid} & holds the sidno and the gno.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em 1} & The table was not found. \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__table__persistor_adc93f28a3661201e896d7102a57a01ca}\label{classGtid__table__persistor_adc93f28a3661201e896d7102a57a01ca}} 
+\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}!save@{save}}
+\index{save@{save}!Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Gtid\+\_\+table\+\_\+persistor\+::save (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set }\end{DoxyParamCaption})}
+
+Insert the gtid set into table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid\+\_\+set} & contains a set of gtid, which holds the sidno and the gno.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em -\/1} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__table__persistor_a422095100e846e98c02436f152f0a6df}\label{classGtid__table__persistor_a422095100e846e98c02436f152f0a6df}} 
+\index{Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}!warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification@{warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification}}
+\index{warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification@{warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification}!Gtid\+\_\+table\+\_\+persistor@{Gtid\+\_\+table\+\_\+persistor}}
+\subsubsection{\texorpdfstring{warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification()}{warn\_or\_err\_on\_explicit\_modification()}}
+{\footnotesize\ttfamily int Gtid\+\_\+table\+\_\+persistor\+::warn\+\_\+or\+\_\+err\+\_\+on\+\_\+explicit\+\_\+modification (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push a warning to client if user is modifying the gtid\+\_\+executed table explicitly by a non-\/XA transaction. Push an error to client if user is modifying it explicitly by a XA transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread requesting to access the table \\
+\hline
+{\em table} & The table is being accessed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & No warning or error was pushed to the client. \\
+\hline
+{\em 1} & Push a warning to client. \\
+\hline
+{\em 2} & Push an error to client. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid\+\_\+persist.\+h\item 
+rpl\+\_\+gtid\+\_\+persist.\+cc\end{DoxyCompactItemize}

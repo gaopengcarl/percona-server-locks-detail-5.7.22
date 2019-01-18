@@ -1,0 +1,192 @@
+\hypertarget{classField__geom}{}\section{Field\+\_\+geom Class Reference}
+\label{classField__geom}\index{Field\+\_\+geom@{Field\+\_\+geom}}
+Inheritance diagram for Field\+\_\+geom\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classField__geom}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__geom_afd43c56a91f8c1e7ebde196a662c5ffa}\label{classField__geom_afd43c56a91f8c1e7ebde196a662c5ffa}} 
+{\bfseries Field\+\_\+geom} (uchar $\ast$ptr\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uint null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share, uint blob\+\_\+pack\+\_\+length, enum geometry\+\_\+type geom\+\_\+type\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__geom_aad9a43475eb4ad0b4c0317ab840709e4}\label{classField__geom_aad9a43475eb4ad0b4c0317ab840709e4}} 
+{\bfseries Field\+\_\+geom} (uint32 len\+\_\+arg, bool maybe\+\_\+null\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$share, enum geometry\+\_\+type geom\+\_\+type\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__geom_a53350fd147407f8951847ddac9ba6530}\label{classField__geom_a53350fd147407f8951847ddac9ba6530}} 
+enum ha\+\_\+base\+\_\+keytype {\bfseries key\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classField__geom_a990773b058879240535ef7dd117988cd}\label{classField__geom_a990773b058879240535ef7dd117988cd}} 
+enum\+\_\+field\+\_\+types {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classField__geom_a2fb62636c68e2bdc984fa7a0c1e920b9}\label{classField__geom_a2fb62636c68e2bdc984fa7a0c1e920b9}} 
+bool {\bfseries match\+\_\+collation\+\_\+to\+\_\+optimize\+\_\+range} () const
+\item 
+\mbox{\Hypertarget{classField__geom_afe31adfb04c8049bd77cbc6f6e64aefc}\label{classField__geom_afe31adfb04c8049bd77cbc6f6e64aefc}} 
+void {\bfseries sql\+\_\+type} (String \&str) const
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__geom_aa150c79e0569c74ed2a004ddab0dc6f1}{store}} (double nr)
+\item 
+\mbox{\Hypertarget{classField__geom_ae321babed12d712a9204dda172db3b1d}\label{classField__geom_ae321babed12d712a9204dda172db3b1d}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (longlong nr, bool unsigned\+\_\+val)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__geom_a898e7030c139559c40683399075788a5}{store\+\_\+decimal}} (const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$)
+\item 
+\mbox{\Hypertarget{classField__geom_ad99f029c0eadc91d06564b5f261a2ed3}\label{classField__geom_ad99f029c0eadc91d06564b5f261a2ed3}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (const char $\ast$from, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__geom_a029dfebc6f8ceb3b00f74be7c191a7d4}{reset}} (void)
+\item 
+\mbox{\Hypertarget{classField__geom_aeb741adaee764002d5c8bba507b2b942}\label{classField__geom_aeb741adaee764002d5c8bba507b2b942}} 
+geometry\+\_\+type {\bfseries get\+\_\+geometry\+\_\+type} () const
+\item 
+\mbox{\hyperlink{classField__geom}{Field\+\_\+geom}} $\ast$ \mbox{\hyperlink{classField__geom_a79a6e5a31b39dbaddfef43ede4d82d40}{clone}} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root) const
+\item 
+\mbox{\hyperlink{classField__geom}{Field\+\_\+geom}} $\ast$ \mbox{\hyperlink{classField__geom_ae0cdd2368852aafe6b325756ba3b5a24}{clone}} () const
+\item 
+uint \mbox{\hyperlink{classField__geom_a20953b29b4a85e8d77f16593313fd381}{is\+\_\+equal}} (\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $\ast$new\+\_\+field)
+\item 
+\mbox{\Hypertarget{classField__geom_a8a52e2ffe708bc6e95114d4159c3a671}\label{classField__geom_a8a52e2ffe708bc6e95114d4159c3a671}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (const char $\ast$to, size\+\_\+t length, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$charset)
+\item 
+\mbox{\Hypertarget{classField__geom_a2bc7bea5075f5ebbee1a11c13e37b5b2}\label{classField__geom_a2bc7bea5075f5ebbee1a11c13e37b5b2}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (double nr)
+\item 
+\mbox{\Hypertarget{classField__geom_a8298ba21e81a9a9c38af09b1b69286bf}\label{classField__geom_a8298ba21e81a9a9c38af09b1b69286bf}} 
+type\+\_\+conversion\+\_\+status {\bfseries store} (longlong nr, bool unsigned\+\_\+val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classField__geom_a1853977f0de308b12418a43fbb78e0ac}\label{classField__geom_a1853977f0de308b12418a43fbb78e0ac}} 
+enum geometry\+\_\+type {\bfseries geom\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__geom_a79a6e5a31b39dbaddfef43ede4d82d40}\label{classField__geom_a79a6e5a31b39dbaddfef43ede4d82d40}} 
+\index{Field\+\_\+geom@{Field\+\_\+geom}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+geom@{Field\+\_\+geom}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__geom}{Field\+\_\+geom}}$\ast$ Field\+\_\+geom\+::clone (\begin{DoxyParamCaption}\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mem\+\_\+root} & M\+E\+M\+\_\+\+R\+O\+OT to use for memory allocation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob_adb81abc88601964eb822c176bd192c6a}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__geom_ae0cdd2368852aafe6b325756ba3b5a24}\label{classField__geom_ae0cdd2368852aafe6b325756ba3b5a24}} 
+\index{Field\+\_\+geom@{Field\+\_\+geom}!clone@{clone}}
+\index{clone@{clone}!Field\+\_\+geom@{Field\+\_\+geom}}
+\subsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classField__geom}{Field\+\_\+geom}}$\ast$ Field\+\_\+geom\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Makes a shallow copy of the \mbox{\hyperlink{classField}{Field}} object.
+
+\begin{DoxyNote}{Note}
+This member function must be overridden in all concrete subclasses. Several of the \mbox{\hyperlink{classField}{Field}} subclasses are concrete even though they are not leaf classes, so the compiler will not always catch this.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & If memory allocation failed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob_a075469b9df8583c1dc4968a983577886}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__geom_a20953b29b4a85e8d77f16593313fd381}\label{classField__geom_a20953b29b4a85e8d77f16593313fd381}} 
+\index{Field\+\_\+geom@{Field\+\_\+geom}!is\+\_\+equal@{is\+\_\+equal}}
+\index{is\+\_\+equal@{is\+\_\+equal}!Field\+\_\+geom@{Field\+\_\+geom}}
+\subsubsection{\texorpdfstring{is\+\_\+equal()}{is\_equal()}}
+{\footnotesize\ttfamily uint Field\+\_\+geom\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} $\ast$}]{new\+\_\+field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Whether a field being created is type-\/compatible with an existing one.
+
+Used by the A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} code to evaluate whether the new definition of a table is compatible with the old definition so that it can determine if data needs to be copied over (table data change). Constraints and generation clause (default value, generation expression) are not checked by this function. 
+
+Reimplemented from \mbox{\hyperlink{classField__blob_aad2a7c5fe21d9c7cfd20aeea52c58ed5}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__geom_a029dfebc6f8ceb3b00f74be7c191a7d4}\label{classField__geom_a029dfebc6f8ceb3b00f74be7c191a7d4}} 
+\index{Field\+\_\+geom@{Field\+\_\+geom}!reset@{reset}}
+\index{reset@{reset}!Field\+\_\+geom@{Field\+\_\+geom}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+geom\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Non-\/nullable G\+E\+O\+M\+E\+T\+RY types cannot have defaults, but the underlying blob must still be reset. 
+
+Reimplemented from \mbox{\hyperlink{classField__blob}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__geom_aa150c79e0569c74ed2a004ddab0dc6f1}\label{classField__geom_aa150c79e0569c74ed2a004ddab0dc6f1}} 
+\index{Field\+\_\+geom@{Field\+\_\+geom}!store@{store}}
+\index{store@{store}!Field\+\_\+geom@{Field\+\_\+geom}}
+\subsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+geom\+::store (\begin{DoxyParamCaption}\item[{double}]{nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Store double value in \mbox{\hyperlink{classField__string}{Field\+\_\+string}} or \mbox{\hyperlink{classField__varstring}{Field\+\_\+varstring}}.
+
+Pretty prints double number into field\+\_\+length characters buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr} & number \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classField__blob_a2bc7bea5075f5ebbee1a11c13e37b5b2}{Field\+\_\+blob}}.
+
+\mbox{\Hypertarget{classField__geom_a898e7030c139559c40683399075788a5}\label{classField__geom_a898e7030c139559c40683399075788a5}} 
+\index{Field\+\_\+geom@{Field\+\_\+geom}!store\+\_\+decimal@{store\+\_\+decimal}}
+\index{store\+\_\+decimal@{store\+\_\+decimal}!Field\+\_\+geom@{Field\+\_\+geom}}
+\subsubsection{\texorpdfstring{store\+\_\+decimal()}{store\_decimal()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+geom\+::store\+\_\+decimal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmy__decimal}{my\+\_\+decimal}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decimal representation of \mbox{\hyperlink{classField__str}{Field\+\_\+str}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & value for storing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classField__str}{Field\+\_\+str}} is the base class for fields implemeting \mbox{[}V\+AR\mbox{]}C\+H\+AR, V\+AR\mbox{[}B\+I\+N\+A\+RY\mbox{]}, B\+L\+O\+B/\+T\+E\+XT, G\+E\+O\+M\+E\+T\+RY, J\+S\+ON. String value should be converted to floating point value according our rules, so we use double to store value of decimal in string.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]use decimal2string?\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & OK \\
+\hline
+{\em !=0} & error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classField__longstr_accc080bab51e57cdcefc594a17cb13f5}{Field\+\_\+longstr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

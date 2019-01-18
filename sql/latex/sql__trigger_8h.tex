@@ -1,0 +1,154 @@
+\hypertarget{sql__trigger_8h}{}\section{sql\+\_\+trigger.\+h File Reference}
+\label{sql__trigger_8h}\index{sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}}
+
+
+This file contains declarations of global public functions which are used directly from parser/executioner to perform basic operations on triggers (C\+R\+E\+A\+TE T\+R\+I\+G\+G\+ER, D\+R\+OP T\+R\+I\+G\+G\+ER, A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, D\+R\+OP \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, ...)  
+
+
+{\ttfamily \#include \char`\"{}m\+\_\+string.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{sql__trigger_8h_a1e3f2ad15ed49c6bd2a89fd4562ee8e5}{mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, bool create)
+\item 
+bool \mbox{\hyperlink{sql__trigger_8h_a6ad30978f64949b18d1f9b3adf7a0d6f}{add\+\_\+table\+\_\+for\+\_\+trigger}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&db\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trigger\+\_\+name, bool continue\+\_\+if\+\_\+not\+\_\+exist, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$table)
+\item 
+bool \mbox{\hyperlink{sql__trigger_8h_af8972f45b1845e71d36bf80fbd3e879c}{change\+\_\+trigger\+\_\+table\+\_\+name}} (T\+HD $\ast$thd, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+alias, const char $\ast$table\+\_\+name, const char $\ast$new\+\_\+db\+\_\+name, const char $\ast$new\+\_\+table\+\_\+name)
+\item 
+bool \mbox{\hyperlink{sql__trigger_8h_ae31ce01efa46d0d7ff12308265fe691d}{drop\+\_\+all\+\_\+triggers}} (T\+HD $\ast$thd, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains declarations of global public functions which are used directly from parser/executioner to perform basic operations on triggers (C\+R\+E\+A\+TE T\+R\+I\+G\+G\+ER, D\+R\+OP T\+R\+I\+G\+G\+ER, A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, D\+R\+OP \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, ...) 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sql__trigger_8h_a6ad30978f64949b18d1f9b3adf7a0d6f}\label{sql__trigger_8h_a6ad30978f64949b18d1f9b3adf7a0d6f}} 
+\index{sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}!add\+\_\+table\+\_\+for\+\_\+trigger@{add\+\_\+table\+\_\+for\+\_\+trigger}}
+\index{add\+\_\+table\+\_\+for\+\_\+trigger@{add\+\_\+table\+\_\+for\+\_\+trigger}!sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}}
+\subsubsection{\texorpdfstring{add\+\_\+table\+\_\+for\+\_\+trigger()}{add\_table\_for\_trigger()}}
+{\footnotesize\ttfamily bool add\+\_\+table\+\_\+for\+\_\+trigger (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG \&}]{db\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trigger\+\_\+name,  }\item[{bool}]{continue\+\_\+if\+\_\+not\+\_\+exist,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$$\ast$}]{table }\end{DoxyParamCaption})}
+
+Find trigger\textquotesingle{}s table from trigger identifier and add it to the statement table list.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & Thread context. \\
+\hline
+\mbox{\texttt{ in}}  & {\em trg\+\_\+name} & \mbox{\hyperlink{classTrigger}{Trigger}} name. \\
+\hline
+\mbox{\texttt{ in}}  & {\em if\+\_\+exists} & T\+R\+UE if S\+QL statement contains \char`\"{}\+I\+F E\+X\+I\+S\+T\+S\char`\"{} clause. That means a warning instead of error should be thrown if trigger with given name does not exist. \\
+\hline
+\mbox{\texttt{ out}}  & {\em table} & Pointer to \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} object for the table trigger.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & On success. \\
+\hline
+{\em T\+R\+UE} & Otherwise. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__trigger_8h_af8972f45b1845e71d36bf80fbd3e879c}\label{sql__trigger_8h_af8972f45b1845e71d36bf80fbd3e879c}} 
+\index{sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}!change\+\_\+trigger\+\_\+table\+\_\+name@{change\+\_\+trigger\+\_\+table\+\_\+name}}
+\index{change\+\_\+trigger\+\_\+table\+\_\+name@{change\+\_\+trigger\+\_\+table\+\_\+name}!sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}}
+\subsubsection{\texorpdfstring{change\+\_\+trigger\+\_\+table\+\_\+name()}{change\_trigger\_table\_name()}}
+{\footnotesize\ttfamily bool change\+\_\+trigger\+\_\+table\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+alias,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{const char $\ast$}]{new\+\_\+db\+\_\+name,  }\item[{const char $\ast$}]{new\+\_\+table\+\_\+name }\end{DoxyParamCaption})}
+
+Update .T\+RG and .T\+RN files after renaming triggers\textquotesingle{} subject table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \mbox{[}i\mbox{]}\mbox{]}} & thd Thread context \\
+\hline
+\mbox{\texttt{ in}}  & {\em db\+\_\+name} & Current database of subject table \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+alias} & Current alias of subject table \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+name} & Current name of subject table \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+db\+\_\+name} & New database for subject table \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+table\+\_\+name} & New name of subject table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method tries to leave trigger related files in consistent state, i.\+e. it either will complete successfully, or will fail leaving files in their initial state.
+
+This method assumes that subject table is not renamed to itself.
+
+This method needs to be called under an exclusive table metadata lock.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__trigger_8h_ae31ce01efa46d0d7ff12308265fe691d}\label{sql__trigger_8h_ae31ce01efa46d0d7ff12308265fe691d}} 
+\index{sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}!drop\+\_\+all\+\_\+triggers@{drop\+\_\+all\+\_\+triggers}}
+\index{drop\+\_\+all\+\_\+triggers@{drop\+\_\+all\+\_\+triggers}!sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}}
+\subsubsection{\texorpdfstring{drop\+\_\+all\+\_\+triggers()}{drop\_all\_triggers()}}
+{\footnotesize\ttfamily bool drop\+\_\+all\+\_\+triggers (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+Drop all triggers for table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & current thread context \\
+\hline
+{\em db\+\_\+name} & name of the table schema \\
+\hline
+{\em table\+\_\+name} & table name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success \\
+\hline
+{\em true} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{sql__trigger_8h_a1e3f2ad15ed49c6bd2a89fd4562ee8e5}\label{sql__trigger_8h_a1e3f2ad15ed49c6bd2a89fd4562ee8e5}} 
+\index{sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}!mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger@{mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger}}
+\index{mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger@{mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger}!sql\+\_\+trigger.\+h@{sql\+\_\+trigger.\+h}}
+\subsubsection{\texorpdfstring{mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger()}{mysql\_create\_or\_drop\_trigger()}}
+{\footnotesize\ttfamily bool mysql\+\_\+create\+\_\+or\+\_\+drop\+\_\+trigger (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$}]{tables,  }\item[{bool}]{create }\end{DoxyParamCaption})}
+
+Create or drop trigger for table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & current thread context (including trigger definition in L\+EX) \\
+\hline
+{\em tables} & table list containing one table for which trigger is created. \\
+\hline
+{\em create} & whenever we create (T\+R\+UE) or drop (F\+A\+L\+SE) trigger\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is mainly responsible for opening and locking of table and invalidation of all its instances in table cache after trigger creation. Real work on trigger creation/dropping is done inside \mbox{\hyperlink{classTable__trigger__dispatcher}{Table\+\_\+trigger\+\_\+dispatcher}} methods.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000121}{Todo}}]T\+O\+DO\+: We should check if user has T\+R\+I\+G\+G\+ER privilege for table here. Now we just require S\+U\+P\+ER privilege for creating/dropping because we don\textquotesingle{}t have proper privilege checking for triggers in place yet.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success \\
+\hline
+{\em T\+R\+UE} & error \\
+\hline
+\end{DoxyRetVals}

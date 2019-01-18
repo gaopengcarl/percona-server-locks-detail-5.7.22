@@ -1,0 +1,178 @@
+\hypertarget{classCost__model__server}{}\section{Cost\+\_\+model\+\_\+server Class Reference}
+\label{classCost__model__server}\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+
+
+{\ttfamily \#include $<$opt\+\_\+costmodel.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}{enum\+\_\+tmptable\+\_\+type}} \{ {\bfseries M\+E\+M\+O\+R\+Y\+\_\+\+T\+M\+P\+T\+A\+B\+LE}, 
+{\bfseries D\+I\+S\+K\+\_\+\+T\+M\+P\+T\+A\+B\+LE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCost__model__server_a7198ad7c22a47c320d7c9c26b1189a5d}{$\sim$\+Cost\+\_\+model\+\_\+server}} ()
+\item 
+void \mbox{\hyperlink{classCost__model__server_a267c97e430cec8665c0c62ad722d80c1}{init}} ()
+\item 
+double \mbox{\hyperlink{classCost__model__server_ab1e112ce95b61d96c291af41541ff2e2}{row\+\_\+evaluate\+\_\+cost}} (double rows) const
+\item 
+double \mbox{\hyperlink{classCost__model__server_a8315c6b7726cc01fda328159ad6c97f5}{key\+\_\+compare\+\_\+cost}} (double keys) const
+\item 
+double \mbox{\hyperlink{classCost__model__server_a52f14b9994d65fe01fd7bdf1b9391470}{tmptable\+\_\+create\+\_\+cost}} (\mbox{\hyperlink{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}{enum\+\_\+tmptable\+\_\+type}} tmptable\+\_\+type) const
+\item 
+double \mbox{\hyperlink{classCost__model__server_ad01970db22e4817c1b2e87ba70f6ec67}{tmptable\+\_\+readwrite\+\_\+cost}} (\mbox{\hyperlink{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}{enum\+\_\+tmptable\+\_\+type}} tmptable\+\_\+type, double write\+\_\+rows, double read\+\_\+rows) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classCost__model__constants}{Cost\+\_\+model\+\_\+constants}} $\ast$ \mbox{\hyperlink{classCost__model__server_ae2d32c871cdee2b0461b43d43bb24685}{get\+\_\+cost\+\_\+constants}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCost__model__server_adaaa56d00e1e122f925f5dea2c8ce7d7}\label{classCost__model__server_adaaa56d00e1e122f925f5dea2c8ce7d7}} 
+const \mbox{\hyperlink{classServer__cost__constants}{Server\+\_\+cost\+\_\+constants}} $\ast$ {\bfseries m\+\_\+server\+\_\+cost\+\_\+constants}
+\item 
+bool \mbox{\hyperlink{classCost__model__server_a3ea4fa00d273ad8d38bb9268fcbfeae0}{m\+\_\+initialized}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCost__model__server_a567e5e00dd7bf84f63f12c885d0bd53f}\label{classCost__model__server_a567e5e00dd7bf84f63f12c885d0bd53f}} 
+class {\bfseries Cost\+\_\+model\+\_\+table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for getting cost estimates for server operations that are not directly related to a table object. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}\label{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!enum\+\_\+tmptable\+\_\+type@{enum\+\_\+tmptable\+\_\+type}}
+\index{enum\+\_\+tmptable\+\_\+type@{enum\+\_\+tmptable\+\_\+type}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{enum\+\_\+tmptable\+\_\+type}{enum\_tmptable\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}{Cost\+\_\+model\+\_\+server\+::enum\+\_\+tmptable\+\_\+type}}}
+
+Temporary table types that the cost model differentiate between. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCost__model__server_a7198ad7c22a47c320d7c9c26b1189a5d}\label{classCost__model__server_a7198ad7c22a47c320d7c9c26b1189a5d}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!````~Cost\+\_\+model\+\_\+server@{$\sim$\+Cost\+\_\+model\+\_\+server}}
+\index{````~Cost\+\_\+model\+\_\+server@{$\sim$\+Cost\+\_\+model\+\_\+server}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{$\sim$\+Cost\+\_\+model\+\_\+server()}{~Cost\_model\_server()}}
+{\footnotesize\ttfamily Cost\+\_\+model\+\_\+server\+::$\sim$\+Cost\+\_\+model\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Desctructor for \mbox{\hyperlink{classCost__model__server}{Cost\+\_\+model\+\_\+server}} objects.
+
+\begin{DoxyNote}{Note}
+This is declared virtual in order to make it easier to implement stubs for this class for use in unit tests. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCost__model__server_ae2d32c871cdee2b0461b43d43bb24685}\label{classCost__model__server_ae2d32c871cdee2b0461b43d43bb24685}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!get\+\_\+cost\+\_\+constants@{get\+\_\+cost\+\_\+constants}}
+\index{get\+\_\+cost\+\_\+constants@{get\+\_\+cost\+\_\+constants}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{get\+\_\+cost\+\_\+constants()}{get\_cost\_constants()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCost__model__constants}{Cost\+\_\+model\+\_\+constants}}$\ast$ Cost\+\_\+model\+\_\+server\+::get\+\_\+cost\+\_\+constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Return a pointer to the object containing the current cost constants.
+
+\begin{DoxyReturn}{Returns}
+Cost constants 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__server_a267c97e430cec8665c0c62ad722d80c1}\label{classCost__model__server_a267c97e430cec8665c0c62ad722d80c1}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!init@{init}}
+\index{init@{init}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Cost\+\_\+model\+\_\+server\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize the cost model object for a query.
+
+This function must be called before calling any cost estimation functions for a query. It should also be called when starting optimization of a new query in case any cost estimate constants have changed. \mbox{\Hypertarget{classCost__model__server_a8315c6b7726cc01fda328159ad6c97f5}\label{classCost__model__server_a8315c6b7726cc01fda328159ad6c97f5}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!key\+\_\+compare\+\_\+cost@{key\+\_\+compare\+\_\+cost}}
+\index{key\+\_\+compare\+\_\+cost@{key\+\_\+compare\+\_\+cost}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{key\+\_\+compare\+\_\+cost()}{key\_compare\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+server\+::key\+\_\+compare\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{keys }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of doing a number of key compare operations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & number of key compare operations\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of comparing the keys 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__server_ab1e112ce95b61d96c291af41541ff2e2}\label{classCost__model__server_ab1e112ce95b61d96c291af41541ff2e2}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!row\+\_\+evaluate\+\_\+cost@{row\+\_\+evaluate\+\_\+cost}}
+\index{row\+\_\+evaluate\+\_\+cost@{row\+\_\+evaluate\+\_\+cost}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{row\+\_\+evaluate\+\_\+cost()}{row\_evaluate\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+server\+::row\+\_\+evaluate\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{rows }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost of processing a number of records and evaluating the query condition on the records.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & number of rows to evaluate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of evaluating the records 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__server_a52f14b9994d65fe01fd7bdf1b9391470}\label{classCost__model__server_a52f14b9994d65fe01fd7bdf1b9391470}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!tmptable\+\_\+create\+\_\+cost@{tmptable\+\_\+create\+\_\+cost}}
+\index{tmptable\+\_\+create\+\_\+cost@{tmptable\+\_\+create\+\_\+cost}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{tmptable\+\_\+create\+\_\+cost()}{tmptable\_create\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+server\+::tmptable\+\_\+create\+\_\+cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}{enum\+\_\+tmptable\+\_\+type}}}]{tmptable\+\_\+type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost estimate for creating a temporary table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmptable\+\_\+type} & storage type for the temporary table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCost__model__server_ad01970db22e4817c1b2e87ba70f6ec67}\label{classCost__model__server_ad01970db22e4817c1b2e87ba70f6ec67}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!tmptable\+\_\+readwrite\+\_\+cost@{tmptable\+\_\+readwrite\+\_\+cost}}
+\index{tmptable\+\_\+readwrite\+\_\+cost@{tmptable\+\_\+readwrite\+\_\+cost}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{tmptable\+\_\+readwrite\+\_\+cost()}{tmptable\_readwrite\_cost()}}
+{\footnotesize\ttfamily double Cost\+\_\+model\+\_\+server\+::tmptable\+\_\+readwrite\+\_\+cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCost__model__server_a140ad6035a21dbe363f69eb4b5ea98c0}{enum\+\_\+tmptable\+\_\+type}}}]{tmptable\+\_\+type,  }\item[{double}]{write\+\_\+rows,  }\item[{double}]{read\+\_\+rows }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cost estimate for inserting and reading records from a temporary table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmptable\+\_\+type} & storage type for the temporary table \\
+\hline
+{\em write\+\_\+rows} & number of rows that will be written to table \\
+\hline
+{\em read\+\_\+rows} & number of rows that will be read from table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The estimated cost 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCost__model__server_a3ea4fa00d273ad8d38bb9268fcbfeae0}\label{classCost__model__server_a3ea4fa00d273ad8d38bb9268fcbfeae0}} 
+\index{Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}!m\+\_\+initialized@{m\+\_\+initialized}}
+\index{m\+\_\+initialized@{m\+\_\+initialized}!Cost\+\_\+model\+\_\+server@{Cost\+\_\+model\+\_\+server}}
+\subsubsection{\texorpdfstring{m\+\_\+initialized}{m\_initialized}}
+{\footnotesize\ttfamily bool Cost\+\_\+model\+\_\+server\+::m\+\_\+initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+Used for detecting if this object is used without having been initialized. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+costmodel.\+h\item 
+opt\+\_\+costmodel.\+cc\end{DoxyCompactItemize}

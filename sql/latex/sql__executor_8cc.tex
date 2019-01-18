@@ -1,0 +1,100 @@
+\hypertarget{sql__executor_8cc}{}\section{sql\+\_\+executor.\+cc File Reference}
+\label{sql__executor_8cc}\index{sql\+\_\+executor.\+cc@{sql\+\_\+executor.\+cc}}
+
+
+Query execution.  
+
+
+{\ttfamily \#include \char`\"{}sql\+\_\+executor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug\+\_\+sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item\+\_\+sum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}key.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opt\+\_\+trace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+join\+\_\+buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+optimizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+show.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+tmp\+\_\+table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json\+\_\+dom.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries prepare\+\_\+sum\+\_\+aggregators} (\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$func\+\_\+ptr, bool need\+\_\+distinct)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga1b1125b75ed00a408f039bb83de7c480}{setup\+\_\+sum\+\_\+funcs}} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$$\ast$func\+\_\+ptr)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga7f64c00677c38e6f233e43f47a52aef7}{copy\+\_\+funcs}} (\mbox{\hyperlink{classMem__root__array}{Func\+\_\+ptr\+\_\+array}} $\ast$func\+\_\+ptr, const T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{group__Query__Executor_ga2b6b23af4fddf731279c6dfdbd084659}{setup\+\_\+tmptable\+\_\+write\+\_\+func}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\begin{DoxyCompactList}\small\item\em Setup write\+\_\+func of \mbox{\hyperlink{classQEP__tmp__table}{Q\+E\+P\+\_\+tmp\+\_\+table}} object. \end{DoxyCompactList}\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{group__Query__Executor_gacddd73f0964f6141ef2666b7ac8a3997}{sub\+\_\+select\+\_\+op}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\begin{DoxyCompactList}\small\item\em Accumulate full or partial join result in operation and send operation\textquotesingle{}s result further. \end{DoxyCompactList}\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state \mbox{\hyperlink{group__Query__Executor_ga09a751162b6ad6ce37cc4db2c77cc158}{sub\+\_\+select}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$const qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga4c3b77b483fa5b7bcefe0f38587480c8}{do\+\_\+sj\+\_\+dups\+\_\+weedout}} (T\+HD $\ast$thd, \mbox{\hyperlink{classSJ__TMP__TABLE}{S\+J\+\_\+\+T\+M\+P\+\_\+\+T\+A\+B\+LE}} $\ast$sjtbl)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga4fb800e0e68d03a1b49a9cf66fda4006}{report\+\_\+handler\+\_\+error}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, int error)
+\item 
+int {\bfseries safe\+\_\+index\+\_\+read} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga39c30d89f411ee0d12ecd4824f9aae1a}{join\+\_\+read\+\_\+const\+\_\+table}} (\mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} $\ast$tab, \mbox{\hyperlink{structst__position}{P\+O\+S\+I\+T\+I\+ON}} $\ast$pos)
+\item 
+void \mbox{\hyperlink{group__Query__Executor_ga2e0154a16c989becf374e885b851aaab}{join\+\_\+read\+\_\+key\+\_\+unlock\+\_\+row}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_ga9cf45a16cbecb892a847bb2ac6e92a56}{join\+\_\+read\+\_\+last\+\_\+key}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int {\bfseries join\+\_\+read\+\_\+prev\+\_\+same} (\mbox{\hyperlink{structREAD__RECORD}{R\+E\+A\+D\+\_\+\+R\+E\+C\+O\+RD}} $\ast$info)
+\item 
+int {\bfseries join\+\_\+init\+\_\+quick\+\_\+read\+\_\+record} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int {\bfseries read\+\_\+first\+\_\+record\+\_\+seq} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int \mbox{\hyperlink{group__Query__Executor_gad4a1cc488b1586d28aa8cfd90bb875df}{join\+\_\+init\+\_\+read\+\_\+record}} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\begin{DoxyCompactList}\small\item\em Prepare table for reading rows and read first record. \end{DoxyCompactList}\item 
+int {\bfseries join\+\_\+materialize\+\_\+derived} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int {\bfseries join\+\_\+materialize\+\_\+semijoin} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int {\bfseries join\+\_\+read\+\_\+first} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+int {\bfseries join\+\_\+read\+\_\+last} (\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$tab)
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries end\+\_\+send\+\_\+group} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gaa74e832cc92e35fa5e94c664b367dcad}{group\+\_\+rec\+\_\+cmp}} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group, uchar $\ast$rec0, uchar $\ast$rec1)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gabf5c3ba6e3e4cec96f452e9d2ca5bf9a}{table\+\_\+rec\+\_\+cmp}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+ulonglong \mbox{\hyperlink{group__Query__Executor_ga161ae3fce537993456b85fe09b4c3d89}{unique\+\_\+hash}} (\mbox{\hyperlink{classField}{Field}} $\ast$field, ulonglong $\ast$hash\+\_\+val)
+\item 
+ulonglong {\bfseries unique\+\_\+hash\+\_\+group} (\mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group)
+\item 
+ulonglong {\bfseries unique\+\_\+hash\+\_\+fields} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga90a4e0bf6e706b42c25d6649e105bd87}{check\+\_\+unique\+\_\+constraint}} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+enum\+\_\+nested\+\_\+loop\+\_\+state {\bfseries end\+\_\+write\+\_\+group} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$const qep\+\_\+tab, bool end\+\_\+of\+\_\+records)
+\item 
+bool {\bfseries cp\+\_\+buffer\+\_\+from\+\_\+ref} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, \mbox{\hyperlink{structst__table__ref}{T\+A\+B\+L\+E\+\_\+\+R\+EF}} $\ast$ref)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gaa0bd2dbcf106da50227e2eb4932b588d}{make\+\_\+group\+\_\+fields}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$main\+\_\+join, \mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$curr\+\_\+join)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga108fbed43151ab58878335fbb84503c1}{alloc\+\_\+group\+\_\+fields}} (\mbox{\hyperlink{classJOIN}{J\+O\+IN}} $\ast$join, \mbox{\hyperlink{structst__order}{O\+R\+D\+ER}} $\ast$group)
+\item 
+int {\bfseries test\+\_\+if\+\_\+item\+\_\+cache\+\_\+changed} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classCached__item}{Cached\+\_\+item}} $>$ \&list)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gaea6e7f59b9cca648046cf55fe5a95732}{setup\+\_\+copy\+\_\+fields}} (T\+HD $\ast$thd, Temp\+\_\+table\+\_\+param $\ast$param, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga6ae2b33e35bb51f5250fac64ee0d231b}{copy\+\_\+fields}} (Temp\+\_\+table\+\_\+param $\ast$param, const T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_ga1e985adce1ee0b0c97f2351330ba0b45}{change\+\_\+to\+\_\+use\+\_\+tmp\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields)
+\item 
+bool \mbox{\hyperlink{group__Query__Executor_gae27d7837289ad61f55a8649b343d2ffe}{change\+\_\+refs\+\_\+to\+\_\+tmp\+\_\+fields}} (T\+HD $\ast$thd, \mbox{\hyperlink{classBounds__checked__array}{Ref\+\_\+ptr\+\_\+array}} ref\+\_\+pointer\+\_\+array, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+selected\+\_\+fields, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&res\+\_\+all\+\_\+fields, uint elements, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classItem}{Item}} $>$ \&all\+\_\+fields)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Query execution. 
+

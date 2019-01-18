@@ -1,0 +1,91 @@
+\hypertarget{classBounded__queue}{}\section{Bounded\+\_\+queue$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$ Class Template Reference}
+\label{classBounded__queue}\index{Bounded\+\_\+queue$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$@{Bounded\+\_\+queue$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$}}
+
+
+{\ttfamily \#include $<$bounded\+\_\+queue.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBounded__queue_a5452fcd0d9a1a1f6af2eded1706126ed}\label{classBounded__queue_a5452fcd0d9a1a1f6af2eded1706126ed}} 
+typedef Priority\+\_\+queue$<$ Key\+\_\+type, std\+::vector$<$ Key\+\_\+type, \mbox{\hyperlink{classMalloc__allocator}{Malloc\+\_\+allocator}}$<$ Key\+\_\+type $>$ $>$, Key\+\_\+compare $>$ {\bfseries Queue\+\_\+type}
+\item 
+\mbox{\Hypertarget{classBounded__queue_a639c876a698f4104e9e15964935b0da2}\label{classBounded__queue_a639c876a698f4104e9e15964935b0da2}} 
+typedef Queue\+\_\+type\+::allocator\+\_\+type {\bfseries allocator\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBounded__queue_a06c121bc377907b33baab4bd1d4b4fff}\label{classBounded__queue_a06c121bc377907b33baab4bd1d4b4fff}} 
+{\bfseries Bounded\+\_\+queue} (const allocator\+\_\+type \&alloc=allocator\+\_\+type(P\+S\+I\+\_\+\+N\+O\+T\+\_\+\+I\+N\+S\+T\+R\+U\+M\+E\+N\+T\+ED))
+\item 
+bool \mbox{\hyperlink{classBounded__queue_aff5e3f52cd3f4224fd3368883310a9b9}{init}} (ha\+\_\+rows max\+\_\+elements, Key\+\_\+generator $\ast$sort\+\_\+param, Key\+\_\+type $\ast$sort\+\_\+keys)
+\item 
+void \mbox{\hyperlink{classBounded__queue_a745d7312ec6c57f47befd4ff75f54540}{push}} (Element\+\_\+type element)
+\item 
+size\+\_\+t \mbox{\hyperlink{classBounded__queue_a6990c2053a12d102653834a45865a9a2}{num\+\_\+elements}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Element\+\_\+type, typename Key\+\_\+type, typename Key\+\_\+generator, typename Key\+\_\+compare = std\+::less$<$\+Key\+\_\+type$>$$>$\newline
+class Bounded\+\_\+queue$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$}
+
+A priority queue with a fixed, limited size.
+
+This is a wrapper on top of Priority\+\_\+queue. It keeps the top-\/N elements which are inserted.
+
+Elements of type Element\+\_\+type are pushed into the queue. For each element, we call a user-\/supplied Key\+\_\+generator\+::make\+\_\+sortkey(), to generate a key of type Key\+\_\+type for the element. Instances of Key\+\_\+type are compared with the user-\/supplied Key\+\_\+compare.
+
+Pointers to the top-\/N elements are stored in the sort\+\_\+keys array given to the \mbox{\hyperlink{classBounded__queue_aff5e3f52cd3f4224fd3368883310a9b9}{init()}} function below. To access elements in sorted order, sort the array and access it sequentially. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBounded__queue_aff5e3f52cd3f4224fd3368883310a9b9}\label{classBounded__queue_aff5e3f52cd3f4224fd3368883310a9b9}} 
+\index{Bounded\+\_\+queue@{Bounded\+\_\+queue}!init@{init}}
+\index{init@{init}!Bounded\+\_\+queue@{Bounded\+\_\+queue}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename Element\+\_\+type , typename Key\+\_\+type , typename Key\+\_\+generator , typename Key\+\_\+compare  = std\+::less$<$\+Key\+\_\+type$>$$>$ \\
+bool \mbox{\hyperlink{classBounded__queue}{Bounded\+\_\+queue}}$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$\+::init (\begin{DoxyParamCaption}\item[{ha\+\_\+rows}]{max\+\_\+elements,  }\item[{Key\+\_\+generator $\ast$}]{sort\+\_\+param,  }\item[{Key\+\_\+type $\ast$}]{sort\+\_\+keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the queue.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em max\+\_\+elements} & The size of the queue. \\
+\hline
+ & {\em sort\+\_\+param} & Sort parameters. We call sort\+\_\+param-\/$>$make\+\_\+sortkey() to generate keys for elements. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em sort\+\_\+keys} & Array of keys to sort. Must be initialized by caller. Will be filled with pointers to the top-\/N elements.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK, true Could not allocate memory.\\
+\hline
+\end{DoxyRetVals}
+We do {\itshape not} take ownership of any of the input pointer arguments. \mbox{\Hypertarget{classBounded__queue_a6990c2053a12d102653834a45865a9a2}\label{classBounded__queue_a6990c2053a12d102653834a45865a9a2}} 
+\index{Bounded\+\_\+queue@{Bounded\+\_\+queue}!num\+\_\+elements@{num\+\_\+elements}}
+\index{num\+\_\+elements@{num\+\_\+elements}!Bounded\+\_\+queue@{Bounded\+\_\+queue}}
+\subsubsection{\texorpdfstring{num\+\_\+elements()}{num\_elements()}}
+{\footnotesize\ttfamily template$<$typename Element\+\_\+type , typename Key\+\_\+type , typename Key\+\_\+generator , typename Key\+\_\+compare  = std\+::less$<$\+Key\+\_\+type$>$$>$ \\
+size\+\_\+t \mbox{\hyperlink{classBounded__queue}{Bounded\+\_\+queue}}$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$\+::num\+\_\+elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The number of elements in the queue. \mbox{\Hypertarget{classBounded__queue_a745d7312ec6c57f47befd4ff75f54540}\label{classBounded__queue_a745d7312ec6c57f47befd4ff75f54540}} 
+\index{Bounded\+\_\+queue@{Bounded\+\_\+queue}!push@{push}}
+\index{push@{push}!Bounded\+\_\+queue@{Bounded\+\_\+queue}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename Element\+\_\+type , typename Key\+\_\+type , typename Key\+\_\+generator , typename Key\+\_\+compare  = std\+::less$<$\+Key\+\_\+type$>$$>$ \\
+void \mbox{\hyperlink{classBounded__queue}{Bounded\+\_\+queue}}$<$ Element\+\_\+type, Key\+\_\+type, Key\+\_\+generator, Key\+\_\+compare $>$\+::push (\begin{DoxyParamCaption}\item[{Element\+\_\+type}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pushes an element on the queue. If the queue is already full, we discard one element. Calls m\+\_\+sort\+\_\+param\+::make\+\_\+sortkey() to generate a key for the element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element to be pushed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+bounded\+\_\+queue.\+h\end{DoxyCompactItemize}

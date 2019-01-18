@@ -1,0 +1,68 @@
+\hypertarget{structsql__digest__storage}{}\section{sql\+\_\+digest\+\_\+storage Struct Reference}
+\label{structsql__digest__storage}\index{sql\+\_\+digest\+\_\+storage@{sql\+\_\+digest\+\_\+storage}}
+
+
+{\ttfamily \#include $<$sql\+\_\+digest.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_ab9cb38c7df4bc3568ccf539c8de1a922}\label{structsql__digest__storage_ab9cb38c7df4bc3568ccf539c8de1a922}} 
+void {\bfseries reset} (unsigned char $\ast$token\+\_\+array, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_af5d3d591c2096e0e3a70aeb6448cfddf}\label{structsql__digest__storage_af5d3d591c2096e0e3a70aeb6448cfddf}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_aeb6d721a5e311c739bdc95a054155cf2}\label{structsql__digest__storage_aeb6d721a5e311c739bdc95a054155cf2}} 
+bool {\bfseries is\+\_\+empty} ()
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_a0b53d96218f6c22866ef3512f6ecaa37}\label{structsql__digest__storage_a0b53d96218f6c22866ef3512f6ecaa37}} 
+void {\bfseries copy} (const \mbox{\hyperlink{structsql__digest__storage}{sql\+\_\+digest\+\_\+storage}} $\ast$from)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_a82e0700698c63f0ad694c88c3de7d6e3}\label{structsql__digest__storage_a82e0700698c63f0ad694c88c3de7d6e3}} 
+bool {\bfseries m\+\_\+full}
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_a5425b83fb1a86072acbfa50a6a0059fc}\label{structsql__digest__storage_a5425b83fb1a86072acbfa50a6a0059fc}} 
+size\+\_\+t {\bfseries m\+\_\+byte\+\_\+count}
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_a1cc109255ed46294669b6f6f57730b90}\label{structsql__digest__storage_a1cc109255ed46294669b6f6f57730b90}} 
+unsigned char {\bfseries m\+\_\+md5} \mbox{[}M\+D5\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+uint \mbox{\hyperlink{structsql__digest__storage_a28b02737e5a7cd2d7d3a7789fcfe82f2}{m\+\_\+charset\+\_\+number}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structsql__digest__storage_ab295f51157fe09403347b5a329c9becd}{m\+\_\+token\+\_\+array}}
+\item 
+\mbox{\Hypertarget{structsql__digest__storage_aff9d69ef4240227f3faa4102a693f177}\label{structsql__digest__storage_aff9d69ef4240227f3faa4102a693f177}} 
+size\+\_\+t {\bfseries m\+\_\+token\+\_\+array\+\_\+length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure to store token count/array for a statement on which digest is to be calculated. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structsql__digest__storage_a28b02737e5a7cd2d7d3a7789fcfe82f2}\label{structsql__digest__storage_a28b02737e5a7cd2d7d3a7789fcfe82f2}} 
+\index{sql\+\_\+digest\+\_\+storage@{sql\+\_\+digest\+\_\+storage}!m\+\_\+charset\+\_\+number@{m\+\_\+charset\+\_\+number}}
+\index{m\+\_\+charset\+\_\+number@{m\+\_\+charset\+\_\+number}!sql\+\_\+digest\+\_\+storage@{sql\+\_\+digest\+\_\+storage}}
+\subsubsection{\texorpdfstring{m\+\_\+charset\+\_\+number}{m\_charset\_number}}
+{\footnotesize\ttfamily uint sql\+\_\+digest\+\_\+storage\+::m\+\_\+charset\+\_\+number}
+
+Character set number. \mbox{\Hypertarget{structsql__digest__storage_ab295f51157fe09403347b5a329c9becd}\label{structsql__digest__storage_ab295f51157fe09403347b5a329c9becd}} 
+\index{sql\+\_\+digest\+\_\+storage@{sql\+\_\+digest\+\_\+storage}!m\+\_\+token\+\_\+array@{m\+\_\+token\+\_\+array}}
+\index{m\+\_\+token\+\_\+array@{m\+\_\+token\+\_\+array}!sql\+\_\+digest\+\_\+storage@{sql\+\_\+digest\+\_\+storage}}
+\subsubsection{\texorpdfstring{m\+\_\+token\+\_\+array}{m\_token\_array}}
+{\footnotesize\ttfamily unsigned char$\ast$ sql\+\_\+digest\+\_\+storage\+::m\+\_\+token\+\_\+array}
+
+Token array. Token array is an array of bytes to store tokens received during parsing. Following is the way token array is formed. ... $<$non-\/id-\/token$>$ $<$non-\/id-\/token$>$ $<$id-\/token$>$ $<$id\+\_\+len$>$ $<$id\+\_\+text$>$ ... For Example\+: S\+E\+L\+E\+CT $\ast$ F\+R\+OM T1; $<$S\+E\+L\+E\+C\+T\+\_\+\+T\+O\+K\+EN$>$ $<$$\ast$$>$ $<$F\+R\+O\+M\+\_\+\+T\+O\+K\+EN$>$ $<$I\+D\+\_\+\+T\+O\+K\+EN$>$ $<$2$>$ $<$T1$>$
+
+\begin{DoxyNote}{Note}
+Only the first {\ttfamily m\+\_\+byte\+\_\+count} bytes are initialized, out of {\ttfamily m\+\_\+token\+\_\+array\+\_\+length}. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+digest.\+h\end{DoxyCompactItemize}

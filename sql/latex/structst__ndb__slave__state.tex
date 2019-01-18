@@ -1,0 +1,253 @@
+\hypertarget{structst__ndb__slave__state}{}\section{st\+\_\+ndb\+\_\+slave\+\_\+state Struct Reference}
+\label{structst__ndb__slave__state}\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structst__ndb__slave__state_a48c3936791f966c865d2c28a0b305012}{at\+Start\+Slave}} ()
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ac6062f52659babcb3176a9bcc94618fa}\label{structst__ndb__slave__state_ac6062f52659babcb3176a9bcc94618fa}} 
+int {\bfseries at\+Prepare\+Conflict\+Detection} (const Ndb\+Dictionary\+::\+Table $\ast$table, const Ndb\+Record $\ast$key\+\_\+rec, const uchar $\ast$row\+\_\+data, Uint64 transaction\+\_\+id, bool \&handle\+\_\+conflict\+\_\+now)
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ad47592803b485c0e1e7be59d91b9b493}\label{structst__ndb__slave__state_ad47592803b485c0e1e7be59d91b9b493}} 
+int {\bfseries at\+Trans\+Conflict\+Detected} (Uint64 transaction\+\_\+id)
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ab98cd46fd49f5b5ecd7fb61228b42a3a}\label{structst__ndb__slave__state_ab98cd46fd49f5b5ecd7fb61228b42a3a}} 
+int {\bfseries at\+Conflict\+Pre\+Commit} (bool \&retry\+\_\+slave\+\_\+trans)
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aebeace200b414036bb20c75fa306f8b0}\label{structst__ndb__slave__state_aebeace200b414036bb20c75fa306f8b0}} 
+void {\bfseries at\+Begin\+Trans\+Conflict\+Handling} ()
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ac7bafed724ff1ddf544108ba638a788e}\label{structst__ndb__slave__state_ac7bafed724ff1ddf544108ba638a788e}} 
+void {\bfseries at\+End\+Trans\+Conflict\+Handling} ()
+\item 
+void \mbox{\hyperlink{structst__ndb__slave__state_a3d731f8bfdce1ea3802fcb0cb3a27d73}{at\+Transaction\+Commit}} (Uint64 epoch)
+\item 
+void \mbox{\hyperlink{structst__ndb__slave__state_a919ec93137f0ebaae6e29118882dd141}{at\+Transaction\+Abort}} ()
+\item 
+void \mbox{\hyperlink{structst__ndb__slave__state_af4b936c6ad89721386871d7d4808a806}{at\+Reset\+Slave}} ()
+\item 
+int \mbox{\hyperlink{structst__ndb__slave__state_ae64bc5c0385b491b5791b40296df0c41}{at\+Apply\+Status\+Write}} (Uint32 master\+\_\+server\+\_\+id, Uint32 row\+\_\+server\+\_\+id, Uint64 row\+\_\+epoch, bool is\+\_\+row\+\_\+server\+\_\+id\+\_\+local)
+\item 
+bool \mbox{\hyperlink{structst__ndb__slave__state_a726e16b6e2106a13558117de0ba37757}{verify\+Next\+Epoch}} (Uint64 next\+\_\+epoch, Uint32 master\+\_\+server\+\_\+id) const
+\item 
+void \mbox{\hyperlink{structst__ndb__slave__state_a366692bd209be04ea4b61608dcc2780e}{reset\+Per\+Attempt\+Counters}} ()
+\item 
+\mbox{\hyperlink{structst__ndb__slave__state_a9388ae521718af871f0fafe8d4312baa}{st\+\_\+ndb\+\_\+slave\+\_\+state}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structst__ndb__slave__state_a51b92c9d78e009560db169c28cf9aaf9}{check\+Slave\+Conflict\+Role\+Change}} (enum\+\_\+slave\+\_\+conflict\+\_\+role old\+\_\+role, enum\+\_\+slave\+\_\+conflict\+\_\+role new\+\_\+role, const char $\ast$$\ast$failure\+\_\+cause)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aded9439f4072d94d684315b3344e2f5d}\label{structst__ndb__slave__state_aded9439f4072d94d684315b3344e2f5d}} 
+Uint32 {\bfseries current\+\_\+violation\+\_\+count} \mbox{[}C\+F\+T\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+F\+TS\mbox{]}
+\item 
+Uint32 \mbox{\hyperlink{structst__ndb__slave__state_a19c4a75aeb841aebb76d27b362969d3c}{current\+\_\+delete\+\_\+delete\+\_\+count}}
+\item 
+Uint32 \mbox{\hyperlink{structst__ndb__slave__state_a8ce32f561db5905aeb0c59419c0dcc4f}{current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count}}
+\item 
+Uint32 \mbox{\hyperlink{structst__ndb__slave__state_ab282a2a924875f1cfd7548c47795ea0a}{current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count}}
+\item 
+Uint32 \mbox{\hyperlink{structst__ndb__slave__state_a03e38b1dcbe407f62fff243162a1042b}{current\+\_\+refresh\+\_\+op\+\_\+count}}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aff94d822023f83fc978b0352eb6ef2ce}\label{structst__ndb__slave__state_aff94d822023f83fc978b0352eb6ef2ce}} 
+Uint64 {\bfseries current\+\_\+master\+\_\+server\+\_\+epoch}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a9a528a6969e16c3a1c140303e891f989}\label{structst__ndb__slave__state_a9a528a6969e16c3a1c140303e891f989}} 
+bool {\bfseries current\+\_\+master\+\_\+server\+\_\+epoch\+\_\+committed}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aaf8c2dfa20cd6234f5a2957ee78e1a5a}\label{structst__ndb__slave__state_aaf8c2dfa20cd6234f5a2957ee78e1a5a}} 
+Uint64 {\bfseries current\+\_\+max\+\_\+rep\+\_\+epoch}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a33ed23cae841b84162a96fcdd3804be9}\label{structst__ndb__slave__state_a33ed23cae841b84162a96fcdd3804be9}} 
+uint8 {\bfseries conflict\+\_\+flags}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a43f1b8fa8386a931c6d0d3a3f4fd8cad}\label{structst__ndb__slave__state_a43f1b8fa8386a931c6d0d3a3f4fd8cad}} 
+Uint32 {\bfseries retry\+\_\+trans\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ac83cea81fc0ba8c48abf501cac67d49a}\label{structst__ndb__slave__state_ac83cea81fc0ba8c48abf501cac67d49a}} 
+Uint32 {\bfseries current\+\_\+trans\+\_\+row\+\_\+conflict\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aa2446b55640bc17e12e283a9e8a66734}\label{structst__ndb__slave__state_aa2446b55640bc17e12e283a9e8a66734}} 
+Uint32 {\bfseries current\+\_\+trans\+\_\+row\+\_\+reject\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ac4124518fa8105ab434a166e2cb72759}\label{structst__ndb__slave__state_ac4124518fa8105ab434a166e2cb72759}} 
+Uint32 {\bfseries current\+\_\+trans\+\_\+in\+\_\+conflict\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aeb250896ded8204bfdb847e2e12e0503}\label{structst__ndb__slave__state_aeb250896ded8204bfdb847e2e12e0503}} 
+Uint64 {\bfseries last\+\_\+conflicted\+\_\+epoch}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a524c15d2a9e28c4be73760783c46064f}\label{structst__ndb__slave__state_a524c15d2a9e28c4be73760783c46064f}} 
+Uint64 {\bfseries last\+\_\+stable\+\_\+epoch}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a9971838dc74644fa2fd9c119a1376ef7}\label{structst__ndb__slave__state_a9971838dc74644fa2fd9c119a1376ef7}} 
+Uint64 {\bfseries total\+\_\+violation\+\_\+count} \mbox{[}C\+F\+T\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+F\+TS\mbox{]}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a1019087e6ae474dafde8a4bb7a556a2b}\label{structst__ndb__slave__state_a1019087e6ae474dafde8a4bb7a556a2b}} 
+Uint64 {\bfseries total\+\_\+delete\+\_\+delete\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a704dadf0b9e8491f12f2d1ee6b2638fb}\label{structst__ndb__slave__state_a704dadf0b9e8491f12f2d1ee6b2638fb}} 
+Uint64 {\bfseries total\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a9beaaa9b8b2c4d5887b07eae504a85d8}\label{structst__ndb__slave__state_a9beaaa9b8b2c4d5887b07eae504a85d8}} 
+Uint64 {\bfseries total\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a3740b37909b9cad0ef1d0ba178666d0c}\label{structst__ndb__slave__state_a3740b37909b9cad0ef1d0ba178666d0c}} 
+Uint64 {\bfseries total\+\_\+refresh\+\_\+op\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ad8941000a025edde8647762758891283}\label{structst__ndb__slave__state_ad8941000a025edde8647762758891283}} 
+Uint64 {\bfseries max\+\_\+rep\+\_\+epoch}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a3016623cb7b0dceae33398f3e3826b20}\label{structst__ndb__slave__state_a3016623cb7b0dceae33398f3e3826b20}} 
+Uint32 {\bfseries sql\+\_\+run\+\_\+id}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a8c3942cd26fdb9df40a846ec658f7b0d}\label{structst__ndb__slave__state_a8c3942cd26fdb9df40a846ec658f7b0d}} 
+Uint64 {\bfseries trans\+\_\+row\+\_\+conflict\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a37136b4e42c3c8d1da11a9b88d3a28ea}\label{structst__ndb__slave__state_a37136b4e42c3c8d1da11a9b88d3a28ea}} 
+Uint64 {\bfseries trans\+\_\+row\+\_\+reject\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_ad8c4053fd83e6af01cc7da2343378142}\label{structst__ndb__slave__state_ad8c4053fd83e6af01cc7da2343378142}} 
+Uint64 {\bfseries trans\+\_\+detect\+\_\+iter\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a9974fd1b7a1d63ab73e9d46b8538d38e}\label{structst__ndb__slave__state_a9974fd1b7a1d63ab73e9d46b8538d38e}} 
+Uint64 {\bfseries trans\+\_\+in\+\_\+conflict\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aba2952cc4a1181633931c632c4cc759b}\label{structst__ndb__slave__state_aba2952cc4a1181633931c632c4cc759b}} 
+Uint64 {\bfseries trans\+\_\+conflict\+\_\+commit\+\_\+count}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a3fca90b4ea0cd90066cb69f76f493e6e}\label{structst__ndb__slave__state_a3fca90b4ea0cd90066cb69f76f493e6e}} 
+enum\+\_\+slave\+\_\+trans\+\_\+conflict\+\_\+apply\+\_\+state {\bfseries trans\+\_\+conflict\+\_\+apply\+\_\+state}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_aaad09a88edc81eb31be63e5485c35308}\label{structst__ndb__slave__state_aaad09a88edc81eb31be63e5485c35308}} 
+M\+E\+M\+\_\+\+R\+O\+OT {\bfseries conflict\+\_\+mem\+\_\+root}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a5b5522aee8dba2c741cf733282a295af}\label{structst__ndb__slave__state_a5b5522aee8dba2c741cf733282a295af}} 
+class Dependency\+Tracker $\ast$ {\bfseries trans\+\_\+dependency\+\_\+tracker}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structst__ndb__slave__state_a7781ca9019aa453c3bc4d55a847ec076}\label{structst__ndb__slave__state_a7781ca9019aa453c3bc4d55a847ec076}} 
+static const Uint32 {\bfseries M\+A\+X\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+T\+R\+A\+N\+S\+\_\+\+C\+O\+U\+NT} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structst__ndb__slave__state_a9388ae521718af871f0fafe8d4312baa}\label{structst__ndb__slave__state_a9388ae521718af871f0fafe8d4312baa}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{st\+\_\+ndb\+\_\+slave\+\_\+state()}{st\_ndb\_slave\_state()}}
+{\footnotesize\ttfamily st\+\_\+ndb\+\_\+slave\+\_\+state\+::st\+\_\+ndb\+\_\+slave\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structst__ndb__slave__state}{st\+\_\+ndb\+\_\+slave\+\_\+state}} constructor
+
+Initialise Ndb Slave state object 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structst__ndb__slave__state_ae64bc5c0385b491b5791b40296df0c41}\label{structst__ndb__slave__state_ae64bc5c0385b491b5791b40296df0c41}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!at\+Apply\+Status\+Write@{at\+Apply\+Status\+Write}}
+\index{at\+Apply\+Status\+Write@{at\+Apply\+Status\+Write}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{at\+Apply\+Status\+Write()}{atApplyStatusWrite()}}
+{\footnotesize\ttfamily int st\+\_\+ndb\+\_\+slave\+\_\+state\+::at\+Apply\+Status\+Write (\begin{DoxyParamCaption}\item[{Uint32}]{master\+\_\+server\+\_\+id,  }\item[{Uint32}]{row\+\_\+server\+\_\+id,  }\item[{Uint64}]{row\+\_\+epoch,  }\item[{bool}]{is\+\_\+row\+\_\+server\+\_\+id\+\_\+local }\end{DoxyParamCaption})}
+
+at\+Apply\+Status\+Write
+
+Called by Slave S\+QL thread when applying an event to the ndb\+\_\+apply\+\_\+status table \mbox{\Hypertarget{structst__ndb__slave__state_af4b936c6ad89721386871d7d4808a806}\label{structst__ndb__slave__state_af4b936c6ad89721386871d7d4808a806}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!at\+Reset\+Slave@{at\+Reset\+Slave}}
+\index{at\+Reset\+Slave@{at\+Reset\+Slave}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{at\+Reset\+Slave()}{atResetSlave()}}
+{\footnotesize\ttfamily void st\+\_\+ndb\+\_\+slave\+\_\+state\+::at\+Reset\+Slave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structst__ndb__slave__state_af4b936c6ad89721386871d7d4808a806}{at\+Reset\+Slave()}}
+
+Called when R\+E\+S\+ET S\+L\+A\+VE command issued -\/ in context of command client. \mbox{\Hypertarget{structst__ndb__slave__state_a48c3936791f966c865d2c28a0b305012}\label{structst__ndb__slave__state_a48c3936791f966c865d2c28a0b305012}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!at\+Start\+Slave@{at\+Start\+Slave}}
+\index{at\+Start\+Slave@{at\+Start\+Slave}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{at\+Start\+Slave()}{atStartSlave()}}
+{\footnotesize\ttfamily void st\+\_\+ndb\+\_\+slave\+\_\+state\+::at\+Start\+Slave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structst__ndb__slave__state_a48c3936791f966c865d2c28a0b305012}{at\+Start\+Slave()}}
+
+Called by Slave S\+QL thread when first applying a row to Ndb after a S\+T\+A\+RT S\+L\+A\+VE command. \mbox{\Hypertarget{structst__ndb__slave__state_a919ec93137f0ebaae6e29118882dd141}\label{structst__ndb__slave__state_a919ec93137f0ebaae6e29118882dd141}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!at\+Transaction\+Abort@{at\+Transaction\+Abort}}
+\index{at\+Transaction\+Abort@{at\+Transaction\+Abort}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{at\+Transaction\+Abort()}{atTransactionAbort()}}
+{\footnotesize\ttfamily void st\+\_\+ndb\+\_\+slave\+\_\+state\+::at\+Transaction\+Abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structst__ndb__slave__state_a919ec93137f0ebaae6e29118882dd141}{at\+Transaction\+Abort()}}
+
+Called by Slave S\+QL thread during transaction abort. \mbox{\Hypertarget{structst__ndb__slave__state_a3d731f8bfdce1ea3802fcb0cb3a27d73}\label{structst__ndb__slave__state_a3d731f8bfdce1ea3802fcb0cb3a27d73}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!at\+Transaction\+Commit@{at\+Transaction\+Commit}}
+\index{at\+Transaction\+Commit@{at\+Transaction\+Commit}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{at\+Transaction\+Commit()}{atTransactionCommit()}}
+{\footnotesize\ttfamily void st\+\_\+ndb\+\_\+slave\+\_\+state\+::at\+Transaction\+Commit (\begin{DoxyParamCaption}\item[{Uint64}]{epoch }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structst__ndb__slave__state_a3d731f8bfdce1ea3802fcb0cb3a27d73}{at\+Transaction\+Commit()}}
+
+Called by Slave S\+QL thread after transaction commit Conflict detected locally
+
+Update last\+\_\+conflicted\+\_\+epoch if we applied reflected or refresh ops (Implies Secondary role in asymmetric algorithms)
+
+This epoch which has looped the circle was stable -\/ no new conflicts have been found / corrected since it was logged
+
+Note that max\+\_\+rep\+\_\+epoch $>$= last\+\_\+conflicted\+\_\+epoch implies that there are no currently known-\/about conflicts. On the primary this is a definitive fact as it finds out about all conflicts immediately. On the secondary it does not mean that there are not committed conflicts, just that they have not started being corrected yet.\mbox{\Hypertarget{structst__ndb__slave__state_a51b92c9d78e009560db169c28cf9aaf9}\label{structst__ndb__slave__state_a51b92c9d78e009560db169c28cf9aaf9}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!check\+Slave\+Conflict\+Role\+Change@{check\+Slave\+Conflict\+Role\+Change}}
+\index{check\+Slave\+Conflict\+Role\+Change@{check\+Slave\+Conflict\+Role\+Change}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{check\+Slave\+Conflict\+Role\+Change()}{checkSlaveConflictRoleChange()}}
+{\footnotesize\ttfamily bool st\+\_\+ndb\+\_\+slave\+\_\+state\+::check\+Slave\+Conflict\+Role\+Change (\begin{DoxyParamCaption}\item[{enum\+\_\+slave\+\_\+conflict\+\_\+role}]{old\+\_\+role,  }\item[{enum\+\_\+slave\+\_\+conflict\+\_\+role}]{new\+\_\+role,  }\item[{const char $\ast$$\ast$}]{failure\+\_\+cause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initial role is S\+C\+R\+\_\+\+N\+O\+NE Allowed transitions \+: S\+C\+R\+\_\+\+N\+O\+NE -\/$>$ S\+C\+R\+\_\+\+P\+A\+SS S\+C\+R\+\_\+\+N\+O\+NE -\/$>$ S\+C\+R\+\_\+\+P\+R\+I\+M\+A\+RY S\+C\+R\+\_\+\+N\+O\+NE -\/$>$ S\+C\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY S\+C\+R\+\_\+\+P\+R\+I\+M\+A\+RY -\/$>$ S\+C\+R\+\_\+\+N\+O\+NE S\+C\+R\+\_\+\+P\+R\+I\+M\+A\+RY -\/$>$ S\+C\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY S\+C\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY -\/$>$ S\+C\+R\+\_\+\+N\+O\+NE S\+C\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY -\/$>$ S\+C\+R\+\_\+\+P\+R\+I\+M\+A\+RY S\+C\+R\+\_\+\+P\+A\+SS -\/$>$ S\+C\+R\+\_\+\+N\+O\+NE
+
+Disallowed transitions S\+C\+R\+\_\+\+P\+A\+SS -\/$>$ S\+C\+R\+\_\+\+P\+R\+I\+M\+A\+RY S\+C\+R\+\_\+\+P\+A\+SS -\/$>$ S\+C\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY S\+C\+R\+\_\+\+P\+R\+I\+M\+A\+RY -\/$>$ S\+C\+R\+\_\+\+P\+A\+SS S\+C\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+RY -\/$>$ S\+C\+R\+\_\+\+P\+A\+SS\mbox{\Hypertarget{structst__ndb__slave__state_a366692bd209be04ea4b61608dcc2780e}\label{structst__ndb__slave__state_a366692bd209be04ea4b61608dcc2780e}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!reset\+Per\+Attempt\+Counters@{reset\+Per\+Attempt\+Counters}}
+\index{reset\+Per\+Attempt\+Counters@{reset\+Per\+Attempt\+Counters}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{reset\+Per\+Attempt\+Counters()}{resetPerAttemptCounters()}}
+{\footnotesize\ttfamily void st\+\_\+ndb\+\_\+slave\+\_\+state\+::reset\+Per\+Attempt\+Counters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reset\+Per\+Attempt\+Counters
+
+Reset the per-\/epoch-\/transaction-\/application-\/attempt counters \mbox{\Hypertarget{structst__ndb__slave__state_a726e16b6e2106a13558117de0ba37757}\label{structst__ndb__slave__state_a726e16b6e2106a13558117de0ba37757}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!verify\+Next\+Epoch@{verify\+Next\+Epoch}}
+\index{verify\+Next\+Epoch@{verify\+Next\+Epoch}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{verify\+Next\+Epoch()}{verifyNextEpoch()}}
+{\footnotesize\ttfamily bool st\+\_\+ndb\+\_\+slave\+\_\+state\+::verify\+Next\+Epoch (\begin{DoxyParamCaption}\item[{Uint64}]{next\+\_\+epoch,  }\item[{Uint32}]{master\+\_\+server\+\_\+id }\end{DoxyParamCaption}) const}
+
+verify\+Next\+Epoch
+
+Check that a new incoming epoch from the relay log is expected given the current slave state, previous epoch etc. This is checking Generic replication errors, with a user warning thrown in too. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__ndb__slave__state_a19c4a75aeb841aebb76d27b362969d3c}\label{structst__ndb__slave__state_a19c4a75aeb841aebb76d27b362969d3c}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!current\+\_\+delete\+\_\+delete\+\_\+count@{current\+\_\+delete\+\_\+delete\+\_\+count}}
+\index{current\+\_\+delete\+\_\+delete\+\_\+count@{current\+\_\+delete\+\_\+delete\+\_\+count}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{current\+\_\+delete\+\_\+delete\+\_\+count}{current\_delete\_delete\_count}}
+{\footnotesize\ttfamily Uint32 st\+\_\+ndb\+\_\+slave\+\_\+state\+::current\+\_\+delete\+\_\+delete\+\_\+count}
+
+Number of delete-\/delete conflicts detected (delete op is applied, and row does not exist) \mbox{\Hypertarget{structst__ndb__slave__state_ab282a2a924875f1cfd7548c47795ea0a}\label{structst__ndb__slave__state_ab282a2a924875f1cfd7548c47795ea0a}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count@{current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count}}
+\index{current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count@{current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count}{current\_reflect\_op\_discard\_count}}
+{\footnotesize\ttfamily Uint32 st\+\_\+ndb\+\_\+slave\+\_\+state\+::current\+\_\+reflect\+\_\+op\+\_\+discard\+\_\+count}
+
+Number of reflected operations that were not applied as they hit some error during execution \mbox{\Hypertarget{structst__ndb__slave__state_a8ce32f561db5905aeb0c59419c0dcc4f}\label{structst__ndb__slave__state_a8ce32f561db5905aeb0c59419c0dcc4f}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count@{current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count}}
+\index{current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count@{current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count}{current\_reflect\_op\_prepare\_count}}
+{\footnotesize\ttfamily Uint32 st\+\_\+ndb\+\_\+slave\+\_\+state\+::current\+\_\+reflect\+\_\+op\+\_\+prepare\+\_\+count}
+
+Number of reflected operations received that have been prepared (defined) to be executed. \mbox{\Hypertarget{structst__ndb__slave__state_a03e38b1dcbe407f62fff243162a1042b}\label{structst__ndb__slave__state_a03e38b1dcbe407f62fff243162a1042b}} 
+\index{st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}!current\+\_\+refresh\+\_\+op\+\_\+count@{current\+\_\+refresh\+\_\+op\+\_\+count}}
+\index{current\+\_\+refresh\+\_\+op\+\_\+count@{current\+\_\+refresh\+\_\+op\+\_\+count}!st\+\_\+ndb\+\_\+slave\+\_\+state@{st\+\_\+ndb\+\_\+slave\+\_\+state}}
+\subsubsection{\texorpdfstring{current\+\_\+refresh\+\_\+op\+\_\+count}{current\_refresh\_op\_count}}
+{\footnotesize\ttfamily Uint32 st\+\_\+ndb\+\_\+slave\+\_\+state\+::current\+\_\+refresh\+\_\+op\+\_\+count}
+
+Number of refresh operations that have been prepared 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ndb\+\_\+conflict.\+h\item 
+ndb\+\_\+conflict.\+cc\end{DoxyCompactItemize}

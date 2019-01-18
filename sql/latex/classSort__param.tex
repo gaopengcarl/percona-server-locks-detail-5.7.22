@@ -1,0 +1,182 @@
+\hypertarget{classSort__param}{}\section{Sort\+\_\+param Class Reference}
+\label{classSort__param}\index{Sort\+\_\+param@{Sort\+\_\+param}}
+
+
+{\ttfamily \#include $<$sql\+\_\+sort.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSort__param_abed9faa9fcd10fd1fc245a1db9e3ad35}\label{classSort__param_abed9faa9fcd10fd1fc245a1db9e3ad35}} 
+typedef int($\ast$ {\bfseries chunk\+\_\+compare\+\_\+fun}) (\mbox{\hyperlink{structMerge__chunk__compare__context}{Merge\+\_\+chunk\+\_\+compare\+\_\+context}} $\ast$ctx, uchar $\ast$arg1, uchar $\ast$arg2)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSort__param_a1c88fed270d14b04d9430213e2957eab}{init\+\_\+for\+\_\+filesort}} (\mbox{\hyperlink{classFilesort}{Filesort}} $\ast$file\+\_\+sort, uint sortlen, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, ulong max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data, ha\+\_\+rows maxrows, bool sort\+\_\+positions)
+\item 
+\mbox{\Hypertarget{classSort__param_aab3d2a63aed2ceb0fe87f44987db44d5}\label{classSort__param_aab3d2a63aed2ceb0fe87f44987db44d5}} 
+void \mbox{\hyperlink{classSort__param_aab3d2a63aed2ceb0fe87f44987db44d5}{try\+\_\+to\+\_\+pack\+\_\+addons}} (ulong max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Enables the packing of addons if possible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSort__param_a2e7fb1385badc24a53c808d1e7de0099}\label{classSort__param_a2e7fb1385badc24a53c808d1e7de0099}} 
+bool \mbox{\hyperlink{classSort__param_a2e7fb1385badc24a53c808d1e7de0099}{using\+\_\+packed\+\_\+addons}} () const
+\begin{DoxyCompactList}\small\item\em Are we packing the \char`\"{}addon fields\char`\"{}? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSort__param_afb3c42f0a3293299ae92677b5d86d07e}\label{classSort__param_afb3c42f0a3293299ae92677b5d86d07e}} 
+bool \mbox{\hyperlink{classSort__param_afb3c42f0a3293299ae92677b5d86d07e}{using\+\_\+addon\+\_\+fields}} () const
+\begin{DoxyCompactList}\small\item\em Are we using \char`\"{}addon fields\char`\"{}? \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classSort__param_af1550d8933ac48ff4f9ac337429b1794}{make\+\_\+sortkey}} (uchar $\ast$to, const uchar $\ast$ref\+\_\+pos)
+\item 
+size\+\_\+t \mbox{\hyperlink{classSort__param_a6d29e4adf43d2a38309f862d4fe072f9}{compare\+\_\+length}} () const
+\item 
+void \mbox{\hyperlink{classSort__param_ab163236156a4c13ec6578d7813b50c8e}{get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len}} (uchar $\ast$record\+\_\+start, uint $\ast$recl, uint $\ast$resl)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSort__param_a2642576c28b981c3b9ade8cbe3b7d07d}\label{classSort__param_a2642576c28b981c3b9ade8cbe3b7d07d}} 
+uint {\bfseries rec\+\_\+length}
+\item 
+\mbox{\Hypertarget{classSort__param_a7d595b49a79af97f33a666245dd98683}\label{classSort__param_a7d595b49a79af97f33a666245dd98683}} 
+uint {\bfseries sort\+\_\+length}
+\item 
+\mbox{\Hypertarget{classSort__param_a1fa83123d9e269be4f7d8e7798087447}\label{classSort__param_a1fa83123d9e269be4f7d8e7798087447}} 
+uint {\bfseries ref\+\_\+length}
+\item 
+\mbox{\Hypertarget{classSort__param_ae52e94af7ce910b149c9a25049d477ee}\label{classSort__param_ae52e94af7ce910b149c9a25049d477ee}} 
+uint {\bfseries addon\+\_\+length}
+\item 
+\mbox{\Hypertarget{classSort__param_ae12b0b63f3fcd8476387cb4ce8eddd80}\label{classSort__param_ae12b0b63f3fcd8476387cb4ce8eddd80}} 
+uint {\bfseries res\+\_\+length}
+\item 
+\mbox{\Hypertarget{classSort__param_a1f63a7f5997d4f1ac2a5d14c7b0d3ac4}\label{classSort__param_a1f63a7f5997d4f1ac2a5d14c7b0d3ac4}} 
+uint {\bfseries max\+\_\+keys\+\_\+per\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{classSort__param_af0fe74cdaa27f81d83fd2754a1a17f82}\label{classSort__param_af0fe74cdaa27f81d83fd2754a1a17f82}} 
+ha\+\_\+rows {\bfseries max\+\_\+rows}
+\item 
+\mbox{\Hypertarget{classSort__param_a38737496680c2ac6b0e02b66a4dd5b7a}\label{classSort__param_a38737496680c2ac6b0e02b66a4dd5b7a}} 
+ha\+\_\+rows {\bfseries examined\+\_\+rows}
+\item 
+\mbox{\Hypertarget{classSort__param_a02811a3c23f82a1ff349df6fb8aa24d4}\label{classSort__param_a02811a3c23f82a1ff349df6fb8aa24d4}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries sort\+\_\+form}
+\item 
+\mbox{\Hypertarget{classSort__param_af104fc0beb5436123ba9c8470d2d083e}\label{classSort__param_af104fc0beb5436123ba9c8470d2d083e}} 
+bool {\bfseries use\+\_\+hash}
+\item 
+\mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$ \mbox{\hyperlink{structst__sort__field}{st\+\_\+sort\+\_\+field}} $>$ \mbox{\hyperlink{classSort__param_a296009bb82bee97d6bc9d24b1114e849}{local\+\_\+sortorder}}
+\item 
+\mbox{\Hypertarget{classSort__param_a4af9855ed31b8f380e4d1f3ec731db11}\label{classSort__param_a4af9855ed31b8f380e4d1f3ec731db11}} 
+\mbox{\hyperlink{classAddon__fields}{Addon\+\_\+fields}} $\ast$ \mbox{\hyperlink{classSort__param_a4af9855ed31b8f380e4d1f3ec731db11}{addon\+\_\+fields}}
+\begin{DoxyCompactList}\small\item\em Descriptors for addon fields. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSort__param_a514d144dde0cb20030d4c64c331248af}\label{classSort__param_a514d144dde0cb20030d4c64c331248af}} 
+uchar $\ast$ {\bfseries unique\+\_\+buff}
+\item 
+\mbox{\Hypertarget{classSort__param_aaa35c2329e1c5f2509041eb55e56695e}\label{classSort__param_aaa35c2329e1c5f2509041eb55e56695e}} 
+bool {\bfseries not\+\_\+killable}
+\item 
+\mbox{\Hypertarget{classSort__param_abf5824ce6a8ebdc00cbe7122505af858}\label{classSort__param_abf5824ce6a8ebdc00cbe7122505af858}} 
+bool {\bfseries using\+\_\+pq}
+\item 
+\mbox{\Hypertarget{classSort__param_a34f5100274496fe458a7dddd3400d545}\label{classSort__param_a34f5100274496fe458a7dddd3400d545}} 
+char $\ast$ {\bfseries tmp\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{classSort__param_af652a78b1db6619360c3d2960e7e9313}\label{classSort__param_af652a78b1db6619360c3d2960e7e9313}} 
+\mbox{\hyperlink{structMerge__chunk__compare__context}{Merge\+\_\+chunk\+\_\+compare\+\_\+context}} {\bfseries cmp\+\_\+context}
+\item 
+\mbox{\Hypertarget{classSort__param_ab9b0af6716a1a6fbc532d867e1fe436b}\label{classSort__param_ab9b0af6716a1a6fbc532d867e1fe436b}} 
+chunk\+\_\+compare\+\_\+fun {\bfseries compare}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+There are two record formats for sorting\+: $\vert$$<$key a$>$=\char`\"{}\char`\"{}$>$$<$key b$>$=\char`\"{}\char`\"{}$>$...$\vert$$<$rowid$>$$\vert$ / sort\+\_\+length / ref\+\_\+l /
+
+or with \char`\"{}addon fields\char`\"{} $\vert$$<$key a$>$=\char`\"{}\char`\"{}$>$$<$key b$>$=\char`\"{}\char`\"{}$>$...$\vert$$<$null bits$>$=\char`\"{}\char`\"{}$>$$\vert$$<$field a$>$=\char`\"{}\char`\"{}$>$$<$field b$>$=\char`\"{}\char`\"{}$>$...$\vert$ / sort\+\_\+length / addon\+\_\+length /
+
+The packed format for \char`\"{}addon fields\char`\"{} $\vert$$<$key a$>$=\char`\"{}\char`\"{}$>$$<$key b$>$=\char`\"{}\char`\"{}$>$...$\vert$$<$length$>$$\vert$$<$null bits$>$=\char`\"{}\char`\"{}$>$$\vert$$<$field a$>$=\char`\"{}\char`\"{}$>$$<$field b$>$=\char`\"{}\char`\"{}$>$...$\vert$ / sort\+\_\+length / addon\+\_\+length /
+
+$<$key$>$ Fields are fixed-\/size, specially encoded with \mbox{\hyperlink{classField_af3bc27d237b6ae6ef3dc7a2aec3d79ac}{Field\+::make\+\_\+sort\+\_\+key()}} so we can do byte-\/by-\/byte compare. $<$length$>$ Contains the {\itshape actual} packed length (after packing) of everything after the sort keys. The size of the length field is 2 bytes, which should cover most use cases\+: addon data $<$= 65535 bytes. This is the same as max record size in My\+S\+QL. $<$null bits$>$=\char`\"{}\char`\"{}$>$ One bit for each nullable field, indicating whether the field is null or not. May have size zero if no fields are nullable. $<$field xx$>$=\char`\"{}\char`\"{}$>$ Are stored with field-\/$>$pack(), and retrieved with field-\/$>$unpack(). Addon fields within a record are stored consecutively, with no \char`\"{}holes\char`\"{} or padding. They will have zero size for N\+U\+LL values. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSort__param_a6d29e4adf43d2a38309f862d4fe072f9}\label{classSort__param_a6d29e4adf43d2a38309f862d4fe072f9}} 
+\index{Sort\+\_\+param@{Sort\+\_\+param}!compare\+\_\+length@{compare\+\_\+length}}
+\index{compare\+\_\+length@{compare\+\_\+length}!Sort\+\_\+param@{Sort\+\_\+param}}
+\subsubsection{\texorpdfstring{compare\+\_\+length()}{compare\_length()}}
+{\footnotesize\ttfamily size\+\_\+t Sort\+\_\+param\+::compare\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of bytes used for sorting. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSort__param_ab163236156a4c13ec6578d7813b50c8e}\label{classSort__param_ab163236156a4c13ec6578d7813b50c8e}} 
+\index{Sort\+\_\+param@{Sort\+\_\+param}!get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len@{get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len}}
+\index{get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len@{get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len}!Sort\+\_\+param@{Sort\+\_\+param}}
+\subsubsection{\texorpdfstring{get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len()}{get\_rec\_and\_res\_len()}}
+{\footnotesize\ttfamily void Sort\+\_\+param\+::get\+\_\+rec\+\_\+and\+\_\+res\+\_\+len (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{record\+\_\+start,  }\item[{uint $\ast$}]{recl,  }\item[{uint $\ast$}]{resl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for record length and result length. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em record\+\_\+start} & Pointer to record. \\
+\hline
+\mbox{\texttt{ out}}  & {\em recl} & Store record length here. \\
+\hline
+\mbox{\texttt{ out}}  & {\em resl} & Store result length here. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSort__param_a1c88fed270d14b04d9430213e2957eab}\label{classSort__param_a1c88fed270d14b04d9430213e2957eab}} 
+\index{Sort\+\_\+param@{Sort\+\_\+param}!init\+\_\+for\+\_\+filesort@{init\+\_\+for\+\_\+filesort}}
+\index{init\+\_\+for\+\_\+filesort@{init\+\_\+for\+\_\+filesort}!Sort\+\_\+param@{Sort\+\_\+param}}
+\subsubsection{\texorpdfstring{init\+\_\+for\+\_\+filesort()}{init\_for\_filesort()}}
+{\footnotesize\ttfamily void Sort\+\_\+param\+::init\+\_\+for\+\_\+filesort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFilesort}{Filesort}} $\ast$}]{file\+\_\+sort,  }\item[{uint}]{sortlen,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{ulong}]{max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data,  }\item[{ha\+\_\+rows}]{maxrows,  }\item[{bool}]{sort\+\_\+positions }\end{DoxyParamCaption})}
+
+Initialize this struct for \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}} usage. \begin{DoxySeeAlso}{See also}
+description of record layout above. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em file\+\_\+sort} & Sorting information which may be re-\/used on subsequent invocations of \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}}. \\
+\hline
+ & {\em sortlen} & Length of sorted columns. \\
+\hline
+ & {\em table} & Table to be sorted. \\
+\hline
+ & {\em max\+\_\+length\+\_\+for\+\_\+sort\+\_\+data} & From thd-\/$>$variables. \\
+\hline
+ & {\em maxrows} & H\+A\+\_\+\+P\+O\+S\+\_\+\+E\+R\+R\+OR or possible L\+I\+M\+IT value. \\
+\hline
+ & {\em sort\+\_\+positions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+documentation for the \mbox{\hyperlink{filesort_8cc_a953fde8362f86f7fb832e9a1e2c06530}{filesort()}} function. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classSort__param_af1550d8933ac48ff4f9ac337429b1794}\label{classSort__param_af1550d8933ac48ff4f9ac337429b1794}} 
+\index{Sort\+\_\+param@{Sort\+\_\+param}!make\+\_\+sortkey@{make\+\_\+sortkey}}
+\index{make\+\_\+sortkey@{make\+\_\+sortkey}!Sort\+\_\+param@{Sort\+\_\+param}}
+\subsubsection{\texorpdfstring{make\+\_\+sortkey()}{make\_sortkey()}}
+{\footnotesize\ttfamily uint Sort\+\_\+param\+::make\+\_\+sortkey (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{to,  }\item[{const uchar $\ast$}]{ref\+\_\+pos }\end{DoxyParamCaption})}
+
+Stores key fields in $\ast$to. Then appends either $\ast$ref\+\_\+pos (the $<$rowid$>$) or the \char`\"{}addon fields\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em to} & out Where to store the result \\
+\hline
+{\em ref\+\_\+pos} & in Where to find the $<$rowid$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes stored. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSort__param_a296009bb82bee97d6bc9d24b1114e849}\label{classSort__param_a296009bb82bee97d6bc9d24b1114e849}} 
+\index{Sort\+\_\+param@{Sort\+\_\+param}!local\+\_\+sortorder@{local\+\_\+sortorder}}
+\index{local\+\_\+sortorder@{local\+\_\+sortorder}!Sort\+\_\+param@{Sort\+\_\+param}}
+\subsubsection{\texorpdfstring{local\+\_\+sortorder}{local\_sortorder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBounds__checked__array}{Bounds\+\_\+checked\+\_\+array}}$<$\mbox{\hyperlink{structst__sort__field}{st\+\_\+sort\+\_\+field}}$>$ Sort\+\_\+param\+::local\+\_\+sortorder}
+
+O\+R\+D\+ER BY list with some precalculated info for filesort. Array is created and owned by a \mbox{\hyperlink{classFilesort}{Filesort}} instance. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+sort.\+h\item 
+\mbox{\hyperlink{filesort_8cc}{filesort.\+cc}}\end{DoxyCompactItemize}

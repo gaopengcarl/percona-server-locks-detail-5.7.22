@@ -1,0 +1,36 @@
+\hypertarget{group__RefOptimizerModule}{}\section{Ref Optimizer}
+\label{group__RefOptimizerModule}\index{Ref Optimizer@{Ref Optimizer}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structKey__field}{Key\+\_\+field}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__RefOptimizerModule_ga58297bde0da4187801e718c29d5d6b5e}\label{group__RefOptimizerModule_ga58297bde0da4187801e718c29d5d6b5e}} 
+\#define {\bfseries K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+E\+X\+I\+S\+TS}~1
+\item 
+\mbox{\Hypertarget{group__RefOptimizerModule_ga0658a5d9673135da1c2f6463f0537405}\label{group__RefOptimizerModule_ga0658a5d9673135da1c2f6463f0537405}} 
+\#define {\bfseries K\+E\+Y\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+\_\+\+R\+E\+F\+\_\+\+O\+R\+\_\+\+N\+U\+LL}~2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module analyzes all equality predicates to determine the best independent ref/eq\+\_\+ref/ref\+\_\+or\+\_\+null index access methods.
+
+The \textquotesingle{}ref\textquotesingle{} optimizer determines the columns (and expressions over them) that reference columns in other tables via an equality, and analyzes which keys and key parts can be used for index lookup based on these references. The main outcomes of the \textquotesingle{}ref\textquotesingle{} optimizer are\+:
+
+
+\begin{DoxyItemize}
+\item A bi-\/directional graph of all equi-\/join conditions represented as an array of \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} elements. This array is stored in J\+O\+I\+N\+::keyuse\+\_\+array in table, key, keypart order. Each J\+O\+I\+N\+\_\+\+T\+A\+B\+::keyuse points to the first \mbox{\hyperlink{classKey__use}{Key\+\_\+use}} element with the same table as J\+O\+I\+N\+\_\+\+T\+A\+B\+::table.
+\item The table dependencies needed by the optimizer to determine what tables must be before certain table so that they provide the necessary column bindings for the equality predicates.
+\item Computed properties of the equality predicates such as null\+\_\+rejecting and the result size of each separate condition.
+\end{DoxyItemize}
+
+Updates in \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}\+:
+\begin{DoxyItemize}
+\item J\+O\+I\+N\+\_\+\+T\+A\+B\+::keys \mbox{\hyperlink{classBitmap}{Bitmap}} of all used keys.
+\item \mbox{\hyperlink{classJOIN__TAB_a338f4f13ed22b1d5bc4a1807f7e15705}{J\+O\+I\+N\+\_\+\+T\+A\+B\+::const\+\_\+keys}} \mbox{\hyperlink{classBitmap}{Bitmap}} of all keys that may be used with quick\+\_\+select.
+\item J\+O\+I\+N\+\_\+\+T\+A\+B\+::keyuse Pointer to possible keys. 
+\end{DoxyItemize}

@@ -1,0 +1,143 @@
+\hypertarget{classItem__outer__ref}{}\section{Item\+\_\+outer\+\_\+ref Class Reference}
+\label{classItem__outer__ref}\index{Item\+\_\+outer\+\_\+ref@{Item\+\_\+outer\+\_\+ref}}
+Inheritance diagram for Item\+\_\+outer\+\_\+ref\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classItem__outer__ref}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_a00c058e47094ba628524023960d0638f}\label{classItem__outer__ref_a00c058e47094ba628524023960d0638f}} 
+{\bfseries Item\+\_\+outer\+\_\+ref} (\mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context\+\_\+arg, \mbox{\hyperlink{classItem__ident}{Item\+\_\+ident}} $\ast$ident\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_aae2c4e7bd3b12889c0448b2bce1d9f8d}\label{classItem__outer__ref_aae2c4e7bd3b12889c0448b2bce1d9f8d}} 
+{\bfseries Item\+\_\+outer\+\_\+ref} (\mbox{\hyperlink{structName__resolution__context}{Name\+\_\+resolution\+\_\+context}} $\ast$context\+\_\+arg, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$item, const char $\ast$table\+\_\+name\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, bool alias\+\_\+of\+\_\+expr\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_ae9af1455f1442b4e5d6ef2543e72d26c}\label{classItem__outer__ref_ae9af1455f1442b4e5d6ef2543e72d26c}} 
+void {\bfseries save\+\_\+in\+\_\+result\+\_\+field} (bool no\+\_\+conversions)
+\item 
+bool \mbox{\hyperlink{classItem__outer__ref_afa87a075b4924dc80749a8e02605d196}{fix\+\_\+fields}} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+void \mbox{\hyperlink{classItem__outer__ref_a30ff5c4083f8d4d7c6ab5c7b2b4fac0c}{fix\+\_\+after\+\_\+pullout}} (st\+\_\+select\+\_\+lex $\ast$parent\+\_\+select, st\+\_\+select\+\_\+lex $\ast$removed\+\_\+select)
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_aa2c513fa1efe5ea75783011cc55fa6f1}\label{classItem__outer__ref_aa2c513fa1efe5ea75783011cc55fa6f1}} 
+table\+\_\+map {\bfseries used\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_aa5e01a31254b73761d63af519e820c0e}\label{classItem__outer__ref_aa5e01a31254b73761d63af519e820c0e}} 
+table\+\_\+map {\bfseries not\+\_\+null\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_a8f395d509b8eafcd8a026dbc8c50512d}\label{classItem__outer__ref_a8f395d509b8eafcd8a026dbc8c50512d}} 
+virtual Ref\+\_\+\+Type {\bfseries ref\+\_\+type} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_a4d409b88ddeda608976ecb237d036ad4}\label{classItem__outer__ref_a4d409b88ddeda608976ecb237d036ad4}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries outer\+\_\+ref}
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_ac0f66190b1caea43444899728643a05d}\label{classItem__outer__ref_ac0f66190b1caea43444899728643a05d}} 
+\mbox{\hyperlink{classItem__sum}{Item\+\_\+sum}} $\ast$ {\bfseries in\+\_\+sum\+\_\+func}
+\item 
+\mbox{\Hypertarget{classItem__outer__ref_a11dee5a66aab38e6fbca2777bb5716ab}\label{classItem__outer__ref_a11dee5a66aab38e6fbca2777bb5716ab}} 
+bool {\bfseries found\+\_\+in\+\_\+select\+\_\+list}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__outer__ref_a30ff5c4083f8d4d7c6ab5c7b2b4fac0c}\label{classItem__outer__ref_a30ff5c4083f8d4d7c6ab5c7b2b4fac0c}} 
+\index{Item\+\_\+outer\+\_\+ref@{Item\+\_\+outer\+\_\+ref}!fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}}
+\index{fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}!Item\+\_\+outer\+\_\+ref@{Item\+\_\+outer\+\_\+ref}}
+\subsubsection{\texorpdfstring{fix\+\_\+after\+\_\+pullout()}{fix\_after\_pullout()}}
+{\footnotesize\ttfamily void Item\+\_\+outer\+\_\+ref\+::fix\+\_\+after\+\_\+pullout (\begin{DoxyParamCaption}\item[{st\+\_\+select\+\_\+lex $\ast$}]{parent\+\_\+select,  }\item[{st\+\_\+select\+\_\+lex $\ast$}]{removed\+\_\+select }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Fix after tables have been moved from one select\+\_\+lex level to the parent level, e.\+g by semijoin conversion. Basically re-\/calculate all attributes dependent on the tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+\_\+select} & select\+\_\+lex that tables are moved to. \\
+\hline
+{\em removed\+\_\+select} & select\+\_\+lex that tables are moved away from, child of parent\+\_\+select. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_a54fdde8c2418171d5f529e24d733f357}{Item\+\_\+ref}}.
+
+\mbox{\Hypertarget{classItem__outer__ref_afa87a075b4924dc80749a8e02605d196}\label{classItem__outer__ref_afa87a075b4924dc80749a8e02605d196}} 
+\index{Item\+\_\+outer\+\_\+ref@{Item\+\_\+outer\+\_\+ref}!fix\+\_\+fields@{fix\+\_\+fields}}
+\index{fix\+\_\+fields@{fix\+\_\+fields}!Item\+\_\+outer\+\_\+ref@{Item\+\_\+outer\+\_\+ref}}
+\subsubsection{\texorpdfstring{fix\+\_\+fields()}{fix\_fields()}}
+{\footnotesize\ttfamily bool Item\+\_\+outer\+\_\+ref\+::fix\+\_\+fields (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$}]{reference }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Resolve the name of a reference to a column reference.
+
+The method resolves the column reference represented by \textquotesingle{}this\textquotesingle{} as a column present in one of\+: G\+R\+O\+UP BY clause, S\+E\+L\+E\+CT clause, outer queries. It is used typically for columns in the H\+A\+V\+I\+NG clause which are not under aggregate functions.
+
+P\+O\+S\+T\+C\+O\+N\+D\+I\+T\+I\+ON ~\newline
+Item\+\_\+ref\+::ref is 0 or points to a valid item.
+
+\begin{DoxyNote}{Note}
+The name resolution algorithm used is (where \mbox{[}T\+\_\+j\mbox{]} is an optional table name that qualifies the column name)\+:
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{resolve\_extended([T\_j].col\_ref\_i)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  Search \textcolor{keywordflow}{for} a column or derived column named col\_ref\_i [in table T\_j]}
+\DoxyCodeLine{  in the SELECT and GROUP clauses of Q.}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} such a column is NOT found AND    \textcolor{comment}{// Lookup in outer queries.}}
+\DoxyCodeLine{     there are outer queries}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{for each} outer query Q\_k beginning from the inner-most one}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{      Search \textcolor{keywordflow}{for} a column or derived column named col\_ref\_i}
+\DoxyCodeLine{      [in table T\_j] in the SELECT and GROUP clauses of Q\_k.}
+\DoxyCodeLine{}
+\DoxyCodeLine{      \textcolor{keywordflow}{if} such a column is not found AND}
+\DoxyCodeLine{         - Q\_k is not a group query AND}
+\DoxyCodeLine{         - Q\_k is not inside an aggregate \textcolor{keyword}{function}}
+\DoxyCodeLine{         OR}
+\DoxyCodeLine{         - Q\_(k-1) is not in a HAVING or SELECT clause of Q\_k}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{        search \textcolor{keywordflow}{for} a column or derived column named col\_ref\_i}
+\DoxyCodeLine{        [in table T\_j] in the FROM clause of Q\_k;}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ ~\newline
+ This procedure treats G\+R\+O\+UP BY and S\+E\+L\+E\+CT clauses as one namespace for column references in H\+A\+V\+I\+NG. Notice that compared to \mbox{\hyperlink{classItem__field_af2e31f1efd8af31c01f0e6dc8f41aea6}{Item\+\_\+field\+::fix\+\_\+fields}}, here we first search the S\+E\+L\+E\+CT and G\+R\+O\+UP BY clauses, and then we search the F\+R\+OM clause.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & current thread \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em reference} & view column if this item was resolved to a view column\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000029}{Todo}}]Here we could first find the field anyway, and then test this condition, so that we can give a better error message -\/ E\+R\+\_\+\+W\+R\+O\+N\+G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+T\+H\+\_\+\+G\+R\+O\+UP, instead of the less informative E\+R\+\_\+\+B\+A\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+R\+R\+OR which we produce now.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & if error \\
+\hline
+{\em F\+A\+L\+SE} & on success \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem__ref_a6a78e05b0db89e799f61808c621b808f}{Item\+\_\+ref}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

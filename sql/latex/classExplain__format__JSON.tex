@@ -1,0 +1,144 @@
+\hypertarget{classExplain__format__JSON}{}\section{Explain\+\_\+format\+\_\+\+J\+S\+ON Class Reference}
+\label{classExplain__format__JSON}\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+
+
+{\ttfamily \#include $<$opt\+\_\+explain\+\_\+json.\+h$>$}
+
+Inheritance diagram for Explain\+\_\+format\+\_\+\+J\+S\+ON\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classExplain__format__JSON}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format__JSON_a5df8ad340d44c6d184be5f6397ab8d99}{is\+\_\+hierarchical}} () const
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format__JSON_a66a631eb1439d85e5616b86bbbddc923}{send\+\_\+headers}} (Query\+\_\+result $\ast$result)
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format__JSON_a3de95e88857de347b30c13ca519c757f}{begin\+\_\+context}} (enum\+\_\+parsing\+\_\+context context, S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$subquery, const \mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} $\ast$flags)
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format__JSON_a6b44f355df4e59b3d33b6c334d8fda59}{end\+\_\+context}} (enum\+\_\+parsing\+\_\+context context)
+\item 
+virtual bool \mbox{\hyperlink{classExplain__format__JSON_adf08f2f20ae05ca772a621f6139be6aa}{flush\+\_\+entry}} ()
+\item 
+virtual \mbox{\hyperlink{classqep__row}{qep\+\_\+row}} $\ast$ \mbox{\hyperlink{classExplain__format__JSON_ab1c4bc5ad6055507a47057fe98ba55dc}{entry}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Formatter class for E\+X\+P\+L\+A\+IN F\+O\+R\+M\+AT=J\+S\+ON output 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExplain__format__JSON_a3de95e88857de347b30c13ca519c757f}\label{classExplain__format__JSON_a3de95e88857de347b30c13ca519c757f}} 
+\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}!begin\+\_\+context@{begin\+\_\+context}}
+\index{begin\+\_\+context@{begin\+\_\+context}!Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{begin\+\_\+context()}{begin\_context()}}
+{\footnotesize\ttfamily bool Explain\+\_\+format\+\_\+\+J\+S\+O\+N\+::begin\+\_\+context (\begin{DoxyParamCaption}\item[{enum\+\_\+parsing\+\_\+context}]{context,  }\item[{S\+E\+L\+E\+C\+T\+\_\+\+L\+E\+X\+\_\+\+U\+N\+IT $\ast$}]{subquery,  }\item[{const \mbox{\hyperlink{classExplain__format__flags}{Explain\+\_\+format\+\_\+flags}} $\ast$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Enter a specified context
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & context type \\
+\hline
+{\em subquery} & for C\+T\+X\+\_\+\+W\+H\+E\+RE\+: unit of the subquery \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classExplain__format_aedfa1f1b941f522948707e4fa3368f79}{Explain\+\_\+format}}.
+
+\mbox{\Hypertarget{classExplain__format__JSON_a6b44f355df4e59b3d33b6c334d8fda59}\label{classExplain__format__JSON_a6b44f355df4e59b3d33b6c334d8fda59}} 
+\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}!end\+\_\+context@{end\+\_\+context}}
+\index{end\+\_\+context@{end\+\_\+context}!Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{end\+\_\+context()}{end\_context()}}
+{\footnotesize\ttfamily bool Explain\+\_\+format\+\_\+\+J\+S\+O\+N\+::end\+\_\+context (\begin{DoxyParamCaption}\item[{enum\+\_\+parsing\+\_\+context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Leave the current context
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & current context type (for validation/debugging) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classExplain__format_a3d668c297dd5fb8ae34b11fe89dfc02b}{Explain\+\_\+format}}.
+
+\mbox{\Hypertarget{classExplain__format__JSON_ab1c4bc5ad6055507a47057fe98ba55dc}\label{classExplain__format__JSON_ab1c4bc5ad6055507a47057fe98ba55dc}} 
+\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}!entry@{entry}}
+\index{entry@{entry}!Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{entry()}{entry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classqep__row}{qep\+\_\+row}} $\ast$ Explain\+\_\+format\+\_\+\+J\+S\+O\+N\+::entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get a pointer to the current T\+A\+B\+L\+E/\+J\+O\+I\+N\+\_\+\+T\+AB property set 
+
+Implements \mbox{\hyperlink{classExplain__format_aa822adf89028df0cdb74d39065ee9e5a}{Explain\+\_\+format}}.
+
+\mbox{\Hypertarget{classExplain__format__JSON_adf08f2f20ae05ca772a621f6139be6aa}\label{classExplain__format__JSON_adf08f2f20ae05ca772a621f6139be6aa}} 
+\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}!flush\+\_\+entry@{flush\+\_\+entry}}
+\index{flush\+\_\+entry@{flush\+\_\+entry}!Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{flush\+\_\+entry()}{flush\_entry()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+\_\+\+J\+S\+O\+N\+::flush\+\_\+entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Flush T\+A\+B\+L\+E/\+J\+O\+I\+N\+\_\+\+T\+AB property set
+
+For traditional E\+X\+P\+L\+A\+IN\+: output a single E\+X\+P\+L\+A\+IN row. 
+
+Implements \mbox{\hyperlink{classExplain__format_a3907382576a43a2fa4ed554f5d13e158}{Explain\+\_\+format}}.
+
+\mbox{\Hypertarget{classExplain__format__JSON_a5df8ad340d44c6d184be5f6397ab8d99}\label{classExplain__format__JSON_a5df8ad340d44c6d184be5f6397ab8d99}} 
+\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}!is\+\_\+hierarchical@{is\+\_\+hierarchical}}
+\index{is\+\_\+hierarchical@{is\+\_\+hierarchical}!Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{is\+\_\+hierarchical()}{is\_hierarchical()}}
+{\footnotesize\ttfamily virtual bool Explain\+\_\+format\+\_\+\+J\+S\+O\+N\+::is\+\_\+hierarchical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+A hierarchical text or a plain table
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Formatter produces hierarchical text \\
+\hline
+{\em false} & Traditional explain \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classExplain__format_a91ab0cd859549a7df55746df2491ca60}{Explain\+\_\+format}}.
+
+\mbox{\Hypertarget{classExplain__format__JSON_a66a631eb1439d85e5616b86bbbddc923}\label{classExplain__format__JSON_a66a631eb1439d85e5616b86bbbddc923}} 
+\index{Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}!send\+\_\+headers@{send\+\_\+headers}}
+\index{send\+\_\+headers@{send\+\_\+headers}!Explain\+\_\+format\+\_\+\+J\+S\+ON@{Explain\+\_\+format\+\_\+\+J\+S\+ON}}
+\subsubsection{\texorpdfstring{send\+\_\+headers()}{send\_headers()}}
+{\footnotesize\ttfamily bool Explain\+\_\+format\+\_\+\+J\+S\+O\+N\+::send\+\_\+headers (\begin{DoxyParamCaption}\item[{Query\+\_\+result $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Send E\+X\+P\+L\+A\+IN header item(s) to output stream
+
+\begin{DoxyNote}{Note}
+\+: This function caches the output result set pointer for further use.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em result} & output result set\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & OK \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classExplain__format_ae4808c82b9c88d94ede33477753917f3}{Explain\+\_\+format}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+json.\+h\item 
+opt\+\_\+explain\+\_\+json.\+cc\end{DoxyCompactItemize}

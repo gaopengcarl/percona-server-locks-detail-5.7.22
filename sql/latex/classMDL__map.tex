@@ -1,0 +1,137 @@
+\hypertarget{classMDL__map}{}\section{M\+D\+L\+\_\+map Class Reference}
+\label{classMDL__map}\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMDL__map_aa98c33d4b7deccff3e9b2e5defed7928}{init}} ()
+\item 
+void \mbox{\hyperlink{classMDL__map_a7a127c75240de9ed98680f55a6c3c640}{destroy}} ()
+\item 
+\mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ \mbox{\hyperlink{classMDL__map_ae128210a2659d0f2e6781139e05e5465}{find}} (L\+F\+\_\+\+P\+I\+NS $\ast$pins, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$key, bool $\ast$pinned)
+\item 
+\mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ \mbox{\hyperlink{classMDL__map_a03f90967e861573bd4ce306d27ceb32c}{find\+\_\+or\+\_\+insert}} (L\+F\+\_\+\+P\+I\+NS $\ast$pins, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$key, bool $\ast$pinned)
+\item 
+void \mbox{\hyperlink{classMDL__map_aa03282e94ef98f16db215151ebf69844}{lock\+\_\+object\+\_\+used}} ()
+\item 
+void \mbox{\hyperlink{classMDL__map_a4451a25836d0e6fc7be87e33c8f9d0ec}{lock\+\_\+object\+\_\+unused}} (\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$ctx, L\+F\+\_\+\+P\+I\+NS $\ast$pins)
+\item 
+int32 \mbox{\hyperlink{classMDL__map_af4c5043a0a8b8deac2a1d330c174056d}{get\+\_\+unused\+\_\+locks\+\_\+count}} () const
+\item 
+L\+F\+\_\+\+P\+I\+NS $\ast$ \mbox{\hyperlink{classMDL__map_a1f761cb64053bfe1f1239be0095efcf5}{get\+\_\+pins}} ()
+\item 
+bool \mbox{\hyperlink{classMDL__map_a7ecc606e53a2b8bfa5714dcba3e795f2}{is\+\_\+lock\+\_\+object\+\_\+singleton}} (const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A collection of all M\+DL locks. A singleton, there is only one instance of the map in the server. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMDL__map_a7a127c75240de9ed98680f55a6c3c640}\label{classMDL__map_a7a127c75240de9ed98680f55a6c3c640}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!destroy@{destroy}}
+\index{destroy@{destroy}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+map\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destroy the container for all M\+DL locks. \begin{DoxyPrecond}{Precondition}
+It must be empty. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classMDL__map_ae128210a2659d0f2e6781139e05e5465}\label{classMDL__map_ae128210a2659d0f2e6781139e05e5465}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!find@{find}}
+\index{find@{find}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ M\+D\+L\+\_\+map\+::find (\begin{DoxyParamCaption}\item[{L\+F\+\_\+\+P\+I\+NS $\ast$}]{pins,  }\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key,  }\item[{bool $\ast$}]{pinned }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object corresponding to the key.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \mbox{[}in/out\mbox{]}} & pins L\+F\+\_\+\+P\+I\+NS to be used for pinning pointers during look-\/up and returned \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mdl\+\_\+key} & \mbox{\hyperlink{classKey}{Key}} for which \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object needs to be found. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pinned} & T\+R\+UE -\/ if \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object is pinned, F\+A\+L\+SE -\/ if \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object doesn\textquotesingle{}t require pinning (i.\+e. it is an object for G\+L\+O\+B\+AL or C\+O\+M\+M\+IT namespaces).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em M\+Y\+\_\+\+E\+R\+R\+P\+TR} & -\/ Failure (O\+OM) \\
+\hline
+{\em other-\/non-\/\+N\+U\+LL} & -\/ \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object found. \\
+\hline
+{\em N\+U\+LL} & -\/ Object not found. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__map_a03f90967e861573bd4ce306d27ceb32c}\label{classMDL__map_a03f90967e861573bd4ce306d27ceb32c}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!find\+\_\+or\+\_\+insert@{find\+\_\+or\+\_\+insert}}
+\index{find\+\_\+or\+\_\+insert@{find\+\_\+or\+\_\+insert}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{find\+\_\+or\+\_\+insert()}{find\_or\_insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} $\ast$ M\+D\+L\+\_\+map\+::find\+\_\+or\+\_\+insert (\begin{DoxyParamCaption}\item[{L\+F\+\_\+\+P\+I\+NS $\ast$}]{pins,  }\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key,  }\item[{bool $\ast$}]{pinned }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object corresponding to the key, create it if it does not exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \mbox{[}in/out\mbox{]}} & pins L\+F\+\_\+\+P\+I\+NS to be used for pinning pointers during look-\/up and returned \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mdl\+\_\+key} & \mbox{\hyperlink{classKey}{Key}} for which \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object needs to be found. \\
+\hline
+\mbox{\texttt{ out}}  & {\em pinned} & T\+R\+UE -\/ if \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object is pinned, F\+A\+L\+SE -\/ if \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object doesn\textquotesingle{}t require pinning (i.\+e. it is an object for G\+L\+O\+B\+AL or C\+O\+M\+M\+IT namespaces).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em non-\/\+N\+U\+LL} & -\/ Success. \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} instance for the key with locked \mbox{\hyperlink{classMDL__lock_a1308b4506d8cb6d754b4f173e3aa4962}{M\+D\+L\+\_\+lock\+::m\+\_\+rwlock}}. \\
+\hline
+{\em N\+U\+LL} & -\/ Failure (O\+OM). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classMDL__map_a1f761cb64053bfe1f1239be0095efcf5}\label{classMDL__map_a1f761cb64053bfe1f1239be0095efcf5}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!get\+\_\+pins@{get\+\_\+pins}}
+\index{get\+\_\+pins@{get\+\_\+pins}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{get\+\_\+pins()}{get\_pins()}}
+{\footnotesize\ttfamily L\+F\+\_\+\+P\+I\+NS$\ast$ M\+D\+L\+\_\+map\+::get\+\_\+pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate pins which are necessary for M\+D\+L\+\_\+context/thread to be able to work with \mbox{\hyperlink{classMDL__map}{M\+D\+L\+\_\+map}} container. \mbox{\Hypertarget{classMDL__map_af4c5043a0a8b8deac2a1d330c174056d}\label{classMDL__map_af4c5043a0a8b8deac2a1d330c174056d}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!get\+\_\+unused\+\_\+locks\+\_\+count@{get\+\_\+unused\+\_\+locks\+\_\+count}}
+\index{get\+\_\+unused\+\_\+locks\+\_\+count@{get\+\_\+unused\+\_\+locks\+\_\+count}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{get\+\_\+unused\+\_\+locks\+\_\+count()}{get\_unused\_locks\_count()}}
+{\footnotesize\ttfamily int32 M\+D\+L\+\_\+map\+::get\+\_\+unused\+\_\+locks\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get number of unused \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} objects in \mbox{\hyperlink{classMDL__map}{M\+D\+L\+\_\+map}} cache.
+
+\begin{DoxyNote}{Note}
+Does non-\/atomic read so can return stale results. This is OK since this method is used only in unit-\/tests. The latter employ means of thread synchronization which are external to M\+DL and prevent memory reordering/ensure that thread calling this method have up-\/to-\/date view on the memory. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+m\+\_\+unused\+\_\+lock\+\_\+objects. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMDL__map_aa98c33d4b7deccff3e9b2e5defed7928}\label{classMDL__map_aa98c33d4b7deccff3e9b2e5defed7928}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!init@{init}}
+\index{init@{init}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+map\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize the container for all M\+DL locks. \mbox{\Hypertarget{classMDL__map_a7ecc606e53a2b8bfa5714dcba3e795f2}\label{classMDL__map_a7ecc606e53a2b8bfa5714dcba3e795f2}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!is\+\_\+lock\+\_\+object\+\_\+singleton@{is\+\_\+lock\+\_\+object\+\_\+singleton}}
+\index{is\+\_\+lock\+\_\+object\+\_\+singleton@{is\+\_\+lock\+\_\+object\+\_\+singleton}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{is\+\_\+lock\+\_\+object\+\_\+singleton()}{is\_lock\_object\_singleton()}}
+{\footnotesize\ttfamily bool M\+D\+L\+\_\+map\+::is\+\_\+lock\+\_\+object\+\_\+singleton (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$}]{mdl\+\_\+key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} object corresponding to the key is going to be singleton. \mbox{\Hypertarget{classMDL__map_a4451a25836d0e6fc7be87e33c8f9d0ec}\label{classMDL__map_a4451a25836d0e6fc7be87e33c8f9d0ec}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!lock\+\_\+object\+\_\+unused@{lock\+\_\+object\+\_\+unused}}
+\index{lock\+\_\+object\+\_\+unused@{lock\+\_\+object\+\_\+unused}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{lock\+\_\+object\+\_\+unused()}{lock\_object\_unused()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+map\+::lock\+\_\+object\+\_\+unused (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMDL__context}{M\+D\+L\+\_\+context}} $\ast$}]{ctx,  }\item[{L\+F\+\_\+\+P\+I\+NS $\ast$}]{pins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increment unused \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} objects counter. If number of such objects exceeds threshold and unused/total objects ratio is high enough try to free some of them. \mbox{\Hypertarget{classMDL__map_aa03282e94ef98f16db215151ebf69844}\label{classMDL__map_aa03282e94ef98f16db215151ebf69844}} 
+\index{M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}!lock\+\_\+object\+\_\+used@{lock\+\_\+object\+\_\+used}}
+\index{lock\+\_\+object\+\_\+used@{lock\+\_\+object\+\_\+used}!M\+D\+L\+\_\+map@{M\+D\+L\+\_\+map}}
+\subsubsection{\texorpdfstring{lock\+\_\+object\+\_\+used()}{lock\_object\_used()}}
+{\footnotesize\ttfamily void M\+D\+L\+\_\+map\+::lock\+\_\+object\+\_\+used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Decrement unused \mbox{\hyperlink{classMDL__lock}{M\+D\+L\+\_\+lock}} objects counter. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mdl.\+cc\end{DoxyCompactItemize}

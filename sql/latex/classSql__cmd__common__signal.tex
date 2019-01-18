@@ -1,0 +1,123 @@
+\hypertarget{classSql__cmd__common__signal}{}\section{Sql\+\_\+cmd\+\_\+common\+\_\+signal Class Reference}
+\label{classSql__cmd__common__signal}\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+
+
+{\ttfamily \#include $<$sql\+\_\+signal.\+h$>$}
+
+Inheritance diagram for Sql\+\_\+cmd\+\_\+common\+\_\+signal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSql__cmd__common__signal}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSql__cmd__common__signal_a0244836afdcb89c3e9ff3b80c90dd908}{Sql\+\_\+cmd\+\_\+common\+\_\+signal}} (const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$cond, \mbox{\hyperlink{classSet__signal__information}{Set\+\_\+signal\+\_\+information}} $\ast$set)
+\item 
+void \mbox{\hyperlink{classSql__cmd__common__signal_adf096fc8dfc88cd1d11bee5d934cfeef}{eval\+\_\+defaults}} (T\+HD $\ast$thd, \mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$cond)
+\item 
+int \mbox{\hyperlink{classSql__cmd__common__signal_a6994c11527b7284868e9bed5c3783d7e}{eval\+\_\+signal\+\_\+informations}} (T\+HD $\ast$thd, \mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$cond)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classSql__cmd__common__signal_a36f05be6152fe14cf4005c68ba20dbb1}{assign\+\_\+defaults}} (\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$cond, bool set\+\_\+level\+\_\+code, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} level, int sqlcode)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$ \mbox{\hyperlink{classSql__cmd__common__signal_a5ec928fbd9312027097edd4862af0004}{m\+\_\+cond}}
+\item 
+\mbox{\hyperlink{classSet__signal__information}{Set\+\_\+signal\+\_\+information}} $\ast$ \mbox{\hyperlink{classSql__cmd__common__signal_a630c5723e27ee3e92be44d723f794465}{m\+\_\+set\+\_\+signal\+\_\+information}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSql__cmd__common__signal}{Sql\+\_\+cmd\+\_\+common\+\_\+signal}} represents the common properties of the S\+I\+G\+N\+AL and R\+E\+S\+I\+G\+N\+AL statements. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSql__cmd__common__signal_a0244836afdcb89c3e9ff3b80c90dd908}\label{classSql__cmd__common__signal_a0244836afdcb89c3e9ff3b80c90dd908}} 
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\subsubsection{\texorpdfstring{Sql\+\_\+cmd\+\_\+common\+\_\+signal()}{Sql\_cmd\_common\_signal()}}
+{\footnotesize\ttfamily Sql\+\_\+cmd\+\_\+common\+\_\+signal\+::\+Sql\+\_\+cmd\+\_\+common\+\_\+signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}} $\ast$}]{cond,  }\item[{\mbox{\hyperlink{classSet__signal__information}{Set\+\_\+signal\+\_\+information}} $\ast$}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em cond} & the condition signaled if any, or N\+U\+LL. \\
+\hline
+{\em set} & collection of signal condition item assignments. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSql__cmd__common__signal_a36f05be6152fe14cf4005c68ba20dbb1}\label{classSql__cmd__common__signal_a36f05be6152fe14cf4005c68ba20dbb1}} 
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!assign\+\_\+defaults@{assign\+\_\+defaults}}
+\index{assign\+\_\+defaults@{assign\+\_\+defaults}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\subsubsection{\texorpdfstring{assign\+\_\+defaults()}{assign\_defaults()}}
+{\footnotesize\ttfamily void Sql\+\_\+cmd\+\_\+common\+\_\+signal\+::assign\+\_\+defaults (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$}]{cond,  }\item[{bool}]{set\+\_\+level\+\_\+code,  }\item[{\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}}}]{level,  }\item[{int}]{sqlcode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Assign the condition items \textquotesingle{}M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+NO\textquotesingle{}, \textquotesingle{}level\textquotesingle{} and \textquotesingle{}M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+E\+XT\textquotesingle{} default values of a condition. 
+\begin{DoxyParams}{Parameters}
+{\em cond} & the condition to update. \\
+\hline
+{\em set\+\_\+level\+\_\+code} & true if \textquotesingle{}level\textquotesingle{} and \textquotesingle{}M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+NO\textquotesingle{} needs to be overwritten \\
+\hline
+{\em level} & the level to assign \\
+\hline
+{\em sqlcode} & the sql code to assign \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSql__cmd__common__signal_adf096fc8dfc88cd1d11bee5d934cfeef}\label{classSql__cmd__common__signal_adf096fc8dfc88cd1d11bee5d934cfeef}} 
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!eval\+\_\+defaults@{eval\+\_\+defaults}}
+\index{eval\+\_\+defaults@{eval\+\_\+defaults}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\subsubsection{\texorpdfstring{eval\+\_\+defaults()}{eval\_defaults()}}
+{\footnotesize\ttfamily void Sql\+\_\+cmd\+\_\+common\+\_\+signal\+::eval\+\_\+defaults (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$}]{cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Evaluate the condition items \textquotesingle{}S\+Q\+L\+S\+T\+A\+TE\textquotesingle{}, \textquotesingle{}M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+NO\textquotesingle{}, \textquotesingle{}level\textquotesingle{} and \textquotesingle{}M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+E\+XT\textquotesingle{} default values for this statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+{\em cond} & the condition to update. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSql__cmd__common__signal_a6994c11527b7284868e9bed5c3783d7e}\label{classSql__cmd__common__signal_a6994c11527b7284868e9bed5c3783d7e}} 
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!eval\+\_\+signal\+\_\+informations@{eval\+\_\+signal\+\_\+informations}}
+\index{eval\+\_\+signal\+\_\+informations@{eval\+\_\+signal\+\_\+informations}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\subsubsection{\texorpdfstring{eval\+\_\+signal\+\_\+informations()}{eval\_signal\_informations()}}
+{\footnotesize\ttfamily int Sql\+\_\+cmd\+\_\+common\+\_\+signal\+::eval\+\_\+signal\+\_\+informations (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classSql__condition}{Sql\+\_\+condition}} $\ast$}]{cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Evaluate each signal condition items for this statement. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & the current thread. \\
+\hline
+{\em cond} & the condition to update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSql__cmd__common__signal_a5ec928fbd9312027097edd4862af0004}\label{classSql__cmd__common__signal_a5ec928fbd9312027097edd4862af0004}} 
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!m\+\_\+cond@{m\+\_\+cond}}
+\index{m\+\_\+cond@{m\+\_\+cond}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\subsubsection{\texorpdfstring{m\+\_\+cond}{m\_cond}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsp__condition__value}{sp\+\_\+condition\+\_\+value}}$\ast$ Sql\+\_\+cmd\+\_\+common\+\_\+signal\+::m\+\_\+cond\hspace{0.3cm}{\ttfamily [protected]}}
+
+The condition to signal or resignal. This member is optional and can be N\+U\+LL (R\+E\+S\+I\+G\+N\+AL). \mbox{\Hypertarget{classSql__cmd__common__signal_a630c5723e27ee3e92be44d723f794465}\label{classSql__cmd__common__signal_a630c5723e27ee3e92be44d723f794465}} 
+\index{Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}!m\+\_\+set\+\_\+signal\+\_\+information@{m\+\_\+set\+\_\+signal\+\_\+information}}
+\index{m\+\_\+set\+\_\+signal\+\_\+information@{m\+\_\+set\+\_\+signal\+\_\+information}!Sql\+\_\+cmd\+\_\+common\+\_\+signal@{Sql\+\_\+cmd\+\_\+common\+\_\+signal}}
+\subsubsection{\texorpdfstring{m\+\_\+set\+\_\+signal\+\_\+information}{m\_set\_signal\_information}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSet__signal__information}{Set\+\_\+signal\+\_\+information}}$\ast$ Sql\+\_\+cmd\+\_\+common\+\_\+signal\+::m\+\_\+set\+\_\+signal\+\_\+information\hspace{0.3cm}{\ttfamily [protected]}}
+
+Collection of \textquotesingle{}S\+ET item = value\textquotesingle{} assignments in the S\+I\+G\+N\+A\+L/\+R\+E\+S\+I\+G\+N\+AL statement. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+signal.\+h\item 
+sql\+\_\+signal.\+cc\end{DoxyCompactItemize}

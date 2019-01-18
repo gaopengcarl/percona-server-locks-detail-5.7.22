@@ -1,0 +1,1273 @@
+\hypertarget{classRelay__log__info}{}\section{Relay\+\_\+log\+\_\+info Class Reference}
+\label{classRelay__log__info}\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+Inheritance diagram for Relay\+\_\+log\+\_\+info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classRelay__log__info}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}} \{ \mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2a6e9fdb2f902d88e174ae5a30e50156dc}{I\+N\+\_\+\+S\+T\+MT}}, 
+\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2aadc21306da0de395bfdc26d20e3c59b7}{S\+T\+A\+T\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+O\+U\+NT}}
+ \}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2072272258d68b26c076f6935d33f3fa}\label{classRelay__log__info_a2072272258d68b26c076f6935d33f3fa}} 
+enum \{ \newline
+{\bfseries U\+N\+T\+I\+L\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+P\+OS}, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+P\+OS}, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+G\+T\+I\+DS}, 
+\newline
+{\bfseries U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+A\+F\+T\+E\+R\+\_\+\+G\+T\+I\+DS}, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+A\+F\+T\+E\+R\+\_\+\+M\+T\+S\+\_\+\+G\+A\+PS}, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+S\+Q\+L\+\_\+\+V\+I\+E\+W\+\_\+\+ID}, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+D\+O\+NE}
+ \}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a837a066d30b8d614df2602beb2eb8c94}\label{classRelay__log__info_a837a066d30b8d614df2602beb2eb8c94}} 
+enum \{ {\bfseries U\+N\+T\+I\+L\+\_\+\+L\+O\+G\+\_\+\+N\+A\+M\+E\+S\+\_\+\+C\+M\+P\+\_\+\+U\+N\+K\+N\+O\+WN} = -\/2, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+L\+O\+G\+\_\+\+N\+A\+M\+E\+S\+\_\+\+C\+M\+P\+\_\+\+L\+E\+SS} = -\/1, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+L\+O\+G\+\_\+\+N\+A\+M\+E\+S\+\_\+\+C\+M\+P\+\_\+\+E\+Q\+U\+AL} = 0, 
+{\bfseries U\+N\+T\+I\+L\+\_\+\+L\+O\+G\+\_\+\+N\+A\+M\+E\+S\+\_\+\+C\+M\+P\+\_\+\+G\+R\+E\+A\+T\+ER} = 1
+ \}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad09fa70e13e2f7e2659b8fe51b08c5ad}\label{classRelay__log__info_ad09fa70e13e2f7e2659b8fe51b08c5ad}} 
+enum \{ {\bfseries M\+T\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+G\+R\+O\+UP}, 
+{\bfseries M\+T\+S\+\_\+\+I\+N\+\_\+\+G\+R\+O\+UP}, 
+{\bfseries M\+T\+S\+\_\+\+E\+N\+D\+\_\+\+G\+R\+O\+UP}, 
+{\bfseries M\+T\+S\+\_\+\+K\+I\+L\+L\+E\+D\+\_\+\+G\+R\+O\+UP}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a80ee7108bc7cbdf1df4025c266147514}\label{classRelay__log__info_a80ee7108bc7cbdf1df4025c266147514}} 
+bool {\bfseries belongs\+\_\+to\+\_\+client} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a523b1810022f40f6c67605e6b35c89e3}\label{classRelay__log__info_a523b1810022f40f6c67605e6b35c89e3}} 
+void {\bfseries add\+\_\+logged\+\_\+gtid} (rpl\+\_\+sidno sidno, rpl\+\_\+gno gno)
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classRelay__log__info_a514a40d969720a66682e708c96d95f83}{add\+\_\+gtid\+\_\+set}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$gtid\+\_\+set)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa5ac490e962add1bd99e03cd92a0ccea}\label{classRelay__log__info_aa5ac490e962add1bd99e03cd92a0ccea}} 
+const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$ {\bfseries get\+\_\+gtid\+\_\+set} () const
+\item 
+int \mbox{\hyperlink{classRelay__log__info_aec9eae2f70577d73ee930cd8223f5233}{init\+\_\+relay\+\_\+log\+\_\+pos}} (const char $\ast$log, ulonglong pos, bool need\+\_\+data\+\_\+lock, const char $\ast$$\ast$errmsg, bool keep\+\_\+looking\+\_\+for\+\_\+fd)
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a50435403f8892d869a5b3ddcc4647234}{fill\+\_\+coord\+\_\+err\+\_\+buf}} (loglevel level, int err\+\_\+code, const char $\ast$buff\+\_\+coord) const
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a8b1c765fea358e45de13c29ba9f778a2}{clear\+\_\+until\+\_\+condition}} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a8c111e744f81a92f66b54efc06b48995}{clear\+\_\+sql\+\_\+delay}} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_ac73b919ab5c4fc95d32307c757ad39f3}{notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update}} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a8b38e96443b2adc87210a39ac7b831a8}{notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update}} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ac9022af7ebf7fd6cdcdf492a94683c7a}\label{classRelay__log__info_ac9022af7ebf7fd6cdcdf492a94683c7a}} 
+void {\bfseries inc\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad7250eb26ac94d066b8369059da13936}\label{classRelay__log__info_ad7250eb26ac94d066b8369059da13936}} 
+int {\bfseries inc\+\_\+group\+\_\+relay\+\_\+log\+\_\+pos} (ulonglong log\+\_\+pos, bool need\+\_\+data\+\_\+lock)
+\item 
+int \mbox{\hyperlink{classRelay__log__info_af1f304d7abb86a2d67a1b60bbf075339}{wait\+\_\+for\+\_\+pos}} (T\+HD $\ast$thd, String $\ast$log\+\_\+name, longlong log\+\_\+pos, double timeout)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8e5f1302b4d46c665cc62d198705a238}\label{classRelay__log__info_a8e5f1302b4d46c665cc62d198705a238}} 
+int {\bfseries wait\+\_\+for\+\_\+gtid\+\_\+set} (T\+HD $\ast$thd, String $\ast$gtid, double timeout)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a23856d0f95ed714d42dcca2f3d5ff626}\label{classRelay__log__info_a23856d0f95ed714d42dcca2f3d5ff626}} 
+int {\bfseries wait\+\_\+for\+\_\+gtid\+\_\+set} (T\+HD $\ast$thd, const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$wait\+\_\+gtid\+\_\+set, double timeout)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a29610ce1f1576c86a14a01aa3e2e5948}\label{classRelay__log__info_a29610ce1f1576c86a14a01aa3e2e5948}} 
+void {\bfseries close\+\_\+temporary\+\_\+tables} ()
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_a98739303e81c718cc7b171ede3b0c0b7}{is\+\_\+until\+\_\+satisfied}} (T\+HD $\ast$thd, \mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$ev)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a091fa330ec1a5f29ff0c824d51c166fb}\label{classRelay__log__info_a091fa330ec1a5f29ff0c824d51c166fb}} 
+ulonglong {\bfseries until\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af8ef0f185cd38150141f293bcc9b4e70}\label{classRelay__log__info_af8ef0f185cd38150141f293bcc9b4e70}} 
+bool {\bfseries get\+\_\+table\+\_\+data} (\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table\+\_\+arg, \mbox{\hyperlink{classtable__def}{table\+\_\+def}} $\ast$$\ast$tabledef\+\_\+var, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$conv\+\_\+table\+\_\+var) const
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a629b920b6fd672668c9028cd1d4b064e}{cached\+\_\+charset\+\_\+invalidate}} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a14e40a372f1de6ff074d9368cf058cf7}\label{classRelay__log__info_a14e40a372f1de6ff074d9368cf058cf7}} 
+bool {\bfseries cached\+\_\+charset\+\_\+compare} (char $\ast$charset) const
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8578ec1a9403f10c7c8aa8f9a6a82f8a}\label{classRelay__log__info_a8578ec1a9403f10c7c8aa8f9a6a82f8a}} 
+void {\bfseries cleanup\+\_\+context} (T\+HD $\ast$, bool)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ac105de18b565580e88a41cb1a1046db5}\label{classRelay__log__info_ac105de18b565580e88a41cb1a1046db5}} 
+void {\bfseries slave\+\_\+close\+\_\+thread\+\_\+tables} (T\+HD $\ast$)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a44e6bc826eb08fa0dfef5fe53c36b526}\label{classRelay__log__info_a44e6bc826eb08fa0dfef5fe53c36b526}} 
+void {\bfseries clear\+\_\+tables\+\_\+to\+\_\+lock} ()
+\item 
+int \mbox{\hyperlink{classRelay__log__info_aefa8a03a7e52ba50a0d4b229c01c2369}{purge\+\_\+relay\+\_\+logs}} (T\+HD $\ast$thd, bool just\+\_\+reset, const char $\ast$$\ast$errmsg, bool delete\+\_\+only=false)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ab8af3ebafd8250455c908cf4a03920fa}\label{classRelay__log__info_ab8af3ebafd8250455c908cf4a03920fa}} 
+size\+\_\+t {\bfseries get\+\_\+worker\+\_\+count} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9e7cbad5f7f6a45c21e26ac67403cf10}\label{classRelay__log__info_a9e7cbad5f7f6a45c21e26ac67403cf10}} 
+Slave\+\_\+worker $\ast$ {\bfseries get\+\_\+worker} (size\+\_\+t n)
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a40ee595fb949ce778290ddd5fdfa2512}{init\+\_\+workers}} (ulong)
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a5f5a0a6193efc579b9836b0bc86f5b0f}{deinit\+\_\+workers}} ()
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_a8a2b8efda6a02b8ba87c981f2e86bde1}{is\+\_\+mts\+\_\+recovery}} () const
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a38b8fae8b4ea8d9f45d05382219ae3bb}\label{classRelay__log__info_a38b8fae8b4ea8d9f45d05382219ae3bb}} 
+void {\bfseries clear\+\_\+mts\+\_\+recovery\+\_\+groups} ()
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_adb9571ba13a628556e9d1cb86ebf9393}{is\+\_\+parallel\+\_\+exec}} () const
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_ada979f23838e56bf348c48b31fd23c1e}{is\+\_\+mts\+\_\+in\+\_\+group}} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a56730f77888663aa324d850a8f0035ec}{reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change}} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a76074c563b1ec0566c24d4725af1de67}{reset\+\_\+notified\+\_\+checkpoint}} (ulong count, time\+\_\+t new\+\_\+ts, bool need\+\_\+data\+\_\+lock, bool update\+\_\+timestamp=false)
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_ad2330aea71b42204dd5ee6461c30ef84}{mts\+\_\+finalize\+\_\+recovery}} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a3cc1aa64774cf98d03ec2495bb7cdb95}\label{classRelay__log__info_a3cc1aa64774cf98d03ec2495bb7cdb95}} 
+void {\bfseries cleanup\+\_\+after\+\_\+query} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ae54ea3c2cd3690bc0bc8b74eb2b75e48}\label{classRelay__log__info_ae54ea3c2cd3690bc0bc8b74eb2b75e48}} 
+void {\bfseries cleanup\+\_\+after\+\_\+session} ()
+\item 
+int \mbox{\hyperlink{classRelay__log__info_a0e802ae911c2cda3436b8e8f4c3d9468}{stmt\+\_\+done}} (my\+\_\+off\+\_\+t event\+\_\+log\+\_\+pos)
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a54a7597da74aeb539c944d54b16bf261}{set\+\_\+flag}} (\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}} flag)
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_ac43e0aa4092c8731d462502ca57e3a58}{get\+\_\+flag}} (\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}} flag)
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a7fa497a605d2730224ade21a3344f15c}{clear\+\_\+flag}} (\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}} flag)
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_a14b055b1320a2a7cd3f9c4a9df960092}{is\+\_\+in\+\_\+group}} () const
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a1746a693d7a13691b26898a5b3873a4c}\label{classRelay__log__info_a1746a693d7a13691b26898a5b3873a4c}} 
+int {\bfseries count\+\_\+relay\+\_\+log\+\_\+space} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a652933ed5cc6ebef760e49c0af75f2f4}\label{classRelay__log__info_a652933ed5cc6ebef760e49c0af75f2f4}} 
+int {\bfseries rli\+\_\+init\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a34a22720779f97a88bb702c795f63418}\label{classRelay__log__info_a34a22720779f97a88bb702c795f63418}} 
+void {\bfseries end\+\_\+info} ()
+\item 
+int \mbox{\hyperlink{classRelay__log__info_ab4299015e0504c30685b2e3b3e093d27}{flush\+\_\+info}} (bool force=F\+A\+L\+SE)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a1887eadc1e77465893a27ec2ec31783e}\label{classRelay__log__info_a1887eadc1e77465893a27ec2ec31783e}} 
+int {\bfseries flush\+\_\+current\+\_\+log} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a587ebca8379f6efc957cfe7c142931f4}\label{classRelay__log__info_a587ebca8379f6efc957cfe7c142931f4}} 
+void {\bfseries set\+\_\+master\+\_\+info} (Master\+\_\+info $\ast$info)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a848ec09d6b0b7f92467ba77a06f12e22}\label{classRelay__log__info_a848ec09d6b0b7f92467ba77a06f12e22}} 
+ulonglong {\bfseries get\+\_\+future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a810c03978cfab5184968a75cd2e98cf4}\label{classRelay__log__info_a810c03978cfab5184968a75cd2e98cf4}} 
+void {\bfseries set\+\_\+future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos} (ulonglong log\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2bedd1496ce2b2f12bc9549612da39c1}\label{classRelay__log__info_a2bedd1496ce2b2f12bc9549612da39c1}} 
+const char $\ast$ {\bfseries get\+\_\+group\+\_\+master\+\_\+log\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a29ea309de4fad4a3a8a7d32fbba04799}\label{classRelay__log__info_a29ea309de4fad4a3a8a7d32fbba04799}} 
+ulonglong {\bfseries get\+\_\+group\+\_\+master\+\_\+log\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a7f6eca9519fb6cf63ea08764f8f5ecb3}\label{classRelay__log__info_a7f6eca9519fb6cf63ea08764f8f5ecb3}} 
+void {\bfseries set\+\_\+group\+\_\+master\+\_\+log\+\_\+name} (const char $\ast$log\+\_\+file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9efea5a95de42b86eccef1f403466f94}\label{classRelay__log__info_a9efea5a95de42b86eccef1f403466f94}} 
+void {\bfseries set\+\_\+group\+\_\+master\+\_\+log\+\_\+pos} (ulonglong log\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a558b6c2e5188bb6c8193ae58cf16b37b}\label{classRelay__log__info_a558b6c2e5188bb6c8193ae58cf16b37b}} 
+const char $\ast$ {\bfseries get\+\_\+group\+\_\+relay\+\_\+log\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa37efaa27105175aa1a8150ac99516ba}\label{classRelay__log__info_aa37efaa27105175aa1a8150ac99516ba}} 
+ulonglong {\bfseries get\+\_\+group\+\_\+relay\+\_\+log\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad39832d845e98bda4155f53e46be43ce}\label{classRelay__log__info_ad39832d845e98bda4155f53e46be43ce}} 
+void {\bfseries set\+\_\+group\+\_\+relay\+\_\+log\+\_\+name} (const char $\ast$log\+\_\+file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa3cd0b41f9d6ebe001f1263e8a380256}\label{classRelay__log__info_aa3cd0b41f9d6ebe001f1263e8a380256}} 
+void {\bfseries set\+\_\+group\+\_\+relay\+\_\+log\+\_\+name} (const char $\ast$log\+\_\+file\+\_\+name, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ab30d735a6743ed558d05951c652e3712}\label{classRelay__log__info_ab30d735a6743ed558d05951c652e3712}} 
+void {\bfseries set\+\_\+group\+\_\+relay\+\_\+log\+\_\+pos} (ulonglong log\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af5c25a0d3d0e626411044867a4e66634}\label{classRelay__log__info_af5c25a0d3d0e626411044867a4e66634}} 
+const char $\ast$ {\bfseries get\+\_\+event\+\_\+relay\+\_\+log\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad013b8da0a5155399d46c0782a09bd2b}\label{classRelay__log__info_ad013b8da0a5155399d46c0782a09bd2b}} 
+ulonglong {\bfseries get\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af064a83db2cde40d72badef1bf24ac57}\label{classRelay__log__info_af064a83db2cde40d72badef1bf24ac57}} 
+void {\bfseries set\+\_\+event\+\_\+relay\+\_\+log\+\_\+name} (const char $\ast$log\+\_\+file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9d92d490a28f3eea58110f2bb29240b4}\label{classRelay__log__info_a9d92d490a28f3eea58110f2bb29240b4}} 
+uint {\bfseries get\+\_\+event\+\_\+relay\+\_\+log\+\_\+number} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_afd826cfd193f05cae10230d6ddd5465a}\label{classRelay__log__info_afd826cfd193f05cae10230d6ddd5465a}} 
+void {\bfseries set\+\_\+event\+\_\+relay\+\_\+log\+\_\+number} (uint number)
+\item 
+void \mbox{\hyperlink{classRelay__log__info_ad031830b92120f50723c41006266b8ed}{relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name}} (uint number, char name\mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN+1\mbox{]})
+\item 
+\mbox{\Hypertarget{classRelay__log__info_acd1d09d66855c4dced93d36d8bafd10b}\label{classRelay__log__info_acd1d09d66855c4dced93d36d8bafd10b}} 
+uint {\bfseries relay\+\_\+log\+\_\+name\+\_\+to\+\_\+number} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a130e6a5495f51e65e56c021e4d4d84b3}\label{classRelay__log__info_a130e6a5495f51e65e56c021e4d4d84b3}} 
+void {\bfseries set\+\_\+event\+\_\+start\+\_\+pos} (my\+\_\+off\+\_\+t pos)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5ff858faafd7ae5945b3ad537232ccee}\label{classRelay__log__info_a5ff858faafd7ae5945b3ad537232ccee}} 
+my\+\_\+off\+\_\+t {\bfseries get\+\_\+event\+\_\+start\+\_\+pos} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2e0827f3a4c6406bd8c7e7e354eb6509}\label{classRelay__log__info_a2e0827f3a4c6406bd8c7e7e354eb6509}} 
+void {\bfseries set\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos} (ulonglong log\+\_\+pos)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5fc96f1bf742a918dd26500687509d04}\label{classRelay__log__info_a5fc96f1bf742a918dd26500687509d04}} 
+const char $\ast$ {\bfseries get\+\_\+rpl\+\_\+log\+\_\+name} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a6296341e5cd0f5fe19b20af5edb842f4}{start\+\_\+sql\+\_\+delay}} (time\+\_\+t delay\+\_\+end)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a37beeca009c8ec11415d6fdacc361077}\label{classRelay__log__info_a37beeca009c8ec11415d6fdacc361077}} 
+time\+\_\+t {\bfseries get\+\_\+sql\+\_\+delay} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a96d1c200de7032d415aed7945d6ac096}\label{classRelay__log__info_a96d1c200de7032d415aed7945d6ac096}} 
+void {\bfseries set\+\_\+sql\+\_\+delay} (time\+\_\+t \+\_\+sql\+\_\+delay)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a852cdf695a4e254b55b845a10de0a137}\label{classRelay__log__info_a852cdf695a4e254b55b845a10de0a137}} 
+time\+\_\+t {\bfseries get\+\_\+sql\+\_\+delay\+\_\+end} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ac6c43e06e2e4b2557df2d749498d7da7}\label{classRelay__log__info_ac6c43e06e2e4b2557df2d749498d7da7}} 
+{\bfseries Relay\+\_\+log\+\_\+info} (bool is\+\_\+slave\+\_\+recovery, uint param\+\_\+id, const char $\ast$param\+\_\+channel, bool is\+\_\+rli\+\_\+fake)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8488a40795fa34671aae5ff153c28c12}\label{classRelay__log__info_a8488a40795fa34671aae5ff153c28c12}} 
+time\+\_\+t {\bfseries get\+\_\+row\+\_\+stmt\+\_\+start\+\_\+timestamp} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9052e86c77e2e197a9faf2f732aa0c43}\label{classRelay__log__info_a9052e86c77e2e197a9faf2f732aa0c43}} 
+time\+\_\+t {\bfseries set\+\_\+row\+\_\+stmt\+\_\+start\+\_\+timestamp} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9b3f88686af3d54e61784a527b0a90d8}\label{classRelay__log__info_a9b3f88686af3d54e61784a527b0a90d8}} 
+void {\bfseries reset\+\_\+row\+\_\+stmt\+\_\+start\+\_\+timestamp} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8328fba71f5d688eac1c9e5f8348cdfe}\label{classRelay__log__info_a8328fba71f5d688eac1c9e5f8348cdfe}} 
+void {\bfseries set\+\_\+long\+\_\+find\+\_\+row\+\_\+note\+\_\+printed} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad75560075f69e976a2ac82b11eca5149}\label{classRelay__log__info_ad75560075f69e976a2ac82b11eca5149}} 
+void {\bfseries unset\+\_\+long\+\_\+find\+\_\+row\+\_\+note\+\_\+printed} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a1981ac0f3e9ad05937c6805e8fb34e78}\label{classRelay__log__info_a1981ac0f3e9ad05937c6805e8fb34e78}} 
+bool {\bfseries is\+\_\+long\+\_\+find\+\_\+row\+\_\+note\+\_\+printed} ()
+\item 
+virtual void \mbox{\hyperlink{classRelay__log__info_abf39e8666f951158a5dd9c074a2b12d6}{set\+\_\+rli\+\_\+description\+\_\+event}} (\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fdle)
+\item 
+\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$ \mbox{\hyperlink{classRelay__log__info_a613b8ded75247b3715590acee3169ef0}{get\+\_\+rli\+\_\+description\+\_\+event}} () const
+\item 
+ulong \mbox{\hyperlink{classRelay__log__info_a882c4b69a10aec9768aac5a01fad52d7}{adapt\+\_\+to\+\_\+master\+\_\+version}} (\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$fdle)
+\item 
+ulong \mbox{\hyperlink{classRelay__log__info_ad03fd94a6b3f52af2e271953ea446f85}{adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown}} (ulong master\+\_\+version, ulong current\+\_\+version)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa0ba06ba84cb9d43773d2632b10a1ded}\label{classRelay__log__info_aa0ba06ba84cb9d43773d2632b10a1ded}} 
+Commit\+\_\+order\+\_\+manager $\ast$ {\bfseries get\+\_\+commit\+\_\+order\+\_\+manager} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a4ebb68b5f9bf497037eb38f4fbb4c746}\label{classRelay__log__info_a4ebb68b5f9bf497037eb38f4fbb4c746}} 
+void {\bfseries set\+\_\+commit\+\_\+order\+\_\+manager} (Commit\+\_\+order\+\_\+manager $\ast$mngr)
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_a41736eb133d061e07653c5207d6913e0}{set\+\_\+info\+\_\+search\+\_\+keys}} (\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$to)
+\item 
+virtual \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} $\ast$ \mbox{\hyperlink{classRelay__log__info_a2c69ad8016761856f3bcf2851949e39b}{get\+\_\+c\+\_\+rli}} ()
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a4e136db090a73932037a1c46837064c4}\label{classRelay__log__info_a4e136db090a73932037a1c46837064c4}} 
+virtual const char $\ast$ {\bfseries get\+\_\+for\+\_\+channel\+\_\+str} (bool upper\+\_\+case=false) const
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a4faab8451d9e84b9b919bbc40df1c5e7}\label{classRelay__log__info_a4faab8451d9e84b9b919bbc40df1c5e7}} 
+void {\bfseries set\+\_\+thd\+\_\+tx\+\_\+priority} (int priority)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a65bfcf035b94919018f07fd25ddf9cfd}\label{classRelay__log__info_a65bfcf035b94919018f07fd25ddf9cfd}} 
+int {\bfseries get\+\_\+thd\+\_\+tx\+\_\+priority} ()
+\item 
+void \mbox{\hyperlink{classRelay__log__info_a2bf100d2bd9de818e407d4f779a14c8d}{detach\+\_\+engine\+\_\+ha\+\_\+data}} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{classRelay__log__info_aff59190d1b65e2e5c8aacac048351b3a}{unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a14c13fbbd22b4d6fc78c901642ea457f}\label{classRelay__log__info_a14c13fbbd22b4d6fc78c901642ea457f}} 
+static void $\ast$ {\bfseries operator new} (size\+\_\+t request)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a7ab3a5134f1b0e56471701f063aea164}\label{classRelay__log__info_a7ab3a5134f1b0e56471701f063aea164}} 
+static void {\bfseries operator delete} (void $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a489c2aa5100702f745c5dff4132bf2e6}\label{classRelay__log__info_a489c2aa5100702f745c5dff4132bf2e6}} 
+static size\+\_\+t {\bfseries get\+\_\+number\+\_\+info\+\_\+rli\+\_\+fields} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad81ee3feef070c6b950a204bc3abd6c3}\label{classRelay__log__info_ad81ee3feef070c6b950a204bc3abd6c3}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries mts\+\_\+temp\+\_\+table\+\_\+\+L\+O\+CK}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_affa9fc41666186c0dd3e2d1eaf51b9e4}\label{classRelay__log__info_affa9fc41666186c0dd3e2d1eaf51b9e4}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries mts\+\_\+gaq\+\_\+\+L\+O\+CK}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a24b2857beecd824f03bfed7352f8ac31}\label{classRelay__log__info_a24b2857beecd824f03bfed7352f8ac31}} 
+mysql\+\_\+cond\+\_\+t {\bfseries logical\+\_\+clock\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a51d97a5d58159e94c6f49732939a3045}\label{classRelay__log__info_a51d97a5d58159e94c6f49732939a3045}} 
+bool {\bfseries replicate\+\_\+same\+\_\+server\+\_\+id}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a13789955a16f858f2d78842a77d91b97}\label{classRelay__log__info_a13789955a16f858f2d78842a77d91b97}} 
+\mbox{\hyperlink{structGtid__specification}{Gtid\+\_\+specification}} {\bfseries currently\+\_\+executing\+\_\+gtid}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a81ed15bfff825903fc74ac14a80af072}\label{classRelay__log__info_a81ed15bfff825903fc74ac14a80af072}} 
+File {\bfseries cur\+\_\+log\+\_\+fd}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9bbad242863fab978884b5c60b4a1b28}\label{classRelay__log__info_a9bbad242863fab978884b5c60b4a1b28}} 
+\mbox{\hyperlink{classMYSQL__BIN__LOG}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+\_\+\+L\+OG}} {\bfseries relay\+\_\+log}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a08fbb593a576198c6afbe512deb9c476}\label{classRelay__log__info_a08fbb593a576198c6afbe512deb9c476}} 
+\mbox{\hyperlink{structst__log__info}{L\+O\+G\+\_\+\+I\+N\+FO}} {\bfseries linfo}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a608cc64769e108143a29f16670acd9e6}\label{classRelay__log__info_a608cc64769e108143a29f16670acd9e6}} 
+I\+O\+\_\+\+C\+A\+C\+HE {\bfseries cache\+\_\+buf}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_abfabebf7bd87a1cb4b673663270587e1}\label{classRelay__log__info_abfabebf7bd87a1cb4b673663270587e1}} 
+I\+O\+\_\+\+C\+A\+C\+HE $\ast$ {\bfseries cur\+\_\+log}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a71010a7a3ecb75a25dce1f9880bbcf64}\label{classRelay__log__info_a71010a7a3ecb75a25dce1f9880bbcf64}} 
+bool {\bfseries is\+\_\+relay\+\_\+log\+\_\+recovery}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a0d1f80d296311d8b2dfa5f9b6a9e5f42}\label{classRelay__log__info_a0d1f80d296311d8b2dfa5f9b6a9e5f42}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries save\+\_\+temporary\+\_\+tables}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ae1435014c6f1b00509cc0533d300a119}\label{classRelay__log__info_ae1435014c6f1b00509cc0533d300a119}} 
+Master\+\_\+info $\ast$ {\bfseries mi}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a79d8c12ad2e90a7c09629b2dc12f9fc0}\label{classRelay__log__info_a79d8c12ad2e90a7c09629b2dc12f9fc0}} 
+Atomic\+\_\+int32 {\bfseries channel\+\_\+open\+\_\+temp\+\_\+tables}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a0e85360485fac189a5215b3bc6388c94}\label{classRelay__log__info_a0e85360485fac189a5215b3bc6388c94}} 
+uint32 {\bfseries cur\+\_\+log\+\_\+old\+\_\+open\+\_\+count}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_adf7b8e0b547257f58d2603709ecea80b}\label{classRelay__log__info_adf7b8e0b547257f58d2603709ecea80b}} 
+bool {\bfseries error\+\_\+on\+\_\+rli\+\_\+init\+\_\+info}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9a590ea77f4e17a4caf2750901f9ca37}\label{classRelay__log__info_a9a590ea77f4e17a4caf2750901f9ca37}} 
+bool {\bfseries is\+\_\+group\+\_\+master\+\_\+log\+\_\+pos\+\_\+invalid}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a6e1db8a2c37725a0966793fef9968b34}\label{classRelay__log__info_a6e1db8a2c37725a0966793fef9968b34}} 
+ulonglong {\bfseries log\+\_\+space\+\_\+limit}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa64c26af8f29f6ea0599d89bb877d719}\label{classRelay__log__info_aa64c26af8f29f6ea0599d89bb877d719}} 
+ulonglong {\bfseries log\+\_\+space\+\_\+total}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a9867ec2dffe865c06c3da573f466bf34}\label{classRelay__log__info_a9867ec2dffe865c06c3da573f466bf34}} 
+bool {\bfseries ignore\+\_\+log\+\_\+space\+\_\+limit}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ada1d8a2d3efcbf5e271998cc79e0420d}\label{classRelay__log__info_ada1d8a2d3efcbf5e271998cc79e0420d}} 
+bool {\bfseries sql\+\_\+force\+\_\+rotate\+\_\+relay}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ada985f35bb25a49503b6796ebdd7e12f}\label{classRelay__log__info_ada985f35bb25a49503b6796ebdd7e12f}} 
+time\+\_\+t {\bfseries last\+\_\+master\+\_\+timestamp}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a0b9794ad546a88d09c36cc3da37ad167}\label{classRelay__log__info_a0b9794ad546a88d09c36cc3da37ad167}} 
+volatile uint32 {\bfseries slave\+\_\+skip\+\_\+counter}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ac9508eb5e8371116f090e8dd8993e66a}\label{classRelay__log__info_ac9508eb5e8371116f090e8dd8993e66a}} 
+volatile ulong {\bfseries abort\+\_\+pos\+\_\+wait}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a879ad96cea28534fcbe1c6e61b1a492e}\label{classRelay__log__info_a879ad96cea28534fcbe1c6e61b1a492e}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries log\+\_\+space\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a1071e0704aa31e9550c22259931a76e7}\label{classRelay__log__info_a1071e0704aa31e9550c22259931a76e7}} 
+mysql\+\_\+cond\+\_\+t {\bfseries log\+\_\+space\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa4f1010aa58a0233b8b358f3620a3caa}\label{classRelay__log__info_aa4f1010aa58a0233b8b358f3620a3caa}} 
+enum Relay\+\_\+log\+\_\+info\+:: \{ ... \}  {\bfseries until\+\_\+condition}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a4b955793cd3354424ede9ae98c845769}\label{classRelay__log__info_a4b955793cd3354424ede9ae98c845769}} 
+char {\bfseries until\+\_\+log\+\_\+name} \mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a7089e457e060da138927f260de4e4e54}\label{classRelay__log__info_a7089e457e060da138927f260de4e4e54}} 
+ulonglong {\bfseries until\+\_\+log\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af4b23b6ee506500e6c6c8f5fbfe7d76c}\label{classRelay__log__info_af4b23b6ee506500e6c6c8f5fbfe7d76c}} 
+ulong {\bfseries until\+\_\+log\+\_\+name\+\_\+extension}
+\item 
+\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} \mbox{\hyperlink{classRelay__log__info_a2f838f8d82a97c44226b63f35862616a}{until\+\_\+sql\+\_\+gtids}}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af06dba56f6c8298f3f9d654f78100f5b}\label{classRelay__log__info_af06dba56f6c8298f3f9d654f78100f5b}} 
+bool {\bfseries until\+\_\+sql\+\_\+gtids\+\_\+first\+\_\+event}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad43b7c0407d95f5b212be73583117075}\label{classRelay__log__info_ad43b7c0407d95f5b212be73583117075}} 
+enum Relay\+\_\+log\+\_\+info\+:: \{ ... \}  {\bfseries until\+\_\+log\+\_\+names\+\_\+cmp\+\_\+result}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a09d882fa76f973f2f1fbbaa54591ba6a}\label{classRelay__log__info_a09d882fa76f973f2f1fbbaa54591ba6a}} 
+char {\bfseries cached\+\_\+charset} \mbox{[}6\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad339874393dcb56089d2234a8ecbca76}\label{classRelay__log__info_ad339874393dcb56089d2234a8ecbca76}} 
+std\+::string {\bfseries until\+\_\+view\+\_\+id}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ab4168d1ccb1714a10f91560e36e5be14}\label{classRelay__log__info_ab4168d1ccb1714a10f91560e36e5be14}} 
+bool {\bfseries until\+\_\+view\+\_\+id\+\_\+found}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a3a796d29dc339fa097fcd2c8431c628f}\label{classRelay__log__info_a3a796d29dc339fa097fcd2c8431c628f}} 
+bool {\bfseries until\+\_\+view\+\_\+id\+\_\+commit\+\_\+found}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a40e9c968385774492b3be06a7e9ddf5e}\label{classRelay__log__info_a40e9c968385774492b3be06a7e9ddf5e}} 
+ulong {\bfseries trans\+\_\+retries}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a29a7bbe8eabee8d7dd39fd89362f514f}\label{classRelay__log__info_a29a7bbe8eabee8d7dd39fd89362f514f}} 
+ulong {\bfseries retried\+\_\+trans}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a33453c86931cbd5f409b89fdb8325be2}\label{classRelay__log__info_a33453c86931cbd5f409b89fdb8325be2}} 
+char {\bfseries ign\+\_\+master\+\_\+log\+\_\+name\+\_\+end} \mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a39e125483b40b8a6d8a3fbf49a431582}\label{classRelay__log__info_a39e125483b40b8a6d8a3fbf49a431582}} 
+ulonglong {\bfseries ign\+\_\+master\+\_\+log\+\_\+pos\+\_\+end}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad59dffb0eae5b9eeb2e116a811eb696e}\label{classRelay__log__info_ad59dffb0eae5b9eeb2e116a811eb696e}} 
+char {\bfseries slave\+\_\+patternload\+\_\+file} \mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a327da5ee7ada2691232c88b7d461a0e3}\label{classRelay__log__info_a327da5ee7ada2691232c88b7d461a0e3}} 
+size\+\_\+t {\bfseries slave\+\_\+patternload\+\_\+file\+\_\+size}
+\item 
+struct timespec \mbox{\hyperlink{classRelay__log__info_a2a6610b50302ab38599e82bda93c53ce}{last\+\_\+clock}}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_adc2326e9be6c8e691e0ccc01a4f24a96}\label{classRelay__log__info_adc2326e9be6c8e691e0ccc01a4f24a96}} 
+\mbox{\hyperlink{structRPL__TABLE__LIST}{R\+P\+L\+\_\+\+T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$ {\bfseries tables\+\_\+to\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a63bb6d3c259c2adc63e3886478951717}\label{classRelay__log__info_a63bb6d3c259c2adc63e3886478951717}} 
+uint {\bfseries tables\+\_\+to\+\_\+lock\+\_\+count}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a23dbc6aff700428d743d8413794bb93e}\label{classRelay__log__info_a23dbc6aff700428d743d8413794bb93e}} 
+\mbox{\hyperlink{classtable__mapping}{table\+\_\+mapping}} {\bfseries m\+\_\+table\+\_\+map}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a18cf6e5f7f2d3c1f2cf96fbcf850b9ab}\label{classRelay__log__info_a18cf6e5f7f2d3c1f2cf96fbcf850b9ab}} 
+\mbox{\hyperlink{classRows__query__log__event}{Rows\+\_\+query\+\_\+log\+\_\+event}} $\ast$ {\bfseries rows\+\_\+query\+\_\+ev}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad008be98e874b09908d1db5dd24afc12}\label{classRelay__log__info_ad008be98e874b09908d1db5dd24afc12}} 
+time\+\_\+t {\bfseries last\+\_\+event\+\_\+start\+\_\+time}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a663b8408cbe5d4c4835a8d5056ecf0ab}\label{classRelay__log__info_a663b8408cbe5d4c4835a8d5056ecf0ab}} 
+\mbox{\hyperlink{classDeferred__log__events}{Deferred\+\_\+log\+\_\+events}} $\ast$ {\bfseries deferred\+\_\+events}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad8996d82e9017c6c40237e7fa3744711}\label{classRelay__log__info_ad8996d82e9017c6c40237e7fa3744711}} 
+bool {\bfseries deferred\+\_\+events\+\_\+collecting}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ae7b85681986de5005ba80f84a92945cb}\label{classRelay__log__info_ae7b85681986de5005ba80f84a92945cb}} 
+Slave\+\_\+worker\+\_\+array {\bfseries workers}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8d4f146fb99a6061b77c1e11bc1bad59}\label{classRelay__log__info_a8d4f146fb99a6061b77c1e11bc1bad59}} 
+H\+A\+SH {\bfseries mapping\+\_\+db\+\_\+to\+\_\+worker}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2d1a2186486bb188c869ac2ee62bfc6b}\label{classRelay__log__info_a2d1a2186486bb188c869ac2ee62bfc6b}} 
+bool {\bfseries inited\+\_\+hash\+\_\+workers}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a54e97ea210c1eebda090b14ad21e76ef}\label{classRelay__log__info_a54e97ea210c1eebda090b14ad21e76ef}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries slave\+\_\+worker\+\_\+hash\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af5a9fc7cface91d34f721ad0a680646a}\label{classRelay__log__info_af5a9fc7cface91d34f721ad0a680646a}} 
+mysql\+\_\+cond\+\_\+t {\bfseries slave\+\_\+worker\+\_\+hash\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a73402a9624bcf4a20b93878f5ccac479}\label{classRelay__log__info_a73402a9624bcf4a20b93878f5ccac479}} 
+std\+::vector$<$ Slave\+\_\+worker $\ast$ $>$ {\bfseries workers\+\_\+copy\+\_\+pfs}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a71b987189f94882b9c287f5df3329d43}\label{classRelay__log__info_a71b987189f94882b9c287f5df3329d43}} 
+bool {\bfseries workers\+\_\+array\+\_\+initialized}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a1ba08799477aab79a09dec7e9d9f2f66}\label{classRelay__log__info_a1ba08799477aab79a09dec7e9d9f2f66}} 
+volatile ulong {\bfseries pending\+\_\+jobs}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2c39c01240d28e03760b9cc50ad3cf5f}\label{classRelay__log__info_a2c39c01240d28e03760b9cc50ad3cf5f}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries pending\+\_\+jobs\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a4e67525d3c6c2f5fb369601e25e9c6ec}\label{classRelay__log__info_a4e67525d3c6c2f5fb369601e25e9c6ec}} 
+mysql\+\_\+cond\+\_\+t {\bfseries pending\+\_\+jobs\+\_\+cond}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_acbf96584fe2d6bb130e76953041d24e3}\label{classRelay__log__info_acbf96584fe2d6bb130e76953041d24e3}} 
+mysql\+\_\+mutex\+\_\+t {\bfseries exit\+\_\+count\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a23ee3506dd58a3812d0601ff83680567}\label{classRelay__log__info_a23ee3506dd58a3812d0601ff83680567}} 
+ulong {\bfseries mts\+\_\+slave\+\_\+worker\+\_\+queue\+\_\+len\+\_\+max}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad1d0853d8f0b0e9bd036456c26816897}\label{classRelay__log__info_ad1d0853d8f0b0e9bd036456c26816897}} 
+ulonglong {\bfseries mts\+\_\+pending\+\_\+jobs\+\_\+size}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af8d21621e68c8c66fb6851423a5befa2}\label{classRelay__log__info_af8d21621e68c8c66fb6851423a5befa2}} 
+ulonglong {\bfseries mts\+\_\+pending\+\_\+jobs\+\_\+size\+\_\+max}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a75a9e8eeaf9a85ebe68b28bbfcc2cb1c}\label{classRelay__log__info_a75a9e8eeaf9a85ebe68b28bbfcc2cb1c}} 
+bool {\bfseries mts\+\_\+wq\+\_\+oversize}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af66097d972b7e3696f87ce6dd28d24f9}\label{classRelay__log__info_af66097d972b7e3696f87ce6dd28d24f9}} 
+Slave\+\_\+worker $\ast$ {\bfseries last\+\_\+assigned\+\_\+worker}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a90a2750ad4d1fd8fd8c1d0941c2693dc}\label{classRelay__log__info_a90a2750ad4d1fd8fd8c1d0941c2693dc}} 
+Slave\+\_\+committed\+\_\+queue $\ast$ {\bfseries gaq}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5de6c45607890209c6109ce8cb5bd31c}\label{classRelay__log__info_a5de6c45607890209c6109ce8cb5bd31c}} 
+Prealloced\+\_\+array$<$ db\+\_\+worker\+\_\+hash\+\_\+entry $\ast$, 4, true $>$ {\bfseries curr\+\_\+group\+\_\+assigned\+\_\+parts}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ab2613f277e765f9961054b6660b2b27a}\label{classRelay__log__info_ab2613f277e765f9961054b6660b2b27a}} 
+Prealloced\+\_\+array$<$ \mbox{\hyperlink{structslave__job__item}{Slave\+\_\+job\+\_\+item}}, 8, true $>$ {\bfseries curr\+\_\+group\+\_\+da}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2015f13a3db6c6a141e4bedf9acc6fb6}\label{classRelay__log__info_a2015f13a3db6c6a141e4bedf9acc6fb6}} 
+bool {\bfseries curr\+\_\+group\+\_\+seen\+\_\+gtid}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a003fc0f1dd4d8c31ec8206e75be296fb}\label{classRelay__log__info_a003fc0f1dd4d8c31ec8206e75be296fb}} 
+bool {\bfseries curr\+\_\+group\+\_\+seen\+\_\+begin}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a81871a0c188dc19ab3b6a88389b7a561}\label{classRelay__log__info_a81871a0c188dc19ab3b6a88389b7a561}} 
+bool {\bfseries curr\+\_\+group\+\_\+isolated}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af3d64d528e0e39a8cbbc406590e60a72}\label{classRelay__log__info_af3d64d528e0e39a8cbbc406590e60a72}} 
+bool {\bfseries mts\+\_\+end\+\_\+group\+\_\+sets\+\_\+max\+\_\+dbs}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5b89dfc26a74c0fc0888948b38be5893}\label{classRelay__log__info_a5b89dfc26a74c0fc0888948b38be5893}} 
+volatile ulong {\bfseries mts\+\_\+wq\+\_\+underrun\+\_\+w\+\_\+id}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a1e42ba28e35b35f852129277ad2310a6}\label{classRelay__log__info_a1e42ba28e35b35f852129277ad2310a6}} 
+volatile long {\bfseries mts\+\_\+wq\+\_\+excess\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa1465e6e9f69406bd28330548d46b5e6}\label{classRelay__log__info_aa1465e6e9f69406bd28330548d46b5e6}} 
+long {\bfseries mts\+\_\+worker\+\_\+underrun\+\_\+level}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a304cdfb16d97ae3148a4f0be59e55883}\label{classRelay__log__info_a304cdfb16d97ae3148a4f0be59e55883}} 
+ulong {\bfseries mts\+\_\+coordinator\+\_\+basic\+\_\+nap}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ae67a40918ed5af5463e43fc3cbac3248}\label{classRelay__log__info_ae67a40918ed5af5463e43fc3cbac3248}} 
+ulong {\bfseries opt\+\_\+slave\+\_\+parallel\+\_\+workers}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aaebd1027e22891f20b73ee1553b641f6}\label{classRelay__log__info_aaebd1027e22891f20b73ee1553b641f6}} 
+ulong {\bfseries slave\+\_\+parallel\+\_\+workers}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5524feabb3d2102a396b4e308dbcc3eb}\label{classRelay__log__info_a5524feabb3d2102a396b4e308dbcc3eb}} 
+ulong {\bfseries exit\+\_\+counter}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a18b91a34e702cace64bc95f30bf3a5f5}\label{classRelay__log__info_a18b91a34e702cace64bc95f30bf3a5f5}} 
+ulonglong {\bfseries max\+\_\+updated\+\_\+index}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af8172590d5f51906f8f5edee3f163f4a}\label{classRelay__log__info_af8172590d5f51906f8f5edee3f163f4a}} 
+ulong {\bfseries recovery\+\_\+parallel\+\_\+workers}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a224388b22aff285ae32e0e76e8e256fe}\label{classRelay__log__info_a224388b22aff285ae32e0e76e8e256fe}} 
+uint {\bfseries checkpoint\+\_\+seqno}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a02bba2ccb2b53d74f5b66f8f9999f9c6}\label{classRelay__log__info_a02bba2ccb2b53d74f5b66f8f9999f9c6}} 
+uint {\bfseries checkpoint\+\_\+group}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a22bbe2a79ab591ad190b46f463999f8f}\label{classRelay__log__info_a22bbe2a79ab591ad190b46f463999f8f}} 
+M\+Y\+\_\+\+B\+I\+T\+M\+AP {\bfseries recovery\+\_\+groups}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a33483057036d96ba0b3988b8bfa4b140}\label{classRelay__log__info_a33483057036d96ba0b3988b8bfa4b140}} 
+bool {\bfseries recovery\+\_\+groups\+\_\+inited}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a7944b964e17da951bd50aa65963f282e}\label{classRelay__log__info_a7944b964e17da951bd50aa65963f282e}} 
+ulong {\bfseries mts\+\_\+recovery\+\_\+group\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad73aa78214cc6b08f3edf7404b343378}\label{classRelay__log__info_ad73aa78214cc6b08f3edf7404b343378}} 
+ulong {\bfseries mts\+\_\+recovery\+\_\+index}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a6610eb6c3f1e668cf82031f6d4a14e25}\label{classRelay__log__info_a6610eb6c3f1e668cf82031f6d4a14e25}} 
+bool {\bfseries mts\+\_\+recovery\+\_\+group\+\_\+seen\+\_\+begin}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a172a2b7cafb04e81515148c1248db9cc}\label{classRelay__log__info_a172a2b7cafb04e81515148c1248db9cc}} 
+enum Relay\+\_\+log\+\_\+info\+:: \{ ... \}  {\bfseries mts\+\_\+group\+\_\+status}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a085cce31f46960cf03b458e908f55e1a}\label{classRelay__log__info_a085cce31f46960cf03b458e908f55e1a}} 
+ulonglong {\bfseries mts\+\_\+events\+\_\+assigned}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a25df544328cae076f070b8a133cf35e8}\label{classRelay__log__info_a25df544328cae076f070b8a133cf35e8}} 
+ulonglong {\bfseries mts\+\_\+groups\+\_\+assigned}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a50adac4e8fcd877976d35b3f3fb805dd}\label{classRelay__log__info_a50adac4e8fcd877976d35b3f3fb805dd}} 
+volatile ulong {\bfseries mts\+\_\+wq\+\_\+overrun\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a0f7b5f06f937ae5c40eff00d3167eb10}\label{classRelay__log__info_a0f7b5f06f937ae5c40eff00d3167eb10}} 
+ulong {\bfseries wq\+\_\+size\+\_\+waits\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a21ece0de1d3523ea5d5624cafa21539d}\label{classRelay__log__info_a21ece0de1d3523ea5d5624cafa21539d}} 
+ulong {\bfseries mts\+\_\+wq\+\_\+no\+\_\+underrun\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aa5d2bf5bbabb0a3c05b4427517f5b899}\label{classRelay__log__info_aa5d2bf5bbabb0a3c05b4427517f5b899}} 
+longlong {\bfseries mts\+\_\+total\+\_\+wait\+\_\+overlap}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a706a05a7c2f15a1fb5e7c47732718d49}\label{classRelay__log__info_a706a05a7c2f15a1fb5e7c47732718d49}} 
+ulonglong {\bfseries mts\+\_\+total\+\_\+wait\+\_\+worker\+\_\+avail}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a802b06a9de3faf9576674f71feb7271f}\label{classRelay__log__info_a802b06a9de3faf9576674f71feb7271f}} 
+ulong {\bfseries mts\+\_\+wq\+\_\+overfill\+\_\+cnt}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5abed3ac1587b04f6c276a37e10345c1}\label{classRelay__log__info_a5abed3ac1587b04f6c276a37e10345c1}} 
+ulonglong {\bfseries stats\+\_\+exec\+\_\+time}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a93c5e43899923697e566fe7249e7b082}\label{classRelay__log__info_a93c5e43899923697e566fe7249e7b082}} 
+ulonglong {\bfseries stats\+\_\+read\+\_\+time}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_aea9166d4ac7a5afd4fd8403c22b87e42}\label{classRelay__log__info_aea9166d4ac7a5afd4fd8403c22b87e42}} 
+struct timespec {\bfseries ts\+\_\+exec} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_acbd1e546a4501429089ba85bc1b502c3}\label{classRelay__log__info_acbd1e546a4501429089ba85bc1b502c3}} 
+struct timespec {\bfseries stats\+\_\+begin}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af1ce47018282180ce343dd487402446c}\label{classRelay__log__info_af1ce47018282180ce343dd487402446c}} 
+Prealloced\+\_\+array$<$ ulong, 16 $>$ {\bfseries least\+\_\+occupied\+\_\+workers}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8e6172455aa9667ddb5bc53ad8e737de}\label{classRelay__log__info_a8e6172455aa9667ddb5bc53ad8e737de}} 
+time\+\_\+t {\bfseries mts\+\_\+last\+\_\+online\+\_\+stat}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_af99718465f1f94df9c04b21183ea4324}\label{classRelay__log__info_af99718465f1f94df9c04b21183ea4324}} 
+enum\+\_\+mts\+\_\+parallel\+\_\+type {\bfseries channel\+\_\+mts\+\_\+submode}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a8fd8c969c11e538879d1012aa2012b25}\label{classRelay__log__info_a8fd8c969c11e538879d1012aa2012b25}} 
+\mbox{\hyperlink{classMts__submode}{Mts\+\_\+submode}} $\ast$ {\bfseries current\+\_\+mts\+\_\+submode}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_afe1366c1bc5aa93d8d69dc18d1df3814}\label{classRelay__log__info_afe1366c1bc5aa93d8d69dc18d1df3814}} 
+ulonglong {\bfseries mts\+\_\+last\+\_\+known\+\_\+parent\+\_\+group\+\_\+id}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a4a7324db04d581524aabb99168198309}\label{classRelay__log__info_a4a7324db04d581524aabb99168198309}} 
+bool {\bfseries reported\+\_\+unsafe\+\_\+warning}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_abfe3e935ab8e2acd38fb8fd9e6c93b55}\label{classRelay__log__info_abfe3e935ab8e2acd38fb8fd9e6c93b55}} 
+bool {\bfseries sql\+\_\+thread\+\_\+kill\+\_\+accepted}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2fedc08f5818062672b5856cfef3503b}\label{classRelay__log__info_a2fedc08f5818062672b5856cfef3503b}} 
+uchar {\bfseries slave\+\_\+version\+\_\+split} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a5ac60dc20a9772ae2c3d448ece59895f}\label{classRelay__log__info_a5ac60dc20a9772ae2c3d448ece59895f}} 
+bool {\bfseries force\+\_\+flush\+\_\+postponed\+\_\+due\+\_\+to\+\_\+split\+\_\+trans}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a7aac59026b294e104954ce20641f0436}\label{classRelay__log__info_a7aac59026b294e104954ce20641f0436}} 
+bool {\bfseries is\+\_\+engine\+\_\+ha\+\_\+data\+\_\+detached}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a83f520fd0ba300d87a0037743e6ffede}\label{classRelay__log__info_a83f520fd0ba300d87a0037743e6ffede}} 
+char {\bfseries group\+\_\+relay\+\_\+log\+\_\+name} \mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a2f1874fce058e237fafbea6b52273018}\label{classRelay__log__info_a2f1874fce058e237fafbea6b52273018}} 
+ulonglong {\bfseries group\+\_\+relay\+\_\+log\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ae63999471cc027d6a5d1bdb5c2a9ae20}\label{classRelay__log__info_ae63999471cc027d6a5d1bdb5c2a9ae20}} 
+char {\bfseries event\+\_\+relay\+\_\+log\+\_\+name} \mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a76b1b972ff731e70e10097b4c76af108}\label{classRelay__log__info_a76b1b972ff731e70e10097b4c76af108}} 
+uint {\bfseries event\+\_\+relay\+\_\+log\+\_\+number}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a33ed136846ea7c3239d712486255ab19}\label{classRelay__log__info_a33ed136846ea7c3239d712486255ab19}} 
+ulonglong {\bfseries event\+\_\+relay\+\_\+log\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ae8cfd4bfc250442fde6e897a36afae3d}\label{classRelay__log__info_ae8cfd4bfc250442fde6e897a36afae3d}} 
+ulonglong {\bfseries future\+\_\+event\+\_\+relay\+\_\+log\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a48028f0544fc8c0adfe9e2599b2c3488}\label{classRelay__log__info_a48028f0544fc8c0adfe9e2599b2c3488}} 
+my\+\_\+off\+\_\+t {\bfseries event\+\_\+start\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a05a2e11975a50e3e316e293ffd1a72fd}\label{classRelay__log__info_a05a2e11975a50e3e316e293ffd1a72fd}} 
+char {\bfseries m\+\_\+group\+\_\+master\+\_\+log\+\_\+name} \mbox{[}F\+N\+\_\+\+R\+E\+F\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a464e00af0a776b6a617a96d83c8006a1}\label{classRelay__log__info_a464e00af0a776b6a617a96d83c8006a1}} 
+volatile my\+\_\+off\+\_\+t {\bfseries m\+\_\+group\+\_\+master\+\_\+log\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_ad1fba5148f3e9f8b4e802dd7357c6ead}\label{classRelay__log__info_ad1fba5148f3e9f8b4e802dd7357c6ead}} 
+\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$ {\bfseries rli\+\_\+description\+\_\+event}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRelay__log__info_a78a99f8bbca705e7958bb3ffaac85abd}\label{classRelay__log__info_a78a99f8bbca705e7958bb3ffaac85abd}} 
+class {\bfseries Rpl\+\_\+info\+\_\+factory}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}\label{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!enum\+\_\+state\+\_\+flag@{enum\+\_\+state\+\_\+flag}}
+\index{enum\+\_\+state\+\_\+flag@{enum\+\_\+state\+\_\+flag}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{enum\+\_\+state\+\_\+flag}{enum\_state\_flag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{Relay\+\_\+log\+\_\+info\+::enum\+\_\+state\+\_\+flag}}}
+
+Flags for the state of the replication. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+\_\+\+S\+T\+MT@{I\+N\+\_\+\+S\+T\+MT}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!I\+N\+\_\+\+S\+T\+MT@{I\+N\+\_\+\+S\+T\+MT}}}\mbox{\Hypertarget{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2a6e9fdb2f902d88e174ae5a30e50156dc}\label{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2a6e9fdb2f902d88e174ae5a30e50156dc}} 
+I\+N\+\_\+\+S\+T\+MT&The replication thread is inside a statement \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+T\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+O\+U\+NT@{S\+T\+A\+T\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+O\+U\+NT}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!S\+T\+A\+T\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+O\+U\+NT@{S\+T\+A\+T\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+O\+U\+NT}}}\mbox{\Hypertarget{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2aadc21306da0de395bfdc26d20e3c59b7}\label{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2aadc21306da0de395bfdc26d20e3c59b7}} 
+S\+T\+A\+T\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+O\+U\+NT&Flag counter. Should always be last \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRelay__log__info_a882c4b69a10aec9768aac5a01fad52d7}\label{classRelay__log__info_a882c4b69a10aec9768aac5a01fad52d7}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!adapt\+\_\+to\+\_\+master\+\_\+version@{adapt\+\_\+to\+\_\+master\+\_\+version}}
+\index{adapt\+\_\+to\+\_\+master\+\_\+version@{adapt\+\_\+to\+\_\+master\+\_\+version}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{adapt\+\_\+to\+\_\+master\+\_\+version()}{adapt\_to\_master\_version()}}
+{\footnotesize\ttfamily ulong Relay\+\_\+log\+\_\+info\+::adapt\+\_\+to\+\_\+master\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{fdle }\end{DoxyParamCaption})}
+
+adaptation for the slave applier to specific master versions.
+
+The method computes the incoming \char`\"{}master\char`\"{}\textquotesingle{}s FD server version and that of the currently installed (if ever) rli\+\_\+description\+\_\+event, to invoke more specific method to compare the two and adapt slave applier execution context to the new incoming master\textquotesingle{}s version.
+
+This method is specifically for S\+TS applier/\+M\+TS Coordinator as well as for a user thread applying binlog events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fdle} & a pointer to new Format Description event that is being set up a new execution context. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 when the versions are equal, master\+\_\+version otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_ad03fd94a6b3f52af2e271953ea446f85}\label{classRelay__log__info_ad03fd94a6b3f52af2e271953ea446f85}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown@{adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown}}
+\index{adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown@{adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown()}{adapt\_to\_master\_version\_updown()}}
+{\footnotesize\ttfamily ulong Relay\+\_\+log\+\_\+info\+::adapt\+\_\+to\+\_\+master\+\_\+version\+\_\+updown (\begin{DoxyParamCaption}\item[{ulong}]{master\+\_\+version,  }\item[{ulong}]{current\+\_\+version }\end{DoxyParamCaption})}
+
+The method compares two supplied versions and carries out down-\/ or up-\/ grade customization of execution context of the slave applier (thd).
+
+The method is invoked in the S\+TS case through \mbox{\hyperlink{classRelay__log__info_a882c4b69a10aec9768aac5a01fad52d7}{Relay\+\_\+log\+\_\+info\+::adapt\+\_\+to\+\_\+master\+\_\+version()}} right before a new master FD is installed into the applier execution context; in the M\+TS case it\textquotesingle{}s done by the Worker when it\textquotesingle{}s assigned with a first event after the latest new FD has been installed.
+
+Comparison of the current (old, existing) and the master (new, incoming) versions yields adaptive actions. To explain that, let\textquotesingle{}s denote V\+\_\+0 as the current, and the master\textquotesingle{}s one as V\+\_\+1. In the downgrade case (V\+\_\+1 $<$ V\+\_\+0) a server feature that is undefined in V\+\_\+1 but is defined starting from some V\+\_\+f of \mbox{[}V\+\_\+1 + 1, V\+\_\+0\mbox{]} range (+1 to mean V\+\_\+1 excluded) are invalidated (\char`\"{}removed\char`\"{} from execution context) by running so called here downgrade action. Conversely in the upgrade case a feature defined in \mbox{[}V\+\_\+0 + 1, V\+\_\+1\mbox{]} range is validated (\char`\"{}added\char`\"{} to execution context) by running its upgrade action. A typical use case showing how adaptive actions are necessary for the slave applier is when the master version is lesser than the slave\textquotesingle{}s one. In such case events generated on the \char`\"{}older\char`\"{} master may need to be applied in their native server context. And such context can be provided by downgrade actions. Conversely, when the old master events are run out and a newer master\textquotesingle{}s events show up for applying, the execution context will be upgraded through the namesake actions.
+
+Notice that a relay log may have two FD events, one the slave local and the other from the Master. As there\textquotesingle{}s no concern for the FD originator this leads to two \mbox{\hyperlink{classRelay__log__info_a882c4b69a10aec9768aac5a01fad52d7}{adapt\+\_\+to\+\_\+master\+\_\+version()}} calls. It\textquotesingle{}s not harmful as can be seen from the following example. Say the currently installed FD\textquotesingle{}s version is V\+\_\+m, then at relay-\/log rotation the following transition takes place\+:
+
+V\+\_\+m -\/adapt-\/$>$ V\+\_\+s -\/adapt-\/$>$ V\+\_\+m.
+
+here and further `m' subscript stands for the master, `s' for the slave. It\textquotesingle{}s clear that in this case an ineffective V\+\_\+m -\/$>$ V\+\_\+m transition occurs.
+
+At composing downgrade/upgrade actions keep in mind that the slave applier version transition goes the following route\+: The initial version is that of the slave server (V\+\_\+ss). It changes to a magic 4.\+0 at the slave relay log initialization. In the following course versions are extracted from each FD read out, regardless of what server generated it. Here is a typical version transition sequence underscored with annotation\+:
+
+V\+\_\+ss -\/$>$ 4.\+0 -\/$>$ V(\+F\+D\+\_\+s$^\wedge$1) -\/$>$ V(\+F\+D\+\_\+m$^\wedge$2) ---$>$ V(\+F\+D\+\_\+s$^\wedge$3) -\/$>$ V(\+F\+D\+\_\+m$^\wedge$4) ...
+
+
+
+ bootstrap 1st relay log rotation 2nd log etc
+
+The upper ($^\wedge$) subscipt enumerates Format Description events, V(\+F\+D$^\wedge$i) stands for a function extrating the version data from the i\+:th FD.
+
+There won\textquotesingle{}t be any action to execute when info\+\_\+thd is undefined, e.\+g at bootstrap.
+
+
+\begin{DoxyParams}{Parameters}
+{\em master\+\_\+version} & an upcoming new version \\
+\hline
+{\em current\+\_\+version} & the current version \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 when the new version is equal to the current one, master\+\_\+version otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_a514a40d969720a66682e708c96d95f83}\label{classRelay__log__info_a514a40d969720a66682e708c96d95f83}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!add\+\_\+gtid\+\_\+set@{add\+\_\+gtid\+\_\+set}}
+\index{add\+\_\+gtid\+\_\+set@{add\+\_\+gtid\+\_\+set}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{add\+\_\+gtid\+\_\+set()}{add\_gtid\_set()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Relay\+\_\+log\+\_\+info\+::add\+\_\+gtid\+\_\+set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{gtid\+\_\+set }\end{DoxyParamCaption})}
+
+Adds a G\+T\+ID set to received G\+T\+ID set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid\+\_\+set} & the gtid\+\_\+set to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_a629b920b6fd672668c9028cd1d4b064e}\label{classRelay__log__info_a629b920b6fd672668c9028cd1d4b064e}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!cached\+\_\+charset\+\_\+invalidate@{cached\+\_\+charset\+\_\+invalidate}}
+\index{cached\+\_\+charset\+\_\+invalidate@{cached\+\_\+charset\+\_\+invalidate}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{cached\+\_\+charset\+\_\+invalidate()}{cached\_charset\_invalidate()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::cached\+\_\+charset\+\_\+invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Last charset (6 bytes) seen by slave S\+QL thread is cached here; it helps the thread save 3 {\ttfamily get\+\_\+charset()} per {\ttfamily \mbox{\hyperlink{classQuery__log__event}{Query\+\_\+log\+\_\+event}}} if the charset is not changing from event to event (common situation). When the 6 bytes are equal to 0 is used to mean \char`\"{}cache is invalidated\char`\"{}. \mbox{\Hypertarget{classRelay__log__info_a7fa497a605d2730224ade21a3344f15c}\label{classRelay__log__info_a7fa497a605d2730224ade21a3344f15c}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!clear\+\_\+flag@{clear\+\_\+flag}}
+\index{clear\+\_\+flag@{clear\+\_\+flag}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{clear\+\_\+flag()}{clear\_flag()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::clear\+\_\+flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}}}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear the value of a replication state flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & Flag to clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a8c111e744f81a92f66b54efc06b48995}\label{classRelay__log__info_a8c111e744f81a92f66b54efc06b48995}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!clear\+\_\+sql\+\_\+delay@{clear\+\_\+sql\+\_\+delay}}
+\index{clear\+\_\+sql\+\_\+delay@{clear\+\_\+sql\+\_\+delay}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{clear\+\_\+sql\+\_\+delay()}{clear\_sql\_delay()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::clear\+\_\+sql\+\_\+delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reset the delay. This is used by R\+E\+S\+ET S\+L\+A\+VE to clear the delay. \mbox{\Hypertarget{classRelay__log__info_a8b1c765fea358e45de13c29ba9f778a2}\label{classRelay__log__info_a8b1c765fea358e45de13c29ba9f778a2}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!clear\+\_\+until\+\_\+condition@{clear\+\_\+until\+\_\+condition}}
+\index{clear\+\_\+until\+\_\+condition@{clear\+\_\+until\+\_\+condition}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{clear\+\_\+until\+\_\+condition()}{clear\_until\_condition()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::clear\+\_\+until\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets U\+N\+T\+IL condition for \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} \mbox{\Hypertarget{classRelay__log__info_a5f5a0a6193efc579b9836b0bc86f5b0f}\label{classRelay__log__info_a5f5a0a6193efc579b9836b0bc86f5b0f}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!deinit\+\_\+workers@{deinit\+\_\+workers}}
+\index{deinit\+\_\+workers@{deinit\+\_\+workers}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{deinit\+\_\+workers()}{deinit\_workers()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::deinit\+\_\+workers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The method to invoke at slave threads stop \mbox{\Hypertarget{classRelay__log__info_a2bf100d2bd9de818e407d4f779a14c8d}\label{classRelay__log__info_a2bf100d2bd9de818e407d4f779a14c8d}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!detach\+\_\+engine\+\_\+ha\+\_\+data@{detach\+\_\+engine\+\_\+ha\+\_\+data}}
+\index{detach\+\_\+engine\+\_\+ha\+\_\+data@{detach\+\_\+engine\+\_\+ha\+\_\+data}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{detach\+\_\+engine\+\_\+ha\+\_\+data()}{detach\_engine\_ha\_data()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::detach\+\_\+engine\+\_\+ha\+\_\+data (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Detaches the engine ha\+\_\+data from T\+HD. The fact is memorized in {\ttfamily is\+\_\+engine\+\_\+ha\+\_\+detached} flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & a reference to T\+HD \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a50435403f8892d869a5b3ddcc4647234}\label{classRelay__log__info_a50435403f8892d869a5b3ddcc4647234}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!fill\+\_\+coord\+\_\+err\+\_\+buf@{fill\+\_\+coord\+\_\+err\+\_\+buf}}
+\index{fill\+\_\+coord\+\_\+err\+\_\+buf@{fill\+\_\+coord\+\_\+err\+\_\+buf}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{fill\+\_\+coord\+\_\+err\+\_\+buf()}{fill\_coord\_err\_buf()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::fill\+\_\+coord\+\_\+err\+\_\+buf (\begin{DoxyParamCaption}\item[{loglevel}]{level,  }\item[{int}]{err\+\_\+code,  }\item[{const char $\ast$}]{buff\+\_\+coord }\end{DoxyParamCaption}) const}
+
+Update the error number, message and timestamp fields. This function is different from va\+\_\+report() as va\+\_\+report() also logs the error message in the log apart from updating the error fields.
+
+S\+Y\+N\+O\+P\+S\+IS 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & specifies the level-\/ error, warning or information, \\
+\hline
+\mbox{\texttt{ in}}  & {\em err\+\_\+code} & error number, \\
+\hline
+\mbox{\texttt{ in}}  & {\em buff\+\_\+coord} & error message to be used. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_ab4299015e0504c30685b2e3b3e093d27}\label{classRelay__log__info_ab4299015e0504c30685b2e3b3e093d27}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!flush\+\_\+info@{flush\+\_\+info}}
+\index{flush\+\_\+info@{flush\+\_\+info}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{flush\+\_\+info()}{flush\_info()}}
+{\footnotesize\ttfamily int Relay\+\_\+log\+\_\+info\+::flush\+\_\+info (\begin{DoxyParamCaption}\item[{bool}]{force = {\ttfamily FALSE} }\end{DoxyParamCaption})}
+
+Stores the file and position where the execute-\/slave thread are in the relay log\+:
+
+
+\begin{DoxyItemize}
+\item As this is only called by the slave thread or on S\+T\+OP S\+L\+A\+VE, with the log\+\_\+lock grabbed and the slave thread stopped, we don\textquotesingle{}t need to have a lock here.
+\item If there is an active transaction, then we don\textquotesingle{}t update the position in the relay log. This is to ensure that we re-\/execute statements if we die in the middle of an transaction that was rolled back.
+\item As a transaction never spans binary logs, we don\textquotesingle{}t have to handle the case where we do a relay-\/log-\/rotation in the middle of the transaction. If this would not be the case, we would have to ensure that we don\textquotesingle{}t delete the relay log file where the transaction started when we switch to a new relay log file.
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok, \\
+\hline
+{\em 1} & write error, otherwise.\+Store the file and position where the slave\textquotesingle{}s S\+QL thread are in the relay log.\\
+\hline
+\end{DoxyRetVals}
+Notes\+:
+
+
+\begin{DoxyItemize}
+\item This function should be called either from the slave S\+QL thread, or when the slave thread is not running. (It reads the group\+\_\+\{relay$\vert$master\}\+\_\+log\+\_\+\{pos$\vert$name\} and delay fields in the rli object. These may only be modified by the slave S\+QL thread or by a client thread when the slave S\+QL thread is not running.)
+\item If there is an active transaction, then we do not update the position in the relay log. This is to ensure that we re-\/execute statements if we die in the middle of an transaction that was rolled back.
+\item As a transaction never spans binary logs, we don\textquotesingle{}t have to handle the case where we do a relay-\/log-\/rotation in the middle of the transaction. If transactions could span several binlogs, we would have to ensure that we do not delete the relay log file where the transaction started before switching to a new relay log file.
+\item Error can happen if writing to file fails or if flushing the file fails.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rli} & The object representing the \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000064}{Todo}}]Change the log file information to a binary format to avoid calling longlong2str.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_a2c69ad8016761856f3bcf2851949e39b}\label{classRelay__log__info_a2c69ad8016761856f3bcf2851949e39b}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!get\+\_\+c\+\_\+rli@{get\+\_\+c\+\_\+rli}}
+\index{get\+\_\+c\+\_\+rli@{get\+\_\+c\+\_\+rli}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{get\+\_\+c\+\_\+rli()}{get\_c\_rli()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}}$\ast$ Relay\+\_\+log\+\_\+info\+::get\+\_\+c\+\_\+rli (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get coordinator\textquotesingle{}s R\+LI. Especially used get the rli from a slave thread, like this\+: thd-\/$>$rli\+\_\+slave-\/$>$\mbox{\hyperlink{classRelay__log__info_a2c69ad8016761856f3bcf2851949e39b}{get\+\_\+c\+\_\+rli()}}; thd could be a S\+QL thread or a worker thread \mbox{\Hypertarget{classRelay__log__info_ac43e0aa4092c8731d462502ca57e3a58}\label{classRelay__log__info_ac43e0aa4092c8731d462502ca57e3a58}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!get\+\_\+flag@{get\+\_\+flag}}
+\index{get\+\_\+flag@{get\+\_\+flag}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{get\+\_\+flag()}{get\_flag()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::get\+\_\+flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}}}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the value of a replication state flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & Flag to get value of\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the flag was set, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_a613b8ded75247b3715590acee3169ef0}\label{classRelay__log__info_a613b8ded75247b3715590acee3169ef0}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!get\+\_\+rli\+\_\+description\+\_\+event@{get\+\_\+rli\+\_\+description\+\_\+event}}
+\index{get\+\_\+rli\+\_\+description\+\_\+event@{get\+\_\+rli\+\_\+description\+\_\+event}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{get\+\_\+rli\+\_\+description\+\_\+event()}{get\_rli\_description\_event()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}$\ast$ Relay\+\_\+log\+\_\+info\+::get\+\_\+rli\+\_\+description\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the current \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}. \mbox{\Hypertarget{classRelay__log__info_aec9eae2f70577d73ee930cd8223f5233}\label{classRelay__log__info_aec9eae2f70577d73ee930cd8223f5233}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!init\+\_\+relay\+\_\+log\+\_\+pos@{init\+\_\+relay\+\_\+log\+\_\+pos}}
+\index{init\+\_\+relay\+\_\+log\+\_\+pos@{init\+\_\+relay\+\_\+log\+\_\+pos}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{init\+\_\+relay\+\_\+log\+\_\+pos()}{init\_relay\_log\_pos()}}
+{\footnotesize\ttfamily int Relay\+\_\+log\+\_\+info\+::init\+\_\+relay\+\_\+log\+\_\+pos (\begin{DoxyParamCaption}\item[{const char $\ast$}]{log,  }\item[{ulonglong}]{pos,  }\item[{bool}]{need\+\_\+data\+\_\+lock,  }\item[{const char $\ast$$\ast$}]{errmsg,  }\item[{bool}]{keep\+\_\+looking\+\_\+for\+\_\+fd }\end{DoxyParamCaption})}
+
+Opens and intialize the given relay log. Specifically, it does what follows\+:
+
+
+\begin{DoxyItemize}
+\item Closes old open relay log files.
+\item If we are using the same relay log as the running IO-\/thread, then sets. rli-\/$>$cur\+\_\+log to point to the same I\+O\+\_\+\+C\+A\+C\+HE entry.
+\item If not, opens the \textquotesingle{}log\textquotesingle{} binary file.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000063}{Todo}}]check proper initialization of group\+\_\+master\+\_\+log\+\_\+name/group\+\_\+master\+\_\+log\+\_\+pos. /alfranio\end{DoxyRefDesc}
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rli\mbox{[}in\mbox{]}} & Relay information (will be initialized) \\
+\hline
+{\em log\mbox{[}in\mbox{]}} & Name of relay log file to read from. N\+U\+LL = First log \\
+\hline
+{\em pos\mbox{[}in\mbox{]}} & Position in relay log file \\
+\hline
+{\em need\+\_\+data\+\_\+lock\mbox{[}in\mbox{]}} & If true, this function will acquire the relay\+\_\+log.\+data\+\_\+lock(); otherwise the caller should already have acquired it. \\
+\hline
+{\em errmsg\mbox{[}out\mbox{]}} & On error, this function will store a pointer to an error message here \\
+\hline
+{\em keep\+\_\+looking\+\_\+for\+\_\+fd\mbox{[}in\mbox{]}} & If true, this function will look for a \mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}}. We only need this when the S\+QL thread starts and opens an existing relay log and has to execute it (possibly from an offset $>$4); then we need to read the first event of the relay log to be able to parse the events we have to execute.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & ok, \\
+\hline
+{\em 1} & error. In this case, $\ast$errmsg is set to point to the error message. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRelay__log__info_a40ee595fb949ce778290ddd5fdfa2512}\label{classRelay__log__info_a40ee595fb949ce778290ddd5fdfa2512}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!init\+\_\+workers@{init\+\_\+workers}}
+\index{init\+\_\+workers@{init\+\_\+workers}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{init\+\_\+workers()}{init\_workers()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::init\+\_\+workers (\begin{DoxyParamCaption}\item[{ulong}]{n\+\_\+workers }\end{DoxyParamCaption})}
+
+The method to invoke at slave threads start \mbox{\Hypertarget{classRelay__log__info_a14b055b1320a2a7cd3f9c4a9df960092}\label{classRelay__log__info_a14b055b1320a2a7cd3f9c4a9df960092}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!is\+\_\+in\+\_\+group@{is\+\_\+in\+\_\+group}}
+\index{is\+\_\+in\+\_\+group@{is\+\_\+in\+\_\+group}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{is\+\_\+in\+\_\+group()}{is\_in\_group()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::is\+\_\+in\+\_\+group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+A group is defined as the entire range of events that constitute a transaction or auto-\/committed statement. It has one of the following forms\+:
+
+(\mbox{\hyperlink{structGtid}{Gtid}})? Query(\+B\+E\+G\+I\+N) ... (Query(\+C\+O\+M\+M\+I\+T) $\vert$ Query(\+R\+O\+L\+L\+B\+A\+C\+K) $\vert$ Xid) (\mbox{\hyperlink{structGtid}{Gtid}})? (Rand $\vert$ User\+\_\+var $\vert$ Int\+\_\+var)$\ast$ Query(\+D\+D\+L)
+
+Thus, to check if the execute thread is in a group, there are two cases\+:
+
+
+\begin{DoxyItemize}
+\item If the master generates \mbox{\hyperlink{structGtid}{Gtid}} events (5.\+7.\+5 or later, or 5.\+6 or later with G\+T\+I\+D\+\_\+\+M\+O\+DE=ON), then is\+\_\+in\+\_\+group is the same as info\+\_\+thd-\/$>$owned\+\_\+gtid.\+sidno != 0, since owned\+\_\+gtid.\+sidno is set to non-\/zero by the \mbox{\hyperlink{classGtid__log__event}{Gtid\+\_\+log\+\_\+event}} and cleared to zero at commit or rollback.
+\item If the master does not generate \mbox{\hyperlink{structGtid}{Gtid}} events (i.\+e., master is pre-\/5.\+6, or pre-\/5.\+7.\+5 with G\+T\+I\+D\+\_\+\+M\+O\+DE=O\+FF), then is\+\_\+in\+\_\+group is the same as is\+\_\+in\+\_\+trx\+\_\+or\+\_\+stmt().
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Replication thread is inside a group. \\
+\hline
+{\em false} & Replication thread is not inside a group. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRelay__log__info_ada979f23838e56bf348c48b31fd23c1e}\label{classRelay__log__info_ada979f23838e56bf348c48b31fd23c1e}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!is\+\_\+mts\+\_\+in\+\_\+group@{is\+\_\+mts\+\_\+in\+\_\+group}}
+\index{is\+\_\+mts\+\_\+in\+\_\+group@{is\+\_\+mts\+\_\+in\+\_\+group}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{is\+\_\+mts\+\_\+in\+\_\+group()}{is\_mts\_in\_group()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::is\+\_\+mts\+\_\+in\+\_\+group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns true if Coordinator is scheduling events belonging to the same group and has not reached yet its terminal event. \mbox{\Hypertarget{classRelay__log__info_a8a2b8efda6a02b8ba87c981f2e86bde1}\label{classRelay__log__info_a8a2b8efda6a02b8ba87c981f2e86bde1}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!is\+\_\+mts\+\_\+recovery@{is\+\_\+mts\+\_\+recovery}}
+\index{is\+\_\+mts\+\_\+recovery@{is\+\_\+mts\+\_\+recovery}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{is\+\_\+mts\+\_\+recovery()}{is\_mts\_recovery()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::is\+\_\+mts\+\_\+recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns true if there is any gap-\/group of events to execute at slave starting phase. \mbox{\Hypertarget{classRelay__log__info_adb9571ba13a628556e9d1cb86ebf9393}\label{classRelay__log__info_adb9571ba13a628556e9d1cb86ebf9393}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!is\+\_\+parallel\+\_\+exec@{is\+\_\+parallel\+\_\+exec}}
+\index{is\+\_\+parallel\+\_\+exec@{is\+\_\+parallel\+\_\+exec}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{is\+\_\+parallel\+\_\+exec()}{is\_parallel\_exec()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::is\+\_\+parallel\+\_\+exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns true if events are to be executed in parallel \mbox{\Hypertarget{classRelay__log__info_a98739303e81c718cc7b171ede3b0c0b7}\label{classRelay__log__info_a98739303e81c718cc7b171ede3b0c0b7}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!is\+\_\+until\+\_\+satisfied@{is\+\_\+until\+\_\+satisfied}}
+\index{is\+\_\+until\+\_\+satisfied@{is\+\_\+until\+\_\+satisfied}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{is\+\_\+until\+\_\+satisfied()}{is\_until\_satisfied()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::is\+\_\+until\+\_\+satisfied (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classLog__event}{Log\+\_\+event}} $\ast$}]{ev }\end{DoxyParamCaption})}
+
+Checks if condition stated in U\+N\+T\+IL clause of S\+T\+A\+RT S\+L\+A\+VE is reached.
+
+Specifically, it checks if U\+N\+T\+IL condition is reached. Uses caching result of last comparison of current log file name and target log file name. So cached value should be invalidated if current log file name changes (see {\ttfamily Relay\+\_\+log\+\_\+info\+::notify\+\_\+}... functions).
+
+This caching is needed to avoid of expensive string comparisons and {\ttfamily strtol()} conversions needed for log names comparison. We don\textquotesingle{}t need to compare them each time this function is called, we only need to do this when current log name changes. If we have {\ttfamily U\+N\+T\+I\+L\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+P\+OS} condition we need to do this only after {\ttfamily Rotate\+\_\+log\+\_\+event\+::do\+\_\+apply\+\_\+event()} (which is rare, so caching gives real benifit), and if we have {\ttfamily U\+N\+T\+I\+L\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+P\+OS} condition then we should invalidate cached comarison value after {\ttfamily inc\+\_\+group\+\_\+relay\+\_\+log\+\_\+pos()} which called for each group of events (so we have some benefit if we have something like queries that use autoincrement or if we have transactions).
+
+Should be called O\+N\+LY if {\ttfamily until\+\_\+condition} {\ttfamily !=} {\ttfamily U\+N\+T\+I\+L\+\_\+\+N\+O\+NE} !
+
+
+\begin{DoxyParams}{Parameters}
+{\em master\+\_\+beg\+\_\+pos} & position of the beginning of to be executed event (not {\ttfamily log\+\_\+pos} member of the event that points to the beginning of the following event)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & condition met or error happened (condition seems to have bad log file name), \\
+\hline
+{\em false} & condition not met. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classRelay__log__info_ad2330aea71b42204dd5ee6461c30ef84}\label{classRelay__log__info_ad2330aea71b42204dd5ee6461c30ef84}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!mts\+\_\+finalize\+\_\+recovery@{mts\+\_\+finalize\+\_\+recovery}}
+\index{mts\+\_\+finalize\+\_\+recovery@{mts\+\_\+finalize\+\_\+recovery}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{mts\+\_\+finalize\+\_\+recovery()}{mts\_finalize\_recovery()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::mts\+\_\+finalize\+\_\+recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Called when gaps execution is ended so it is crash-\/safe to reset the last session Workers info.
+
+Reset recovery info from Worker info table and mark M\+TS recovery is completed.
+
+\begin{DoxyReturn}{Returns}
+false on success true when {\ttfamily reset\+\_\+notified\+\_\+checkpoint} failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_a8b38e96443b2adc87210a39ac7b831a8}\label{classRelay__log__info_a8b38e96443b2adc87210a39ac7b831a8}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update@{notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update}}
+\index{notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update@{notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update()}{notify\_group\_master\_log\_name\_update()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::notify\+\_\+group\+\_\+master\+\_\+log\+\_\+name\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The same as {\ttfamily notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update} but for {\ttfamily group\+\_\+master\+\_\+log\+\_\+name}. \mbox{\Hypertarget{classRelay__log__info_ac73b919ab5c4fc95d32307c757ad39f3}\label{classRelay__log__info_ac73b919ab5c4fc95d32307c757ad39f3}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update@{notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update}}
+\index{notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update@{notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update()}{notify\_group\_relay\_log\_name\_update()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::notify\+\_\+group\+\_\+relay\+\_\+log\+\_\+name\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Invalidates cached until\+\_\+log\+\_\+name and group\+\_\+relay\+\_\+log\+\_\+name comparison result. Should be called after any update of group\+\_\+realy\+\_\+log\+\_\+name if there chances that sql\+\_\+thread is running. \mbox{\Hypertarget{classRelay__log__info_aefa8a03a7e52ba50a0d4b229c01c2369}\label{classRelay__log__info_aefa8a03a7e52ba50a0d4b229c01c2369}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!purge\+\_\+relay\+\_\+logs@{purge\+\_\+relay\+\_\+logs}}
+\index{purge\+\_\+relay\+\_\+logs@{purge\+\_\+relay\+\_\+logs}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{purge\+\_\+relay\+\_\+logs()}{purge\_relay\_logs()}}
+{\footnotesize\ttfamily int Relay\+\_\+log\+\_\+info\+::purge\+\_\+relay\+\_\+logs (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{bool}]{just\+\_\+reset,  }\item[{const char $\ast$$\ast$}]{errmsg,  }\item[{bool}]{delete\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Purges relay logs. It assumes to have a run lock on rli and that no slave thread are running.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em T\+HD} & connection, \\
+\hline
+\mbox{\texttt{ in}}  & {\em just\+\_\+reset} & if false, it tells that logs should be purged and {\ttfamily \mbox{\hyperlink{classRelay__log__info_aec9eae2f70577d73ee930cd8223f5233}{init\+\_\+relay\+\_\+log\+\_\+pos()}}} should be called, \mbox{[}out\mbox{]} errmsg store pointer to an error message.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfuly executed, \\
+\hline
+{\em 1} & otherwise error, where errmsg is set to point to the error message. \\
+\hline
+\end{DoxyRetVals}
+Clear the retrieved gtid set for this channel. global\+\_\+sid\+\_\+lock-\/$>$wrlock() is needed.\mbox{\Hypertarget{classRelay__log__info_ad031830b92120f50723c41006266b8ed}\label{classRelay__log__info_ad031830b92120f50723c41006266b8ed}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name@{relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name}}
+\index{relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name@{relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name()}{relay\_log\_number\_to\_name()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::relay\+\_\+log\+\_\+number\+\_\+to\+\_\+name (\begin{DoxyParamCaption}\item[{uint}]{number,  }\item[{char}]{name\mbox{[}\+F\+N\+\_\+\+R\+E\+F\+L\+E\+N+1\mbox{]} }\end{DoxyParamCaption})}
+
+Given the extension number of the relay log, gets the full relay log path. Currently used in Slave\+\_\+worker\+::retry\+\_\+transaction()
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number} & extension number of relay log \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em name} & The full path of the relay log (per-\/channel) to be read by the slave worker. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a76074c563b1ec0566c24d4725af1de67}\label{classRelay__log__info_a76074c563b1ec0566c24d4725af1de67}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!reset\+\_\+notified\+\_\+checkpoint@{reset\+\_\+notified\+\_\+checkpoint}}
+\index{reset\+\_\+notified\+\_\+checkpoint@{reset\+\_\+notified\+\_\+checkpoint}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{reset\+\_\+notified\+\_\+checkpoint()}{reset\_notified\_checkpoint()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::reset\+\_\+notified\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{ulong}]{shift,  }\item[{time\+\_\+t}]{new\+\_\+ts,  }\item[{bool}]{need\+\_\+data\+\_\+lock,  }\item[{bool}]{update\+\_\+timestamp = {\ttfamily false} }\end{DoxyParamCaption})}
+
+While a group is executed by a Worker the relay log can change. Coordinator notifies Workers about this event. Coordinator and Workers maintain a bitmap of executed group that is reset with a new checkpoint.
+
+This method is called in mts\+\_\+checkpoint\+\_\+routine() to mark that each worker is required to adapt to a new checkpoint data whose coordinates are passed to it through G\+AQ index.
+
+Worker notices the new checkpoint value at the group commit to reset the current bitmap and starts using the clean bitmap indexed from zero of being reset checkpoint\+\_\+seqno.
+
+New seconds\+\_\+behind\+\_\+master timestamp is installed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & number of bits to shift by Worker due to the current checkpoint change. \\
+\hline
+{\em new\+\_\+ts} & new seconds\+\_\+behind\+\_\+master timestamp value unless zero. Zero could be due to FD event or fake rotate event. \\
+\hline
+{\em need\+\_\+data\+\_\+lock} & False if caller has locked {\ttfamily data\+\_\+lock} \\
+\hline
+{\em update\+\_\+timestamp} & if true, this function will update the rli-\/$>$last\+\_\+master\+\_\+timestamp. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a56730f77888663aa324d850a8f0035ec}\label{classRelay__log__info_a56730f77888663aa324d850a8f0035ec}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change@{reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change}}
+\index{reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change@{reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change()}{reset\_notified\_relay\_log\_change()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::reset\+\_\+notified\+\_\+relay\+\_\+log\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+While a group is executed by a Worker the relay log can change. Coordinator notifies Workers about this event. Worker is supposed to commit to the recovery table with the new info.
+
+Method is called when M\+TS coordinator senses the relay-\/log name has been changed. It marks each Worker member with this fact to make an action at time it will distribute a terminal event of a group to the Worker.
+
+Worker receives the new name at the group commiting phase {\ttfamily Slave\+\_\+worker\+::slave\+\_\+worker\+\_\+ends\+\_\+group()}. \mbox{\Hypertarget{classRelay__log__info_a54a7597da74aeb539c944d54b16bf261}\label{classRelay__log__info_a54a7597da74aeb539c944d54b16bf261}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!set\+\_\+flag@{set\+\_\+flag}}
+\index{set\+\_\+flag@{set\+\_\+flag}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+flag()}{set\_flag()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::set\+\_\+flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRelay__log__info_a768d1f6426a20be0e32d7380a231c0b2}{enum\+\_\+state\+\_\+flag}}}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the value of a replication state flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & Flag to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a41736eb133d061e07653c5207d6913e0}\label{classRelay__log__info_a41736eb133d061e07653c5207d6913e0}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!set\+\_\+info\+\_\+search\+\_\+keys@{set\+\_\+info\+\_\+search\+\_\+keys}}
+\index{set\+\_\+info\+\_\+search\+\_\+keys@{set\+\_\+info\+\_\+search\+\_\+keys}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+info\+\_\+search\+\_\+keys()}{set\_info\_search\_keys()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::set\+\_\+info\+\_\+search\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRpl__info__handler}{Rpl\+\_\+info\+\_\+handler}} $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+To search in the slave repositories, each slave info object (mi, rli or worker) should use a primary key. This function sets the field values of the slave info objects with the search information, which is nothing but PK in mysql slave info tables. Ex\+: field\+\_\+value\mbox{[}23\mbox{]}=\char`\"{}channel\+\_\+name\char`\"{} in the master info object.
+
+Currently, used only for \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} repository. 
+
+Implements \mbox{\hyperlink{classRpl__info_a0b3b3cf032e7017f1760379364ff1738}{Rpl\+\_\+info}}.
+
+\mbox{\Hypertarget{classRelay__log__info_abf39e8666f951158a5dd9c074a2b12d6}\label{classRelay__log__info_abf39e8666f951158a5dd9c074a2b12d6}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!set\+\_\+rli\+\_\+description\+\_\+event@{set\+\_\+rli\+\_\+description\+\_\+event}}
+\index{set\+\_\+rli\+\_\+description\+\_\+event@{set\+\_\+rli\+\_\+description\+\_\+event}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{set\+\_\+rli\+\_\+description\+\_\+event()}{set\_rli\_description\_event()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::set\+\_\+rli\+\_\+description\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormat__description__log__event}{Format\+\_\+description\+\_\+log\+\_\+event}} $\ast$}]{fe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Delete the existing event and set a new one. This class is responsible for freeing the event, the caller should not do that.
+
+The method is run by S\+QL thread/\+M\+TS Coordinator. It replaces the current FD event with a new one. A version adaptation routine is invoked for the new FD to align the slave applier execution context with the master version.
+
+Since FD are shared by Coordinator and Workers in the M\+TS mode, deletion of the old FD is done through decrementing its usage counter. The destructor runs when the later drops to zero, also see {\ttfamily Slave\+\_\+worker\+::set\+\_\+rli\+\_\+description\+\_\+event()}. The usage counter of the new FD is incremented.
+
+Although notice that M\+TS worker runs it, inefficiently (see assert), once at its destruction time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & pointer to be installed into execution context Format\+Descriptor event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a6296341e5cd0f5fe19b20af5edb842f4}\label{classRelay__log__info_a6296341e5cd0f5fe19b20af5edb842f4}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!start\+\_\+sql\+\_\+delay@{start\+\_\+sql\+\_\+delay}}
+\index{start\+\_\+sql\+\_\+delay@{start\+\_\+sql\+\_\+delay}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{start\+\_\+sql\+\_\+delay()}{start\_sql\_delay()}}
+{\footnotesize\ttfamily void Relay\+\_\+log\+\_\+info\+::start\+\_\+sql\+\_\+delay (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{delay\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicate that a delay starts.
+
+This does not actually sleep; it only sets the state of this \mbox{\hyperlink{classRelay__log__info}{Relay\+\_\+log\+\_\+info}} object to delaying so that the correct state can be reported by S\+H\+OW S\+L\+A\+VE S\+T\+A\+T\+US and S\+H\+OW P\+R\+O\+C\+E\+S\+S\+L\+I\+ST.
+
+Requires rli-\/$>$data\+\_\+lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+\_\+end} & The time when the delay shall end. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_a0e802ae911c2cda3436b8e8f4c3d9468}\label{classRelay__log__info_a0e802ae911c2cda3436b8e8f4c3d9468}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!stmt\+\_\+done@{stmt\+\_\+done}}
+\index{stmt\+\_\+done@{stmt\+\_\+done}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{stmt\+\_\+done()}{stmt\_done()}}
+{\footnotesize\ttfamily int Relay\+\_\+log\+\_\+info\+::stmt\+\_\+done (\begin{DoxyParamCaption}\item[{my\+\_\+off\+\_\+t}]{event\+\_\+log\+\_\+pos }\end{DoxyParamCaption})}
+
+Helper function to do after statement completion.
+
+This function is called from an event to complete the group by either stepping the group position, if the \char`\"{}statement\char`\"{} is not inside a transaction; or increase the event position, if the \char`\"{}statement\char`\"{} is inside a transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+log\+\_\+pos} & Master log position of the event. The position is recorded in the relay log info and used to produce information for {\ttfamily S\+H\+OW S\+L\+A\+VE S\+T\+A\+T\+US}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRelay__log__info_aff59190d1b65e2e5c8aacac048351b3a}\label{classRelay__log__info_aff59190d1b65e2e5c8aacac048351b3a}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data@{unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data}}
+\index{unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data@{unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data()}{unflag\_detached\_engine\_ha\_data()}}
+{\footnotesize\ttfamily bool Relay\+\_\+log\+\_\+info\+::unflag\+\_\+detached\+\_\+engine\+\_\+ha\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Drops the engine ha\+\_\+data flag when it is up. The method is run at execution points of the engine ha\+\_\+data re-\/attachment.
+
+\begin{DoxyReturn}{Returns}
+true when T\+HD has detached the engine ha\+\_\+data, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRelay__log__info_af1f304d7abb86a2d67a1b60bbf075339}\label{classRelay__log__info_af1f304d7abb86a2d67a1b60bbf075339}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!wait\+\_\+for\+\_\+pos@{wait\+\_\+for\+\_\+pos}}
+\index{wait\+\_\+for\+\_\+pos@{wait\+\_\+for\+\_\+pos}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{wait\+\_\+for\+\_\+pos()}{wait\_for\_pos()}}
+{\footnotesize\ttfamily int Relay\+\_\+log\+\_\+info\+::wait\+\_\+for\+\_\+pos (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{String $\ast$}]{log\+\_\+name,  }\item[{longlong}]{log\+\_\+pos,  }\item[{double}]{timeout }\end{DoxyParamCaption})}
+
+Waits until the S\+QL thread reaches (has executed up to) the log/position or timed out.
+
+S\+Y\+N\+O\+P\+S\+IS 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & client thread that sent {\ttfamily S\+E\+L\+E\+CT} {\ttfamily M\+A\+S\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+W\+A\+IT}, \\
+\hline
+\mbox{\texttt{ in}}  & {\em log\+\_\+name} & log name to wait for, \\
+\hline
+\mbox{\texttt{ in}}  & {\em log\+\_\+pos} & position to wait for, \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout} & {\ttfamily timeout} in seconds before giving up waiting. {\ttfamily timeout} is double whereas it should be ulong; but this is to catch if the user submitted a negative timeout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/2} & improper arguments (log\+\_\+pos$<$0) or slave not running, or master info changed during the function\textquotesingle{}s execution, or client thread killed. -\/2 is translated to N\+U\+LL by caller, \\
+\hline
+{\em -\/1} & timed out \\
+\hline
+{\em $>$=0} & number of log events the function had to wait before reaching the desired log/position \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classRelay__log__info_a2a6610b50302ab38599e82bda93c53ce}\label{classRelay__log__info_a2a6610b50302ab38599e82bda93c53ce}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!last\+\_\+clock@{last\+\_\+clock}}
+\index{last\+\_\+clock@{last\+\_\+clock}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{last\+\_\+clock}{last\_clock}}
+{\footnotesize\ttfamily struct timespec Relay\+\_\+log\+\_\+info\+::last\+\_\+clock}
+
+Identifies the last time a checkpoint routine has been executed. \mbox{\Hypertarget{classRelay__log__info_a2f838f8d82a97c44226b63f35862616a}\label{classRelay__log__info_a2f838f8d82a97c44226b63f35862616a}} 
+\index{Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}!until\+\_\+sql\+\_\+gtids@{until\+\_\+sql\+\_\+gtids}}
+\index{until\+\_\+sql\+\_\+gtids@{until\+\_\+sql\+\_\+gtids}!Relay\+\_\+log\+\_\+info@{Relay\+\_\+log\+\_\+info}}
+\subsubsection{\texorpdfstring{until\+\_\+sql\+\_\+gtids}{until\_sql\_gtids}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} Relay\+\_\+log\+\_\+info\+::until\+\_\+sql\+\_\+gtids}
+
+The S\+T\+A\+RT S\+L\+A\+VE U\+N\+T\+IL S\+Q\+L\+\_\+$\ast$\+\_\+\+G\+T\+I\+DS initializes until\+\_\+sql\+\_\+gtids. Each time a gtid is about to be processed, we check if it is in the set. Depending on until\+\_\+condition, S\+QL thread is stopped before or after applying the gtid. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+rli.\+h\item 
+rpl\+\_\+rli.\+cc\end{DoxyCompactItemize}

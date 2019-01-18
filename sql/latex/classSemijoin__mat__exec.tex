@@ -1,0 +1,55 @@
+\hypertarget{classSemijoin__mat__exec}{}\section{Semijoin\+\_\+mat\+\_\+exec Class Reference}
+\label{classSemijoin__mat__exec}\index{Semijoin\+\_\+mat\+\_\+exec@{Semijoin\+\_\+mat\+\_\+exec}}
+
+
+{\ttfamily \#include $<$sql\+\_\+executor.\+h$>$}
+
+Inheritance diagram for Semijoin\+\_\+mat\+\_\+exec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSemijoin__mat__exec}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a965ec656e4046983214ef5c6152a87c4}\label{classSemijoin__mat__exec_a965ec656e4046983214ef5c6152a87c4}} 
+{\bfseries Semijoin\+\_\+mat\+\_\+exec} (\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$\mbox{\hyperlink{classSemijoin__mat__exec_a8f658f0000b03662f190189032cda0b4}{sj\+\_\+nest}}, bool \mbox{\hyperlink{classSemijoin__mat__exec_a216db4b75a23aefee9256e0bdeddda9d}{is\+\_\+scan}}, uint \mbox{\hyperlink{classSemijoin__mat__exec_adda1225326ac660e195cb3417b8a9348}{table\+\_\+count}}, uint \mbox{\hyperlink{classSemijoin__mat__exec_a816cc5491db4c3f65592b8bf8abb1ed2}{mat\+\_\+table\+\_\+index}}, uint \mbox{\hyperlink{classSemijoin__mat__exec_a67e7548cf5367c2c2a3f5620849856cb}{inner\+\_\+table\+\_\+index}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a8f658f0000b03662f190189032cda0b4}\label{classSemijoin__mat__exec_a8f658f0000b03662f190189032cda0b4}} 
+\mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$const \mbox{\hyperlink{classSemijoin__mat__exec_a8f658f0000b03662f190189032cda0b4}{sj\+\_\+nest}}
+\begin{DoxyCompactList}\small\item\em Semi-\/join nest for this materialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a216db4b75a23aefee9256e0bdeddda9d}\label{classSemijoin__mat__exec_a216db4b75a23aefee9256e0bdeddda9d}} 
+const bool \mbox{\hyperlink{classSemijoin__mat__exec_a216db4b75a23aefee9256e0bdeddda9d}{is\+\_\+scan}}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE if executing a scan, F\+A\+L\+SE if lookup. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_adda1225326ac660e195cb3417b8a9348}\label{classSemijoin__mat__exec_adda1225326ac660e195cb3417b8a9348}} 
+const uint \mbox{\hyperlink{classSemijoin__mat__exec_adda1225326ac660e195cb3417b8a9348}{table\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Number of tables in the sj-\/nest. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a816cc5491db4c3f65592b8bf8abb1ed2}\label{classSemijoin__mat__exec_a816cc5491db4c3f65592b8bf8abb1ed2}} 
+const uint \mbox{\hyperlink{classSemijoin__mat__exec_a816cc5491db4c3f65592b8bf8abb1ed2}{mat\+\_\+table\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index in join\+\_\+tab for materialized table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a67e7548cf5367c2c2a3f5620849856cb}\label{classSemijoin__mat__exec_a67e7548cf5367c2c2a3f5620849856cb}} 
+const uint \mbox{\hyperlink{classSemijoin__mat__exec_a67e7548cf5367c2c2a3f5620849856cb}{inner\+\_\+table\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Index in join\+\_\+tab for first inner table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a8e9384a0d165798aeb131543382e050e}\label{classSemijoin__mat__exec_a8e9384a0d165798aeb131543382e050e}} 
+Temp\+\_\+table\+\_\+param \mbox{\hyperlink{classSemijoin__mat__exec_a8e9384a0d165798aeb131543382e050e}{table\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em The temptable and its related info. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSemijoin__mat__exec_a46a4bcfd2a37db01420f050d6de6cf24}\label{classSemijoin__mat__exec_a46a4bcfd2a37db01420f050d6de6cf24}} 
+\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ \mbox{\hyperlink{classSemijoin__mat__exec_a46a4bcfd2a37db01420f050d6de6cf24}{table}}
+\begin{DoxyCompactList}\small\item\em Reference to temporary table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Executor structure for the materialized semi-\/join info, which contains
+\begin{DoxyItemize}
+\item Description of expressions selected from subquery
+\item The sj-\/materialization temporary table 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+executor.\+h\end{DoxyCompactItemize}

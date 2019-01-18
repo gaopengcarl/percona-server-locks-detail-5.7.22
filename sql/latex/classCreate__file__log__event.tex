@@ -1,0 +1,46 @@
+\hypertarget{classCreate__file__log__event}{}\section{Create\+\_\+file\+\_\+log\+\_\+event Class Reference}
+\label{classCreate__file__log__event}\index{Create\+\_\+file\+\_\+log\+\_\+event@{Create\+\_\+file\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Create\+\_\+file\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCreate__file__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCreate__file__log__event_adaba877609a7d8e19bd9a9d9b3b58c69}\label{classCreate__file__log__event_adaba877609a7d8e19bd9a9d9b3b58c69}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classCreate__file__log__event_a5c0ab1da8d0099881b9749ed640147b1}\label{classCreate__file__log__event_a5c0ab1da8d0099881b9749ed640147b1}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info, bool enable\+\_\+local)
+\item 
+\mbox{\hyperlink{classCreate__file__log__event_a88cc18c97980807dfdd4ffd6542bbc89}{Create\+\_\+file\+\_\+log\+\_\+event}} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classCreate__file__log__event_ac425a362eed59492a04dd0e700d61919}\label{classCreate__file__log__event_ac425a362eed59492a04dd0e700d61919}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The Create\+\_\+file\+\_\+event contains the options to L\+O\+AD D\+A\+TA I\+N\+F\+I\+LE. This was a design flaw since the file cannot be loaded until the Exec\+\_\+load\+\_\+event is seen. The use of this event was deprecated from My\+S\+QL server version 5.\+0.\+3 and above. To work around this, the slave, when executing the \mbox{\hyperlink{classCreate__file__log__event}{Create\+\_\+file\+\_\+log\+\_\+event}}, writes the \mbox{\hyperlink{classCreate__file__log__event}{Create\+\_\+file\+\_\+log\+\_\+event}} to a temporary file.\hypertarget{classCreate__file__log__event_Create_file_log_event_binary_format}{}\subsection{Binary Format}\label{classCreate__file__log__event_Create_file_log_event_binary_format}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCreate__file__log__event_a88cc18c97980807dfdd4ffd6542bbc89}\label{classCreate__file__log__event_a88cc18c97980807dfdd4ffd6542bbc89}} 
+\index{Create\+\_\+file\+\_\+log\+\_\+event@{Create\+\_\+file\+\_\+log\+\_\+event}!Create\+\_\+file\+\_\+log\+\_\+event@{Create\+\_\+file\+\_\+log\+\_\+event}}
+\index{Create\+\_\+file\+\_\+log\+\_\+event@{Create\+\_\+file\+\_\+log\+\_\+event}!Create\+\_\+file\+\_\+log\+\_\+event@{Create\+\_\+file\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{Create\+\_\+file\+\_\+log\+\_\+event()}{Create\_file\_log\_event()}}
+{\footnotesize\ttfamily Create\+\_\+file\+\_\+log\+\_\+event\+::\+Create\+\_\+file\+\_\+log\+\_\+event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buf,  }\item[{uint}]{event\+\_\+len,  }\item[{const Format\+\_\+description\+\_\+event $\ast$}]{description\+\_\+event }\end{DoxyParamCaption})}
+
+We need to set exec\+\_\+time here, which is ued to calcutate seconds behind master on the slave.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

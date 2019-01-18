@@ -1,0 +1,344 @@
+\hypertarget{classItem__subselect}{}\section{Item\+\_\+subselect Class Reference}
+\label{classItem__subselect}\index{Item\+\_\+subselect@{Item\+\_\+subselect}}
+Inheritance diagram for Item\+\_\+subselect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{classItem__subselect}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__subselect_aebfb78eb783ba77b9d6cff076513ac16}\label{classItem__subselect_aebfb78eb783ba77b9d6cff076513ac16}} 
+enum {\bfseries trans\+\_\+res} \{ {\bfseries R\+E\+S\+\_\+\+OK}, 
+{\bfseries R\+E\+S\+\_\+\+R\+E\+D\+U\+CE}, 
+{\bfseries R\+E\+S\+\_\+\+E\+R\+R\+OR}
+ \}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a1d3f5245246e370c6420309fe8daafc5}\label{classItem__subselect_a1d3f5245246e370c6420309fe8daafc5}} 
+enum {\bfseries subs\+\_\+type} \{ \newline
+{\bfseries U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+U\+BS}, 
+{\bfseries S\+I\+N\+G\+L\+E\+R\+O\+W\+\_\+\+S\+U\+BS}, 
+{\bfseries E\+X\+I\+S\+T\+S\+\_\+\+S\+U\+BS}, 
+{\bfseries I\+N\+\_\+\+S\+U\+BS}, 
+\newline
+{\bfseries A\+L\+L\+\_\+\+S\+U\+BS}, 
+{\bfseries A\+N\+Y\+\_\+\+S\+U\+BS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a4e4cfad55d29b325f1943a53dd329037}\label{classItem__subselect_a4e4cfad55d29b325f1943a53dd329037}} 
+const \mbox{\hyperlink{classsubselect__engine}{subselect\+\_\+engine}} $\ast$ \mbox{\hyperlink{classItem__subselect_a4e4cfad55d29b325f1943a53dd329037}{get\+\_\+engine\+\_\+for\+\_\+explain}} () const
+\begin{DoxyCompactList}\small\item\em E\+X\+P\+L\+A\+IN needs read-\/only access to the engine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classItem__subselect_afd257a4ceeaf579a71ce317f5a8d384b}\label{classItem__subselect_afd257a4ceeaf579a71ce317f5a8d384b}} 
+{\bfseries Item\+\_\+subselect} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a8c1f983b699962ed0959c9b66562acce}\label{classItem__subselect_a8c1f983b699962ed0959c9b66562acce}} 
+virtual subs\+\_\+type {\bfseries substype} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a9468be7092a2cd16d62b9944696b2bdb}\label{classItem__subselect_a9468be7092a2cd16d62b9944696b2bdb}} 
+void {\bfseries init} (st\+\_\+select\+\_\+lex $\ast$select, Query\+\_\+result\+\_\+subquery $\ast$result)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a8e56b0bedaa5c944bbe5a85f410931e6}\label{classItem__subselect_a8e56b0bedaa5c944bbe5a85f410931e6}} 
+virtual void {\bfseries cleanup} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a6ebf42152773e7024635d16c473f4edc}\label{classItem__subselect_a6ebf42152773e7024635d16c473f4edc}} 
+virtual void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a580567b9ee7d9ddf00df6f6d69deb669}\label{classItem__subselect_a580567b9ee7d9ddf00df6f6d69deb669}} 
+virtual trans\+\_\+res {\bfseries select\+\_\+transformer} (st\+\_\+select\+\_\+lex $\ast$select)=0
+\item 
+\mbox{\Hypertarget{classItem__subselect_a809b0e63113f553e7c5c65cee97f2087}\label{classItem__subselect_a809b0e63113f553e7c5c65cee97f2087}} 
+bool {\bfseries assigned} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_aaaf5e6c0d77cd3fdde5f38e74b3b2afc}\label{classItem__subselect_aaaf5e6c0d77cd3fdde5f38e74b3b2afc}} 
+void {\bfseries assigned} (bool a)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a4dfac4bd64e20d641bac18cbe55a8bf6}\label{classItem__subselect_a4dfac4bd64e20d641bac18cbe55a8bf6}} 
+enum Type {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_acb9e1e59aacf2c14bb6add3b4652e877}\label{classItem__subselect_acb9e1e59aacf2c14bb6add3b4652e877}} 
+bool {\bfseries is\+\_\+null} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a40f8e8c8f599529db3bd9a3152b2cdcf}\label{classItem__subselect_a40f8e8c8f599529db3bd9a3152b2cdcf}} 
+bool {\bfseries fix\+\_\+fields} (T\+HD $\ast$thd, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$ref)
+\item 
+void \mbox{\hyperlink{classItem__subselect_a8636b93f943b8a52f75222eb4e49c4cf}{fix\+\_\+after\+\_\+pullout}} (st\+\_\+select\+\_\+lex $\ast$parent\+\_\+select, st\+\_\+select\+\_\+lex $\ast$removed\+\_\+select)
+\item 
+\mbox{\Hypertarget{classItem__subselect_af0ae42fa99f0d81fc16e5a5991fbe77a}\label{classItem__subselect_af0ae42fa99f0d81fc16e5a5991fbe77a}} 
+virtual bool {\bfseries exec} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a540f884ab9d0aa9c9a780362b1b3705e}\label{classItem__subselect_a540f884ab9d0aa9c9a780362b1b3705e}} 
+virtual void {\bfseries fix\+\_\+length\+\_\+and\+\_\+dec} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_accc65a41c32a8a66d944d2ffad1562b1}\label{classItem__subselect_accc65a41c32a8a66d944d2ffad1562b1}} 
+table\+\_\+map {\bfseries used\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_a641a61f1bc5e616fc669ef13f1babdf4}\label{classItem__subselect_a641a61f1bc5e616fc669ef13f1babdf4}} 
+table\+\_\+map {\bfseries not\+\_\+null\+\_\+tables} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_a641a5947bd768765933be042b4b7135a}\label{classItem__subselect_a641a5947bd768765933be042b4b7135a}} 
+bool {\bfseries const\+\_\+item} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_a9fe87ad9bf7c02b1959aae91506d418d}\label{classItem__subselect_a9fe87ad9bf7c02b1959aae91506d418d}} 
+table\+\_\+map {\bfseries get\+\_\+used\+\_\+tables\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a903380610c75cd9ac3db021b4a28eb0c}\label{classItem__subselect_a903380610c75cd9ac3db021b4a28eb0c}} 
+bool {\bfseries get\+\_\+const\+\_\+item\+\_\+cache} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a67f86da92142f3320da4def7a8868ece}\label{classItem__subselect_a67f86da92142f3320da4def7a8868ece}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries get\+\_\+tmp\+\_\+table\+\_\+item} (T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a29f2ffe59f58d6ff742501682505941c}\label{classItem__subselect_a29f2ffe59f58d6ff742501682505941c}} 
+void {\bfseries update\+\_\+used\+\_\+tables} ()
+\item 
+virtual void \mbox{\hyperlink{classItem__subselect_a61f70e7dc36e3aad77919971995cccb9}{print}} (String $\ast$str, enum\+\_\+query\+\_\+type query\+\_\+type)
+\item 
+\mbox{\Hypertarget{classItem__subselect_ac3d6a36f2e3fa420421a77a4806e525e}\label{classItem__subselect_ac3d6a36f2e3fa420421a77a4806e525e}} 
+virtual bool {\bfseries have\+\_\+guarded\+\_\+conds} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a62af7c0644b9ae343eeb4522c9fab817}\label{classItem__subselect_a62af7c0644b9ae343eeb4522c9fab817}} 
+bool {\bfseries change\+\_\+engine} (\mbox{\hyperlink{classsubselect__engine}{subselect\+\_\+engine}} $\ast$eng)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a18eec0d0432b2f9d7fda234212f8bda2}\label{classItem__subselect_a18eec0d0432b2f9d7fda234212f8bda2}} 
+bool {\bfseries is\+\_\+evaluated} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_a37bc63d62c1343ba9916123dfffdbf65}\label{classItem__subselect_a37bc63d62c1343ba9916123dfffdbf65}} 
+bool {\bfseries is\+\_\+uncacheable} () const
+\item 
+\mbox{\Hypertarget{classItem__subselect_a56bb969095ab4624f5e00c1f390490db}\label{classItem__subselect_a56bb969095ab4624f5e00c1f390490db}} 
+virtual void {\bfseries reset\+\_\+value\+\_\+registration} ()
+\item 
+\mbox{\Hypertarget{classItem__subselect_a6adf8c5e7a376cc70ffdb932ffe5af41}\label{classItem__subselect_a6adf8c5e7a376cc70ffdb932ffe5af41}} 
+enum\+\_\+parsing\+\_\+context {\bfseries place} ()
+\item 
+bool \mbox{\hyperlink{classItem__subselect_aa20b4bdca4595e2c25904b04a0de909a}{walk\+\_\+body}} (Item\+\_\+processor processor, \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}} \mbox{\hyperlink{classItem__subselect_a163a5d1a04b9bf04d352aca85c084adf}{walk}}, uchar $\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem__subselect_a163a5d1a04b9bf04d352aca85c084adf}{walk}} (Item\+\_\+processor processor, \mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}} walk, uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem__subselect_afd7dbf2095f70599df0a15fd0de9f9f5}{explain\+\_\+subquery\+\_\+checker}} (uchar $\ast$$\ast$arg)
+\item 
+bool \mbox{\hyperlink{classItem__subselect_ace856ad68034af0f86c67a98e4236a22}{inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab}} (uchar $\ast$arg)
+\item 
+virtual bool \mbox{\hyperlink{classItem__subselect_a0944e9b89787f5adac23639eb0792d86}{clean\+\_\+up\+\_\+after\+\_\+removal}} (uchar $\ast$arg)
+\item 
+\mbox{\Hypertarget{classItem__subselect_adc15cd96c5cc6efe1ade56e7c0b46c50}\label{classItem__subselect_adc15cd96c5cc6efe1ade56e7c0b46c50}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a630048911c7954e7ea7fd0ce080167d3}\label{classItem__subselect_a630048911c7954e7ea7fd0ce080167d3}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ {\bfseries substitution}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a0096b9cf2dc73c3ce31d387fbce6a016}\label{classItem__subselect_a0096b9cf2dc73c3ce31d387fbce6a016}} 
+st\+\_\+select\+\_\+lex\+\_\+unit $\ast$ {\bfseries unit}
+\item 
+int \mbox{\hyperlink{classItem__subselect_a844742f0868e1938f275be3195665a84}{in\+\_\+cond\+\_\+of\+\_\+tab}}
+\item 
+\mbox{\Hypertarget{classItem__subselect_acd0b9464508e0c52de89eb60ac025ca5}\label{classItem__subselect_acd0b9464508e0c52de89eb60ac025ca5}} 
+bool {\bfseries changed}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a788af9043d6c4fc61005e137c302331a}\label{classItem__subselect_a788af9043d6c4fc61005e137c302331a}} 
+\mbox{\hyperlink{classsubselect__engine}{subselect\+\_\+engine}} $\ast$ {\bfseries engine}
+\item 
+\mbox{\Hypertarget{classItem__subselect_aa54ff3bce485e32934afaf46311f1de2}\label{classItem__subselect_aa54ff3bce485e32934afaf46311f1de2}} 
+\mbox{\hyperlink{classsubselect__engine}{subselect\+\_\+engine}} $\ast$ {\bfseries old\+\_\+engine}
+\item 
+\mbox{\Hypertarget{classItem__subselect_abc1008996a889be2da930bb140bb6ad7}\label{classItem__subselect_abc1008996a889be2da930bb140bb6ad7}} 
+table\+\_\+map {\bfseries used\+\_\+tables\+\_\+cache}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a73059e6053757ee2a8e3558e9a6d7f14}\label{classItem__subselect_a73059e6053757ee2a8e3558e9a6d7f14}} 
+uint {\bfseries max\+\_\+columns}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a075bd100f2dafa21d394f8074b34e306}\label{classItem__subselect_a075bd100f2dafa21d394f8074b34e306}} 
+enum\+\_\+parsing\+\_\+context {\bfseries parsing\+\_\+place}
+\item 
+\mbox{\Hypertarget{classItem__subselect_aacfacb6c4843c5103dd442558602bd2d}\label{classItem__subselect_aacfacb6c4843c5103dd442558602bd2d}} 
+bool {\bfseries have\+\_\+to\+\_\+be\+\_\+excluded}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a0fed7f18cbf24d6272b3f284958eac91}\label{classItem__subselect_a0fed7f18cbf24d6272b3f284958eac91}} 
+bool {\bfseries const\+\_\+item\+\_\+cache}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a171c54b34efda791349fef8fb7014485}\label{classItem__subselect_a171c54b34efda791349fef8fb7014485}} 
+class {\bfseries Query\+\_\+result\+\_\+interceptor}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a6d0c03141d3908698d518f2e65c89b2e}\label{classItem__subselect_a6d0c03141d3908698d518f2e65c89b2e}} 
+class {\bfseries Item\+\_\+in\+\_\+optimizer}
+\item 
+\mbox{\Hypertarget{classItem__subselect_a9e9b547973700504ec6d2f21f26c0d64}\label{classItem__subselect_a9e9b547973700504ec6d2f21f26c0d64}} 
+bool {\bfseries Item\+\_\+field\+::fix\+\_\+fields} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a9b2a0926694cd97186b608ba0498dbd6}\label{classItem__subselect_a9b2a0926694cd97186b608ba0498dbd6}} 
+int {\bfseries Item\+\_\+field\+::fix\+\_\+outer\+\_\+field} (T\+HD $\ast$, \mbox{\hyperlink{classField}{Field}} $\ast$$\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+\mbox{\Hypertarget{classItem__subselect_a755236b0c507b1a56e79babb63dfc604}\label{classItem__subselect_a755236b0c507b1a56e79babb63dfc604}} 
+bool {\bfseries Item\+\_\+ref\+::fix\+\_\+fields} (T\+HD $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$$\ast$)
+\item 
+\mbox{\Hypertarget{classItem__subselect_aa2aec9b84c47a9fabb4ee1d089a4677d}\label{classItem__subselect_aa2aec9b84c47a9fabb4ee1d089a4677d}} 
+void {\bfseries Item\+\_\+ident\+::fix\+\_\+after\+\_\+pullout} (st\+\_\+select\+\_\+lex $\ast$parent\+\_\+select, st\+\_\+select\+\_\+lex $\ast$removed\+\_\+selec)
+\item 
+\mbox{\Hypertarget{classItem__subselect_ad1278d074381aaabb1db15fcf41cdf66}\label{classItem__subselect_ad1278d074381aaabb1db15fcf41cdf66}} 
+void {\bfseries mark\+\_\+select\+\_\+range\+\_\+as\+\_\+dependent} (T\+HD $\ast$, st\+\_\+select\+\_\+lex $\ast$, st\+\_\+select\+\_\+lex $\ast$, \mbox{\hyperlink{classField}{Field}} $\ast$, \mbox{\hyperlink{classItem}{Item}} $\ast$, \mbox{\hyperlink{classItem__ident}{Item\+\_\+ident}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__subselect_a0944e9b89787f5adac23639eb0792d86}\label{classItem__subselect_a0944e9b89787f5adac23639eb0792d86}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!clean\+\_\+up\+\_\+after\+\_\+removal@{clean\+\_\+up\+\_\+after\+\_\+removal}}
+\index{clean\+\_\+up\+\_\+after\+\_\+removal@{clean\+\_\+up\+\_\+after\+\_\+removal}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{clean\+\_\+up\+\_\+after\+\_\+removal()}{clean\_up\_after\_removal()}}
+{\footnotesize\ttfamily bool Item\+\_\+subselect\+::clean\+\_\+up\+\_\+after\+\_\+removal (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clean up after removing the subquery from the item tree.
+
+Call st\+\_\+select\+\_\+lex\+\_\+unit\+::exclude\+\_\+tree() to unlink it from its master and to unlink direct st\+\_\+select\+\_\+lex children from all\+\_\+selects\+\_\+list.
+
+Don\textquotesingle{}t unlink subqueries that are not descendants of the starting point (root) of the removal and cleanup. 
+
+Reimplemented from \mbox{\hyperlink{classItem_a649bf72a4ae639e262d147cf5beaa30a}{Item}}.
+
+\mbox{\Hypertarget{classItem__subselect_afd7dbf2095f70599df0a15fd0de9f9f5}\label{classItem__subselect_afd7dbf2095f70599df0a15fd0de9f9f5}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!explain\+\_\+subquery\+\_\+checker@{explain\+\_\+subquery\+\_\+checker}}
+\index{explain\+\_\+subquery\+\_\+checker@{explain\+\_\+subquery\+\_\+checker}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{explain\+\_\+subquery\+\_\+checker()}{explain\_subquery\_checker()}}
+{\footnotesize\ttfamily bool Item\+\_\+subselect\+::explain\+\_\+subquery\+\_\+checker (\begin{DoxyParamCaption}\item[{uchar $\ast$$\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Register subquery to the table where it is used within a condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & \mbox{\hyperlink{classqep__row}{qep\+\_\+row}} to which the subquery belongs\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+We always return \char`\"{}false\char`\"{} as far as we don\textquotesingle{}t want to dive deeper because we explain inner subqueries in their joins contexts. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+\mbox{\Hypertarget{classItem__subselect_a8636b93f943b8a52f75222eb4e49c4cf}\label{classItem__subselect_a8636b93f943b8a52f75222eb4e49c4cf}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}}
+\index{fix\+\_\+after\+\_\+pullout@{fix\+\_\+after\+\_\+pullout}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{fix\+\_\+after\+\_\+pullout()}{fix\_after\_pullout()}}
+{\footnotesize\ttfamily void Item\+\_\+subselect\+::fix\+\_\+after\+\_\+pullout (\begin{DoxyParamCaption}\item[{st\+\_\+select\+\_\+lex $\ast$}]{parent\+\_\+select,  }\item[{st\+\_\+select\+\_\+lex $\ast$}]{removed\+\_\+select }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Fix used tables information for a subquery after query transformations. Common actions for all predicates involving subqueries. Most actions here involve re-\/resolving information for conditions and items belonging to the subquery. Notice that the usage information from underlying expressions is not propagated to the subquery predicate, as it belongs to inner layers of the query operator structure. However, when underlying expressions contain outer references into a select\+\_\+lex on this level, the relevant information must be updated when these expressions are resolved. 
+
+Reimplemented from \mbox{\hyperlink{classItem_a6e3c38497d210357a4f80a755fb7b61e}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__in__subselect_aa6c971974969097521a5a736ea6eed02}{Item\+\_\+in\+\_\+subselect}}.
+
+\mbox{\Hypertarget{classItem__subselect_ace856ad68034af0f86c67a98e4236a22}\label{classItem__subselect_ace856ad68034af0f86c67a98e4236a22}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab@{inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab}}
+\index{inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab@{inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab()}{inform\_item\_in\_cond\_of\_tab()}}
+{\footnotesize\ttfamily bool Item\+\_\+subselect\+::inform\+\_\+item\+\_\+in\+\_\+cond\+\_\+of\+\_\+tab (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells an \mbox{\hyperlink{classItem}{Item}} that it is in the condition of a \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} of a query block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & A std\+::pair\+: first argument is the query block, second is the index of \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} in \mbox{\hyperlink{classJOIN}{J\+O\+IN}}\textquotesingle{}s array.\\
+\hline
+\end{DoxyParams}
+The \mbox{\hyperlink{classItem}{Item}} records this fact and can deduce from it the estimated number of times that it will be evaluated. If the \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} doesn\textquotesingle{}t belong to the query block owning this \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}}, it must belong to a more inner query block (not a more outer, as the \mbox{\hyperlink{classItem__subselect_a163a5d1a04b9bf04d352aca85c084adf}{walk()}} doesn\textquotesingle{}t dive into subqueries); in that case, it must be that \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} is the left-\/hand-\/side of a subquery transformed with IN-\/to-\/E\+X\+I\+S\+TS and has been wrapped in \mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}} and then injected into the W\+H\+E\+R\+E/\+H\+A\+V\+I\+NG of that subquery; but then the \mbox{\hyperlink{classItem__subselect}{Item\+\_\+subselect}} will not be evaluated when the \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}}\textquotesingle{}s condition is evaluated (\mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}} will short-\/circuit it); it will be evaluated when the I\+N(subquery) (\mbox{\hyperlink{classItem__in__optimizer}{Item\+\_\+in\+\_\+optimizer}}) is -\/ that\textquotesingle{}s when the \mbox{\hyperlink{classItem__cache}{Item\+\_\+cache}} is updated. Thus, we will ignore \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} in this case. 
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+\mbox{\Hypertarget{classItem__subselect_a61f70e7dc36e3aad77919971995cccb9}\label{classItem__subselect_a61f70e7dc36e3aad77919971995cccb9}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!print@{print}}
+\index{print@{print}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Item\+\_\+subselect\+::print (\begin{DoxyParamCaption}\item[{String $\ast$}]{str,  }\item[{enum\+\_\+query\+\_\+type}]{query\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is used for to\+:
+\begin{DoxyItemize}
+\item to generate a view definition query (S\+E\+L\+E\+CT-\/statement);
+\item to generate a S\+QL-\/query for E\+X\+P\+L\+A\+IN E\+X\+T\+E\+N\+D\+ED;
+\item to generate a S\+QL-\/query to be shown in I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA;
+\item to generate a S\+QL-\/query that looks like a prepared statement for query\+\_\+rewrite
+\item debug.
+\end{DoxyItemize}
+
+For more information about view definition query, I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA query and why they should be generated from the \mbox{\hyperlink{classItem}{Item}}-\/tree, \begin{DoxySeeAlso}{See also}
+mysql\+\_\+register\+\_\+view(). 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_aa7ba4bde739d83adec8edf3bf1596d94}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__allany__subselect_ade4b2eaa6af0cde005b082598d2e31b0}{Item\+\_\+allany\+\_\+subselect}}, \mbox{\hyperlink{classItem__in__subselect_a8c80eb807d1c1219807fd45db61fad8f}{Item\+\_\+in\+\_\+subselect}}, \mbox{\hyperlink{classItem__exists__subselect_a795c650acea24859e6ff1d6f82d5a2ec}{Item\+\_\+exists\+\_\+subselect}}, and \mbox{\hyperlink{classItem__maxmin__subselect_ad03a1c165ac9ec019b5c7e80f108cddd}{Item\+\_\+maxmin\+\_\+subselect}}.
+
+\mbox{\Hypertarget{classItem__subselect_a163a5d1a04b9bf04d352aca85c084adf}\label{classItem__subselect_a163a5d1a04b9bf04d352aca85c084adf}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!walk@{walk}}
+\index{walk@{walk}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{walk()}{walk()}}
+{\footnotesize\ttfamily bool Item\+\_\+subselect\+::walk (\begin{DoxyParamCaption}\item[{Item\+\_\+processor}]{processor,  }\item[{\mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}}}]{walk,  }\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Traverses a tree of Items in prefix and/or postfix order. Optionally walks into subqueries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & processor function to be invoked per item returns true to abort traversal, false to continue \\
+\hline
+{\em walk} & controls how to traverse the item tree W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX\+: call processor before invoking children W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX\+: call processor after invoking children W\+A\+L\+K\+\_\+\+S\+U\+B\+Q\+U\+E\+RY go down into subqueries walk values are bit-\/coded and may be combined. Omitting both W\+A\+L\+K\+\_\+\+P\+R\+E\+F\+IX and W\+A\+L\+K\+\_\+\+P\+O\+S\+T\+F\+IX is undefined behaviour. \\
+\hline
+{\em arg} & Optional pointer to a walk-\/specific object\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & walk succeeded \\
+\hline
+{\em true} & walk aborted by agreement, an error may have been reported \\
+\hline
+\end{DoxyRetVals}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_ab7d2529511c14a77e59a1b1bbabc95d7}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__in__subselect_ae2d9db307c8214b314f387b8f0fca6ae}{Item\+\_\+in\+\_\+subselect}}.
+
+\mbox{\Hypertarget{classItem__subselect_aa20b4bdca4595e2c25904b04a0de909a}\label{classItem__subselect_aa20b4bdca4595e2c25904b04a0de909a}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!walk\+\_\+body@{walk\+\_\+body}}
+\index{walk\+\_\+body@{walk\+\_\+body}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{walk\+\_\+body()}{walk\_body()}}
+{\footnotesize\ttfamily bool Item\+\_\+subselect\+::walk\+\_\+body (\begin{DoxyParamCaption}\item[{Item\+\_\+processor}]{processor,  }\item[{\mbox{\hyperlink{classItem_a4e68f315ba2a26543339e9f0efed3695}{enum\+\_\+walk}}}]{walk,  }\item[{uchar $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Workaround for bug in gcc 4.\+1.  \mbox{\hyperlink{classItem__in__subselect_ae2d9db307c8214b314f387b8f0fca6ae}{Item\+\_\+in\+\_\+subselect\+::walk()}} 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classItem__subselect_a844742f0868e1938f275be3195665a84}\label{classItem__subselect_a844742f0868e1938f275be3195665a84}} 
+\index{Item\+\_\+subselect@{Item\+\_\+subselect}!in\+\_\+cond\+\_\+of\+\_\+tab@{in\+\_\+cond\+\_\+of\+\_\+tab}}
+\index{in\+\_\+cond\+\_\+of\+\_\+tab@{in\+\_\+cond\+\_\+of\+\_\+tab}!Item\+\_\+subselect@{Item\+\_\+subselect}}
+\subsubsection{\texorpdfstring{in\+\_\+cond\+\_\+of\+\_\+tab}{in\_cond\_of\_tab}}
+{\footnotesize\ttfamily int Item\+\_\+subselect\+::in\+\_\+cond\+\_\+of\+\_\+tab}
+
+If !=N\+O\+\_\+\+P\+L\+A\+N\+\_\+\+I\+DX\+: this \mbox{\hyperlink{classItem}{Item}} is in the condition attached to the \mbox{\hyperlink{classJOIN__TAB}{J\+O\+I\+N\+\_\+\+T\+AB}} having this index in the parent \mbox{\hyperlink{classJOIN}{J\+O\+IN}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+subselect.\+h\item 
+\mbox{\hyperlink{item__subselect_8cc}{item\+\_\+subselect.\+cc}}\end{DoxyCompactItemize}

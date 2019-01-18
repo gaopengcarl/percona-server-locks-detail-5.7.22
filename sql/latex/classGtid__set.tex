@@ -1,0 +1,601 @@
+\hypertarget{classGtid__set}{}\section{Gtid\+\_\+set Class Reference}
+\label{classGtid__set}\index{Gtid\+\_\+set@{Gtid\+\_\+set}}
+
+
+{\ttfamily \#include $<$rpl\+\_\+gtid.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGtid__set_1_1Const__interval__iterator}{Const\+\_\+interval\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classGtid__set_1_1Gtid__iterator}{Gtid\+\_\+iterator}}
+\item 
+struct \mbox{\hyperlink{structGtid__set_1_1Interval}{Interval}}
+\item 
+class \mbox{\hyperlink{classGtid__set_1_1Interval__iterator}{Interval\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classGtid__set_1_1Interval__iterator__base}{Interval\+\_\+iterator\+\_\+base}}
+\item 
+struct \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGtid__set_a048d3934c095e4afed99055334367047}{Gtid\+\_\+set}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, \mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$sid\+\_\+lock=N\+U\+LL)
+\item 
+\mbox{\hyperlink{classGtid__set_a3f441c71a9465b3e03fc2d8a68a04315}{Gtid\+\_\+set}} (\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$sid\+\_\+map, const char $\ast$text, enum\+\_\+return\+\_\+status $\ast$status, \mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$sid\+\_\+lock=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classGtid__set_ad214bab2852c98a3b0ce39bb305f720f}\label{classGtid__set_ad214bab2852c98a3b0ce39bb305f720f}} 
+\mbox{\hyperlink{classGtid__set_ad214bab2852c98a3b0ce39bb305f720f}{$\sim$\+Gtid\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Destroy this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGtid__set_a8d8130a7559cfd7b940f42e66c9b171a}{clear}} ()
+\item 
+void \mbox{\hyperlink{classGtid__set_aba662ba6a9761b9b0c21473aecc27a1b}{\+\_\+add\+\_\+gtid}} (rpl\+\_\+sidno sidno, rpl\+\_\+gno gno)
+\item 
+void \mbox{\hyperlink{classGtid__set_aed076ca0f25c0c25c718abe4cc5c27ed}{\+\_\+remove\+\_\+gtid}} (rpl\+\_\+sidno sidno, rpl\+\_\+gno gno)
+\item 
+void \mbox{\hyperlink{classGtid__set_afbd9dcbc89a4d8c7a3ab9c518302039b}{\+\_\+add\+\_\+gtid}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid)
+\item 
+void \mbox{\hyperlink{classGtid__set_add6998be8ef93e04caca93692e755826}{\+\_\+remove\+\_\+gtid}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid)
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__set_a5a76ae688b1286b8bc51b02619174892}{add\+\_\+gtid\+\_\+set}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other)
+\item 
+void \mbox{\hyperlink{classGtid__set_a6ed8e71d84efbc22bc589897b7318751}{remove\+\_\+gtid\+\_\+set}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other)
+\item 
+void \mbox{\hyperlink{classGtid__set_ac51226ff8e814b700a353fef54763456}{remove\+\_\+intervals\+\_\+for\+\_\+sidno}} (\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other, rpl\+\_\+sidno sidno)
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__set_ae854e77cbadfd86cf28b61d5a8e228b9}{add\+\_\+gtid\+\_\+text}} (const char $\ast$text, bool $\ast$anonymous=N\+U\+LL)
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__set_ae5f1bc4e5fa45a2902ff562df316cf1b}{add\+\_\+gtid\+\_\+encoding}} (const uchar $\ast$encoded, size\+\_\+t length, size\+\_\+t $\ast$actual\+\_\+length=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classGtid__set_a4e68bd7787bfa962c687120e171eae73}\label{classGtid__set_a4e68bd7787bfa962c687120e171eae73}} 
+bool \mbox{\hyperlink{classGtid__set_a4e68bd7787bfa962c687120e171eae73}{contains\+\_\+gtid}} (rpl\+\_\+sidno sidno, rpl\+\_\+gno gno) const
+\begin{DoxyCompactList}\small\item\em Return true iff the given G\+T\+ID exists in this set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__set_a5c5f701799a0101c55a594a39969ef20}\label{classGtid__set_a5c5f701799a0101c55a594a39969ef20}} 
+bool \mbox{\hyperlink{classGtid__set_a5c5f701799a0101c55a594a39969ef20}{contains\+\_\+gtid}} (const \mbox{\hyperlink{structGtid}{Gtid}} \&gtid) const
+\begin{DoxyCompactList}\small\item\em Return true iff the given G\+T\+ID exists in this set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__set_a090363bf019907d9eea5bf9fa6f8719c}\label{classGtid__set_a090363bf019907d9eea5bf9fa6f8719c}} 
+rpl\+\_\+gno {\bfseries get\+\_\+last\+\_\+gno} (rpl\+\_\+sidno sidno) const
+\item 
+\mbox{\Hypertarget{classGtid__set_afcc3a046cf55b71db3a2def3b4a01ecb}\label{classGtid__set_afcc3a046cf55b71db3a2def3b4a01ecb}} 
+rpl\+\_\+sidno \mbox{\hyperlink{classGtid__set_afcc3a046cf55b71db3a2def3b4a01ecb}{get\+\_\+max\+\_\+sidno}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximal sidno that this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} currently has space for. \end{DoxyCompactList}\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__set_a4f026631d33627a5c273bdc35dcc03ef}{ensure\+\_\+sidno}} (rpl\+\_\+sidno sidno)
+\item 
+\mbox{\Hypertarget{classGtid__set_a0fe2143cf922ad18d4d92853d439796b}\label{classGtid__set_a0fe2143cf922ad18d4d92853d439796b}} 
+bool \mbox{\hyperlink{classGtid__set_a0fe2143cf922ad18d4d92853d439796b}{is\+\_\+subset}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$super) const
+\begin{DoxyCompactList}\small\item\em Returns true if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is a subset of the other \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGtid__set_aaa735cb7bf13a930a11ea4ca69ffa763}\label{classGtid__set_aaa735cb7bf13a930a11ea4ca69ffa763}} 
+bool \mbox{\hyperlink{classGtid__set_aaa735cb7bf13a930a11ea4ca69ffa763}{is\+\_\+subset\+\_\+not\+\_\+equals}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$super) const
+\begin{DoxyCompactList}\small\item\em Returns true if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is a non equal subset of the other \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGtid__set_a75513b924941cde711e91e8c0f9275a0}{is\+\_\+subset\+\_\+for\+\_\+sid}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$super, rpl\+\_\+sidno superset\+\_\+sidno, rpl\+\_\+sidno subset\+\_\+sidno) const
+\item 
+bool \mbox{\hyperlink{classGtid__set_a09f59bb7b9cd3a32b54bb5f8128aa5ca}{is\+\_\+intersection\+\_\+nonempty}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other) const
+\item 
+enum\+\_\+return\+\_\+status \mbox{\hyperlink{classGtid__set_a9a384be7c735d018d5fc0c8c0c64344e}{intersection}} (const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$other, \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$result)
+\item 
+\mbox{\Hypertarget{classGtid__set_abba037b0972b58d2be314c76cffef66d}\label{classGtid__set_abba037b0972b58d2be314c76cffef66d}} 
+bool \mbox{\hyperlink{classGtid__set_abba037b0972b58d2be314c76cffef66d}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGtid__set_a129894d15720c07d707ca29a426cbe47}{contains\+\_\+sidno}} (rpl\+\_\+sidno sidno) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classGtid__set_a9183195ad785890b208ce15ce111755b}{get\+\_\+string\+\_\+length}} (const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} $\ast$string\+\_\+format=N\+U\+LL) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classGtid__set_a256a8c891ab89b5388bdae4df8798d9b}{to\+\_\+string}} (char $\ast$buf, bool need\+\_\+lock=false, const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} $\ast$string\+\_\+format=N\+U\+LL) const
+\item 
+long \mbox{\hyperlink{classGtid__set_a2ff97dca33abfc52b81adedaf416abf9}{to\+\_\+string}} (char $\ast$$\ast$buf, bool need\+\_\+lock=false, const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} $\ast$string\+\_\+format=N\+U\+LL) const
+\item 
+\mbox{\Hypertarget{classGtid__set_a79646f3e6a593f175f8b4692460bf955}\label{classGtid__set_a79646f3e6a593f175f8b4692460bf955}} 
+void \mbox{\hyperlink{classGtid__set_a79646f3e6a593f175f8b4692460bf955}{print}} (bool need\+\_\+lock=false, const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} $\ast$sf=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em Debug only\+: Print this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to stdout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGtid__set_a9f1ff7200f92ce9911347ba459176ecd}{dbug\+\_\+print}} (const char $\ast$text=\char`\"{}\char`\"{}, bool need\+\_\+lock=false, const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} $\ast$sf=N\+U\+LL) const
+\item 
+void \mbox{\hyperlink{classGtid__set_aa972d694a2c2f8c2b3805cf248ec7d2b}{get\+\_\+gtid\+\_\+intervals}} (std\+::list$<$ \mbox{\hyperlink{structGtid__interval}{Gtid\+\_\+interval}} $>$ $\ast$gtid\+\_\+intervals) const
+\item 
+\mbox{\Hypertarget{classGtid__set_a1dcb30d3c0809db3baa3bce6a813332b}\label{classGtid__set_a1dcb30d3c0809db3baa3bce6a813332b}} 
+\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$ \mbox{\hyperlink{classGtid__set_a1dcb30d3c0809db3baa3bce6a813332b}{get\+\_\+sid\+\_\+map}} () const
+\begin{DoxyCompactList}\small\item\em Return the \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} associated with this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGtid__set_a11541c02363dc7a2877a5a0282d679ab}{add\+\_\+interval\+\_\+memory}} (int n\+\_\+intervals, \mbox{\hyperlink{structGtid__set_1_1Interval}{Interval}} $\ast$intervals\+\_\+param)
+\item 
+void \mbox{\hyperlink{classGtid__set_a036d17fc704667febec3777422f164cd}{encode}} (uchar $\ast$buf) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classGtid__set_ac92c3495294a8533401fe17ea6e250f4}{get\+\_\+encoded\+\_\+length}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classGtid__set_a8a10c1dfb57ac995cbf14b51f83f8e68}{is\+\_\+valid}} (const char $\ast$text)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} \mbox{\hyperlink{classGtid__set_a65b9f6c31cfc7d5ca7b1564411c2a416}{default\+\_\+string\+\_\+format}}
+\item 
+static const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} \mbox{\hyperlink{classGtid__set_abefb12fa60900cd38a8abe959b774f54}{sql\+\_\+string\+\_\+format}}
+\item 
+static const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} \mbox{\hyperlink{classGtid__set_a4ba668b76ba3d4a4d96a91389dc31817}{commented\+\_\+string\+\_\+format}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGtid__set_a59860055a243825524c47d9adc494250}{Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em Used by unit tests that need to access private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a set of G\+T\+I\+Ds.
+
+This is structured as an array, indexed by S\+I\+D\+NO, where each element contains a linked list of intervals.
+
+This data structure O\+P\+T\+I\+O\+N\+A\+L\+LY knows of a \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} that gives a correspondence between S\+I\+D\+NO and S\+ID. If the \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} is N\+U\+LL, then operations that require a \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} -\/ printing and parsing -\/ raise an assertion.
+
+This data structure O\+P\+T\+I\+O\+N\+A\+L\+LY knows of a read-\/write lock that protects the number of S\+I\+D\+N\+Os. The lock is provided by the invoker of the constructor and it is generally the caller\textquotesingle{}s responsibility to acquire the read lock. If the lock is not N\+U\+LL, access methods assert that the caller already holds the read (or write) lock. If the lock is not N\+U\+LL and a method of this class grows the number of S\+I\+D\+N\+Os, then the method temporarily upgrades this lock to a write lock and then degrades it to a read lock again; there will be a short period when the lock is not held at all. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGtid__set_a048d3934c095e4afed99055334367047}\label{classGtid__set_a048d3934c095e4afed99055334367047}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{Gtid\+\_\+set()}{Gtid\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gtid\+\_\+set\+::\+Gtid\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{sid\+\_\+map,  }\item[{\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$}]{sid\+\_\+lock = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Constructs a new, empty \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid\+\_\+map} & The \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} to use, or N\+U\+LL if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} should not have a \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}}. \\
+\hline
+{\em sid\+\_\+lock} & Read-\/write lock that protects updates to the number of S\+I\+Ds. This may be N\+U\+LL if such changes do not need to be protected. \\
+\hline
+{\em free\+\_\+intervals\+\_\+mutex\+\_\+key} & Performance\+\_\+schema instrumentation key to use for the free\+\_\+intervals mutex. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_a3f441c71a9465b3e03fc2d8a68a04315}\label{classGtid__set_a3f441c71a9465b3e03fc2d8a68a04315}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{Gtid\+\_\+set()}{Gtid\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gtid\+\_\+set\+::\+Gtid\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} $\ast$}]{sid\+\_\+map,  }\item[{const char $\ast$}]{text,  }\item[{enum\+\_\+return\+\_\+status $\ast$}]{status,  }\item[{\mbox{\hyperlink{classCheckable__rwlock}{Checkable\+\_\+rwlock}} $\ast$}]{sid\+\_\+lock = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} that contains the groups in the given string, in the same format as add\+\_\+gtid\+\_\+text(char $\ast$).
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid\+\_\+map} & The \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} to use for S\+I\+Ds. \\
+\hline
+{\em text} & The text to parse. \\
+\hline
+{\em status} & Will be set to R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK on success or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR on error. \\
+\hline
+{\em sid\+\_\+lock} & Read/write lock to protect changes in the number of S\+I\+Ds with. This may be N\+U\+LL if such changes do not need to be protected. \\
+\hline
+{\em free\+\_\+intervals\+\_\+mutex\+\_\+key} & Performance\+\_\+schema instrumentation key to use for the free\+\_\+intervals mutex.\\
+\hline
+\end{DoxyParams}
+If sid\+\_\+lock != N\+U\+LL, then the read lock on sid\+\_\+lock must be held before calling this function. If the array is grown, sid\+\_\+lock is temporarily upgraded to a write lock and then degraded again; there will be a short period when the lock is not held at all. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGtid__set_aba662ba6a9761b9b0c21473aecc27a1b}\label{classGtid__set_aba662ba6a9761b9b0c21473aecc27a1b}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!\+\_\+add\+\_\+gtid@{\+\_\+add\+\_\+gtid}}
+\index{\+\_\+add\+\_\+gtid@{\+\_\+add\+\_\+gtid}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{\+\_\+add\+\_\+gtid()}{\_add\_gtid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::\+\_\+add\+\_\+gtid (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno,  }\item[{rpl\+\_\+gno}]{gno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the given G\+T\+ID to this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+The S\+I\+D\+NO must exist in the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} before this function is called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & S\+I\+D\+NO of the group to add. \\
+\hline
+{\em gno} & G\+NO of the group to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_afbd9dcbc89a4d8c7a3ab9c518302039b}\label{classGtid__set_afbd9dcbc89a4d8c7a3ab9c518302039b}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!\+\_\+add\+\_\+gtid@{\+\_\+add\+\_\+gtid}}
+\index{\+\_\+add\+\_\+gtid@{\+\_\+add\+\_\+gtid}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{\+\_\+add\+\_\+gtid()}{\_add\_gtid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::\+\_\+add\+\_\+gtid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the given G\+T\+ID to this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+The S\+I\+D\+NO must exist in the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} before this function is called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid} & \mbox{\hyperlink{structGtid}{Gtid}} to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_aed076ca0f25c0c25c718abe4cc5c27ed}\label{classGtid__set_aed076ca0f25c0c25c718abe4cc5c27ed}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!\+\_\+remove\+\_\+gtid@{\+\_\+remove\+\_\+gtid}}
+\index{\+\_\+remove\+\_\+gtid@{\+\_\+remove\+\_\+gtid}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{\+\_\+remove\+\_\+gtid()}{\_remove\_gtid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::\+\_\+remove\+\_\+gtid (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno,  }\item[{rpl\+\_\+gno}]{gno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the given G\+T\+ID from this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & S\+I\+D\+NO of the group to remove. \\
+\hline
+{\em gno} & G\+NO of the group to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_add6998be8ef93e04caca93692e755826}\label{classGtid__set_add6998be8ef93e04caca93692e755826}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!\+\_\+remove\+\_\+gtid@{\+\_\+remove\+\_\+gtid}}
+\index{\+\_\+remove\+\_\+gtid@{\+\_\+remove\+\_\+gtid}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{\+\_\+remove\+\_\+gtid()}{\_remove\_gtid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::\+\_\+remove\+\_\+gtid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid}{Gtid}} \&}]{gtid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the given G\+T\+ID from this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gtid} & \mbox{\hyperlink{structGtid}{Gtid}} to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_ae5f1bc4e5fa45a2902ff562df316cf1b}\label{classGtid__set_ae5f1bc4e5fa45a2902ff562df316cf1b}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!add\+\_\+gtid\+\_\+encoding@{add\+\_\+gtid\+\_\+encoding}}
+\index{add\+\_\+gtid\+\_\+encoding@{add\+\_\+gtid\+\_\+encoding}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{add\+\_\+gtid\+\_\+encoding()}{add\_gtid\_encoding()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+set\+::add\+\_\+gtid\+\_\+encoding (\begin{DoxyParamCaption}\item[{const uchar $\ast$}]{encoded,  }\item[{size\+\_\+t}]{length,  }\item[{size\+\_\+t $\ast$}]{actual\+\_\+length = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Decodes a \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} from the given string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to parse. \\
+\hline
+{\em length} & The number of bytes. \\
+\hline
+{\em actual\+\_\+length} & If this is not N\+U\+LL, it is set to the number of bytes used by the encoding (which may be less than \textquotesingle{}length\textquotesingle{}). If this is N\+U\+LL, an error is generated if the encoding is shorter than the given \textquotesingle{}length\textquotesingle{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_a5a76ae688b1286b8bc51b02619174892}\label{classGtid__set_a5a76ae688b1286b8bc51b02619174892}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!add\+\_\+gtid\+\_\+set@{add\+\_\+gtid\+\_\+set}}
+\index{add\+\_\+gtid\+\_\+set@{add\+\_\+gtid\+\_\+set}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{add\+\_\+gtid\+\_\+set()}{add\_gtid\_set()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+set\+::add\+\_\+gtid\+\_\+set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Adds all groups from the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+If sid\+\_\+lock != N\+U\+LL, then the read lock must be held before calling this function. If a new sidno is added so that the array of lists of intervals is grown, sid\+\_\+lock is temporarily upgraded to a write lock and then degraded again; there will be a short period when the lock is not held at all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_ae854e77cbadfd86cf28b61d5a8e228b9}\label{classGtid__set_ae854e77cbadfd86cf28b61d5a8e228b9}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!add\+\_\+gtid\+\_\+text@{add\+\_\+gtid\+\_\+text}}
+\index{add\+\_\+gtid\+\_\+text@{add\+\_\+gtid\+\_\+text}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{add\+\_\+gtid\+\_\+text()}{add\_gtid\_text()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+set\+::add\+\_\+gtid\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{bool $\ast$}]{anonymous = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Adds the set of G\+T\+I\+Ds represented by the given string to this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+The string must have the format of a comma-\/separated list of zero or more of the following\+:
+
+X\+X\+X\+X\+X\+X\+XX-\/X\+X\+XX-\/X\+X\+XX-\/X\+X\+XX-\/X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+XX(\+:N\+U\+M\+B\+ER+(-\/N\+U\+M\+B\+ER)?)$\ast$ $\vert$ A\+N\+O\+N\+Y\+M\+O\+US
+
+Each X is a hexadecimal digit (upper-\/ or lowercase). N\+U\+M\+B\+ER is a decimal, 0xhex, or 0oct number.
+
+The start of an interval must be greater than 0. The end of an interval may be 0, but any interval that has an endpoint that is smaller than the start is discarded.
+
+If sid\+\_\+lock != N\+U\+LL, then the read lock on sid\+\_\+lock must be held before calling this function. If a new sidno is added so that the array of lists of intervals is grown, sid\+\_\+lock is temporarily upgraded to a write lock and then degraded again; there will be a short period when the lock is not held at all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The string to parse. \\
+\hline
+{\em anonymous\mbox{[}in,out\mbox{]}} & If this is N\+U\+LL, A\+N\+O\+N\+Y\+M\+O\+US is not allowed. If this is not N\+U\+LL, it will be set to true if the anonymous group was found; false otherwise. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_a11541c02363dc7a2877a5a0282d679ab}\label{classGtid__set_a11541c02363dc7a2877a5a0282d679ab}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!add\+\_\+interval\+\_\+memory@{add\+\_\+interval\+\_\+memory}}
+\index{add\+\_\+interval\+\_\+memory@{add\+\_\+interval\+\_\+memory}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{add\+\_\+interval\+\_\+memory()}{add\_interval\_memory()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::add\+\_\+interval\+\_\+memory (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+intervals,  }\item[{\mbox{\hyperlink{structGtid__set_1_1Interval}{Interval}} $\ast$}]{intervals\+\_\+param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Provides an array of Intervals that this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} can use when groups are subsequently added. This can be used as an optimization, to reduce allocation for sets that have a known number of intervals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+intervals} & The number of intervals to add. \\
+\hline
+{\em intervals} & Array of n\+\_\+intervals intervals. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_a8d8130a7559cfd7b940f42e66c9b171a}\label{classGtid__set_a8d8130a7559cfd7b940f42e66c9b171a}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!clear@{clear}}
+\index{clear@{clear}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all groups from this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+This does not deallocate anything\+: if groups are added later, existing allocated memory will be re-\/used. \mbox{\Hypertarget{classGtid__set_a129894d15720c07d707ca29a426cbe47}\label{classGtid__set_a129894d15720c07d707ca29a426cbe47}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!contains\+\_\+sidno@{contains\+\_\+sidno}}
+\index{contains\+\_\+sidno@{contains\+\_\+sidno}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{contains\+\_\+sidno()}{contains\_sidno()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+set\+::contains\+\_\+sidno (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} contains at least one G\+T\+ID with the given S\+I\+D\+NO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & The S\+I\+D\+NO to test. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & The S\+I\+D\+NO is less than or equal to the max S\+I\+D\+NO, and there is at least one group with this S\+I\+D\+NO. \\
+\hline
+{\em false} & The S\+I\+D\+NO is greater than the max S\+I\+D\+NO, or there is no group with this S\+I\+D\+NO. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classGtid__set_a9f1ff7200f92ce9911347ba459176ecd}\label{classGtid__set_a9f1ff7200f92ce9911347ba459176ecd}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!dbug\+\_\+print@{dbug\+\_\+print}}
+\index{dbug\+\_\+print@{dbug\+\_\+print}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{dbug\+\_\+print()}{dbug\_print()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::dbug\+\_\+print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{need\+\_\+lock = {\ttfamily false},  }\item[{const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} $\ast$}]{sf = {\ttfamily NULL} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Print this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to the trace file if debug is enabled; no-\/op otherwise. \mbox{\Hypertarget{classGtid__set_a036d17fc704667febec3777422f164cd}\label{classGtid__set_a036d17fc704667febec3777422f164cd}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!encode@{encode}}
+\index{encode@{encode}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::encode (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{buf }\end{DoxyParamCaption}) const}
+
+Encodes this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} as a binary string. \mbox{\Hypertarget{classGtid__set_a4f026631d33627a5c273bdc35dcc03ef}\label{classGtid__set_a4f026631d33627a5c273bdc35dcc03ef}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!ensure\+\_\+sidno@{ensure\+\_\+sidno}}
+\index{ensure\+\_\+sidno@{ensure\+\_\+sidno}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{ensure\+\_\+sidno()}{ensure\_sidno()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+set\+::ensure\+\_\+sidno (\begin{DoxyParamCaption}\item[{rpl\+\_\+sidno}]{sidno }\end{DoxyParamCaption})}
+
+Allocates space for all sidnos up to the given sidno in the array of intervals. The sidno must exist in the \mbox{\hyperlink{classSid__map}{Sid\+\_\+map}} associated with this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+If sid\+\_\+lock != N\+U\+LL, then the read lock on sid\+\_\+lock must be held before calling this function. If the array is grown, sid\+\_\+lock is temporarily upgraded to a write lock and then degraded again; there will be a short period when the lock is not held at all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sidno} & The S\+I\+D\+NO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_ac92c3495294a8533401fe17ea6e250f4}\label{classGtid__set_ac92c3495294a8533401fe17ea6e250f4}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!get\+\_\+encoded\+\_\+length@{get\+\_\+encoded\+\_\+length}}
+\index{get\+\_\+encoded\+\_\+length@{get\+\_\+encoded\+\_\+length}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{get\+\_\+encoded\+\_\+length()}{get\_encoded\_length()}}
+{\footnotesize\ttfamily size\+\_\+t Gtid\+\_\+set\+::get\+\_\+encoded\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the length of this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} when encoded using the \mbox{\hyperlink{classGtid__set_a036d17fc704667febec3777422f164cd}{encode()}} function. \mbox{\Hypertarget{classGtid__set_aa972d694a2c2f8c2b3805cf248ec7d2b}\label{classGtid__set_aa972d694a2c2f8c2b3805cf248ec7d2b}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!get\+\_\+gtid\+\_\+intervals@{get\+\_\+gtid\+\_\+intervals}}
+\index{get\+\_\+gtid\+\_\+intervals@{get\+\_\+gtid\+\_\+intervals}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{get\+\_\+gtid\+\_\+intervals()}{get\_gtid\_intervals()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::get\+\_\+gtid\+\_\+intervals (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{structGtid__interval}{Gtid\+\_\+interval}} $>$ $\ast$}]{gtid\+\_\+intervals }\end{DoxyParamCaption}) const}
+
+Gets all gtid intervals from this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em gtid\+\_\+intervals} & Store all gtid intervals from this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_a9183195ad785890b208ce15ce111755b}\label{classGtid__set_a9183195ad785890b208ce15ce111755b}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!get\+\_\+string\+\_\+length@{get\+\_\+string\+\_\+length}}
+\index{get\+\_\+string\+\_\+length@{get\+\_\+string\+\_\+length}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{get\+\_\+string\+\_\+length()}{get\_string\_length()}}
+{\footnotesize\ttfamily size\+\_\+t Gtid\+\_\+set\+::get\+\_\+string\+\_\+length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} $\ast$}]{string\+\_\+format = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+Returns the length of the output from to\+\_\+string.
+
+\begin{DoxyWarning}{Warning}
+This does not include the trailing \textquotesingle{}\textbackslash{}0\textquotesingle{}, so your buffer needs space for \mbox{\hyperlink{classGtid__set_a9183195ad785890b208ce15ce111755b}{get\+\_\+string\+\_\+length()}} + 1 characters.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em string\+\_\+format} & \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} object that specifies separators in the resulting text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_a9a384be7c735d018d5fc0c8c0c64344e}\label{classGtid__set_a9a384be7c735d018d5fc0c8c0c64344e}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!intersection@{intersection}}
+\index{intersection@{intersection}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{intersection()}{intersection()}}
+{\footnotesize\ttfamily enum\+\_\+return\+\_\+status Gtid\+\_\+set\+::intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{other,  }\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+Add the intersection of this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} and the other \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to result.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to intersect with this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} \\
+\hline
+{\em result} & \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} where the result will be stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK or R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+P\+O\+R\+T\+E\+D\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000060}{Todo}}]\+: This algorithm is simple, a little bit slower than necessary. It would be more efficient to iterate over intervals of \textquotesingle{}this\textquotesingle{} and \textquotesingle{}other\textquotesingle{} similar to add\+\_\+gno\+\_\+interval(). At the moment the performance of this is not super-\/important. /\+Sven \end{DoxyRefDesc}
+\mbox{\Hypertarget{classGtid__set_a09f59bb7b9cd3a32b54bb5f8128aa5ca}\label{classGtid__set_a09f59bb7b9cd3a32b54bb5f8128aa5ca}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!is\+\_\+intersection\+\_\+nonempty@{is\+\_\+intersection\+\_\+nonempty}}
+\index{is\+\_\+intersection\+\_\+nonempty@{is\+\_\+intersection\+\_\+nonempty}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{is\+\_\+intersection\+\_\+nonempty()}{is\_intersection\_nonempty()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+set\+::is\+\_\+intersection\+\_\+nonempty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{other }\end{DoxyParamCaption}) const}
+
+Returns true if there is a least one element of this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} in the other \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. \mbox{\Hypertarget{classGtid__set_a75513b924941cde711e91e8c0f9275a0}\label{classGtid__set_a75513b924941cde711e91e8c0f9275a0}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!is\+\_\+subset\+\_\+for\+\_\+sid@{is\+\_\+subset\+\_\+for\+\_\+sid}}
+\index{is\+\_\+subset\+\_\+for\+\_\+sid@{is\+\_\+subset\+\_\+for\+\_\+sid}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{is\+\_\+subset\+\_\+for\+\_\+sid()}{is\_subset\_for\_sid()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+set\+::is\+\_\+subset\+\_\+for\+\_\+sid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{super,  }\item[{rpl\+\_\+sidno}]{superset\+\_\+sidno,  }\item[{rpl\+\_\+sidno}]{subset\+\_\+sidno }\end{DoxyParamCaption}) const}
+
+Returns true if this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is a subset of the given gtid\+\_\+set on the given superset\+\_\+sidno and subset\+\_\+sidno.
+
+
+\begin{DoxyParams}{Parameters}
+{\em super} & \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} with which \textquotesingle{}this\textquotesingle{}\+::gtid\+\_\+set needs to be compared \\
+\hline
+{\em superset\+\_\+sidno} & The sidno that will be compared, relative to super-\/$>$sid\+\_\+map. \\
+\hline
+{\em subset\+\_\+sidno} & The sidno that will be compared, relative to this-\/$>$sid\+\_\+map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If \textquotesingle{}this\textquotesingle{} \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is subset of given \textquotesingle{}super\textquotesingle{} \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. false If \textquotesingle{}this\textquotesingle{} \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} is {\itshape not} subset of given \textquotesingle{}super\textquotesingle{} \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_a8a10c1dfb57ac995cbf14b51f83f8e68}\label{classGtid__set_a8a10c1dfb57ac995cbf14b51f83f8e68}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!is\+\_\+valid@{is\+\_\+valid}}
+\index{is\+\_\+valid@{is\+\_\+valid}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{is\+\_\+valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool Gtid\+\_\+set\+::is\+\_\+valid (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns true if the given string is a valid specification of a \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}, false otherwise. \mbox{\Hypertarget{classGtid__set_a6ed8e71d84efbc22bc589897b7318751}\label{classGtid__set_a6ed8e71d84efbc22bc589897b7318751}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!remove\+\_\+gtid\+\_\+set@{remove\+\_\+gtid\+\_\+set}}
+\index{remove\+\_\+gtid\+\_\+set@{remove\+\_\+gtid\+\_\+set}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{remove\+\_\+gtid\+\_\+set()}{remove\_gtid\_set()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::remove\+\_\+gtid\+\_\+set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Removes all groups in the given \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} from this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_ac51226ff8e814b700a353fef54763456}\label{classGtid__set_ac51226ff8e814b700a353fef54763456}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!remove\+\_\+intervals\+\_\+for\+\_\+sidno@{remove\+\_\+intervals\+\_\+for\+\_\+sidno}}
+\index{remove\+\_\+intervals\+\_\+for\+\_\+sidno@{remove\+\_\+intervals\+\_\+for\+\_\+sidno}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{remove\+\_\+intervals\+\_\+for\+\_\+sidno()}{remove\_intervals\_for\_sidno()}}
+{\footnotesize\ttfamily void Gtid\+\_\+set\+::remove\+\_\+intervals\+\_\+for\+\_\+sidno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} $\ast$}]{other,  }\item[{rpl\+\_\+sidno}]{sidno }\end{DoxyParamCaption})}
+
+Removes all intervals of \textquotesingle{}other\textquotesingle{} for a given S\+I\+D\+NO, from \textquotesingle{}this\textquotesingle{}.
+
+Example\+: this = A\+:1-\/100, B\+:1-\/100 other = A\+:1-\/100, B\+:1-\/50, C\+:1-\/100 this.\+remove\+\_\+intervals\+\_\+for\+\_\+sidno(other, B) = A\+:1-\/100, B\+:51-\/100
+
+It is not required that the intervals exist in this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The set to remove. \\
+\hline
+{\em sidno} & The sidno to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGtid__set_a256a8c891ab89b5388bdae4df8798d9b}\label{classGtid__set_a256a8c891ab89b5388bdae4df8798d9b}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Gtid\+\_\+set\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{bool}]{need\+\_\+lock = {\ttfamily false},  }\item[{const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} $\ast$}]{string\+\_\+format = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+Formats this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} as a string and saves in a given buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buf} & Pointer to the buffer where the string should be stored. This should have size at least \mbox{\hyperlink{classGtid__set_a9183195ad785890b208ce15ce111755b}{get\+\_\+string\+\_\+length()}}+1. \\
+\hline
+ & {\em need\+\_\+lock} & If this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} has a sid\+\_\+lock, then the write lock must be held while generating the string. If this parameter is true, then this function acquires and releases the lock; otherwise it asserts that the caller holds the lock. \\
+\hline
+ & {\em string\+\_\+format} & \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} object that specifies separators in the resulting text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of the generated string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGtid__set_a2ff97dca33abfc52b81adedaf416abf9}\label{classGtid__set_a2ff97dca33abfc52b81adedaf416abf9}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily long Gtid\+\_\+set\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{buf,  }\item[{bool}]{need\+\_\+lock = {\ttfamily false},  }\item[{const \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} $\ast$}]{string\+\_\+format = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+Formats a \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} as a string and saves in a newly allocated buffer. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buf} & Pointer to pointer to string. The function will set it to point to the newly allocated buffer, or N\+U\+LL on out of memory. \\
+\hline
+ & {\em need\+\_\+lock} & If this \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} has a sid\+\_\+lock, then the write lock must be held while generating the string. If this parameter is true, then this function acquires and releases the lock; otherwise it asserts that the caller holds the lock. \\
+\hline
+ & {\em string\+\_\+format} & Specifies how to format the string. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Length} & of the generated string, or -\/1 on out of memory. \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classGtid__set_a59860055a243825524c47d9adc494250}\label{classGtid__set_a59860055a243825524c47d9adc494250}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock@{Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock}}
+\index{Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock@{Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock}{Gtid\_set::Free\_intervals\_lock}}
+{\footnotesize\ttfamily friend class Gtid\+\_\+set\+::\+Free\+\_\+intervals\+\_\+lock\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Used by unit tests that need to access private members. 
+
+Only Free\+\_\+intervals\+\_\+lock is allowed to access free\+\_\+intervals\+\_\+mutex. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classGtid__set_a4ba668b76ba3d4a4d96a91389dc31817}\label{classGtid__set_a4ba668b76ba3d4a4d96a91389dc31817}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!commented\+\_\+string\+\_\+format@{commented\+\_\+string\+\_\+format}}
+\index{commented\+\_\+string\+\_\+format@{commented\+\_\+string\+\_\+format}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{commented\+\_\+string\+\_\+format}{commented\_string\_format}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} Gtid\+\_\+set\+::commented\+\_\+string\+\_\+format\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"\# "}, \textcolor{stringliteral}{""}, \textcolor{stringliteral}{":"}, \textcolor{stringliteral}{"-"}, \textcolor{stringliteral}{":"}, \textcolor{stringliteral}{",\(\backslash\)n\# "}, \textcolor{stringliteral}{"\# [empty]"},}
+\DoxyCodeLine{  2, 0, 1, 1, 1, 4, 9}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} for printing the \mbox{\hyperlink{classGtid__set}{Gtid\+\_\+set}} commented\+: the string is not quote-\/wrapped, and every S\+ID is on a new line with a leading \textquotesingle{}\# \textquotesingle{}. \mbox{\Hypertarget{classGtid__set_a65b9f6c31cfc7d5ca7b1564411c2a416}\label{classGtid__set_a65b9f6c31cfc7d5ca7b1564411c2a416}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!default\+\_\+string\+\_\+format@{default\+\_\+string\+\_\+format}}
+\index{default\+\_\+string\+\_\+format@{default\+\_\+string\+\_\+format}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{default\+\_\+string\+\_\+format}{default\_string\_format}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} Gtid\+\_\+set\+::default\+\_\+string\+\_\+format\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{stringliteral}{""}, \textcolor{stringliteral}{""}, \textcolor{stringliteral}{":"}, \textcolor{stringliteral}{"-"}, \textcolor{stringliteral}{":"}, \textcolor{stringliteral}{",\(\backslash\)n"}, \textcolor{stringliteral}{""},}
+\DoxyCodeLine{  0, 0, 1, 1, 1, 2, 0}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+The default \mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}}\+: the format understood by add\+\_\+gtid\+\_\+text(const char $\ast$). \mbox{\Hypertarget{classGtid__set_abefb12fa60900cd38a8abe959b774f54}\label{classGtid__set_abefb12fa60900cd38a8abe959b774f54}} 
+\index{Gtid\+\_\+set@{Gtid\+\_\+set}!sql\+\_\+string\+\_\+format@{sql\+\_\+string\+\_\+format}}
+\index{sql\+\_\+string\+\_\+format@{sql\+\_\+string\+\_\+format}!Gtid\+\_\+set@{Gtid\+\_\+set}}
+\subsubsection{\texorpdfstring{sql\+\_\+string\+\_\+format}{sql\_string\_format}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structGtid__set_1_1String__format}{Gtid\+\_\+set\+::\+String\+\_\+format}} Gtid\+\_\+set\+::sql\+\_\+string\+\_\+format\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"'"}, \textcolor{stringliteral}{"'"}, \textcolor{stringliteral}{":"}, \textcolor{stringliteral}{"-"}, \textcolor{stringliteral}{":"}, \textcolor{stringliteral}{"',\(\backslash\)n'"}, \textcolor{stringliteral}{"''"},}
+\DoxyCodeLine{  1, 1, 1, 1, 1, 4, 2}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\hyperlink{structGtid__set_1_1String__format}{String\+\_\+format}} useful to generate an S\+QL string\+: the string is wrapped in single quotes and there is a newline between S\+I\+Ds. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+gtid.\+h\item 
+rpl\+\_\+gtid\+\_\+set.\+cc\end{DoxyCompactItemize}

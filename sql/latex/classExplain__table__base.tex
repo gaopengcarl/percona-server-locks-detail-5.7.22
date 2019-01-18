@@ -1,0 +1,70 @@
+\hypertarget{classExplain__table__base}{}\section{Explain\+\_\+table\+\_\+base Class Reference}
+\label{classExplain__table__base}\index{Explain\+\_\+table\+\_\+base@{Explain\+\_\+table\+\_\+base}}
+Inheritance diagram for Explain\+\_\+table\+\_\+base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classExplain__table__base}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__table__base_abbad2286bbba8a5025cd6559f7223124}\label{classExplain__table__base_abbad2286bbba8a5025cd6559f7223124}} 
+{\bfseries Explain\+\_\+table\+\_\+base} (enum\+\_\+parsing\+\_\+context context\+\_\+type\+\_\+arg, T\+HD $\ast$const thd\+\_\+arg, S\+E\+L\+E\+C\+T\+\_\+\+L\+EX $\ast$\mbox{\hyperlink{classExplain_ad66987d49df1e5712c2af2f646561503}{select\+\_\+lex}}=N\+U\+LL, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$const table\+\_\+arg=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a3892a0d83c0f42dc3f66a39f27df9c4d}\label{classExplain__table__base_a3892a0d83c0f42dc3f66a39f27df9c4d}} 
+virtual bool {\bfseries explain\+\_\+partitions} ()
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a3f377908e466093707a647de61e08aa5}\label{classExplain__table__base_a3f377908e466093707a647de61e08aa5}} 
+virtual bool {\bfseries explain\+\_\+possible\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a8e3124ad74a5dfed6a11d999579ad35b}\label{classExplain__table__base_a8e3124ad74a5dfed6a11d999579ad35b}} 
+bool {\bfseries explain\+\_\+key\+\_\+parts} (int key, uint key\+\_\+parts)
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a45c82b767a78fcb1ffb4f0116bb32513}\label{classExplain__table__base_a45c82b767a78fcb1ffb4f0116bb32513}} 
+bool {\bfseries explain\+\_\+key\+\_\+and\+\_\+len\+\_\+quick} (\mbox{\hyperlink{classQUICK__SELECT__I}{Q\+U\+I\+C\+K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+I}} $\ast$quick)
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a095dcffc40ea66e5a2d40e4639a01baa}\label{classExplain__table__base_a095dcffc40ea66e5a2d40e4639a01baa}} 
+bool {\bfseries explain\+\_\+key\+\_\+and\+\_\+len\+\_\+index} (int key)
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a1c709bff47c2ddce47158dd3bcaa64b4}\label{classExplain__table__base_a1c709bff47c2ddce47158dd3bcaa64b4}} 
+bool {\bfseries explain\+\_\+key\+\_\+and\+\_\+len\+\_\+index} (int key, uint key\+\_\+length, uint key\+\_\+parts)
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a91b4a8369974ffc4037fd4f45af55b06}\label{classExplain__table__base_a91b4a8369974ffc4037fd4f45af55b06}} 
+bool {\bfseries explain\+\_\+extra\+\_\+common} (int \mbox{\hyperlink{sql__select_8h_a931d06905210c0f917b25d180eeb643f}{quick\+\_\+type}}, uint keyno)
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a08d78d30646d539c77ab0ffa81edaad0}\label{classExplain__table__base_a08d78d30646d539c77ab0ffa81edaad0}} 
+bool {\bfseries explain\+\_\+tmptable\+\_\+and\+\_\+filesort} (bool need\+\_\+tmp\+\_\+table\+\_\+arg, bool need\+\_\+sort\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExplain__table__base_a7c86975702d8f57c25e1e6b99a526f3e}\label{classExplain__table__base_a7c86975702d8f57c25e1e6b99a526f3e}} 
+const \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$ {\bfseries table}
+\item 
+\mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} $\ast$ \mbox{\hyperlink{classExplain__table__base_ab8546ecb7443ca29d5f3abced9ce1b70}{tab}}
+\item 
+\mbox{\Hypertarget{classExplain__table__base_ad2d5a0efa9782e70df2412c9c7b7c2af}\label{classExplain__table__base_ad2d5a0efa9782e70df2412c9c7b7c2af}} 
+\mbox{\hyperlink{classBitmap_3_0164_01_4}{key\+\_\+map}} {\bfseries usable\+\_\+keys}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Common base class for \mbox{\hyperlink{classExplain__join}{Explain\+\_\+join}} and \mbox{\hyperlink{classExplain__table}{Explain\+\_\+table}} 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classExplain__table__base_ab8546ecb7443ca29d5f3abced9ce1b70}\label{classExplain__table__base_ab8546ecb7443ca29d5f3abced9ce1b70}} 
+\index{Explain\+\_\+table\+\_\+base@{Explain\+\_\+table\+\_\+base}!tab@{tab}}
+\index{tab@{tab}!Explain\+\_\+table\+\_\+base@{Explain\+\_\+table\+\_\+base}}
+\subsubsection{\texorpdfstring{tab}{tab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}}$\ast$ Explain\+\_\+table\+\_\+base\+::tab\hspace{0.3cm}{\ttfamily [protected]}}
+
+The \mbox{\hyperlink{classQEP__TAB}{Q\+E\+P\+\_\+\+T\+AB}} which we are currently explaining. It is N\+U\+LL for the inserted table in I\+N\+S\+E\+R\+T/\+R\+E\+P\+L\+A\+CE S\+E\+L\+E\+CT. \begin{DoxyNote}{Note}
+that you should never read quick() or condition(), they may change under your feet without holding the mutex ; read quick\+\_\+optim() and condition\+\_\+optim() instead. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain.\+cc\end{DoxyCompactItemize}

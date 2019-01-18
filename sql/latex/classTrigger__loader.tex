@@ -1,0 +1,188 @@
+\hypertarget{classTrigger__loader}{}\section{Trigger\+\_\+loader Class Reference}
+\label{classTrigger__loader}\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTrigger__loader_a594c1281a407ec813ae34ab4490d420b}\label{classTrigger__loader_a594c1281a407ec813ae34ab4490d420b}} 
+static L\+E\+X\+\_\+\+S\+T\+R\+I\+NG {\bfseries build\+\_\+trn\+\_\+path} (char $\ast$trn\+\_\+file\+\_\+name\+\_\+buffer, int trn\+\_\+file\+\_\+name\+\_\+buffer\+\_\+size, const char $\ast$db\+\_\+name, const char $\ast$trigger\+\_\+name)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_a4c302b0917c9d536dcb568cde72870e9}{check\+\_\+trn\+\_\+exists}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trn\+\_\+path)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_a57fa4348f9ba55ac5880d44422cadea2}{load\+\_\+trn\+\_\+file}} (T\+HD $\ast$thd, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trigger\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trn\+\_\+path, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$tbl\+\_\+name)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_a7f8cea2fa784dfa7b89011c619653a1f}{trg\+\_\+file\+\_\+exists}} (const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_a3a4857082c9d76bb2224df770f54f416}{load\+\_\+triggers}} (T\+HD $\ast$thd, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$triggers)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_af75d501de3f2db52638da4d58368bc00}{store\+\_\+trigger}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&db\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&table\+\_\+name, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, \mbox{\hyperlink{classTrigger}{Trigger}} $\ast$new\+\_\+trigger, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$triggers)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_af096f75cbf2411b74572fa71fa2f6612}{drop\+\_\+trigger}} (const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&db\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&table\+\_\+name, const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&trigger\+\_\+name, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$triggers, bool $\ast$trigger\+\_\+found)
+\item 
+static bool \mbox{\hyperlink{classTrigger__loader_a0ac0a2bcb6a58a137bfaabc3380b2ca3}{drop\+\_\+all\+\_\+triggers}} (const char $\ast$db\+\_\+name, const char $\ast$table\+\_\+name, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$triggers)
+\item 
+\mbox{\Hypertarget{classTrigger__loader_a8fab2678add342478649779e065f48b6}\label{classTrigger__loader_a8fab2678add342478649779e065f48b6}} 
+static bool {\bfseries rename\+\_\+subject\+\_\+table} (M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$triggers, const char $\ast$old\+\_\+db\+\_\+name, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$old\+\_\+table\+\_\+name, const char $\ast$new\+\_\+db\+\_\+name, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$new\+\_\+table\+\_\+name, bool upgrading50to51)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTrigger__loader_a4c302b0917c9d536dcb568cde72870e9}\label{classTrigger__loader_a4c302b0917c9d536dcb568cde72870e9}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!check\+\_\+trn\+\_\+exists@{check\+\_\+trn\+\_\+exists}}
+\index{check\+\_\+trn\+\_\+exists@{check\+\_\+trn\+\_\+exists}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{check\+\_\+trn\+\_\+exists()}{check\_trn\_exists()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::check\+\_\+trn\+\_\+exists (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trn\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check if T\+RN-\/file exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em trn\+\_\+path} & path to T\+RN-\/file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if T\+RN-\/file does not exists, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTrigger__loader_a0ac0a2bcb6a58a137bfaabc3380b2ca3}\label{classTrigger__loader_a0ac0a2bcb6a58a137bfaabc3380b2ca3}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!drop\+\_\+all\+\_\+triggers@{drop\+\_\+all\+\_\+triggers}}
+\index{drop\+\_\+all\+\_\+triggers@{drop\+\_\+all\+\_\+triggers}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{drop\+\_\+all\+\_\+triggers()}{drop\_all\_triggers()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::drop\+\_\+all\+\_\+triggers (\begin{DoxyParamCaption}\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$}]{triggers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Drop all triggers for the given table. \mbox{\Hypertarget{classTrigger__loader_af096f75cbf2411b74572fa71fa2f6612}\label{classTrigger__loader_af096f75cbf2411b74572fa71fa2f6612}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!drop\+\_\+trigger@{drop\+\_\+trigger}}
+\index{drop\+\_\+trigger@{drop\+\_\+trigger}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{drop\+\_\+trigger()}{drop\_trigger()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::drop\+\_\+trigger (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{db\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{table\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trigger\+\_\+name,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$}]{triggers,  }\item[{bool $\ast$}]{trigger\+\_\+found }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Drop trigger in the data dictionary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tables} & pointer to trigger\textquotesingle{}s table \\
+\hline
+\mbox{\texttt{ in}}  & {\em trigger\+\_\+name} & name of the trigger to drop \\
+\hline
+\mbox{\texttt{ in}}  & {\em triggers} & list of all table triggers \\
+\hline
+\mbox{\texttt{ out}}  & {\em trigger\+\_\+found} & flag to store a result whether the named trigger was found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Failure \\
+\hline
+{\em false} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__loader_a3a4857082c9d76bb2224df770f54f416}\label{classTrigger__loader_a3a4857082c9d76bb2224df770f54f416}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!load\+\_\+triggers@{load\+\_\+triggers}}
+\index{load\+\_\+triggers@{load\+\_\+triggers}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{load\+\_\+triggers()}{load\_triggers()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::load\+\_\+triggers (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+name,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$}]{triggers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Load table triggers from the data dictionary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em db\+\_\+name} & name of schema \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\+\_\+name} & subject table name \\
+\hline
+\mbox{\texttt{ out}}  & {\em triggers} & pointer to the list where new \mbox{\hyperlink{classTrigger}{Trigger}} objects will be inserted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Failure \\
+\hline
+{\em false} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__loader_a57fa4348f9ba55ac5880d44422cadea2}\label{classTrigger__loader_a57fa4348f9ba55ac5880d44422cadea2}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!load\+\_\+trn\+\_\+file@{load\+\_\+trn\+\_\+file}}
+\index{load\+\_\+trn\+\_\+file@{load\+\_\+trn\+\_\+file}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{load\+\_\+trn\+\_\+file()}{load\_trn\_file()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::load\+\_\+trn\+\_\+file (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trigger\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{trn\+\_\+path,  }\item[{L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $\ast$}]{tbl\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Load trigger table name from T\+RN-\/file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em thd} & thread handle \\
+\hline
+\mbox{\texttt{ in}}  & {\em trigger\+\_\+name} & name of trigger \\
+\hline
+\mbox{\texttt{ in}}  & {\em trn\+\_\+path} & path to the corresponding T\+RN-\/file \\
+\hline
+\mbox{\texttt{ out}}  & {\em tbl\+\_\+name} & variable to store retrieved table name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Failure. \\
+\hline
+{\em false} & Success. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__loader_af75d501de3f2db52638da4d58368bc00}\label{classTrigger__loader_af75d501de3f2db52638da4d58368bc00}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!store\+\_\+trigger@{store\+\_\+trigger}}
+\index{store\+\_\+trigger@{store\+\_\+trigger}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{store\+\_\+trigger()}{store\_trigger()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::store\+\_\+trigger (\begin{DoxyParamCaption}\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{db\+\_\+name,  }\item[{const L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \&}]{table\+\_\+name,  }\item[{M\+E\+M\+\_\+\+R\+O\+OT $\ast$}]{mem\+\_\+root,  }\item[{\mbox{\hyperlink{classTrigger}{Trigger}} $\ast$}]{new\+\_\+trigger,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classTrigger}{Trigger}} $>$ $\ast$}]{triggers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Store a table trigger into the data dictionary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tables} & pointer to trigger\textquotesingle{}s table \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+trigger} & trigger to save \\
+\hline
+\mbox{\texttt{ in}}  & {\em triggers} & pointer to the list where new trigger object has to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Failure \\
+\hline
+{\em false} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classTrigger__loader_a7f8cea2fa784dfa7b89011c619653a1f}\label{classTrigger__loader_a7f8cea2fa784dfa7b89011c619653a1f}} 
+\index{Trigger\+\_\+loader@{Trigger\+\_\+loader}!trg\+\_\+file\+\_\+exists@{trg\+\_\+file\+\_\+exists}}
+\index{trg\+\_\+file\+\_\+exists@{trg\+\_\+file\+\_\+exists}!Trigger\+\_\+loader@{Trigger\+\_\+loader}}
+\subsubsection{\texorpdfstring{trg\+\_\+file\+\_\+exists()}{trg\_file\_exists()}}
+{\footnotesize\ttfamily bool Trigger\+\_\+loader\+::trg\+\_\+file\+\_\+exists (\begin{DoxyParamCaption}\item[{const char $\ast$}]{db\+\_\+name,  }\item[{const char $\ast$}]{table\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check if the T\+RG-\/file for the given table exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+\_\+name} & name of schema \\
+\hline
+{\em table\+\_\+name} & name of trigger\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if T\+RG-\/file exists, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+trigger\+\_\+loader.\+h\item 
+trigger\+\_\+loader.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{classopt__explain__json__namespace_1_1subquery__ctx}{}\section{opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:subquery\+\_\+ctx Class Reference}
+\label{classopt__explain__json__namespace_1_1subquery__ctx}\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}}
+Inheritance diagram for opt\+\_\+explain\+\_\+json\+\_\+namespace\+:\+:subquery\+\_\+ctx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classopt__explain__json__namespace_1_1subquery__ctx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_ac6c4a646fbe15ee031e058535b1c7ce6}\label{classopt__explain__json__namespace_1_1subquery__ctx_ac6c4a646fbe15ee031e058535b1c7ce6}} 
+{\bfseries subquery\+\_\+ctx} (enum\+\_\+parsing\+\_\+context type\+\_\+arg, const char $\ast$name\+\_\+arg, \mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$parent\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_a8b243a0c9cb7ea61db723377cc6f211e}\label{classopt__explain__json__namespace_1_1subquery__ctx_a8b243a0c9cb7ea61db723377cc6f211e}} 
+virtual \mbox{\hyperlink{classqep__row}{qep\+\_\+row}} $\ast$ {\bfseries entry} ()
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_a10a31708578590f205ebbc52c4343055}\label{classopt__explain__json__namespace_1_1subquery__ctx_a10a31708578590f205ebbc52c4343055}} 
+virtual bool {\bfseries cacheable} ()
+\item 
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_a954add25aaeb349f84743515936850d4}\label{classopt__explain__json__namespace_1_1subquery__ctx_a954add25aaeb349f84743515936850d4}} 
+virtual bool {\bfseries dependent} ()
+\item 
+virtual bool \mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx_ab09c364c9a8a64f548140c8035309dc6}{format}} (\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$json)
+\item 
+virtual void \mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx_aa096e69d58d2c6a241e66619bd23f891}{set\+\_\+child}} (\mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$child)
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx_abfd5e54f4399b5b4269573895c84a0dc}{id}} (bool hide)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classNode}{Node}} class to wrap a subquery node tree
+
+Implements C\+T\+X\+\_\+\+W\+H\+E\+RE, C\+T\+X\+\_\+\+H\+A\+V\+I\+NG, C\+T\+X\+\_\+\+O\+R\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+SQ, C\+T\+X\+\_\+\+G\+R\+O\+U\+P\+\_\+\+B\+Y\+\_\+\+SQ and C\+T\+X\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+E\+D\+\_\+\+A\+W\+A\+Y\+\_\+\+S\+U\+B\+Q\+U\+E\+RY context nodes. This class hosts underlying \mbox{\hyperlink{classopt__explain__json__namespace_1_1join__ctx}{join\+\_\+ctx}} or uion\+\_\+ctx. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_ab09c364c9a8a64f548140c8035309dc6}\label{classopt__explain__json__namespace_1_1subquery__ctx_ab09c364c9a8a64f548140c8035309dc6}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}!format@{format}}
+\index{format@{format}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}}
+\subsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily virtual bool opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx\+::format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOpt__trace__context}{Opt\+\_\+trace\+\_\+context}} $\ast$}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Pass the node with its child nodes to a J\+S\+ON formatter
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Formatter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Ok \\
+\hline
+{\em true} & Error\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+The {\ttfamily \mbox{\hyperlink{classopt__explain__json__namespace_1_1join__ctx}{join\+\_\+ctx}}} class overloads this function. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_a73e34a665c4550ba7725839ca643119d}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_abfd5e54f4399b5b4269573895c84a0dc}\label{classopt__explain__json__namespace_1_1subquery__ctx_abfd5e54f4399b5b4269573895c84a0dc}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}!id@{id}}
+\index{id@{id}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual size\+\_\+t opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx\+::id (\begin{DoxyParamCaption}\item[{bool}]{hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Analogue of the \char`\"{}id\char`\"{} column in the traditional E\+X\+P\+L\+A\+IN output
+
+
+\begin{DoxyParams}{Parameters}
+{\em hide} & if true, ban the output of K\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+ID J\+S\+ON property in the underlying table\+\_\+with\+\_\+where\+\_\+and\+\_\+derived\+\_\+ctx objects\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Select number\char`\"{} that is associated with this node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_a07c46bab31a35d88c13ccdca82755aaa}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+\mbox{\Hypertarget{classopt__explain__json__namespace_1_1subquery__ctx_aa096e69d58d2c6a241e66619bd23f891}\label{classopt__explain__json__namespace_1_1subquery__ctx_aa096e69d58d2c6a241e66619bd23f891}} 
+\index{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}!set\+\_\+child@{set\+\_\+child}}
+\index{set\+\_\+child@{set\+\_\+child}!opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx@{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx}}
+\subsubsection{\texorpdfstring{set\+\_\+child()}{set\_child()}}
+{\footnotesize\ttfamily virtual void opt\+\_\+explain\+\_\+json\+\_\+namespace\+::subquery\+\_\+ctx\+::set\+\_\+child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopt__explain__json__namespace_1_1context}{context}} $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Associate a child node with this node
+
+This function is to be overloaded by \mbox{\hyperlink{classopt__explain__json__namespace_1_1subquery__ctx}{subquery\+\_\+ctx}}. 
+
+Reimplemented from \mbox{\hyperlink{classopt__explain__json__namespace_1_1context_a16f5a188524441f0bf60b88edc779fa6}{opt\+\_\+explain\+\_\+json\+\_\+namespace\+::context}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+opt\+\_\+explain\+\_\+json.\+cc\end{DoxyCompactItemize}

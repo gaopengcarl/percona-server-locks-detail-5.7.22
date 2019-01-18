@@ -1,0 +1,219 @@
+\hypertarget{structBinlog__relay__IO__observer}{}\section{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer Struct Reference}
+\label{structBinlog__relay__IO__observer}\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+
+
+{\ttfamily \#include $<$replication.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_abb607f2709f74085c6714dde0c89a39c}\label{structBinlog__relay__IO__observer_abb607f2709f74085c6714dde0c89a39c}} 
+uint32 {\bfseries len}
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_a20289ee51edcf183545e10dabd64cf6e}{thread\+\_\+start}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_a294cb8458058381e4721a3a1ae3611e9}{thread\+\_\+stop}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_ae91b0642ab8e0ce148caf48ab0576d40}{applier\+\_\+start}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_ac4ddb05e11e8315086b8be4a0141a369}{applier\+\_\+stop}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, bool aborted)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_af77e9d19d035a32f44167c54047c7e59}{before\+\_\+request\+\_\+transmit}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, uint32 flags)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_a27807e0980172eea877fd8aae424ac1f}{after\+\_\+read\+\_\+event}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, const char $\ast$packet, unsigned long len, const char $\ast$$\ast$event\+\_\+buf, unsigned long $\ast$event\+\_\+len)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_af0f798f7d28328ccf2002ab7e3f4b348}{after\+\_\+queue\+\_\+event}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, const char $\ast$event\+\_\+buf, unsigned long event\+\_\+len, uint32 flags)
+\item 
+int($\ast$ \mbox{\hyperlink{structBinlog__relay__IO__observer_a741cce0e01c2bc0f0ca1830751c48012}{after\+\_\+reset\+\_\+slave}} )(\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Observes and extends the service of slave IO thread. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_af0f798f7d28328ccf2002ab7e3f4b348}\label{structBinlog__relay__IO__observer_af0f798f7d28328ccf2002ab7e3f4b348}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!after\+\_\+queue\+\_\+event@{after\+\_\+queue\+\_\+event}}
+\index{after\+\_\+queue\+\_\+event@{after\+\_\+queue\+\_\+event}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+queue\+\_\+event}{after\_queue\_event}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::after\+\_\+queue\+\_\+event) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, const char $\ast$event\+\_\+buf, unsigned long event\+\_\+len, uint32 flags)}
+
+This callback is called after written an event packet to relay log
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em event\+\_\+buf} & Event packet written to relay log \\
+\hline
+{\em event\+\_\+len} & Length of the event packet written to relay log \\
+\hline
+{\em flags} & flags for relay log\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_a27807e0980172eea877fd8aae424ac1f}\label{structBinlog__relay__IO__observer_a27807e0980172eea877fd8aae424ac1f}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!after\+\_\+read\+\_\+event@{after\+\_\+read\+\_\+event}}
+\index{after\+\_\+read\+\_\+event@{after\+\_\+read\+\_\+event}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+read\+\_\+event}{after\_read\_event}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::after\+\_\+read\+\_\+event) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, const char $\ast$packet, unsigned long len, const char $\ast$$\ast$event\+\_\+buf, unsigned long $\ast$event\+\_\+len)}
+
+This callback is called after read an event packet from master
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em packet} & The event packet read from master \\
+\hline
+{\em len} & Length of the event packet read from master \\
+\hline
+{\em event\+\_\+buf} & The event packet return after process \\
+\hline
+{\em event\+\_\+len} & The length of event packet return after process\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_a741cce0e01c2bc0f0ca1830751c48012}\label{structBinlog__relay__IO__observer_a741cce0e01c2bc0f0ca1830751c48012}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!after\+\_\+reset\+\_\+slave@{after\+\_\+reset\+\_\+slave}}
+\index{after\+\_\+reset\+\_\+slave@{after\+\_\+reset\+\_\+slave}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{after\+\_\+reset\+\_\+slave}{after\_reset\_slave}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::after\+\_\+reset\+\_\+slave) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)}
+
+This callback is called after reset slave relay log IO status
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_ae91b0642ab8e0ce148caf48ab0576d40}\label{structBinlog__relay__IO__observer_ae91b0642ab8e0ce148caf48ab0576d40}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!applier\+\_\+start@{applier\+\_\+start}}
+\index{applier\+\_\+start@{applier\+\_\+start}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{applier\+\_\+start}{applier\_start}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::applier\+\_\+start) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)}
+
+This callback is called when a relay log consumer thread starts
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_ac4ddb05e11e8315086b8be4a0141a369}\label{structBinlog__relay__IO__observer_ac4ddb05e11e8315086b8be4a0141a369}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!applier\+\_\+stop@{applier\+\_\+stop}}
+\index{applier\+\_\+stop@{applier\+\_\+stop}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{applier\+\_\+stop}{applier\_stop}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::applier\+\_\+stop) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, bool aborted)}
+
+This callback is called when a relay log consumer thread stops
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em aborted} & thread aborted or exited on error\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_af77e9d19d035a32f44167c54047c7e59}\label{structBinlog__relay__IO__observer_af77e9d19d035a32f44167c54047c7e59}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!before\+\_\+request\+\_\+transmit@{before\+\_\+request\+\_\+transmit}}
+\index{before\+\_\+request\+\_\+transmit@{before\+\_\+request\+\_\+transmit}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{before\+\_\+request\+\_\+transmit}{before\_request\_transmit}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::before\+\_\+request\+\_\+transmit) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param, uint32 flags)}
+
+This callback is called before slave requesting binlog transmission from master
+
+This is called before slave issuing B\+I\+N\+L\+O\+G\+\_\+\+D\+U\+MP command to master to request binlog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter \\
+\hline
+{\em flags} & binlog dump flags\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_a20289ee51edcf183545e10dabd64cf6e}\label{structBinlog__relay__IO__observer_a20289ee51edcf183545e10dabd64cf6e}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!thread\+\_\+start@{thread\+\_\+start}}
+\index{thread\+\_\+start@{thread\+\_\+start}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{thread\+\_\+start}{thread\_start}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::thread\+\_\+start) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)}
+
+This callback is called when slave IO thread starts
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structBinlog__relay__IO__observer_a294cb8458058381e4721a3a1ae3611e9}\label{structBinlog__relay__IO__observer_a294cb8458058381e4721a3a1ae3611e9}} 
+\index{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}!thread\+\_\+stop@{thread\+\_\+stop}}
+\index{thread\+\_\+stop@{thread\+\_\+stop}!Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer@{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer}}
+\subsubsection{\texorpdfstring{thread\+\_\+stop}{thread\_stop}}
+{\footnotesize\ttfamily int($\ast$ Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+observer\+::thread\+\_\+stop) (\mbox{\hyperlink{structBinlog__relay__IO__param}{Binlog\+\_\+relay\+\_\+\+I\+O\+\_\+param}} $\ast$param)}
+
+This callback is called when slave IO thread stops
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Observer common parameter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Sucess \\
+\hline
+{\em 1} & Failure \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+replication.\+h\end{DoxyCompactItemize}

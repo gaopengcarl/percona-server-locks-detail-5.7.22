@@ -1,0 +1,52 @@
+\hypertarget{classDelete__file__log__event}{}\section{Delete\+\_\+file\+\_\+log\+\_\+event Class Reference}
+\label{classDelete__file__log__event}\index{Delete\+\_\+file\+\_\+log\+\_\+event@{Delete\+\_\+file\+\_\+log\+\_\+event}}
+
+
+{\ttfamily \#include $<$log\+\_\+event.\+h$>$}
+
+Inheritance diagram for Delete\+\_\+file\+\_\+log\+\_\+event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDelete__file__log__event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDelete__file__log__event_afb834bc591b8ea429bfaafa6f7c47367}\label{classDelete__file__log__event_afb834bc591b8ea429bfaafa6f7c47367}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info)
+\item 
+\mbox{\Hypertarget{classDelete__file__log__event_ab0b50becd5bf5c1114732e31af3892f1}\label{classDelete__file__log__event_ab0b50becd5bf5c1114732e31af3892f1}} 
+void {\bfseries print} (F\+I\+LE $\ast$file, P\+R\+I\+N\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+I\+N\+FO $\ast$print\+\_\+event\+\_\+info, bool enable\+\_\+local)
+\item 
+\mbox{\Hypertarget{classDelete__file__log__event_a99a8f0f207a36c4d88fba48c7627f468}\label{classDelete__file__log__event_a99a8f0f207a36c4d88fba48c7627f468}} 
+{\bfseries Delete\+\_\+file\+\_\+log\+\_\+event} (const char $\ast$buf, uint event\+\_\+len, const Format\+\_\+description\+\_\+event $\ast$description\+\_\+event)
+\item 
+\mbox{\Hypertarget{classDelete__file__log__event_adc92cf6c4ed780c470ac7a4a5c68ad84}\label{classDelete__file__log__event_adc92cf6c4ed780c470ac7a4a5c68ad84}} 
+size\+\_\+t {\bfseries get\+\_\+data\+\_\+size} ()
+\item 
+bool \mbox{\hyperlink{classDelete__file__log__event_a3cba2bd9057ac18a7ac720bbfeb2081f}{is\+\_\+sbr\+\_\+logging\+\_\+format}} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classDelete__file__log__event}{Delete\+\_\+file\+\_\+log\+\_\+event}} is created when the L\+O\+A\+D\+\_\+\+D\+A\+TA query fails on the master for some reason, and the slave should be notified to abort the load. The event is required since the master starts writing the loaded block into the binary log before the statement ends. In case of error, the slave should abort, and delete any temporary file created while applying the (N\+E\+W\+\_\+)L\+O\+A\+D\+\_\+\+E\+V\+E\+NT. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDelete__file__log__event_a3cba2bd9057ac18a7ac720bbfeb2081f}\label{classDelete__file__log__event_a3cba2bd9057ac18a7ac720bbfeb2081f}} 
+\index{Delete\+\_\+file\+\_\+log\+\_\+event@{Delete\+\_\+file\+\_\+log\+\_\+event}!is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}}
+\index{is\+\_\+sbr\+\_\+logging\+\_\+format@{is\+\_\+sbr\+\_\+logging\+\_\+format}!Delete\+\_\+file\+\_\+log\+\_\+event@{Delete\+\_\+file\+\_\+log\+\_\+event}}
+\subsubsection{\texorpdfstring{is\+\_\+sbr\+\_\+logging\+\_\+format()}{is\_sbr\_logging\_format()}}
+{\footnotesize\ttfamily bool Delete\+\_\+file\+\_\+log\+\_\+event\+::is\+\_\+sbr\+\_\+logging\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return true if the event has to be logged using S\+BR for D\+M\+Ls. 
+
+Reimplemented from \mbox{\hyperlink{classLog__event_ad4d689d007b7c8f1b0d54e65d8f34069}{Log\+\_\+event}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log__event_8h}{log\+\_\+event.\+h}}\item 
+log\+\_\+event.\+cc\end{DoxyCompactItemize}

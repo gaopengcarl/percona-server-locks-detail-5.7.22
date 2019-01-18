@@ -1,0 +1,68 @@
+\hypertarget{classHa__trx__info}{}\section{Ha\+\_\+trx\+\_\+info Class Reference}
+\label{classHa__trx__info}\index{Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}}
+
+
+{\ttfamily \#include $<$transaction\+\_\+info.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classHa__trx__info_a8c9605da42e7b06acb1279fbd95d342a}{register\+\_\+ha}} (\mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$ha\+\_\+info, \mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ht\+\_\+arg)
+\item 
+void \mbox{\hyperlink{classHa__trx__info_a8566510f1fa2e76f93fa7656b110cc4b}{reset}} ()
+\item 
+\mbox{\Hypertarget{classHa__trx__info_a9409b39e236efd90798dfcaa5d1cb969}\label{classHa__trx__info_a9409b39e236efd90798dfcaa5d1cb969}} 
+void {\bfseries set\+\_\+trx\+\_\+read\+\_\+write} ()
+\item 
+\mbox{\Hypertarget{classHa__trx__info_a6e5c258e3bdac2c682ad0f6c9572d203}\label{classHa__trx__info_a6e5c258e3bdac2c682ad0f6c9572d203}} 
+bool {\bfseries is\+\_\+trx\+\_\+read\+\_\+write} () const
+\item 
+\mbox{\Hypertarget{classHa__trx__info_a5b9dafe6b140345af7d0deee6c219134}\label{classHa__trx__info_a5b9dafe6b140345af7d0deee6c219134}} 
+bool {\bfseries is\+\_\+started} () const
+\item 
+void \mbox{\hyperlink{classHa__trx__info_aa529c17a6931145e81ff19abc942a022}{coalesce\+\_\+trx\+\_\+with}} (const \mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$stmt\+\_\+trx)
+\item 
+\mbox{\Hypertarget{classHa__trx__info_a4cbb85eee36820a7921fbfe58ab38073}\label{classHa__trx__info_a4cbb85eee36820a7921fbfe58ab38073}} 
+\mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$ {\bfseries next} () const
+\item 
+\mbox{\Hypertarget{classHa__trx__info_a2fab5b974bb31c2f9a01883fed5409cf}\label{classHa__trx__info_a2fab5b974bb31c2f9a01883fed5409cf}} 
+\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$ {\bfseries ht} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Either statement transaction or normal transaction -\/ related thread-\/specific storage engine data.
+
+If a storage engine participates in a statement/transaction, an instance of this class is present in thd-\/$>$m\+\_\+transaction.\+m\+\_\+scope\+\_\+info\mbox{[}S\+T\+M\+T$\vert$\+S\+E\+S\+S\+I\+ON\mbox{]}.ha\+\_\+list. The addition this list is made by \mbox{\hyperlink{handler_8cc_a5b334384203039e1f5fc63b69e64d544}{trans\+\_\+register\+\_\+ha()}}.
+
+When it\textquotesingle{}s time to commit or rollback, each element of ha\+\_\+list is used to access storage engine\textquotesingle{}s prepare()/commit()/rollback() methods, and also to evaluate if a full two phase commit is necessary.
+
+\begin{DoxySeeAlso}{See also}
+General description of transaction handling in \mbox{\hyperlink{handler_8cc}{handler.\+cc}}. 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHa__trx__info_aa529c17a6931145e81ff19abc942a022}\label{classHa__trx__info_aa529c17a6931145e81ff19abc942a022}} 
+\index{Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}!coalesce\+\_\+trx\+\_\+with@{coalesce\+\_\+trx\+\_\+with}}
+\index{coalesce\+\_\+trx\+\_\+with@{coalesce\+\_\+trx\+\_\+with}!Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}}
+\subsubsection{\texorpdfstring{coalesce\+\_\+trx\+\_\+with()}{coalesce\_trx\_with()}}
+{\footnotesize\ttfamily void Ha\+\_\+trx\+\_\+info\+::coalesce\+\_\+trx\+\_\+with (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$}]{stmt\+\_\+trx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Mark this transaction read-\/write if the argument is read-\/write. \mbox{\Hypertarget{classHa__trx__info_a8c9605da42e7b06acb1279fbd95d342a}\label{classHa__trx__info_a8c9605da42e7b06acb1279fbd95d342a}} 
+\index{Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}!register\+\_\+ha@{register\+\_\+ha}}
+\index{register\+\_\+ha@{register\+\_\+ha}!Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}}
+\subsubsection{\texorpdfstring{register\+\_\+ha()}{register\_ha()}}
+{\footnotesize\ttfamily void Ha\+\_\+trx\+\_\+info\+::register\+\_\+ha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHa__trx__info}{Ha\+\_\+trx\+\_\+info}} $\ast$}]{ha\+\_\+info,  }\item[{\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$}]{ht\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Register this storage engine in the given transaction context. \mbox{\Hypertarget{classHa__trx__info_a8566510f1fa2e76f93fa7656b110cc4b}\label{classHa__trx__info_a8566510f1fa2e76f93fa7656b110cc4b}} 
+\index{Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}!reset@{reset}}
+\index{reset@{reset}!Ha\+\_\+trx\+\_\+info@{Ha\+\_\+trx\+\_\+info}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Ha\+\_\+trx\+\_\+info\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear, prepare for reuse. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+transaction\+\_\+info.\+h\end{DoxyCompactItemize}

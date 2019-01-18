@@ -1,0 +1,296 @@
+\hypertarget{classField__temporal__with__date}{}\section{Field\+\_\+temporal\+\_\+with\+\_\+date Class Reference}
+\label{classField__temporal__with__date}\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for Field\+\_\+temporal\+\_\+with\+\_\+date\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.833333cm]{classField__temporal__with__date}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classField__temporal__with__date_add449ec4ea8b3be7ee002d3def0a9c02}{Field\+\_\+temporal\+\_\+with\+\_\+date}} (uchar $\ast$ptr\+\_\+arg, uchar $\ast$null\+\_\+ptr\+\_\+arg, uchar null\+\_\+bit\+\_\+arg, enum utype unireg\+\_\+check\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint8 int\+\_\+length\+\_\+arg, uint8 dec\+\_\+arg)
+\item 
+\mbox{\hyperlink{classField__temporal__with__date_a6898bd8188ce0c64a09ef367efdad6f3}{Field\+\_\+temporal\+\_\+with\+\_\+date}} (bool maybe\+\_\+null\+\_\+arg, const char $\ast$field\+\_\+name\+\_\+arg, uint int\+\_\+length\+\_\+arg, uint8 dec\+\_\+arg)
+\item 
+\mbox{\Hypertarget{classField__temporal__with__date_a7f3f2b122718792ee65e28cf75b7deca}\label{classField__temporal__with__date_a7f3f2b122718792ee65e28cf75b7deca}} 
+bool {\bfseries send\+\_\+binary} (\mbox{\hyperlink{classProtocol}{Protocol}} $\ast$protocol)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__temporal__with__date_aa93167bb62fc7b8e0428ef1e3baaaf7c}{store\+\_\+time}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, uint8 dec)
+\item 
+\mbox{\Hypertarget{classField__temporal__with__date_a335cc272ad6b188a673a7e8d3edd28d0}\label{classField__temporal__with__date_a335cc272ad6b188a673a7e8d3edd28d0}} 
+String $\ast$ {\bfseries val\+\_\+str} (String $\ast$, String $\ast$)
+\item 
+longlong \mbox{\hyperlink{classField__temporal__with__date_acf8330ac7e19ae7bdf978fc811e49c00}{val\+\_\+time\+\_\+temporal}} ()
+\item 
+longlong \mbox{\hyperlink{classField__temporal__with__date_a3d1a5e9fb109d1da223753c6072436ab}{val\+\_\+date\+\_\+temporal}} ()
+\item 
+\mbox{\Hypertarget{classField__temporal__with__date_ac71f02e96f3a525349feb97f4d035c85}\label{classField__temporal__with__date_ac71f02e96f3a525349feb97f4d035c85}} 
+bool {\bfseries get\+\_\+time} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)
+\item 
+virtual type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__temporal__with__date_af9ebe4d96a6a81232e4a41e4b1d7b599}{validate\+\_\+stored\+\_\+val}} (T\+HD $\ast$thd)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classField__temporal__with__date_aef905f77b5430dd2b3ef461ce916b4ef}{get\+\_\+date\+\_\+internal}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime)=0
+\item 
+bool \mbox{\hyperlink{classField__temporal__with__date_a771e7058c51d29caf989396ecbe8bbb3}{get\+\_\+internal\+\_\+check\+\_\+zero}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, my\+\_\+time\+\_\+flags\+\_\+t fuzzydate)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__temporal__with__date_a161cad8d28fa79b793aca5a59b5c9044}{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}} (longlong nr, bool unsigned\+\_\+val, int nanoseconds, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, int $\ast$warning)
+\item 
+bool \mbox{\hyperlink{classField__temporal__with__date_ae39fe9b7b0dbb013f52ce93551420886}{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME}} (const char $\ast$str, size\+\_\+t len, const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$cs, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US $\ast$status)
+\item 
+type\+\_\+conversion\+\_\+status \mbox{\hyperlink{classField__temporal__with__date_a737fca0e5e576c4ae32386f6dc306a3c}{store\+\_\+internal\+\_\+with\+\_\+round}} (M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ltime, int $\ast$warnings)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract class for types with date with optional time, with or without fractional part\+: D\+A\+TE, D\+A\+T\+E\+T\+I\+ME, D\+A\+T\+E\+T\+I\+M\+E(\+N), T\+I\+M\+E\+S\+T\+A\+MP, T\+I\+M\+E\+S\+T\+A\+M\+P(\+N). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classField__temporal__with__date_add449ec4ea8b3be7ee002d3def0a9c02}\label{classField__temporal__with__date_add449ec4ea8b3be7ee002d3def0a9c02}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{Field\+\_\+temporal\+\_\+with\+\_\+date()}{Field\_temporal\_with\_date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Field\+\_\+temporal\+\_\+with\+\_\+date\+::\+Field\+\_\+temporal\+\_\+with\+\_\+date (\begin{DoxyParamCaption}\item[{uchar $\ast$}]{ptr\+\_\+arg,  }\item[{uchar $\ast$}]{null\+\_\+ptr\+\_\+arg,  }\item[{uchar}]{null\+\_\+bit\+\_\+arg,  }\item[{enum utype}]{unireg\+\_\+check\+\_\+arg,  }\item[{const char $\ast$}]{field\+\_\+name\+\_\+arg,  }\item[{uint8}]{int\+\_\+length\+\_\+arg,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \mbox{\hyperlink{classField__temporal}{Field\+\_\+temporal}} 
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em null\+\_\+ptr\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em null\+\_\+bit\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em unireg\+\_\+check\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em field\+\_\+name\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em len\+\_\+arg} & Number of characters in the integer part. \\
+\hline
+{\em dec\+\_\+arg} & Number of second fraction digits, 0..6. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classField__temporal__with__date_a6898bd8188ce0c64a09ef367efdad6f3}\label{classField__temporal__with__date_a6898bd8188ce0c64a09ef367efdad6f3}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{Field\+\_\+temporal\+\_\+with\+\_\+date()}{Field\_temporal\_with\_date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Field\+\_\+temporal\+\_\+with\+\_\+date\+::\+Field\+\_\+temporal\+\_\+with\+\_\+date (\begin{DoxyParamCaption}\item[{bool}]{maybe\+\_\+null\+\_\+arg,  }\item[{const char $\ast$}]{field\+\_\+name\+\_\+arg,  }\item[{uint}]{int\+\_\+length\+\_\+arg,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \mbox{\hyperlink{classField__temporal}{Field\+\_\+temporal}} 
+\begin{DoxyParams}{Parameters}
+{\em maybe\+\_\+null\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em field\+\_\+name\+\_\+arg} & See \mbox{\hyperlink{classField}{Field}} definition \\
+\hline
+{\em len\+\_\+arg} & Number of characters in the integer part. \\
+\hline
+{\em dec\+\_\+arg} & Number of second fraction digits, 0..6. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classField__temporal__with__date_a161cad8d28fa79b793aca5a59b5c9044}\label{classField__temporal__with__date_a161cad8d28fa79b793aca5a59b5c9044}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}}
+\index{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+M\+E()}{convert\_number\_to\_TIME()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+temporal\+\_\+with\+\_\+date\+::convert\+\_\+number\+\_\+to\+\_\+\+T\+I\+ME (\begin{DoxyParamCaption}\item[{longlong}]{nr,  }\item[{bool}]{unsigned\+\_\+val,  }\item[{int}]{nanoseconds,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{int $\ast$}]{warning }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Convert a number with fractional part with nanosecond precision into M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME, according to the field type. Nanoseconds are rounded to milliseconds and added to ltime-\/$>$second\+\_\+part.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nr} & Number \\
+\hline
+\mbox{\texttt{ in}}  & {\em unsigned\+\_\+val} & S\+I\+G\+N\+E\+D/\+U\+N\+S\+I\+G\+N\+ED flag \\
+\hline
+\mbox{\texttt{ in}}  & {\em nanoseconds} & Fractional part in nanoseconds \\
+\hline
+\mbox{\texttt{ out}}  & {\em ltime} & The value is stored here \\
+\hline
+\mbox{\texttt{ out}}  & {\em status} & Conversion status \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & On success \\
+\hline
+{\em true} & On error \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField__temporal_a08043a131a33951273dc348cbacd2858}{Field\+\_\+temporal}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_ae39fe9b7b0dbb013f52ce93551420886}\label{classField__temporal__with__date_ae39fe9b7b0dbb013f52ce93551420886}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME}}
+\index{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME@{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+M\+E()}{convert\_str\_to\_TIME()}}
+{\footnotesize\ttfamily bool Field\+\_\+temporal\+\_\+with\+\_\+date\+::convert\+\_\+str\+\_\+to\+\_\+\+T\+I\+ME (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{len,  }\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{cs,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US $\ast$}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Convert a string to M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME, according to the field type.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & String \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & String length \\
+\hline
+\mbox{\texttt{ in}}  & {\em cs} & String character set \\
+\hline
+\mbox{\texttt{ out}}  & {\em ltime} & The value is stored here \\
+\hline
+\mbox{\texttt{ out}}  & {\em status} & Conversion status \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Conversion went fine, ltime contains a valid time \\
+\hline
+{\em true} & Conversion failed, ltime was reset and contains nothing \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField__temporal_a69d31bd69ced4e4b918cf6c7dfba77f8}{Field\+\_\+temporal}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_aef905f77b5430dd2b3ef461ce916b4ef}\label{classField__temporal__with__date_aef905f77b5430dd2b3ef461ce916b4ef}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!get\+\_\+date\+\_\+internal@{get\+\_\+date\+\_\+internal}}
+\index{get\+\_\+date\+\_\+internal@{get\+\_\+date\+\_\+internal}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{get\+\_\+date\+\_\+internal()}{get\_date\_internal()}}
+{\footnotesize\ttfamily virtual bool Field\+\_\+temporal\+\_\+with\+\_\+date\+::get\+\_\+date\+\_\+internal (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Low level function to get value into M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME, without checking for being valid. 
+
+Implemented in \mbox{\hyperlink{classField__datetimef_a54497950174c5034fd1ffd97e08bc368}{Field\+\_\+datetimef}}, \mbox{\hyperlink{classField__datetime_ad1b048032be351ce7227d8ab6804fc99}{Field\+\_\+datetime}}, \mbox{\hyperlink{classField__newdate_a108e583a4ec9f51e7f1a28d179b3b725}{Field\+\_\+newdate}}, \mbox{\hyperlink{classField__timestampf_a2f546414955a5ad516e77dc821ff5f47}{Field\+\_\+timestampf}}, and \mbox{\hyperlink{classField__timestamp_aff69ed0b8fb6329aa9dd6dceb14ddd27}{Field\+\_\+timestamp}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_a771e7058c51d29caf989396ecbe8bbb3}\label{classField__temporal__with__date_a771e7058c51d29caf989396ecbe8bbb3}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!get\+\_\+internal\+\_\+check\+\_\+zero@{get\+\_\+internal\+\_\+check\+\_\+zero}}
+\index{get\+\_\+internal\+\_\+check\+\_\+zero@{get\+\_\+internal\+\_\+check\+\_\+zero}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{get\+\_\+internal\+\_\+check\+\_\+zero()}{get\_internal\_check\_zero()}}
+{\footnotesize\ttfamily bool Field\+\_\+temporal\+\_\+with\+\_\+date\+::get\+\_\+internal\+\_\+check\+\_\+zero (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{my\+\_\+time\+\_\+flags\+\_\+t}]{fuzzydate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get value into M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME and check T\+I\+M\+E\+\_\+\+N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+D\+A\+TE flag. 
+\begin{DoxyRetVals}{Return values}
+{\em True} & on error\+: we get a zero value but flags disallow zero dates. \\
+\hline
+{\em False} & on success. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classField__temporal__with__date_a737fca0e5e576c4ae32386f6dc306a3c}\label{classField__temporal__with__date_a737fca0e5e576c4ae32386f6dc306a3c}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!store\+\_\+internal\+\_\+with\+\_\+round@{store\+\_\+internal\+\_\+with\+\_\+round}}
+\index{store\+\_\+internal\+\_\+with\+\_\+round@{store\+\_\+internal\+\_\+with\+\_\+round}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{store\+\_\+internal\+\_\+with\+\_\+round()}{store\_internal\_with\_round()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+temporal\+\_\+with\+\_\+date\+::store\+\_\+internal\+\_\+with\+\_\+round (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{int $\ast$}]{warnings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Low level routine to store a M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value into a field with rounding according to the field decimals() value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ltime} & M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value. \\
+\hline
+\mbox{\texttt{ out}}  & {\em error} & Error flag vector, set in case of error. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & In case of success. \\
+\hline
+{\em true} & In case of error. ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classField__temporal_ae2be4bf490d06f2f1707bee19dcbebf4}{Field\+\_\+temporal}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_aa93167bb62fc7b8e0428ef1e3baaaf7c}\label{classField__temporal__with__date_aa93167bb62fc7b8e0428ef1e3baaaf7c}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!store\+\_\+time@{store\+\_\+time}}
+\index{store\+\_\+time@{store\+\_\+time}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{store\+\_\+time()}{store\_time()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+temporal\+\_\+with\+\_\+date\+::store\+\_\+time (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{ltime,  }\item[{uint8}]{dec\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Store M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value with the given amount of decimal digits into a field.
+
+Note, the \char`\"{}dec\char`\"{} parameter represents number of digits of the \mbox{\hyperlink{classItem}{Item}} that previously created the M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME value. It\textquotesingle{}s needed when we store the value into a C\+H\+A\+R/\+V\+A\+R\+C\+H\+A\+R/\+T\+E\+XT field to display the proper amount of fractional digits. For other field types the \char`\"{}dec\char`\"{} value does not matter and is ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ltime} & Time, date or datetime value. \\
+\hline
+{\em dec} & Number of decimals in ltime. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & on success \\
+\hline
+{\em true} & on error\\
+\hline
+\end{DoxyRetVals}
+This is called when storing a date in a string.
+
+\begin{DoxyNote}{Note}
+Needs to be changed if/when we want to support different time formats. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classField_a7433aa07355def6c394687567256e6cf}{Field}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_a3d1a5e9fb109d1da223753c6072436ab}\label{classField__temporal__with__date_a3d1a5e9fb109d1da223753c6072436ab}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}}
+\index{val\+\_\+date\+\_\+temporal@{val\+\_\+date\+\_\+temporal}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{val\+\_\+date\+\_\+temporal()}{val\_date\_temporal()}}
+{\footnotesize\ttfamily longlong Field\+\_\+temporal\+\_\+with\+\_\+date\+::val\+\_\+date\+\_\+temporal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns D\+A\+T\+E/\+D\+A\+T\+E\+T\+I\+ME value in packed longlong format. This method should not be called for non-\/temporal types. Temporal field types override the default method. 
+
+Reimplemented from \mbox{\hyperlink{classField_a85b7713df40509aaa467a75eb3945614}{Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__datetimef_aec7455bda53c84017097539ac92c91d2}{Field\+\_\+datetimef}}, and \mbox{\hyperlink{classField__newdate_a06c3392cc8329a524f544360d789fc3d}{Field\+\_\+newdate}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_acf8330ac7e19ae7bdf978fc811e49c00}\label{classField__temporal__with__date_acf8330ac7e19ae7bdf978fc811e49c00}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!val\+\_\+time\+\_\+temporal@{val\+\_\+time\+\_\+temporal}}
+\index{val\+\_\+time\+\_\+temporal@{val\+\_\+time\+\_\+temporal}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{val\+\_\+time\+\_\+temporal()}{val\_time\_temporal()}}
+{\footnotesize\ttfamily longlong Field\+\_\+temporal\+\_\+with\+\_\+date\+::val\+\_\+time\+\_\+temporal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns T\+I\+ME value in packed longlong format. This method should not be called for non-\/temporal types. Temporal field types override the default method. 
+
+Reimplemented from \mbox{\hyperlink{classField_a504ae8be08face4684852eaa79734158}{Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__newdate_aad085aaff8fef3367986f9733b79605c}{Field\+\_\+newdate}}.
+
+\mbox{\Hypertarget{classField__temporal__with__date_af9ebe4d96a6a81232e4a41e4b1d7b599}\label{classField__temporal__with__date_af9ebe4d96a6a81232e4a41e4b1d7b599}} 
+\index{Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}!validate\+\_\+stored\+\_\+val@{validate\+\_\+stored\+\_\+val}}
+\index{validate\+\_\+stored\+\_\+val@{validate\+\_\+stored\+\_\+val}!Field\+\_\+temporal\+\_\+with\+\_\+date@{Field\+\_\+temporal\+\_\+with\+\_\+date}}
+\subsubsection{\texorpdfstring{validate\+\_\+stored\+\_\+val()}{validate\_stored\_val()}}
+{\footnotesize\ttfamily type\+\_\+conversion\+\_\+status Field\+\_\+temporal\+\_\+with\+\_\+date\+::validate\+\_\+stored\+\_\+val (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Validate date value stored in the field.
+
+Now we check whether date value is zero or has zero in date or not and sets warning/error message appropriately(depending on the sql\+\_\+mode). 
+
+Reimplemented from \mbox{\hyperlink{classField}{Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classField__timestampf_a3a96ed01920259945daf2744367a94f1}{Field\+\_\+timestampf}}, and \mbox{\hyperlink{classField__timestamp_ac6253aa19d757ba5607be97fbbefe02a}{Field\+\_\+timestamp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+field.\+h\item 
+\mbox{\hyperlink{field_8cc}{field.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\hypertarget{classAudit__error__handler}{}\section{Audit\+\_\+error\+\_\+handler Class Reference}
+\label{classAudit__error__handler}\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+Inheritance diagram for Audit\+\_\+error\+\_\+handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAudit__error__handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAudit__error__handler_ad70a6f131999a8e3b187f833dbe8d1c2}{Audit\+\_\+error\+\_\+handler}} (T\+HD $\ast$thd, const char $\ast$warning\+\_\+message, bool active=true)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAudit__error__handler_a75fb736aa4997a6e4908443a9937cf72}\label{classAudit__error__handler_a75fb736aa4997a6e4908443a9937cf72}} 
+virtual \mbox{\hyperlink{classAudit__error__handler_a75fb736aa4997a6e4908443a9937cf72}{$\sim$\+Audit\+\_\+error\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Destruction. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAudit__error__handler_aa674ae49782d768001e7bd1d11f16c68}{handle}} ()=0
+\begin{DoxyCompactList}\small\item\em Simplified custom handler. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAudit__error__handler_a5b6e8df5f80e0b00026eb90f90622657}{handle\+\_\+condition}} (T\+HD $\ast$thd, uint sql\+\_\+errno, const char $\ast$sqlstate, \mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$level, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Error handler. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAudit__error__handler_ac3b06f010e4c72aee47ae6123e49ecc4}{print\+\_\+warning}} (const char $\ast$warn\+\_\+msg, uint sql\+\_\+errno, const char $\ast$sqlstate, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Warning print routine. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAudit__error__handler_a44d7850d3d9d50f3eb71c3f9ab9cf9dc}{get\+\_\+result}} (int result)
+\begin{DoxyCompactList}\small\item\em Convert the result value returned from the audit api. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Error handler that controls error reporting by plugin. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAudit__error__handler_ad70a6f131999a8e3b187f833dbe8d1c2}\label{classAudit__error__handler_ad70a6f131999a8e3b187f833dbe8d1c2}} 
+\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}!Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}!Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{Audit\+\_\+error\+\_\+handler()}{Audit\_error\_handler()}}
+{\footnotesize\ttfamily Audit\+\_\+error\+\_\+handler\+::\+Audit\+\_\+error\+\_\+handler (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{warning\+\_\+message,  }\item[{bool}]{active = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd\mbox{[}in\mbox{]}} & Current thread data. \\
+\hline
+{\em warning\+\_\+message\mbox{[}in\mbox{]}} & Warning message used when error has been suppressed. \\
+\hline
+{\em active} & Specifies whether the handler is active or not. Optional parameter (default is true). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAudit__error__handler_a44d7850d3d9d50f3eb71c3f9ab9cf9dc}\label{classAudit__error__handler_a44d7850d3d9d50f3eb71c3f9ab9cf9dc}} 
+\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}!get\+\_\+result@{get\+\_\+result}}
+\index{get\+\_\+result@{get\+\_\+result}!Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{get\+\_\+result()}{get\_result()}}
+{\footnotesize\ttfamily int Audit\+\_\+error\+\_\+handler\+::get\+\_\+result (\begin{DoxyParamCaption}\item[{int}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert the result value returned from the audit api. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result\mbox{[}in\mbox{]}} & Result value received from the plugin function.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Converted} & result value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classAudit__error__handler_aa674ae49782d768001e7bd1d11f16c68}\label{classAudit__error__handler_aa674ae49782d768001e7bd1d11f16c68}} 
+\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}!handle@{handle}}
+\index{handle@{handle}!Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily virtual bool Audit\+\_\+error\+\_\+handler\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Simplified custom handler. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & on error rejection, otherwise false. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classIgnore__command__start__error__handler_a237add9c946d5b5f76c40483bde4a4b7}{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}, and \mbox{\hyperlink{classIgnore__event__error__handler_a0ade890f86d2a321f78f90ed446328a6}{Ignore\+\_\+event\+\_\+error\+\_\+handler}}.
+
+\mbox{\Hypertarget{classAudit__error__handler_a5b6e8df5f80e0b00026eb90f90622657}\label{classAudit__error__handler_a5b6e8df5f80e0b00026eb90f90622657}} 
+\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}!handle\+\_\+condition@{handle\+\_\+condition}}
+\index{handle\+\_\+condition@{handle\+\_\+condition}!Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{handle\+\_\+condition()}{handle\_condition()}}
+{\footnotesize\ttfamily virtual bool Audit\+\_\+error\+\_\+handler\+::handle\+\_\+condition (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{sqlstate,  }\item[{\mbox{\hyperlink{classSql__condition_ab0602581e19cddb609bfe10c44be4e83}{Sql\+\_\+condition\+::enum\+\_\+severity\+\_\+level}} $\ast$}]{level,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Error handler. 
+
+\begin{DoxySeeAlso}{See also}
+Internal\+\_\+error\+\_\+handler\+::handle\+\_\+condition
+\end{DoxySeeAlso}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & on error rejection, otherwise false. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classAudit__error__handler_ac3b06f010e4c72aee47ae6123e49ecc4}\label{classAudit__error__handler_ac3b06f010e4c72aee47ae6123e49ecc4}} 
+\index{Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}!print\+\_\+warning@{print\+\_\+warning}}
+\index{print\+\_\+warning@{print\+\_\+warning}!Audit\+\_\+error\+\_\+handler@{Audit\+\_\+error\+\_\+handler}}
+\subsubsection{\texorpdfstring{print\+\_\+warning()}{print\_warning()}}
+{\footnotesize\ttfamily virtual void Audit\+\_\+error\+\_\+handler\+::print\+\_\+warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warn\+\_\+msg,  }\item[{uint}]{sql\+\_\+errno,  }\item[{const char $\ast$}]{sqlstate,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Warning print routine. 
+
+Also prints the underlying error attributes if supplied.
+
+
+\begin{DoxyParams}{Parameters}
+{\em warn\+\_\+msg\mbox{[}in\mbox{]}} & Warning message to be printed. \\
+\hline
+{\em sql\+\_\+errno\mbox{[}in\mbox{]}} & The error number of the underlying error \\
+\hline
+{\em sqlstate\mbox{[}in\mbox{]}} & The S\+QL state of the underlying error. N\+U\+LL if none \\
+\hline
+{\em msg\mbox{[}in\mbox{]}} & The text of the underlying error. N\+U\+LL if none \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classIgnore__command__start__error__handler_a182e2ebd517169e1138bbbf3999896ac}{Ignore\+\_\+command\+\_\+start\+\_\+error\+\_\+handler}}, and \mbox{\hyperlink{classIgnore__event__error__handler_a62ca182f5f8a5faebac36dccc8b5a01d}{Ignore\+\_\+event\+\_\+error\+\_\+handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+audit.\+cc\end{DoxyCompactItemize}

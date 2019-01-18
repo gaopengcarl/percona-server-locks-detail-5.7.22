@@ -1,0 +1,158 @@
+\hypertarget{classJson__datetime}{}\section{Json\+\_\+datetime Class Reference}
+\label{classJson__datetime}\index{Json\+\_\+datetime@{Json\+\_\+datetime}}
+
+
+{\ttfamily \#include $<$json\+\_\+dom.\+h$>$}
+
+Inheritance diagram for Json\+\_\+datetime\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classJson__datetime}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson__datetime_a647530c4996bfbdd8c26aef226eaebe8}{Json\+\_\+datetime}} (const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \&t, enum\+\_\+field\+\_\+types ft)
+\item 
+\mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{enum\+\_\+json\+\_\+type}} \mbox{\hyperlink{classJson__datetime_af03bb30e76ab42285d3ee4bc66abbc55}{json\+\_\+type}} () const
+\item 
+\mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ \mbox{\hyperlink{classJson__datetime_a2c4c37beb0c84fa7cdaeb1c2f28b07c4}{clone}} () const
+\item 
+const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$ \mbox{\hyperlink{classJson__datetime_a8d94ebe1237f57e7ffd2bb82621f8f5a}{value}} () const
+\item 
+enum\+\_\+field\+\_\+types \mbox{\hyperlink{classJson__datetime_a31c8a7a17013d92434f033dbb787df70}{field\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classJson__datetime_a702fc9e31b2a27fe5f99e7daa4ade1f4}{to\+\_\+packed}} (char $\ast$dest) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classJson__datetime_ab7477e110d3a4d88a7caf6c5559db1be}{from\+\_\+packed}} (const char $\ast$from, enum\+\_\+field\+\_\+types ft, M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$to)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classJson__datetime_ac18eb9fb33e2a1cf151a7a6a748e4212}{P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE}} = 8
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJson__datetime_a033e7dd9698db64d895c552a296b88b0}\label{classJson__datetime_a033e7dd9698db64d895c552a296b88b0}} 
+class {\bfseries Json\+\_\+dom}
+\item 
+\mbox{\Hypertarget{classJson__datetime_a98e93450f231dee2765955e5acaef3eb}\label{classJson__datetime_a98e93450f231dee2765955e5acaef3eb}} 
+class {\bfseries Json\+\_\+wrapper}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a My\+S\+QL date/time value (D\+A\+TE, T\+I\+ME, D\+A\+T\+E\+T\+I\+ME or T\+I\+M\+E\+S\+T\+A\+MP) -\/ an extension to the E\+C\+MA set of J\+S\+ON scalar types, types J\+\_\+\+D\+A\+TE, J\+\_\+\+T\+I\+ME, J\+\_\+\+D\+A\+T\+E\+T\+I\+ME and J\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP respectively. The method field\+\_\+type identifies which of the four it is. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJson__datetime_a647530c4996bfbdd8c26aef226eaebe8}\label{classJson__datetime_a647530c4996bfbdd8c26aef226eaebe8}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{Json\+\_\+datetime()}{Json\_datetime()}}
+{\footnotesize\ttfamily Json\+\_\+datetime\+::\+Json\+\_\+datetime (\begin{DoxyParamCaption}\item[{const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME \&}]{t,  }\item[{enum\+\_\+field\+\_\+types}]{ft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a object to hold a My\+S\+QL date/time value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em t} & the time/value \\
+\hline
+\mbox{\texttt{ in}}  & {\em ft} & the field type\+: must be one of M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+ME, M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+TE, M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+T\+E\+T\+I\+ME or M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJson__datetime_a2c4c37beb0c84fa7cdaeb1c2f28b07c4}\label{classJson__datetime_a2c4c37beb0c84fa7cdaeb1c2f28b07c4}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!clone@{clone}}
+\index{clone@{clone}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} $\ast$ Json\+\_\+datetime\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Make a deep clone. The ownership of the returned object is henceforth with the caller.
+
+\begin{DoxyReturn}{Returns}
+a cloned \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_a03c529d590cc4cdb747ccb82f4b70fb5}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__datetime_a31c8a7a17013d92434f033dbb787df70}\label{classJson__datetime_a31c8a7a17013d92434f033dbb787df70}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!field\+\_\+type@{field\+\_\+type}}
+\index{field\+\_\+type@{field\+\_\+type}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{field\+\_\+type()}{field\_type()}}
+{\footnotesize\ttfamily enum\+\_\+field\+\_\+types Json\+\_\+datetime\+::field\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return what kind of date/time value this object holds. \begin{DoxyReturn}{Returns}
+One of M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+ME, M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+TE, M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+T\+E\+T\+I\+ME or M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJson__datetime_ab7477e110d3a4d88a7caf6c5559db1be}\label{classJson__datetime_ab7477e110d3a4d88a7caf6c5559db1be}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!from\+\_\+packed@{from\+\_\+packed}}
+\index{from\+\_\+packed@{from\+\_\+packed}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{from\+\_\+packed()}{from\_packed()}}
+{\footnotesize\ttfamily void Json\+\_\+datetime\+::from\+\_\+packed (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{enum\+\_\+field\+\_\+types}]{ft,  }\item[{M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Convert a packed datetime back to a M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME. 
+\begin{DoxyParams}{Parameters}
+{\em from} & the buffer to read from (must have at least P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE bytes) \\
+\hline
+{\em ft} & the field type of the value \\
+\hline
+{\em to} & the M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME to write the value to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJson__datetime_af03bb30e76ab42285d3ee4bc66abbc55}\label{classJson__datetime_af03bb30e76ab42285d3ee4bc66abbc55}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!json\+\_\+type@{json\+\_\+type}}
+\index{json\+\_\+type@{json\+\_\+type}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{json\+\_\+type()}{json\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson__dom_af37eed7dfe1da1d6507d3ab85320eb03}{Json\+\_\+dom\+::enum\+\_\+json\+\_\+type}} Json\+\_\+datetime\+::json\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type corresponding to the actual \mbox{\hyperlink{classJson__dom}{Json\+\_\+dom}} subclass 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson__dom_aed953eca1e112aade66511ad1bbf82b8}{Json\+\_\+dom}}.
+
+\mbox{\Hypertarget{classJson__datetime_a702fc9e31b2a27fe5f99e7daa4ade1f4}\label{classJson__datetime_a702fc9e31b2a27fe5f99e7daa4ade1f4}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!to\+\_\+packed@{to\+\_\+packed}}
+\index{to\+\_\+packed@{to\+\_\+packed}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{to\+\_\+packed()}{to\_packed()}}
+{\footnotesize\ttfamily void Json\+\_\+datetime\+::to\+\_\+packed (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest }\end{DoxyParamCaption}) const}
+
+Convert the datetime to the packed format used when storing datetime values. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination buffer to write the packed datetime to (must at least have size P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJson__datetime_a8d94ebe1237f57e7ffd2bb82621f8f5a}\label{classJson__datetime_a8d94ebe1237f57e7ffd2bb82621f8f5a}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!value@{value}}
+\index{value@{value}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily const M\+Y\+S\+Q\+L\+\_\+\+T\+I\+ME$\ast$ Json\+\_\+datetime\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a pointer the date/time value. Ownership is {\itshape not} transferred. To identify which time time the value represents, use \+::field\+\_\+type. \begin{DoxyReturn}{Returns}
+the pointer 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJson__datetime_ac18eb9fb33e2a1cf151a7a6a748e4212}\label{classJson__datetime_ac18eb9fb33e2a1cf151a7a6a748e4212}} 
+\index{Json\+\_\+datetime@{Json\+\_\+datetime}!P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE}}
+\index{P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE@{P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE}!Json\+\_\+datetime@{Json\+\_\+datetime}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE}{PACKED\_SIZE}}
+{\footnotesize\ttfamily const size\+\_\+t Json\+\_\+datetime\+::\+P\+A\+C\+K\+E\+D\+\_\+\+S\+I\+ZE = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+Datetimes are packed in eight bytes. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{json__dom_8h}{json\+\_\+dom.\+h}}\item 
+json\+\_\+dom.\+cc\end{DoxyCompactItemize}

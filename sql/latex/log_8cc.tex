@@ -1,0 +1,327 @@
+\hypertarget{log_8cc}{}\section{log.\+cc File Reference}
+\label{log_8cc}\index{log.\+cc@{log.\+cc}}
+
+
+logging of commands  
+
+
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+audit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+rcontext.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+head.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+instr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sql\+\_\+prepare.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysqld.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pfs\+\_\+file\+\_\+provider.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mysql/psi/mysql\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$syslog.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classQuery__log__table__intact}{Query\+\_\+log\+\_\+table\+\_\+intact}}
+\item 
+class \mbox{\hyperlink{classSilence__log__table__errors}{Silence\+\_\+log\+\_\+table\+\_\+errors}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{log_8cc_abce958ef54b1f770cd058abdc2b11171}\label{log_8cc_abce958ef54b1f770cd058abdc2b11171}} 
+enum {\bfseries enum\+\_\+slow\+\_\+query\+\_\+log\+\_\+table\+\_\+field} \{ \newline
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+I\+ME} = 0, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+U\+S\+E\+R\+\_\+\+H\+O\+ST}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+T\+I\+ME}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L\+O\+C\+K\+\_\+\+T\+I\+ME}, 
+\newline
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+R\+O\+W\+S\+\_\+\+S\+E\+NT}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+R\+O\+W\+S\+\_\+\+E\+X\+A\+M\+I\+N\+ED}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+A\+T\+A\+B\+A\+SE}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L\+A\+S\+T\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+ID}, 
+\newline
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+ID}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+ID}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+Q\+L\+\_\+\+T\+E\+XT}, 
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+ID}, 
+\newline
+{\bfseries S\+Q\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+U\+NT}
+ \}
+\item 
+\mbox{\Hypertarget{log_8cc_a0f6fc7eafe397a1bc401222eebc4ecee}\label{log_8cc_a0f6fc7eafe397a1bc401222eebc4ecee}} 
+enum {\bfseries enum\+\_\+general\+\_\+log\+\_\+table\+\_\+field} \{ \newline
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+I\+ME} = 0, 
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+U\+S\+E\+R\+\_\+\+H\+O\+ST}, 
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+ID}, 
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+ID}, 
+\newline
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+Y\+PE}, 
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+A\+R\+G\+U\+M\+E\+NT}, 
+{\bfseries G\+L\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+O\+U\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{log_8cc_ad5337d4770466744e16d2f1d36f377dc}{log\+\_\+syslog\+\_\+find\+\_\+facility}} (char $\ast$f, S\+Y\+S\+L\+O\+G\+\_\+\+F\+A\+C\+I\+L\+I\+TY $\ast$rsf)
+\item 
+bool \mbox{\hyperlink{log_8cc_a3c12c66972ae38cfa54a8b6242e6387d}{log\+\_\+syslog\+\_\+update\+\_\+settings}} ()
+\item 
+void \mbox{\hyperlink{log_8cc_ab05afa70624022ea1660a88fc805e6ff}{log\+\_\+syslog\+\_\+exit}} (void)
+\item 
+bool \mbox{\hyperlink{log_8cc_a9200e4f7c283207dac3ee00654478158}{log\+\_\+syslog\+\_\+init}} (void)
+\item 
+bool \mbox{\hyperlink{log_8cc_ad2af629ac67940dc8839f8273499435e}{is\+\_\+valid\+\_\+log\+\_\+name}} (const char $\ast$name, size\+\_\+t len)
+\item 
+char $\ast$ \mbox{\hyperlink{log_8cc_a6c28006a83045969be252194e6de2380}{make\+\_\+query\+\_\+log\+\_\+name}} (char $\ast$buff, enum\+\_\+log\+\_\+table\+\_\+type log\+\_\+type)
+\item 
+bool \mbox{\hyperlink{log_8cc_a93624d7ffd4d872d5e820e5b8ce8432b}{log\+\_\+slow\+\_\+applicable}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{log_8cc_a129f4305c71867fb0acceb629a5e87ec}{log\+\_\+slow\+\_\+do}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{log_8cc_a61772c99fe344b2afa6d92281d114027}{log\+\_\+slow\+\_\+statement}} (T\+HD $\ast$thd)
+\item 
+void \mbox{\hyperlink{log_8cc_adffcb1a4793a1b3805d7fa26b4db4e1e}{flush\+\_\+error\+\_\+log\+\_\+messages}} ()
+\item 
+void \mbox{\hyperlink{log_8cc_aa9d70b8f403a364bc1bc7784667bddcf}{init\+\_\+error\+\_\+log}} ()
+\item 
+bool \mbox{\hyperlink{log_8cc_afc48a1ab50960fa49837096bf14de8ea}{open\+\_\+error\+\_\+log}} (const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{log_8cc_a3fe0135f4ab5c952477d44d09aa4c8ef}{destroy\+\_\+error\+\_\+log}} ()
+\item 
+bool \mbox{\hyperlink{log_8cc_a5e8562061634d5d00f0b68b8d318ba3d}{reopen\+\_\+error\+\_\+log}} ()
+\item 
+\mbox{\Hypertarget{log_8cc_a5aa575418b280733418704ec34e94ae6}\label{log_8cc_a5aa575418b280733418704ec34e94ae6}} 
+void {\bfseries error\+\_\+log\+\_\+print} (enum loglevel level, const char $\ast$format, va\+\_\+list args)
+\item 
+\mbox{\Hypertarget{log_8cc_a8e88c1f62a9e97f45eb01515c9a31e3b}\label{log_8cc_a8e88c1f62a9e97f45eb01515c9a31e3b}} 
+void {\bfseries sql\+\_\+print\+\_\+error} (const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{log_8cc_a8cb7d17584b91c920e91c9c188b129bf}\label{log_8cc_a8cb7d17584b91c920e91c9c188b129bf}} 
+void {\bfseries sql\+\_\+print\+\_\+warning} (const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{log_8cc_a5792800fe1276804c39a02bc34614020}\label{log_8cc_a5792800fe1276804c39a02bc34614020}} 
+void {\bfseries sql\+\_\+print\+\_\+information} (const char $\ast$format,...)
+\item 
+\mbox{\Hypertarget{log_8cc_a3a645ed07038ca8ca3aeae825ef567ff}\label{log_8cc_a3a645ed07038ca8ca3aeae825ef567ff}} 
+int {\bfseries my\+\_\+plugin\+\_\+log\+\_\+message} (M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+IN $\ast$plugin\+\_\+ptr, plugin\+\_\+log\+\_\+level level, const char $\ast$format,...)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{log_8cc_a4d0b16c5a54d55370dcefdd0f8c4706d}\label{log_8cc_a4d0b16c5a54d55370dcefdd0f8c4706d}} 
+ulong {\bfseries max\+\_\+binlog\+\_\+files}
+\item 
+\mbox{\Hypertarget{log_8cc_af5dc139f67f4edee7487f2d0309118cc}\label{log_8cc_af5dc139f67f4edee7487f2d0309118cc}} 
+ulong {\bfseries max\+\_\+slowlog\+\_\+size}
+\item 
+\mbox{\Hypertarget{log_8cc_ab71300c894d527ed991df0d786bf7003}\label{log_8cc_ab71300c894d527ed991df0d786bf7003}} 
+ulong {\bfseries max\+\_\+slowlog\+\_\+files}
+\item 
+\mbox{\Hypertarget{log_8cc_a2552742edb23ad2bc0bc18c7e2fa6efe}\label{log_8cc_a2552742edb23ad2bc0bc18c7e2fa6efe}} 
+\mbox{\hyperlink{classQuery__logger}{Query\+\_\+logger}} {\bfseries query\+\_\+logger}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+logging of commands 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000044}{Todo}}]Abort logging when we get an error in reading or writing log files \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{log_8cc_a3fe0135f4ab5c952477d44d09aa4c8ef}\label{log_8cc_a3fe0135f4ab5c952477d44d09aa4c8ef}} 
+\index{log.\+cc@{log.\+cc}!destroy\+\_\+error\+\_\+log@{destroy\+\_\+error\+\_\+log}}
+\index{destroy\+\_\+error\+\_\+log@{destroy\+\_\+error\+\_\+log}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{destroy\+\_\+error\+\_\+log()}{destroy\_error\_log()}}
+{\footnotesize\ttfamily void destroy\+\_\+error\+\_\+log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free any error log resources.
+
+\begin{DoxyNote}{Note}
+This function accesses shared resources without protection, so it should only be called while the server is running single-\/threaded.
+
+The error log can still be used after this function is called, but that should only be done single-\/threaded. All buffered messages should be flushed before calling this function. 
+\end{DoxyNote}
+\mbox{\Hypertarget{log_8cc_adffcb1a4793a1b3805d7fa26b4db4e1e}\label{log_8cc_adffcb1a4793a1b3805d7fa26b4db4e1e}} 
+\index{log.\+cc@{log.\+cc}!flush\+\_\+error\+\_\+log\+\_\+messages@{flush\+\_\+error\+\_\+log\+\_\+messages}}
+\index{flush\+\_\+error\+\_\+log\+\_\+messages@{flush\+\_\+error\+\_\+log\+\_\+messages}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{flush\+\_\+error\+\_\+log\+\_\+messages()}{flush\_error\_log\_messages()}}
+{\footnotesize\ttfamily void flush\+\_\+error\+\_\+log\+\_\+messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+We buffer all error log messages that have been printed before the error log has been opened. This allows us to write them to the correct file once the error log has been opened.
+
+This function will explicitly flush buffered messages to stderr. It is only needed in cases where \mbox{\hyperlink{log_8cc_afc48a1ab50960fa49837096bf14de8ea}{open\+\_\+error\+\_\+log()}} is not called as it otherwise will be done there.
+
+This function also turns buffering off (there is no way to turn buffering back on). \mbox{\Hypertarget{log_8cc_aa9d70b8f403a364bc1bc7784667bddcf}\label{log_8cc_aa9d70b8f403a364bc1bc7784667bddcf}} 
+\index{log.\+cc@{log.\+cc}!init\+\_\+error\+\_\+log@{init\+\_\+error\+\_\+log}}
+\index{init\+\_\+error\+\_\+log@{init\+\_\+error\+\_\+log}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{init\+\_\+error\+\_\+log()}{init\_error\_log()}}
+{\footnotesize\ttfamily void init\+\_\+error\+\_\+log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize structures (e.\+g. mutex) needed by the error log.
+
+\begin{DoxyNote}{Note}
+This function accesses shared resources without protection, so it should only be called while the server is running single-\/threaded.
+
+The error log can still be used before this function is called, but that should only be done single-\/threaded. 
+\end{DoxyNote}
+\mbox{\Hypertarget{log_8cc_ad2af629ac67940dc8839f8273499435e}\label{log_8cc_ad2af629ac67940dc8839f8273499435e}} 
+\index{log.\+cc@{log.\+cc}!is\+\_\+valid\+\_\+log\+\_\+name@{is\+\_\+valid\+\_\+log\+\_\+name}}
+\index{is\+\_\+valid\+\_\+log\+\_\+name@{is\+\_\+valid\+\_\+log\+\_\+name}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+log\+\_\+name()}{is\_valid\_log\_name()}}
+{\footnotesize\ttfamily bool is\+\_\+valid\+\_\+log\+\_\+name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Check given log name against certain blacklisted names/extensions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Log name to check \\
+\hline
+{\em len} & Length of log name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if name is valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8cc_a93624d7ffd4d872d5e820e5b8ce8432b}\label{log_8cc_a93624d7ffd4d872d5e820e5b8ce8432b}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+slow\+\_\+applicable@{log\+\_\+slow\+\_\+applicable}}
+\index{log\+\_\+slow\+\_\+applicable@{log\+\_\+slow\+\_\+applicable}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+slow\+\_\+applicable()}{log\_slow\_applicable()}}
+{\footnotesize\ttfamily bool log\+\_\+slow\+\_\+applicable (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Check whether we need to write the current statement (or its rewritten version if it exists) to the slow query log. As a side-\/effect, a digest of suppressed statements may be written.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & statement needs to be logged \\
+\hline
+{\em false} & statement does not need to be logged \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{log_8cc_a129f4305c71867fb0acceb629a5e87ec}\label{log_8cc_a129f4305c71867fb0acceb629a5e87ec}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+slow\+\_\+do@{log\+\_\+slow\+\_\+do}}
+\index{log\+\_\+slow\+\_\+do@{log\+\_\+slow\+\_\+do}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+slow\+\_\+do()}{log\_slow\_do()}}
+{\footnotesize\ttfamily void log\+\_\+slow\+\_\+do (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Unconditionally writes the current statement (or its rewritten version if it exists) to the slow query log.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log_8cc_a61772c99fe344b2afa6d92281d114027}\label{log_8cc_a61772c99fe344b2afa6d92281d114027}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+slow\+\_\+statement@{log\+\_\+slow\+\_\+statement}}
+\index{log\+\_\+slow\+\_\+statement@{log\+\_\+slow\+\_\+statement}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+slow\+\_\+statement()}{log\_slow\_statement()}}
+{\footnotesize\ttfamily void log\+\_\+slow\+\_\+statement (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})}
+
+Check whether we need to write the current statement to the slow query log. If so, do so. This is a wrapper for the two functions above; most callers should use this wrapper. Only use the above functions directly if you have expensive rewriting that you only need to do if the query actually needs to be logged (e.\+g. SP variables / N\+A\+M\+E\+\_\+\+C\+O\+N\+ST substitution when executing a P\+R\+O\+C\+E\+D\+U\+RE). A digest of suppressed statements may be logged instead of the current statement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log_8cc_ab05afa70624022ea1660a88fc805e6ff}\label{log_8cc_ab05afa70624022ea1660a88fc805e6ff}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+syslog\+\_\+exit@{log\+\_\+syslog\+\_\+exit}}
+\index{log\+\_\+syslog\+\_\+exit@{log\+\_\+syslog\+\_\+exit}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+syslog\+\_\+exit()}{log\_syslog\_exit()}}
+{\footnotesize\ttfamily void log\+\_\+syslog\+\_\+exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Stop using syslog / Event\+Log. Call as late as possible. \mbox{\Hypertarget{log_8cc_ad5337d4770466744e16d2f1d36f377dc}\label{log_8cc_ad5337d4770466744e16d2f1d36f377dc}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+syslog\+\_\+find\+\_\+facility@{log\+\_\+syslog\+\_\+find\+\_\+facility}}
+\index{log\+\_\+syslog\+\_\+find\+\_\+facility@{log\+\_\+syslog\+\_\+find\+\_\+facility}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+syslog\+\_\+find\+\_\+facility()}{log\_syslog\_find\_facility()}}
+{\footnotesize\ttfamily bool log\+\_\+syslog\+\_\+find\+\_\+facility (\begin{DoxyParamCaption}\item[{char $\ast$}]{f,  }\item[{S\+Y\+S\+L\+O\+G\+\_\+\+F\+A\+C\+I\+L\+I\+TY $\ast$}]{rsf }\end{DoxyParamCaption})}
+
+On being handed a syslog facility name tries to look it up. If successful, fills in a struct with the facility ID and the facility\textquotesingle{}s canonical name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \mbox{[}in\mbox{]} Name of the faciltiy we\textquotesingle{}re trying to look up. Lookup is case-\/insensitive; leading \char`\"{}log\+\_\+\char`\"{} is ignored. \\
+\hline
+{\em rsf} & \mbox{[}out\mbox{]} A buffer in which to return the ID and canonical name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false No errors; buffer contains valid result true Something went wrong, no valid result set returned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8cc_a9200e4f7c283207dac3ee00654478158}\label{log_8cc_a9200e4f7c283207dac3ee00654478158}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+syslog\+\_\+init@{log\+\_\+syslog\+\_\+init}}
+\index{log\+\_\+syslog\+\_\+init@{log\+\_\+syslog\+\_\+init}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+syslog\+\_\+init()}{log\_syslog\_init()}}
+{\footnotesize\ttfamily bool log\+\_\+syslog\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Start using syslog / Event\+Log.
+
+\begin{DoxyReturn}{Returns}
+true could not open syslog / Event\+Log with the requested characteristics false no issues encountered 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8cc_a3c12c66972ae38cfa54a8b6242e6387d}\label{log_8cc_a3c12c66972ae38cfa54a8b6242e6387d}} 
+\index{log.\+cc@{log.\+cc}!log\+\_\+syslog\+\_\+update\+\_\+settings@{log\+\_\+syslog\+\_\+update\+\_\+settings}}
+\index{log\+\_\+syslog\+\_\+update\+\_\+settings@{log\+\_\+syslog\+\_\+update\+\_\+settings}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{log\+\_\+syslog\+\_\+update\+\_\+settings()}{log\_syslog\_update\_settings()}}
+{\footnotesize\ttfamily bool log\+\_\+syslog\+\_\+update\+\_\+settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update syslog / Windows Event\+Log characteristics (on/off, identify-\/as, log-\/P\+I\+Ds, facility, ...) from global variables.
+
+\begin{DoxyReturn}{Returns}
+false No errors; all characteristics updated. true Unable to update characteristics. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8cc_a6c28006a83045969be252194e6de2380}\label{log_8cc_a6c28006a83045969be252194e6de2380}} 
+\index{log.\+cc@{log.\+cc}!make\+\_\+query\+\_\+log\+\_\+name@{make\+\_\+query\+\_\+log\+\_\+name}}
+\index{make\+\_\+query\+\_\+log\+\_\+name@{make\+\_\+query\+\_\+log\+\_\+name}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{make\+\_\+query\+\_\+log\+\_\+name()}{make\_query\_log\_name()}}
+{\footnotesize\ttfamily char$\ast$ make\+\_\+query\+\_\+log\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{buff,  }\item[{enum\+\_\+log\+\_\+table\+\_\+type}]{log\+\_\+type }\end{DoxyParamCaption})}
+
+Create the name of the query log specified.
+
+This method forms a new path + file name for the log specified.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buff} & Location for building new string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em log\+\_\+type} & Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+S\+L\+OW or Q\+U\+E\+R\+Y\+\_\+\+L\+O\+G\+\_\+\+G\+E\+N\+E\+R\+AL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new string containing the name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8cc_afc48a1ab50960fa49837096bf14de8ea}\label{log_8cc_afc48a1ab50960fa49837096bf14de8ea}} 
+\index{log.\+cc@{log.\+cc}!open\+\_\+error\+\_\+log@{open\+\_\+error\+\_\+log}}
+\index{open\+\_\+error\+\_\+log@{open\+\_\+error\+\_\+log}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{open\+\_\+error\+\_\+log()}{open\_error\_log()}}
+{\footnotesize\ttfamily bool open\+\_\+error\+\_\+log (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Open the error log and redirect stderr and optionally stdout to the error log file. The streams are reopened only for appending (writing at end of file).
+
+\begin{DoxyNote}{Note}
+This function also writes any error log messages that have been buffered by calling \mbox{\hyperlink{log_8cc_adffcb1a4793a1b3805d7fa26b4db4e1e}{flush\+\_\+error\+\_\+log\+\_\+messages()}}.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of error log file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log_8cc_a5e8562061634d5d00f0b68b8d318ba3d}\label{log_8cc_a5e8562061634d5d00f0b68b8d318ba3d}} 
+\index{log.\+cc@{log.\+cc}!reopen\+\_\+error\+\_\+log@{reopen\+\_\+error\+\_\+log}}
+\index{reopen\+\_\+error\+\_\+log@{reopen\+\_\+error\+\_\+log}!log.\+cc@{log.\+cc}}
+\subsubsection{\texorpdfstring{reopen\+\_\+error\+\_\+log()}{reopen\_error\_log()}}
+{\footnotesize\ttfamily bool reopen\+\_\+error\+\_\+log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flush any pending data to disk and reopen the error log. 

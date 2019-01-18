@@ -1,0 +1,54 @@
+\hypertarget{structst__lookup__field__values}{}\section{st\+\_\+lookup\+\_\+field\+\_\+values Struct Reference}
+\label{structst__lookup__field__values}\index{st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{structst__lookup__field__values_aa31bf13e12e3f30c7e07f78439cb6e56}{db\+\_\+value}}
+\item 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{structst__lookup__field__values_a5ae61210774960f96b7da5bd6094bacf}{table\+\_\+value}}
+\item 
+bool \mbox{\hyperlink{structst__lookup__field__values_a696c94dd58f32374162948c5c97ddb02}{wild\+\_\+db\+\_\+value}}
+\item 
+bool \mbox{\hyperlink{structst__lookup__field__values_afc672c52a3286578c0edaee5676cf7fb}{wild\+\_\+table\+\_\+value}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Condition pushdown used for I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA / S\+H\+OW queries. This structure is to implement an optimization when accessing data dictionary data in the I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N\+\_\+\+S\+C\+H\+E\+MA or S\+H\+OW commands. When the query contain a T\+A\+B\+L\+E\+\_\+\+S\+C\+H\+E\+MA or T\+A\+B\+L\+E\+\_\+\+N\+A\+ME clause, narrow the search for data based on the constraints given. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structst__lookup__field__values_aa31bf13e12e3f30c7e07f78439cb6e56}\label{structst__lookup__field__values_aa31bf13e12e3f30c7e07f78439cb6e56}} 
+\index{st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}!db\+\_\+value@{db\+\_\+value}}
+\index{db\+\_\+value@{db\+\_\+value}!st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}}
+\subsubsection{\texorpdfstring{db\+\_\+value}{db\_value}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+S\+T\+R\+I\+NG st\+\_\+lookup\+\_\+field\+\_\+values\+::db\+\_\+value}
+
+Value of a T\+A\+B\+L\+E\+\_\+\+S\+C\+H\+E\+MA clause. Note that this value length may exceed {\ttfamily N\+A\+M\+E\+\_\+\+L\+EN}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structst__lookup__field__values_a696c94dd58f32374162948c5c97ddb02}{wild\+\_\+db\+\_\+value}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structst__lookup__field__values_a5ae61210774960f96b7da5bd6094bacf}\label{structst__lookup__field__values_a5ae61210774960f96b7da5bd6094bacf}} 
+\index{st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}!table\+\_\+value@{table\+\_\+value}}
+\index{table\+\_\+value@{table\+\_\+value}!st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}}
+\subsubsection{\texorpdfstring{table\+\_\+value}{table\_value}}
+{\footnotesize\ttfamily L\+E\+X\+\_\+\+S\+T\+R\+I\+NG st\+\_\+lookup\+\_\+field\+\_\+values\+::table\+\_\+value}
+
+Value of a T\+A\+B\+L\+E\+\_\+\+N\+A\+ME clause. Note that this value length may exceed {\ttfamily N\+A\+M\+E\+\_\+\+L\+EN}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structst__lookup__field__values_afc672c52a3286578c0edaee5676cf7fb}{wild\+\_\+table\+\_\+value}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structst__lookup__field__values_a696c94dd58f32374162948c5c97ddb02}\label{structst__lookup__field__values_a696c94dd58f32374162948c5c97ddb02}} 
+\index{st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}!wild\+\_\+db\+\_\+value@{wild\+\_\+db\+\_\+value}}
+\index{wild\+\_\+db\+\_\+value@{wild\+\_\+db\+\_\+value}!st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}}
+\subsubsection{\texorpdfstring{wild\+\_\+db\+\_\+value}{wild\_db\_value}}
+{\footnotesize\ttfamily bool st\+\_\+lookup\+\_\+field\+\_\+values\+::wild\+\_\+db\+\_\+value}
+
+True when {\ttfamily db\+\_\+value} is a L\+I\+KE clause, false when {\ttfamily db\+\_\+value} is an \textquotesingle{}=\textquotesingle{} clause. \mbox{\Hypertarget{structst__lookup__field__values_afc672c52a3286578c0edaee5676cf7fb}\label{structst__lookup__field__values_afc672c52a3286578c0edaee5676cf7fb}} 
+\index{st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}!wild\+\_\+table\+\_\+value@{wild\+\_\+table\+\_\+value}}
+\index{wild\+\_\+table\+\_\+value@{wild\+\_\+table\+\_\+value}!st\+\_\+lookup\+\_\+field\+\_\+values@{st\+\_\+lookup\+\_\+field\+\_\+values}}
+\subsubsection{\texorpdfstring{wild\+\_\+table\+\_\+value}{wild\_table\_value}}
+{\footnotesize\ttfamily bool st\+\_\+lookup\+\_\+field\+\_\+values\+::wild\+\_\+table\+\_\+value}
+
+True when {\ttfamily table\+\_\+value} is a L\+I\+KE clause, false when {\ttfamily table\+\_\+value} is an \textquotesingle{}=\textquotesingle{} clause. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sql\+\_\+show.\+cc\end{DoxyCompactItemize}

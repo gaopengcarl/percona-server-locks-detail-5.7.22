@@ -1,0 +1,120 @@
+\hypertarget{classItem__func__xor}{}\section{Item\+\_\+func\+\_\+xor Class Reference}
+\label{classItem__func__xor}\index{Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}}
+
+
+{\ttfamily \#include $<$item\+\_\+cmpfunc.\+h$>$}
+
+Inheritance diagram for Item\+\_\+func\+\_\+xor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{classItem__func__xor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__func__xor_ab8d2de292d0b34c844a799f80143b57d}\label{classItem__func__xor_ab8d2de292d0b34c844a799f80143b57d}} 
+{\bfseries Item\+\_\+func\+\_\+xor} (\mbox{\hyperlink{classItem}{Item}} $\ast$i1, \mbox{\hyperlink{classItem}{Item}} $\ast$i2)
+\item 
+\mbox{\Hypertarget{classItem__func__xor_aa85b0600d4be791d940db59fbee7d99e}\label{classItem__func__xor_aa85b0600d4be791d940db59fbee7d99e}} 
+{\bfseries Item\+\_\+func\+\_\+xor} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos, \mbox{\hyperlink{classItem}{Item}} $\ast$i1, \mbox{\hyperlink{classItem}{Item}} $\ast$i2)
+\item 
+\mbox{\Hypertarget{classItem__func__xor_a0965af7e1dec81a2cdc18be092104e79}\label{classItem__func__xor_a0965af7e1dec81a2cdc18be092104e79}} 
+enum Functype {\bfseries functype} () const
+\item 
+\mbox{\Hypertarget{classItem__func__xor_a1bcfdf20e27f49caa98b71f3a7c546e0}\label{classItem__func__xor_a1bcfdf20e27f49caa98b71f3a7c546e0}} 
+const char $\ast$ {\bfseries func\+\_\+name} () const
+\item 
+longlong \mbox{\hyperlink{classItem__func__xor_abf20b3f1b71cb4c4b588c5a04d77ba05}{val\+\_\+int}} ()
+\item 
+\mbox{\Hypertarget{classItem__func__xor_afdd5e5f01dc7a0760b7ce87c6f0053fb}\label{classItem__func__xor_afdd5e5f01dc7a0760b7ce87c6f0053fb}} 
+void {\bfseries top\+\_\+level\+\_\+item} ()
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__func__xor_a8a1833fa47e41da3c73e32912f91b768}{neg\+\_\+transformer}} (T\+HD $\ast$thd)
+\item 
+float \mbox{\hyperlink{classItem__func__xor_abd4e66123ec93ceb67d18b756c1c2720}{get\+\_\+filtering\+\_\+effect}} (table\+\_\+map filter\+\_\+for\+\_\+table, table\+\_\+map read\+\_\+tables, const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$fields\+\_\+to\+\_\+ignore, double rows\+\_\+in\+\_\+table)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+X\+OR inherits from \mbox{\hyperlink{classItem__bool__func2}{Item\+\_\+bool\+\_\+func2}} because it is not optimized yet. Later, when X\+OR is optimized, it needs to inherit from \mbox{\hyperlink{classItem__cond}{Item\+\_\+cond}} instead. See WL\#5800. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__func__xor_abd4e66123ec93ceb67d18b756c1c2720}\label{classItem__func__xor_abd4e66123ec93ceb67d18b756c1c2720}} 
+\index{Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}!get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}}
+\index{get\+\_\+filtering\+\_\+effect@{get\+\_\+filtering\+\_\+effect}!Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}}
+\subsubsection{\texorpdfstring{get\+\_\+filtering\+\_\+effect()}{get\_filtering\_effect()}}
+{\footnotesize\ttfamily float Item\+\_\+func\+\_\+xor\+::get\+\_\+filtering\+\_\+effect (\begin{DoxyParamCaption}\item[{table\+\_\+map}]{filter\+\_\+for\+\_\+table,  }\item[{table\+\_\+map}]{read\+\_\+tables,  }\item[{const M\+Y\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{fields\+\_\+to\+\_\+ignore,  }\item[{double}]{rows\+\_\+in\+\_\+table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calculate the filter contribution that is relevant for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} for this item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+\_\+for\+\_\+table} & The table we are calculating filter effect for \\
+\hline
+{\em read\+\_\+tables} & Tables earlier in the join sequence. Predicates for table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that rely on values from these tables can be part of the filter effect. \\
+\hline
+{\em fields\+\_\+to\+\_\+ignore} & Fields in \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{} that should not be part of the filter calculation. The filtering effect of these fields is already part of the calculation somehow (e.\+g. because there is a predicate \char`\"{}col = $<$const$>$\char`\"{}, and the optimizer has decided to do ref access on \textquotesingle{}col\textquotesingle{}). \\
+\hline
+{\em rows\+\_\+in\+\_\+table} & The number of rows in table \textquotesingle{}filter\+\_\+for\+\_\+table\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the filtering effect (between 0 and 1) this \mbox{\hyperlink{classItem}{Item}} contributes with. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_a83f65da25aae04ad1aecebc1d43832c0}{Item}}.
+
+\mbox{\Hypertarget{classItem__func__xor_a8a1833fa47e41da3c73e32912f91b768}\label{classItem__func__xor_a8a1833fa47e41da3c73e32912f91b768}} 
+\index{Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}!neg\+\_\+transformer@{neg\+\_\+transformer}}
+\index{neg\+\_\+transformer@{neg\+\_\+transformer}!Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}}
+\subsubsection{\texorpdfstring{neg\+\_\+transformer()}{neg\_transformer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+func\+\_\+xor\+::neg\+\_\+transformer (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+X\+OR can be negated by negating one of the operands\+:
+
+N\+OT (a X\+OR b) =$>$ (N\+OT a) X\+OR b =$>$ a X\+OR (N\+OT b)
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New negated item 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+\mbox{\Hypertarget{classItem__func__xor_abf20b3f1b71cb4c4b588c5a04d77ba05}\label{classItem__func__xor_abf20b3f1b71cb4c4b588c5a04d77ba05}} 
+\index{Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}!val\+\_\+int@{val\+\_\+int}}
+\index{val\+\_\+int@{val\+\_\+int}!Item\+\_\+func\+\_\+xor@{Item\+\_\+func\+\_\+xor}}
+\subsubsection{\texorpdfstring{val\+\_\+int()}{val\_int()}}
+{\footnotesize\ttfamily longlong Item\+\_\+func\+\_\+xor\+::val\+\_\+int (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Make a logical X\+OR of the arguments.
+
+If either operator is N\+U\+LL, return N\+U\+LL.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000032}{Todo}}](low priority) Change this to be optimized as\+: ~\newline
+ A X\+OR B -\/$>$ (A) == 1 A\+ND (B) $<$$>$ 1) OR (A $<$$>$ 1 A\+ND (B) == 1) ~\newline
+ To be able to do this, we would however first have to extend the My\+S\+QL range optimizer to handle OR better.\end{DoxyRefDesc}
+
+
+\begin{DoxyNote}{Note}
+As we don\textquotesingle{}t do any index optimization on X\+OR this is not going to be very fast to use. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classItem}{Item}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item\+\_\+cmpfunc.\+h\item 
+\mbox{\hyperlink{item__cmpfunc_8cc}{item\+\_\+cmpfunc.\+cc}}\end{DoxyCompactItemize}

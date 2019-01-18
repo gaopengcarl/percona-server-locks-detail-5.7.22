@@ -1,0 +1,83 @@
+\hypertarget{classSys__var__integer}{}\section{Sys\+\_\+var\+\_\+integer$<$ T, A\+R\+GT, S\+H\+O\+WT, S\+I\+G\+N\+ED $>$ Class Template Reference}
+\label{classSys__var__integer}\index{Sys\+\_\+var\+\_\+integer$<$ T, A\+R\+G\+T, S\+H\+O\+W\+T, S\+I\+G\+N\+E\+D $>$@{Sys\+\_\+var\+\_\+integer$<$ T, A\+R\+G\+T, S\+H\+O\+W\+T, S\+I\+G\+N\+E\+D $>$}}
+
+
+{\ttfamily \#include $<$sys\+\_\+vars.\+h$>$}
+
+Inheritance diagram for Sys\+\_\+var\+\_\+integer$<$ T, A\+R\+GT, S\+H\+O\+WT, S\+I\+G\+N\+ED $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.898305cm]{classSys__var__integer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSys__var__integer_a489bb539b6748d4500f8f4dfa24e0531}\label{classSys__var__integer_a489bb539b6748d4500f8f4dfa24e0531}} 
+{\bfseries Sys\+\_\+var\+\_\+integer} (const char $\ast$name\+\_\+arg, const char $\ast$comment, int flag\+\_\+args, ptrdiff\+\_\+t off, size\+\_\+t size, \mbox{\hyperlink{structCMD__LINE}{C\+M\+D\+\_\+\+L\+I\+NE}} getopt, T min\+\_\+val, T max\+\_\+val, T def\+\_\+val, uint block\+\_\+size, \mbox{\hyperlink{classPolyLock}{Poly\+Lock}} $\ast$lock=0, enum \mbox{\hyperlink{classsys__var_a664520ec82191888717c86085bfa83ce}{binlog\+\_\+status\+\_\+enum}} binlog\+\_\+status\+\_\+arg=V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+B\+I\+N\+L\+OG, on\+\_\+check\+\_\+function on\+\_\+check\+\_\+func=0, on\+\_\+update\+\_\+function on\+\_\+update\+\_\+func=0, const char $\ast$substitute=0, int parse\+\_\+flag=P\+A\+R\+S\+E\+\_\+\+N\+O\+R\+M\+AL)
+\item 
+\mbox{\Hypertarget{classSys__var__integer_affb84d24fdab340363d9a72c3cb00f7d}\label{classSys__var__integer_affb84d24fdab340363d9a72c3cb00f7d}} 
+bool {\bfseries do\+\_\+check} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+\mbox{\Hypertarget{classSys__var__integer_ae485fe4251daf142568c76c80fd968e7}\label{classSys__var__integer_ae485fe4251daf142568c76c80fd968e7}} 
+bool {\bfseries session\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+\mbox{\Hypertarget{classSys__var__integer_abd0840e731953d5020af33408462a052}\label{classSys__var__integer_abd0840e731953d5020af33408462a052}} 
+bool {\bfseries global\+\_\+update} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+\mbox{\Hypertarget{classSys__var__integer_a4c234eb291bfbda4ce38f7bc2bd3bbd2}\label{classSys__var__integer_a4c234eb291bfbda4ce38f7bc2bd3bbd2}} 
+bool {\bfseries check\+\_\+update\+\_\+type} (Item\+\_\+result type)
+\item 
+void \mbox{\hyperlink{classSys__var__integer_aed46d5a98789b087a079ff51f1d6a9a7}{session\+\_\+save\+\_\+default}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\item 
+void \mbox{\hyperlink{classSys__var__integer_a59952c5211c10659bc16a0f5f5706e9f}{global\+\_\+save\+\_\+default}} (T\+HD $\ast$thd, \mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$var)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, ulong A\+R\+GT, enum enum\+\_\+mysql\+\_\+show\+\_\+type S\+H\+O\+WT, bool S\+I\+G\+N\+ED$>$\newline
+class Sys\+\_\+var\+\_\+integer$<$ T, A\+R\+G\+T, S\+H\+O\+W\+T, S\+I\+G\+N\+E\+D $>$}
+
+\mbox{\hyperlink{classSys__var__integer}{Sys\+\_\+var\+\_\+integer}} template is used to generate Sys\+\_\+var\+\_\+$\ast$ classes for variables that represent the value as a signed or unsigned integer. They are Sys\+\_\+var\+\_\+uint, Sys\+\_\+var\+\_\+ulong, Sys\+\_\+var\+\_\+harows, Sys\+\_\+var\+\_\+ulonglong, and Sys\+\_\+var\+\_\+long.
+
+An integer variable has a minimal and maximal values, and a \char`\"{}block\+\_\+size\char`\"{} (any valid value of the variable must be divisible by the block\+\_\+size).
+
+Class specific constructor arguments\+: min, max, block\+\_\+size Backing store\+: uint, ulong, ha\+\_\+rows, ulonglong, long, depending on the Sys\+\_\+var\+\_\+$\ast$ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSys__var__integer_a59952c5211c10659bc16a0f5f5706e9f}\label{classSys__var__integer_a59952c5211c10659bc16a0f5f5706e9f}} 
+\index{Sys\+\_\+var\+\_\+integer@{Sys\+\_\+var\+\_\+integer}!global\+\_\+save\+\_\+default@{global\+\_\+save\+\_\+default}}
+\index{global\+\_\+save\+\_\+default@{global\+\_\+save\+\_\+default}!Sys\+\_\+var\+\_\+integer@{Sys\+\_\+var\+\_\+integer}}
+\subsubsection{\texorpdfstring{global\+\_\+save\+\_\+default()}{global\_save\_default()}}
+{\footnotesize\ttfamily template$<$typename T , ulong A\+R\+GT, enum enum\+\_\+mysql\+\_\+show\+\_\+type S\+H\+O\+WT, bool S\+I\+G\+N\+ED$>$ \\
+void \mbox{\hyperlink{classSys__var__integer}{Sys\+\_\+var\+\_\+integer}}$<$ T, A\+R\+GT, S\+H\+O\+WT, S\+I\+G\+N\+ED $>$\+::global\+\_\+save\+\_\+default (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save the global default value of the variable in var 
+
+Implements \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSys__var__session__special_aae482b58f68b85585c41527fcb71c7d9}{Sys\+\_\+var\+\_\+session\+\_\+special}}.
+
+\mbox{\Hypertarget{classSys__var__integer_aed46d5a98789b087a079ff51f1d6a9a7}\label{classSys__var__integer_aed46d5a98789b087a079ff51f1d6a9a7}} 
+\index{Sys\+\_\+var\+\_\+integer@{Sys\+\_\+var\+\_\+integer}!session\+\_\+save\+\_\+default@{session\+\_\+save\+\_\+default}}
+\index{session\+\_\+save\+\_\+default@{session\+\_\+save\+\_\+default}!Sys\+\_\+var\+\_\+integer@{Sys\+\_\+var\+\_\+integer}}
+\subsubsection{\texorpdfstring{session\+\_\+save\+\_\+default()}{session\_save\_default()}}
+{\footnotesize\ttfamily template$<$typename T , ulong A\+R\+GT, enum enum\+\_\+mysql\+\_\+show\+\_\+type S\+H\+O\+WT, bool S\+I\+G\+N\+ED$>$ \\
+void \mbox{\hyperlink{classSys__var__integer}{Sys\+\_\+var\+\_\+integer}}$<$ T, A\+R\+GT, S\+H\+O\+WT, S\+I\+G\+N\+ED $>$\+::session\+\_\+save\+\_\+default (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classset__var}{set\+\_\+var}} $\ast$}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save the session default value of the variable in var 
+
+Implements \mbox{\hyperlink{classsys__var}{sys\+\_\+var}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSys__var__session__special_a1a685de0cd05c6161889034e899178b2}{Sys\+\_\+var\+\_\+session\+\_\+special}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sys__vars_8h}{sys\+\_\+vars.\+h}}\end{DoxyCompactItemize}

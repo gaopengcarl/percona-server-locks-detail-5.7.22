@@ -1,0 +1,50 @@
+\hypertarget{classItem__num}{}\section{Item\+\_\+num Class Reference}
+\label{classItem__num}\index{Item\+\_\+num@{Item\+\_\+num}}
+Inheritance diagram for Item\+\_\+num\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.914893cm]{classItem__num}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classItem__num_afbd7272c8b02a3927fb954a1381f891f}\label{classItem__num_afbd7272c8b02a3927fb954a1381f891f}} 
+{\bfseries Item\+\_\+num} (const \mbox{\hyperlink{structYYLTYPE}{P\+OS}} \&pos)
+\item 
+\mbox{\Hypertarget{classItem__num_aa6fd1be00b536f1b21a54f34c0a2e973}\label{classItem__num_aa6fd1be00b536f1b21a54f34c0a2e973}} 
+virtual \mbox{\hyperlink{classItem__num}{Item\+\_\+num}} $\ast$ {\bfseries neg} ()=0
+\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classItem__num_a2185b5b16fe2ec007c127b1c3567b233}{safe\+\_\+charset\+\_\+converter}} (const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$tocs)
+\item 
+\mbox{\Hypertarget{classItem__num_aa6e7bab16fdfa112ff1a2a3a1c200de4}\label{classItem__num_aa6e7bab16fdfa112ff1a2a3a1c200de4}} 
+bool {\bfseries check\+\_\+partition\+\_\+func\+\_\+processor} (uchar $\ast$int\+\_\+arg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem__num_a2185b5b16fe2ec007c127b1c3567b233}\label{classItem__num_a2185b5b16fe2ec007c127b1c3567b233}} 
+\index{Item\+\_\+num@{Item\+\_\+num}!safe\+\_\+charset\+\_\+converter@{safe\+\_\+charset\+\_\+converter}}
+\index{safe\+\_\+charset\+\_\+converter@{safe\+\_\+charset\+\_\+converter}!Item\+\_\+num@{Item\+\_\+num}}
+\subsubsection{\texorpdfstring{safe\+\_\+charset\+\_\+converter()}{safe\_charset\_converter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Item\+\_\+num\+::safe\+\_\+charset\+\_\+converter (\begin{DoxyParamCaption}\item[{const C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+FO $\ast$}]{tocs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Created mostly for mysql\+\_\+prepare\+\_\+table(). Important when a string E\+N\+U\+M/\+S\+ET column is described with a numeric default value\+:
+
+C\+R\+E\+A\+TE \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} t1(a S\+ET(\textquotesingle{}a\textquotesingle{}) D\+E\+F\+A\+U\+LT 1);
+
+We cannot use generic Item\+::safe\+\_\+charset\+\_\+converter(), because the latter returns a non-\/fixed \mbox{\hyperlink{classItem}{Item}}, so val\+\_\+str() crashes afterwards. Override \mbox{\hyperlink{classItem__num}{Item\+\_\+num}} method, to return a fixed item. 
+
+Reimplemented from \mbox{\hyperlink{classItem}{Item}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classItem__static__float__func_a9a61341166a21bae1b91976041ccbd52}{Item\+\_\+static\+\_\+float\+\_\+func}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

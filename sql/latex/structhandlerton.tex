@@ -1,0 +1,428 @@
+\hypertarget{structhandlerton}{}\section{handlerton Struct Reference}
+\label{structhandlerton}\index{handlerton@{handlerton}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structhandlerton_ac611b993207fb0a7c383b7f183005205}\label{structhandlerton_ac611b993207fb0a7c383b7f183005205}} 
+S\+H\+O\+W\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+T\+I\+ON {\bfseries state}
+\item 
+\mbox{\Hypertarget{structhandlerton_a6031b196b90687ecfe92de38dc553d3b}\label{structhandlerton_a6031b196b90687ecfe92de38dc553d3b}} 
+enum legacy\+\_\+db\+\_\+type {\bfseries db\+\_\+type}
+\item 
+\mbox{\Hypertarget{structhandlerton_a715538b1a749546dfeedb2cd41b28e30}\label{structhandlerton_a715538b1a749546dfeedb2cd41b28e30}} 
+uint {\bfseries slot}
+\item 
+\mbox{\Hypertarget{structhandlerton_a55518ff2a6fdf1ad4c03e3aa9d6eae10}\label{structhandlerton_a55518ff2a6fdf1ad4c03e3aa9d6eae10}} 
+uint {\bfseries savepoint\+\_\+offset}
+\item 
+\mbox{\Hypertarget{structhandlerton_a37076439ded72f45adb4c952cca1995f}\label{structhandlerton_a37076439ded72f45adb4c952cca1995f}} 
+int($\ast$ {\bfseries close\+\_\+connection} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structhandlerton_a6d0cdabc3302d06ca48d18aea124b24c}\label{structhandlerton_a6d0cdabc3302d06ca48d18aea124b24c}} 
+void($\ast$ {\bfseries kill\+\_\+connection} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structhandlerton_a134e85cecbc8d7dea66712c5b03e742a}\label{structhandlerton_a134e85cecbc8d7dea66712c5b03e742a}} 
+int($\ast$ {\bfseries savepoint\+\_\+set} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, void $\ast$sv)
+\item 
+\mbox{\Hypertarget{structhandlerton_aeaf0813d3463600e6f1e05b23e552eb3}\label{structhandlerton_aeaf0813d3463600e6f1e05b23e552eb3}} 
+int($\ast$ {\bfseries savepoint\+\_\+rollback} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, void $\ast$sv)
+\item 
+bool($\ast$ \mbox{\hyperlink{structhandlerton_ac79bf3ab67509d85a67f800c26b814b1}{savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl}} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structhandlerton_acdeb7c0c8f51ec3e39174228827e459a}\label{structhandlerton_acdeb7c0c8f51ec3e39174228827e459a}} 
+int($\ast$ {\bfseries savepoint\+\_\+release} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, void $\ast$sv)
+\item 
+\mbox{\Hypertarget{structhandlerton_a4f4097944c1ada6c128a67fc380b70fc}\label{structhandlerton_a4f4097944c1ada6c128a67fc380b70fc}} 
+int($\ast$ {\bfseries commit} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{structhandlerton_a095d2cbd5510fdeeb3dea0216adadb0f}\label{structhandlerton_a095d2cbd5510fdeeb3dea0216adadb0f}} 
+int($\ast$ {\bfseries rollback} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{structhandlerton_a713bce9fa6b3f60ab7480c318e1b10be}\label{structhandlerton_a713bce9fa6b3f60ab7480c318e1b10be}} 
+int($\ast$ {\bfseries prepare} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, bool all)
+\item 
+\mbox{\Hypertarget{structhandlerton_a265a16a5fc3084f06606c34ceae822cc}\label{structhandlerton_a265a16a5fc3084f06606c34ceae822cc}} 
+int($\ast$ {\bfseries recover} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid\+\_\+list, uint len)
+\item 
+\mbox{\Hypertarget{structhandlerton_a7b8fe766012c674ebf6d4815b18ac1c7}\label{structhandlerton_a7b8fe766012c674ebf6d4815b18ac1c7}} 
+int($\ast$ {\bfseries commit\+\_\+by\+\_\+xid} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid)
+\item 
+\mbox{\Hypertarget{structhandlerton_aea257f4033e04543dd9f9f3af6942b59}\label{structhandlerton_aea257f4033e04543dd9f9f3af6942b59}} 
+int($\ast$ {\bfseries rollback\+\_\+by\+\_\+xid} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, \mbox{\hyperlink{structxid__t}{X\+ID}} $\ast$xid)
+\item 
+\mbox{\Hypertarget{structhandlerton_a6b4cd3586ca45f8151614433824e0213}\label{structhandlerton_a6b4cd3586ca45f8151614433824e0213}} 
+\mbox{\hyperlink{classhandler}{handler}} $\ast$($\ast$ {\bfseries create} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, \mbox{\hyperlink{structTABLE__SHARE}{T\+A\+B\+L\+E\+\_\+\+S\+H\+A\+RE}} $\ast$table, M\+E\+M\+\_\+\+R\+O\+OT $\ast$mem\+\_\+root)
+\item 
+\mbox{\Hypertarget{structhandlerton_aa1eb62f336f4236512338d3caa444483}\label{structhandlerton_aa1eb62f336f4236512338d3caa444483}} 
+void($\ast$ {\bfseries drop\+\_\+database} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, char $\ast$path)
+\item 
+\mbox{\Hypertarget{structhandlerton_a80b43bb854d71d7dc763e4476e7b3d4c}\label{structhandlerton_a80b43bb854d71d7dc763e4476e7b3d4c}} 
+int($\ast$ {\bfseries panic} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, enum ha\+\_\+panic\+\_\+function flag)
+\item 
+\mbox{\Hypertarget{structhandlerton_a1cac38a7793101cb153dc1a7a641787d}\label{structhandlerton_a1cac38a7793101cb153dc1a7a641787d}} 
+int($\ast$ {\bfseries start\+\_\+consistent\+\_\+snapshot} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structhandlerton_a904494eefd1f3d9ce520e7d248eeab7d}\label{structhandlerton_a904494eefd1f3d9ce520e7d248eeab7d}} 
+int($\ast$ {\bfseries clone\+\_\+consistent\+\_\+snapshot} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, T\+HD $\ast$from\+\_\+thd)
+\item 
+bool($\ast$ \mbox{\hyperlink{structhandlerton_acaa0802b5a0dcd67a52ac65678d0ed9d}{flush\+\_\+logs}} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, bool binlog\+\_\+group\+\_\+flush)
+\item 
+\mbox{\Hypertarget{structhandlerton_aa9014fc60ffcd62a0566487ca387b4cd}\label{structhandlerton_aa9014fc60ffcd62a0566487ca387b4cd}} 
+int($\ast$ {\bfseries store\+\_\+binlog\+\_\+info} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structhandlerton_a0dfbc51ae3b674c7a9e9daa6b3d48351}\label{structhandlerton_a0dfbc51ae3b674c7a9e9daa6b3d48351}} 
+bool($\ast$ {\bfseries show\+\_\+status} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, stat\+\_\+print\+\_\+fn $\ast$print, enum ha\+\_\+stat\+\_\+type stat)
+\item 
+\mbox{\Hypertarget{structhandlerton_a9e6a59ed9d5b2babdb6eb23b05f7c852}\label{structhandlerton_a9e6a59ed9d5b2babdb6eb23b05f7c852}} 
+uint($\ast$ {\bfseries partition\+\_\+flags} )()
+\item 
+int($\ast$ \mbox{\hyperlink{structhandlerton_ad5f3570a20fd93e894a5e56404f5472a}{get\+\_\+tablespace}} )(T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG db\+\_\+name, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG table\+\_\+name, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$tablespace\+\_\+name)
+\item 
+\mbox{\Hypertarget{structhandlerton_a0d7f69e1c9cf0329f9e5d59f421068a7}\label{structhandlerton_a0d7f69e1c9cf0329f9e5d59f421068a7}} 
+int($\ast$ {\bfseries alter\+\_\+tablespace} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, \mbox{\hyperlink{classst__alter__tablespace}{st\+\_\+alter\+\_\+tablespace}} $\ast$ts\+\_\+info)
+\item 
+\mbox{\Hypertarget{structhandlerton_a2c2c125c83d92c072229f2bf84ef9717}\label{structhandlerton_a2c2c125c83d92c072229f2bf84ef9717}} 
+int($\ast$ {\bfseries fill\+\_\+is\+\_\+table} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE__LIST}{T\+A\+B\+L\+E\+\_\+\+L\+I\+ST}} $\ast$tables, class \mbox{\hyperlink{classItem}{Item}} $\ast$cond, enum enum\+\_\+schema\+\_\+tables)
+\item 
+\mbox{\Hypertarget{structhandlerton_ab80f4551856021c65e677824e918aea2}\label{structhandlerton_ab80f4551856021c65e677824e918aea2}} 
+my\+\_\+bool($\ast$ {\bfseries flush\+\_\+changed\+\_\+page\+\_\+bitmaps} )(void)
+\item 
+\mbox{\Hypertarget{structhandlerton_a77430f88536897473268d51a81dcac48}\label{structhandlerton_a77430f88536897473268d51a81dcac48}} 
+my\+\_\+bool($\ast$ {\bfseries purge\+\_\+changed\+\_\+page\+\_\+bitmaps} )(ulonglong lsn)
+\item 
+int($\ast$ \mbox{\hyperlink{structhandlerton_af5efe2d0a29eb581b591e1d12ea09ff4}{get\+\_\+parent\+\_\+fk\+\_\+list}} )(T\+HD $\ast$thd, const char $\ast$path, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$f\+\_\+key\+\_\+list)
+\item 
+\mbox{\Hypertarget{structhandlerton_aca9d1e2a06f1c38c7804003770f1a051}\label{structhandlerton_aca9d1e2a06f1c38c7804003770f1a051}} 
+uint32 {\bfseries flags}
+\item 
+\mbox{\Hypertarget{structhandlerton_a7e96136362baa8195f9f42f10e020e40}\label{structhandlerton_a7e96136362baa8195f9f42f10e020e40}} 
+int($\ast$ {\bfseries binlog\+\_\+func} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, enum\+\_\+binlog\+\_\+func fn, void $\ast$arg)
+\item 
+\mbox{\Hypertarget{structhandlerton_a786490c92831158695b854b85af12ecd}\label{structhandlerton_a786490c92831158695b854b85af12ecd}} 
+void($\ast$ {\bfseries binlog\+\_\+log\+\_\+query} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, enum\+\_\+binlog\+\_\+command binlog\+\_\+command, const char $\ast$query, uint query\+\_\+length, const char $\ast$db, const char $\ast$table\+\_\+name)
+\item 
+\mbox{\Hypertarget{structhandlerton_ab4f8cf79ec942e1b9f2fac1d5b40a7d3}\label{structhandlerton_ab4f8cf79ec942e1b9f2fac1d5b40a7d3}} 
+int($\ast$ {\bfseries release\+\_\+temporary\+\_\+latches} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)
+\item 
+\mbox{\Hypertarget{structhandlerton_a4214f627f24daae358e4bff0c54c5fad}\label{structhandlerton_a4214f627f24daae358e4bff0c54c5fad}} 
+int($\ast$ {\bfseries discover} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$db, const char $\ast$name, uchar $\ast$$\ast$frmblob, size\+\_\+t $\ast$frmlen)
+\item 
+\mbox{\Hypertarget{structhandlerton_a0afa76e2414199e1829b6c8cac2b3a13}\label{structhandlerton_a0afa76e2414199e1829b6c8cac2b3a13}} 
+int($\ast$ {\bfseries find\+\_\+files} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$db, const char $\ast$path, const char $\ast$wild, bool dir, \mbox{\hyperlink{classList}{List}}$<$ L\+E\+X\+\_\+\+S\+T\+R\+I\+NG $>$ $\ast$files)
+\item 
+\mbox{\Hypertarget{structhandlerton_ac3cfb4acd4e060c0405a6b1c463e9f7f}\label{structhandlerton_ac3cfb4acd4e060c0405a6b1c463e9f7f}} 
+int($\ast$ {\bfseries table\+\_\+exists\+\_\+in\+\_\+engine} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$db, const char $\ast$name)
+\item 
+\mbox{\Hypertarget{structhandlerton_ade5f1ce0077cb1e2a7aa4fc300ad6532}\label{structhandlerton_ade5f1ce0077cb1e2a7aa4fc300ad6532}} 
+int($\ast$ {\bfseries make\+\_\+pushed\+\_\+join} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const \mbox{\hyperlink{classAQP_1_1Join__plan}{A\+Q\+P\+::\+Join\+\_\+plan}} $\ast$plan)
+\item 
+const char $\ast$($\ast$ \mbox{\hyperlink{structhandlerton_a8d533d8e4139d4385e9d2e2171985447}{system\+\_\+database}} )()
+\item 
+bool($\ast$ \mbox{\hyperlink{structhandlerton_af292121e11f7e92ab52a11751467e9ad}{is\+\_\+supported\+\_\+system\+\_\+table}} )(const char $\ast$db, const char $\ast$table\+\_\+name, bool is\+\_\+sql\+\_\+layer\+\_\+system\+\_\+table)
+\item 
+\mbox{\hyperlink{classSE__cost__constants}{S\+E\+\_\+cost\+\_\+constants}} $\ast$($\ast$ \mbox{\hyperlink{structhandlerton_a6bf8fbe7ed06d09cc1480eda20134e4a}{get\+\_\+cost\+\_\+constants}} )(uint storage\+\_\+category)
+\item 
+void($\ast$ \mbox{\hyperlink{structhandlerton_a20defd9e728cbce0952339a471e46231}{replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd}} )(T\+HD $\ast$thd, void $\ast$new\+\_\+trx\+\_\+arg, void $\ast$$\ast$ptr\+\_\+trx\+\_\+arg)
+\item 
+bool($\ast$ \mbox{\hyperlink{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}{notify\+\_\+exclusive\+\_\+mdl}} )(T\+HD $\ast$thd, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, ha\+\_\+notification\+\_\+type notification\+\_\+type, bool $\ast$victimized)
+\item 
+bool($\ast$ \mbox{\hyperlink{structhandlerton_a57c6461574bf87859428478d916ac1e8}{notify\+\_\+alter\+\_\+table}} )(T\+HD $\ast$thd, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, ha\+\_\+notification\+\_\+type notification\+\_\+type)
+\item 
+bool($\ast$ \mbox{\hyperlink{structhandlerton_a5908a4c597a3ce673a6086debb6510b1}{rotate\+\_\+encryption\+\_\+master\+\_\+key}} )(void)
+\begin{DoxyCompactList}\small\item\em Initiate master key rotation. \end{DoxyCompactList}\item 
+handler\+\_\+create\+\_\+zip\+\_\+dict\+\_\+result($\ast$ \mbox{\hyperlink{structhandlerton_aca0c34713f57e089a2bb432351dcda1e}{create\+\_\+zip\+\_\+dict}} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$name, ulong $\ast$name\+\_\+len, const char $\ast$data, ulong $\ast$data\+\_\+len)
+\item 
+handler\+\_\+drop\+\_\+zip\+\_\+dict\+\_\+result($\ast$ \mbox{\hyperlink{structhandlerton_a9675ad9031e11e33c6f1578fa62568eb}{drop\+\_\+zip\+\_\+dict}} )(\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$name, ulong $\ast$name\+\_\+len)
+\item 
+\mbox{\Hypertarget{structhandlerton_a49cfa7bd726fa941576f0976c5db6407}\label{structhandlerton_a49cfa7bd726fa941576f0976c5db6407}} 
+uint32 {\bfseries license}
+\item 
+\mbox{\Hypertarget{structhandlerton_a0d4532e92564e95ce6c3be6137387509}\label{structhandlerton_a0d4532e92564e95ce6c3be6137387509}} 
+void $\ast$ {\bfseries data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhandlerton_aca0c34713f57e089a2bb432351dcda1e}\label{structhandlerton_aca0c34713f57e089a2bb432351dcda1e}} 
+\index{handlerton@{handlerton}!create\+\_\+zip\+\_\+dict@{create\+\_\+zip\+\_\+dict}}
+\index{create\+\_\+zip\+\_\+dict@{create\+\_\+zip\+\_\+dict}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{create\+\_\+zip\+\_\+dict}{create\_zip\_dict}}
+{\footnotesize\ttfamily handler\+\_\+create\+\_\+zip\+\_\+dict\+\_\+result($\ast$ handlerton\+::create\+\_\+zip\+\_\+dict) (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$name, ulong $\ast$name\+\_\+len, const char $\ast$data, ulong $\ast$data\+\_\+len)}
+
+Creates a new compression dictionary with the specified data for this SE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hton} & handletron object. \\
+\hline
+{\em thd} & thread descriptor. \\
+\hline
+{\em name} & compression dictionary name \\
+\hline
+{\em name\+\_\+len} & compression dictionary name length \\
+\hline
+{\em data} & compression dictionary data \\
+\hline
+{\em data\+\_\+len} & compression dictionary data length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a valid \#handler\+\_\+create\+\_\+zip\+\_\+dict\+\_\+result value.
+\end{DoxyReturn}
+This interface is optional, so not every SE needs to implement it. \mbox{\Hypertarget{structhandlerton_a9675ad9031e11e33c6f1578fa62568eb}\label{structhandlerton_a9675ad9031e11e33c6f1578fa62568eb}} 
+\index{handlerton@{handlerton}!drop\+\_\+zip\+\_\+dict@{drop\+\_\+zip\+\_\+dict}}
+\index{drop\+\_\+zip\+\_\+dict@{drop\+\_\+zip\+\_\+dict}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{drop\+\_\+zip\+\_\+dict}{drop\_zip\_dict}}
+{\footnotesize\ttfamily handler\+\_\+drop\+\_\+zip\+\_\+dict\+\_\+result($\ast$ handlerton\+::drop\+\_\+zip\+\_\+dict) (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd, const char $\ast$name, ulong $\ast$name\+\_\+len)}
+
+Deletes a compression dictionary for this SE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hton} & handletron object. \\
+\hline
+{\em thd} & thread descriptor. \\
+\hline
+{\em name} & compression dictionary name \\
+\hline
+{\em name\+\_\+len} & compression dictionary name length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a valid \#handler\+\_\+drop\+\_\+zip\+\_\+dict\+\_\+result value.
+\end{DoxyReturn}
+This interface is optional, so not every SE needs to implement it. \mbox{\Hypertarget{structhandlerton_acaa0802b5a0dcd67a52ac65678d0ed9d}\label{structhandlerton_acaa0802b5a0dcd67a52ac65678d0ed9d}} 
+\index{handlerton@{handlerton}!flush\+\_\+logs@{flush\+\_\+logs}}
+\index{flush\+\_\+logs@{flush\+\_\+logs}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{flush\+\_\+logs}{flush\_logs}}
+{\footnotesize\ttfamily bool($\ast$ handlerton\+::flush\+\_\+logs) (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, bool binlog\+\_\+group\+\_\+flush)}
+
+Flush the log(s) of storage engine(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em hton} & Handlerton of storage engine. \\
+\hline
+{\em binlog\+\_\+group\+\_\+flush} & true if we got invoked by binlog group commit during flush stage, false in other cases. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Succeed \\
+\hline
+{\em true} & Error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structhandlerton_a6bf8fbe7ed06d09cc1480eda20134e4a}\label{structhandlerton_a6bf8fbe7ed06d09cc1480eda20134e4a}} 
+\index{handlerton@{handlerton}!get\+\_\+cost\+\_\+constants@{get\+\_\+cost\+\_\+constants}}
+\index{get\+\_\+cost\+\_\+constants@{get\+\_\+cost\+\_\+constants}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{get\+\_\+cost\+\_\+constants}{get\_cost\_constants}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSE__cost__constants}{S\+E\+\_\+cost\+\_\+constants}}$\ast$($\ast$ handlerton\+::get\+\_\+cost\+\_\+constants) (uint storage\+\_\+category)}
+
+Retrieve cost constants to be used for this storage engine.
+
+A storage engine that wants to provide its own cost constants to be used in the optimizer cost model, should implement this function. The server will call this function to get a cost constant object that will be used for tables stored in this storage engine instead of using the default cost constants.
+
+Life cycle for the cost constant object\+: The storage engine must allocate the cost constant object on the heap. After the function returns, the server takes over the ownership of this object. The server will eventually delete the object by calling delete.
+
+\begin{DoxyNote}{Note}
+In the initial version the storage\+\_\+category parameter will not be used. The only valid value this will have is D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+C\+L\+A\+SS (see declartion in \mbox{\hyperlink{opt__costconstants_8h_source}{opt\+\_\+costconstants.\+h}}).
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em storage\+\_\+category} & the storage type that the cost constants will be used for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the cost constant object, if N\+U\+LL is returned the default cost constants will be used 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structhandlerton_af5efe2d0a29eb581b591e1d12ea09ff4}\label{structhandlerton_af5efe2d0a29eb581b591e1d12ea09ff4}} 
+\index{handlerton@{handlerton}!get\+\_\+parent\+\_\+fk\+\_\+list@{get\+\_\+parent\+\_\+fk\+\_\+list}}
+\index{get\+\_\+parent\+\_\+fk\+\_\+list@{get\+\_\+parent\+\_\+fk\+\_\+list}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{get\+\_\+parent\+\_\+fk\+\_\+list}{get\_parent\_fk\_list}}
+{\footnotesize\ttfamily int($\ast$ handlerton\+::get\+\_\+parent\+\_\+fk\+\_\+list) (T\+HD $\ast$thd, const char $\ast$path, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{structst__foreign__key__info}{F\+O\+R\+E\+I\+G\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+FO}} $>$ $\ast$f\+\_\+key\+\_\+list)}
+
+Get the list of foreign keys referencing a specified table
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread handle \\
+\hline
+{\em path} & Path to the table \\
+\hline
+{\em f\+\_\+key\+\_\+list\mbox{[}out\mbox{]}} & The list of foreign keys\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error code or zero for success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structhandlerton_ad5f3570a20fd93e894a5e56404f5472a}\label{structhandlerton_ad5f3570a20fd93e894a5e56404f5472a}} 
+\index{handlerton@{handlerton}!get\+\_\+tablespace@{get\+\_\+tablespace}}
+\index{get\+\_\+tablespace@{get\+\_\+tablespace}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{get\+\_\+tablespace}{get\_tablespace}}
+{\footnotesize\ttfamily int($\ast$ handlerton\+::get\+\_\+tablespace) (T\+HD $\ast$thd, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG db\+\_\+name, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG table\+\_\+name, L\+E\+X\+\_\+\+C\+S\+T\+R\+I\+NG $\ast$tablespace\+\_\+name)}
+
+Get the tablespace name from the SE for the given schema and table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em thd} & Thread context. \\
+\hline
+ & {\em db\+\_\+name} & Name of the relevant schema. \\
+\hline
+ & {\em table\+\_\+name} & Name of the relevant table. \\
+\hline
+\mbox{\texttt{ out}}  & {\em tablespace\+\_\+name} & Name of the tablespace containing the table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operation status. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em ==} & 0 Success. \\
+\hline
+{\em !=} & 0 Error (handler error code returned). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structhandlerton_af292121e11f7e92ab52a11751467e9ad}\label{structhandlerton_af292121e11f7e92ab52a11751467e9ad}} 
+\index{handlerton@{handlerton}!is\+\_\+supported\+\_\+system\+\_\+table@{is\+\_\+supported\+\_\+system\+\_\+table}}
+\index{is\+\_\+supported\+\_\+system\+\_\+table@{is\+\_\+supported\+\_\+system\+\_\+table}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{is\+\_\+supported\+\_\+system\+\_\+table}{is\_supported\_system\_table}}
+{\footnotesize\ttfamily bool($\ast$ handlerton\+::is\+\_\+supported\+\_\+system\+\_\+table) (const char $\ast$db, const char $\ast$table\+\_\+name, bool is\+\_\+sql\+\_\+layer\+\_\+system\+\_\+table)}
+
+Check if the given db.\+tablename is a system table for this SE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Database name to check. \\
+\hline
+{\em table\+\_\+name} & table name to check. \\
+\hline
+{\em is\+\_\+sql\+\_\+layer\+\_\+system\+\_\+table} & if the supplied db.\+table\+\_\+name is a S\+QL layer system table.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+example\+\_\+is\+\_\+supported\+\_\+system\+\_\+table in ha\+\_\+example.\+cc
+\end{DoxySeeAlso}
+is\+\_\+sql\+\_\+layer\+\_\+system\+\_\+table is supplied to make more efficient checks possible for S\+Es that support all S\+QL layer tables.
+
+This interface is optional, so every SE need not implement it. \mbox{\Hypertarget{structhandlerton_a57c6461574bf87859428478d916ac1e8}\label{structhandlerton_a57c6461574bf87859428478d916ac1e8}} 
+\index{handlerton@{handlerton}!notify\+\_\+alter\+\_\+table@{notify\+\_\+alter\+\_\+table}}
+\index{notify\+\_\+alter\+\_\+table@{notify\+\_\+alter\+\_\+table}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{notify\+\_\+alter\+\_\+table}{notify\_alter\_table}}
+{\footnotesize\ttfamily bool($\ast$ handlerton\+::notify\+\_\+alter\+\_\+table) (T\+HD $\ast$thd, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, ha\+\_\+notification\+\_\+type notification\+\_\+type)}
+
+Notify/get permission from storage engine before or after execution of A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} operation on the table identified by the M\+DL key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em mdl\+\_\+key} & M\+DL key identifying table which is going to be or was A\+L\+T\+E\+Red. \\
+\hline
+{\em notification\+\_\+type} & Indicates whether this is pre-\/A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} or post-\/A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} notification.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This hook is necessary because for A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} upgrade to X metadata lock happens fairly late during the execution process, so it can be expensive to abort A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} operation at this stage by returning failure from \mbox{\hyperlink{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}{notify\+\_\+exclusive\+\_\+mdl()}} hook.
+
+This hook follows the same error reporting convention as 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}{notify\+\_\+exclusive\+\_\+mdl()}}.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Similarly to \mbox{\hyperlink{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}{notify\+\_\+exclusive\+\_\+mdl()}} in some cases post-\/A\+L\+T\+ER notification might happen even if there were no prior pre-\/A\+L\+T\+ER notification.
+
+Post-\/A\+L\+T\+ER notification can happen before post-\/release notification for exclusive metadata lock acquired by this A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+False -\/ if notification was successful/\+A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} can proceed. True -\/ if it has failed/\+A\+L\+T\+ER \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} should be aborted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}\label{structhandlerton_af92da74d6b4dcdadf903d113c69136f4}} 
+\index{handlerton@{handlerton}!notify\+\_\+exclusive\+\_\+mdl@{notify\+\_\+exclusive\+\_\+mdl}}
+\index{notify\+\_\+exclusive\+\_\+mdl@{notify\+\_\+exclusive\+\_\+mdl}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{notify\+\_\+exclusive\+\_\+mdl}{notify\_exclusive\_mdl}}
+{\footnotesize\ttfamily bool($\ast$ handlerton\+::notify\+\_\+exclusive\+\_\+mdl) (T\+HD $\ast$thd, const \mbox{\hyperlink{structMDL__key}{M\+D\+L\+\_\+key}} $\ast$mdl\+\_\+key, ha\+\_\+notification\+\_\+type notification\+\_\+type, bool $\ast$victimized)}
+
+Notify/get permission from storage engine before acquisition or after release of exclusive metadata lock on object represented by key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread context. \\
+\hline
+{\em mdl\+\_\+key} & M\+DL key identifying object on which exclusive lock is to be acquired/was released. \\
+\hline
+{\em notification\+\_\+type} & Indicates whether this is pre-\/acquire or post-\/release notification. \\
+\hline
+{\em victimized} & \textquotesingle{}true\textquotesingle{} if locking failed as we were selected as a victim in order to avoid possible deadlocks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Notification is done only for objects from T\+A\+B\+L\+E\+S\+P\+A\+CE, S\+C\+H\+E\+MA, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}}, F\+U\+N\+C\+T\+I\+ON, P\+R\+O\+C\+E\+D\+U\+RE, T\+R\+I\+G\+G\+ER and E\+V\+E\+NT namespaces.
+
+Problems during notification are to be reported as warnings, M\+DL subsystem will report generic error if pre-\/acquire notification fails/\+SE refuses lock acquisition. 
+
+Return value is ignored/error is not reported in case of post-\/release notification.
+
+In some cases post-\/release notification might happen even if there were no prior pre-\/acquire notification. For example, when SE was loaded after exclusive lock acquisition, or when we need notify S\+Es which permitted lock acquisition that it didn\textquotesingle{}t happen because one of S\+Es didn\textquotesingle{}t allow it (in such case we will do post-\/release notification for all S\+Es for simplicity).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+False -\/ if notification was successful/lock can be acquired, True -\/ if it has failed/lock should not be acquired. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structhandlerton_a20defd9e728cbce0952339a471e46231}\label{structhandlerton_a20defd9e728cbce0952339a471e46231}} 
+\index{handlerton@{handlerton}!replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd@{replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd}}
+\index{replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd@{replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd}{replace\_native\_transaction\_in\_thd}}
+{\footnotesize\ttfamily void($\ast$ handlerton\+::replace\+\_\+native\+\_\+transaction\+\_\+in\+\_\+thd) (T\+HD $\ast$thd, void $\ast$new\+\_\+trx\+\_\+arg, void $\ast$$\ast$ptr\+\_\+trx\+\_\+arg)}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em thd} & pointer to T\+HD \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+trx\+\_\+arg} & pointer to replacement transaction \\
+\hline
+\mbox{\texttt{ out}}  & {\em ptr\+\_\+trx\+\_\+arg} & double pointer to being replaced transaction\\
+\hline
+\end{DoxyParams}
+Associated with T\+HD engine\textquotesingle{}s native transaction is replaced with {\ttfamily new\+\_\+trx\+\_\+arg}. The old value is returned through a buffer if non-\/null pointer is provided with {\ttfamily ptr\+\_\+trx\+\_\+arg}. The method is adapted by XA start and XA prepare handlers to handle XA transaction that is logged as two parts by slave applier.
+
+This interface concerns engines that are aware of XA transaction. \mbox{\Hypertarget{structhandlerton_a5908a4c597a3ce673a6086debb6510b1}\label{structhandlerton_a5908a4c597a3ce673a6086debb6510b1}} 
+\index{handlerton@{handlerton}!rotate\+\_\+encryption\+\_\+master\+\_\+key@{rotate\+\_\+encryption\+\_\+master\+\_\+key}}
+\index{rotate\+\_\+encryption\+\_\+master\+\_\+key@{rotate\+\_\+encryption\+\_\+master\+\_\+key}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{rotate\+\_\+encryption\+\_\+master\+\_\+key}{rotate\_encryption\_master\_key}}
+{\footnotesize\ttfamily bool($\ast$ handlerton\+::rotate\+\_\+encryption\+\_\+master\+\_\+key) (void)}
+
+
+
+Initiate master key rotation. 
+
+\begin{DoxyReturn}{Returns}
+false on success, true on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structhandlerton_ac79bf3ab67509d85a67f800c26b814b1}\label{structhandlerton_ac79bf3ab67509d85a67f800c26b814b1}} 
+\index{handlerton@{handlerton}!savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl@{savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl}}
+\index{savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl@{savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl}{savepoint\_rollback\_can\_release\_mdl}}
+{\footnotesize\ttfamily bool($\ast$ handlerton\+::savepoint\+\_\+rollback\+\_\+can\+\_\+release\+\_\+mdl) (\mbox{\hyperlink{structhandlerton}{handlerton}} $\ast$hton, T\+HD $\ast$thd)}
+
+Check if storage engine allows to release metadata locks which were acquired after the savepoint if rollback to savepoint is done. \begin{DoxyReturn}{Returns}
+true -\/ If it is safe to release M\+DL locks. false -\/ If it is not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structhandlerton_a8d533d8e4139d4385e9d2e2171985447}\label{structhandlerton_a8d533d8e4139d4385e9d2e2171985447}} 
+\index{handlerton@{handlerton}!system\+\_\+database@{system\+\_\+database}}
+\index{system\+\_\+database@{system\+\_\+database}!handlerton@{handlerton}}
+\subsubsection{\texorpdfstring{system\+\_\+database}{system\_database}}
+{\footnotesize\ttfamily const char$\ast$($\ast$ handlerton\+::system\+\_\+database) ()}
+
+\mbox{\hyperlink{classList}{List}} of all system tables specific to the SE. Array element would look like below, \{ \char`\"{}$<$database\+\_\+name$>$\char`\"{}, \char`\"{}$<$system table name$>$\char`\"{} \}, The last element M\+U\+ST be, \{ (const char$\ast$)N\+U\+LL, (const char$\ast$)N\+U\+LL \}
+
+\begin{DoxySeeAlso}{See also}
+ha\+\_\+example\+\_\+system\+\_\+tables in ha\+\_\+example.\+cc
+\end{DoxySeeAlso}
+This interface is optional, so every SE need not implement it. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+handler.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,232 @@
+\hypertarget{group__Locking}{}\section{Locking}
+\label{group__Locking}\index{Locking@{Locking}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Locking_ga65cffe586bef8fdfb5334d343c069df6}\label{group__Locking_ga65cffe586bef8fdfb5334d343c069df6}} 
+\#define {\bfseries G\+E\+T\+\_\+\+L\+O\+C\+K\+\_\+\+U\+N\+L\+O\+CK}~1
+\item 
+\mbox{\Hypertarget{group__Locking_ga1bef164e121fc9d85a6e19eae9625365}\label{group__Locking_ga1bef164e121fc9d85a6e19eae9625365}} 
+\#define {\bfseries G\+E\+T\+\_\+\+L\+O\+C\+K\+\_\+\+S\+T\+O\+R\+E\+\_\+\+L\+O\+C\+KS}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$ \mbox{\hyperlink{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}{mysql\+\_\+lock\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$tables, size\+\_\+t count, uint flags)
+\item 
+\mbox{\Hypertarget{group__Locking_ga2bff80304c9d27f634976ac8fe60cd38}\label{group__Locking_ga2bff80304c9d27f634976ac8fe60cd38}} 
+void {\bfseries mysql\+\_\+unlock\+\_\+tables} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$sql\+\_\+lock)
+\item 
+void \mbox{\hyperlink{group__Locking_gafad092ec9a399db99abd75b57a9ee679}{mysql\+\_\+unlock\+\_\+some\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$table, uint count)
+\item 
+void \mbox{\hyperlink{group__Locking_ga1e24a131cbe030c49d953669f804877d}{mysql\+\_\+unlock\+\_\+read\+\_\+tables}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$sql\+\_\+lock)
+\item 
+void \mbox{\hyperlink{group__Locking_gad40fe56766e1b54e2fed60814aec1e58}{mysql\+\_\+lock\+\_\+remove}} (T\+HD $\ast$thd, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$locked, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+void \mbox{\hyperlink{group__Locking_ga07896e99c9c248c6441be5c13c484303}{mysql\+\_\+lock\+\_\+abort}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table, bool upgrade\+\_\+lock)
+\item 
+void \mbox{\hyperlink{group__Locking_gad2320fa808c9d6523790e796d57e2331}{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread}} (T\+HD $\ast$thd, \mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$table)
+\item 
+\mbox{\Hypertarget{group__Locking_gae8e0ecd1f7872040079f5319aacd93a2}\label{group__Locking_gae8e0ecd1f7872040079f5319aacd93a2}} 
+\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$ {\bfseries mysql\+\_\+lock\+\_\+merge} (\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$a, \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$b)
+\item 
+bool \mbox{\hyperlink{group__Locking_gac67865dd0ef1b003fdee2182aba9a049}{lock\+\_\+schema\+\_\+name}} (T\+HD $\ast$thd, const char $\ast$db)
+\item 
+bool \mbox{\hyperlink{group__Locking_ga1923c93a226a0a762e9a7675135f770e}{lock\+\_\+tablespace\+\_\+name}} (T\+HD $\ast$thd, const char $\ast$tablespace)
+\item 
+\mbox{\Hypertarget{group__Locking_ga53e5914955b0e1ad76551983a22ecf60}\label{group__Locking_ga53e5914955b0e1ad76551983a22ecf60}} 
+uchar $\ast$ {\bfseries tablespace\+\_\+set\+\_\+get\+\_\+key} (const uchar $\ast$record, size\+\_\+t $\ast$length, my\+\_\+bool not\+\_\+used M\+Y\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE((unused)))
+\item 
+bool \mbox{\hyperlink{group__Locking_ga377fe3850ef2fce0988a3cffb9128159}{lock\+\_\+tablespace\+\_\+names}} (T\+HD $\ast$thd, \mbox{\hyperlink{classHash__set}{Tablespace\+\_\+hash\+\_\+set}} $\ast$tablespace\+\_\+set, ulong lock\+\_\+wait\+\_\+timeout)
+\item 
+bool \mbox{\hyperlink{group__Locking_gab03d9cc9ff9682e9f2a961685fd90cb3}{lock\+\_\+object\+\_\+name}} (T\+HD $\ast$thd, \mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}} mdl\+\_\+type, const char $\ast$db, const char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__Locking_gadb186a1125c10d63d0217bc321a4c95a}\label{group__Locking_gadb186a1125c10d63d0217bc321a4c95a}} 
+H\+A\+SH {\bfseries open\+\_\+cache}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__Locking_gab03d9cc9ff9682e9f2a961685fd90cb3}\label{group__Locking_gab03d9cc9ff9682e9f2a961685fd90cb3}} 
+\index{Locking@{Locking}!lock\+\_\+object\+\_\+name@{lock\+\_\+object\+\_\+name}}
+\index{lock\+\_\+object\+\_\+name@{lock\+\_\+object\+\_\+name}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{lock\+\_\+object\+\_\+name()}{lock\_object\_name()}}
+{\footnotesize\ttfamily bool lock\+\_\+object\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structMDL__key_a391ec4bd98fec6852a48f7856546ed3b}{M\+D\+L\+\_\+key\+::enum\+\_\+mdl\+\_\+namespace}}}]{mdl\+\_\+type,  }\item[{const char $\ast$}]{db,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Obtain an exclusive metadata lock on an object name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle. \\
+\hline
+{\em mdl\+\_\+type} & Object type (currently functions, procedures and events can be name-\/locked). \\
+\hline
+{\em db} & The schema the object belongs to. \\
+\hline
+{\em name} & Object name in the schema.\\
+\hline
+\end{DoxyParams}
+This function cannot be called while holding L\+O\+C\+K\+\_\+open\+\_\+mutex. This invariant is enforced by asserts in \mbox{\hyperlink{classMDL__context_a4583e611d097158c5f08b8d1133fbd7e}{M\+D\+L\+\_\+context\+::acquire\+\_\+locks}}. To avoid deadlocks, we do not try to obtain exclusive metadata locks in L\+O\+CK T\+A\+B\+L\+ES mode, since in this mode there may be other metadata locks already taken by the current connection, and we must not wait for M\+DL locks while holding locks.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure\+: we\textquotesingle{}re in L\+O\+CK T\+A\+B\+L\+ES mode, or out of memory, or this connection was killed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Locking_gac67865dd0ef1b003fdee2182aba9a049}\label{group__Locking_gac67865dd0ef1b003fdee2182aba9a049}} 
+\index{Locking@{Locking}!lock\+\_\+schema\+\_\+name@{lock\+\_\+schema\+\_\+name}}
+\index{lock\+\_\+schema\+\_\+name@{lock\+\_\+schema\+\_\+name}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{lock\+\_\+schema\+\_\+name()}{lock\_schema\_name()}}
+{\footnotesize\ttfamily bool lock\+\_\+schema\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{db }\end{DoxyParamCaption})}
+
+Obtain an exclusive metadata lock on a schema name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle. \\
+\hline
+{\em db} & The database name.\\
+\hline
+\end{DoxyParams}
+This function cannot be called while holding L\+O\+C\+K\+\_\+open mutex. To avoid deadlocks, we do not try to obtain exclusive metadata locks in L\+O\+CK T\+A\+B\+L\+ES mode, since in this mode there may be other metadata locks already taken by the current connection, and we must not wait for M\+DL locks while holding locks.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em F\+A\+L\+SE} & Success. \\
+\hline
+{\em T\+R\+UE} & Failure\+: we\textquotesingle{}re in L\+O\+CK T\+A\+B\+L\+ES mode, or out of memory, or this connection was killed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Locking_ga1923c93a226a0a762e9a7675135f770e}\label{group__Locking_ga1923c93a226a0a762e9a7675135f770e}} 
+\index{Locking@{Locking}!lock\+\_\+tablespace\+\_\+name@{lock\+\_\+tablespace\+\_\+name}}
+\index{lock\+\_\+tablespace\+\_\+name@{lock\+\_\+tablespace\+\_\+name}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{lock\+\_\+tablespace\+\_\+name()}{lock\_tablespace\_name()}}
+{\footnotesize\ttfamily bool lock\+\_\+tablespace\+\_\+name (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{const char $\ast$}]{tablespace }\end{DoxyParamCaption})}
+
+Obtain an exclusive metadata lock on a tablespace name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handle. \\
+\hline
+{\em tablespace} & The tablespace name.\\
+\hline
+\end{DoxyParams}
+This function cannot be called while holding the L\+O\+C\+K\+\_\+open mutex. To avoid deadlocks, we do not try to obtain exclusive metadata locks in L\+O\+CK T\+A\+B\+L\+ES mode, since in this mode there may be other metadata locks already taken by the current connection, and we must not wait for M\+DL locks while holding locks.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & Success. \\
+\hline
+{\em true} & Failure\+: we\textquotesingle{}re in L\+O\+CK T\+A\+B\+L\+ES mode, out of memory, connection was killed, or numerous other reasons. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Locking_ga377fe3850ef2fce0988a3cffb9128159}\label{group__Locking_ga377fe3850ef2fce0988a3cffb9128159}} 
+\index{Locking@{Locking}!lock\+\_\+tablespace\+\_\+names@{lock\+\_\+tablespace\+\_\+names}}
+\index{lock\+\_\+tablespace\+\_\+names@{lock\+\_\+tablespace\+\_\+names}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{lock\+\_\+tablespace\+\_\+names()}{lock\_tablespace\_names()}}
+{\footnotesize\ttfamily bool lock\+\_\+tablespace\+\_\+names (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{classHash__set}{Tablespace\+\_\+hash\+\_\+set}} $\ast$}]{tablespace\+\_\+set,  }\item[{ulong}]{lock\+\_\+wait\+\_\+timeout }\end{DoxyParamCaption})}
+
+Acquire IX M\+DL lock each tablespace name from the given set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & -\/ Thread invoking this function. \\
+\hline
+{\em tablespace\+\_\+set} & -\/ Set of tablespace names to be lock. \\
+\hline
+{\em lock\+\_\+wait\+\_\+timeout} & -\/ Lock timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ On failure 
+
+false -\/ On Success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Locking_ga07896e99c9c248c6441be5c13c484303}\label{group__Locking_ga07896e99c9c248c6441be5c13c484303}} 
+\index{Locking@{Locking}!mysql\+\_\+lock\+\_\+abort@{mysql\+\_\+lock\+\_\+abort}}
+\index{mysql\+\_\+lock\+\_\+abort@{mysql\+\_\+lock\+\_\+abort}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{mysql\+\_\+lock\+\_\+abort()}{mysql\_lock\_abort()}}
+{\footnotesize\ttfamily void mysql\+\_\+lock\+\_\+abort (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table,  }\item[{bool}]{upgrade\+\_\+lock }\end{DoxyParamCaption})}
+
+Abort all other threads waiting to get lock in table. \mbox{\Hypertarget{group__Locking_gad2320fa808c9d6523790e796d57e2331}\label{group__Locking_gad2320fa808c9d6523790e796d57e2331}} 
+\index{Locking@{Locking}!mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread@{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread}}
+\index{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread@{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread()}{mysql\_lock\_abort\_for\_thread()}}
+{\footnotesize\ttfamily void mysql\+\_\+lock\+\_\+abort\+\_\+for\+\_\+thread (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Abort one thread / table combination.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & Thread handler \\
+\hline
+{\em table} & Table that should be removed from lock queue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Locking_gad40fe56766e1b54e2fed60814aec1e58}\label{group__Locking_gad40fe56766e1b54e2fed60814aec1e58}} 
+\index{Locking@{Locking}!mysql\+\_\+lock\+\_\+remove@{mysql\+\_\+lock\+\_\+remove}}
+\index{mysql\+\_\+lock\+\_\+remove@{mysql\+\_\+lock\+\_\+remove}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{mysql\+\_\+lock\+\_\+remove()}{mysql\_lock\_remove()}}
+{\footnotesize\ttfamily void mysql\+\_\+lock\+\_\+remove (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$}]{locked,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+Try to find the table in the list of locked tables. In case of success, unlock the table and remove it from this list. If a table has more than one lock instance, removes them all.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & thread context \\
+\hline
+{\em locked} & list of locked tables \\
+\hline
+{\em table} & the table to unlock \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}\label{group__Locking_ga40d9de997ac2ee4f94f358ce1ac2d76a}} 
+\index{Locking@{Locking}!mysql\+\_\+lock\+\_\+tables@{mysql\+\_\+lock\+\_\+tables}}
+\index{mysql\+\_\+lock\+\_\+tables@{mysql\+\_\+lock\+\_\+tables}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{mysql\+\_\+lock\+\_\+tables()}{mysql\_lock\_tables()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}}$\ast$ mysql\+\_\+lock\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$}]{tables,  }\item[{size\+\_\+t}]{count,  }\item[{uint}]{flags }\end{DoxyParamCaption})}
+
+Lock tables.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thd} & The current thread. \\
+\hline
+{\em tables} & An array of pointers to the tables to lock. \\
+\hline
+{\em count} & The number of tables to lock. \\
+\hline
+{\em flags} & Options\+: M\+Y\+S\+Q\+L\+\_\+\+L\+O\+C\+K\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+R\+E\+A\+D\+\_\+\+O\+N\+LY Ignore S\+ET G\+L\+O\+B\+AL R\+E\+A\+D\+\_\+\+O\+N\+LY M\+Y\+S\+Q\+L\+\_\+\+L\+O\+C\+K\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+T\+I\+M\+E\+O\+UT Use maximum timeout value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em A} & lock structure pointer on success. \\
+\hline
+{\em N\+U\+LL} & if an error or if wait on a lock was killed. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__Locking_ga1e24a131cbe030c49d953669f804877d}\label{group__Locking_ga1e24a131cbe030c49d953669f804877d}} 
+\index{Locking@{Locking}!mysql\+\_\+unlock\+\_\+read\+\_\+tables@{mysql\+\_\+unlock\+\_\+read\+\_\+tables}}
+\index{mysql\+\_\+unlock\+\_\+read\+\_\+tables@{mysql\+\_\+unlock\+\_\+read\+\_\+tables}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{mysql\+\_\+unlock\+\_\+read\+\_\+tables()}{mysql\_unlock\_read\_tables()}}
+{\footnotesize\ttfamily void mysql\+\_\+unlock\+\_\+read\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structst__mysql__lock}{M\+Y\+S\+Q\+L\+\_\+\+L\+O\+CK}} $\ast$}]{sql\+\_\+lock }\end{DoxyParamCaption})}
+
+unlock all tables locked for read. \mbox{\Hypertarget{group__Locking_gafad092ec9a399db99abd75b57a9ee679}\label{group__Locking_gafad092ec9a399db99abd75b57a9ee679}} 
+\index{Locking@{Locking}!mysql\+\_\+unlock\+\_\+some\+\_\+tables@{mysql\+\_\+unlock\+\_\+some\+\_\+tables}}
+\index{mysql\+\_\+unlock\+\_\+some\+\_\+tables@{mysql\+\_\+unlock\+\_\+some\+\_\+tables}!Locking@{Locking}}
+\subsubsection{\texorpdfstring{mysql\+\_\+unlock\+\_\+some\+\_\+tables()}{mysql\_unlock\_some\_tables()}}
+{\footnotesize\ttfamily void mysql\+\_\+unlock\+\_\+some\+\_\+tables (\begin{DoxyParamCaption}\item[{T\+HD $\ast$}]{thd,  }\item[{\mbox{\hyperlink{structTABLE}{T\+A\+B\+LE}} $\ast$$\ast$}]{table,  }\item[{uint}]{count }\end{DoxyParamCaption})}
+
+Unlock some of the tables locked by mysql\+\_\+lock\+\_\+tables.
+
+This will work even if get\+\_\+lock\+\_\+data fails (next unlock will free all) 

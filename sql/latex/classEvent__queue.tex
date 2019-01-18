@@ -1,0 +1,34 @@
+\hypertarget{classEvent__queue}{}\section{Event\+\_\+queue Class Reference}
+\label{classEvent__queue}\index{Event\+\_\+queue@{Event\+\_\+queue}}
+
+
+{\ttfamily \#include $<$event\+\_\+queue.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries init\+\_\+queue} (T\+HD $\ast$thd)
+\item 
+bool \mbox{\hyperlink{group__Event__Scheduler_gad864f1ee71bf785ce02a4f6cc3273fc4}{create\+\_\+event}} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$new\+\_\+element, bool $\ast$created)
+\item 
+void {\bfseries update\+\_\+event} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name, \mbox{\hyperlink{classEvent__queue__element}{Event\+\_\+queue\+\_\+element}} $\ast$new\+\_\+element)
+\item 
+void {\bfseries drop\+\_\+event} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG dbname, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG name)
+\item 
+void {\bfseries drop\+\_\+schema\+\_\+events} (T\+HD $\ast$thd, L\+E\+X\+\_\+\+S\+T\+R\+I\+NG schema)
+\item 
+void {\bfseries recalculate\+\_\+activation\+\_\+times} (T\+HD $\ast$thd)
+\item 
+bool {\bfseries get\+\_\+top\+\_\+for\+\_\+execution\+\_\+if\+\_\+time} (T\+HD $\ast$thd, \mbox{\hyperlink{classEvent__queue__element__for__exec}{Event\+\_\+queue\+\_\+element\+\_\+for\+\_\+exec}} $\ast$$\ast$event\+\_\+name)
+\item 
+void {\bfseries dump\+\_\+internal\+\_\+status} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Queue of active events awaiting execution. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{event__queue_8h}{event\+\_\+queue.\+h}}\item 
+event\+\_\+queue.\+cc\end{DoxyCompactItemize}

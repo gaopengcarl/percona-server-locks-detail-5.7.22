@@ -1,0 +1,93 @@
+\hypertarget{classinjector_1_1transaction}{}\section{injector\+:\+:transaction Class Reference}
+\label{classinjector_1_1transaction}\index{injector\+::transaction@{injector\+::transaction}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classinjector_1_1transaction_1_1binlog__pos}{binlog\+\_\+pos}}
+\item 
+class \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a1282448fc04b46473713bcecab54663a}\label{classinjector_1_1transaction_a1282448fc04b46473713bcecab54663a}} 
+typedef uchar $\ast$ {\bfseries record\+\_\+type}
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a9c6e24e277125d6b6e91206fbd2a917b}\label{classinjector_1_1transaction_a9c6e24e277125d6b6e91206fbd2a917b}} 
+typedef uint32 {\bfseries server\+\_\+id\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_ab6024a52e12025f4b18b31f269fcb5a8}\label{classinjector_1_1transaction_ab6024a52e12025f4b18b31f269fcb5a8}} 
+{\bfseries transaction} (\mbox{\hyperlink{classinjector_1_1transaction}{transaction}} const \&)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a5dba8e0d51c5b2dab290a9ccdae07281}\label{classinjector_1_1transaction_a5dba8e0d51c5b2dab290a9ccdae07281}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a508254b94efa2d27082e7ae67ca915f5}\label{classinjector_1_1transaction_a508254b94efa2d27082e7ae67ca915f5}} 
+bool {\bfseries good} () const
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a70efe1a48a2b478a516a4076879fac1d}\label{classinjector_1_1transaction_a70efe1a48a2b478a516a4076879fac1d}} 
+\mbox{\hyperlink{classinjector_1_1transaction}{transaction}} \& {\bfseries operator=} (\mbox{\hyperlink{classinjector_1_1transaction}{transaction}} t)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a88488a9507748be1b908d89266a0dcb6}\label{classinjector_1_1transaction_a88488a9507748be1b908d89266a0dcb6}} 
+int {\bfseries use\+\_\+table} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a73c73c461b71ac2d04bddb8361ad7e05}\label{classinjector_1_1transaction_a73c73c461b71ac2d04bddb8361ad7e05}} 
+int {\bfseries write\+\_\+row} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, size\+\_\+t colcnt, record\+\_\+type record, const uchar $\ast$extra\+\_\+row\+\_\+info)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a2fd5b63a7114d808173395722c3ca752}\label{classinjector_1_1transaction_a2fd5b63a7114d808173395722c3ca752}} 
+int {\bfseries write\+\_\+row} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, size\+\_\+t colcnt, record\+\_\+type record)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a54d2e9d704a63cb5272c7a143ac1f950}\label{classinjector_1_1transaction_a54d2e9d704a63cb5272c7a143ac1f950}} 
+int {\bfseries delete\+\_\+row} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, size\+\_\+t colcnt, record\+\_\+type record, const uchar $\ast$extra\+\_\+row\+\_\+info)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a02f75dc0ec6bf4692abf3b57817b53c1}\label{classinjector_1_1transaction_a02f75dc0ec6bf4692abf3b57817b53c1}} 
+int {\bfseries delete\+\_\+row} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, size\+\_\+t colcnt, record\+\_\+type record)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_ac95e0011e2698ff97d924f1d1efbcf34}\label{classinjector_1_1transaction_ac95e0011e2698ff97d924f1d1efbcf34}} 
+int {\bfseries update\+\_\+row} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$before\+\_\+cols, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$after\+\_\+cols, size\+\_\+t colcnt, record\+\_\+type before, record\+\_\+type after, const uchar $\ast$extra\+\_\+row\+\_\+info)
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a701a78ef792e93fe80338e33a7128fc1}\label{classinjector_1_1transaction_a701a78ef792e93fe80338e33a7128fc1}} 
+int {\bfseries update\+\_\+row} (server\+\_\+id\+\_\+type sid, \mbox{\hyperlink{classinjector_1_1transaction_1_1table}{table}} tbl, M\+Y\+\_\+\+B\+I\+T\+M\+AP const $\ast$cols, size\+\_\+t colcnt, record\+\_\+type before, record\+\_\+type after)
+\item 
+int \mbox{\hyperlink{classinjector_1_1transaction_a83b7faf4da3c9450ea2feed25565a308}{commit}} ()
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_ae028734fb53a794ec7e1155fdcb3a285}\label{classinjector_1_1transaction_ae028734fb53a794ec7e1155fdcb3a285}} 
+int {\bfseries rollback} ()
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_abb05c6c7969efd192d27bf6b9e324c39}\label{classinjector_1_1transaction_abb05c6c7969efd192d27bf6b9e324c39}} 
+\mbox{\hyperlink{classinjector_1_1transaction_1_1binlog__pos}{binlog\+\_\+pos}} {\bfseries start\+\_\+pos} () const
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_a71fbf91b3e192c093e8b15b68b7fe0f3}\label{classinjector_1_1transaction_a71fbf91b3e192c093e8b15b68b7fe0f3}} 
+\mbox{\hyperlink{classinjector_1_1transaction_1_1binlog__pos}{binlog\+\_\+pos}} {\bfseries next\+\_\+pos} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classinjector_1_1transaction_ad27499ba8668ef66ebec662c7b552419}\label{classinjector_1_1transaction_ad27499ba8668ef66ebec662c7b552419}} 
+class {\bfseries injector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classinjector_1_1transaction_a83b7faf4da3c9450ea2feed25565a308}\label{classinjector_1_1transaction_a83b7faf4da3c9450ea2feed25565a308}} 
+\index{injector\+::transaction@{injector\+::transaction}!commit@{commit}}
+\index{commit@{commit}!injector\+::transaction@{injector\+::transaction}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily int injector\+::transaction\+::commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & transaction committed \\
+\hline
+{\em 1} & transaction rolled back \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rpl\+\_\+injector.\+h\item 
+rpl\+\_\+injector.\+cc\end{DoxyCompactItemize}

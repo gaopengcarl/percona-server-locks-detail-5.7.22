@@ -1,0 +1,67 @@
+\hypertarget{classsp__variable}{}\section{sp\+\_\+variable Class Reference}
+\label{classsp__variable}\index{sp\+\_\+variable@{sp\+\_\+variable}}
+
+
+{\ttfamily \#include $<$sp\+\_\+pcontext.\+h$>$}
+
+Inheritance diagram for sp\+\_\+variable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsp__variable}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__variable_a56d4818528315e22e65f849fb78c0a23}\label{classsp__variable_a56d4818528315e22e65f849fb78c0a23}} 
+enum {\bfseries enum\+\_\+mode} \{ {\bfseries M\+O\+D\+E\+\_\+\+IN}, 
+{\bfseries M\+O\+D\+E\+\_\+\+O\+UT}, 
+{\bfseries M\+O\+D\+E\+\_\+\+I\+N\+O\+UT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__variable_a89004cd2dbfb7472d2386876f15980ca}\label{classsp__variable_a89004cd2dbfb7472d2386876f15980ca}} 
+{\bfseries sp\+\_\+variable} (L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \+\_\+name, enum\+\_\+field\+\_\+types \+\_\+type, enum\+\_\+mode \+\_\+mode, uint \+\_\+offset)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsp__variable_a522cdeb2e86b5ef2b9078091e8f3c715}\label{classsp__variable_a522cdeb2e86b5ef2b9078091e8f3c715}} 
+L\+E\+X\+\_\+\+S\+T\+R\+I\+NG \mbox{\hyperlink{classsp__variable_a522cdeb2e86b5ef2b9078091e8f3c715}{name}}
+\begin{DoxyCompactList}\small\item\em Name of the SP-\/variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__variable_ac552ce28eddbf5617939c3e6c2953dc2}\label{classsp__variable_ac552ce28eddbf5617939c3e6c2953dc2}} 
+enum enum\+\_\+field\+\_\+types \mbox{\hyperlink{classsp__variable_ac552ce28eddbf5617939c3e6c2953dc2}{type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classField}{Field}}-\/type of the SP-\/variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__variable_a4b636c011ffece730d6b3205f92e88e2}\label{classsp__variable_a4b636c011ffece730d6b3205f92e88e2}} 
+enum\+\_\+mode \mbox{\hyperlink{classsp__variable_a4b636c011ffece730d6b3205f92e88e2}{mode}}
+\begin{DoxyCompactList}\small\item\em Mode of the SP-\/variable. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classsp__variable_ab053166f9aaf72e5bfb2eb5df27672df}{offset}}
+\item 
+\mbox{\Hypertarget{classsp__variable_a23ef964d98a25acbeb927ace417bad1c}\label{classsp__variable_a23ef964d98a25acbeb927ace417bad1c}} 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classsp__variable_a23ef964d98a25acbeb927ace417bad1c}{default\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em Default value of the SP-\/variable (if any). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsp__variable_a73f9f6e62ce471fdac83ca6f976d7b80}\label{classsp__variable_a73f9f6e62ce471fdac83ca6f976d7b80}} 
+\mbox{\hyperlink{classCreate__field}{Create\+\_\+field}} \mbox{\hyperlink{classsp__variable_a73f9f6e62ce471fdac83ca6f976d7b80}{field\+\_\+def}}
+\begin{DoxyCompactList}\small\item\em Full type information (field meta-\/data) of the SP-\/variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents a stored program variable or a parameter (also referenced as \textquotesingle{}SP-\/variable\textquotesingle{}). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsp__variable_ab053166f9aaf72e5bfb2eb5df27672df}\label{classsp__variable_ab053166f9aaf72e5bfb2eb5df27672df}} 
+\index{sp\+\_\+variable@{sp\+\_\+variable}!offset@{offset}}
+\index{offset@{offset}!sp\+\_\+variable@{sp\+\_\+variable}}
+\subsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily uint sp\+\_\+variable\+::offset}
+
+The index to the variable\textquotesingle{}s value in the runtime frame.
+
+It is calculated during parsing and used when creating \mbox{\hyperlink{classsp__instr__set}{sp\+\_\+instr\+\_\+set}} instructions and \mbox{\hyperlink{classItem__splocal}{Item\+\_\+splocal}} items. I.\+e. values are set/referred by array indexing in runtime. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sp\+\_\+pcontext.\+h\end{DoxyCompactItemize}
