@@ -10,7 +10,7 @@
 
 下载源码
 
-```
+```shell
 git clone https://github.com/gaopengcarl/percona-server-locks-detail-5.7.22.git
 ```
 
@@ -190,12 +190,17 @@ Record lock, heap no 2 PHYSICAL RECORD: n_fields 3; compact format; info bits 0
 ## 五、一些我的测试案例文章
 
 这些文章都用到了这里的输出方式学习，供大家参考：
-1、[MySQL：一个死锁分析 (未分析出来的死锁)](https://www.jianshu.com/p/1e1e13f8ec27) 
-2、[MySQL:Innodb 一个死锁案例](https://www.jianshu.com/p/4c9f800763de )
-3、[Mysql:从一个USE DB堵塞故障展开的探讨](https://www.jianshu.com/p/5319594dd390)
-4、[关于叶老师一个RR模式下UPDATE锁范围扩大案例的研究](https://www.jianshu.com/p/88203202f16f )
-5、[Mysql中一个特殊的MDL LOCK死锁案列](http://blog.itpub.net/7728585/viewspace-2143277/ )
-6、[Mysql METADATA LOCK(MDL LOCK)学习(1) 理论知识和加锁类型测试](http://blog.itpub.net/7728585/viewspace-2143093/ )
 
+1. [MySQL：一个死锁分析 (未分析出来的死锁)](https://www.jianshu.com/p/1e1e13f8ec27) 
 
-微信:gp_22389860
+2. [MySQL:Innodb 一个死锁案例](https://www.jianshu.com/p/4c9f800763de )
+
+3. [Mysql:从一个USE DB堵塞故障展开的探讨](https://www.jianshu.com/p/5319594dd390)
+
+4. [关于叶老师一个RR模式下UPDATE锁范围扩大案例的研究](https://www.jianshu.com/p/88203202f16f )
+
+5. [Mysql中一个特殊的MDL LOCK死锁案列](http://blog.itpub.net/7728585/viewspace-2143277/ )
+
+6. [Mysql METADATA LOCK(MDL LOCK)学习(1) 理论知识和加锁类型测试](http://blog.itpub.net/7728585/viewspace-2143093/ )
+
+   微信:gp_22389860
