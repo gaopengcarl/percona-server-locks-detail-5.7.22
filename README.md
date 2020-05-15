@@ -28,7 +28,7 @@ tar zxf mysql-boost-5.7.22.tar.gz -C /usr/local/
 依赖安装
 
 ```shell
-yum -y install gcc gcc-c++ ncurses ncurses-devel bison libgcrypt perl make cmake openssl readline-devel libcurl-devel
+yum -y install gcc gcc-c++ ncurses ncurses-devel bison libgcrypt perl make cmake openssl readline-devel libcurl-devel zlib-devel
 ```
 
 创建用户
