@@ -21,11 +21,14 @@ wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-boost-5.7.22.tar.gz
 ```
 
 将boost解压到/usr/local/boost
+```shell
+tar zxf mysql-boost-5.7.22.tar.gz -C /usr/local/
+```
 
 依赖安装
 
 ```shell
-yum -y install gcc gcc-c++ ncurses ncurses-devel bison libgcrypt perl make cmake openssl
+yum -y install gcc gcc-c++ ncurses ncurses-devel bison libgcrypt perl make cmake openssl readline-devel libcurl-devel
 ```
 
 创建用户
@@ -63,7 +66,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
 -DDEFAULT_COLLATION=utf8_bin  \
 -DMYSQL_USER=mysql  \
 -DWITH_BINLOG_PREALLOC=ON   \
--DWITH_BOOST=/usr/local/boost
+-DWITH_BOOST=/usr/local/mysql-5.7.22/boost/boost_1_59_0
 
 make && make install
 ```
